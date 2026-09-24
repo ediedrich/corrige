@@ -103,4 +103,56 @@ Acumulado **según este archivo**: ronda 35 (260) + ronda 36 (1.124) + ronda 37 
 | Remisiones a capítulos posteriores en el texto nuevo | 3 de 20-opacidad a 21-ausencias | marcadas «más adelante» antes de compilar |
 | Compilación | libro entero | compila; 755 págs.; 0 referencias indefinidas; `.lof` con 38 |
 
-## Ronda 38 — …
+## Ronda 38 — auditoría con fase 6 (24/09/2026)
+
+Base: commit `5196df6` de `ediedrich/dispositivo-caldereno`, con tres incorporaciones posteriores al cierre de la ronda 37 (`8072c0e`, `5f220dc`, `5196df6`). **Denominador medido: 24.672 líneas** (38 archivos `.tex`, `wc -l`).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos de las rondas 35 y 36 (numeración de `591b074`) y de la 37 (numeración de `67d1dae`) se trasladaron a la numeración de `5196df6` por diff línea a línea: una línea sin cambios conserva su cobertura con su número nuevo, y **una línea modificada por las incorporaciones caduca**. Recalculado el acumulado de este archivo sobre sus propias tablas, da 3.678, igual que la ronda 37. Caducan **51**: F-fuentes 16, 04-siglo 8, 22-infraestructura 8, 21-ausencias 5, 00-advertencia 4, 26-presencia 4, 20-opacidad 2, 22-prospectiva 2, 02-metodo 1 y 11-ribera 1. **Quedan vigentes 3.627.**
+
+Las correcciones de la fase 6 de esta ronda cambian una o varias frases en 13 archivos **sin cambiar el número de líneas de ninguno** (lo comprobó el script que las aplicó). Siguiendo el criterio de las rondas 36 y 37, no hacen caducar ningún tramo.
+
+### Lectura sobre el texto (numeración de `5196df6`, igual a la de después de la fase 6)
+
+| Archivo | Líneas | Leídas | Nuevas |
+|---|---|---|---|
+| main.tex | 1–398 | 398 | 398 |
+| cap/00-advertencia.tex | 20, 43, 75, 78 | 4 | 4 |
+| cap/02-metodo.tex | 28–44 | 17 | 17 |
+| cap/04-siglo.tex | 847–848, 850, 853, 863–865, 877–901, 2869–2870, 3285–3304, 3370–3380, 3515–3524, 3540–3542, 3550–3555, 3760–3772, 3928–3937, 4165–4190, 4192–4200 | 142 | 119 |
+| cap/06-pdua.tex | 1–190 | 190 | 190 |
+| cap/11-ribera.tex | 1056 | 1 | 1 |
+| cap/14-poblacion.tex | 782 | 1 | 1 |
+| cap/15-hacienda.tex | 39–52, 150–165 | 30 | 30 |
+| cap/17-aguabaja.tex | 1–456 | 456 | 456 |
+| cap/18-politica.tex | 371 | 1 | 1 |
+| cap/18-trabajo.tex | 1–400 | 400 | 400 |
+| cap/20-opacidad.tex | 653–655 | 3 | 3 |
+| cap/21-ausencias.tex | 47–48, 56–58, 65, 87, 270–285 | 23 | 23 |
+| cap/22-infraestructura.tex | 213–216, 270, 466, 551, 762–763, 768–771 | 13 | 13 |
+| cap/22-prospectiva.tex | 158–160 | 3 | 3 |
+| cap/23-plan.tex | 1–326 | 326 | 326 |
+| cap/26-presencia.tex | 157, 174, 217–218, 228–251 | 28 | 28 |
+| ape/A-cronologia.tex | 21, 25–26, 28, 65, 82, 91, 100, 103, 111, 120–121, 125–126, 132–133, 140–142, 152, 156, 158, 173, 180, 183, 186–189, 193–194, 198–199, 204–206, 210–211, 216, 227–231, 236–237, 245–246, 250, 253–255, 286, 301, 305, 341, 346, 351, 359, 369, 375, 381, 394, 399, 407, 418, 421–422, 427, 445 | 70 | 70 |
+| ape/B-matriz.tex | 1–120 | 120 | 120 |
+| ape/D-pedidos.tex | 102, 184, 200 | 3 | 3 |
+| ape/F-fuentes.tex | 29–55, 57, 82, 121, 124–125, 130–133, 157–158, 162–167, 181–195, 205–207, 209, 213–226 | 77 | 76 |
+| ape/G-propuestas.tex | 31–774 | 744 | 744 |
+
+**Esta ronda: 3.050 líneas leídas; 24 ya estaban (04-siglo 23, F 1); nuevas: 3.026 (12,3 %).** De esas, 2.924 son de bloques enteros o de líneas que cambiaron las incorporaciones, y 102 son de contexto (04-siglo 66, 15-hacienda 21, F 13, D 2), deduplicadas por el mismo script.
+
+Acumulado: 3.627 vigentes + 3.026 = **6.653 de 24.672 (27,0 %)**. Sin las 102 de contexto: 6.551 (26,6 %).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 3.678/3.678 líneas registradas | 3.627 vigentes, 51 caducas |
+| Recuentos de topónimos contra `tabla_parajes.py` | 52 filas y 13 columnas | 52, 46, 24, 21 y núcleo de 10 cierran; 04:4200 y 21-ausencias:56 no (corregidos) |
+| Menciones de «doce/trece nóminas», «1.470/1.492», «treinta y una» | 24.672/24.672 | sin menciones desactualizadas |
+| Láminas en el texto frente al `.lof` | 41 entradas; menciones en 00 y F | 41 en todas |
+| Scripts declarados frente a `mapas_caldera` (público) | 20/20 láminas propias | 17 presentes; 3 declaradas sin script en F |
+| Superlativos en el texto agregado por la fase 6 | 28 líneas cambiadas | 4 coincidencias, todas preexistentes o con universo declarado |
+| Número de líneas por archivo antes y después de la fase 6 | 13/13 archivos tocados | sin cambios |
+| Compilación | libro entero | compila; 763 págs.; 0 referencias indefinidas; `.lof` con 41 |
