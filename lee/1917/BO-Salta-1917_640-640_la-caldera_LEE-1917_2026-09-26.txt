@@ -1,0 +1,527 @@
+BOLETÍN OFICIAL DE SALTA - AÑO 1917 - EDICIÓN N° 640 (COMPLEMENTO)
+LEE v17 — 1917 complemento 640
+Informe cerrado el 26 de septiembre de 2026
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con cuatro límites declarados en E.10. No quedan pendientes.
+
+Modo: LEE <año> complemento <ediciones> (flujo editorial v1, §5.4). El corpus
+es una sola edición, la N° 640 del 2 de marzo de 1917, que faltaba del Release
+cuando se hizo el informe anterior del año
+(BO-Salta-1917_636-683_la-caldera_LEE-1917_2026-09-21.txt, rúbrica v15, sin
+§R). Rigen la rúbrica LEE v16 entera y los cambios de v17 (flujo §5). Además
+de lo propio de la edición, este informe dice en E.11 qué afirmaciones del
+informe anterior cambian con lo nuevo, cada una con su ficha.
+
+Rúbrica y reglas: flujo-editorial.md, rubrica-lee-v16.md y
+config/lee_config.json bajados de ediedrich/corrige al empezar. El repositorio
+corrige responde sin token desde la sesión.
+
+Insumos del Release 1917 (releases/expanded_assets/1917): 48 PDF de edición
+(636 a 683, sin avisos de «no se encontró») y ocho assets más: dos
+pre-informes, decretos_1917.csv, lee_config.json, lee_textos_1917.zip,
+log.txt, recortes_1917.zip y resultados_1917.csv. Llegaron todos. Pre-informe
+usado: BO-Salta-1917_la-caldera_PRE-INFORME-LEE_2026-09-26.txt, el de fecha
+más nueva; el del 2026-09-22 es de la corrida anterior, con 47 archivos y sin
+la 640. decretos_1917.csv trae sólo el renglón de cabecera: el script no armó
+lista de decretos para este año.
+
+log.txt: dos corridas de lee_auto.py (commit f9a69a713e25 según estado.json),
+la del 22/09 con 47 archivos y 289 hojas y la del 26/09 con 48 archivos y 297
+hojas. En las dos la capa previa resulta útil en el 100 % de las hojas y se
+ocrizan 0. Sin errores en el log. Consecuencia: el zip de textos trae sólo
+N.prev.txt y EXTRAIDO.json; no hay N.prop.txt ni .tsv. Hay por lo tanto UNA
+SOLA VERSIÓN y no hay confianza por hoja, igual que en el informe anterior,
+aunque esta vez el zip sí llegó.
+
+Configs, según v16 §15.4 y v17 §5.2, en cuatro renglones:
+
+  config del Release: version 2026-09-22, hasta 1932, actores 554, anillo2 160
+  config de corrige: version 2026-09-26, hasta 1932, actores 567, anillo2 165
+  se usa: el de corrige — razón: único válido (v17 §5.2) y más nuevo
+  contenido: el de corrige contiene al otro; difiere en 13 actores y 5 términos
+
+Los 13 actores que faltan en el Release son 11 de origen 1913, uno de 1914
+(«adolfo videl») y uno de 1915; los 5 términos, candelaria, el sauce, estación
+f.c.c.n.a., getsemaní y la helvecia. La corrida del 26/09 se hizo con la foto
+del 22/09. Los 13 y los 5 se buscaron en esta sesión sobre la 640: de los
+términos da acierto sólo «candelaria» (B.3); de los actores ninguno por su
+propia entrada, aunque Adolfo Vidal, a quien el config lleva también como
+«Adolfo Videl» (1914), lo da por su entrada de 1908 (B.4).
+
+Entorno verificado: nproc = 1; tesseract sólo con eng y osd, sin spa
+(tesseract --list-langs); PyMuPDF 1.28.2 presente. En esta sesión no se ocrizó
+ninguna hoja.
+
+Imágenes: 640.pdf bajado del Release, y además 636 a 639 y 641 a 644 para las
+cabeceras vecinas. Cotejo contra EXTRAIDO.json: 538.864 bytes y 8 hojas,
+coinciden; la capa extraída por la sesión con PyMuPDF es idéntica, hoja por
+hoja, a los 8 N.prev.txt del zip.
+
+Lo que verificó la sesión: tapa, año editorial y folios en la imagen; las
+cinco pasadas del anillo 1; el anillo 2 completo con el contexto de todos los
+aciertos; los 567 actores; los números; las fórmulas de reemplazo; la tinta de
+las 8 hojas; las dos fichas del §A y la entrada de B.3 que es homónimo del
+anillo 1, transcritas desde la imagen.
+
+Desvíos de §8.17: ninguno.
+
+§1 · CORPUS REVISADO
+--------------------
+
+  Ed.  Fecha de tapa          Día      Hojas  Folios  Tipo/confianza
+  ---  ----------------------  -------  -----  ------  --------------------
+  640  [Salta, Marzo 2 de      viernes    8    17-24   PDF real, capa prev,
+  1917]                                           sin confianza
+
+La fecha, el año editorial y el número se leyeron en la imagen de la tapa:
+«Año IX · Salta, Marzo 2 de 1917 · Núm. 640». La capa los resuelve también,
+salvo «Salla,,» por Salta. El 2 de marzo de 1917 cae viernes.
+
+Hojas: 8 presentes. La tapa no declara páginas. Los folios se leyeron en la
+imagen en las 7 hojas interiores (h2 = Pág. 18 a h8 = Pág. 24); la h1 es la
+tapa, sin folio impreso, y le corresponde el 17. Cadena con las vecinas, leída
+en la imagen: 638 h8 = Pág. 8, 639 h8 = Pág. 16 (impreso «Paj. 16»), 641 h2 =
+Pág. 26. De 638 a 641 la serie cierra exacta, y la 640 está COMPLETA.
+
+Tipo: PDF real con capa previa; 2.877 a 4.138 caracteres por hoja; ninguna
+bajo 500 bytes. Proporción alfabética del EXTRAIDO.json entre 0,903 y 0,949.
+
+Techo de resolución: 300 ppi. Cada hoja lleva un fondo JPX en gris de ~150 ppi
+(1017-1106 x 1495-1509), otro de ~75 ppi, y una máscara de 1 bit de 2035 x
+2990 a 2064 x 3013 que es donde está el texto (medida en h1 y h2).
+
+Tinta, medida rasterizando a 100 dpi (umbral 128): h1 6,66 %; h2 4,65 %; h3
+5,27 %; h4 4,28 %; h5 9,28 %; h6 12,85 %; h7 4,65 %; h8 7,22 %. Ninguna hoja
+en blanco. Las tres bajo 5 % (h2, h4, h7) se miraron enteras en la imagen: son
+hojas de texto a dos columnas, completas, con cabecera y folio.
+
+Formato de época: la tapa trae el título, la línea de año, fecha y número, la
+caja «DIRECCIÓN Y ADMINISTRACIÓN / SECRETARÍA DE POLICÍA» y a continuación la
+ley de creación del Boletín (Sala de Sesiones, Agosto de 1908). NO trae
+fórmula de días de salida (E.11, punto 5).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+Versiones: una, la capa previa (prev). No hay unión de versiones; el desempate
+es la imagen.
+
+Marca de corte: U+0002 no aparece en las 8 hojas. El guion blando U+00AD se
+quita junto con el salto de renglón y después los sueltos (v16 §2.3). Además
+la unión tolera espacios y hasta dos signos a cada lado del salto, porque la
+capa de 640 deja «Ya- \ncones», «Potre- \n: \nro» y «Maida- \nna» con un
+espacio entre el guion y el salto.
+
+Anillo 1, cinco pasadas: Literal/normalizada «cald»: 3 aciertos en 2 hojas
+(h5, h6). Laxa con separador [\s\-\u00ad]{0,3} entre cada par de letras: 1
+acierto, «caldera» en h6, el mismo que la literal. No rescató nada nuevo. No
+es cero, así que no hizo falta probarla contra otro patrón. Difusa >= 0,78:
+«calderilla» contra caldera (h5, h6, las mismas de la literal) y «calovera»
+(h5, 0,80), falso positivo (E.7). Difusa ampliada 0,70-0,78 en palabras con c,
+g u o: sin acierto nuevo. Quinta pasada, sobre el texto sin espacios
+(propuesta F.2 del informe anterior): 5 aciertos, 3 los de la literal y 2
+falsos positivos de unión («local designado» en h6, «local de la Confitería»
+en h8).
+
+Anillo 2: los 165 términos del config de corrige. 16 dieron acierto en la capa
+y se leyó el contexto de los 16 (B.3 y §A). Tres topónimos del decreto 1133 NO
+dan acierto en la capa porque el OCR los parte («Potre- : ro de Castillo»,
+«EN>rohgos» por Porongos, «Chalcha-líiio»), y sí se leen en la imagen: es un
+falso negativo del anillo 2 que sólo la imagen resuelve (E.7).
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis):
+
+  faltan: 0 de los 7 topónimos que v16 nombra (los 7 ya en el config)
+  apellidos: 10 de 10 siguen en anillo2 (apaza, aramayo, condori, chaile,
+  isasmendi, murua, nogales, toconas, castellanos, burgos de yugra)
+  a revisar: no se rehízo; la lista completa de 17 no está en la rúbrica
+
+Los apellidos no se movieron a actores en este complemento (F.2).
+
+Actores: los 567 del config de corrige, por nombre completo sobre el texto sin
+puntuación, y por apellido suelto los del §A. 23 entradas dan acierto por
+nombre completo en la 640; las que tocan al departamento van al §B.4. Tres
+personas del decreto 1133 no las devuelve la búsqueda por nombre completo
+aunque su acto está en el corpus: C. Zacarías Maidana (la capa parte «Maida-
+na», y el config lo tiene sin la inicial C.), Virgilio Arévalo (la capa dice
+«Arevaio») y Venancio Ruiloba (la capa dice «Rniioba» y el config lo tiene
+como «benancio»). Es una falla de la búsqueda, no una ausencia, y se declara
+nombrándolos.
+
+Números arrastrados: los 129 del config. En la 640 sólo coincide 1140, y es
+otro acto: el N° 1.140 de h7 nombra encargado de los Talleres Gráficos de la
+Penitenciaría y no toca al departamento. Los actos de 640 llevan números entre
+1109 y 1140.
+
+Reemplazo: las 10 fórmulas; 3 aciertos, todos en h7 y ajenos (Comisario de
+Tablada y Talleres de la Penitenciaría).
+
+Identificadores de las ausencias: número de acto y fecha, además de lugar,
+persona y organismo.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+Un acto con una aparición. La otra mención literal de la edición («Cuesta
+Calderilla», h5) es un homónimo que el propio acto atribuye al Distrito de La
+Silleta y va a B.3 con transcripción desde la imagen.
+
+A.10 · Edición N° 640, hoja 6
+-----------------------------
+
+FUENTE: Ed. N° 640, hoja 6, columna 1 (encabezado, cuerpo y lista) y columna 2
+(artículo 2°, fecha y firmas).
+
+FICHA: Decreto N° 1133, de Salta, Febrero 24 de 1917: a propuesta del
+Comisario del Departamento de La Caldera, elevada por la Jefatura de Policía,
+nombra a los Comisarios Auxiliares del departamento para el corriente año.
+Firma CORNEJO; refrenda Rafael M. Zuviría; Es copia Francisco J. López.
+
+MODO DE LECTURA: Columna 1 recortada a 300 dpi por el ancho de columna más
+margen (44-236 pt) en dos tramos; las tres palabras dudosas, a 600 dpi; el
+cierre, recortado a 250 dpi en la columna 2. Número del acto, todos los
+nombres, todos los topónimos, fecha y firmas leídos en la imagen.
+
+TEXTO:
+  N° 1133
+  De acuerdo con la propuesta elevada por el Comisario del
+  Departamento de La Caldera, por intermedio de la Jefatura de
+  Policía, para la designación de las personas que han de desempeñar
+  las funciones de Comisarios Auxiliares en el corriente año.
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1°--Nómbranse Comisarios Auxiliares del Departamento
+  mencionado a las siguientes personas; Comisario Departamental,
+  Suplente, a D. Adolfo Vidal; del Rartido [sic] de la Calderilla,
+  a D. Genaro Molina; del de Vaqueros, á D. Nolasco Echenique; del
+  de Potrero de Gallinato, a D. José Nogales; del de Yacones, a D.
+  Victorino Tolaba; del de Lesser, a D. Pedro Vale; del de Potrero
+  de Castillo, a D. C. Zacarías Maidana; del de Despensa, a D.
+  Francisco Isasmendi; del de Peñones y Chalcha-mio [dudoso], a D.
+  Liborio Guerrero; del de Porongos, a D. Pablo Paredes; del de los
+  Sauces, a D. Virgilio Arévalo; del de San Alejo y Santa Rufina, a
+  D. Eustaquio Sarapura y del de Potrero de Valencia, a D. Venancio
+  Ruiloba [dudoso].
+  Art 2°--Comuníquese, publíquese e insértese en el R. Oficial.
+  Salta, Febrero 24 de 1917
+  CORNEJO
+  RAFAEL M. ZUVIRIA
+  Es copia:--Francisco J. López
+
+NOTA DE LECTURA: RECUENTO PROPIO, sobre esta transcripción: 13 personas; 13
+cargos (el suplente departamental y 12 comisarías de partido); 14 topónimos de
+partido (Calderilla, Vaqueros, Potrero de Gallinato, Yacones, Lesser, Potrero
+de Castillo, Despensa, Peñones, Chalcha-mio, Porongos, los Sauces, San Alejo,
+Santa Rufina, Potrero de Valencia), porque dos comisarías abarcan dos partidos
+unidos por «y». Ningún elemento tiene cuatro palabras o más; el separador «;»
+es regular en toda la lista, de modo que el recuento es un número y no un
+rango. El acto no declara número, de modo que no hay nada que cotejar.
+
+Lecturas dudosas, miradas a 600 dpi y escritas como se ven: «Rartido» por
+Partido (errata o P dañada; se transcribe con [sic] y no se corrige);
+«Chalcha-/mio», cuya segunda mitad admite también «nio» (el config ya trae
+chalchanio, chalchamo y chalchalnio, y no se elige); «Ruiloba», que admite
+«Rulloba». La capa previa las da como «Partido», «Chalcha- líiio» y «Rniioba».
+
+La pertenencia de los 14 partidos al departamento la da el acto mismo («del
+Departamento mencionado»), no el anillo 2 (v16 §5.1ter). El Comisario del
+Departamento que eleva la propuesta no se nombra; que sea Eustaquio Murúa,
+nombrado Comisario de Caldera por el decreto N° 1101 del 5 de febrero (A.5 del
+informe anterior), es INFERENCIA y se rotula así. La propuesta misma es un
+acto citado y no acompañado (E.2).
+
+Fecha contra numeración, vecinos ±3 presentes en la misma edición y mirados en
+la imagen o en la capa: 1130 y 1131 (23 de febrero, h5), 1132 (23 de febrero,
+h6), 1134 y 1135 (24 de febrero, h6), 1137 y 1137 bis (24 de febrero, h6-h7).
+Falta el 1136. Las fechas son coherentes con el orden.
+
+§B · VECINDAD
+-------------
+
+B.1 · NÚCLEOS YA FICHADOS. El partido de la Calderilla (A.7 y A.9 del informe
+anterior) aparece aquí como partido con comisario propio. Potrero de Gallinato
+(A.1 anterior, «Potrero Gallinato») aparece como partido policial, con la
+forma «Potrero de Gallinato». Vaqueros (B.2.1 anterior) figura como partido de
+La Caldera por atribución del propio acto 1133.
+
+B.2 · NÚCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TÉRMINO. Ninguno en
+la edición 640. Los 14 partidos del 1133 no son B.2 porque su acto nombra al
+departamento.
+
+B.3 · TÉRMINOS QUE EN LA 640 SON OTRA COSA. Contexto leído de los 16 términos
+con acierto:
+
+  B.3.1 · 640 h5, columna 1. Decreto N° 1126, Salta, Febrero 21 de 1917,
+  Art. 4°, Comisarios Auxiliares del Distrito de La Silleta. Leído en la
+  imagen a 250 dpi; el encabezado también en la imagen.
+  Art. 4.°--Nómbranse Comisarios Auxiliares, del Distrito de La
+  Silleta, a las siguientes personas: de los Partido [sic] de Tunal,
+  Candado y los Sauces, a D. Anastacio Solís; de los de Arca y
+  Capilla, a D. Serafín Tapia; de los de Toro y Tres Cruces, a D.
+  Pedro P. Lamás; de las Cuevas, a D. José Madariaga, de los de
+  Incahuasi, Pascha y Abra Grade [sic], a D. Liberato Padilla; de
+  Potrero de Uriburo, a D. Belisario Sosa; del Pié de la Cuesta
+  Calderilla y Cuesta Grande, a D. Abdón Sarapura; de la Merced de
+  Arriba, a D. Felipe Flores y Sub-comisario de Chorrillos, a D.
+  Mario U. Dozo.
+
+POR QUÉ ESTÁ AQUÍ: es la única otra mención literal del anillo 1 en la
+edición, y el acto la atribuye al Distrito de La Silleta. Es un homónimo y no
+se cuenta entre los actos del departamento. Tampoco se agrega a
+falsos_positivos (v16 §12, «ojo con los que ocultan»): «cuesta calderilla»
+marcaría como conocida cualquier mención real vecina. Sus «los Sauces» y
+«Sarapura» coinciden con el partido y con el comisario del 1133 de San Alejo y
+Santa Rufina (Eustaquio Sarapura); son otro partido y otra persona según los
+dos actos, y no se infiere parentesco. RECUENTO PROPIO del Art. 4°: 9 personas
+y 18 topónimos; «Abra Grade» se cuenta como uno.
+
+Resto: «candelaria», 4 aciertos: partido de Cerrillos (1125, h4) y
+Departamento de La Candelaria (1126, h5, dos veces, una de ellas también
+partido). «sauces»/«los sauces» en h5 son de La Silleta (arriba). «murúa» en
+h8 es el martillero Silvano I. Murúa. «isasmendi» y «nogales» en h6 son
+Francisco Isasmendi y José Nogales, personas del 1133. «despensa», «lesser»,
+«yacones», «vaqueros», «penones», «san alejo», «santa rufina», «potrero de
+gallinato», «gallinato», «potrero de valencia» y «los sauces» de h6 son los
+partidos del 1133. «calovera» (difusa, h5) es el partido de Calovera del
+Distrito de El Carril.
+
+B.4 · ANILLO DE ACTORES, en los tres grupos, buscados sobre las 297 hojas del
+año (capa sin puntuación).
+
+Grupo 1, sólo en su propio acto en 1917: Adolfo Vidal, Genaro Molina, Nolasco
+Echenique, Victorino Tolaba, Pedro Vale, C. Zacarías Maidana, Francisco
+Isasmendi, Liborio Guerrero, Pablo Paredes, Virgilio Arévalo, Eustaquio
+Sarapura y Venancio Ruiloba (A.10). Los apellidos sueltos que aparecen en
+otras hojas del año son otras personas: Vidal Hermanos (636 h5, 668 h2), los
+señores Vidal Martearena y Aybar (674 h5), un Vidal de la Comisión de
+Embarcación (677 h2); Rosa Maidana, comisario auxiliar de Alemania en
+Guachipas (650 h2); Feliciano, Casimiro y Valentín Tolaba, de otros
+departamentos (641 h3, 644 h2, 644 h3); Echenique en remates (667 h5, 672 h7).
+
+Grupo 2, en más de un acto del departamento: JOSÉ NOGALES, lindero del este de
+la finca «Potrero Gallinato» en el edicto de deslinde de 636 h4 y 637 h4 (A.1
+anterior), y Comisario Auxiliar del partido de Potrero de Gallinato por el
+decreto 1133 (A.10). Mismo nombre y mismo paraje; que sea la misma persona es
+INFERENCIA.
+
+Grupo 3, también fuera del departamento: ninguno de los 13.
+
+Con origen anterior en el config (para el cruce, no para este año): Adolfo
+Vidal 1908 y «Adolfo Videl» 1914; Genaro Molina, Liborio Guerrero, Zacarías
+Maidana y «Benancio Ruiloba» 1909; Virgilio Arévalo 1910; Nolasco Echenique
+1915; Pedro Vale 1919; José Nogales 1917. Son coincidencias de nombre en la
+red de búsqueda, no fichas.
+
+§C · LIMITROFES
+---------------
+
+Capital: el partido de La Troja (1127, h5) y la Estación Alvarado (1122, h1).
+Campo Santo: no aparece en la 640. Rosario de Lerma: su Comisión Municipal
+renovada por el 1130 (h5), y el Distrito de La Silleta con su «Cuesta
+Calderilla» (B.3.1). Jujuy: no aparece. Ningún acto de límites.
+
+§P · PLANOS
+-----------
+
+La edición no publica ningún plano. Una hoja menciona la palabra: 640 h2,
+decreto N° 1138, que manda al Departamento de Obras Públicas confeccionar los
+planos del edificio para la tela del Panorama de la Batalla de Salta. Es un
+plano citado y no acompañado y no toca al departamento. Techo de resolución:
+300 ppi.
+
+§D · INDICE
+-----------
+
+  640  h6   CARGOS       A.10 Decreto 1133, comisarios auxiliares de
+  La Caldera, 14 partidos, 13 personas
+  640  h5   OTRO         B.3.1 Decreto 1126, Cuesta Calderilla del
+  Distrito de La Silleta (homónimo)
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACIÓN Y SALDOS. Sin .jpg del script: md5 y dhash no aplicables; la
+duplicación se controló por texto. El texto del 1133 no se repite en ninguna
+otra hoja del año. La edición no publica resúmenes de Tesorería, balances
+municipales ni balances de banco: el año sigue sin cadena de saldos. No hay
+marcas de publicación de avisos.
+
+E.2 · COBERTURA. Hojas miradas en la imagen: 8 de 8. Son la h1 entera (tapa) y
+las cabeceras de h2 a h8; la h6 columna 1 entera y el tramo alto de la columna
+2; la h5 columna 1 del 1126 (encabezado y Art. 4°); las h2, h4 y h7 enteras
+por tinta baja; y el N° 1118 de h3 a 500 dpi. Además, cinco cabeceras de las
+vecinas (638 h8, 639 h1 y h8, 641 h1 y h2) y la tapa de 639.
+
+Columnas cotejadas renglón por renglón contra la capa: 2 (h6 columna 1 y h5
+columna 1 tramo del Art. 4°), de 16 columnas de la edición. En las dos la capa
+no pierde renglones.
+
+Citados y no acompañados: (1) la propuesta del Comisario del Departamento de
+La Caldera en que se funda el decreto 1133; (2) el decreto N° 1104, que el
+1137 (h6-h7) deja sin efecto por haber designado equivocadamente al comisario
+auxiliar de Juramento (Metán), ajeno al departamento; (3) el decreto del 12 de
+febrero que fijó el local de las mesas de San Carlos, citado por el 1132,
+ajeno.
+
+E.3 · SIN MENCIÓN Y NO MIRADO. De las 16 columnas, 9 se miraron sólo en la
+vista de hoja entera (h2, h4, h7) o en la tapa, y 5 (h3 dos, h8 dos y h5
+columna 2) no se miraron fuera de su cabecera. Ninguna de esas 5 tiene acierto
+de las cinco pasadas ni del anillo 2 que el contexto no resuelva.
+
+E.4 · FIRMAS Y AUTORIDAD. Gobernador: Abraham Cornejo, «CORNEJO», en los actos
+de las 7 primeras hojas; leído en la imagen en el 1133. La tapa de esta época
+no trae el nombre del gobernador. Refrendan Rafael M. Zuviría (Gobierno) y, en
+los acuerdos, Manuel R. Alvarado (Hacienda), que firma también «M. R.
+ALVARADO» (h2). Es copia: «Francisco J. López», «F. J. López» y, en 1137 bis,
+«Francisco López» sin inicial. Fórmulas: «El Gobernador de la Provincia» y «El
+Gobernador de la Provincia en acuerdo de Ministros». No hay interinato en la
+edición.
+
+Numeración: se ven 1109 a 1111, 1113, 1116 a 1118, 1120 a 1127, 1130 a 1135,
+1137, 1137 bis y 1138 a 1140. El orden de publicación no sigue el de
+numeración: el 1138 (26 de febrero) va en h2 antes que el 1109 (10 de
+febrero). Hay un «1137 bis», leído en la imagen.
+
+E.5 · CORTES Y COLUMNAS. Guion blando sí, U+0002 no. Además de la palabra
+partida en el renglón, la capa deja un espacio entre el guion y el salto, de
+modo que «Ya- cones», «Potre- ro» y «Maida- na» no se unen con la regla de v16
+§2.3 tal como está escrita (F.1). Columna perdida: no hallada en las 2
+columnas cotejadas. Palabras sueltas que fallan: «Rniioba», «Arevaio»,
+«EN>rohgos», «Chalcha- líiio», «S&rapura», «Salla,,» y «1118» por 1113 en el
+acuerdo de la tapa.
+
+E.6 · REPETICIONES. Ninguna del departamento en la edición.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS. Positivos: «Cuesta Calderilla» de La
+Silleta (homónimo, B.3.1); «calovera» (difusa); «local designado» y «local de
+la Confitería» (quinta pasada). Negativos: tres topónimos del 1133 que la capa
+parte y el anillo 2 no ve (Potrero de Castillo, Porongos, Chalcha-mio), y tres
+personas que la búsqueda por nombre completo no devuelve (§2).
+
+E.8 · FIDELIDAD NUMÉRICA. La edición no publica cuadros. Los importes en prosa
+(3.159,26 pesos del 1113; 90 y 40 pesos del 1122; bases de remate de 16.000 y
+12.000 pesos) no tocan al departamento y no se publican como cifras. El único
+número del departamento es el 1133, leído en la imagen.
+
+E.9 · CONTRADICCIONES. (1) «Rartido» por Partido en el 1133. (2) «los Partido»
+en plural con sustantivo singular en el 1126. (3) «Abra Grade» en el 1126. (4)
+La quiebra de la sucesión Augspurg (h7) fecha el auto «Febrero 12 de 1917» y
+la firma del secretario «Salta Febrero 24 de 1916»: leído en la vista de hoja
+entera, no ampliado; se transcribe y no se concilia. (5) El 1137 lleva «Art.
+2.°» dos veces.
+
+E.10 · LÍMITES. 1. Sin .tsv no hay confianza por hoja ni lista de hojas «a
+ojos». Las hojas se cubrieron por tinta, por candidatos y por cabeceras. 2.
+Sin .jpg del script no hay md5 ni dhash; la tinta sí se midió. 3. Una sola
+versión: la corrida no ocrizó ninguna hoja porque la capa previa pasó el
+umbral. El único desempate es la imagen. 4. Tesseract sin spa en la sesión.
+
+E.11 · QUÉ CAMBIA DEL INFORME ANTERIOR DE 1917. Cada punto con su ficha. 1.
+Cae el límite E.10.4 («la edición N° 640 no está en el Release»). El año pasa
+a 48 ediciones presentes, 0 ausentes y 297 hojas. La fecha del 2 de marzo, que
+el informe anterior dio por INFERENCIA, queda leída en la tapa (§1). 2. El §A
+del año pasa de 9 actos y 10 apariciones a 10 actos y 11 apariciones (A.10).
+3. §B.3 anterior: de los «54 términos sin acierto en el año», Yacones, Potrero
+de Castillo, San Alejo, Los Peñones, Los Porongos y Santa Rufina tienen
+acierto en 640 h6 (A.10). Tres de ellos sólo en la imagen. 4. §B.4 anterior:
+José Nogales pasa del grupo 1 al grupo 2 (B.4). 5. E.9 (2) y F.4 anteriores
+decían que la fórmula «Aparece Miércoles y Sábados» se imprime «durante todo
+el año». No es así: en la capa sólo está en las tapas de 636 y 637, y falta de
+la 638 a la 683. Mirado en la imagen en 639 y 640; en las otras 44 tapas, sólo
+en la capa. Lo que sigue en pie es que la fórmula no describe los días de 636
+y 637 (sábado y martes). 6. E.5 anterior, paginación: además del reinicio
+entre 649 y 650 hay otro entre 637 y 638. La 637 cierra en el folio 16
+(informe anterior) y la 638 cierra en el 8 (638 h8, «Paj. 8», imagen), de modo
+que la 638 abre en 1. Coincide con el paso de AÑO VIII a AÑO IX. La afirmación
+de que 636 y 637 ocupan los folios 1 a 16 no cambia. 7. E.2 anterior: se suma
+un citado y no acompañado del departamento, la propuesta del Comisario de La
+Caldera (A.10). 8. B.1 anterior: «Potrero Gallinato» aparece en el año con dos
+formas, la del edicto (A.1) y «Potrero de Gallinato» (A.10), y además como
+partido policial. No cambian: la cadena de saldos (sigue sin existir), los
+planos (siguen en cero del departamento) y las contradicciones E.9 (1), (3) a
+(10).
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+F.1 · LA UNIÓN DE CORTES TIENE QUE TOLERAR ESPACIOS ENTRE EL GUION Y EL SALTO.
+v16 §2.3 escribe la unión de U+00AD con [ \t]* y la de puntuación sin
+espacios. En esta capa el corte es «Ya- \ncones»: guion visible, espacio y
+salto. Con la regla literal, Yacones, Potrero de Castillo y Maidana no se ven.
+Propuesta: la clase de la unión es [ \t]*[-.,;:]{0,2}[ \t]*\n[
+\t]*[-.,;:]{0,2}[ \t]*, a cada lado. Se aplicó en esta sesión.
+
+F.2 · MOVER LOS APELLIDOS DEL ANILLO 2 NECESITA UNA FORMA DE ACTOR SIN NOMBRE.
+v16 §5.1bis manda mover a actores los 10 apellidos del anillo 2, pero una
+entrada de actores es [nombres, apellido, origen], y un apellido suelto no
+tiene nombres. Siguen en el anillo 2 en el config del 26/09. Propuesta:
+admitir ["", apellido, origen] como actor de búsqueda por apellido agrupado
+por contexto, y hacer el traslado en una corrida con --solo-busqueda de todos
+los años, no en un complemento.
+
+F.3 · UN COMPLEMENTO PUEDE CORREGIR AL INFORME ANTERIOR EN COSAS QUE NO SON DE
+LA EDICIÓN NUEVA. La fórmula de periodicidad (E.11.5) y el reinicio de folios
+en 638 (E.11.6) salieron de mirar las vecinas para cerrar la cadena. Propuesta
+para v17 §5.4: el complemento mira siempre la tapa y la cabecera de la última
+hoja de las dos ediciones vecinas, y declara lo que eso cambia.
+
+§R · RECUENTO
+-------------
+
+anio: 1917
+ediciones_desde: 640
+ediciones_hasta: 640
+ediciones_presentes: 1
+ediciones_ausentes: 0
+hojas_presentes: 8
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 0
+periodicidad: semanal-viernes
+dias_salida_sin_edicion: 0
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: zip-del-release
+versiones: 1
+actos_departamento: 1
+actos_dominio: 0
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 0
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-armable
+columnas_cotejadas: 2
+hojas_miradas: 8
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 4
+limites_declarados: 4
+nivel_lectura: imagen
+pdf_release: 48
+avisos_release: 0
+estado: COMPLETO
+
+Nota: el §R cubre sólo la edición 640. Las claves del año entero salen de
+sumar este §R con el del informe anterior, que no tiene §R (fue escrito con
+v15).
+
+CONFIG ACTUALIZADO
+------------------
+
+Se entrega lee_config.json completo, sobre el de corrige del 26/09, con
+version 2026-09-26. Se conserva hasta: 1932, porque el config ya incorpora
+hasta ese año y bajarlo a 1917, como dice literalmente v17 §5.2, lo haría
+parecer atrasado. actores: 567 -> 575; se agregan, con origen 1917 y edición
+640, victorino tolaba, francisco isasmendi, pablo paredes, eustaquio sarapura,
+venancio ruiloba, y tres formas que sin ellas no se encontrarían: «venancio
+rniioba» y «virgilio arevaio» (así los lee la capa) y «c. zacarias maidana»
+(con la inicial). anillo2: 165 -> 166, se agrega «chalchamio», la forma
+impresa en el 1133. numeros: 129 -> 130, se agrega 1133. falsos_positivos: sin
+cambios; «cuesta calderilla» NO se agrega (B.3.1).
+
+Fin del informe LEE 1917, complemento 640.
