@@ -1,0 +1,558 @@
+BOLETIN OFICIAL DE SALTA - AÑO 1913 - COMPLEMENTO: EDICIONES N° 438 Y 444
+==========================================================================
+
+LEE v17 — 1913 complemento 438-444
+Barrido documental forense sobre LA CALDERA / LA CALDERILLA, en modo
+complemento (flujo editorial v1, §5.4). Informe generado el 26/09/2026.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, CON CINCO LÍMITES DECLARADOS (E.10). Se entrega en dos
+turnos; el primero no dejó archivo y su trabajo quedó en notas.txt, del que
+parte este.
+
+QUÉ ES ESTE INFORME. Un complemento del informe de 1913 ya entregado,
+«BO-Salta-1913_384-458_la-caldera_LEE-1913_2026-09-20.txt» (rúbrica v15,
+cuatro tandas), guardado en corrige/lee/1913/. Aquel informe declaró ausentes
+del Release las ediciones 438 y 444 (su límite L4) y dedujo por la cadena de
+folios que existieron, con cuatro hojas cada una. Las dos llegaron después al
+Release. El corpus de este informe son SÓLO esas dos ediciones, ocho hojas.
+Rige la rúbrica LEE v16 del repositorio corrige, con los cambios de v17 que
+fija flujo-editorial.md §5; la regla propia del modo complemento es decir qué
+afirmaciones del informe anterior cambian, cada una con su ficha: están en
+E.11.
+
+INSUMOS. Todo se bajó del repositorio: flujo-editorial.md, estado/estado.json,
+rubrica-lee-v16.md y config/lee_config.json. El Release 1913 de
+ediedrich/boletines-salta (leído en releases/expanded_assets/1913, sin token)
+trae 83 assets: 75 PDF de edición (384 a 458, ahora sin huecos), ningún aviso
+de «no se encontró», dos pre-informes, resultados_1913.csv, decretos_1913.csv
+(vacío: sólo el encabezado), log.txt, recortes_1913.zip, lee_config.json y
+lee_textos_1913.zip. PRE-INFORME USADO: el de fecha más nueva,
+BO-Salta-1913_la-caldera_PRE-INFORME-LEE_2026-09-26.txt (lee_auto.py con
+rúbrica v11). No se usó su §A ni su §B como fuente: sirvieron de lista de
+candidatos, y todos se juzgaron de nuevo.
+
+LOG. La corrida del 26/09/2026 dice: 75 archivos, capa previa útil en 271 de
+299 hojas, «OCR de 0 hojas»: las ocho hojas nuevas tienen capa y no se
+ocrizaron. Ningún error. La corrida del 22/09/2026 tenía 73 archivos y 291
+hojas.
+
+TEXTOS. lee_textos_1913.zip trae para 438 y 444 sólo N.prev.txt y
+EXTRAIDO.json: UNA versión, la capa previa, sin .prop.txt ni .tsv. La sesión
+extrajo la capa por su cuenta con PyMuPDF y la comparó con la del zip:
+coinciden carácter a carácter en las ocho hojas. No hay segunda versión ni
+confianza por hoja para este corpus (E.10).
+
+CONFIG:
+  config del Release:  version 2026-09-22, hasta 1932, actores 554, anillo2 160
+  config del proyecto: version 2026-09-22, hasta 1932, actores 554, anillo2 160
+  se usa: el del proyecto (corrige/config) — razón: es el único válido (v17)
+  contenido: idénticos; ningún término de uno falta en el otro
+
+ENTORNO, verificado: nproc = 1; PyMuPDF instalado; tesseract 5.3.4 con sólo
+eng y osd, SIN spa. No hubo OCR en sesión y no hizo falta: las ocho hojas
+tienen capa.
+
+DESVÍOS. Ninguno de método. Una aclaración de alcance: el estado del proyecto
+marca el informe anterior como «sin-R» porque se escribió con la rúbrica v15 y
+no tiene §R. Este complemento no lo reescribe ni le agrega el §R: su §R cuenta
+sólo las dos ediciones del complemento.
+
+§1 · CORPUS REVISADO
+--------------------
+
+Dos archivos, 438.pdf (1,31 MB) y 444.pdf (1,34 MB), PDF 1.5 reales, cuatro
+hojas cada uno y una imagen incrustada por hoja. Ocho hojas, ocho folios
+distintos, ningún escaneo repetido: el folio impreso de las hojas 2 a 4 se
+leyó en la imagen en las seis y cierra con la tapa.
+
+  Ed.  hojas  folios       capa    fecha de tapa ([ ] = leída en la imagen)
+  ------------------------------------------------------------------------
+  438  4      1671-1674    previa  [Setiembre 27 de 1913, sábado; AÑO V]
+  444  4      1695-1698    previa  [Octubre 25 de 1913, sábado; AÑO VI]
+
+Los folios son exactamente los que el informe anterior dedujo por la cadena
+(438 = 1671-1674; 444 = 1695-1698), y las fechas son las que le asignó al
+contar los días de salida (27 de setiembre y 25 de octubre). La cadena de
+folios del año queda cerrada con hojas y no con deducción.
+
+TECHO DE RESOLUCIÓN: 300 ppi en las ocho hojas, medido sobre la caja de la
+imagen incrustada (3.546 a 3.885 px de ancho sobre 596 a 620 pt). Es el techo
+alto del año; 1913 tenía nueve ediciones a 150 ppi.
+
+CALENDARIO. Las dos tapas declaran «Aparece miércoles y sábados», y las dos
+fechas caen en sábado: se comprobó el día de la semana. Ninguna es doble. La
+edición 438 trae además la tarifa del Boletín en 438 h4 (mirada en la imagen).
+
+CONFIANZA POR HOJA: no existe, porque no hay .tsv (E.10). Densidad: ninguna
+hoja baja de 5.800 caracteres. Ruido, medido sobre la capa: entre 13,6 % y
+27,5 % de caracteres no alfabéticos; 438 h2 (27,5 %) pasa el umbral del 25 % y
+se miró entera en la imagen, igual que las otras siete.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+VERSIONES. Una sola, la capa previa, etiqueta prev. El único desempate es la
+imagen.
+
+MARCA DE CORTE. U+0002: cero apariciones. U+00AD: 73 en las ocho hojas, contra
+5.861 en las 263 hojas con capa del resto del año (unas 9 por hoja contra 22).
+La unión quita el U+00AD JUNTO CON el salto de renglón y tolera hasta dos
+signos a cada lado del corte. Se comprobó que pega las dos mitades a través
+del salto: «cal\ndera» y «Cal-\ndera» dan acierto.
+
+COTEJO SUMARIO/CUERPO: NO APLICABLE. Las ediciones de esta época no traen
+sumario con puntos guía.
+
+CUATRO PASADAS. (1) Literal/normalizada «cald»: 2 aciertos, los dos falsos
+positivos (E.7). (2) Laxa [gc][ao][l1i|][\s-]{0,3}[dcl][ec][rnm][ao]: ningún
+acierto que la literal no tuviera; se probó que no está rota con «caldera»,
+«gal dera», «cal\ndera» y «ca1dera», las cuatro reconocidas. (3) Laxa
+espaciada, con la clase [\s\-]{0,3} entre cada par de letras de «caldera»:
+cero aciertos; probada con «c a l d e r a», «c ald era» y «cal\nde-\nra», las
+tres reconocidas, de modo que el cero es del corpus y no de la pasada. (4)
+Difusa >= 0,78 contra caldera y calderilla: dos formas, «calda» (0,83, falso
+positivo) y «faldera» (0,86), que ES LA MENCIÓN DEL AÑO: «de la Caldera» en
+444 h4. Difusa ampliada 0,70-0,78 restringida a c, g y o: «cada», «caneria»,
+«cuadras», «cale»; todas falsos positivos.
+
+ANILLO 2: 7 de los 160 términos dan acierto en el corpus del complemento
+(lesser, castellanos, chaile, apaza, churcal, san jose, vaqueros), y se
+leyeron los contextos de los siete (§B). «vaqueros» no lo devuelve la búsqueda
+automática porque la capa lo lee «vaqw eh»: se encontró en la imagen al leer
+el aviso. ACTORES: 9 de los 554 aparecen con nombre completo, y los 9 son
+homónimos o personas fuera del departamento (B.4). NÚMEROS: dos cadenas de los
+arrastrados, «40» (444 h2, un importe) y «132» (438 h3, el artículo 132 del
+Código Rural); coincidencia de cifra las dos. REEMPLAZO: «vacante» y
+«nómbrase» en tres actos, ninguno del departamento. Los actos de 1913 no
+llevan número, de modo que los identificadores de las ausencias son lugar,
+persona y organismo.
+
+COTEJO DEL ANILLO 2 CONTRA LA TOPONIMIA ESTABLECIDA (v16 §5.1bis), sobre el
+config vigente y con los casos que nombra la rúbrica: FALTAN 5 de los 7
+topónimos establecidos que v16 nombra (candelaria, estación f.c.c.n.a., el
+sauce, la helvecia, getsemaní; mesada y cañada ancha ya entraron). SIGUEN
+DENTRO los 10 apellidos que v16 manda mover a actores (apaza, aramayo,
+condori, chaile, isasmendi, murúa, nogales, toconas, castellanos, burgos de
+yugra). A REVISAR: la lista completa de la toponimia establecida no está en
+ningún archivo del repositorio, de modo que el cotejo se hizo sólo contra los
+casos nombrados en v16 y no se afirma el número total (E.10). Sobre este
+corpus, agregar «candelaria» habría devuelto 438 h3, que es el departamento de
+La Candelaria y no Calderilla; y «castellanos» demuestra por qué no conviene
+sacarlo sin más: en 444 h4 es el río Castellanos, lindero de una finca del
+departamento, y no un apellido.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+UNA entrada, con una aparición, transcripta desde la imagen. Es la única
+mención del departamento en las ocho hojas: las cuatro pasadas, el anillo 2 y
+el anillo de actores no dan otra, y las ocho hojas se recorrieron enteras en
+la imagen a 130 dpi, en medias páginas, además de los recortes de la ficha.
+
+  ======================================================================
+  FUENTE: Edición N° 444, hoja 4, columna 1 (pie) y columna 2 (cabeza), folio
+  1698.
+  FICHA: Edicto de deslinde, mensura y amojonamiento de la finca LESSER,
+  «ubicada en el departamento de la Caldera», pedido por Luis Patrón Costas.
+  Límites: al sur, el río llamado Castellanos; al poniente, el mismo río y los
+  herederos de Custodio López; al norte, lo que fue de Exequiel López, Adolfo
+  Boedo y dueños desconocidos; al naciente, la cañada frente a las juntas del
+  río de Las Nieves con el de Castellanos y las cumbres que la separan de la
+  finca que fue de Victorino F. Solá y de la de Vaqueros. Auto del juez
+  Alejandro Bassani, 22 de octubre de 1913; peritos Pfister y Martín; firma el
+  secretario Pedro J. Aranda el 23 de octubre. Marca 560v27nv.
+
+  MODO DE LECTURA: Tres recortes, los tres mirados: columna 1, y 715-862 pt, a
+  300 dpi; columna 2, y 40-330 y 320-560 pt, a 250 dpi; y el renglón de los
+  Lesser, y 160-200 pt, a 600 dpi. Transcripto desde la imagen, no desde la
+  capa. El nombre del departamento lo trae la DIFUSA: la capa lee «faldera»
+  (0,86). La columna 1 termina en «encerrada dentro» y la 2 abre en «de los
+  siguientes límites»: es un solo aviso partido entre columnas.
+
+  TEXTO (transcripto de la imagen):
+    Habiéndose presentado el señor Luis Patrón Costas, con títulos bas-
+    tantes, solicitando el deslinde, mensura y amojonamiento de la finca
+    LESSER, ubicada en el departamento de la Caldera y encerrada dentro
+    de los siguientes límites generales: Al sur, el río llamado Castella-
+    nos; al poniente, el mismo río y propiedad de los herederos o suceso-
+    res de don Custodio López; al norte, con propiedad que fué de don
+    Exequiel López, y Adolfo Boedo y más abajo de dueños desconocidos,
+    siendo los límites restantes de ésta parte los que se expresan en la
+    transacción celebrada entre los herederos y sucesores de don
+    Ma[ilegible]ín y Javier Lesser con doña Micaela Lesser de Outes; y al
+    naciente, con la cañada de frente á las juntas del río de Las Nieves
+    con el de Castellanos y las cumbres de las lomas o cerros que la
+    separan respectivamente de la finca que fué de don Victorino F. Solá
+    y la de Vaqueros; el señor juez de primera instancia en lo civil y
+    comercial, doctor Alejandro Bassani, ha dictado el siguiente auto: —
+    Salta, octubre 22 de 1913. — Autos y vistos: — Por presentado con los
+    documentos adjuntos. — Hágase saber por edictos que se publicarán
+    durante treinta días en los diarios "La Provincia" y "Tribuna
+    Popular" y por una vez en el "Boletín Oficial" las diligencias que se
+    van a practicar y que darán principio el día que el agrimensor señale
+    á todos los que puedan tener interés en ellas. — Téngase como peritos
+    propuestos a los agrimensores señores Pfister y Martín. — Dése la in-
+    tervención correspondiente al señor agente fiscal. — A. Bassani. — Lo
+    que el subscripto hace saber a los que puedan tener interés en dichas
+    operaciones, por medio del presente. — Salta, octubre 23 d e1913
+    [sic]. — Pedro J. Aranda, secretario.
+    560v27nv
+
+  NOTA DE LECTURA: Los cortes de renglón de la transcripción no son los del
+  original; los guiones de fin de renglón que quedan son del original.
+  «Ma[ilegible]ín»: entre «Ma» y «ín» hay una o dos letras que no se leen ni a
+  600 dpi; la lectura «Martín» es la obvia y NO se escribe (§8.2). «23 d
+  e1913» es composición del original: va con [sic] y a E.9. Las tildes de «á»
+  y «fué» se leen en la imagen; donde la tilde no se distingue a 250 dpi se
+  escribe la forma sin tilde. El auto manda publicar «por una vez» en el
+  Boletín, y la búsqueda por texto sobre las 299 imágenes del año (capa
+  previa, más la versión propia de 452 a 458) no lo encuentra en ninguna otra
+  hoja: se publicó una vez. No acompaña plano ni remite a uno. RECUENTO PROPIO
+  de los linderos nombrados: 7 (río Castellanos, herederos de Custodio López,
+  Exequiel López, Adolfo Boedo, dueños desconocidos, finca de Victorino F.
+  Solá, finca de Vaqueros), más la remisión a la transacción de los Lesser; el
+  acto no declara número, de modo que no hay nada que cotejar. «Lesser» es
+  también el nombre de la finca rematada en 399 h4 y el de un partido del
+  decreto de 404 h2. El informe NO afirma que sean la misma finca: este aviso
+  no remite al remate y los linderos no se superponen (399 h4 nombra a Arquati
+  y a Narciso Figueroa; este, a los López, Boedo, Solá y Vaqueros). Tampoco
+  afirma nada sobre la relación entre Micaela Lesser de Outes y el
+  subsecretario José M. Outes que firma los «Es copia» del año: sería
+  inferencia. La búsqueda de actores por nombre completo NO devuelve este acto
+  aunque «luis patron costas» está en el config (1930 y 1931): la capa imprime
+  «patron gbstas» (E.7).
+
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS DEL DEPARTAMENTO YA FICHADOS EN EL §A
+
+No se repiten. Son la finca Lesser, el río Castellanos, el río de Las Nieves,
+la finca de Vaqueros y los linderos nombrados en la ficha.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+Ninguno. Los decretos de las dos ediciones nombran subcomisario del partido de
+Río de las Piedras, en Metán (438 h2-h3); autorizan una prolongación de
+cañería en la calle Güemes de la ciudad (438 h3); dan una beca en el colegio
+Ángel Zerda (444 h3); y nombran expendedor de guías de Horcones, en Rosario de
+la Frontera (444 h3). Ninguno toca al departamento.
+
+B.3 · TERMINOS QUE EN 1913 SON OTRA COSA
+
+Chaile (438 h2): Elisa Toro de Chaile, damnificada del hurto que juzga el
+Juzgado del Crimen; la causa es de la ciudad (calle Jujuy entre España y
+Caseros). Apaza (444 h1): Juan Manuel Apaza, condenado por hurto de ganado
+vacuno por el Superior Tribunal; el acto no nombra el departamento del hecho y
+la tabla queda SIN ATRIBUIR. Churcal (444 h3): la finca Churcal o Simbolar, en
+Guachipas, por el acto mismo. San José (444 h3): la finca de ese nombre, en
+Chicoana, por el acto mismo. Lesser (444 h4, segunda aparición del término):
+Javier Lesser y Micaela Lesser de Outes, partes de la transacción que cita el
+aviso del §A; es el mismo acto y no otro. Castellanos (444 h4): las dos
+apariciones son el río Castellanos, dentro del aviso del §A, y no un apellido.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+
+Búsqueda sobre el texto CON LA PUNTUACIÓN SUPRIMIDA. Aparecen 9 actores del
+config con nombre completo, ninguno en un acto del departamento: Abraham
+Cornejo, José A. Aráoz, Arturo S. Torino (vocales y secretario del Superior
+Tribunal), Zenón Arias y Luis López (secretario y abogado en juicios de la
+ciudad), Francisco F. Sosa (juez civil), José Manuel Fernández (causante en un
+juicio de la ciudad, 438 h4), Pedro J. Aranda (secretario del juzgado de
+Bassani, 444 h3 y h4, firmante del aviso del §A) y José María Leguizamón
+(martillero de dos remates de la ciudad, 444 h4).
+
+FALLA DE LA BÚSQUEDA, que se declara nombrando al afectado: Luis Patrón Costas
+está en el config (1930 y 1931) y la búsqueda por nombre completo NO devuelve
+su propio acto, porque la capa imprime «patron gbstas». Lo rescató la difusa
+del anillo 1, no el anillo de actores.
+
+Los actores del departamento de 1913 que el informe anterior fichó
+(Escolástico Aparicio, Daniel Linares, Silvano y Eustaquio Murúa, Lucas y
+Jacoba Molina, Camilo Cáceres, Liborio y Jacinto Guerrero, Adolfo Vidal,
+Augusto Regis, Enrique Leconte, Julio Padilla, Pablo Enrique Wenner y los
+demás) se buscaron también por apellido suelto: NINGUNO aparece en las dos
+ediciones. La ausencia se afirma con dos identificadores, persona y lugar u
+organismo. En tres grupos: Grupo 1, los que sólo aparecen en su propio acto:
+Luis Patrón Costas, Custodio López, Exequiel López, Adolfo Boedo, Javier
+Lesser, Micaela Lesser de Outes y Victorino F. Solá, todos en el aviso del §A
+y en ningún otro lugar de estas ocho hojas. Grupo 2, los que aparecen en más
+de un acto del departamento: ninguno dentro del complemento; Pfister y Martín,
+peritos del §A, son también los peritos del deslinde de Wenner (443 h4 y 449
+h4, informe anterior), y el juez Bassani y el secretario Aranda firman los
+dos. Grupo 3, los que aparecen también fuera del departamento: Alejandro
+Bassani (juez civil, en 5 de las 8 hojas) y Pedro J. Aranda (3 hojas).
+
+§C · LIMITROFES
+---------------
+
+Ningún acto de un departamento limítrofe que toque a La Caldera. El aviso
+del §A nombra como lindero «la de Vaqueros», que el acto no atribuye a otro
+departamento (§5.1ter).
+
+§P · PLANOS
+-----------
+
+La palabra «plano» no aparece en ninguna de las ocho hojas y el corpus no
+publica ninguna lámina. Un «croquis aproximado» se cita y no se acompaña en
+438 h3: es la solicitud de agua de José Jurado para la finca Ceibalito del
+Brete, en La Candelaria, y no toca al departamento. El aviso del §A no
+acompaña plano ni remite a uno: planos citados del departamento, cero. Techo
+de resolución: 300 ppi.
+
+§D · INDICE
+-----------
+
+  444  h4   DOMINIO      Deslinde, mensura y amojonamiento de la finca
+                          Lesser, departamento de la Caldera, pedido por
+                          Luis Patrón Costas (auto del 22/10/1913)
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+
+No hay .jpg del script, pero con PDF reales la sesión rasterizó y midió la
+tinta: entre 9,5 % y 15,3 % de píxeles oscuros en las ocho hojas; ninguna en
+blanco ni bajo 5 %. Sin md5 ni dhash, la duplicación se controló por el folio
+impreso, leído en la imagen en las seis hojas interiores: ocho folios
+distintos, ningún escaneo repetido. SALDOS: ninguna de las dos ediciones
+publica resumen de Tesorería, de modo que la cadena del año (dos resúmenes no
+contiguos, abril y setiembre) no cambia.
+
+E.2 · COBERTURA
+
+Ocho hojas de ocho, miradas enteras en la imagen: dieciséis medias páginas a
+130 dpi, más cuatro recortes de columna o renglón a 250, 300 y 600 dpi sobre
+444 h4. Columnas cotejadas contra la capa en recorte: 2 de 24 (444 h4,
+columnas 1 y 2); en esas dos no hay columna perdida, y sobre las otras 22 no
+se afirma nada más que lo que dio la lectura de conjunto. Lo que sí falló, en
+silencio, fue la palabra suelta: «Caldera» leída «faldera», «Costas» leída
+«gbstas», «Vaqueros» leída «vaqw eh» y «Galdo» (438 h2) no leída como tal.
+Tres de las cuatro decidían algo del §A.
+
+E.3 · SIN MENCION Y NO MIRADO
+
+Nada quedó sin mirar: las ocho hojas se recorrieron en la imagen.
+
+E.4 · FIRMAS Y AUTORIDAD
+
+Leído en la imagen, en orden de fecha. (1) 23 de setiembre de 1913 (438 h3,
+col. 1): «El Presidente del Senado en ejercicio del Poder Ejecutivo de la
+Provincia», firma LEGUIZAMÓN y Francisco M. Uriburu; «Es copia: — José M.
+Outes. S. S.». (2) 24 de setiembre (438 h3, col. 1): la misma fórmula,
+LEGUIZAMÓN y Macedonio Aranda. (3) 11 de octubre (444 h3, col. 2): PATRÓN
+COSTAS y Francisco M. Uriburu; «Es copia — José M. Outes. S. S.». (4) 13 de
+octubre (444 h3, col. 2): PATRÓN COSTAS y Macedonio Aranda; «Es copia: Juan
+Martín Leguizamón». HAY UN INTERINATO EN SETIEMBRE, a cargo del Presidente del
+Senado, y el titular firma de nuevo el 11 de octubre. Se declaran el último
+acto mirado del interino (24 de setiembre) y el primero mirado del titular (11
+de octubre); la sesión NO fija el día del reintegro: las ediciones 439 a 443
+caen en ese intervalo y no son corpus de este complemento. El 13 de octubre el
+«Es copia» lo firma otra persona que la habitual.
+
+E.5 · CORTES Y COLUMNAS
+
+Maqueta de tres columnas, medida con get_text('words'): arranques en ~30-40,
+~200-220 y ~380-400 pt. Recortes por el ancho entero de la columna más margen.
+Columna perdida: no se halló en las dos columnas cotejadas en recorte. La capa
+de 438 h3 intercala columnas vecinas (el decreto de la cañería y el edicto de
+José Jurado salen mezclados); la lectura de la imagen los separa y ninguno es
+del departamento.
+
+E.6 · REPETICIONES
+
+El aviso del §A no se repite: su texto no aparece en ninguna otra de las 299
+imágenes del año, comprobado por texto sobre la capa previa y sobre la versión
+propia de 452 a 458. Las marcas del tipo «560v27nv» no se usan como prueba.
+Ningún aviso de las dos ediciones repite uno del departamento ya fichado.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+
+FALSOS POSITIVOS del anillo 1: «calda» en 438 h1 (el apellido de don Benito
+Galda, endosante en un juicio ejecutivo de la ciudad; la imagen a 130 dpi no
+distingue si la inicial es G o C, y no decide nada); «fiscalde» en 444 h1
+(fiscal de), ya juzgado en 1946. Difusa ampliada: cada, cañería, cuadras,
+cale. Ninguno se agrega al config (§12). FALSOS NEGATIVOS: «Caldera» en 444
+h4, leída «faldera» por la capa y rescatada por la difusa; «Patrón Costas»,
+leído «patron gbstas», que la búsqueda de actores no devuelve en su propio
+acto; «Vaqueros», leído «vaqw eh», que el anillo 2 no devuelve. Los tres están
+en el mismo aviso, y el único que el barrido automático alcanzó fue el
+primero.
+
+E.8 · FIDELIDAD NUMERICA
+
+Cuadros publicados: ninguno. Balances municipales: ninguno. Tablas no
+recalculadas: ninguna. La única lista del §A es la de linderos, recontada
+sobre la transcripción: 7 elementos más una remisión (nota de lectura). Las
+fechas y la marca del aviso se leyeron en la imagen.
+
+E.9 · CONTRADICCIONES
+
+(a) «Salta, octubre 23 d e1913» en el aviso del §A: composición del original,
+transcripta con [sic]. (b) El mismo nombre, Lesser, designa en 1913 una finca
+rematada en junio (399 h4, martillero Víctor M. Saravia, linderos Arquati y
+Narciso Figueroa), un partido del departamento (404 h2) y la finca cuyo
+deslinde pide Luis Patrón Costas en octubre (444 h4, linderos López, Boedo,
+Solá y Vaqueros). No se concilia: ningún acto dice que sean la misma finca ni
+que haya cambiado de dueño. La pieza que lo resolvería es el expediente del
+deslinde, o la escritura del remate de junio. (c) En la misma hoja del §A el
+aviso de Wenner (443 h4) se había impreso con «Caladera» y «Baassani»; este
+aviso, del mismo juzgado y del mismo secretario, imprime «Caldera» y «Bassani»
+bien. No hay errata que declarar dos veces.
+
+E.10 · LIMITES
+
+Son CINCO y son límites, no pendientes. L1. No hay .tsv para 438 y 444: no
+existe la confianza por hoja ni la lista de hojas «a ojos»; se cubrió mirando
+las ocho hojas enteras. L2. Una sola versión del texto: ningún dígito ni
+palabra tiene desempate por segunda lectura. L3. No hay .jpg del script: no
+hay md5 ni dhash; la tinta sí se midió. L4. No hay sumario en la época: el
+cotejo sumario/cuerpo no es aplicable. L5. Los actos no llevan número: no hay
+fecha contra numeración, y los días de salida sin edición no se cuentan en un
+complemento de dos ediciones (clave «no-aplicable» en el §R). Aparte, no es
+límite de este corpus pero se declara: el cotejo del anillo 2 se hizo sólo
+contra los casos nombrados en v16, porque la lista entera de la toponimia
+establecida no está en el repositorio.
+
+QUÉ AGREGARÍA CADA INSUMO QUE FALTÓ. Una versión propia con spa daría
+desempate en la palabra suelta, que es exactamente donde falló este aviso tres
+veces; con ella la búsqueda de actores habría encontrado a Patrón Costas sin
+depender de la difusa. El .tsv daría la confianza por hoja. Las .jpg darían
+md5 y dhash, que aquí reemplazó el folio sin costo.
+
+E.11 · CAMBIOS AL INFORME ANTERIOR DE 1913
+
+Regla del modo complemento (flujo v1, §5.4). Cada cambio con su ficha o su
+hoja. Nada de esto reescribe el informe anterior: lo corrige desde afuera, y
+el AMPLÍA que incorpore 1913 debe leer los dos juntos.
+
+C1. EDICIONES AUSENTES: pasan de 2 a 0. El §1 y el recuento del informe
+anterior dicen «Ediciones ausentes: 2 (438 y 444)»; las dos están en el
+Release (§1 de este informe, tapas leídas en la imagen). CAE SU LÍMITE L4.
+
+C2. HOJAS Y COBERTURA: de 288 hojas distintas presentes sobre 296 (97,3 %) a
+296 sobre 296 (100 %). Los folios deducidos (1671-1674 y 1695-1698) quedan
+confirmados en la imagen.
+
+C3. §A: de TRECE entradas y catorce apariciones a CATORCE entradas y quince
+apariciones, con la ficha de 444 h4. Los deslindes del departamento publicados
+en 1913 pasan de UNO (Wenner, 443 h4 y 449 h4) a DOS; los actos sobre la finca
+o el partido Lesser, de dos (399 h4 y 404 h2) a tres. Toda afirmación del tipo
+«el único deslinde» o «la única vez que aparece Lesser» sobre 1913 deja de
+valer.
+
+C4. §B.1: se suman como núcleos del departamento el río Castellanos, el río de
+Las Nieves y la finca de Vaqueros como lindero, y el término «castellanos»
+deja de ser en 1913 sólo apellido: el B.3 anterior lo daba como abogado,
+ordenanza y otras personas, y en 444 h4 es un río del departamento.
+
+C5. §B.4, GRUPO 2: Pfister y Martín, peritos del deslinde de Wenner, lo son
+también del de Lesser, y Bassani y Aranda firman los dos. El informe anterior
+dijo que en 1913 NINGÚN actor falla la búsqueda por nombre completo en su
+propio acto; en el complemento falla uno, Luis Patrón Costas (B.4 y E.7).
+
+C6. E.4, AUTORIDAD: el informe anterior registró cuatro configuraciones de
+firma entre enero y abril y dejó abierto el resto del año. Se suma un
+interinato del Presidente del Senado, mirado el 23 y el 24 de setiembre (438
+h3), y la vuelta del titular, mirada el 11 de octubre (444 h3), con un «Es
+copia» de Juan Martín Leguizamón el 13.
+
+C7. §P: el informe anterior contó dos remisiones del departamento sin plano, y
+entre ellas el deslinde de Wenner, que no remite a ningún plano. Con el
+criterio estricto de §9, el aviso de 444 h4 tampoco remite a uno y NO SE SUMA.
+Si el AMPLÍA quiere mantener el criterio del informe anterior, serían tres;
+con el de la rúbrica, las de 1913 son cero y el recuento anterior debe
+revisarse.
+
+C8. NO CAMBIAN: los días de salida sin edición (28), porque el informe
+anterior ya contaba como ocupados el 27 de setiembre y el 25 de octubre, y las
+tapas confirman ahora esas fechas, las dos en sábado; la cadena de saldos
+(ningún resumen en el complemento); la cadena de folios (se completa, sin
+salto); el año editorial (V en la 438 y VI en la 444, coherente con el cambio
+en la 442); los avisos del departamento repetidos (uno, el de Wenner).
+
+C9. FUERA DEL CORPUS, sólo se declara: el zip de textos del Release trae ahora
+versión propia en spa (.prop.txt y .tsv) para las 28 hojas de 452 a 458, que
+el informe anterior cubrió con un OCR de cribado en inglés (su L5 y su F2).
+Este complemento no las relee. Si se quiere levantar ese límite, corresponde
+otro complemento: «LEE 1913 complemento 452-458».
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+F1. EL «hasta» DEL CONFIG NO PUEDE BAJAR. flujo v1 §5.2 dice que un config
+cambiado se entrega con «hasta» = año barrido. En un complemento de 1913 eso
+escribiría hasta 1913 sobre un config que llega a 1932, y lo dejaría diciendo
+lo contrario de lo que es. Propuesta: «hasta» = el mayor entre el vigente y el
+año barrido. Por esta razón este informe NO entrega lee_config.json y deja los
+agregados como propuesta (abajo).
+
+F2. EN MODO COMPLEMENTO, LA BÚSQUEDA DE ACTORES SE REPITE CON LA DIFUSA SOBRE
+LOS ACTOS YA HALLADOS. Con una sola versión, el apellido que decide el acto
+puede estar deformado en una letra («gbstas»), y la regla de v16 que prohíbe
+declarar ausente a un actor que no aparece en su propio acto sólo se puede
+aplicar si alguien busca ese acto por otra vía. Propuesta: para cada ficha
+del §A, correr la difusa (>= 0,78) de cada apellido del config sobre la hoja
+de la ficha.
+
+F3. EL CAMBIO DE UNA EDICIÓN AUSENTE A PRESENTE TIENE QUE CERRARSE CONTRA LO
+DEDUCIDO. En 1913 el informe anterior dedujo folios y fechas de dos ediciones
+que no tenía; el complemento los confirmó. La regla que se propone: todo
+complemento lee en la imagen tapa y folios, y dice en E.11 si lo deducido se
+confirma o no, porque eso valida o invalida el método del folio para los años
+que siguen con huecos.
+
+CONFIG ACTUALIZADO
+------------------
+
+No se entrega archivo (F1). Propuesta de agregados a «actores», con origen
+1913, para quien actualice el config vigente: custodio lopez, exequiel lopez,
+adolfo boedo, javier lesser, micaela lesser de outes, victorino f. sola. Luis
+Patrón Costas ya está (1930, 1931) y se conserva sin duplicar. A «anillo2» no
+se agrega nada: castellanos, las nieves, vaqueros y lesser ya están. A
+«falsos_positivos» y a «numeros», nada.
+
+§R · RECUENTO
+-------------
+
+anio: 1913
+ediciones_desde: 438
+ediciones_hasta: 444
+ediciones_presentes: 2
+ediciones_ausentes: 0
+hojas_presentes: 8
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 0
+periodicidad: miercoles-sabados
+dias_salida_sin_edicion: no-aplicable
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: extraida-en-sesion
+versiones: 1
+actos_departamento: 1
+actos_dominio: 1
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 0
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 2
+hojas_miradas: 8
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 2
+limites_declarados: 5
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 75
+avisos_release: 0
+complemento: 438-444
+
+CIERRE. SE ENTREGA ARCHIVO. Todo lo mirado está en notas.txt.
