@@ -158,13 +158,16 @@ La máquina ya corrió `lee_auto.py` y subió todo al Release del año, así que
 ```bash
 Y=1951; R=https://github.com/ediedrich/boletines-salta/releases
 curl -sL $R/expanded_assets/$Y -o exp.html     # inventario (v16 §1.1)
-for f in preinforme_$Y.txt resultados_$Y.csv decretos_$Y.csv log.txt \
-         lee_textos_$Y.zip recortes_$Y.zip avisos.txt; do
-  curl -fsSL -o $f $R/download/$Y/$f || echo "no llegó: $f"
-done
+# todo lo que no es un PDF de edición: pre-informe(s), CSV, log, zips, config, avisos
+grep -oE "releases/download/$Y/[^\"]+" exp.html | sed 's#.*/##' | sort -u \
+  | grep -vE '^[0-9]+\.pdf$' | while read f; do
+      curl -fsSL -o "$f" "$R/download/$Y/$f" || echo "no llegó: $f"; done
+ls BO-Salta-${Y}_*PRE-INFORME*.txt | sort | tail -1   # el pre-informe vigente es el de fecha más nueva
 # PDF: sólo los que hacen falta mirar, o el año entero:
 # seq <a> <b> | xargs -P 8 -I{} curl -fsSL -o pdf/{}.pdf $R/download/$Y/{}.pdf
 ```
+
+- **El pre-informe** se llama `BO-Salta-<año>_la-caldera_PRE-INFORME-LEE_<fecha>.txt`. Si hay más de uno (una corrida vieja y una nueva), **vale el de fecha más nueva**, y el §0 dice cuál se usó.
 
 - **`lee_textos_<año>.zip`** trae los `.txt`, `.tsv` y `EXTRAIDO.json` de `lee_trabajo`. Con él hay **segunda versión y confianza por hoja**, así que ya no rige el límite de v16 §2.1.
 - **Si falta** el zip de textos o el pre-informe, se trabaja como en v16 §2.1 y se declara en el §0. No se reclama.
