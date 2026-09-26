@@ -1,0 +1,935 @@
+==============================================================================
+BOLETIN OFICIAL DE SALTA - ANO 1922 - COMPLEMENTO, EDICIONES N 917 A 938
+==============================================================================
+LEE v17 -- 1922 complemento 917-938. Barrido LEE sobre el departamento de La
+Caldera. Rubrica LEE v16 del repositorio corrige, con los cambios de
+flujo-editorial.md version 1, §5 (LEE v17). Informe fechado el 26/09/2026.
+Complementa al informe
+BO-Salta-1922_890-916_la-caldera_LEE-1922_2026-09-22.txt, que no se reemplaza.
+
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: CON PENDIENTES. Un pendiente, nombrado: no se recalculo ningun
+subtotal de los tres resumenes de Tesoreria del complemento (julio, septiembre
+y octubre), que la regla del §4.1 de v16 pide para cada cuadro. Se
+transcribieron y encadenaron sus saldos de apertura y cierre en la imagen
+(E.1). Es trabajo que una sesion puede hacer; no toca al departamento, porque
+ningun resumen desagrega por departamento, pero sin el no se puede declarar
+COMPLETO. Todo lo demas esta hecho, y los limites van en E.10.
+
+Modo: complemento (flujo §5.4). El corpus son SOLO las ediciones 917 a 938.
+Rigen todas las reglas de v16, y ademas el informe dice que afirmaciones del
+informe anterior de 1922 cambian con lo nuevo: eso esta en E.9, bajo el rotulo
+"LO QUE CAMBIA DEL INFORME ANTERIOR", cada cambio con su ficha.
+
+Se hizo en tres turnos de la misma sesion. Ningun turno entrego archivo salvo
+este.
+
+Insumos. El Release 1922 de ediedrich/boletines-salta trae 50 PDF (889 a 938),
+el aviso de 889 (avisos.txt: una edicion que el archivo oficial no tiene), dos
+pre-informes (2026-09-22 y 2026-09-26), resultados_1922.csv,
+decretos_1922.csv, log.txt, recortes_1922.zip, lee_textos_1922.zip y
+lee_config.json. Llegaron todos. El pre-informe vigente es el de fecha mas
+nueva, 2026-09-26, generado por lee_auto.py (sha f9a69a713e25 segun
+estado.json) sobre 720 hojas; su log dice que la capa previa fue util en 710
+de 720 hojas y que se OCRizaron 10. En el complemento, el OCR propio existe en
+5 hojas (919 h13, 927 h15, 927 h16, 931 h15, 931 h16): son las unicas con
+segunda version y con confianza por hoja, y las cinco estan en la lista "a
+ojos" del pre-informe. El resto del complemento tiene una sola version. El
+flujo §5.1 dice que con el zip de textos "ya no rige el limite de v16 §2.1":
+en 1922 eso vale para 5 de 274 hojas (§F).
+
+Config (§5.2 del flujo, que reemplaza a v16 §15.4):
+  config del Release:  version 2026-09-22, hasta 1932, actores 554, anillo2 160
+  config de corrige:   version 2026-09-26, hasta 1932, actores 575, anillo2 166
+  se usa: corrige -- razon: el unico valido (flujo §5.2) y el mas nuevo
+  contenido: corrige contiene al del Release; difieren en 21 actores, 6
+  terminos de anillo 2 y 1 numero, todos de corrige y ausentes del Release
+Las 28 busquedas que el Release no tenia se corrieron en sesion sobre los
+textos. Con esta entrega va un lee_config.json actualizado (§F).
+
+Entorno verificado: nproc 1; pymupdf instalado desde pypi; tesseract 5 con eng
+y osd, SIN spa (no hay OCR en sesion). Los 22 PDF del complemento se bajaron
+del Release en una llamada (14 MB). Son PDF reales. Hojas por edicion: las 22
+coinciden con EXTRAIDO.json (274 hojas).
+
+Que verifico la sesion: las cuatro pasadas y el anillo 2 sobre la union propia
+de los textos; el anillo de actores dos veces (la primera estaba rota: E.7);
+las 22 tapas en la imagen; diez lecturas de folio, cinco en la imagen; las
+nueve fichas del §A enteras en la imagen salvo tres firmas; el Item 7 del
+presupuesto semestral entero; los saldos de apertura y cierre de los tres
+resumenes; y fecha contra numeracion en los vecinos +-3 de las once piezas de
+las secciones A y B, sobre la capa.
+
+Desvio del §8.17 de v16, declarado: las transcripciones van SIN TILDES NI
+ENES, igual que el informe anterior del mismo ano, para que los dos sean
+cotejables renglon a renglon. Las demas marcas del original (erratas, [sic],
+mayusculas, puntuacion, abreviaturas) se conservan. Una proxima entrega puede
+restituir la ortografia desde los recortes.
+
+
+§1 · CORPUS REVISADO
+--------------------
+
+22 ediciones, N 917 a 938, 274 hojas de PDF, del viernes 28 de julio al
+viernes 29 de diciembre de 1922. La numeracion corre sin huecos. Todas las
+fechas se leyeron en la imagen de la tapa (entre corchetes, como pide el §7 de
+v16). Todas las tapas dicen "PUBLICACION SEMANAL", "ANO XIV" y "GOBIERNO DEL
+DR. ADOLFO GUEMES" (esta ultima leida en la imagen de 917 y 938; en las demas,
+en la capa). Ninguna declara cantidad de paginas.
+
+ed   hojas  fecha (imagen)          ed   hojas  fecha (imagen)
+917    10  [vie 28 de julio]       928    15  [vie 20 de octubre]
+918    12  [vie 4 de agosto]       929    15  [vie 27 de octubre]
+919    14  [vie 11 de agosto]      930    12  [vie 3 de noviembre]
+920    12  [vie 18 de agosto]      931    16  [vie 10 de noviembre]
+921    10  [vie 25 de agosto]      932    14  [vie 17 de noviembre]
+922     8  [vie 1 de setiembre]    933    13  [vie 24 de noviembre]
+923    12  [vie 8 de setiembre]    934    11  [vie 1 de diciembre]
+924    16  [vie 22 de setiembre]   935    12  [vie 8 de diciembre]
+925    11  [vie 29 de setiembre]   936     8  [vie 15 de diciembre]
+926    15  [vie 6 de octubre]      937    12  [vie 22 de diciembre]
+927    16  [vie 13 de octubre]     938    10  [vie 29 de diciembre]
+
+Confianza por hoja: solo en las 5 hojas con OCR propio, las cinco "a ojos"
+(media de todo el ano 60,9 segun el pre-informe). En las otras 269 no hay
+confianza porque no hay segunda version (E.10).
+
+Techo de resolucion: 150 ppi en las 274 hojas, medido por hoja. Cada hoja trae
+dos imagenes, una a 150 ppi y otra a 75 ppi; la de 75 es una copia reducida y
+no agrega grano. Es el mismo techo que 1923-1932 y algo menos que el de
+890-916 (150-192).
+
+Dias de salida: el Boletin sale los viernes, como declara el informe anterior.
+UN VIERNES SIN EDICION: el 15 de septiembre. 923 es del viernes 8 y 924 del
+viernes 22, y la numeracion no salta. La causa esta en el corpus: el decreto N
+284 del 9 de septiembre (925 h4, mirado) declara feriado para toda la
+Administracion los dias 13, 14 y 15 "con motivo de la tradicional festividad
+del Senor y Virgen de los Milagros". El decreto se publica dos semanas despues
+del feriado que explica. Ediciones dobles: ninguna.
+
+Paginacion corrida: sigue corrida en el segundo semestre. Resultado en E.9.
+
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+Version: la capa previa de los PDF, tal como la extrajo lee_auto.py en
+lee_textos_1922.zip, etiqueta "prev" en 274 hojas; OCR propio "prop" en 5. Las
+busquedas se hicieron sobre las dos. U+0002: cero veces. U+00AD: 4.148 veces,
+quitado junto con el salto de renglon. Se midio la union defectuosa: devuelve
+las mismas 9 hojas que la correcta; en el complemento el guion blando no
+esconde ninguna mencion.
+
+Las cuatro pasadas, sobre las 279 hojas-version:
+1. Literal/normalizada ("cald"): 9 hojas, 17 apariciones, todas "caldera" y
+todas del departamento: 918 h4, 919 h4, 924 h5, 927 h5, 927 h6, 931 h5, 931
+h7, 936 h2 y 937 h3. Ninguna es el apellido Calderon.
+2. Laxa, con la variante espaciada escrita con separador entre cada par de
+letras y con la clase de espacios en blanco: 17 aciertos de la forma exacta y
+dos espaciados, "c a ldera" (919 h4) y "c a l d e r a" (931 h5, en el
+epigrafe). Las dos hojas ya estaban en la literal: la espaciada no rescato
+ninguna hoja nueva en el complemento. No devolvio cero, de modo que no hizo
+falta probarla.
+3. Difusa (>= 0,78): una sola forma, "ldera" (919 h4), que es la segunda mitad
+de "c a ldera". Difusa ampliada (0,70-0,78, iniciales c, g, o): 14 formas,
+todas ruido (cabrera, cada, cadaver, cadena, cadenas, cadillal, calidad,
+candela, cara, cartera, cuadra, cuadras, cualquiera, galeria).
+4. Anillo 2, actores, numeros y reemplazo, sobre el texto normalizado y sobre
+el texto sin puntuacion.
+
+Cotejo del anillo 2 contra la toponimia establecida (§5.1bis de v16), en tres
+lineas:
+  faltantes: los 7 topónimos que v16 nombra entre sus 17 faltantes ya
+    estan en el config de corrige; los otros 10 no estan nombrados en la
+    rubrica y no se pueden cotejar sin la lista: no se afirma nada.
+  apellidos: siguen en la lista de lugares los 10 que nombra v16, mas
+    "mamani": 11. No se movieron (E.10 y §F).
+  a revisar: no se repitio el conteo de 44; queda para un LEE cruce.
+
+Anillo 2: 21 terminos de 166 con acierto. Se leyeron los contextos de los 21,
+uno por uno (§B.3). Actores: 575 del config; 46 con acierto por nombre
+completo, tras corregir la busqueda (E.7). Numeros: 130 del config, sin
+coincidencias que no sean de cifra. Reemplazo: las diez formulas del config;
+sus aciertos del departamento son los del §A.
+
+Identificadores de las ausencias: numero de decreto y fecha, ademas de lugar,
+persona y organismo. Toda ausencia del §B y del E.9 se afirma con dos.
+
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+Nueve fichas, en once hojas de siete ediciones. Todas son actos del Poder
+Ejecutivo provincial (gobernador Adolfo Guemes; ministros Antonio Ortelli, de
+Gobierno, y Rafael P. Sosa, de Hacienda). No hay un solo aviso judicial,
+remate, mensura ni acto de dominio del departamento en el semestre. Todo lo
+transcripto sale de la imagen, salvo lo que va entre corchetes, que es de la
+capa y lo dice cada ficha.
+
+A.1 · Edicion 918
+
+FUENTE: Edicion N 918 (viernes 4 de agosto de 1922), hoja 4, columna
+izquierda.
+
+FICHA: Decreto N 192, Salta, 27 de julio de 1922. El Gobernador acepta la
+renuncia de Julio Royo Ortiz como Receptor de Rentas del departamento. No
+nombra sucesor.
+
+MODO DE LECTURA: Imagen: recorte de la columna izquierda, y 330-560, a 220
+dpi. El refrendo queda fuera del recorte y sale de la capa previa; va entre
+corchetes.
+
+TEXTO:
+  Aceptando la renuncia del
+  Receptor de Rentas de La
+  Caldera.
+                N 192
+  Salta, Julio 27 de 1922.
+  Vista la renuncia presentada por el Receptor de Rentas del
+  Departamento de La Caldera; atento las razones eu [sic] que la
+  funda,
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1o -- Aceptase la mencionada renuncia del cargo antedicho,
+  presentada por el senor Julio Royo Ortiz.
+  Art. 2 -- Comuniquese, publiquese y dese al Registro Oficial.
+  GUEMES
+  [Rafael P. Sosa]
+
+NOTA DE LECTURA: Transcripcion sin tildes, como todo este informe (ver §0). En
+el epigrafe y en el cuerpo, las enes y las ues de "renuncia" no se distinguen
+a 150 ppi: el original puede traer tipos invertidos. No se marca [sic] porque
+no se puede decidir. El decreto acepta la renuncia y NO nombra reemplazante:
+el cargo queda sin titular nombrado en el corpus hasta que el decreto N 536
+(937 h3) lo muestra ocupado por Jorge A. Rauch, cuyo nombramiento no aparece
+(§5.3 de v16; ver B.4 y E.9).
+
+A.2 · Edicion 919
+
+FUENTE: Edicion N 919 (viernes 11 de agosto de 1922), hoja 4, columna
+izquierda.
+
+FICHA: Decreto N 204, Salta, 3 de agosto de 1922. Acepta la renuncia de don
+Vicente Vivas, juez de paz suplente del departamento.
+
+MODO DE LECTURA: Imagen entera: recorte de la columna izquierda, y 190-450, a
+220 dpi.
+
+TEXTO:
+  Aceptando la renuncia del
+  juez de paz suplente de la Cal-
+  dera don Vicente Vivas.
+                N 204
+  Salta, Agosto 3 de 1922
+  Vista la renuncia elevada por el senor Juez de Paz Suplente del
+  departamento de La Caldera,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1o -- Aceptase la renuncia elevada por el senor Juez de Paz
+  Suplente del departamento La Caldera, don Vicente Vivas.
+  Art. 2 -- Comuniquese, publiquese, y dese al Registro Oficial.
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA: La fecha va sin punto final. Vivas habia sido nombrado
+suplente por el decreto N 105 del 12 de junio (912 h3, informe anterior): dura
+siete semanas. No se nombra reemplazante en el corpus del complemento. La capa
+previa escribe "c a ldera"; la literal lo encuentra por la otra aparicion de
+la misma hoja y la laxa espaciada por esta.
+
+A.3 · Edicion 924
+
+FUENTE: Edicion N 924 (viernes 22 de septiembre de 1922), hoja 5, columna de
+cuadro que ocupa la hoja entera; el item sigue en la hoja 6.
+
+FICHA: Ley de presupuesto de gastos de la Administracion para el ejercicio del
+1 de julio al 31 de diciembre de 1922 (924 h2 en adelante). Inciso de
+Gobierno, Item 7, Registro Civil de la Campana: un encargado en Caldera, 44
+pesos mensuales y 264 por el semestre.
+
+MODO DE LECTURA: Imagen: cuatro recortes a 170 y 220 dpi que cubren el item
+entero (924 h5, y 440-660; 924 h6, y 60-530). El encabezado de la ley (924 h2)
+y su total general salen de la capa previa y NO se miraron.
+
+TEXTO:
+  ITEM 7o.--REGISTRO CIVIL DE LA CAMPANA
+  1 Encargado en 1a. seccion Anta ............  44.--    264.05
+  [...]
+  1 encargado en la Candelaria ................  44.--    264.00
+  1 encargado en Tala--Candelaria .............  44.--    264.00
+  1 encargado en Caldera ......................  44.--    264.00
+  1 encargado en Cafayate .....................  44.--    264.00
+  [...]
+  1 encargado en Cuchillo--Rivadavia ..........  44.--    264 --
+                                               -------  --------
+                                               2376.--  15.312.--
+
+NOTA DE LECTURA: RECUENTO PROPIO (§4.1bis de v16) sobre la transcripcion
+completa de las dos hojas, no sobre el original a ojo: 57 renglones de "1
+encargado", 17 en la hoja 5 y 40 en la hoja 6. Ningun elemento tiene cuatro
+palabras o mas que puedan ser dos nombres pegados, porque cada renglon es un
+cargo. El acto no declara numero de encargados, de modo que el recuento se
+coteja contra los totales. Y LOS TOTALES NO CIERRAN, ni contra el recuento ni
+entre si: 57 x 44 = 2.508 y 57 x 264 = 15.048, mientras la ley imprime 2.376
+(que serian 54 encargados) y 15.312 (que serian 58). Se transcriben y no se
+concilian. Hay ademas cinco cifras de la columna semestral que no son 264,00:
+264.05 (1a. seccion Anta), 294.00 (Cachi), 254.00 (Chicoana), 264.09 (Rio
+Piedras) y 294.00 (Seclantas). Son erratas de la columna, no del OCR: se
+leyeron en la imagen. El renglon del departamento esta limpio. Es la unica
+partida del departamento que la ley publica en el tramo mirado; que no haya
+otra en el resto de la ley queda dicho solo para las pasadas de texto (ver
+E.8).
+
+A.4 · Edicion 927
+
+FUENTE: Edicion N 927 (viernes 13 de octubre de 1922), hoja 5, columna
+derecha; cierra en la hoja 6, columna izquierda.
+
+FICHA: Decreto 345 [impreso sin "N"], Salta, 28 de septiembre de 1922. A
+pedido de la Jefatura de Policia (nota 3544), nombra subcomisarios ad honorem
+para el departamento a Francisco Urquiza, con jurisdiccion en Vaqueros, y a
+Victor Marin, en San Alejo y Santa Rufina.
+
+MODO DE LECTURA: Imagen entera: 927 h5 columna derecha, y 370-683, a 210 dpi;
+927 h6 columna izquierda, y 20-130, a 190 dpi.
+
+TEXTO:
+  Nombramiento de Sub-Comi-
+  sarios Auxiliares del departa-
+  mento de La Caldera, a los
+  senores Francisco Urquiza y
+  Victor Marin.
+                345
+  Salta, Septiembre 28 de 1922
+  Vista la nota 3544, de la Jefatura de Policia, por la que se
+  solicita el nombramiento de Sub-Comisarios auxiliares para el
+  departamento de La Caldera.
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1 -- Nombrase con caracter ad-honorem, Sub-Comisarios de
+  Policia para el departamento de La Caldera a don Francisco
+  Urquiza y a don Victor Marin, el primero con jurisdiccion en
+  Vaqueros y el segundo en San Alejo y Santo Rufino [sic].
+  [hoja 6]
+  Art. 2 -- Comuniquese, publiquese y dese al Registro Oficial.
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA: "Santo Rufino" [sic] por Santa Rufina: errata del original,
+confirmada en la imagen; va tambien a E.9. El numero se imprime solo, sin "N".
+El epigrafe dice "Auxiliares" y el articulo no. RECUENTO PROPIO: dos
+nombrados, dos jurisdicciones de Urquiza y Marin (Vaqueros; San Alejo y Santa
+Rufina, que se cuentan como dos parajes). La rubrica v16 (§5.3) cita el
+decreto 2674 de 1925 que nombra subcomisario de Vaqueros "en reemplazo de D.
+Francisco S. Urquiza" y dice que el nombramiento de Urquiza no aparecia en
+ningun tramo leido. ESTE PUEDE SER ESE NOMBRAMIENTO, pero el nombre de 1922 no
+trae la inicial S. y el cargo se da en 1922 y se revoca en 1925: la identidad
+es inferencia y se rotula como tal. La pieza que lo resolveria es el decreto
+de 1925 cotejado contra este, en un LEE cruce.
+
+A.5 · Edicion 927
+
+FUENTE: Edicion N 927, hoja 6, columna izquierda (abajo) y columna derecha
+(arriba).
+
+FICHA: Decreto N 347, Salta, 28 de septiembre de 1922. Julio Royo, ex
+Expendedor de Guias, Marcas y Multas Policiales del departamento, adeuda a
+Receptoria General 1.003,99 y es acreedor por 397 de sueldo de la Comisaria de
+la Caldera de julio de 1921, pagados de su peculio. Se lo autoriza a saldar
+con 607 en efectivo y un documento a sesenta dias por 397.
+
+MODO DE LECTURA: Imagen entera: columna izquierda y 400-684 a 200 dpi; columna
+derecha y 20-420 a 190-210 dpi.
+
+TEXTO:
+  Transferencia de credito y
+  aceptacion de documentos a
+  plazos para pago de diferencias
+  de receptoria del Departamen-
+  to de La Caldera.
+                No 347
+  Salta, Setiembre 28 de 1922
+  Vista la solicitud presentada por el ex-Expendedor de Guias,
+  Marcas y Multas Policiales del Departamento de La Caldera, don
+  Julio Royo; de la que resulta: Que adeuda a Receptoria Gral. la
+  cantidad de un mil tres pesos, noventa y nueve centavos, siendo a
+  la vez acreedor al Fisco por la suma de trescientos noventa y
+  siete pesos por concepto de sueldo de la Comi-
+  [columna derecha]
+  saria de la Caldera, por el mes de Julio de 1921; los que ha
+  abonado de su peculio
+  Que ofrece a fin de regularizar su situacion, hacer una entrega
+  de seiscientos siete pesos en efectivo y un documento a sesenta
+  dias con su sola firma, por el importe de la planilla hasta tanto
+  esta sea liquidada,
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1o Autorizase al senor Receptor Gral. de Rentas para que
+  reciba del senor Julio Royo la cantidad de $ 607.-- en efectivo y
+  un documento a sesenta dias, con su sola firma, por $ 397.
+  Art. 2 -- Comuniquese publiquese, dese al R. O.
+  GUEMES
+  RAFAEL P. SOSA
+
+NOTA DE LECTURA: Recalculo: 607 + 397 = 1.004, contra una deuda de 1.003,99;
+la deuda neta del credito seria 1.003,99 - 397 = 606,99. El decreto redondea
+un centavo y no lo dice. Se declara y no se corrige. Las cifras de la deuda y
+del credito estan solo en letras; las del articulo, solo en cifras. El decreto
+llama a Royo "ex-Expendedor" y NO receptor: su renuncia como expendedor no
+aparece en el corpus del complemento (918 h4 es la de receptor). Que Royo
+pagara de su peculio el sueldo de la comisaria de julio de 1921 es lo que el
+decreto afirma; no se infiere por que.
+
+A.6 · Edicion 931
+
+FUENTE: Edicion N 931 (viernes 10 de noviembre de 1922), hoja 5, columna
+izquierda.
+
+FICHA: Decreto N 442, Salta, 31 de octubre de 1922. Acepta la renuncia de
+Jorge A. Rauch como Comisario de Policia del departamento y nombra en su
+reemplazo a Julio Royo.
+
+MODO DE LECTURA: Imagen entera: columna izquierda, y 170-470, en tres recortes
+a 200-210 dpi.
+
+TEXTO:
+  Aceptacion de renuncia y nombra-
+  miento de Comisario de Policia de La
+  Caldera.
+                N 442
+  Salta, Octubre 31 de 1922
+  Vista la renuncia presentada por el Comisario de Policia del
+  Departamento La Caldera, don Jorge A. Rauch; atento a los
+  motivos en que la funda,
+  Art. 1o.-- Aceptase la renuncia interpuesta por el senor Jorge A.
+  Rauch, del cargo de Comisario de Policia de La Caldera, y
+  denseles las gracias por los servicios prestado [sic].
+  Art. 2o.-- Nombrase en reemplazo del dimitente al senor Julio
+  Royo.
+  Art. 3 -- Comuniquese, publiquese y dese al Registro Oficial.
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA: El 9 del ano sale roto en la imagen (la capa lee "1022"); la
+fecha se da por 1922 por la tapa y los vecinos (441 del 30/10, 443 del 2/11).
+El decreto no imprime la formula "El Poder Ejecutivo ... DECRETA" entre los
+considerandos y el articulo 1: se transcribe como esta (§4.3 de v16). Rauch
+era comisario desde el decreto N 349 del 8 de marzo (899 h10, informe
+anterior).
+
+A.7 · Edicion 931
+
+FUENTE: Edicion N 931, hoja 7, columna izquierda.
+
+FICHA: Decreto N 446, Salta, 3 de noviembre de 1922. Movimiento en cadena de
+la policia: el comisario de La Silleta pasa a la Capital, lo reemplaza "el
+Comisario del departamento La Caldera, senor Julio Royo", y a Royo lo
+reemplaza don Eustaquio Murua.
+
+MODO DE LECTURA: Imagen entera: columna izquierda, y 20-480, en cuatro
+recortes a 190-210 dpi.
+
+TEXTO:
+  Renuncia y Nombramiento
+                N 446
+  Salta, Noviembre 3 de 1922
+  Vista la renuncia presentada por el Sub-comisario de El Tabacal,
+  don Augusto Troncoso; atento al pedido formulado por el senor
+  Jefe de Policia.
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1o.-- Aceptase la expresada renuncia, y nombrase
+  Subcomisario de El Tabacal al actual Comisario del departamento
+  de Metan senor Navor J. Frias designandose para ocupar la vacante
+  dejada por este, al Oficial Inspector don Carlos C. Quiroga.
+  Art. 2o.-- Nombrase Oficial Inspector de la Policia de la
+  Capital, al comisario de La Silleta don Victor Soliverez, y
+  designase en reemplazo de este al Comisario del departamento La
+  Caldera, senor Julio Royo, y de este ultimo a don Eustaquio
+  Murua.
+  Art. 3o.-- Comuniquese, publiquese y dese al Registro Oficial.
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA: RECUENTO PROPIO de la cadena: cinco personas y cinco cargos
+(Troncoso sale; Frias, Quiroga, Soliverez, Royo y Murua entran). Royo fue
+comisario de La Caldera del 31 de octubre al 3 de noviembre de 1922, segun las
+fechas de los dos decretos; que haya asumido no lo dice ninguno. Murua esta en
+el config con origen 1912 (Eustaquio Murua).
+
+A.8 · Edicion 936
+
+FUENTE: Edicion N 936 (viernes 15 de diciembre de 1922), hoja 2, columna
+derecha (abajo), y hoja 3, columna izquierda (arriba).
+
+FICHA: Decreto N 529, Salta, 5 de diciembre de 1922. Acepta la renuncia de
+Jorge A. Rauch como Expendedor de Guias, Marcas y Multas Policiales del
+departamento y nombra a don Eustaquio Murua, con fianza.
+
+MODO DE LECTURA: Imagen: 936 h2 columna derecha y 540-684 a 190 dpi; 936 h3
+columna izquierda y 20-250 a 190 dpi. La firma queda fuera del recorte y sale
+de la capa; va entre corchetes.
+
+TEXTO:
+  Aceptacion de renuncia.
+                N 529
+  Salta, Diciembre 5 de 1922
+  Vista la renuncia interpuesta por el Expendedor de Guias, Marcas
+  y Multas Policiales del Departamento de La Caldera, don
+  [hoja 3]
+  Jorge A. Rauch; atento a las razones en que la funda,
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1o -- Aceptase la renuncia de referencia y nombrase para
+  desempenar dicho cargo a don Eustaquio Murua, quien debera
+  rendir fianza a satisfaccion de acuerdo con lo dispuesto por el
+  Art. 77 de la Ley de contabilidad de la Provincia.
+  Art. 2 -- Comuniquese, publiquese, y dese al R. O.
+  [GUEMES]
+  [Rafael P. Sosa]
+
+NOTA DE LECTURA: La capa previa escribe "Rluch": la busqueda por nombre
+completo de Jorge A. Rauch NO devuelve esta hoja (ver B.4). Murua queda, desde
+el 3 de noviembre y el 5 de diciembre, con la comisaria y la expendeduria del
+departamento; el decreto no lo dice, se deduce de los dos actos y se rotula
+como inferencia. El nombramiento de Rauch como expendedor no aparece en el
+corpus del complemento.
+
+A.9 · Edicion 937
+
+FUENTE: Edicion N 937 (viernes 22 de diciembre de 1922), hoja 3, columna
+izquierda.
+
+FICHA: Decreto N 536, Salta, 7 de diciembre de 1922. Acepta la renuncia de
+Jorge A. Rauch como Receptor de Rentas del departamento y nombra a la senora
+Romelia Caceres de Jerez, con fianza.
+
+MODO DE LECTURA: Imagen entera: columna izquierda, y 290-600, en dos recortes
+a 210 dpi.
+
+TEXTO:
+  Aceptando la renuncia del Re-
+  ceptor de Rentas del Dpto. de
+  La Caldera.
+                N 536
+  Salta, Diciembre 7 de 1922
+  Vista la renuncia presentada por el senor Jorge A. Rauch, del
+  cargo de Receptor de Rentas del Departamento de "La Caldera",
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1 -- Aceptase la mencionada renuncia y nombrase para
+  desempenar el referido cargo a la senora Romelia Caceres de
+  Jerez quien debera prestar la fianza que establece el Art. 77 de
+  la Ley de Contabilidad de la Provincia.
+  Art. 2o -- Comuniquese, publiquese y dese al Registro Oficial.
+  GUEMES
+  RAFAEL P. SOSA
+
+NOTA DE LECTURA: La capa previa escribe "Ranch". Las comillas de "La Caldera"
+son del original. Es un cargo de Hacienda del departamento dado a una mujer;
+NO se afirma que sea el primero ni el unico: este informe no tiene universo
+para un superlativo. Caceres es apellido de un encargado del Registro Civil
+del departamento declarado cesante en marzo (Casimiro Caceres, 902 h2); no se
+relacionan. El nombramiento de Rauch como receptor no aparece en el
+complemento: entre el 27 de julio (renuncia de Royo Ortiz, 918 h4) y el 7 de
+diciembre, el corpus no dice quien lo nombro ni cuando.
+
+
+
+§B · VECINDAD
+-------------
+
+
+B.1 · Nucleos ya fichados en el §A
+----------------------------------
+
+Personas: Julio Royo Ortiz, Julio Royo, Vicente Vivas, Francisco Urquiza,
+Victor Marin, Jorge A. Rauch, Eustaquio Murua, Romelia Caceres de Jerez, y los
+firmantes Guemes, Ortelli y Sosa. Lugares: Vaqueros, San Alejo, Santa Rufina
+(impreso "Santo Rufino"). Cargos del departamento que el semestre toca:
+comisaria, subcomisarias auxiliares, juzgado de paz suplente, receptoria de
+rentas, expendeduria de guias y registro civil (en el presupuesto).
+
+B.2 · Nucleos del departamento en actos que NO nombran el termino
+-----------------------------------------------------------------
+
+EDICION N 919, HOJA 3, columna izquierda. DECRETO N 200, SALTA, AGOSTO 1o DE
+1922. Mirado entero en la imagen (y 225-590, 200 dpi). Transcripcion:
+  Autorizando la instalacion de
+  una escuela nacional en Mo-
+  jotoro, departamento de Cam-
+  po Santo.
+                N 200
+  Salta, Agosto 1o de 1922
+  Visto el expediente N 1104, letra D, iniciado por la Inspeccion
+  Nacional de Escuelas, solicitando la adquiescencia [sic]
+  correspondiente para instalar en Mojotoro, departamento de Campo
+  Santo, una escuela de la Ley 4874; atento lo informado por el
+  Consejo General de Educacion,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1 -- Autorizase a la Inspeccion Nacional de Escuelas para
+  instalar en Mojotoro, departamento de Campo Santo, una escuela de
+  la Ley 4874.
+  Art. 2o -- Comuniquese, publiquese y dese al R. O.
+  GUEMES
+  ANTONIO ORTELLI
+
+POR QUE SE INCLUYE: entra por el anillo 2, termino "mojotoro". EL ACTO
+ATRIBUYE MOJOTORO A CAMPO SANTO, tres veces. El decreto del 23 de junio de 912
+h1 (informe anterior) escribe "de Mojotoro, La Caldera", y la division
+electoral de 891 h8 pone Mojotoro en el Colegio Electoral de La Caldera y la
+"Estacion Mojotoro" junto a Campo Santo. Por el §5.1ter de v16 la jurisdiccion
+la da el acto, y aqui dos actos del mismo ano la dan distinta: queda
+INDETERMINADA y va a E.9. Tampoco se decide si el Mojotoro de la escuela es el
+paraje o la estacion. "Adquiescencia" es la grafia del original.
+
+B.3 · Terminos que en el complemento son otra cosa
+--------------------------------------------------
+
+Se leyeron los contextos de los 21 terminos con acierto. Salvo "vaqueros" (927
+h5, en el §A) y "mojotoro" (919 h3, en B.2), NINGUNO ES DEL DEPARTAMENTO:
+"candelaria" (16 apariciones en 11 hojas) es siempre el departamento de La
+Candelaria: su comision municipal, sus jueces de paz, su registro civil, la
+mesa electoral de su iglesia y una finca "ubicada en el departamento de La
+Candelaria". El informe anterior anoto que 1922 imprime Calderilla como
+"candelaria" en su propio circuito (891 h8); en el complemento esa forma no
+aparece.
+Apellidos que coinciden con toponimos: "castellanos" (Benjamin Castellanos,
+juez de paz suplente de Chicoana; el doctor Juan Jose Castellanos, sindico y
+fiscal ad hoc); "isasmendi" (Mariano Isasmendi, Severo Isasmendi Ortiz de
+Rosario de Lerma, la razon social Isasmendi y Cia.); "apaza" (Nacianceno
+Apaza, juez de paz de Guachipas; el sucesorio de Mercedes Apaza de Taritolay);
+"murua" (Carlos Murua, subcomisario de Santo Domingo, Rivadavia; Eustaquio
+Murua, que si es del §A); "aramayo" (la tutela de la menor Vicenta Flora
+Aramayo); "quintin" (Quintin S. Aguirre de Pichanal; Quintin Diaz, lindero en
+Molinos); "wierna" (Arturo Wierna, auxiliar de Estadistica).
+Toponimos de otra parte: "san jose" (San Jose de Orquera, Metan; la propiedad
+San Jose de Chicoana); "durazno" (una damajuana de cana durazno; una finca en
+La Candelaria); "pacara" (madera, en la tarifa de 923 h5-h6); "tabacal" (El
+Tabacal, Oran); "mesada" (una finca de Anta; la Mesada Grande de otro
+departamento); "betania" (subcomisaria de Campo Santo); "entre rios" (calle de
+la Capital); "santa gertrudis" y "el bordo" (localidades de Chicoana en un
+nombramiento de jueces); "castanares" (subcomisaria de la Capital);
+"parroquia" (la oficina o parroquia de una constancia).
+
+B.4 · Ausencias del anillo de actores
+-------------------------------------
+
+Busqueda por nombre completo sobre el texto sin puntuacion, con la puntuacion
+quitada TAMBIEN del nombre del config (E.7): 46 de 575 actores con acierto.
+GRUPO 1, los que solo aparecen en su propio acto del departamento: Vicente
+Vivas (919 h4), Francisco Urquiza y Victor Marin (927 h5, que no estaban en el
+config con esos nombres), y Romelia Caceres de Jerez (937 h3, nueva).
+GRUPO 2, los que aparecen en mas de un acto del departamento, que arman la
+trama del semestre: Julio Royo / Julio Royo Ortiz (918 h4, 927 h6, 931 h5, 931
+h7), Jorge A. Rauch (931 h5, 936 h3, 937 h3) y Eustaquio Murua (931 h7, 936
+h3).
+GRUPO 3, los que aparecen tambien fuera del departamento: Julio Royo Ortiz,
+nombrado Expendedor de guias de La Silleta, Rosario de Lerma, el 18 de
+noviembre como "Comisario de la localidad" (decreto N 493, 934 h1, mirado en
+la imagen: la firma pasa de hoja y no se miro). Victor Soliverez, comisario de
+La Silleta en el decreto N 446, es "Victor E. Soliverez" en el N 493. Los
+otros 40 actores con acierto son de otros departamentos o de la Capital
+(jueces, escribanos, sindicos, firmantes de la Corte); ninguno toca al
+departamento.
+
+FALLAS DE LA BUSQUEDA, NOMBRADAS (§5.1 de v16): Jorge A. Rauch, cuya busqueda
+por nombre completo devuelve SOLO 931 h5 y no sus otros dos actos, porque la
+capa escribe "Rluch" (936 h3) y "Ranch" (937 h3). Rafael P. Sosa, que refrenda
+los actos de Hacienda del semestre y la busqueda devuelve en solo 2 hojas,
+porque la capa espacia las letras de la firma.
+
+AUSENTES DEL SEMESTRE, con dos identificadores cada uno (nombre completo y
+apellido suelto sin puntuacion, contra las 279 hojas-version): Carlos F.
+Matienzo (juez de paz y encargado del Registro Civil desde junio), Augusto
+Regis, Daniel Linares como persona, Domingo Royo, Victor Masclef, Juan de la
+Cruz Nogales, Eustaquio Guerra, Santiago Guzman y Manuel Condori no aparecen
+en ningun acto del departamento de 917-938. "Linares" tiene 12 aciertos y
+ninguno es Daniel Linares: es la firma "L. Linares" de la Seccion
+Administrativa en las leyes reimpresas.
+
+
+§C · LIMITROFES
+---------------
+
+Campo Santo: el decreto N 200 le atribuye Mojotoro (B.2); Betania tiene nuevo
+subcomisario (922 h2, Blas Bonigno en reemplazo de Luis Seggiaro); Julio
+Cornejo (hijo) renuncia a su comision municipal (936 h2). Rosario de Lerma: La
+Silleta, adonde pasa Julio Royo (931 h7, 934 h1). Capital: nada que linde.
+Ningun deslinde, mensura ni amojonamiento toca al departamento o a sus
+linderos.
+
+
+§P · PLANOS
+-----------
+
+EL COMPLEMENTO NO PUBLICA NINGUN PLANO. La palabra aparece en 10 hojas (918
+h11, 919 h2, 923 h8, 923 h9, 927 h13 dos veces, 930 h2 dos veces, 937 h4 y 937
+h12): son remisiones a planos de la Capital, de Oran, de pedimentos mineros,
+de una finca sobre el rio Conchas y de obras sin planos. Todas son citadas y
+no acompanadas, y NINGUNA toca al departamento. Con el informe anterior, 1922
+entero no publica un solo plano. Techo de resolucion: 150 ppi.
+
+
+§D · INDICE
+-----------
+
+  918  h4   CARGOS       Decreto N 192, 27/7: renuncia del receptor de
+                         rentas, Julio Royo Ortiz; sin sucesor
+  919  h3   ESCUELA      Decreto N 200, 1/8: escuela Ley 4874 en Mojotoro,
+                         "departamento de Campo Santo"  [§B.2]
+  919  h4   JUSTICIA     Decreto N 204, 3/8: renuncia del juez de paz
+                         suplente Vicente Vivas
+  924  h5   NORMA+REGISTRO-CIVIL
+                         Presupuesto 1/7-31/12/1922, Item 7: encargado
+                         en Caldera, 44 mensuales
+  927  h5   CARGOS       Decreto 345, 28/9: subcomisarios ad honorem
+                         Urquiza (Vaqueros) y Marin (San Alejo)
+  927  h6   OTRO         Decreto N 347, 28/9: cuenta de Julio Royo, ex
+                         expendedor de guias
+  931  h5   CARGOS       Decreto N 442, 31/10: renuncia el comisario
+                         Rauch; entra Julio Royo
+  931  h7   CARGOS       Decreto N 446, 3/11: Royo a La Silleta; entra
+                         Eustaquio Murua
+  936  h2   CARGOS       Decreto N 529, 5/12: renuncia Rauch a la
+                         expendeduria; entra Murua
+  937  h3   CARGOS       Decreto N 536, 7/12: renuncia Rauch a la
+                         receptoria; entra Romelia Caceres de Jerez
+
+Clases: se usa OTRO para la cuenta de Royo, que no es hacienda municipal, y
+CARGOS para las receptorias y expendedurias, porque la lista cerrada del §7.1
+de v16 no tiene clase para las rentas provinciales en el departamento (§F).
+
+
+§E · OBSERVACIONES
+------------------
+
+
+E.1 · Duplicacion y saldos
+--------------------------
+
+Duplicacion: el pre-informe da 0 pares dhash <= 16 en el ano. Ningun acto del
+departamento se repite en el complemento: se busco el texto de cada ficha en
+las demas hojas.
+
+SALDOS. Se contaron los resumenes antes de prometer la cadena: SON TRES en el
+complemento, julio (919 h13-14), septiembre (927 h15-16) y octubre (931
+h15-16). No hay resumen de agosto, noviembre ni diciembre. Cifras de apertura
+y cierre leidas en la imagen a 130 dpi:
+  cierre de junio (916 h7, informe anterior) ........    9.780,--
+  julio abre "A SALDO DE JUNIO DE 1922" ..............    9.780,--
+  julio cierra, pasa a agosto .........................    5.085,51
+  [agosto: sin resumen]
+  septiembre abre "A EXISTENCIA DEL MES DE AGOSTO" ....   11.356,5?
+  septiembre cierra, rotulado "pasa al mes de
+    Agosto de 1922" [sic] ..............................    7.666,04
+  octubre abre "A EXISTENCIA DEL MES DE SETIEMBRE" ....    7.666,--
+  octubre cierra, pasa a noviembre ....................    4.039,67
+
+La cadena se arma POR LA CIFRA en dos tramos. Primer tramo: junio-julio
+encadena exacto (9.780). Puente de una sola cifra: el cierre de agosto,
+11.356,5?, registrado solo en la apertura de septiembre; el ultimo digito no
+se decide a 130 dpi. Segundo tramo: septiembre-octubre, con una diferencia de
+cuatro centavos: septiembre cierra en 7.666,04 y octubre abre en 7.666,--. Se
+transcriben las dos y no se concilian. EL ROTULO DEL CIERRE DE SEPTIEMBRE
+MIENTE: dice "pasa al mes de Agosto" y es el saldo que octubre recibe como de
+septiembre. Es el tercer rotulo falso de 1922 (el informe anterior tiene el de
+junio). El titulo del resumen imprime "Setieebre" [sic]. Ninguno desagrega por
+departamento: DEL DEPARTAMENTO NO HAY NINGUN SALDO en el semestre.
+
+E.2 · Cobertura
+---------------
+
+Hojas presentes: 274. Hojas miradas en la imagen: 45, que son las 22 tapas,
+las 14 hojas del §A y del §B, las 6 de los resumenes, 925 h4 (el feriado) y
+dos cabeceras de folio (921 h6, 923 h3). Columnas cotejadas contra la capa:
+24, en 11 ediciones. Quedan sin mirar 229 hojas, que es el estado normal de un
+barrido.
+
+E.4 · Firmas y autoridad
+------------------------
+
+Gobernador: Adolfo Guemes en las 22 tapas (leido en la imagen en 917 y 938) y
+en todos los actos. Ministros refrendantes: Antonio Ortelli (Gobierno:
+decretos 200, 204, 284, 345, 442 y 446) y Rafael P. Sosa (Hacienda: 347 y 536;
+192 y 529 segun la capa). Formulas: "El Poder Ejecutivo de la Provincia" y "El
+Gobernador de la Provincia", las dos en el mismo semestre y con el mismo
+refrendante; el decreto 442 no imprime ninguna. No hay interinatos en los
+actos leidos. Tres firmas no se miraron (918 h4, 934 h1, 936 h3).
+
+E.5 · Cortes y columnas
+-----------------------
+
+Columna perdida: ninguna en las 24 columnas cotejadas. Maqueta: dos columnas
+por hoja, la izquierda de ~20 a ~230 pt y la derecha de ~225 a ~440 pt,
+medidas en 918 h4 con get_text("words"); los recortes llevaron margen.
+Palabras sueltas que fallaron en la capa y decidian una ficha o su busqueda:
+"Rluch" y "Ranch" por Rauch, "c a ldera", "r o}md" por Royo (927 h6), "1022"
+por 1922 (931 h5) y "7.066" que la capa da en una lectura y la imagen dice
+7.666.
+
+E.7 · Falsos positivos y negativos
+----------------------------------
+
+Falsos positivos del anillo 1: ninguno. Falso negativo de metodo, corregido en
+la sesion: la primera corrida del anillo de actores escapaba la puntuacion del
+nombre del config pero la buscaba sobre un texto sin puntuacion, de modo que
+todo actor con inicial y punto ("jorge a.", "rafael p.") NO PODIA dar acierto.
+Recuperados al corregirla: 15 actores, entre ellos Jorge A. Rauch. Va al §F.
+
+E.8 · Fidelidad numerica
+------------------------
+
+Inventario de cuadros del complemento, por busqueda y no por hoja: los tres
+resumenes de Tesoreria, la ley de presupuesto del semestre (924 h2 a h6, por
+lo menos) y la tarifa de maderas de 923 h5-h6. Balances municipales: ninguno,
+ni del departamento ni de otro. Recalculados: el Item 7 de la ley, que NO
+CIERRA (A.3). Sin recalcular: los tres resumenes, por pendiente (§0); la ley
+salvo el Item 7, y la tarifa, porque no nombran al departamento. Otras cifras
+del departamento: 44 y 264 del encargado del Registro Civil; 1.003,99, 397,
+607 del decreto 347, recalculadas (A.5).
+
+E.9 · Contradicciones
+---------------------
+
+1. MOJOTORO EN DOS DEPARTAMENTOS. El decreto N 200 (919 h3) lo pone en Campo
+Santo; el decreto del 23 de junio (912 h1) en La Caldera. No se concilia
+(B.2).
+2. LOS TOTALES DEL ITEM 7 no cierran con sus renglones ni entre si (A.3).
+3. DOS SALDOS DE SEPTIEMBRE que difieren en cuatro centavos, y un rotulo que
+dice agosto (E.1).
+4. FOLIOS. La paginacion corrida sigue en el segundo semestre y otra vez
+avanza mas rapido que las hojas de los PDF. Leidos en la imagen: 923 h3 =
+3063, 924 h6 = 3078, 927 h6 = 3122, 931 h7 = 3183; en la capa, 925 h7 = 3095,
+927 h12 = 3128, 935 h3 = 3235 y 936 h4, h6 y h8 = 3248, 3250, 3252. Restando
+la posicion de la hoja en el complemento, el desvio pasa de 2994 (923-925) a
+2996 (927), a 2998 (931) y a 3000 (935-936): FALTAN AL MENOS SEIS PAGINAS
+DENTRO DE LAS EDICIONES ENTREGADAS, dos entre 924 y 927 y dos entre 927 y 931
+(con lecturas de imagen), y dos entre 931 y 935 (solo con lecturas de capa).
+No se afirma en que ediciones: haria falta leer el folio de la primera y la
+ultima hoja de cada una. Tres folios no encadenan: 921 h6 dice "Pag. 3848" en
+la imagen a 500 dpi, donde la serie pide 3048; y las hojas de Contaduria
+llevan "Pag. 3031" (927 h15) y "pag. 3091" (931 h15), donde la serie pide
+alrededor de 3131 y 3191. Se transcriben y no se explican.
+5. ERRATAS DEL ORIGINAL confirmadas en la imagen: "Santo Rufino" (927 h5),
+"Setieebre" (927 h15), "servicios prestado" (931 h5), "adquiescencia" (919
+h3), "eu" por en (918 h4), "Pag. 3848" (921 h6).
+
+LO QUE CAMBIA DEL INFORME ANTERIOR (flujo §5.4), cada cambio con su ficha:
+a. §1 y E.10.7 ("El ano esta cortado el 21 de julio: de la edicion 917 en
+adelante no hay PDF"): CAE. Las 22 ediciones existen y fueron leidas. 1922
+queda completo salvo 889 (E.10).
+b. E.9.3 ("cuatro Royo en cinco meses"): el receptor de rentas que renuncia el
+27 de julio se llama Julio Royo Ortiz (A.1), y el comisario de La Silleta
+nombrado el 3 de noviembre como "Julio Royo" (A.7) es "Julio Royo Ortiz" dos
+semanas despues (934 h1). El informe anterior daba "Julio Royo flor" como
+receptor (900 h10). Sigue sin conciliarse, pero dos actos del complemento
+muestran a un mismo hombre con las dos formas del nombre.
+c. §D, comisaria de policia: la serie ya no termina con el decreto N 349
+(Rauch). Siguen el 442 (Royo, 31/10) y el 446 (Murua, 3/11).
+d. §D, subcomisarias: se suman Urquiza en Vaqueros y Marin en San Alejo y
+Santa Rufina (A.4), sin que ningun acto revoque a Eustaquio Guerra (Vaqueros,
+902 h1) ni a Masclef (Mojotoro).
+e. §D, juzgado de paz: Vivas renuncia el 3 de agosto (A.2).
+f. §D, rentas: la receptoria pasa por Royo Ortiz, un titular cuyo nombramiento
+no consta (Rauch) y Romelia Caceres de Jerez (A.1, A.9). La expendeduria, por
+Royo, Rauch y Murua (A.5, A.8).
+g. E.8, "el corpus publica CINCO cuadros": en el ano entero son al menos diez.
+h. E.1: la cadena de saldos se extiende de junio a octubre, en dos tramos
+(E.1).
+i. E.9.1 (folios): el desvio acumulado del primer semestre (unas trece hojas)
+se suma a las seis del segundo. Contra 910 h12 = 2922 (lectura de capa del
+informe anterior), 923 h3 = 3063 queda seis paginas por encima de lo que dan
+las hojas intermedias.
+j. B.4: se agregan dos ausencias de semestre (Matienzo y Regis como actores
+del departamento) y una presencia nueva (Rauch en tres cargos).
+k. Lo que NO cambia: ninguna mencion del complemento contradice una ficha del
+§A anterior ni hace caer una ausencia suya.
+
+E.10 · Limites
+--------------
+
+  1. Una sola version en 269 de 274 hojas; OCR propio solo en 5.
+  2. Confianza por hoja solo en esas 5.
+  3. Tesseract sin spa en la sesion: no hay OCR propio en sesion.
+  4. Techo de 150 ppi: el ultimo digito del cierre de agosto no se
+     decide.
+  5. La edicion 889 no existe en el origen (aviso del Release).
+  6. Faltan al menos seis paginas dentro de las ediciones del
+     complemento, por la cadena de folios.
+QUE AGREGARIA CADA INSUMO QUE FALTO: un OCR con spa de las 269 hojas con una
+sola version daria desempate y confianza, y habria evitado las dos fallas de
+busqueda de Rauch y de Sosa; las paginas que faltan pueden traer actos del
+departamento que este informe no puede nombrar.
+
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+1. El anillo de actores debe quitar la puntuacion de los DOS lados: del texto
+y del nombre del config. Sin eso, todo actor con inicial y punto es invisible
+y la rubrica no lo detecta, porque la prohibicion del §5.1 solo muerde si
+alguien busca el propio acto. En 1922 escondio 15 actores, uno del
+departamento. Es una regla para v17 y para lee_auto.py.
+2. Flujo §5.1 dice que lee_textos da "segunda version y confianza por hoja".
+En 1922 da las dos en 5 de 274 hojas, porque lee_auto.py solo OCRiza las hojas
+sin capa util. Conviene que el flujo diga: "segunda version solo donde hay
+.prop.txt".
+3. EXTRAIDO.json llama "capa_nativa" a una capa que es OCR previo (v16 §2 la
+distingue). Conviene corregir la etiqueta en lee_auto.py.
+4. En el modo complemento, la paginacion corrida del ano debe encadenarse con
+la del informe anterior: es el unico control que dice si faltan hojas entre
+las dos tandas.
+5. §7.1 de v16: la lista cerrada de clases no tiene una para las rentas
+provinciales en el departamento (receptorias, expendedurias). Propuesta:
+RENTAS.
+6. Config: se entrega actualizado, con version 2026-09-26 y hasta 1932 (se
+conserva el hasta del vigente, que ya es mayor que el ano barrido). Agrega los
+actores Francisco Urquiza, Victor Marin, Romelia Caceres de Jerez, Victor E.
+Soliverez y las formas de capa "ranch" y "rluch" de Jorge A. Rauch, con origen
+[1922, edicion]; el termino "santo rufino" al anillo 2; y los numeros 192,
+204, 345, 347, 442, 446, 529 y 536.
+
+
+§R · RECUENTO
+-------------
+
+anio: 1922
+ediciones_desde: 917
+ediciones_hasta: 938
+ediciones_presentes: 22
+ediciones_ausentes: 0
+hojas_presentes: 274
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 6
+periodicidad: semanal-viernes
+dias_salida_sin_edicion: 1
+ediciones_dobles: 0
+techo_ppi: 150
+ocr_en_sesion: no
+capa_previa: lee-auto
+versiones: 1
+actos_departamento: 9
+actos_dominio: 0
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 5
+subtotales_recalculados: 1
+resumenes_tesoreria: 3
+cadena_saldos: dos-tramos
+columnas_cotejadas: 24
+hojas_miradas: 45
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 0
+limites_declarados: 6
+nivel_lectura: imagen
+pdf_release: 22
+avisos_release: 0
+complemento: 917-938
+estado: CON-PENDIENTES
