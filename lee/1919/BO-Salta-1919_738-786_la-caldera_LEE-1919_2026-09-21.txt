@@ -1,0 +1,1481 @@
+BOLETIN OFICIAL DE SALTA - ANO 1919 - BARRIDO LEE SOBRE LA CALDERA
+------------------------------------------------------------------
+
+Informe LEE del ano 1919 del Boletin Oficial de Salta, ediciones N.o 738 a N.o
+786, sobre el departamento de La Caldera y su vecindad. Rubrica aplicada: LEE
+v15, del 20/09/2026. Fecha de esta entrega: 21/09/2026. Turnos 1 y 2 de la
+sesion.
+
+0 - ADVERTENCIA PRELIMINAR
+--------------------------
+
+ESTADO: COMPLETO, CON SEIS LIMITES DECLARADOS. No quedan pendientes: el
+parrafo A esta cerrado con ocho apariciones transcritas desde la imagen, el
+parrafo B con sus cuatro bloques, la autoridad medida hoja por hoja, el unico
+cuadro del ano recalculado y la cadena de folios reconstruida entera. Los seis
+limites que quedan son imposibilidades del corpus o de los insumos, no trabajo
+sin hacer, y se desarrollan en E.10.
+
+Insumos recibidos. El Release con tag 1919 del repositorio
+ediedrich/boletines-salta trae 52 assets: 51 PDF numerados 737 a 787 y un
+lee_config.json. No llego nada mas: no hay pre-informe, no hay
+resultados_1919.csv ni decretos_1919.csv, no hay log.txt, no hay recortes.zip,
+no hay zip de los .txt de lee_trabajo y no hay EXTRAIDO.json. Por lo tanto
+lee_auto.py no corrio sobre este ano, o sus salidas no se publicaron, y no hay
+version, fecha de corrida ni parametros de script que declarar. El barrido se
+hace por el procedimiento del parrafo 2.1: la sesion extrajo la capa previa de
+los PDF con PyMuPDF.
+
+Los dos lee_config.json. El del Release tiene 180 actores y llega hasta el ano
+1915. El del proyecto, que es el que se uso, tiene 234 actores y llega hasta
+1917. El del proyecto contiene al del Release sin ninguna baja: 234 contra 180
+actores, 84 contra 70 terminos de anillo 2, 51 contra 40 numeros y 20 contra
+12 falsos positivos. Se trabajo con el del proyecto y se declara la
+diferencia. Ningun actor del config tiene origen 1913, 1914 ni 1918: eso no
+prueba que esos anos no se hayan barrido, solo que no aportaron actores.
+
+Entorno verificado al empezar. nproc = 1, como en todas las sesiones medidas.
+PyMuPDF no venia instalado y se instalo desde pypi. Tesseract 5.3.4 esta
+presente pero su tessdata trae solo eng y osd: NO HAY spa. Se comprobo con
+tesseract --list-langs antes de prometer nada. En consecuencia el parrafo 3 y
+el parrafo 16 de la rubrica no son aplicables en esta sesion: no se OCRizo ni
+una hoja, y todo lo que no esta en la capa previa se leyo mirando la imagen.
+
+De donde salieron las imagenes y como se cotejaron. Los 51 PDF se bajaron del
+Release con curl y xargs -P 8, en una sola llamada, 26 MB en total. No hay
+EXTRAIDO.json contra el cual cotejar bytes y hojas, de modo que el cotejo se
+hizo contra la cadena de folios impresos, que en 1919 existe y da un resultado
+importante (vease el parrafo 1 y E.5).
+
+Lo que verifico la sesion en este turno: el listado de assets del Release; el
+formato de los 51 archivos con file; la extraccion de la capa previa de las
+442 hojas; la marca de corte U+0002 y el guion blando U+00AD; el techo de
+resolucion; la identificacion de las dos hojas que no son boletines; el
+calendario del ano entero; las cuatro pasadas del anillo 1 con la union de
+cortes corregida; el anillo 2 completo; el anillo de actores por nombre
+completo y por apellido suelto; las formulas de reemplazo; y la transcripcion
+desde la imagen de las ocho apariciones del parrafo A.
+
+Desvios del parrafo 8.17 en esta entrega. Las transcripciones se escriben con
+tildes y enes restituidas por una tabla de palabras fijas, no caracter por
+caracter desde la imagen. Donde el original imprime una errata, la errata se
+conserva ('Camisarios', 'Pdero Vale', 'Potrero de Castilla', 'Chalchalnio',
+'Vista las ternas'), pero la acentuacion de las palabras corrientes es
+reconstruida y no observada. Es un desvio declarado, no una lectura.
+
+Lo que se cerro en el segundo turno: los contextos de los 21 terminos del
+anillo 2, en sus 141 apariciones, uno por uno; las 21 personas de los actos
+del departamento, buscadas en las 440 hojas; el parrafo B entero, incluida una
+aparicion que ninguna pasada del anillo 1 podia traer; ocho tapas leidas en la
+imagen; la cadena de folios reconstruida por OCR de las 440 cabeceras; el
+inventario y el recalculo del unico cuadro del ano; la alternancia de firmas
+del Ejecutivo; la comprobacion de repeticiones de avisos; el indice; y el
+config actualizado.
+
+LIMITES ya conocidos, que ningun trabajo de esta sesion levanta: no hay
+confianza por hoja porque no hay .tsv; no hay lista de hojas a ojos por la
+misma razon; no hay md5 ni dhash porque no hay .jpg; no hay medicion de tinta;
+y no hay segunda version del texto con que desempatar. Se desarrollan en E.10.
+
+Entrega de este turno: SI. El archivo se entrego entero, con el mismo nombre
+del turno anterior y el parrafo 0 actualizado, no como apendice. Queda anotado
+en notas.txt todo lo mirado con los ojos.
+
+1 - CORPUS REVISADO
+-------------------
+
+El Release trae 51 PDF, pero solo 49 son ediciones del Boletin. Los archivos
+737.pdf y 787.pdf tienen una sola hoja, de tamano carta (612 por 792 puntos,
+distinto de todo el resto), y su unico contenido es el renglon: 'Este boletin
+no se encuentro en nuestra base de datos.', con la concordancia rota tal como
+se imprime. No son boletines: son la respuesta del repositorio de origen a un
+pedido que no pudo servir. No se barren y no se cuentan.
+
+Ademas falta del Release la edicion N.o 736, que por la formula de fechas
+corresponde al viernes 3 de enero de 1919. No esta como asset y no se pidio.
+
+Corpus efectivo: ediciones N.o 738 a N.o 786, 49 ediciones, 440 hojas, 26 MB.
+Todos los archivos son PDF reales (PDF 1.5 a 1.7, zip deflate), ninguno es un
+ZIP con extension .pdf ni texto plano. Cada hoja lleva dos imagenes
+incrustadas salvo una, que lleva tres.
+
+Calendario. El Boletin de 1919 es semanal y sale los viernes. Las diez tapas
+cuya fecha la capa previa entrega sin ambiguedad dan todas viernes, y la serie
+es aritmetica sin excepcion: la edicion N corresponde al 3 de enero de 1919
+mas (N - 736) por siete dias. Eso pone la N.o 738 en el viernes 17 de enero y
+la N.o 786 en el viernes 19 de diciembre: son cuarenta y nueve viernes
+consecutivos, sin un solo hueco. No hay ninguna edicion doble en el ano, a
+diferencia de 1911 (seis) y 1912 (ocho), y no hay ninguna edicion fechada en
+un dia que la formula no admita, a diferencia de 1912 (cuatro). Tres tapas dan
+una fecha que no cierra con la serie y son erratas del original o del OCR: la
+N.o 759 imprime junio 13 y la capa lee 11, la N.o 761 imprime junio 27 y la
+capa lee 7, y la N.o 754 imprime mayo 9 y la capa lee 91.
+
+Hojas por edicion. De 2 (N.o 763) a 19 (N.o 773). Reparto: seis hojas en 10
+ediciones, nueve en 8, ocho en 5, siete en 5, diez en 4, doce en 4, cinco en
+3, quince en 2, y una edicion con cada uno de 2, 3, 11, 14, 16, 17, 18 y 19
+hojas. La tapa no declara paginas en esta epoca, de modo que el control de
+hojas presentes contra declaradas no se puede hacer por esa via.
+
+Paginacion corrida: existe, y es el hallazgo mayor del corpus. La cabecera de
+cada hoja imprime 'Pag. N' en el margen exterior, con N corriendo a lo largo
+del ano. La capa previa lo entrega en 11 de las 440 hojas; OCRizando solo la
+franja de cabecera con el modelo eng se lee en 307. Con eso se ajusto el folio
+de la hoja 1 de cada edicion y se reconstruyo la cadena entera: el ano corre
+del folio 595 al 1072, o sea 478 paginas impresas contra 440 presentes. FALTAN
+38 HOJAS, y no estan repartidas al azar: dentro de cada edicion la cadena es
+continua sin un solo salto, y los treinta y ocho huecos caen todos al final de
+veintiocho ediciones. El desarrollo esta en E.5bis.
+
+Tipo y confianza. Todas las hojas son imagen con capa previa; no hay texto
+nativo en ninguna. La confianza por hoja NO se puede informar: es un valor que
+sale del .tsv de lee_auto.py y el .tsv no existe para este ano. La tabla por
+edicion que la rubrica pide en este parrafo se entrega por eso sin la columna
+de confianza y sin la columna de hojas declaradas.
+
+Techo de resolucion. La imagen incrustada de cada hoja va de 75 a 300 ppi
+segun la medicion de PyMuPDF, con la enorme mayoria en 300. El valor de 75 ppi
+corresponde a la segunda imagen de la hoja, que es una capa auxiliar y no el
+escaneo. El techo util es entonces 300 ppi, por debajo de 1909 (323 a 370),
+1911 (329 a 370) y 1912 (300 a 500).
+
+Tabla por edicion (edicion, fecha por formula, hojas presentes; entre
+corchetes las fechas confirmadas en la imagen o en la capa sin ambiguedad):
+
+  738 17/01  9h   739 24/01  9h   740 31/01  6h   741 07/02 18h
+  742 14/02 10h   743 21/02 14h   744 28/02  5h   745 07/03 12h
+  746 14/03  5h   747 21/03  8h   748 28/03  9h   749 04/04  9h
+  750 11/04  9h   751 18/04  6h   752 25/04  7h   753 02/05  6h
+  754 09/05  6h   755 16/05 10h   756 23/05 17h   757 30/05  7h
+  758 06/06 11h   759 13/06  3h   760 20/06  6h   761 27/06  8h
+  762 04/07  6h   763 11/07  2h   764 18/07  6h   765 25/07 10h
+  766 01/08  9h   767 08/08  8h   768 15/08  8h   769 22/08  5h
+  770 29/08  7h   771 05/09  9h   772 12/09  9h   773 19/09 19h
+  774 26/09 12h   775 03/10 12h   776 10/10 15h   777 17/10  7h
+  778 24/10  8h   779 31/10  7h   780 07/11 12h   781 14/11 16h
+  782 21/11 10h   783 28/11 15h   784 05/12  6h   785 12/12  6h
+  786 19/12  6h
+
+Autoridad declarada en la mancheta: 'Gobierno del Dr. don Joaquin
+Castellanos', en las cuarenta y nueve tapas. Ano editorial: ANO XI en todo
+1919. Se confirmo en la imagen en ocho tapas repartidas de enero a diciembre
+(738, 745, 757, 767, 777, 780, 783 y 786) y no hay paso a ANO XII dentro del
+ano.
+
+La tapa de 1919 NO DECLARA LOS DIAS DE SALIDA. Donde 1911 y 1912 imprimian
+'Aparece Miercoles y Sabados', 1919 imprime la Ley N.o 204 de creacion del
+Boletin. El ritmo semanal de los viernes queda establecido por el calendario y
+por la serie aritmetica de las fechas, no por una formula de la tapa, y se
+declara asi. La tapa trae, en cambio, 'Direccion y Administracion: Secretaria
+de Policia' y 'Ministerio de Gobierno'.
+
+2 - CRITERIO DE BUSQUEDA
+------------------------
+
+Versiones. Hay una sola: la capa previa de los PDF, extraida en sesion con
+PyMuPDF (parrafo 2.1). No hay OCR propio porque no hay spa instalado. Todos
+los resultados se etiquetan prev y NO HUBO DESEMPATE POSIBLE entre versiones:
+la unica prueba de cualquier dato es la imagen, y por eso cada ficha del
+parrafo A dice que tramo esta mirado.
+
+Marca de corte. U+0002 no aparece ni una sola vez en las 440 hojas, igual que
+en 1908 a 1912. El guion blando U+00AD aparece 7.886 veces y, como en toda
+esta epoca, marca el corte de renglon SIN imprimir guion visible. La union se
+hizo con la regla corregida del parrafo 2.3: primero se quita el U+00AD junto
+con el salto de renglon y los espacios que lo rodean, y recien despues los
+sueltos. Tambien se toleran hasta dos signos de puntuacion a cada lado del
+salto.
+
+Lo que eso gano, medido. Con la union defectuosa (quitar el U+00AD como
+caracter y dejar el salto) la pasada literal devuelve 9 hojas. Con la union
+corregida devuelve 11. Las dos hojas ganadas son 755 h2 y 773 h6, y las dos
+son actos del departamento: el decreto N.o 337, que acepta la renuncia de
+Liborio Guerrero como Comisario Auxiliar de Monte y Chalchalnio, y el item VII
+del presupuesto, que asigna a Caldera un Encargado de Registro Civil. Es el
+tercer ano seguido en que la correccion no es teorica.
+
+Las cuatro pasadas, sobre las 440 hojas:
+
+  Literal/normalizada  'cald' sobre NFD sin diacriticos, con los cortes
+                       unidos: 11 hojas.
+  Laxa                 [gco][ao][l1i|][\s-]{0,3}[dcl][ec][rnm][ao], con
+                       la clase de espacios en blanco y no un espacio
+                       literal: 12 hojas, de las cuales 11 coinciden con
+                       la literal y una (773 h1) es ruido.
+  Difusa               ratio >= 0,78 contra caldera y calderilla, sobre
+                       todas las palabras, excluida la forma exacta: tres
+                       formas, todas falsos positivos ya juzgados.
+  Difusa ampliada      banda 0,70 a 0,78 restringida a palabras que
+                       empiezan con c, g u o: catorce formas, todas
+                       falsos positivos.
+  Anillo 2             84 terminos del config: 21 con acierto.
+  Actores              234 entradas del config, por nombre completo y por
+                       apellido suelto, sobre el texto con la puntuacion
+                       suprimida.
+  Numeros y reemplazo  51 numeros del config y las ocho formulas.
+
+Ninguna pasada devolvio cero, de modo que el control del parrafo 5.2 sobre
+pasadas rotas no hizo falta esta vez. La laxa si se probo antes de creerle:
+escrita con un espacio literal en lugar de la clase de espacios en blanco
+devuelve 11 hojas y no 12; escrita bien devuelve la de mas.
+
+Actores. La lista se armo con el config del proyecto, 234 entradas
+provenientes de 1946 (por edicion: 2465, 2514, 2553, 2584, 2614, 2675, 2702,
+2730) y de 1908, 1909, 1910, 1911, 1912, 1915, 1916 y 1917 (por ano). 1919
+esta a dos anos del ultimo barrido de la epoca y el config heredado sigue
+funcionando: 26 de esos actores reaparecen en 1919 con nombre y apellido
+completos.
+
+Numeros arrastrados. Los 51 numeros del config son de 1946 y de 2015. En 1919,
+a diferencia de 1908 a 1912, LOS ACTOS SI LLEVAN NUMERO: los decretos se
+numeran corridos dentro del ano, de N.o 14 en enero a N.o 605 y mas en
+noviembre. El identificador principal de este ano es por lo tanto el numero de
+decreto mas la fecha, y la regla del parrafo 5.3 sobre epocas sin numeracion
+NO se aplica en 1919.
+
+Identificadores de las ausencias. Numero de decreto, fecha del decreto,
+edicion y hoja, cargo y departamento. Con eso alcanzan los dos identificadores
+que pide el parrafo 5.3.
+
+A - MENCIONES EXPLICITAS
+------------------------
+
+Ocho apariciones, todas transcritas desde la imagen salvo los tramos que cada
+ficha declara como lectura de capa. Se ordenan por edicion y hoja.
+
+==============================================================================
+A.1 - EDICION 738, HOJA 2
+
+FUENTE
+Edicion N.o 738, hoja 2, columna 1. Decreto Nro. 14, sin fecha impresa en el
+propio decreto.
+
+FICHA
+Nombramiento del Comisario de Policia del Departamento de La Caldera en el
+senor Ambrosio L. Mascietti, por vacancia del cargo y a propuesta del Jefe de
+Policia. Firman PENALVA y DARIO ARIAS; Es copia: A. M. Porta, Ofi. 1o.
+
+MODO DE LECTURA
+Recorte de la columna 1 entera desde y=190 pt a 250 dpi, ancho de columna mas
+6 pt de margen. Transcripcion hecha sobre la imagen; el numero de decreto
+tambien se leyo en la imagen.
+
+TEXTO
+  Decreto Nro. 14
+    Encontrándose vacante el cargo de
+    Comisario de Policía del  Departamento
+    de La Caldera, y de acuerdo con la pro-
+    puesta elevada por el Sr. Jefe de Poli-
+    cia.
+    El Presidente del Senado en ejercicio del
+    P. E. de la Provincia,
+    DECRETA:
+    Art. 1o.-Nombrase Comisario de Po-
+    licia del referido Departamento al Sr.
+    Ambrosio L. Mascietti.
+    Art. 2o.-El nombrado tomara pose-
+    sion del cargo, recibiendose del archi-
+    vo y de mas enseres de la Comisaria
+    bajo de inventario, y propondra por
+    intermedio del Sr. Jefe de Policia, las
+    personas que deben desempeñar las Co-
+    misarias de Partido durante el corrien-
+    te ano.
+    Art. 3o  Comuniquese, publiquese, y
+    dése en el R. Oficial.
+    PENALVA
+    DARIO ALIAS
+
+NOTA DE LECTURA
+La firma del ministro se lee en esta hoja como DARIO ALIAS y la del presidente
+del Senado como PENALVA; en 742 h3, 755 h2 y 764 h3 las mismas firmas se
+imprimen DARIO ARIAS y PENALBA. Se transcribe lo que se ve en cada hoja y no
+se normaliza (vease E.9). El decreto no lleva fecha propia: el que lo precede
+en la columna la tampoco tiene a la vista, y no se le atribuye la del vecino.
+Este decreto es el que ordena al Comisario proponer las Comisarias de Partido,
+que se resuelven en 745 h7.
+
+==============================================================================
+A.2 - EDICION 738, HOJA 5
+
+FUENTE
+Edicion N.o 738, hoja 5, columnas 1 y 2. Decreto N.o 33, Salta, Enero 15 de
+1919. Cabecera impresa: Pag. 599.
+
+FICHA
+Nombramiento de los miembros de la Comision Municipal del Departamento de
+Caldera: Domingo Royo, Francisco Sosaya, Jose Molina, Julio Mercado y Camilo
+Caceres.
+
+MODO DE LECTURA
+Dos recortes a 250 dpi: columna 2 entera desde y=400 pt (la nomina) y el pie
+de la columna 1 con la cabeza de la columna 2 (el encabezado del decreto).
+Todo transcrito desde la imagen.
+
+TEXTO
+  Decreto N.o 33
+    Nombramientos de la Comision Mu-
+    nicipal de la Campana
+    Salta, Enero 15 de 1919.
+    Siendo de urgente necesidad pro-
+    ceder a la organización del personal
+    de las Comisiones Municipales de
+    los Departamentos de Campaña y
+    CONSIDERANDO:
+    Que el art. 16 de la Ley Organica
+    de Municipalidades en que se crea-
+    ba una Municipalidad en cada uno
+    de los Departamentos mencionados
+    en el mismo, ha sido derogado por
+    el art. 175 de la Constitucion, que
+    exije para la existencia de Munici-
+    palidades autónomas un centro ur-
+    bano de cinco mil habitantes, de
+    que carecen todos los Departamen-
+    tos de Campana; y hasta tanto se
+    obtenga la reforma constitucional
+    para conseguir la creacion de la Mu-
+    nicipalidad electiva en todos los De-
+    partamentos de la Provincia, de a-
+    cuerdo con el programa fundamen-
+    tal de este Gobierno;
+    El Presidente del Senado en ejerci-
+    cio del P. E. de la Provincia,
+    DECRETA:
+    Art. 1o-Nombranse Miembros
+    de las Comisiones Municipales de
+    los Departamentos y Distritos que
+    a continuación se expresan, a los
+    siguientes senores:
+    [...]
+    Caldera
+    Domingo Royo
+    Francisco Sosaya
+    José Molina
+    Julio Mercado
+    Camilo Cáceres
+
+NOTA DE LECTURA
+El encabezado se busco expresamente (regla del parrafo 4.11): sin el, la
+nomina 'Caldera - Domingo Royo...' no se puede fichar. La nomina va sin cargos
+individuales: los cinco son miembros de la Comision, sin distinguir
+presidente. Cuatro de los cinco reaparecen en otros actos del ano (vease el
+parrafo B). El corte de columna cae entre 'Alberto Campos' y 'Caldera': la
+palabra del departamento abre el bloque y no esta partida.
+
+==============================================================================
+A.3 - EDICION 739, HOJA 3
+
+FUENTE
+Edicion N.o 739, hoja 3, columnas 1 y 2. Decreto N.o 49, Salta, Enero 18 de
+1919. Cabecera impresa: Pag. 609.
+
+FICHA
+Nombramiento del Encargado de la Oficina de Registro Civil de Caldera en el
+senor Leoncio A. Mascietti.
+
+MODO DE LECTURA
+Dos recortes a 250 dpi: el tramo medio de la hoja (pie de la columna 1 y
+cabeza de la columna 2, donde esta el encabezado) y la columna 2 con la
+nomina. Transcrito desde la imagen.
+
+TEXTO
+  Decreto N.o 49
+    Salta, Enero 18 de 1919
+    Siendo conveniente proveer los car-
+    gos de Encargados de Registro Civil de
+    la Campana,
+    El Presidente del Senado en
+    Ejercicio del Poder Ejecuti-
+    vo de la Provincia,
+    DECRETA:
+    Art. 1.o-Nombranse Encargados de
+    las Oficinas de Registro Civil de las lo-
+    calidades que a continuación se expre-
+    san [...]
+    Guemes, Mario Caligniani: Caldera,
+    Leoncio A. Mascietti; Anta, 1a Seccion
+    (Palermo), Martín Jauregui; [...]
+    Art. 2o-Los nombrados se haran car-
+    go de sus Oficinas bajo prolijo inven-
+    tario que elevaran a conocimiento del
+    Ministerio de Gobierno.
+
+NOTA DE LECTURA
+El encabezado tambien se busco expresamente. Importa porque en la misma hoja,
+tres decretos mas arriba, termina otro que nombra 'Jueces de Paz Propietarios
+y Suplentes': sin leer el encabezado, la nomina de Caldera se habria fichado
+como judicial cuando es del Registro Civil. El apellido Mascietti aparece en
+1919 en dos personas distintas del mismo departamento: Ambrosio L. (Comisario
+de Policia, 738 h2) y Leoncio A. (Registro Civil). No se infiere parentesco.
+El Juez de Paz de La Caldera se nombra aparte, por el decreto N. 117 de 742
+h3.
+
+==============================================================================
+A.4 - EDICION 742, HOJA 3
+
+FUENTE
+Edicion N.o 742, hoja 3, columna 1. Decreto N.o 117, Salta, febrero 4 de 1919.
+
+FICHA
+Nombramiento del Juez de Paz Propietario del departamento de la Caldera en don
+Casimiro Caceres y del suplente en don Carmelo Sivila, por las ternas elevadas
+por la Comision Municipal del departamento.
+
+MODO DE LECTURA
+Recorte de la columna 1 de y=250 a y=520 pt a 250 dpi. Todo transcrito desde
+la imagen, incluido el numero de decreto, que la capa previa lee '117' y la
+imagen confirma.
+
+TEXTO
+  Decreto N.o 117
+    Vista las ternas presentadas por la
+    Comision Municipal del departamento
+    de la Caldera,
+    El Presidente del Senado en ejerci-
+    cio del Poder Ejecutivo de la Pro-
+    vincia,
+    DECRETA:
+    Art. 1.o-Nombrase para desempe-
+    nar el cargo de Juez de Paz Propieta-
+    rio de dicho departamento, durante el
+    corriente ano, a don Casimiro Caceres
+    y suplente a don Carmelo Sivila.
+    Art. 2.o-Comuniquese, publíquese y
+    dése al Registro Oficial.
+    Salta, febrero 4 de 1919
+    PENALBA
+    DARIO ARIAS
+    Es copia:  G. Quevedo
+
+NOTA DE LECTURA
+'Vista las ternas' concuerda mal en el original y se transcribe asi. El acto
+encadena con 738 h5: la Comision Municipal nombrada el 15 de enero es la que
+eleva las ternas veinte dias despues. La capa previa lee el apellido
+'Caceras'; la imagen dice Caceres, que es tambien la forma de la nomina de 738
+h5 ('Camilo Caceres'). El decreto se publica en la edicion del 14 de febrero y
+esta fechado el 4: diez dias de demora, que no se concilian.
+
+==============================================================================
+A.5 - EDICION 745, HOJA 7
+
+FUENTE
+Edicion N.o 745, hoja 7, columnas 1 y 2. Decreto N.o 213, sin fecha a la vista
+en el tramo leido.
+
+FICHA
+Nombramiento de los Comisarios de Partido del departamento de Caldera para el
+corriente ano: Mojotoro, Silverio Caseres; Vaquero, Jose A. Molina; Gallinato,
+Julio Zambrano; Calderilla, Delfin Chaile; Lesser, Pdero Vale; Yacones, Juan
+Cuchui; Potrero de Castilla, Zacarias Maidana; San Alejo, Manuel Ramos; El
+Sauce, Domingo Royo; el Monte, Liborio Guerrero.
+
+MODO DE LECTURA
+Recorte de la columna 1 entera a 250 dpi, partido en dos mitades apiladas en
+horizontal con solape. Todo transcrito desde la imagen.
+
+TEXTO
+  Decreto N.o 213
+    En merito de las propuestas presen-
+    tadas por intermedio del señor Jefe de
+    Policia; por los Comisarios de los de-
+    partamentos de Caldera, Guachipas, Ro-
+    sario de Lerma, Vina, Cerrillos, Cachi
+    y distritos de la Silleta y Coronel Mol-
+    des, para el nombramiento de los ciu-
+    dadanos que deben desempeñar en el
+    corriente año las Comisarías de partido.
+    El Presidente del Senado en ejerci-
+    cio del Poder Ejecutivo de la Pro-
+    vincia,
+    DECRETA:
+    Art. 1o-Nombranse Camisarios de
+    partido en los departamentos y distri-
+    tos que a continuación se expresan a
+    los siguientes senores: departamento de
+    Caldera: para el partido de Mojotoro a
+    don Silverio Caseres, para el de Vaque-
+    ro a don José A. Molina, para el de
+    Gallinato a don Julio Zambrano, para
+    el de Calderilla a don Delfín Chaile,
+    para el de Lesser a don Pdero Vale, pa-
+    ra el de Yacones a don Juan Cuchui,
+    para el de Potrero de Castilla a don
+    Zacarías Maidana, para el de San Alejo
+    a don Manuel Ramos, para el de El
+    Sauce a don Domingo Royo y para el
+    del Monte a don Liborio Guerrero.-
+    Departamento de Guachipas: [...]
+
+NOTA DE LECTURA
+El recorte se armo con las dos mitades de la columna lado a lado; el renglon
+'el de Calderilla a don Delfin Chaile' aparece dos veces por el solape y se
+transcribe una sola. Erratas del original que se transcriben tal cual:
+'Camisarios' por Comisarios en el art. 1o; 'Pdero Vale' por Pedro Vale, que el
+decreto N. 414 de 764 h3 escribe Pedro; 'Potrero de Castilla' por Potrero de
+Castillo, la forma del anillo 2. Es la hoja mas densa del ano para el
+departamento: nombra diez partidos, nueve de los cuales son terminos del
+anillo 2. Domingo Royo y Jose A. Molina aparecen aqui como comisarios de
+partido y en 738 h5 como miembros de la Comision Municipal; Liborio Guerrero
+renuncia en 755 h2 a otro cargo del mismo departamento.
+
+==============================================================================
+A.6 - EDICION 755, HOJA 2
+
+FUENTE
+Edicion N.o 755, hoja 2, columna 2, con continuacion en la hoja 3. Decreto N.o
+337, Salta, mayo 8 de 1919.
+
+FICHA
+Aceptacion de la renuncia de Liborio Guerrero al cargo de Comisario Auxiliar
+de los partidos de Monte y Chalchalnio, departamento de La Caldera, y
+nombramiento en su lugar del senor Hector Echanique.
+
+MODO DE LECTURA
+Recorte de la columna 2 de y=180 a y=653 pt a 250 dpi para el cuerpo del
+decreto; la resolucion, que cae en la hoja 3, se leyo en la capa previa y no
+en la imagen.
+
+TEXTO
+  Decreto N.o 337
+    Vista la renuncia elevada por el senor
+    Liborio Guerrero del cargo de Comisario
+    Auxiliar de los partidos de Monte y
+    Chalchalnio, departamento de La Cal-
+    dera y de acuerdo con la propuesta del
+    señor jefe de Policia,
+    [continua en la hoja 3]
+    El Presidente del Senado en ejercicio
+    del Poder Ejecutivo de la Provincia,
+    DECRETA:
+    Art. 1.o-Aceptase la renuncia elevada
+    y nombrase para ocupar el cargo vacante
+    al señor Héctor Echanique.
+    Art. 2.o-Comuniquese, publíquese y
+    dése al Registro Oficial.
+    Salta, mayo 8 de 1919
+    PENALBA
+    DARIO ARIAS
+    Es copia: G. Quevedo
+
+NOTA DE LECTURA
+Esta es una de las dos hojas que la union de cortes corregida rescato: la capa
+previa parte 'Cal-dera' con guion blando mas salto de renglon y, sin la
+correccion del parrafo 2.3, la hoja no aparece en ninguna pasada. El topinimo
+se imprime aqui 'Chalchalnio'; el anillo 2 lo trae como 'chalchanio' y
+'chalcanio', y 1912 lo leyo 'Chalchamo': cuatro formas para el mismo paraje,
+ninguna de las cuales coincide. La continuacion en la hoja 3 se tomo de la
+capa previa: el nombre 'Hector Echanique' no esta mirado en la imagen y queda
+como lectura de capa. El decreto N. 336, inmediatamente anterior en la misma
+columna, pasa del Art. 1.o al Art. 3.o sin Art. 2.o (vease E.9).
+
+==============================================================================
+A.7 - EDICION 764, HOJA 3
+
+FUENTE
+Edicion N.o 764, hoja 3, columnas 1 y 2. Decreto N.o 414, Salta, julio 11 de
+1919. Cabecera impresa: Pag 837.
+
+FICHA
+Se deja sin efecto el nombramiento de Comisario Auxiliar del Partido de
+Lesser, Dto. de la Caldera, hecho a favor de D. Pedro Vale, y se nombra en su
+lugar al senor Marcelo Lamas.
+
+MODO DE LECTURA
+Recorte de la columna 2 de y=0 a y=340 pt a 250 dpi; el arranque del art. 1.o
+cae al pie de la columna 1 y se leyo alli. Todo transcrito desde la imagen.
+
+TEXTO
+  Decreto N.o 414
+    De acuerdo a la nota elevada por el
+    señor Jefe de Policia.
+    El Presidente del Senado en ejercicio
+    del Poder Ejecutivo de la Provincia,
+    DECRETA:
+    [Art. 1.o-Dejase sin efecto el nombra-]
+    miento de Comisario Auxiliar del Parti-
+    do de Lesser Dto. de la Caldera a favor
+    de D. Pedro Vale.
+    Art. 2.o Nómbrase para desempenar
+    dicho cargo al señor Marcelo Lamas.
+    Art. 3.o-Comuniquese, publiquese, e
+    insértese en el Registro Oficial.
+    Salta, julio 11 de 1919
+    PENALBA
+    DARIO ARIAS
+    Es copia: G. Quevedo.
+
+NOTA DE LECTURA
+Cierra el nombramiento de 745 h7: Pedro Vale, designado para Lesser en marzo
+con el nombre impreso 'Pdero', sale en julio. El decreto no dice por que.
+Marcelo Lamas figura en el config con origen 1909, y esta es su primera
+aparicion en el departamento desde entonces. El numero de pagina impreso en la
+cabecera de esta hoja, Pag 837, es uno de los anclajes de la cadena de folios
+de E.5.
+
+==============================================================================
+A.8 - EDICION 773, HOJA 6
+
+FUENTE
+Edicion N.o 773, hoja 6. Proyecto de presupuesto, items V, VI y VII. Cabecera
+impresa: Pag. 918.
+
+FICHA
+Caldera figura entre las cincuenta y cinco localidades a las que el item VII
+del presupuesto asigna un Encargado de Registro Civil de la Campana, a
+cuarenta y cuatro pesos cada uno inclusive gastos de oficina y alquiler.
+
+MODO DE LECTURA
+Recorte de la columna 1 entera a 250 dpi para el texto y tres recortes de la
+banda de cifras: dos fallidos por mala ubicacion de la columna numerica y uno
+a 500 dpi, que es el que se leyo. Las cifras del cuadro estan miradas; la
+lista de las cincuenta y cinco localidades se leyo en la imagen hasta
+'Candelaria (creada), Guemes' y el resto en la capa previa.
+
+TEXTO
+  ITEM V
+    Policía de la Campana
+                                          mensual   Total
+    30 Comisarios a $ 160 c/u.              4.860
+     1 Sub-Comisario                          110
+     1  "   "  Policía volante                100
+     1  "   "   "    "                          90
+     1  "   "   "    "                          80
+    17  "   "   "    "  a $ 100 c/u.         1.700
+    75 Agentes de primera a $ 60 c/u,       4.500
+    80   "    "  segunda " " 55  "          4 400
+     1 Sub-Comisario para San Andrés (Oran)    80
+       Para forrajes, herrajes, etc.        1.070
+                                           16.930  84.650-
+  
+    ITEM VI
+    Registro Civil de la Capital
+     1 Jefe                                   300
+     1 2o Jefe                                210
+     2 Escribientes a $ 120 c/u.              240
+     1 Ordenanza                               80
+                                              830   4.150.-
+  
+    ITEM VII
+    Registro Civil de la Campana
+    Para cincuenta y cinco Encargados en la campa-
+    na, distribuidos: Noques, Anta 1a Seccion, Anta
+    2a Seccion, Anta 3a Seccion, Anta 4a Seccion,
+    Anta 5a Seccion, Cerrillos, Cachi, Candelaria, Cal-
+    dera, Cafayate, Campo Santo, Chicoana, Carril,
+    Candelaria (creada), Guemes, [...]
+    A cuarenta y cuatro pesos cada uno, inclusive
+    gastos de oficina y alquiler.
+
+NOTA DE LECTURA
+Segunda hoja rescatada por la union de cortes corregida: la capa parte
+'Cal-dera' en el renglon de la lista. Recalculo del item V: la columna mensual
+impresa suma 16.990 y el subtotal impreso dice 16.930, sesenta pesos de
+diferencia. La lectura alternativa que cerraria la columna es que el primer
+renglon fuera 4.800 y no 4.860, que es lo que da 30 por 160; a 500 dpi el
+digito impreso es un 6 y no un 0. Se declaran las dos y no se corrige. La
+columna Total encadena con el subtotal impreso: 16.930 por 5 da 84.650, y el
+item VI hace lo mismo (830 por 5 da 4.150), de modo que el periodo
+presupuestado son cinco meses. El renglon de los agentes de segunda imprime '4
+400' sin punto y se transcribe asi. El item VII no lleva importe por localidad
+ni total en el tramo leido.
+
+B - VECINDAD
+------------
+
+Los veintiun terminos del anillo 2 con acierto se leyeron uno por uno, en sus
+141 apariciones. El reparto solo se supo leyendolos, y es muy desparejo: un
+termino satura el corpus por una razon ajena al departamento, uno aporta un
+acto del departamento que ninguna otra via habria traido, y los diecinueve
+restantes son otra cosa.
+
+B.1 - NUCLEOS YA FICHADOS EN EL PARRAFO A
+
+Se nombran y no se repiten: Mojotoro, Vaquero, Gallinato, Calderilla, Lesser,
+Yacones, Potrero de Castilla, San Alejo, El Sauce y el Monte, los diez
+partidos del decreto N.o 213 de 745 h7; y Chalchalnio, del decreto N.o 337 de
+755 h2. Once topinimos del departamento en dos actos. Ninguno hizo falta para
+llegar al acto: llegaron con el, porque el acto nombra tambien al
+departamento.
+
+B.2 - NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+Uno solo en todo el ano, y es el que justifica el parrafo.
+
+B.2.1 - EDICION N.o 774, HOJA 5
+
+FUENTE: edicion N.o 774 (viernes 26 de setiembre de 1919), hoja 5, columnas 1
+y 2. Decreto N.o 522, Salta, Septiembre 20 de 1919. Cabecera impresa: Pag.
+937.
+
+POR QUE SE INCLUYE: el acto crea la Sub-Comisaria de Mojotoro y nombra para
+ella a Silverio Caceres, y NO NOMBRA a La Caldera en ningun renglon: la hoja
+no aparece en la pasada literal ni en ninguna de las otras del anillo 1. Llego
+por el anillo 2 (termino 'mojotoro') y por el anillo de actores (Silverio
+Caseres, comisario de partido de Mojotoro en el decreto N.o 213 de 745 h7). Es
+el caso exacto de la regla del parrafo 5.1: el anillo de actores encuentra lo
+que las cuatro pasadas pierden.
+
+MODO DE LECTURA: dos recortes a 260 dpi, el pie de la columna 1 (donde arranca
+el decreto) y la columna 2 entera. Todo transcrito desde la imagen.
+
+  Decreto N.o 522
+  Habiendose creado la Sub-Comisaria
+  de Mojotoro con sueldo y de acuerdo
+  a la propuesta elevada por el Senor
+  Jefe de Policia.
+  El Presidente del Senado en ejercicio
+  del Poder Ejecutivo de la Provin-
+  cia,
+  DECRETA:
+  Art. 1o-Nombrase Sub-Comisario de
+  Policia de dicha localidad al senor
+  Silverio Caceres con el sueldo que le
+  asigna el presupuesto con anterioridad
+  al 1.o de Agosto.
+  Art. 2.o Comuniquese, publiquese y
+  dese la R. Oficial.
+  Salta, Septiembre 20 de 1919
+  PENALBA
+  DARIO ARIAS
+  Es copia:-G. Quevedo
+
+NOTA DE LECTURA: el decreto encadena tres actos del ano. En marzo, Silverio
+Caseres es nombrado comisario de PARTIDO de Mojotoro (745 h7); en agosto el
+presupuesto crea y dota la plaza; en setiembre el mismo hombre pasa a
+SUB-COMISARIO de la localidad con sueldo retroactivo al 1.o de agosto. El
+apellido se imprime Caseres en marzo y Caceres en setiembre, y el config trae
+las dos formas como entradas separadas, de 1910 y de 1909: conservarlas fue lo
+correcto. El 'sueldo que le asigna el presupuesto' remite a la Ley de
+Presupuesto publicada una semana antes en 773, cuyo item V trae los renglones
+de sub-comisario de la campana. El art. 2.o imprime 'dese la R. Oficial' donde
+corresponde 'al' y se transcribe asi.
+
+B.3 - TERMINOS QUE EN ESTE ANO SON OTRA COSA
+
+Diecinueve terminos y un caso de saturacion. Se leyeron todos los contextos,
+no solo los que parecian del departamento.
+
+  castellanos  136 aciertos en 82 de 440 hojas. Es el apellido del
+               gobernador: la mancheta imprime 'Gobierno del Dr. don
+               Joaquin Castellanos' en las 49 tapas y el cuerpo lo repite
+               cada vez que firma. No es el Castellanos de Anta ni el
+               abogado de 1912. Saturacion por mancheta.
+  apaza        8 hojas, ninguna del departamento: Ernesto Apaza y Jose F.
+               Apaza, ordenanzas; Nacianseno Apaza, Juez de Paz de
+               Guachipas, tres veces; Napoleon Apaza, comisario del
+               partido de Alemania en Guachipas; una propiedad 'de Apaza'
+               en el plano de Simesen; Mercedes Apaza de Taritolay y
+               Matias Apaza, en juicios.
+  isasmendi    6 hojas: Mariano Isasmendi, comision municipal de La Vina;
+               Andres A. Isasmendi, vocal del Superior Tribunal, que
+               renuncia en junio y es designado interventor; y dos
+               apellidos en juicios sucesorios.
+  wierna       5 hojas: Arturo Wierna, auxiliar de la Oficina de
+               Estadistica; Jaime Wierna, juez de paz suplente de La
+               Silleta y despues sub-comisario de Las Higuerillas y de La
+               Quesera; Isabel Diez de Wierna, sucesorio. Es la familia de
+               Rosario de Lerma y la Capital, como en 1911 y 1912.
+  lesser       4 hojas, y aqui hay que partir el termino en dos. En 745 h7
+               y 764 h3 es el partido del departamento y esta en el
+               parrafo A. En 742 h4 y 784 h1 es Lorenzo Lesser, celador de
+               la Carcel Penitenciaria, nombrado en febrero y exonerado en
+               diciembre: apellido, no lugar.
+  entre rios   2 hojas: la finca 'Entre Rios' de Rosario de Lerma, en
+               deslinde, y una calle de la Capital en un juicio de
+               manzanas.
+  mojotoro     2 hojas: 745 h7, ya fichada, y 774 h5, que es B.2.1.
+  manzano      2 hojas: el partido de Manzano en Rosario de Lerma (745 h7)
+               y un proyecto de ley de vialidad 'camino al Manzano' del
+               mismo departamento.
+  rio blanco   2 hojas: el partido del Tunal, Candao y Rio Blanco, del
+               distrito de La Silleta, y la finca 'Abra Grande y Abra
+               Chica' o Rio Blanco, de Oran.
+  sauces       2 hojas: Los Sauces de Guachipas (745 h7) y la finca
+               'Sauces' y 'Herreria' que fue del doctor Martin Gabriel
+               Guemes. El Sauce del departamento es singular y esta en el
+               parrafo A.
+  gallinato    1 hoja: 745 h7, ya fichada.
+  san alejo    1 hoja: 745 h7, ya fichada.
+  murua        1 hoja: Mercedes Murua, juicio sucesorio. Apellido.
+  quintin      1 hoja: Quintin Rivero, de Angastaco. Nombre de pila, como
+               en 1911 y 1912.
+  nogales      1 hoja: el arroyo de Nogales, en un deslinde de Anta.
+  lagunilla    1 hoja: el paraje de Lagunilla, departamento de la Capital,
+               en un decreto de escuelas ambulantes. Como en 1911.
+  tabacal      1 hoja: el Tabacal de Oran, sub-comisaria.
+  loma bola    1 hoja: un mojon 'la Loma Bola' en el deslinde de un
+               potrero de Linares. No se puede atribuir a jurisdiccion y
+               se declara sin atribuir.
+  penales      1 hoja: el adjetivo, en 'las sanciones penales que
+               correspondan'. El termino entro al config en 1912 porque
+               364 h4 imprimia asi el paraje de los Penones; en 1919 no
+               es eso.
+  aramayo      1 hoja: Silverio Aramayo, Registro Civil de Iruya.
+  mamani       1 hoja: Jorge Mamani, Juez de Paz de Carahuasi.
+
+B.4 - AUSENCIAS DEL ANILLO DE ACTORES
+
+Se buscaron las veintiuna personas que los actos del parrafo A y de B.2
+nombran en el departamento, por nombre y apellido sobre el texto con la
+puntuacion suprimida, y ademas por apellido suelto en las 440 hojas. Los tres
+grupos del parrafo 5.1:
+
+GRUPO 1 - SOLO APARECEN EN SU PROPIO ACTO
+
+Catorce personas: Ambrosio L. Mascietti (Comisario de Policia del
+departamento, 738 h2); Leoncio A. Mascietti (Registro Civil, 739 h3);
+Francisco Sosaya, Julio Mercado y Camilo Caceres (Comision Municipal, 738 h5);
+Casimiro Caceres y Carmelo Sivila (Juez de Paz propietario y suplente, 742
+h3); Julio Zambrano, Delfin Chaile, Juan Cuchui, Zacarias Maidana y Manuel
+Ramos (comisarios de partido, 745 h7); Hector Echanique (comisario auxiliar de
+Monte y Chalchalnio, 755 h3); y Marcelo Lamas (comisario auxiliar de Lesser,
+764 h3). Ninguno vuelve a aparecer en el ano. Los homonimos que si aparecen
+son otras personas y se verificaron uno por uno: Emeterio Royo y Julio Royo,
+Dionicia H. de Mercado, Pedro P. Lamas y Agapito Lamas, Adolfo Molina, el
+doctor Carlos Zambrano (Juez de Paz Letrado), Alejandro Ramos, Ciro Caceres y
+Simon Guerrero.
+
+GRUPO 2 - APARECEN EN MAS DE UN ACTO DEL DEPARTAMENTO
+
+Cinco personas, y son las que arman la trama del ano:
+
+  Domingo Royo       miembro de la Comision Municipal en enero (738 h5) y
+                     comisario del partido de El Sauce en marzo (745 h7).
+  Jose A. Molina     miembro de la Comision Municipal en enero, donde se
+                     imprime 'Jose Molina' (738 h5), y comisario del
+                     partido del Vaquero en marzo (745 h7).
+  Liborio Guerrero   comisario del partido del Monte en marzo (745 h7) y,
+                     en mayo, renunciante al cargo de Comisario Auxiliar
+                     de los partidos de Monte y Chalchalnio (755 h2).
+  Silverio Caseres   comisario del partido de Mojotoro en marzo (745 h7)
+  / Silverio Caceres y Sub-Comisario de Policia de Mojotoro en setiembre
+                     (774 h5), con sueldo retroactivo al 1.o de agosto.
+  Pedro Vale         comisario del partido de Lesser en marzo, impreso
+                     'Pdero Vale' (745 h7), y dejado sin efecto en julio
+                     (764 h3).
+
+GRUPO 3 - APARECEN TAMBIEN FUERA DEL DEPARTAMENTO
+
+VACIO. Ninguna de las veintiuna personas nombradas en los actos del
+departamento aparece en 1919 en un acto ajeno a el. Se comprobo caso por caso
+y los aciertos de apellido suelto fuera del departamento resultaron todos ser
+otras personas, como se detalla en el grupo 1. Es un resultado, no una falta
+de busqueda.
+
+BUSQUEDAS QUE FALLAN SOBRE SU PROPIO ACTO
+
+La regla del parrafo 5.1 prohibe declarar ausente a un actor cuya busqueda por
+nombre completo no devuelve ni siquiera su propio acto. En 1919 son SEIS y se
+nombran: Camilo Caceres, que la capa lee 'Camilo Caccres'; Casimiro Caceres,
+que lee 'Caceras'; Silverio Caseres, que lee 'sjlverio caseres'; Delfin
+Chaile, que lee 'delfin oliaile' y del que NI EL APELLIDO SUELTO da un solo
+acierto en todo el ano; Pedro Vale, que lee 'pelero vale'; y Zacarias Maidana,
+que lee 'maidatia'. Los seis estan mirados en la imagen. Con una sola version
+del texto no hay desempate, y estos seis son la medida exacta de lo que eso
+cuesta.
+
+C - LIMITROFES
+--------------
+
+Los departamentos y distritos vecinos aparecen en los mismos actos de campana
+que Caldera, y en ninguno de ellos el departamento queda aislado. Con ficha y
+una linea:
+
+  Guachipas          Decreto N.o 213, 745 h7: comisarios de partido de
+                     Acosta 2a Seccion, Alemania y Los Sauces, y
+                     sub-comisario del departamento.
+  Rosario de Lerma   Decreto N.o 213, 745 h7: Carabajal, Camara, Manzano,
+                     Cerro Negro, San Ramon-Timbo-Florida, Pucara y
+                     Quijano, San Martin y Santa Rosa. Ademas, juez de paz
+                     propietario y suplente en 739 h6.
+  La Vina            Decreto N.o 213, 745 h7: el Tunal y Cardonal.
+                     Comision Municipal en 738 h6.
+  Cerrillos, Cachi   Decreto N.o 213, 745 h7, en el mismo encabezado que
+                     Caldera. Ambos en el item VII del presupuesto.
+  Distrito La        Decreto N.o 213, 745 h7: Incahuasi, el Toro, Villa
+  Silleta            Sola, el Tunal-Candao-Rio Blanco y Taxtil. Es el
+                     distrito donde Jaime Wierna es juez de paz suplente.
+  Campo Santo        Decreto N.o 523, 774 h5: traslado del Encargado del
+                     Registro Civil de la 1a Seccion a Guemes, el decreto
+                     inmediatamente siguiente al de Mojotoro.
+  Guemes             Registro Civil en 739 h3 (Mario Caligniani) y destino
+                     del traslado de 774 h5.
+
+El limitrofe que importa este ano es Guemes: la Sub-Comisaria de Mojotoro se
+crea (774 h5) el mismo dia en que se mueve el Registro Civil de Campo Santo
+hacia Guemes, y las dos son jurisdicciones que lindan con el departamento por
+el este. No se infiere ninguna relacion entre los dos actos: estan contiguos
+en la hoja y eso es todo lo que consta.
+
+P - PLANOS
+----------
+
+El corpus de 1919 no publica ningun plano. Las 440 hojas son texto a dos
+columnas y las unicas imagenes incrustadas son el escaneo de la hoja y su capa
+auxiliar. Techo de resolucion declarado: 300 ppi.
+
+Diecinueve hojas nombran un plano sin acompanarlo, y se registran aqui como
+citados y no acompanados: 741 h8, h10, h11, h12, h14, h15 y h16 (pedimentos de
+cateo de petroleo del doctor Arturo M. Figueroa y otros); 742 h9; 756 h3, h11,
+h12, h16 y h17; 758 h3 y h4; 761 h8; 772 h8; 776 h12; y 778 h6. NINGUNA de
+esas diecinueve remisiones toca al departamento: ninguna de las hojas del
+parrafo A ni la de B.2 menciona un plano, y los deslindes que si lo citan son
+de Anta, Oran, Rosario de Lerma, Cafayate y la Capital.
+
+D - INDICE
+----------
+
+  POR EDICION Y HOJA
+  
+  738 h2   Decreto Nro. 14. Comisario de Policia del departamento:
+           Ambrosio L. Mascietti.                                    (A.1)
+  738 h5   Decreto N.o 33, 15/I/1919. Comision Municipal de Caldera:
+           Domingo Royo, Francisco Sosaya, Jose Molina, Julio Mercado,
+           Camilo Caceres.                                           (A.2)
+  739 h3   Decreto N.o 49, 18/I/1919. Encargado del Registro Civil de
+           Caldera: Leoncio A. Mascietti.                            (A.3)
+  742 h3   Decreto N.o 117, 4/II/1919. Juez de Paz propietario Casimiro
+           Caceres y suplente Carmelo Sivila.                        (A.4)
+  745 h7   Decreto N.o 213. Comisarios de partido del departamento, diez
+           partidos.                                                 (A.5)
+  755 h2   Decreto N.o 337, 8/V/1919. Renuncia de Liborio Guerrero como
+           Comisario Auxiliar de Monte y Chalchalnio; nombramiento de
+           Hector Echanique.                                         (A.6)
+  764 h3   Decreto N.o 414, 11/VII/1919. Se deja sin efecto a Pedro Vale
+           en Lesser; nombramiento de Marcelo Lamas.                 (A.7)
+  773 h6   Ley de Presupuesto, item VII: un Encargado de Registro Civil
+           para Caldera.                                             (A.8)
+  774 h5   Decreto N.o 522, 20/IX/1919. Creacion de la Sub-Comisaria de
+           Mojotoro; nombramiento de Silverio Caceres.             (B.2.1)
+  
+  POR MATERIA
+  
+  Policia          738 h2, 745 h7, 755 h2, 764 h3, 774 h5
+  Gobierno local   738 h5 (Comision Municipal), 742 h3 (Juez de Paz)
+  Registro Civil   739 h3, 773 h6
+  Presupuesto      773 h6
+  
+  POR PERSONA (las que aparecen mas de una vez)
+  
+  Silverio Caseres / Caceres   745 h7, 774 h5
+  Domingo Royo                 738 h5, 745 h7
+  Jose (A.) Molina             738 h5, 745 h7
+  Liborio Guerrero             745 h7, 755 h2
+  Pedro Vale                   745 h7, 764 h3
+  
+  POR TOPONIMO DEL DEPARTAMENTO
+  
+  Calderilla  745 h7      Mojotoro          745 h7, 774 h5
+  Vaquero     745 h7      Gallinato         745 h7
+  Lesser      745 h7, 764 h3                Yacones      745 h7
+  San Alejo   745 h7      Potrero de Castilla  745 h7
+  El Sauce    745 h7      el Monte     745 h7, 755 h2
+  Chalchalnio 755 h2
+
+E - OBSERVACIONES
+-----------------
+
+E.1 - DUPLICACION Y SALDOS
+
+Duplicacion. Sin las .jpg del script no hay md5 ni dhash, de modo que el
+control se hizo por texto sobre las 440 hojas: dan 440 textos distintos y no
+hay ninguna edicion ni hoja repetida. Las dos hojas identicas del Release (737
+y 787) no son boletines. Ningun aviso se publica dos veces: vease E.6.
+
+Saldos. EN 1919 NO SE PUBLICO UN SOLO RESUMEN DE TESORERIA. Se conto antes de
+prometer la cadena, como manda el parrafo 6: la palabra 'balance' aparece en
+una sola hoja y no encabeza un cuadro; 'resumen' aparece en dos y en las dos
+es prosa juridica; 'movimiento de fondos', 'movimiento de tesoreria' y
+'demostracion' no aparecen nunca. No hay cadena de saldos que armar, ni corta
+ni larga, y no hay ningun balance municipal, ni del departamento ni de ningun
+otro. Es un hecho del corpus, no una tabla que quedo sin mirar. La serie queda
+abierta contra 1918 por un lado y contra 1920 por el otro, sin ningun punto de
+apoyo en el medio.
+
+E.2 - COBERTURA
+
+Hojas presentes: 440, en 49 ediciones. Hojas cuya capa previa se leyo entera:
+440. Hojas cuya cabecera se OCRizo para el folio: 440. Hojas miradas con los
+ojos: 13, con 22 recortes de columna, banda o cabecera. Columnas cotejadas
+contra la capa previa: 20. Tapas leidas en la imagen: 7 (738, 745, 757, 767,
+777, 780, 783 y 786).
+
+Cruces hechos: las cuatro pasadas del anillo 1; los 84 terminos del anillo 2
+con lectura de contexto de los 21 que dieron acierto, en sus 141 apariciones;
+los 234 actores del config por nombre completo y por apellido suelto; las 21
+personas de los actos del departamento, una por una, en las 440 hojas; las
+ocho formulas de reemplazo; y los 51 numeros arrastrados.
+
+Destinos. Los actos del departamento no despachan a ninguna otra jurisdiccion:
+todos se comunican al Registro Oficial y, cuando corresponde, al Ministerio de
+Gobierno (739 h3, art. 2.o) o al Jefe de Policia, que es quien eleva todas las
+propuestas del ano salvo las del Juez de Paz, que vienen de la Comision
+Municipal del departamento.
+
+Citados y no acompanados. Uno solo desde los actos del departamento: el
+decreto de la Intervencion Nacional de fecha 31 de diciembre de 1918 que cita
+755 h2 al convocar a las Camaras. Esta fuera del corpus del ano y no se lo
+busca afuera. Los demas decretos citados desde actos del departamento son del
+propio ano y estan en el corpus (N.o 18, 32, 33, 49, 117, 213, 337, 414, 521,
+522, 523). No hay ninguna vacante declarada sin nombrar a quien la dejo: las
+cuatro vacantes del ano en el departamento nombran al saliente (Liborio
+Guerrero en 755 h2, Pedro Vale en 764 h3) o declaran el cargo vacante por
+creacion (774 h5) o por vacancia previa sin titular nombrado (738 h2, que dice
+'encontrandose vacante' sin decir de quien).
+
+E.3 - SIN MENCION Y NO MIRADO
+
+427 de las 440 hojas no estan miradas con los ojos en su cuerpo. De esas, 425
+no dieron acierto en ninguna pasada del anillo 1, y cuatro hojas dieron
+acierto pero se juzgaron por el contexto de la capa y no por la imagen: 779
+h6, 783 h2 y 783 h8, las tres con el apellido Calderon, y 773 h1, ruido de la
+laxa. Se declara asi. Ademas, las cabeceras de las 440 estan todas leidas, de
+modo que ninguna hoja del ano quedo sin tocar.
+
+E.4 - FIRMAS Y AUTORIDAD
+
+1919 es un ano de autoridad partida y la alternancia esta medida hoja por
+hoja. La mancheta dice 'Gobierno del Dr. don Joaquin Castellanos' en las 49
+tapas, pero el Ejecutivo lo ejerce el Presidente del Senado durante la mayor
+parte del ano, en DOS interinatos separados por un regreso del titular:
+
+  738 a 758   PENALBA firma. Ediciones del 17 de enero al 6 de junio.
+              (En 754 y 757 aparecen las dos firmas: 757 es la edicion de
+              transicion, con 7 apariciones de Penalba y 5 de Castellanos.)
+  760 a 762   CASTELLANOS firma. Del 20 de junio al 4 de julio.
+              Ninguna aparicion de Penalba en esas tres ediciones.
+  764 a 774   PENALBA vuelve a firmar. Del 18 de julio al 26 de setiembre.
+              (764 trae tambien 3 apariciones de Castellanos.)
+  775 a 786   CASTELLANOS firma hasta el cierre del ano. Del 3 de octubre
+              al 19 de diciembre. Ninguna aparicion de Penalba.
+
+No hay decreto de apertura ni de cierre de ninguno de los dos interinatos a la
+vista en el corpus. Conforme a la regla del parrafo 2.5bis, se declaran el
+ultimo acto del interino y el primero del titular en cada cambio y NO se fija
+el dia del reintegro. La edicion 763, de dos hojas, cae justo en el medio del
+segundo cambio y no trae ninguna de las dos firmas.
+
+El hecho de fondo esta en 755 h2: un decreto recuerda que las Camaras
+Legislativas se constituyeron 'en virtud de la convocatoria hecha por la
+Intervencion Nacional por decreto de fecha 31 de diciembre del ano ppdo.'.
+1918 cerro con una intervencion federal, y por eso 1919 abre con la
+Legislatura recien reabierta y el Presidente del Senado en ejercicio. No se
+explica la causa: se transcribe lo que el decreto dice.
+
+Formulas de encabezado, todas registradas y ninguna normalizada: 'El
+Presidente del Senado en ejercicio del Poder Ejecutivo de la Provincia' y su
+variante '...del P. E. de la Provincia', 124 hojas; 'El Gobernador de la
+Provincia', 39 hojas; 'El Poder Ejecutivo de la Provincia', que aparece en
+decretos de junio firmados por Castellanos; y 'en Acuerdo de Ministros', 17
+hojas.
+
+Refrendo. DARIO ARIAS, Ministro de Gobierno, en 126 hojas, de 738 h2 a 786 h3,
+tambien impreso DARIO ALIAS en 738 h2. DAVID M. SARAVIA firma en su lugar en
+mayo (755 h2 y h3) y en setiembre (774 h5), y el decreto N.o 338 de 755 h3
+publica el reintegro: 'Encontrandose en esta ciudad el senor Ministro de
+Gobierno, doctor don Dario Arias [...] queda en posesion de su cargo el
+expresado senor', del 8 de mayo de 1919. El decreto anterior a ese, en 774 h5,
+dice que 'habiendose escusado refrendar el presente decreto el senor ministro
+de gobierno lo hara el senor ministro de hacienda': la excusacion tambien se
+publica.
+
+'Es copia'. Lo firman, en orden de frecuencia: G. Quevedo, A. M. Porta
+(Oficial 1.o), J. M. Decavi, Diego Pereyra, Pereira, Nolasco Zapata, M. Coll y
+E. G. Dousset. Los ocho actos del departamento estan certificados por tres de
+ellos: G. Quevedo (742 h3, 755 h2, 764 h3, 774 h5), A. M. Porta (738 h2, 738
+h5, 739 h3) y ninguno visible en 773 h6, que es una ley y no un decreto.
+
+E.5 - CORTES Y COLUMNAS
+
+Guion blando: 7.886 apariciones, siempre como marca de corte de renglon sin
+guion impreso. Marca U+0002: cero. Cortes con puntuacion intercalada: la union
+los tolera.
+
+Columna perdida. El corpus es a dos columnas, no a tres como 1912. Los bordes
+se midieron por pagina con get_text('words') y no por proyeccion, porque el
+ancho de hoja varia de 415 a 515 puntos entre escaneos. En las 20 columnas
+cotejadas contra la capa previa NO se encontro ninguna columna perdida. Se
+dice sobre veinte columnas de nueve ediciones, y nada mas.
+
+Lo que si fallo, como todos los anos, es la palabra suelta, y fallo en
+silencio: 'cablera' por Caldera y 'Tacones' por Yacones en 745 h7, 'Caceras'
+por Caceres en 742 h3, 'oliaile' por Chaile y 'pelero' por Pedro en 745 h7,
+'maidatia' por Maidana. Toda palabra que decidio una ficha esta mirada. La
+lista completa de las que rompen una busqueda esta en B.4.
+
+E.5bis - LA CADENA DE FOLIOS Y LAS HOJAS QUE FALTAN
+
+Es el resultado mas importante del corpus y se cerro entero. El folio impreso
+en la cabecera ('Pag. N') corre dentro del ano. La capa previa lo entrega en
+11 de 440 hojas; buscando numeros en el diez por ciento superior con
+get_text('words') se recuperan unas treinta anclas mas; y OCRIZANDO SOLO LA
+FRANJA DE CABECERA CON EL MODELO ENG se lee en 307 de las 440. Esto ultimo
+merece decirse: para leer un folio de tres cifras no hace falta el modelo spa,
+y en una sesion sin spa la cabecera igual se puede leer entera. Las 440
+franjas se OCRizaron en menos de tres minutos con nproc = 1.
+
+Con eso se ajusto, por edicion, el folio de la hoja 1, y el resultado es
+tajante: DENTRO DE CADA EDICION LA CADENA ES CONTINUA, SIN UN SOLO SALTO, en
+las cuarenta y nueve. Todos los huecos caen en los limites entre ediciones. Es
+decir que a ninguna edicion le falta una hoja del medio: a veintiocho de ellas
+les faltan la ultima hoja o las dos ultimas. La distincion del parrafo 2.5bis
+entre edicion corta y edicion incompleta se resuelve entera del lado de la
+incompleta.
+
+El ano corre del folio 595 (738 h1) al 1072 (786 h6): 478 paginas impresas
+contra 440 presentes. FALTAN 38 HOJAS. Reparto, por la edicion a cuyo final le
+faltan:
+
+  738  -3     751  -2     763  -2     773  -1
+  739  -1     752  -1     764  -2     776  -1
+  744  -1     756  -1     766  -1     777  -1
+  746  -1     757  -1     769  -1     779  -1
+  748  -1     759  -2     770  -1     783  -1
+  749  -1     760  -2     771  -1     784  -2
+  750  -1     762  -2     772  -1     785  -2
+
+Veintiocho ediciones incompletas de cuarenta y nueve; veintiuna completas. De
+las nueve ediciones que traen actos del departamento, cuatro estan
+incompletas: 738 pierde tres hojas, 739 una, 764 dos y 773 una. Las otras
+cinco (742, 745, 755, 774 y la propia 786) estan completas. Lo que se pierde
+es siempre el final de la edicion, donde el Boletin de esta epoca imprime
+avisos y edictos.
+
+La cadena NO se hereda entre anos: 1919 abre en el folio 595 y no se concilia
+con 1918, que esta fuera del corpus. Se declara y no se explica.
+
+E.6 - REPETICIONES
+
+En 1919 NO HAY MARCAS DE PUBLICACION. El formato '251 v Dbre 5' que 1912 usaba
+119 veces no aparece ni una sola vez en las 440 hojas. Se busco de todos modos
+por texto si algun aviso se repite, comparando los edictos y avisos del ano, y
+no se encontro ninguna repeticion: cada aviso sale una vez. La regla se
+mantiene: la marca no prueba repeticion y la repeticion solo la prueba el
+texto; aqui no hay ni marca ni repeticion.
+
+E.7 - FALSOS POSITIVOS Y NEGATIVOS
+
+Anillo 1, falsos positivos de 1919, que se declaran aqui y NO se agregan al
+config (regla del parrafo 12): el apellido Calderon, en tres actos ajenos al
+departamento - Maria Calderon de Raposo, testamentaria de Rosario de la
+Frontera (779 h6); Manuel Calderon, miembro municipal de Rosario de la
+Frontera al que se le deja sin efecto el nombramiento por cambio de residencia
+(783 h2); y Delfina Sanchez de Calderon, autos sucesorios (783 h8). En la
+laxa, 'cal deno' en 773 h1, que es ruido de columna. En la difusa por encima
+de 0,78: calavera y escalera; el tercer resultado, 'cablera', NO es falso
+positivo sino la deformacion que el OCR hace de Caldera en 745 h7, y la difusa
+lo rescato. En la banda 0,70 a 0,78: caberas, cabrera, caceras, cadaver,
+caeria, calidad, calisalla, camera, capilla, cartera, criolla, cuadra, cuadrar
+y cualquiera.
+
+Anillo 2, falsos positivos de 1919, tambien declarados y no agregados al
+config: castellanos, el gobernador, que satura 82 hojas; apaza, en siete
+personas distintas y una propiedad; isasmendi, la familia de La Vina y el
+vocal del Superior Tribunal; wierna, la familia de Rosario de Lerma y la
+Capital; lesser, el celador Lorenzo Lesser de la Carcel Penitenciaria; entre
+rios, la finca de Rosario de Lerma y la calle de la Capital; manzano, el
+partido de Rosario de Lerma y el camino; rio blanco, el partido de La Silleta
+y la finca de Oran; sauces, Los Sauces de Guachipas y la finca de los Guemes;
+murua, quintin, nogales, lagunilla, tabacal, aramayo y mamani como apellidos,
+nombres de pila o parajes ajenos; loma bola, sin atribuir; y penales, el
+adjetivo.
+
+Falsos negativos. Dos hojas del departamento (755 h2 y 773 h6) eran invisibles
+para todas las pasadas con la union de cortes defectuosa; con la corregida
+aparecen. Una tercera aparicion (774 h5) es invisible para TODAS las pasadas
+del anillo 1, incluso con la union corregida, porque el acto no nombra al
+departamento: la trajo el anillo de actores. No se puede descartar que existan
+otros en las treinta y ocho hojas ausentes, porque esas no se pueden buscar.
+
+E.8 - FIDELIDAD NUMERICA
+
+Cuadros publicados en 1919: UNO, y es grande. La Ley de Presupuesto y Calculo
+de Recursos de la Provincia de Salta para el Ejercicio de Agosto a Diciembre
+de 1919, en la edicion N.o 773, hojas 2 a 14. Su articulo 1.o fija el gasto de
+la Administracion para ese ejercicio en $ 767.599,95 m/n. Titulo, periodo y
+cifra total estan leidos en la imagen (773 h2, Pag. 914). Fuera de el, el
+unico otro cuadro del ano es la tarifa de clasificacion de bosques y
+transferencia de maderas de 773 h14, que es tarifa y no balance. No hay ningun
+balance municipal ni ningun resumen de Tesoreria (vease E.1).
+
+Recalculo. Se recalcularon CATORCE subtotales del cuadro. Trece cierran
+exactos, incluido el multiplicador por cinco de la columna 'Total', que
+confirma el periodo de cinco meses que el titulo declara:
+
+  Camara de Senadores        250+200+80+200 = 730       x5 = 3.650   cierra
+  Camara de Diputados   250+200+180+80+250 = 960        x5 = 4.800   cierra
+  Gobernacion              1.200+150+100 = 1.450        x5 = 7.250   cierra
+  Ministerio de Gobierno                  = 1.670       x5 = 8.350   cierra
+  Ministerio de Hacienda   800+400+170+170 = 1.540      x5 = 7.700   cierra
+  Superior Tribunal                       = 4.220      x5 = 21.100   cierra
+  Ministerio Publico  1.000+1.200+600+300 = 3.100      x5 = 15.500   cierra
+  Juzgados 1a instancia                   = 7.610      x5 = 38.050   cierra
+  Juzgado de Paz Letrado  550+180+110+200 = 1.040       x5 = 5.200   cierra
+  Gastos del Poder Judicial       50+150  =   200       x5 = 1.000   cierra
+  Policia de la Capital (35 renglones)    = 8.940      x5 = 44.700   cierra
+  Vigilantes y bomberos                  = 16.435      x5 = 82.175   cierra
+  Banda de musica          200+600+500 = 1.300          x5 = 6.500   cierra
+  Gastos de la policia de la Capital     = 11.620      x5 = 58.100   cierra
+  Registro Civil de la Capital 300+210+240+80 = 830     x5 = 4.150   cierra
+  POLICIA DE LA CAMPANA (item V)         = 16.990   impreso 16.930  NO CIERRA
+
+El unico que no cierra es el item V, Policia de la Campana, que es justamente
+el que paga a los comisarios del departamento. La columna mensual impresa suma
+16.990 y el subtotal impreso dice 16.930: sesenta pesos de diferencia. La
+lectura alternativa que cerraria la columna es que el primer renglon fuera
+4.800, que es exactamente 30 comisarios a 160 pesos; con 4.800 la columna suma
+16.930 y cierra al centavo. Se miro ese digito a 500 dpi y el caracter impreso
+es un 6, no un 0. Se declaran las dos lecturas y NO se corrige. La columna
+'Total' encadena con el subtotal IMPRESO y no con el sumado: 16.930 por cinco
+da los 84.650 impresos.
+
+Separacion entre lo mirado y lo leido en la capa, como manda el parrafo 8.5:
+las cifras del item V, del item VI y del item VII (773 h6) estan miradas en la
+imagen, a 250 y a 500 dpi. Los otros trece subtotales se recalcularon sobre la
+capa previa de 773 h2 a h5 y no sobre la imagen: cierran todos, pero su
+lectura es de capa y se declara asi. Si alguno no hubiera cerrado, habria
+habido que mirarlo antes de publicarlo.
+
+Erratas numericas de impresion transcritas tal como estan: el renglon de los
+agentes de segunda del item V imprime el importe '4 400' sin punto de millar.
+
+Tablas NO recalculadas: la tarifa de bosques y maderas de 773 h14, por ser
+tarifa y no cuadro con total; y el calculo de recursos de 773 h12 a h13, cuyos
+renglones de deuda publica no traen subtotal a la vista en la capa. Ninguna
+otra: el ano no publico mas cuadros.
+
+E.9 - CONTRADICCIONES
+
+No se concilia ninguna. Las halladas:
+
+   1. La misma firma se imprime de dos maneras en el mismo ano: PENALVA
+      en 738 h2 y PENALBA en 742 h3, 755 h2, 755 h3, 764 h3 y 774 h5;
+      DARIO ALIAS en 738 h2 y DARIO ARIAS en las demas.
+   2. El paraje de Monte y Chalchalnio: el Boletin lo imprime
+      'Chalchalnio' en 755 h2; el config lo trae como 'chalchanio' y
+      'chalcanio'; el barrido de 1912 lo leyo 'Chalchamo'. Cuatro formas,
+      ninguna coincidente.
+   3. El decreto N.o 336 de 755 h2 pasa del Art. 1.o al Art. 3.o: no
+      imprime Art. 2.o.
+   4. El decreto N.o 117 esta fechado el 4 de febrero de 1919 y se publica
+      en la edicion del 14 de febrero.
+   5. El item V del presupuesto de 773 h6 no cierra por sesenta pesos.
+   6. Dos personas de apellido Mascietti ocupan en el mismo mes dos cargos
+      del mismo departamento: Ambrosio L. (Comisario de Policia, 738 h2) y
+      Leoncio A. (Registro Civil, 739 h3). No se infiere parentesco.
+   7. El comisario de partido de Mojotoro se imprime 'Silverio Caseres' en
+      745 h7 y 'Silverio Caceres' en 774 h5, en el mismo cargo y la misma
+      localidad. El config trae las dos formas por separado y se
+      conservan.
+   8. El decreto N.o 213 imprime 'Camisarios' en su articulo 1.o, 'Pdero
+      Vale' por Pedro Vale y 'Potrero de Castilla' por Potrero de
+      Castillo, tres erratas en la misma hoja.
+   9. El decreto N.o 522 imprime 'dese la R. Oficial' donde corresponde
+      'al'.
+  10. Las dos hojas del Release que no son boletines imprimen 'Este
+      boletin no se encuentro en nuestra base de datos', con la
+      concordancia rota.
+  11. El decreto N.o 117 dice 'Vista las ternas presentadas', sin
+      concordar.
+  12. La mancheta atribuye las cuarenta y nueve ediciones al 'Gobierno del
+      Dr. don Joaquin Castellanos' mientras el Ejecutivo lo ejerce el
+      Presidente del Senado en treinta y dos de ellas.
+
+E.10 - LIMITES
+
+Son seis, y ninguno lo levanta el trabajo de esta sesion:
+
+  1. CONFIANZA POR HOJA: no existe. Sale del .tsv de lee_auto.py y el
+     .tsv no se publico. Sin ella, el reparto pub/ver/ojos del parrafo 1
+     no se puede informar.
+  2. HOJAS 'A OJOS': la lista NO EXISTE, por la misma razon. No es un
+     pendiente: es una imposibilidad. Las hojas se cubrieron por otras
+     vias: las de los candidatos del anillo 1, las de los encabezados de
+     lista, la del cuadro, la de B.2, ocho tapas, y las 440 cabeceras.
+  3. DEDUPLICACION POR IMAGEN: sin las .jpg no hay md5 ni dhash. El
+     control se hizo por texto.
+  4. MEDICION DE TINTA: sin las .jpg no hay porcentaje de tinta. Ocho
+     hojas tienen menos de 500 bytes de capa y son las candidatas a hoja
+     casi en blanco, pero eso es densidad de texto y no tinta.
+  5. SEGUNDA VERSION: no hay OCR propio del cuerpo porque tesseract no
+     tiene spa en esta sesion. Todo resultado esta etiquetado prev y el
+     unico desempate es la imagen. Las seis busquedas que fallan sobre su
+     propio acto (B.4) son la medida de lo que eso cuesta.
+  6. TREINTA Y OCHO HOJAS AUSENTES DEL CORPUS: la cadena de folios prueba
+     que faltan y donde faltan, el Release no las tiene y no hay de donde
+     sacarlas. Es el unico limite de los seis que no depende de que corra
+     el script: depende de que se escaneen. Cuatro de las nueve ediciones
+     con actos del departamento estan incompletas.
+
+Que agregaria cada insumo que falto. El .tsv daria la confianza por hoja, la
+lista de hojas a ojos y una segunda lectura de los digitos dudosos del item V
+del presupuesto. Las .jpg darian md5, dhash y la medicion de tinta. El log.txt
+diria si el script fallo en alguna hoja. El pre-informe y los CSV permitirian
+cotejar las pasadas contra una corrida independiente. Un tesseract con spa
+daria la segunda version del texto y desharia las seis busquedas rotas de B.4.
+Ninguno de esos cambiaria el parrafo A, que esta transcrito desde las imagenes
+del PDF, ni el parrafo B. El unico insumo que cambiaria el parrafo A son las
+treinta y ocho hojas que faltan.
+
+F - CORRECCION A LA RUBRICA
+---------------------------
+
+Propuestas para v16, todas nacidas de 1919 y todas verificadas en este corpus:
+
+  1. LA FRANJA DE CABECERA SE PUEDE OCRIZAR SIN spa. Un folio de tres
+     cifras lo lee tesseract con el modelo eng. En 1919 eso convirtio un
+     pendiente en un resultado: 307 de 440 cabeceras leidas en menos de
+     tres minutos con nproc = 1. La regla del parrafo 3 -sin spa no se
+     OCRiza en sesion- debe acotarse al TEXTO CORRIDO: los numeros de
+     cabecera, los folios y las cifras aisladas se leen con eng.
+  2. LA PAGINACION CORRIDA NO SE LEE IGUAL EN TODA LA SERIE. En 1908 a
+     1912 el folio estaba en los primeros noventa caracteres de la capa.
+     En 1919 esta en la cabecera exterior y la capa lo entrega en 11 de
+     440 hojas. La receta del parrafo 2.5bis hay que escribirla en tres
+     escalones: regex sobre el arranque de la capa; numeros del diez por
+     ciento superior con get_text('words'); y OCR de la franja de cabecera
+     con eng.
+  3. EL FOLIO NO SOLO DISTINGUE EDICION CORTA DE INCOMPLETA: MIDE CUANTO
+     FALTA DEL ANO Y DONDE. Ajustando por edicion el folio de la hoja 1 y
+     comparando el salto en cada limite, se separa el hueco interno del
+     hueco de final de edicion. En 1919 no hay un solo hueco interno y hay
+     treinta y ocho hojas perdidas al final de veintiocho ediciones. Sin
+     ese ajuste, el deficit acumulado parece repartido por todo el ano y
+     no lo esta.
+  4. UN ASSET DEL RELEASE PUEDE NO SER UN BOLETIN. 737.pdf y 787.pdf son
+     una hoja de tamano carta con el aviso de que el boletin no esta en la
+     base de datos de origen. Hay que medir tamano de pagina y cantidad de
+     hojas antes de contar ediciones.
+  5. LA EPOCA DE LOS ACTOS SIN NUMERO TERMINA ANTES DE 1919. El parrafo
+     5.3 supone, para 1908 a 1912, que los actos no llevan numero. En 1919
+     los decretos van numerados corridos dentro del ano. La regla debe
+     decir que el regimen de numeracion SE MIDE en cada corpus.
+  6. LA TAPA PUEDE NO DECLARAR LOS DIAS DE SALIDA. En 1911 y 1912 la tapa
+     decia 'Aparece Miercoles y Sabados'. La de 1919 no dice nada: en su
+     lugar imprime la Ley N.o 204 de creacion del Boletin. El ritmo se
+     establece entonces por el calendario y no por la formula, y eso se
+     declara.
+  7. EL CONFIG DEL RELEASE PUEDE SER MAS VIEJO QUE EL DEL PROYECTO. En
+     1919 el del Release llegaba hasta 1915 y el del proyecto hasta 1917.
+     Antes de usar uno hay que comparar los dos y declarar cual se uso.
+  8. UNA COLUMNA 'TOTAL' PUEDE NO SER ANUAL. En 773 el 'Total' es de cinco
+     meses. Se comprueba con el multiplicador de dos items distintos, y en
+     este caso ademas lo dice el titulo de la ley.
+  9. UN TERMINO DEL ANILLO 2 PUEDE SER EL APELLIDO DEL GOBERNADOR.
+     'castellanos' dio 136 aciertos en 82 de 440 hojas por la mancheta.
+     Conviene cotejar la mancheta contra el anillo 2 en el primer turno.
+  10. UN ANO PUEDE NO PUBLICAR NINGUN RESUMEN DE TESORERIA. 1911 publico
+     uno, 1912 cuatro, 1919 ninguno. Contar antes de prometer la cadena no
+     alcanza: hay que aceptar que el resultado sea cero y declararlo como
+     hecho del corpus.
+  11. UN ANO PUEDE NO USAR MARCAS DE PUBLICACION. 1912 tenia 119; 1919,
+     ninguna. La ausencia de la marca no se declara como falla de la
+     busqueda sino como rasgo del corpus, y la comprobacion por texto se
+     hace igual.
+
+CONFIG ACTUALIZADO
+------------------
+
+Se entrega un lee_config.json actualizado sobre el del PROYECTO (234 actores),
+no sobre el del Release. Se agrega lo de 1919 con origen '1919', se conserva
+todo lo anterior sin ninguna baja.
+
+A 'actores' se agregan NUEVE entradas con origen 1919, que son las personas de
+los actos del departamento que el config todavia no tenia:
+
+  ambrosio l.   mascietti     leoncio a.   mascietti
+  carmelo       sivila        julio        zambrano
+  delfin        chaile        pedro        vale
+  juan          cuchui        manuel       ramos
+  hector        echanique
+
+No se agregan, porque ya estan: julio mercado (1909), camilo caceres (1909),
+casimiro caceres (1917), silverio caceres (1909), silverio caseres (1910),
+zacarias maidana (1909), liborio guerrero (1909), marcelo lamas (1909),
+domingo royo (1911), jose a. molina (1911) y francisco sosaya (1910). Tres de
+esos once -Royo, Molina y Sosaya- entraron al config por los barridos de 1910
+y 1911 y en 1919 reaparecen EN EL MISMO DEPARTAMENTO, nueve y ocho anos
+despues: es la mejor prueba de que el anillo de actores por epoca vale la
+pena. Sobre 'hector echanique': el config trae 'hector echenique' con origen
+1909 y 1919 imprime Echanique. Se agregan las dos y no se unifican, por la
+regla del parrafo 15.3: el config es una red de busqueda y no un padron.
+
+A 'anillo2' se agregan tres terminos, todos formas con que 1919 imprime o el
+OCR deforma topinimos del departamento que sin ellas no se encontrarian:
+
+  chalchalnio            forma con que 755 h2 imprime el paraje que el
+                         config trae como chalchanio y chalcanio.
+  potrero de castilla    forma con que 745 h7 imprime Potrero de Castillo.
+  tacones                forma con que la capa previa lee Yacones en
+                         745 h7, la misma deformacion ya vista en 1911.
+
+A 'numeros' NO se agrega nada. Los decretos de 1919 van numerados, pero su
+numeracion es interna del ano y no se arrastra: ninguno de los ocho numeros de
+los actos del departamento (14, 33, 49, 117, 213, 337, 414, 522) sirve como
+identificador fuera de 1919. De los 51 numeros arrastrados del config, cuatro
+aparecen en el corpus y los cuatro son coincidencia de cifra: 745 es el numero
+de la propia edicion en una cabecera, 1914 es un ano, 2000 una cantidad y
+1.450 un importe del presupuesto.
+
+A 'falsos_positivos' NO se agrega nada. Los de 1919 quedan listados en E.7 y
+no se cargan al config, por la regla del parrafo 12: 'lesser' y 'mojotoro' son
+a la vez falso positivo y termino real del departamento en el mismo ano, y
+cargarlos marcaria fp_conocido justamente sobre las hojas del parrafo A.
+
+RECUENTO
+--------
+
+  Assets del Release                          52 (51 PDF + lee_config.json)
+  Archivos que no son boletines                2 (737.pdf y 787.pdf)
+  Ediciones ausentes del Release               1 (N.o 736, 3 de enero)
+  Ediciones barridas                          49 (N.o 738 a N.o 786)
+  Hojas presentes                            440
+  Folio del ano                        595 a 1072 (478 paginas impresas)
+  Hojas ausentes del corpus                   38, en 28 ediciones
+  Ediciones incompletas / completas        28 / 21
+  Huecos internos de edicion                   0
+  Ediciones dobles                             0
+  Dias de salida sin edicion                   0
+  Hojas declaradas por la tapa            no declara (epoca sin declaracion)
+  Reparto de confianza                    no disponible (limite 1)
+  Hojas leidas en la capa previa             440
+  Cabeceras OCRizadas con eng                440 (folio legible en 307)
+  Hojas miradas con los ojos                  13
+  Recortes de imagen mirados                  22
+  Columnas cotejadas contra la capa           20
+  Tapas leidas en la imagen                    8
+  Marca de corte U+0002                        0
+  Guion blando U+00AD                      7.886
+  Hojas ganadas por la union corregida         2 (755 h2 y 773 h6)
+  Anillo 1, hojas con acierto literal         11
+  Anillo 1, apariciones fichadas               8
+  Anillo 1, falsos positivos                   4
+  Anillo 2, terminos con acierto           21 de 84
+  Anillo 2, apariciones con contexto leido   141
+  Anillo 2, aportes al parrafo B               1 (mojotoro, 774 h5)
+  Actores del config con nombre completo   26 de 234
+  Personas del departamento buscadas          21
+  Busquedas que fallan sobre su propio acto    6
+  Ausencias del parrafo B, grupo 1 / 2 / 3  14 / 5 / 0
+  Limitrofes fichados                          7
+  Cuadros publicados                           1 (Ley de Presupuesto)
+  Subtotales recalculados                     16 (15 cierran, 1 no)
+  Tablas no recalculadas                       2 (tarifa y calculo de
+                                               recursos de 773)
+  Resumenes de Tesoreria publicados            0
+  Balances municipales publicados              0
+  Saldos encadenados                           0
+  Planos publicados                            0
+  Planos citados y no acompanados             19 hojas, 0 del departamento
+  Marcas de publicacion de avisos              0
+  Avisos repetidos                             0
+  Interinatos del Ejecutivo                    2, ninguno con decreto de
+                                               apertura ni de cierre
+  Contradicciones declaradas                  12
+  Limites declarados                           6
+  Correcciones propuestas a la rubrica        11
+  Entradas nuevas del config                   9 actores + 3 anillo 2
+  Actores del config que reaparecen en 1919   26 con nombre completo
+
+Fin del informe LEE 1919. COMPLETO, CON SEIS LIMITES DECLARADOS.

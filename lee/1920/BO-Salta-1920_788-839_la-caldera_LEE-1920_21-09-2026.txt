@@ -1,0 +1,1508 @@
+==============================================================================
+BOLETIN OFICIAL DE SALTA - ANO 1920 - EDICIONES N 788 A 839
+BARRIDO LEE SOBRE EL DEPARTAMENTO DE LA CALDERA
+Rubrica LEE v15 - informe armado el 21/09/2026
+==============================================================================
+
+
+------------------------------------------------------------------------------
+S0 . ADVERTENCIA PRELIMINAR
+------------------------------------------------------------------------------
+
+ESTADO: COMPLETO, con siete limites declarados.
+
+Este informe cierra el barrido de 1920 en cuatro turnos. Estan cerrados el
+corpus, la capa de texto, las cuatro pasadas, el anillo 2, los actores, los
+numeros, los reemplazos, las tapas, el calendario, la paginacion corrida, la
+autoridad, el S A -las dieciseis apariciones miradas en la imagen y repartidas
+en diez fichas-, el S B con los contextos de los diecisiete terminos del
+anillo 2 y de los quince actores leidos uno por uno, el S C, el S P, los diez
+cuadros con un subtotal recalculado cada uno, la cadena de saldos, las
+repeticiones, el indice y el config actualizado. No queda trabajo pendiente:
+lo que falta son siete limites, que el corpus y los insumos no permiten
+levantar, y se desarrollan en E.10.
+
+Insumos. El usuario no subio nada al proyecto salvo lee_config.json. El
+Release 1920 de ediedrich/boletines-salta trae 51 assets: 50 PDF numerados
+(788 a 839, sin 837 ni 838) y una copia de lee_config.json. No llegaron el
+pre-informe, ni resultados_1920.csv, ni decretos_1920.csv, ni log.txt, ni
+recortes.zip, ni el zip de los .txt de lee_trabajo. Por lo tanto no hubo
+ninguna salida de lee_auto.py para este ano y la sesion trabajo con el modo
+del S2.1 de la rubrica: extraer ella misma la capa previa de los PDF.
+
+Entorno de la sesion, verificado al empezar. nproc = 1, de modo que el OCR de
+un ano entero no se hace aca. PyMuPDF no venia instalado y se instalo desde
+pypi. tesseract 5.3.4 esta presente pero --list-langs devuelve solo eng y osd:
+NO hay spa. En consecuencia no se OCRizo nada en sesion; toda lectura propia
+es lectura de la imagen con los ojos. Estan convert, montage, identify, curl y
+python3 con PIL y numpy. api.github.com no se uso: el listado de assets se
+saco de releases/expanded_assets/1920, que es HTML sin token.
+
+De donde salieron las imagenes. Los 50 PDF se bajaron del Release en una sola
+llamada con xargs -P 8: 58 MB en segundos. Son PDF reales (version 1.5, zip
+deflate), no ZIP con extension .pdf. No hay EXTRAIDO.json contra el cual
+cotejar bytes y hojas, asi que el cotejo se hizo contra la cadena de folios
+impresos (S2.5bis), que en 1920 cierra dentro del ano.
+
+Que verifico la sesion. Las 530 hojas de los 50 archivos tienen capa de texto:
+ninguna con cero caracteres. La marca de corte U+0002 no aparece ni una vez,
+igual que en 1908-1912. El guion blando U+00AD aparece 6.000 veces y 5.999 de
+ellas van seguidas de salto de renglon: se quitaron junto con el salto, segun
+la correccion del S2.3 de v15, y tras la union no queda ninguno. La union se
+probo contando los cortes efectivamente pegados, no dandola por buena.
+
+Que agregaria cada insumo que falto, para que el lector sepa si le conviene
+correr el script. El .tsv daria confianza por hoja y con ella la lista de
+hojas a ojos, que en 1920 no existe. Las .jpg darian md5, dhash y medicion de
+tinta, con lo que la duplicacion de la edicion 810 se probaria por imagen y no
+por texto, y las hojas casi en blanco se detectarian por tinta y no por
+densidad de caracteres. El OCR propio daria una segunda version con que
+desempatar las palabras sueltas que la capa rompe -vocalds por vocales, cqres
+por Caceres, Abril 28 por Abril 23-, que es la falla dominante del ano. El
+log.txt permitiria declarar version y parametros de la corrida. Ninguno de los
+cuatro cambiaria el S A: las dieciseis apariciones estan miradas en la imagen,
+que es la prueba que ninguno de esos insumos reemplaza.
+
+Limites ya conocidos, que ningun turno de esta sesion puede levantar y que se
+desarrollan en E.10: sin el .tsv del script no hay confianza por hoja y la
+lista de hojas a ojos no existe; sin las .jpg no hay md5, ni dhash, ni
+medicion de tinta; sin OCR propio no hay segunda version con que desempatar,
+de modo que todo resultado se etiqueta prev y el unico desempate posible es la
+imagen.
+
+
+------------------------------------------------------------------------------
+S1 . CORPUS REVISADO
+------------------------------------------------------------------------------
+
+Cincuenta archivos bajados; cuarenta y ocho ediciones reales. Los archivos
+793.pdf y 822.pdf no son ediciones: traen una sola hoja con la leyenda ESTE
+BOLETIN NO SE ENCUENTRO EN NUESTRA BASE DE DATOS, que es un aviso del
+repositorio de origen y no texto del Boletin. Se cuentan como ausencias, no
+como ediciones de una hoja. Las ediciones 837 y 838 no figuran entre los
+assets del Release.
+
+Las fechas entre corchetes se leyeron en la imagen de la tapa porque la capa
+previa las daba rotas o no las daba. Las demas se leyeron en la capa. El ano
+editorial es XII en todas las tapas miradas, de la 788 a la 839: en 1920 no
+hay cambio de ano editorial. La tapa no declara cantidad de paginas ni dias de
+aparicion, de modo que el control de hojas es la cadena de folios y no una
+declaracion.
+
+  Ed.  Fecha de tapa     Hojas  Folios impresos   Capa   Version
+
+  ---  ----------------  -----  ----------------  -----  -------
+
+  788  Enero 2              11  1081-1089         prev   unica
+  789  Enero 9               4  1093-1094         prev   unica
+  790  [Enero 16]            5  1096-1098         prev   unica
+  791  Enero 23              3  1102-1103         prev   unica
+  792  Enero 30              5  1106-1109         prev   unica
+  793  (ausente)             -  -                 -      ausente
+  794  Febrero 13            5  1128-1131         prev   unica
+  795  [Febrero 20]         12  1136-1142         prev   unica
+  796  Febrero 27            9  1147-1153         prev   unica
+  797  [Marzo 5]             7  1156-1161         prev   unica
+  798  Marzo 12              7  1156-1160         prev   unica
+  799  Marzo 19             12  1166-1174         prev   unica
+  800  [Marzo 26]            6  1177-1180         prev   unica
+  801  Abril 2               7  1184-1188         prev   unica
+  802  Abril 9              11  1193-1201         prev   unica
+  803  Abril 16              7  1204-1208         prev   unica
+  804  [Abril 23]            8  1211-1217         prev   unica
+  805  Abril 30              9  1219-1226         prev   unica
+  806  Mayo 7                6  1229-1231         prev   unica
+  807  Mayo 14              12  1237-1246         prev   unica
+  808  [Mayo 21]            13  1249-1260         prev   unica
+  809  Mayo 28               8  1263-1269         prev   unica
+  810  Junio 4              15  1272-1282         prev   unica
+  811  Junio 11             13  1285-1296         prev   unica
+  812  [Junio 18]           11  1299-1305         prev   unica
+  813  [Junio 25]           10  1311-1319         prev   unica
+  814  Julio 2              16  1320-1334         prev   unica
+  815  [Julio 9]            10  1336-1340         prev   unica
+  816  [Julio 16]            6  1347-1348         prev   unica
+  817  Julio 23             18  1355-1369         prev   unica
+  818  Julio 30             22  1372-1392         prev   unica
+  819  Agosto 6              8  1396-1399         prev   unica
+  820  Agosto 13             8  1404-1410         prev   unica
+  821  Agosto 20            12  1412-1422         prev   unica
+  822  (ausente)             -  -                 -      ausente
+  823  Setiembre 3           7  1436-1441         prev   unica
+  824  Setiembre 10         12  1444-1454         prev   unica
+  825  [Setiembre 24]        7  1456-1460         prev   unica
+  826  [Octubre 1o]          7  1464-1468         prev   unica
+  827  Octubre 8            32  1472-1502         prev   unica
+  828  Octubre 15           15  1506-1515         prev   unica
+  829  [Octubre 22]         18  1519-1535         prev   unica
+  830  Octubre 29           23  1537-1558         prev   unica
+  831  Noviembre 5          24  1099-1581         prev   unica
+  832  Noviembre 12         20  1585-1603         prev   unica
+  833  Noviembre 19         13  1605-1616         prev   unica
+  834  Noviembre 26          6  1619-1623         prev   unica
+  835  Diciembre 3          12  1628-1637         prev   unica
+  836  Diciembre 10          8  1638-1644         prev   unica
+  837  (ausente)             -  -                 -      ausente
+  838  (ausente)             -  -                 -      ausente
+  839  Diciembre 31          8  1676-1680         prev   unica
+
+Hojas: 530 en los archivos, menos las dos hojas de aviso del repositorio, dan
+528 hojas de Boletin. De esas, dos son una repeticion de scanner dentro de la
+edicion 810 -las hojas 9 y 10 repiten las 7 y 8, con el mismo folio impreso
+1276 y 1277-, de modo que las hojas distintas son 526. La edicion mas larga es
+la 827, con 32 hojas; las mas cortas, la 791 con 3.
+
+Tipo y resolucion. Los cincuenta son PDF reales con una imagen incrustada por
+hoja y capa de texto previa encima. El techo de resolucion es el de la imagen
+incrustada: 300 ppi en 595 de las 606 imagenes medidas, con 283, 301 y 302 ppi
+en cuatro casos y con tres hojas que traen ademas una segunda imagen chica a
+75 o 150 ppi. Ninguna hoja supera los 302 ppi: el techo del ano es 300 ppi,
+mas bajo que el de 1912, que llegaba a 500.
+
+Densidad. La hoja mas pobre de texto tiene 50 caracteres y la mas rica 5.392;
+la mediana es 2.868. Hay nueve hojas por debajo de 500 caracteres, que son las
+que hay que mirar por poca tinta o por columna caida: 793 h1 y 822 h1 -las dos
+hojas de aviso-, 801 h6, 802 h11, 803 h7, 804 h7, 806 h6, 815 h3 y 816 h6.
+
+
+------------------------------------------------------------------------------
+S2 . CRITERIO DE BUSQUEDA
+------------------------------------------------------------------------------
+
+Version. Hay una sola: la capa previa de los PDF, extraida por la sesion con
+PyMuPDF. No hay OCR propio, porque el entorno no tiene el modelo spa. Todo
+resultado se etiqueta prev y no hubo desempate posible entre versiones: cuando
+una palabra decide una ficha, la prueba es la imagen y nada mas.
+
+Union de cortes. Se aplico la regla corregida de v15: primero U+00AD seguido
+de salto de renglon con espacios opcionales a los dos lados, y recien despues
+los U+00AD sueltos. Se agrego la union del guion visible de fin de renglon
+tolerando hasta dos signos de puntuacion a cada lado del salto. Medido: 6.000
+guiones blandos, 5.999 de ellos de corte de renglon, cero restantes tras la
+union. En 1920 la union no agrega ningun acierto del anillo 1 -la literal da
+los mismos trece aciertos sobre el texto crudo y sobre el unido-, pero eso se
+comprobo, no se supuso.
+
+Las cuatro pasadas. Literal sobre NFD sin diacriticos: trece hojas. Laxa con
+la clase de espacios en blanco, [gco][ao][l1i|][\s-]{0,3} [dcl][ec][rnm][ao]:
+las mismas trece, ningun acierto extra; la pasada no esta rota, porque
+devuelve todos los aciertos de la literal, de modo que su cero extra es un
+cero real. Difusa con ratio mayor o igual a 0,78 contra caldera y calderilla:
+cuatro formas, y las cuatro resueltas como falso positivo. Difusa ampliada
+entre 0,70 y 0,78 restringida a palabras con c, g u o inicial: diecinueve
+formas, ninguna del departamento.
+
+Anillo 2. Se corrieron los OCHENTA Y SIETE terminos del config sobre el texto
+normalizado y sin puntuacion. La cuenta importa: el S15.2 de la rubrica v15
+dice que el anillo 2 tiene setenta terminos y que el bloque se escribe leyendo
+el config y no de memoria. Leido el archivo, tiene ochenta y siete, y los
+actores son 243 y no 171: la rubrica quedo vieja y se corrige en el S F. La
+busqueda se corrio sobre el archivo, de modo que es completa; lo que estaba
+mal era la cifra. Diecisiete terminos dan acierto: castellanos (484),
+isasmendi (18), aramayo (7), rio blanco (6), apaza (5), mojotoro (4), nogales
+(3), quintin (3), campo alegre (2), entre rios (2), lagunilla (2), tabacal
+(2), wierna (2), mamani (1), santa getrudis (1), siancas (1) y vaqueros (1).
+El primero satura el ano por una razon que no es geografica: Castellanos es el
+apellido del gobernador, que firma casi todos los decretos. Los contextos se
+leen uno por uno en el turno siguiente, como manda el S5.1, incluidos los que
+ya se sabe que son otra cosa.
+
+Actores. Se buscaron los 243 actores del config por nombre y apellido con
+hasta dos palabras intercaladas, sobre el texto con la puntuacion suprimida.
+Quince dan acierto: dario arias (29), casiano hoyos (8), carlos serrey (6),
+francisco aleman (6), walter hessling (2), y con un acierto cada uno adolfo
+agote, augusto f. torino, francisco j. lopez, gumersindo quevedo, liborio
+castillo, manuel garcia, marcos zorrilla, pedro mendoza, silverio caceres y
+victor m. saravia. Silverio Caceres es ademas protagonista de un acto del
+departamento -la renuncia al puesto de sub-comisario de Mojotoro, edicion
+795-, de modo que su acierto no es incidental.
+
+Numeros arrastrados. De los 51 numeros del config, quince aparecen en el ano,
+todos de una a seis veces. No se los da por cadena: en 1920 los decretos
+llevan numeracion propia y corrida, de modo que una coincidencia de cifra con
+un numero de 1946 no significa nada hasta mirarla. Se revisan en el turno
+siguiente.
+
+Formulas de reemplazo. en reemplazo de aparece 49 veces y en su reemplazo
+otras 49; vacante producida, una. La concentracion es alta porque 1920 es ano
+de elecciones y el Boletin publica listas de presidentes de mesa nombrados en
+reemplazo de otros. Una de esas lineas es del departamento y esta entre los
+candidatos del S A.
+
+Identificadores de las ausencias. En 1920 los actos del Poder Ejecutivo SI
+llevan numero -decreto N 724, N 725 y siguientes-, a diferencia de 1908-1912.
+De modo que la regla del S8.15, fecha contra numeracion sobre los vecinos mas
+y menos tres de cada acto del S A y del S B, vuelve a ser aplicable este ano y
+se aplicara en el turno que cierre las fichas.
+
+
+------------------------------------------------------------------------------
+SA . MENCIONES EXPLICITAS DEL ANILLO 1
+------------------------------------------------------------------------------
+
+Diecinueve coincidencias de la cadena cald en trece hojas. Tres son falso
+positivo, resueltas y declaradas en E.7: 806 h3, Romero Calderon y Compania,
+interventores de una quiebra; 835 h8, dona Rene Reyes de Calderon, en una
+nomina de herederos; y 815 h4, donde la capa lee vocalds por vocales y el cald
+del medio no es una palabra. Quedan dieciseis apariciones reales en diez
+hojas, agrupadas en diez entradas, todas miradas en la imagen y transcriptas
+abajo.
+
+El ano se reparte en dos materias y nada mas. La primera es policial y de
+registro: el puesto de Sub-Comisario de Mojotoro se mueve tres veces -renuncia
+de Silverio Caceres en febrero, nombramiento de Jose Agustin Martinez en el
+mismo febrero, nombramiento de Ciro Caceres en junio- y en octubre se cubre el
+Registro Civil del departamento con Casimiro Caceres. La segunda es electoral
+y ocupa nueve de las dieciseis apariciones: la convocatoria, la ubicacion de
+las mesas, la proclamacion de candidatos por tres partidos, el reemplazo de un
+presidente de mesa y la anulacion de una urna. Cierra el ano el nombramiento
+del Coronel de la Guardia Nacional por Caldera.
+
+..............................................................................
+FUENTE: Edicion N 795, Salta, [Febrero 20] de 1920, hoja 4, columna 2, folio
+impreso no legible en la capa.
+
+FICHA: Decreto N 677 del 4 de febrero de 1920: se acepta la renuncia de
+Silverio Caceres al puesto de Sub Comisario de Policia de Mojotoro,
+jurisdiccion del Departamento de la Caldera.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  Decreto N° 677
+
+  Vista la renuncia del Sr. Silverio
+  Caceres del puesto de Sub Comisario
+  de Policia de Mojotoro, jurisdiccion
+  del Departamento de la Caldera,
+
+  El Gobernador de la Provincia.
+  DECRETA:
+
+  Art. 1°. Aceptase la mencionada re-
+  nuncia del Sr. Silverio Caceres.
+  Art. 2.--Comuniquese, publiquese e
+  insertese en el R. Oficial.
+        Salta, Febrero 4 de 1920
+              CASTELLANOS
+               JULIO J. PAZ
+  Es copia:  D. Lopez Reyna
+
+NOTA DE LECTURA: Silverio Caceres esta en el config como actor de 1909. Este
+es su unico acierto del ano, y es su propio acto: la busqueda no lo encuentra
+en ningun otro lugar de 1920. El decreto no dice quien lo reemplaza; el
+reemplazo aparece tres semanas despues, en el decreto N 724 de la edicion 798.
+El original escribe Mojotoro con o y la Caldera con minuscula.
+
+..............................................................................
+FUENTE: Edicion N 795, hoja 6, columna 1, cabecera Pag. 1136 [la capa lee
+1136; el numero se leyo en la imagen como 11-36 partido].
+
+FICHA: Decreto N 685 del 6 de febrero de 1920: convocatoria al pueblo de la
+Provincia a elecciones de Senadores y Diputados provinciales para el 7 de
+marzo de 1920. En el reparto por departamento, Caldera figura DOS VECES, con
+un Diputado cada vez.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. El
+encabezado del decreto y su numero no estan en esta hoja: la columna 1 abre
+directamente con la formula El Poder Ejecutivo de la Provincia / DECRETA. Se
+miro tambien la columna 2 de la hoja 5, donde el decreto empieza, y ahi se
+leyeron el numero y el vistos, que se transcriben antes del articulo 1.
+
+TEXTO (transcripcion desde la imagen):
+
+  [795 h5, col. 2:]
+
+  Decreto N° 685
+
+  Debiendose llenar las vacantes de Se-
+  nadores a la H. Legislatura de la Provin-
+  cia, por fallecimiento del Senor Felix
+  Usandivaras, Senador por Cafayate, y
+  por renuncia del senor J. Jose Oliva, se-
+  nador por el Departamento de Rivadavia;
+  y correspondiendo igualmente reemplazar
+  a los Diputados cuyo mandato cesa segun
+  el sorteo verificado por la H. Camara,
+  y de acuerdo con lo prescrito por los
+  arts. 57, 63 y 78 de la Constitucion de la
+  Provincia; [...] y habiendo-
+  se producido por renuncia las vacantes
+  de los senores Diputados David M. Sa-
+  ravia, Jose Santos, Bernabe Toranzos
+  Torino y Julio J. Paz;
+
+  [795 h6, col. 1:]
+
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+
+  Art. 1.°--Convocase al pueblo de la
+  Provincia a elecciones de Senadores y
+  Diputados provinciales, que se llevara a
+  cabo el 7 de Marzo proximo en la si-
+  guiente forma:
+  Por la Capital cinco Diputados; Mo-
+  linos un Diputado; Caldera un Dipu-
+  tado; Cafayate un Senador; Guachipas
+  un Diputado; Chicoana dos Diputados;
+  Metan un Diputado; Cerrillos un Dipu-
+  tado; Caldera un Diputado; Rivada-
+  via dos Diputados y un Senador; Iruya
+  un Diputado; Oran dos Diputados; Rosa-
+  rio de Lerma, dos Diputados.
+  Art. 2.°--Comuniquese, publiquese y
+  dese al R. Oficial.--
+        Salta, Febrero 6 de 1920.
+              CASTELLANOS
+               JULIO J. PAZ
+  Es copia  D. Lopez Reyna
+
+NOTA DE LECTURA: La repeticion de Caldera es del original y esta confirmada en
+la imagen: se lee Caldera un Diputado despues de Molinos y otra vez Caldera un
+Diputado despues de Cerrillos, con la misma grafia. No se concilia y no se
+infiere que la segunda deba decir otro departamento. La lista tampoco nombra a
+La Vina, Anta, Campo Santo, Rosario de la Frontera, La Candelaria, San Carlos,
+Cachi, Santa Victoria ni Rosario de la Frontera: es una enumeracion parcial
+tal como esta impresa. Va tambien a E.9.
+
+..............................................................................
+FUENTE: Edicion N 795, hoja 7, columna 2.
+
+FICHA: Ubicacion de las mesas receptoras de votos para la eleccion del 7 de
+marzo. Caldera, Colegio Electoral N 3, cuatro mesas.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. Se leyo
+ademas el renglon anterior y el posterior al bloque para fijar el encabezado:
+arriba termina la lista del colegio anterior con la Mesa 16 en la Polvora, y
+abajo empieza Metan, Colegio Electoral N 6.
+
+TEXTO (transcripcion desde la imagen):
+
+  Mesa 15. La Lagunilla, Casa de la
+  finca Lagunilla de dona Lucinda
+  Quiroz.
+  Mesa 16. En la Polvora, Escuela Na-
+  cional N° 3.
+            Caldera
+     Colegio Electoral N° 3.
+  Mesa 1. En Caldera, Escuela Ele-
+  mental Mixta.
+  Mesa 2. En Caldera Pueblo, Iglesia
+  Parroquial.
+  Mesa 3. En Vaqueros, Escuela In-
+  fantil Provincial.
+  Mesa 4. En Mojotoro, Oficina de Co-
+  rreos.
+            Metan
+     Colegio Electoral N° 6.
+
+NOTA DE LECTURA: El encabezado del bloque es la sola palabra Caldera, sin
+articulo, y la unidad es el Colegio Electoral N 3. Las cuatro mesas dan la
+geografia del departamento en 1920: el pueblo de Caldera con dos mesas -una en
+la escuela elemental mixta y otra en la iglesia parroquial-, Vaqueros y
+Mojotoro. La Lagunilla de la mesa 15 NO es del departamento: pertenece al
+colegio anterior, y es el acierto de lagunilla del anillo 2. Este bloque es la
+unica pieza del ano que enumera parajes del departamento uno por uno.
+
+..............................................................................
+FUENTE: Edicion N 796, Salta, Febrero 27 de 1920, hoja 6, columna 2.
+
+FICHA: Nomina de la Junta Electoral: presidentes y suplentes de mesa nombrados
+en reemplazo de otros. Colegio Electoral N 3 Caldera, Mesa N 1: presidente
+Fernandez Alberto Tomas, en reemplazo de Regis Augusto.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. El
+encabezado de la nomina no esta en esta columna: la lista viene corrida desde
+antes y aca solo se ven los colegios 12, 3 y 26. Se transcriben los tres para
+dejar constancia del orden.
+
+TEXTO (transcripcion desde la imagen):
+
+  Colegio Electoral N.° 12 Oran
+          Mesa N.° 4
+  Pte., Arias Isidoro, en reemplazo de
+  Servat Rosa
+   Colegio Electoral N.° 3 Caldera
+          Mesa N.° 1
+  Pte., Fernandez Alberto Tomas, en
+  reemplazo de Regis Augusto
+   Colegio Electoral N.° 26 Guachipas
+          Mesa N.° 1
+  Suplente 1.°, Morales Luis B., en
+  reemplazo de Jose G. Gallo.
+
+NOTA DE LECTURA: Regis Augusto es, invertido, el Augusto Regis que el config
+trae como actor de 1909. La forma impresa pone el apellido primero, que es
+como esta armada toda la lista, de modo que la busqueda por nombre y apellido
+no lo encuentra y la busqueda por apellido suelto si. Se declara en E.7 como
+falso negativo de la pasada de actores. Del colegio de Caldera solo se nombra
+la mesa 1: las otras tres del decreto de la edicion 795 no aparecen en esta
+nomina.
+
+..............................................................................
+FUENTE: Edicion N 796, hojas 6 y 7. Encabezado al pie de la columna 2 de la
+hoja 6; las listas siguen en las dos columnas de la hoja 7, cabecera Pag.
+1151.
+
+FICHA: Candidatos a Diputados y Senadores proclamados para la eleccion del 7
+de marzo, por partido. Tres partidos nombran candidato por La Caldera: Union
+Civica Radical Intransigente, Jose Maria Ocaranza; Union Provincial, Jose
+Antonio Araoz; Union Civica Radical, Dermidio Arancibia.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. Se
+leyeron las dos columnas enteras de la hoja 7 y el pie de la columna 2 de la
+hoja 6, porque las tres menciones son casi identicas y solo el encabezado de
+cada bloque dice a que partido pertenece cada una. Sin esa lectura las tres se
+habrian fichado como una sola lista.
+
+TEXTO (transcripcion desde la imagen):
+
+  [796 h6, col. 2, al pie:]
+
+  Candidatos a Diputados y Senadores
+  de la H. H. Camaras Legislativas de la
+  Provincia proclamados para las proxi-
+  mas elecciones del 7 de Marzo.
+
+  Union Civica Radical Intransigente
+
+  Por la Capital para Diputados: Srs.
+  David Michel Torino, Rafael P. Sosa,
+  Agustin Courel, Alfredo C. Casado y
+  Amalio Vargas.
+  [...]
+
+  [796 h7, col. 1, sigue la misma lista:]
+
+  Por el de Oran, srs. Julio Pizzetti y
+  Ramon Lorences.
+  Por el de la Caldera, sr. Jose Maria
+  Ocaranza
+  Por el de Chicoana, srs. Eduardo de
+  los Rios y Antonio Abal Suarez.
+  [...]
+
+            Union Provincial
+
+  Para Senadores:--Por el Departa-
+  mento de Cafayate, sr Miguel A. Fle-
+  ming
+  [...]
+  Para Diputados:--Por la Capital, Dr.
+  Carlos Aranda; Dr. Carlos Lopez Perey-
+  ra, sr. Jose Mejuto Gonzalez, sr. Julio
+  Suarez, sr. Ignacio Bejarano.
+  Por el Departamento de la Caldera,
+  sr. Jose Antonio Araoz
+  Por el de Cerrillos, sr. Manuel R.
+  Alvarado
+  [...]
+  Por el de Molinos, sr. Domingo S. I-
+  sasmendi
+
+          Union Civica Radical
+
+  Para Senadores:--Por el Departa-
+  mento de Rivadavia; Dr. Dario Arias
+  Por el de Cafayate, Dr. Julio C. To-
+  rino
+  Para Diputados:--Por la Capital, Dr.
+  [...]
+  Por el de Cerrillos, sr. Casiano Ho-
+  yos
+  Por el de La Caldera, sr. Dermidio
+  Arancibia
+  Por el de Iruya, sr. Zenon Wayar
+  Por el de Oran, srs. Domingo A. Fi-
+  gueroa, y Pedro E. Perez
+                    El Secretario
+
+NOTA DE LECTURA: El departamento se escribe de tres maneras en la misma pieza:
+la Caldera, el Departamento de la Caldera y La Caldera. Dos actores del config
+aparecen aca en su propio contexto: Dario Arias, candidato a Senador por
+Rivadavia de la Union Civica Radical -que es el que da 29 aciertos en el ano-,
+y Casiano Hoyos, candidato a Diputado por Cerrillos. Ninguno de los dos es del
+departamento. Domingo S. Isasmendi, candidato por Molinos, explica parte de
+los dieciocho aciertos de isasmendi del anillo 2. Los tres candidatos de La
+Caldera -Ocaranza, Araoz y Arancibia- no vuelven a aparecer en el ano bajo
+esas grafias.
+
+..............................................................................
+FUENTE: Edicion N 798, Salta, Marzo 12 de 1920, hoja 2, columna 1, folio
+impreso Pag. 1156 [la cabecera imprime Num. 797].
+
+FICHA: Decreto N 724 del 26 de febrero de 1920: nombramiento de Jose Agustin
+Martinez como Sub-Comisario de Mojotoro, partido del departamento de La
+Caldera.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  MINISTERIO DE GOBIERNO
+
+  Decreto N°. 724
+
+  Vista la nota de la Jefatura de Po-
+  licia proponiendo al senor Jose Agustin
+  Martinez para ocupar el puesto vacan-
+  te de Sub-Comisario de Mojotoro, parti-
+  do del departamento de la Caldera,
+
+  El Gobernador de la Provincia
+  DECRETA
+
+  Art. 1o Nombrase Sub-Comisario de
+  Mojotoro, partido del departamento de
+  la Caldera, al senor Jose Agustin Mar-
+  tinez.
+  Art. 2o--Comuniquese, publiquese e
+  insertese en R. Oficial.
+        Salta, Febrero 26 de 1920
+              CASTELLANOS
+               JULIO J. PAZ
+  Es copia: D. Lopez Reyna
+
+NOTA DE LECTURA: Este decreto cubre la vacante que dejo la renuncia aceptada
+por el decreto N 677 de la edicion 795, aunque no lo cita: no dice en
+reemplazo de Silverio Caceres, solo dice el puesto vacante. La cabecera de
+esta hoja imprime Num. 797 y Pag. 1156, que son el numero y el folio de la
+edicion anterior; la hoja 7 llega a imprimir Num. 796. Confirmado en la imagen
+y declarado en E.9. Aqui la unidad se llama partido del departamento, mientras
+el decreto 677 la llamaba jurisdiccion del Departamento.
+
+..............................................................................
+FUENTE: Edicion N 802, Salta, Abril 9 de 1920, hoja 2, columnas 1 y 2,
+cabecera Pag. 1192.
+
+FICHA: Decreto N 772 del 22 de marzo de 1920: convocatoria a nuevas elecciones
+complementarias de un Diputado al H. Congreso de la Nacion para el 4 de abril,
+por anulacion de urnas. La Caldera entra por el Colegio Electoral N 3, mesa N
+4.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. La pieza
+cruza las dos columnas: el numero y el vistos estan al pie de la columna 1 y
+la lista de mesas y la firma en la columna 2. Se leyeron las dos.
+
+TEXTO (transcripcion desde la imagen):
+
+  Decreto N°. 772
+
+  Vista la nota de la Junta Escrutado-
+  ra Nacional del Distrito Electoral de
+  Salta, fechada el 16 del corriente mes,
+  en la que expresamente da cuenta al
+  Poder Ejecutivo de la urnas que han
+  sido anuladas en el acto electoral que
+  se llevo a cabo el 7 del presente en
+  cumplimiento del Art. 61 de la Ley de
+  Elecciones Nacionales,
+
+  El P. E. de la Provincia
+  DECRETA:
+
+  Art. 1.°--Convocase para el 4 de
+  Abril proximo, a nuevas elecciones com-
+  plementarias de un Diputado al H. Con-
+  greso de la Nacion a los electores de las
+  siguientes mesas:
+  La Caldera  C. Electoral N° 3 Mesa N.° 4
+  Iruya         »      »      » 17  »  »  4
+  Sta. Victoria »      »      » 18  »  »  2
+  El Carril     »      »      » 23  »  »  3
+  Cafayate      »      »      » 31  »  »  5
+  San Carlos    »      »      » 33  »  »  3
+  Angastaco     »      »      » 33  »  »  3
+  Luna Muerta   »      »      » 15  »  »  1
+  Art. 2.°--Comuniquese, publiquese y
+  dese al Registro Oficial.--
+        Salta, Marzo 22 de 1920
+              CASTELLANOS
+               JULIO J. PAZ
+  Es copia: D. Lopez Reyna
+
+NOTA DE LECTURA: La formula de encabezado es El P. E. de la Provincia, una de
+las dos veces que aparece abreviada en el ano. El cuadro de mesas se recalcula
+como lectura, no como suma: San Carlos y Angastaco figuran los dos con el
+Colegio Electoral N 33, lo que o es errata del original o es correcto porque
+comparten colegio; no se concilia. La urna anulada del departamento es la mesa
+4, que el decreto de la edicion 795 ubicaba en Mojotoro, Oficina de Correos:
+el cruce lo hace la sesion y queda rotulado como inferencia, porque el decreto
+772 no nombra el lugar.
+
+..............................................................................
+FUENTE: Edicion N 816, Salta, [Julio 16] de 1920, hoja 3, columna 1.
+
+FICHA: Decreto N 901 del 16 de junio de 1920: nombramiento de Ciro Caceres
+como Sub-Comisario de Policia de Mojotoro, Departamento de La Caldera.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  Decreto N°. 901
+
+  Vista la nota N.° 1.622. M.-19
+  elevada por la Jefatura de Policia
+  y atento a la propuesta que hace
+  en la misma,
+
+  El Gobernador de la Provincia
+  DECRETA:
+
+  Art. 1.°--Nombrase Sub-Comi-
+  sario de Policia de Mojotoro, De-
+  partamento de La Caldera, al senor
+  Ciro Caceres.
+  Art. 2.°--Comuniquese, publi-
+  quese y dese al R. Oficial.
+        Salta, Junio 16 de 1920
+
+NOTA DE LECTURA: Tercer movimiento del mismo puesto en el ano: renuncia de
+Silverio Caceres en febrero, nombramiento de Jose Agustin Martinez en el mismo
+febrero y nombramiento de Ciro Caceres en junio. El decreto 901 no dice que
+Martinez haya renunciado ni lo nombra: la vacante se declara sin nombrar al
+que la dejo, que es el caso del S5.3 de la rubrica, y va a E.2 como citado y
+no acompanado. La nota N.° 1.622. M.-19 que se invoca no esta publicada. La
+firma y el es copia caen abajo del recorte, en la misma columna; la capa
+previa los lee CASTELLANOS, JULIO J. PAZ y D. Lopez Reyna, y eso NO se leyo en
+la imagen: se declara aca porque la regla pide separar lo leido en la imagen
+de lo leido en la capa.
+
+..............................................................................
+FUENTE: Edicion N 832, Salta, Noviembre 12 de 1920, hoja 5, columna 2.
+
+FICHA: Decreto N 1140 del 25 de octubre de 1920: nombramiento de Casimiro
+Caceres como Encargado de la Oficina del Registro Civil de La Caldera, con
+antiguedad al 5 de agosto.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  Decreto N° 1140
+        Salta, Octubre 25 de 1920
+  Encontrandose vacante el puesto
+  de Encargado de la Oficina del
+  Registro Civil del Departamento
+  de la Caldera.
+
+  El P. Ejecutivo de la Provincia
+  DECRETA:
+
+  Art. 1.°--Nombrase Encargado
+  de la Oficina del Registro Civil de
+  La Caldera al senor Casimiro Ca-
+  ceres, con antiguedad al 5 de Agos-
+  to ppdo. fecha desde la cual pres-
+  ta servicios en caracter de interino.
+  Art. 2.°--Comuniquese, publi-
+  quese y dese al R. Oficial.
+
+NOTA DE LECTURA: La fecha va arriba, entre el numero y el vistos, y no abajo:
+es la unica ficha del ano con esa disposicion. El vistos termina en punto y no
+en coma, de modo que la frase queda cortada antes de la formula; se transcribe
+como esta. Casimiro Caceres es actor del config con origen 1917, donde figura
+como Casimiro Caceres a secas. El decreto declara la vacante sin nombrar a
+quien la dejo ni citar su renuncia: segunda vacante sin nombre del ano. El
+nombramiento retrotrae la antiguedad al 5 de agosto y reconoce un interinato
+que el Boletin no publico.
+
+..............................................................................
+FUENTE: Edicion N 834, Salta, Noviembre 26 de 1920, hoja 2, columna 1.
+
+FICHA: Decreto en acuerdo de Ministros: nombramiento de Coroneles de la
+Guardia Nacional de la Provincia por departamento. Caldera, Mariano Coll.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna (unos 200 pt sobre pagina de unos 440) mas 6 pt de
+margen, rasterizado a 260 dpi. Transcripcion integra desde la imagen. Se leyo
+el articulo 1 entero, no solo el renglon del departamento, porque es una lista
+de departamentos que nombra el termino (S4.10).
+
+TEXTO (transcripcion desde la imagen):
+
+  El Gobernador de la Provincia
+      en acuerdo de Ministros
+  DECRETA:
+
+  Art. 1--Nombrase Coroneles de
+  la Guardia Nacional de la Provin-
+  cia de Salta a los siguientes seno-
+  res: Capital, Comandante don To-
+  mas Bello; Rosario de Lerma, se-
+  nor Carlos Palma; Chicoana, Ma-
+  nuel Rosa Zapata; Cerrillos, Odi-
+  lon Torres; Guachipas, Tristan Lo-
+  pez; La Vina, Tomas Chaves; San
+  Carlos, Wenceslao Plaza; Anta,
+  Gabriel Jauregui; Oran, Juan Mar-
+  tinez; Rivadavia, Alejandro Paz;
+  Cafayate, Pedro Mendoza; Cande-
+  laria, Jose Jurado; Iruya, Silverio
+  Aramayo; Metan, Marcelino Arias;
+  Caldera, Mariano Coll; Campo San-
+  to, Bernabe Toranzos Torino y
+  Santa Victoria, Zenon Wayar, de-
+  biendo recabarse oportunamente
+  del H. Senado el acuerdo corres-
+  pondiente de ley.
+  Art. 2--Nombrase Tenientes Co-
+  roneles de la Guardia Nacional de
+  la Provincia de Salta a los siguien-
+  tes senores: Capital, Capitan Mi-
+  guel Herrera; La Vina, Cristobal
+  [...]
+
+NOTA DE LECTURA: El departamento se nombra Caldera, sin articulo. La lista no
+incluye a Molinos, Cachi, Rosario de la Frontera ni La Poma: se transcribe tal
+cual y no se completa. Dos actores del config aparecen aqui y no por el
+departamento: Pedro Mendoza, actor de 1916, nombrado por Cafayate, y Silverio
+Aramayo por Iruya, que es el que explica los siete aciertos de aramayo del
+anillo 2. El acuerdo del H. Senado se pide para despues y no consta en el
+corpus: citado y no acompanado. El articulo 2 se leyo entero, al pie de la
+misma columna: nombra Tenientes Coroneles solo por Capital, La Vina, Anta,
+Oran y Candelaria, de modo que Caldera NO tiene Teniente Coronel. El decreto
+lo refrendan M. Lopez Dominguez y Julio J. Paz, los dos, que es la unica pieza
+del S A con doble refrendo; es copia, D. Lopez Reyna.
+
+..............................................................................
+
+
+------------------------------------------------------------------------------
+SB . VECINDAD
+------------------------------------------------------------------------------
+
+Se leyeron uno por uno los contextos de los diecisiete terminos del anillo 2
+con acierto y de los quince actores con acierto, como manda el S5.1, incluidos
+los que de antemano se sabia que eran otra cosa. El resultado es un ano de
+vecindad pobre: fuera de las piezas ya fichadas en el S A, el departamento
+casi no aparece.
+
+B.1 . Nucleos ya fichados en el S A
+
+No se repiten aca. Son Mojotoro, que da cuatro aciertos y tres de ellos son
+los decretos de sub-comisario de las ediciones 798 y 816 y la mesa 4 del
+decreto de mesas de la 795; y Vaqueros, con un solo acierto en todo el ano, la
+mesa 3 de ese mismo decreto. Los dos unicos parajes del departamento que el
+Boletin nombra en 1920 lo hacen dentro de piezas que ya estan transcriptas en
+el S A.
+
+B.2 . Nucleos del departamento en actos que no nombran el termino
+
+Ninguno. Es el hallazgo del S B de este ano y conviene decirlo asi, sin
+suavizarlo: no hay un solo acto de 1920 que toque al departamento sin
+nombrarlo. Las cuatro personas que el S A pone en el departamento -Jose
+Agustin Martinez, Ciro Caceres, Casimiro Caceres y Mariano Coll- no vuelven a
+aparecer en el corpus bajo esas grafias, y los tres candidatos de los partidos
+-Ocaranza, Jose Antonio Araoz y Dermidio Arancibia- tampoco, salvo un homonimo
+que se senala en B.3. Con dieciseis apariciones del anillo 1 y cero
+apariciones indirectas, 1920 es un ano en que el departamento entra al Boletin
+solo por la puerta del nombre.
+
+B.3 . Terminos que en 1920 son otra cosa
+
+  castellanos (484) - es el apellido del Gobernador, Dr. Joaquin
+    Castellanos, que encabeza las cincuenta tapas y firma casi todos
+    los decretos del ano. Ninguno de los 484 aciertos es toponimico.
+    Satura el corpus por firma, no por geografia.
+  isasmendi (18) - apellido y casa de comercio de la ciudad:
+    Isasmendi y Cia., que figura como parte en varios juicios y como
+    lindera de un inmueble junto al parque San Martin; Luisa
+    Isasmendi de Martinez; Andres A. Isasmendi; Elena Isasmendi de
+    Castro; Ricardo J. Isasmendi; y Domingo S. Isasmendi, candidato a
+    Diputado por Molinos en la lista de la Union Provincial.
+  aramayo (7) - Silverio Aramayo, nombrado Coronel de la Guardia
+    Nacional por Iruya y separado despues de un cargo, y Antonio
+    Aramayo, de cuya sucesion se rematan bienes. Ninguno del
+    departamento.
+  rio blanco (6) - cinco de los seis son el Rio Blanco del valle
+    Calchaqui, en los avisos de cateo del criadero Condor, que lo
+    ubican por su confluencia con el Calchaqui; el sexto es un
+    circuito electoral de Payogasta.
+  apaza (5) - cinco apellidos sin relacion entre si: Nacianceno
+    Apaza, Juez de Paz de Guachipas; Napoleon Apaza, depositario en
+    la finca Sevilar; y tres sucesorios, de Victoria Apaza de Jurado,
+    Agustina Apaza de Guaymas y Martina Ontiveros de Apaza.
+  nogales (3) - Hilaria V. de Nogales, propietaria lindera en la
+    ciudad, dos veces; y Ocho Nogales, circuito electoral de Cachi.
+  quintin (3) - nombre de pila en los tres: Quintin Mercado,
+    demandado en un cobro hipotecario; Quintin Sosa, en una nomina de
+    herederos; y Jose Quintin Flores, presidente de mesa del Colegio
+    Electoral N 2.
+  campo alegre (2) - la finca de Natalia Gutierrez en el partido de
+    Tipal, departamento de Chicoana, cuyo deslinde se publica dos
+    veces en la misma hoja.
+  entre rios (2) - la finca Entre Rios o Santos Lugares, del
+    departamento de Rosario de Lerma; y la Provincia de Entre Rios,
+    que invita al homenaje a Urquiza.
+  lagunilla (2) - el partido de La Lagunilla, jurisdiccion de la
+    Capital, donde se crea una comisaria auxiliar. Es el mismo que
+    aporta la mesa 15 que precede al bloque de Caldera en el decreto
+    de mesas de la edicion 795: pertenece al colegio anterior y no al
+    N 3.
+  tabacal (2) - el Tabacal de Oran, en el nombramiento de un
+    encargado del impuesto de bosques; y Tabacal, circuito electoral
+    de Cachi.
+  wierna (2) - la familia: Florinda I. de Wierna, exonerada del pago
+    de aguas corrientes por pobreza de solemnidad, y Jaime Wierna,
+    nombrado guarda sanitario. Ninguna de las dos menciones ubica el
+    apellido en el departamento.
+  mamani (1) - el sucesorio de Luis Mamani.
+  santa getrudis (1) - la finca de ese nombre, del senor Patron
+    Costas, lindera con la del doctor Dario Arias, rematada en la
+    edicion 819. No es la Santa Gertrudis del departamento: el aviso
+    la sitia entre propiedades de Patron Costas y Angel Villagran. La
+    hoja imprime el nombre de dos maneras en cuatro renglones, santa
+    gctrudis y santa getrudis, y asi se transcribe.
+  siancas (1) - el arroyo Siancas, separativo de la finca Hornillos
+    y del Ingenio San Isidro de la sociedad Pedro P. Cornejo, en un
+    deslinde de la zona de Campo Santo.
+
+B.4 . Ausencias del anillo de actores
+
+La lista de actores del config tiene 243 nombres, de 1946 y de 1908 a 1919.
+Quince dan acierto en 1920 y 228 no dan ninguno. Se ordenan en los tres grupos
+del S5.1.
+
+Grupo uno, los que solo aparecen en su propio acto: Silverio Caceres, que
+figura una sola vez en el ano y es el decreto N 677 que le acepta la renuncia.
+No hay otro.
+
+Grupo dos, los que aparecen en mas de un acto del departamento: ninguno. Es el
+grupo que en 1912 armaba la trama del ano y en 1920 esta vacio.
+
+Grupo tres, los que aparecen tambien o solamente fuera del departamento: Dario
+Arias, con veintinueve aciertos, que es el que mas pesa y es tres cosas a la
+vez -el doctor Dario Arias, propietario lindero de Santa Getrudis; el Dr.
+Dario Arias que refrenda decretos como ministro entre las ediciones 790 y 798;
+y el Dr. Dario Arias, candidato a Senador por Rivadavia de la Union Civica
+Radical-. No se afirma que sean la misma persona y no se concilian. Siguen
+Casiano Hoyos, con ocho, nombrado director de la biblioteca Dr. Victorino de
+la Plaza y candidato a Diputado por Cerrillos; Carlos Serrey, con seis,
+abogado en cuyo estudio se exhiben titulos de remates; Francisco Aleman, con
+seis, propietario lindero en deslindes; Walter Hessling, con dos, agrimensor
+que practica mensuras; y con un acierto cada uno Adolfo Agote, ejecutado en un
+remate; Augusto F. Torino, juez de primera instancia; Francisco J. Lopez,
+procurador; Gumersindo Quevedo, en una causa por cobro de alquileres; Liborio
+Castillo, soldado del cuerpo de bomberos que pide jubilacion; Manuel Garcia
+del Rio, propietario en Santa Victoria; Marcos Zorrilla, en cuya sucesion esta
+la estancia Pozo del Mulato; Pedro Mendoza, nombrado Coronel de la Guardia
+Nacional por Cafayate; y Victor M. Saravia, cuya fianza se cancela.
+
+Los 228 restantes no aparecen. Se declara la ausencia con los identificadores
+del S5.3 -persona, organismo y lugar-, y no se declara para ninguno de ellos
+que el Boletin no lo trae: se declara que la busqueda por nombre y apellido,
+por nombre con inicial y por apellido suelto agrupado por contexto no los
+devolvio.
+
+Y se nombra la excepcion que la rubrica obliga a nombrar. Casimiro Caceres
+esta en el config como actor de 1917 y es protagonista de un acto del
+departamento de este mismo ano -el decreto N 1140, edicion 832-, y sin embargo
+la busqueda no lo devuelve ni en su propio acto. El motivo esta medido: la
+capa previa imprime su apellido partido por el renglon como ca- seguido de una
+comilla tipografica, salto de renglon, y cqres, de modo que ni la union de
+cortes lo pega -porque la comilla tipografica no esta en la clase de
+puntuacion que la union tolera- ni el resultado seria caceres, porque el OCR
+lee cqres. Eso no es una ausencia: es una falla de la busqueda, y va tambien a
+E.7 y al S F.
+
+
+------------------------------------------------------------------------------
+SC . LIMITROFES
+------------------------------------------------------------------------------
+
+Sin entradas. Leidos los contextos del anillo 2 y de los actores, no hay en
+1920 ningun acto de un departamento limitrofe -Capital, Campo Santo, Rosario
+de Lerma o la Republica de Bolivia por el norte- que toque al departamento de
+La Caldera o a sus parajes. Lo mas cercano es el decreto de la edicion 828 que
+crea una comisaria auxiliar en el partido de La Lagunilla, jurisdiccion de la
+Capital, que es lindero pero no nombra a La Caldera ni a ninguno de sus
+parajes. Se registra aca y no se le hace ficha.
+
+
+------------------------------------------------------------------------------
+SP . PLANOS
+------------------------------------------------------------------------------
+
+El corpus no publica ningun plano. La palabra aparece en catorce hojas -804
+h5, 806 h3, 810 h11, 814 h16, 824 h7 y h8, 827 h9, h16, h17, h19 y h26, 831 h7
+y h20, y 833 h13-, siempre como remision a un plano que queda en un expediente
+o en el Departamento Topografico, y ninguna de las catorce remisiones toca al
+departamento ni a sus parajes: son deslindes y pedimentos mineros de Chicoana,
+Oran, Anta y el valle Calchaqui. El techo de resolucion del corpus es 300 ppi,
+de modo que aunque hubiera plano no se podria leer una cartela.
+
+
+------------------------------------------------------------------------------
+SD . INDICE
+------------------------------------------------------------------------------
+
+Por edicion y hoja, las dieciseis apariciones del anillo 1 en sus diez
+entradas, con el acto y la fecha del acto.
+
+  795 h4   Decreto N 677, 4-II-1920. Acepta la renuncia de Silverio
+           Caceres, Sub Comisario de Policia de Mojotoro.
+  795 h5-6 Decreto N 685, 6-II-1920. Convoca a elecciones de
+           Senadores y Diputados provinciales para el 7 de marzo.
+           Caldera, un Diputado, nombrada dos veces.
+  795 h7   Decreto de ubicacion de mesas receptoras. Caldera,
+           Colegio Electoral N 3, mesas 1 a 4: Caldera escuela
+           elemental mixta, Caldera Pueblo iglesia parroquial,
+           Vaqueros escuela infantil provincial y Mojotoro oficina
+           de correos.
+  796 h6   Junta Electoral, 25-II-1920. Colegio Electoral N 3
+           Caldera, mesa 1: presidente Fernandez Alberto Tomas, en
+           reemplazo de Regis Augusto.
+  796 h6-7 Candidatos proclamados para el 7 de marzo. Por La
+           Caldera: Jose Maria Ocaranza (U. C. Radical
+           Intransigente), Jose Antonio Araoz (Union Provincial) y
+           Dermidio Arancibia (Union Civica Radical).
+  798 h2   Decreto N 724, 26-II-1920. Nombra Sub-Comisario de
+           Mojotoro a Jose Agustin Martinez.
+  802 h2   Decreto N 772, 22-III-1920. Convoca a elecciones
+           complementarias de un Diputado nacional para el 4 de
+           abril; La Caldera, Colegio N 3, mesa 4.
+  816 h3   Decreto N 901, 16-VI-1920. Nombra Sub-Comisario de
+           Policia de Mojotoro a Ciro Caceres.
+  832 h5   Decreto N 1140, 25-X-1920. Nombra Encargado del Registro
+           Civil de La Caldera a Casimiro Caceres, con antiguedad
+           al 5 de agosto.
+  834 h2   Decreto en acuerdo de Ministros, XI-1920. Nombra Coronel
+           de la Guardia Nacional por Caldera a Mariano Coll.
+
+
+------------------------------------------------------------------------------
+SE . OBSERVACIONES
+------------------------------------------------------------------------------
+
+E.1 . Duplicacion y saldos
+
+Sin las .jpg del script no hay md5 ni dhash: la duplicacion se controlo por
+texto. Un hallazgo firme: la edicion 810 trae las hojas 7 y 8 repetidas como
+hojas 9 y 10. Las cuatro llevan folio impreso 1276 y 1277, y el texto de la
+hoja 9 es el mismo aviso de cateo que el de la hoja 7 -norte, sud, este y
+oeste hasta completar las quinientas hectareas de superficie, o sea una unidad
+de medida prevista por el articulo 27 del Codigo de Mineria-, con las
+diferencias que deja el escaneo de la misma pagina dos veces. Confirmado en la
+imagen: las cabeceras de las hojas 7 y 9 imprimen las dos Num. 810 ... Pag.
+1276 y los dos primeros renglones de las dos columnas coinciden palabra por
+palabra. Es duplicacion del archivo, no repeticion del Boletin, y por eso las
+hojas distintas del ano son 526 y no 528.
+
+Saldos. Contados antes de prometer nada: 1920 publica DIEZ resumenes del
+movimiento de Tesoreria, muchos mas que el unico de 1911 y los cuatro de 1912.
+Son los de diciembre de 1919 (790 h4) y enero (797 h6), marzo (805 h6), abril
+(811 h12), mayo (812 h10), junio (817 h17), julio (820 h7), agosto (824 h11),
+setiembre (829 h17) y octubre (832 h19) de 1920. Faltan febrero, noviembre y
+diciembre de 1920: no estan en el corpus y no se explica por que.
+
+Cada resumen ocupa dos hojas: las entradas y su total cierran la primera y las
+salidas siguen en la siguiente. El renglon de apertura de los diez se leyo en
+la imagen, a 300 dpi, y da la cadena que sigue. La cifra es lo que cada
+resumen declara como existencia o saldo del mes anterior; el rotulo es lo que
+el original imprime al lado.
+
+  resumen de   declara como saldo del mes anterior        rotulo
+  -----------  ---------------------------------------    ---------
+  dic. 1919    18.705,06                                  Noviembre
+                                                          de 1919
+  ene. 1920    43.117,04                                  Diciembre
+                                                          de 1919
+  mar. 1920    35.252,76                                  Febrero
+                                                          de 1920
+  abr. 1920    152.366,75  [o 52.366,75; ver E.8]         Marzo
+                                                          de 1920
+  may. 1920    93.536,27                                  Abril
+                                                          de 1920
+  jun. 1920    24.542,81                                  Mayo
+                                                          de 1920
+  jul. 1920    64.150,15                                  Julio [sic]
+                                                          de 1920
+  ago. 1920    51.551,83                                  Julio
+                                                          de 1920
+  set. 1920    31.905,41                                  Agosto
+  oct. 1920    13.213,59                                  Setiembre
+
+La cadena se arma por la cifra y no por el rotulo, como manda v15, y hay un
+rotulo que miente: el resumen de julio encabeza su apertura A EXISTENCIA DE
+JULIO DE 1920, cuando esa cifra no puede ser la de julio -es la de junio, que
+es el mes que cierra-. Lo prueba el resumen siguiente: el de agosto abre con A
+SALDO DE JULIO DE 1920 y una cifra distinta, 51.551,83. De modo que 64.150,15
+es el cierre de junio y 51.551,83 el de julio. Se transcriben los dos rotulos
+tal como estan y la contradiccion va a E.9.
+
+La cadena no se cotejo contra los cierres: el saldo final de cada mes esta en
+la segunda hoja de cada resumen, en la columna de salidas, y esas diez hojas
+no se miraron. Lo que hay es la serie de aperturas, que es la que el propio
+Boletin encadena. El unico eslabon que falta dentro del ano es enero contra
+marzo, porque el resumen de febrero no se publico: la cifra de cierre de enero
+no consta en ninguna parte del corpus. Contra 1919 y contra 1921 la cadena
+queda abierta por los dos lados, y no se concilia con ningun informe anterior
+porque no hay informe LEE de esos anos.
+
+E.2 . Cobertura
+
+Hojas leidas por la sesion en la imagen: 39 en los cuatro turnos. Catorce son
+tapas -790, 795, 797, 800, 804, 808, 812, 813, 815, 816, 825, 826, 829 y 839-,
+miradas para fecha y ano editorial. Doce son hojas de cuerpo: 795 h4, h5, h6 y
+h7; 796 h6 y h7; 798 h2; 802 h2; 816 h3; 832 h5; 834 h2; y las cabeceras de
+810 h7 y h9. Las trece restantes son las hojas de los diez resumenes de
+Tesoreria, miradas en el renglon del saldo y en el bloque de Impuestos al
+Consumo, mas la hoja 7 de la edicion 797, donde ese bloque cae. Columnas
+cotejadas contra la capa previa: 18, de 10 ediciones. Hojas con acierto del
+anillo 1 no miradas: ninguna. Lugares que quedaron pendientes en turnos
+anteriores y se cerraron en este: el pie de la columna 1 de 834 h2 y la
+columna 2 de 795 h5.
+
+Citados y no acompanados: cinco. La nota N.° 1.622. M.-19 de la Jefatura de
+Policia, que funda el decreto N 901; el acuerdo del H. Senado que el decreto
+de la Guardia Nacional manda recabar oportunamente; y tres vacantes declaradas
+sin nombrar a quien las dejo -la del decreto N 724, la del N 901 y la del N
+1140-, que segun el S5.3 de la rubrica son tambien actos citados y no
+acompanados. No se infiere quienes eran, aunque en el caso del N 724 el propio
+Boletin haya publicado la renuncia tres semanas antes.
+
+E.3 . Sin mencion y no mirado
+
+De las 526 hojas distintas, 513 no dan acierto en ninguna de las cuatro
+pasadas ni en el anillo 2 ni en el anillo de actores, y no se miraron con los
+ojos. No se afirma que no contengan nada: se afirma que ninguna de las redes
+las trajo.
+
+E.4 . Firmas y autoridad
+
+Gobernador durante todo el ano: Dr. Joaquin Castellanos, cuyo nombre encabeza
+las cincuenta tapas y firma 484 veces. La formula de encabezado de los
+decretos es casi siempre El Gobernador de la Provincia, 163 veces, contra seis
+de El Poder Ejecutivo de la Provincia y dos de El P. Ejecutivo de la
+Provincia: se registran las tres y no se normalizan. El refrendo mas frecuente
+es Julio J. Paz, 199 veces. El Es copia lo firman D. Lopez Reyna -de lejos el
+mas frecuente, unas 165 veces contando las variantes que el OCR parte como
+Lopez Rey na-, C. Hoyos, Pedro R. Torres y una forma que la capa lee Celso A.
+Latiera. La lectura de los contextos aclaro dos cosas. La primera: el D. de D.
+Lopez Reyna es Dermidio. El decreto de la edicion 794, del 24 de enero, nombra
+Sub-Secretario de Gobierno con caracter de interino al senor Dermidio Lopez
+Reyna con antiguedad al 16 del actual, y el decreto de la edicion 807, del 3
+de mayo, lo autoriza a refrendar por su nombre completo. La segunda: no se
+afirma que el C. Hoyos que firma Es copia sea el Casiano Hoyos que el config
+trae como actor de 1916 y que este ano es director de la biblioteca Dr.
+Victorino de la Plaza y candidato a Diputado por Cerrillos. Son el mismo
+apellido y la misma inicial, y nada mas.
+
+El refrendo no es uno solo: cambia y se reparte. Julio J. Paz aparece 199
+veces y en 40 ediciones, de la 788 a la 839; M. Lopez Dominguez, unas 140
+veces en 24 ediciones, tambien de punta a punta del ano; y el Dr. Dario Arias
+refrenda en ocho ediciones, de la 790 a la 798. Julio N. Bastiani aparece en
+nueve ediciones entre la 790 y la 807. Los dos primeros conviven todo el ano,
+de modo que no hay sucesion sino reparto por materia: Gobierno y Hacienda, que
+son los dos ministerios que encabezan seccion, con 68 y 54 apariciones. El Es
+copia lo firman D. Lopez Reyna, de la 794 a la 839 en 36 ediciones; Pedro R.
+Torres, de la 795 a la 839 en 15; C. Hoyos, de la 812 a la 830 en 13; y C. A.
+Lallera, solo de la 831 a la 839, en 7. No se normaliza ninguna de las formas
+y no se fija fecha de relevo para ninguno.
+
+E.5 . Cortes y columnas
+
+Maqueta: pagina de unos 434 a 451 pt de ancho por 641 a 668 de alto, a dos
+columnas. Medidos los x0 de las palabras sobre cinco ediciones enteras, las
+columnas arrancan en unos 22 y unos 222 pt: el recorte se hace por el ancho
+entero de la columna mas unos 6 pt de margen. Las catorce columnas cotejadas
+hasta ahora -en 795, 796, 798, 802, 810, 816, 832 y 834- no presentan columna
+perdida: en las catorce, el orden de los renglones de la capa previa coincide
+con el de la imagen y no falta ninguno. No se afirma nada sobre las 512
+columnas restantes. Lo que si fallo, y falla en silencio, es la palabra
+suelta: la capa lee vocalds por vocales (815 h4), Abril 28 por Abril 23 en una
+tapa, y en 796 h6 reduce Fernandez Alberto Tomas a una lista donde el apellido
+va primero, de modo que ninguna busqueda por nombre y apellido lo alcanza.
+
+E.6 . Repeticiones
+
+En 1920 los avisos NO llevan marca de publicacion. No hay una sola aparicion
+de la forma 251 v Dbre 5 que en 1946 anunciaba hasta cuando corria la orden de
+publicar; se busco el patron entero sobre las 526 hojas y devolvio cero, y el
+cero se probo. De modo que la repeticion se comprobo por el unico camino que
+queda, que es ademas el que la rubrica prefiere: buscar el texto en el resto
+del corpus.
+
+Se hizo de dos maneras. La primera, un barrido de coincidencias de doce
+palabras entre ediciones distintas, que devolvio sobre todo formula de edicto
+-contados desde la primera publicacion del presente a todos los que se
+consideren con derechos- y el texto de la Ley 204 que la tapa reimprime cada
+semana. La segunda, la busqueda de la frase distintiva de cada una de las diez
+piezas del S A. Resultado: ninguna pieza del departamento se repite. Cada uno
+de los cinco decretos, la nomina de la Junta Electoral, la proclamacion de
+candidatos, el decreto de mesas y el de elecciones complementarias aparecen
+una sola vez en todo el ano.
+
+Si hay repeticiones ajenas al departamento, y conviene dejarlas anotadas
+porque prueban que el Boletin de 1920 repite avisos sin marcarlos: el remate
+de la propiedad lindera de dona Hilaria V. de Nogales sobre la calle Urquiza
+sale igual en 801 h4 y en 807 h12, y el remate cuyo depositario es Alfonso
+Orlando sale en 788 h10 y en 806 h5. El cotejo de esas dos parejas se hizo
+sobre la capa y no sobre la imagen, y asi se declara.
+
+Duplicacion de archivo, no de Boletin: las hojas 9 y 10 de la edicion 810 son
+un segundo escaneo de las hojas 7 y 8, confirmado en la imagen. Esta en E.1 y
+se descuenta del recuento.
+
+E.7 . Falsos positivos y negativos
+
+Anillo 1, resueltos y no agregados al config: Romero Calderon y Compania,
+interventores nombrados en una quiebra (806 h3); dona Rene Reyes de Calderon,
+en la nomina de herederos de una sucesion (835 h8); e Isidoro B. e Isidro D.
+Calderon, que ya estaban juzgados en 1912. El tercero es de otra naturaleza:
+en 815 h4 la capa previa lee vocalds donde el original dice vocales, y ese
+vocalds contiene la cadena cald. No es un falso positivo del original sino del
+OCR, y se declara como tal.
+
+Difusa: adera, que es el final de verdadera partido por el renglon; caderias,
+que es mercaderias; cuadrilla; y calderon. Difusa ampliada, banda 0,70 a 0,78,
+diecinueve formas, ninguna del departamento: caballeria, cabrera, cadayer,
+calidad, calidas, candara, candejaria, carera, carleru, carrera, carrill,
+cartera, casilla, cuadra, cuadras, cualea, cualquiera, cuartillas y galeria.
+
+Falso negativo confirmado de la pasada de actores. Augusto Regis, que el
+config trae como actor de 1909, esta en el ano -796 h6, presidente de la mesa
+1 del Colegio Electoral N 3 de Caldera, reemplazado por Fernandez Alberto
+Tomas- y la busqueda no lo devolvio, porque la nomina de la Junta Electoral
+imprime el apellido antes que el nombre: Regis Augusto. La pasada de actores
+busca nombre y despues apellido, con hasta dos palabras en el medio, y no
+contempla la inversion. Es falla de la busqueda, no ausencia del actor.
+
+Segundo falso negativo, y mas grave porque lo provoca la union de cortes.
+Casimiro Caceres, actor del config con origen 1917, es el protagonista del
+decreto N 1140 de la edicion 832, y la busqueda no lo devuelve ni en su propio
+acto. La capa previa imprime el apellido partido asi: casimiro seguido de ca-,
+una comilla tipografica, salto de renglon y cqres. La union de v15 tolera
+hasta dos signos de puntuacion a cada lado del salto, pero su clase es de
+puntuacion ASCII y no incluye la comilla tipografica U+2019, que es la que
+esta ahi; y aunque la union pegara las dos mitades, el resultado seria cacqres
+y no caceres, porque el OCR lee la e como q. Medido sobre el corpus: de los
+5.466 cortes con guion visible seguido de salto, 244 llevan una comilla o un
+acento tipografico entre el guion y el salto. La falla no es un caso aislado.
+
+E.8 . Fidelidad numerica
+
+Inventario cerrado, recalculo pendiente. Los cuadros publicados del ano son
+diez, y los diez son el mismo: el resumen mensual del movimiento de Tesoreria
+de la Contaduria General, en las ediciones 790, 797, 805, 811, 812, 817, 820,
+824, 829 y 832. Cada uno ocupa dos hojas. No hay ningun balance municipal en
+todo el ano, y por lo tanto ninguno del departamento: eso es un hecho del
+corpus y no una tabla que quedo sin mirar. Las otras cinco hojas que la
+busqueda habia marcado -804 h5, 827 h27, la otra mencion de 829 h17, 831 h4 y
+831 h11- no traen cuadro: son importes sueltos dentro de un remate, de un
+reglamento de riego y de dos decretos de gastos, y se leyeron para
+descartarlas.
+
+De los diez cuadros se recalculo un subtotal, el mismo en todos para que sean
+comparables: el bloque de Impuestos al Consumo -bebidas, cigarrillos,
+cigarros, tabacos, naipes y coca-, que es compacto, esta siempre en la hoja de
+entradas y lleva su propio subtotal impreso. Las sesenta cifras y los diez
+subtotales se leyeron en la imagen a 240 dpi, ninguna en la capa. Ocho de los
+diez cierran exactos y dos no.
+
+Cifra dudosa, con las dos lecturas escritas. El cuadro de abril (811 h12) abre
+con A EXISTENCIA de Marzo de 1920 y una cifra que la capa previa lee 52.366,75
+y la imagen a 300 dpi deja ver como 152.366,75, con el primer digito separado
+del resto y pegado al filete de la columna. Las dos lecturas se publican. Cual
+de las dos cierra la cadena no se puede decidir, porque el cierre de marzo
+esta en la segunda hoja del cuadro de marzo, que no se miro.
+
+  cuadro de   suma de los seis   subtotal impreso   diferencia
+  ----------  -----------------  -----------------  ----------
+  dic. 1919      24.982,81          24.982,81          cierra
+  ene. 1920      39.615,69          39.615,59          0,10
+  mar. 1920      28.120,10          28.120,10          cierra
+  abr. 1920      20.136,38          20.136,38          cierra
+  may. 1920      23.303,66          23.303,66          cierra
+  jun. 1920      22.135,46          22.135,46          cierra
+  jul. 1920      24.701,15          24.701,15          cierra
+  ago. 1920      22.477,98          22.468,98          9,00
+  set. 1920      28.780,92          28.780,92          cierra
+  oct. 1920      23.619,76          23.619,76          cierra
+
+Los dos que no cierran, con su lectura alternativa escrita, como manda el
+S8.7. Enero: la suma da 39.615,69 contra 39.615,59 impreso, diez centavos de
+mas; alcanza un digito para cerrar la columna -Cigarros 6.729,04 en lugar de
+6.729,14, o Tabacos 1.141,68 en lugar de 1.141,78, o Naipes 183,00 en lugar de
+183,10-. Agosto: la suma da 22.477,98 contra 22.468,98 impreso, nueve pesos de
+mas; tambien alcanza un digito -Bebidas 8.540,94 en lugar de 8.549,94, o
+Naipes 70,80 en lugar de 79,80-. En los dos casos se declara la diferencia y
+las lecturas alternativas, y no se corrige nada.
+
+Notas de transcripcion de los cuadros. Los pesos redondos se imprimen con raya
+en lugar de centavos -Coca 1.729.-, 2.260.-, 1.655.-, 1.240.-, 3.525.- en
+cinco de los diez cuadros-, y asi se transcriben. El rubro se llama Impuestos
+al Consumo en ocho cuadros e Impuesto al Consumo en dos, y Tabacos alterna con
+Tabaco: no se normaliza. El orden de los seis renglones tampoco es fijo: el
+cuadro de enero abre por Tabacos y el de julio por Bebidas.
+
+E.9 . Contradicciones
+
+Uno: la edicion 798, fechada el 12 de marzo de 1920 en su tapa, imprime en las
+cabeceras de sus hojas interiores el numero de la edicion anterior -Num. 797-
+y repite sus folios, 1156 a 1160; la hoja 7 llega a imprimir Num. 796. El
+contenido no es el de la 797: se comparo hoja por hoja y no coincide en
+ninguna. Es errata del original, confirmada en la imagen de la hoja 2. No se
+concilia.
+
+Dos: la edicion 804 esta fechada Abril 23 de 1920 en la imagen de la tapa,
+donde la capa previa leia Abril 28. La fecha de la imagen es la que encadena
+con la serie de viernes; la de la capa no. Se declara la discrepancia entre
+capa e imagen y se toma la imagen.
+
+Tres: el Boletin de 1920 aparece los viernes, sin excepcion en las cuarenta y
+ocho tapas leidas, pero la tapa no lo declara: a diferencia de 1911 y 1912,
+que imprimian Aparece Miercoles y Sabados, la de 1920 no trae formula de
+periodicidad. El dia de salida es una regularidad observada, no una
+declaracion del original, y asi se registra.
+
+Cuatro: entre la edicion 824, del 10 de setiembre, y la 825, del 24, falta el
+viernes 17 de setiembre, y sin embargo la numeracion no salta: 825 sigue a
+824. De modo que el Boletin dejo de salir una semana sin gastar un numero. La
+cadena de folios lo confirma: 824 cierra en 1454 y 825 abre en 1456, con un
+solo folio de por medio, el de la tapa. No se busca la causa afuera.
+
+Cinco: la cadena de folios corre de 1081 (788 h2) a 1680 (839 h8) sin un solo
+salto que no se explique por una edicion ausente, pero tres hojas imprimen o
+la capa lee un folio que no encaja -1051 en 828, 1046 en 830, 1099 y 1122 en
+831, 1393 en 832 y 1137 en 836-. Son lecturas sueltas dentro de hojas cuyos
+vecinos encadenan bien: se declaran como dudosas y se miraran en la imagen
+antes de usarlas.
+
+Seis: la tipografia de la tapa cambia dentro del ano. Hasta la 830 el mes se
+imprime con mayuscula inicial en tipo romano; de la 831 en adelante aparece en
+minuscula y con otra familia -noviembre 5, noviembre 12- y la 839 usa una
+tercera, cursiva, donde Num. se imprime con una D que la capa lee Dum. Se
+transcribe lo que se ve.
+
+Siete: el decreto de convocatoria a elecciones provinciales de la edicion 795,
+hoja 6, nombra a Caldera dos veces en la misma enumeracion, con un Diputado
+cada vez: una detras de Molinos y otra detras de Cerrillos. Esta confirmado en
+la imagen, con la misma grafia en los dos renglones. La misma enumeracion no
+nombra a varios departamentos de la Provincia. No se concilia y no se infiere
+que el segundo Caldera deba decir otra cosa.
+
+Ocho: el decreto N 772 de la edicion 802 asigna el Colegio Electoral N 33 a
+San Carlos y tambien a Angastaco, en renglones consecutivos del mismo cuadro.
+O es errata del impresor o los dos comparten colegio; el decreto no lo dice y
+no se concilia.
+
+Nueve: el puesto de Sub-Comisario de Mojotoro cambia de titular tres veces en
+cinco meses y ninguno de los tres decretos cita al anterior. El decreto N 724
+nombra a Jose Agustin Martinez para un puesto vacante sin decir que la vacante
+la dejo Silverio Caceres, cuya renuncia el propio Boletin habia publicado tres
+semanas antes; y el decreto N 901 nombra a Ciro Caceres sin nombrar a Martinez
+ni publicar su renuncia. Lo mismo hace el decreto N 1140 con el Registro
+Civil. Se declaran como vacantes sin nombre en E.2 y no se completan.
+
+Diez: el resumen de Tesoreria de julio de 1920 (820 h7) encabeza su renglon de
+apertura A EXISTENCIA DE JULIO DE 1920, cuando esa cifra es necesariamente la
+del mes anterior, que es lo que los otros nueve resumenes rotulan bien. El
+resumen de agosto lo confirma al abrir con A SALDO DE JULIO DE 1920 y una
+cifra distinta. Se transcriben los dos rotulos y no se corrige ninguno.
+
+Once: los numeros de acto arrastrados del config dan quince aciertos en el ano
+y los quince son coincidencia de cifra, no cadena. Tres -745, 1056 y 1085- son
+numeros de decreto reales de 1920, pero de la numeracion propia del ano y no
+de la serie de 1946 que el config arrastra; 1097, 1392 y 1419 son folios
+impresos; 1.450 es el importe de cigarros del cuadro de abril; 1914 y 1922 son
+anos; 2386 y 2575 son numeros de expediente; 1668 es una base de remate.
+Ninguno se toma como remision.
+
+E.10 . Limites
+
+Uno. Sin el .tsv del script no hay confianza por hoja: la lista de hojas a
+ojos no existe. Es un limite, no un pendiente. Las hojas se cubren por otras
+vias: las de los candidatos del anillo 1, las de los cuadros, las de las
+listas y las nueve hojas de menos de 500 caracteres.
+
+Dos. Sin las .jpg del script no hay md5 ni dhash de imagen: la deduplicacion
+se hace por texto, como se hizo con la edicion 810. Tres. Sin las .jpg tampoco
+hay medicion de tinta, de modo que las hojas casi en blanco se buscan por
+densidad de caracteres. Cuatro. Sin OCR propio -el entorno no tiene el modelo
+spa- no hay segunda version: no hay desempate entre lecturas y la unica prueba
+de una palabra o de una cifra es la imagen. Cinco. No hay log.txt, de modo que
+no se puede declarar version ni fecha de corrida de lee_auto.py: no hubo
+corrida. Seis. No hay sumario con puntos guia en 1920, de modo que el cotejo
+sumario contra cuerpo es no aplicable, igual que en 1908-1912. Siete. Las
+ediciones 793, 822, 837 y 838 no estan en el Release: lo que contengan queda
+fuera de este barrido.
+
+
+------------------------------------------------------------------------------
+SF . CORRECCION A LA RUBRICA
+------------------------------------------------------------------------------
+
+Ocho cosas que 1920 mostro y que v15 no preveia o decia de otro modo. Las seis
+primeras se escribieron en el primer turno y quedaron confirmadas; las dos
+ultimas salieron del trabajo de fondo.
+
+Uno. Un archivo del Release puede no ser una edicion. Los PDF 793 y 822 traen
+una sola hoja con la leyenda ESTE BOLETIN NO SE ENCONTRO EN NUESTRA BASE DE
+DATOS, que es del repositorio de origen. Contarlos como ediciones de una hoja
+falsea el recuento y el control de folios. La regla: toda edicion de una sola
+hoja se lee antes de contarla.
+
+Dos. La cadena de folios distingue tambien la edicion ausente de la edicion
+incompleta, y ademas mide cuanto falta. En 1920: 793 ocupaba los folios 1110 a
+1127 y 822 los 1423 a 1435, de modo que la primera tenia unas diecinueve hojas
+y la segunda unas catorce; 837 y 838 juntas ocupaban de 1645 a 1673.
+
+Tres. Un ano puede no declarar los dias de aparicion. v15 dice que los dias de
+salida los declara la tapa; en 1920 la tapa no los declara. La regularidad se
+establece contra el calendario y se dice que es observada.
+
+Cuatro. El regimen de numeracion de los actos puede volver. v15 da por
+sentado, para 1908-1912, que los actos no llevan numero; en 1920 los decretos
+del Poder Ejecutivo se numeran y la numeracion corre. De modo que la regla de
+fecha contra numeracion, suspendida en aquella epoca, vuelve a aplicarse, y el
+config puede volver a alimentar la clave numeros con numeros reales.
+
+Cinco. Una edicion puede imprimir el numero y los folios de la anterior. Lo
+hace la 798 en todas sus cabeceras. Si el control de folios se hace a ciegas,
+esa edicion aparece como un retroceso de cinco folios en la cadena; mirada, es
+una errata del impresor. La cadena de folios no se corrige por ella: se
+declara.
+
+Seis. La duplicacion dentro de una edicion existe aunque no haya md5. En 810
+las hojas 9 y 10 repiten las 7 y 8. El indicio barato es el folio impreso
+repetido dentro de la misma edicion, que se lee de la capa previa sin mirar
+una sola imagen.
+
+Siete. La clase de puntuacion de la union de cortes es ASCII y deberia ser
+tipografica. v15 corrigio la union para que quitara el guion blando junto con
+el salto y tolerara hasta dos signos de puntuacion a cada lado; pero esos
+signos se escribieron con una clase de comillas y comas ASCII. La capa previa
+de esta epoca usa comillas tipograficas: en 1920, de los 5.466 cortes con
+guion visible seguido de salto, 244 llevan una comilla o un acento tipografico
+entre el guion y el salto, y uno de esos 244 es el apellido de Casimiro
+Caceres, protagonista de un acto del departamento, a quien la busqueda de
+actores no devuelve ni en su propio acto. La clase tiene que incluir al menos
+U+2018, U+2019, U+201C, U+201D y U+00B4. Y como en esta epoca los cuatro anos
+ya barridos se buscaron con la clase vieja, conviene repasarlos con
+--solo-busqueda, igual que se hizo tras la correccion del guion blando.
+
+Ocho. La pasada de actores no contempla el apellido invertido. Busca nombre,
+hasta dos palabras en el medio, apellido; y las nominas electorales de 1920
+imprimen apellido y despues nombre -Regis Augusto, Fernandez Alberto Tomas,
+Arias Isidoro-. Augusto Regis, actor del config desde 1909, esta en un acto
+del departamento y la pasada no lo devuelve. La pasada deberia correrse en los
+dos ordenes.
+
+Y una correccion al S15.2 de la rubrica, que se escribe leyendo el config y no
+de memoria. El archivo que llego con este barrido no tiene 171 actores, 70
+terminos de anillo 2, 40 numeros y 12 falsos positivos, que es lo que v15
+declara, sino 243 actores -con 38 de 1917 y 9 de 1919, epocas que v15 todavia
+no registraba-, 87 terminos de anillo 2, 51 numeros y 20 falsos positivos. Las
+busquedas de este barrido se corrieron sobre el archivo y por lo tanto son
+completas; lo que estaba viejo era el bloque de la rubrica.
+
+
+------------------------------------------------------------------------------
+CONFIG ACTUALIZADO
+------------------------------------------------------------------------------
+
+Se entrega lee_config.json actualizado, con lo anterior conservado.
+
+Se agrego a actores, con origen 1920, dieciocho nombres: los cuatro que el S A
+pone dentro del departamento -Jose Agustin Martinez y Ciro Caceres,
+sub-comisarios de Mojotoro; Mariano Coll, Coronel de la Guardia Nacional; y
+Alberto Tomas Fernandez, presidente de mesa-; los tres candidatos por La
+Caldera -Jose Maria Ocaranza, Jose Antonio Araoz y Dermidio Arancibia-; la
+autoridad del ano -Joaquin Castellanos, Julio J. Paz, M. Lopez Dominguez,
+Dermidio Lopez Reyna, Pedro R. Torres, C. A. Lallera y Julio N. Bastiani-; y
+cuatro del S B que conviene poder rastrear en los anos vecinos -Domingo S.
+Isasmendi, Silverio Aramayo, Jaime Wierna y Nacianceno Apaza-. Silverio
+Caceres y Casimiro Caceres ya estaban, con origen 1909 y 1917: se conservan
+como estan y no se duplican.
+
+Se agrego a numeros los seis numeros de acto del S A: 677, 685, 724, 772, 901
+y 1140. Es la primera vez desde 1946 que un ano aporta numeros reales, porque
+de 1908 a 1912 los actos no llevaban numeracion y en 1920 si la llevan.
+
+NO se agrego nada a anillo2. Los parajes del departamento que 1920 nombra
+-Mojotoro y Vaqueros- ya estan, y con la misma grafia que el original imprime.
+No aparecio ninguna forma deformada por el OCR que hiciera falta agregar.
+
+NO se agrego nada a falsos_positivos, por la misma razon que en 1911 y 1912:
+un termino del anillo 1 cuyo contexto contenga un falso positivo del config
+queda marcado como fp_conocido y sin recorte, aunque sea real. Los falsos
+positivos de 1920 quedan listados en E.7 y en el S12 de la rubrica, y no en el
+archivo.
+
+
+------------------------------------------------------------------------------
+RECUENTO
+------------------------------------------------------------------------------
+
+  Archivos bajados del Release ......................... 50 PDF, 58 MB
+  Ediciones reales ..................................... 48 (788-839)
+  Ediciones ausentes ................................... 4 (793, 822,
+                                                         837 y 838)
+  Hojas en los archivos ................................ 530
+  Hojas de Boletin ..................................... 528
+  Hojas distintas ...................................... 526
+  Hojas con capa de texto .............................. 530 de 530
+  Techo de resolucion .................................. 300 ppi
+  Marca de corte U+0002 ................................ 0
+  Guion blando U+00AD .................................. 6.000
+    de ellos, cortes de renglon ........................ 5.999
+  Folios impresos, de .................................. 1081 a 1680
+  Reparto de confianza ................................. no aplicable
+  Imagenes miradas ..................................... 39
+  Columnas cotejadas contra la capa previa ............. 18
+  Anillo 1, coincidencias de la cadena cald ............ 19
+    hojas con acierto .................................. 13
+    coincidencias falso positivo ....................... 3
+    apariciones reales ................................. 16
+    entradas del S A ................................... 10
+    fichadas ........................................... 10
+  Anillo 2, terminos con acierto ....................... 17 de 87
+  Actores con acierto .................................. 15 de 243
+  Cuadros publicados ................................... 10
+    todos resumenes de Tesoreria, de dos hojas cada uno
+    balances municipales ............................... 0
+  Subtotales recalculados .............................. 10
+    que cierran exactos ................................ 8
+    que no cierran, con lectura alternativa ............ 2
+  Saldos transcriptos y encadenados .................... 10
+    eslabones que faltan dentro del ano ................ 1 (febrero)
+  Planos publicados .................................... 0
+    hojas que remiten a un plano ....................... 14
+    de ellas, del departamento ......................... 0
+  Limitrofes ........................................... 0
+  Citados y no acompanados ............................. 5
+  Repeticiones de piezas del departamento .............. 0
+  Repeticiones ajenas detectadas ....................... 2
+  Duplicacion de archivo ............................... 1 (810)
+  Actores agregados al config .......................... 18
+  Numeros agregados al config .......................... 6
+  Limites declarados ................................... 7
+  Pendientes ........................................... 0
+
+Cierre. Este turno entrego archivo, y el archivo es este, que reemplaza al de
+los tres turnos anteriores con el mismo nombre, mas el lee_config.json
+actualizado. El informe esta COMPLETO, con siete limites declarados en E.10 y
+ningun pendiente. Todo lo que se miro con los ojos quedo anotado en notas.txt.

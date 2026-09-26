@@ -1,0 +1,1961 @@
+BOLETIN OFICIAL DE SALTA - ANO 1923 - EDICIONES N° 939 A N° 990
+BARRIDO LEE SOBRE <LA CALDERA> - RUBRICA v15
+Informe generado el 22/09/2026 (segunda entrega, reemplaza a la primera)
+
+
+============================================================================
+§0 - ADVERTENCIA PRELIMINAR
+============================================================================
+
+ESTADO: COMPLETO, CON NUEVE LIMITES DECLARADOS. El §A tiene diecisiete
+entradas, todas transcriptas desde la imagen. Las 52 tapas estan leidas en
+la imagen, los 55 terminos del anillo 2 con acierto tienen su contexto
+leido, los cinco cuadros publicados tienen subtotales recalculados, los
+vecinos +-3 estan cotejados y el indice esta armado. Lo que queda sin
+resolver no es trabajo pendiente: son los limites de E.10, que este corpus y
+estos insumos no permiten levantar.
+
+Salidas de lee_auto.py: NINGUNA. El listado de assets del Release 1923 de
+github.com/ediedrich/boletines-salta, leido el 22/09/2026 por la pagina
+releases/expanded_assets/1923 (api.github.com responde 403 sin token), trae
+53 archivos: los 52 PDF de las ediciones 939 a 990 y un lee_config.json. No
+llegaron el pre-informe, ni resultados_1923.csv, ni decretos_1923.csv, ni
+log.txt, ni recortes.zip, ni el zip de los .txt de lee_trabajo. No hay
+version ni fecha de corrida del script, ni parametros, ni errores de log que
+declarar: no hubo corrida a la vista. Rige el §2.1 de la rubrica y la capa
+previa la extrajo esta sesion.
+
+Config usado: el lee_config.json adjunto al proyecto, no el del Release. Los
+dos difieren y el del proyecto es el posterior: 280 actores contra 180, 102
+terminos de anillo 2 contra 70, 70 numeros contra 40 y 20 falsos positivos
+contra 12. Los origenes de los actores del config del proyecto son 1908 (8),
+1909 (45), 1910 (41), 1911 (24), 1912 (11), 1915 (9), 1916 (16), 1917 (38),
+1919 (9), 1920 (18), 1922 (19) y las ocho ediciones de 1946 (42). El bloque
+se escribio leyendo el archivo.
+
+Entorno verificado al empezar: nproc = 1; PyMuPDF no venia instalado y se
+instalo desde pypi (1.28.2); tesseract 5.3.4 presente pero con los idiomas
+eng y osd UNICAMENTE, sin spa. No se OCRizo nada en esta sesion: el §3 y el
+§16 de la rubrica no son aplicables a este barrido, y toda lectura que no
+sale de la capa previa sale de la imagen mirada.
+
+Imagenes: los 52 PDF se bajaron del Release en una llamada (33 MB) y los 52
+abren como PDF reales. No hay EXTRAIDO.json para cotejar bytes y hojas: el
+cotejo se hizo contra la cadena de folios impresos y contra la serie semanal
+de tapas (§2.5bis), y tiene consecuencias que estan en el §1 y en E.9.
+
+1923 NO es la epoca de 1908-1912 y casi nada de lo medido alli vale aca.
+Cinco diferencias miden la distancia, todas verificadas en este corpus:
+
+(a) Los actos LLEVAN NUMERO. La numeracion de decretos corre de N° 555 (18
+de diciembre de 1922, publicado en la edicion 939) a N° 1355 (diciembre de
+1923), y es continua y creciente de edicion en edicion. El §8.15 SI se
+aplica aqui, al reves de lo que pasaba en 1908-1912.
+
+(b) El techo de resolucion es 150 ppi, la mitad o menos que en 1908-1912
+(300 a 500 ppi). Cada hoja trae DOS imagenes incrustadas superpuestas sobre
+el mismo rectangulo: una de 150 ppi y otra de 75 ppi. Pedir 400 o 600 dpi
+sobre estas hojas agranda pixeles y no agrega informacion.
+
+(c) La paginacion corrida existe, viene heredada de 1922 y se interrumpe
+DENTRO de 1923, en la edicion 971 y no en otra: 970 h2 lleva Pag. 3682 y 971
+h2 lleva Pag. 2, las dos leidas en la imagen.
+
+(d) El sumario aparece a mitad de ano, tambien en la edicion 971, junto con
+el cambio de cabecera: desde ahi la hoja 1 trae un sumario por acto con
+remision a pagina. Antes no hay sumario. El cotejo sumario/cuerpo es, por lo
+tanto, no aplicable de la 939 a la 970 y aplicable de la 971 a la 990.
+
+(e) El original compone los titulos y los nombres de departamento con las
+letras separadas (C A L D E R A, C ald era). Eso hace invisibles para la
+pasada literal tres menciones reales, una de ellas un acto entero del §A
+(A.13). La pasada que las rescata es la laxa reescrita para admitir espacios
+entre TODAS las letras, no solo en el medio de la palabra. Es el hallazgo de
+metodo del ano y esta en el §2, en E.7 y en el §F.
+
+Que verifico esta sesion, ademas: la marca de corte U+0002 no aparece ni una
+vez en las 673 hojas; el guion blando U+00AD aparece 10.554 veces y corta
+renglones igual que en 1909-1912, de modo que la union se hizo con la regla
+corregida del §2.3; las cuatro pasadas se corrieron sobre la capa unida; se
+recalcularon subtotales en los cuatro cuadros de Tesoreria publicados; y se
+comprobo por el texto, hoja por hoja, que ninguno de los tres avisos del
+departamento se repite.
+
+Desvios del §8.17: el informe se escribe sin tildes ni enes en la prosa
+propia por una limitacion del canal de salida, pero las transcripciones
+conservan mayusculas, numeracion, abreviaturas, erratas con [sic] y los
+guiones y rayas tal como se ven. Las comillas angulares del original se
+escriben < >.
+
+Que agregaria cada insumo que falto, en una linea: si llegaran el .tsv, las
+.jpg y el log de lee_auto.py se podrian agregar la confianza por hoja y la
+lista de hojas <a ojos>, la deduplicacion por md5 y dhash, la medicion de
+tinta -que diria si 973 h14 esta en blanco- y los errores de corrida; si el
+corpus viniera rasterizado por encima de 150 ppi se podrian cerrar las dos
+diferencias de E.8; y si tesseract tuviera spa habria una segunda version
+del texto con que desempatar. El §A no cambiaria por ninguno de los tres:
+las diecisiete entradas estan leidas en la imagen.
+
+
+============================================================================
+§1 - CORPUS REVISADO
+============================================================================
+
+52 archivos, 52 ediciones, N° 939 a N° 990, sin faltantes en la serie
+numerica. 673 hojas. El Boletin es SEMANAL en 1923 y la tapa lo declara:
+<PUBLICACION SEMANAL> en las ediciones de enero a agosto. Las 52 ediciones
+caen en los 52 viernes de 1923, del 5 de enero al 28 de diciembre, sin un
+solo hueco y sin ninguna edicion doble: no hay dia de salida sin edicion y
+no hay tapa con dos fechas.
+
+Ninguna tapa declara cantidad de paginas en todo el ano. El control de hojas
+es la cadena de folios (§2.5bis) y solo existe hasta la edicion 970.
+
+Ano editorial: AÑO XIV en las ediciones 939 y 940, AÑO XV desde la 941 hasta
+la 990. El cambio cae en la edicion del 19 de enero y las tres tapas se
+leyeron en la imagen; las 49 restantes tambien, y ninguna otra cambia el ano
+editorial. El ano editorial no coincide con el calendario.
+
+Columna <fecha>: [img] significa leida en la imagen; OK, leida en la capa
+previa en tipo comun. Las 52 tapas estan cotejadas contra el viernes que les
+toca. Las 32 de las ediciones 939 a 970 estan compuestas en tipo de fantasia
+que el OCR no resuelve y se leyeron todas en la imagen, en cuatro montajes
+de ocho; las 20 restantes estan en tipo comun y se leyeron en la capa.
+Cincuenta y una coinciden con la serie. La excepcion es la edicion 945, cuya
+tapa dice <Salta, Viernes 17 de Febrero de 1923> cuando el 17 de febrero de
+1923 fue sabado y el viernes de esa semana fue el 16. El digito se verifico
+a 400 dpi contra el 7 de <27 de Julio> de la edicion 968 y contra el 0 de
+<20 de Abril> de la 954: es un 7. No es errata del OCR y no se concilia
+(E.9). La tapa de la edicion 970, que a 200 dpi parece decir 19 de Agosto,
+dice 10: el 0 de esa tipografia no lleva el rizo que si lleva el 9 de 1923.
+
+Columna <folio h1>: el folio impreso en la cabecera. Veintitres valores son
+lectura directa (939 h8, 940 h13, 941 h2, 942 h3 y h13, 943 h2/h3/h7, 944
+h2/h6/h11, 946 h8/h9/h12, 947 h9/h14/h15/h17, 948 h8, 949 h3/h7, 950
+h13/h14, 953 h9/h13/h14, 954 h10, 955 h7/h9, 956 h2/h9/h10, 957 h8, 958 h4,
+961 h12, 965 h12, 967 h7, 968 h2, 969 h6, 970 h2); el resto de la columna
+esta encadenado a partir de ellas.
+
+
+  ED.   FECHA (1923)      HOJAS  FOLIO h1   FECHA    REGIMEN
+  --------------------------------------------------------------
+  939   5 de enero        12     3275       [img]    corrido
+  940   12 de enero       14     3287       [img]    corrido
+  941   19 de enero       8      3301       [img]    corrido
+  942   26 de enero       14     3309       [img]    corrido
+  943   2 de febrero      11     3323       [img]    corrido
+  944   9 de febrero      12     3335       [img]    corrido
+  945   16 de febrero     11     3347       [img]    corrido
+  946   23 de febrero     16     3358       [img]    corrido
+  947   2 de marzo        23     3373       [img]    corrido
+  948   9 de marzo        12     3397       [img]    corrido
+  949   16 de marzo       14     3409       [img]    corrido
+  950   23 de marzo       15     3423       [img]    corrido
+  951   30 de marzo       6      3438       [img]    corrido
+  952   6 de abril        11     3444       [img]    corrido
+  953   13 de abril       18     3458       [img]    corrido
+  954   20 de abril       15     3476       [img]    corrido
+  955   27 de abril       12     3492       [img]    corrido
+  956   4 de mayo         10     3504       [img]    corrido
+  957   11 de mayo        9      3514       [img]    corrido
+  958   18 de mayo        13     3523       [img]    corrido
+  959   25 de mayo        12     3536       [img]    corrido
+  960   1 de junio        10     3548       [img]    corrido
+  961   8 de junio        15     3561       [img]    corrido
+  962   15 de junio       9      3576       [img]    corrido
+  963   22 de junio       16     3585       [img]    corrido
+  964   29 de junio       11     3601       [img]    corrido
+  965   6 de julio        17     3615       [img]    corrido
+  966   13 de julio       8      3632       [img]    corrido
+  967   20 de julio       12     3641       [img]    corrido
+  968   27 de julio       7      3653       [img]    corrido
+  969   3 de agosto       19     3661       [img]    corrido
+  970   10 de agosto      18     3681       [img]    corrido
+  971   17 de agosto      18     -          OK       por edic.
+  972   24 de agosto      18     -          OK       por edic.
+  973   31 de agosto      14     -          OK       por edic.
+  974   7 de setiembre    14     -          OK       por edic.
+  975   14 de setiembre   6      -          OK       por edic.
+  976   21 de setiembre   9      -          OK       por edic.
+  977   28 de setiembre   12     -          OK       por edic.
+  978   5 de octubre      16     -          OK       por edic.
+  979   12 de octubre     15     -          OK       por edic.
+  980   19 de octubre     15     -          OK       por edic.
+  981   26 de octubre     14     -          OK       por edic.
+  982   2 de noviembre    12     -          OK       por edic.
+  983   9 de noviembre    11     -          OK       por edic.
+  984   16 de noviembre   11     -          OK       por edic.
+  985   23 de noviembre   13     -          OK       por edic.
+  986   30 de noviembre   11     -          OK       por edic.
+  987   7 de diciembre    15     -          OK       por edic.
+  988   14 de diciembre   12     -          OK       por edic.
+  989   21 de diciembre   12     -          OK       por edic.
+  990   28 de diciembre   15     -          OK       por edic.
+
+
+Lo que dice la cadena de folios
+-------------------------------
+
+La cadena no reinicia en enero: la edicion 939, del 5 de enero, abre en el
+folio 3275, heredado de 1922. Esto contradice lo medido en 1911-1912, donde
+el folio no se heredaba de un ano al otro, y confirma que el regimen se mide
+en cada corpus.
+
+Entre dos anclas consecutivas, el folio deberia avanzar tantos numeros como
+hojas tiene el tramo. Avanza de mas en nueve tramos. La diferencia acumulada
+entre el ancla de 939 y la de 970 es de catorce folios: la cadena llega a
+3681 donde las hojas presentes darian 3667. Tramo por tramo:
+
+    943 -> 944 .......... +1
+    946 -> 947 .......... -1  (explicado: 946 h16 no lleva folio)
+    947 -> 948 .......... +1
+    950 -> 953 .......... +3
+    954 -> 955 .......... +1
+    958 -> 961 .......... +3
+    961 -> 965 .......... +3
+    965 -> 967 .......... +1
+    968 -> 969 .......... +1
+    969 -> 970 .......... +1
+
+Quince hojas del Boletin de 1923, entonces, estan foliadas y no estan en el
+Release. La cadena dice en que tramo cae cada una y no dice en cual de las
+ediciones del tramo: por eso se declara por tramo y no se reparte. La unica
+que se puede nombrar es el folio 3334, que falta entre la edicion 943
+(cierra en 3333) y la 944 (abre en 3335).
+
+Al reves: la edicion 946 tiene 16 hojas y solo 15 folios. La hoja 16 no
+lleva folio y es, ademas, una de las dos hojas del corpus sin una sola letra
+en la capa previa. Es una hoja del ejemplar y no una pagina del Boletin.
+
+Desde la edicion 971 el folio reinicia en 1 por edicion y el control
+desaparece. De la 971 a la 990 no hay manera barata de saber si una edicion
+esta completa: 322 de las 673 hojas del ano quedan sin ese control, y se
+declara asi.
+
+
+Contenedores, resolucion y confianza
+------------------------------------
+
+Los 52 son PDF reales, version 1.5, con capa de texto previa y dos imagenes
+incrustadas por hoja. No hay ZIP ni texto plano con extension .pdf. Techo de
+resolucion: 150 ppi en todo el ano, uniforme (medido en 939, 946, 960, 971 y
+990). La segunda imagen de cada hoja es la misma area a 75 ppi.
+
+Confianza por hoja: NO EXISTE en este barrido. Sin los .tsv de lee_auto.py
+no hay media de confianza ni porcentaje de palabras bajo 60, y por lo tanto
+no hay reparto pub/ver/ojos ni lista de hojas <a ojos>. Es un limite, no un
+pendiente (E.10). Las hojas se cubrieron por otras vias: las de los
+candidatos del anillo 1, las de los cuadros de Tesoreria, las del
+presupuesto, las de los aciertos del anillo 2 que resultaron de vecindad, y
+las tapas del cambio de ano editorial.
+
+Hojas sin una sola letra en la capa previa: 946 h16 y 973 h14. La primera
+queda explicada arriba. La segunda no se miro y no se declara en blanco: sin
+las .jpg del script no hay medicion de tinta.
+
+
+============================================================================
+§2 - CRITERIO DE BUSQUEDA
+============================================================================
+
+Versiones. Hay UNA sola: la capa previa de los PDF, extraida por esta sesion
+con PyMuPDF (§2.1). No hay OCR propio porque tesseract no tiene spa. Todo
+resultado se etiqueta prev y no hubo desempate posible entre versiones: el
+unico desempate es la imagen, y se uso en las diecisiete fichas.
+
+Union de cortes. U+0002 no aparece (0 en 673 hojas). U+00AD aparece 10.554
+veces y es la unica marca de corte de renglon del corpus: el original no
+imprime guion visible en el corte, salvo cuando el corte cae entre dos hojas
+(990 h13/h14). La union quita primero el guion blando junto con el salto de
+renglon y su sangria, y recien despues los sueltos; tolera hasta dos signos
+de puntuacion a cada lado del salto.
+
+
+Las cuatro pasadas
+------------------
+
+1. Literal/normalizada, cald sobre NFD sin diacriticos con los cortes
+unidos: 27 aciertos en 18 hojas.
+
+2. Laxa. Escrita como en la rubrica v15 -clase de espacios en blanco entre
+cal y dera- devuelve 24 aciertos, todos formas exactas ya capturadas por la
+literal, y CERO variantes. Se comprobo que no estaba rota contando los
+aciertos totales del patron, que son 24 reales: el patron corre. Reescrita
+para admitir espacios, guiones o puntos entre TODAS las letras, devuelve
+cuatro aciertos que la literal no ve: 947 h14 (C A L D E R A), 947 h15 (C A
+L D E R A), 961 h12 (C ald era) y 978 h2 (C ald er a, en el epigrafe). Tres
+de ellos son menciones nuevas y uno, el de 978, es el epigrafe de un acto
+que la literal ya traia por el cuerpo. Con eso el anillo 1 pasa de 18 a 21
+hojas y el §A de catorce a diecisiete entradas.
+
+3. Difusa, ratio >= 0,78 contra caldera y calderilla sobre las 16.189
+palabras distintas de 5 a 12 letras del corpus, excluidas las formas
+exactas: 6 formas en 12 hojas -calera, caleras, cablera, escalera, calchera,
+calavera-, las seis miradas en la imagen y las seis falsos positivos (E.7).
+En 1923, al reves de 1909, 1911 y 1912, la difusa no rescata ninguna
+mencion: el trabajo que en esos anos hacia ella lo hace aqui la laxa
+corregida.
+
+4. Difusa ampliada, banda 0,70 a 0,78 restringida a palabras que empiezan
+con c, g u o, una vez por ano: 22 formas -cadillal, cuadra, caldas, cadena,
+curaderia, calaveras, galeria, cuadras, cartera, cardena, caneria, candena,
+calidad, cadenas, cadaver, cabrera, cualquiera, cqalquiera, cortaderas,
+catella, capilla, cerrrilloa-, ninguna del departamento. Fuera de la
+restriccion la banda trae otras 17 formas, encabezadas por mercaderia y
+balderrama, ya juzgadas antes.
+
+Anillo 2, actores, numeros y reemplazos se corrieron sobre el texto
+normalizado, sobre el texto con la puntuacion suprimida y sobre una tercera
+version con el espaciado tipografico deshecho. Anillo 2: 55 de los 102
+terminos del config dieron acierto y se leyo el contexto de los 55. Anillo
+de actores: de los 280 del config, 27 aparecen con nombre y apellido
+completos y 123 apellidos sueltos tienen al menos un acierto. Numeros
+arrastrados del config: los 70, sin un solo acierto que no sea coincidencia
+de cifra, como en 1912.
+
+Identificadores de las ausencias (§5.3). En 1923 los actos llevan numero, de
+modo que los identificadores son numero de decreto y fecha, y ademas
+expediente, lugar, organismo y persona. Es la primera vez en la serie
+1908-1923 en que el numero de acto sirve como identificador.
+
+
+============================================================================
+§A - MENCIONES EXPLICITAS DEL ANILLO 1
+============================================================================
+
+Diecisiete entradas. Cada una corresponde a un acto; tres de ellas se
+reparten en dos hojas y cuentan como una entrada con dos apariciones (A.2,
+A.6 y A.17). Las diecisiete estan transcriptas desde la imagen.
+
+Cuatro hilos atraviesan el ano y conviene leerlos juntos: el electoral (A.2
+convoca, A.3 fija mesas y circuitos, A.4 y A.5 proclaman candidatos, A.6 y
+A.7 corrigen autoridades de mesa, A.11 incorpora al senador electo); el de
+la comisaria (A.8 renuncia, A.9 nombramiento interino, A.10 revocacion y
+sucesor, en nueve dias); el municipal (A.1 y A.12 cubren dos vacantes, A.15
+interviene la comuna); y el patrimonial (A.13 y A.16 rematan bienes del
+departamento, A.17 pide agua del rio de Wierna).
+
+
+A.1 - Edicion N° 942, hoja 3
+----------------------------
+
+FUENTE:
+  Edicion N° 942, viernes 26 de enero de 1923, hoja 3 (Pag. 3311),
+  columna 2 arriba.
+
+FICHA:
+  Decreto N° 620. Acepta la renuncia de Augusto Regis como miembro
+  de la H. Comision Municipal de La Caldera y designa en su lugar a
+  Genaro Molina.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi desde el PDF del
+  Release (techo de resolucion 150 ppi); las dos columnas leidas
+  completas.
+
+TEXTO:
+  Aceptacion de renuncia y nombramiento respectivo
+  N° 620
+  Salta, Enero 18 de 1823 [sic]
+  Encontrandose vacante el cargo de miembro de la H. Comision
+  Municipal de la Caldera, por renuncia de don Augusto Regis
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. I.-Designase para integrar la referida Comision Municipal al
+  Sr. Genaro Molina
+  Art. 2.- Comuniquese, publiquese, y dese al Registro Oficial
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA:
+  El ano del decreto esta impreso 1823 y no 1923: errata del
+  original, transcripta tal cual y declarada en E.9. Los vecinos
+  N° 621 y N° 622, de la misma columna, llevan Enero 18 de 1923, y
+  el N° 622 nombra en la Comision Municipal de Cerrillos. Augusto
+  Regis y Genaro Molina figuran los dos en el config como actores de
+  1909 y reaparecen aqui con nombre completo; ninguno de los dos
+  vuelve a aparecer en 1923 fuera de este decreto.
+
+
+A.2 - Edicion N° 943, hoja 3
+----------------------------
+
+FUENTE:
+  Edicion N° 943, viernes 2 de febrero de 1923, hojas 2 y 3
+  (Pag. 3324 y Pag. 3325): el decreto empieza en la columna 2 de la
+  hoja 2 y termina en la columna 1 de la hoja 3.
+
+FICHA:
+  Decreto N° 629. Convoca a elecciones de renovacion de la
+  Legislatura para el domingo 4 de marzo; La Caldera elige un
+  senador y un diputado.
+
+MODO DE LECTURA:
+  Dos recortes: la mitad inferior de la hoja 2 a 150 dpi y la hoja 3
+  entera a 110 dpi. El epigrafe del decreto queda por encima del
+  recorte de la hoja 2 y se transcribe desde la capa previa; todo lo
+  demas, incluidos el numero y la fecha, se leyo en la imagen.
+
+TEXTO:
+  Convocatoria de elecciones para Senadores y Diputados a
+  Legislatura [epigrafe leido en la capa, no en la imagen]
+  N° 629
+  Salta, Enero 22 de 1923
+  Debiendo procederse a la renovacion de los miembros de la H.
+  Legislatura de la Provincia y existiendo ademas una vacante de
+  Senador por el Departamento de Iruya, cuyo periodo termina el dia
+  30 de Abril de 1924; una vacante de Diputado por la Capital cuyo
+  mandato expira en igual fecha, segun comunicaciones de los
+  senores Presidentes de las HH. Camaras; de acuerdo con los
+  articulos 63 y 78 de la Constitucion y 23 y 29 de la Ley de
+  Elecciones,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°-Convocase al pueblo de los Departamentos que a
+  continuacion se expresa a elegir sus representantes ante la H.
+  Legislatura, en la siguiente forma: por la Capital un Senador y
+  tres Diputados; por cada uno de los Departamentos de La Caldera,
+  Candelaria, Cerrillos, Oran, Iruya y Rivadavia, un Senador y un
+  Diputado; por cada uno de los de Rosario de Lerma, Metan, San
+  Carlos y Cachi, un Senador; por Rosario de la Frontera, un
+  Senador y dos Diputados; por Chicoana, dos Diputados; por cada uno
+  de los de Cafayate, Guachipas, Molinos y Santa Victoria, un
+  Diputado.
+  Art. 2°-Designase el domingo 4 del proximo mes de Marzo para que
+  tenga lugar dicha eleccion en todas las circunscripciones
+  electorales convocadas.
+  Art. 3°-Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.
+  GUEMES
+  ANTONIO ORTELLI
+
+NOTA DE LECTURA:
+  Es el acto que abre toda la serie electoral del ano, de la que
+  salen las fichas A.3 a A.7 y A.11. La Caldera queda en el grupo de
+  los departamentos que eligen un senador y un diputado, junto con
+  Candelaria, Cerrillos, Oran, Iruya y Rivadavia.
+  Aqui el departamento se escribe La Caldera, con articulo.
+
+
+A.3 - Edicion N° 944, hoja 6
+----------------------------
+
+FUENTE:
+  Edicion N° 944, viernes 9 de febrero de 1923, hoja 6 (Pag. 3340),
+  columna 2, tercio superior.
+
+FICHA:
+  Registro de mesas y circuitos electorales: La Caldera, Colegio
+  Electoral N° 3, con sus cuatro mesas y el detalle de parajes de
+  cada circuito.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi; columna 2 leida
+  renglon por renglon. Los nombres de paraje se leyeron uno por uno
+  en la imagen por ser terminos del anillo 2.
+
+TEXTO:
+  La Caldera
+  Colegio Electoral N° 3
+  MESA N° 1.-Escuela Elemental Mixta, La Caldera.-CIRCUITO:
+  Pueblo, Potrero de Castillo, Penones y San Alejo.
+  MESA N° 2.-Iglesia Parroquial, La Caldera.-CIRCUITO: Angosto,
+  Angosto de Arrieta, Angostura, Campo Alegre, Calderilla, Corral
+  de Barranca, Cachanio. Despensa, Despensilla, El Acheral, El
+  Churcal, El Monte Las Garrapatas, Los Porongos, Los Sauces,
+  Mesadas, Potrero de Valencia, Queseria, Santa Rufina, Wierna,
+  Yacones, El Bordo y las Lagunas.
+  MESA N° 3.-Escuela Infantil Provincial, Vaqueros--CIRCUITO:
+  Lesser y Vaqueros.
+  MESA N° 4.-Oficina de Correos, Mojotoro-CIRCUITO: Mojotoro,
+  Mojotorito, Potrero de Gallinato, Tunel y Estacion del
+  Ferrocarril.
+
+NOTA DE LECTURA:
+  Es el acto mas denso del ano en terminos del anillo 2: veinticinco
+  parajes del departamento en catorce renglones, y la unica hoja del
+  corpus donde aparecen Yacones, Wierna, Santa Rufina, San Alejo,
+  Penones, Los Porongos, Queseria, Potrero de Valencia, Potrero de
+  Gallinato, Mojotorito, Las Garrapatas, Las Lagunas, Tunel y
+  Angosto de Arrieta.
+  El encabezado que lo rotula esta en la misma columna, en tipo de
+  fantasia, y separa esta lista de la del departamento anterior
+  (Capital, que termina en la Mesa N° 17, La Quesera) y de la
+  siguiente (Campo Santo, Colegio Electoral N° 4). La Quesera de la
+  Mesa N° 17 es de la Capital y NO es la Queseria de la Mesa N° 2.
+  El original imprime El Monte Las Garrapatas sin coma entre los dos
+  nombres; en el config figuran separados. No se agrega la coma.
+  Cachanio es forma nueva: el config trae chalchanio, calchanio y
+  chalcanio, ninguna de las cuales aparece en 1923. Corral de
+  Barranca va en singular; el config trae corral de barrancas.
+  Despensa va sin articulo; el config trae la despensa.
+  Esta lista no se republica en el resto del ano: la unica
+  convocatoria posterior, el decreto N° 1015 de 967 h5, fija mesas
+  solo para el departamento de Campo Santo.
+
+
+A.4 - Edicion N° 946, hoja 8
+----------------------------
+
+FUENTE:
+  Edicion N° 946, viernes 23 de febrero de 1923, hoja 8
+  (Pag. 3365), ancho de pagina.
+
+FICHA:
+  Lista de candidatos proclamados de la Union Civica Radical
+  Nacional: por La Caldera, senador Dr. Ignacio Ortiz y diputado
+  Sr. Augusto P. Matienzo.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi. La lista ocupa el
+  ancho de la pagina en tres columnas de tabulacion, no en las dos
+  columnas habituales del cuerpo.
+
+TEXTO:
+  <UNION CIVICA RADICAL NACIONAL>
+  LISTA DE CANDIDATOS PROCLAMADOS.
+  [...]
+  La Caldera      Senador     Dr.  Ignacio Ortiz
+     "            Diputado    Sr.  Augusto P. Matienzo
+  [...]
+  Salta, Febrero 17 de 1923
+  JULIO FIGUEROA S.
+
+NOTA DE LECTURA:
+  El encabezado es lo que distingue esta lista de la de la hoja
+  siguiente: son dos partidos distintos con candidatos distintos
+  para el mismo departamento. Al pie de la misma hoja empieza una
+  tercera lista, <INDEPENDIENTES>, que solo presenta candidatos por
+  la Capital y por lo tanto no nombra a La Caldera. Las tres llevan
+  la misma fecha y la misma firma.
+  Augusto P. Matienzo figura en el config como actor de 1917.
+  Ninguno de los dos candidatos de esta lista resulto electo por el
+  departamento: el senador incorporado en mayo es el de la lista de
+  la hoja siguiente (A.11).
+
+
+A.5 - Edicion N° 946, hoja 9
+----------------------------
+
+FUENTE:
+  Edicion N° 946, viernes 23 de febrero de 1923, hoja 9
+  (Pag. 3366), ancho de pagina.
+
+FICHA:
+  Lista de candidatos proclamados de la Union Provincial: por
+  Caldera, senador Sr. Jose Antonio Araoz y diputado Ing. Pedro J.
+  Frias.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi.
+
+TEXTO:
+  <Union Provincial>
+  LISTA DE CANDIDATOS PROCLAMADOS
+  SENADORES
+  [...]
+  Caldera            Sr.     Jose Antonio Araoz
+  [...]
+  DIPUTADOS
+  [...]
+  Caldera            Ing.    Pedro J. Frias
+  [...]
+  Salta, Febrero 17 de 1923
+  JULIO FIGUEROA S.
+
+NOTA DE LECTURA:
+  Esta lista escribe Caldera sin articulo en las dos secciones,
+  mientras la de la hoja anterior escribe La Caldera: las dos formas
+  conviven en la misma edicion.
+  Silvano Murua, propuesto aqui como diputado por Oran, lleva el
+  mismo nombre que el causante del juicio sucesorio de A.16, donde
+  se remata una finca en La Caldera; no se afirma que sean la misma
+  persona.
+  Pedro J. Frias vuelve a aparecer en 962 h8, fuera de todo acto del
+  departamento.
+
+
+A.6 - Edicion N° 947, hoja 14
+-----------------------------
+
+FUENTE:
+  Edicion N° 947, viernes 2 de marzo de 1923, hojas 14 y 15
+  (Pag. 3386 y Pag. 3387), ancho de pagina.
+
+FICHA:
+  Junta de Escrutinio de la Provincia: nomina de autoridades de mesa
+  insaculadas en reemplazo de otras. Dos renglones de Caldera: Mesa
+  N° 2, Presidente Arevalo Pedro en reemplazo de Choque Pablo; Mesa
+  N° 4, Suplente 2° Varela C. Roberto en reemplazo de Lopez
+  Abelardo.
+
+MODO DE LECTURA:
+  Imagen rasterizada de las dos hojas enteras a 110 dpi. La lista va
+  a dos columnas tabuladas bajo un encabezado comun, y las dos
+  columnas se leyeron renglon por renglon.
+
+TEXTO:
+  JUNTA DE ESCRUTINIO DE LA PROVINCIA
+  Nomina de las autoridades ultimamente insaculadas | En reemplazo
+  de:
+  [...]
+  CALDERA
+    Mesa N° 2
+  Presidente  -Arevalo Pedro          Choque Pablo
+  [...]
+  CALDERA
+    Mesa N° 4
+  Suplente 2°-Varela C. Roberto       Lopez Abelardo
+  [...]
+  Salta, Febrero 26 de 1923
+  PEDRO J. ARANDA
+  SECRETARIO
+
+NOTA DE LECTURA:
+  Un solo acto repartido en dos hojas: una entrada con dos
+  apariciones. El encabezado, que esta solo en la hoja 14, es lo que
+  permite leer los renglones: sin el, las dos columnas de nombres no
+  se pueden interpretar y no se sabe quien reemplaza a quien.
+  El departamento se imprime CALDERA, sin articulo y con las letras
+  separadas: por eso la pasada literal no lo encontro y hubo que
+  llegar por la laxa corregida (§2 y §F).
+
+
+A.7 - Edicion N° 947, hoja 17
+-----------------------------
+
+FUENTE:
+  Edicion N° 947, viernes 2 de marzo de 1923, hoja 17
+  (Pag. 3389), ancho de pagina.
+
+FICHA:
+  Tercera nomina de autoridades insaculadas de la misma edicion, que
+  cierra el 1° de marzo: Caldera, Mesa N° 4, Suplente 2° Roldan Jose
+  Isidoro en reemplazo de Lopez Abelardo.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi.
+
+TEXTO:
+  [...]
+  SECLANTAS
+    Mesa N° 2
+  Suplente 1°-Guzman Federico E.      Marin Jose
+  CALDERA
+    Mesa N° 4
+  Suplente 2°-Roldan Jose Isidoro     Lopez Abelardo
+  Salta, Marzo 1° de 1923
+  PEDRO J. ARANDA
+  Secretario
+
+NOTA DE LECTURA:
+  Es un acto distinto del de A.6, con fecha distinta, y no una
+  repeticion: el bloque que cierra el 1° de marzo empieza en la hoja
+  16, despues de la nomina firmada por Julio Figueroa S. el 27 de
+  febrero, y no repite el rotulo de la columna.
+  Lopez Abelardo, suplente 2° de la Mesa N° 4, es reemplazado dos
+  veces en la misma edicion y con tres dias de diferencia: primero
+  por Varela C. Roberto (26 de febrero, A.6) y despues por Roldan
+  Jose Isidoro (1° de marzo). Los dos actos se transcriben y no se
+  concilian (E.9).
+
+
+A.8 - Edicion N° 948, hoja 8
+----------------------------
+
+FUENTE:
+  Edicion N° 948, viernes 9 de marzo de 1923, hoja 8 (Pag. 3404),
+  columna 1, mitad inferior.
+
+FICHA:
+  Decreto N° 701. Acepta la renuncia de Eustaquio Murua como
+  Comisario de Policia del departamento de La Caldera.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi desde el PDF del
+  Release (techo de resolucion 150 ppi); las dos columnas leidas
+  completas.
+
+TEXTO:
+  Aceptacion de renuncia
+  N° 701
+  Salta, Febrero 21 de 1923
+  Vista la renuncia elevada por el senor Eustaquio Murua del cargo
+  de Comisario de Policia del Departamento de La Caldera y atento
+  sus fundamentos.
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°-Aceptase la renuncia del Comisario de Policia de La
+  Caldera, senor Eustaquio Murua.
+  Art. 2°-Comuniquese, publiquese, dese al Reg. Oficial y
+  archivese.
+  GUEMES
+  LUIS LOPEZ
+
+NOTA DE LECTURA:
+  Eustaquio Murua figura en el config como actor de 1912: en aquel
+  ano y en este ocupa el mismo cargo. Su renuncia abre la cadena de
+  comisarios del departamento (A.9 y A.10) y no vuelve a aparecer en
+  el resto del ano.
+  El apellido se imprime con acento en la u en el vistos y sin
+  acento legible en el articulo 1°; la capa previa lo lee mtirua.
+
+
+A.9 - Edicion N° 949, hoja 3
+----------------------------
+
+FUENTE:
+  Edicion N° 949, viernes 16 de marzo de 1923, hoja 3 (Pag. 3411),
+  columna 1, mitad inferior.
+
+FICHA:
+  Decreto N° 712. Nombra interinamente Comisario de Policia del
+  Departamento La Caldera a Juan de la Cruz Nogales.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi desde el PDF del
+  Release (techo de resolucion 150 ppi); las dos columnas leidas
+  completas.
+
+TEXTO:
+  Nombrando Comisario Interino
+  N° 712
+  Salta, Febrero 26 de 1923
+  Vista la propuesta hecha por el Senor Jefe de Policia,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°-Nombrase interinamente Comisario de Policia del
+  Departamento La Caldera al senor Juan de la Cruz Nogales.
+  Art. 2.-Comuniquese, publiquese, dese al R. O. y archivese
+  GUEMES
+  LUIS LOPEZ
+
+NOTA DE LECTURA:
+  La fecha impresa es Febrero 26 de 1923. El decreto N° 725, que
+  deja sin efecto este nombramiento, dice que fue conferido por
+  decreto de 24 de Febrero ppdo.: las dos fechas no coinciden y no
+  se concilian (E.9).
+  Juan de la Cruz Nogales figura en el config como actor de 1922. En
+  1923 aparece unicamente en este decreto y en el N° 725, y ademas
+  -aunque la busqueda por nombre no lo devuelve por como el original
+  separa las letras- como depositario judicial del remate de A.13.
+  El decreto escribe Departamento La Caldera sin la preposicion de,
+  igual que el N° 725 y a diferencia del N° 701.
+
+
+A.10 - Edicion N° 949, hoja 7
+-----------------------------
+
+FUENTE:
+  Edicion N° 949, viernes 16 de marzo de 1923, hoja 7 (Pag. 3415),
+  columna 2, mitad superior.
+
+FICHA:
+  Decreto N° 725. Deja sin efecto el nombramiento de Juan de la
+  Cruz Nogales y nombra Comisario de Policia del Departamento La
+  Caldera a Julio Royo, hasta entonces comisario de La Silleta.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi desde el PDF del
+  Release (techo de resolucion 150 ppi); las dos columnas leidas
+  completas.
+
+TEXTO:
+  Dejando sin efecto el nombramiento de Comisario y nombrando
+  sucesor.
+  N° 725
+  Salta, Marzo 1° de 1923
+  Vista la nota 568, de la Jefatura de Policia,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1.-Dejase sin efecto el nombramiento de don Juan de la Cruz
+  Nogales como Comisario de La Caldera, conferido por decreto de 24
+  de Febrero ppdo.
+  Art. 2.-Nombrase Comisario de Policia del Departamento La Caldera
+  al actual Comisario de La Silleta don Julio Royo.
+  Art. 3°. Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.
+  GUEMES
+  LUIS LOPEZ
+
+NOTA DE LECTURA:
+  Tres actos sobre el mismo cargo en nueve dias: renuncia de Murua
+  el 21 de febrero, Nogales interino el 26 de febrero, Nogales
+  dejado sin efecto y Royo nombrado el 1° de marzo.
+  El decreto cita como fuente la nota 568 de la Jefatura de Policia,
+  que no se publica: citada y no acompanada.
+  Julio Royo figura en el config como actor de 1922. En 1923 vuelve
+  a aparecer una sola vez, en el decreto N° 886 (A.12), que nombra a
+  Julio Royo Ortiz en la Comision Municipal del mismo departamento.
+  El Boletin no dice que haya parentesco entre Julio Royo, Domingo
+  Royo y Julio Royo Ortiz: no se infiere.
+
+
+A.11 - Edicion N° 956, hoja 9
+-----------------------------
+
+FUENTE:
+  Edicion N° 956, viernes 4 de mayo de 1923, hoja 9 (Pag. 3512),
+  columna 2, mitad inferior.
+
+FICHA:
+  Legislatura: nomina de senadores electos el 4 de marzo cuyos
+  diplomas aprobo el H. Senado. Por Caldera, Sr. Jose A. Araoz.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi; columna 2 leida
+  renglon por renglon.
+
+TEXTO:
+  Legislatura
+  Senadores incorporados
+  Art. 11-del Reglamento del H. Senado
+  Senadores Elegidos en las Elecciones del 4 de Marzo p.p. cuyos
+  diplomas han sido aprobados por el H. Senado:
+  Capital            Dr. Juan B. Peyrotti
+  San Carlos         Dr. Francisco M. Uriburu
+  Cachi              Sr. Benjamin Zorrilla
+  Cerrillos          Dr. Carlos Serrey
+  Caldera            Sr. Jose A. Araoz
+  Metan              Sr. Wenceslao Saravia
+  R. de Lerma        Sr. Adbertano Colina
+  R. de la Frontera  Sr. Alberto B. Rovaletti
+  Candelaria         Sr. Ignacio Gimenez Merchott
+  Rivadavia          Sr. Julio E. Usandivaras
+  Oran               Sr. Rodolfo Caprini
+  Iruya              Sr. Emilio Espelta
+
+NOTA DE LECTURA:
+  Cierra la serie electoral: el senador incorporado por el
+  departamento es el candidato de la Union Provincial (A.5) y no el
+  de la Union Civica Radical Nacional (A.4). La nomina no dice nada
+  del diputado por Caldera, que no aparece en ninguna otra hoja del
+  ano.
+  Aqui el nombre va abreviado Jose A. Araoz y en A.5 completo Jose
+  Antonio Araoz. Se transcriben las dos formas y no se unifican.
+  Tampoco aqui lleva articulo el departamento.
+
+
+A.12 - Edicion N° 958, hoja 4
+-----------------------------
+
+FUENTE:
+  Edicion N° 958, viernes 18 de mayo de 1923, hoja 4 (Pag. 3526),
+  columna 2, mitad.
+
+FICHA:
+  Decreto N° 886. Acepta la renuncia de Domingo Royo como miembro
+  de la Comision Municipal del Departamento de La Caldera y nombra
+  en su reemplazo a Julio Royo Ortiz.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi desde el PDF del
+  Release (techo de resolucion 150 ppi); las dos columnas leidas
+  completas.
+
+TEXTO:
+  Aceptacion de renuncia y nombramiento
+  N° 886
+  Salta, Mayo 7 de 1923
+  Vista la renuncia que interpone el senor Domingo Royo del cargo de
+  Miembro de la Comision Municipal del Departamento de La Caldera,
+  atento los motivos en que la funda,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.-Aceptase la expresada renuncia.
+  Art. 2°.-Nombrase en su reemplazo Miembro de la Comision
+  Municipal mencionada, al senor Julio Royo Ortiz.
+  Art. 3°.-Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.
+  GUEMES
+  LUIS LOPEZ
+
+NOTA DE LECTURA:
+  Segunda vacante del ano en la Comision Municipal del departamento:
+  la primera fue la de Augusto Regis, cubierta por Genaro Molina en
+  enero (A.1). Cuatro meses despues, el decreto N° 1161 interviene
+  esa misma Comision (A.15).
+  El decreto no dice cuando fue nombrado Domingo Royo ni cita el
+  acto de su designacion: citado y no acompanado.
+  Domingo Royo figura en el config como actor de 1911 y Julio Royo
+  Ortiz como actor de 1922; ninguno de los dos vuelve a aparecer en
+  1923 fuera de este decreto.
+
+
+A.13 - Edicion N° 961, hoja 12
+------------------------------
+
+FUENTE:
+  Edicion N° 961, viernes 8 de junio de 1923, hoja 12 (Pag. 3572),
+  columna 2, mitad.
+
+FICHA:
+  Aviso de remate judicial N° 154: muebles y semovientes
+  adjudicados a Jose Nogales en la division de bienes de los esposos
+  Aramayo Nogales, depositados en el departamento de La Caldera en
+  poder de Juan de la Cruz Nogales.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi; columna 2 leida
+  renglon por renglon.
+
+TEXTO:
+  Por Jose M. Decavi
+  El 20 de Junio de 1923, a las 16 y 1/2 en mi escritorio Santiago
+  450, por orden del Juez de 1a Nominacion y como perteneciente a
+  Don Jose Nogales en los autos division de bienes de los esposos
+  Aramayo Nogales, rematare sin base y al contado, todos los muebles
+  y semovientes que han sido adjudicados al Sr. Jose Nogales.
+  Los bienes encuentranse en el Departamento de la Caldera, en poder
+  del depositario judicial Don Juan de la Cruz Nogales.
+  En el acto del remate el 20 % como sena y a cuenta de la compra.
+  -J. M. Decavi
+  N° 154
+
+NOTA DE LECTURA:
+  Esta ficha no existe para la pasada literal: el original imprime
+  C ald era con las letras separadas y solo la laxa corregida -la
+  que admite espacios entre TODAS las letras- la devuelve. Es el
+  caso de 1923 equivalente a Oaldfera en 1912 y a Cajdera en 1911.
+  El depositario judicial es el mismo Juan de la Cruz Nogales que
+  cuatro meses antes fue nombrado y desnombrado comisario del
+  departamento (A.9 y A.10). El Boletin no dice que sea la misma
+  persona ni que tenga parentesco con Jose Nogales: no se infiere.
+  El aviso no se repite en el resto del ano: se busco el texto en
+  las 673 hojas y aparece una sola vez.
+
+
+A.14 - Edicion N° 969, hoja 6
+-----------------------------
+
+FUENTE:
+  Edicion N° 969, viernes 3 de agosto de 1923, hoja 6
+  (Pah. 3666 [sic por Pag.]), columna 1 al pie y columna 2, y
+  continuacion en la hoja 7.
+
+FICHA:
+  Proyecto de presupuesto: Inciso V, Departamento de Gobierno, Item
+  2° Registro Civil de la Campana. La Caldera figura entre las
+  oficinas con un Encargado a $ 44 mensuales.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi, mas un recorte del
+  cuadro del Item 1° a 300 dpi para decidir un digito. La
+  enumeracion de oficinas continua en la hoja 7, leida en la capa
+  previa y no en la imagen.
+
+TEXTO:
+  INCISO V
+  Departamento de Gobierno
+  ITEM 1° REGISTRO CIVIL DE LA CAPITAL
+  1  Jefe                          320.-   3,840,
+  1  2°. Jefe                      280.-   3,360,
+  1  Secretario                    220.    2,640,
+  3  Escribientes a $ 125 c/u.     375.    4,500,
+  1  Ordenanza                     100.    1,200,
+     Para alquiler de casa y gastos 150.   1,800,
+                                  1,445,  17,340,   17,340,
+  ITEM 2°. REGISTRO CIVIL DE LA CAMPANA
+  1 Encargado para cada una de las Oficinas de Registro Civil de
+  Anta 1a. Seccion, Anta 2a. Seccion, Anta 3a. Seccion, Anta 4a.
+  Seccion, Anta 5a. seccion, Anta 6a. sec. (Monasterio), Cerrillos,
+  La Merced, (Cerrillos), Cachi, Palermo, (Cachi), La Candelaria,
+  El Tala, (Candelaria), La Caldera, Cafayate, Campo Santo,
+  Guemes, (Campo Santo), Chicoana, Guachipas, Guachipas 2a.
+  seccion, Bodeguita, (Guachipas), La Pampa, (Guachipas), Metan,
+  Galpon, (Metan), San Jose de Orquera, (Metan), Rio Piedras,
+  (Metan), La Trampa, (Campo Santo), Carril (Chicoana), [...]
+  Rivadavia 1a. seccion a $ 44. m/n c/u.
+
+NOTA DE LECTURA:
+  Es el unico acto del ano en que el departamento aparece dentro de
+  un cuadro de cifras. La Caldera no tiene aqui partida propia: el
+  sueldo de $ 44 mensuales es comun a las mas de cuarenta oficinas
+  enumeradas, y el cuadro no las desglosa. La cifra que le
+  corresponde al departamento, por lo tanto, no se puede separar del
+  total, y asi se declara en E.8.
+  El folio de la hoja esta impreso Pah. 3666 en lugar de Pag. 3666:
+  errata del original (E.9).
+  La capa previa lee 520 en la primera cifra del Item 1°, lo que
+  hace que la columna no cierre; el recorte a 300 dpi muestra 320 y
+  con esa lectura la columna cierra exacta (1,445 mensuales y 17,340
+  anuales). Es error del OCR y no del original.
+
+
+A.15 - Edicion N° 978, hoja 2
+-----------------------------
+
+FUENTE:
+  Edicion N° 978, viernes 5 de octubre de 1923, hojas 1 y 2
+  (sumario y Pag. 2), columna 1 al pie y columna 2 arriba.
+
+FICHA:
+  Decreto N° 1161. Declara intervenida la Municipalidad del
+  departamento de La Caldera y nombra Interventor a Eduardo F.
+  Harbin.
+
+MODO DE LECTURA:
+  Imagenes rasterizadas de las dos hojas enteras a 110 dpi; las dos
+  columnas de la hoja 2 y el sumario de la hoja 1 leidos completos.
+
+TEXTO:
+  [hoja 1, sumario]
+  ACTOS DEL PODER EJECUTIVO
+  MINISTERIO DE GOBIERNO
+  Declarando intervenida la Comision Municipal de La Caldera.
+  (Pagina 2)
+  [hoja 2]
+  Intervencion a la Municipalidad de La Caldera
+  1161--Salta, Setiembre 24 de 1923.
+  Vistas las presentaciones de que instruye el expediente N° 4541 F,
+  pidiendo la intervencion del P. E. a la Comision Municipal del
+  departamento de La Caldera,
+  CONSIDERANDO:
+  1° Que conforme a la Constitucion de la Provincia y Ley Organica
+  de Municipalidades (articulos 173 y 22, respectivamente), las
+  Comisiones Municipales son nombradas por el Poder Ejecutivo de la
+  Provincia, el que, de acuerdo al articulo 24 de dicha Ley, puede
+  removerlas de su sola y directa autoridad;
+  2° Que de las facultades fundamentales senaladas, surge evidente
+  que es tambien de su exclusiva jurisdiccion intervenirlas;
+  3° Que los hechos anotados en las presentaciones solicitando la
+  intervencion de la Comuna del departamento de La Caldera, hacen
+  procedente esta, para regularizar su funcionamiento y con el
+  obtener la observancia en ella de la Constitucion y las leyes,
+  Por tanto:
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°-Declarase intervenida la Municipalidad del departamento de
+  La Caldera y nombrase Interventor de ella al senor Eduardo F.
+  Harbin.
+  Art. 2°-Desele las instrucciones respectivas por el Ministerio de
+  Gobierno.
+  Art. 3°-Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.--GUEMES--LUIS LOPEZ
+
+NOTA DE LECTURA:
+  Es el acto de mayor alcance del ano sobre el departamento. El
+  mismo acto se nombra de cuatro maneras en dos hojas: el sumario
+  dice Comision Municipal; el epigrafe del cuerpo dice
+  Municipalidad; el vistos vuelve a decir Comision Municipal; el
+  considerando 3° dice Comuna; y el articulo 1° dice Municipalidad.
+  Se transcriben todas y no se normaliza (E.9).
+  El cotejo sumario/cuerpo de esta edicion cierra en la remision:
+  el sumario manda a la Pagina 2 y el decreto esta en la pagina 2.
+  Este decreto no lleva el N° antepuesto: imprime el numero pegado a
+  la fecha, como el vecino 1162 de la columna 2, que si lo lleva.
+  Las presentaciones que piden la intervencion, y el expediente
+  N° 4541 F que las instruye, no se publican: citados y no
+  acompanados. Tampoco se publican las instrucciones del articulo
+  2°, ni ningun acto posterior del Interventor dentro del ano, ni
+  acto alguno de la Comision Municipal intervenida.
+  Eduardo F. Harbin aparece ademas en 954 h8 y en 972 h11, donde se
+  le concede una licencia cinco semanas antes de ser nombrado
+  Interventor. Ver B.2.
+
+
+A.16 - Edicion N° 982, hoja 11
+------------------------------
+
+FUENTE:
+  Edicion N° 982, viernes 2 de noviembre de 1923, hoja 11
+  (Pag. 11), columna 2, mitad.
+
+FICHA:
+  Aviso de remate judicial N° 328: venta de la finca Calderilla,
+  departamento de La Caldera, en el juicio sucesorio de Silvano
+  Murua.
+
+MODO DE LECTURA:
+  Imagen rasterizada de la hoja entera a 110 dpi; columna 2 leida
+  renglon por renglon. Las cifras se leyeron en la imagen.
+
+TEXTO:
+  Por Jose M. Leguizamon
+  JUDICIAL
+  Por disposicion del Sr Juez Dr Canepa y como correspondiente al
+  juicio sucesorio de Don Silvano Murua, el 11 Diciembre del cte
+  ano, a las 10, en mi escritorio Alberdi 323, vendere con base de
+  $ 7,000, la Finca Calderilla ubicada en el departamento de La
+  Caldera; con base de $ 5,000 una accion equivalente a la novena
+  parte de la casa Boulevard Belgrano n° 666 y sin base, doscientas
+  diez y siete cabezas de ganado vacuno.
+  -Jose M Leguizamon martillero
+  N° 328
+
+NOTA DE LECTURA:
+  Calderilla es termino del anillo 1 y aqui aparece como nombre de
+  finca, no de paraje; el mismo nombre figura como circuito de la
+  Mesa N° 2 en A.3. No se afirma que sean la misma propiedad.
+  El aviso no lleva marca de publicacion y no se repite: se busco su
+  texto en las 673 hojas y aparece una sola vez.
+  Silvano Murua figura en el config como actor de 1912 y, con otras
+  iniciales, de 1909 y 1916. Jose M. Leguizamon, actor de 1922, es
+  el martillero mas frecuente del ano: veintiun hojas.
+  La capa previa lee sin bise donde la imagen dice sin base.
+
+
+A.17 - Edicion N° 990, hoja 13
+------------------------------
+
+FUENTE:
+  Edicion N° 990, viernes 28 de diciembre de 1923, hojas 13 y 14
+  (Pag. 13 y Pag. 14), columna 2 de la hoja 13 y columna 1 de la
+  hoja 14.
+
+FICHA:
+  Pedido de concesion de agua de Francisco S. Urquiza sobre los
+  sobrantes del Rio de Wierna, para el bien raiz <Cerro de Buena
+  Vista>, departamento de la Caldera, partido de Vaqueros, con
+  providencia del Ministerio de Gobierno.
+
+MODO DE LECTURA:
+  Imagen rasterizada de las dos hojas enteras a 110 dpi; el aviso se
+  leyo completo cruzando el corte de hoja.
+
+TEXTO:
+  PEDIDO DE CONCESION DE AGUA
+  Salta, Diciembre 10 de 1922.-Francisco S. Urquiza, fijando
+  domicilio en la casa calle Balcarce N° 415, a S. S. digo:
+  Que segun resulta del titulo que acompano poseo un bien raiz
+  situado en el departamento de la Caldera, partido de Vaqueros,
+  denominado <Cerro de Buena Vista>.
+  Haciendo uso del derecho que me acuerda el Codigo Rural vengo a
+  pedir se me acuerde el derecho de hacer uso de los sobrantes de
+  agua del Rio de Wierna para irrigar esa heredad en cantidad que
+  alcance a cien litros por segundo, siendo la extension que me
+  propongo regar de ciento noventa hectareas.
+  Cumpliendo las prescripciones legales, acompano un croquis
+  explicativo del recorrido de la acequia, la que arrancando del rio
+  nombrado y siguiendo por el curso actual de la acequia de la finca
+  Vaqueros, al Oeste del camino nacional de esta a Jujuy se
+  desprendera un ramal que ira a desembocar en los terrenos a
+  irrigarse.
+  En este recorrido no hay que hacer otra obra de arte que un sifon
+  que atraviesa el cauce de un rio seco que a veces recoje las
+  corrientes veraniegas.
+  La acequia proyectada para llegar a mis terrenos atraviesa
+  unicamente la finca nombrada de propiedad de los herederos
+  Toranzos y doctor Carlos Serrey.
+  Por tanto y teniendo por presentada esta solicitud, dignese S. S.
+  ordenar previamente se recabe informes de la Municipalidad de la
+  Caldera y se publique edictos a fin de que los que se crean
+  lesionados en sus derechos hagan valer su oposicion en forma.
+  Sera justicia-F. S. Urquiza.
+  Ministerio de Gobierno, Salta, Enero 12 de 1923.-De acuerdo a lo
+  que prescribe el Codigo Rural en su articulo 112, inciso 5°,
+  publiquese durante treinta dias en el diario La Provincia.
+  -ORTELLI.
+  (437)
+
+NOTA DE LECTURA:
+  Un solo aviso repartido en dos hojas consecutivas: una entrada con
+  dos apariciones. El corte cae dentro de la palabra legales, que el
+  original parte lega- / les entre el pie de la hoja 13 y la cabeza
+  de la hoja 14, y ahi si imprime el guion visible.
+  La providencia ordena publicar en el diario La Provincia y no en
+  el Boletin Oficial, donde sin embargo aparece (E.9).
+  Entre el pedido (10 de diciembre de 1922), la providencia (12 de
+  enero de 1923) y esta publicacion (28 de diciembre de 1923) pasan
+  casi doce meses. No se explica el desfase.
+  El aviso pide informes a la Municipalidad de la Caldera tres meses
+  despues de que el decreto N° 1161 la declarara intervenida (A.15);
+  el Boletin no relaciona los dos hechos.
+  El croquis que el escrito dice acompanar no se publica: citado y
+  no acompanado (§P).
+  El texto nombra tres terminos del anillo 2 -Vaqueros, Wierna y la
+  finca Vaqueros- y a Carlos Serrey, actor del config (1916), como
+  propietario colindante. La capa previa lee rio de wierua donde la
+  imagen dice Wierna.
+  El aviso no se repite: su texto aparece una sola vez en el ano.
+
+
+============================================================================
+§B - VECINDAD (ANILLO 2 Y ANILLO DE ACTORES)
+============================================================================
+
+
+B.1 - Nucleos ya fichados en el §A
+----------------------------------
+
+Se nombran y no se repiten: los veinticinco parajes del Colegio Electoral N°
+3 (A.3); Calderilla como finca rematada (A.16); Vaqueros, la finca Vaqueros
+y el Rio de Wierna en el pedido de concesion de agua (A.17). Fuera de A.3,
+los unicos terminos del anillo 2 que el ano vuelve a poner en el
+departamento son Vaqueros, Lesser y Wierna, y los tres estan en B.2.
+
+
+B.2 - Nucleos del departamento en actos que no nombran el termino
+-----------------------------------------------------------------
+
+B.2.1 - Decreto N° 1076, edicion 972, hojas 2 y 3 (Pag. 2 y Pag. 3), viernes
+24 de agosto de 1923, epigrafe <Cierre de un camino>, leido en la imagen en
+las dos hojas.
+
+POR QUE SE INCLUYE: §5.1, anillo 2. El acto no nombra a La Caldera en ningun
+renglon y sin embargo trata de tres nucleos del departamento: la Quebrada de
+Lesser, el Arroyo Castellanos y el Rio Vaqueros. Lesser y Vaqueros son,
+segun A.3, el circuito entero de la Mesa N° 3 del departamento.
+
+
+  Cierro de un camino
+  N° 1076- Salta, Agosto, 8 de 1923
+  Vista la comunicacion pasada a este Gobierno por el Comandante de
+  la 5a Division de Ejercito, General de Brigada don Jose E.
+  Belloni, contenida en el expediente N° 2129 D, por la que expresa
+  que ese Comando, cumpliendo ordenes del Ministerio de Guerra,
+  clausurara un camino que existe dentro del <Campo General
+  Belgrano> (utilizado actualmente por el publico para llegar a la
+  Quebrada de Lesser) en razon de molestar el transito que se
+  efectua por el mismo, la instruccion de la tropa; de que ello no
+  perjudicara al publico que habitualmente transita por el mismo por
+  que se procedera a la apertura del camino que costeando el Rio
+  Vaqueros, conduzca a la mencionada quebrada por haber sido este
+  siempre, el camino nacional, no efectuandose la clausura del
+  actual hasta tanto este habilitado,
+  CONSIDERANDO
+  Que como lo establece el Departamento de Obras Publicas en el
+  informe que corre agregado al expediente de referencia, nada hay
+  que observar a la medida a tomarse, desde que ella no perjudicara
+  a los pobladores de la region de la Quebrada de Lesser y del
+  Arroyo Castellanos, en virtud de las consideraciones que en el
+  mismo informe se mencionan, concordante por ultimo el dictamen
+  fiscal expedido en el caso ocurrente, que como muy bien lo
+  expresa, no cabria en ningun caso formular reparo a la clausura,
+  por la autoridad nacional del camino de que se trata, dada la
+  jurisdiccion exclusivamente nacional sobre el Campo Belgrano y
+  toda vez que la medida ya citada no traera ningun perjuicio al
+  transito publico, por la apertura de otra via al mismo trafico
+  como la antes mencionada,
+  Por tanto:
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.- Hacer saber al Comandante de la 5a Division de Ejercito,
+  General de Brigada don Jose E. Belloni, que el P. E. de la
+  Provincia, no tiene ningun reparo que formular a la medida
+  resuelta por el Ministerio de Guerra de la Nacion.
+  Art 2°. - Remitase a tales fines al referido Comando, copia
+  autenticada del presente decreto.
+  Art. 3°- Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.
+  GUEMES-LUIS LOPEZ
+
+NOTA DE LECTURA: el informe del Departamento de Obras Publicas y el dictamen
+fiscal que el decreto invoca, y el expediente N° 2129 D que los contiene, no
+se publican: citados y no acompanados. El acto se resuelve entre la
+Provincia y el Ejercito sin que intervenga la autoridad municipal del
+departamento donde esta el camino, que cinco semanas despues seria
+intervenida (A.15); el Boletin no relaciona los dos hechos. Arroyo
+Castellanos es la unica aparicion del ano de castellanos como nombre de
+lugar del departamento: las otras dieciseis son personas o lugares de otros
+departamentos (B.3).
+
+B.2.2 - Eduardo F. Harbin, Interventor nombrado por A.15, aparece antes en
+954 h8 y en 972 h11, donde el sumario anuncia <Licencia-Se concede a don E.
+F. Harbin>, cinco semanas antes de su nombramiento, y en 940 h4 con el
+apellido solo. Ninguna de las tres menciones nombra a La Caldera. No se
+transcriben aqui porque no se miraron en la imagen: se declaran como
+aciertos de la busqueda por apellido, pendientes de lectura.
+
+
+B.3 - Terminos que en 1923 son otra cosa
+----------------------------------------
+
+Se leyo el contexto de los 55 terminos del anillo 2 con acierto, uno por
+uno, sin excepcion. El reparto:
+
+Castellanos (17 aciertos) es, salvo una vez, otra cosa: el abogado Juan Jose
+Castellanos, candidato a senador por La Candelaria (946 h8) y cobrador de
+honorarios (947 h8); Bernardo, Ladislao y Segundo Castellanos, autoridades
+de mesa (942 h5, 947 h14, 947 h16); el Castellanos del departamento de la
+Capital, donde se crea una sub-comisaria auxiliar (949 h6) y una escuela
+(953 h4); la finca Castellanos, la laguna de Castellanos y el pozo de
+Castellanos, de la Capital y de Anta (944 h3, 944 h9); el sucesorio de Jose
+Feliz Castellanos (954 h15). La unica del departamento es el Arroyo
+Castellanos de B.2.1.
+
+Isasmendi (15): el Dr. Isasmendi, juez de la Camara que falla en una causa
+por homicidio (947 h18 a h22); Domingo S. Isasmendi, candidato a diputado
+por Molinos (946 h9); la casa de comercio Isasmendi y Cia. (964 h3, 964 h9);
+el sucesorio de Elisea Ortiz de Isasmendi, con una finca en Molinos (963
+h15, 964 h11); y Federico Williams Isasmendi, auxiliar de investigaciones
+(965 h5, 971 h7). Ninguno del departamento.
+
+Betania (12) es integramente el Betania de Campo Santo -circuito electoral,
+sub-comisaria, expendedor de guias- en 944 h7, 953 h12, 955 h4, 963 h7, 967
+h3 y h5, 971 h12. Apaza (12) son personas: Nacianceno Apaza, juez de paz de
+Guachipas, y el sucesorio de Mercedes Apaza de Taritolay. Sauces (11),
+Nogales (8), Entre Rios (8), El Bordo (7), Campo Alegre (6), Rio Blanco (6),
+Angostura (4), Mesadas (4), Parroquia (4), Durazno (3), Pirguas (3),
+Tabacal, Acheral, Manzano, El Cajon, Pacara, Bandurrias, Despensilla, Santa
+Gertrudis, La Despensa y Lagunilla son todos circuitos o parajes de OTROS
+departamentos, casi siempre dentro de las mismas listas electorales de 944 y
+945 en que aparece el departamento: la lista es la misma y los lugares no.
+
+Quintin (3) es nombre de pila (Quintin F. Diaz, de Angastaco) y el juicio
+Quintin Conde vs. Bernardo Moya. Lesser (3) es el unico termino que reparte:
+una vez el circuito del departamento (A.3) y dos veces la Quebrada de Lesser
+de B.2.1. Trancas (1), Angosto (1), Cerro Nevado (1) y Lagunilla (1) caen
+todos en un mismo deslinde de Cachi (961 h10). Mesa Redonda (1) es un mueble
+en un remate. Murua (5) y Aramayo (5) son apellidos. Mojotoro, Yacones,
+Wierna, Gallinato, Santa Rufina, San Alejo, Chaile, Yugra, Potrero de
+Castillo, Angosto de Arrieta, Los Porongos, Penones, Potrero de Valencia,
+Potrero de Gallinato, Mojotorito, Tunel, Las Lagunas, Porongos, Queseria y
+Las Garrapatas aparecen una sola vez cada uno y siempre en A.3.
+
+Terminos del config SIN un solo acierto en 1923: 47 de 102. Dos de ellos, el
+churcal y el monte, estan sin embargo impresos en la lista de A.3: el
+original escribe El Churcal y El Monte Las Garrapatas y la busqueda los
+pierde por la composicion, no por la grafia. Es una falla de la busqueda y
+no una ausencia, y se declara nombrandolos.
+
+
+B.4 - Ausencias del anillo de actores, en los tres grupos
+---------------------------------------------------------
+
+Primero, la advertencia que manda el §5.1: hay seis personas de los actos
+del §A cuya busqueda por nombre completo no devuelve ni siquiera su propio
+acto, porque el original les separa las letras o abrevia el nombre de pila.
+Son Jose Antonio Araoz (A.5 y A.11), Jose Nogales (A.13), Pedro Arevalo y
+Pablo Choque (A.6), C. Roberto Varela (A.6) y Jose Isidoro Roldan (A.7). Eso
+no es una ausencia: es una falla de la busqueda, y se declara nombrandolos.
+
+GRUPO 1 - aparecen SOLO en su propio acto del departamento: Augusto Regis y
+Genaro Molina (A.1, una hoja); Eustaquio Murua (A.8); Domingo Royo y Julio
+Royo Ortiz (A.12); Augusto P. Matienzo (A.4); Francisco S. Urquiza (A.17).
+Siete personas que el Boletin de 1923 nombra una sola vez, y siempre por el
+departamento.
+
+GRUPO 2 - aparecen en mas de un acto del departamento: Juan de la Cruz
+Nogales (A.9 y A.10, y ademas como depositario judicial en A.13); Julio Royo
+(A.10 y A.12); Silvano Murua (A.5 y A.16); Abelardo Lopez, reemplazado dos
+veces en la misma edicion y con tres dias de diferencia (A.6 y A.7). Este
+grupo es el que arma la trama del ano: el mismo apellido Nogales entra como
+comisario interino en febrero, sale por decreto en marzo y reaparece en
+junio guardando los bienes de otro Nogales; y la familia Royo ocupa en el
+mismo semestre la comisaria y un asiento de la Comision Municipal.
+
+GRUPO 3 - aparecen tambien fuera del departamento: Ignacio Ortiz (A.4, y 967
+h10); Pedro J. Frias (A.5, y 962 h8); Carlos Serrey (A.17 como colindante, y
+946 h9, 955 h10, 961 h9, 987 h9 y h10, donde es senador por Cerrillos);
+Eduardo F. Harbin (A.15, y 940 h4, 954 h8, 972 h11); Jose M. Leguizamon
+(A.16, y veinte hojas mas como martillero); Jose M. Decavi (A.13, y catorce
+hojas mas, tambien como martillero); Julio Figueroa S. (A.4 y A.5 como
+firmante de la Junta, y 990 h15); Pedro J. Aranda (A.6 y A.7 como
+Secretario, y 942 h13).
+
+De los 280 actores del config, 27 aparecen en 1923 con nombre y apellido
+completos. Los de mayor presencia son Jose Maria Decavi (15 hojas), Rodolfo
+Perez (8), Carlos Serrey, Abraham Cornejo y Jose Maria Leguizamon (5 cada
+uno) y Dario Arias (4). Reaparecen con el mismo cargo o el mismo oficio que
+en su ano de origen Eustaquio Murua (comisario, 1912), Juan de la Cruz
+Nogales (1922), Julio Royo (1922), Domingo Royo (1911), Augusto Regis y
+Genaro Molina (1909), Arturo Aleman (1914 del padron de 1946), Herman
+Pfister (1917) y Teofilo Reyes (1946).
+
+
+============================================================================
+§C - LIMITROFES
+============================================================================
+
+Capital. Es el limitrofe mas presente del ano y el que mas riesgo de
+confusion trae: en la misma lista de A.3, la Mesa N° 17 de la Capital tiene
+por circuito La Pedrera, La Quesera, La Troja y la finca El Naranjo, y la
+Mesa N° 2 de La Caldera tiene Queseria. Son dos lugares distintos y dos
+departamentos distintos. Ademas, el Castellanos donde se crea una
+sub-comisaria auxiliar (949 h6) y una escuela (953 h4) es de la Capital, no
+el Arroyo Castellanos de B.2.1.
+
+Campo Santo. Sigue inmediatamente a La Caldera en la lista de A.3, con el
+Colegio Electoral N° 4, y es el departamento del Betania que ocupa doce de
+los aciertos del anillo 2. En julio (967 h5, decreto N° 1015) se convoca a
+elecciones solo para Campo Santo y se fijan sus mesas de nuevo; La Caldera
+no interviene.
+
+Rosario de Lerma. Aparece en A.2 entre los departamentos que eligen solo
+senador, y La Silleta -de donde viene Julio Royo, nombrado comisario de La
+Caldera por A.10- es de ese departamento.
+
+Jujuy. Una sola mencion pertinente: el camino nacional de Salta a Jujuy, que
+el pedido de concesion de agua de A.17 usa como referencia de la acequia, al
+Este de la cual estan los terrenos a irrigar.
+
+
+============================================================================
+§P - PLANOS
+============================================================================
+
+El corpus no publica un solo plano: las 673 hojas son texto a dos columnas,
+sin laminas. Techo de resolucion del corpus: 150 ppi, de modo que aunque
+hubiera plano no habria cartela legible.
+
+Remisiones a plano que tocan al departamento y quedan como citadas y no
+acompanadas: el croquis explicativo del recorrido de la acequia que
+Francisco S. Urquiza dice acompanar (A.17). Fuera del departamento, la
+formula <titulos y planos en el escritorio del suscrito> aparece en avisos
+de remate sin que ningun plano se publique.
+
+
+============================================================================
+§D - INDICE
+============================================================================
+
+Por edicion y hoja, las diecisiete entradas del §A -por la hoja en que
+empiezan; A.2 sigue en 943 h2, A.6 en 947 h15 y A.17 en 990 h14-, mas la
+entrada del §B que esta transcripta:
+
+
+  942 h3   A.1   Decreto N° 620. Acepta la renuncia de Augusto Regis 
+  943 h3   A.2   Decreto N° 629. Convoca a elecciones de renovacion d
+  944 h6   A.3   Registro de mesas y circuitos electorales: La Calder
+  946 h8   A.4   Lista de candidatos proclamados de la Union Civica R
+  946 h9   A.5   Lista de candidatos proclamados de la Union Provinci
+  947 h14  A.6   Junta de Escrutinio de la Provincia: nomina de autor
+  947 h17  A.7   Tercera nomina de autoridades insaculadas de la mism
+  948 h8   A.8   Decreto N° 701. Acepta la renuncia de Eustaquio Muru
+  949 h3   A.9   Decreto N° 712. Nombra interinamente Comisario de Po
+  949 h7   A.10  Decreto N° 725. Deja sin efecto el nombramiento de J
+  956 h9   A.11  Legislatura: nomina de senadores electos el 4 de mar
+  958 h4   A.12  Decreto N° 886. Acepta la renuncia de Domingo Royo c
+  961 h12  A.13  Aviso de remate judicial N° 154: muebles y semovient
+  969 h6   A.14  Proyecto de presupuesto: Inciso V, Departamento de G
+  978 h2   A.15  Decreto N° 1161. Declara intervenida la Municipalida
+  982 h11  A.16  Aviso de remate judicial N° 328: venta de la finca C
+  990 h13  A.17  Pedido de concesion de agua de Francisco S. Urquiza 
+  972 h2   B.2.1 Decreto N° 1076, cierre del camino a la Quebrada
+  972 h3   B.2.1 de Lesser (continuacion)
+
+Por materia. Electoral: A.2 convocatoria (943), A.3 mesas y circuitos (944),
+A.4 y A.5 candidatos proclamados (946), A.6 y A.7 autoridades de mesa (947),
+A.11 senador incorporado (956). Policia: A.8 renuncia del comisario (948),
+A.9 comisario interino (949), A.10 revocacion y sucesor (949). Municipal:
+A.1 vacante y nombramiento (942), A.12 vacante y nombramiento (958), A.15
+intervencion (978). Patrimonial y judicial: A.13 remate de bienes
+depositados (961), A.16 remate de la finca Calderilla (982), A.17 concesion
+de agua (990). Presupuesto: A.14 Registro Civil de la campana (969).
+Caminos: B.2.1 (972).
+
+
+Por persona, con la ficha donde aparece: Araoz, Jose Antonio / Jose A. -
+A.5, A.11. Arevalo, Pedro - A.6. Choque, Pablo - A.6. Figueroa S., Julio -
+A.4, A.5. Frias, Pedro J. - A.5. Harbin, Eduardo F. - A.15. Leguizamon, Jose
+M. - A.16. Lopez, Abelardo - A.6, A.7. Matienzo, Augusto P. - A.4. Molina,
+Genaro - A.1. Murua, Eustaquio - A.8. Murua, Silvano - A.5, A.16. Nogales,
+Jose - A.13. Nogales, Juan de la Cruz - A.9, A.10, A.13. Ortiz, Ignacio -
+A.4. Regis, Augusto - A.1. Roldan, Jose Isidoro - A.7. Royo, Domingo - A.12.
+Royo, Julio - A.10. Royo Ortiz, Julio - A.12. Serrey, Carlos - A.17.
+Urquiza, Francisco S. - A.17. Varela, C. Roberto - A.6.
+
+
+Por lugar del departamento: Angosto, Angosto de Arrieta, Angostura,
+Cachanio, Calderilla, Campo Alegre, Corral de Barranca, Despensa,
+Despensilla, El Acheral, El Bordo, El Churcal, El Monte, Las Garrapatas, Las
+Lagunas, Los Porongos, Los Sauces, Mesadas, Mojotoro, Mojotorito, Penones,
+Potrero de Castillo, Potrero de Gallinato, Potrero de Valencia, Pueblo,
+Queseria, San Alejo, Santa Rufina, Tunel, Wierna, Yacones - todos en A.3.
+Calderilla tambien en A.16. Vaqueros y Lesser en A.3, y en B.2.1 con el Rio
+Vaqueros y la Quebrada de Lesser. Arroyo Castellanos, solo en B.2.1. Cerro
+de Buena Vista y Rio de Wierna, solo en A.17.
+
+
+============================================================================
+§E - OBSERVACIONES
+============================================================================
+
+
+E.1 - Duplicacion y saldos
+--------------------------
+
+Duplicacion. Sin las .jpg de lee_auto.py no hay md5 ni dhash: el control es
+por texto. 1923 casi no usa la marca de publicacion del tipo <251 v Dbre 5>
+que era corriente en 1912: la busqueda devuelve una sola marca en todo el
+ano (974 h14). La comprobacion, por lo tanto, se hizo donde importa: se
+busco el texto de los tres avisos del departamento -el remate de la finca
+Calderilla (A.16), el remate de los bienes de Aramayo Nogales (A.13) y el
+pedido de concesion de agua (A.17)- en las 673 hojas del ano, y los tres
+aparecen UNA SOLA VEZ. Ninguno se repite. El cotejo se hizo sobre la capa y
+no sobre la imagen, y se declara asi.
+
+Saldos. Se contaron los resumenes antes de prometer la cadena. La Contaduria
+General publico CUATRO cuadros de la Tesoreria General en todo el ano:
+febrero (949 h13), abril (958 h12), agosto (974 h13) y octubre (983 h10). No
+son meses consecutivos, de modo que la cadena de saldos de 1923 NO SE PUEDE
+ARMAR: ningun saldo final de los publicados se puede cotejar con el inicial
+del siguiente publicado. Lo unico que se puede transcribir es el saldo
+inicial que cada uno declara, y esta en E.8. Es un hecho del corpus y no una
+tarea pendiente.
+
+
+E.2 - Cobertura
+---------------
+
+Hojas del corpus: 673. Hojas miradas en la imagen: 57, con 77 recortes
+contando los de detalle. Se reparten asi: 32 tapas de las ediciones 939 a
+970, en cuatro montajes de ocho mas siete recortes de fecha a 400 dpi; 21
+hojas de cuerpo -942 h3, 943 h2, 943 h3, 944 h6, 945 h2, 945 h7, 946 h8, 946
+h9, 947 h14, 947 h15, 947 h17, 948 h8, 949 h3, 949 h7, 956 h9, 958 h4, 961
+h12, 969 h6, 972 h2, 972 h3, 977 h2, 978 h1, 978 h2, 981 h5, 982 h11, 990
+h13, 990 h14-; dos cuadros de Tesoreria -958 h12 y 983 h10- con cuatro
+recortes de columna a 170 y a 330 dpi; y las cabeceras de 971 h2 y 971 h3,
+que son las que fijan el cambio de regimen de paginacion. Columnas de cuerpo
+cotejadas contra la capa previa: 48.
+
+Vecinos +-3 (§8.15). Se cotejaron los siete numeros vecinos de cada uno de
+los ocho actos numerados del §A y del §B contra su fecha impresa. N° 620:
+617 es del 15 de enero, 621 y 622 del 18, 623 del 19; el propio 620 dice 18
+de enero. N° 629: 628 es del 22 de enero, 630, 631 y 632 del 23; el 629 dice
+22. N° 701: 698 del 20 de febrero, 699 y 700 del 21, 702 del 22, 703 del 23;
+el 701 dice 21. N° 712: 709 del 24 de febrero, 710 del 26, 713 del 26, 714 y
+715 del 27; el 712 dice 26. N° 725: 724 del 1° de marzo, 726 del 2, 727 del
+2, 728 del 3; el 725 dice 1° de marzo. N° 886: 883 del 6 de mayo, 889 del 8;
+el 886 dice 7. N° 1076: 1074 y 1075 del 7 de agosto, 1078 y 1079 del 8; el
+1076 dice 8. En los siete casos la serie es monotona y la fecha del acto cae
+donde le corresponde. El octavo, el N° 1161, no se pudo cotejar: de sus seis
+vecinos solo el 1162 tiene fecha legible -24 de setiembre, la misma del
+1161-, y los otros cinco no aparecen en el corpus con numero y fecha
+legibles a la vez. Se declara el cotejo parcial y no se completa.
+
+Citados y no acompanados: la nota 568 de la Jefatura de Policia (A.10); el
+decreto de 24 de febrero de 1923 que el N° 725 dice haber dejado sin efecto
+y que no coincide en fecha con el N° 712 (A.9 y A.10); el acto de
+designacion de Domingo Royo como miembro de la Comision Municipal, que el N°
+886 no cita (A.12); el expediente N° 4541 F y las presentaciones que piden
+la intervencion, y las instrucciones del articulo 2° (A.15); el croquis de
+la acequia (A.17); el expediente N° 2129 D, el informe del Departamento de
+Obras Publicas y el dictamen fiscal (B.2.1). Todos se buscaron por numero,
+por fecha y por materia antes de listarlos: ninguno esta en el corpus del
+ano.
+
+
+E.3 - Sin mencion y no mirado
+-----------------------------
+
+652 de las 673 hojas no dieron acierto en el anillo 1. De ellas se miraron
+37 por otros motivos -las 32 tapas de 939 a 970, los dos cuadros de
+Tesoreria, dos falsos positivos de la difusa, el decreto de B.2.1 y las
+cabeceras de 971-, y las 615 restantes no se miraron. No se afirma que no
+contengan menciones: se afirma que las cuatro pasadas, con la union
+corregida del guion blando y con la laxa reescrita para cruzar el espaciado
+tipografico, no devolvieron nada en ellas, y que el anillo 2 y el anillo de
+actores tampoco pusieron nada del departamento en ellas.
+
+
+E.4 - Firmas y autoridad
+------------------------
+
+Gobernador: Dr. Adolfo Guemes, nombrado en el cabezal de la tapa las 52
+semanas (<GOBIERNO DEL DR. ADOLFO GUEMES>) y firmante GUEMES en los
+diecisiete actos leidos.
+
+Refrendos, en el orden en que aparecen y sin normalizar las formas: ANTONIO
+ORTELLI, Ministro de Hacienda, de la edicion 939 a la 947; RAFAEL P. SOSA,
+en 942 h3, en la misma hoja y la misma columna en que refrenda Ortelli; LUIS
+LOPEZ, Ministro de Gobierno, desde 948 y en la mayor parte del ano; RICARDO
+N. MESSONES, Sub-Secretario de Hacienda, autorizado a refrendar por el
+propio decreto N° 702 (948 h8); y J. C. TORINO, desde 959. La capa previa
+devuelve la forma LUIS LOPEZ escrita de nueve maneras distintas por el
+espaciado; se cuentan como una.
+
+Formulas de encabezado: conviven <El Poder Ejecutivo de la Provincia>, <El
+Gobernador de la Provincia> y <El Poder Ejecutivo de la Provincia en acuerdo
+de Ministros> (949 h3). No se normaliza.
+
+<Es copia> aparece cinco veces y lo firman cuatro personas distintas: Pedro
+J. Aranda, Secretario (940 h10); Ricardo Messones, Sub-secretario de
+Hacienda (944 h12); Pedro E. Koch Reto (945 h10); y David Schiaffino,
+Sub-secretario de Hacienda (958 h13 y 970 h18).
+
+Interinatos. Dos empiezan a la vista y ninguno de los dos cierra con decreto
+de reintegro publicado. El primero: el decreto N° 630 (943 h3, 23 de enero)
+acepta la renuncia del Ministro de Hacienda Ing. Rafael P. Sosa y encarga la
+cartera al Ministro de Gobierno, y el N° 631 de la misma hoja autoriza al
+Sub-secretario de Gobierno Pedro E. Koch Reto a refrendar. El segundo: el
+decreto N° 702 (948 h8, 22 de febrero) concede un mes de licencia al
+Ministro de Hacienda Dr. Antonio Ortelli, encarga la cartera al Ministro de
+Gobierno Dr. Luis Lopez y autoriza al Sub-Secretario Messones a refrendar.
+Se declaran el ultimo acto de cada titular y el primero de cada interino y
+no se fija el dia del reintegro.
+
+Sede de la direccion y administracion, leida en la tapa: Secretaria de
+Policia (939 a 974), Dpto. Central de Policia (975 a 982) y Casa de Gobierno
+(983 a 990). Los limites exactos de cada tramo salen de la capa previa y
+solo el de la 978 se miro en la imagen.
+
+
+E.5 - Cortes y columnas
+-----------------------
+
+Columna perdida: NO se encontro ninguna en las 48 columnas de cuerpo
+cotejadas contra la capa previa. Se declara sobre esas 48 columnas de 24
+hojas, y sobre nada mas; las 32 tapas y los cuatro recortes de cuadro no van
+a dos columnas y no cuentan para este control.
+
+Maqueta medida una vez por corpus con page.get_text(<words>): las hojas
+miden entre 460 y 505 pt de ancho por 691 a 727 pt de alto, y el cuerpo va a
+dos columnas que arrancan en torno a los 12 y los 222 pt. Rompen esa maqueta
+las listas electorales de 946 h8 y h9, las nominas de la Junta de Escrutinio
+de 947 h14 a h17 y los cuadros de Tesoreria, que ocupan el ancho entero con
+tabulaciones propias.
+
+Corte de renglon: el original NO imprime guion visible dentro de la hoja; la
+marca es solo el guion blando U+00AD, 10.554 veces. Cuando el corte cae
+entre dos hojas si imprime el guion: lega- / les entre 990 h13 y 990 h14.
+
+
+E.6 - Repeticiones
+------------------
+
+Marcas de publicacion del tipo <v Dbre 5>: una sola en todo el ano (974
+h14). Los tres avisos del departamento no llevan marca y no se repiten: ver
+E.1. No se encontro, ademas, ningun aviso repetido de otro departamento,
+pero ese control no se hizo exhaustivamente y no se afirma.
+
+Lo que si se repite son las listas electorales, y no por error: la lista de
+mesas y circuitos se publica en 944 y 945 para toda la provincia, y en 967
+se vuelve a publicar SOLO la de Campo Santo, por el decreto N° 1015 que
+convoca una eleccion parcial en ese departamento. La de La Caldera no se
+republica.
+
+
+E.7 - Falsos positivos y negativos
+----------------------------------
+
+Falsos positivos del anillo 1 de 1923, los seis mirados en la imagen:
+caldas, en <riego y aprovechamiento de caldas> dentro de la ley que
+reglamenta el ejercicio de la ingenieria (977 h2); Calchera, circuito de la
+mesa de Alto Verde (945 h2); Caleras, circuito de la mesa de San Lorenzo
+(945 h7), y calera/caleras en otras listas (944 h8, 970 h7, 985 h11, 986
+h9); Cabrera, apellido del doctor Francisco Cabrera, que el OCR lee cablera
+(981 h5); escalera (964 h6, 981 h14); calavera (945 h5, 945 h6, 963 h10).
+Ninguno es el departamento. Como en 1911 y 1912, NO se agregan al config: un
+acierto del anillo 1 cuyo contexto contenga un falso positivo del config
+queda marcado fp_conocido y sin recorte, aunque sea real.
+
+Falsos negativos, que en 1923 son el problema serio y son todos de la
+busqueda y no del corpus. Tres menciones reales del anillo 1 -947 h14, 947
+h15 y 961 h12- no las devuelve la pasada literal porque el original compone
+C A L D E R A y C ald era con las letras separadas; una de ellas, 961 h12,
+es un acto entero del §A que ninguna otra via habria traido. Dos terminos
+del anillo 2 -el churcal y el monte- figuran como sin acierto y estan
+impresos en A.3. Y seis personas de los actos del §A no aparecen ni en su
+propio acto cuando se las busca por nombre completo (B.4). El denominador
+comun es la composicion tipografica, no la ortografia.
+
+
+E.8 - Fidelidad numerica
+------------------------
+
+Cuadros publicados en 1923: CINCO. Cuatro son los resumenes mensuales de la
+Tesoreria General (febrero en 949 h13, abril en 958 h12, agosto en 974 h13,
+octubre en 983 h10) y el quinto es el cuadro de sueldos del proyecto de
+presupuesto, que ocupa varias hojas de la edicion 969. No hubo un solo
+balance municipal en todo el ano y, por lo tanto, ninguno del departamento:
+es un hecho del corpus y no una tabla que quedo sin mirar.
+
+Recalculos hechos, al menos un subtotal por cuadro:
+
+969 h6, presupuesto, Item 1° Registro Civil de la Capital: la columna
+mensual suma 1,445 y la anual 17,340, las dos exactamente iguales a lo
+impreso. La capa previa lee 520 en la primera cifra y con esa lectura la
+columna no cerraria; el recorte a 300 dpi muestra 320. Error del OCR, no del
+original.
+
+958 h12, abril, Impuesto al Consumo: 15.213,89 + 19.781,50 + 4.299,85 +
+2.697,88 + 299,25 + 2.795 = 45.087,37, exactamente el subtotal impreso.
+Cierra.
+
+958 h12, abril, Receptoria General: los doce renglones impresos suman
+174.950,57 contra 180.950,57 impreso. Diferencia de 6.000 pesos exactos. Los
+candidatos aritmeticos de un digito serian 32.580 por 38.580 en Patentes o
+20.125,66 por 26.125,66 en Vinos; los dos se releyeron a 330 dpi y los dos
+digitos impresos son inequivocos. Se declara la diferencia y no se corrige.
+En este mismo cuadro la capa previa lee 3.080,50 en Multas donde la imagen
+dice 3.180,50: error del OCR, ya incorporado a la suma de arriba.
+
+983 h10, octubre, Impuestos al Consumo: 24.027,32 + 25.826,40 + 1.229,20 +
+2.600 + 1.595,80 + 131 = 55.409,72 contra 52.409,72 impreso. Diferencia de
+3.000 pesos exactos. La lectura alternativa que cerraria la columna es
+22.826,40 en el renglon de Cigarrillos, en lugar de 25.826,40. La imagen a
+170 dpi muestra 25.826,40. Se escriben las dos lecturas y no se corrige.
+
+983 h10, octubre, Receptoria General: los catorce renglones suman 132.265,97
+contra 132.665,97 impreso. Diferencia de 400 pesos exactos. Los catorce se
+releyeron a 330 dpi y ninguno admite una lectura alternativa de un solo
+digito que cierre la columna: los candidatos aritmeticos serian 424,50 por
+824,50 o 4.595,50 por 4.995,50, y en los dos casos el digito impreso es
+inequivoco. Se declara la diferencia y no se corrige.
+
+983 h10, octubre, total: el saldo de setiembre (7.602,36) mas el total de
+entradas (447.741,03) da 455.343,39, exactamente el total impreso. El cuadro
+cierra por arriba aunque dos de sus subtotales no cierren por abajo: la
+discrepancia esta en los renglones de detalle y no en los subtotales, lo que
+refuerza la lectura alternativa del renglon de Cigarrillos.
+
+974 h13, agosto, Impuesto al Consumo: 23.170,34 + 15.022,60 + 3.300,75 +
+1.116,01 + 16,80 + 3.295,27 = 45.921,77, coincidente con el subtotal impreso
+hasta donde la capa lo deja leer. Este cuadro no se miro en la imagen y el
+recalculo queda apoyado solo en la capa: se declara asi, como el unico de
+los cinco cuyo subtotal no esta verificado contra la pagina.
+
+Saldos iniciales transcriptos: febrero, <A EXISTENCIA DE ENERO>; abril, <A
+EXISTENCIA DEL MES DE MARZO ... $ 14.467,96>; agosto, <A SALDO DEL MES DE
+JULIO DE 1923>; octubre, <A SALDO DE SETIEMBRE ... $ 7.602,36>. Los dos
+primeros no traen cifra legible en la capa y no se miraron.
+
+Tablas no recalculadas y por que: los cuadros de sueldos de la edicion 969
+fuera del Item 1°, porque el departamento no tiene partida propia en ninguno
+de ellos -el sueldo de $ 44 mensuales del encargado del Registro Civil es
+comun a mas de cuarenta oficinas y el cuadro no las desglosa-; y las
+planillas de los otros incisos del presupuesto, por lo mismo.
+
+Advertencia de metodo para este ano: con techo de 150 ppi, una cifra dudosa
+no se resuelve subiendo la resolucion del recorte. Las dos diferencias que
+quedan abiertas (6.000 y 400 pesos) quedan abiertas por eso.
+
+
+E.9 - Contradicciones
+---------------------
+
+1. El decreto N° 620 (A.1) imprime <Salta, Enero 18 de 1823>. Errata del
+original: los vecinos N° 621 y N° 622, de la misma columna y del mismo dia,
+llevan 1923.
+
+2. El decreto N° 725 (A.10) dice que el nombramiento de Juan de la Cruz
+Nogales fue conferido por decreto de 24 de Febrero ppdo., mientras que el N°
+712 que lo confirio (A.9) esta fechado el 26 de febrero.
+
+3. Abelardo Lopez, suplente 2° de la Mesa N° 4 de Caldera, es reemplazado
+dos veces en la misma edicion 947: por C. Roberto Varela el 26 de febrero
+(A.6) y por Jose Isidoro Roldan el 1° de marzo (A.7). El Boletin no dice que
+el primero haya cesado.
+
+4. El acto de intervencion (A.15) se nombra de cuatro maneras en dos hojas:
+Comision Municipal en el sumario y en el vistos, Municipalidad en el
+epigrafe y en el articulo 1°, Comuna en el considerando 3°.
+
+5. El pedido de concesion de agua (A.17) lleva una providencia que ordena
+publicarlo <durante treinta dias en el diario La Provincia> y aparece, sin
+embargo, en el Boletin Oficial, y casi un ano despues de dictada.
+
+6. La lista de circuitos de A.3 imprime <El Monte Las Garrapatas> sin coma,
+uniendo dos nombres que el resto de la serie trae separados.
+
+7. Las dos listas de candidatos de la edicion 946 escriben el departamento
+de dos maneras: La Caldera en la de la Union Civica Radical Nacional (A.4) y
+Caldera en la de la Union Provincial (A.5). La nomina de senadores
+incorporados (A.11) tambien escribe Caldera, y los decretos escriben las
+tres formas: de La Caldera, La Caldera y la Caldera.
+
+8. El folio 3334 falta entre las ediciones 943 y 944, y la cadena adelanta
+otros trece folios repartidos en ocho tramos (§1). La edicion 946 tiene 16
+hojas y 15 folios.
+
+9. La paginacion cambia de regimen en la edicion 971, de corrida a por
+edicion, sin acto ni aviso que lo anuncie; en la misma edicion cambia la
+cabecera y empieza el sumario.
+
+10. La hoja 6 de la edicion 969 imprime el folio <Pah. 3666> en lugar de
+<Pag. 3666>.
+
+11. Los dos cuadros de Tesoreria de E.8 no cierran por 6.000 y por 400
+pesos, y un tercer subtotal cierra solo con una lectura alternativa de un
+renglon.
+
+12. La tapa de la edicion 945 dice <Salta, Viernes 17 de Febrero de 1923>.
+El 17 de febrero de 1923 fue sabado. Las 51 tapas restantes caen en viernes
+y la 946, de la semana siguiente, vuelve a la serie con el 23 de febrero. El
+digito se verifico a 400 dpi. No se concilia.
+
+
+E.10 - Limites
+--------------
+
+L1. No hay confianza por hoja ni lista de hojas <a ojos>: no llegaron los
+.tsv de lee_auto.py.
+
+L2. No hay deduplicacion por imagen: sin las .jpg no hay md5 ni dhash. La
+duplicacion solo se controla por texto.
+
+L3. No hay medicion de tinta: no se puede decir si una hoja esta en blanco.
+Afecta a 973 h14.
+
+L4. No hay segunda version del texto: tesseract no tiene spa en esta sesion.
+Todo desempate es la imagen.
+
+L5. El techo de resolucion es 150 ppi. Una cifra que no se lee a 150 ppi no
+se lee, y por eso quedan abiertas las dos diferencias de E.8.
+
+L6. No hay log de corrida: no hubo corrida.
+
+L7. El cotejo sumario/cuerpo no es aplicable de la edicion 939 a la 970,
+porque no traen sumario. De la 971 a la 990 si lo es.
+
+L8. De la edicion 971 a la 990 no hay paginacion corrida y por lo tanto no
+hay control barato de hojas faltantes: 322 de las 673 hojas quedan sin ese
+control.
+
+L9. La cadena de saldos de Tesoreria no existe en 1923: los cuatro resumenes
+publicados no son de meses consecutivos.
+
+
+Config actualizado
+------------------
+
+Se entrega un lee_config.json actualizado. Agrega, conserva todo lo anterior
+y no quita nada.
+
+ACTORES: nueve entradas nuevas con origen 1923 -Jose Antonio Araoz y Jose A.
+Araoz (las dos formas, segun el §15.3.3), Pedro J. Frias, Eduardo F. Harbin,
+Francisco S. Urquiza, C. Roberto Varela, Jose Isidoro Roldan, Abelardo Lopez
+y Julio Figueroa S.-, que llevan el total de 280 a 289. Tres personas de los
+actos del §A ya estaban en el config con otro origen y no se duplicaron:
+Jose Nogales (1917), Pedro Arevalo (edicion 2584) y Pablo Choque, que figura
+como Abdon Choque (1909). Otras trece ya estaban con su nombre completo
+exacto: Augusto Regis y Genaro Molina (1909), Domingo Royo (1911), Eustaquio
+Murua y Silvano Murua (1912), Carlos Serrey (1916), Augusto P. Matienzo y
+Pedro J. Aranda (1917), Ignacio Ortiz (1910), Juan de la Cruz Nogales, Julio
+Royo, Julio Royo Ortiz, Jose Maria Leguizamon y Jose Maria Decavi (1922).
+
+ANILLO 2: nueve terminos nuevos, de 102 a 111. Cinco son formas con que 1923
+imprime toponimos del departamento y sin las cuales no se encontrarian:
+cachanio (por chalchanio), corral de barranca (en singular), despensa ya
+estaba como la despensa pero se agrega el acheral, y el monte las
+garrapatas, que es como A.3 compone los dos nombres sin coma. Cuatro son
+nucleos que 1923 nombra y el config no tenia: arroyo castellanos, quebrada
+de lesser, rio vaqueros y rio de wierna, mas cerro de buena vista, el bien
+raiz de A.17.
+
+NUMEROS: ocho, de 70 a 78. Son los numeros de los actos del §A y del §B de
+1923 -620, 629, 701, 712, 725, 886, 1076 y 1161-, y es la primera vez desde
+1946 que un ano de esta serie aporta numeros reales y no coincidencias de
+cifra.
+
+FALSOS POSITIVOS: SIN CAMBIOS, 20. Los seis de 1923 quedan listados en E.7 y
+NO se agregan, por la misma razon que los de 1911 y 1912: un acierto del
+anillo 1 cuyo contexto contenga un falso positivo del config queda marcado
+fp_conocido y sin recorte, aunque sea real. Agregar caldas o calera costaria
+mas de lo que ahorra.
+
+Nota para la proxima corrida: despues de la correccion de la laxa (§F.1)
+conviene repasar con --solo-busqueda TODOS los anos ya barridos, no solo los
+de la epoca de 1908-1912. El espaciado tipografico de los titulos no es
+exclusivo de 1923 y cualquier ano puede tener menciones perdidas del mismo
+modo.
+
+
+============================================================================
+§F - CORRECCION A LA RUBRICA (propuesta para v16)
+============================================================================
+
+F.1 - La laxa tiene que admitir el espaciado entre TODAS las letras, no solo
+en el medio. La v15 corrigio la laxa para que el espacio se escribiera con
+la clase de espacios en blanco, pero la dejo con un solo hueco, entre cal y
+dera. En 1923 el original compone los titulos y los nombres de departamento
+letra por letra -C A L D E R A- y esa forma no la devuelve ninguna de las
+cuatro pasadas tal como estan escritas. El patron que hace falta es el que
+intercala la clase de espacios, guiones y puntos entre cada par de letras de
+caldera y de calderilla. Con el patron viejo el ano daba catorce fichas; con
+el nuevo da diecisiete, y una de las tres nuevas es un acto que ninguna otra
+via traia.
+
+F.2 - El espaciado tipografico tambien rompe el anillo 2 y el anillo de
+actores, y ahi no alcanza con una pasada mas. Seis personas de los actos del
+§A de 1923 no aparecen ni en su propio acto cuando se las busca por nombre
+completo, y dos terminos del anillo 2 figuran como sin acierto estando
+impresos en una ficha. Conviene que el §5.1 agregue, al lado de la busqueda
+sin puntuacion, una tercera version del texto con el espaciado deshecho, y
+la comprobacion inversa que ya existe para los actores: todo termino del
+anillo 2 que aparezca en una ficha del §A y figure como sin acierto es una
+falla de la busqueda y se declara nombrandolo.
+
+F.3 - La epoca de 1908-1912 termina y conviene decirlo. La rubrica habla de
+<esta epoca> para el corpus sin numeracion de actos. En 1923 los actos
+llevan numero corrido entre anos, el §8.15 vuelve a ser aplicable y los
+identificadores del §5.3 cambian. La regla que conviene subir al cuerpo
+desde la bitacora no es <en 1908-1912 no hay numeracion> sino <el regimen de
+numeracion se mide en cada corpus con pares contiguos mirados>.
+
+F.4 - El techo de resolucion puede BAJAR al avanzar en el tiempo, y no se
+extrapola. La serie de la rubrica -1909: 323-370 ppi; 1911: 329-370; 1912:
+300-500- invita a leer una tendencia que no existe: 1923 da 150 ppi parejos.
+Conviene que el §8.10 diga que el techo se mide siempre, y que el §4 agregue
+que cuando el techo es de 150 ppi la instruccion de <recorte chico a 400 o
+600 dpi para cifras dudosas> no se puede cumplir y la cifra se declara
+dudosa con sus dos lecturas.
+
+F.5 - Cada hoja puede traer mas de una imagen incrustada, con resoluciones
+distintas. En 1923 son dos por hoja, de 150 y de 75 ppi, superpuestas sobre
+el mismo rectangulo. La medicion del techo tiene que tomar el MAXIMO de las
+imagenes de la hoja y no la primera que devuelve el lector.
+
+F.6 - La paginacion puede cambiar de regimen DENTRO de un ano. La v15
+corrigio que la cadena no se hereda entre anos; 1923 obliga a dos
+correcciones mas. Primera: aca SI se hereda de 1922, de modo que la regla
+correcta es que el regimen se mide y no se supone en ninguna direccion.
+Segunda: no es homogeneo dentro del ano -corrido hasta la edicion 970 y por
+edicion desde la 971-, asi que el §1 lo declara edicion por edicion y un
+corte de la cadena se busca primero como cambio de regimen antes de listarlo
+como hoja faltante.
+
+F.7 - La deriva de la cadena de folios es un inventario de hojas faltantes y
+conviene publicarla como tal. En 1923 la cadena adelanta catorce folios
+entre la edicion 939 y la 970: son quince hojas del Boletin que estan
+foliadas y no estan en el Release, y la cadena dice en que tramo cae cada
+una. Conviene que el §2.5bis pida la tabla tramo-por-tramo, y que el
+recuento tenga una linea para <hojas faltantes segun la cadena de folios>,
+distinta de <hojas ausentes>.
+
+F.8 - El sumario puede aparecer a mitad de ano. El §2.3 manda declarar
+<cotejo no aplicable> cuando la edicion no tiene sumario, y el §13 lo pide
+una vez por ano. En 1923 el cotejo es no aplicable de la 939 a la 970 y
+aplicable de la 971 a la 990: la declaracion tiene que ser por tramo y no
+por ano.
+
+F.9 - Contar los cuadros no alcanza: hay que contar tambien los MESES que
+cubren. La v15 mando contar los resumenes de Tesoreria antes de prometer la
+cadena de saldos. En 1923 hay cuatro, que es mas de los que hubo en 1911 y
+los mismos que en 1912, y sin embargo NO hay cadena posible, porque no son
+meses consecutivos. La pregunta correcta no es cuantos resumenes hay sino si
+los meses encadenan.
+
+F.10 - El config del Release y el config del proyecto pueden discrepar.
+Conviene que el §14.2 diga que, cuando los dos estan presentes, se usa el
+mas nuevo, se dice cual es y se declara la diferencia contada por clave,
+como se hizo en el §0 de este informe.
+
+
+============================================================================
+RECUENTO
+============================================================================
+
+  Archivos y ediciones .............. 52 PDF / 52 ediciones (939-990)
+  Hojas presentes ................... 673
+  Hojas declaradas por las tapas .... ninguna (la tapa no las declara)
+  Hojas faltantes segun los folios .. 15 (tramos en §1); 1 sin foliar
+  Reparto de confianza .............. no existe (limite L1)
+  Techo de resolucion ............... 150 ppi, uniforme
+  Imagenes miradas .................. 77 recortes / 57 hojas
+  Columnas cotejadas ................ 48
+  Anillo 1: aciertos literales ...... 27 en 18 hojas
+  Anillo 1: con la laxa corregida ... 31 en 21 hojas
+  Anillo 1: entradas del §A ......... 17 (20 apariciones)
+  Anillo 2: terminos con acierto .... 55 de 102, los 55 leidos
+  Anillo 3 / limitrofes ............. 4
+  Actores: nombre completo .......... 27 de 280
+  Cuadros publicados ................ 5
+  Subtotales recalculados ........... 7 (4 cierran, 3 no)
+  Tablas no recalculadas ............ los demas cuadros de 969
+  Saldos ............................ 4 resumenes, sin cadena posible
+  Planos ............................ 0 publicados; 1 citado
+  Citados y no acompanados .......... 9
+  Limites declarados ................ 9
+  Tapas leidas en la imagen ......... 52 de 52
+  Vecinos +-3 cotejados ............. 7 de 8 actos numerados
+  Config: actores agregados ......... 9 (origen 1923); total 289
+  Config: anillo 2 agregados ........ 9; total 111
+  Config: numeros agregados ......... 8; total 78
+  Config: falsos positivos .......... sin cambios (20)
+  Pendientes ........................ 0
+
+ESTADO: COMPLETO, CON NUEVE LIMITES DECLARADOS.
+

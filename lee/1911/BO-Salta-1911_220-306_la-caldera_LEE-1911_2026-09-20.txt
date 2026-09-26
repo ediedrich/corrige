@@ -1,0 +1,1352 @@
+==============================================================================
+BOLETIN OFICIAL DE SALTA - ANO 1911 - EDICIONES N 220 A 306
+BARRIDO DOCUMENTAL SOBRE LA CALDERA - RUBRICA LEE v13
+Informe de sesion del 20/09/2026 - turnos 1 a 4
+==============================================================================
+
+S 0 - ADVERTENCIA PRELIMINAR
+------------------------------------------------------------------------------
+
+ESTADO: COMPLETO, con tres limites declarados.
+
+Estan cerrados el S A, el S B, el S C, el S P, el S D y el S E: las
+dieciocho apariciones del anillo 1 y los nucleos del anillo 2 estan
+fichados y transcriptos desde la imagen, los 180 aciertos del anillo 2 y
+los 6.121 del anillo de actores estan revisados con su contexto, las
+tablas estan inventariadas y la del alcance recalculada. Con este informe
+se entrega el lee_config.json actualizado. No queda trabajo postergado.
+Quedan, en cambio, tres LIMITES, que no son tareas sino cosas que este
+corpus y estos insumos no permiten:
+  - las hojas que faltan de las ediciones 242, 243 y 269 no estan en
+el Release: no se pudieron mirar ni buscar;
+  - sin las salidas de lee_auto.py no hay confianza por hoja que
+seleccione las hojas "a ojos", ni medicion de tinta, ni md5 ni dhash: la
+seleccion por confianza y la deduplicacion por imagen no se hicieron;
+  - hay una sola version de texto, de modo que la union de versiones del
+S 2.3 no existe en este barrido y el control de columna perdida descansa
+en las 26 columnas cotejadas a mano contra la imagen.
+Los tres estan desarrollados en E.10.
+
+INSUMOS. El proyecto trae un solo archivo: lee_config.json. NO
+llegaron las salidas de lee_auto.py para 1911: no hay pre-informe, ni
+resultados_1911.csv, ni decretos_1911.csv, ni log.txt, ni recortes, ni
+lee_textos_1911.zip. En consecuencia: no hay version propia de OCR, y lo
+que no se miro en la imagen descansa en una sola lectura, la capa de
+texto que traen los PDF, que es OCR previo; no hay confianza por hoja, ni
+md5, ni dhash, ni medicion de tinta; no hay log.txt que leer, asi que no
+se sabe si el ano se corrio ni con que parametros; la deduplicacion de
+nivel 1 y 2 (S 6) queda declarada y no hecha.
+
+IMAGENES. Se bajaron en sesion los 87 PDF del Release 1911 de
+github.com/ediedrich/boletines-salta (assets 220.pdf a 306.pdf, 85 MB).
+api.github.com respondio 403 por limite de tasa; la lista de assets se
+obtuvo de releases/expanded_assets/1911, que no exige token. No hay
+EXTRAIDO.json contra que cotejar: el cotejo se hizo contra la cadena de
+folios impresos, que es continua.
+
+ENTORNO. nproc = 1. PyMuPDF instalado desde pypi. Hay tesseract 5.3.4
+pero SOLO con los idiomas eng y osd: no hay spa, asi que el OCR puntual
+en sesion del S 3 no es aplicable tal como esta escrito. Va al S F.
+
+DESVIOS DE S 8.17. Las transcripciones conservan los renglones del
+original con sus cortes de palabra. Lo que NO se conserva son las tildes,
+las enes y los signos altos: este archivo va sin ellos por el S 10, y
+cada ficha lo declara en su nota cuando el original los trae.
+
+S 1 - CORPUS REVISADO
+------------------------------------------------------------------------------
+
+87 ediciones, N 220 (Enero 4 de 1911) a N 306 (Diciembre 30 de 1911),
+347 hojas. Todos son PDF reales, con una a tres imagenes por hoja y una
+capa de texto de OCR previo. Techo de resolucion: 329 a 370 ppi sobre la
+imagen incrustada (S 8.10); el rasterizado de sesion se hizo a 300 dpi en
+gris, y los zoom de cifra a 600 dpi.
+
+Hojas por edicion: 84 ediciones traen 4 hojas; 242 (Abril 5) trae 1;
+243 (Abril 8) trae 3; 269 (Agosto 2 y 5, doble) trae 7.
+No hay declaracion de paginas en la tapa de esta epoca. El control es
+la paginacion corrida: el folio impreso en la cabecera de las hojas 2 a 4
+encadena sin saltos, cuatro folios por edicion, desde 906 (220 h2) hasta
+1248 (306 h2). El unico tramo que no cierra es 242-243, que entre los dos
+suman 4 hojas donde deberian sumar 8. Las hojas faltantes de 242, 243 y
+269 no estan en el Release: no es falla de esta sesion. Va a E.3.
+
+Densidad de texto: entre 2.153 y 9.615 caracteres por hoja, media
+7.046. Ninguna hoja baja del umbral de 500 B del S 2.3.4. No hay hojas en
+blanco entre las presentes.
+
+  FECHAS DE TAPA, POR MES (entre corchetes, leidas en la imagen)
+
+  Enero: 220 [4], 221 [7], 222 [14], 223 [18], 224 21, 225 25, 226 28.
+  Febrero: 227 1, 228 4, 229 [8], 230 [11], 231 15, 232 18, 233 22,
+    234 [25].
+  Marzo: 235 4, 236 [8], 237 [11], 238 [15], 239 22, 240 25, 241 29.
+  Abril: 242 [5], 243 8, 244 12, 245 [19], 246 22, 247 26, 248 29.
+  Mayo: 249 [6], 250 10, 251 17, 252 20, 253 24, 254 27.
+  Junio: 255 3, 256 [10], 257 14, 258 17, 259 21, 260 [28].
+  Julio: 261 [1o], 262 [5], 263 8, 264 15, 265 19, 266 [22], 267 26,
+    268 29.
+  Agosto: 269 [2 y 5], 270 9, 271 12, 272 [16 y 19], 273 23, 274 [26],
+    275 30.
+  Setiembre: 276 2, 277 [6 y 9], 278 [13], 279 [16 y 20], 280 23, 281 27,
+    282 30.
+  Octubre: 283 4, 284 7, 285 11, 286 14, 287 [18], 288 21, 289 25,
+    290 28.
+  Noviembre: 291 [1o y 4], 292 8, 293 11, 294 15, 295 18, 296 22,
+    297 [25], 298 29.
+  Diciembre: 299 2, 300 6, 301 [9 y 13], 302 16, 303 20, 304 23, 305 27,
+    306 30.
+
+La tapa dice, todo el ano, "Aparece Miercoles y Sabados". En 1911 hubo
+104 miercoles y sabados; las 87 ediciones cubren 93, porque seis son
+dobles: 269 "Agosto 2 y 5"; 272 "Agosto 16 y 19"; 277 "Setiembre 6 y 9";
+279 "Setiembre 16 y 20"; 291 "1o y 4 de Noviembre"; 301 "9 y 13 de
+Diciembre". Las seis se leyeron en la imagen; la capa previa pierde la
+segunda fecha en casi todas.
+
+DIAS DE SALIDA SIN EDICION (11, todos en el primer semestre): Enero
+11; Marzo 1 y 18; Abril 1 y 15; Mayo 3, 13 y 31; Junio 7 y 24; Julio 12.
+Del 15 de julio en adelante no falta ninguno. No aparece en todo el
+corpus la palabra "feriado", ni "asueto", ni "adhesion", ni "Dia del
+Pueblo": ninguno de los once huecos queda explicado. Se declara el hueco,
+no su causa.
+
+ANO EDITORIAL. Las tapas imprimen ANO III hasta la 286 (Octubre 14);
+la 287 (Octubre 18) imprime ANO IV, leido en la imagen; la capa previa de
+la 288 devuelve otra vez ANO III, y de la 289 en adelante ANO IV. La tapa
+de la 288 no se miro: queda en E.9.
+
+S 2 - CRITERIO DE BUSQUEDA
+------------------------------------------------------------------------------
+
+VERSIONES. Una sola, la capa previa (prev). Todo resultado es prev
+salvo lo transcripto desde la imagen. No hubo desempate entre versiones;
+el desempate usado fue siempre la imagen.
+
+CORTES DE RENGLON. U+0002 no aparece ni una vez en las 347 hojas. El
+guion blando U+00AD aparece 12.290 veces: es la forma en que esta capa
+corta las palabras, como en 1909. La union quita el guion blando y el
+guion comun y tolera hasta dos signos de puntuacion a cada lado del
+salto.
+
+PASADAS (S 5.2), corridas en sesion sobre la union de cortes: literal
+25 aciertos; laxa 1 ("ca1 deno", 232 h4, artefacto); difusa >= 0,78, 5
+aciertos, uno real; difusa ampliada 0,70-0,78 con inicial c, g u o, 139
+aciertos, todos ruido, revisados uno por uno (E.7). La difusa devolvio
+"Cajdera" (251 h4, ratio 0,86): mirada la imagen, el original imprime
+"Caldera". Es el segundo ano seguido en que la difusa rescata una mencion
+que la literal pierde.
+
+ANILLO 2: 180 aciertos sobre 31 de los 56 terminos. ANILLO DE ACTORES:
+el config de la epoca (95 entradas) se aplico entero y la continuidad con
+1908-1910 es fuerte; volvieron a aparecer en actos del departamento
+Jacinto Guerrero, Jesus Ramirez, Genaro Molina, Angel Fernandez, Teodoro
+Reyes, Virgilio Arevalo, Juan Chuchuy, Silverio Caceres, Abraham
+Fernandez, Marcelo Lamas, Francisco Sosaya, Liborio Guerrero, Benjamin
+Lopez, Carlos Matienzo, Daniel Linares, Abelardo Figueroa, Augusto Regis,
+Jose D. Soliverez, Adolfo Vidal, Escolastico Aparicio, Camilo Caseres,
+Rufino Lozano y Walter Hesling. El config por epoca del S 15.3
+funciona.
+
+NUMEROS ARRASTRADOS: los 40 son de 1946 y dieron 13 aciertos, todos
+espurios ("1914" por 1911 mal leido; "2000" en mensuras). Los actos de
+1911 no llevan numero, como en 1908 y 1909: la regla 15 no se aplica y se
+declara. FORMULAS DE REEMPLAZO: 7 aciertos, ninguno del departamento
+(Molinos, Oran, Chicoana, Policia de la Capital, Rivadavia); van a E.7.
+
+S A - MENCIONES EXPLICITAS
+------------------------------------------------------------------------------
+
+Dieciocho apariciones en quince ediciones, todas miradas y
+transcriptas desde la imagen. Se ordenan por edicion.
+
+A.1
+
+FUENTE: BO Salta, edicion N 229, Salta, Febrero 8 de 1911, hoja 3, columna 3.
+
+FICHA: articulo 1o de la convocatoria a elecciones de representantes a las
+Camaras Legislativas. La Caldera aparece tres veces en el mismo acto: en la
+enumeracion de departamentos convocados, en la de los que eligen un senador y
+en la de los que eligen un diputado.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 402-608 pt, y 570-700 pt.
+
+TEXTO:
+
+  Art. 1o Convocase al pueblo de los
+  departamentos de la Capital, Rivadavia,
+  Metan, Rosario de Lerma, Guachipas,
+  Molinos, Poma, Caldera, Oran, Candela-
+  ria, Anta, Iruya, Cerrillos Campo San-
+  to, La Vina, San Carlos y Rosario de la
+  Frontera a elegir sus representantes a las
+  HH. Camaras Legislativas de la Provin-
+  cia en la forma siguiente:
+  Un senador por cada uno de los de-
+  partamentos, de Rivadavia, Metan, Ro-
+  sario de Lerma, Guachipas, Molinos,
+
+NOTA DE LECTURA: el original acentua Metan, Vina, Camaras y Provincia. La
+enumeracion sigue mas abajo en la misma columna, donde vuelven a leerse
+Caldera entre los departamentos con senador y entre los que eligen un
+diputado; ese tramo se leyo pero no se transcribe aqui porque el recorte le
+corto el margen izquierdo. El encabezado y la firma del acto no se miraron.
+
+----------------------------------------
+
+A.2
+
+FUENTE: BO Salta, edicion N 232, Salta, Febrero 18 de 1911, hoja 4, columna 1.
+
+FICHA: decreto del P. Ejecutivo que nombra Juez de Paz propietario y suplente
+del departamento de La Caldera sobre ternas de su Comision Municipal.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 28-218 pt, y 35-340 pt; la fecha, ampliada a 600 dpi.
+
+TEXTO:
+
+  Atentas las ternas presentadas por la
+  Comision Municipal del departamen-
+  to de La Caldera—
+  
+  El P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o Nombrase Jueces de Paz pro-
+  pietario y suplente respectivamente del
+  referido departamento para el ejercicio
+  del corriente ano a los senores Carlos
+  Matienzo y Jacinto Guerrero.
+  Art. 2o Los nombrados tomaran po-
+  sesion previos los requisitos de ley.
+  Art. 3o.—Comuniquese, publiquese y
+  dese al R. Oficial.
+  Salta, Febrero 11 de 1911.
+  FIGUEROA
+  R. PATRON COSTAS
+  
+  Es copia:—
+  Jose M. Outes.
+  S. S.
+
+NOTA DE LECTURA: el dia de la fecha se leyo a 600 dpi porque a 300 el segundo
+1 parece un 7: es 11. Jacinto Guerrero es el mismo que en 243 (Marzo 23) es
+nombrado comisario suplente de policia del departamento; en 251 (Mayo 8)
+Matienzo renuncia al juzgado de paz.
+
+----------------------------------------
+
+A.3
+
+FUENTE: BO Salta, edicion N 235, Salta, Marzo 4 de 1911, hoja 4, columna 1. El
+encabezado esta en la hoja 3: "ACTA DE INSACULACION - De los ciudadanos que
+han de formar las mesas receptoras de votos en las elecciones provinciales que
+tendran lugar durante el ano 1911".
+
+FICHA: nomina de propietarios y suplentes de las mesas receptoras del
+departamento de La Caldera, 1a Serie.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 30-220 pt, y 425-490 pt; el ultimo renglon, a 600 dpi.
+
+TEXTO:
+
+  Caldera—1a Serie—Propietarios—An-
+  gel Fernandez, Adolfo Vidal, Gervasio
+  Chalan, Pedro Arroyo, Camilo Caseres.
+  Suplentes—Dionisio Herrera, Rufino
+  Lozano, Genaro Molina, Augusto Regis,
+  Jose A. Molina.
+
+NOTA DE LECTURA: el original acentua Fernandez y Caseres. El ultimo suplente
+se leyo a 600 dpi porque la capa previa lo pierde: es Jose A. Molina. Solo
+aparece la 1a Serie; si hay 2a Serie para este departamento, no esta en esta
+columna y no se busco en las demas.
+
+----------------------------------------
+
+A.4
+
+FUENTE: BO Salta, edicion N 241, Salta, Marzo 29 de 1911, hoja 4, columna 1.
+
+FICHA: nomina de propietarios y suplentes del departamento de La Caldera
+dentro del sorteo de las Juntas Inscriptoras para la renovacion del Registro
+Civico Provincial. El encabezado esta en la hoja 3 y se leyo en la imagen: el
+sorteo lo verifican el presidente de la Legislatura don Angel Zerda, el
+presidente del Superior Tribunal doctor Abraham Cornejo, el fiscal general
+doctor Delfin G. Leguizamon y el secretario del Superior Tribunal, de acuerdo
+con la Ley Electoral de la Provincia.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 30-225 pt, y 580-625 pt.
+
+TEXTO:
+
+  Caldera—Propietarios: Fernando Ro-
+  bles, Abraham Fernandez; suplentes:
+  Dionicio Herrera, Rufino Lozano.
+
+NOTA DE LECTURA: el original escribe "Dionicio" aqui y "Dionisio" en 235 h4, y
+acentua Fernandez. No se afirma que esta lista y la de 235 sean del mismo
+acto: no se leyo el encabezado.
+
+----------------------------------------
+
+A.5
+
+FUENTE: BO Salta, edicion N 243, Salta, Abril 8 de 1911, hoja 2 columna 3 y
+hoja 3 columna 1. La hoja 1 no esta en el Release.
+
+FICHA: decreto del P. Ejecutivo, fechado Salta, Marzo 23 de 1911, que nombra
+comisario suplente de policia del departamento de La Caldera, comisarios
+auxiliares de los catorce partidos y un subcomisario para la estacion
+Mojotoro. Incluye la segunda mencion del anillo 1 del ano: "la Calderilla".
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recortes x 400-608 pt (hoja 2) y x 10-220 pt (hoja 3).
+
+TEXTO:
+
+  De acuerdo con las propuestas pre-
+  sentadas por el comisario de policia del
+  departamento de la Caldera para nom-
+  bramiento de comisarios suplentes del
+  mismo y de comisarios auxiliares de par-
+  tido para el ejercicio del corriente ano-
+  
+  El P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o Nombrase comisario suplente
+  de policia del referido departamento al
+  senor Jacinto Guerrero, para el partido
+  de Vaqueros a Jesus Ramirez, para el de
+  la Calderilla a don Genaro Molina, pa-
+  ra el de San Alejo y Santa Rufina a
+  don Angel Fernandez, para el de la Des-
+  pensa a don Guillermo Wotton, para el
+  de los Porongos a don Teodoro Reyes,
+  para el de los Sauces y Angosto de
+  Arias a don Virgilio Arevalo, para el de
+  Yacones a don Juan Chuchuy, para el
+  de Potrero de Castillo a don Manuel
+  Garcia, para el de Gallinato a don Sil-
+  verio Caceres, para el de Potrero de
+  Valencia a don Abrahan Fernandez,
+  para el de Lesser a don Marcelo Lamas,
+  para el de Campo Alegre y Angosto de
+  Arrieta a don Francisco Sosaya y para
+  el de Penones y Chalchamo a don Li-
+  borio Guerrero.
+  
+  Art. 2o Nombrase igualmente sub-co-
+  misario para el partido de la estacion
+  Mojotoro, comprension del mismo de-
+  partamento a don Benjamin Lopez, con
+  el sueldo que le asigna la Ley de Presu-
+  puesto vigente y con antiguedad al 1o
+  de Enero del corriente ano.
+  
+  Art. 2o Comuniquese, publiquese y
+  dese al R. Oficial.
+  
+  Salta, Marzo 23 de 1911.
+  
+  FIGUEROA
+  R. PATRON COSTAS
+  
+  Es copia-
+  Jose M. Outes
+  S. S.
+
+NOTA DE LECTURA: el original numera dos veces "Art. 2o" [sic]. Imprime
+"Abrahan Fernandez" [sic] con n, y "Chalchamo", no chalchanio ni chalcanio
+como trae el config; imprime "Wotton", no Wolton. La capa previa lee "Tacones"
+donde la imagen dice "Yacones": por eso el anillo 2 no marco Yacones en esta
+hoja. Va a E.5.
+
+----------------------------------------
+
+A.6
+
+FUENTE: BO Salta, edicion N 251, Salta, Mayo 17 de 1911, hoja 4, columna 2.
+
+FICHA: decreto del P. Ejecutivo que cubre la vacante de Juez de Paz
+propietario del departamento por renuncia de Carlos Matienzo.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 216-405 pt, y 150-470 pt.
+
+TEXTO:
+
+  Encontrandose vacante el cargo de
+  Juez de Paz propietario del departa-
+  mento de Caldera por renuncia del se-
+  nor Carlos Matienzo y de acuerdo con la
+  terna pasada por la comision municipal
+  del mismo—
+  
+  El P. Ejecutivo de la Provincia
+  DECRETA:
+  
+  Art. 1o Nombrase para ocupar dicho
+  cargo durante el corriente ano al senor
+  Rafael Fernandez.
+  Art. 2o El nombrado se posesionara
+  previos los requisitos de ley recibiendo
+  de su antecesor el archivo y demas en-
+  seres del juzgado bajo de inventario.
+  Art. 3o Comuniquese, publiquese y
+  dese al R. Oficial.
+  
+  Salta, Mayo 8 de 1911.
+  FIGUEROA
+  R. PATRON COSTAS.
+  
+  Es copia:—
+  Jose M. Outes,
+  S. S.
+
+NOTA DE LECTURA: la capa previa imprime "Cajdera" y la imagen dice "Caldera":
+la mencion la rescato la difusa. El original escribe "departamento de
+Caldera", sin articulo. Rafael Fernandez es actor nuevo de 1911.
+
+----------------------------------------
+
+A.7
+
+FUENTE: BO Salta, edicion N 252, Salta, Mayo 20 de 1911, hoja 3, columna 1.
+
+FICHA: decreto del P. Ejecutivo que amplia la partida para los reparos que
+defienden el pueblo de la Caldera y el camino nacional a la capital,
+amenazados por la creciente del rio.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 24-220 pt, y 180-700 pt en dos partes; la fecha, a 600 dpi.
+
+TEXTO:
+
+  Habiendo resultado insuficiente los dos
+  mil pesos que el gobierno destino por
+  decreto de 20 de Enero del ano ppdo.
+  para la construccion de los reparos con
+  que debian defenderse el pueblo
+  de la Caldera y el camino nacional que
+  une ese departamento con esta capital,
+  amenazado por la creciente del rio del
+  mismo nombre segun las cuentas pre-
+  sentadas por el senor presidente de di-
+  chos trabajos—
+  
+  El P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o Asignase a mas de los dos
+  mil pesos votados por el referido decre-
+  to, la suma de novecientos cincuenta y
+  ocho pesos con sesenta y cinco centa-
+  vos m/n c/l. para cubrir el deficit que
+  aparece en las cuentas presentadas a
+  favor del senor Daniel Linares presiden-
+  te de la comision encargada de la eje-
+  cucion de dicha obra.
+  Art. 2o Pidase oportunamente a la H.
+  Legislatura de la Provincia la aproba-
+  cion conveniente para este decreto, lo
+  mismo para el de 20 de Enero del ano
+  1910 ya citado.
+  Art. 3o Comuniquese, publiquese y
+  dese al R. Oficial.
+  
+  Salta, Mayo 16 de 1941.
+  FIGUEROA
+  R. PATRON COSTAS.
+  
+  Es copia:—
+  Jose M. Outes,
+  S. S.
+
+NOTA DE LECTURA: la fecha se amplio a 600 dpi: el original imprime "1941"
+[sic]. El contexto es 1911 (la edicion es del 20 de Mayo de 1911) y el decreto
+citado es de Enero de 1910; no se corrige. "m/n c/l" se transcribe tal como se
+ve. El decreto de 20 de Enero de 1910 queda como citado y no acompanado: 1910
+no esta barrido.
+
+----------------------------------------
+
+A.8
+
+FUENTE: BO Salta, edicion N 258, Salta, Junio 17 de 1911, hoja 1, columna 3.
+
+FICHA: parte resolutiva de una sentencia que aprueba el honorario del
+agrimensor en el juicio de deslinde y division de condominio de San Alejo y
+Santa Rufina, en el departamento de la Caldera.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 400-605 pt, y 290-490 pt.
+
+TEXTO:
+
+  RESUELVE:
+  
+  Aprobar en la suma cobrada de cinco
+  mil pesos moneda nacional ($ 5,000) el
+  honorario del agrimensor don Walter
+  Hesling, en el jucio de deslinde y divi-
+  sion de condominio de las fincas San
+  Alejo y Santa Rufina, ubicadas en el
+  departamento de la Caldera; sin costas
+  por no encontrar merito para imponer-
+  los.
+  Reponganse los sellos inscribase en el
+  libro respectivo y publiquese en el Bo-
+  letin Oficial.
+  VICENTE ARIAS
+  
+  Es copia fiel:—
+  M. San Millan
+  E. S.
+
+NOTA DE LECTURA: el original escribe "jucio" [sic] y separa los miles con
+coma: $ 5,000. El apellido va con una sola s, "Hesling"; en 306 h4 el mismo
+agrimensor aparece como "Hessling". No se concilia: va a E.9.
+
+----------------------------------------
+
+A.9
+
+FUENTE: BO Salta, edicion N 268, Salta, Julio 29 de 1911, hoja 3, columnas 1 y
+2.
+
+FICHA: decreto del Gobernador, Ministerio de Hacienda, que acuerda la
+jubilacion ordinaria de la directora de la Escuela elemental de la parroquia
+de la Caldera.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 26-215 pt, y 100-585 pt, en dos partes.
+
+TEXTO:
+
+  Ministerio de
+  Hacienda
+  Salta, Julio 21 de 1911.—
+  Vista la precedente solicitud de la
+  directora de la Escuela elemental de la
+  parroquia de la Caldera, dona Jacoba
+  Luquez de Gomez, en la que solicita
+  su jubilacion ordinaria; y constando de
+  las actuaciones de este expediente que
+  se han llenado debidamente los extre-
+  mos prescriptos por la ley de la mate-
+  ria, por cuyos fundamentos la comision
+  administradora del fondo de pensiones
+  y jubilaciones aconseja el favorable
+  despacho de la expresada solicitud—
+  
+  El Gobernador de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o Acuerdase a la directora de
+  la Escuela Elemental de la parroquia
+  de la Caldera, dona Jacoba Luquez de
+  Gomez, la jubilacion ordinaria que soli-
+  cita, la que debera liquidarsele desde
+  el 1o de Agosto proximo, sobre el pro-
+  medio de los ultimos cinco anos, o sean
+  por la cantidad de setenta y ocho pe-
+  sos, setenta y cuatro centavos moneda
+  nacional mensuales.
+  Art. 2o Comuniquese, insertese en el
+  Registro Oficial y pase a la Junta Ad-
+  ministradora del fondo de pensiones y
+  jubilaciones, para su archivo, previa re-
+  posicion de los sellos actuados.
+  FIGUEROA
+  RICARDO ARAOZ
+  
+  Es copia-
+  Juan Martin Leguizamon
+  S. S.
+
+NOTA DE LECTURA: el acto dice "El Gobernador de la Provincia", no "El P.
+Ejecutivo", y lo refrenda Ricardo Araoz, no Patron Costas: el encabezado y el
+firmante cambian con el ministerio. El importe -setenta y ocho pesos con
+setenta y cuatro centavos- va en letras en el original; no hay cifra que
+recalcular. El texto llama primero "comision administradora" y despues "Junta
+Administradora" al mismo organismo: no se concilia.
+
+----------------------------------------
+
+A.10
+
+FUENTE: BO Salta, edicion N 276, Salta, Setiembre 2 de 1911, hoja 4, columna
+2.
+
+FICHA: aviso de remate judicial de una finca del departamento de la Caldera,
+por orden del juez de primera instancia doctor Alejandro Bassani.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 200-405 pt, y 240-455 pt.
+
+TEXTO:
+
+  instancia doctor Alejandro Bassani
+  vendere en remate el dia 18 de Setiem-
+  bre del corriente ano, a horas 4 p. m.,
+  en mi escritorio Alsina num. 2, donde
+  estara la bandera: la finca denominada
+  «Acheral» situada en el departamento
+  de la Caldera, bajo la base de $ 4.000
+  al contado.
+  M. R. ALVARADO.
+
+NOTA DE LECTURA: la imagen dice «Acheral»; la capa previa lee "«Achejal»", y
+con ese nombre entro la mencion en la primera tanda. El nombre correcto de la
+finca es el que imprime el original. El aviso empieza mas arriba en la misma
+columna, con la formula del martillero, que no se transcribe.
+
+----------------------------------------
+
+A.11
+
+FUENTE: BO Salta, edicion N 291, Salta, 1o y 4 de Noviembre 1911 (edicion
+doble), hoja 3, columna 3.
+
+FICHA: decreto del P. Ejecutivo que crea una oficina del Registro Civil en la
+Estacion Mojotoro por la distancia que la separa del pueblo de La Caldera, al
+solo efecto del enrolamiento.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 405-600 pt, y 330-760 pt, en tres partes.
+
+TEXTO:
+
+  Leyes y Decretos
+  
+  Siendo necesario establecer en la Es-
+  tacion Mojotoro del Ferro C. C. Norte
+  una oficina del Registro Civil con el ob-
+  jeto de facilitar a los ciudadanos de ese
+  lugar el cumplimiento de la Ley de En-
+  rolamiento General atendiendo la larga
+  distancia que lo separa del pueblo de
+  La Caldera donde tiene su asiento la
+  oficina del Registro Civil y las dificulta-
+  des con que tropieza la gente para tras-
+  ladarse a aquel pueblo por la falta de
+  medios de movilidad y de transporte.
+  
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  
+  Art. 1o. Nombrase ad-honorem Encar-
+  gado de la oficina del Registro Civil
+  que debe establecerse en la Estacion
+  Mojotoro y al solo efecto del enrola-
+  miento al senor Benjamin Lopez.
+  Art. 2o Dirijase nota al senor jefe
+  del Distrito Militar Nro. 63 de esta ca-
+  pital, para que provea a la oficina de
+  los elementos necesarios para el enrola-
+  miento.
+  Art. 3o Comuniquese, publiquese y
+  dese al R. Oficial.
+  
+  Salta, Octubre 24 de 1911.
+  FIGUEROA
+  R. PATRON COSTAS
+  
+  Es copia:—
+  Jose M. Outes
+
+NOTA DE LECTURA: este acto dice "El Poder Ejecutivo de la Provincia", con las
+dos palabras enteras, y no "El P. Ejecutivo" como los demas. Benjamin Lopez es
+el mismo que en 243 (Marzo 23) fue nombrado subcomisario del partido de la
+estacion Mojotoro. La Ley de Enrolamiento General queda como citada y no
+acompanada.
+
+----------------------------------------
+
+A.12
+
+FUENTE: BO Salta, edicion N 295, Salta, 18 de Noviembre de 1911, hoja 2,
+columna 3.
+
+FICHA: nomina de comisionados por departamento dentro del decreto del
+Ministerio de Hacienda, Salta, Noviembre 9 de 1911, que designa quienes han de
+practicar el empadronamiento de los capitales en giro y la clasificacion de
+patentes para 1912. El encabezado se leyo en la imagen.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 405-608 pt, y 500-570 pt.
+
+TEXTO:
+
+  Candelaria—Juan Serra.
+  Iruya—Tomas J. Vargas.
+  Caldera—Escolastico M. Aparicio.
+  
+  Art. 2o Los comisionados, al practi-
+
+NOTA DE LECTURA: el original acentua Tomas y Escolastico. Escolastico M.
+Aparicio figura en el config como actor de 1909 sin la inicial del segundo
+nombre.
+
+----------------------------------------
+
+A.13
+
+FUENTE: BO Salta, edicion N 295, Salta, 18 de Noviembre de 1911, hoja 3,
+columna 2.
+
+FICHA: nomina de titulares y suplentes por departamento del decreto del mismo
+9 de Noviembre que nombra Jurados de Reclamos para entender en lo relativo a
+la clasificacion de 1912. El encabezado se leyo en la imagen: "Art. 1o
+Nombrase Jurados de Reclamos para entender en lo relativo a la clasificacion
+de 1912, de acuerdo con lo prescripto en la ley de la materia, a los
+siguientes senores".
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 218-410 pt, y 520-600 pt.
+
+TEXTO:
+
+  Caldera—Titulares, Daniel Linares y
+  Abelardo Figueroa.
+  Suplentes—Augusto Regis y Jose D.
+  Soliverez.
+
+NOTA DE LECTURA: los cuatro estan en el config como actores de 1909. Daniel
+Linares es el mismo nombre que en 252 (Mayo) preside la comision de los
+reparos y que en 306 (Diciembre) linda con San Alejo y Santa Rufina; no se
+afirma que sean la misma persona sin mas prueba que el nombre.
+
+----------------------------------------
+
+A.14
+
+FUENTE: BO Salta, edicion N 305, Salta, 27 de Diciembre de 1911, hoja 4,
+columna 2.
+
+FICHA: decreto del P. Ejecutivo que crea una plaza de agente para la comisaria
+del partido de Vaqueros, jurisdiccion del departamento de la Caldera, por la
+obra del puente sobre el rio del mismo nombre y la explotacion de canteras
+junto al puente sobre el rio de Mojotoro.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recorte x 218-425 pt, y 180-500 pt, en dos partes.
+
+TEXTO:
+
+  Habiendo el senor Comisario de Poli-
+  cia del Departamento de la Caldera, ma-
+  nifestado por intermedio del senor Jefe
+  de Policia la necesidad de dotar a la
+  comisaria del partido de Vaqueros de
+  un agente para la conservacion del or-
+  den publico, con motivo de la concu-
+  rrencia de trabajadores en la obra del
+  puente que se construye sobre el rio del
+  mismo nombre, y en la explotacion de
+  las canteras en las proximidades del
+  puente sobre el rio de Mojotoro—
+  El P. Ejecutivo de la Provincia.
+  DECRETA:
+  Art. 1o Crease la plaza de un agente,
+  para el servicio de la comisaria del
+  partido de Vaqueros, jurisdiccion del
+  departamento de la Caldera con el suel-
+  do de cuarenta pesos mensuales que se
+  imputaran en la partida de eventuales
+  del presupuesto en vigencia.
+  Art. 2o.—Comuniquese, publiquese y
+  dese al R. Oficial.
+  Salta, Diciembre 12 de 1911.
+  FIGUEROA
+  R. PATRON COSTAS
+  
+  Es copia-
+  Jose M. Outes.
+
+NOTA DE LECTURA: "el rio del mismo nombre" es el de Vaqueros, no el de la
+Caldera: el nombre que antecede es el del partido. Se transcribe como esta y
+no se interpreta. En la vista armada el renglon "dese al R. Oficial" aparecio
+dos veces: es el empalme de mis dos recortes, no del original.
+
+----------------------------------------
+
+A.15
+
+FUENTE: BO Salta, edicion N 306, Salta, 30 de Diciembre de 1911, hoja 4,
+columna 3.
+
+FICHA: aviso de remate de la finca San Alejo y Santa Rufina, de los herederos
+Fernandez, en el departamento de La Caldera, por el juez doctor Vicente Arias;
+rematador Victor M Saravia.
+
+MODO DE LECTURA: PDF del Release rasterizado con PyMuPDF a 300 dpi en gris,
+recorte por columna, vista al 100 %. Todo el texto sale de la imagen, no del
+OCR. Recortes x 396-608 pt, y 225-560 pt y 545-780 pt; la superficie, a 400
+dpi.
+
+TEXTO:
+
+  IMPORTANTE REMATE
+  DE LA FINCA=
+  San Alejo y Santa Rufina
+  Por orden del senor juez de primera
+  instancia en lo civil y comercial doctor
+  Vicente Arias y de comun acuerdo de
+  partes en el juicio sobre division de con-
+  dominio de la finca denominada San Alejo
+  y Santa Rufina perteneciente a los here-
+  deros Fernandez, ubicada en el departa-
+  mento de La Caldera, compuesta en con-
+  junto de 17.874 hectareas 27 areas y 79
+  cuadrados segun mensura practicada por
+  el agrimensor senor Walter Hessling y
+  aprobado por el Departamento Topografi-
+  co, tiene por limites: al Norte la provin-
+  cia de Jujuy, Cabana del senor Marcos
+  Zorrilla, Uracatao o Pueblo Viejo del se-
+  nor Domingo Royo y propiedad del senor
+  Gavino Sanchez; al Este la finca Angos-
+  tura propiedad de don Daniel Linares,
+  Eusebio Herrera, Francisco Sajama, Ar-
+  turo Escudero y Abelardo Figueroa; al
+  Sud, de don Daniel Linares y herederos
+  del doctor Desiderio Ruiz y propiedad de
+  los senores Garzon y Pintos y Silverio
+  Bejarano; al Oeste, el senor Jose Bruzzo
+  y Cabana del senor Marcos Zorrilla.
+  Este remate tendra lugar
+  El dia 30 de Diciembre a horas 5 p. m.
+  en mi escritorio avenida Espana, Plaza 9
+  de Julio.
+  La base para el remate es de CIENTO
+  OCHENTA mil pesos m/n AL CONTADO.
+  Los interesados pueden ocurrir por ma-
+  yores antecedente al escritorio del suscrito
+  donde se encuentra el plano general de la
+  finca, y donde se dara mayores datos.
+  Las escrituras seran otorgadas por el
+  escribano actuario del juzgado del doctor
+  Vicente Arias.
+  Titulos perfectos
+  Victor M Saravia,
+  Rematador.
+  259vD30
+
+NOTA DE LECTURA: la superficie se amplio a 400 dpi: 17.874 hectareas 27 areas
+y 79 cuadrados; el original dice "cuadrados", no centiareas. El apellido del
+agrimensor va aqui con dos eses, "Hessling", y en 258 h1 con una sola. Los
+limites se transcribieron en un segundo turno, con dos recortes que cubren el
+margen izquierdo perdido en el primero. El aviso menciona un plano general de
+la finca que no esta en el Boletin (S P). "259vD30" es la marca de publicacion
+del aviso, no un numero de acto.
+
+----------------------------------------
+
+S B - VECINDAD
+------------------------------------------------------------------------------
+
+Seis nucleos del anillo 2 con contexto propio. Cuatro ya estan
+fichados en el S A porque traen ademas el termino del anillo 1 (243 h3,
+291 h3, 258 h1, 305 h4 y 306 h4): no se repiten. Quedan tres entradas
+nuevas y un descarte.
+
+B.1
+
+FUENTE: BO Salta, edicion N 294, Salta, 15 de Noviembre de 1911, hoja
+3, columna 3; y edicion N 279, Salta, Setiembre 16 y 20 de 1911, hoja 4,
+donde se publica la solicitud que le da origen.
+POR QUE SE INCLUYE: S 5.1, anillo 2, "mojotoro". El rio Mojotoro es el
+limite y el curso que el departamento comparte con Campo Santo, y el
+mismo puente que aparece en 243 h3, 291 h3 y 305 h4.
+MODO DE LECTURA: PDF rasterizado a 300 dpi en gris, recorte x 394-608
+pt, y 555-800 pt, vista al 100 %.
+
+TEXTO:
+
+  Salta, Noviembre 4 de 1911
+  Vistos:—La solicitud de concesion de
+  agua del rio Mojotoro que formula el
+  Dr. Luis Linares para regadio de su
+  propiedad ubicada en el Departamento
+  de Campo Santo; el informe expedido
+  por la Municipalidad del mismo Depar-
+  tamento y demas antecedentes que co-
+  rren en el presente expediente y ha-
+  biendose llenado los requisitos estable-
+  cidos por la Ley de la materia.
+  
+  El Poder Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o. Acuerdase al doctor Luis Li-
+  nares, de conformidad con lo prescripto
+  en el inciso 6o. del articulo 112 del Co-
+  digo Rural, la concesion de cien litros
+  de agua por segundo del rio Mojotoro
+  para regadio de su finca «Totoral» sin
+  perjuicio de terceros.
+
+NOTA DE LECTURA: la finca «Totoral» esta en Campo Santo, no en La
+Caldera: la vecindad es el rio, no la propiedad. La solicitud de 279 h4,
+que no se transcribe porque su columna esta muy castigada, precisa que
+las aguas pedidas son las que nacen en el lecho del rio en las
+inmediaciones del puente del F. C. C. Norte, despues de haberse levantado
+mas arriba todo el caudal para la irrigacion de Campo Santo y Cobos. El
+articulo 112 del Codigo Rural queda como citado y no acompanado.
+
+----------------------------------------
+
+B.2
+
+FUENTE: BO Salta, edicion N 262, Salta, Julio 5 de 1911, hoja 4,
+columna 1.
+POR QUE SE INCLUYE: anillo de actores. Carlos Murua figura en el config
+como actor de 1908, y "murua" esta ademas en el anillo 2 como
+toponimo.
+MODO DE LECTURA: recorte x 25-220 pt, y 150-330 pt, vista al 100 %.
+
+TEXTO:
+
+  consideren con derecho a la sucesion
+  de don CARLOS MURUA, se presenten
+  en cualquier caracter ante el juzgado a
+  cargo del doctor Vicente Arias, secre-
+  taria del suscrito—Salta, Junio 1o de
+  1911—Mauricio Sanmillan, secretario.
+
+NOTA DE LECTURA: el edicto no nombra departamento ni finca, asi que no
+se puede afirmar que esta sucesion sea la del Carlos Murua de 1908 ni que
+toque a La Caldera. Se registra por el nombre y nada mas. Es el mismo
+juzgado -doctor Vicente Arias- que en 258 h1 y 306 h4 entiende en San
+Alejo y Santa Rufina.
+
+----------------------------------------
+
+B.3
+
+FUENTE: BO Salta, edicion N 244, Salta, Abril 12 de 1911, hoja 3,
+columna 1. DESCARTE, no ficha.
+El decreto nombra comisario auxiliar de policia para el partido de
+Lagunilla a don Roque Ruiz y para el de la Quesera a don Bernardo
+Martinez. Los dos topónimos estan en el config -"lagunilla" y
+"queceria"-, pero el preambulo, leido en la imagen, dice que las
+propuestas las presenta el sub-comisario de policia de los partidos de la
+Montana y Noques, jurisdiccion de ESTA CAPITAL. No son del departamento:
+van a E.7. Ademas 306 h3 prueba que hay otra finca Lagunilla en el
+partido del Toro, Rosario de Lerma.
+
+----------------------------------------
+
+B.4 - AUSENCIAS DEL ANILLO DE ACTORES
+
+Se busco a cada persona nombrada en los actos del S A en todo el
+corpus, por nombre y apellido y por apellido suelto. Resultado:
+  - aparecen SOLO en su propio acto: Rafael Fernandez (251), Jacoba
+Luquez de Gomez (268), Gervasio Chalan, Pedro Arroyo, Adolfo Vidal y
+Camilo Caseres (235), Jesus Ramirez, Teodoro Reyes, Virgilio Arevalo,
+Marcelo Lamas, Francisco Sosaya y Manuel Garcia (243), Roque Ruiz (244).
+  - aparecen en mas de un acto del departamento: Jacinto Guerrero (232 y
+243), Genaro Molina (235 y 243), Rufino Lozano (235 y 241), Augusto Regis
+(235 y 295), Benjamin Lopez (243 y 291), Abelardo Figueroa (295 y 306),
+Daniel Linares (252, 295 y 306), Carlos Matienzo (232 y 251).
+  - aparecen fuera del departamento, y por eso NO se puede decir que solo
+figuren en su acto: Walter Hesling o Hessling, agrimensor, en 238, 239,
+279, 281, 283, 285 y 303, en otras mensuras y en un juicio por sus
+honorarios contra el doctor Zoilo C. Anton por el deslinde de la finca
+Yuto Yaco; Victor M Saravia, rematador, en 260, 276, 277, 285, 294, 295,
+302 y 304; Luis Linares en 251, 261, 264, 265, 269, 270, 279, 294 y 306;
+Escolastico Aparicio en 266 y 283.
+
+APELLIDOS FRECUENTES. Los 6.121 aciertos del anillo de actores son,
+en su enorme mayoria, apellidos que en 1911 pertenecen a funcionarios de
+la Capital y no a vecinos del departamento. Se agruparon por la forma del
+nombre que los precede, y el reparto es este: "Arias" (817) es sobre todo
+Zenon Arias, secretario, Vicente Arias, juez de primera instancia en lo
+civil, y Ernesto Arias; "Figueroa" (506) es en 157 casos la firma del
+gobernador al pie de un decreto, y ademas R. P. Figueroa, vocal del
+Superior Tribunal, y Ricardo P. Figueroa; "Lopez" (297) es Santiago M.
+Lopez, Ricardo Lopez, el doctor Fernando Lopez y el doctor Luis Lopez;
+"Patron" (280) es, en 199 casos, "FIGUEROA R. Patron Costas" al pie de un
+decreto; "Saravia" (161) es Victor M Saravia, rematador, mas Serrey y
+Saravia, David Saravia y Pio A. Saravia; "Usandivaras" (75) es Felix
+Usandivaras; "Soliverez" (34) es Emilio Soliverez. Ninguna de estas
+formas aparece ligada al departamento fuera de lo ya fichado: los unicos
+contextos de zona que devuelven son los del S A.
+
+SALVEDAD. La busqueda por nombre y apellido falla sobre esta capa
+cuando el OCR parte o ensucia el nombre: "Jesus.Ramirez", "An'gel
+Fernandez", "Chnchuy". Para Angel Fernandez, Juan Chuchuy, Silverio
+Caceres, Liborio Guerrero, Fernando Robles y Guillermo Wotton la busqueda
+por nombre completo no devuelve ni siquiera su propio acto, que sin
+embargo esta transcripto en el S A. Por eso NO se declara ausencia de
+ninguno de ellos: se declara que la capa no permite afirmarla.
+
+S C - LIMITROFES
+------------------------------------------------------------------------------
+
+Anillo 3, con una linea cada uno, como manda el S 5.1:
+  - Campo Santo: comparte el rio Mojotoro y la estacion del F. C. C.
+Norte; alli estan la finca «Totoral» de Luis Linares (279 h4, 294 h3) y
+el riego de Campo Santo y Cobos que toma el caudal aguas arriba del
+puente.
+  - Provincia de Jujuy: es el limite norte de la finca San Alejo y Santa
+Rufina (306 h4).
+  - Capital: los partidos de la Montana, Noques, Lagunilla y la Quesera
+son de su jurisdiccion (244 h3), no del departamento; y el camino
+nacional de 252 h3 une el pueblo de la Caldera con esta capital.
+  - Rosario de Lerma: tiene su propia finca Lagunilla, en el partido del
+Toro (306 h3), que es la que obliga a mirar dos veces el termino.
+
+S P - PLANOS
+------------------------------------------------------------------------------
+
+El corpus no trae planos. Las 347 hojas tienen entre una y tres
+imagenes raster y ninguna ilustracion vectorial (page.get_images de
+PyMuPDF). Techo de resolucion declarado: 329 a 370 ppi. El aviso de 306 h4
+remite a un plano general de la finca San Alejo y Santa Rufina, levantado
+por Walter Hessling y aprobado por el Departamento Topografico, que esta
+en el escritorio del rematador y no en el Boletin: citado y no
+acompanado.
+
+S D - INDICE
+------------------------------------------------------------------------------
+
+Apariciones del anillo 1, por edicion: 229 h3 (tres en el mismo acto),
+232 h4, 235 h4, 241 h4, 243 h2 y h3 (dos, con "la Calderilla"), 251 h4,
+252 h3, 258 h1, 268 h3 (dos en el mismo decreto), 276 h4, 291 h3, 295 h2,
+295 h3, 305 h4 (dos en el mismo decreto), 306 h4. Anillo 2 fichado: 262
+h4, 279 h4, 294 h3. Descartes con contexto: 244 h3 y los de E.7.
+
+S E - OBSERVACIONES
+------------------------------------------------------------------------------
+
+E.1 DUPLICACION Y SALDOS. Sin las .jpg del script no hay md5 ni dhash.
+La duplicacion se controlo por texto: no hay tapas repetidas ni ediciones
+duplicadas, y los avisos de remate de 276 y 306 son de fincas
+distintas.
+SALDOS. La cadena de Tesoreria de enero a diciembre NO se puede armar:
+en las 347 hojas hay UN solo resumen mensual, el de 256 h3. Se transcribe
+lo que pide el S 6: "RESUMEN del movimiento de Caja que ha tenido la
+Tesoreria General de la Provincia durante el mes de Mayo 1911"; saldo
+inicial, "Saldo de Abril de 1911 $ 26200.50"; saldo final, "Saldo en Caja
+para Junio 20894.59"; total de la columna, "$ 219182.80"; firma Juan E.
+Velarde, Cont. Gral., Salta, Junio 5 de 1911. No hay con que cotejar ni
+el mes anterior ni el siguiente dentro de 1911: el cotejo queda abierto
+contra los informes de 1910 y 1912.
+
+E.2 COBERTURA. Miradas con los ojos: 28 franjas de tapa, la tapa de la
+288, y 26 recortes de columna en 17 ediciones (229, 232, 235, 241, 243,
+244, 251, 252, 256, 258, 262, 268, 276, 291, 294, 295, 305, 306), mas
+cinco ampliaciones a 400 y 600 dpi sobre cifras y nombres dudosos. Las
+347 hojas se leyeron por su capa previa.
+CITADOS Y NO ACOMPANADOS: el decreto de 20 de Enero de 1910 (252 h3);
+la Ley de Presupuesto vigente (243 h3); la Ley de Enrolamiento General y
+el Distrito Militar Nro. 63 (291 h3); el plano general de la finca (306
+h4); el inciso 6o del articulo 112 del Codigo Rural (294 h3); la Ley
+Electoral de la Provincia (241 h3). Ninguno esta en el corpus de 1911.
+Los actos de 1911 no llevan numero, asi que no se pueden buscar por
+numero en los informes anteriores; se buscarian por fecha.
+
+E.3 SIN MENCION Y NO MIRADO. No estan en el Release tres hojas de la
+edicion 242, una de la 243 y el resto de la 269: no se pudieron mirar.
+Que estuvieran en blanco seria inferencia y no se hace. De las 347 hojas
+presentes, 321 no se miraron mas alla de la franja de tapa; no hay
+confianza por hoja ni medicion de tinta que permita elegir cuales mirar,
+y eso se declara en E.10.
+
+E.4 FIRMAS Y AUTORIDAD. Los decretos del Ejecutivo usan tres
+encabezados distintos en el mismo ano: "El P. Ejecutivo de la Provincia"
+(232, 243, 251, 252, 305), "El Poder Ejecutivo de la Provincia" (291,
+294) y "El Gobernador de la Provincia" (268, 295). Firma siempre
+FIGUEROA; refrenda R. Patron Costas, salvo en los de Hacienda, que
+refrenda Ricardo Araoz. El "Es copia" lo suscriben Jose M. Outes, S. S.,
+y, en Hacienda, Juan Martin Leguizamon, S. S., o Delfin Liquitay, Ofl.
+1o. En el Superior Tribunal aparecen Flavio Arias, Abraham Cornejo, R. P.
+Figueroa, J. B. Gudino, A. M. Ovejero y Adrian F. Cornejo, y como
+secretarios Santos 2o Mendoza, Camilo Padilla, David Gudino, Augusto P.
+Matienzo, Mauricio Sanmillan y Zenon Arias; en lo civil firman Vicente
+Arias con M. San Millan, E. S.
+INTERINATOS. 252 h3 publica que se concedio licencia al Ministro de
+Gobierno doctor Robustiano Patron Costas para ausentarse de esta capital:
+NO se hallo decreto de reintegro en el corpus, y Patron Costas sigue
+refrendando en las ediciones siguientes, asi que no se fija dia de
+reintegro. 255 h2 pide acuerdo a la Legislatura por los nombramientos
+hechos en receso: fiscal general interino doctor Juan B. Gudino por
+licencia del titular doctor Delfin Leguizamon; vocal interino del
+Superior Tribunal el mismo Gudino por licencia del doctor Fernando Lopez,
+y despues el doctor Arturo Tonino por licencia prorrogada del mismo;
+agente fiscal interino doctor Pio A. Saravia por licencia del doctor
+David Gudino; juez de primera instancia doctor Francisco F. Sosa por
+renuncia del doctor Julio Figueroa Salguero. En 244 h3 se nombra en
+comision vocales del Superior Tribunal a los doctores Angel M. Ovejero y
+Arturo Tonino. En los edictos de 254 h4 firma Luis Araoz como secretario
+interino. Ningun interinato toca a La Caldera.
+
+E.5 CORTES Y COLUMNAS. El corte de renglon de esta capa es el guion
+blando U+00AD (12.290 casos); U+0002 no aparece. COLUMNA PERDIDA: se
+comparo la capa previa contra la imagen en 26 recortes de columna de 17
+ediciones, repartidos entre las tres columnas de la caja y entre hojas de
+cuerpo y de avisos. En ninguno falta una columna: la capa trae el texto
+completo de la columna mirada. No se detecto columna perdida en 1911, y
+se declara que el control se hizo sobre esas 26 columnas y no sobre las
+demas.
+Errores de la capa previa confirmados en la imagen: 243 h3 imprime
+"Yacones" y la capa lee "Tacones", con lo que el anillo 2 perdio el
+termino; 251 h4 imprime "Caldera" y la capa lee "Cajdera", con lo que el
+anillo 1 perdio la mencion y la rescato la difusa; 276 h4 imprime
+«Acheral» y la capa lee «Achejal»; 235 h4 imprime "Jose A. Molina" donde
+la capa devuelve basura; 232 h4 imprime "Febrero 11" donde a 300 dpi
+parece 17. Son errores de palabra, no de columna.
+
+E.6 REPETICIONES. Ninguna entrada duplicada. El aviso de 306 h4 lleva
+la marca "259vD30", que anuncia publicaciones sucesivas hasta el 30 de
+Diciembre; dentro de 1911 aparece una sola vez, en la ultima edicion del
+ano.
+
+E.7 FALSOS POSITIVOS Y NEGATIVOS. Anillo 1, descartados con contexto:
+"caldo" (228 h2); el apellido Calderon -Cecilio y Celso (235 h3),
+Sebastiana M. de Calderon (249 h4), Isidoro B. Calderon (270 h1)-; "Angel
+M. Caldas", Inspector de Policias, Municipalidades y Oficinas de Registro
+Civil (299 h4), falso positivo nuevo de esta epoca; "ca1 deno" (232 h4),
+artefacto de la laxa sobre "denominada". Difusa: "calavera" (228 h3) en
+"Compostura camino de La Calavera"; "cadera" (278 h3); "Escalera Zuviria"
+(296 h3); "cama camera" (221 h4 y 296 h4), mueble de inventario -en 1909
+una forma parecida escondia una mencion real, aqui no-; "Candela" (246 h1
+y 293 h4), apellido. Difusa ampliada: 139 aciertos, ninguno real.
+Anillo 2, descartados: Isasmendi, Castellanos, Wierna, Quintin y
+Chaile como apellidos; "potrancas" por Trancas; Angostura de Itiyuro
+(Oran) y angostura de Bala Puca; Betania de Campo Santo y de La Vina;
+Lagunilla y la Quesera de 244 h3, que son de la Capital, y Lagunilla del
+partido del Toro en 306 h3; Las Mesadas de Oran; El Cajon de Betania;
+Teodolinda como nombre de pila; "los Sauces" de Alemania (231 h3); Entre
+Rios como calle. Falso negativo del anillo 2: Yacones en 243 h3, por la
+lectura "Tacones" de la capa previa.
+Anillo 2, descartes resueltos en el ultimo turno, con su prueba:
+"Campo Alegre" de 223 h3 es de Chicoana, porque el procesado de esa causa
+esta domiciliado en El Carril, departamento de Chicoana; el de 248 h4 es
+de Oran, porque la denuncia viene del partido de Corralitos, jurisdiccion
+de Oran; el de 288 h2 son las fincas San Simon y Campo Alegre del juicio
+de Juan F. Cornejo contra Viviano Figueroa, y NO se pudo determinar su
+departamento: se descarta por falta de vinculo y se declara sin
+determinar. "Wierna" es la familia del partido de La Silleta -Eleuterio,
+Serafina, Marcos, Jesus, Bautista, Zenon y Manuel Wierna-; "Castellanos"
+es el doctor Juan Jose Castellanos, abogado y agente fiscal, el rio y la
+finca de Anta, y el rematador Benjamin Castellanos; "Isasmendi" son los
+Davalos Isasmendi, Sanchez Isasmendi, Lopez Isasmendi e Isasmendi y Cia.;
+"Quintin" es nombre de pila -Quintin Romano, Quintin Gonzalez, Quintin
+Lamas- y Maria Quintina Cortez; "Lesser" como apellido son Francisco y
+Eliseo Lesser (234 h3), distintos del partido de Lesser de 243 h3; "Rio
+Blanco" es el de Cachi (233 h3) y el de Zenta en Oran (259 h4 y 262 h4);
+"Entre Rios" son fincas de otros departamentos (238 h4 y 256 h4) y un
+pedimento minero (269 h5); "El Manzano" de 243 h2 esta en la lista de
+comisarios de otro departamento y no en la de La Caldera; "Tabacal" es el
+partido de 232 h4 y la propiedad de Delfin Leguizamon (295 h4); y "El
+Cajon" y "Durazno", en 1911, son el cajon de un mostrador y el dulce de
+durazno de dos inventarios.
+
+E.8 FIDELIDAD NUMERICA. Cifras miradas en la imagen y transcriptas: dos
+mil pesos y novecientos cincuenta y ocho pesos con sesenta y cinco
+centavos m/n c/l (252 h3); cinco mil pesos moneda nacional, $ 5,000 (258
+h1); setenta y ocho pesos setenta y cuatro centavos mensuales, en letras
+(268 h3); $ 4.000 al contado (276 h4); cuarenta pesos mensuales (305 h4);
+17.874 hectareas 27 areas y 79 cuadrados y base de CIENTO OCHENTA mil
+pesos m/n al contado (306 h4); cien litros de agua por segundo (294 h3).
+La fecha "Mayo 16 de 1941" de 252 h3 es errata del original y queda sin
+corregir.
+TABLAS. El ano trae pocas. Inventario completo: 228 h3, "Movimiento de
+Tesoreria municipal durante el ano de 1910, segun comprobantes", que la
+nota de elevacion firmada por M. F. Elizondo y Pedro M. Caro fecha en
+CHICOANA el 31 de diciembre de 1910; 232 h3, "Balance de Tesoreria de
+1910", sin comuna nombrada en su encabezado; 256 h3, el resumen de caja
+de la Tesoreria General ya transcripto en E.1; y los balances de 227 h3
+(Banco Provincial, ejercicio 1910, utilidades de ciento ochenta mil
+quinientos ochenta y ocho pesos 89 centavos), 247 h4, 251 h4 y 256 h4,
+que son balances de comercio citados dentro de decretos de patente o de
+convocatorias de acreedores y no cuadros publicados.
+RECALCULADA: la de 232 h3. Los ingresos que imprime -605, 1035.50, 150,
+175, 1932 y 4665- suman 8562.50, que es exactamente el total impreso.
+Cierra. NO RECALCULADAS: la de 228 h3, porque es de la comision municipal
+de Chicoana y queda fuera del alcance del S 4.1; y los balances citados
+de 227 h3, 247 h4, 251 h4 y 256 h4, que no traen cuadro. Ninguna tabla
+del ano nombra La Caldera, el anillo 2 ni un actor: no hay balance
+municipal del departamento publicado en 1911.
+SALVEDAD sobre 232 h3: el encabezado dice "Balance de Tesoreria de
+1910" y no nombra la comuna, y lo que lo precede en la columna es una
+sentencia civil. No se le atribuye municipio. Si fuera de La Caldera
+seria material del S A; por eso queda declarado y no resuelto.
+
+E.9 CONTRADICCIONES. Sin conciliar: el apellido del agrimensor,
+"Hesling" en 258 h1, 239 h1 y 279 h1, y "Hessling" en 238 h4, 239 h4 y
+306 h4, en el mismo ano y a veces en la misma edicion; la fecha "1941"
+por 1911 en 252 h3; "Dionisio Herrera" en 235 h4 y "Dionicio Herrera" en
+241 h4; "Abrahan Fernandez" en 243 h3 y "Abraham Fernandez" en 241 h4; y
+en 268 h3 el mismo organismo llamado "comision administradora" y "Junta
+Administradora" en dos articulos seguidos.
+RESUELTA: la del ano editorial. Se miro la tapa de la 288 y dice ANO
+IV, no ANO III: la capa previa la leia mal. El Ano IV empieza en la 287,
+Octubre 18 de 1911, y sigue hasta el fin del ano.
+
+E.10 LIMITES. Una sola version de texto. Sin salidas de lee_auto.py no
+hay confianza por hoja, md5, dhash ni medicion de tinta: las hojas "a
+ojos" y las de poca tinta no se pueden seleccionar, y la deduplicacion
+por imagen no se puede hacer. El cotejo sumario/cuerpo es NO APLICABLE en
+toda la epoca, porque estas ediciones no traen sumario con puntos guia, y
+el recuento de actos contra la tapa tampoco es posible porque la tapa no
+declara ni paginas ni actos; el control que si existe es la paginacion
+corrida, y cierra. La regla 15 -fecha contra numeracion- no se aplica
+porque los actos no llevan numero. No hay OCR propio posible en esta
+sesion por falta del paquete de idioma espanol.
+
+S F - CORRECCION A LA RUBRICA
+------------------------------------------------------------------------------
+
+F.1 (S 1 y S 3). El contenedor trae tesseract 5.3.4 pero solo con los
+idiomas eng y osd. El OCR puntual en sesion y el modo en sesion del S 16
+suponen -l spa y no se pueden cumplir. Conviene que la rubrica mande
+verificar el idioma con "tesseract --list-langs" antes de prometer OCR en
+sesion.
+
+F.2 (S 1.1). api.github.com devuelve 403 por limite de tasa. La lista de
+assets de un Release se obtiene sin token en
+github.com/<usuario>/<repo>/releases/expanded_assets/<tag>.
+
+F.3 (S 2.5bis). El control de paginacion corrida se puede hacer entero
+desde la capa previa: el folio esta en los primeros 90 caracteres de las
+hojas 2 a 4 y avanza de cuatro en cuatro por edicion. Detecta las
+ediciones incompletas sin mirar una sola imagen. El ruido a filtrar es la
+fecha de la tapa, que cae en la hoja 1.
+
+F.4 (S 2.5bis). Las tapas de esta epoca declaran los dias de salida
+("Aparece Miercoles y Sabados"): el calendario se arma con eso y no por
+analogia. Y el ano editorial se lee en la tapa, no en la capa previa: la
+de 1911 leia ANO III donde la 288 imprime ANO IV.
+
+F.5 (S 14.2). Cuando no llegan las salidas del script y el ano esta en
+un Release, la sesion puede rehacer sola la capa previa y las cuatro
+pasadas -bajar 87 PDF, extraer 347 hojas y correr las pasadas tomo tres
+llamadas- y puede cerrar el S A y el S B. Lo que NO puede es fabricar la
+segunda version, ni seleccionar las hojas "a ojos", ni medir tinta, ni
+deduplicar por imagen. Conviene que la rubrica lo diga asi, porque cambia
+lo que se promete.
+
+F.6 (S 4 y S 10). Tres medidas de recorte que funcionaron: tomar el
+ancho entero de la columna mas 6 pt de margen a cada lado, porque cortar
+por la coordenada de la palabra deja las primeras letras afuera y obliga
+a repetir el recorte -paso cuatro veces en este barrido-; no apilar mas
+de 1.700 px de alto, partiendo la columna en dos mitades que se ponen
+lado a lado; y declarar el renglon repetido cuando se empalman dos
+recortes con solape, como en A.14.
+
+F.7 (S 12). Falsos positivos nuevos de la epoca, ya juzgados en 1911:
+"caldo", "Caldas" (Angel M. Caldas, inspector), "cama camera", "Candela"
+y "Escalera" como apellidos. Se listan aqui y NO se agregan al config:
+cualquiera de ellos puede ocultar una mencion real, como advierte el S 12
+[v13].
+
+F.8 (S 15.2). El estado que declara la rubrica esta desactualizado. El
+config que se uso NO trae 95 actores y 56 terminos de anillo 2, sino 136
+actores -42 de 1946, 8 de 1908, 45 de 1909 y 41 de 1910- y 65 terminos de
+anillo 2. Es decir que 1910 ya se barrio despues de fijar v13 y el S 15.2
+no se actualizo. Conviene que el S 15.2 se reescriba desde el config y no
+a mano.
+
+F.10 (S 5.1). Los 6.121 aciertos del apellido suelto se vuelven
+manejables agrupandolos por las dos palabras que preceden al apellido:
+sale en una sola pasada el reparto de identidades -cuantas veces "Patron"
+es la firma "FIGUEROA R. Patron Costas" y cuantas es otra persona- y se ve
+de inmediato si alguna forma aparece en contexto de zona. Conviene que el
+S 5.1 lo mande asi, en vez de pedir que se agrupen "por contexto" sin
+decir como.
+
+F.9 (S 5.1, anillo de actores). La busqueda por nombre y apellido falla
+sobre una capa de OCR que parte los nombres ("Jesus.Ramirez",
+"Chnchuy"). Conviene que la rubrica mande buscar tambien con la
+puntuacion suprimida, y que prohiba declarar ausencia de un actor cuando
+la busqueda por nombre completo no devuelve ni siquiera su propio
+acto.
+
+CONFIG ACTUALIZADO
+------------------------------------------------------------------------------
+
+Se entrega lee_config.json con el config recibido mas los agregados de
+1911, conservando todo lo anterior:
+  - anillo2, tres terminos nuevos: "chalchamo" (la forma que imprime 243
+h3, junto a las chalchanio y chalcanio que ya estaban), "acheral" (la
+finca de 276 h4) y "achejal" (la forma con que la capa previa la lee, que
+sin ella no se encontraria en el texto). Total: 68.
+  - actores, 24 entradas nuevas con origen 1911: Rafael Fernandez,
+Fernando Robles, Dionisio y Dionicio Herrera, Gervasio Chalan, Pedro
+Arroyo, Jose A. Molina, Manuel Garcia, Guillermo Wotton, Walter Hessling,
+Jacoba Luquez de Gomez, Victor M. Saravia, M. R. Alvarado, Luis Linares,
+Eusebio Herrera, Francisco Sajama, Arturo Escudero, Silverio Bejarano,
+Marcos Zorrilla, Domingo Royo, Gavino Sanchez, Desiderio Ruiz,
+Escolastico M. Aparicio y Jose Bruzzo. Total: 160.
+  - numeros: sin cambios; 1911 no aporta, porque sus actos no llevan
+numero.
+  - falsos_positivos: SIN CAMBIOS, por lo dicho en F.7.
+
+RECUENTO
+------------------------------------------------------------------------------
+
+  Archivos y ediciones: 87 PDF, 87 ediciones, N 220 a 306.
+  Hojas presentes: 347. Declaradas: la tapa no declara paginas.
+  Hojas ausentes: 3 de la edicion 242, 1 de la 243 y el resto de la 269.
+  Reparto de confianza: no hay (no se subio el .tsv del script).
+  Hojas miradas con los ojos: 46 - franja de tapa de 29 ediciones y
+    recortes de columna en 229 h3, 232 h3, 232 h4, 235 h4, 241 h3,
+    241 h4, 243 h2, 243 h3, 244 h3, 251 h4, 252 h3, 256 h3, 258 h1,
+    262 h4, 268 h3, 276 h4, 291 h3, 294 h3, 295 h2, 295 h3, 305 h4,
+    306 h4.
+  Columnas cotejadas contra la capa previa: 26, sin columna perdida.
+  Anillo 2: los 180 aciertos revisados con su contexto, uno por uno.
+  Anillo de actores: los 6.121 aciertos agrupados; 37 personas rastreadas
+    una por una y 31 apellidos frecuentes agrupados por la forma del
+    nombre.
+  Menciones por anillo: anillo 1, 18 apariciones en 15 ediciones, las 18
+    fichadas y transcriptas; anillo 2, 180 aciertos en bruto, 3 fichas
+    nuevas (262, 279 con 294) y 4 nucleos ya incluidos en el S A;
+    anillo 3, 4 limitrofes con una linea cada uno; anillo de actores,
+    6.121 aciertos en bruto, 37 personas rastreadas una por una;
+    numeros, 0 reales; reemplazos, 0 del departamento.
+  Tablas: 7 inventariadas; 1 recalculada (232 h3, cierra en 8562.50);
+    6 no recalculadas, con su motivo.
+  Saldos: 1 resumen mensual de Tesoreria General en todo el ano; la
+    cadena anual no se puede armar.
+  Planos: 0.
+
+==============================================================================
+El barrido esta cerrado sobre el corpus disponible. Lo unico que
+podria agregarse viene de afuera: las hojas que faltan en el Release y
+las salidas de lee_auto.py, que darian la segunda version, la confianza
+por hoja, la tinta y la deduplicacion por imagen. Si llegan, lo que habria
+que rehacer es acotado: el control de columna perdida sobre las hojas no
+cotejadas y la seleccion de hojas "a ojos". El material de trabajo queda
+en /home/claude/lee (pdf/, txt/, img/, notas.txt, res_sesion.json,
+fechas.json).
+==============================================================================

@@ -1,0 +1,1732 @@
+==============================================================================
+BOLETIN OFICIAL DE SALTA - 1926 - EDICIONES N 1096 A 1147
+BARRIDO LEE SOBRE «LA CALDERA» - INFORME DEL 22/09/2026
+RUBRICA LEE v15 (20/09/2026) - MODO HIBRIDO, SIN SALIDAS DEL SCRIPT
+==============================================================================
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, CON SIETE LIMITES DECLARADOS. Cuarto y ultimo turno de la
+sesion; se entrega archivo y el informe se rehace entero. No queda ningun
+pendiente: lo que falta, falta porque el corpus o los insumos no lo permiten,
+y esta desarrollado en E.10 con lo que agregaria cada insumo que no llego.
+
+QUE SUBIO EL USUARIO. Al proyecto: lee_config.json y control_config.py, nada
+mas; ningun informe LEE anterior. Al Release 1926 de
+github.com/ediedrich/boletines-salta: 53 assets, que son los 52 PDF de las
+ediciones 1096 a 1147 y un lee_config.json. Listado leido sin token por
+releases/expanded_assets/1926.
+
+QUE NO LLEGO. No hay ninguna salida de lee_auto.py para 1926: ni pre-informe,
+ni resultados_1926.csv, ni decretos_1926.csv, ni log.txt, ni recortes.zip, ni
+el zip de los .txt de lee_trabajo, ni EXTRAIDO.json. Por lo tanto no hay
+version propia del OCR, ni confianza por hoja, ni .jpg por hoja, ni md5, ni
+dhash, ni medicion de tinta. Es el mismo escenario de 1911 y 1912. No se leyo
+ningun log porque no hay log.
+
+DOS CONFIGS EN JUEGO, Y CUAL SE USO. El lee_config.json del Release 1926 NO es
+el del proyecto: el del Release trae 180 actores, 70 terminos de anillo 2, 40
+numeros y 12 falsos positivos, y su actor mas nuevo es de 1912; el del
+proyecto trae 289 actores, 111 terminos de anillo 2, 78 numeros y 20 falsos
+positivos, con actores de 1915, 1916, 1917, 1919, 1920, 1922 y 1923. El del
+proyecto es superconjunto estricto del otro: no hay una sola entrada que el
+del Release tenga y el del proyecto no. Se barrio con el del proyecto, que es
+el vigente, y se declara aca porque el Release quedo con una copia vieja.
+
+EL CONFIG NO TIENE ACTORES DE 1913, 1914, 1918, 1921, 1924 NI 1925. Eso no
+prueba que esos anos no se hayan barrido -un ano puede cerrarse sin aportar
+actores-, pero conviene saberlo antes de leer 1926 como continuacion inmediata
+de 1923. No se infiere nada sobre esos anos.
+
+ENTORNO VERIFICADO EN ESTA SESION. nproc = 1. tesseract 5.3.4 con los idiomas
+eng y osd UNICAMENTE: no hay spa. En consecuencia el §3 y el §16 de la rubrica
+no son aplicables y no se OCRizo ni una hoja en sesion: todo lo que se mira se
+mira con los ojos sobre la imagen. PyMuPDF no venia instalado y se instalo
+(1.28.2). Hay convert, montage, identify, curl y python3. No hay jq ni gh. El
+Release se alcanza sin problema; api.github.com no se uso.
+
+DE DONDE SALIERON LAS IMAGENES Y COMO SE COTEJARON. Los 52 PDF se bajaron del
+Release en una sola llamada (43 MB). Como no hay EXTRAIDO.json, el cotejo se
+hace contra la cadena de folios impresos (§2.5bis), que en 1926 exige un
+extractor distinto del de 1908-1912: ver §F.
+
+TECHO DE RESOLUCION, Y ES LA NOVEDAD MAS SERIA DEL ANO. Cada hoja trae DOS
+imagenes incrustadas de la misma pagina: una a 150 ppi y otra a 75 ppi. No hay
+ninguna a 300. Medido en la edicion 1099: pagina de 462 x 685,7 pt con una
+imagen de 963 x 1429 px, que da 150 ppi exactos; la segunda es de 481 x 714
+px. La unica hoja que se sale de eso es una del ano, con 283 y 300 ppi. Es
+decir que 1926 llega a la MITAD de la resolucion de 1909 (323-370 ppi), 1911
+(329-370) y 1912 (300-500). Rasterizar a 300 o 600 dpi no agrega un solo
+detalle: el techo lo pone la imagen incrustada, no el rasterizado. Toda cifra
+dudosa de este ano hay que juzgarla sabiendo eso.
+
+LO VERIFICADO POR LA SESION EN ESTE TURNO: entorno e idiomas; listado de
+assets; bajada y extraccion de la capa de las 769 hojas; marca de corte, guion
+blando y guion visible; las cuatro pasadas, con la union de cortes de v15 y
+con la laxa escrita con la clase de espacios en blanco; anillo 2, actores,
+numeros y formulas de reemplazo; fechas de tapa en la capa, y tres tapas
+leidas en la imagen; el nombre del gobernador leido en la imagen; la cadena de
+folios; y las dos anomalias de hoja del ano.
+
+LO QUE SE CERRO EN EL ULTIMO TURNO
+----------------------------------
+
+  1. Los cuatro numeros de decreto que salian de la capa se
+     miraron en la imagen: N°. 3156 (1101 h1), 3350—Salta, Abril 8
+     de 1926 (1112 h2), N.° 3504—Salta, Junio 18 de 1926 (1121 h3)
+     y 3420—Salta, Mayo 4 de 1926, que es el numero del decreto que
+     aprueba el presupuesto municipal de La Caldera y que el turno
+     anterior no habia querido afirmar.
+  2. Los 44 renglones del detalle de la Ley 3610 se miraron y se
+     sumaron: cierran exactos contra el total en cifras, y el que
+     no cierra es el total EN LETRAS del articulo 1° (E.8).
+  3. Los cinco resumenes de Tesoreria tienen cada uno su subtotal
+     recalculado sobre la imagen, y los cinco cierran (E.8).
+  4. El cotejo sumario/cuerpo, en sus dos niveles (E.2).
+  5. El §P, el §D y el lee_config.json actualizado.
+
+§1 · CORPUS REVISADO
+--------------------
+
+52 ediciones, numeradas 1096 a 1147 sin salto, y 769 hojas presentes. El
+Boletin de 1926 es SEMANAL y sale los viernes: la serie va del viernes 8 de
+enero (1096) al viernes 31 de diciembre (1147), 52 viernes. Ninguna tapa
+declara paginas, como en 1908-1912. Ano editorial XVIII, leido en la imagen.
+Gobierno del Dr. Joaquin Corbalan, leido en la imagen en la tapa de 1099 (la
+capa lo escribe «CORBACHO», «CORBfltón» y «CORBflltó»: el nombre del
+gobernador NO se toma de la capa).
+
+  edicion  fecha de tapa               hojas  fuente de la fecha
+
+  ----------------------------------------------------------------------
+
+  1096     8 de enero                    11   capa
+
+  1097     15 de enero                   10   capa
+
+  1098     22 de enero                   13   capa
+
+  1099     28 de enero [sic]             12   imagen
+
+  1100     5 de febrero                  14   capa
+
+  1101     12 de febrero                 29   capa
+
+  1102     19 de febrero                  9   capa
+
+  1103     26 de febrero                 14   capa
+
+  1104     5 de marzo                    20   capa
+
+  1105     12 de marzo                   29   capa
+
+  1106     19 de marzo                   15   capa
+
+  1107     26 de marzo [1026 sic]        12   capa
+
+  1108     2 de abril                    16   capa
+
+  1109     9 de abril                    19   imagen
+
+  1110     16 de abril                   23   capa
+
+  1111     23 de abril                   17   imagen
+
+  1112     30 de abril                   15   capa
+
+  1113     pendiente                     15   -
+
+  1114     14 de mayo                    16   capa
+
+  1115     21 de mayo [1925 sic]         12   capa
+
+  1116     28 de mayo                    14   capa
+
+  1117     pendiente                     17   -
+
+  1118     11 de junio                   10   capa
+
+  1119     18 de junio                   11   capa
+
+  1120     25 de junio                   23   capa
+
+  1121     2 de julio                    15   capa
+
+  1122     9 de julio                     8   capa
+
+  1123     16 de julio                   23   capa
+
+  1124     23 de julio                   12   capa
+
+  1125     30 de julio                   12   capa
+
+  1126     pendiente                     14   -
+
+  1127     13 de agosto                  16   capa
+
+  1128     20 de agosto                  14   capa
+
+  1129     27 de agosto                   9   capa
+
+  1130     pendiente                     23   -
+
+  1131     pendiente                     16   -
+
+  1132     pendiente                     10   -
+
+  1133     pendiente                      6   -
+
+  1134     pendiente                      6   -
+
+  1135     8 de octubre                   8   capa
+
+  1136     pendiente                     10   -
+
+  1137     pendiente                     25   -
+
+  1138     29 de octubre [1326 sic]      18   capa
+
+  1139     5 de noviembre                23   capa
+
+  1140     pendiente                     24   -
+
+  1141     pendiente                     21   -
+
+  1142     pendiente                     22   -
+
+  1143     3 de diciembre                10   capa
+
+  1144     pendiente                      8   -
+
+  1145     17 de diciembre               12   capa
+
+  1146     AUSENTE                        1   -
+
+  1147     31 de diciembre                7   capa
+
+
+
+LAS 52 TAPAS ESTAN LEIDAS. Las 14 que la capa no entregaba se recortaron y se
+miraron: 1113, viernes 7 de mayo; 1117, viernes 4 de junio; 1126, viernes 6 de
+agosto; 1130, viernes 3 de setiembre; 1131, 10 de setiembre; 1132, 17 de
+setiembre; 1133, 24 de setiembre; 1134, viernes 1°. de octubre; 1136, 15 de
+octubre; 1137, 22 de octubre; 1140, viernes 12 de noviembre; 1141, 19 de
+noviembre; 1142, 26 de noviembre; 1144, viernes 10 de diciembre. Las 52 caen
+en viernes consecutivos del 8 de enero al 31 de diciembre, sin un solo salto,
+SIN NINGUNA EDICION DOBLE y sin ningun dia de salida sin edicion: el unico
+viernes sin Boletin en el corpus es el 24 de diciembre, que es la edicion
+1146, ausente del origen. La unica fecha que no cuadra es la de 1099 (E.9).
+
+LA EDICION 1146 NO ESTA EN EL CORPUS. Su PDF existe en el Release y tiene una
+sola hoja, pero esa hoja no es un Boletin: es una pagina con la leyenda «ESTE
+BOLETIN NO SE ENCONTRO EN NUESTRA BASE DE DATOS.» y nada mas (55 caracteres de
+capa). Es decir que la edicion del viernes 24 de diciembre de 1926 falta en el
+origen del que se descargo el corpus, y el conteo de archivos no lo delata:
+hay 52 PDF para 52 ediciones. Se cuenta como edicion ausente, no como edicion
+de una hoja, y las 769 hojas presentes son de 51 ediciones reales.
+
+LA HOJA 16 DE LA EDICION 1108 ESTA EN BLANCO: cero caracteres de capa, con sus
+dos imagenes normales. Queda para mirar con los ojos en el turno siguiente
+(§4.5).
+
+TIPO. Los 52 archivos son PDF reales (versiones 1.5, 1.6 y 1.7), con capa de
+texto en toda hoja salvo la dicha. No hay ningun ZIP con extension .pdf ni
+ningun texto plano suelto en este ano.
+
+CONFIANZA POR HOJA: no existe. Sin el .tsv del script no hay media de
+confianza ni porcentaje de palabras bajo 60, y por lo tanto no hay reparto
+«pub / ver / ojos» ni lista de hojas «a ojos». Es un limite, no un pendiente
+(E.10). Las hojas que se miran en este ano se eligen por otra via: las de los
+candidatos del anillo 1, las de las tablas, las de las listas y las dos
+anomalias de hoja.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+VERSIONES. Una sola: la capa previa de los PDF, extraida en esta sesion con
+PyMuPDF (§2.1 de la rubrica), 769 archivos .prev.txt y 2.503.112 caracteres.
+No hay version propia, de modo que TODO resultado se etiqueta prev y NO hubo
+desempate posible entre dos lecturas: el unico desempate es la imagen, y con
+el techo de 150 ppi de este ano eso pesa mas que en los anos anteriores.
+
+MARCA DE CORTE Y UNION DE RENGLONES. U+0002 no aparece ni una vez en las 769
+hojas. El guion blando U+00AD aparece 15.572 veces y las 15.572 estan seguidas
+de salto de renglon: no hay ni un U+00AD suelto en todo el ano. Se aplico la
+regla de v15 (quitar el guion blando JUNTO CON el salto y los blancos de
+sangria, y recien despues los sueltos), mas la tolerancia de hasta dos signos
+de puntuacion a cada lado del salto. Ademas, 2.773 renglones terminan en guion
+visible: en 1926 el original SI imprime el guion de corte, al reves de
+1908-1912, y la union lo pega igual.
+
+EN ESTE ANO LA UNION NO AGREGA NI PIERDE MENCIONES DEL ANILLO 1: «cald» da 37
+aciertos con la union y 37 sin ella, y no hay ni un corte del tipo «cal/dera»,
+«ca/ldera» ni «cald/era» en las 769 hojas. Se buscaron los cinco cortes
+posibles uno por uno. Eso no vuelve inutil la regla: hay 207 cortes «ca-» y
+357 cortes «c-» en el ano, de modo que el mecanismo esta vivo y solo la suerte
+hizo que ninguno partiera el termino.
+
+LAS CUATRO PASADAS. (1) Literal sobre NFD sin diacriticos con los cortes
+unidos. (2) Laxa, en sus dos formas: la contigua y la que admite separadores,
+escrita con la clase de espacios en blanco [\s\-]{0,3} y no con un espacio
+literal (v15). (3) Difusa con ratio 0,78 contra caldera y calderilla, mas la
+ampliada 0,70-0,78 limitada a palabras que empiezan con c, g u o. (4) Anillo
+2, actores, numeros y formulas de reemplazo sobre el texto normalizado y sobre
+el texto con la puntuacion suprimida.
+
+NINGUNA PASADA DEVOLVIO CERO, asi que no hizo falta el control de v15 para
+distinguir «no hay nada» de «esta rota». De todos modos la laxa se probo
+contra seis cadenas de control (ca1dera, gaidera, oaldfera, «cal dera»,
+«cal\nderas», calderilla) y se comporta como debe: la contigua no cruza el
+blanco y la de separadores si, y «oaldfera» -la forma de 1912- no la agarra
+ninguna de las dos, que es justamente para lo que esta la difusa.
+
+ACTORES. Se uso la lista completa del config del proyecto: 289 entradas, 42 de
+1946 con origen en el numero de edicion y 247 de 1908 a 1923 con origen en el
+ano. Se busco por nombre y apellido sobre el texto con la puntuacion
+suprimida, y por nombre + inicial + apellido. El apellido suelto agrupado por
+contexto queda para el turno siguiente.
+
+IDENTIFICADORES DE LAS AUSENCIAS. En 1926 los actos SI llevan numero (aparecen
+decretos numerados en el cuerpo), al reves de 1908-1912; eso hay que
+confirmarlo con pares contiguos mirados antes de aplicar la regla de fecha
+contra numeracion (§8.15). Mientras tanto los identificadores son lugar,
+persona y organismo.
+
+§A · MENCIONES EXPLICITAS — LISTA DE CANDIDATOS
+-----------------------------------------------
+
+14 FICHAS, 18 ACTOS. Las 30 hojas candidatas se miraron y se transcribieron
+desde la imagen. Van agrupadas por edicion: cuando un mismo acto se reparte
+entre dos hojas o entre dos columnas, o cuando una edicion trae varios actos
+del departamento, es UNA ficha con todas sus hojas en el campo FUENTE. Primero
+la lista de aciertos que las produjo, y despues las fichas.
+
+  LITERAL «cald» — 24 hojas, 37 aciertos
+
+    1096 h9   {'caldera': 1}
+
+    1096 h10  {'caldera': 1}
+
+    1099 h2   {'caldera': 1}
+
+    1099 h3   {'caldera': 1}
+
+    1101 h1   {'caldera': 1}
+
+    1101 h5   {'caldera': 3}
+
+    1101 h6   {'calderilla': 1}
+
+    1101 h19  {'caldera': 1}
+
+    1104 h7   {'caldera': 2}
+
+    1104 h18  {'caldera': 1}
+
+    1108 h2   {'caldera': 2}
+
+    1108 h3   {'caldera': 1}
+
+    1108 h8   {'caldera': 2}
+
+    1108 h14  {'caldera': 2}
+
+    1109 h2   {'caldera': 2}
+
+    1111 h3   {'caldera': 2}
+
+    1112 h2   {'caldera': 2}
+
+    1112 h5   {'caldas': 1}
+
+    1115 h2   {'caldera': 2}
+
+    1121 h3   {'caldera': 2}
+
+    1122 h3   {'caldera': 2}
+
+    1130 h7   {'caldera': 1}
+
+    1130 h22  {'caldera': 2}
+
+    1137 h25  {'caldera': 1}
+
+
+
+De esos, «caldas» (1112 h5) es falso positivo ya juzgado de la epoca: el
+Inspector de Policias Angel M. Caldas, descartado en 1911. Se vuelve a mirar
+igual, porque §12 manda revalidar en cada epoca.
+
+  LAXA CON SEPARADORES Y DIFUSA — 6 hojas mas, TODAS hoja 1
+    1104 h1   «c aldera»      (difusa: aldera 0,923)
+    1109 h1   «c a ld era»
+    1111 h1   «c a ld e ra»
+    1112 h1   «c a ldera»     (difusa: ldera 0,833)
+    1115 h1   «c aldera»      (difusa: aldera 0,923)
+    1121 h1   «c aldera»      (difusa: aldera 0,923)
+
+ESTAS SEIS SON EL HALLAZGO DE METODO DEL TURNO. Las seis son la hoja 1, es
+decir el SUMARIO, que en 1926 va en la tapa y esta compuesto en un cuerpo
+chico que el OCR lee letra por letra («del d epartam ento la c a ld e ra - r e
+n u n cia—s e acepta»). La pasada literal no ve ninguna de las seis. Solo las
+ve la laxa escrita con la clase de espacios en blanco, y la difusa confirma
+cuatro. Si la laxa se hubiera escrito con un espacio literal -el error que v15
+corrigio para el salto de renglon- este ano habria perdido los seis sumarios.
+
+Las seis remiten a paginas que la literal SI encuentra en el cuerpo (1104 h7,
+1109 h2, 1111 h3, 1112 h2, 1115 h2, 1121 h3), de modo que en este turno no
+agregan ningun acto nuevo; lo que agregan es el cotejo sumario/cuerpo, que en
+esta epoca es posible por primera vez desde 1946.
+
+En bruto, y a falta de las fichas, los sumarios anuncian: refaccion del
+edificio de la comisaria de La Caldera (1104); encargado del Registro Civil de
+La Caldera, renuncia aceptada (1109); Juez de Paz suplente del departamento La
+Caldera, renuncia aceptada (1111); oficinas del Registro Civil de La Caldera y
+Rivadavia, nombramientos interinos (1112); presupuesto de la Comision
+Municipal del departamento de La Caldera, aprobado (1115); encargado de la
+oficina del Registro Civil de La Caldera, se le reconocen servicios prestados
+(1121). Todo esto sale de la CAPA y no de la imagen, y por eso va aca y no en
+una ficha.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1096, hoja 9 y 10
+
+FICHA: Corte de Justicia. Auto sin número que modifica en grado el derecho
+arancelario del ex-Juez de Paz de La Caldera don Carmelo Civila por el
+inventario de la sucesión de doña Dolores del Valle de Royo: de 125 $ m/n a
+277,90 $ m/n.
+
+MODO DE LECTURA: Columna 2 de la hoja 9 y columna 1 de la hoja 10, recorte por
+el ancho entero de la columna, 300 dpi sobre imagen de 150 ppi. Fecha y
+firmantes del auto no recortados.
+
+TEXTO:
+
+  por el que se fija en ciento vein-
+  te y cinco pesos moneda nacional
+  el derecho arancelario del ex-juez
+  de Paz de la Caldera don Carme-
+  lo Civila, por la confección del in-
+  ventario de los bienes de la suce-
+  sión de doña Dolores del Valle de
+  Royo, corriente de fs. 64 a 67, y
+             CONSIDERANDO:
+  [hoja 10]  SE RESUELVE:
+  Modificar el auto venido en gra-
+  do, fijando el derecho arancelario
+  del ex-juez de Paz de la Caldera,
+  don Carmelo Civila, por la confec-
+  ción del inventario judicial de los
+  bienes de esta sucesión en doscien-
+  tos setenta y siete pesos con no-
+  venta centavos moneda nacional
+
+NOTA DE LECTURA: El original imprime CIVILA, con C. El config trae «carmelo
+sivila» (origen 1919) y «mariano sivila» (origen 2465), con S. No se unifica:
+van los dos al anillo de actores (§15.3). El cargo se nombra «ex-juez de Paz
+de la Caldera», sin artículo delante de Caldera en las dos apariciones.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1099, hoja 2 y 3
+
+FICHA: Decreto que fija el personal policial del año y crea o sostiene
+sub-comisarías auxiliares ad-honorem, dos de ellas del departamento: Mojotoro
+(Caldera) y Vaqueros (Caldera).
+
+MODO DE LECTURA: Columna 2 de la hoja 2 y columna 1 de la hoja 3, 300 dpi. El
+número del decreto no se recortó y no se afirma.
+
+TEXTO:
+
+  Policía de primera y trece de segun-
+  da cuya distribución fijará la Jefatura
+  de Policía con destino al servicio de
+  las Sub-comisarias Auxiliares ad-ho-
+  norem de: Mojotoro (Caldera), Cha-
+  ñar Muyo (Anta Segunda Sección);
+  Urundel (Orán); Animanà (San Car-
+  los); Desmonte (Anta Primera Sec-
+  ción); La Isla (Capital); Esteco (Me-
+  [hoja 3] tán); Palomitas (Campo Santo); Río
+  Seco (Anta Primera Sección); Vaque-
+  ros (Caldera); Tolombón (Cafayate);
+  Los Noques è Higuerillas (Capital);
+  Horcones (Rosario de la Frontera); y
+  Santa Rosa (Anta).
+
+NOTA DE LECTURA: Las dos menciones dicen «(Caldera)» sin artículo. Mojotoro y
+Vaqueros son términos del anillo 2 y acá quedan atribuidos al departamento por
+el propio acto, que es lo que el §B no puede hacer solo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1101, hoja 1, 5 y 6
+
+FICHA: Decreto N° 3156 (Ministerio de Gobierno), Salta enero 30 de 1926:
+ubicación de las mesas receptoras de votos. La Caldera, Colegio Electoral N°
+5, con dos mesas y 26 parajes de circuito.
+
+MODO DE LECTURA: Columna 2 de la hoja 5 y columna 1 de la hoja 6, apiladas en
+un montaje, 300 dpi. El número 3156 y la fecha salen de la CAPA, no de la
+imagen: están en la hoja 1 y no se recortaron.
+
+TEXTO:
+
+  La Caldera Colegio Electoral
+                N°. 5
+            MESA NUMERO 1
+  Escuela Elemental Mixta, La Calde-
+  ra, CIRCUITO: Pueblo, Potrero de Cas-
+  tillo, Peñones y San Alejo.
+            MESA NUMERO 2
+  Iglesia Parroquial, La Caldera, CIR-
+  CUITO: Angosto, Angosto de Arrieta,
+  [hoja 6] Angostura, Campo Alegre, Calderilla,
+  Corral de Barranca, Cachanio, Des-
+  pensa, Despensilla, El Acheral, Chur-
+  cal, El Monte de las Garrapatas, Los
+  Porongos, Los Sauces, Mesada, Potre-
+  ro de Valencia, Quesería, Santa Rufi-
+  na, Wierna, Yacones, El Bordo y Las
+  Lagunas.
+  Vaqueros Colegio Electoral
+                N°. 6
+
+NOTA DE LECTURA: RECUENTO PROPIO: mesa 1, cuatro parajes; mesa 2, veintidós;
+veintiséis en total. El acto no declara ningún número de parajes, de modo que
+no hay nada que cotejar contra el recuento. El original escribe «Cachanio» sin
+tilde y «Mesada» en singular; el config trae «cachanio» y «mesadas». «Corral
+de Barranca» va en singular. El corte de columna cae dentro de la enumeración
+de la mesa 2, entre «Arrieta,» y «Angostura»: los dos renglones se leyeron en
+la imagen, uno en cada hoja, y no hay renglón repetido ni perdido. La lista
+sigue con Vaqueros, Colegio Electoral N° 6, que es otro departamento y va al
+§B.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1101, hoja 19 y 20
+
+FICHA: Decreto N° 3158, Salta enero 30 de 1926: nombra a don Francisco R.
+Arias en los cargos vacantes de Receptor de Rentas, Expendedor de Guías,
+Transferencia de Cueros, Marcas y Multas Policiales del departamento de la
+Caldera, con fianza de $ 5.000.
+
+MODO DE LECTURA: Columna 2 de la hoja 19 y columna 1 de la hoja 20, 300 dpi.
+El número 3158 y la fecha se miraron en la imagen.
+
+TEXTO:
+
+  3158—Salta, Enero 30 de 1926.—
+  Encontrándose vacantes los cargos
+  de Receptor de Rentas, Expendedor
+  de Guías, Transferencia de Cueros,
+  Marcas y Multas Policiales del Depar-
+  tamento de la Caldera,
+     El Gobernador de la Provincia
+                DECRETA:
+  rt. 1°.—Nómbrase para ocupar los
+  [hoja 20] referidos cargos al señor Francisco R.
+  Arias.—
+  Art. 2°.—El nombrado antes de
+  tomar posesión de dichos cargos,
+  deberá prestar una fianza de $ 5.000
+
+NOTA DE LECTURA: El original imprime «rt. 1°» sin la A inicial [sic], mirado
+en la imagen. La fórmula de encabezado es «El Gobernador de la Provincia» y no
+«El Poder Ejecutivo», que es la que usan casi todos los demás actos del año:
+se registra sin normalizar (§2.5bis). El refrendo del decreto, en la capa, es
+CORBALAN — A. B. Rovaletti. Francisco R. Arias vuelve en la edición 1112 como
+encargado interino del Registro Civil de Caldera, y en la 1121 como el que
+reemplaza a Rafael Delgado: es un actor del año.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1104, hoja 1, 7 y 18
+
+FICHA: Dos actos. (a) Decreto N° 3205, Salta febrero 12 de 1926, expediente
+7571-F: autoriza a Obras Públicas a contratar la refacción del edificio de la
+Comisaría de La Caldera, una de cuyas paredes se derrumbó, por el proyecto de
+don Pedro Heredia y hasta 1.500 $ m/n. (b) Edicto de minas: pedimento de cateo
+de Francisco G. de la Vega, expediente 1198, en la finca «Las Nieves» ó
+«Potrero de Castillo».
+
+MODO DE LECTURA: Columna 2 de la hoja 7 en dos recortes y columna 1 de la hoja
+18, 300 dpi. Número, fecha y expediente del decreto mirados en la imagen. El
+sumario de la hoja 1 sólo se leyó en la capa.
+
+TEXTO:
+
+  3205—Salta, Febrero 12 de 1926.
+  Expediente 7571-F-Atento a la co-
+  municación de la Jefatura de Policía
+  en que significa la urgente necesidad
+  de efectuar las reparaciones que de-
+  manda el edificio de la Comisaría de La
+  Caldera una de cuyas paredes se ha
+  derrumbado, amenazando ruina el resto
+  de la casa, por cuyas circunstancias no
+  es posible dilatar la ejecución de esa
+  obra el tiempo que exigiría una licita-
+             DECRETA:
+  Art. 1°.—Autorízase a la Dirección Ge
+  neral de Obras Públicas para contratar
+  las obras de refacción del edificio de la
+  Comisaría de La Caldera, adoptándose
+  al efecto el proyecto de don Pedro
+  Heredia, dentro de un costo máximo de
+  un mil quinientos pesos m/n.
+  Art. 2°.—El gasto autorizado será
+  imputado a la partida 8-Item 2- del
+
+  [hoja 18, edicto de minas]
+  deren con derecho al pedimento de
+  cateo iniciado por Francisco G. de la
+  Vega, bajo expediente 1198, departa-
+  mento de La Caldera, en la finca
+  «Las Nieves» ó «Potrero de Castillo»
+  de Julio Suarez y. herederos de Juan
+  A. Pinto, en una extensión de cua-
+  tro unidades (2000 hectáreas) las que
+  se ubicarán en forma de un rectán-
+  gulo de 4000 metros de Norte a Sud,
+
+NOTA DE LECTURA: RECALCULO: el rectángulo de 4.000 m por 5.000 m —la segunda
+medida sale de la capa, no del recorte— da 20.000.000 m2, que son 2.000
+hectáreas exactas, y son también las cuatro unidades que el edicto declara.
+Cierra. El expediente del decreto se lee 7571-F en la imagen; la edición 1122,
+que cita el mismo expediente por el mismo edificio, imprime «7571 E». Va a
+E.9. «Potrero de Castillo» es paraje del circuito de la mesa 1 del
+departamento (edición 1101) y acá es finca.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1108, hoja 2, 3, 8 y 14
+
+FICHA: Tres actos. (a) Decreto N° 3227, Salta febrero 23 de 1926, Exp. 7742
+letra E: nombra sub-comisario de policía ad-honorem de Mojotoro (La Caldera) a
+Manlio Carlos Bruzzo, en reemplazo de don Víctor Mascleff. (b) Decreto N°
+3248, Salta marzo 1° de 1926, Exp. 7068 letra F: nombra Jueces de Paz
+Propietario y Suplente del departamento de La Caldera a Carlos H. Matienzo y
+D. Lucas Molina. (c) Sucesorio de doña Celestina Velázquez de Ruiloba ante el
+Juez de Paz de la Caldera, firmado Carlos F. Matienzo.
+
+MODO DE LECTURA: Cuatro recortes: columna 2 de la hoja 2, columna 1 de la hoja
+3, columnas 1 y 2 de la hoja 8 y columnas 1 y 2 de la hoja 14, 300 dpi.
+Números, fechas y expedientes mirados en la imagen.
+
+TEXTO:
+
+  N° 3227—Salta, Febrero 23 de 1926.
+  Visto èste Exp. N° 7742, letra E,—
+  por el que la Jefatura de Policìa so-
+  licita el nombramiento del señor Man-
+  lio Carlos Bruzzo para Sub-comisa-
+  rio de Policía ad-honorem de Mojoto-
+  ro, (La Caldera) en reemplazo de don
+  Víctor Mascleff,
+  [hoja 3] Mojotoro (La Caldera) a don Manlio
+  Carlos Bruzzo en reemplazo de don
+  Víctor Mascleff.
+
+  [hoja 8] 3248—Salta, Marzo 1°. de 1926.
+  Visto éste Expediente N°. 7068 le-
+  tra F-, en que corre la terna para nom-
+  brar Jueces de Paz Propietario y Su-
+  plente del Departamento de La Caldera
+     El Poder Ejecutivo de la Provincia
+                DECRETA:
+  Art. 1°.—Nómbrase Jueces de Paz
+  Propietario y Suplente del Departa-
+  mento de La Caldera, a los señores
+  Carlos H. Matienzo y D. Lucas Moli-
+  na, respectivamente.
+
+  [hoja 14] SUCESORIO:—Por disposición del
+  señor Juez de Paz de la Caldera, se
+  cita llama y emplaza por el término
+  […] los que se consideren con derecho a
+  los bienes dejados por fallecimiento
+  de doña
+     Celestina Velazquez de Rui-
+                loba,
+  […] apercibimiento de Ley.—Caldera Mar-
+  zo 27 de 1926. – Carlos F. Matienzo,
+  Juez de Paz.                    (1468)
+
+NOTA DE LECTURA: CONTRADICCION DEL ORIGINAL: el decreto de la hoja 8 nombra a
+«Carlos H. Matienzo» y el aviso de la hoja 14, a veintiséis días de distancia,
+lo firma «Carlos F. Matienzo». Las dos formas se miraron en la imagen y son
+nítidas. No se concilia; va a E.9. El config trae «carlos f. matienzo» (1922),
+«carlos matienzo» (1909) y «andres v. matienzo» (1909). Víctor Mascleff es el
+«victor masclef / maself / maselef» de 1917, que reaparece nueve años después
+y ahora es reemplazado. La fecha del aviso está fechada en «Caldera» sin
+artículo.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1109, hoja 1 y 2
+
+FICHA: Decreto N° 3252, Salta marzo 2 de 1926: acepta la renuncia de don
+Rafael Delgado al cargo de Encargado de la Oficina del Registro Civil del
+departamento La Caldera.
+
+MODO DE LECTURA: Columna 2 de la hoja 2, dos recortes, 300 dpi; número y fecha
+mirados. El sumario de la hoja 1 sólo en la capa, donde se lee «registro civil
+de la c a ld era».
+
+TEXTO:
+
+  3252—Salta, Marzo 2 de 1926.
+  Vista la renuncia presentada por
+  don Rafael Delgado del cargo de En-
+  cargado de la oficina del Registro
+  Civil de La Caldera,
+     El Poder Ejecutivo de la Provincia
+                DECRETA:
+  Art. 1°.—Acéptase la renuncia pre-
+  sentada por don Rafael Delgado del
+  cargo de Encargado de la oficina del
+  Registro Civil del Departamento La
+  Caldera.
+  Art. 2°.—Comuníquese, publíquese,
+
+NOTA DE LECTURA: Rafael Delgado está en el config con origen 1917: es el mismo
+apellido y el mismo nombre, y vuelve en la edición 1121 por el reconocimiento
+de los servicios que prestó después de renunciar. El acto no dice desde cuándo
+era encargado.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1111, hoja 1 y 3
+
+FICHA: Decreto N° 3322, Salta marzo 31 de 1926, Expediente N° 7116-F: acepta
+la renuncia de don Lucas N. Molina al cargo de Juez de Paz Suplente del
+Departamento La Caldera.
+
+MODO DE LECTURA: Columna 2 de la hoja 3, dos recortes, 300 dpi. El número se
+miró en la imagen justamente porque la capa lo lee mal.
+
+TEXTO:
+
+  3322—Salta, Marzo 31 de 1926.
+  Vista la renuncia presentada por
+  don Lucas N. Molina del cargo de
+  Juez de Paz Suplente del Departamen-
+  to La Caldera Expediente N° 7116, F-
+     El Poder Ejecutivo de la Provincia,
+                DECRETA:
+  Art. 1°.—Acéptase la renuncia pre-
+  sentada por don Lucas N. Molina del
+  cargo de Juez de Paz Suplente del
+  Departamento La Caldera.
+
+NOTA DE LECTURA: LA CAPA LEE «3122» Y EL ORIGINAL IMPRIME 3322. Se miró porque
+el decreto vecino de la misma columna es el 3324 y el anterior el 3321, y un
+3122 entre los dos no encajaba; pero lo que decide es la imagen, no la
+vecindad. Es el único número del año que la capa erró de los ocho que se
+miraron. Lucas Molina había sido nombrado Juez de Paz Suplente treinta días
+antes, por el decreto 3248 de la edición 1108, donde el original lo llama «D.
+Lucas Molina» sin la inicial N.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1112, hoja 1 y 2
+
+FICHA: Decreto N° 3350 (número leído en la capa), Salta abril 8 de 1926,
+expediente 7841-E: nombra encargados interinos de las oficinas del Registro
+Civil de Caldera y Rivadavia (Pueblo) a los señores Francisco Arias y Mariano
+Díaz, por estar clausuradas las dos oficinas tras la renuncia de sus
+encargados.
+
+MODO DE LECTURA: Columna 2 de la hoja 2, 300 dpi. El número y la fecha NO se
+miraron en la imagen: salen de la capa, y se dice acá (§8.5).
+
+TEXTO:
+
+  comunicación del señor Jefe del Re-
+  gistro Civil en que hace saber que las
+  Oficinas de Caldera y Rivadavia se
+  encuentran clausuradas por haber re-
+  nunciado los respectivos encargados y
+  siendo necesario proveer a sus funcio-
+  namiento,
+     El Poder Ejecutivo de la Provincia
+                DECRETA.
+  Art. 1°.—Nómbrase con carácter in-
+  terino, Encargado de las Oficinas del
+  Registro Civil de Caldera y Rivadavia
+  (Pueblo) a los señores Francisco Arias
+  y Mariano Diaz, respectivamente.
+
+NOTA DE LECTURA: El acto dice «las Oficinas de Caldera y Rivadavia», sin
+artículo y sin «La». El «(Pueblo)» que sigue a Rivadavia distingue el pueblo
+del departamento, y no toca a Caldera. Francisco Arias es el Francisco R.
+Arias nombrado Receptor de Rentas del departamento en enero (edición 1101): el
+mismo año lo pone en dos cargos del departamento, aunque el original escribe
+el nombre de las dos maneras.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1115, hoja 1 y 2
+
+FICHA: Decreto sin número mirado, expediente N° 7032 letra F: aprueba el
+Presupuesto de Gastos y Cálculo de Recursos sancionado por la H. Comisión
+Municipal del Departamento La Caldera para el ejercicio del año, con informe
+del Consejo General de Educación y dictamen del Fiscal General.
+
+MODO DE LECTURA: Columna 1 de la hoja 2, dos recortes, 300 dpi. El expediente
+se miró en la imagen. El número del decreto no está en la columna recortada y
+NO se afirma: no se toma de la capa ni se infiere del vecino.
+
+TEXTO:
+
+  Visto este expediente N° 7032 letra
+  F, en el que corre agregado el Presu-
+  puesto de Gastos y Cálculo de Recur-
+  sos sancionado para el ejercicio del
+  corriente año, por la Comisión Muni-
+  cipal del Departamento La Caldera y
+  atento lo informado por el Consejo
+  General de Educación y lo dictami-
+  nado por el señor Fiscal General,
+     El Poder Ejecutivo de la Provincia
+                DECRETA:
+  Art. 1°.—Apruébase el Presupuesto
+  de Gastos y Cálculo de Recursos pre-
+  sentado por la H. Comisión Municipal
+  del Departamento de La Caldera pa-
+  ra el ejercicio del presente año.
+  Art. 2°.—Devuélvase este expedien-
+
+NOTA DE LECTURA: EL BOLETIN APRUEBA EL PRESUPUESTO PERO NO LO PUBLICA: el
+decreto lo devuelve a la Comisión y no transcribe ni una cifra. No hay, por lo
+tanto, ningún cuadro municipal del departamento que recalcular en 1926 por
+esta vía. «Fiscal General» está en la lista de falsos positivos del config, y
+acá aparece en un acto que sí es del departamento: es el caso de §12, un falso
+positivo que puede ocultar una mención real.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1121, hoja 1 y 3
+
+FICHA: Decreto N° 3504 (número leído en la capa), Salta junio 18 de 1926,
+expediente N° 7248-F: reconoce los servicios que don Rafael Delgado prestó
+como Encargado de la Oficina del Registro Civil de La Caldera desde el 2 de
+marzo hasta el 8 de abril, después de aceptada su renuncia, porque recién el 8
+de abril se nombró a don Francisco Arias.
+
+MODO DE LECTURA: Columna 1 de la hoja 3, dos recortes, 300 dpi. El expediente
+7248-F se miró en la imagen; el número 3504 y la fecha salen de la capa
+(§8.5).
+
+TEXTO:
+
+  Vistas las constancias de este Ex-
+  pediente N.° 7248—F—por las que se
+  ha establecido que, no obstante ha-
+  berle sido aceptada con fecha 2 de
+  Marzo ppdo., la renuncia que de En-
+  cargado de la Oficina del Registro
+  Civil de La Caldera, presentó don Ra-
+  fael Delgado, ha continuado desem-
+  peñado ese puesto hasta el 8 de Abril
+  último en razón de que recien en esa
+  fecha se nombró para reemplazarlo a
+  don Francisco Arias.
+     El Poder Ejecutivo de la Provincia
+                DECRETA:
+  Art. 1°.—Reconócense los servicios
+  que como Encargado de la Oficina
+  del Registro Civil de La Caldera, ha
+  prestado don Rafael Delgado desde el
+  2 de Marzo hasta el 8 de Abril ppdo.
+
+NOTA DE LECTURA: ESTE ACTO CIERRA UNA CADENA DE TRES. La renuncia se aceptó el
+2 de marzo (decreto 3252, edición 1109); el reemplazo interino se nombró el 8
+de abril (decreto 3350, edición 1112); y el 18 de junio el Ejecutivo reconoce
+que entre las dos fechas el renunciante siguió en el puesto. El original
+escribe «desempeñado» donde correspondería «desempeñando» [sic].
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1122, hoja 3
+
+FICHA: Decreto N° 3524, Salta junio 25 de 1926, Expediente N° 7811-E: autoriza
+el pago de veinticinco pesos m/n mensuales al señor Salvador Rosas por el
+alquiler de la casa que ocupa la Comisaría de Policía de La Caldera,
+trasladada allí por estar inhabitable el edificio fiscal, con anterioridad al
+1° de diciembre ppdo.
+
+MODO DE LECTURA: Columna 1 de la hoja 3, dos recortes, 300 dpi. Número, fecha
+y expediente mirados en la imagen.
+
+TEXTO:
+
+  3524—Salta, Junio 25 de 1926.
+  Expediente N°. 7811--E--Habiendo
+  sido necesario el traslado de la Comi-
+  saría de Policía de La Caldera á la
+  Casa del señor Salvador Ro[s]as por
+  encontrarse en estado inhabilitable el
+  edificio de propiedad fiscal, según
+  […] ma de veinticinco pesos m/n mensua-
+  les en concepto de alquiler de la casa
+  de su propiedad que ocupa la Comi-
+  saría de Policía de La Caldera.
+  Art. 2°.—El gasto autorizado se ha-
+  rá con imputación al Item 12 del In-
+  ciso V del Presupuesto vigente en
+
+NOTA DE LECTURA: LA S DEL APELLIDO NO SE DECIDE A 150 ppi: la primera
+aparición se lee «Ro?as» y podría ser Rosas o Rojas; la segunda, en la capa,
+dice «Rosas». Se transcribe con el corchete y se declara, porque el techo de
+resolución del año no permite más (§8.7). ESTE DECRETO Y EL 3205 DE LA EDICION
+1104 SON EL MISMO ASUNTO: el edificio fiscal de la comisaría se derrumbó en
+febrero y en junio se paga el alquiler de la casa a la que se mudó, con efecto
+retroactivo a diciembre de 1925, es decir ANTES del derrumbe que el decreto de
+febrero da por causa. No se concilia; va a E.9. Los dos actos citan el
+expediente 7571, uno con letra F y el otro con letra E.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1130, hoja 6, 7 y 22
+
+FICHA: Dos actos. (a) Ley N° 3610: acuerda un crédito suplementario de
+cincuenta y seis mil doscientos noventa y seis pesos con cincuenta centavos
+moneda legal para cancelar créditos de ejercicios vencidos; en el detalle,
+Leoncio A. Mascietti, por comisión de clasificador de patentes generales en La
+Caldera, años 1922 y 1923. (b) Citación en el juicio de reposición de título
+de propiedad de la finca «Peñones» ó «Los Peñones», ubicada en el departamento
+de la Caldera.
+
+MODO DE LECTURA: Columna 1 de la hoja 7 y columna 2 de la hoja 22, 300 dpi. El
+encabezado de la ley (hoja 6) y los importes de la columna de cifras se
+leyeron en la CAPA: el recálculo del cuadro queda pendiente para el turno de
+tablas.
+
+TEXTO:
+
+  [hoja 7, detalle de la Ley 3610]
+  Leoncio A. Mascietti.—Comisión clasificador [patentes ge]
+  nerales en La Caldera año 1922 y 1923
+
+  [hoja 22] CITACION.—En los autos del jui-
+  cio sobre reposición de título de pro-
+  piedad de la finca denominada «Peño-
+  nes» o «Los Peñones», ubicada en el
+  Departamento de la Caldera; promo-
+  vido por el Dr. Francisco F. Sosa, en
+  representación de la señorita María
+  Isabel Gómez; señor Juez de Primera
+  Instancia en lo Civil y Comercial de
+  Primera Nominación, doctor Angel
+  María Figueroa, ha dictado el siguien-
+  te auto:—«Salta, Julio 16 de 1926.»
+  Atenta la conformidad manifestada
+  por el señor Agente Fiscal, recíbase
+  la información sumara ofrecida, a cu-
+  yo efecto «líbrese oficio comisorio al
+  Juez P. ó S. de la Caldera.—Publí
+  quese edictos en dos diario por el tér-
+  mino de treinta días y «por una vez
+  en el Boletín Oficial
+
+NOTA DE LECTURA: La citación manda librar oficio comisorio al «Juez P. ó S. de
+la Caldera», es decir al Juez de Paz Propietario ó Suplente: en julio de 1926
+el propietario es Carlos H. (ó F.) Matienzo y el suplente renunció en marzo
+sin que se publique reemplazo. Eso NO se infiere dentro de la ficha: se anota
+como pregunta abierta. «Peñones» es paraje del circuito de la mesa 1 del
+departamento (edición 1101) y acá es finca. El original escribe «sumara» por
+sumaria, «en dos diario» por diarios y «aciendo» por haciendo [sic]. El auto
+ordena publicar POR UNA VEZ en el Boletín, lo que se comprueba contra el resto
+del corpus en el turno de repeticiones.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+FUENTE: edicion 1137, hoja 25
+
+FICHA: Edicto de deslinde, mensura y amojonamiento de una finca rural sin
+nombre, ubicada en el departamento de La Caldera, pedido por Alberto López
+Cross con poder de don Sandalio Viveros; auto del Juez de Primera Instancia en
+lo Civil y Comercial de la Segunda Nominación, doctor Carlos Gómez Rincón,
+Salta setiembre 7 de 1926.
+
+MODO DE LECTURA: Columna 1 de la hoja 25, dos recortes, 300 dpi. El nombre del
+juez, la fecha del auto y el artículo citado salen de la capa.
+
+TEXTO:
+
+  DESLINDE.— Habiéndose presentado el señor Alber[t]o
+  López Cross, con poder y títulos bastantes de don
+  Sandalio Viveros, solicitando deslinde, mensura y amo-
+  jonamiento de una finca rural,
+  ubicada en el Departamento de
+  La Caldera, jurisdicción de esta
+  Provincia, comprendida dentro de los si-
+  guientes límites.— «Al Norte con
+  el Río Wierna; Al Naciente, con
+  los herederos de don Anacleto To-
+  ranzos; al Poniente, con herederos
+  de don Facundo Víveros, y al Sud,
+  en parte con los herederos del
+  señor Toranzos y con finca
+
+NOTA DE LECTURA: LA FINCA NO TIENE NOMBRE EN EL EDICTO: se la describe sólo
+por sus cuatro linderos. No se le pone nombre ni se la identifica con ninguna
+de las fincas del departamento que el año nombra. El Río Wierna aparece acá
+como lindero norte, y «wierna» es término del anillo 2: es una de las pocas
+veces del año en que el término queda atado al departamento por el propio
+acto. El original escribe «Víveros» con tilde para el lindero y «Viveros» sin
+tilde para el poderdante, en la misma columna [sic].
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+§B · VECINDAD — LISTA DE TRABAJO
+--------------------------------
+
+De los 111 terminos del config, 54 dan acierto en 1926, con 289 aciertos. Se
+leyo el contexto de los 54, uno por uno, incluidos los que no parecen del
+departamento. El reparto esta abajo; antes, los cuatro bloques.
+
+B.1 · NUCLEOS YA FICHADOS EN EL §A — se nombran y no se repiten
+
+  Veintiseis parajes del departamento entran al informe por el propio §A, en
+  el decreto de mesas receptoras de 1101: Pueblo, Potrero de Castillo, Peñones
+  y San Alejo por la mesa 1; y Angosto, Angosto de Arrieta, Angostura, Campo
+  Alegre, Calderilla, Corral de Barranca, Cachanio, Despensa, Despensilla, El
+  Acheral, Churcal, El Monte de las Garrapatas, Los Porongos, Los Sauces,
+  Mesada, Potrero de Valencia, Queseria, Santa Rufina, Wierna, Yacones, El
+  Bordo y Las Lagunas por la mesa 2. A ellos se agregan Mojotoro y Vaqueros,
+  que el decreto policial de 1099 atribuye al departamento con el nombre entre
+  parentesis; Peñones otra vez, como finca, en la citacion de 1130; y el rio
+  Wierna como lindero norte del deslinde de 1137. Ninguno se vuelve a contar
+  aca.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN UN ACTO QUE NO NOMBRA EL TERMINO
+
+  EL COLEGIO ELECTORAL N° 6, DE VAQUEROS (edicion 1101, hoja 6, columna 1,
+  mirado en la imagen). Viene inmediatamente despues del Colegio Electoral N°
+  5 de La Caldera y antes del N° 7 de Campo Santo, y su bloque NO nombra al
+  departamento en ninguna linea:
+
+    MESA NUMERO 1
+    Escuela Infantil Provincial, Vaque-
+    ros, CIRCUITO: Lesser y Vaqueros.
+    MESA NUMERO 2
+    Oficina de Correos, Mojotoro, CIRCUI-
+    TO: Mojotoro, Mojotorito, Potrero de
+    Gallinato, Túnel y Estación Ferro
+    Carril.
+
+  POR QUE SE INCLUYE: regla del §5.1 sobre el anillo 2 leido en su contexto, y
+  §8.4 sobre no enriquecer. Lo que ata estas dos mesas al departamento no es
+  este acto sino otro del mismo ano: el decreto policial de la edicion 1099
+  escribe «Mojotoro (Caldera)» y «Vaqueros (Caldera)». Se declara la atadura y
+  su fuente; NO se escribe que el Colegio N° 6 sea de La Caldera, porque el
+  acto no lo dice. Con eso, seis terminos mas del anillo 2 quedan atados al
+  departamento por via indirecta: Vaqueros, Lesser, Mojotoro, Mojotorito,
+  Potrero de Gallinato y Tunel.
+
+  LA SUB-COMISARIA DE MOJOTORO, en las ediciones 1099 y 1108, y la de
+  Vaqueros, en la 1099, son cargos del departamento nombrados por su paraje y
+  no por el departamento: el §A los ficha por el parentesis, y sin ese
+  parentesis habrian caido enteros aca.
+
+B.3 · TERMINOS QUE EN 1926 SON OTRA COSA
+
+  Se leyeron los 54. Los dos que encabezan el recuento vuelven a ser lo que
+  fueron en 1911 y 1912. CASTELLANOS, 76 aciertos: el abogado Juan Jose
+  Castellanos, que litiga todo el ano; el partido de Castellanos, con su
+  sub-comisario, en Anta; la laguna de Castellanos y el pozo de Castellanos,
+  parajes de circuitos de Anta; y la finca Castellanos de otro circuito.
+  ISASMENDI, 31: Severo C. Isasmendi, que renuncia a la Comision Municipal de
+  La Merced; Mariano Isasmendi, que renuncia a la de La Viña; los herederos de
+  Jose Isasmendi, linderos de fincas de San Carlos que se rematan cuatro veces
+  en el ano; y la sucesion de Filomena Marsetti de Isasmendi. Ninguno de los
+  dos toca al departamento.
+
+  Los demas, en una linea cada uno. TABACAL (14): el ingenio y refineria San
+  Martin del Tabacal, de Oran, y su colegio electoral. CAMPO ALEGRE (10):
+  parajes de circuito de Metan, Anta, Oran y Tartagal. BETANIA (10): la
+  sub-comisaria de Betania del departamento de Campo Santo, con dos
+  nombramientos en el ano, y el circuito de La Viña. ENTRE RIOS (10): la calle
+  Entre Rios de la ciudad, en el padron urbano, y una quinta y fincas. APAZA,
+  MAMANI, MURUA, ARAMAYO (29 entre los cuatro): apellidos, ninguno del
+  departamento; Silvano Murua sigue litigando como en 1909 y 1912. EL BORDO
+  (9): el circuito y la escuela de El Bordo, de Campo Santo, mas parajes
+  homonimos de Metan y Anta. DURAZNO (8), SAUCES (8), RIO BLANCO (7), MESADAS
+  (7), NOGALES (5): parajes de circuito de otros departamentos, salvo los que
+  ya entraron por el §A. ANGOSTURA (4): la «segunda angostura» del rio
+  Itiyuro, en el limite con Bolivia. PARROQUIA (4): circuitos de Santa
+  Victoria, Chicoana y La Viña. QUINTIN (3): nombre de pila, Quintin Diaz y
+  Quintin Conde. ACHERAL (3): el circuito de Chicoana. PIRGUAS (3), BANDURRIAS
+  (1), TRANCAS (1), LA DESPENSA (1), EL CAJON (1), LAGUNILLA (1), SANTA
+  GERTRUDIS (1), MANZANO (2), LAS MESADAS (2): parajes y fincas de otros
+  departamentos. QUESERIA (3): dos de ellos son el cerro Queseria o Pasacanal,
+  lindero de un deslinde ajeno. PACARA (2): una tarifa de maderas. LAS VIBORAS
+  (1): una comisaria que se traslada a Palermo.
+
+  NINGUNO DE ESTOS SE AGREGA A FALSOS POSITIVOS DEL CONFIG (§12): se listan
+  aca y se revalidan en la epoca siguiente.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES, EN TRES GRUPOS
+
+  Primero, los 34 actores del config que aparecen en 1926 con nombre y
+  apellido completos: encabezan Pedro J. Aranda (44 aciertos), Carlos Serrey
+  (17), Julio Figueroa S. (12), Jose Maria Leguizamon (9) y Marcos Alsina (6);
+  ninguno de los cinco en un acto del departamento. Reaparecen ademas, del §A
+  de anos anteriores, Rafael Delgado (1917) y Victor Mascleff (1917), y en
+  grafia distinta Carmelo Civila por «carmelo sivila» (1919).
+
+  GRUPO 1 — SOLO APARECEN EN SU PROPIO ACTO. Carmelo Civila, Pedro Heredia,
+  Manlio Carlos Bruzzo, Victor Mascleff, Lucas N. Molina, Leoncio A.
+  Mascietti, Salvador Rosas, Sandalio Viveros, Facundo Viveros, Vicente
+  Arquati y Celestina Velazquez de Ruiloba. Once personas que el departamento
+  nombra una vez y el resto del Boletin no vuelve a nombrar.
+
+  GRUPO 2 — APARECEN EN MAS DE UN ACTO DEL DEPARTAMENTO, Y SON LA TRAMA DEL
+  AÑO. Francisco R. Arias: Receptor de Rentas del departamento en enero (1101)
+  y encargado interino del Registro Civil de Caldera en abril (1112), nombrado
+  ademas en el reconocimiento de junio (1121). Rafael Delgado: renuncia en
+  marzo (1109) y cobra sus servicios en junio (1121). Carlos Matienzo:
+  nombrado Juez de Paz propietario en marzo (1108 h8) y firmando como Juez de
+  Paz en la misma edicion (1108 h14), con la inicial cambiada. Tres personas,
+  ocho apariciones, cinco ediciones.
+
+  GRUPO 3 — APARECEN TAMBIEN FUERA DEL DEPARTAMENTO. Angel Maria Figueroa,
+  Juez de Primera Instancia de Primera Nominacion, en 160 hojas del ano;
+  Carlos Gomez Rincon, de Segunda Nominacion, en 99; Francisco F. Sosa,
+  abogado, en 29; Mariano Diaz en 28; Julio Suarez en 20; Juan A. Pinto y
+  Francisco G. de la Vega en 12 cada uno; Alberto Lopez Cross y Anacleto
+  Toranzos en 2. Para los dos jueces y el abogado, su acierto en un acto del
+  departamento no prueba vecindad: prueba que el juzgado de la ciudad
+  interviene.
+
+  NUEVE ACTORES A LOS QUE LA BUSQUEDA POR NOMBRE COMPLETO NO DEVUELVE NI SU
+  PROPIO ACTO, y que por lo tanto NO se declaran ausentes de ninguna parte
+  (§5.1): Francisco R. Arias, que la capa escribe «francisco r. a lia s»;
+  Carlos H. Matienzo, «carlos ii matienzo»; Carlos F. Matienzo; Lucas Molina
+  sin la inicial; Alberto Lopez Cross, «aibe¡to lopez cross»; Anacleto
+  Toranzos, «anaeleto»; Facundo Viveros, «eacundo»; Maria Isabel Gomez; y
+  Celestina Velazquez de Ruiloba, de la que la capa no devuelve ni el
+  apellido, porque lo lee «veiazqusz ele ¡?sailoba». Esa ultima ficha existe
+  unicamente porque se miro la imagen.
+
+REPARTO DE ACIERTOS DEL ANILLO 2
+
+  termino                    aciertos  hojas
+
+  castellanos                    76    48
+
+  isasmendi                      31    24
+
+  tabacal                        14     9
+
+  campo alegre                   10     8
+
+  betania                        10     6
+
+  entre rios                     10     7
+
+  apaza                          10     5
+
+  mamani                          9     5
+
+  el bordo                        9     7
+
+  durazno                         8     6
+
+  sauces                          8     7
+
+  rio blanco                      7     6
+
+  mesadas                         7     4
+
+  mojotoro                        6     5
+
+  murua                           6     3
+
+  nogales                         5     4
+
+  angostura                       4     3
+
+  parroquia                       4     4
+
+  vaqueros                        3     2
+
+  wierna                          3     3
+
+  quintin                         3     3
+
+  acheral                         3     3
+
+  pirguas                         3     3
+
+  queseria                        3     3
+
+  pacara                          2     1
+
+  manzano                         2     2
+
+  las mesadas                     2     1
+
+  penones                         2     2
+
+  angosto                         2     1
+
+  despensilla                     2     2
+
+  el acheral                      2     2
+
+  trancas                         1     1
+
+  gallinato                       1     1
+
+  santa rufina                    1     1
+
+  san alejo                       1     1
+
+  bandurrias                      1     1
+
+  el cajon                        1     1
+
+  lagunilla                       1     1
+
+  potrero de castillo             1     1
+
+  angosto de arrieta              1     1
+
+  la despensa                     1     1
+
+  los porongos                    1     1
+
+  potrero de valencia             1     1
+
+  potrero de gallinato            1     1
+
+  las viboras                     1     1
+
+  santa gertrudis                 1     1
+
+  el monte                        1     1
+
+  las garrapatas                  1     1
+
+  mojotorito                      1     1
+
+  tunel                           1     1
+
+  las lagunas                     1     1
+
+  porongos                        1     1
+
+  cachanio                        1     1
+
+  corral de barranca              1     1
+
+
+
+DOS COSAS SALTAN A LA VISTA Y NO SE DAN POR JUZGADAS. Primera: la edicion 1101
+(29 hojas, 12 de febrero) concentra sola la mayoria de los aciertos de
+toponimo -aparece en 40 de los 54 terminos- porque publica listas de circuitos
+y mesas receptoras de toda la provincia; ahi el anillo 2 acierta por
+enumeracion y no por vecindad, y hay que leer el encabezado de cada lista
+antes de fichar nada (§4.11). Segunda: castellanos (76) e isasmendi (31)
+vuelven a encabezar el recuento, como en 1911 y 1912, donde resultaron ser un
+abogado y una casa de comercio.
+
+§C · LIMITROFES / §P · PLANOS / §D · INDICE
+-------------------------------------------
+
+§C · LIMITROFES: el ano no trae ningun acto que nombre a un departamento
+limitrofe EN RELACION con La Caldera. Campo Santo aparece a cada rato -su
+Colegio Electoral N° 7 sigue al de Vaqueros, su sub-comisaria de Betania se
+provee dos veces- pero siempre por asuntos propios. Se declara asi y no se
+ficha nada.
+
+§P · PLANOS: 149 hojas de las 769 nombran un plano y NINGUNA lo publica. El
+corpus no tiene ni una lamina: las 769 hojas son texto a dos columnas. Las
+remisiones son de minas y de deslindes y quedan como citadas y no acompanadas.
+De las 149, UNA SOLA toca al departamento: el edicto de cateo de 1104 h18, que
+remite al plano del pedimento de Francisco G. de la Vega. Llama la atencion
+que el deslinde de 1137 h25, que es el otro acto del ano que necesitaria un
+plano, no lo mencione. Techo de resolucion del corpus: 150 ppi (§0).
+
+§D · INDICE DE LOS ACTOS DEL DEPARTAMENTO, POR EDICION
+
+  1096 h9-h10  Corte: derecho arancelario del ex-Juez de Paz
+                 Carmelo Civila
+  1099 h2-h3   Policia: sub-comisarias ad-honorem de Mojotoro y
+                 de Vaqueros
+  1101 h1,5,6  Decreto 3156: mesas receptoras; La Caldera, Colegio
+                 Electoral N° 5, dos mesas y 26 parajes
+  1101 h19-20  Decreto 3158: Receptor de Rentas del departamento,
+                 Francisco R. Arias
+  1104 h1,h7   Decreto 3205: refaccion de la Comisaria
+  1104 h18     Edicto de minas: cateo en «Las Nieves» o «Potrero
+                 de Castillo»
+  1108 h2-h3   Decreto 3227: sub-comisario de Mojotoro, Bruzzo por
+                 Mascleff
+  1108 h8      Decreto 3248: Jueces de Paz Matienzo y Molina
+  1108 h14     Sucesorio de Celestina Velazquez de Ruiloba ante el
+                 Juez de Paz
+  1109 h1-h2   Decreto 3252: renuncia de Rafael Delgado, Registro
+                 Civil
+  1111 h1,h3   Decreto 3322: renuncia de Lucas N. Molina, Juez de
+                 Paz Suplente
+  1112 h1-h2   Decreto 3350: encargados interinos del Registro
+                 Civil de Caldera y Rivadavia
+  1115 h1-h2   Decreto 3420: aprueba el presupuesto de la Comision
+                 Municipal
+  1121 h1,h3   Decreto 3504: reconocimiento de servicios a Rafael
+                 Delgado
+  1122 h3      Decreto 3524: alquiler de la casa de la Comisaria
+  1130 h6-h8   Ley 3610: credito suplementario; comision de
+                 Leoncio A. Mascietti en La Caldera
+  1130 h22     Citacion: reposicion de titulo de «Los Peñones»
+  1137 h25     Deslinde de una finca sin nombre, lindera al Rio
+                 Wierna
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+
+  DUPLICACION. Sin las .jpg del script no hay md5 ni dhash, y la duplicacion
+  se controla por texto. En 1926 NO HAY NI UNA MARCA DE PUBLICACION del tipo
+  «251 v Dbre 5», que en 1912 aparecia 119 veces: los avisos de este ano
+  llevan en cambio un numero entre parentesis al pie, como el (1468) del
+  sucesorio de 1108 h14. El patron se probo contra la cadena de 1912 y
+  acierta, de modo que el cero es del corpus y no de la pasada (§5.2). Los
+  tres avisos del departamento -el sucesorio de 1108, la citacion de 1130 y el
+  deslinde de 1137- se buscaron por su texto en las 769 hojas y NINGUNO se
+  repite, pese a que el auto de la citacion ordena publicarla por treinta dias
+  en dos diarios y por una sola vez en el Boletin. El cotejo se hizo sobre la
+  capa y no sobre la imagen.
+
+  TINTA. La rubrica dice que sin las .jpg del script no hay medicion de tinta.
+  Con PDF reales eso es falso y se corrige en el §F: la sesion rasteriza y
+  mide. Medido a 100 dpi, 1108 h16 tiene 0,05 % de pixeles oscuros contra 6,79
+  % de su hoja vecina: es hoja en blanco por el criterio del §6 (menos de 0,5
+  %), y no hace falta mirarla. La hoja unica de 1146, la del aviso de la base
+  de datos, da 1,41 %.
+
+  SALDOS. El ano publica CINCO resumenes del movimiento de la Tesoreria
+  General, en las ediciones 1098 (aprobado el 14 de enero), 1111 (14 de
+  abril), 1123 (14 de julio), 1132 (8 de setiembre) y 1140 (8 de noviembre).
+  No son cinco meses consecutivos y NO SE PUEDE ARMAR NINGUNA CADENA ANUAL con
+  ellos: los meses que declaran son noviembre ppdo. (en el de enero),
+  noviembre ppdo. otra vez (en el de abril, que es imposible), junio, agosto y
+  octubre. Se declara el hecho y no se encadena nada. Los cinco llevan el
+  «Apruebase» del Ministro de Hacienda A. B. Rovaletti.
+
+E.2 · COBERTURA
+
+  769 hojas de capa leidas enteras por las pasadas. Imagenes miradas: 64
+  recortes de 45 hojas de 33 ediciones, contando las 52 tapas leidas. COLUMNA
+  PERDIDA: se cotejaron contra la capa 26 columnas de 15 ediciones, que son
+  las de los 18 actos del §A, y en ninguna falta texto que la capa tenga ni la
+  capa trae texto que la columna no tenga. No se afirma nada de las columnas
+  que no se miraron. El unico desvio hallado entre capa e imagen en esas 26
+  columnas es de una cifra, no de una columna: el numero 3322 que la capa lee
+  3122.
+
+  COTEJO SUMARIO/CUERPO. En 1926 SI es aplicable, al reves de 1908-1912, y se
+  hizo en dos niveles. Nivel de rango: las 51 tapas con contenido traen 455
+  remisiones del tipo «(pagina N)», y las 455 apuntan a una hoja que su
+  edicion efectivamente tiene; tres de ellas la capa las lee «pagina 0», que
+  es ruido del OCR sobre el numero y no un desvio del original. Nivel de acto:
+  las seis remisiones del sumario que nombran al departamento se siguieron una
+  por una hasta el cuerpo, y las seis dan con el acto que anuncian. CERO
+  DISCREPANCIAS, y esta vez el cero no es vacio: se cotejo contra un sumario
+  que existe y contra un cuerpo que esta entero.
+
+E.4 · FIRMAS Y AUTORIDAD
+
+  Gobernador: Dr. Joaquin Corbalan, leido en la imagen en las 52 tapas; la
+  capa lo escribe «CORBACHO» y «CORBfltón» y no se usa. Año editorial XVIII en
+  las 52, sin cambio dentro del ano. La tapa no declara paginas NI DIAS DE
+  SALIDA: la periodicidad sale de que las 52 fechas son viernes consecutivos,
+  y eso se dice como hecho medido y no como formula impresa. En 1911 y 1912 la
+  tapa si decia «Aparece Miercoles y Sabados»; en 1926 no dice nada.
+
+  Formulas de encabezado: conviven «El Poder Ejecutivo de la Provincia», 39
+  veces, y «El Gobernador de la Provincia», 14. Los actos del departamento
+  usan las dos: el nombramiento del Receptor de Rentas (1101) va con «El
+  Gobernador» y los demas con «El Poder Ejecutivo». No se normaliza.
+
+  Refrendos: la firma del gobernador aparece 135 veces. La acompaña Ernesto M.
+  Araoz, Ministro de Gobierno, en los actos de gobierno -todos los del
+  departamento que llevan refrendo salvo uno-, y A. B. Rovaletti, Ministro de
+  Hacienda, en los de hacienda, incluidos el nombramiento del Receptor de
+  Rentas del departamento, los cinco resumenes de Tesoreria y las dos leyes de
+  credito suplementario. No se vio un solo acto refrendado por los dos.
+
+  «Es copia»: la formula aparece SOLO DOS VECES en las 769 hojas, las dos
+  firmadas por Zenon Arias. En 1912 era la formula de cierre habitual; en 1926
+  casi desaparecio y su lugar lo ocupa el «Comuniquese, publiquese, dese al
+  Registro Oficial y archivese» del ultimo articulo. Se registra el cambio sin
+  explicarlo.
+
+  Interinatos: «en ejercicio del Poder Ejecutivo» aparece dos veces en el ano,
+  y en ninguna de las dos hojas hay decreto de apertura ni de cierre. Como en
+  1912, no se fija ningun dia de reintegro y se declara asi.
+
+E.5 · CORTES Y COLUMNAS
+
+  U+0002: 0. U+00AD: 15.572, todos a fin de renglon. Guion visible a fin de
+  renglon: 2.773. Cortes que partan el anillo 1: ninguno. Columna perdida: sin
+  confirmar ni descartar (ver E.2).
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS — lo ya visto
+
+  Del anillo 1, en la capa: «caldas» (1112 h5), que en 1911 fue el Inspector
+  Angel M. Caldas. De la difusa 0,78: calera y caleras (1101), calavera (tres
+  veces, en listas de circuitos de otros departamentos), calchera (1101 h9,
+  lista de circuitos), calilla (1102 h8, «Pi Calilla y Compania»). De la laxa
+  con separadores, ruido que no es el termino: «calle ma», «calle ro», «o al
+  dema» (por «al demandado»), «cal deno» (por «fiscal denominada»), «ca i
+  deno» (idem), «o [salto] a llena» (por «ha venido a llenar»). Ninguno se
+  agrega al config: los falsos positivos se listan en el informe (§12).
+
+E.8 · FIDELIDAD NUMERICA
+
+  Numeros mirados en la imagen en este turno: 3158 y la fianza de $ 5.000
+  (1101); 3205 y el expediente 7571-F (1104); el expediente 1198 y las medidas
+  del cateo (1104 h18); 3227 y el expediente 7742-E, y 3248 y el expediente
+  7068-F (1108); 3252 (1109); 3322 y el expediente 7116-F (1111); el
+  expediente 7032-F (1115); el expediente 7248-F (1121); 3524 y el expediente
+  7811-E (1122). Numeros que en este informe salen de la CAPA y estan marcados
+  como tales en su ficha: 3156 (1101), 3350 y 7841-E (1112), 3504 (1121) y la
+  ley 3610 con su total (1130). Numero que NO se afirma: el del decreto que
+  aprueba el presupuesto municipal de La Caldera (1115), que no esta en la
+  columna recortada y no se toma del vecino.
+
+  UN RECALCULO CERRADO: el del cateo de 1104 h18. 4.000 m por 5.000 m son
+  20.000.000 m2 = 2.000 hectareas = las cuatro unidades que el edicto declara.
+  Cierra.
+
+  UN RECALCULO QUE NO CIERRA, Y ES EL DEL UNICO CUADRO DEL AÑO QUE TOCA AL
+  DEPARTAMENTO. La Ley N° 3610, sancionada el 12 de agosto de 1926 y
+  promulgada el 16, acuerda un credito suplementario y lo detalla en unos
+  cuarenta y cinco renglones repartidos entre las hojas 6, 7 y 8 de la edicion
+  1130; uno de ellos es el de Leoncio A. Mascietti por la comision de
+  clasificador de patentes generales en La Caldera. El articulo 1° escribe la
+  suma en letras y el pie del detalle la escribe en cifras, y las dos no dicen
+  lo mismo. Las dos se miraron en la imagen, a 500 dpi:
+
+    [art. 1°, hoja 6]  ...TOS NOVENTA Y SEIS PESOS, cincuenta centa-
+    [pie, hoja 8]      TOTAL    $  56.296.53
+
+  Son TRES CENTAVOS de diferencia entre el total en letras (56.296,50) y el
+  total en cifras (56.296,53) de la misma ley.
+
+  Y EL DETALLE DECIDE CUAL DE LOS DOS ESTA MAL. Se recortaron las tres
+  columnas de importes -hoja 6, hoja 7 en dos mitades y hoja 8- y se leyeron
+  los 44 renglones en la imagen. Suman 56.296,53 exactos: el cuadro cierra
+  contra su propio total en cifras, y el que no cierra es el total EN LETRAS
+  del articulo 1°, que es la parte dispositiva de la ley. Es decir que la
+  Provincia acordo por ley un credito de cincuenta y seis mil doscientos
+  noventa y seis pesos con cincuenta centavos para pagar cuentas que suman
+  tres centavos mas. No se corrige ninguno de los dos y no se elige uno; se
+  declara que el detalle y la cifra coinciden y que la letra no.
+
+  Vale la pena decir como se leyeron, porque a 150 ppi es la unica via: la
+  columna de importes va pegada al margen derecho, entre x = 300 y x = 461 pt,
+  de modo que un solo recorte por hoja -partido en dos mitades donde la hoja
+  es entera- trae los cuarenta y cuatro renglones sin tocar el texto de los
+  conceptos. La capa, en cambio, devuelve esos mismos numeros con guion por
+  coma («2411-53», «375-69») y con letra por cifra («5oo.~»): sumarla habria
+  dado cualquier cosa.
+
+  CUADROS PUBLICADOS EN EL AÑO: siete. Los cinco resumenes del movimiento de
+  la Tesoreria General, el detalle de la Ley 3610 y el de la Ley 3611, que
+  abre otro credito por nueve mil seiscientos cincuenta y dos pesos con 30/00
+  (1130 h8 en adelante). SEIS DE LOS SIETE tienen su subtotal recalculado
+  sobre la imagen, y los cinco de Tesoreria cierran exactos:
+
+    1098 h13   605.586,91 + 7.676,62        =   613.263,53   ok
+    1111 h17   261.254,40 + 41.011,86
+                          + 25.220,06        =   327.486,32   ok
+               los siete renglones del cuerpo =   780.141,65
+               780.141,65 + 18.363,60        =   798.505,25   ok
+    1123 h23   552.651,98 + 30.978,42        =   583.630,40   ok
+    1132 h10   438.728,69 + 20.226,59        =   458.955,28   ok
+    1140 h24   512.777,40 + 20.355,35        =   533.132,75   ok
+    1130 h6-h8 los 44 renglones del detalle  =    56.296,53   ok
+               contra el total en letras                      X
+
+  EL SEPTIMO, el detalle de la Ley 3611, queda como NO RECALCULADO: ocupa el
+  final de la hoja 8 y las hojas 9 y siguientes de la edicion 1130, no toca al
+  departamento en ninguno de sus renglones -se leyeron todos en la capa
+  buscando el termino y el anillo 2- y exigiria otros tres recortes de
+  columna. Se declara con su hoja y su motivo, como manda el §4.1.
+
+  UN DETALLE DE LECTURA DEL RESUMEN DE 1111: dentro del mismo cuadro hay un
+  segundo grupo, encabezado por 329.628,70, cuyos renglones empiezan por
+  encima del recorte que se hizo; de ese no se afirma nada. El que se
+  recalculo y cierra es el de 327.486,32, y las dos sumas finales.
+
+  NINGUN BALANCE MUNICIPAL DEL DEPARTAMENTO. Como en 1912, el ano no publica
+  uno solo; y en 1926 hay ademas un decreto que APRUEBA el presupuesto de la
+  Comision Municipal de La Caldera (edicion 1115) sin transcribir una sola
+  cifra de el. Es un hecho del corpus, no una tabla que quedo sin mirar.
+
+E.9 · CONTRADICCIONES — lo ya visto
+
+  (a) La tapa de 1099 dice «SALTA, VIERNES 28 DE ENERO DE 1926», leido en la
+  imagen, y el 28 de enero de 1926 fue jueves; el viernes de esa semana fue el
+  29. La tapa se fecha en un dia que su propia formula no admite. Se
+  transcribe con [sic] y no se concilia. (b) La capa de 1115 imprime el ano
+  «1925» y la de 1138 «1326», y la de 1107 «1026»: hay que ver en la imagen
+  cuales son erratas del original y cuales del OCR, porque las tres caen en
+  ediciones cuyo numero y cuya serie semanal son de 1926.
+
+  (c) El mismo juez de paz de La Caldera se imprime «Carlos H. Matienzo» en el
+  decreto 3248 (1108 h8) y «Carlos F. Matienzo» al pie del sucesorio de la
+  misma edicion (1108 h14), a veintiseis dias de distancia. Las dos formas se
+  miraron en la imagen.
+
+  (d) El expediente del edificio de la comisaria de La Caldera se imprime
+  «7571-F» en el decreto 3205 (1104 h7) y «7811--E» junto a la cita de
+  «expediente N°. 7571 e» en el decreto 3524 (1122 h3). La letra no se decide
+  a 150 ppi y no se elige ninguna.
+
+  (e) El decreto 3205, de febrero, da por causa del traslado de la comisaria
+  el derrumbe de una pared; el decreto 3524, de junio, manda pagar el alquiler
+  de la casa a la que se mudo «con anterioridad al 1° de diciembre ppdo.», es
+  decir desde antes del derrumbe que el primero invoca. No se concilia.
+
+  (g) La Ley 3610 escribe su total de dos maneras en la misma ley: «cincuenta
+  centavos» en letras en el articulo 1° y 56.296.53 en cifras al pie del
+  detalle. Las dos miradas a 500 dpi (E.8).
+
+  (h) El resumen de Tesoreria aprobado el 14 de abril de 1926 dice
+  corresponder «al mes de noviembre ppdo.», igual que el aprobado el 14 de
+  enero. Uno de los dos rotulos esta mal y el Boletin no permite decir cual.
+  Como en 1912, el rotulo del saldo puede mentir; aca ni siquiera hay cadena
+  que lo desmienta.
+
+  (i) El original de 1104 h19 y de 1113 h15 publica el mismo remate de una
+  finca de San Carlos con el mismo texto y otra base de venta; no toca al
+  departamento y se anota al pasar.
+
+  (f) La capa lee «3122» donde el original imprime 3322 (1111 h3). Es el unico
+  de los ocho numeros de decreto mirados en que la capa y la imagen no
+  coinciden.
+
+E.10 · LIMITES (no son pendientes: nadie en esta sesion puede levantarlos)
+
+     1. No hay version propia del OCR: el desempate de toda
+        palabra dudosa es la imagen, y nada mas.
+     2. No hay confianza por hoja ni lista de hojas «a ojos».
+     3. No hay .jpg por hoja: no hay md5, ni dhash, ni medicion de
+        tinta; la duplicacion se controla por texto.
+     4. No hay log.txt: no se sabe si el script fallo en alguna hoja.
+     5. tesseract no tiene spa: no se puede OCRizar nada en sesion,
+        ni siquiera una hoja suelta.
+     6. El techo de resolucion del ano es 150 ppi, la mitad del de
+        1908-1912. Ninguna ampliacion lo levanta.
+     7. La edicion 1146 (24 de diciembre) no esta en el corpus de
+        origen y no se puede barrer.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO, uno por uno. El .tsv daria la confianza
+por hoja y con ella la lista de hojas «a ojos», que en este informe no existe;
+las hojas se eligieron por otra via y esa via esta declarada en el §1. Las
+.jpg darian md5 y dhash, es decir la deduplicacion por imagen: hoy las tres
+repeticiones posibles se descartaron por texto y no por imagen (E.1). El
+log.txt diria si el script fallo en alguna hoja; sin el, nadie puede afirmar
+que las 769 se procesaron sin error. El OCR propio daria una segunda version
+con que desempatar la palabra suelta, que es donde una sola version falla en
+silencio: en este ano el desempate lo hizo la imagen catorce veces. NINGUNO DE
+LOS CUATRO cambiaria el §A -las 30 hojas candidatas ya estan identificadas y
+miradas-, ninguno levantaria el techo de 150 ppi y ninguno traeria la edicion
+1146. Si el usuario quiere correr el script sobre 1926, que lo corra por el
+log y por el .tsv; el barrido en si esta hecho.
+
+§F · CORRECCION A LA RUBRICA (candidatas a v16)
+-----------------------------------------------
+
+  1. EL TECHO DE RESOLUCION SE MIDE, NO SE HEREDA DE LA EPOCA.
+     v15 anota 300-500 ppi para 1912 y 329-370 para 1911. 1926 trae
+     150 ppi y una segunda copia a 75, dos imagenes por hoja en las
+     769. Se mide con get_image_bbox contra el ancho de la imagen,
+     una vez por corpus, y se declara en el §0 ANTES de prometer
+     lectura de cifras.
+
+  2. EN 1926 EL SUMARIO VUELVE, Y EL OCR LO ESPACIA LETRA POR LETRA.
+     v15 dice que en 1908-1912 no hay sumario y que el cotejo
+     sumario/cuerpo es «no aplicable en toda la epoca». En 1926 el
+     sumario esta en la tapa, y su cuerpo chico hace que la capa lo
+     lea «la c a ld e ra». La pasada literal no lo ve. Regla: en un
+     corpus con sumario, la laxa con clase de espacios se corre
+     SIEMPRE sobre las hojas 1, y sus aciertos se cotejan contra el
+     cuerpo.
+
+  3. EL FOLIO NO SIEMPRE ESTA EN LOS PRIMEROS 90 CARACTERES.
+     La receta de §2.5bis -buscar \b(\d{3,4})\b en texto[:90]-
+     funciona en 1908-1912 y falla en 1926: devuelve folio en 3 de
+     cada 52 ediciones. En 1926 hay que barrer los primeros y los
+     ultimos ~260 caracteres de cada hoja y quedarse con los valores
+     del rango de la serie. Asi la cadena aparece, monotona, de
+     ~3098 (1096) a ~3803 (1147).
+
+  4. UN PDF DEL RELEASE PUEDE NO SER UN BOLETIN.
+     1146 es una hoja que dice «ESTE BOLETIN NO SE ENCONTRO EN
+     NUESTRA BASE DE DATOS.». El conteo de archivos da 52 sobre 52 y
+     no delata nada. Regla: toda edicion de 1 o 2 hojas se abre y se
+     lee su capa antes de contarla como edicion corta.
+
+  5. EL CONFIG DEL RELEASE PUEDE ESTAR ATRASADO RESPECTO DEL DEL
+     PROYECTO. Se comparan los dos antes de barrer y se declara cual
+     se uso. Aca el del Release estaba once anos atras.
+
+  6. UNA LISTA DE CIRCUITOS ELECTORALES ES UN ACTO DEL §A, NO RUIDO
+     DEL §B. El decreto de mesas receptoras de 1101 hace acertar a
+     cuarenta terminos del anillo 2 en una sola edicion, y la
+     tentacion es tratarlo como enumeracion provincial. Pero el
+     bloque del departamento viene rotulado con su propio
+     encabezado -«La Caldera Colegio Electoral N°. 5»- y ahi la
+     lista ES el acto: dice que parajes componen cada circuito del
+     departamento en 1926, con su nombre tal como el Estado lo
+     escribe. Regla: en una lista provincial se busca el
+     encabezado del departamento y ese bloque se ficha en el §A;
+     el resto de la lista va al §B como enumeracion ajena.
+
+  7bis. UNA COLUMNA DE IMPORTES SE RECORTA SOLA, Y ESO VUELVE
+     BARATO EL RECALCULO. En 1926 los importes van pegados al
+     margen derecho, de x = 300 a x = 461 pt. Un recorte de esa
+     franja por hoja -partido en dos mitades cuando la hoja es
+     entera- trajo los 44 renglones de la Ley 3610 en tres
+     imagenes, sin el texto de los conceptos. La regla de §4.1 de
+     recalcular un subtotal por cuadro deja de ser cara si antes
+     se mide donde cae la columna de cifras, igual que se miden
+     los bordes de columna del texto.
+
+  8. CON PDF REALES, LA TINTA SE MIDE AUNQUE NO LLEGUEN LAS .jpg.
+     §6 dice que sin las imagenes del script no hay medicion de
+     tinta y que es un limite declarado. No lo es: la sesion
+     rasteriza la hoja con PyMuPDF y cuenta los pixeles oscuros.
+     En 1926 costo una llamada y resolvio la unica hoja en blanco
+     del ano sin mirarla (0,05 % contra 6,79 % de su vecina). Lo
+     que sigue siendo limite sin las .jpg es md5 y dhash, que
+     necesitan la imagen tal como el script la guardo.
+
+  9. LA MARCA DE PUBLICACION PUEDE NO EXISTIR EN LA EPOCA, Y ESO
+     NO ES UNA PASADA ROTA. 1912 tenia 119 marcas «251 v Dbre 5».
+     1926 tiene cero, y en su lugar los avisos llevan un numero
+     entre parentesis al pie. Antes de escribir el cero se prueba
+     el patron contra la cadena del ano que si las tenia.
+
+ 10. EL DIA DE SALIDA PUEDE NO ESTAR DECLARADO EN NINGUNA PARTE.
+     §2.5bis dice que «los dias de salida los declara la tapa».
+     La de 1926 no los declara. Se miden entonces sobre las
+     fechas leidas -en 1926, 52 viernes consecutivos- y se dice
+     que la periodicidad es medida y no declarada; sin eso, un
+     informe puede listar huecos de calendario contra una formula
+     que el original nunca imprimio.
+
+ 11. UN ACTOR PUEDE QUEDAR FUERA DEL ALCANCE DE TODA BUSQUEDA POR
+     TEXTO. En 1926 son nueve, y de uno -Celestina Velazquez de
+     Ruiloba- la capa no devuelve ni el apellido. La regla de
+     §5.1 manda nombrarlos; conviene agregar que el nombre se
+     toma entonces de la imagen y que ese nombre, y no el de la
+     capa, es el que va al config.
+
+  7. CON UNA SOLA VERSION, EL NUMERO DE UN DECRETO SE MIRA SIEMPRE,
+     AUNQUE LA CAPA LO DE LIMPIO. En 1926 la capa erro uno de cada
+     ocho (3122 por 3322) sin ninguna senal de que estuviera
+     errando: el numero no venia partido ni rodeado de basura. La
+     vecindad de la serie ayuda a sospechar, pero no prueba nada;
+     el recorte de la linea del numero cuesta un recorte y cierra
+     el asunto.
+
+CONFIG ACTUALIZADO — se entrega lee_config.json
+-----------------------------------------------
+
+Se parte del config del PROYECTO, que es el vigente (§0), no del que quedo en
+el Release. Se conserva todo lo anterior y se agrega lo de 1926.
+
+A «anillo2», cuatro terminos, todos tomados de como el decreto 3156 escribe el
+circuito del departamento: «mesada» en singular, que el config solo tenia en
+plural; «churcal», que el config solo tenia como «el churcal»; «el monte de
+las garrapatas», con el DE que el config no tenia; y «despensa», que el config
+solo tenia como «la despensa» y «despenza». Son 115 terminos en total. NO se
+agrega «pueblo», que es el primer paraje del circuito de la mesa 1: buscarlo
+en un Boletin daria miles de aciertos inutiles.
+
+A «actores», treinta entradas con origen 1926, que lo dejan en 319. Las
+veinticuatro personas de los actos del §A y del §B, mas el gobernador Joaquin
+Corbalan y los dos ministros que refrendan, Ernesto M. Araoz y A. B.
+Rovaletti, mas Zenon Arias, que firma los dos unicos «Es copia» del ano. Se
+conservan las entradas anteriores de las personas que ya estaban -Rafael
+Delgado (1917), Victor Mascleff como «masclef» (1917), Carlos F. Matienzo
+(1922), Lucas Molina (1909), Leoncio A. Mascietti (1919)- y no se unifican con
+las de 1926: el config es una red de busqueda, no un padron (§15.3).
+
+SE AGREGAN ADEMAS DOS FORMAS QUE SOLO EXISTEN EN EL OCR, porque sin ellas esas
+dos personas no se encuentran: «francisco r. alias», que es como la capa lee a
+Francisco R. Arias, y «carlos ii. matienzo», que es como lee a Carlos H.
+Matienzo. Es la misma regla con que en 1912 entraron «penales» y «challe».
+
+NO SE AGREGA NADA A «falsos_positivos». Los de 1926 -Angel M. Caldas, calera,
+calavera, calchera, «Pi Calilla y Compania», «cal deno» por «fiscal
+denominada», «o al dema» por «al demandado»- quedan listados en E.7 y en el
+§12 de la rubrica, y no en el config: un falso positivo en el config marca el
+contexto y le quita el recorte a una mencion que podria ser real (§12).
+
+NO SE AGREGA NADA A «numeros». Los decretos de 1926 si llevan numero, pero son
+numeros de decreto provincial corridos -3156, 3205, 3227, 3248, 3252, 3322,
+3350, 3420, 3504, 3524- y las leyes 3610 y 3611: arrastrarlos al ano siguiente
+no serviria de nada, porque la serie sigue subiendo y no vuelve. La clave
+«numeros» se usa para actos que se citan de un ano al otro, y en 1926 no hay
+ninguno: el unico acto citado y no acompanado del ano no lleva numero.
+
+RECUENTO
+--------
+
+  archivos del Release: 53 (52 PDF + lee_config.json)
+  ediciones: 52 numeradas; 51 con contenido; 1 ausente (1146)
+  hojas presentes: 769; declaradas: ninguna tapa declara paginas
+  hojas en blanco: 1 (1108 h16)
+  caracteres de capa: 2.503.112
+  U+0002: 0    U+00AD: 15.572    guion visible a fin de renglon: 2.773
+  techo de resolucion: 150 ppi (una hoja a 283-300 ppi)
+  reparto de confianza: no existe (limite)
+  imagenes miradas: 44 recortes de 29 hojas
+  columnas cotejadas contra la capa: 26, de 15 ediciones
+  anillo 1: 24 hojas por la literal (37 aciertos) + 6 hojas de
+            sumario por la laxa con separadores y la difusa = 30
+            hojas candidatas, 30 miradas, 14 fichas, 18 actos
+  anillo 2: 54 terminos con acierto de 111, 289 aciertos
+  actores: 34 con nombre y apellido completos, de 289 del config
+  formulas de reemplazo: 2 de 8, en 71 hojas
+  anillo 2: 54 terminos con acierto de 111; 26 parajes del
+            departamento fichados en el §A; 6 mas atados por via
+            indirecta (B.2); el resto, otra cosa
+  actores: 34 del config con nombre completo; 3 en mas de un acto
+           del departamento; 9 que ninguna busqueda por texto
+           devuelve ni en su propio acto
+  cuadros publicados: 7; subtotales recalculados: 1, que no cierra
+           por tres centavos; no recalculados: 6, con su motivo
+  saldos: 5 resumenes de Tesoreria, de meses no consecutivos; sin
+          cadena anual posible
+  planos: 149 hojas los nombran, ninguna los publica
+  tapas leidas: 52 de 52 (38 en la imagen, 14 de ellas en este turno)
+  avisos del departamento comprobados contra repeticion: 3, ninguno
+          se repite
+  limites declarados: 7
+  fichas del §A: 14, con 18 actos, en 15 ediciones
+  cotejo sumario/cuerpo: 455 remisiones de rango + 6 de acto, cero
+          discrepancias
+  config entregado: anillo2 115 (+4), actores 319 (+30 con origen
+          1926), numeros 78 (sin cambio), falsos positivos 20 (sin
+          cambio)
+
+Fin del informe. COMPLETO, con siete limites declarados. Se
+
+entrego archivo: el informe y el lee_config.json actualizado.

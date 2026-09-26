@@ -1,0 +1,1175 @@
+BOLETIN OFICIAL DE SALTA - ANO 1917 - EDICIONES N° 636 A 683
+BARRIDO LEE SOBRE «LA CALDERA» - RUBRICA v15
+Informe cerrado el 21 de setiembre de 2026
+
+
+§0 · ADVERTENCIA PRELIMINAR
+===========================
+
+ESTADO: COMPLETO, con seis limites declarados. No quedan pendientes: todo lo
+que la sesion podia hacer con los insumos que llegaron esta hecho. Los seis
+limites estan desarrollados en E.10.
+
+Salidas de lee_auto.py: NINGUNA. El Release 1917 del repositorio
+ediedrich/boletines-salta trae 48 assets y son los 47 PDF del ano mas el
+lee_config.json. No llegaron pre-informe, resultados_1917.csv,
+decretos_1917.csv, log.txt, recortes.zip ni el zip de los .txt de lee_trabajo.
+Por lo tanto no hay version propia del OCR, ni confianza por hoja, ni .jpg, ni
+log que leer, y no se puede declarar version ni fecha de corrida del script.
+Es el tercer ano seguido barrido en este modo, despues de 1911 y 1912.
+
+Lo que agregaria cada insumo que falto, si llegara: el .tsv daria la confianza
+por hoja y con ella la lista de hojas «a ojos»; las .jpg darian md5, dhash y
+medicion de tinta; el OCR propio daria una segunda version con que desempatar
+las palabras dudosas, que en este ano son varias (Cacere/Cacerez,
+Pfister/Pjister, Getrudis/Gertrudis, Reyes/Keyes). El §A no cambiaria: sus
+nueve actos estan todos mirados en la imagen.
+
+Ediciones: 47 presentes, de la N° 636 a la N° 683. Falta por completo la N°
+640, que no esta entre los assets del Release. 289 hojas extraidas.
+
+Imagenes: bajadas del Release con curl en una sola llamada (47 PDF, 16 MB). No
+hay EXTRAIDO.json con que cotejar bytes y hojas, asi que el cotejo se hizo
+contra la cadena de folios impresos (§2.5bis) y contra la cadena de fechas de
+tapa, las dos reconstruidas en esta sesion.
+
+Entorno verificado al empezar: nproc = 1; tesseract 5.3.4 presente pero con
+los idiomas eng y osd UNICAMENTE, sin spa, comprobado con tesseract
+--list-langs antes de prometer nada. El §3 y el §16 no son aplicables: en esta
+sesion no se OCRizo ni una hoja. PyMuPDF no venia instalado y se instalo desde
+pypi. Hay convert, montage, identify, unzip, git y curl; no hay jq, exiftool
+ni gh. api.github.com responde 403, de modo que la lista de assets se saco de
+la pagina releases/expanded_assets/1917, que no exige token.
+
+Capa previa: reconstruida en sesion con PyMuPDF sobre los 47 PDF, en tres
+llamadas. Todos los resultados de este informe llevan por lo tanto la etiqueta
+prev: no hubo segunda version y no hubo desempate posible por cotejo de
+versiones. El unico desempate es la imagen, y se uso en cada ficha.
+
+Lo que verifico la sesion: las cuatro pasadas del anillo 1 mas una quinta
+sobre el texto sin espacios; el anillo 2 completo con el contexto de los 30
+terminos que dieron acierto; los 233 actores del config por nombre completo y,
+los que no dieron acierto, por apellido suelto; los 51 numeros; las 8 formulas
+de reemplazo; las 47 tapas, seis de ellas en la imagen; la cadena de folios;
+el calendario; la autoridad y sus formulas; el unico cuadro publicado del ano;
+y las nueve menciones del §A, todas transcritas desde la imagen.
+
+Desvios de §8.17: ninguno buscado. Este archivo esta escrito sin tildes ni
+enes por una limitacion del canal de escritura de la sesion, NO del original:
+las transcripciones respetan mayusculas, puntuacion, comillas angulares,
+erratas y cortes tal como se ven, pero sus tildes y enes se han perdido. Donde
+la ortografia original decide algo (una errata, una doble forma de un
+apellido) se dice expresamente en la nota de lectura.
+
+Observacion sobre el config, que no es un desvio pero conviene declarar: el
+lee_config.json del Release YA TRAE 37 actores con origen «1917», varios de
+ellos con deformaciones de OCR propias de este corpus («teodoro keyes»,
+«daniel li 11 ares», «emilio eres.sart», «juana flores de olia ile»). El ano
+fue barrido antes y el config recogio su resultado. Esta sesion no tuvo a la
+vista ningun informe LEE anterior y rehizo el barrido entero desde la capa y
+la imagen; los 37 actores se usaron como heredados, igual que los de 1908 a
+1916, y no como fichas. Tampoco se pudo cumplir la regla de §5.1 de armar la
+lista de actores «con todos los informes anteriores»: se armo con el config,
+que es lo unico que llego.
+
+
+§1 · CORPUS REVISADO
+====================
+
+El ano no declara paginas en la tapa. La columna «hojas» es la cuenta de hojas
+presentes en el PDF; no hay cifra declarada contra la cual cotejarla, de modo
+que el control de completitud lo hace la cadena de folios (E.5). Las fechas
+marcadas [imagen] se leyeron en la tapa rasterizada porque la capa previa no
+las resuelve.
+
+  Ed.   Fecha de tapa        Dia       Hojas  Tipo/confianza
+
+  ----  -------------------  --------  -----  ---------------------
+
+   636  [Enero 20]           sabado       8   PDF real, capa prev.
+
+   637  Enero 30             martes       8   PDF real, capa prev.
+
+   638  Febrero 15           jueves       8   PDF real, capa prev.
+
+   639  Febrero 23           viernes      8   PDF real, capa prev.
+
+   640  [ausente]            [viernes  --     NO ESTA EN EL RELEASE
+
+                              2 de marzo por posicion]
+
+   641  Marzo 9              viernes      9   PDF real, capa prev.
+
+   642  Marzo 16             viernes      3   PDF real, capa prev.
+
+   643  Marzo 23             viernes     12   PDF real, capa prev.
+
+   644  Marzo 30             viernes      6   PDF real, capa prev.
+
+   645  Abril 6              viernes      2   PDF real, capa prev.
+
+   646  [Abril 13]           viernes      4   PDF real, capa prev.
+
+   647  Abril 20             viernes      7   PDF real, capa prev.
+
+   648  Abril 27             viernes      8   PDF real, capa prev.
+
+   649  Mayo 4               viernes      5   PDF real, capa prev.
+
+   650  Mayo 11              viernes      7   PDF real, capa prev.
+
+   651  [Mayo 18]            viernes      6   PDF real, capa prev.
+
+   652  Mayo 25              viernes      4   PDF real, capa prev.
+
+   653  Junio 1              viernes      6   PDF real, capa prev.
+
+   654  Junio 8              viernes      7   PDF real, capa prev.
+
+   655  Junio 15             viernes      3   PDF real, capa prev.
+
+   656  [Junio 22]           viernes      6   PDF real, capa prev.
+
+   657  Junio 29             viernes      3   PDF real, capa prev.
+
+   658  Julio 6              viernes      8   PDF real, capa prev.
+
+   659  Julio 13             viernes      4   PDF real, capa prev.
+
+   660  Julio 20             viernes      4   PDF real, capa prev.
+
+   661  Julio 27             viernes      3   PDF real, capa prev.
+
+   662  Agosto 3             viernes      4   PDF real, capa prev.
+
+   663  Agosto 10            viernes      7   PDF real, capa prev.
+
+   664  Agosto 17            viernes      5   PDF real, capa prev.
+
+   665  Agosto 24            viernes      5   PDF real, capa prev.
+
+   666  Agosto 31            viernes      5   PDF real, capa prev.
+
+   667  Setiembre 7          viernes      5   PDF real, capa prev.
+
+   668  [Setiembre 14]       viernes      3   PDF real, capa prev.
+
+   669  Setiembre 21         viernes      4   PDF real, capa prev.
+
+   670  Setiembre 28         viernes     18   PDF real, capa prev.
+
+   671  Octubre 5            viernes      9   PDF real, capa prev.
+
+   672  Octubre 12           viernes      9   PDF real, capa prev.
+
+   673  [Octubre 19]         viernes      4   PDF real, capa prev.
+
+   674  Octubre 26           viernes      7   PDF real, capa prev.
+
+   675  Noviembre 2          viernes      8   PDF real, capa prev.
+
+   676  Noviembre 9          viernes      9   PDF real, capa prev.
+
+   677  Noviembre 16         viernes      5   PDF real, capa prev.
+
+   678  Noviembre 23         viernes      4   PDF real, capa prev.
+
+   679  Noviembre 30         viernes      7   PDF real, capa prev.
+
+   680  Diciembre 7          viernes      6   PDF real, capa prev.
+
+   681  Diciembre 14         viernes      6   PDF real, capa prev.
+
+   682  Diciembre 21         viernes      4   PDF real, capa prev.
+
+   683  Diciembre 28         viernes      6   PDF real, capa prev.
+
+
+
+Tipo, para las 47 ediciones: PDF real con imagen y capa de texto previa mayor
+que cero en las 289 hojas; ninguna hoja con txt = 0 y ninguna hoja de menos de
+500 bytes (el minimo del ano es 602 caracteres y la media 3.344). Ningun
+contenedor ZIP y ningun texto plano con extension .pdf.
+
+Confianza: NO HAY. Sin el .tsv del script no existe media de confianza por
+hoja ni reparto pub/ver/ojos, y los umbrales del §3 no son aplicables a esta
+epoca. Es un limite, no un pendiente (E.10).
+
+Techo de resolucion: 300 ppi. Conviene decir como se midio, porque el camino
+corto enganaba. Estos PDF son de contenido mixto: cada hoja lleva dos imagenes
+JPX en gris, una de 1012 x 1477 (150 ppi) y otra de 506 x 738 (75 ppi), y
+ADEMAS una mascara JBIG2 de 1 bit de 2023 x 2953, que es donde esta el texto y
+que equivale a 300 ppi sobre una pagina de 485 x 709 pt. Medido por lo que
+devuelve get_images se habria declarado un techo de 75 a 150 ppi; rasterizada
+a 300 dpi la pagina se lee entera y sin esfuerzo.
+
+Formato de epoca: la tapa dice «BOLETIN OFICIAL · ANO IX · SALTA, <fecha> de
+1917 · NUM. n», sin declaracion de paginas, con la direccion y administracion
+en la Secretaria de Policia, calle Caseros 417, y con la formula de
+periodicidad «Aparece Miercoles y Sabados». El ano editorial AÑO IX se leyo en
+la tapa y no en la capa; la tapa de la edicion 636 (20 de enero) dice AÑO VIII
+y esta parcialmente cubierta por un sello diagonal «IMPRESOS», de modo que el
+cambio de ano editorial cae entre la 636 y la 638, sin que la 637 lo resuelva.
+
+
+§2 · CRITERIO DE BUSQUEDA
+=========================
+
+Versiones y etiquetas: una sola version, la capa previa de los PDF, extraida
+por la sesion. Todo resultado se etiqueta prev. No hubo union de versiones ni
+desempate por cotejo: el unico desempate posible fue la imagen, y se uso en
+las nueve fichas del §A y en las seis tapas ilegibles.
+
+Marca de corte: U+0002 no aparece NI UNA VEZ en las 289 hojas. El guion blando
+U+00AD aparece 5.316 veces y es la unica marca de corte de renglon de este
+corpus; en esta epoca no se imprime guion visible. La union lo quita JUNTO CON
+el salto de renglon, y despues los sueltos, segun la correccion de v15 §2.3.
+Se probo tambien el corte con signos intercalados (hasta dos signos de
+puntuacion a cada lado del salto) y el guion visible de fin de renglon.
+
+Las cuatro pasadas, mas una quinta. Literal/normalizada: «cald» sobre NFD sin
+diacriticos con los cortes unidos; 19 aciertos en 11 hojas. Laxa:
+[gco][ao][l1i|][dcl][ec][rnm][ao] con la clase de espacios en blanco
+[\s\-\u00ad]{0,3} entre CADA par de caracteres, no con un espacio literal; 13
+hojas, con cinco formas distintas. Difusa: ratio >= 0,78 contra caldera y
+calderilla sobre todas las palabras de la hoja, excluida la forma exacta; un
+solo acierto, «escalera» en 667 h2, falso positivo ya juzgado. Difusa ampliada
+entre 0,70 y 0,78 restringida a palabras que empiezan con c, g u o: corrida,
+sin acierto nuevo. Anillo 2, actores, numeros y reemplazo, sobre la unica
+version que hay.
+
+La quinta pasada es nueva de este ano y va al §F: la misma busqueda literal
+sobre el texto con TODOS los espacios suprimidos. Devolvio 51 hojas contra las
+11 de la literal. De las 40 hojas de mas, 39 son falsos positivos de union
+entre palabras vecinas («local de», «fiscal de», «vocal del», «dominical de»,
+«local de remates») y una es real y decisiva: la edicion 639 hoja 7, donde el
+OCR parte el renglon en «C alde r a--Da niel Li 11 ares». Esa mencion es un
+acto del departamento y ninguna otra via la traia, salvo la laxa bien escrita,
+que tambien la devuelve.
+
+Ninguna pasada de este ano devolvio cero, de modo que no hizo falta probarlas
+contra otro corpus. La difusa devolvio un solo acierto, que es poco, y se
+comprobo bajando el umbral a 0,70: el fondo del ano tiene pocas palabras
+parecidas a caldera, y esa es la explicacion, no una pasada rota.
+
+Lista de actores y su origen: los 233 del lee_config.json del Release, que al
+21/09/2026 se reparten asi, leidos del archivo y no de memoria: 42 de 1946 con
+origen por edicion (2465, 2514, 2553, 2584, 2614, 2675, 2702, 2730) y 191 con
+origen por ano: 8 de 1908, 45 de 1909, 41 de 1910, 24 de 1911, 11 de 1912, 9
+de 1915, 16 de 1916 y 37 de 1917. No hay actores con origen 1913 ni 1914. El
+bloque §15.2 de la rubrica v15 esta vencido: describe un config de 171
+actores, 70 terminos de anillo 2, 40 numeros y 12 falsos positivos, y el
+archivo real tiene 233, 84, 51 y 20.
+
+Se busco a cada actor por nombre y apellido sobre el texto con la puntuacion
+suprimida, y a los que no dieron acierto, por apellido suelto, agrupando por
+contexto. Prohibido declarar ausente a quien la busqueda no devuelve ni en su
+propio acto: en 1917 no se dio ese caso con ninguno de los actores del §A,
+porque los nueve actos se miraron en la imagen y sus personas se verificaron
+ahi.
+
+Numeros arrastrados: los 51 del config, corridos sobre las 289 hojas. A
+diferencia de 1908-1912, los actos de 1917 SI llevan numero, y esta a la vista
+un rango de 1023 a 1455 con 166 numeros distintos leidos. La regla §8.15 de
+fecha contra numeracion vuelve a ser aplicable y se aplico a los vecinos ±3 de
+los cuatro decretos del §A (E.4).
+
+Identificadores de las ausencias: numero de acto y fecha, ademas de lugar,
+persona y organismo. Con numeracion a la vista, toda ausencia de este informe
+se afirma con dos identificadores.
+
+
+§A · MENCIONES EXPLICITAS
+=========================
+
+Nueve actos, diez apariciones. La diferencia es el edicto de deslinde de
+«Potrero Gallinato», que sale identico en las ediciones 636 y 637 y se ficha
+una sola vez, con dos apariciones. Cada ficha lleva el modo de lectura, y en
+todas el texto se transcribio desde la imagen.
+
+A.1 · Edicion N° 636, hoja 4
+----------------------------
+FUENTE: Ed. N° 636, hoja 4, columna 2, y Ed. N° 637, hoja 4, columna 1 (folio
+impreso Pág. 12). Dos apariciones del mismo edicto.
+FICHA: Edicto de deslinde, mensura y amojonamiento de la finca «Potrero
+Gallinato» y division de condominio, en el departamento de La Caldera.
+Solicitante: Camilo Cacere (636) / Camilo Cacerez (637). La finca fue antes de
+Inocencio Aramayo. Juez de feria: doctor Augusto F. Torino, auto de Salta,
+Enero 19 de 1917. Perito propuesto: Herman Pfister. Escribano firmante del
+pedimento vecino: J. M. Romero Escobar.
+MODO DE LECTURA: Columna entera recortada a 250 dpi por el ancho de columna
+(242-466 pt) y leida en dos mitades apaisadas. Numero de edicion, nombres,
+limites y fecha del auto leidos en la imagen. La repeticion en 637 se verifico
+tambien en la imagen.
+TEXTO:
+  Habiendose presentado el senor Camilo Cacere, con titulos
+  bastantes, solicitando deslindes, mensura y amojonamiento de la
+  finca «Potrero Gallinato» que fue antes de Inocencio Aramayo y la
+  division de condominio de la misma finca, ubicada en el
+  departamento de La Caldera, y bajo los siguientes limites, al
+  norte, con los filos Santa «Getrudis, propiedad de los herederos
+  de don Angel Sola; al sur, con los filos del cerro Mojotoro, que
+  la divide de la propiedad de los senores Arias: al este, con
+  propiedad de Jose Nogales; y al oeste, con la de los herederos
+  Yugra.--El senor juez de feria, doctor Augusto F. Torino, a
+  proveido lo siguiente. Salta Enero 19 de 1917. A merito de los
+  titulos presentados y de lo dictaminado por el senor Agente
+  Fiscal, procedase por el perito propuesto, senor Herman Pfister, a
+  practicar las operaciones solicitadas en el precedente escrito,
+  pervio la publicacion de estilo por el termino de treinta dias en
+  los diarios LA PROVINCIA y «La Libertad» y por una vez en el
+  «Boletin Oficial», quedando obligado el perito nombrado de
+  notificar en legal forma a los duenos de te[...]
+NOTA DE LECTURA: El texto se corta al pie de la columna de 636 h4 y sigue
+fuera del recorte. La comilla de «Getrudis no cierra (sic). El auto ordena
+publicar por UNA VEZ en el Boletin Oficial y sin embargo el aviso sale
+identico en 636 y en 637: se declara en E.6. Entre las dos impresiones cambia
+el apellido del solicitante, Cacere en 636 y Cacerez en 637, las dos formas
+leidas en la imagen; no se elige una. La cabecera de 636 h4 imprime «Nmu 636»
+por Num. (sic).
+
+A.2 · Edicion N° 638, hoja 2
+----------------------------
+FUENTE: Ed. N° 638, hoja 2, columna 2 (arranque) y hoja 3, columna 1 (cierre).
+FICHA: Decreto N° 1056, de Salta, Enero 4 de 1917: nombra por un nuevo periodo
+a los miembros de la Comision Municipal del Departamento de La Caldera,
+senores Daniel Linares, Andres Marini y Camilo Caceres. Firma CORNEJO;
+refrenda Rafael M. Zuviria; Es copia Francisco J. Lopez.
+MODO DE LECTURA: Numero del acto (N.o 1056) recortado a 300 dpi y leido en la
+imagen en 638 h2. Cuerpo y firmas leidos en la imagen en la columna 1 de 638
+h3, recortada entera a 250 dpi.
+TEXTO:
+  N.o 1056
+  Habiendo terminado el periodo por el que fueron nombrados Miembros
+  de [...] la Comision Municipal del Departamento de La Caldera, los
+  Senores Daniel Linares, Andres Marini y Camilo Caceres.
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1o--Nombranse por un nuevo periodo a los Senores antes
+  mencionados.
+  Art. 2o--Comuniquese, publiquese e insertese en el Registro
+  Oficial.
+          Salta, Enero 4 de 1917
+                  CORNEJO
+            RAFAEL M. ZUVIRIA
+  Es copia:--Francisco J. Lopez
+NOTA DE LECTURA: El acto cruza de la hoja 2 a la hoja 3; el tramo intermedio
+cae en el corte entre columnas y se marca [...]. En el mismo ano, el decreto
+N° 1377 de 668 h2 declara incompleta esta misma Comision por renuncia de
+Andres Marini (ficha A.8).
+
+A.3 · Edicion N° 638, hoja 7
+----------------------------
+FUENTE: Ed. N° 638, hoja 7, columna 2.
+FICHA: Decreto N° 1085, de Salta, Enero 23 de 1917: nombra Jueces de Paz
+propietario y suplente del Departamento de La Caldera, para el ejercicio del
+corriente ano, a los senores Escolastico M. Aparicio y Casimiro Caceres
+respectivamente, de acuerdo con las ternas elevadas por la H. Comision
+Municipal del Departamento.
+MODO DE LECTURA: Banda de 250 pt de alto sobre la columna 2, recortada a 300
+dpi. Numero de acto, nombres y fecha leidos en la imagen.
+TEXTO:
+  N.o 1085
+  De acuerdo con las ternas elevadas por la H. Comision Municipal
+  del Departamento de La Caldera, para el nombramiemto de Jueces de
+  Paz.
+  El Gobernador' de la Provincia
+  DECRETA:
+  Art. 1o--Nombranse Jueces de Paz propietario y suplente del
+  mencionado Departamento para el ejercicio del corriente ano, a los
+  Srs. Escolastico M. Aparicio y Casimiro Caceres, respectivamente.
+  Art. 2o--Comuniquese, publiquese e insertese en el R. O.
+          Salta, Enero 23 de 1917
+                  CORNEJO
+            RAFAEL M. ZUVIRIA
+  Es copia:--Francisco J. Lopez
+NOTA DE LECTURA: «nombramiemto» por nombramiento (sic), leido asi en la
+imagen. La H. Comision Municipal que eleva las ternas es la misma que el
+decreto N° 1056 habia renovado diez y nueve dias antes.
+
+A.4 · Edicion N° 639, hoja 5
+----------------------------
+FUENTE: Ed. N° 639, hoja 5, columna 1.
+FICHA: Decreto de convocatoria a elecciones de senadores y diputados, de
+Salta, Febrero 3 de 1917. Asigna un diputado a cada uno de los departamentos
+de Caldera, Metan, R. de Lerma y Guachipas, y fija el domingo 4 de marzo para
+la eleccion.
+MODO DE LECTURA: Leido en la capa previa y cotejado con la imagen en el
+renglon que nombra al departamento. El numero del acto queda arriba del
+recorte y NO se leyo.
+TEXTO:
+  Art. 1.o--Convocase al pueblo de los departamentos, que a
+  continuacion se expresan, a elejir sus representantes ante la [el]
+  Legislatura, en la siguiente forma; por la Capital, un senador y
+  cuatro diputados; por cada uno de los Dptos. de Cerrillos,
+  Chicoana, Campo Santo, La Vina, R. de la Frontera, San Carlos y
+  Candelaria, un diputado y un senador; por cada uno de los de
+  Cafayate, Cachi, Santa Victoria y Molinos, un senador; por
+  Rivadavia dos diputados y por cada uno de los de Caldera, Metan,
+  R. de Lerma y Guachipas un diputado.
+  Art. 2.o--Designase el domingo 4 del proximo mes de marzo, para
+  que tenga lugar dicha eleccion, en todas las circunscripciones
+  electorales convocadas.
+  Art. 3.o--Comuniquese, publiquese e insertese en el R. Oficial.
+          Salta, Febrero 3 de 1917.
+                  CORNEJO
+            RAFAEL M. ZUVIRIA
+  Es copia--F. J. Lopez
+NOTA DE LECTURA: El decreto se dicta de acuerdo con los articulos 63 y 78 de
+la Constitucion y 23 y 29 de la ley de elecciones. Su numero no se leyo: cae
+arriba del vistos y fuera de la banda recortada; el acto siguiente en la misma
+hoja es el N° 1100, y el que le sigue el N° 1101. No se infiere el numero
+faltante.
+
+A.5 · Edicion N° 639, hoja 5
+----------------------------
+FUENTE: Ed. N° 639, hoja 5, columna 2, lista que sigue al Art. 1.o.
+FICHA: Decreto N° 1101, de Salta, Febrero 5 de 1917: nombra Comisarios de
+Policia de los Departamentos y Distritos de la Provincia. Por Caldera:
+Eustaquio Murua.
+MODO DE LECTURA: Banda de 300 pt sobre la columna 2, recortada a 300 dpi.
+Encabezado de la lista, numero de acto y renglon de Caldera leidos en la
+imagen, segun la regla §4.11.
+TEXTO:
+  N.o 1101
+  Siendo oportuno designar las personas que han de desempenar en el
+  corriente ano, las funciones de Comisarios de Policia de los
+  Dptos. y Distritos de la Provincia.
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1.o--Nombranse Comisarios de Policia de los Departamentos y
+  Distritos que a continuacion se expresan, a los siguientes
+  Senores:
+    Anta          Don Abraham Diez Gomez
+    Cerrillos      »  Abraham Peralta
+    Chicoana       »  Justo F. Caro
+    Cafayate       »  Salustiano Rodriguez
+    Campo Santo    »  Pedro Perez del Busto
+    Metan          »  Antonio Padovani
+    Oran           »  Rosendo Cullell
+    R. Frontera    »  Nestor B. Acosta
+    Rivadavia      »  Amado Soloaga
+    Cachi          »  Napoleon Wayar
+    Caldera        »  Eustaquio Murua
+    Guachipas      »  Domingo L. Arana
+    Iruya          »  Tomas F. Vargas
+    Molinos        »  Balvin Diaz
+NOTA DE LECTURA: Se transcribe la lista entera por la regla §4.10. El
+encabezado decide la ficha: sin el, el renglon «Caldera - Eustaquio Murua»
+podria confundirse con las otras dos listas por departamento de la misma epoca
+(candidatos y mesas receptoras). Eustaquio Murua ya figuraba en el config con
+origen 1912.
+
+A.6 · Edicion N° 639, hoja 6
+----------------------------
+FUENTE: Ed. N° 639, hoja 6, columna 2 (encabezado) y hoja 7, columna 1
+(lista).
+FICHA: Publicacion de la Junta de Escrutinio: candidatos a senadores y
+diputados a la H. Legislatura para las elecciones del 4 de marzo. En la lista
+del partido «Union Provincial», bajo DIPUTADOS: Caldera - Daniel Linares.
+MODO DE LECTURA: Encabezado leido en la capa previa al pie de 639 h6; la lista
+y el renglon del departamento, recortados a 300 dpi y leidos en la imagen en
+639 h7.
+TEXTO:
+  JUNTA DE ESCRUTINIO
+  Candidatos a Senadores y Diputados a la H. Legislatura de la
+  Provincia, para las proximas elecciones del 4 de marzo.
+  PARTIDO «UNION PROVINCIAL»
+  SENADORES
+  Capital--Monsenor Gregorio Romero
+  [...]
+  Molinos--Juan Cornejo
+  Campo Santo--Santiago Fleming
+  Cachi--Benjamin Zorrilla
+  Cerrillos--Carlos Serrey
+  Chicoana--Domingo Patron Costas
+  La Vina--Abel Zerda
+  R. de la Frontera--Adolfo G. Pinto
+  San Carlos--Marcos Alsina
+  Santa Victoria--Jose Benito Aranda
+  Cafayate--Felix Usandivaras
+  La Candelaria--Juan Jose Castellanos
+  DIPUTADOS
+  Caldera--Daniel Linares
+  Campo Santo--Pedro Baldi
+  Cerrillos--Nestor Patron Costas
+  Chicoana--Luis C. Arana
+  La Vina--Julio Usandivaras
+  Rivadavia--Julio Sarmiento y Santiago Durand
+  San Carlos--Silverio Chavarria
+  Metan--Wenceslao Saravia
+NOTA DE LECTURA: Son CANDIDATOS, no electos: el encabezado esta en la hoja
+anterior y sin el la lista se lee al reves. La capa previa parte el renglon en
+«C alde r a--Da niel Li 11 ares», con espacios dentro de las dos palabras; la
+impresion es limpia. Esta mencion es la que la pasada literal pierde y solo
+devuelven la laxa bien escrita y la pasada sin espacios (§2.3 y §F). Mas abajo
+en la misma hoja hay una lista de la «Agrupacion Independiente» cuyo OCR esta
+muy roto y en la que no se hallo renglon del departamento por ninguna de las
+cuatro pasadas.
+
+A.7 · Edicion N° 664, hoja 4
+----------------------------
+FUENTE: Ed. N° 664, hoja 4, columna 2 (arranque) y hoja 5, columna 1 (cierre).
+FICHA: Edicto de deslinde parcial por el rumbo sud de un terreno en la
+Calderilla, departamento de La Caldera, de propiedad de dona Juana Flores de
+Chaile. Juez de 1a Instancia doctor Augusto F. Torino, auto del 18 de julio;
+perito el agrimensor Herman Pjister [sic]. Salta, Julio 23 de 1917. Secretario
+M. Sanmillan.
+MODO DE LECTURA: Arranque leido en la capa previa; el cierre, con los
+linderos, el rio de la Calderilla, el perito y la fecha, recortado a 300 dpi y
+leido en la imagen en 664 h5 columna 1.
+TEXTO:
+  DESLINDE-- En el juicio de deslinde parcial por el rumbo sud de un
+  terreno en la Calderilla departamento de La Caldera de propiedad
+  de dona Juana Flores de Chaile que limita al Norte, con propiedad
+  de Juana Antonia Caceres, Sud, con terrenos de Ildefonsa Burgos de
+  Yugra; Este, con propiedad de familia Yugra y Oeste, con el Rio de
+  la Calderilla; el Sr. Juez de 1a Instancia Dr. Augusto F. Torino
+  por auto de fecha 18 del corriente mes y ano ha ordenado se cite
+  por el presente edicto y por el termino de 30 dias a los que se
+  consideren con derecho a las operaciones a practicarse teniendose
+  como perito al agrimensor Sr. Herman Pjister--Lo que el suscrito
+  Secretario hace saber por el presente edicto.--Salta. Julio 23 de
+  1917.
+          M. Sanmillan. = E. Saeretario
+NOTA DE LECTURA: El apellido de la propietaria decide la ficha y se miro: la
+capa previa lo lee «Juana Flores de olia ile» y la impresion dice Chaile. El
+perito se imprime «Pjister» donde el mismo perito aparece como «Pfister» en
+636 h4 y en 648 h7: se transcriben las dos formas y no se corrige. La firma
+del secretario se imprime «E. Saeretario» (sic).
+
+A.8 · Edicion N° 668, hoja 2
+----------------------------
+FUENTE: Ed. N° 668, hoja 2, columna 1.
+FICHA: Decreto N° 1377, de Salta, Septiembre 7 de 1917: por renuncia de D.
+Andres Marini, nombra miembro de la Comision Municipal del Departamento de La
+Caldera, por el termino de ley, al senor Rafael Delgado.
+MODO DE LECTURA: Banda de 250 pt sobre la columna 1, recortada a 300 dpi.
+Numero de acto, nombres y fecha leidos en la imagen.
+TEXTO:
+  MINISTERIO DE GOBIERNO
+  N.o 1377
+  Encontrandose incompleta la Comision Municipal del Departamento de
+  La Caldera por renuncia de D. Andres Marini.
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1o--Nombrase por el termino de Ley, Miembro de la mencionada
+  Comision Municipal, en reemplazo de D. Andres Marini, al Senor
+  Rafael Delgado.
+  Art. 2o--Comuniquese, publiquese e insertese en el R. O.
+          Salta, Septiembre 7 de 1917
+                  CORNEJO
+            RAFAEL M. ZUVIRIA
+  Es copia:--Francisco J. Lopez
+NOTA DE LECTURA: El numero es 1377 y no 1277: la capa previa lo devuelve como
+«x.n i;?77» y la imagen lo resuelve (§8.11). La renuncia de Marini no aparece
+publicada en el ano: es un acto citado y no acompanado (E.2). Marini habia
+sido nombrado por el decreto N° 1056 del 4 de enero (ficha A.2).
+
+A.9 · Edicion N° 683, hoja 4
+----------------------------
+FUENTE: Ed. N° 683, hoja 4, columna 2.
+FICHA: Edicto de deslinde, mensura y amojonamiento de dos terrenos en el
+partido de «Calderilla» del departamento de La Caldera, pedido por Augusto P.
+Matienzo con poder y titulos de don Abraham Fernandez, uno de este y otro del
+menor Bernabe Fernandez, de quien es tutor. Juez de primera instancia en lo
+civil y comercial doctor David E. Gudino, auto de Salta, Noviembre 7 de 1917.
+MODO DE LECTURA: Banda de 250 pt sobre la columna 2, recortada a 300 dpi.
+Nombres, limites y fecha leidos en la imagen; el borde derecho del recorte
+corta la ultima letra de algunos renglones y se completo con la capa previa,
+que coincide.
+TEXTO:
+  DESLINDE--Habiendose presentado el senor Augusto P. Matienzo, con
+  poder y titulos bastantes de don Abraham Fernandez, pidiendo
+  deslinde, mensura y amojonamiento de unos terrenos, ubicados en el
+  partido de «Calderilla» del departamento de La Caldera, dentro de
+  los siguientes limites: norte, con terrenos del menor Bernabe
+  Fernandez; sud, con Eduardo Toconas; naciente, con el cerro
+  «Pucheta», que lo separa de la finca «Santa Gertrudis»; y al
+  poniente, con el rio de La Caldera. Y de un terreno colindante
+  perteneciente al menor Bernabe Fernandez, del que es tutor, cuyos
+  limites son: norte, con Teodoro Reyes; sud, con Abraham Fernandez;
+  naciente, con el cerro «Pucheta», que los separa de la finca
+  «Santa Gertrudis», y al poniente con el rio de La Caldera.--El
+  senor juez de primera instancia en lo civil y comercial, doctor
+  David E. Gudino, ha dictado lo siguiente: Salta, Noviembre 7 de
+  1917. Autos y vistos: en merito de los testimonios presentados, y
+  de acuerdo con los dictamenes que preceden, hagase saber por medio
+  de edictos que se publicaran durante treinta dias, en los diarios
+  «Tribuna Popular» y «La Provincia», y por un[...]
+NOTA DE LECTURA: El lindero del norte del segundo terreno es Teodoro Reyes,
+leido en la imagen; la capa previa lo devuelve «Teodoro Keyes» y con esa forma
+entro al config. La finca «Santa Gertrudis» de este edicto se escribe con e,
+mientras el edicto de 636 h4 imprime «Getrudis»: son las dos formas del mismo
+toponimo y no se unifican.
+
+
+§B · VECINDAD
+=============
+
+B.1 · NUCLEOS YA FICHADOS EN EL §A. Se nombran y no se repiten: la finca
+«Potrero Gallinato» y su division de condominio (A.1); el partido y el rio de
+la Calderilla (A.7 y A.9); el rio de La Caldera (A.9); el cerro Mojotoro como
+filo sur de Potrero Gallinato (A.1); los filos y la finca «Santa Getrudis» /
+«Santa Gertrudis» (A.1 y A.9); el cerro «Pucheta» (A.9); los herederos Yugra y
+la familia Yugra, y los terrenos de Ildefonsa Burgos de Yugra (A.1 y A.7); el
+cerro conocido por Quitilipe o el Socabon, nombrado en el pedimento minero que
+corre en la misma hoja 636 h4 y cuya ubicacion no se atribuye a ninguna
+jurisdiccion en el texto.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO. Este es el
+bloque que justifica el paragrafo, y en 1917 tiene dos entradas seguras y una
+indecisa.
+
+  B.2.1 · Ed. N° 681, hoja 2. Decreto de Salta, Diciembre 5 de 1917:
+  «vista la precedente solicitud de jubilacion extraordinaria formulada
+  por la Directora de la Escuela Infantil de Vaqueros senorita Sara
+  Blasco, atentos los dictamenes de la Caja de Jubilaciones y Pensiones
+  y del senor Fiscal General favorables a la peticion de referencia».
+  POR QUE SE INCLUYE: Vaqueros es termino del anillo 2 (§5.1) y nucleo
+  del departamento; el acto no nombra a La Caldera. Sara Blasco entro al
+  config con origen 1917. Leido en la capa previa; NO mirado en la
+  imagen, y se dice en este mismo renglon (§8.5).
+
+  B.2.2 · Ed. N° 675, hoja 6. Decreto que acepta la renuncia del senor
+  Emilio Eres sart [asi, partido, en la capa] del puesto de Sub Comisario
+  ad honorem del partido de Mojotoro, y nombra al reemplazante de acuerdo
+  con la propuesta elevada por la Jefatura de Policia.
+  POR QUE SE INCLUYE: Mojotoro es termino del anillo 2 y el decreto no
+  dice a que departamento pertenece el partido. El apellido esta en el
+  config en cuatro formas de 1917 (eressart, eres.sart, fresart,
+  fressart de 1908), lo que confirma que el OCR lo destroza. Leido en la
+  capa previa; NO mirado en la imagen.
+
+  B.2.3 · Ed. N° 662, hoja 3. Edicto de deslinde de la finca «San Pablo
+  o Puesto Viejo», ubicada en el departamento de CAMPO SANTO, cuyo
+  limite oeste es el rio Mojotoro y cuyo lindero sud es el doctor Luis
+  Linares. Juez doctor David E. Gudino, auto de Salta, Junio 26 de 1917.
+  POR QUE SE INCLUYE: el rio Mojotoro es termino del anillo 2 y Luis
+  Linares figura en el config con origen 1911. La finca se atribuye
+  expresamente a Campo Santo, de modo que NO es del departamento; queda
+  aqui como vecindad de borde y no se lo cuenta entre los nucleos.
+
+B.3 · TERMINOS QUE EN 1917 SON OTRA COSA. De los 84 terminos del anillo 2, 30
+dieron acierto y se leyo el contexto de LOS TREINTA, uno por uno, no solo de
+los que parecian del departamento. El reparto solo se supo leyendolos: «murua»
+son 23 apariciones y casi todas son Silvano I. Murua, martillero publico, en
+avisos de remate; «castellanos» son trece y se reparten entre el doctor Juan
+Jose Castellanos, candidato a senador por La Candelaria, el abogado que cobra
+honorarios en 666 h2, y el arroyo Castellanos de Anta que aparece como lindero
+en 664 h4; «isasmendi» son trece, entre Domingo Isasmendi, candidato por La
+Candelaria, y Ricardo Isasmendi, lindero en Rosario de Lerma; «wierna» son
+seis, cinco de ellas del juicio sucesorio de Jesus Wierna y una de Jose A.
+Wierna, nombrado miembro de una comision municipal que el decreto no
+identifica en el tramo leido.
+
+Ademas: «cornisa» en 639 h4 no es la Cornisa sino «cornisairio», es decir
+comisario, deformado por el OCR; «chaile» en 638 h7 es Ceferino Chaile, juez
+de rio de las acequias de Gallo y Olmos sobre el rio del Toro; «sauces» en 650
+h2 y «angostura» en 670 h2 son partidos de Guachipas y de la zona de Tonono y
+Aguaray; «entre rios» en 671 h8 es una finca de Rosario de Lerma; «rio blanco»
+en 681 h5 es la finca de Oran regada del rio Zenta; «las mesadas» en 683 h5
+esta en Lorohuasi, departamento de Cafayate; «lesser» y «nogales» son
+apellidos (la sucesion Lesser en 643 h12; Jose Nogales, en cambio, es lindero
+real de Potrero Gallinato y va al §A); «quintin» es Quintin Conde; «penales»
+son «disposiciones penales» en las dos hojas; «apaza», «mamani», «condori» y
+«toconas» son personas de Iruya, Santa Victoria y Guachipas, salvo Eduardo
+Toconas, lindero real de A.9; «aramayo» son sucesiones y ejecuciones ajenas,
+salvo Inocencio Aramayo, duenno anterior de Potrero Gallinato; «las viboras»
+en 647 h5 es la finca de Benjamin Zigaran, cuya jurisdiccion el aviso no
+declara y que por lo tanto se deja sin atribuir.
+
+54 terminos del anillo 2 no dieron ni un acierto en el ano. Entre ellos estan
+Yacones, Siancas, Trancas, Potrero de Castillo, San Alejo, Los Penones,
+Acheral, Betania, Campo Alegre, El Manzano, Tabacal, Lagunilla, Mesa Redonda,
+El Durazno, Los Porongos, Bandurrias, Chunas, Guaranguay, Santa Rufina,
+Cuchimayo, Pirguas, Getsmani y Villar Urquiza.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES, en los tres grupos de §5.1.
+
+Grupo 1, los que solo aparecen en su propio acto: Inocencio Aramayo, Angel
+Sola y Jose Nogales (A.1, y en las dos apariciones del mismo aviso); Casimiro
+Caceres (A.3); Juana Flores de Chaile, Juana Antonia Caceres e Ildefonsa
+Burgos de Yugra (A.7); Abraham Fernandez, Bernabe Fernandez y Eduardo Toconas
+(A.9). De ninguno de ellos hay una segunda aparicion en las 289 hojas.
+
+Grupo 2, los que aparecen en mas de un acto del departamento, que es el que
+arma la trama del ano: CAMILO CACERE / CACEREZ, solicitante del deslinde de
+Potrero Gallinato en enero (A.1) y miembro renovado de la Comision Municipal
+por el decreto N° 1056 del 4 de enero (A.2); ANDRES MARINI, miembro de esa
+misma Comision en enero y renunciante en septiembre, reemplazado por Rafael
+Delgado (A.2 y A.8); DANIEL LINARES, miembro de la Comision Municipal en enero
+y candidato a diputado por Caldera del partido «Union Provincial» para las
+elecciones del 4 de marzo (A.2 y A.6).
+
+Grupo 3, los que aparecen tambien fuera del departamento: DANIEL LINARES,
+nombrado ademas como lindero del este de la finca Antila, en Campo Santo, en
+el edicto de 672 h6; ESCOLASTICO M. APARICIO, juez de paz propietario de La
+Caldera (A.3), cuyo apellido suelto aparece en otras cuatro hojas donde son
+otras personas (Plasida Aparicio de Gayata, Eugenio Aparicio, Rodolfo
+Aparicio); HERMAN PFISTER, perito de A.1 y A.7 y tambien perito propuesto en
+los deslindes de 647 h5, 648 h7 y 662 h3, que no son del departamento; RAFAEL
+DELGADO (A.8), cuyo apellido suelto aparece en otras cuatro hojas que son
+otras personas (el partido de Valle Delgado, Marcelina Delgado, un «Xalal
+Delgado» ilegible en 653 h4 y Manuel A. Delgado, de Cerrillos); EUSTAQUIO
+MURUA, comisario de Caldera (A.5), cuyo apellido comparte con el martillero
+Silvano I. Murua en catorce hojas; AUGUSTO P. MATIENZO, apoderado en A.9; y
+los funcionarios que firman en todo el ano y cuya presencia no dice nada del
+departamento: Augusto F. Torino en 35 hojas, David E. Gudino en 45, Francisco
+J. Lopez en 65, Rafael M. Zuviria en 36, Pedro J. Aranda en 22 y M. Sanmillan
+en 9.
+
+
+§C · LIMITROFES
+===============
+
+Capital: presente en todo el ano, como cabecera administrativa y como
+circunscripcion electoral (un senador y cuatro diputados en el decreto de
+convocatoria, A.4). Campo Santo: presente con actos propios, entre ellos el
+deslinde de «San Pablo o Puesto Viejo» limitado por el rio Mojotoro (B.2.3) y
+el de la finca Antila en 672 h6, y con su propia Comision Municipal y su
+registro civil de «La Trampa». Rosario de Lerma: presente, con un diputado en
+la convocatoria y con la finca «Entre Rios» de 671 h8. Jujuy: no aparece en
+relacion con el departamento en ninguna hoja del ano. No hay en 1917 ningun
+acto de limites interdepartamentales ni interprovinciales que toque a La
+Caldera.
+
+
+§P · PLANOS
+===========
+
+El corpus no publica ningun plano. Catorce hojas mencionan la palabra plano y
+ninguna lo acompana: 636 h5 y 637 h3 (lote 57 del plano oficial de la colonia
+Rivadavia, en el mismo aviso repetido), 639 h6 (bases, planos y pliegos de la
+licitacion del pozo de General Guemes, que pueden verse en el Departamento de
+Obras Publicas), 643 h1, h2 y h3 (la ley de minas que manda preparar un plano
+catastral de las regiones mineras y que los peritos presenten planos por
+triplicado), 648 h6, 664 h2, 665 h5, 670 h16, 672 h7, 675 h2, 676 h8 y 676 h9.
+
+Ninguna de esas catorce remisiones toca al departamento. Los dos deslindes del
+departamento que se fichan en el §A (A.1 y A.9) y el deslinde parcial de A.7
+no remiten a plano alguno: mandan practicar las operaciones por el perito y
+publicar edictos, sin pieza grafica. Techo de resolucion del corpus: 300 ppi
+por la mascara JBIG2 (§1).
+
+
+§D · INDICE
+===========
+
+  A.1  636 h4 y 637 h4  Deslinde de «Potrero Gallinato», Camilo Cacere
+  A.2  638 h2-h3         Decreto N° 1056, Comision Municipal
+  A.3  638 h7            Decreto N° 1085, Jueces de Paz
+  A.4  639 h5            Convocatoria electoral, un diputado por Caldera
+  A.5  639 h5            Decreto N° 1101, Comisario Eustaquio Murua
+  A.6  639 h6-h7         Junta de Escrutinio, candidato Daniel Linares
+  A.7  664 h4-h5         Deslinde parcial en la Calderilla
+  A.8  668 h2            Decreto N° 1377, Rafael Delgado por A. Marini
+  A.9  683 h4            Deslinde en el partido de «Calderilla»
+  B.2.1 681 h2           Jubilacion de la directora de Vaqueros
+  B.2.2 675 h6           Sub comisario del partido de Mojotoro
+  B.2.3 662 h3           Deslinde con el rio Mojotoro (Campo Santo)
+
+Por materia: gobierno comunal, A.2 y A.8; justicia de paz, A.3; policia, A.5 y
+B.2.2; elecciones, A.4 y A.6; deslindes y mensuras, A.1, A.7 y A.9;
+instruccion publica y previsional, B.2.1.
+
+Por persona: Camilo Cacere / Cacerez, A.1 y A.2. Andres Marini, A.2 y A.8.
+Daniel Linares, A.2 y A.6. Escolastico M. Aparicio y Casimiro Caceres, A.3.
+Eustaquio Murua, A.5. Rafael Delgado, A.8. Inocencio Aramayo, Angel Sola, Jose
+Nogales y Herman Pfister, A.1. Juana Flores de Chaile, Juana Antonia Caceres e
+Ildefonsa Burgos de Yugra, A.7. Abraham Fernandez, Bernabe Fernandez, Eduardo
+Toconas, Teodoro Reyes y Augusto P. Matienzo, A.9. Sara Blasco, B.2.1. Emilio
+Eres sart, B.2.2.
+
+
+§E · OBSERVACIONES
+==================
+
+E.1 · DUPLICACION Y SALDOS. Nivel 1 y nivel 2 no aplicables: sin las .jpg del
+script no hay md5 de imagen ni dhash, y se declara. La duplicacion se controlo
+por texto sobre las 289 hojas. Resultado: un solo par duplicado en el ano, el
+edicto de «Potrero Gallinato», que sale en 636 h4 y en 637 h4 (ficha A.1); el
+cotejo de las dos apariciones se hizo sobre la IMAGEN de las dos, no sobre la
+capa, y difieren en el apellido del solicitante. Tambien se repite, ajeno al
+departamento, el aviso del lote 57 de la colonia Rivadavia (636 h5 y 637 h3),
+y la resolucion sobre el establecimiento en tierra fiscal de una colonia
+agricola de Williams, Hudjes y Faojen aparece en la tapa de nueve ediciones
+seguidas, de la 662 a la 683.
+
+Este ano NO tiene marcas de publicacion del tipo «251 v Dbre 5»: la busqueda
+devolvio cero formas en las 289 hojas, contra 119 marcas con 107 numeros
+distintos en 1912. De modo que el control de §6 sobre si la marca prueba
+repeticion no tuvo materia sobre la que correr, y la repeticion se comprobo
+unicamente buscando el texto de los avisos en el resto del corpus, que es como
+corresponde.
+
+Saldos: NO HAY CADENA. Se contaron los resumenes publicados antes de
+prometerla, como manda §6, y el ano no publica NINGUN resumen mensual de
+Tesoreria, ningun balance de banco ni ningun balance municipal. Las cuatro
+hojas donde aparece «tesoreria general» (641 h4, 642 h2, 650 h3 y 654 h1) y
+las dos donde aparece «balance» (650 h4 y 658 h4) son prosa dentro de decretos
+y resoluciones, no cuadros. Se declara como hecho del corpus y no como tabla
+que quedo sin mirar. La cadena de 1912 (que cerraba en 52.337,78 al 30 de
+setiembre) queda por lo tanto sin continuacion por este ano.
+
+E.2 · COBERTURA. Hojas miradas en la imagen: 31, de 289. Son 636 h1 y h4; 637
+h4; 638 h2, h3 y h7; 639 h5 y h7; 644 h5; 645 h2; 646 h1; 648 h2; 649 h4; 650
+h2, h5 y h7; 651 h1 y h4; 652 h2; 653 h4; 654 h3 y h7; 655 h2; 656 h1; 664 h4
+y h5; 668 h1 y h2; 670 h14; 673 h1; y 683 h4. De ellas, 2 son columnas enteras
+cotejadas renglon por renglon contra la capa previa (636 h4 columna 2 y 638 h3
+columna 1), 10 son bandas de columna de 200 a 300 pt cotejadas del mismo modo,
+13 son cabeceras leidas para el folio y 6 son tapas leidas para la fecha y el
+ano editorial.
+
+Cruces por texto: los 233 actores del config, los 84 terminos del anillo 2,
+los 51 numeros y las 8 formulas de reemplazo, sobre la capa normalizada y
+sobre la capa sin puntuacion. Destinos: los cuatro decretos del §A mandan
+insertarse en el Registro Oficial; los tres edictos mandan publicarse en
+diarios nombrados («LA PROVINCIA», «La Libertad», «Tribuna Popular») y en el
+Boletin Oficial.
+
+Citados y no acompanados, con dos identificadores cada uno: (1) la renuncia de
+D. Andres Marini como miembro de la Comision Municipal de La Caldera, citada
+por el decreto N° 1377 del 7 de setiembre y no publicada en ninguna de las 289
+hojas; (2) las ternas elevadas por la H. Comision Municipal del Departamento
+de La Caldera para jueces de paz, citadas por el decreto N° 1085 del 23 de
+enero y no acompanadas; (3) los titulos y el dictamen del Agente Fiscal en que
+se funda el auto del 19 de enero de 1917 del juez de feria Torino (A.1); (4)
+el numero del decreto de convocatoria electoral del 3 de febrero (A.4), que no
+se leyo y que no se infiere de los vecinos 1100 y 1101. Tambien se busco por
+fecha y materia el decreto que abriria el interinato del Presidente del H.
+Senado en el ejercicio del Poder Ejecutivo, y no esta (E.4).
+
+E.3 · SIN MENCION Y NO MIRADO. 258 hojas del ano no se miraron en la imagen.
+No tienen acierto de ninguna de las cinco pasadas del anillo 1, ni acierto de
+anillo 2 que el contexto no haya resuelto por texto, ni tabla, y sin .tsv no
+hay confianza que las mande a ojos. Se declaran como no miradas y no se afirma
+nada sobre su contenido.
+
+E.4 · FIRMAS Y AUTORIDAD. El gobernador titular es el doctor ABRAHAM CORNEJO,
+que firma «CORNEJO» en 103 hojas. Refrendan Rafael M. Zuviria, ministro de
+Gobierno, en 36 hojas, y Manuel R. Alvarado, ministro de Hacienda, en 20. El
+«Es copia» lo firman Francisco J. Lopez en 65 hojas y en 9 mas como «F. J.
+Lopez», y Juan M. Leguizamon en 9 hojas y como «J. M. Leguizamon» en 5. Se
+registran todas las formas y no se normaliza: la misma persona firma
+«Francisco J. Lopez», «F. J. Lopez» y, en 638 h2, «Farncisco J. Lopez» (sic).
+
+Formulas de encabezado, que varian dentro del mismo ano y del mismo gobierno:
+«El Gobernador de la Provincia» (95 veces), «El Poder Ejecutivo» (44), «El P.
+Ejecutivo» (1), «en Acuerdo de Ministros» (31), «en Acuerdo General de
+Ministros» (1), «El Ministro de Hacienda» (8), «El Ministro de Gobierno» (1) y
+«El Senado y Camara de Diputados de la Provincia sancionan con fuerza de Ley»
+(19). Se registran todas y no se elige una.
+
+Interinatos. Hay DOS y uno de ellos no cierra con decreto de apertura a la
+vista. (1) El Presidente del H. Senado, D. Sixto Ovejero, firma en ejercicio
+del Poder Ejecutivo; su ultimo acto a la vista esta en 662 h1 y 663 h1, y el
+CIERRE si esta publicado: el decreto N° 1347, «habiendo regresado a esta
+capital S. E. el senor Gobernador», pone en posesion del mando gubernativo al
+gobernador titular doctor Abraham Cornejo (662 h2). No hay decreto de apertura
+en ninguna de las 289 hojas, de modo que se declara el ultimo acto del titular
+antes del interinato y el primero despues, y no se fija el dia en que el
+interinato empezo. (2) El ministro de Hacienda se ausenta y regresa: el
+decreto N° 1352 de 663 h2, de Salta, Agosto 2 de 1917, lo repone en su
+cartera; y el N° 1199 de 644 h1, de Salta, Marzo 21 de 1917, encarga el
+despacho de Gobierno por ausencia con licencia de Rafael M. Zuviria.
+
+Numeracion y vecinos ±3, aplicable en 1917 porque los actos llevan numero (a
+diferencia de 1908-1912). Se ven 166 numeros distintos entre 1023 y 1455. Para
+los cuatro decretos del §A: del N° 1056 (4 de enero) estan a la vista el 1057
+y el 1059, y no el 1053, 1054, 1055 ni el 1058; del N° 1085 (23 de enero)
+estan el 1082, 1083, 1086 y 1087, y no el 1084; del N° 1101 (5 de febrero)
+estan el 1099, 1100, 1102 y 1103, serie contigua completa; del N° 1377 (7 de
+setiembre) estan el 1374, 1375 y 1379, y no el 1376 ni el 1378. En los cuatro
+casos las fechas de los vecinos presentes son coherentes con el orden de los
+numeros: no se hallo ninguna inversion.
+
+E.5 · CORTES Y COLUMNAS. La marca U+0002 no existe en este corpus. El corte de
+renglon se hace con el guion blando U+00AD, 5.316 veces, sin guion visible; la
+union lo quita junto con el salto, segun v15 §2.3, y la diferencia es medible:
+con la union defectuosa la pasada literal pierde menciones en silencio, y por
+eso se corrio desde el primer momento con la union corregida.
+
+Columna perdida: NO SE HALLO, y conviene decir sobre cuanto. Se cotejaron
+renglon por renglon contra la capa previa 12 columnas o bandas de columna de
+10 ediciones (636, 637, 638 dos veces, 639 dos veces, 664 dos veces, 668, 670
+y 683). En ninguna de las doce la capa pierde renglones ni traspone entre
+columnas vecinas. «No hay columna perdida en el ano» seria una afirmacion
+vacia: lo que se afirma es que en esas doce no la hay. Lo que si falla, y
+falla en silencio, es la palabra suelta: «Juana Flores de olia ile» por Flores
+de CHAILE (664 h4), «Teodoro Keyes» por Teodoro REYES (683 h4), «cornisairio»
+por comisario (639 h4), «C alde r a» por Caldera (639 h7) y «x.n i;?77» por
+N.o 1377 (668 h2). Toda palabra que decidio una ficha se miro.
+
+Paginacion corrida. El folio va impreso en la cabecera de casi todas las
+hojas, «Pag. N» a un lado y «Num. E» al otro, pero la capa previa lo conserva
+en muy pocas, asi que se leyeron trece cabeceras en la imagen. El control
+funciona por tramos, NO de punta a punta del ano, por dos motivos. Primero,
+HAY UN REINICIO DENTRO DEL ANO: la edicion 649 (4 de mayo) llega al folio 88
+en su hoja 4 y la edicion 650 (11 de mayo) abre en el folio 62, con 65 en su
+hoja 5 y 67 en su hoja 7; los cinco folios estan leidos en la imagen. El tramo
+61-89 queda por lo tanto impreso dos veces en el ano, una en las ediciones 645
+a 649 y otra en las 650 a 654. No se concilia.
+
+Segundo, dentro de cada tramo la cadena detecta ediciones a las que les falta
+una hoja, y esa es su utilidad: la edicion 654 cierra en el folio 91 (hoja 7)
+y la 655 abre en el 93 (hoja 2 = 94), de modo que falta el folio 92 y la
+edicion 654 esta INCOMPLETA en el Release, no corta. Entre la 645 (folio 62 en
+la hoja 2) y la 648 (folio 78 en la hoja 2) la cadena pide 16 folios y las
+hojas presentes de 645, 646 y 647 cubren 13: faltan tres hojas, que no se
+pueden atribuir con seguridad a una de las tres ediciones y se declaran asi.
+Fuera de eso, el arranque del ano cierra exacto: 637 hoja 4 es el folio 12 y
+su hoja 8 el 16, de modo que la 636 ocupa los folios 1 a 8 y la 637 los 9 a
+16.
+
+La edicion N° 640 falta por completo: no esta entre los assets del Release y
+no hay hoja suya que leer. Por posicion en el calendario le corresponderia el
+viernes 2 de marzo de 1917, entre la 639 (23 de febrero) y la 641 (9 de
+marzo); eso es INFERENCIA y se rotula como tal.
+
+E.6 · REPETICIONES. El edicto de «Potrero Gallinato» ordena, en su propio
+auto, publicarse «por una vez en el Boletin Oficial», y sin embargo sale en
+636 h4 y otra vez en 637 h4. Es el mismo caso que el deslinde de «El Potrero
+de Copo Quile» de 1912. Las dos impresiones no son identicas: el apellido del
+solicitante se imprime Cacere en 636 y Cacerez en 637, las dos formas leidas
+en la imagen. En el §A cuenta como una entrada con dos apariciones.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS. Falsos positivos del anillo 1 en 1917, que
+NO se agregan al config por la regla de §12 (un termino real cuyo contexto
+contenga un falso positivo del config queda marcado fp_conocido y sin
+recorte): el apellido Calderon, en dos juicios distintos, el sucesorio de
+Delfina Sanchez de Calderon (655 h2) y la demanda de Maria Palomino contra
+Gregorio Calderon (679 h4, cuatro apariciones); «cal cena» por fiscal general
+(670 h1); «o al dema» por al demandado (681 h4); y en la difusa, «escalera»
+(667 h2). Falsos positivos de la quinta pasada, la que suprime los espacios:
+«en el local de la confiteria del Aguila», «en el local del Jockey Bar»,
+«agente fiscal de hacienda», «vocal del Superior Tribunal», «servicio nocturno
+y dominical de las farmacias», «en tierra fiscal de una colonia agricola» y
+«en mi local de remates», 39 hojas en total.
+
+Falso negativo, uno y grave: la pasada literal PIERDE la mencion de 639 h7,
+que es un acto del departamento. La causa no es el corte de renglon sino que
+el OCR mete espacios DENTRO de las dos palabras. Lo recuperan la laxa escrita
+con la clase de espacios entre cada caracter y la quinta pasada. Sin ninguna
+de las dos, Daniel Linares no figuraria como candidato a diputado por Caldera
+y el grupo 2 del §B tendria dos entradas en vez de tres.
+
+E.8 · FIDELIDAD NUMERICA. Cuadros publicados en el ano: UNO. Es la lista de
+ampliacion de partidas de la Ley N° 1062, en 670 h14, unica hoja del ano con
+densidad numerica de cuadro (42 cifras en 153 renglones). Se recalculo un
+subtotal desde la imagen, como manda v15 §4.1: «Vigilante y Bomberos, Inciso
+8, Item 4o. Un sargento 2o Bombero a $ 85.--Once meses 935. Un cabo primero
+vigilante a $ 75.--Once meses 825. Un agente matadero a $ 70 Once meses 770. $
+2.530,0[0]». Los tres productos cierran (85 x 11 = 935, 75 x 11 = 825, 70 x 11
+= 770) y la suma cierra exacta: 935 + 825 + 770 = 2.530. Se comprobo ademas
+«Dos agentes de investigaciones a $ 80 ... $ 1.920,0[0]» (2 x 80 x 12 =
+1.920), que tambien cierra. Los ultimos digitos de la columna de importes
+quedan fuera del recorte por ancho de columna y se marcan entre corchetes.
+
+Tablas no recalculadas: el resto de la Ley N° 1062, es decir las partidas de
+Gobernacion, Ministerio Publico, Archivo y Registro de la Propiedad, Registro
+Civil Central, Comisaria de Investigaciones, Gastos Generales, Comisarios de
+Campana y Consejo de Higiene, y el total general de la ley. Criterio: la ley
+no nombra al departamento, ni un termino del anillo 2, ni un actor, y no es un
+acto del §A ni del §B, de modo que cae fuera del alcance obligatorio de §4.1;
+y el tramo de Comisarios de Campana tiene el OCR tan roto que sus sumandos no
+se pueden reconstruir sin mirar la hoja entera. Se declara con su motivo y no
+se publica ninguna de sus cifras.
+
+Ninguna otra cifra de hoja escaneada se publica en este informe sin haberla
+mirado. Los unicos numeros que se afirman son los cuatro numeros de decreto
+del §A (1056, 1085, 1101 y 1377), los cuatro leidos en la imagen, y los folios
+de E.5, trece de los cuales se leyeron en la imagen y el resto se declara como
+leido en la capa.
+
+E.9 · CONTRADICCIONES. Se transcriben y no se concilian. (1) El folio
+retrocede de 88 (649 h4) a 62 (650 h2) y el tramo 61-89 se imprime dos veces
+en el ano. (2) La formula de la tapa dice «Aparece Miercoles y Sabados»
+durante todo el ano, y de la edicion 639 (viernes 23 de febrero) a la 683
+(viernes 28 de diciembre) el Boletin sale TODOS LOS VIERNES, 45 viernes
+consecutivos y 45 numeros de edicion, sin un solo hueco; enero y febrero
+tampoco siguen la formula (636 cae sabado 20 de enero, 637 martes 30 de enero,
+638 jueves 15 de febrero). La formula impresa no describe ningun tramo del
+ano. (3) El ano editorial cambia de AÑO VIII a AÑO IX entre la edicion 636 y
+la 638, y la tapa de la 636 esta cubierta por un sello diagonal «IMPRESOS» que
+no deja leerlo con seguridad; la 637 no lo resuelve. (4) El mismo perito se
+imprime «Herman Pfister» en 636 h4 y «Herman Pjister» en 664 h5. (5) El mismo
+solicitante se imprime «Camilo Cacere» en 636 h4 y «Camilo Cacerez» en 637 h4.
+(6) La misma finca se imprime «Santa Getrudis» en 636 h4 y «Santa Gertrudis»
+en 683 h4. (7) La cabecera de 636 h4 imprime «Nmu 636» por Num. (8) El decreto
+N° 1085 imprime «nombramiemto» por nombramiento. (9) El secretario de 664 h5
+firma «M. Sanmillan. = E. Saeretario». (10) La comilla angular de «Getrudis en
+636 h4 abre y no cierra. Todas se declaran ademas en la nota de lectura de su
+ficha, como manda §8.18.
+
+E.10 · LIMITES. Son seis, y ninguno es trabajo que esta sesion pudiera hacer.
+
+  1. Sin el .tsv de lee_auto.py no hay confianza por hoja, no hay reparto
+     pub/ver/ojos y LA LISTA DE HOJAS «A OJOS» NO EXISTE. No es un
+     pendiente: es una imposibilidad. Las hojas se cubrieron por otras
+     tres vias, que se declaran: las de los candidatos de las cinco
+     pasadas, la unica hoja con densidad de cuadro, y las cabeceras y
+     tapas necesarias para el folio y el calendario.
+  2. Sin las .jpg no hay md5 de imagen, ni dhash, ni medicion de tinta.
+     La duplicacion se controlo por texto y se dice asi en E.1.
+  3. Sin el OCR propio hay UNA SOLA VERSION. No hubo union de versiones
+     ni desempate por cotejo; el unico desempate fue la imagen.
+  4. La edicion N° 640 no esta en el Release. No hay hoja suya que leer y
+     no se afirma nada sobre su contenido.
+  5. No hay sumario con puntos guia en ninguna edicion del ano, de modo
+     que el cotejo sumario/cuerpo es NO APLICABLE. Declararlo con cero
+     discrepancias seria no haber controlado nada.
+  6. tesseract no trae el modelo spa en esta sesion, comprobado con
+     --list-langs. No se OCRizo ninguna hoja; lo dudoso se miro.
+
+
+§F · CORRECCION A LA RUBRICA (propuesta de v16)
+===============================================
+
+F.1 · EN UN PDF DE CONTENIDO MIXTO, EL TECHO DE RESOLUCION ES EL DE LA
+MASCARA, NO EL DE LAS IMAGENES QUE get_images DEVUELVE. Las hojas de 1917
+llevan dos capas JPX en gris de 150 y 75 ppi y una mascara JBIG2 de 1 bit a
+300 ppi, que es donde esta el texto. Medido por las JPX, el §8.10 habria
+declarado un techo de 75 a 150 ppi y el §4 habria dado por ilegible un corpus
+que a 300 dpi se lee sin esfuerzo. La regla: antes de declarar el techo,
+recorrer los xref de imagen de una hoja y quedarse con el mayor, mascaras
+incluidas.
+
+F.2 · EL OCR NO SOLO PARTE LA PALABRA EN EL SALTO DE RENGLON: TAMBIEN LE METE
+ESPACIOS ADENTRO. «C alde r a--Da niel Li 11 ares» (1917, 639 h7). La
+correccion de v15 §2.3, que pega las dos mitades a traves del salto, no
+alcanza para esto. Se agrega una QUINTA PASADA, sobre el texto con todos los
+espacios suprimidos, como generadora de candidatos: en 1917 devolvio 51 hojas
+contra 11 de la literal, 39 de ellas falsos positivos de union («local de»,
+«fiscal de», «vocal del») y una real que ninguna otra via traia. La laxa,
+escrita con la clase de espacios entre CADA par de caracteres y no solo en un
+punto, la devuelve tambien; escrita de cualquier otro modo, no.
+
+F.3 · LA CADENA DE FOLIOS PUEDE REINICIARSE DENTRO DEL MISMO ANO. v15 ya habia
+corregido que no se hereda de un ano al otro; 1917 muestra que tampoco es
+continua dentro del ano: el folio va de 88 a 62 entre dos ediciones
+consecutivas, las dos puntas leidas en la imagen, y el tramo 61-89 se imprime
+dos veces. El control sigue sirviendo por tramos, y sigue siendo la unica
+forma barata de distinguir la edicion corta de la incompleta (654 pierde el
+folio 92). Lo que hay que abandonar es la idea de una serie anual unica: antes
+de sumar hojas entre dos anclas, hay que comprobar que el folio crece
+monotonamente entre ellas.
+
+F.4 · LA FORMULA DE PERIODICIDAD DE LA TAPA PUEDE NO DESCRIBIR NINGUN TRAMO
+DEL ANO. v15 decia que «los dias de salida los declara la tapa». En 1917 la
+tapa declara «Aparece Miercoles y Sabados» y el ano sale todos los viernes de
+febrero a diciembre, 45 viernes sin un hueco. La regla corregida: los dias de
+salida se MIDEN sobre las fechas de tapa y se cotejan contra la formula;
+cuando no coinciden, se declaran los dos y no se busca la causa afuera. Y
+conviene medirlos antes de listar huecos de calendario: en 1917, contra la
+formula impresa habria 90 huecos, y contra la cadencia real, ninguno.
+
+F.5 · EL CONFIG PUEDE TRAER YA LOS ACTORES DEL ANO QUE SE VA A BARRER. El
+lee_config.json del Release 1917 trae 37 actores con origen «1917», varios con
+deformaciones de OCR propias de ese corpus. Eso significa que el ano fue
+barrido antes y que el config recogio su resultado. No invalida el barrido,
+pero hay que declararlo en el §0 y tratarlos como heredados, nunca como
+fichas: una ficha se gana mirando la hoja. Y conviene comprobar de entrada el
+reparto del config por origen, que es tambien como se descubre que el §15.2 de
+la rubrica esta vencido (lo estaba: describe 171 actores y hay 233, y no
+menciona 1915, 1916 ni 1917).
+
+F.6 · EL RECORTE POR EL ANCHO DE LA COLUMNA CORTA LA COLUMNA DE IMPORTES. La
+regla de v15 (recortar por el ancho entero de la columna mas 6 pt de margen)
+esta bien para prosa, pero en un cuadro los importes cuelgan a la derecha del
+cuerpo de texto y quedan afuera. Cuando la hoja es un cuadro, el recorte se
+hace por el ancho de la CAJA, no de la columna, y si aun asi el ultimo digito
+queda cortado se marca entre corchetes y se dice en E.8.
+
+F.7 · CONVIENE MEDIR LA CAPA ANTES DE ELEGIR LAS PASADAS. Contar U+0002,
+U+00AD, caracteres por hoja y ppi de las imagenes en el mismo paso en que se
+extrae la capa cuesta una llamada y decide todo lo demas: en 1917, U+0002 = 0
+y U+00AD = 5.316 fijaron la union de cortes, y el recuento de imagenes por
+hoja (dos JPX por hoja en las 289) fue lo que hizo sospechar del contenido
+mixto y llevo a F.1.
+
+
+CONFIG ACTUALIZADO
+==================
+
+Se entrega un lee_config.json actualizado sobre el que llego en el Release. Lo
+que se agrega y lo que no, clave por clave.
+
+actores: se agrega UNA entrada, ["camilo", "cacerez", "1917"], que es la forma
+con que la edicion 637 imprime el apellido del solicitante del deslinde de
+Potrero Gallinato, distinta de la que imprime la 636. Se conserva la entrada
+["camilo", "cacere", "1917"] que ya estaba y no se unifican: cuando una
+persona aparece con dos apellidos distintos en anos o ediciones distintos se
+agregan los dos, porque el config es una red de busqueda y no un padron. Las
+demas personas del §A y del §B ya estaban en el config con origen 1917 (Rafael
+Delgado, Casimiro Caceres, Juana Flores de Chaile, Eduardo Toconas, Sara
+Blasco, Inocencio Aramayo, Herman Pfister y Pjister, Andres Marini, Angel
+Sola, Jose Nogales, Teodoro Keyes, Juana Antonia Caceres, Ildefonsa Burgos de
+Yugra, Augusto P. Matienzo, Bernabe Fernandez, Emilio Eressart y sus
+variantes), o con origen anterior (Daniel Linares y Abraham Fernandez de 1909,
+Escolastico M. Aparicio de 1911, Eustaquio Murua de 1912). Total: 234 actores.
+
+numeros: NO SE AGREGA NADA, y el motivo merece declararse. Los cuatro numeros
+de acto del §A (1056, 1085, 1101 y 1377) YA ESTABAN en la clave, junto con
+1097, 1100, 1419, 1450 y las formas con punto 1.377, 1.419 y 1.450. Es la
+segunda prueba, despues de los 37 actores con origen 1917, de que el ano fue
+barrido antes y de que su resultado volco al config. Los cuatro se verificaron
+de todos modos en la imagen en este barrido y coinciden. Total: 51 numeros,
+sin cambio.
+
+anillo2: NO SE AGREGA NADA. Todos los toponimos que el ano nombra ya estan en
+la clave, incluidas las dos formas de Santa Gertrudis (santa gertrudis y santa
+getrudis), potrero gallinato, pucheta, quitilipe, toconas y yugra. Se
+considero agregar «calderilla» como termino de anillo 2 y se decidio que no:
+es anillo 1 y ya esta en esa clave. Total: 84 terminos.
+
+falsos_positivos: NO SE AGREGA NADA, por la regla de §12. Los de 1917 quedan
+listados en E.7 y fuera del archivo. En particular NO se agregan «local de»,
+«vocal del» ni «dominical de», aunque los genere la quinta pasada, porque son
+contextos de union artificial y no del texto; y no se agrega «calderon», que
+ya esta. Total: 20.
+
+anillo1, tesseract, lang, psm, dpi y reemplazo: sin cambios.
+
+
+RECUENTO
+========
+
+  Archivos y ediciones .......... 47 PDF, 47 ediciones (636 a 683)
+  Ediciones ausentes ............ 1 (la N° 640)
+  Hojas presentes ............... 289
+  Hojas declaradas .............. ninguna; el ano no declara paginas
+  Hojas ausentes detectadas ..... 4 por la cadena de folios
+                                  (1 en la ed. 654; 3 entre la 645 y
+                                  la 647, sin poder atribuirlas)
+  Reparto de confianza .......... no aplicable, sin .tsv (E.10.1)
+  Techo de resolucion ........... 300 ppi (mascara JBIG2)
+  Imagenes miradas .............. 31 hojas
+  Columnas cotejadas ............ 12 (2 columnas enteras y 10 bandas)
+  Cabeceras leidas en imagen .... 13 folios y 6 tapas
+  Menciones anillo 1 ............ 9 actos, 10 apariciones
+  Menciones anillo 2 ............ 30 terminos con acierto de 84;
+                                  contexto leido de los 30
+  Nucleos del dpto. sin el
+    termino (B.2) ............... 2 seguros, 1 de borde
+  Actores del config ............ 233 buscados; 41 con acierto por
+                                  nombre completo
+  Anillo 3 (limitrofes) ......... 3 presentes, 1 ausente (Jujuy)
+  Cuadros publicados ............ 1
+  Subtotales recalculados ....... 2, los dos cierran exactos
+  Tablas no recalculadas ........ 1 (el resto de la Ley N° 1062)
+  Balances municipales .......... 0
+  Resumenes de Tesoreria ........ 0; no hay cadena de saldos
+  Saldos transcritos ............ ninguno; el ano no publica saldos
+  Planos ........................ 0 publicados; 14 hojas los mencionan,
+                                  ninguna de ellas del departamento
+  Avisos repetidos .............. 1 del departamento, 2 ajenos
+  Marcas de publicacion ......... 0
+  Citados y no acompanados ...... 4
+  Contradicciones (E.9) ......... 10
+  Limites declarados ............ 6
+  Pendientes .................... 0
+  Correcciones a la rubrica ..... 7 (F.1 a F.7)
+
+
+Fin del informe LEE 1917.

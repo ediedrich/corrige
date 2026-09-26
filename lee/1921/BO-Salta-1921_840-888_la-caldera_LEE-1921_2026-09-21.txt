@@ -1,0 +1,1664 @@
+BOLETIN OFICIAL DE SALTA — AÑO 1921 — EDICIONES N.o 840 A 888
+BARRIDO LEE SOBRE «LA CALDERA» — INFORME FINAL
+Rubrica LEE v15 (20/09/2026). Informe cerrado el 21/09/2026.
+
+
+§0 · ADVERTENCIA PRELIMINAR
+===========================
+
+ESTADO: COMPLETO, con nueve limites declarados. No quedan pendientes: todo lo
+que esta sesion podia hacer con los insumos que llegaron, esta hecho. Los
+nueve limites se desarrollan en E.10 y ninguno depende de mas trabajo en
+sesion.
+
+Que subio el usuario. El Release con tag 1921 del repositorio
+ediedrich/boletines-salta trae cincuenta archivos: los cuarenta y nueve PDF de
+las ediciones 840 a 888 y el lee_config.json. El listado de assets se leyo de
+la pagina releases/expanded_assets/1921, que no exige token, y se comprobo
+archivo por archivo.
+
+Que NO llego. No hay pre-informe, ni resultados_1921.csv, ni
+decretos_1921.csv, ni log.txt, ni recortes.zip, ni el zip de los .txt de
+lee_trabajo. Es decir: no hay ninguna salida de lee_auto.py. Es el tercer año
+seguido en esa condicion, despues de 1911 y 1912, y el procedimiento aplicado
+es el del §2.1 de la rubrica: la sesion extrajo la capa previa de los PDF con
+PyMuPDF y corrio ella misma las cuatro pasadas, el anillo 2, los actores, los
+numeros y los reemplazos. No hay log que leer y se declara que no lo hay.
+
+Version y parametros de lee_auto.py: no consta ninguna corrida sobre 1921. No
+se declara version, ni fecha, ni parametros, porque no hay de donde leerlos.
+
+Dos configuraciones distintas. El lee_config.json del Release esta atrasado:
+trae 180 actores, con origenes hasta 1915. El lee_config.json de los archivos
+del proyecto trae 261 actores, con origenes hasta 1920, anillo 2 de 87
+terminos, 57 numeros y 20 falsos positivos, y contiene a los 180 del Release
+sin excepcion: es superconjunto estricto. El barrido se hizo con el del
+proyecto y se declara la diferencia, que conviene corregir subiendo el config
+vigente como asset del Release antes del proximo año.
+
+Entorno de la sesion, verificado al empezar. nproc = 1. PyMuPDF no venia
+instalado y se instalo desde pypi. tesseract 5.3.4 presente pero con dos
+idiomas solamente, eng y osd: NO hay spa. En consecuencia no se OCRizo nada en
+esta sesion; el §3 y el §16 de la rubrica no son aplicables y lo que no estaba
+en la capa previa se leyo mirando la imagen, que es lo que se hizo.
+
+De donde salieron las imagenes y como se cotejaron. Los cuarenta y nueve PDF
+se bajaron del Release en una sola llamada (85 MB) y se verifico que cada uno
+abriera como PDF real con imagen incrustada. No hay EXTRAIDO.json, de modo que
+el cotejo se hizo contra la cadena de folios impresos, segun §2.5bis: la
+cadena corre sin interrupcion inexplicada de 1681, tapa de la edicion 840, a
+2532, ultima hoja de la 888, y cada salto se explica por una edicion ausente o
+por una edicion incompleta, salvo dos casos que se declaran en E.9.
+
+Hecho del corpus que cambia el recuento. Seis de los cuarenta y nueve archivos
+no son boletines: 859, 872, 876, 878, 884 y 885 traen una sola hoja con una
+leyenda que dice que el ejemplar no se encontro en la base de datos de origen.
+No son ediciones cortas ni hojas en blanco: son marcadores de ausencia. El
+corpus efectivo del año son 43 ediciones y 742 hojas, mas seis hojas de
+marcador.
+
+Desvios de §8.17: ninguno en las transcripciones. Advertencia de formato: este
+archivo se escribe sin tildes ni eñes en la prosa del informe, para que el
+ancho se mida en caracteres sin ambiguedad y el archivo viaje sin riesgo de
+mojibake; las transcripciones conservan la puntuacion, las comillas angulares,
+los corchetes y las erratas del original, y las tildes se omiten tambien alli,
+lo que se declara aqui de una vez y no se repite en cada ficha. El unico signo
+que se pierde es el diacritico; ninguna palabra, cifra ni orden de renglon se
+altera.
+
+Que agregaria cada insumo que falto. Si llegaran el .tsv del script, las .jpg
+y el log, se podrian agregar: confianza por hoja y con ella la lista de hojas
+«a ojos»; deduplicacion por md5 y por dhash; medicion de tinta; y una segunda
+version del texto con la que desempatar las palabras dudosas. El §A no
+cambiaria: sus dieciocho fichas estan transcriptas desde la imagen, que es la
+prueba ultima y no admite desempate. Lo que si mejoraria es el margen de E.7 y
+E.10.
+
+
+§1 · CORPUS REVISADO
+====================
+
+Cuarenta y nueve archivos, numerados 840 a 888 sin faltantes en la serie de
+archivos. El Release de 1920 cierra en 839 y el de 1922 abre en 889, de modo
+que el año esta completo como serie de numeros. Todas las ediciones son PDF
+reales, con imagen incrustada y capa de texto previa en las 748 hojas; ninguna
+es ZIP ni texto plano. Techo de resolucion de la imagen incrustada: 283 a 307
+ppi.
+
+La columna FOLIOS da el folio impreso de la tapa (que no lo imprime: se deduce
+del de la hoja 2, que siempre es el siguiente) y el de la ultima hoja
+presente. Las fechas leidas en la imagen van entre corchetes. La columna DIA
+es el dia de la semana calculado sobre la fecha de tapa.
+
+
+ ED   FECHA DE TAPA        DIA        HOJAS  FOLIOS
+ ---  -------------------  ---------  -----  ---------------------
+ 840  [Enero 7]            viernes        7  1681-1687
+ 841  Enero 14             viernes       10  no impresos
+ 842  Enero 21             viernes       13  1693-1705
+ 843  Enero 28             viernes       11  1707-1717
+ 844  Febrero 4            viernes       22  1719-1740
+ 845  Febrero 11           viernes       27  1743-1769
+ 846  Febrero 18           viernes       24  1771-1794
+ 847  Febrero 25           viernes       18  1795-1812
+ 848  Marzo 4              viernes       28  1813-1840
+ 849  Marzo 11             viernes       22  1841-1862
+ 850  Marzo 18             viernes       20  1865-1884
+ 851  Abril 1              viernes       19  1885-1903
+ 852  Abril 8              viernes        7  1905-1908 y 1917-1919
+ 853  Abril 15             viernes       12  1920-1931
+ 854  Abril 22             viernes       12  1933-1944
+ 855  Abril 29             viernes       12  1945-1956
+ 856  Mayo 6               viernes       21  1957-1977
+ 857  Mayo 13              viernes       17  1979-1995
+ 858  [Mayo 21]            sabado        18  1997-2014
+ 859  [sin boletin]                       -  (ausente)
+ 860  Junio 3              viernes       20  2023-2042
+ 861  Junio 24             viernes       15  2043-2057
+ 862  Julio 1 (s/i)        viernes       14  2059-2072
+ 863  Julio 8              viernes       16  2073-2088
+ 864  Julio 15             viernes       16  2089-2104
+ 865  Julio 22 (s/i)       viernes       16  2107-2122
+ 866  Julio 29             viernes       16  2123-2138
+ 867  Agosto 5             viernes       12  2139-2150
+ 868  Agosto 12            viernes        8  2151-2158
+ 869  Agosto 19            viernes        7  2159-2165
+ 870  [Agosto 26]          viernes       22  2167-2188
+ 871  [Sbre. 3]            sabado        16  2191-2206
+ 872  [sin boletin]                       -  (ausente)
+ 873  Sbre. 16             viernes       12  2223-2234
+ 874  Sbre. 23             viernes       16  2235-2250
+ 875  [Sbre. 30]           viernes       23  2251-2273
+ 876  [sin boletin]                       -  (ausente)
+ 877  Octubre 14           viernes       16  2291-2306
+ 878  [sin boletin]                       -  (ausente)
+ 879  Octubre 28           viernes       24  2331-2354
+ 880  Noviembre 4          viernes       24  2355-2378
+ 881  Noviembre 11         viernes       24  2379-2402
+ 882  Noviembre 18         viernes       15  2403-2417
+ 883  Noviembre 25         viernes       24  2419-2442
+ 884  [sin boletin]                       -  (ausente)
+ 885  [sin boletin]                       -  (ausente)
+ 886  [Diciembre 15]       jueves        18  2467-2484
+ 887  [Diciembre 23]       viernes       24  2485-2508
+ 888  Diciembre 30         viernes       24  2509-2532
+
+(s/i) = fecha de tapa tomada de la capa previa y no confirmada en la imagen;
+son las dos unicas de todo el año, y las dos caen en viernes segun la serie.
+Las siete entre corchetes se leyeron en la imagen, sea porque la capa las daba
+rotas, sea porque el dia de la semana no cerraba.
+
+Formato de tapa de la epoca: «Año XIII · Salta, <fecha> de 1921 · Num. <n>»,
+sin declaracion de paginas y SIN formula de dias de aparicion. En 1911 y en
+1912 la tapa decia «Aparece Miercoles y Sabados»; en 1921 no dice nada, de
+modo que la periodicidad semanal de los viernes es inferida de las fechas
+mismas y asi se rotula. El año editorial es XIII en las cuarenta y tres tapas
+y no cambia dentro del año.
+
+Confianza por hoja: no existe. Sin el .tsv del script no hay media ni
+porcentaje de palabras bajo 60, de modo que no hay reparto pub / ver / ojos y
+no se inventa uno. En su lugar se declara la densidad medida sobre la capa
+previa: mediana de 2.853 caracteres por hoja, minimo 55 y maximo 9.497; ocho
+hojas por debajo de 500 bytes, de las cuales seis son los marcadores de
+ausencia (una hoja de 55 caracteres cada uno) y las otras dos son 843 hoja 9,
+con 459, y 848 hoja 28, con 420, las dos miradas y las dos legitimas: son
+hojas de cierre con poco texto y mucho blanco.
+
+
+§2 · CRITERIO DE BUSQUEDA
+=========================
+
+Versiones y etiquetas. Hay una sola version del texto: la capa previa de los
+PDF, extraida en sesion. No hubo OCR propio, porque tesseract no tiene spa en
+esta maquina. En consecuencia todos los resultados de esta busqueda llevan
+etiqueta prev, no hubo union de versiones y NO HUBO DESEMPATE POSIBLE por
+segunda lectura: el unico desempate disponible es la imagen, y es el que se
+uso en las dieciocho fichas y en las 26 columnas cotejadas.
+
+Marca de corte U+0002: cero apariciones en las 748 hojas, medidas una por una.
+Guion blando U+00AD: 8.392 apariciones. Como en 1909-1912, esta epoca corta
+los renglones con guion blando y sin guion visible, de modo que la union se
+escribio con la regla corregida de v15, quitando el guion blando JUNTO CON el
+salto de renglon y solo despues los sueltos. Se midio lo que esa correccion
+gana en este año: la pasada literal sobre el texto sin unir devuelve 27 hojas
+y sobre el texto unido devuelve 28. La hoja ganada es 886 hoja 17, y resulto
+ser un falso positivo («el local del Jockey Bar» partido en «lo- caldel»). Es
+decir: en 1921 la correccion no agrega ninguna ficha, y eso tambien se
+declara, porque el año anterior agregaba dos.
+
+Cortes con puntuacion intercalada: la union tolera hasta dos signos a cada
+lado del salto y se aplico; ningun candidato del anillo 1 de este año dependia
+de ella.
+
+Las cuatro pasadas. 1) Literal y normalizada, «cald» sobre NFD sin diacriticos
+con los cortes unidos: 28 hojas. 2) Laxa, con la clase de espacios en blanco y
+no con un espacio literal: 28 hojas, de las que 24 coinciden con la literal y
+4 son formas nuevas (collera, gallera, callera dos veces), todas falsos
+positivos; la laxa no alcanza a «calderilla», que no termina en a ni en o, y
+por eso las cuatro hojas de la literal que le faltan no son un fallo. 3)
+Difusa, ratio mayor o igual a 0,78 contra caldera y calderilla sobre todas las
+palabras de cada hoja, excluida la forma exacta: 16 hojas, de las que 12 son
+nuevas respecto de la literal. 4) Anillo 2, actores, numeros y reemplazos,
+sobre la unica version que hay.
+
+Ninguna pasada devolvio cero, de modo que la prueba de sanidad de v15 no hizo
+falta esta vez; aun asi la laxa se probo primero contra el corpus de 1912,
+donde debe devolver «Oaldfera», y lo devolvio.
+
+La difusa volvio a ser la que rescata lo que la literal pierde, cuarto año
+seguido: en 869 hoja 5, la capa previa lee «de la caldeim» donde la imagen
+dice «de La Caldera», y esa es la unica mencion del rio de La Caldera de todo
+el año. Sin difusa, el deslinde de la finca «El Angosto» no existiria en este
+informe, o existiria mutilado.
+
+Difusa ampliada, banda 0,70 a 0,78 restringida a palabras que empiezan con c,
+g u o: se corrio una vez sobre el año entero y devolvio 28 formas, todas
+juzgadas y todas falsas. Se listan en §12 del informe, bajo falsos positivos.
+
+Lista de actores y su origen. Se uso el anillo de actores completo del
+lee_config.json del proyecto: 261 entradas, con origen en edicion para las 42
+de 1946 y en año para las 219 de 1908, 1909, 1910, 1911, 1912, 1915, 1916,
+1917, 1919 y 1920. Se busco por nombre y apellido sobre el texto normalizado Y
+sobre el texto con la puntuacion suprimida, segun §5.1. Veintiseis entradas
+del config reaparecen en 1921 con nombre y apellido completos.
+
+Numeros arrastrados. Los 57 numeros del config se buscaron y diecinueve dan
+acierto, pero TODOS son coincidencia de cifra: folios de pagina, el año 1921 y
+1922, sumas, articulos de ley y numeros de expediente ajenos. Los 40 numeros
+de 1946 no tienen nada que ver con esta epoca y los de 1908 a 1912 tampoco,
+porque en aquellos años los actos no llevaban numero. En 1921, en cambio, SI
+LO LLEVAN: se hallaron 407 numeros de decreto distintos, de 112 a 2093, y la
+regla §8.15 de fecha contra numeracion vuelve a ser aplicable, cosa que no
+ocurria desde 1907. Se aplico sobre los vecinos mas menos 3 de cada acto del
+§A que lleva numero.
+
+Identificadores de las ausencias. Los actos de 1921 se identifican por numero
+de decreto y fecha cuando lo llevan, y por lugar, persona y organismo cuando
+son edictos, listas electorales o fallos del Superior Tribunal, que no lo
+llevan.
+
+
+§A · MENCIONES EXPLICITAS
+=========================
+
+Dieciocho actos, contados una vez cada uno. Varios se publican a lo largo de
+dos hojas seguidas: eso es una aparicion en dos hojas, no dos apariciones. En
+total, el termino del anillo 1 se leyo en la imagen en 28 hojas, de las que 17
+lo traen de verdad y 11 son falsos positivos ya juzgados.
+
+
+A.1 · Edicion 843, hoja 8
+-------------------------
+
+FUENTE. Edicion N.o 843, Salta, Enero 28 de 1921, hojas 8 y 9 (Pag. 1714 y
+1715), columna 3 de la hoja 8 y columna 1 de la hoja 9.
+
+FICHA. Edicto de deslinde, mensura y amojonamiento de las fincas «Cerro de
+Buena Vista» y «Sausal o Curuzu», sitos en el partido de Vaqueros,
+Departamento La Caldera, de propiedad de don Francisco S. Urquiza. Juez de 1a.
+Instancia en lo Civil y Comercial doctor Daniel Etcheverry; agrimensor
+propuesto don Hector Chiostri; Secretario Tomas Izarrualde. Una sola
+aparicion, en dos hojas seguidas.
+
+MODO DE LECTURA. Hoja entera rasterizada a 115 dpi desde el PDF y leida a
+pantalla completa; las dos hojas, lado a lado. Ninguna cifra ni nombre de esta
+ficha sale de la capa previa.
+
+TEXTO (transcripto desde la imagen):
+
+  DESLINDE—Por disposicion del senor Juez de 1a. Instancia en lo
+  Civil y Comercial de esta ciudad, doctor Daniel Etcheverry, se
+  hace saber por el termino de treinta dias que habiendose
+  presentado don Francisco S. Urquiza solicitando el deslinde,
+  mensura y amojonamiento de las fincas denominadas «Cerro de
+  Buena Vista» y «Sausal o Curuzu», sitos en el Departamento de
+  La Caldera, se ha dictado la siguiente resolucion:
+  Salta, Octubre 18 de 1020.—Autos y Vistos: por presentado con
+  los titulos se le tiene por parte y por constituido el
+  domicilio legal indicado.—Encontrandose llenados los requisitos
+  que establece el art. 570 del Codigo de Procedimientos con la
+  presentacion de los titulos de fs. 33 y 40 y expresion de los
+  linderos actuales, tienese por designado al agrimensor
+  propuesto don Hector Chiostri para que previa aceptacion del
+  cargo en forma y publicacion de edictos por treinta dias en los
+  diarios «El Civico Intransigente y La Voz del Norte» y por una
+  sola vez en el «BOLETIN OFICIAL», proceda el dia 20 y
+  siguientes del entrante Enero de 1921, a las operaciones de
+  deslinde, mensura y amojonamiento de las fincas «Cerro de Buena
+  Vista» y «Sausal o Curuzu», sitos en el partido de Vaqueros,
+  Departamento La Caldera, de propiedad de don Francisco S.
+  Urquiza. Se senala para notificaciones en Secretaria los dias
+  martes y viernes de cada semana (art. 375 y 51 del Codigo de
+  Procedimientos).—Daniel Etcheverry.—Entre lineas-dias vale.
+    Tomas Izarrualde E. S.
+
+NOTA DE LECTURA. La resolucion esta fechada «Octubre 18 de 1020» [sic]: el
+cuarto digito es un cero donde la fecha pide un nueve, y asi esta impreso. El
+articulo del Codigo de Procedimientos se lee «570» en la hoja 8 y el edicto de
+la hoja 9 del mismo asunto no lo repite; el otro deslinde de la misma edicion
+cita el art. 575, que es el que usan todos los demas edictos del ano. La finca
+se escribe «La Caldera» en el cuerpo y «La Caldera» tambien en la hoja 9, pero
+la hoja 8 imprime «La Caldera» con acento en la e («La Caldera» / «La
+Caldera»): el acento se ve en la imagen. El numero de aviso no figura al pie
+de esta entrega.
+
+
+A.2 · Edicion 844, hoja 11
+--------------------------
+
+FUENTE. Edicion N.o 844, Salta, Febrero 4 de 1921, hojas 11 y 12 (Pag. 1729 y
+1730), columna 3 de la hoja 11 y columna 1 de la hoja 12.
+
+FICHA. Junta Electoral de la Provincia: autoridades de mesa designadas para el
+Colegio Electoral N. 3 (Caldera), cuatro mesas, con presidente y dos suplentes
+cada una.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado.
+Los nombres se transcriben de la imagen, no de la capa.
+
+TEXTO (transcripto desde la imagen):
+
+  Colegio Electoral N. 3 (Caldera)
+    Mesa N. 1
+  Presidente Molina Jose Lucas
+  Sup. 1. Linares Daniel
+   »  2. Balboa Ramon Rosa
+    Mesa N. 2
+  Presidente Royo Domingo
+  Sup. 1. Echenique Nestor
+   »  2. Fernandez Auge[ilegible]
+    Mesa N. 3
+  Presid. Carabajal Torres Antonio M.
+  Sup. 1. Salustro Domingo
+   »  2. Molina Jose Andres
+    Mesa N. 4
+  Presidente Nogales Gregorio
+  Sup. 1. Aramburu Emilio
+   »  2. Diaz de Jesus Eudoro
+
+NOTA DE LECTURA. El segundo suplente de la Mesa N. 2 cae en el ultimo renglon
+de la columna de la hoja 11 y se lee «Fernandez Auge» con la ultima silaba
+comida por el borde: puede ser Augusto o Augusti. Se escribe [ilegible] y no
+se completa. «Nogales» aqui es apellido, no el paraje del anillo 2. La lista
+no lleva encabezado propio en la hoja 11: el rotulo del acto esta en las hojas
+anteriores de la misma serie de colegios electorales.
+
+
+A.3 · Edicion 845, hoja 21
+--------------------------
+
+FUENTE. Edicion N.o 845, Salta, Febrero 11 de 1921, hojas 20 y 21 (Pag. 1762 y
+1763); el articulo 2 esta en la columna 1 de la hoja 21.
+
+FICHA. Decreto del Poder Ejecutivo en acuerdo de Ministros que convoca a
+elecciones generales de Senadores y Diputados para el 6 de marzo y declara que
+Caldera elige un Diputado y un Senador.
+
+MODO DE LECTURA. Hoja 21 rasterizada a 115 dpi y leida entera; la hoja 20 se
+miro para ubicar el encabezado del decreto.
+
+TEXTO (transcripto desde la imagen):
+
+  Art. 1.o—Convocase al pueblo de la Provincia a elecciones
+  generales de Senadores y Diputados a la H. Legislatura, las que
+  tendran lugar el dia seis de Marzo proximo.
+  Art. 2.o A los efectos legales correspondientes declarase que
+  elijen un Diputado y un Senador cada uno de los departamentos
+  siguientes: Cachi, Cafayate, Caldera, Campo Santo, Candelaria,
+  Cerrillos, Guachipas, Iruya, Metan, Molinos, La Poma, San
+  Carlos, Santa Victoria y La Vina; un Senador y dos Diputados
+  por Anta, Chicoana, Oran, Rivadavia, Rosario de la Frontera y
+  Rosario de Lerma; un Senador y seis Diputados por la Capital.
+  Art. 3.o—Comuniquese, publiquese y dese al Registro Oficial.
+    CASTELLANOS — JULIO J. PAZ — M. LOPEZ DOMINGUEZ
+  Es copia: D. Lopez Reyna.
+
+NOTA DE LECTURA. El decreto se publica sin numero visible en la hoja 21; el
+encabezado «El Gobernador de la Provincia en acuerdo de Ministros» esta arriba
+de la misma columna. El termino aparece sin articulo («Caldera») y seguido de
+punto en el impreso, no de coma, entre «Cafayate» y «Campo Santo».
+
+
+A.4 · Edicion 846, hoja 1
+-------------------------
+
+FUENTE. Edicion N.o 846, Salta, Febrero 18 de 1921, hojas 1 a 3 (tapa, Pag.
+1772 y 1773); el termino cae en la columna 1 de la hoja 2.
+
+FICHA. Superior Tribunal de Justicia: causa de oficio contra Angel Guari o
+Martin Jurado por hurto de ganado a Asuncion Aquino y Jacinto Muruaga. El
+hecho se situa «en la Caldera y Buena Vista» a fines de octubre de 1917.
+Jueces Dres. Tamayo, Cornejo y Lopez Dominguez.
+
+MODO DE LECTURA. Tapa y hoja 2 rasterizadas a 115 dpi y leidas lado a lado; la
+caratula se transcribe de la tapa.
+
+TEXTO (transcripto desde la imagen):
+
+  Causa contra Angel Guari o Martin Jurado por hurto de ganado a
+  Asuncion Aquino y Jacinto Muruaga.—Jueces: Dres. Tamayo,
+  Cornejo y Lopez Dominguez.
+  En Salta, a los siete dias del mes de Octubre de mil
+  novecientos diez y nueve reunidos los Sres. Vocales del
+  Superior Tribunal de Justicia, en su Salon de Audiencias para
+  fallar en la causa seguida de oficio contra Angel Guari o
+  Martin Jurado por el delito de hurto de animales vacunos a
+  Asuncion Aquino y Jacinto Muruaga venida en grado por el
+  recurso de apelacion del Sr. Defensor Oficial de la sentencia
+  del Sr. Juez del Crimen de fecha 3 de Mayo del corriente ano.
+  [hoja 2, columna 1]
+  ...cion a fs. 54. Este hecho tuvo lugar en la Caldera y Buena
+  Vista a fines de Octubre de 1917 y el acusado declara que los
+  hurtos del ganado los efectuaba en pleno campo, en compania de
+  Martin Jurado y Manuel N. sujeto cuya captura esta
+  recomendada.
+
+NOTA DE LECTURA. La sentencia es de octubre de 1919 y se publica en febrero de
+1921, con un ano y cuatro meses de demora: el Boletin de este ano publica
+fallos viejos del Superior Tribunal con regularidad. El hecho se fecha en
+1917, de modo que el acto toca al departamento por el lugar del delito y no
+por domicilio de parte. «la Caldera» va con minuscula y sin acento en el
+impreso.
+
+
+A.5 · Edicion 846, hoja 10
+--------------------------
+
+FUENTE. Edicion N.o 846, Salta, Febrero 18 de 1921, hojas 10 y 11 (Pag. 1780 y
+1781), columna 2 de la hoja 10 y columna 1 de la hoja 11.
+
+FICHA. Junta Electoral de la Provincia: ubicacion de las mesas receptoras de
+votos y composicion de los circuitos del Colegio Electoral N.o 3 de Caldera,
+con cuatro mesas (Pueblo, Pueblo, Vaqueros y Mojotoro). Es la lista mas rica
+en toponimos del departamento de todo el ano.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado;
+los toponimos se transcriben de la imagen uno por uno.
+
+TEXTO (transcripto desde la imagen):
+
+  Caldera.—Colegio Electoral N.o 3
+  Mesa 1—En Caldera, Pueblo, Escuela Elemental Mixta.—CIRCUITO:
+  Pueblo, Potrero de Castilla, Penones y San Alejo.
+  Mesa 2—En Caldera, Pueblo, Iglesia Parroquial.—CIRCUITO,
+  Angosto, Angosto de Arrieta, Angostura, Campo Alegre,
+  Calderilla, Corral de Barrancas, Chalchanio, Despensa,
+  Despensilla, El Acheral, El Churcal, El Monte, Las Garrapatas,
+  Los Porongos, Los Sauces, Mesadas, Potrero de Valencia,
+  Queseria, Santa Rufina, Wierna, Yacones y El Bordo.
+  Mesa 3—En Vaqueros, Escuela Infantil Provincial.—CIRCUITO: Las
+  Lagunas, Lesser y Vaqueros.
+  Mesa 4—En Mojotoro, Oficina de Correos.—CIRCUITO: Mojo Toro,
+  Mojo Torito, Potrero de Gallinato, Tunel y Estacion F. C. C. N.
+  (Mojo Toro).
+
+NOTA DE LECTURA. El nombre del departamento se imprime dos veces en la hoja
+10: la primera, en el rotulo, sale de la capa previa como «Caide.ra» y la
+segunda como «caldera7»; en la imagen las dos dicen Caldera. «Calderilla» esta
+partido por el fin de renglon y la capa lo lee «cab derilja»: sin mirar la
+hoja, el unico topónimo del anillo 1 distinto de Caldera que aparece en 1921
+no existiria. La capa tambien deforma «Los Porongos» en «los.-potongos»,
+«Quesería» en «queseria» y «Wierna» en «wierma»; los tres se leyeron en la
+imagen. La ortografia del impreso separa «Mojo Toro» en la Mesa 4 y escribe
+«Mojotoro» en el encabezado de la misma mesa: se transcriben las dos formas
+como estan.
+
+
+A.6 · Edicion 847, hoja 15
+--------------------------
+
+FUENTE. Edicion N.o 847, Salta, Febrero 25 de 1921, hojas 15 y 16 (Pag. 1809 y
+1810); el encabezado en la columna 3 de la hoja 15, el asiento del
+departamento en la columna 1 de la hoja 16.
+
+FICHA. Junta Electoral de la Provincia: lista de candidatos proclamados por la
+Union Civica Radical para las elecciones del 6 de marzo. Por La Caldera,
+Senador Emeterio Royo y Diputado Dr. Lucio Ortiz. Firma Enrique Klix,
+Secretario.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado. El
+encabezado se busco expresamente en la hoja anterior, por la regla de no
+fichar una nomina sin saber de que es.
+
+TEXTO (transcripto desde la imagen):
+
+  [hoja 15] Junta Electoral de la Provincia
+  Lista de candidatos proclamados por la Union Civica Radical
+  para las elecciones de Diputados y Senadores a realizarse el
+  dia 6 de Marzo proximo.
+  [hoja 16]
+  Por La Caldera
+  Senador: Emeterio Royo
+  Diputado: Dr. Lucio Ortiz
+  Salta, Febrero 24 de 1921.
+    Enrique Klix Secretario.
+
+NOTA DE LECTURA. Inmediatamente debajo, en la misma columna, empieza otra
+lista de la misma Junta, proclamada por el partido «Union San Carlos» y
+fechada tres dias antes, que no nombra al departamento: las dos listas se
+tocan sin mas separacion que un filete, y confundirlas atribuiria los
+candidatos de Caldera al partido equivocado.
+
+
+A.7 · Edicion 869, hoja 5
+-------------------------
+
+FUENTE. Edicion N.o 869, Salta, Agosto 19 de 1921, hojas 5 y 6 (Pag. 2163 y
+2164), columna 3 de la hoja 5 y columna 1 de la hoja 6.
+
+FICHA. Edicto de deslinde, mensura y amojonamiento de la finca «El Angosto»,
+departamento de La Caldera, de la senora Antonia P. de Peralta, con sus cuatro
+linderos. Juez Dr. Alberto Mendioroz; agrimensor don Rodolfo Chavez;
+Secretario Tomas Izarrualde; aviso N.o 286.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado;
+los nombres de los linderos se transcriben de la imagen.
+
+TEXTO (transcripto desde la imagen):
+
+  DESLINDE—Habiendose presentado el Procurador Sr. Elias Gallardo
+  con poder y titulos bastantes de la senora Antonia P. de
+  Peralta solicitando deslinde, mensura y amojonamiento de la
+  finca denominada «El Angosto», situada en el departamento de La
+  Caldera, limitada al Norte, propiedad de los herederos de Luisa
+  A. Costas, hoy Daniel Linares y de Julio Mercado; al Sud, el
+  monte del Quitilipe separado por el rio de La Caldera y
+  propiedad de Susana Aguilera; al Este, propiedad de Augusto
+  Reyes; al Oeste, herederos de Luis A. Costas hoy Daniel
+  Linares; el Sr. Juez de la causa Dr. Alberto Mendioroz a cargo
+  interino del Juzgado de 1a. Instancia y 1a. Nominacion por auto
+  de fecha de ayer ha ordenado hacer saber por edictos que se
+  publicaran de acuerdo al art. 575 del Cod. de P. en lo C. y C.
+  las operaciones a practicarse que daran comienzo el dia 22 del
+  entrante Agosto para que dentro de el se presenten todos los
+  que tuvieren algun interes a ejercitar sus derechos y tener
+  como perito al Agrimensor propuesto don Rodolfo Chavez. Lo que
+  el suscrito Secretario hace saber a sus efectos.—Salta, Julio 7
+  de 1921.
+    Tomas Izarrualde.        (N.o 286)
+
+NOTA DE LECTURA. El mismo edicto escribe el apellido del lindero del Norte
+«Luisa A. Costas» y el del Oeste «Luis A. Costas»: dos personas o una sola mal
+impresa, y no se concilia. La capa previa lee «de la caldeim» donde la imagen
+dice «de La Caldera»: esta es la aparicion que la pasada literal pierde y la
+difusa rescata. El edicto se publica el 19 de agosto y manda comenzar las
+operaciones «el dia 22 del entrante Agosto», con el auto fechado el 7 de
+julio: el «entrante» quedo vencido antes de la publicacion. Se transcribe y no
+se corrige.
+
+
+A.8 · Edicion 875, hoja 10
+--------------------------
+
+FUENTE. Edicion N.o 875, Salta, Sbre. 30 de 1921, hojas 10 y 11 (Pag. 2260 y
+2261); el termino en la columna 1 de la hoja 11.
+
+FICHA. Decreto que convoca a la eleccion de electores de Gobernador para el 7
+de agosto y a la eleccion de Convencionales para la reforma de la
+Constitucion: dos electores por Caldera.
+
+MODO DE LECTURA. Hoja 11 rasterizada a 115 dpi y leida entera; la hoja 10 se
+miro para el arranque del decreto.
+
+TEXTO (transcripto desde la imagen):
+
+  Siete electores por la Capital; tres por cada uno de los
+  Departamentos de Rosario de Lerma, Anta, Rivadavia, Chicoana,
+  Oran y Rosario de la Frontera, y dos por cada uno de los
+  Departamentos de Cachi, Cafayate, Caldera, Campo Santo,
+  Candelaria, Cerrillos, Guachipas, Iruya, Metan, La Poma, San
+  Carlos, Santa Victoria y La Vina.
+  [...]
+  Art. 4.o—Convocase a eleccion de Convencionales para la reforma
+  de la Constitucion, los cuales seran elegidos del mismo modo y
+  en la misma proporcion que los electores de Gobernador.
+  (Articulo 184 de la Constitucion).
+    CASTELLANOS — JULIO J. PAZ
+  Es copia: A. Gambolini.
+
+NOTA DE LECTURA. La lista de este decreto omite a Molinos, que si figura en el
+articulo siguiente: se transcribe como esta. La edicion lleva fecha 30 de
+setiembre y publica decretos del 7 de julio.
+
+
+A.9 · Edicion 875, hoja 12
+--------------------------
+
+FUENTE. Edicion N.o 875, Salta, Sbre. 30 de 1921, hojas 12 y 13 (Pag. 2262 y
+2263): arranque en la columna 3 de la hoja 12, cuerpo en la columna 1 de la
+hoja 13.
+
+FICHA. Decreto N.o 1669, Salta, Julio 7 de 1921: vistas las ternas elevadas
+por la Comision Municipal del Departamento de la Caldera, nombra Jueces de Paz
+Propietario y Suplente a Laureano Peralta y Escolastico M. Aparicio.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado. El
+numero del decreto y los dos nombres se leen en la imagen.
+
+TEXTO (transcripto desde la imagen):
+
+  Decreto N.o 1669
+  Salta, Julio 7 de 1921.
+  Vistas las ternas elevadas por la Comision Municipal del
+  Departamento de la Caldera, proponiendo a las personas que han
+  de desempenar los cargos de Jueces de Paz Propietario y
+  Suplente de esa localidad
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1.o—Nombrase Jueces de Paz Propietario y Suplente del
+  Departamento de La Caldera a los senores Laureano Peralta y
+  Escolastico M. Aparicio, respectivamente.
+  Art. 2.o—Los nombrados tomaran posesion de sus cargos previas
+  las formalidades de Ley y el Titular recibira de quien
+  corresponda los libros y demas enseres del Juzgado, bajo
+  inventario.
+  Art. 3.o—Comuniquese, publiquese y dese al R. Oficial.
+    CASTELLANOS — JULIO J. PAZ
+  Es copia: A. Gambolini.
+
+NOTA DE LECTURA. El decreto escribe «de la Caldera» en el visto y «de La
+Caldera» en el articulo 1.o, en la misma pieza. No nombra a los salientes ni
+cita el acto por el que cesaron. Los vecinos 1666, 1667, 1668, 1670 y 1671
+estan todos en estas dos hojas y llevan la misma fecha del 7 de julio: la
+serie y el calendario concuerdan.
+
+
+A.10 · Edicion 879, hoja 12
+---------------------------
+
+FUENTE. Edicion N.o 879, Salta, Octubre 28 de 1921, hoja 12 (Pag. 2342),
+columna 1.
+
+FICHA. Decreto N.o 1816, Salta, Setiembre 12 de 1921: acepta la renuncia del
+Juez de Paz Suplente del departamento La Caldera, don Escolastico M. Aparicio.
+
+MODO DE LECTURA. Hoja entera rasterizada a 110 dpi y leida a pantalla
+completa.
+
+TEXTO (transcripto desde la imagen):
+
+  Decreto N.o 1816
+  Salta, Setiembre 12 de 1921.
+  Vista la renuncia elevada por el Juez de Paz Suplente del
+  departamento La Caldera, don Escolastico M. Aparicio; en
+  atencion a los motivos en que la funda,
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1.o—Aceptase la renuncia interpuesta por el Juez de Paz
+  Suplente del departamento La Caldera, don Escolastico M.
+  Aparicio.
+  Art. 2.o—Comuniquese, publiquese y dese al Registro Oficial.
+    CASTELLANOS — JULIO J. PAZ
+  Es copia: [A. Gambolini]
+
+NOTA DE LECTURA. Aparicio habia sido nombrado suplente por el Decreto N.o 1669
+del 7 de julio (ficha de 875) y renuncia el 12 de setiembre: dos meses y cinco
+dias. El decreto no nombra reemplazante y en el resto del ano no se publica
+otro que cubra esa vacante. La firma del «Es copia» queda cortada por el
+filete inferior y se completa con la del decreto inmediato anterior de la
+misma columna, lo que se declara aqui por ser inferencia.
+
+
+A.11 · Edicion 879, hoja 15
+---------------------------
+
+FUENTE. Edicion N.o 879, Salta, Octubre 28 de 1921, hojas 15 y 16 (Pag. 2345 y
+2346): arranque en la columna 2 de la hoja 15, cuerpo en la columna 1 de la
+hoja 16.
+
+FICHA. Decreto N.o 1828, Salta, Setiembre 20 de 1921: declarada nula por la
+Junta Electoral la eleccion del 7 de agosto en los distritos electorales de la
+Caldera y otros once, convoca de nuevo y asigna a Caldera dos Convencionales
+para la reforma de la Constitucion, para el segundo domingo de octubre.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado.
+
+TEXTO (transcripto desde la imagen):
+
+  Decreto N.o 1828
+  Salta, Setiembre 20 de 1921.
+  Habiendo comunicado el senor Presidente de la Junta Electoral
+  de la Provincia, en nota N.o 30 de fecha 6 del corriente, que
+  dicha Junta ha resuelto declarar nula la eleccion practicada el
+  dia 7 de Agosto ppdo., en los distritos eleectorales de la
+  Caldera, Rosario de Lerma, Rosario de la Frontera, La
+  Candelaria, Guachipas, Iruya, Anta, Metan, Santa Victoria, San
+  Carlos, Oran y Rivadavia, por no haberse verificado eleccion
+  legal en dos tercios de las mesas, (Arts. 75 y 84 de la Ley de
+  Elecciones de la Provincia); y en cumplimiento a lo que dispone
+  el art. 184 de la Constitucion de la Provincia y 84 de la Ley
+  de Elecciones citada,
+  El Gobernador de la Provincia
+  DECRETA:
+  Art. 1.o—Convocase al pueblo de los distritos electorales que a
+  continuacion se expresan, para elegir:
+  Caldera: dos Convencionales para la reforma de la Constitucion.
+  [siguen los once distritos restantes]
+  Art. 2.o—Senalase al segundo domingo del mes de Octubre proximo
+  para que tenga lugar la eleccion en los distritos indicados.
+  Art. 3.o: Comuniquese, publiquese y dese al Registro Oficial.
+    CASTELLANOS — JULIO J. PAZ
+  Es copia:—A. Gambolini
+
+NOTA DE LECTURA. «eleectorales» [sic] en el visto. La nota de la Junta es del
+6 de setiembre, el decreto del 20 y la publicacion del 28 de octubre, esto es,
+catorce dias despues del segundo domingo de octubre, que cayo el 9: el Boletin
+publica la convocatoria cuando la fecha senalada ya paso. Se declara y no se
+explica.
+
+
+A.12 · Edicion 883, hoja 10
+---------------------------
+
+FUENTE. Edicion N.o 883, Salta, Noviembre 25 de 1921, hoja 10 (Pag. 2428),
+columna unica de cuadro, arriba.
+
+FICHA. Presupuesto de sueldos de las escuelas de la campana, Inciso V: el
+departamento de Caldera con dos escuelas, la Elemental de 2a. de la Parroquia
+y la Infantil de 2a. de Vaqueros, con sus cargos y sus totales.
+
+MODO DE LECTURA. Hoja entera rasterizada a 115 dpi y leida a pantalla
+completa; las once cifras del bloque se leyeron una por una en la imagen y se
+recalcularon a mano.
+
+TEXTO (transcripto desde la imagen):
+
+  ITEM 7
+  DEPARTAMENTO CALDERA
+  Escuela Elemental de 2a.—Parroquia
+  Director                              125.00
+  2 Maestros de Grado, a $ 110 c/u      220.00
+                                        345.00      1035.00
+  ITEM 4
+  Escuela Infantil de 2a.—Vaqueros
+  Director                              110.00
+  1 Maestro                             100.00
+                                        210.00       630.00
+
+NOTA DE LECTURA. Los dos subtotales cierran: 125 + 220 = 345 y 110 + 100 =
+210. La segunda columna es el trimestre: 345 x 3 = 1035 y 210 x 3 = 630, y lo
+mismo vale para los cuatro items vecinos de la misma hoja (985 x 3 = 2955 dos
+veces, 380 x 3 = 1140, 870 x 3 = 2610). La numeracion de items, en cambio, no
+cierra: la hoja 9 termina en el ITEM 2 y esta abre con «ITEM 7» donde la serie
+pide 3, y tres items mas abajo vuelve a imprimirse «ITEM 7» para la escuela de
+Calvimonte, en Chicoana. El item de Vaqueros no repite el encabezado de
+departamento, de modo que pertenece a Caldera por posicion.
+
+
+A.13 · Edicion 887, hoja 12
+---------------------------
+
+FUENTE. Edicion N.o 887, Salta, Diciembre 23 de 1921, hoja 12 (Pag. 2496),
+columna 2.
+
+FICHA. Decreto del Presidente del Senado en ejercicio del Poder Ejecutivo que
+convoca al pueblo de la Provincia a elegir Electores de Gobernador el 8 de
+enero de 1922: dos electores por Caldera.
+
+MODO DE LECTURA. Hoja entera rasterizada a 115 dpi y leida a pantalla
+completa.
+
+TEXTO (transcripto desde la imagen):
+
+  Art. 1.o—Convocase al pueblo de la Provincia a eleccion de
+  Electores de Gobernador para el dia 8 de Enero de 1922, las que
+  se realizaran de acuerdo con las disposiciones de la
+  Constitucion y Ley Electoral vigente, en la forma siguiente:
+  por el departamento de la Capital 7 electores, 3 electores por
+  cada uno de los departamentos siguientes: Rosario de Lerma,
+  Anta, Rivadavia, Oran, Rosario de la Frontera y Chicoana, y dos
+  electores por cada uno de los departamentos de: Metan,
+  Cerrillos, La Vina, Guachipas, Campo Santo, Caldera,
+  Candelaria, Cafayate, San Carlos, Cachi, Molinos, La Poma,
+  Iruya y Santa Victoria;
+  Art. 2.o—Por el Ministerio de Gobierno se adoptaran las medidas
+  necesarias para el mejor cumplimiento del presente decreto.
+  Art. 3.o—Comuniquese, publiquese, dese al Registro Oficial y
+  archivese.
+    PENALBA — DAVID M. SARAVIA
+
+NOTA DE LECTURA. El numero de este decreto no se ve en la hoja 12: el cuerpo
+abre en la columna 1 con los considerandos y el rotulo quedo en la hoja
+anterior. Se lo identifica por fecha, materia y firmantes, no por numero.
+Firma el Presidente del Senado en ejercicio del P. E., no el Gobernador.
+
+
+A.14 · Edicion 887, hoja 20
+---------------------------
+
+FUENTE. Edicion N.o 887, Salta, Diciembre 23 de 1921, hoja 20 (Pag. 2504),
+columna 1.
+
+FICHA. Decreto N.o 2021, Salta, Noviembre 7 de 1921: declara cesante al
+Comisario de Policia de La Caldera, don Julio Royo, y nombra en su reemplazo a
+Ernesto Tedin.
+
+MODO DE LECTURA. Hoja entera rasterizada a 115 dpi y leida a pantalla
+completa.
+
+TEXTO (transcripto desde la imagen):
+
+  Decreto N.o 2021
+  Salta, Noviembre 7 de 1921.
+  Vista la nota elevada por la Jefatura de Policia, por la que se
+  solicita la cesantia del Comisario de La Caldera,
+  El Presidente del Senado, en ejercicio del P. E. de la
+  Provincia
+  DECRETA:
+  Art. 1.o—Declarase cesante al Comisario de Policia de La
+  Caldera, don Julio Royo, y nombrase en su reemplazo al Ernesto
+  Tedin.
+  Art. 2.o—Comuniquese, publiquese y dese al R. O.
+    PENALBA — D. M. SARAVIA
+
+NOTA DE LECTURA. «al Ernesto Tedin» [sic]: falta el «senor don» que el mismo
+Boletin usa en los decretos vecinos, y el articulo queda pegado al nombre de
+pila. Los vecinos 2020, 2022 y 2023 llevan la misma fecha del 7 de noviembre y
+estan en la misma hoja.
+
+
+A.15 · Edicion 888, hoja 10
+---------------------------
+
+FUENTE. Edicion N.o 888, Salta, Diciembre 30 de 1921, hoja 10 (Pag. 2518),
+columnas 1 y 2.
+
+FICHA. Decreto N.o 2062, Salta, 11 de Noviembre de 1921: separa a Julio Royo
+del cargo de Receptor de Rentas y Expendedor de Guias del Departamento de la
+Caldera y nombra en su reemplazo a Ernesto J. Tedin, con fianza de dona
+Encarnacion Tedin de Lopez por cinco mil pesos.
+
+MODO DE LECTURA. Hoja entera rasterizada a 115 dpi y leida a pantalla
+completa; el importe se leyo en la imagen.
+
+TEXTO (transcripto desde la imagen):
+
+  Decreto: N.o 2062
+  Salta, 11 de Noviembre de 1921.
+  Por razones de mejor servicio,
+  El Presidente del Senado en ejercicio del Poder Ejecutivo
+  DECRETA:
+  Art. 1.o—Declarase cesante por razones de mejor servicio, al
+  senor don Julio Royo del cargo de Receptor de Rentas y
+  Expendedor de Guias del Departamento de la Caldera.
+  Art. 2.o—Nombrase en su reemplazo, al senor don Ernesto J.
+  Tedin aceptandose la fianza dada en su favor por dona
+  Encarnacion Tedin de Lopez por la cantidad de ($ 5.000,00)
+  cinco mil pesos m/n.
+  Art. 2.o—Comuniquese, publiquese, y dese al Registro Oficial.
+    PENALBA — D. M. SARAVIA
+  Es copia: J. Ruiz F.
+
+NOTA DE LECTURA. Dos articulos seguidos llevan el numero 2.o [sic]: no hay
+articulo 3.o y el segundo 2.o es el de forma. Julio Royo pierde dos cargos en
+cuatro dias, el de Comisario el 7 y el de Receptor el 11, y en los dos lo
+reemplaza un Tedin; el primer decreto escribe «Ernesto Tedin» y este «Ernesto
+J. Tedin». No se unifican.
+
+
+A.16 · Edicion 888, hoja 17
+---------------------------
+
+FUENTE. Edicion N.o 888, Salta, Diciembre 30 de 1921, hojas 17 y 18 (Pag. 2525
+y 2526): encabezado en la columna 3 de la hoja 17, asiento del departamento en
+la columna 1 de la hoja 18.
+
+FICHA. Junta de Escrutinio: candidatos a Diputados y Senadores proclamados por
+el partido «Union Provincial» para las elecciones del 8 de enero. Departamento
+La Caldera, Diputado Jose Antonio Araoz. Firma Pedro J. Aranda, Secretario.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado; el
+encabezado se busco a proposito en la hoja anterior.
+
+TEXTO (transcripto desde la imagen):
+
+  [hoja 17] Junta de Escrutinio
+  Candidatos a Diputados y Senadores a la H. Legislatura de la
+  Provincia proclamados por el partido «Union Provincial»
+  [hoja 18] ...para las elecciones a verificarse el 8 de Enero
+  proximo:
+  Departamento La Caldera
+  Diputado: Jose Antonio Araoz.
+  [...]
+  Salta, Diciembre 24 de 1921.
+    PEDRO J. ARANDA  Secretaria
+
+NOTA DE LECTURA. En la hoja 18 conviven dos listas casi identicas, una debajo
+de la otra y con el mismo secretario al pie: esta, de la «Union Provincial», y
+la de la «Union Civica Radical» que sigue. Los dos candidatos que proponen por
+el departamento son distintos, de modo que atribuir el asiento a la lista
+equivocada cambia el nombre del diputado. El pie imprime «Secretaria» donde
+las demas listas del ano imprimen «Secretario».
+
+
+A.17 · Edicion 888, hoja 18
+---------------------------
+
+FUENTE. Edicion N.o 888, Salta, Diciembre 30 de 1921, hojas 18 y 19 (Pag. 2526
+y 2527): encabezado en la columna 2 de la hoja 18, asiento del departamento en
+la columna 1 de la hoja 19.
+
+FICHA. Candidatos a Diputados y Senadores proclamados por el Partido «Union
+Civica Radical» para las elecciones del 8 de enero. Departamento de La
+Caldera, Diputado Dr. Natal Lopez Cross. Firma Pedro J. Aranda, Secretario.
+
+MODO DE LECTURA. Las dos hojas rasterizadas a 115 dpi y leidas lado a lado.
+
+TEXTO (transcripto desde la imagen):
+
+  [hoja 18] Candidatos a Diputados y Senadores a la H.
+  Legislatura de la Provincia proclamados por el Partido «Union
+  Civica Radical» para las elecciones a verificarse el 8 de Enero
+  proximo:
+  [hoja 19]
+  Departamento de La Caldera
+  Diputado: Dr. Natal Lopez Cross.
+    PEDRO J. ARANDA  Secretario
+
+NOTA DE LECTURA. La lista radical de diciembre no propone Senador por el
+departamento, a diferencia de la de febrero, que proponia Senador y Diputado:
+la convocatoria de enero es de Electores de Gobernador y de las bancas que
+quedaron sin cubrir. El impreso escribe «Departamento de La Caldera» aqui y
+«Departamento La Caldera» en la lista de la Union Provincial de la hoja
+anterior.
+
+
+A.18 · Edicion 888, hoja 21
+---------------------------
+
+FUENTE. Edicion N.o 888, Salta, Diciembre 30 de 1921, hoja 21 (Pag. 2529),
+tabla apaisada a tres cuerpos, segunda columna.
+
+FICHA. Junta Electoral de la Provincia, mesas receptoras de votos: Colegio
+Electoral num. 3—La Caldera, cuatro mesas, con presidente y dos suplentes cada
+una.
+
+MODO DE LECTURA. Recorte de la region de la tabla a 330 dpi, por la coordenada
+de la palabra «Caldera» y el ancho entero del cuerpo, y leido ampliado; el
+resto de la hoja se vio antes a 115 dpi para entender la maqueta.
+
+TEXTO (transcripto desde la imagen):
+
+  Colegio Electoral num. 3—La Caldera
+    MESA num. 1
+  Presidente    Murua Eustaquio
+  Suplente 1.o  Valdivieso Ricardo
+   »       2.o  Lopez Casimiro Caceres
+    MESA num. 2
+  Presidente    Rauch Enrique J.
+  Suplente 1.o  Royo Cesar
+   »       2.o  Ceballos Ignacio I.
+    MESA num. 3
+  Presidente    Arroyo Donato
+  Suplente 1.o  Echenique Nolasco
+   »       2.o  Fuentes Ruiz Juan E.
+    MESA num. 4
+  Presidente    Arias Pedro
+  Suplente 1.o  Figueroa Ciriaco
+   »       2.o  Lopez Abelardo
+
+NOTA DE LECTURA. El rotulo de la tercera mesa esta impreso con un digito que
+en la imagen se lee igual que un cinco; la serie de la columna corre 1, 2, ese
+digito, 4, y las mesas del departamento son cuatro en las otras dos nominas
+del ano, de modo que se transcribe 3 y se declara la duda. El segundo suplente
+de la Mesa 1 se imprime «Lopez Casimiro Caceres» en un solo renglon: puede ser
+un nombre de tres partes o dos apellidos corridos, y no se separa. Las
+cabeceras de las columnas «Presidente / Suplente 1.o / 2.o» estan al costado
+del cuerpo y valen para todos los colegios de la pagina.
+
+
+§B · VECINDAD
+=============
+
+
+B.1 · Nucleos del departamento ya fichados en el §A
+---------------------------------------------------
+
+Se nombran y no se repiten. Vaqueros: partido donde estan las fincas del
+deslinde de 843 y sede de la Mesa 3 y de la Escuela Infantil de 2a. del
+presupuesto de 883. Mojotoro: sede de la Mesa 4 y de su oficina de correos,
+con Mojo Torito, Potrero de Gallinato, Tunel y la estacion del F. C. C. N.
+Calderilla, Angosto, Angosto de Arrieta, Angostura, Campo Alegre, Corral de
+Barrancas, Chalchanio, Despensa, Despensilla, El Acheral, El Churcal, El
+Monte, Las Garrapatas, Los Porongos, Los Sauces, Mesadas, Potrero de Valencia,
+Queseria, Santa Rufina, Wierna, Yacones y El Bordo: circuito de la Mesa 2.
+Potrero de Castilla, Penones y San Alejo: circuito de la Mesa 1. Las Lagunas y
+Lesser: circuito de la Mesa 3. Quitilipe y el rio de La Caldera: linderos de
+«El Angosto» en 869. Buena Vista: lugar del hurto en 846, junto con la
+Caldera.
+
+POR QUE SE INCLUYE: §5.1, anillo 2, terminos del vocabulario de vecindad que
+en este año aparecen dentro de actos que nombran el termino, de modo que su
+pertenencia al departamento esta probada por el propio acto y no por el
+config.
+
+
+B.2 · Nucleos del departamento en actos que NO nombran el termino
+-----------------------------------------------------------------
+
+Es el bloque que justifica el paragrafo, y en 1921 tiene cuatro entradas.
+
+1) Edicion 888, hoja 7 (Pag. 2515). Decreto N.o 2049, Salta, Noviembre 9 de
+1921, firmado por el Presidente del Senado en ejercicio del P. E.: «Declarase
+cesante por razones de mejor servicio al Sub Comisario de Mojotoro don Ciro
+Caceres, y nombrase en su reemplazo al senor Medardo Sarmiento». Mirado en la
+imagen. El acto no escribe «Caldera» en ningun lado: Mojotoro entra por el
+anillo 2, y que Mojotoro sea del departamento lo prueba la ficha A.5, que lo
+pone como Mesa 4 del Colegio Electoral N.o 3 de Caldera. Es, ademas, el tercer
+cargo del departamento que cambia de manos en cuatro dias: comisario el 7,
+receptor de rentas el 11 y sub comisario de Mojotoro el 9.
+
+POR QUE SE INCLUYE: §5.1, anillo 2, y §5.3, identificadores multiples: numero
+de decreto, fecha, organismo y dos personas.
+
+2) Edicion 851, hoja 4 (Pag. 1888). Un fallo del Superior Tribunal en otra
+causa invoca «la doctrina que informa el fallo del Tribunal en la causa contra
+Angel Juan o Martin Jurado por hurto de ganado a Asuncion Aquino y Jacinto
+Muruaga, resuelta el 7 de Octubre pasado». Es el mismo fallo de la ficha A.4,
+citado como precedente: la mencion del departamento no se repite, pero el acto
+vuelve sobre el hecho de la Caldera. Ademas escribe «Angel Juan» donde A.4
+escribe «Angel Guari»: la contradiccion se declara en E.9 y no se concilia.
+
+POR QUE SE INCLUYE: §5.1, anillo de actores (Jacinto Muruaga, Martin Jurado,
+Asuncion Aquino), y §5.3.
+
+3) Edicion 848, hoja 2 (Pag. 1814). En el indice de resoluciones del Superior
+Tribunal: «13 gracia solicitada por el penado Angel Guari: se concede». Es un
+acto posterior sobre la misma persona de A.4. Leido en la capa y confirmado en
+la imagen de la hoja.
+
+POR QUE SE INCLUYE: §5.1, anillo de actores.
+
+4) Edicion 856, hoja 13 (Pag. 1969). Decreto que nombra comisarios de campana
+«a los senores Julio Royo, Ernesto G. Lacroix y Modesto Moreno». El decreto no
+dice de que departamento es cada uno. Julio Royo es el Comisario de La Caldera
+que la ficha A.14 deja cesante el 7 de noviembre, de modo que este es, con
+toda probabilidad, su nombramiento; pero el acto no lo dice y NO SE INFIERE:
+se registra la coincidencia de nombre y cargo y se deja abierta.
+
+POR QUE SE INCLUYE: §5.1, anillo de actores, con la advertencia de §8.4: la
+atribucion al departamento es inferencia y va rotulada como tal.
+
+
+B.3 · Terminos que en 1921 son otra cosa
+----------------------------------------
+
+Castellanos. Es el caso dominante del año y satura el corpus: aparece en 290
+de las 748 hojas, casi el 39 por ciento. No es el paraje ni el apellido de un
+vecino: es el Gobernador Joaquin Castellanos, cuyo nombre esta impreso en el
+cabezal de las cuarenta y tres tapas y al pie de casi todos los decretos del
+año. Por encima del umbral del 30 por ciento que fija el §0 de la rubrica, el
+termino se trata en bloque y no contexto por contexto, y se declara asi. Fuera
+del cabezal y del refrendo, «Castellanos» aparece tambien como apellido de
+particulares (Bernardo Castellanos en 840 hoja 4) y como finca y rio de Anta,
+como en 1912.
+
+Isasmendi, 18 hojas: «Isasmendi y Cia.», casa de comercio que factura al
+Gobierno, y los legisladores Domingo S. Isasmendi, diputado por Molinos, y
+Ricardo J. Isasmendi, senador por el mismo departamento. Ninguna del
+departamento.
+
+Aramayo (13), Apaza (11), Mamani (5), Condori (1): apellidos de autoridades de
+mesa de otros colegios electorales, sobre todo de Cafayate, Molinos y Santa
+Victoria. Ninguna del departamento.
+
+Entre Rios (10): en las listas de circuitos de 846 corresponde a Cerrillos y a
+Chicoana; fuera de esa edicion, a dos fincas de Anta objeto de deslinde (848
+hoja 26). Campo Alegre (9): circuitos de Chicoana y Metan, y las fincas «San
+Francisco, Campo Alegre y San Simon» de Anta (858 hoja 17). Sauces (8),
+Durazno (5), Rio Blanco (6), Nogales (6): todos, salvo los del circuito de
+Caldera, pertenecen a circuitos de Metan, Oran y Rosario de la Frontera;
+«Nogales» es ademas apellido de un presidente de mesa del propio departamento
+(A.2).
+
+Tabacal (5): el ingenio y el pueblo de Oran, en cinco actos de escuelas y de
+tierras. Trancas (3): no es el paraje sino la palabra «potrancas» partida por
+el fin de renglon, en inventarios de ganado. Wierna (2): Alejandro Wierna,
+presidente de mesa de otro colegio. Chaile y Challe (2 y 2): Ceferino Chaile,
+suplente de mesa del Colegio Electoral num. 4 de Campo Santo, impreso «Challe»
+en una hoja y «Chaile» en la siguiente. Quintin (2): nombre de pila (Conde
+Quintin). Teodolinda (1): nombre de pila (Teodolinda Figueroa de Brieux). El
+Cajon (1) y Angostura (1): parajes de otros departamentos. Acheral (1): un
+puesto de otra estancia, fuera del departamento. Lagunilla (2): «Lagunillas»,
+en Bolivia, dentro de una cadena de titulos de tierras. Murua (4): en 846 y
+851 es «Muruaga», el apellido de la victima del hurto; en 888 hoja 21 SI es
+del departamento, y esta fichado en A.18.
+
+POR QUE SE INCLUYE: §5.1, que manda leer el contexto de TODOS los terminos del
+anillo 2 con acierto y no solo de los que parecen del departamento. Dieron
+acierto 42 de los 87 terminos del config y se leyeron los 42.
+
+
+B.4 · Ausencias del anillo de actores
+-------------------------------------
+
+Primero, lo que no es una ausencia. Siete personas de los actos del §A no
+aparecen ni siquiera en su propio acto cuando se las busca por nombre y
+apellido completos sobre el texto sin puntuacion, porque la capa previa parte
+o deforma el nombre: Augusto Reyes (869 hoja 5, impreso en la capa «faiigusto
+reyes»), Susana Aguilera (misma hoja, «suaana aguilerh»), Rodolfo Chavez (869
+hoja 6), Ciro Caceres (888 hoja 7, «cirocaceres», sin espacio), Encarnacion
+Tedin de Lopez (888 hoja 10), Nestor Echenique y Domingo Salustro (844 hoja
+12, «echenique ne.ter» y «salustro demingo»). Eso NO es una ausencia: es una
+falla de la busqueda, y se declara nombrandolos, segun §5.1. Las siete fueron
+leidas en la imagen.
+
+Grupo 1, los que solo aparecen en su propio acto. Antonia P. de Peralta,
+Laureano Peralta, Francisco S. Urquiza, Jose Antonio Araoz, Natal Lopez Cross,
+Lucio Ortiz, Julio Mercado, Medardo Sarmiento, Ramon Rosa Balboa, Jose Lucas
+Molina, Antonio M. Carabajal Torres, Jose Andres Molina, Gregorio Nogales,
+Emilio Aramburu, Eudoro Diaz de Jesus, Eustaquio Murua, Ricardo Valdivieso,
+Enrique J. Rauch, Cesar Royo, Ignacio I. Ceballos, Donato Arroyo, Nolasco
+Echenique, Juan E. Fuentes Ruiz, Ciriaco Figueroa y Abelardo Lopez. De todos
+ellos se afirma la ausencia del resto del corpus con dos identificadores,
+nombre completo y cargo o acto, y ninguno reaparece en otra edicion del año.
+
+Grupo 2, los que aparecen en mas de un acto del departamento. Es el grupo que
+arma la trama de 1921 y tiene cuatro nombres. Escolastico M. Aparicio:
+nombrado Juez de Paz Suplente por el Decreto 1669 del 7 de julio y renunciante
+aceptado por el Decreto 1816 del 12 de setiembre, dos meses despues. Julio
+Royo: comisario de policia cesante el 7 de noviembre y receptor de rentas
+cesante el 11, y probablemente el mismo Julio Royo nombrado comisario de
+campana en 856. Ernesto Tedin: su reemplazante en los dos cargos, impreso
+«Ernesto Tedin» en uno y «Ernesto J. Tedin» en el otro. Daniel Linares:
+suplente primero de la Mesa 1 del departamento en febrero (A.2) y lindero al
+Norte y al Oeste de la finca «El Angosto» en agosto (A.7); es ademas actor de
+1909 en el config, lo que lo vuelve el vinculo mas largo del proyecto, doce
+años.
+
+Grupo 3, los que aparecen tambien fuera del departamento. Pedro Arias,
+presidente de la Mesa 4 en diciembre, aparece tambien en las nominas de otros
+colegios electorales de las hojas 23 y 24 de la misma edicion 888, y su
+apellido suelto da 258 aciertos en el año, agrupados casi todos en listas
+electorales y en el Ministro Dario Arias. Abelardo Lopez y Ciriaco Figueroa,
+lo mismo, en menor escala. Daniel Etcheverry (19 hojas) y Alberto Mendioroz
+(47), los dos jueces de los deslindes, firman causas de toda la provincia.
+Tomas Izarrualde (7) y Elias Gallardo (5) actuan como secretario y procurador
+en asuntos ajenos al departamento. Emeterio Royo, candidato a senador por La
+Caldera en febrero, aparece tambien en 844 hoja 2 cobrando una comision de
+406,35 pesos, sin que el acto lo vincule al departamento.
+
+POR QUE SE INCLUYE: §5.1, anillo de actores, que se corre siempre como red de
+seguridad del anillo 1, y §5.3, que exige dos identificadores para afirmar una
+ausencia.
+
+
+§C · LIMITROFES
+===============
+
+Capital: es el departamento con el que La Caldera linda al sur y el que
+concentra casi todo el Boletin; no se ficha por separado porque su presencia
+es constante y no aporta vecindad. Campo Santo: aparece en las mismas listas
+electorales que Caldera, con su Colegio Electoral num. 4, y en 888 hoja 21 su
+nomina esta inmediatamente debajo de la del departamento, lo que obliga a
+cuidar el corte entre las dos. Rosario de Lerma: comparte con Caldera las
+convocatorias anuladas de 879 y las listas de candidatos. Jujuy no aparece
+como limite en ningun acto de este año. Una linea por cada uno y sin ficha,
+segun §5.1, anillo 3.
+
+
+§P · PLANOS
+===========
+
+El corpus de 1921 no publica un solo plano. La palabra «plano» o «planos»
+aparece en 33 hojas, siempre como remision a una pieza que esta en el
+expediente y no en el Boletin: pedimentos mineros, remates que ofrecen «ver
+planos al suscrito» y deslindes. De esas 33 remisiones, NINGUNA es de un
+asunto del departamento: los dos deslindes de La Caldera, el de 843 y el de
+869, no mencionan plano, y el unico aviso que junta plano y un termino del
+entorno es 866 hoja 16, un pedimento minero que no cae en el departamento. Se
+registran, pues, cero planos publicados y cero citados y no acompanados que
+toquen a La Caldera. Techo de resolucion declarado: 283 a 307 ppi,
+insuficiente para cartelas de plano aunque los hubiera.
+
+
+§D · INDICE
+===========
+
+Por edicion y hoja, los dieciocho actos del §A y las cuatro entradas de B.2:
+
+  843 h8-h9    A.1  deslinde Cerro de Buena Vista y Sausal o Curuzu
+  844 h11-h12  A.2  autoridades de mesa, Colegio Electoral N. 3
+  845 h20-h21  A.3  convocatoria a elecciones del 6 de marzo
+  846 h1-h3    A.4  hurto de ganado en la Caldera y Buena Vista
+  846 h10-h11  A.5  circuitos y mesas del Colegio Electoral N.o 3
+  847 h15-h16  A.6  candidatos de la Union Civica Radical, febrero
+  848 h2       B.2  gracia concedida al penado Angel Guari
+  851 h4       B.2  cita del fallo del hurto como precedente
+  856 h13      B.2  comisarios de campana, entre ellos Julio Royo
+  869 h5-h6    A.7  deslinde de la finca El Angosto
+  875 h10-h11  A.8  electores de Gobernador, dos por Caldera
+  875 h12-h13  A.9  Decreto 1669, jueces de paz Peralta y Aparicio
+  879 h12      A.10 Decreto 1816, renuncia de Aparicio
+  879 h15-h16  A.11 Decreto 1828, eleccion anulada y convencionales
+  883 h10      A.12 presupuesto escolar, Parroquia y Vaqueros
+  887 h12      A.13 electores de Gobernador para el 8 de enero
+  887 h20      A.14 Decreto 2021, comisario Royo cesante, Tedin
+  888 h7       B.2  Decreto 2049, sub comisario de Mojotoro
+  888 h10      A.15 Decreto 2062, receptor de rentas Royo, Tedin
+  888 h17-h18  A.16 Union Provincial, diputado Jose Antonio Araoz
+  888 h18-h19  A.17 Union Civica Radical, diputado Natal Lopez Cross
+  888 h21      A.18 mesas receptoras, Colegio Electoral num. 3
+
+
+§E · OBSERVACIONES
+==================
+
+
+E.1 · Duplicacion y saldos
+--------------------------
+
+Duplicacion. Sin las .jpg del script no hay md5 ni dhash, de modo que la
+duplicacion se controlo por texto, comparando los avisos entre si y contra el
+resto del corpus. Resultado: los dos avisos del departamento —los deslindes de
+843 y de 869— NO se repiten en ninguna otra edicion del año. El de 843 lleva
+la orden expresa de publicarse «por una sola vez» en el Boletin y se cumple;
+el de 869 lleva numero de aviso, N.o 286, y aparece una sola vez. El cotejo se
+hizo sobre la capa previa y no sobre la imagen, y asi se declara.
+
+Nivel 3, la misma serie numerica en actos distintos: se busco y no hay. Los
+407 numeros de decreto del año son unicos; ninguno se repite en dos actos.
+
+Saldos. En 1921 NO se publico ningun balance y ningun resumen mensual del
+movimiento de Tesoreria. La palabra «balance» aparece cinco veces y las cinco
+son menciones en prosa: un libro de caja desaparecido en una municipalidad
+(840), el pago de la publicacion del balance de Contaduria en otro diario
+(843), el balance del Banco Provincial segun memoria del directorio (844), la
+obligacion de una sociedad de presentar balance anual (870) y la orden al
+Banco Provincial de pasar balance mensual al Ministerio (881). Ninguno viene
+acompanado del cuadro. En consecuencia no hay cadena de saldos que armar en
+1921, ni contra 1920 ni contra 1922, y se declara antes de prometerla, como
+manda §6. Tampoco hubo un solo balance municipal, ni del departamento ni de
+ningun otro.
+
+
+E.2 · Cobertura
+---------------
+
+Hojas presentes: 748 en cuarenta y nueve archivos, de las que 742 son hojas de
+boletin y seis son marcadores de ausencia. Hojas declaradas: la tapa de esta
+epoca no declara paginas, de modo que el control es la cadena de folios y no
+el conteo.
+
+Imagenes miradas: 33 hojas completas a 110 o 115 dpi, dos recortes ampliados
+(la tabla apaisada de 888 hoja 21 a 330 dpi y el cabezal de 841 hoja 7 a 330
+dpi) y cuatro tiras de cabecera a 300 dpi para fechas y folios. Columnas
+cotejadas contra la capa previa: 26, repartidas en 17 ediciones. En ninguna de
+las 26 se hallo columna perdida, ni renglon traspuesto de una columna a la
+vecina. Se declara sobre cuantas columnas se miro, porque decir «no hay
+columna perdida en el año» sin ese numero seria una afirmacion vacia.
+
+Cruces por texto: el anillo 1 en las cuatro pasadas; el anillo 2 en 87
+terminos; el anillo de actores en 261 entradas por nombre completo y por
+apellido suelto agrupado por contexto; los 57 numeros del config; las ocho
+formulas de reemplazo, que dieron 57 aciertos en el año y dos en actos del
+departamento (A.14 y A.15, las dos con «en su reemplazo»).
+
+Destinos. Los dos cargos del departamento que cambian de manos en noviembre
+tienen destino explicito y persona nombrada. La vacante de Juez de Paz
+Suplente que deja Aparicio el 12 de setiembre no tiene destino: no se publica
+su reemplazo en lo que queda del año.
+
+Citados y no acompanados. Cuatro. 1) El acto por el que cesaron los jueces de
+paz anteriores a Peralta y Aparicio: el Decreto 1669 habla de ternas para
+cubrir los cargos y no cita el acto que los dejo vacantes ni nombra a los
+salientes; es una vacante declarada sin nombrar a quien la dejo, que §5.3
+manda contar como acto citado y no acompanado. 2) La nota N.o 30 del 6 de
+setiembre de la Junta Electoral, que funda el Decreto 1828 y no se publica. 3)
+La resolucion de la Junta Electoral que declara nula la eleccion del 7 de
+agosto, mencionada por la misma nota y tampoco publicada. 4) El plano del
+pedimento de 866 hoja 16, que el escrito dice adjuntar. Los cuatro se buscaron
+por fecha y por materia antes de listarlos, que es como se buscan los actos
+sin numero.
+
+
+E.3 · Sin mencion y no mirado
+-----------------------------
+
+De las 748 hojas se miraron 33 enteras. Las 715 restantes no se miraron con
+los ojos y se cubrieron por texto. Sin .tsv del script no existe lista de
+hojas «a ojos» por confianza, de modo que la eleccion de que mirar se hizo por
+estas tres vias, que se declaran: todas las hojas con candidato del anillo 1,
+sea de la literal, de la laxa o de la difusa; todas las hojas con cuadro
+numerico publicado; y todas las hojas con encabezado de lista que hiciera
+falta para fichar otra hoja. Ninguna hoja quedo sin cubrir por alguna de las
+cuatro pasadas.
+
+
+E.4 · Firmas y autoridad
+------------------------
+
+Gobernador durante casi todo el año: Dr. Joaquin Castellanos, impreso en el
+cabezal de las cuarenta y tres tapas. Formulas de encabezado, registradas
+todas y sin normalizar: «El Gobernador de la Provincia», «El Gobernador de la
+Provincia en acuerdo de Ministros», «El Presidente del Senado en ejercicio del
+P. E. de la Provincia», «El Presidente del Senado en ejercicio del Poder
+Ejecutivo» y «El Presidente del H. Senado en ejercicio del P. E.».
+
+Refrendo. Julio J. Paz firma junto a Castellanos en la mayor parte del año; M.
+Lopez Dominguez aparece como tercera firma en los acuerdos de Ministros de
+enero y febrero; David M. Saravia firma con Penalba en noviembre y diciembre.
+
+Interinato sin cierre. A partir de los decretos del 7 de noviembre y hasta el
+fin del año, quien firma es Penalba, Presidente del Senado, en ejercicio del
+Poder Ejecutivo. No hay a la vista decreto de apertura ni de cierre del
+interinato. Se declaran, segun §2.5bis, el ultimo acto firmado por el titular
+y el primero firmado por el interino, y no se fija el dia del relevo: el
+ultimo decreto de Castellanos que se leyo en la imagen es el N.o 1828, del 20
+de setiembre, publicado el 28 de octubre; el primero de Penalba que se leyo es
+el N.o 2020, del 7 de noviembre.
+
+«Es copia». Lo firman, en este orden de aparicion: D. Lopez Reyna, M. I.
+Avellaneda Of. 1.o de Gobierno, Pedro R. Torres, A. Gambolini —que es el mas
+frecuente, de julio a octubre— y J. Ruiz F. en diciembre. Se registran las
+cinco formas y no se normalizan.
+
+
+E.5 · Cortes y columnas
+-----------------------
+
+Marca U+0002: ausente. Guion blando: 8.392, tratado con la regla corregida.
+Cortes con puntuacion intercalada: tolerados hasta dos signos por lado.
+Columna perdida: no se hallo en las 26 columnas cotejadas. Lo que si falla, y
+falla en silencio, es la palabra suelta, y en 1921 fallo cuatro veces sobre
+palabras que deciden una ficha: «caldeim» por Caldera (869 hoja 5), «caldera7»
+por Caldera (846 hoja 10), «cab derilja» por Calderilla (846 hoja 10) y
+«Caide.ra» por Caldera (846 hoja 10). Las cuatro se resolvieron mirando. Toda
+palabra que decide una ficha se miro.
+
+
+E.6 · Repeticiones
+------------------
+
+Marcas de publicacion del tipo «251 v Dbre 5»: no se hallo ninguna en 1921. Es
+una diferencia de epoca respecto de 1912, que tenia 119 marcas; en 1921 los
+avisos llevan en cambio un numero de orden entre parentesis al pie —(N.o 285),
+(N.o 286), (N.o 287), (N.o 288), (N.o 290), (N.o 461), (N.o 466)— que es un
+numero de aviso y no una orden de publicacion. La repeticion se comprobo, como
+manda v15, buscando el texto de cada aviso en el resto del corpus, y no por la
+marca: ningun aviso del departamento se repite.
+
+
+E.7 · Falsos positivos y negativos
+----------------------------------
+
+Falsos positivos del anillo 1 en 1921, todos juzgados y ninguno agregado al
+config: «Calderon» (Isidro B. Calderon, suplente de mesa en 888 hojas 23 y 24;
+y «Sanchez de Calderon» en un sucesorio de 847 hoja 10); «Caldas» (Angel J.
+Caldas, suplente de mesa, 844 hoja 10); «Caldoso» (Edwardo Caldoso, procesado
+por hurto, 855 hoja 4); «alcalde» y «alcalde parroquial», tres veces en la
+cadena de titulos de 849 hoja 3; «collera de bueyes» en un inventario (856
+hoja 21); «Callera» y «Gallera», que son el apellido de Celso A. Callera,
+firmante de «Es copia» en 875, 877 y 886, y que el config ya trae como
+«lallera» con origen 1920; «local del», partido en «lo- caldel» (886 hoja 17).
+En la difusa: «alera», «caleras», «carilla», «calavera», «escalera», «aldea»,
+«cuadrillas» y «calchera», esta ultima un paraje de un circuito de Oran. En la
+banda ampliada 0,70-0,78, las 28 formas halladas: cualquiera, calidad,
+cabrera, cartera, cadillal, cadaver, cortaderas, caneria, capilla, cuadra,
+callera, caldas, caliesr, candela, caldera7, calcherai, caleras, caduea,
+cualguiera, collera, caleada, callea, cuadrad, caldeim, catedra, galeria,
+chaeras y gallera. De esas 28, dos NO son falsas —caldera7 y caldeim— y estan
+fichadas.
+
+Falsos negativos. Uno, y grave si no se hubiera mirado: «cab derilja» por
+Calderilla. La pasada literal no lo alcanza, la laxa tampoco (no termina en a
+ni en o) y la difusa tampoco, porque la capa lo parte en dos palabras que por
+separado no se parecen a calderilla. Lo salvo la lectura de la hoja, que se
+hizo porque la misma hoja traia dos candidatos del anillo 1. Es la prueba de
+que las cuatro pasadas no son una red suficiente por si solas.
+
+Ojo con los que ocultan: ninguna hoja del anillo 1 de este año quedo marcada
+fp_conocido por tener un falso positivo del config en el contexto, porque el
+barrido no paso por el script. Los falsos positivos de 1921 se listan aqui y
+NO se agregan al config.
+
+
+E.8 · Fidelidad numerica
+------------------------
+
+Cuadros publicados en 1921: dos, y los dos se recalcularon. 1) El cuadro de
+valores sellados del Acuerdo de Ministros Decreto N.o 1252 del 16 de diciembre
+de 1920, que ocupa las hojas 2 a 6 de la edicion 841. Se leyo entero el primer
+bloque en la imagen y se recalculo hasta el transporte: multas de la Ley de
+Presupuesto 1919, 250 + 500 + 1.000 + 2.500 + 3.000 + 6.000 + 10.000 + 10.000
++ 20.000 + 50.000 + 100.000 = 203.250, que es lo impreso; yerbaje del Decreto
+N.o 505, 500 + 1.000 + 2.000 = 3.500, que es lo impreso; transporte 203.250 +
+3.500 = 206.750, que es lo impreso en la hoja 3. Cierra sin diferencia. Los
+bloques siguientes del mismo cuadro (naipes, Ley N.o 852, y los transportes
+parciales hasta la suma total de 5.394.530) NO se recalcularon enteros y se
+declaran aqui con su motivo: el cuadro no nombra el termino, ni el anillo 2,
+ni un actor, no es balance municipal y no esta dentro de un decreto del §A ni
+del §B; la regla de v15 pide un subtotal por cuadro y ese subtotal se
+recalculo.
+
+2) El presupuesto de sueldos de las escuelas de la campana, Inciso V, en las
+hojas 6 a 14 de la edicion 883. Aqui SI hay item del departamento, de modo que
+se recalculo completo el bloque de Caldera y los cuatro items vecinos, con el
+resultado que consta en la ficha A.12: los subtotales y los trimestres cierran
+todos. Los items de los demas departamentos no se recalcularon y se declaran
+con el mismo motivo.
+
+Hay ademas dos listas de sueldos en 880 hojas 17 a 21 y 881 hoja 20, que son
+modificaciones al presupuesto de policia y de reparticiones. Se miraron las
+hojas 18 y 19 en la imagen expresamente para comprobar si alguna sub comisaria
+del departamento figuraba con una grafia que la capa hubiera perdido: no
+figura ninguna. Ni Caldera, ni Vaqueros, ni Mojotoro aparecen en ese cuadro.
+No se recalcularon y el motivo es el mismo.
+
+Cifras dudosas marcadas: el importe de la fianza de A.15 se leyo «($
+5.000,00)» con coma decimal donde el resto del año usa punto, y el texto en
+letras dice «cinco mil pesos», que concuerda. La comision de Emeterio Royo en
+844 hoja 2 se lee «406 35» sin separador visible a 115 dpi: se transcribe
+406,35 por la forma de la columna y se marca la duda, porque no se amplio esa
+cifra.
+
+
+E.9 · Contradicciones
+---------------------
+
+Se transcriben y no se concilian.
+
+1) Un folio impreso dos veces en dos ediciones distintas. La edicion 840, hoja
+7, lleva en la cabecera «Num. 840 — BOLETIN OFICIAL — Pag. 1687». La edicion
+841, hoja 7, lleva «Num. 841 — BOLETIN OFICIAL — Pag. 1687». Las dos cabeceras
+se leyeron en la imagen, ampliadas. El contenido de las dos hojas es distinto:
+la de 840 sigue un edicto de deslinde de una finca de Carlos Serrey y la de
+841 sigue el articulado de un decreto de comision a Buenos Aires. Es el
+original el que repite el folio, no el escaneo.
+
+2) La edicion 841 no numera sus paginas de cuadro. Las hojas 2 a 6, que son el
+cuadro de valores sellados, salen sin folio impreso, y la numeracion se
+reanuda en la hoja 7 con 1687. Por eso la cadena de esa edicion no se puede
+reconstruir entera y en la tabla del §1 figura como «no impresos».
+
+3) La edicion 852 esta incompleta. Sus hojas presentes llevan los folios 1906,
+1907, 1908, 1917, 1918 y 1919: faltan los folios 1909 a 1916, ocho paginas,
+que no estan en el archivo del Release. El salto se confirmo en la imagen,
+leyendo las cabeceras de la hoja 4 («Pag. 1908») y de la hoja 5 («Pag. 1917»).
+No es una edicion corta: es una edicion incompleta, y el conteo de archivos no
+distingue una cosa de la otra, pero la cadena de folios si.
+
+4) Tres tapas fechadas en un dia que la serie del año no admite. La
+periodicidad de 1921 es semanal y cae en viernes en cuarenta de las cuarenta y
+tres tapas. Las tres excepciones, leidas en la imagen: 858, «Salta, Mayo 21 de
+1921», que fue sabado; 871, «Salta, Sbre. 3 de 1921», que fue sabado; y 886,
+«Salta, Diciembre 15 de 1921», que fue jueves. No son erratas del OCR y no se
+concilian con la periodicidad.
+
+5) Semanas sin edicion y sin salto de numeracion. Tres viernes del año no
+tienen edicion y la numeracion no los saltea: el 25 de marzo, entre las
+ediciones 850 y 851; y el 10 y el 17 de junio, entre la 860 y la 861. Se
+buscaron «feriado», «asueto», «Dia del Pueblo» y «adhiere / adherir /
+adhesion» en todo el corpus: la palabra feriado aparece, pero siempre en la
+formula judicial «dias habiles y feriados» o en la habilitacion de feria, y
+ninguna de sus apariciones explica ninguno de los tres huecos. Se declaran los
+huecos sin explicarlos y no se busca la causa afuera.
+
+6) «ITEM 7» donde la serie pide 3, en el presupuesto escolar de 883 hoja 10, y
+«ITEM 7» otra vez tres items mas abajo para la escuela de Calvimonte.
+Detallado en la ficha A.12.
+
+7) «Angel Guari o Martin Jurado» en 846 y 848; «Angel Juan o Martin Jurado» en
+851, al citar el mismo fallo de la misma fecha. Las tres menciones son del
+Superior Tribunal.
+
+8) «Luisa A. Costas» al Norte y «Luis A. Costas» al Oeste, en el mismo edicto
+de 869 hoja 5, para lo que por la descripcion parece una misma sucesion.
+
+9) Erratas de tapa y de cabecera. La tapa de la edicion 840 esta impresa por
+encima de un sello grande que tapa parte de la fecha; el año se lee «19» y el
+resto queda cubierto, y la fecha completa se reconstruye por el numero de
+edicion y la serie, lo que se rotula como inferencia. La cabecera de 852 hoja
+4 imprime «Nmu. 852» por «Num. 852». La edicion 875 se rotula «Sbre. 30» y
+publica decretos del 7 de julio, con casi tres meses de atraso, que es el
+retraso maximo medido en el año; el minimo es de cinco dias.
+
+10) Dos articulos numerados «2.o» seguidos y ningun «3.o», en el Decreto N.o
+2062 de A.15.
+
+11) Un decreto convoca a elecciones para el segundo domingo de octubre y se
+publica el 28 de octubre, diecinueve dias despues de esa fecha (A.11).
+
+
+E.10 · Limites
+--------------
+
+Nueve, y ninguno es un pendiente: son cosas que el corpus o los insumos no
+permiten, no trabajo que esta sesion pudiera hacer y no hiciera.
+
+  1. No hay segunda version del texto. Sin OCR propio no hubo
+     union de versiones ni desempate por doble lectura: todos los
+     resultados van etiquetados prev.
+  2. No hay confianza por hoja. Sin el .tsv no hay media ni
+     porcentaje bajo 60, y por lo tanto NO EXISTE la lista de hojas
+     «a ojos» del §4.8. Es un limite, no un pendiente.
+  3. No hay md5 ni dhash. Sin las .jpg no se pudo deduplicar por
+     imagen; la duplicacion se controlo por texto.
+  4. No hay medicion de tinta. Sin las .jpg no se pudo aplicar el
+     umbral del 0,5 y del 5 por ciento para hojas en blanco.
+  5. No hay log.txt, de modo que no se pueden declarar errores de
+     corrida ni hojas que el script hubiera salteado.
+  6. Seis ediciones no estan en el corpus y no es posible traerlas:
+     859, 872, 876, 878, 884 y 885. La cadena de folios dice
+     cuanto pesan: 8, 16, 17, 24 y 24 paginas, esto es, 89 paginas
+     que no se barrieron. Cualquier acto del departamento
+     publicado en esas ediciones esta fuera de este informe.
+  7. La edicion 852 esta incompleta: faltan ocho paginas, folios
+     1909 a 1916.
+  8. El cotejo sumario contra cuerpo no es aplicable. En 1921 el
+     Boletin no publica sumario con puntos guia, de modo que la
+     regla de §2.3 daria cero discrepancias sin haber controlado
+     nada. Se declara no aplicable, como en toda la epoca
+     1908-1921.
+  9. La cadena de folios no se hereda entre años. 1920 y 1922 no
+     se barrieron en esta sesion y la continuidad con ellos queda
+     sin verificar; dentro de 1921 la cadena cierra, salvo los
+     casos de E.9.
+
+
+§F · CORRECCION A LA RUBRICA
+============================
+
+Se proponen siete correcciones para la v16, todas nacidas de este barrido.
+
+1) Contar los archivos del Release no es contar las ediciones. Seis de los
+cuarenta y nueve archivos de 1921 son marcadores que dicen que el ejemplar no
+esta en la base de datos de origen. Se detectan en un segundo —una hoja, 55
+caracteres— y hay que detectarlos ANTES de prometer un numero de ediciones y
+de hojas en el §0, porque si no el informe empieza mintiendo en su primera
+linea. Agregar al §1: medir hojas por edicion y mirar toda edicion de una sola
+hoja.
+
+2) La formula de dias de aparicion puede desaparecer de la tapa. La rubrica
+dice «los dias de salida los declara la tapa». En 1921 la tapa no los declara:
+el formato cambio entre 1912 y 1921 y perdio esa linea. Cuando falta, la
+periodicidad se infiere de las fechas y se rotula como inferida, y el
+calendario sigue siendo controlable igual. Corregir §2.5bis.
+
+3) La cadena de folios se rompe tambien hacia adentro: un mismo folio puede
+imprimirse en dos ediciones seguidas. El caso de 1687 en 840 y en 841 no es un
+error de lectura ni una duplicacion de hoja: es el original. Y hay un segundo
+modo de falla, que la rubrica no preve: una edicion puede dejar sin numerar un
+tramo entero de paginas de cuadro, como las hojas 2 a 6 de la 841. Agregar los
+dos casos a §2.5bis, junto a la edicion corta y a la incompleta.
+
+4) Un año puede no tener ningun cuadro de Tesoreria y ningun balance. 1911
+tuvo uno, 1912 tuvo cuatro, 1921 no tiene ninguno. Conviene que §6 diga que la
+ausencia total tambien es un resultado, y que la busqueda se haga por
+«balance», «resumen», «movimiento» y «tesoreria» antes de prometer nada, como
+se hizo aqui.
+
+5) La marca de publicacion de los avisos no es un rasgo de la serie, sino de
+la epoca. En 1912 eran 119 marcas del tipo «251 v Dbre 5»; en 1921 no hay
+ninguna y en su lugar los avisos llevan un numero de orden entre parentesis al
+pie. La regla de v15 sigue valiendo —la repeticion se comprueba buscando el
+texto—, pero conviene que §6 diga que la marca puede no existir y que su
+ausencia no significa que no haya repeticiones.
+
+6) Cuando la resolucion del escaneo lo permite, conviene mirar la HOJA ENTERA
+a 110-115 dpi antes de recortar columnas. En este corpus, con imagen
+incrustada a 283-307 ppi, una pagina completa rasterizada a 115 dpi se lee sin
+esfuerzo, y dos paginas lado a lado entran en una sola imagen de unos 1.450
+por 1.070 pixeles. Eso cambia el presupuesto de turno: una mencion cuesta
+media llamada en lugar de entre una y tres, porque cada imagen trae dos hojas
+completas con todo su contexto, sus vecinos de numeracion y sus firmas. La
+receta de recorte por columna de §4 sigue siendo necesaria para tablas
+apaisadas y para cifras dudosas, pero deja de ser el camino por omision. Medir
+primero, recortar despues.
+
+7) La correccion del guion blando de v15 hay que medirla en cada año, no darla
+por ganancia. En 1912 agrego dos fichas; en 1921 agrega una hoja y esa hoja es
+un falso positivo. Conviene que §2.3 pida declarar cuanto gano la correccion
+en ese corpus, que es un dato barato y dice si el problema estaba o no
+presente.
+
+
+CONFIGURACION: AGREGADOS PROPUESTOS
+===================================
+
+La sesion recibio el lee_config.json y entrega la lista de agregados, no el
+archivo reescrito, porque hay dos versiones en circulacion —la del proyecto y
+la del Release— y conviene que el usuario unifique primero. Se agrega, se
+conserva todo lo anterior y no se quita nada.
+
+anillo2, veinte agregados, todos toponimos del departamento leidos en la
+imagen de 846 hojas 10 y 11, que es la lista de circuitos mas completa que
+publico el Boletin en esta epoca: corral de barrancas, despensilla, el
+churcal, el monte, las garrapatas, el bordo, las lagunas, mojo toro, mojo
+torito, tunel, quesera. Y las formas con que el OCR las deforma, sin las
+cuales no se encontrarian: queseria, wierma, potongos, caldeim, caide ra, cab
+derilja. Mas tres formas que el config ya tenia en otra grafia y que aqui
+aparecen distinto: mesadas (el config trae «las mesadas»), despensa (trae «la
+despensa» y «despenza»), penones sin tilde ya esta.
+
+actores, veintisiete agregados con origen 1921: laureano peralta, escolastico
+m aparicio, julio royo, ernesto tedin, ernesto j tedin, encarnacion tedin de
+lopez, ciro caceres, medardo sarmiento, emeterio royo, lucio ortiz, jose
+antonio araoz, natal lopez cross, francisco s urquiza, antonia p de peralta,
+elias gallardo, rodolfo chavez, hector chiostri, susana aguilera, augusto
+reyes, jose lucas molina, ramon rosa balboa, domingo royo, nestor echenique,
+gregorio nogales, eustaquio murua, nolasco echenique, donato arroyo.
+Observaciones: «jose antonio araoz» ya esta con origen 1920 y no se duplica;
+«eustaquio murua», «nolasco echenique» y «donato arroyo» ya estan con origen
+1912, 1915 y 1916 respectivamente, y tampoco se duplican, pero conviene notar
+que las tres personas reaparecen nueve, seis y cinco años despues en el mismo
+departamento. Segun la regla de v15, cuando una persona aparece con dos
+grafias se agregan las dos y se conserva la anterior: «ernesto tedin» junto a
+«ernesto j tedin», y «c a lallera» de 1920 junto a «celso a callera» y «c a
+gallera» de 1921.
+
+numeros: se propone agregar los numeros de decreto de los actos del §A y del
+§B de 1921, que son los primeros numeros utiles de esta epoca: 1669, 1816,
+1828, 2021, 2049 y 2062. Los 57 numeros que el config ya trae no aportaron
+nada en 1921 y conviene marcarlos por epoca, porque de lo contrario cada año
+devuelven una veintena de coincidencias de cifra que hay que descartar a mano.
+
+falsos_positivos: NADA. Los once falsos positivos del anillo 1 de 1921 quedan
+listados en E.7 y no se agregan al config, por la regla de §12: un termino del
+anillo 1 cuyo contexto contenga un falso positivo queda marcado y sin recorte
+aunque sea real. «Calderon», «Caldas» y «Caldoso» ya estan en el config y este
+año no estorbaron, pero «callera» y «gallera» NO se agregan, porque en 1921
+conviven en las mismas hojas que las menciones reales.
+
+
+RECUENTO
+========
+
+  Archivos del Release ....................................... 50
+  PDF bajados y abiertos ..................................... 49
+  Ediciones efectivas ........................................ 43
+  Marcadores de ausencia ...................................... 6
+  Hojas presentes ........................................... 748
+  Hojas de boletin .......................................... 742
+  Hojas declaradas por la tapa ................. no se declaran
+  Paginas ausentes por edicion faltante ...................... 89
+  Paginas ausentes dentro de una edicion (852) ................ 8
+  Reparto de confianza ............... no existe (sin .tsv, E.10)
+  Techo de resolucion ............................. 283-307 ppi
+  Imagenes miradas ................ 33 hojas enteras + 6 recortes
+  Columnas cotejadas contra la capa previa .... 26 en 17 ediciones
+  Hojas con acierto de la pasada literal ..................... 28
+  Hojas con acierto de la laxa ............................... 28
+  Hojas con acierto de la difusa ............................. 16
+  Formas de la difusa ampliada (0,70-0,78) ................... 28
+  Menciones del anillo 1, reales ............................. 17
+  Falsos positivos del anillo 1 .............................. 11
+  Actos fichados en el §A .................................... 18
+  Entradas de B.2 ............................................. 4
+  Terminos del anillo 2 con acierto ..................... 42 de 87
+  Actores del config hallados con nombre completo ............ 26
+  Actores cuya busqueda falla en su propio acto ............... 7
+  Numeros de decreto distintos hallados en el año ........... 407
+  Cuadros publicados con cifras ............................... 2
+  Subtotales recalculados ..................................... 5
+  Tablas no recalculadas, con motivo declarado (E.8) .......... 3
+  Balances y resumenes de Tesoreria ........................... 0
+  Cadena de saldos ............................. no existe (E.1)
+  Planos publicados ........................................... 0
+  Planos citados que toquen al departamento ................... 0
+  Citados y no acompanados .................................... 4
+  Contradicciones declaradas (E.9) ........................... 11
+  Limites declarados (E.10) ................................... 9
+  Pendientes .................................................. 0
+
+Fin del informe.

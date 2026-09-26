@@ -1,0 +1,1846 @@
+================================================================
+INFORME LEE — BOLETIN OFICIAL DE SALTA, 1910
+Ediciones N° 121 a 219 — el termino «La Caldera»
+Rubrica LEE v13 — informe fechado el 20/09/2026
+================================================================
+
+
+----------------------------------------------------------------
+§0 · ADVERTENCIA PRELIMINAR
+----------------------------------------------------------------
+
+ESTADO: CON PENDIENTES.
+
+Lo que falta, en una lista:
+
+  1. Diecinueve de las veintinueve hojas «a ojos» no se miraron.
+     Estan enumeradas en E.3. Es un desvio de §4.8, que pide
+     mirarlas todas cuando son menos de ~80.
+  2. El subtotal de Receptoria General de julio (180 h4) no
+     cierra y no se resolvio: E.8.
+  3. La «Nota demostrativa» de Contaduria General de 206 h3 no
+     se miro.
+  4. Los cuatro cortes de la paginacion corrida (falta un folio)
+     se confirmaron con los ojos en uno solo de los cuatro
+     casos; los otros tres descansan en la capa de texto: E.3.
+  5. La tarifa anual de patentes de 213 h2 se listo como no
+     recalculada, con su criterio, y no se recalculo.
+
+CORRIDA DEL SCRIPT. lee_auto.py corrio el 20/09/2026 a las 09:57,
+sobre 99 archivos y 392 hojas; el OCR propio de las 392 hojas se
+hizo con 6 procesos y termino a las 10:06. El log.txt no
+registra ningun error ni hoja sin OCRizar. Parametros: tesseract
+-l spa, psm 3, 300 dpi. El pre-informe se genero con la rubrica
+v11 y por eso lee las tapas con los patrones de 1946 (ver E.7).
+
+CONFIG. Se corrio con el lee_config.json vigente al 20/09/2026:
+2 terminos de anillo 1, 56 de anillo 2, 95 actores (42 de 1946,
+8 de 1908, 45 de 1909), 40 numeros, 8 formulas de reemplazo y 10
+falsos positivos, ya sin «calera» ni «caleras». Corresponde a la
+epoca: 1910 sigue a 1908-1909, misma imprenta, mismo formato y
+mismos actores. El config actualizado se entrega junto a este
+informe.
+
+QUE SE RECIBIO Y QUE NO. El proyecto y la carpeta de uploads
+llegaron vacios. Todos los insumos estaban publicados como
+assets del mismo Release: pre-informe, resultados_1910.csv,
+decretos_1910.csv, log.txt, lee_config.json y
+lee_textos_1910.zip. NO se recibieron los recortes del script
+(recortes\ en .zip), ni las imagenes .jpg de lee_trabajo, ni los
+.prop.tsv, ni el texto de «salidas txt», ni informes LEE
+anteriores.
+
+Consecuencias declaradas:
+  — Sin las .jpg no hay md5 ni dhash del script. La duplicacion
+    se controlo con el md5 de las imagenes incrustadas en los
+    PDF, que es el mismo nivel 1 de §6 (ver E.1).
+  — Sin los .prop.tsv no se pudieron usar las coordenadas del
+    OCR propio. Se usaron las coordenadas de la capa de texto
+    del PDF, que son exactas.
+  — Sin informes LEE anteriores, la lista de actores se armo
+    desde el config, que es donde estan volcados.
+  — La tercera lectura («sal») no existe en este barrido.
+
+DE DONDE SALIERON LAS IMAGENES. Los 99 PDF se bajaron del
+Release 1910 de github.com/ediedrich/boletines-salta, uno por
+edicion, 121.pdf a 219.pdf, 97 MB. Los 99 coinciden en bytes y
+en cantidad de hojas con el EXTRAIDO.json de su edicion, que
+venia dentro del zip de textos: cero desajustes. Se rasterizaron
+con PyMuPDF a 300 dpi en gris.
+
+QUE VERIFICO LA SESION. Marca de corte, guion blando y cortes
+con puntuacion; busqueda propia del anillo 1 sobre las dos
+versiones con la union corregida; difusa ampliada entre 0,70 y
+0,78; columna perdida sobre una hoja con la imagen; las 27 tapas
+que ningun texto resolvio, mas nueve dudosas; la paginacion
+corrida; el cotejo sumario/cuerpo (no aplicable); la autoridad
+por firmantes; cada candidato del anillo 1 transcripto desde la
+pagina; los tres estados de hacienda; once hojas «a ojos»; y la
+duplicacion por md5 de imagen.
+
+DESVIOS DE §8.17. Ninguno en las transcripciones: van renglon
+por renglon como se ven, con las erratas marcadas [sic] y los
+guiones de fin de renglon donde estan. Donde el recorte corto
+letras se dice.
+
+OTRO DESVIO. §4.8: se miraron 11 de 29 hojas «a ojos» (punto 1
+de la lista de arriba).
+
+
+----------------------------------------------------------------
+§1 · CORPUS REVISADO
+----------------------------------------------------------------
+
+99 archivos PDF, todos PDF reales con capa de texto, ninguno ZIP
+ni texto suelto, 392 hojas en total. De esos 99, 98 son
+ediciones del Boletin de 1910, con 391 hojas: N° 121 (5 de
+enero) a N° 219 (31 de diciembre). El archivo 162.pdf, con su
+unica hoja, no es una edicion (ver mas abajo).
+
+Resumen por mes (ediciones y hojas presentes):
+
+  Enero      121-128   8 ediciones   32 hojas
+  Febrero    129-135   7 ediciones   28 hojas
+  Marzo      136-143   8 ediciones   32 hojas
+  Abril      144-152   9 ediciones   36 hojas
+  Mayo       153-158   6 ediciones   23 hojas
+  Junio      159-167   8 ediciones   32 hojas
+  Julio      168-175   8 ediciones   32 hojas
+  Agosto     176-184   9 ediciones   36 hojas
+  Setiembre  185-192   8 ediciones   32 hojas
+  Octubre    193-201   9 ediciones   36 hojas
+  Noviembre  202-210   9 ediciones   36 hojas
+  Diciembre  211-219   9 ediciones   36 hojas
+
+EXCEPCIONES, una por una:
+
+  N° 157 (18 de mayo): tres hojas presentes. El folio impreso
+    pide cuatro (157 h3 = 644 y 158 h2 = 647, con 158 h1 = 646:
+    falta el 645). Falta la hoja 4. Confirmado con los ojos.
+
+  N° 162: NO es una edicion del Boletin de 1910. El archivo
+    162.pdf tiene una sola hoja, con el logotipo actual del
+    Boletin Oficial de Salta y la leyenda «ESTE BOLETIN NO SE
+    ENCUENTRO EN NUESTRA BASE DE DATOS». Es un aviso del
+    repositorio. La edicion N° 162 esta AUSENTE del corpus. Por
+    la cadena de fechas le corresponderia el sabado 11 de junio
+    de 1910; no se afirma, porque no hay tapa que leer.
+
+  Todas las demas ediciones tienen cuatro hojas.
+
+TIPO Y TECHO DE RESOLUCION. Una imagen incrustada por hoja, PNG
+en gris. Medidas en 145.pdf: de 2.911 x 3.910 a 3.000 x 3.976
+px, es decir 327 a 357 ppi. El rasterizado a 300 dpi queda por
+debajo de ese techo, de modo que el techo real de este barrido
+son los 300 dpi del rasterizado, no la imagen incrustada.
+
+CONFIANZA DEL OCR PROPIO. Media 80,1. Publicables 1, a verificar
+362, a ojos 29. Los umbrales de §3 estan calibrados para 1946 y
+no sirven para esta tipografia: con media 80,1 el reparto deja
+una sola hoja «publicable» en todo el año, y sin embargo las
+paginas se leen bien en la imagen a 300 dpi, como muestran las
+veintitres transcripciones del §A. Igual que en 1908-1909, la
+confianza del .tsv aqui ordena prioridades pero no autoriza ni
+prohibe transcribir: lo que decide es la imagen.
+
+
+----------------------------------------------------------------
+§2 · CRITERIO DE BUSQUEDA
+----------------------------------------------------------------
+
+VERSIONES. Dos por hoja: la capa previa del PDF (prev) y el OCR
+propio de tesseract (prop). No hay tercera lectura. Toda
+busqueda corrio sobre la union de las dos y cada resultado esta
+etiquetado. El desempate de cualquier cifra o palabra es la
+imagen.
+
+UNION DE CORTES, MEDIDA EN ESTE CORPUS:
+  U+0002 (marca de corte): CERO, en las dos versiones.
+  U+00AD (guion blando): 15.340 en el previo, CERO en el propio.
+  guion normal seguido de salto: 5.969 en el previo, 17.365 en
+    el propio.
+  cortes con puntuacion intercalada entre las dos mitades: 2.017
+    en el previo y 3.122 en el propio.
+La union de la sesion quita U+0002, quita el guion blando, une
+el guion normal y tolera hasta dos signos de puntuacion a cada
+lado del salto.
+
+LO QUE ESA CORRECCION ENCONTRO. La busqueda propia devuelve 33
+hojas con anillo 1 contra las 29 del pre-informe. De las cuatro
+nuevas, DOS SON MENCIONES REALES que el script no trae: 145 h2 y
+146 h3 (§A.8 y §A.9). Las otras dos son falsos positivos
+(139 h4, 197 h4).
+
+PASADAS. Las cuatro de §5.2, corridas de nuevo en la sesion
+sobre las dos versiones. Ninguna volvio vacia. La difusa
+ampliada de §5.2 v13 (0,70 a 0,78, palabras que empiezan con c,
+g u o) devolvio 44 formas distintas; dos son reales y estan en
+el §A: «calderas» (0,78, 130 h4) y «calileraj» (0,75, 140 h2).
+Las otras 42 estan en E.7.
+
+CO-OCURRENCIA. Los vecinos del termino aparecen donde deben: el
+anillo 2 tiene presencia en 32 de sus 56 terminos, y la hoja
+161 h4 sola reune Calderilla, San Alejo, Santa Rufina, Vaqueros,
+Yacones, Potrero de Castillo, Bandera Angosta, Mojotoro,
+Potrero de Gallinato, Potrero de Valencia, Angostura de Arias,
+Porongos, Peñones, Chalchañio, Angostura de Arrieta y Campo
+Alegre. Ninguna ausencia se declara sin eso.
+
+ACTORES. La lista se armo con el config, que es donde estan
+volcados los informes anteriores: 53 entradas de la epoca
+(1908-1909) mas las 42 de 1946. Se buscaron por apellido suelto
+sobre las dos versiones y se agruparon por contexto. Los que
+aparecen en los actos de este año estan en el §B y en E.2. Los
+39 actores nuevos de 1910 van al config actualizado.
+
+NUMEROS. Los actos de 1910 NO llevan numero. El
+decretos_1910.csv del script esta vacio: cero numeros distintos,
+cero cambios de ministerio. La regla 15 (fecha contra
+numeracion, vecinos ±3) NO SE APLICA y asi se declara. Los 40
+numeros arrastrados de 1946 se buscaron igual y no aparecen.
+
+IDENTIFICADORES DE LAS AUSENCIAS. Sin numeracion, los
+identificadores son tres: lugar (los partidos del departamento),
+persona (los actores) y organismo (comision municipal, juzgado
+de paz, comisaria de departamento y de partido). Toda ausencia
+de este informe se afirma con al menos dos de ellos.
+
+
+----------------------------------------------------------------
+§A · MENCIONES EXPLICITAS
+----------------------------------------------------------------
+
+Veintiuna entradas, por orden de aparicion. Un aviso repetido es
+una sola entrada. Todas las transcripciones salen de la imagen a
+300 dpi.
+
+
+A.1
+FUENTE: edicion N° 127, hoja 2, columna 1. Tapa: ANO II, SALTA,
+  Enero 26 de 1910, NUM. 127.
+FICHA: fallo del Superior Tribunal de Justicia, fechado Salta,
+  Noviembre 19 de 1909, publicado en enero de 1910. Causa contra
+  Delfin Gonzalez y Emidio Robles o Jurado por asalto y robo.
+  Dos menciones del departamento en la misma pieza.
+MODO DE LECTURA: PDF 127.pdf, hoja 2, 300 dpi gris; columna 1
+  (cortes de columna por proyeccion vertical), banda del 56 % al
+  84 % del alto, escala 0,8. Hallada por la pasada literal en
+  las dos versiones.
+TEXTO:
+    por asalto y robo.
+    Salta, Noviembre 19 de 1909.
+    Y VISTOS:—En la causa criminal se-
+    guida contra Delfin Gonzalez, sin apo-
+    do, de 35 años de edad, soltero, jornale-
+    ro, argentino, domiciliado en esta ciu-
+    dad, en la Avenida Boulevard Belgrano,
+    entre las de Sarmiento y Guido contra
+    Emidio Robles o Jurado, sin apodo, de
+    38 años de edad, casado, labrador, ar-
+    gentino y domiciliado en Lesser, de-
+    partamento de la Caldera, acusado por
+    robo de dinero a Manuel Sarapura y
+    CONSIDERANDO:
+    1º Que a fs. 1 corre la denuncia del
+    damnificado, expresando, que en el lu-
+    gar de los Yacones, jurisdiccion del
+    departamento de la Caldera, el 21 de Fe-
+    brero del corriente año, a eso de las
+NOTA DE LECTURA: el original imprime «de la Caldera» con
+  minuscula las dos veces. Lesser y los Yacones son del anillo 2
+  y los dos son partidos del departamento (ver A.12). El texto
+  sigue mas abajo y no se transcribio entero.
+
+
+A.2
+FUENTE: edicion N° 128, hoja 2, folio impreso 526. Tapa: ANO II,
+  SALTA, Enero 29 de 1910, NUM. 128.
+FICHA: acta de insaculacion de los ciudadanos que han de formar
+  las mesas receptoras de votos en las elecciones provinciales.
+  Bloque del departamento.
+MODO DE LECTURA: vista general de la hoja a 150 dpi al 72 %
+  para entender la maqueta, y recorte del bloque a 300 dpi, x de
+  0,03 a 0,50 e y de 0,46 a 0,61, escala 0,95. Es hoja «a ojos»
+  (tinta 5,65 %) y se miro entera.
+TEXTO:
+    Caldera
+        1ª SERIE
+    Propietarios            Suplentes
+      Adolfo Vidal            Silvano Muraa
+      Angel Fernandez         Jose M. Alfaro
+      Abelardo Figueroa       Lucas Molina
+      Camilo Caseres          Jacinto Guerrero
+      Vicente Burgos          Rufino Lozano
+NOTA DE LECTURA: «Muraa» [sic]: en el resto del año el mismo
+  hombre se imprime «Murua» (A.3). Caldera trae una sola serie;
+  Cerrillos, La Merced, Metan, Chicoana y otros traen dos o
+  tres. El acta se cierra en 128 h4, que se miro y no nombra el
+  departamento.
+
+
+A.3
+FUENTE: edicion N° 130, hoja 4, columnas 1 y 2. Tapa: ANO II,
+  SALTA, Febrero 5 de 1910, NUM. 130.
+FICHA: decreto del P. Ejecutivo en acuerdo de ministros, Salta,
+  Enero 21 de 1910. Destina dos mil pesos a defender el pueblo
+  de La Caldera y el camino a Jujuy de las crecientes del rio, y
+  nombra una comision de siete vecinos. Es la pieza de mayor
+  peso del año sobre el departamento.
+MODO DE LECTURA: 300 dpi gris; columna 1 banda 40-100 %, columna
+  2 bandas 0-30 % y 28-50 %, escala 0,82 a 0,85; la fecha y la
+  firma releidas al 220 %. Hallada por la literal en las dos
+  versiones y, ademas, por la difusa ampliada («calderas», 0,78,
+  en el propio). Es hoja «a ojos» y se miro entera.
+TEXTO:
+    Decretos y Leyes
+    Vista la solicitud presentada por los
+    vecinos del pueblo de La Caldera, ha-
+    ciendo presente la urgente necesidad que
+    hay de defender la poblacion, capital
+    del departamento, y el camino que con-
+    duce de esta ciudad a ese pueblo, de las
+    invasiones del Rio del mismo nombre, y
+    estando comprobado que realmente exis-
+    te el peligro inmediato, puesto de ma-
+    nifiesto por las ultimas crecientes y
+    que no obstante de tratarse de un cami-
+    no nacional que pone esta ciudad en co-
+    municacion con la de Jujuy, es al mismo
+    mismo tiempo y principalmente un ca-
+    mino provincial de gran importancia, a
+    cuya buena conservacion debe proveer-
+    se, cuando como en este caso el Gobier-
+    no de la Nacion no tiene votados fondos
+    especiales a este objeto:—
+    El P. Ejecutivo de la Provincia en
+        acuerdo de ministros
+    DECRETA:
+    Art. 1º Destinase la suma de dos mil
+    pesos para llenar la enunciada necesi-
+    dad, la que se imputara a este mismo
+    decreto, con cargo de dar cuenta a la
+    H. Legislatura.
+    Art. 2º Nombrase una comision com-
+    puesta de los señores: Augusto Regis,
+    Abelardo Figueroa, Silvano Murua, Dr.
+    Rafael Usandivaras, Daniel Linares, An-
+    gel Fernandez y Jacinto Guerrero, para
+    que de acuerdo con el ingeniero inspec-
+    tor de Obras Publicas proyecte y reali-
+    ce los trabajos pertinentes, a cuyo efec-
+    to se expedira la correspondiente orden
+    de pago, con cargo de rendir cuenta fiel
+    y documentada de los valores que per-
+    ciba, a la Contaduria de la Provincia.
+    Art. 3º Encargase a esta comision de
+    la mision de requerir de la Comision
+    Municipal del Departamento, toda la
+    ayuda pecuniaria que fuera posible, pa-
+    ra la mayor y mas eficaz realizacion de
+    los enunciados trabajos.
+    Art. 4º Comuniquese, publiquese y
+    dese al R. Oficial.
+    Salta, Enero 21 de 1910.
+    LINARES.
+    DAVID ZAMBRANO, HIJO
+    JUAN MARTIN LEGUIZAMON
+    Es copia—
+    Jose M. Outes,
+    S. S.
+NOTA DE LECTURA: el decreto no dice de donde salen los dos mil
+  pesos mas alla de imputarlos a si mismo, ni fija plazo. «El
+  Rio del mismo nombre» es el unico modo en que el texto nombra
+  al rio La Caldera. La primera lectura de la fecha, sobre un
+  recorte al 0,85, dio «1919»; releida al 220 % dice 1910, y la
+  edicion es del 5 de febrero. Los siete vecinos van al anillo
+  de actores; cinco de ellos vuelven a aparecer en A.2, A.9,
+  A.12, A.20 y A.21.
+
+
+A.4
+FUENTE: edicion N° 131, hoja 4, columna 2. Tapa: ANO II, SALTA,
+  Febrero 12 de 1910, NUM. 131.
+FICHA: decreto de convocatoria a elecciones legislativas. Dos
+  menciones: el departamento entre los convocados y el
+  departamento como circunscripcion de un senador.
+MODO DE LECTURA: 300 dpi gris, columna 2, bandas 60-86 % y
+  77-95 %, escalas 0,8 y 1,05.
+TEXTO:
+    Debiendo procederse a la renovacion
+    del personal de las HH. Camaras Le-
+    gislativas de la Provincia de acuerdo
+    con lo prescripto en los articulos 63, 70
+    y 78 de la Constitucion y 39 de la Ley
+    de Elecciones de la Provincia y en vir-
+    tud de lo comunicado por los señores
+    presidentes de ambas camaras en que
+    dan cuenta de las vacantes que deben
+    producirse en el corriente año—
+    El P. Ejecutivo de la Provincia
+    DECRETA:
+    Art. 1º Convocase al pueblo de los
+    departamentos de la Capital, Caldera,
+    Cafayate, Chicoana, Molinos, Rosario de
+    Lerma, Guachipas, San Carlos, Cachi, Po-
+    ma, Rosario de la Frontera, Anta, Oran,
+    Iruya y Santa Victoria a elegir sus repre-
+    sentantes a las HH. Camaras Legislati-
+    vas de la Provincia en la forma siguien-
+    te: un senador por cada uno de los de-
+    partamentos de Caldera, Cafayate, Chi-
+    coana y Molinos; dos diputados por la
+    Capital, dos por Oran y uno por cada
+    uno de los departamentos de Cafayate,
+NOTA DE LECTURA: en la segunda mitad de la transcripcion las
+  palabras entre las que se corta cada renglon quedaron fuera
+  del recorte y se completaron mirando el renglon siguiente; el
+  corte es del recorte, no del original. La hoja lleva mas
+  arriba la firma LINARES / JUAN MARTIN LEGUIZAMON, y
+  «Conforme— C. M. Serrey, S. S.», de otro acto.
+
+
+A.5
+FUENTE: edicion N° 136, hoja 3, columna 2. Tapa: ANO II, SALTA,
+  Maizo 2 de 1910, NUM. 136 [sic, «Maizo» en el original].
+FICHA: designacion de los sitios donde funcionaran las mesas
+  receptoras de votos en las elecciones nacionales, seccion por
+  seccion. Entrada del departamento.
+MODO DE LECTURA: 300 dpi gris, columna 2, banda alrededor del
+  22 % del alto, ubicada con las coordenadas de la capa de
+  texto; escala 0,8. La lista de secciones se recorrio entera.
+TEXTO:
+    Seccion Caldera.— Para las dos se-
+    ries que corresponden a esta seccion,
+    se señala, para la 1ª. y 2ª. mesa, el
+    atrio de la Iglesia Parroquial.
+NOTA DE LECTURA: la lista nombra Capital, Candelaria, Rosario de
+  Lerma, Silleta, Tala, Cafayate, Chicoana, Carril, Guachipas,
+  Carahuasi, Rosario de la Frontera, Cerrillos, Merced, Caldera,
+  Rivadavia y Oran. Dos series, igual que en A.2.
+
+
+A.6
+FUENTE: edicion N° 140, hoja 2, columna 2. Tapa: ANO II, SALTA,
+  Maizo 16 de 1910, NUM. 140 [sic].
+FICHA: Juzgado del Crimen. Causa contra Roque Miranda y Emilio
+  Herrera por lesiones a Anacleto Gutierrez. Salta, Febrero 26
+  de 1910.
+MODO DE LECTURA: 300 dpi gris, columna 2, banda 0-28 %, escala
+  0,8. NINGUNA pasada literal la encontro: salio de la laxa
+  («galderaj» en el previo) y de la difusa ampliada
+  («calileraj», 0,75, en el propio). Es hoja «a ojos» y se miro
+  entera.
+TEXTO:
+    JUZGADO DEL CRIMEN
+    CAUSA contra Roque Miranda y Emi-
+        lio Herrera por lesiones a Ana-
+        cleto Gutierrez.
+    Salta, Febrero 26 de 1910.
+    Y VISTOS:—En la causa criminal se-
+    guida a Emilio Herrera, sin apodo, de
+    20 años de edad, soltero, labrador, ar-
+    gentino, domiciliado en el pueblo de
+    La Caldera, acusado por lesiones in-
+    feridas a Anacleto Gutierrez. y
+NOTA DE LECTURA: el OCR destruyo «La Caldera» en las dos
+  versiones y de dos maneras distintas. Es el caso que justifica
+  la difusa ampliada de v13.
+
+
+A.7
+FUENTE: edicion N° 140, hoja 4, columna 3. Repetido literalmente
+  en la edicion N° 190, hoja 4, columna 3 (tapa: Setiembre 21 de
+  1910).
+FICHA: edicto de deslinde, mensura y amojonamiento de la finca
+  «Los Porongos», en el departamento, a pedido de Francisco
+  Aleman con poder de Monica Diez de Costas. Un solo aviso, dos
+  publicaciones.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda alrededor del
+  48 % del alto en 140 h4 y del 55 % en 190 h4, ubicadas con las
+  coordenadas de la capa de texto; escala 0,8. Las dos
+  publicaciones se miraron y se cotejaron: mismos linderos,
+  mismos nombres.
+TEXTO (de 140 h4):
+    Habiendose presentado don Francisco
+    Aleman con poder y titulo bastante de la
+    señora Monica Diez de Costas solicitando
+    el deslinde, mensura y amojonamiento de
+    la finca "Los Porongos" ubicada en el
+    departamento de la Caldera y comprendi-
+    da dentro de los siguientes limites: por el
+    Poniente, con las lomas altas que lindan
+    con tierras de la Caldera y Sauces, hasta
+    donde se hallan unos mojones antiguos;
+    por el Norte, la loma que viene dividien-
+    do las tierras de Perico que hoy poseen
+    los herederos de don Domingo Iriarte; por
+    el Naciente, siguiendo dicha cuchilla al
+    encontrarse la loma conocida con el nom-
+    bre de "Las Viboras", y pasando dicha
+    loma delante de un morro alto, cabecera
+    de la Cañada Seca donde se encuentra en
+    medio de dichos signos el fondo de la que-
+    brada que hace un mojon de piedra, que
+    divide esta pertenencia de la de Los Piño-
+    nes; y por el Sud, la cuchilla que sale del
+    morro alto por el Poniente, conocida con
+    el nombre de "Tabacal" o "Pelada Muer-
+    ta", que divide estas tierras de las de "La
+    Despensa"; el señor Juez de 1ª Instancia
+NOTA DE LECTURA: «tierras de la Caldera y Sauces» nombra el
+  termino como linde, no como jurisdiccion. Los linderos dan
+  nueve topónimos nuevos para el anillo 2. En 190 h4 el nombre
+  va entre comillas angulares, «Los Porongos», y el
+  departamento con mayuscula, «La Caldera». El texto sigue con
+  la orden del juez y no se transcribio entero.
+
+
+A.8
+FUENTE: edicion N° 145, hoja 2, columna 3. Tapa: ANO II, SALTA,
+  Abril 6 de 1910, NUM. 145.
+FICHA: causa contra Pascual Copa por hurto de ganado al doctor
+  Ignacio Ortiz. Salta, Marzo 16 de 1910.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda 23-55 %, escala
+  0,85. MENCION QUE EL PRE-INFORME NO TRAE: aparecio en la
+  busqueda propia de la sesion, con la union de cortes
+  corregida.
+TEXTO:
+    CAUSA contra Pascual Copa por hurto
+        de ganado al doctor Ignacio
+        Ortiz
+    Salta, Marzo 16 de 1910.
+    Y VISTOS:—En la causa criminal se-
+    guida a Pascual Copa, sin apodo, de 58
+    años de edad, soltero, carpintero, argen-
+    tino, domiciliado en «Los Porongos», ju-
+    risdiccion del departamento de  l a Cal-
+    dera, acusado por hurto de ganado al
+    doctor Ignacio Ortiz. y
+    RESULTANDO:
+    1º—Que a f. 1 corre la denuncia del
+    comisario del lugar indicado, en virtud
+    de la cual se le recibe la indagatoria al
+    encausado a fs. 2 en la que expone: que
+    el 20 de Julio del año ppdo. se encon-
+NOTA DE LECTURA: el original imprime «de  l a Cal-dera», con la
+  «l» y la «a» separadas por espacios; es defecto de
+  composicion, no de la lectura, y por eso se transcribe asi.
+  Ese defecto es lo que rompio las pasadas del script. «Los
+  Porongos» es la misma finca del edicto A.7. El comisario del
+  lugar es el del partido de Porongos (A.12).
+
+
+A.9
+FUENTE: edicion N° 146, hoja 3, columna 3. Tapa: ANO II, SALTA,
+  Abril 9 de 1910, NUM. 146.
+FICHA: decreto, Salta, Marzo 31 de 1910. Nombra a Escolastico
+  Aparicio para integrar la Comision Municipal del departamento,
+  por renuncia de Abelardo Figueroa.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda 63-95 %, escala
+  0,9. MENCION QUE EL PRE-INFORME NO TRAE.
+TEXTO:
+    Hallandose incompleta la Comision
+    Municipal del Departamento de la Cal-
+    dera por renuncia del señor Abelardo Fi-
+    gueroa.
+    El P. Ejecutivo de la Provincia
+    DECRETA
+    Art. 1º. Nombrase para integrar dicha
+    Comision Municipal, al señor Escolasti-
+    co Aparicio.
+    2º. Comuniquese, publiquese y dese al
+    R. Oficial.
+    Salta, Marzo 31 de 1910
+    FIGUEROA
+    R. PATRON COSTAS
+    Es copia—
+    Jose M. Outes,
+    S. S.
+NOTA DE LECTURA: decreto sin numero impreso, como todos los del
+  año. El segundo articulo se imprime «2º.» sin la palabra
+  «Art.». Abelardo Figueroa renuncia aqui en marzo y en
+  diciembre vuelve como jurado titular del departamento (A.20).
+
+
+A.10
+FUENTE: edicion N° 148, hoja 3, columna 3. Tapa: ANO II, SALTA,
+  Abril 16 de 1910, NUM. 148.
+FICHA: decreto del Gobernador nombrando Comisarios de Policia de
+  los Departamentos y Distritos. Entrada del departamento.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda 72-98 %, escala
+  0,8.
+TEXTO:
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1º.—Nombranse Comisarios de Po-
+    licia de los Departamentos y Distritos
+    que a continuacion se expresan a los
+    siguientes señores:
+    Caldera, a don Escolastico Aparicio;
+    Cerrillos, a don Guillermo W. Garcia;
+    Merced, a don Emeterio Royo; Rosario
+    de Lerma, a don Waldino R. Castillo;
+    Silleta, a don Delfin Casas; Seccion Chi-
+    coana, a don Daniel Moreno; Carril, a
+    don Fernando Sanmillan; Viña, a don
+    Belisario Correa; Poma, a don Gualber-
+    to Diaz; Molinos, a don Federico Aus-
+NOTA DE LECTURA: la formula de encabezado es «El Gobernador de
+  la Provincia», no «El P. Ejecutivo»; ver E.4. Escolastico
+  Aparicio es comisario del departamento en abril, y el mismo
+  año integra la Comision Municipal (A.9), es comisionado de
+  empadronamiento (A.18), vuelve a ser nombrado comisario en
+  diciembre (A.21) y figura en la comision municipal de fin de
+  año (A.21). El texto sigue con los demas departamentos.
+
+
+A.11
+FUENTE: edicion N° 150, hoja 1, columna 2. Tapa: ANO II, SALTA,
+  Abril 23 de 1910, NUM. 150.
+FICHA: causa contra Manuel Gomez y Ramon Rodriguez por lesiones
+  mutuas. Salta, Marzo 29 de 1910.
+MODO DE LECTURA: 300 dpi gris; primer recorte por columna corto
+  letras a la derecha y se rehizo con banda absoluta, x de 0,33
+  a 0,68 e y de 0,87 a 1,0, escala 0,9.
+TEXTO:
+    CAUSA contra Manuel Gomez y Ramon
+        Rodriguez por lesiones mutuas
+    Salta, Marzo 29 de 1910.
+    Y VISTOS:—En la causa criminal se-
+    guida a manuel Gomez, boliviano, de
+    39 años de edad, soltero, jornalero, do-
+    miciliado en Mojotoro, jurisdiccion del
+    Departamento de Caldera, y a Ramon
+    Rodriguez, sin apodo, de 24 años de
+    edad, soltero, jornalero, argentino, do-
+NOTA DE LECTURA: «Departamento de Caldera», sin articulo, y
+  «manuel» con minuscula [sic]. Mojotoro es del anillo 2 y es
+  partido del departamento (A.12), donde aparece como «Bandera
+  Angosta y estacion Mojotoro».
+
+
+A.12
+FUENTE: edicion N° 161, hoja 3 (columna 3, pie) y hoja 4
+  (columna 1, folio impreso 661). Tapa: ANO II, SALTA, Junio 8
+  de 1910, NUM. 161.
+FICHA: decreto, Salta, Junio 2 de 1910. Nombra al comisario
+  suplente del departamento y a los comisarios auxiliares de
+  policia de doce partidos. Es la lista de partidos del
+  departamento y se leyo entera (§4.10).
+MODO DE LECTURA: 300 dpi gris. 161 h3: columna 3, banda 62-100
+  %, escala 0,9 (la misma hoja sirvio para el control de columna
+  perdida). 161 h4: columna 1, banda 0-29 %, escala 0,9, mas la
+  continuacion 0-30 %.
+TEXTO (161 h3, pie de la columna 3):
+    De acuerdo con las propuestas pre-
+    sentadas por el señor comisario de poli-
+    cia del departamento de La Caldera pa-
+TEXTO (161 h4, columna 1, sigue):
+    ra el nombramiento de las personas que
+    deben desempeñar las comisarias de
+    partidos durante el corriente año—
+    El P. Ejecutivo de la Provincia.
+    DECRETA:
+    Art. 1º.—Nombrase comisario suplen-
+    te del referido departamento a don Ja-
+    cinto Guerrero, comisario auxiliar de
+    policia para el partido de La Calderilla
+    a don Jose Miguel Rauch, para el de
+    San Alejo y Santa Rufina a don Angel
+    Fernandez, para el de Vaqueros a don
+    Jesus Ramirez, para el de Yacones a
+    don Victorino Viveros, para el del Po-
+    trero de Castillo a don Zacarias Mai-
+    dana, para el de Bandera Angosta y
+    estacion Mojotoro a don Antonio Ma-
+    glioni, para el del Potrero de Gallinato
+    a don Silverio Caseres, para el del Po-
+    trero de Valencia a don Abraham Her-
+    nandez, para el de la Angostura de Arias
+    de los Sauces a don Virgilio Arevalo,
+    para el de Porongos a don Teodoro Re-
+    yes, para el de los Peñones y Chalcha-
+    ñio a don Liborio Guerrero y para el de
+    la Angostura de Arrieta y Campo Ale-
+    gre a don Francisco Sosaya.
+    2º.—Comuniquese, publiquese y dese
+    al Registro Oficial.
+    Salta, Junio 2 de 1910
+    FIGUEROA
+NOTA DE LECTURA: «La Calderilla» se transcribe y no se afirma
+  que pertenezca a La Caldera: aqui el propio decreto la pone
+  entre los partidos del departamento, y eso es lo que se lee.
+  Doce partidos. Once de los doce topónimos ya estaban en el
+  anillo 2; «Angostura de Arias de los Sauces» y «estacion
+  Mojotoro» se agregan. En la misma columna 3 de 161 h3, antes
+  de este decreto, hay otro que nombra ordenanza del
+  Departamento Central de Policia a Robustiano Sosa, fechado
+  tambien el 2 de junio, con la firma FIGUEROA / RICARDO ARAOZ y
+  «Es copia:— Jose M. Outes. S. S.».
+
+
+A.13
+FUENTE: edicion N° 171, hoja 3, columnas 1 y 3. Tapa: ANO II,
+  SALTA, Julio 16 de 1910, NUM. 171.
+FICHA: dos decretos del mismo dia, Salta, Julio 6 de 1910. El
+  primero (columna 3) nombra comisarios auxiliares de los
+  partidos de Lesser y La Despensa. El segundo (columna 1)
+  resuelve las ternas de la Comision Municipal para la
+  judicatura del departamento.
+MODO DE LECTURA: 300 dpi gris, columna 1 banda 39-90 % y columna
+  2 banda 0-30 %, escala 0,82; columna 3 banda 4-26 %, escala
+  0,8. Las dos menciones se ubicaron con las coordenadas de la
+  capa de texto.
+TEXTO (columna 3):
+    De acuerdo con las propuestas pre-
+    sentadas por el señor Comisario de Po-
+    licia del Departamento de La Caldera,
+    para la provision de las Comisarias de
+    los partidos de Lesser y Despensa,
+    El P. Ejecutivo de la Provincia.
+    DECRETA:
+    Art. 1º.—Nombrase Comisario auxiliar
+    de policia para el partido de Lesser, a
+    don Marcelo Lamas y para el de La Des-
+    pensa a don Guillermo Wolton.
+    Art. 2º.—Comuniqnese, publiquese y
+    dese al R. Oficial.
+    Salta, Julio 6 de 1910.
+    FIGUEROA
+TEXTO (columna 1, segundo decreto):
+    Vistas las ternas presentadas por la
+    Comision Municipal del Departamento
+    de La Caldera para la designacion de
+    los ciudadanos que deben desempeñar en
+    el corriente año la judicatura en el re-
+    ferido Departamento,
+    El P. Ejecutivo de la Provincia
+    DECRETA:
+    Art. 1º.—Nombrase Juez de Paz pro-
+    pietario de dicho Departamento al se-
+    ñor Carlos Matienzo y suplente a don
+    Jacinto Guerrero.
+    Los nombrados tomaran posesion de
+    sus cargos previas las formalidade exi-
+    jidas por ley.
+    Art. 3º.—Comuniquese. publiquese y
+    dese al R. Oficial.
+    Salta Junio 6 de 1910.
+    FIGUEROA
+    R. PATRON COSTAS
+NOTA DE LECTURA: tres cosas que no se concilian y van a E.9. El
+  epigrafe del primer decreto dice «Despensa» y el articulo «La
+  Despensa». El segundo decreto salta del Art. 1º al Art. 3º,
+  sin Art. 2º, y dice «formalidade» sin s [sic]. Y esta fechado
+  «Salta Junio 6 de 1910», sin coma, un mes antes del otro
+  decreto de la misma pagina, en una edicion del 16 de julio: se
+  transcribe como se lee y no se corrige. Jacinto Guerrero es a
+  la vez comisario suplente del departamento (A.12) y juez de
+  paz suplente.
+
+
+A.14
+FUENTE: edicion N° 174, hoja 4, columna 2. Tapa: ANO II, SALTA,
+  Julio 27 de 1910, NUM. 174.
+FICHA: aviso de remate. Derecho de marca de la sucesion de
+  Laureano Catacata, bienes semovientes en el Potrero de
+  Castillo, (Caldera). Salta, Julio 16 de 1910.
+MODO DE LECTURA: 300 dpi gris, columna 2, banda alrededor del
+  16 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    za 9 de Julio, donde estara la bandera
+    de remate, por orden del señor Juez en
+    lo Civil y Comercial doctor Julio Figue-
+    roa, vendere, sin base, y al contado, el
+    derecho de marca perteneciente a la su-
+    cesion de don Laureano Catacata, con-
+    sistente a todos los bienes semovientes
+    existentes, en el Potrero de Castillo,
+    (Caldera). Salta, Julio 16 de 1910.—M.
+    Nuñez de la Rosa, Martillero publico.
+NOTA DE LECTURA: es la misma sucesion Catacata del remate de
+  1909 sobre el que v13 fijo la regla del cuadro contra el
+  detalle. Este aviso NO trae cuadro de cabezas ni total: no hay
+  nada que recalcular, y asi se declara. «consistente a todos
+  los bienes» [sic]. El termino aparece entre parentesis, como
+  ubicacion del potrero.
+
+
+A.15
+FUENTE: edicion N° 178, hoja 3, columna 3. Tapa: ANO II, SALTA,
+  Agosto 10 de 1910, NUM. 178.
+FICHA: decreto, Salta, Agosto 1º de 1910. Aprueba el contrato ad
+  referendum con Moises Vera para construir el edificio de la
+  comisaria de La Caldera. Dos menciones en la misma pieza.
+MODO DE LECTURA: 300 dpi gris, columna 3, bandas alrededor del
+  31 % y del 47 % del alto por coordenadas de la capa de texto,
+  escala 0,8.
+TEXTO:
+    Visto el contrato ad referendum ce-
+    lebrado entre el señor Gefe de la ofici-
+    na de Obras Publicas y don Moises Ve-
+    ra sobre construccion del edificio para
+    la comisaria de La Caldera y conside-
+    rando que el es conveniente bara los in-
+    tereses publicos,—
+    El P. Ejecutivo de la Provincia
+    DECRETA:
+    Art. 1º Apruebase el contrato ad re-
+    ferendum celebrado entre el señor Gefe
+    de la oficina de Obras Publicas y don
+    Moises Vera sobre construccion del edi-
+    ficio para la comisaria de La Caldera.
+    Art. 5º Comuniquese, publiquese y
+    dese al R. Oficial.
+    Salta, Agosto 1º de 1910.
+    FIGUEROA
+    R. PATRON COSTAS
+    Es copia:—
+    Jose M. Outes.
+    S. S.
+NOTA DE LECTURA: «bara» por «para» [sic]. El decreto salta del
+  Art. 1º al Art. 5º [sic]: E.9. No dice monto, ni plazo, ni
+  donde se construye dentro del departamento. El contrato mismo
+  no se publica.
+
+
+A.16
+FUENTE: edicion N° 189, hoja 4, columna 1. Tapa: ANO II, SALTA,
+  Setiembre 17 de 1910, NUM. 189.
+FICHA: edicto de deslinde de la finca «Loma Bola», en el
+  departamento, a pedido de Francisco Aleman en representacion
+  de Angel Costaz. Salta, Setiembre 12 de 1910.
+MODO DE LECTURA: 300 dpi gris, columna 1, banda alrededor del
+  53 % del alto por coordenadas de la capa de texto, escala 0,8.
+  Es hoja «a ojos» y se miro entera.
+TEXTO:
+    Habiencose presentado don Francisco
+    Aleman, en representacion de don Angel
+    Costaz, solicitando se señale nuevo dia
+    para que se practique el deslinde, mensu-
+    ro y amojonamiento de la finca "Loma
+    Bola", ubicada en el departamento de la
+    Caldera y comprendida dentro los siguien-
+    tes limit s: al Norte, con propiedad de
+    los sucesores del doctor Julio Arias; al
+    Sud, con los de los herederos del señor
+    Segundo D. Bedoya; al Este, con la estan-
+    cia Los Porongos; y al Oeste, con propie-
+    dad de Francisco Sosaya; el señor Juez
+    de 1ª Instancia en lo Civil y Comercial,
+    doctor Vicente Arias, ha ordenado se
+    practiquen esas operaciones por el agri-
+    mensor don Rafael M. Zuvira, quien dara
+    principio a ellas el dia 1º y siguientes ha-
+    biles del mes de Noviembre del corriente
+    año.
+    Es lo que el suscrito secretario hace saber
+    a los interesados por medio del presente
+    que debera publicarse durante 30 dias.—
+    Salta, Setiembre 12 de 1910. M. Sanmi
+NOTA DE LECTURA: «Habiencose» y «limit s» [sic]; «mensuro» por
+  «mensura» [sic]. El apellido del secretario queda cortado por
+  el recorte, no por el original: es M. Sanmillan, que firma
+  igual en otros edictos del año. «Loma Bola» linda al Este con
+  la estancia Los Porongos (A.7 y A.8) y al Oeste con Francisco
+  Sosaya, que es el comisario del partido de la Angostura de
+  Arrieta y Campo Alegre (A.12).
+
+
+A.17
+FUENTE: edicion N° 200, hoja 1, columna 2. Tapa: ANO III, SALTA,
+  Octubre 26 de 1910, NUM. 200.
+FICHA: causa contra Juan Ortega por hurto de ganado a Jose
+  Miguel Rauch. Salta, Agosto 25 de 1910.
+MODO DE LECTURA: 300 dpi gris, columna 2, bandas alrededor del
+  42 % y del 51 % del alto por coordenadas de la capa de texto,
+  escala 0,8.
+TEXTO:
+    Salta, Agosto 25 de 1910.
+    Y VISTOS:—En la causa criminal se-
+    guida a Juan Ortega, sin apodo, de 40
+    años de edad, casado, lechero, domicilia-
+    do en el Rosal, jurisdiccion de esta capi-
+    tal, acusado por hurto de ganado a Jo-
+    se Miguel Rauch, y
+    RESULTANDO:
+    1º. Que a f. 1 y con fecha 29 de Junio
+    del año ppdo., se presenta el damnifica-
+    do, denunciando: que hace un mes, mas o
+    menos a la fecha, le sustrajeron de su fin-
+    ca, situada en La Calderilla, dos caballos
+    ambos con esta marca R el uno rosillo
+    y el otro colorado patas blancas, anima-
+    les que estima en la suma de ciento cin-
+    cuenta pesos m/n; que recien ahora ha te-
+    nido conocimiento de que los citados ani-
+    males se encuentran en una finca que
+    tiene el Sr. Luciano Zerdan, sin saber el
+    exponente quien los haya llevado o depo-
+    sitado alli, por lo que pide se practiquen
+    las averiguaciones del caso.
+NOTA DE LECTURA: el damnificado es el mismo Jose Miguel Rauch
+  que el decreto de junio nombra comisario auxiliar del partido
+  de La Calderilla (A.12), y la finca de la que le sustraen los
+  caballos esta en ese partido. El acusado no es del
+  departamento. La cifra, ciento cincuenta pesos m/n, se leyo en
+  la pagina; «m/n» va como se ve.
+
+
+A.18
+FUENTE: edicion N° 214, hoja 3, columna 3. Tapa: ANO III, SALTA,
+  Diciembre 14 de 1910, NUM. 214.
+FICHA: decreto de comisionados para el empadronamiento y la
+  clasificacion de patentes, por departamento. Entrada del
+  departamento y plazos.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda alrededor del
+  60 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    R. de la Frontera 1ª. Seccion—R. Cor-
+    nejo Echenique.
+    R. de la Frontera 2ª. Seccion.—Ama-
+    dor Lopez.
+    Candelaria.—Juan Serra.
+    Anta.—Rodolfo Matorras.
+    Rivadavia.—Francisco C. Filpo.
+    Oran.—Samuel Caprini Eguez.
+    Iruya.  Juan R. Herrera.
+    Santa Victoria.—Angel M. Cardozo.
+    Caldera.—Escolastico M. Aparicio.
+    Art. 2º. Los comisionados de la capi-
+    tal, terminaran su cometido el 31 de Di-
+    ciembre corriente y los de los departa-
+    mentos de campaña el 31 de Enero pro-
+    ximo, debiendo presentarse los reclamos,
+    en la capital, durante el mes de Enero
+    y en la campaña en el de Febrero de
+    1911; para cuyo efecto funcionaran los
+    jurados por el periodo legal, a contar de
+    las fechas en que se dispone la termina-
+    cion del empadronamiento y clasificacion
+    de patente.
+NOTA DE LECTURA: aqui el nombre lleva inicial del segundo
+  apellido, «Escolastico M. Aparicio», que en A.9, A.10 y A.21
+  va sin inicial. Se transcribe como se ve y no se unifica.
+
+
+A.19
+FUENTE: edicion N° 215, hoja 2, columna 3. Tapa: ANO III, SALTA,
+  Diciembre 17 de 1910, NUM. 215.
+FICHA: causa contra Maximo Ramos por lesiones a Ricardo
+  Valdiviezo. Dos menciones: el domicilio del procesado y la
+  comisaria donde se hace la denuncia.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda alrededor del
+  42 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    Y VISTOS:—En la causa criminal segui-
+    da a Maximo Ramos, sin apodo, de 22
+    años de edad, soltero, labrador, argenti-
+    no, domiciliado en el pueblo de La Cal-
+    dera, acusado por lesiones inferidas a Ri-
+    cardo Valdiviezo, y
+    RESULTANDO:
+    1º. Que f. 1, se presenta el damnifica-
+    do ante la comisaria de La Caldera, de-
+    nunciando: que serian las 12 de la noche
+    del 2 al 3 de Agosto del año ppdo., que
+    el declarante se encontraba en casa de
+    Manuel Ramos tomando unas copas de
+    vino con varios amigos
+NOTA DE LECTURA: «la comisaria de La Caldera» es la misma cuyo
+  edificio se manda construir en agosto (A.15), y de cuyo
+  comisario salen las propuestas de A.12 y A.13. La fecha del
+  fallo queda mas arriba en la columna y no se transcribio.
+
+
+A.20
+FUENTE: edicion N° 217, hoja 4, columna 2. Tapa: ANO III, SALTA,
+  Diciembre 24 de 1910, NUM. 217.
+FICHA: decreto que designa los jurados de patentes por
+  departamento. Entrada del departamento.
+MODO DE LECTURA: 300 dpi gris, columna 2, banda alrededor del
+  16 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    IRUYA—Titulares—Tomas F. Vargas
+    y Manuel Meneses.—Suplentes—Tomas
+    Echenique y Froilan Herrera.
+    SANTA VICTORIA—Titulares—Car-
+    los Echenique y Julio C. Aparicio.—Su-
+    plentes—Mamerto Aramburu y Justo Fi-
+    gueroa.
+    CALDERA.—Titulares—Daniel Lina-
+    res y Abelardo Figueroa.—Suplentes—
+    Jose M. Ceballos y Jose D. Soliverez.
+    Art. 2º. Las reclamaciones, en el de-
+    partamento de la Capital, deberan pre-
+    sentarse durante el mes de Enero y los
+    de la Campaña en el mes de Febrero de
+    1911; para cuyo efecto los jurados fun-
+    cionaran por el periodo legal, a contar
+    desde el 1º de Enero de Febrero res-
+    pectivamente.
+    Art. 3º.—Comuniquese, publiquese e
+    insertese en el R. O.
+    FIGUEROA
+NOTA DE LECTURA: «a contar desde el 1º de Enero de Febrero
+  respectivamente» [sic]: falta el segundo «y del 1º». Daniel
+  Linares y Abelardo Figueroa, los dos titulares, son dos de los
+  siete vecinos de la comision del rio (A.3).
+
+
+A.21
+FUENTE: edicion N° 219, hoja 3, columna 1 (primer decreto) y
+  columnas 2-3 (segundo). Tapa: ANO III, SALTA, Diciembre 31 de
+  1910, NUM. 219, folio impreso 903.
+FICHA: dos decretos de fin de año. El primero, Salta, Diciembre
+  27 de 1910, nombra Comisarios de Policia de los Departamentos
+  y Distritos. El segundo designa los miembros de las Comisiones
+  Municipales de los Departamentos y Distritos de la Campaña.
+MODO DE LECTURA: 300 dpi gris, columnas 1 y 2, bandas alrededor
+  del 75 % y del 62 % del alto por coordenadas de la capa de
+  texto, escala 0,8.
+TEXTO (primer decreto):
+    Art. 1º Nombrase Comisarios de Policia
+    de los Departamentos y Distritos a los
+    ciudadanos siguientes:
+    Cerrillos Romulo Juarez; Rosario de
+    Lerma, Welindo R. Castillo; Chicoana,
+    Fernando Sanmillan; Chicoana, (seccion
+    pueblo), Daniel Moreno; Viña, Belisario
+    Correa; Guachipas, Armando D' de
+    Amezaga; Poma, Gualberto Diaz; Cafa-
+    yate, Manuel Chavarria; San Carlos Emi-
+    lio Figueroa; Caldera, Escolastico Apari-
+    cio; Campo Santo, Pedro Perez del Bus-
+    to; Metan. J. Adolfo Cajal; R. de la Fron-
+    tera, Victor Ceballos; Candelaria, A. Diez
+    Gomez; Anta, Rodolfo Matorras; Oran, Sa-
+    turnino Saravia; Rivadavia, Luis Sosa;
+    Iruya, Tomas F. Vargas; Santa Victoria,
+    Carlos Echenique; Noques y Montaña,
+    Rafael Sanmillan; Merced, Emeterio Ro-
+    yo; Coronel Moldes, Adan Villa; Galpon
+    Juan Jose Saravia; Guemes, Horacio
+    [...]
+    Art. 4º—Comuniquese a quienes co-
+    rresponda, publiquese y dese al R. Ofi-
+    cial.
+    Salta, Diciembre 27 de 1910.
+    FIGUEROA
+    R. PATRON COSTAS.
+    Es copia.
+    Jose M. Outes,
+    S. S.
+TEXTO (segundo decreto):
+    Considerando oportuno designar las
+    personas que deben desempeñar los car-
+    gos de miembros de las Comisiones Mu-
+    nicipales de los Departamentos y Dis-
+    tritos de la Campaña y no pudiendo es-
+    tos nombramientos hacerse por el mo-
+    mento de conformidad con lo prescrito
+    en el articulo 173 de la Constitucion,
+    [...]
+    Caldera—Señores Angel Fernandez,
+    Augusto Regis, Adolfo Vidal, Fernando
+    Benitez y Escolastino Aparicio.
+NOTA DE LECTURA: «Escolastino» [sic] por Escolastico; es el
+  mismo hombre que el primer decreto de la misma hoja llama
+  «Escolastico Aparicio». Los cinco miembros de la Comision
+  Municipal de fin de año son, cuatro de ellos, gente ya
+  nombrada en el año: Angel Fernandez y Augusto Regis estan en
+  la comision del rio (A.3), Adolfo Vidal encabeza la 1ª serie
+  de la insaculacion (A.2) y Aparicio viene de A.9, A.10 y A.18.
+  Fernando Benitez no aparece en ningun otro acto del año. El
+  cuerpo de los dos decretos sigue con los demas departamentos y
+  no se transcribio entero.
+
+
+----------------------------------------------------------------
+§B · VECINDAD
+----------------------------------------------------------------
+
+Aqui van los actos que no nombran el termino pero nombran un
+partido del departamento, segun la lista que el propio decreto
+de junio establece (A.12). Esa lista es la que vuelve al anillo
+2 verificable en este corpus: antes de 1910 los partidos eran
+una hipotesis de vocabulario; en A.12 estan enumerados por el
+Poder Ejecutivo.
+
+
+B.1
+FUENTE: edicion N° 121, hoja 1, columnas 1 y 2. Tapa: ANO I,
+  SALTA, Enero 5 de 1910, NUM. 121. Es la primera pieza del año.
+FICHA: fallo del Superior Tribunal de Justicia sobre la division
+  de las fincas «San Alejo» y «Santa Rufina» e incidente sobre
+  si se debe o no sacar original sin plano de la Oficina
+  Topografica. En Salta, a cinco dias de Noviembre de mil
+  novecientos nueve.
+POR QUE SE INCLUYE: San Alejo y Santa Rufina forman, juntos, uno
+  de los doce partidos del departamento segun A.12. Regla §5.1,
+  anillo 2, mas el identificador de lugar de §5.3.
+MODO DE LECTURA: capa de texto de las dos versiones; el fallo se
+  ubico por las coordenadas de la capa de texto y se leyo el
+  encabezado en la imagen de la tapa (montaje de franja). El
+  cuerpo del fallo NO se transcribio: no nombra el
+  departamento.
+NOTA DE LECTURA: el fallo no dice en que departamento estan las
+  fincas. Que sean las del partido de A.12 es coherente con el
+  nombre y con la Oficina Topografica, pero NO se afirma: es
+  homonimia posible. Firman A. M. Ovejero—Ricardo P. Figueroa—
+  Flavio Arias, «Ante mi— Santos 2º Mendoza».
+
+
+B.2
+FUENTE: edicion N° 131, hoja 1.
+FICHA: pleito en que se alega que una ley de 1908 lesiona
+  derechos de propiedad sobre el caudal de agua del rio
+  Mojotoro, porque al hacerse efectiva la ley ese caudal
+  disminuira.
+POR QUE SE INCLUYE: Mojotoro es anillo 2 y, como «Bandera
+  Angosta y estacion Mojotoro», partido del departamento (A.12).
+  Regla §5.1.
+MODO DE LECTURA: capa de texto de las dos versiones. No se
+  transcribio desde la imagen.
+NOTA DE LECTURA: el rio Mojotoro corre por mas de un
+  departamento y la pieza no dice cual. No se afirma que el
+  tramo en disputa sea el del departamento.
+
+
+B.3
+FUENTE: edicion N° 186, hoja 1, columna 3. Tapa: ANO II, SALTA,
+  Setiembre 7 de 1910, NUM. 186.
+FICHA: causa contra Secundino Astigueta por defraudacion a Jose
+  Carrillo. Salta, Agosto 1º de 1910.
+POR QUE SE INCLUYE: el procesado esta domiciliado en Vaqueros,
+  partido del departamento (A.12). Regla §5.1, anillo 2.
+MODO DE LECTURA: 300 dpi gris, columna 3, banda alrededor del
+  62 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    defraudacion a Jose Carrillo.
+    Salta, Agosto 1º de 1910.
+    Y VISTOS:—En la causa criminal se-
+    guida a Secundino Astigueta, sin apodo,
+    de 54 años de edad, soltero, jornalero,
+    argentino, domiciliado en Vaqueros, acu-
+    sado por defraudacion a Jose Carrillo, y
+    CONSIDERANDO:
+    1º Que por confesion del procesado
+    y demas constancias de autos, resulta
+    plenamente comprobado el delito de de-
+    fraudacion cometido por el acusado Se-
+    cundino Astigueta a don Jose Carrillo.
+NOTA DE LECTURA: el fallo no nombra el departamento. Vaqueros
+  es tambien nombre de rio y de finca; en este corpus el unico
+  Vaqueros con partido y comisario es el del departamento
+  (A.12), pero el fallo no lo dice y no se afirma.
+
+
+B.4
+FUENTE: edicion N° 198, hoja 3, columna 2. Tapa: ANO III, SALTA,
+  Octubre 19 de 1910, NUM. 198.
+FICHA: decreto que acepta la renuncia de Antonio Maglioni al
+  cargo de comisario auxiliar de policia de la Estacion Mojotoro
+  y nombra en su lugar a Benjamin Lopez.
+POR QUE SE INCLUYE: es la continuacion directa de A.12 —
+  Maglioni es el comisario que aquel decreto nombro para
+  «Bandera Angosta y estacion Mojotoro»— y ademas cae en la
+  formula de reemplazo del config. Reglas §5.1 y §15.1.
+MODO DE LECTURA: 300 dpi gris, columna 2, banda alrededor del
+  33 % del alto por coordenadas de la capa de texto, escala 0,8.
+TEXTO:
+    Habiendose aceptado la renuncia pre-
+    sentada por el señor Antonio Maglioni
+    del cargo de comisario auxiliar de po-
+    licia de la Estacion Mojotoro y de
+    acuerdo con la propuesta presentada
+    por el señor Jefe de Policia—
+    El Poder Ejecutivo de la Provincia
+    DECRETA:
+    Art. 1º Nombrase comisario auxiliar
+    de policia de la referida Estacion al se-
+    ñor Benjamin Lopez.
+    Art. 2º Comuniquese, publiquese y
+    dese al R. Oficial,
+NOTA DE LECTURA: el decreto llama al partido «Estacion
+  Mojotoro» a secas, sin «Bandera Angosta» y sin nombrar el
+  departamento. La formula de encabezado es «El Poder Ejecutivo
+  de la Provincia», escrita entera, y no la abreviada «El P.
+  Ejecutivo» del resto del año: ver E.4. Benjamin Lopez es un
+  apellido y nombre muy frecuentes en el corpus (225 hojas), de
+  modo que no se afirma que sea el mismo Benjamin Lopez de otros
+  actos.
+
+
+AUSENCIAS DEL ANILLO DE ACTORES
+
+Se buscaron por apellido suelto, sobre las dos versiones, los 53
+actores de la epoca que trae el config y los 41 nuevos de este
+año. Lo que se puede afirmar, con dos identificadores cada vez:
+
+  — Fernando Benitez, miembro de la Comision Municipal designado
+    el 31 de diciembre (A.21), NO aparece en ningun otro acto de
+    1910. Identificadores: organismo (Comision Municipal del
+    departamento) y persona. El apellido Benitez si aparece en
+    otras hojas, siempre con otro nombre (Belisario Benitez, en
+    la insaculacion de 128 h1).
+  — Guillermo Wolton, comisario auxiliar de La Despensa (A.13),
+    NO aparece en ningun otro acto de 1910. Identificadores:
+    lugar (partido de La Despensa) y organismo (comisaria de
+    partido).
+  — Zacarias Maidana (Potrero de Castillo), Silverio Caseres
+    (Potrero de Gallinato), Abraham Hernandez (Potrero de
+    Valencia), Virgilio Arevalo (Angostura de Arias de los
+    Sauces) y Victorino Viveros (Yacones) aparecen una sola vez,
+    en A.12, y no vuelven. Identificadores: lugar y organismo.
+  — Antonio Maglioni aparece dos veces y solo dos: nombrado en
+    junio (A.12) y renunciante en octubre (B.4).
+  — Teodoro Reyes (Porongos) aparece ademas en 145 h2 y en otras
+    17 hojas, pero el apellido Reyes es frecuente y los
+    contextos no permiten afirmar que sea la misma persona: no
+    se afirma.
+  — Los que si recorren el año son Escolastico Aparicio (A.9,
+    A.10, A.18 y A.21, cuatro cargos distintos), Jacinto Guerrero
+    (A.2, A.3, A.12, A.13), Angel Fernandez (A.2, A.3, A.12,
+    A.21), Abelardo Figueroa (A.2, A.3, A.9, A.20), Augusto
+    Regis (A.3, A.21), Adolfo Vidal (A.2, A.21) y Daniel Linares
+    (A.3, A.20).
+
+No se declara ninguna otra ausencia: sin numeracion de actos y
+sin informes LEE anteriores a mano, los identificadores
+disponibles no alcanzan para afirmar mas.
+
+
+----------------------------------------------------------------
+§C · LIMITROFES
+----------------------------------------------------------------
+
+Sin ficha propia este año. Los departamentos y distritos vecinos
+aparecen siempre en listas generales (comisarios, jurados,
+comisiones municipales, mesas electorales) donde el
+departamento figura como una entrada mas; esas listas ya estan
+transcriptas en el §A y no se duplican aqui. Jujuy aparece una
+vez, en A.3, como destino del camino nacional que el decreto
+manda defender.
+
+
+----------------------------------------------------------------
+§P · PLANOS
+----------------------------------------------------------------
+
+El corpus no tiene planos. Se verifico con PyMuPDF: cada hoja
+lleva una sola imagen incrustada, que es la pagina entera
+escaneada, mas algunos sellos o marcas chicas de 110 a 135 px;
+no hay imagenes vectoriales ni raster separadas que puedan ser
+un plano. Techo de resolucion declarado: la imagen incrustada
+mide de 327 a 357 ppi y el rasterizado de trabajo fue de 300
+dpi.
+
+Lo mas cercano a un plano es lo que los edictos describen con
+palabras: los linderos de «Los Porongos» (A.7) y de «Loma Bola»
+(A.16), y la mencion, en B.1, de un original «sin plano de la
+Oficina Topografica» — es decir, un plano que el propio fallo
+discute y que no se publica.
+
+
+----------------------------------------------------------------
+§D · INDICE
+----------------------------------------------------------------
+
+Menciones del termino, por edicion y hoja:
+
+  127 h2  A.1    causa Gonzalez / Robles (Lesser, Yacones)
+  128 h2  A.2    insaculacion, 1ª serie del departamento
+  130 h4  A.3    decreto del rio, dos mil pesos
+  131 h4  A.4    convocatoria a elecciones (dos menciones)
+  136 h3  A.5    sitios de mesa, seccion Caldera
+  140 h2  A.6    causa Miranda / Herrera
+  140 h4  A.7    edicto «Los Porongos» (repetido en 190 h4)
+  145 h2  A.8    causa Pascual Copa
+  146 h3  A.9    Comision Municipal, entra Aparicio
+  148 h3  A.10   comisarios de departamento, abril
+  150 h1  A.11   causa Gomez / Rodriguez (Mojotoro)
+  161 h3  A.12   comisarios de partido, doce partidos
+  161 h4  A.12   (sigue)
+  171 h3  A.13   comisarias de Lesser y La Despensa; judicatura
+  174 h4  A.14   remate Catacata, Potrero de Castillo
+  178 h3  A.15   edificio de la comisaria (dos menciones)
+  189 h4  A.16   edicto «Loma Bola»
+  190 h4  A.7    repeticion del edicto «Los Porongos»
+  200 h1  A.17   causa Ortega, finca de Rauch en La Calderilla
+  214 h3  A.18   comisionados de empadronamiento
+  215 h2  A.19   causa Maximo Ramos (dos menciones)
+  217 h4  A.20   jurados de patentes
+  219 h3  A.21   comisarios y Comision Municipal de fin de año
+
+Vecindad: 121 h1 (B.1), 131 h1 (B.2), 186 h1 (B.3), 198 h3
+(B.4).
+
+MESES SIN NINGUNA MENCION DEL TERMINO: mayo (ediciones 153 a
+158) y noviembre (202 a 210). En los dos casos la ausencia se
+declara con los identificadores de §5.3: ningun partido del
+departamento, ninguno de los actores del año y ninguno de sus
+organismos (comision municipal, juzgado de paz, comisaria de
+departamento o de partido) aparece en esas ediciones en un acto
+propio. El mes con mas menciones es diciembre: cuatro entradas
+del §A en cuatro ediciones distintas.
+
+
+----------------------------------------------------------------
+§E · OBSERVACIONES
+----------------------------------------------------------------
+
+E.1 · DUPLICACION Y SALDOS
+
+Duplicacion. Sin las .jpg del script no hay md5 ni dhash de §6
+nivel 1 y 2 tal como los hace lee_auto.py. En su lugar se saco
+el md5 de la imagen incrustada de cada una de las 392 hojas,
+directamente del PDF, que es la misma imagen que el script
+habria hasheado: CERO repeticiones. Ninguna hoja esta dos veces
+en el corpus. El nivel 2 (dhash, pares a distancia <= 16) no se
+corrio; la duplicacion de contenido se controlo por texto y esta
+en E.6.
+
+Tinta. Medida a 72 dpi sobre las 392 hojas. Ninguna por debajo
+del 0,5 %: no hay hojas en blanco. Dos por debajo del 5 %:
+128 h4 (3,94 %) y 162 h1 (1,38 %). Las dos se miraron. La
+segunda es el aviso del repositorio, no una hoja del Boletin.
+
+Saldos. El año NO tiene serie mensual de Tesoreria. Hay tres
+estados de ingresos y egresos, todos firmados por Juan E.
+Velarde: junio (179 h4), julio (180 h4) y octubre (206 h2-h3).
+No hay ningun balance municipal del departamento de La Caldera
+en todo el año, ni resumen de la Comision Municipal.
+
+Cadena de saldos, con lo que el corpus permite:
+
+  saldo de mayo           $  18.767,—    abre el estado de junio
+  existencia de junio     $  27.690,70   cierra junio
+  «A Saldo de Junio»      $  27.690,70   abre julio — ENCADENA
+  existencia para agosto  $  66.653,30   cierra julio
+  [no hay estados de agosto ni de setiembre]
+  saldo de setiembre      $  65.923,41   abre octubre
+  existencia al 31/X      $  90.858,48   cierra octubre
+  [no hay estados de noviembre ni de diciembre]
+
+La cadena tiene dos cortes, julio-octubre y octubre-fin de año.
+No se infiere nada sobre los meses faltantes ni sobre la
+diferencia entre 66.653,30 y 65.923,41: son de meses distintos y
+en el medio hay dos meses sin publicar.
+
+
+E.2 · COBERTURA
+
+Hojas del corpus: 392, de las que 391 son hojas del Boletin.
+Todas tienen las dos versiones de texto.
+
+Hojas miradas con los ojos, enumeradas:
+  121 h1, 127 h1, 127 h2, 128 h2, 128 h4, 130 h4, 131 h4,
+  136 h3, 140 h2, 140 h4, 145 h2, 145 h4, 146 h1, 146 h2,
+  146 h3, 148 h3, 150 h1, 157 h1, 157 h2, 157 h3, 158 h1,
+  158 h2, 158 h4, 161 h3, 161 h4, 162 h1, 171 h3, 174 h4,
+  178 h3, 179 h4, 180 h4, 182 h2, 186 h1, 189 h4, 190 h4,
+  194 h4, 198 h3, 200 h1, 206 h2, 206 h3, 207 h4, 208 h1,
+  213 h2, 214 h3, 215 h2, 217 h4, 219 h3.
+  Total: 47 hojas.
+Ademas se leyeron en la imagen las franjas de cabecera de 36
+tapas (27 ilegibles mas 9 dudosas), que no cuentan como hoja
+mirada entera.
+
+Cruces hechos: cada nombre del §A contra el resto del corpus por
+apellido; cada topónimo del anillo 2 contra las 392 hojas; los
+40 numeros arrastrados de 1946 (ninguno aparece); las ocho
+formulas de reemplazo del config, que dieron el acto de B.4.
+
+DESTINOS. El script no reporto destinos y la sesion no los
+reconstruyo: los actos de 1910 no llevan numero y no hay
+sumario, de modo que no hay a que enganchar un destino. Se
+declara como no hecho.
+
+CITADOS Y NO ACOMPAÑADOS. Tres, los tres buscados en el corpus
+antes de listarlos:
+  — El contrato ad referendum con Moises Vera por el edificio de
+    la comisaria (A.15). Se aprueba pero no se publica. Buscado
+    por «Vera», «ad referendum» y «Obras Publicas» en las 392
+    hojas: no esta.
+  — Las ternas de la Comision Municipal para la judicatura
+    (A.13). Se resuelven pero no se publican. Buscadas por
+    «terna» y por los nombres: no estan.
+  — Las propuestas del comisario del departamento para las
+    comisarias de partido (A.12 y A.13). Se citan dos veces y no
+    se publican.
+  Un cuarto caso, distinto: la ley que segun B.2 lesiona
+  derechos sobre el caudal del rio Mojotoro se cita como «ley de
+  1908» y cae fuera del corpus, que empieza en 1910.
+
+
+E.3 · SIN MENCION Y NO MIRADO
+
+Ediciones sin ninguna mencion del termino ni de un partido del
+departamento: todas las que no figuran en el §D. En particular,
+mayo (153 a 158) y noviembre (202 a 210) no tienen ninguna
+entrada de §A ni de §B. Se reviso uno por uno cada acierto de
+apellido de la lista de actores en esas dos tandas: todos
+corresponden a otras personas (el gobernador Figueroa y otros
+Figueroa, Nicolas Arias Murua, Samuel y Narciso Aparicio, Luis
+Molina, Alberto Burgos) o a otros departamentos. La ausencia se
+declara con dos identificadores: lugar (ningun partido) y
+organismo (ninguna comision municipal, comisaria ni juzgado de
+paz del departamento).
+
+LO QUE FALTA MIRAR, enumerado:
+
+  1. Diecinueve de las veintinueve hojas «a ojos»: 129 h2,
+     130 h1, 132 h2, 132 h4, 134 h1, 134 h2, 135 h2, 139 h1,
+     140 h3, 141 h1, 141 h2, 155 h2, 155 h3, 182 h3, 184 h4,
+     185 h4, 195 h1, 195 h4, 208 h4. Las once restantes se
+     miraron. Es un desvio de §4.8, declarado tambien en §0.
+     Las diecinueve tienen densidad de texto normal en las dos
+     versiones (de 5.800 a 10.400 bytes) y ninguna quedo marcada
+     por las cuatro pasadas; eso no reemplaza mirarlas.
+  2. La hoja 4 de la edicion N° 157 esta AUSENTE. El folio
+     impreso lo prueba: 157 h3 = 644 y 158 h2 = 647, con
+     158 h1 = 646, de modo que el 645 no esta. Confirmado con
+     los ojos.
+  3. La edicion N° 162 esta AUSENTE. El archivo que ocupa su
+     lugar es un aviso del repositorio.
+  4. Otros tres cortes de la paginacion corrida, donde falta un
+     folio y NO se confirmo con los ojos: entre 145 h4 (596) y
+     146 h2 (599); entre 196 h4 (801) y 197 h2 (804); y entre
+     207 h2 (843) y 208 h2 (848). Descansan en la capa de texto.
+  5. La «Nota demostrativa de la renta calculada y recaudado al
+     31 de Octubre» de Contaduria General, en 206 h3.
+  6. El cuerpo de los fallos y decretos del §A por debajo de la
+     parte transcripta, cuando el acto sigue y no nombra otra
+     vez el departamento.
+
+
+E.4 · FIRMAS Y AUTORIDAD
+
+El año tiene DOS gobernadores firmando, y el corte es nitido:
+
+  LINARES, desde la edicion N° 121 (5 de enero) hasta la N° 136
+    (2 de marzo). Ministros que refrendan: DAVID ZAMBRANO
+    (hijo) y JUAN MARTIN LEGUIZAMON. En los acuerdos de
+    ministros firman los dos. Sub-secretario que da fe:
+    «Conforme— C. M. Serrey, S. S.» en unos actos y «Es copia—
+    Jose M. Outes, S. S.» en otros.
+  FIGUEROA, desde la N° 137 (5 de marzo) hasta la N° 219 (31 de
+    diciembre). Ministros: R. PATRON COSTAS y RICARDO ARAOZ.
+    «Es copia— Jose M. Outes, S. S.» en todo el tramo.
+
+El decreto del rio (A.3) es de LINARES, en acuerdo de ministros,
+fechado el 21 de enero. Todos los demas actos del §A que llevan
+firma son de FIGUEROA.
+
+CUIDADO CON UNA FIRMA REPETIDA: «LINARES / SANTIAGO M. LOPEZ» NO
+es el gobernador de 1910 firmando tarde. Es el pie de la Ley de
+creacion del Boletin, sancionada el 10 de agosto de 1908 y
+promulgada el 14 de agosto de 1908, que se reimprime en quince
+hojas a lo largo del año (ver E.6). Quien lea el texto plano sin
+mirar la fecha puede creer que Linares sigue firmando en
+noviembre: no es asi.
+
+FORMULAS DE ENCABEZADO, tal como aparecen:
+  «El P. Ejecutivo de la Provincia» — la habitual.
+  «El P. Ejecutivo de la Provincia en acuerdo de ministros» —
+    A.3.
+  «El Gobernador de la Provincia» — A.10.
+  «El Poder Ejecutivo de la Provincia», escrito entero — B.4.
+No se interpreta que esas cuatro formulas signifiquen cosas
+distintas: se registran como estan.
+
+INTERINATOS. No se hallo en el corpus ningun decreto que abra o
+cierre un interinato del gobernador. El pre-informe conto dos
+apariciones de la formula «encargase interinamente» (146 y 216)
+y una de «ausencia del titular» (154); las tres se leyeron en el
+texto y son interinatos de ministerios, no de la gobernacion
+(«encargase interinamente del despacho de esta cartera al señor
+ministro de hacienda»). No se fija ninguna fecha de reintegro.
+
+
+E.5 · CORTES Y COLUMNAS
+
+Marca de corte U+0002: no existe en este corpus, ni en la capa
+previa ni en el OCR propio. Es la tercera epoca seguida en que
+no aparece; solo 1946 la tenia.
+
+Guion blando U+00AD: 15.340 en la capa previa, cero en el OCR
+propio. Sin quitarlo, «Cal-dera» no se une y la mencion se
+pierde. Es lo que v13 corrigio.
+
+Cortes con puntuacion intercalada: 2.017 en la previa y 3.122 en
+la propia.
+
+COLUMNA PERDIDA: DESCARTADA, y confirmada con la imagen. La hoja
+de control fue 161 h3, elegida porque su texto termina a media
+palabra («de La Caldera pa-») en las dos versiones, que es
+justamente la señal de columna perdida. Se rasterizo a 300 dpi,
+se detectaron los cortes de columna por proyeccion vertical
+(x = 917 y x = 1.692 sobre 2.605 px de ancho) y se leyo el pie
+de la columna 3 renglon por renglon: el texto de la hoja termina
+ahi y sigue en 161 h4. Es corte de hoja, no de columna. Las tres
+columnas estan enteras en las dos versiones.
+
+En esa misma hoja aparecio una discrepancia entre versiones: la
+capa previa imprime «Robustmno» donde la pagina dice
+«Robustiano». Desempate por imagen, como manda §8.16.
+
+En 150 h1 el recorte por columna corto letras a la derecha y se
+rehizo con banda absoluta; el corte era del recorte, no del
+original (§8.2).
+
+
+E.6 · REPETICIONES
+
+  — La Ley de creacion del Boletin Oficial (sancionada el 10 de
+    agosto de 1908, promulgada el 14) se reimprime en quince
+    hojas: 121 h4, 122 h4, 123 h4, 126 h4, 133 h4, 146 h4,
+    149 h4, 172 h1, 175 h1, 176 h4, 190 h4, 201 h4, 202 h4,
+    210 h1 y 210 h4. Con ella se reimprime la Tarifa del
+    Boletin («Pago adelantado»). Firman LINARES y SANTIAGO M.
+    LOPEZ, con fecha de 1908.
+  — El edicto de deslinde de «Los Porongos» se publica dos
+    veces, en 140 h4 y en 190 h4 (A.7). Un solo aviso, una sola
+    entrada del §A.
+  — Los edictos de remate y de sucesion se repiten a lo largo de
+    los treinta dias de publicacion que ellos mismos ordenan;
+    ninguno de los repetidos nombra el departamento fuera de
+    A.7.
+
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+
+FALSOS POSITIVOS DEL ANILLO 1. Diecisiete, todos revisados. Uno
+confirmado en la imagen, el resto juzgado por el contexto en las
+dos versiones:
+  158 h4 — «dro Calderon», es decir Pedro Calderon, lindero de
+    un campo junto a Beltran Arroyo y Rogelio Gamberale.
+    CONFIRMADO EN LA IMAGEN.
+  163 h4 — el mismo Pedro Calderon, el mismo campo.
+  174 h1 — Pedro Calderon, comisario auxiliar muerto de un
+    balazo en el Cuarteadero (Rosario de la Frontera); ocho
+    apariciones en la hoja.
+  210 h2 — «los señores Calderon y Vaca», arrendatarios de
+    bosques.
+  128 h2 — Celso Calderon, en la insaculacion.
+  128 h1 — «Ricaldo Orihuela», nombre de la insaculacion.
+  128 h3 — «Juan Caldoso», idem.
+  173 h4 — «Angel Caldas», apellido, en un decreto de
+    nombramiento.
+  139 h4 — «habia caldo», por «caido», en un fallo.
+  185 h1 — «los alcaldes», en una cita de una obra sobre el
+    Codigo Civil.
+  197 h4 — «collero», artefacto de la pasada laxa.
+  Difusa: 138 h4 «calabera»; 153 h2 «caderia»; 157 h2 «cadera»
+    (anatomica: herida en la punta de la cadera); 181 h4 y
+    200 h4 «escalera»; 188 h1 «caderado»; 196 h3 «calavera»;
+    198 h3 «carlerma»; 203 h4 «caladora»; 208 h3 y 213 h2
+    «caderias», por «mercaderias».
+
+DIFUSA AMPLIADA (0,70 a 0,78). 44 formas distintas. Dos son
+reales y estan en el §A: «calderas» (0,78, 130 h4) y «calileraj»
+(0,75, 140 h2). Las 42 restantes son ruido y se descartan aqui
+en bloque: cadillal, cadillar, caderias, cuadra, cadena, caldas,
+cedera, cabera, chalde, cortadera, cadera, galnadera,
+capdevila, cada, cara, caer, cale, cala, clea, calidad,
+cabrera, cuadrar, calleas, galeras, cualquiera, cuadras,
+callara, cadaver, calille, casilla, caseras, cartera, cjrilla,
+candela, cadenas, carrera, capilla, cortaderas, clerard,
+carbera, cortadella, cerillarea.
+
+FALSOS POSITIVOS DEL ANILLO 2, juzgados por contexto:
+  castellanos, isasmendi, wierna, quintin, murua — apellidos
+    (Benjamin Castellanos, Jose Isasmendi, Norberto Wierna,
+    Quintin Gutierrez, Nicolas Arias Murua).
+  nogales — finca en Campo Santo y paraje en Anta.
+  el cajon — «el cajon del mostrador» y el rio del Cajon, en
+    otro departamento.
+  manzano — finca «El Manzano», en un juicio sucesorio.
+  lagunilla — partido de la jurisdiccion de la capital, con su
+    propio comisario auxiliar (200 h2).
+  durazno — «Pozo del Durazno», sobre el rio Yatasto, y plantas
+    de duraznos en una tasacion.
+  chaile — apellido (Milagro Chaile de Prieto).
+  betania — finca lindera de otra, con Juan Urrestarazu.
+  rio blanco — finca «Yutu-Yaco o Rio Blanco» y partido de otro
+    departamento (188 h4).
+  angostura — «Angostura de Itaque» y la finca «Angostura» de
+    Felicidad de Uriburu, en San Carlos.
+  campo alegre — en 186 h3, dentro de una lista de expendedores
+    de guias de otro departamento.
+  trancas, entre rios — sin relacion con el departamento.
+
+FALSOS NEGATIVOS DEL SCRIPT. Dos menciones reales que el
+pre-informe no trae: 145 h2 (A.8) y 146 h3 (A.9). Las dos las
+encontro la busqueda propia de la sesion con la union de cortes
+corregida. En A.8 el original imprime «de  l a Cal-dera» con
+espacios dentro del articulo; en A.9 el corte «Cal-/dera» va con
+guion blando.
+
+FALSO POSITIVO DE OTRA BUSQUEDA. Rastrear asuetos por la palabra
+«adhiere» no sirve en este corpus: aparece en 84 ediciones, casi
+siempre en «los demas Vocales adhieren al voto anterior».
+
+LO QUE EL PRE-INFORME LEYO MAL POR SER DE v11. Las tapas: el
+script busca el formato de 1946 y por eso dio «¿fecha?» en las
+99 ediciones, «None» en paginas declaradas y numeros de tapa
+absurdos (1988, 1901, 1208, 1887, 1850, 1986, 1879, 1890, 1828,
+1883), que son fechas o cifras del cuerpo, no numeros de
+edicion. Y el cotejo sumario/cuerpo: ver E.10.
+
+
+E.8 · FIDELIDAD NUMERICA
+
+CIFRAS RELEIDAS Y RESUELTAS:
+  206 h2, Receptoria General de octubre, quinta partida
+    (Multas). Primera lectura 3.683,02; con ella el subtotal
+    fallaba por 50,00 exactos. Releida al 300 % dice 3.633,02, y
+    con esa cifra el subtotal cierra. Es el caso 3/8 que §4.1
+    anticipa. Se transcribe 3.633,02 y se declara la relectura.
+  130 h4, fecha del decreto del rio. Primera lectura, sobre un
+    recorte al 0,85: «Enero 21 de 1919». Releida al 220 % dice
+    «Enero 21 de 1910», que es lo coherente con una edicion del
+    5 de febrero de 1910. El error fue del recorte de la sesion,
+    no del original: no es errata del Boletin.
+
+LO QUE NO CIERRA Y NO SE CORRIGE:
+  180 h4, Receptoria General de julio. El subtotal impreso dice
+    $ 105.674,80. Las diez partidas que lo preceden —32.202,45;
+    10.910,94; 12.948,15; 1.004,94; 1.814,50; 7.307,—;
+    3.335,93; 150,—; 263,—; 28.734,34— suman $ 98.671,25. La
+    diferencia es de $ 7.003,55. Las diez cifras se releyeron al
+    200 % y son las que estan escritas. Se probo contra los
+    cuadros vecinos: el de junio y el de octubre cierran exactos
+    en los dos lados, de modo que el modo de sumar de la
+    Receptoria es el esperado. No se corrige y no se elige entre
+    las dos explicaciones posibles (errata del subtotal o
+    partida no impresa).
+
+TABLAS RECALCULADAS ENTERAS (3):
+  179 h4, estado de junio. Ingresos $ 208.337,85: recalculado,
+    cierra exacto. Egresos $ 208.337,85: recalculado, cierra
+    exacto. Subtotales de Receptoria (77.192,90) y de Banco
+    Provincial mas Plaza Guemes (97.950,—): los dos cierran.
+  180 h4, estado de julio. Egresos $ 194.374,88: recalculado,
+    cierra exacto, con el subtotal de deuda liquidada
+    (70.625,61). Ingresos: el subtotal de Receptoria no cierra
+    (arriba); el total del mes no se recalculo entero porque las
+    partidas entre «Eventuales» y el total no se miraron.
+  206 h2-h3, resumen de caja al 31 de octubre. Ingresos
+    $ 223.895,78: recalculado, cierra exacto. Egresos
+    $ 223.895,78: recalculado, cierra exacto, incluida la
+    existencia final de 90.858,48, que se obtuvo por diferencia
+    y coincide con la cifra impresa.
+
+TABLAS NO RECALCULADAS, con hoja y criterio:
+  213 h2, tarifa anual de patentes. Lista larga de rubros con
+    importes y sin total. Criterio: no nombra el termino, ni el
+    anillo 2, ni un actor, y no esta dentro de un decreto del §A
+    ni del §B. Fuera del alcance de §4.1.
+  206 h3, «Nota demostrativa de la renta calculada y recaudado
+    al 31 de Octubre», de Contaduria General. Criterio: no se
+    miro (E.3).
+  158 h4 y las otras catorce hojas con la Tarifa del Boletin.
+    Criterio: es la misma tarifa reimpresa, sin total, y fuera
+    del alcance.
+
+OTRAS CIFRAS DEL §A, todas leidas en la pagina:
+  A.3: dos mil pesos.
+  A.17: ciento cincuenta pesos m/n.
+  A.14: el remate es «sin base» y no trae cifra ni cuadro de
+    cabezas.
+  A.15: el decreto no dice monto.
+
+
+E.9 · CONTRADICCIONES
+
+  1. A.13. Dos decretos en la misma hoja: el de las comisarias
+     de Lesser y La Despensa esta fechado «Salta, Julio 6 de
+     1910» y el de la judicatura «Salta Junio 6 de 1910». La
+     edicion es del 16 de julio. Los dos se transcriben como se
+     leen. No se elige cual de las dos fechas es la errata.
+  2. A.13. El decreto de la judicatura salta del Art. 1º al Art.
+     3º, sin Art. 2º.
+  3. A.15. El decreto del edificio de la comisaria salta del
+     Art. 1º al Art. 5º.
+  4. A.13. El epigrafe dice «los partidos de Lesser y Despensa»
+     y el articulo «el partido de La Despensa».
+  5. A.18 y A.21. El mismo hombre se imprime «Escolastico M.
+     Aparicio», «Escolastico Aparicio» y «Escolastino Aparicio».
+     No se unifica.
+  6. A.2 y A.3. «Silvano Muraa» y «Silvano Murua».
+  7. A.20. «a contar desde el 1º de Enero de Febrero
+     respectivamente», donde falta el segundo «y del 1º».
+  8. Ninguna serie numerica repetida: los actos no llevan
+     numero, de modo que el nivel 3 de §6 no tiene sobre que
+     operar.
+
+
+E.10 · LIMITES
+
+  1. COTEJO SUMARIO/CUERPO: NO APLICABLE, todo el año. Las
+     ediciones de 1910 no traen sumario con puntos guia. El
+     script informo «discrepancias: 0», que es el resultado de
+     no haber controlado nada, tal como v13 previene. En su
+     lugar se uso el control que este corpus si permite: la
+     paginacion corrida (E.3 y §1).
+  2. REGLA 15 (fecha contra numeracion): NO SE APLICA. Los actos
+     de 1910 no llevan numero. El decretos_1910.csv esta vacio.
+     No se mide regimen de numeracion y no se hereda ninguno.
+  3. No hay recortes del script, ni .jpg, ni .prop.tsv, ni
+     «salidas txt», ni informes LEE anteriores (§0).
+  4. No hay tercera lectura: el desempate fue siempre la imagen.
+  5. Los umbrales de confianza de §3 no sirven para esta
+     tipografia (§1).
+  6. El techo de trabajo fue 300 dpi, por debajo del techo real
+     de la imagen incrustada (327 a 357 ppi). Para cualquier
+     cifra dudosa eso basto, como muestran las dos relecturas de
+     E.8.
+  7. Diecinueve hojas «a ojos» sin mirar (§0 y E.3).
+
+
+----------------------------------------------------------------
+§F · CORRECCION A LA RUBRICA
+----------------------------------------------------------------
+
+F.1 · LA ESCALA DEL RECORTE ES UNA FUENTE DE ERROR, Y HAY QUE
+DECLARARLA JUNTO CON EL DPI. §4 fija el dpi del rasterizado y el
+modo de apilar, pero no dice nada sobre la escala a la que se
+guarda el recorte. En este barrido una fecha leida sobre un
+recorte al 0,85 dio «1919» y al 220 % dio «1910» (E.8). El dpi
+era el mismo. Propuesta para v14: toda cifra que vaya a citarse
+se recorta al 200 % o mas, y el modo de lectura declara la
+escala del recorte ademas del dpi. Lo que se lee al 0,8 sirve
+para ubicar y para prosa, no para cifras ni fechas.
+
+F.2 · CUANDO EL CORPUS NO TIENE SUMARIO, EL CONTROL ES EL FOLIO,
+Y CONVIENE DECIRLO COMO PROCEDIMIENTO. §2.5bis v13 ya dice que
+en 1908-1909 el control es la paginacion corrida. Este año
+muestra como usarla de verdad y cuanto rinde: el folio impreso
+esta en las hojas 2 a 4, se saca de la capa de texto con
+coordenadas, y comparando cada folio con el anterior aparecen a
+la vez las ediciones faltantes (N° 162), las hojas faltantes
+(157 h4) y las lecturas erroneas de la propia capa. Propuesta
+para v14: incorporar como paso fijo de la primera tanda
+«reconstruir la cadena de folios y listar sus cortes», con la
+advertencia de que un corte de un solo folio puede ser error de
+lectura y hay que confirmarlo en la imagen antes de declararlo
+pagina faltante.
+
+F.3 · LA LISTA DE PARTIDOS DEL DEPARTAMENTO ES UN HALLAZGO
+REUTILIZABLE, NO SOLO UNA FICHA. A.12 trae los doce partidos
+enumerados por el Poder Ejecutivo. Eso convierte el anillo 2, en
+esta epoca, de hipotesis de vocabulario en lista cerrada
+verificable, y da el criterio para decidir que topónimo entra al
+config y cual no (por eso quedaron fuera «el rosal» y «perico»).
+Propuesta para v14: cuando aparezca un acto que enumere los
+partidos de un departamento, se lo marca como ACTO DE REFERENCIA
+y su lista pasa entera al anillo 2, con el año del acto como
+origen.
+
+F.4 · UN ARCHIVO PUEDE NO SER UNA EDICION. El 162.pdf no es el
+Boletin N° 162: es una hoja del repositorio que avisa que el
+boletin no se encontro. Ninguna regla de la rubrica prevee este
+caso, y el script lo conto como edicion de una hoja. Propuesta
+para v14: en el paso de «file» y conteo de hojas, marcar como
+sospechoso todo archivo de una sola hoja o con menos de 2 % de
+tinta, y mirarlo antes de contarlo en el corpus.
+
+F.5 · CONVIENE SEPARAR «FIRMA DE ESTE AÑO» DE «FIRMA
+REIMPRESA». En este corpus la Ley de creacion del Boletin, de
+1908, se reimprime en quince hojas con la firma LINARES /
+SANTIAGO M. LOPEZ, y el gobernador de enero y febrero de 1910
+tambien se llama LINARES pero firma con otros ministros. Leido
+en texto plano, eso hace parecer que el mismo gobernador firma
+en noviembre. Propuesta para v14: al registrar la autoridad,
+anotar siempre la fecha del acto junto al firmante, y tratar
+como pieza aparte todo texto que se repita en mas de tres hojas
+del año.
+
+
+----------------------------------------------------------------
+RECUENTO
+----------------------------------------------------------------
+
+ARCHIVOS Y EDICIONES
+  Archivos PDF bajados del Release y verificados:        99
+  Archivos que son ediciones del Boletin:                98
+  Archivos que no lo son (aviso del repositorio):         1
+  Ediciones presentes:      N° 121 a 219, menos la 162
+  Ediciones ausentes:                                     1 (162)
+
+HOJAS
+  Hojas en los archivos:                                392
+  Hojas del Boletin:                                    391
+  Hojas declaradas: no hay declaracion de paginas en
+    esta epoca; el control es el folio impreso
+  Hojas ausentes probadas por el folio:                   1 (157 h4)
+  Otros cortes de un folio, sin confirmar en imagen:      3
+  Hojas en blanco (< 0,5 % de tinta):                     0
+  Hojas con menos del 5 % de tinta:                       2
+  Hojas duplicadas (md5 de imagen):                       0
+
+CONFIANZA DEL OCR PROPIO (umbrales de §3, que no sirven aqui)
+  Media:                                               80,1
+  Publicables:                                            1
+  A verificar:                                          362
+  A ojos:                                                29
+
+HOJAS MIRADAS CON LOS OJOS
+  Total:                                                 47
+  De ellas, hojas «a ojos»:                       11 de 29
+  Franjas de cabecera de tapa leidas en imagen:          36
+
+TAPAS
+  Tapas resueltas por el texto:                          63
+  Tapas leidas en la imagen:                             36
+  Tapas sin resolver:                                     0
+  Ediciones dobles:                                       0
+  Ediciones fuera de miercoles/sabado:       2 (185 y 192)
+  Dias de salida sin edicion:                             8
+  Decretos de feriado hallados:                2 (189, 196)
+  Años editoriales: I (121), II (122-196), III (197-219)
+
+MENCIONES
+  Anillo 1, entradas del §A:                             21
+  Hojas con mencion del anillo 1:                        23
+  Menciones del anillo 1 en total (incluidas las
+    repetidas dentro de una misma pieza):                29
+  De ellas, «La Calderilla»:               3 (A.12, A.17)
+  Entradas del §B (vecindad):                             4
+  Entradas del §C (limitrofes):                           0
+  Menciones que el pre-informe NO trae:                   2
+  Menciones que solo dio la laxa o la difusa:             2
+  Falsos positivos del anillo 1 juzgados:                17
+  Formas descartadas en la difusa ampliada:              42
+
+ANILLO 2 Y ACTORES
+  Terminos del anillo 2 con presencia en el corpus:      32
+  De ellos, juzgados como falsos positivos:              15
+  Partidos del departamento enumerados en A.12:          12
+  Actores nuevos de 1910 para el config:                 41
+  Topónimos nuevos para el anillo 2:                      9
+  Falsos positivos nuevos para el config:   2 (caldas,
+    caldoso)
+  Numeros de acto: los actos de 1910 no llevan numero
+
+TABLAS Y SALDOS
+  Tablas recalculadas enteras:                            3
+  De ellas, las que cierran exactas:            2 y media
+    (junio entero, octubre entero, julio solo egresos)
+  Tablas que no cierran:      1 subtotal (180 h4, julio)
+  Tablas no recalculadas, con criterio declarado:        3
+  Cifras releidas al 200 % o mas:                         2
+  Eslabones de la cadena de saldos verificados:           1
+    (junio a julio)
+  Cortes de la cadena:                                    2
+
+PLANOS
+  Planos en el corpus:                                    0
+  Techo de resolucion de la imagen incrustada:  327-357 ppi
+  Techo de trabajo (rasterizado):                   300 dpi
+
+================================================================
+Fin del informe. Estado: CON PENDIENTES (§0).
+================================================================

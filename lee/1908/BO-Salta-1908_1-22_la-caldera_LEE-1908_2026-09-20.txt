@@ -1,0 +1,687 @@
+================================================================================
+INFORME LEE 1908 · Boletín Oficial de Salta · término: La Caldera
+Ediciones N° 1 a 22, Año I (15 de octubre a 30 de diciembre de 1908)
+Rúbrica LEE v12, modo híbrido · sesión del 20/09/2026 · versión final
+================================================================================
+
+--------------------------------------------------------------------------------
+§0 · ADVERTENCIA PRELIMINAR
+--------------------------------------------------------------------------------
+
+Estado. Reemplaza al informe con pendientes entregado antes en esta misma
+sesión. Después de aquél se subió 1908.zip, que contiene la carpeta
+lee_trabajo\1908 completa: 103 imágenes JPG a 300 dpi, los .prev.txt,
+.prop.txt y .prop.tsv de cada hoja, y un EXTRAIDO.json por edición. Con eso se
+miraron las páginas y se cerró el informe. Los PDF originales no se subieron;
+no hicieron falta para mirar ni para citar.
+
+Invocación. Se escribió «LEE» a secas; el proyecto contiene salidas de
+lee_auto.py de un solo año y el modo conmutó a «LEE 1908» (§0).
+
+Corrida de lee_auto.py (log.txt): 20/09/2026, 09:45:05 a 09:47:54; 22 archivos
+PDF; 103 hojas; OCR de las 103 con 6 procesos en 2 minutos; sin errores ni
+hojas saltadas. El log no da la versión del script (el encabezado del
+pre-informe dice «rúbrica v11»). Parámetros del config: tesseract, modelo spa
+(sin constancia de fast o best), psm 3, 300 dpi.
+
+Config usado: el de la época 1946 (42 actores, 40 números, 37 términos de
+anillo 2, 8 fórmulas de reemplazo, 11 falsos positivos). Actores y números de
+1946 no aplican a 1908 (§5.1); sus 1.055 resultados se tratan en E.7 como capa
+no aplicable. Se entrega config actualizado (§F.9).
+
+Insumos presentes: pre-informe, resultados_1908.csv (1.146 filas),
+decretos_1908.csv (0 filas), log.txt, lee_config.json, 81 recortes sueltos y
+1908.zip. Ausentes: los PDF, salidas txt\1908 y los informes LEE anteriores
+(1946). Sin estos últimos no se hace ninguna remisión a otros años.
+
+Qué verificó la sesión sobre la corrida. Entorno: nproc 1; tesseract sin
+modelo spa (no hizo falta OCR en sesión). Búsqueda propia de «cald» y «calder»
+sobre las dos versiones: coincide exactamente con el pre-informe. Difusa
+propia a 0,72: sólo formas vecinas (escalera, cuadra, cadena, madera,
+cortadera). Tapas: el script no leyó ninguna; se leyeron las 22 en la imagen.
+Cotejo sumario/cuerpo: no aplicable, las ediciones de 1908 no tienen sumario.
+Numeración: los decretos de 1908 no llevan número; decretos_1908.csv vacío es
+correcto. Recortes: 81 archivos que son 30 imágenes distintas (§F.1). dhash: 0
+pares; tinta: ninguna hoja bajo 5 %; aceptados del script.
+
+Modo de lectura. Toda transcripción del §A sale de las imágenes de página a
+300 dpi de lee_trabajo (2.585 a 2.598 px de ancho), recortadas por columna; el
+OCR sólo se usó para ubicar. Techo de resolución: 300 dpi de rasterizado; la
+resolución de la imagen incrustada en los PDF no se midió porque los PDF no se
+subieron (regla 10).
+
+Contexto leído. Al menos las ediciones N° 1, 4, 5, 6, 9, 13, 16, 17, 20 y 22
+traen en la primera hoja la «LEY DE CREACION DEL BOLETIN», sancionada en «Sala
+de Sesiones Salta, Agosto 10 de 19o8» y promulgada «Salta, Agosto 14 de 19o8».
+El corpus es el primer año del Boletín Oficial de Salta: la N° 1 es del 15 de
+octubre de 1908.
+
+--------------------------------------------------------------------------------
+§1 · CORPUS REVISADO
+--------------------------------------------------------------------------------
+
+Tapas miradas (franja de cabecera de la hoja 1 de cada edición): «AÑO I»,
+«SALTA, <fecha>», «NÚM. n». El nombre de cada archivo coincide con el número
+de edición. Imprenta y Librería El Comercio de Ramón R. Sanmillán y Cía.,
+Caseros 629 y 631; «Aparece Miércoles y Sábados». La tapa no declara número de
+páginas; el control se hizo por paginación corrida.
+
+  N°  fecha         día  hojas  páginas          ausentes
+   1  15/10/1908    jue    4      1-4
+   2  21/10/1908    mié    4      5-8
+   3  24/10/1908    sáb    4      9-12
+   4  28/10/1908    mié    4     13-16
+   5  30/10/1908    vie    6     17-22
+   6   4/11/1908    mié    5     23-27            28
+   7   7/11/1908    sáb    7     29-35            36
+   8  11/11/1908    mié    9     37-45            46
+   9  14/11/1908    sáb    4     47-50
+  10  18/11/1908    mié    7     51-57            58
+  11  21/11/1908    sáb    4     59-62
+  12  25/11/1908    mié    4     63-66
+  13  28/11/1908    sáb    4     67-70
+  14   2/12/1908    mié    4     71-74
+  15   5/12/1908    sáb    4     75-78
+  16   9/12/1908    mié    4     79-82
+  17  12/12/1908    sáb    4     83-86
+  18  16/12/1908    mié    4     87-90
+  19  19/12/1908    sáb    4     91-94
+  20  23/12/1908    mié    4     95-98
+  21  26/12/1908    sáb    5     99-102 (101 dos veces)
+  22  30/12/1908    mié    4    103-106
+
+Paginación: leída en el .tsv y mirada en las esquinas de 6 h5, 7 h2, 7 h7, 8
+h2, 8 h9, 9 h2, 10 h3 a 10 h5, 10 h7, 11 h2, 17 h4, 21 h2 a 21 h5 y 22 h2.
+Faltan las páginas 28, 36, 46 y 58, que son la última página par de las
+ediciones 6, 7, 8 y 10; que estuvieran en blanco es INFERENCIA. El folio 101
+está impreso en 21 h3 y en 21 h4, con contenido distinto (E.8).
+
+Calendario: todas las ediciones salen miércoles o sábado, salvo la N° 1
+(jueves 15/10) y la N° 5 (viernes 30/10). Miércoles y sábados sin edición:
+sábado 17/10 y sábado 31/10. La numeración 1 a 22 es continua: no falta
+ninguna edición. «feriado» y «asueto» no aparecen en ninguna de las dos
+versiones del texto; el conteo de «feriado» del pre-informe (ediciones 1, 14,
+15 y 18) no se reproduce. No se atribuye ningún hueco a un feriado.
+
+Confianza del OCR propio: media 77,4; «pub» 0, «ver» 82, «ojos» 21. Con 0
+«pub» no hubo muestra para comparar con la imagen. Las hojas «ver» y «ojos»
+que se miraron son legibles salvo 20 h3 (E.3): los umbrales de 1946 son
+demasiado estrictos para 1908 (§F.7).
+
+--------------------------------------------------------------------------------
+§2 · CRITERIO DE BÚSQUEDA
+--------------------------------------------------------------------------------
+
+Pasadas del script (§5.2) sobre la unión de la capa previa (prev) y el OCR
+propio (prop): literal/normalizada «cald», laxa, difusa (0,78), anillo 2 (37
+términos), actores y números de 1946, 8 fórmulas de reemplazo. Sin marca
+U+0002 en la capa previa. Sin tercera lectura («sal»). La sesión rehízo sobre
+los textos de 1908.zip: «cald|calder», la laxa, una difusa a 0,72 y las
+búsquedas de actores, fórmulas de autoridad, feriados, tablas y paginación.
+
+Columna perdida (§2.3.3). Comparados renglón por renglón con la imagen, los
+textos prev de 10 h4 (columnas 1 y 3), 22 h2 (columna 1) y 22 h4 (columna 3)
+cortan donde corta el renglón impreso: la capa previa de 1908 no pierde
+columnas en lo mirado. El que falla es el OCR propio a psm 3, que intercala
+renglones de columnas vecinas (20 h4, donde fabricó «acald»; 8 h5; 22 h4). En
+22 h3 la capa previa rompió la palabra («calderhja») y el OCR propio la leyó
+bien: la unión fue necesaria.
+
+Actores de 1908 surgidos del §A: Adolfo Vidal, Abelardo Figueroa, Cárlos
+Murúa, Augusto Rejis (A.1); Escolástico M. Aparicio (A.2, A.4); Juan Chuchuy y
+«Nerberto Tarifa y esposa» (A.3); Odorico Diaz, Emilio Fressart y «los señores
+Garzon y Pinto» (A.5). Se buscaron por nombre y apellido en los textos prev y
+prop de las 103 hojas (§B, cierre).
+
+Números arrastrados: no aplica; los decretos de 1908 no llevan número. Las
+ausencias del §B se afirman con dos identificadores: nombre y apellido, y
+apellido con el cargo o el lugar del acto.
+
+--------------------------------------------------------------------------------
+§A · MENCIONES EXPLÍCITAS
+--------------------------------------------------------------------------------
+
+Cinco apariciones en tres actos del P. E. y dos piezas judiciales o de
+minería, en las ediciones N° 10 y N° 22. Todas transcritas desde la imagen de
+página a 300 dpi.
+
+A.1
+
+  FUENTE: N° 10 (18/11/1908), hoja 4 (página 54), columna 1. El acto
+  empieza en la hoja 3 (página 53), columna 3. Versiones: prev y prop.
+  FICHA: decreto del Ministerio de Hacienda, «Salta, Noviembre 12 de 1908»,
+  que designa los «Jurados de Reclamos sobre patentes generales para
+  1909», por departamento. Firmas (10 h4, pie de la columna 2, miradas):
+  «LINARES / JOSÉ SARAVIA / Es copia:— Delfín Liquitay. / Of. 1º».
+  MODO DE LECTURA: página 300 dpi, columna recortada; encabezado del acto
+  en miniatura de la página 53 y en el texto prev.
+
+  TEXTO (entre «Cerrillos» y «Campo Santo 1ª SECCION»)
+    Caldera
+    Titulares—Sres Adolfo- Vidal, Abe-
+    lardo Figueroa, Cárlos Murúa.
+    Suplente—Sr. Augusto Rejis.
+
+NOTA DE LECTURA: la marca tras «Adolfo» se ve como guion corto y se
+transcribe. Por el Art. 2º, leído en la misma hoja, los jurados de los
+departamentos de campaña terminan su cometido «el 31 de Enero de 1909» y
+entregan los registros a las comisiones clasificadoras.
+
+A.2
+
+  FUENTE: N° 10, hoja 4 (página 54), columna 3. Versiones: prev y prop.
+  FICHA: decreto del Ministerio de Hacienda, «Salta, Noviembre 12 de
+  1908», que nombra los clasificadores de patentes generales para 1909.
+  Sigue en la hoja 5 (página 55), donde firman «LINARES / JOSÉ SARAVIA /
+  Es copia— Delfín Liquitay / Oficial 1º» (mirado en miniatura).
+  MODO DE LECTURA: página 300 dpi, columna recortada.
+
+  TEXTO (encabezado y tramo del término)
+    Ministerio de
+    Hacienda
+    Salta, Noviembre 12 de 1908.
+    Siendo oportuno proceder á la orga-
+    nización de las comisiones clasificadoras
+    de patentes generales para el año 1909
+    y, de acuerdo con lo dispuesto por el
+    art. 4º de la ley de la materia.
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1.º Nómbranse los siguientes cla-
+    sificadores de patentes generales para
+    1909:
+    [...]
+    Rosario de Lerma—Sr. Amadeo de la
+    Cuesta.
+    Cerrillos—Sr. Serafin Mesones.
+    Caldera—Sr. Escolástico M. Aparicio.
+    Campo Santo—1ª sección—Sr. Electo
+    Mendilaharzu.
+
+NOTA DE LECTURA: los nombres de departamento van en cursiva. El «Art. 1.º» y
+el «Nómbranse» del encabezado se tomaron de la miniatura y del texto prev; lo
+demás, del recorte a 300 dpi. La misma persona es comisario de policía de
+Caldera para 1909 en A.4.
+
+A.3
+
+  FUENTE: N° 22 (30/12/1908), hoja 1 (página 103), columna 3, pie, y
+  hoja 2 (página 104), columna 1. Versiones: prev y prop.
+  FICHA: resolución del «JUZGADO DEL DR BASSANI», «Salta, Diciembre 16 de
+  1908», en el juicio por cobro de pesos de don Juan Chuchuy contra don
+  Nerberto Tarifa y esposa: rechaza la excepción de incompetencia de
+  jurisdicción. Firma «A. BASSANI»; «Es copia» Zenon Arias, Secretario.
+  MODO DE LECTURA: página 300 dpi, columnas recortadas.
+
+  TEXTO
+    JUZGADO DEL DR BASSANI.
+    Salta, Diciembre 16 de 1908.
+    Y Vistos:—En este juicio por co-
+    bro de pesos seguido por don Juan
+    Chuchuy contra don Nerberto Tarifa
+    y esposa la escepción de incompeten-
+    cia de jurisdicción opuesta como ar-
+    tículo previo á fs. 12 y
+    CONSIDERANDO:
+    Que el artículo 4 del Codigo de Pro-
+    cedimientos en lo Civil y Comercial es-
+    tablece claramente que: El Juez com-
+    [hoja 2, columna 1]
+    petente cuando se ejercitan acciones
+    personales, es el del lugar convenido
+    para el cumplimiento de la obligación;
+    y á falta de esto á elección del de-
+    mandante, el del domicilio del deman-
+    dado ó el del lugar del contrato con tal
+    que el demandado se halle en él aun-
+    que sea accidentalmente. Ahora bien,
+    el documento de fs. 3 no tiene lugar
+    designado para su cumplimiento y es-
+    tá plenamente comprobado en autos,
+    que los demandados tienen su domi-
+    cilio fuera del Departamento de la ca-
+    pital de la Provincia, ver fs. 6 y 10,
+    consta igualmente que el actor está
+    domiciliado en el Departamento de la
+    Caldera, ver fs. 1 y 10.
+    En consecuencia siendo la cantidad
+    reclamada mayor de doscientos pesos,
+    de acuerdo con el artículo citado y lo
+    dispuesto en el artículo 22 Inciso 1º
+    de la Ley sobre organización y juris-
+    dicción de los tribunales, esta causa
+    es de competencia de este Juzgado y
+    nó, como lo sostiene el demandado de
+    el Juez de Paz Letrado, puesto que
+    este, segun el artículo 1º de la Ley
+    de su creación solo entiende en asun-
+    tos que se susciten entre vecinos de
+    la Capital.
+    Por todo lo expuesto y de acuerdo
+    con lo dispuesto en el artículo 1º del
+    Código de Procedimientos citado, re-
+    suelvo: Rechazar la mencionada es-
+    cepción declarando que esta causa es
+    de competencia de este Juzgado Sin
+    costas por no haber sido pedidas—Re-
+    póngase.—A. BASSANI.—Es copia—Ze-
+    non Arias, Secretario.
+
+NOTA DE LECTURA: «Nerberto» y «escepción» como en el original. El domicilio en
+Caldera es del actor, Juan Chuchuy; que los demandados estén fuera del
+departamento de la Capital es lo único que se dice de ellos.
+
+A.4
+
+  FUENTE: N° 22 (30/12/1908), hoja 3 (página 105), columna 3.
+  Versiones: prev («calderhja», roto) y prop («caldera»).
+  FICHA: decreto del P. E., «Salta, Diciembre 23 de 1908», que nombra los
+  comisarios de policía de los departamentos y distritos de campaña para
+  1909. Firman «LINARES: / SANTIAGO M. LÓPEZ.»; «Es ócpia— / José M.
+  Outes. / S. S.». Sin número.
+  MODO DE LECTURA: página 300 dpi, columna recortada en dos tramos. Los
+  renglones 3 y 4 del preámbulo están desvaídos.
+
+  TEXTO
+    Siendo necesario proceder á la desig-
+    nación de las personas que deben de-
+    sempeñ[ilegible] l[ilegible] comis[ilegible]ias de policía de los
+    depart[ilegible] y distritos de campaña en
+    el año próximo de 1909—
+    El P. E. de la Provincia
+    DECRETA:
+    Art. 1º Nómbrase comisarios de po-
+    licía de los departamentos y distritos de
+    campaña á los ciudadanos siguientes:
+    Caldera, á don Escolástico Aparicio;
+    Cerrillos, á don Serafin Messones; Mer-
+    ced, á don Emeterio Royo; Rosario de
+    Lerma, á don Adolfo Diez; Silleta, á
+    don Delfin Casas; Chicoana, á D. Daniel
+    Moreno; Chicoana departamental con re-
+    sidencia en el Carril á don Emilio Fi-
+    gueroa; Viña, á don Belisario Correa;
+    Coronel Moldes, á don Adam Villa; Gua-
+    chipas, á don Delfin Nuñez; Cachi, á don
+    Jacinto F. Córdoba; Poma, á don Gual-
+    berto Díaz; Molinos, á don Salustiano
+    Rodriguez; San Carlos, á don Estevan
+    Bácerque; Cafayate, á don Julio López;
+    Campo Santo, á don Manuel Garay; Güe-
+    mes, á don Horacio Apatié; Metán, á don
+    J. Adolfo Cajal; Galpón, á don Victor
+    Saravia; Anta, á don Rodolfo Matorras;
+    Rosario de la Frontera, á don Ricardo
+    J. Pérez; Candelaria, Guillermo W. Gar-
+    cía; Orán, á don Saturnino Saravia. Ri-
+    vadavia, á don Gabriel Puló; Iruya, á
+    don Tomás Vargas; Santa Victoria, á
+    don Carlos Echenique; Noques y Monta-
+    ña (capital) á don Rafael San-Millán.
+    Art. 2º Los comisarios nombrados to-
+    marán posesión de sus cargos recibiendo
+    de sus antecesores el archivo y demás
+    enseres de la comisaria, bajo de inven-
+    tario y propondrán por intermedio del
+    señor jefe de policía las personas que
+    deben desempeñar las comisarias de par-
+    tido en sus respectivos departamentos
+    y distritos durante el mismo año.
+    Art. 3º Dénsele las gracias á los comi-
+    sarios cesantes por los servicios que han
+    prestado á la Administración durante el
+    tiempo que han desempeñado dichos
+    puestos.
+    Art. 4º Comuníqueee, publíquese é in-
+    sértese en el Registro Oficial.
+    Salta, Diciembre 23 de 1908.
+    LINARES:
+    SANTIAGO M. LÓPEZ.
+    Es ócpia—
+    José M. Outes.
+    S. S.
+
+NOTA DE LECTURA: «Comuníqueee» y «ócpia» [sic]. Los dos decretos de la columna
+2 de la misma hoja (22/12/1908: División de Cafayate y Banco Provincial) no
+tocan el término.
+
+A.5
+
+  FUENTE: N° 22 (30/12/1908), hoja 4 (página 106, última de la edición),
+  columna 3. Versiones: prev y prop.
+  FICHA: edicto de minas. Petición de cateo de Odorico Diaz, por sí y por
+  Emilio Fressart, vecino de la Silleta: cobre en «el departamento de la
+  Caldera, partido del Potrero de Castillo», cuatro unidades de 500 ha.
+  Proveído del Ministerio de Hacienda «Salta, Diciembre 1o de 19o8»,
+  firmado «Saravia»; edicto «Salta, Diciembre 14 de 19o8.—WALDINO
+  RIARTE.—Escribano.»; aviso «315 v Dbre. 3o.»
+  MODO DE LECTURA: página 300 dpi, columna recortada en tres tramos; las
+  cifras se releyeron ampliadas.
+
+  TEXTO
+    A S. S el Señor Ministro de Hacienda
+    de la Provincia S. D.—El suscrito Odorico
+    Diaz, vecino de la capital en su nombre
+    y en el del señor Emilio. Fressart, vecino
+    de la Silleta, ante S. S., con el debido res-
+    peto expone: Que en el departamento de
+    la Caldera, partido del Potrero de Casti-
+    llo á encontrado señas evidentes de la
+    existencias de minerales de cobre, en el
+    punto A del croquis que acompaña, por lo
+    que solicita un permiso de cateo en la for-
+    ma indicada en los artículos 25 y siguien-
+    tes del Código de Minas.—Como los terre-
+    nos á que se refiere, no son labrados ni
+    cercados; solicito cuatro unidades de 5oo
+    hectareas cada una, las que situarán co-
+    mo sigue: Estando colocado sobre la sen
+    da de las Animas, á los 1oo metros al
+    Sud del paralelo del cerro Nevado puuto
+    to C del cropuis, medirán 5oo metros en
+    línea recta al Sud, hasta el punto D, en
+    seguida se medirán 4ooo metros al Este,
+    hasta el punto F, y formando rectágulo
+    sobre estas dos lineas, se tendrá una su-
+    perficie de 2ooo hectáreas, ó sean las cua-
+    tro unidades indicadas. Los dueños del
+    terreno son los señores Garzon y Pinto,
+    vecinos de Buenos Aires.—No hay ningun
+    otro cateo solicitado en la región.—Será
+    usticia ect.—Odorico Diaz.—Otro, si digo:
+    que señalo domicilio, á objeto de las noti-
+    ficacasiones, la casa ubicada en la calle
+    Sarmiento núm 66, entre Caseros y Es-
+    paña.—Odorico Diaz.—A despacho el siete
+    de Diciembre de 19o8: conste Riarte.—Mi-
+    nisterio de Hacienda. Salta, Diciembre 1o
+    de 19o8.—Por presentada sin perjuicio de
+    anteriores solicitantes, anótese, publí-
+    quese y notifiquesé á los propietarios del
+    terreno, debiendo denunciarse el domici-
+    lio de los mismos, conforme lo dispone el
+    artículo 25 del Código de Minería.—Sara-
+    via.—Por el presente se notifica á los que
+    se crean con derecho á este pedimento,
+    para que se presenten á deducirlo durante
+    del término de ley.—Salta, Diciembre 14
+    de 19o8.—WALDINO RIARTE.—Escribano.
+    315 v Dbre. 3o.
+
+NOTA DE LECTURA: ortografía del original sin corregir («á encontrado»,
+«existencias», «puuto / to», «cropuis», «rectágulo», «usticia ect.»,
+«notificasiones» escrito «ficacasiones», «durante del término»). La punto de
+«Emilio. Fressart» está en la imagen. La cuenta de la superficie no cierra
+(E.8). El croquis no se publica (§P). El edicto está fechado el 14/12 con
+vencimiento «Dbre. 30», pero sólo aparece en la N° 22: no está en las N° 18 a
+21 (búsqueda de «odorico», «fressart», «garz», «cobre», «cateo» y «315 v» en
+las dos versiones), E.2.
+
+--------------------------------------------------------------------------------
+§B · VECINDAD
+--------------------------------------------------------------------------------
+
+Sin entradas. Ningún candidato del anillo 2 se refiere al departamento de La
+Caldera según lo mirado (todos a E.7).
+
+Anillo de actores de 1908, buscado en prev y prop de las 103 hojas:
+
+- Adolfo Vidal, Abelardo Figueroa, Cárlos Murúa, Augusto Rejis: sólo en A.1.
+  Homónimos de apellido o de nombre en otras hojas: «Betbedert y Vidal»,
+  almacén (14 h2); «Abelardo Quiroga» (14 h2) y «Abelardo Ortiz» (19 h4),
+  procesados; «Cesario Rejis», procesado (20 h3). Ninguno es la misma persona
+  según el contexto.
+- Escolástico M. Aparicio: sólo en A.2 y, sin la inicial, en A.4. Otros
+  Aparicio: Samuel y Julio C. Aparicio, jurados de Santa Victoria (10 h4);
+  Hipólita Aparicio (20 h4).
+- Juan Chuchuy: sólo en A.3. «Matías Chuchuy», propietario de la quebrada de
+  Lagunilla, departamento de Rosario de Lerma (7 h5, 8 h7): mismo apellido; no
+  se afirma relación.
+- Odorico Diaz, Emilio Fressart, «Garzon y Pinto»: sólo en A.5. «Odorico
+  Medrano» (5 h3) es otra persona.
+- Fórmulas de reemplazo: ninguna toca a los actores del §A.
+
+--------------------------------------------------------------------------------
+§C · LIMÍTROFES
+--------------------------------------------------------------------------------
+
+Sólo aparecen junto a Caldera, sin ficha propia, en las mismas listas:
+Cerrillos (A.1, A.2, A.4), Campo Santo (A.1, A.2, A.4), Rosario de Lerma (A.1,
+A.2, A.4) y Silleta (A.4; y como vecindad de Emilio Fressart en A.5). La
+Silleta figura en 5 h4 y 11 h4 como parte del departamento de Rosario de
+Lerma. El config no tiene anillo 3.
+
+--------------------------------------------------------------------------------
+§P · PLANOS
+--------------------------------------------------------------------------------
+
+Ninguno en las 103 hojas. El edicto de A.5 cita un croquis que no se publica.
+Techo: 300 dpi de rasterizado; no se midió la imagen incrustada de los PDF.
+
+--------------------------------------------------------------------------------
+§D · ÍNDICE
+--------------------------------------------------------------------------------
+
+  A.1  N° 10 h4 c1  p. 54   Jurados de Reclamos sobre patentes 1909,
+                             Caldera                       12/11/1908
+  A.2  N° 10 h4 c3  p. 54   Clasificadores de patentes 1909,
+                             Escolástico M. Aparicio      12/11/1908
+  A.3  N° 22 h1-h2  p.103-4 Juzgado Dr. Bassani, actor Juan Chuchuy
+                             domiciliado en Caldera       16/12/1908
+  A.4  N° 22 h3 c3  p. 105  Comisarios de policía 1909,
+                             Escolástico Aparicio         23/12/1908
+  A.5  N° 22 h4 c3  p. 106  Cateo de cobre Odorico Diaz y Emilio
+                             Fressart, Potrero de Castillo 14/12/1908
+
+--------------------------------------------------------------------------------
+§E · OBSERVACIONES
+--------------------------------------------------------------------------------
+
+E.1 · Duplicación y saldos
+
+dhash: 0 pares (script). Ninguna hoja duplicada: 21 h3 y 21 h4 llevan el mismo
+folio 101 pero su texto es distinto (similitud 0,03). Avisos repetidos: E.6.
+Saldos: el corpus de 1908 no trae balances de Tesorería ni municipales
+(búsqueda de «balance», «saldo», «tesorería», «total» y miradas de las hojas
+enteras): no hay cadena de saldos que armar.
+
+E.2 · Cobertura
+
+Hojas miradas enteras (miniatura de página, 760 a 900 px de ancho): 6 h4, 6
+h5, 7 h2, 7 h4, 7 h6, 8 h8, 8 h9, 9 h4, 10 h2, 10 h3, 10 h4, 10 h5, 16 h1, 17
+h4, 19 h2, 19 h4, 20 h1, 20 h2, 20 h3, 20 h4, 22 h1, 22 h2, 22 h3 y 22 h4. Con
+ampliación a 300 dpi: las columnas del §A (10 h4, 22 h1 a 22 h4) y la columna
+3 de 20 h2. Franjas (recortes del script): 4 h4, 5 h1, 7 h5, 8 h3, 8 h7, 13
+h1, 14 h2, 15 h2, 16 h4, 18 h4 y 21 h5. Tapas: las 22 hojas 1, en franja de
+cabecera.
+
+Cruces de sumario: no aplicable. Destinos: los nombramientos de comisarios,
+jueces de paz y comisiones municipales del corpus se buscaron por texto; sólo
+A.1, A.2 y A.4 nombran a Caldera.
+
+Citados y no acompañados: la «Ley sobre organización y jurisdicción de los
+tribunales» y la ley de creación de la Justicia de Paz Letrada (A.3); «la ley
+de la materia» de patentes, art. 4º y art. 9º (A.1, A.2); el Código de
+Minería, arts. 25 y siguientes (A.5); el croquis de A.5. Ninguno se publica en
+el corpus. El edicto de A.5 está fechado el 14/12 y vence el 30/12, pero sólo
+aparece en la N° 22 (búsqueda en las N° 18 a 21 sin resultado): si salió
+antes, no fue en este Boletín o el OCR de ambas versiones lo perdió; lo
+segundo es poco probable y no se afirma ninguna de las dos cosas.
+
+E.3 · Sin mención y no mirado
+
+Páginas ausentes: 28, 36, 46 y 58 (§1). Hojas «a ojos» del script: las 21 se
+miraron enteras a escala reducida; no se ve «Caldera» en ninguna. En 20 h3 las
+columnas 1 y 2 tienen la impresión corrida y quedan ilegibles en parte;
+ninguna de las dos versiones del texto las lee bien. Un término perdido allí
+no puede descartarse. El preámbulo de A.4 tiene dos renglones desvaídos,
+transcritos con [ilegible].
+
+E.4 · Firmas y sellos
+
+Autoridad. Encabezados «El Gobernador de la Provincia» y «El P. E. de la
+Provincia»; varios «en acuerdo de ministros» (12 h4, 18 h4). Firma «LINARES»
+en las 22 ediciones (texto prev; mirada en 10 h4, 16 h1, 17 h4, 20 h1, 20 h4,
+21 h5, 22 h3). Ministro de Gobierno: Santiago M. López, «Es copia» José M.
+Outes, S. S. Ministro de Hacienda: José Saravia, «Es copia» Delfín Liquitay,
+Of. 1º (noviembre, 10 h4 y h5) y Juan Martín Leguizamón, S. S. (8 h3, texto;
+20 h4, mirado). No hay interinatos ministeriales ni Vicegobernador en
+ejercicio. Interinatos judiciales y de escribanía, sólo por texto: juez de
+instrucción interino Juan B. Gudiño (3 h3); encargo interino del despacho de
+un juzgado (9 h2); escribano de gobierno y hacienda interino Zenón Arias
+«mientras dure la ausencia del titular» (9 h3, 6/11/1908).
+
+Escribanía de Minas: Waldino Riarte. Receptoría: M. F. Cornejo, Receptor Gral.
+de Rentas. Secretarios de juzgado: Zenón Arias, Camilo Padilla, Augusto P.
+Matienzo, Santos 2º Mendoza, Enrique Klix, David Gudiño. Sellos: no se ven
+sellos en las hojas miradas.
+
+E.5 · Cortes reconstruidos
+
+Ninguno. A.3 se lee a través del paso de la hoja 1 a la 2 («El Juez com- /
+petente»), marcado en la transcripción.
+
+E.6 · Repeticiones
+
+Ley de creación del Boletín: en la primera hoja de al menos diez ediciones.
+Aviso de la Receptoría General (deudores morosos, «Salta, Dbre. 14 de 1908»):
+N° 18 h4 y N° 21 h5. Remate de la finca Cerro Negro: N° 18 h4 y N° 22 h4.
+Remate de la sucesión de Marcelina Hoyos: N° 16 h4 y N° 17 h4 (E.9). Edictos
+de minas de Patrón Costas y socios: N° 8 h3 a h6. Los actos del §A no se
+repiten.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1, descartados tras mirar:
+
+- N° 18 h4 y N° 21 h5: «cald» dentro de «Jo-/sefa S. de Alcalde» (apellido;
+  aviso de la Receptoría).
+- N° 20 h4: «acald», basura del OCR propio que cruzó columnas; la imagen dice
+  «Una fracción de la estancia deno-/minada "Santa Ana" en Anta».
+- N° 21 h1: «escalera», difusa: Sinforoso Escalera, apellido (fp_conocido del
+  script; contexto inequívoco en las dos versiones).
+
+Anillo 2, descartados:
+
+- wierna (N° 5 h1): «don Bautista Wierna», apellido, en la sentencia de Cámara
+  del juicio reivindicatorio de Isauro Ruiz contra Jenoveva Arancibia. Un
+  «molino de Wierna» está sobre un callejón que va «al Rosario de Lerma». La
+  sentencia no dice en qué departamento está el terreno: queda abierto, sin
+  afirmarle pertenencia.
+- murua (N° 10 h4): es el Cárlos Murúa de A.1.
+- isasmendi (N° 8 h3 a h6): «Ricardo J. Isasmendi», socio de Robustiano y
+  Néstor Patrón Costas y Abraham Cornejo en pertenencias mineras junto a las
+  lagunas «del Toro» y el «camino nacional de Salta á Bolivia» (texto; 8 h3
+  mirado). Apellido.
+- manzano: «En Chicoana, partido de Escoipe» (N° 17 h4) y «la Quebrada de El
+  Manzano», cateo en Rosario de Lerma (N° 7 h5, N° 8 h7).
+- lagunilla: «Lagunilla departamento de Rosario de Lerma» (N° 7 h5, N° 8 h7).
+- betania: «Betania, Partido de La Viña, jurisdicción del departamento de
+  Campo Santo» (N° 13 h1, N° 14 h2).
+
+Actores y números de 1946, capa no aplicable:
+
+- «el doctor Darío Arias» (N° 15 h2, mirado), abogado en un juicio de
+  deslinde: homónimo de época.
+- Apellidos sueltos, 1.054 filas (López 293, Arias 292, Saravia 156, Patrón
+  73...): personas de 1908 (el juez Vicente Arias, el martillero Ricardo
+  López, los ministros Santiago M. López y José Saravia, los Patrón Costas).
+  No se miraron una por una.
+- Número 2000 (8 filas; 9 h4, 16 h4, 17 h4, 18 h4 y 22 h4 mirados): bases de
+  remate de $ 2.000, un impuesto municipal de $ 2.000, la superficie de A.5 y
+  un terreno de 2.000 m2. Ningún acto.
+- Reemplazo: N° 18 h4, mirado, nombramiento de Félix A. Saravia en la
+  Receptoría (9/12/1908); N° 21 h1, «en reemplazo del rancho» (texto).
+
+Falsos negativos posibles: sólo en las columnas 1 y 2 de 20 h3 (E.3).
+
+E.8 · Fidelidad numérica
+
+- A.5: «5oo metros» al Sud por «4ooo metros» al Este dan 2.000.000 m2, es
+  decir 200 ha. El edicto imprime «2ooo hectáreas, ó sean las cuatro unidades»
+  (4 x 500 ha = 2.000 ha). Cifras releídas ampliadas: la cuenta del rectángulo
+  no cierra con la superficie. No se corrige.
+- Folio 101 impreso dos veces (N° 21 h3 y h4, texto distinto); la hoja 5 lleva
+  el 102 y la N° 22 empieza en el 103.
+- Remate de la finca Cerro Negro: «El dia 23 de Enero de 19o6» en N° 18 h4 y
+  N° 22 h4, ediciones de diciembre de 1908 [sic].
+- N° 20 h4, columna 2: «Salta, 22 de Diciembre de 1909», al pie de un aviso de
+  remate para el 8 de enero de 1909, en la edición del 23/12/1908 [sic].
+- Tablas: ninguna en el corpus. Tablas recalculadas: 0; no recalculadas: 0.
+  Cuentas recalculadas: 1 (superficie de A.5).
+
+E.9 · Contradicciones
+
+- Remate de la sucesión de Marcelina Hoyos (domingo 20 de diciembre, calle
+  Alsina 454, 456 462, base $ 2.000): «Hoyos de Salas» en N° 16 h4, «Hoyos de
+  Sosa» en N° 17 h4. No se concilia.
+- «Serafin Mesones» (A.2) y «Serafin Messones» (A.4), Cerrillos. No se
+  concilia.
+- Numeración (regla 15): no aplicable; los decretos de 1908 no llevan número.
+  El orden por fecha de los actos del §A es coherente con la paginación: A.1 y
+  A.2 en la página 54, A.3 a A.5 en las 103 a 106.
+
+E.10 · Límites
+
+Las hojas enteras se miraron a escala reducida; sólo las columnas del §A se
+leyeron a 300 dpi. Las ausencias de actores se afirman sobre dos lecturas OCR
+de todas las hojas, no sobre la imagen. No se cotejó con informes LEE de otros
+años. Nada se afirma sobre la pertenencia de «la Silleta», el «Potrero de
+Castillo», la «senda de las Animas» o el «cerro Nevado» más allá de lo que
+dicen los actos.
+
+--------------------------------------------------------------------------------
+§F · CORRECCIÓN A LA RÚBRICA Y AL SCRIPT
+--------------------------------------------------------------------------------
+
+- F.1 Recortes. lee_auto.py hace una sola franja por capa, edición y hoja,
+  centrada en el primer resultado, y la copia para cada resultado (81
+  archivos, 30 imágenes). Si no ubica la palabra, guarda la página entera
+  reducida. Corregir: centrar cada recorte en su resultado (coordenadas del
+  .tsv) y no duplicar archivos. §4: md5 de los recortes antes de mirarlos.
+- F.2 Insumos. El zip de lee_trabajo con las .jpg alcanza para mirar y citar
+  sin los PDF. §14.2 punto 3: los PDF pasan a optativos si se sube lee_trabajo
+  completo con las imágenes. Si falta todo, el informe se entrega «con
+  pendientes» y los recortes se citan como provisionales.
+- F.3 Época sin número de decreto. En 1908 los decretos no llevan número.
+  Regla 15: se declara no aplicable y se controla el orden por fecha y
+  paginación.
+- F.4 Tapa de 1908. Formato «AÑO I / SALTA, <fecha> / NÚM. n», sin «EDICIÓN DE
+  N PÁGINAS»; el script no lo lee. Agregar el patrón y extraer la paginación
+  corrida de la cabeza de cada hoja («54 BOLETIN OFICIAL»): es el control de
+  páginas ausentes de la época.
+- F.5 Feriados. El conteo de «feriado» del pre-informe no se reproduce en los
+  textos: revisar el patrón.
+- F.6 Actores por época: filtro por origen (p. ej. --epoca 1908) para no
+  producir los resultados de apellidos de 1946.
+- F.7 Confianza. Con 0 «pub» y 21 «ojos», casi todas legibles, los umbrales de
+  1946 no sirven para 1908; recalibrar con este año.
+- F.8 OCR propio y columnas. A psm 3 intercala columnas en 1908; la capa
+  previa no. La unión sigue siendo obligatoria (22 h3: sólo el propio leyó
+  «caldera»).
+- F.9 Config entregado (lee_config.json): actores de 1908 con origen «1908»
+  (Vidal, Figueroa, Murúa, Rejis, Aparicio, Chuchuy, Diaz, Fressart); anillo 2
+  + «potrero de castillo» y «senda de las animas»; falsos_positivos + «s. de
+  alcalde». Sin números nuevos. Para 1908 a 1910: «python lee_auto.py --anios
+  1908 1909 1910 --solo-busqueda».
+- F.10 §12. Agregar para 1908: «Alcalde» (apellido); Betania (Campo Santo);
+  Lagunilla y Quebrada de El Manzano (Rosario de Lerma); El Manzano (Escoipe,
+  Chicoana); Isasmendi (minas del Toro).
+
+--------------------------------------------------------------------------------
+RECUENTO
+--------------------------------------------------------------------------------
+
+  Archivos: 22 PDF = ediciones N° 1 a 22, Año I (15/10 a 30/12/1908).
+  Hojas presentes: 103. Páginas impresas: 1 a 106, con el folio 101 dos
+    veces (107 folios). Ausentes: 4 (páginas 28, 36, 46 y 58).
+  Confianza OCR propio: pub 0 · ver 82 · ojos 21.
+  Resultados del script: 1.146 (A1 30, A2 51, ACT 1, ACTAP 1.054, NUM 8,
+    REEMP 2). Recortes: 81 archivos, 30 imágenes, 30 miradas.
+  Hojas miradas enteras: 24 (lista en E.2), más las 22 cabeceras de tapa.
+    Columnas a 300 dpi: 10 h4 c1 y c3, 20 h2 c3, 22 h1 c3, 22 h2 c1,
+    22 h3 c3, 22 h4 c3.
+  §A: 5 menciones (N° 10 y N° 22). §B: 0. §C: 4 limítrofes en lista.
+  Tablas: 0 en el corpus. Cuentas recalculadas: 1 (no cierra).
+  Planos: 0.
+

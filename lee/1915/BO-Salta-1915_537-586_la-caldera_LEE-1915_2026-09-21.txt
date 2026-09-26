@@ -1,0 +1,1096 @@
+BOLETIN OFICIAL DE SALTA - ANO 1915 - EDICIONES N 537 A 586
+BARRIDO LEE SOBRE "LA CALDERA" - RUBRICA v15
+Informe generado el 21 de septiembre de 2026
+==============================================================================
+
+0 - ADVERTENCIA PRELIMINAR
+--------------------------
+
+ESTADO: CON PENDIENTES. Este informe se entrega al cierre del segundo turno de
+trabajo. El parrafo A esta cerrado en lo que hace al anillo 1: las quince
+hojas con acierto de la pasada literal estan resueltas -doce miradas en la
+imagen y fichadas, con trece apariciones, y tres juzgadas falso positivo- y
+los cinco candidatos de la difusa tambien. Faltan los contextos del anillo 2,
+el inventario de cuadros, la cadena de saldos, el registro completo de la
+autoridad, el indice y los limitrofes.
+
+AL CIERRE DE ESTE TURNO se agregaron el parrafo B entero, los limitrofes, los
+planos, el indice, la autoridad, la cadena de saldos y el recalculo de un
+subtotal, y se entrega el lee_config.json actualizado. Lo que queda es
+verificacion, no barrido: tres encabezados leidos en el OCR y no en la imagen,
+la segunda aparicion del edicto en la 569 h3, el numero de tapa de la 563 y el
+saldo de cierre de noviembre.
+
+QUE PUSO EL USUARIO. Del proyecto, el archivo lee_config.json. Del Release
+1915 de github.com/ediedrich/boletines-salta, cuarenta y nueve assets, que son
+cuarenta y nueve PDF y nada mas: no llegaron el pre-informe, ni
+resultados_1915.csv, ni decretos_1915.csv, ni log.txt, ni recortes.zip, ni el
+zip de los .txt de lee_trabajo. El listado de assets se leyo de la pagina
+releases/expanded_assets/1915, que no exige token. No hay, por lo tanto,
+ninguna salida de lee_auto.py para este ano, ni version ni fecha de corrida
+que declarar, ni log que leer.
+
+QUE FALTA EN EL RELEASE. El asset 581.pdf no existe: la descarga devuelve un
+cuerpo de nueve bytes. Las ediciones presentes van de la 537 a la 586 con ese
+unico salto. Tampoco hay ediciones de enero ni de la primera semana de
+febrero: la serie del ano empieza el 10 de febrero.
+
+QUE VERIFICO LA SESION. nproc = 1. PyMuPDF no venia instalado y se instalo
+desde pypi. Tesseract 5.3.4 presente, y como en todas las sesiones medidas
+venia solo con eng y osd: se comprobo con tesseract --list-langs antes de
+prometer nada.
+
+DESVIO MAYOR RESPECTO DE 1911 Y 1912, Y COMO SE RESOLVIO. Los PDF de 1915 casi
+no traen capa de texto: de las 195 hojas del ano, diecinueve tienen texto y
+176 son imagen pura. El camino del 2.1 de la rubrica, que salvo 1911 y 1912,
+aqui no alcanza. La sesion bajo spa.traineddata de raw.githubusercontent.com,
+que es dominio alcanzable, y OCRizo el ano entero en sesion, en segundo plano,
+sobre las imagenes incrustadas de los PDF, que estan a 300 ppi exactos. Esto
+es un desvio del 3 y del 16 de la rubrica, que dan el OCR en sesion por
+imposible sin spa; con spa bajado, es posible, y esta es la primera vez que se
+hace un ano entero asi.
+
+QUE SE MIRO CON LOS OJOS HASTA AHORA. Las cuarenta y nueve tapas, una por una,
+en recortes de cabecera por el ancho entero de la hoja. Siete hojas de mencion
+-537 h2, 539 h3, 540 h2, 541 h1 y h2, 552 h2, 567 h2, 568 h4, 569 h1 y h2, 584
+h2, 585 h1 y h2- por columna o por zona recortada. En total, treinta y cuatro
+imagenes. Desde este turno los recortes se ubican con las coordenadas del tsv
+de la segunda version, que tambien da la confianza por palabra.
+
+1 - CORPUS REVISADO
+-------------------
+
+Cuarenta y nueve ediciones, 195 hojas. Todas las ediciones tienen cuatro hojas
+salvo la 569, que tiene tres. Las fechas de tapa se leyeron todas en la imagen
+y por eso van entre corchetes. El folio impreso se lee en la cabecera de las
+hojas 2 a 4; la columna FOLIO da el que se leyo, con (i) cuando sale del OCR y
+no de la imagen.
+
+  ED   FECHA DE TAPA [leida en la imagen]        HOJAS  CAPA PREVIA
+  --------------------------------------------------------------------
+  537  [febrero 10                  ] miercoles 4    ninguna
+  538  [enero 13, enero 16          ] miercoles 4    ninguna
+  539  [febrero 13                  ] sabado    4    ninguna
+  540  [febrero 17                  ] miercoles 4    ninguna
+  541  [febrero 24                  ] miercoles 4    ninguna
+  542  [marzo 3                     ] miercoles 4    ninguna
+  543  [marzo 10, marzo 13          ] miercoles 4    ninguna
+  544  [marzo 17, marzo 20          ] miercoles 4    ninguna
+  545  [marzo 27, marzo 31          ] sabado, m 4    ninguna
+  546  [abril 7                     ] miercoles 4    ninguna
+  547  [abril 14, abril 17          ] miercoles 4    ninguna
+  548  [abril 21, abril 24          ] miercoles 4    ninguna
+  549  [abril 28                    ] miercoles 4    ninguna
+  550  [mayo 6, mayo 8              ] jueves, s 4    ninguna
+  551  [mayo 12                     ] miercoles 4    h4
+  552  [mayo 15, mayo 19            ] sabado, m 4    ninguna
+  553  [mayo 22, mayo 26            ] sabado, m 4    h4
+  554  [mayo 29                     ] sabado    4    ninguna
+  555  [junio 2, junio 5            ] miercoles 4    ninguna
+  556  [junio 7, junio 9            ] lunes, mi 4    ninguna
+  557  [junio 12, junio 16          ] sabado, m 4    ninguna
+  558  [junio 19, junio 23          ] sabado, m 4    h2
+  559  [junio 26, junio 30          ] sabado, m 4    ninguna
+  560  [julio 3, julio 7            ] sabado, m 4    ninguna
+  561  [julio 10, julio 14          ] sabado, m 4    h2
+  562  [julio 17, julio 21          ] sabado, m 4    ninguna
+  563  [julio 24, julio 28          ] sabado, m 4    ninguna
+  564  [agosto 1                    ] domingo   4    ninguna
+  565  [agosto 4, agosto 7          ] miercoles 4    h3, h4
+  566  [agosto 11, agosto 14        ] miercoles 4    h1, h2, h3, h4
+  567  [agosto 18, agosto 21        ] miercoles 4    h3, h4
+  568  [agosto 25, agosto 29        ] miercoles 4    h2, h3, h4
+  569  [septiembre 1, septiembre 4  ] miercoles 3    ninguna
+  570  [septiembre 8, septiembre 11 ] miercoles 4    h3, h4
+  571  [septiembre 18               ] sabado    4    ninguna
+  572  [septiembre 22, septiembre 25] miercoles 4    ninguna
+  573  [octubre 2                   ] sabado    4    h3, h4
+  574  [octubre 6, octubre 9        ] miercoles 4    ninguna
+  575  [octubre 13, octubre 16      ] miercoles 4    ninguna
+  576  [octubre 20, octubre 23      ] miercoles 4    ninguna
+  577  [octubre 27, octubre 30      ] miercoles 4    ninguna
+  578  [noviembre 3, noviembre 6    ] miercoles 4    ninguna
+  579  [noviembre 10, noviembre 13  ] miercoles 4    ninguna
+  580  [noviembre 17, noviembre 20  ] miercoles 4    ninguna
+  582  [diciembre 1, diciembre 4    ] miercoles 4    ninguna
+  583  [diciembre 7, diciembre 11   ] martes, s 4    ninguna
+  584  [diciembre 15, diciembre 18  ] miercoles 4    ninguna
+  585  [diciembre 22                ] miercoles 4    ninguna
+  586  [diciembre 29                ] miercoles 4    ninguna
+
+La edicion 581 no esta en el Release. La 538 se fecha en enero y sale entre
+dos ediciones de febrero: ver E.9.
+
+2 - CRITERIO DE BUSQUEDA
+------------------------
+
+VERSIONES. prev es la capa de texto del PDF, que existe en diecinueve hojas de
+diez ediciones (551 h4, 553 h4, 558 h2, 561 h2, 565 h3 y h4, 566 h1 a h4, 567
+h3 y h4, 568 h2 a h4, 570 h3 y h4, 573 h3 y h4). propf es el OCR propio de la
+sesion sobre las 195 hojas, con el modelo spa de tessdata_fast, -l spa --psm
+3, sin preprocesado, sobre la imagen incrustada a 300 ppi. props es una
+segunda version con el modelo spa estandar y salida tsv, que quedo incompleta
+al cerrar el turno. Cada resultado se etiqueta con la version en que aparece.
+
+UNION DE CORTES. Se midio la marca U+0002: no aparece ni una vez en el ano,
+como en 1908-1912. El guion blando U+00AD aparece 444 veces, y todas ellas en
+la capa previa de esas diecinueve hojas; el OCR propio no lo produce. La union
+quita el guion blando junto con el salto de renglon, despues los sueltos, y
+despues los guiones visibles de fin de renglon con hasta dos signos
+intercalados a cada lado, que es la correccion del 2.3 de la v15.
+
+PASADAS. Literal sobre el texto unido y normalizado sin diacriticos; laxa con
+las dos variantes, la segunda escrita con la clase de espacios en blanco y no
+con un espacio literal; difusa por ratio sobre todas las palabras de cada
+hoja; y difusa ampliada entre 0,70 y 0,78 restringida a palabras que empiezan
+con c, g u o. Ninguna pasada devolvio cero, de modo que no hizo falta probar
+si estaba rota.
+
+ANILLO 2, ACTORES, NUMEROS Y REEMPLAZOS se corrieron sobre el texto sin
+puntuacion de las dos versiones. La lista de actores es la del config
+entregado: 171 entradas de 1946 y de 1908 a 1912. Los numeros de acto son los
+cuarenta de 1946; en esta epoca los actos no llevan numero, de modo que el
+cotejo de fecha contra numeracion del 8.15 no se aplica y se declara.
+
+IDENTIFICADORES DE LAS AUSENCIAS. Sin numero de acto, los identificadores son
+lugar, persona, organismo y fecha.
+
+A - MENCIONES EXPLICITAS
+------------------------
+
+Trece apariciones fichadas, en doce hojas. Las tres hojas restantes con
+acierto de la pasada literal son falsos positivos y estan en E.7, igual que
+los cinco candidatos de la difusa. Tres de las trece apariciones estan en una
+sola hoja, la 569 h2, y son tres listas distintas de tres partidos distintos:
+el encabezado de cada una hubo que buscarlo fuera de la columna donde esta el
+departamento, y en un caso en otra hoja.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 537, Salta, Febrero 10 de 1915, hoja 2, columna 3. Version: OCR
+    propio (propf).
+
+  FICHA
+    Nomina de las autoridades de las mesas receptoras de votos, por
+    departamento. Caldera tiene dos mesas: en la numero 1, presidente titular
+    Santiago Felipe Ruiloba, vice 1o. Camilo Caseres y vice 2o. Augusto Regis;
+    en la numero 2, presidente titular Marcelo Lamas, vice 1o. Pedro Arroyo y
+    vice 2o. Pedro Arias. Despues de la mesa 2 empieza el Departamento de San
+    Carlos.
+
+  MODO DE LECTURA
+    Dos recortes contiguos de la columna 3 (y 0,40 a 0,52 y y 0,50 a 0,60),
+    por el ancho de la columna, a 300 ppi y escala 1,2, ubicados por las
+    coordenadas del tsv. El encabezado general de la nomina esta en la hoja 1
+    de la misma edicion y todavia no se miro: la hoja 2 arranca en mitad de la
+    lista, con el departamento anterior.
+
+  TEXTO (transcripcion desde la imagen)
+    Caldera
+    Mesa numero 1
+    Pte. titular, Santiago Felipe Rui-
+    loba; vice 1o., Camilo Caseres; vice
+    2o., Augusto Regis.
+    Mesa numero 2
+    Pte. titular, Marcelo Lamas; vice
+    1o., Pedro Arroyo; vice 2o., Pedro
+    Arias.
+    Departamento de San Carlos
+
+  NOTA DE LECTURA
+    La entrada de Caldera va sin la palabra Departamento, que si llevan San
+    Carlos y otras de la misma nomina; el original alterna las dos formas.
+    Cinco de los seis nombrados estaban en el config: Camilo Caseres (1910),
+    Augusto Regis (1909), Marcelo Lamas (1909) y Pedro Arroyo (1911); Ruiloba
+    figura como Felipe S. Ruiloba (1912) y Benancio Ruiloba (1909), no como
+    Santiago Felipe. Pedro Arias no estaba.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 539, Salta, Febrero 13 de 1915, hoja 3, columna 2. Version: OCR
+    propio (propf) y, para el cierre del acto, solo el OCR.
+
+  FICHA
+    Decreto del P. E. de la Provincia que convoca al pueblo a elecciones.
+    Caldera aparece dos veces: entre los departamentos que eligen
+    representantes al H. Senado y entre los que eligen diputados. El OCR da un
+    Art. 2o. que designa el domingo 7 del proximo mes de marzo para la
+    eleccion, y el cierre con Patron Costas, Julio Cornejo y "Es copia:
+    Francisco J. Lopez".
+
+  MODO DE LECTURA
+    Recorte de la columna 2 entre y 0,78 y 0,97, por el ancho de la columna, a
+    300 ppi. La hoja esta impresa con un fantasma: la plana sale superpuesta
+    consigo misma desplazada, y el OCR de las zonas donde eso pasa es
+    ilegible. Lo transcripto aqui se leyo en la imagen; el articulo 2o., la
+    fecha y las firmas se leyeron SOLO en el OCR y no se pudieron confirmar en
+    la imagen, porque la columna sigue fuera del recorte y la que sigue trae
+    un remate.
+
+  TEXTO (transcripcion desde la imagen)
+    El P. E. de la Provincia
+    DECRETA:
+    Art. 1o. Convocase al pueblo de
+    los departamentos de Anta, Metan,
+    Iruya, Guachipas, Molinos, La Poma,
+    Candelaria, Oran, Caldera, Rosario
+    de Lerma y Rivadavia, a elejir sus
+    representantes al H. Senado, y al de
+    los departamentos de la Capital, Ri-
+    vadavia, Caldera, Cerrillos, Campo
+    Santo, Chicoana, La Vina, San Car-
+    los, Metan, Candelaria, Rosario de
+    Lerma y Rosario de la Frontera, [a]
+    elejir cuatro diputados por el pri[mero]
+
+  NOTA DE LECTURA
+    El original escribe "elejir" con jota las dos veces. Caldera figura en las
+    dos listas del mismo articulo, de modo que el departamento vota senador y
+    diputado en la misma convocatoria; es la eleccion del 7 de marzo cuyos
+    candidatos publica la edicion 541 y cuyas mesas ubica la 541 h2. A la
+    izquierda de esta columna corre un cuadro de cifras con una linea de
+    saldo, que se trata en E.8.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 540, Salta, Febrero 17 de 1915, hoja 2, columna 1, folio impreso
+    2077. Version: OCR propio de la sesion (propf); no hay capa previa en esta
+    hoja.
+
+  FICHA
+    Decreto del Poder Ejecutivo de la Provincia, Salta, enero 26 de 1915:
+    nombra miembros de la comision municipal del departamento de la Caldera a
+    Eustaquio Murua y Adolfo Vidal, por haber terminado el periodo de Adolfo
+    Vidal y Angel Fernandez. Firman Patron Costas y Julio Cornejo; "Es copia:
+    Gerano S. del Corro, Oficial 1o."
+
+  MODO DE LECTURA
+    Columna 1 recortada por el ancho entero de la columna con 35 pt de margen
+    a la izquierda y 45 a la derecha, mitad superior y mitad inferior apiladas
+    en horizontal, 300 ppi sin reduccion. Transcripcion hecha sobre la imagen.
+    El folio 2077 tambien se leyo en la imagen; el OCR lo daba 2071.
+
+  TEXTO (transcripcion desde la imagen)
+    Habiendo terminado el periodo que
+    fueron nombrados miembros de la co-
+    mision municipal, del departamento
+    de la Caldera los senores Adolfo Vi-
+    dal y Angel Fernandez,
+    El P. Ejecutivo de la Provincia
+    DECRETA:
+    Art. 1o. Nombrase miembros de la
+    referida comision municipal a los se-
+    nores Eustaquio Murua y Adolfo Vi-
+    dal por el termino de ley.
+    Art. 2o. Comuniquese, publiquese
+    y dese al Registro Oficial.
+    Salta, enero 26 de 1915.
+    PATRON COSTAS.
+    Julio Cornejo.
+    Es copia: Gerano S. del Corro.
+    Oficial 1o.
+
+  NOTA DE LECTURA
+    La ortografia del original lleva tildes que esta transcripcion conserva en
+    el archivo de trabajo y que aqui se escriben sin diacriticos solo donde el
+    renglon lo exige; el nombre del refrendante sale impreso "Gerano S. del
+    Corro" en esta columna y "Genaro S. del Corro" en la columna 2 de la misma
+    hoja: las dos formas se transcriben y la contradiccion va a E.9. El
+    decreto no lleva numero de acto. La fecha del decreto (26 de enero) es
+    anterior en tres semanas a la edicion que lo publica (17 de febrero). Los
+    cuatro nombrados y salientes estaban ya en el config como actores de
+    1908-1912: Adolfo Vidal (1908), Angel Fernandez (1909), Eustaquio Murua
+    (1912).
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 541, Salta, Febrero 24 de 1915, hoja 1, columna 2. Version: OCR
+    propio (propf); no hay capa previa en esta hoja.
+
+  FICHA
+    Junta Electoral. Lista de los candidatos proclamados por el partido Union
+    Civica Radical para las elecciones del 7 de marzo. Por Caldera: senador
+    Gumersindo Quevedo y diputado Desiderio Ruiz. Al pie de la columna vecina,
+    Salta, febrero 19 de 1915, Jose A. Araoz.
+
+  MODO DE LECTURA
+    Recorte de la zona de la mencion por el ancho de la columna, 300 ppi sin
+    reduccion, ubicado por las coordenadas del tsv. El encabezado de la lista
+    -Junta Electoral y la formula de los candidatos proclamados- se leyo en el
+    OCR propio y NO en la imagen: queda por confirmar, igual que si hay en la
+    misma hoja una segunda lista de otro partido con el departamento.
+
+  TEXTO (transcripcion desde la imagen)
+    Caldera - Senador: Gu[mersindo]
+    Quevedo.
+    Diputado: Desiderio Ruiz.
+
+  NOTA DE LECTURA
+    El renglon sale con el margen derecho del recorte encima del apellido del
+    senador: se lee "Gu" y el resto se completa con el OCR y con la edicion
+    569, donde el mismo nombre sale entero como Gumersindo Quevedo. Los dos
+    nombrados estan en el config: Desiderio Ruiz como actor de 1911. La lista
+    separa senador de diputado en dos renglones, cosa que no hacen las listas
+    de septiembre.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 541, Salta, Febrero 24 de 1915, hoja 2, columna 3, folio impreso
+    2081. Version: OCR propio (propf).
+
+  FICHA
+    Decreto que fija la ubicacion de las mesas receptoras de votos para las
+    elecciones de senadores y diputados a la H. Legislatura del 7 de marzo.
+    Departamento de La Caldera, colegio electoral de Caldera: mesa 1, padron 1
+    a 298, en la Escuela Elemental mixta del Pueblo; mesa 2, padron 1 a 216,
+    en la Escuela Infantil Provincial de Vaqueros.
+
+  MODO DE LECTURA
+    Recorte de la zona por el ancho de la columna (x 0,695 a 0,93, y 0,855 a
+    0,945) a 300 ppi y escala 1,5, ubicado por el tsv. El encabezado del
+    decreto -Ubicacion de las mesas receptoras de votos- esta al comienzo de
+    la misma hoja y se leyo en el OCR, no en la imagen.
+
+  TEXTO (transcripcion desde la imagen)
+    Departamento de La Cal-
+    dera - Colegio electoral
+    de Caldera
+    1  1 a 298  Escuela Elemental mixta,
+               Pueblo.
+    2  1 a 216  Escuela Infantil Provin-
+               cial, Vaqueros.
+
+  NOTA DE LECTURA
+    La primera columna es el numero de mesa y la segunda el tramo de padron;
+    sin el encabezado de la tabla los dos numeros se confunden. El
+    departamento lleva articulo en el rotulo del departamento (La Caldera) y
+    no lo lleva en el del colegio electoral (Caldera), en el mismo renglon.
+    Vaqueros, termino del anillo 2, aparece aqui como sede de mesa del
+    departamento: es nucleo, no falso positivo.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 552, Salta, Mayo 15 y 19 de 1915, hoja 2, columna 2. Version:
+    OCR propio (propf).
+
+  FICHA
+    Decreto del P. Ejecutivo de la Provincia que suprime puestos por razones
+    de renta: entre ellos, 23 agentes de las comisarias de campana, uno por
+    departamento o distrito, y uno de ellos es el de Caldera. El articulo 2o.
+    suprime ademas, por el corriente ano, subvenciones acordadas.
+
+  MODO DE LECTURA
+    Dos recortes contiguos de la columna 2 (y 0,27 a 0,42 y y 0,40 a 0,52),
+    por el ancho de la columna, a 300 ppi y escala 1,1 y 1,2. Transcripcion
+    sobre la imagen.
+
+  TEXTO (transcripcion desde la imagen)
+    Art. 1o. Suprimense, los siguientes
+    puestos: Jefe de archivo y registro
+    de la propiedad; quince soldados
+    bomberos; diez vigilantes de la poli-
+    cia de la capital; 23 agentes de las
+    comisarias de campana, como sigue:
+    Uno de Alvarado (capital), uno de
+    Cerrillos, uno del Carril, uno de Chi-
+    coana, uni de Chivilme (Chicoana),
+    uno de Cafayate, uno de Betania
+    (Campo Santo), uno de General
+    Guemes, uno de Campo Durand
+    (Oran), uno de Oran, uno del Rosario
+    de la Frontera, uno de Candelaria,
+    uno de Rivadavia, uno de Cachi,
+    uno de Caldera, uno de La Poma,
+    uno de San Carlos, uno de La Vina,
+    uno de Coronel Moldes, uno de La
+    Silleta, uno de Rosario de Lerma,
+    uno de Chorrillos.
+    Art. 2o. Suprimense por el co-
+    rriente ano las subvenciones acorda-
+
+  NOTA DE LECTURA
+    El original imprime "uni de Chivilme" por "uno" [sic] y pone coma despues
+    de Suprimense. La lista nombra 22 puestos donde el articulo anuncia 23; el
+    recuento se hizo sobre la transcripcion y la diferencia va a E.8 sin
+    conciliar. Betania, termino del anillo 2, aparece aqui aclarado como de
+    Campo Santo: falso positivo para el departamento.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 567, Salta, Agosto 18 y 21 de 1915, hoja 2, columna 1. Version:
+    OCR propio (propf).
+
+  FICHA
+    Segunda tabla de ubicacion de mesas receptoras del ano, la de las
+    elecciones de agosto. DTO. DE LA CALDERA, colegio electoral de la Caldera:
+    mesa 1, padron 1 a 298, Escuela Elemental Mixta del Pueblo; mesa 2, padron
+    1 a 216 o 316, Escuela Infantil Provincial de Vaqueros. Antes viene el
+    colegio electoral de Campo Duran y despues el Departamento de La Vina.
+
+  MODO DE LECTURA
+    Dos recortes de la columna 1 (y 0,66 a 0,88 por el ancho de la columna, y
+    y 0,735 a 0,815 a escala 1,5), mas un recorte del numero dudoso a escala
+    3, ubicados por el tsv.
+
+  TEXTO (transcripcion desde la imagen)
+    DTO. DE LA CALDERA
+    Colegio Electoral de la Caldera
+    1  1 a 298  E. Etal. Mixta, Pueblo.
+    2  1 a 216  E. Intil. Pcial. Vaqueros
+
+  NOTA DE LECTURA
+    El primer digito del segundo padron esta empastado. A escala 3 el trazo se
+    parece al del 2 de "298" del renglon de arriba, y la edicion 541 imprime
+    216 sin ninguna duda para la misma mesa; pero la lectura 316 tambien
+    cierra con lo impreso. Se escriben las dos y no se corrige. Aqui el rotulo
+    del departamento va abreviado y en versalitas, y el del colegio electoral
+    en bastardilla, al reves que en la edicion 541: las dos formas se
+    transcriben.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 568, Salta, Agosto 25 y 29 de 1915, hoja 4, columna 1, pie de
+    columna, bajo el titulo "Edictos". Segunda aparicion: edicion N 569,
+    Salta, Septiembre 1o y 4 de 1915, hoja 3. Versiones: capa previa y OCR
+    propio (prev+propf) en la 568; solo OCR propio en la 569.
+
+  FICHA
+    Edicto del Juez de Paz del departamento de Caldera, E. M. Aparicio:
+    declara abierto el juicio sucesorio de dona Asuncion Espeche Gonzalez de
+    Wayar y cita por treinta dias a herederos y acreedores. Fechado en
+    Caldera, septiembre 2 de 1915. Marca de publicacion 1.202 v-7 oct.
+
+  MODO DE LECTURA
+    Columna 1 de la hoja 4 recortada entera y apilada de a dos, 300 ppi. El
+    pie de la columna quedo con el margen derecho recortado en la primera
+    pasada y se repitio el recorte con mas margen. El texto que sigue se
+    coteja renglon a renglon con la capa previa de la misma hoja, que en esta
+    hoja existe.
+
+  TEXTO (transcripcion desde la imagen)
+    Edictos
+    Habiendose declarado abierto el juicio
+    sucesorio de dona Asuncion Espeche
+    Gonzalez de Wayar, el suscrito Juez de
+    Paz de este Departamento de Caldera,
+    ha ordenado se cite por edicto durante
+    treinta dias desde la primera publicacion
+    del presente, a todos los que se conside-
+    ren con derecho a esta sucesion ya sean
+    como herederos o acreedores a hacerlos
+    valer, bajo apercibimiento de ley.-Cal-
+    dera, Septiembre 2 de 1915.-E. M. APA-
+    RICIO, Juez de Paz.            1.202 v-7 oct.
+
+  NOTA DE LECTURA
+    El apellido de la causante sale "Wayar" en la imagen y en el OCR propio;
+    la capa previa lo lee "Wayat" en el primer renglon y "Wayar" despues: se
+    transcribe la forma de la imagen y la discrepancia entre versiones va a
+    E.5. E. M. Aparicio es Escolastico M. Aparicio, que aparece por su nombre
+    completo en la hoja 2 de la edicion 584 como juez de paz de Caldera. La
+    marca "v-7 oct" anuncia publicacion hasta el 7 de octubre; el texto del
+    aviso se busco en todo el corpus y solo aparece en estas dos ediciones
+    (568 y 569), de modo que la marca no prueba las demas publicaciones.
+    Pendiente: verificar en la imagen la aparicion de la edicion 569.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 569, Salta, Septiembre 1o y 4 de 1915, hoja 2, columna 1. El
+    encabezado de la lista esta en la hoja 1 de la misma edicion, columna 3.
+    Version: OCR propio (propf).
+
+  FICHA
+    Lista de candidatos proclamados por el partido Union Provincial para
+    electores de gobernador. Por La Caldera: Eustaquio Murua y Nolasco
+    Echenique. La lista cierra al pie de la columna 1 de la hoja 2, en Salta,
+    Septiembre 3 de 1915, Jose A. Araoz, Srio. del Senado.
+
+  MODO DE LECTURA
+    Tres recortes: el encabezado en la hoja 1 (x 0,52 a 0,76 del ancho, y
+    0,685 a 0,80), la entrada del departamento y el cierre de la lista, los
+    tres por el ancho de la columna y a 300 ppi. La posicion de cada uno salio
+    de las coordenadas del tsv de la segunda version.
+
+  TEXTO (transcripcion desde la imagen)
+    Electores de gobernador
+    Candidatos proclamados por el
+    partido Union Provincial para elec-
+    tores de gobernador.
+      [...]
+    La Caldera
+    Senores Eustaquio Murua y No-
+    lasco Echenique.
+      [...]
+    Salta, Septiembre 3 de 1915.
+    JOSE A. ARAOZ.
+    Srio. del Senado.
+
+  NOTA DE LECTURA
+    Esta es la unica de las tres listas de la hoja que escribe "La Caldera"
+    con articulo; las otras dos escriben "Caldera". Eustaquio Murua es el
+    mismo que el decreto de la edicion 540 nombra miembro de la comision
+    municipal del departamento siete meses antes. Nolasco Echenique no estaba
+    en el config.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 569, hoja 2, columna 2; el encabezado de la lista esta al pie de
+    la columna 1 de la misma hoja. Version: OCR propio.
+
+  FICHA
+    Lista de candidatos proclamados por el partido Union Civica Radical para
+    electores de gobernador. Por Caldera: Desiderio Ruiz y Gumersindo Quevedo.
+
+  MODO DE LECTURA
+    Recorte de la entrada por el ancho de la columna (x 0,44 a 0,68, y 0,20 a
+    0,36) y recorte aparte del encabezado al pie de la columna 1 (x 0,25 a
+    0,47, y 0,68 a 1,00), los dos a 300 ppi.
+
+  TEXTO (transcripcion desde la imagen)
+    Candidatos proclamados por el
+    partido Union Civica Radical para
+    electores de gobernador.
+      [...]
+    Caldera
+    Senores Desiderio Ruiz. Gumer-
+    sindo Quevedo.
+
+  NOTA DE LECTURA
+    Los mismos dos nombres que la lista radical de febrero (edicion 541), alli
+    como candidatos a senador y diputado y aqui como electores de gobernador.
+    El original pone punto y no coma despues de Ruiz.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 569, hoja 2, columna 3. Version: OCR propio.
+
+  FICHA
+    Lista de candidatos proclamados por el partido Union Provincial
+    Independiente para electores de gobernador. Por Caldera: Octavio Figueroa
+    y Ernesto Tedin. La lista cierra en Salta, Septiembre 4 de 1915, Jose A.
+    Araoz, Srio. del Senado, y debajo empieza la seccion Remates.
+
+  MODO DE LECTURA
+    Un solo recorte de la columna 3 entre y 0,24 y 0,62, por el ancho de la
+    columna, a 300 ppi; entra el encabezado, la entrada del departamento y el
+    cierre firmado.
+
+  TEXTO (transcripcion desde la imagen)
+    Candidatos proclamados por [el]
+    partido Union Provincial Indep[en-]
+    diente para electores de gobernad[or.]
+      [...]
+    Caldera
+    Senores Octavio Figueroa y Ern[es-]
+    to Tedin.
+      [...]
+    Salta, Septiembre 4 de 1915.
+    JOSE A. ARAOZ.
+    Srio. del Senado.
+
+  NOTA DE LECTURA
+    El recorte corta unos caracteres del margen derecho de la columna, que se
+    marcan entre corchetes. Las dos listas anteriores cierran el 3 de
+    septiembre y esta el 4. Ni Octavio Figueroa ni Ernesto Tedin estaban en el
+    config.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 584, Salta, Diciembre 15 y 18 de 1915, hoja 2, columna 1, bajo
+    el titulo "Leyes y Decretos". Version: OCR propio (propf).
+
+  FICHA
+    Decreto del Gobernador de la Provincia, Salta, Diciembre 6 de 1915:
+    comisiona a una persona por departamento para la clasificacion general de
+    patentes y el empadronamiento de los capitales en giro del ano 1916 en los
+    departamentos de la campana. Por Caldera, Escolastico M. Aparicio.
+
+  MODO DE LECTURA
+    Columna 1 recortada en dos tramos por el ancho entero de la columna (y
+    0,20 a 0,72 y y 0,68 a 0,80), a 300 ppi el segundo y a 0,85 de escala el
+    primero. Transcripcion sobre la imagen.
+
+  TEXTO (transcripcion desde la imagen)
+    Leyes y Decretos
+    Salta, Diciembre 6 de 1915.
+    Siendo conveniente proce-
+    der a la clasificacion general
+    de patentes y empadrona-
+    miento de los capitales en gi-
+    ro, por el proximo ano de
+    1916, en los departamentos de
+    la campana,
+    El Gobernador de la Provincia
+    DECRETA:
+    Articulo 1.o Comisionese pa-
+    ra llenar estas funciones a los
+    siguientes senores:
+      [...]
+    Iruya, Tomas F.
+    Vargas;  Caldera, Escolastico
+    M. Aparicio;  Anta, Paulino
+    Echazu;  Rivadavia. Jose N.
+    Pena.
+
+  NOTA DE LECTURA
+    Escolastico M. Aparicio es el mismo E. M. Aparicio que firma como Juez de
+    Paz de Caldera el edicto de la edicion 568. El nombre Escolastico M.
+    Aparicio ya estaba en el config como actor de 1911 ("escolastico m.
+    aparicio") y como "escolastico aparicio" de 1908. El original abrevia sin
+    punto: "M Aparicio". La entrada de Rivadavia lleva punto en vez de coma.
+
+  ......................................................................
+
+  FUENTE
+    Edicion N 585, Salta, Diciembre 22 de 1915, hoja 2, columna 1. El
+    encabezado del decreto esta en la hoja 1 de la misma edicion, columna 2.
+    Version: OCR propio (propf).
+
+  FICHA
+    Decreto del Gobernador de la Provincia: nombra los jurados que han de
+    entender en los reclamos relativos al empadronamiento de capitales en giro
+    del ano 1916. Por Caldera: Daniel Linares y Silvano Murua; suplentes,
+    Adolfo Vidal y Belisario Nieva.
+
+  MODO DE LECTURA
+    Dos recortes: el encabezado en la hoja 1 (x 0,515 a 0,755, y 0,255 a 0,52)
+    y el renglon del departamento en la hoja 2 (x 0,25 a 0,45, y 0,785 a
+    0,87), los dos a 300 ppi, ubicados por las coordenadas del tsv. El
+    apellido del ultimo suplente queda en el borde derecho de la columna.
+
+  TEXTO (transcripcion desde la imagen)
+    Estando nombrados por de-
+    creto de la fecha los comisio-
+    nados que han de practicar el
+    empadronamiento de los ca-
+    pitales en giro y clasificacion
+    de patentes para el proximo
+    ano de 1916 y correspondien-
+    do en consecuencia designar
+    los jurados que han de enten-
+    der en los reclamos, segun las
+    disposiciones pertinentes de la
+    ley de la materia.
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1,o  Nombrase jurados
+    para entender en los reclamos
+    relativos al empadronamiento
+    de capitales en giro del ano
+    1916 a las siguientes personas:
+      [...]
+    Caldera-Daniel Linares [y]
+    Silvano Murua; suplentes: Ado[l-]
+    fo Vidal y Belisario Nieva.
+
+  NOTA DE LECTURA
+    El decreto de los jurados remite a otro decreto "de la fecha", que es el
+    de los comisionados publicado en la edicion 584 y fechado el 6 de
+    diciembre; los dos son del mismo tramite y por eso el departamento aparece
+    en dos ediciones seguidas con personas distintas. El original imprime
+    "Art. 1,o" con coma. El apellido del ultimo suplente se lee "Nieva."
+    contra el borde del recorte y el OCR lo da "Nievas": se transcribe lo que
+    se ve y la duda queda declarada. Daniel Linares y Silvano Murua ya estaban
+    en el config como actores de 1909.
+
+  ......................................................................
+
+LO QUE QUEDA DEL ANILLO 1. Ninguna hoja con acierto sin resolver. Queda por
+mirar en la imagen la segunda aparicion del edicto de la sucesion Espeche, en
+la 569 h3, y tres encabezados que hasta ahora se leyeron solo en el OCR: el de
+la nomina de autoridades de mesa (537 h1), el de la lista de candidatos
+radicales de febrero (541 h1) y el del decreto de ubicacion de mesas (541 h2).
+Cada ficha lo declara en su modo de lectura.
+
+B - VECINDAD
+------------
+
+B.1 - NUCLEOS YA FICHADOS EN EL PARRAFO A. Vaqueros, que es sede de la mesa 2
+del colegio electoral de Caldera en las ediciones 541 y 567, y el apellido
+Murua en sus dos portadores del departamento, Eustaquio (540) y Silvano (585).
+Se nombran y no se repiten.
+
+B.2 - NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO. Ninguno. En
+1915 no hay un solo acto que toque a un paraje, una finca o una persona del
+departamento sin nombrar tambien a Caldera o a La Caldera; los dos unicos
+nombres del anillo 2 que resultaron del departamento, Vaqueros y el apellido
+Murua, aparecen siempre dentro de un acto que ya nombra el termino. Es un
+hecho del ano y se declara como tal: este parrafo no aporta ninguna mencion
+nueva.
+
+B.3 - TERMINOS DEL ANILLO 2 QUE EN 1915 SON OTRA COSA. El anillo 2 dio acierto
+en dieciocho de sus setenta terminos y se leyeron los contextos de los
+dieciocho, uno por uno. Sacando Vaqueros y Murua, los dieciseis restantes son
+otra cosa: castellanos es, en doce hojas, el abogado Juan Jose Castellanos,
+ademas de Benjamin, Aurelio y Joaquin Castellanos, del rio Castellanos de Anta
+y del partido Castellanos de la segunda seccion de Candelaria; manzano es la
+finca El Manzano, lindera de San Martin y de la propiedad de Miguel Lardies, y
+en dos hojas la palabra manzana de un plano de la ciudad leida mal; isasmendi
+es la casa de comercio Isasmendi y Cia. y Ricardo J. Isasmendi, de la finca El
+Churcal; entre rios es la calle Entre Rios de la ciudad y la finca Entre Rios,
+parte integrante del Tabacal de Oran; angostura es la finca Angostura y
+Arcadia de la senora Felicidad G. de Uriburu; betania es el vivero de Campo
+Santo, aclarado asi en el original; wierna es el apellido de Angel Bautista,
+Jose Antonio y Exequiel Wierna; chunas es la palabra hichunas de dos
+inventarios de herramientas; lagunilla es un partido del colegio electoral de
+Candelaria y la finca Lagunillas de Rosario de Lerma; acheral es una fraccion
+de finca del departamento de Anta; el cajon es el Nevado del Cajon; rio blanco
+es el rio Blanco de Urena y Puerta Grande, en Oran; nogales es el arroyo de
+los Nogales del distrito de La Silleta; quintin es el nombre de pila de
+Quintin Mercado; sauces es el rio de los Sauces de ese mismo deslinde; y
+trancas es la palabra transcurrido partida por el OCR. Los cincuenta y dos
+terminos restantes del anillo 2 no dieron un solo acierto en el ano.
+
+B.4 - AUSENCIAS DEL ANILLO DE ACTORES, en los tres grupos del 5.1.
+
+  Primer grupo, los que solo aparecen en su propio acto: Eustaquio Murua y
+  Angel Fernandez (540 h2); Daniel Linares, Silvano Murua, Adolfo Vidal y
+  Belisario Nieva (585 h2); Nolasco Echenique, Octavio Figueroa y Ernesto
+  Tedin (569 h2); Camilo Caseres, Augusto Regis, Marcelo Lamas y Pedro Arroyo
+  (537 h2). Trece personas que el departamento pone en un acto y que no
+  vuelven a aparecer en las 195 hojas del ano.
+
+  Segundo grupo, los que aparecen en mas de un acto del departamento, que es
+  el que arma la trama del ano: Escolastico M. Aparicio, juez de paz de
+  Caldera que firma el edicto de la sucesion Espeche en septiembre (568 h4 y
+  569 h3) y comisionado del empadronamiento del departamento en diciembre (584
+  h2); Desiderio Ruiz, candidato a diputado por Caldera en febrero (541 h1) y
+  elector de gobernador por el mismo departamento y el mismo partido en
+  septiembre (569 h2); y Gumersindo Quevedo, candidato a senador en febrero y
+  elector en septiembre, con el mismo par.
+
+  Tercer grupo, los que aparecen tambien fuera del departamento: Gumersindo
+  Quevedo, presidente titular de una mesa de otro departamento en la nomina de
+  la edicion 537 h1; y el doctor Desiderio Ruiz, nombrado en la edicion 560 h3
+  como antiguo propietario de un terreno de la ciudad lindero de la calle
+  Corrientes, donde el tratamiento de doctor deja en duda si es la misma
+  persona. No se unifican.
+
+DOS BUSQUEDAS QUE FALLAN Y QUE NO SON AUSENCIAS. Santiago Felipe Ruiloba y
+Pedro Arias, presidente y vicepresidente 2o. de las mesas de Caldera de la
+edicion 537 h2, no aparecen en ninguna busqueda, ni siquiera en su propio
+acto, y tampoco su apellido suelto. No es una ausencia: es la busqueda. El OCR
+de esa hoja intercala renglones de columnas vecinas y parte los nombres, de
+modo que donde la imagen dice "Santiago Felipe Rui-loba" el texto dice
+"santiago felipe ruia mamero abraham ... loba vice lo camilo caseres", y donde
+dice "Pedro Arias" dice "dro arias" en otro renglon. Lo mismo, en menor grado,
+le pasa a Adolfo Vidal en la 540 h2, que el texto parte en "adolfo vi dal" y
+que solo se encuentra por el nombre.
+
+ACTORES DEL CONFIG QUE REAPARECEN. Veintidos entradas del config de 1908-1912
+y 1946 vuelven a salir en 1915 con nombre completo o con nombre e inicial:
+Francisco Mario Lopez (34 hojas), Emilio Soliverez (11), Manuel Garcia (3),
+Abelardo Figueroa (2), Desiderio Ruiz (2), Manuel Nunez de la Rosa (2),
+Francisco Aleman (2), Luis Linares (2), y con una hoja cada uno Victor M.
+Saravia, Jesus Ramirez, Silvano Murua, Daniel Linares, Angel Fernandez,
+Eustaquio Murua, Augusto Regis, Marcelo Lamas, Camilo Caseres, Pedro Arroyo,
+Benjamin Lopez, Ignacio Ortiz y Anacleto Gutierrez. El config heredado sirve
+para esta epoca.
+
+C - LIMITROFES
+--------------
+
+En 1915 los departamentos limitrofes aparecen sobre todo en las mismas listas
+electorales donde aparece Caldera, y por eso no generan ficha propia: la
+Capital, Rosario de Lerma, Campo Santo y General Guemes figuran en la
+convocatoria de la edicion 539, en las nominas de mesas de las ediciones 537,
+541 y 567, en las tres listas de electores de la 569 y en los dos decretos de
+diciembre de las ediciones 584 y 585. No hay en el ano ningun acto de limite,
+deslinde o jurisdiccion entre Caldera y un departamento vecino.
+
+P - PLANOS
+----------
+
+El corpus no publica ningun plano. Veintisiete hojas del ano mencionan la
+palabra plano, casi siempre en deslindes, mensuras y remates que remiten a un
+plano que no esta en el Boletin, y una de ellas, la 567 h3, a una manzana del
+plano general oficial de la ciudad. Ninguna de esas veintisiete remisiones
+toca al departamento: los actos de Caldera de 1915 son electorales, judiciales
+o de nombramiento, y ninguno acompana plano. Se registran, entonces,
+veintisiete planos citados y no acompanados, cero del departamento. El techo
+de resolucion del ano es la imagen incrustada en el PDF: 300 ppi exactos en
+las 195 hojas, en gris de un bit, con compresion CCITT.
+
+D - INDICE
+----------
+
+Menciones del anillo 1, por edicion y hoja, con su materia:
+
+  537 h2   autoridades de las mesas 1 y 2 de Caldera
+  539 h3   convocatoria a elecciones; Caldera en las dos listas
+  540 h2   comision municipal del departamento (enero 26)
+  541 h1   candidatos radicales: senador y diputado por Caldera
+  541 h2   ubicacion de las mesas del colegio electoral de Caldera
+  552 h2   supresion del agente de la comisaria de campana
+  567 h2   ubicacion de mesas, segunda tabla del ano
+  568 h4   edicto del juez de paz: sucesion Espeche Gonzalez de Wayar
+  569 h2   electores de gobernador, Union Provincial
+  569 h2   electores de gobernador, Union Civica Radical
+  569 h2   electores de gobernador, Union Provincial Independiente
+  569 h3   segunda aparicion del edicto de la 568
+  584 h2   comisionado del empadronamiento de 1916
+  585 h2   jurados del empadronamiento de 1916
+
+E - OBSERVACIONES
+-----------------
+
+
+E.1 - DUPLICACION Y SALDOS
+Sin las .jpg del script no hay md5 ni dhash ni medicion de tinta: la
+duplicacion se controla por texto. El unico aviso del departamento con marca
+de publicacion es el edicto de la sucesion Espeche Gonzalez de Wayar, marca
+1.202 v-7 oct, y su texto se busco en todo el corpus: aparece en la 568 h4 y
+en la 569 h3 y en ninguna otra, de modo que la marca, que anuncia publicacion
+hasta el 7 de octubre, no prueba las demas.
+
+UNA REPETICION QUE SI OCURRE, y que no es del departamento: el resumen de caja
+de la Tesoreria General correspondiente a marzo de 1915, firmado en Salta el 5
+de abril por M. A. Arias, tesorero, sale completo en la edicion 552, hojas 2 y
+3, del 15 y 19 de mayo, y vuelve a salir en la edicion 557 h4, del 12 y 16 de
+junio, un mes despues, con las mismas cifras. El cotejo de las dos apariciones
+se hizo sobre el texto y no sobre la imagen, y se declara asi.
+
+CADENA DE SALDOS. Antes de prometerla se contaron los resumenes publicados:
+son cinco, de enero, marzo, abril, septiembre y noviembre, y faltan los de los
+otros siete meses. Con cinco no hay cadena anual sino tramos cortos. Lo
+transcripto desde la imagen: el resumen de enero (541 h1) abre con saldo de
+diciembre de 1914 de 121.321,68, cierra con saldo existente en caja que pasa a
+febrero de 1915 de 170.106,28 y da un total de egresos de 330.304,01; el de
+marzo (552 h2) abre con saldo de febrero de 1915 de 167.028,26 y cierra, en la
+hoja 3, con 141.856,06 que pasan a abril; el de abril (556 h2) abre con saldo
+de marzo de 1915 de 141.856,06, que encadena exacto con el anterior; el de
+septiembre (574 h2) abre con saldo de agosto de 1915 de 133.183,95; y el de
+noviembre (583 h2) abre con saldo de octubre de 1915 de 176.518,70. Entre el
+cierre de enero y la apertura de marzo no hay contradiccion, porque el mes
+intermedio no se publico: lo que pasa a febrero es 170.106,28 y lo que febrero
+entrega es 167.028,26, y el resumen de febrero, que los conciliaria, no esta
+en el corpus. El unico empalme comprobado del ano es marzo con abril. La
+cadena queda abierta contra 1914 por un lado y contra 1916 por el otro. El
+saldo de cierre de noviembre y el total de salidas de ese mes se leyeron solo
+en el OCR y por eso no se publican aqui como cifra.
+
+E.2 - COBERTURA
+195 hojas de 195 con texto, de las cuales 19 con dos versiones y 176 con una
+sola. Veinticuatro imagenes miradas: las 49 cabeceras de tapa en siete
+montajes, una vista general de hoja y dieciseis recortes de columna o de zona
+en siete hojas. Una sola columna cotejada renglon a renglon contra la capa
+previa, la columna 1 de la 568 h4, que es una de las diecinueve hojas donde la
+capa previa existe.
+
+E.3 - SIN MENCION Y NO MIRADO
+Del anillo 1 no queda ninguna hoja con acierto sin mirar. Sin mirar siguen los
+contextos del anillo 2 y las hojas de las tablas.
+
+E.4 - FIRMAS Y AUTORIDAD
+El gobernador es Patron Costas, que firma en 41 de las 49 ediciones. Refrendan
+Julio Cornejo, en 35 ediciones, y Macedonio Aranda, en 9. El "Es copia" lo
+firman Francisco J. Lopez en 22 ediciones, Juan Martin Leguizamon en 14, y
+Gerano (o Genaro) S. del Corro, Oficial 1o., en una sola, la 540; las dos
+formas de ese nombre estan en esa misma hoja y no se normalizan.
+
+La formula de encabezado varia dentro del mismo ano y del mismo gobierno, y no
+se normaliza: "El P. Ejecutivo de la Provincia" en 13 ediciones, "El P. E. de
+la Provincia" en 15, y "El Gobernador de la Provincia" en 2, las ediciones 584
+y 585, las dos de diciembre y las dos del mismo tramite de empadronamiento.
+
+INTERINATO SIN CIERRE. En las ediciones 549 y 567 firma el Presidente del
+Senado en ejercicio del Poder Ejecutivo. No hay a la vista decreto de apertura
+ni de cierre, de modo que no se fija el dia del reintegro: se declaran las dos
+ediciones donde aparece y nada mas.
+
+E.5 - CORTES Y COLUMNAS
+La marca U+0002 no existe en este corpus. El guion blando vive solo en la capa
+previa. La columna perdida no se puede descartar todavia: con dos columnas
+cotejadas no se afirma nada sobre el ano. Discrepancia entre versiones ya
+vista: "Wayat" en la capa previa contra "Wayar" en la imagen y en el OCR
+propio.
+
+E.6 - REPETICIONES
+Ver E.1.
+
+E.7 - FALSOS POSITIVOS Y NEGATIVOS
+FALSOS POSITIVOS DEL ANILLO 1 EN 1915, juzgados por su contexto entero: "Celso
+Calderon", presidente de mesa de otro departamento (539 h2); "alcalde de
+carcel", que contiene la cadena cald (546 h1); y "1 motor y caldera completo,
+con bomba de agua" en el remate de las maquinas de un aserradero (556 h3). De
+los cinco candidatos de la difusa, ninguno es el termino: "calavera" es la
+finca Calavera y "cabedera" es cabecera, las dos en un deslinde (550 h4);
+"malderas" es maderas, en un lote de maderas, carbon y lena (553 h3);
+"caderlas" es mercaderias, en un remate de generos (578 h3); "alder" es
+Alderete, apellido, en 569 h2. Las dos formas que si son el termino son
+"calyera" en 568 h4, que es la misma palabra Caldera del edicto ya fichado
+leida mal por una version, y "alder" en 567 h2, que es "Dto. de La Caldera"
+partido por el OCR. Los tres falsos positivos del anillo 1 y los cuatro de la
+difusa se juzgaron por el contexto del OCR y por la palabra aislada del tsv,
+no por la imagen; se declara asi. De la difusa ampliada, entre 0,70 y 0,78 y
+con inicial c, g u o, salieron veinte formas, todas ruido conocido de la
+epoca: cualquiera, calidad, galeria, cuadra, cuadras, capilla, cadenas,
+candela, caneria, cabrera, carretilla, cartera, cadena, camera, caller y seis
+deformaciones sueltas del OCR.
+
+E.8 - FIDELIDAD NUMERICA
+CUADROS PUBLICADOS. Cinco resumenes de caja de la Tesoreria General, de enero,
+marzo, abril, septiembre y noviembre, mas el cuadro de cifras de la hoja 3 de
+la edicion 539 y el balance del Banco Provincial de Salta del ejercicio de
+1914, aprobado por ley en la edicion 549 h1 sin que el Boletin publique el
+cuadro. No hay en todo el ano un solo balance municipal, y por lo tanto
+ninguno del departamento: es un hecho del corpus y no una tabla que quedo sin
+mirar.
+
+SUBTOTAL RECALCULADO. Del resumen de septiembre (574 h2) se leyo entero, en la
+imagen, el subtotal de Receptoria General: C. Tril. 1915 11595.08, Pat.
+General 10.10.-, Papel Sellado 14949.75, Guias 36.28.-, Imp. Vinos 14.872,85,
+Papel Multas 259.06, Imp. Azucar 3888.74 y Renta Atrazada 1244.05, con
+subtotal impreso 51437.53. Leyendo los dos importes con punto de millar, esto
+es 1010 y 3628, la suma da 51447.53, diez pesos mas que lo impreso. La lectura
+alternativa que cierra la columna exacta es Pat. General 1000.-, y las dos se
+escriben sin corregir ninguna. Los otros cuatro resumenes quedan como no
+recalculados: de tres se transcribieron los saldos y el total, y del de abril
+solo el saldo de apertura.
+
+Dos diferencias mas, las dos dentro de fichas del parrafo A. La primera: el
+decreto de la edicion 552 anuncia 23 agentes de comisarias de campana y
+enumera 22 lugares; el recuento se hizo sobre la transcripcion propia y la
+diferencia se declara sin conciliar. La segunda: el tramo de padron de la mesa
+2 de Caldera sale 1 a 216 en la edicion 541 y, en la 567, con el primer digito
+empastado, que se lee 216 o 316.
+
+E.9 - CONTRADICCIONES
+a) La edicion 538 se fecha "SALTA, ENERO 13 - 16 DE 1915" y sale en la serie
+entre la 537, del 10 de febrero, y la 539, del 13 de febrero. La fecha se leyo
+en la imagen y no se concilia.
+b) Cinco tapas caen en dia que la propia formula de la cabecera no admite: la
+550 en jueves 6 de mayo, la 556 en lunes 7 de junio, la 564 en domingo 1o de
+agosto, la 568 en domingo 29 de agosto y la 583 en martes 7 de diciembre. Las
+tapas declaran "Aparece miercoles y sabados" (551) y "Aparece miercoles y
+sabado" (566 y 586).
+c) La tapa de la 566 no imprime el ano: dice "SALTA, AGOSTO 11 Y 14", sin "DE
+1915".
+d) La tapa de la 564 sale con la fecha impresa dos veces, una sobre la otra.
+e) El refrendante del "Es copia" sale impreso "Gerano S. del Corro" y "Genaro
+S. del Corro" en la misma hoja 2 de la edicion 540.
+f) El numero de la edicion 563 se lee "563" o "568" segun el recorte: queda
+por mirar a mayor resolucion.
+g) La hoja 3 de la edicion 539 esta impresa con fantasma: la plana sale
+superpuesta consigo misma, desplazada, y hay zonas donde ninguna version del
+OCR acierta. Se declara y no se explica.
+h) El mismo tramite de fin de ano sale con dos formulas de autoridad
+distintas: los decretos de las ediciones 584 y 585 abren con "El Gobernador de
+la Provincia" y los de enero, en la 540, con "El P. Ejecutivo de la Provincia"
+y "El P. E. de la Provincia". No se normaliza.
+
+E.10 - LIMITES
+1. No hay .tsv del script, de modo que no hay confianza por hoja tal como la
+define el 3 de la rubrica, y la lista de hojas "a ojos" no existe. La segunda
+version del OCR que corre en la sesion escribe su propio tsv y va a permitir
+calcularla; al cerrar este turno estaba incompleta.
+2. No hay .jpg del script: no hay md5, ni dhash, ni medicion de tinta.
+3. No hay pre-informe ni CSV: no hay conteo de formulas de autoridad ni lista
+de decretos con que cotejar.
+4. No hay log.txt: no hay errores de corrida que leer.
+5. La edicion 581 no esta en el Release: sus hojas no se pueden mirar.
+6. No hay ediciones de enero ni de la primera semana de febrero.
+7. No hay sumario con puntos guia en esta epoca: el cotejo sumario contra
+cuerpo no es aplicable, y decirlo asi evita el cero discrepancias sin control.
+
+CONFIG ACTUALIZADO
+------------------
+
+Se entrega lee_config.json con una sola clave tocada. A actores se le agregan
+nueve entradas con origen 1915, que son las personas de los actos del parrafo
+A que no estaban: Gumersindo Quevedo, Nolasco Echenique, Octavio Figueroa,
+Ernesto Tedin, Belisario Nieva, Santiago Felipe Ruiloba, Pedro Arias, Asuncion
+Espeche Gonzalez de Wayar y la forma abreviada E. M. Aparicio, que es como
+firma el juez de paz. Las 171 entradas anteriores se conservan con su origen:
+van de 171 a 180.
+
+A anillo2 no se le agrega nada: en 1915 el departamento no aporto ningun
+toponimo nuevo ni ninguna forma deformada que hiciera falta para encontrarlo,
+porque las dos unicas menciones de vecindad del ano, Vaqueros y el apellido
+Murua, ya estaban. A numeros tampoco: los actos de esta epoca no llevan numero
+y los cuatro numeros del config que dan acierto, 1914, 2000, 2201 y 2220, son
+coincidencias de cifra, sobre todo de ano y de tramos de padron. A
+falsos_positivos no se le agrega nada, por la regla del 12: los dieciseis
+terminos del anillo 2 que en 1915 son otra cosa y los siete falsos positivos
+del anillo 1 quedan listados en este informe y no en el config, para que no
+oculten una mencion real en otro ano.
+
+F - CORRECCION A LA RUBRICA
+---------------------------
+
+1. El 2 de la rubrica supone que un PDF real trae capa previa. En 1915 no la
+trae: 176 de 195 hojas tienen cero caracteres. Conviene medirlo hoja por hoja
+al bajar el ano y no por edicion, porque aqui la capa aparece salteada dentro
+de la misma edicion.
+2. El 1 y el 16 de la rubrica dan por imposible el OCR en sesion cuando
+tesseract no trae spa. Es corregible: raw.githubusercontent.com esta entre los
+dominios alcanzables y spa.traineddata se baja de tesseract-ocr/tessdata en
+segundos. Con el modelo rapido el ano entero de esta epoca, 195 hojas a 300
+ppi y un solo nucleo, tarda unos treinta y cinco minutos; con el estandar,
+unos cincuenta y cinco.
+3. El contenedor de la sesion se reinicia entre turnos: el proceso lanzado con
+setsid nohup no sobrevive al cambio de turno, aunque los archivos si. El OCR
+solo avanza dentro del turno y hay que relanzarlo al empezar cada uno; el
+script reanudable lo hace sin perder nada.
+4. pkill -f <script> mata tambien la shell de la herramienta, porque el patron
+aparece en su propia linea de comando y la llamada muere sin ejecutar lo que
+seguia. Se mata por PID, o no se mata.
+5. Conviene pedirle a tesseract txt y tsv en la misma corrida. El tsv da la
+confianza por hoja, que sin el script es un limite, y las coordenadas de cada
+palabra, que ahorran el tanteo de columnas al recortar.
+6. La regla del 4.11 -el encabezado de una lista se mira aunque este en otra
+hoja- vuelve a decidir fichas en 1915, y mas fuerte que en 1912. La hoja 2 de
+la edicion 569 trae tres listas de departamentos casi identicas, con los
+mismos apellidos repartidos de otro modo, y son tres proclamaciones de tres
+partidos distintos: Union Provincial, Union Civica Radical y Union Provincial
+Independiente. El encabezado de la primera esta en la hoja anterior; el de la
+segunda, al pie de la columna 1 de la misma hoja; el de la tercera, al pie de
+la columna 3. Sin buscarlos, las tres entradas se habrian fichado como una
+sola cosa.
+7. Conviene contar como aparicion la entrada del departamento en cada lista y
+no la hoja: tres fichas en una hoja no son una ficha con tres renglones,
+porque cada lista es un acto distinto con su propia fecha y su propia firma.
+8. El recorte por tercios de la hoja no sirve si se mide sobre el ancho de la
+imagen: estos escaneos tienen margenes blancos desiguales y el bloque de texto
+de 1915 ocupa del 24 al 87 por ciento del ancho. Se detecta el bloque por
+proyeccion vertical y se divide ese bloque, no la hoja.
+
+RECUENTO
+--------
+
+  Assets del Release                        49 (todos PDF)
+  Ediciones presentes                       49 (537 a 586, falta 581)
+  Hojas                                     195
+  Hojas con capa previa                     19
+  Hojas con OCR propio (rapido)             195
+  Hojas con segunda version (estandar)      parcial
+  Techo de resolucion                       300 ppi en las 195 hojas
+  Tapas leidas en la imagen                 49
+  Imagenes miradas                          34
+  Columnas cotejadas contra la capa previa  1
+  Hojas con acierto de la literal           15
+  Menciones fichadas                        13 (en 12 hojas)
+  Terminos del anillo 2 con acierto         18 de 70
+  Actores del config que reaparecen         22 de 171
+  Resumenes de caja publicados              5 (de 12 meses)
+  Subtotales recalculados                   1
+  Tablas no recalculadas                    4 resumenes y 1 cuadro
+  Planos citados y no acompanados           27, ninguno del dpto.
+  Actores agregados al config               9 (de 171 a 180)
+  Limites declarados                        7
+  Falsos positivos del anillo 1             3, mas 4 de la difusa
+
+==============================================================================
+Fin del informe. Estado: CON PENDIENTES.

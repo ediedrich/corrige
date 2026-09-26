@@ -1,0 +1,1367 @@
+BOLETIN OFICIAL DE SALTA - ANO 1913 - EDICIONES N 384 A 458
+===========================================================
+
+Barrido documental forense sobre LA CALDERA / LA CALDERILLA.
+Rubrica LEE v15. Informe generado el 20/09/2026.
+
+§0 - ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, CON SIETE LIMITES DECLARADOS. Es la cuarta y ultima tanda.
+Estan cerrados la verificacion de insumos, la bajada del corpus, la
+reconstruccion de la capa previa, las cuatro pasadas, el anillo 2, los
+actores, los numeros, los reemplazos, la cadena de folios, el calendario
+entero, el ano editorial, el §A, el §B en sus cuatro bloques, los dos cuadros
+de Tesoreria y las repeticiones. Se miraron CUARENTA Y CUATRO recortes de
+columna y de cabecera. El §A lleva TRECE FICHAS sobre catorce apariciones. Las
+fechas de tapa leidas EN LA IMAGEN van entre corchetes en el §1: son 36 de las
+73; las demas salen de la capa previa.
+
+SALIDAS DE lee_auto.py: ninguna. El Release 1913 del repositorio
+ediedrich/boletines-salta trae 73 assets y los 73 son PDF de edicion. No
+llegaron el pre-informe, ni resultados_1913.csv, ni decretos_1913.csv, ni
+log.txt, ni recortes.zip, ni el zip de los .txt de lee_trabajo, ni un
+EXTRAIDO.json. Se comprobo sobre la pagina releases/expanded_assets/1913, que
+no exige token. No hay log que leer y se declara.
+
+CONFIG: se uso el /mnt/project/lee_config.json vigente al 20/09/2026, el mismo
+que cerro 1912: 171 actores, 70 terminos de anillo 2, 40 numeros y 12 falsos
+positivos. Corresponde a la epoca: 30 de sus actores reaparecen en 1913 con
+nombre y apellido completos.
+
+ENTORNO DE LA SESION, verificado: nproc = 1; PyMuPDF no venia instalado y se
+instalo desde pypi (1.28.2); tesseract 5.3.4 presente pero con SOLO eng y osd,
+SIN spa. Por lo tanto el §3 y el §16 de la rubrica no son aplicables y el OCR
+propio en castellano no existe en este informe.
+
+DESVIO DE METODO QUE SE DECLARA. Siete ediciones del ano -452 a 458, 28 hojas-
+vienen en PDF sin ninguna capa de texto: cero caracteres extraibles. Sin spa
+no hay OCR en castellano. Para no dejar esas 28 hojas sin ninguna red, la
+sesion corrio sobre ellas un OCR de CRIBADO con -l eng, que sirve unicamente
+para localizar candidatos y NO se usa como fuente de ninguna transcripcion ni
+de ninguna cifra. Todo lo que salga de ahi se mira en la imagen antes de
+ficharse. Este desvio se propone como agregado a la rubrica en el §F.
+
+§1 - CORPUS REVISADO
+--------------------
+
+73 archivos bajados del Release, 73 PDF reales (version 1.5), 74 MB, 291
+IMAGENES DE HOJA, que son 288 HOJAS DISTINTAS: tres imagenes son escaneos
+repetidos (E.1). Serie 384 a 458. FALTAN DOS EDICIONES: la 438 y la 444, que
+no estan entre los assets del Release. La cadena de folios impresos prueba que
+las dos existieron y que cada una tenia cuatro hojas (438 = folios 1671-1674;
+444 = folios 1695-1698). Es un limite del corpus, no un pendiente de la
+sesion.
+
+  Ed.   img.  capa       fecha de tapa ([ ] = leida en la imagen)
+  ------------------------------------------------------------------------
+  384   4     previa     [Enero 4 (1912 con el 2 tachado)]
+  385   4     previa     [Enero 8 (1912 tachado)]
+  386   4     previa     [Enero 11 (1912 tachado)]
+  387   4     previa     Enero 15
+  388   3     previa     Enero 25
+  389   1     previa     [Enero 29 (1912 tachado)]
+  390   4     previa     Febrero 12
+  391   4     previa     Febrero 15
+  392   4     previa     Febrero 22
+  393   4     previa     [Febrero 28 (viernes)]
+  394   4     previa     Marzo 5
+  395   4     previa     Marzo 8
+  396   4     previa     Marzo 12 y 15 (doble)
+  397   4     previa     [Marzo 19]
+  398   4     previa     Marzo 29
+  399   4     previa     [Abril 3 (jueves)]
+  400   4     previa     [Abril 9 y 12 (doble)]
+  401   4     previa     Abril 16
+  402   4     previa     [Abril 19]
+  403   4     previa     [Abril 23]
+  404   4     previa     [Abril 26 y 30 (doble)]
+  405   4     previa     Mayo 3
+  406   4     previa     [Mayo 7]
+  407   4     previa     Mayo 10 y 14 (doble)
+  408   4     previa     Mayo 17
+  409   4     previa     Mayo 28
+  410   4     previa     Junio 4
+  411   4     previa     Junio 7
+  412   4     previa     Junio 11
+  413   4     previa     Junio 14
+  414   4     previa     Junio 18
+  415   4     previa     Junio 21
+  416   4     previa     Junio 25
+  417   4     previa     [Junio 28]
+  418   4     previa     Julio 2
+  419   6     previa     [Julio 5]
+  420   4     previa     [Julio 12]
+  421   4     previa     [Julio 16]
+  422   4     previa     [Julio 19]
+  423   4     previa     Julio 23
+  424   4     previa     Julio 30
+  425   4     previa     Agosto 2
+  426   4     previa     Agosto 6
+  427   4     previa     Agosto 9
+  428   4     previa     [Agosto 13]
+  429   4     previa     [Agosto 16]
+  430   4     previa     Agosto 20
+  431   4     previa     [Agosto 23]
+  432   4     previa     Agosto 27
+  433   4     previa     [Setiembre 6]
+  434   4     previa     [Setiembre 10]
+  435   4     previa     Setiembre 17
+  436   4     previa     Setiembre 20
+  437   4     previa     [Setiembre 24]
+  439   4     previa     [Octubre 1o]
+  440   4     previa     [Octubre 8]
+  441   5     previa     [Octubre 11]
+  442   4     previa     [Octubre 18 (ANO VI)]
+  443   4     previa     Octubre 22
+  445   4     previa     Octubre 29
+  446   4     previa     Noviembre 5
+  447   4     previa     Noviembre 8
+  448   4     previa     Noviembre 12
+  449   4     previa     Noviembre 15
+  450   4     previa     [Moviembre 19 (sic)]
+  451   4     previa     [Moviembre 22 (sic)]
+  452   4     sin capa   [Moviembre 29 (sic)]
+  453   4     sin capa   [Diciembre 6]
+  454   4     sin capa   [Diciembre 10]
+  455   4     sin capa   [Diciembre 13]
+  456   4     sin capa   [Diciembre 17]
+  457   4     sin capa   [Diciembre 24]
+  458   4     sin capa   [Diciembre 27]
+  438   -     -          (ausente del Release; folios 1671-1674)
+  444   -     -          (ausente del Release; folios 1695-1698)
+
+Hojas por edicion, DESPUES de descontar los escaneos repetidos: 71 ediciones
+de 4 hojas, una de 3 (388) y una de 1 sola hoja (389). Suman 71 x 4 + 3 + 1 =
+288, que es exactamente el numero de hojas distintas contadas: el corpus
+cierra consigo mismo. El archivo 419.pdf trae seis imagenes porque incluye,
+ademas de sus cuatro hojas, las hojas 3 y 4 de la edicion 429 (folios 1637 y
+1638); el archivo 441.pdf trae cinco porque su tapa esta escaneada dos veces.
+La cadena de folios confirma ademas que la 388 y la 389 salieron cortas y no
+estan incompletas (E.9).
+
+TECHO DE RESOLUCION. Imagen incrustada por hoja, medida sobre su caja: 150 a
+301 ppi. Siete ediciones traen paginas a 150 ppi (395, 396, 412, 429, 431,
+433, 441, 443, 445); el resto, 300 ppi. La 429, la 443 y la 445 estan enteras
+a 150 ppi. Ese es el techo y no se puede subir.
+
+CALENDARIO. La tapa declara "Aparece Miercoles y Sabados" en todo el ano. Las
+73 tapas estan fechadas, 36 leidas en la imagen. Ediciones dobles: cuatro -396
+(marzo 12 y 15), 400 (abril 9 y 12), 404 (abril 26 y 30) y 407 (mayo 10 y
+14)-, y antes de listar un dia sin edicion se miro la tapa vecina. DOS TAPAS
+SE FECHAN EN UN DIA QUE LA PROPIA FORMULA NO ADMITE: la 393, viernes 28 de
+febrero, y la 399, jueves 3 de abril, las dos leidas en la imagen. No es
+errata del OCR y no se concilia.
+
+DIAS DE SALIDA SIN EDICION: VEINTIOCHO, contando como ocupados el 27 de
+setiembre y el 25 de octubre, que es donde la cadena de folios coloca a las
+ediciones ausentes 438 y 444. Por mes: enero 1, 18 y 22; febrero 1, 5, 8, 19 y
+26; marzo 1, 22 y 26; abril 2 y 5; mayo 21, 24 y 31; julio 9 y 26; agosto 30;
+setiembre 3 y 13; octubre 4 y 15; noviembre 1 y 26; diciembre 3, 20 y 31.
+Junio no tiene ninguno: sus ocho dias de salida tienen edicion.
+
+NO SE EXPLICAN. Las palabras "feriado", "asueto", "Dia del Pueblo", "adherir"
+y "adhesion" no aparecen en todo el ano con ese sentido: hay cero apariciones
+de feriado y de asueto en las 263 hojas con capa. La unica pieza que roza el
+asunto es el decreto de 411 h3, del 27 de mayo, que prolonga el plazo de pago
+de impuestos "a causa de los dias festivos que con motivo de las fiestas
+centenarias han impedido a las oficinas recaudadoras percibir los impuestos":
+toca justamente el hueco de mayo, pero el decreto habla de las oficinas
+recaudadoras y no del Boletin, de modo que SE DECLARA EL HUECO SIN EXPLICARLO
+y no se busca la causa afuera.
+
+ANO EDITORIAL, LEIDO EN LA TAPA Y NO EN LA CAPA: ANO V desde la 384 hasta la
+441 (Octubre 11) y ANO VI desde la 442 (Octubre 18). Las dos tapas vecinas se
+miraron en la imagen. El ano editorial no coincide con el calendario, como en
+toda la epoca.
+
+CONFIANZA POR HOJA: no existe. Sin el .tsv de lee_auto.py no hay media de
+confianza ni porcentaje de palabras bajo 60, y por lo tanto no hay reparto
+pub/ver/ojos ni lista de hojas 'a ojos'. Es un limite, no un pendiente
+(§E.10). Lo que si se midio, sobre la capa previa: densidad -ninguna hoja con
+texto baja de 2.000 caracteres- y ruido -mediana de caracteres no alfabeticos
+11,8 %, maximo 26,7 % en 417 h2-.
+
+§2 - CRITERIO DE BUSQUEDA
+-------------------------
+
+VERSIONES. Una sola: la capa previa de los PDF, extraida en sesion con PyMuPDF
+(§2.1 de la rubrica). No hay version propia, de modo que NO HUBO DESEMPATE
+POSIBLE por segunda lectura en ningun punto del ano, y todo resultado se
+etiqueta prev. El unico desempate es la imagen.
+
+MARCA DE CORTE. U+0002 no aparece ni una sola vez en las 263 hojas con capa,
+igual que en 1908-1912. El corte de renglon se marca con guion blando U+00AD:
+5.861 apariciones en el ano. La union se hizo con la regla corregida de v15
+-quitar el U+00AD JUNTO CON el salto de renglon-. Se midio lo que eso cambia:
+con la union defectuosa de v13 y v14 la pasada literal devuelve 23 aciertos;
+con la correcta, 26. Las tres menciones que la union defectuosa perderia en
+silencio son 419 h5, 425 h4 y 429 h3, y dos de las tres son reales.
+
+COTEJO SUMARIO/CUERPO: NO APLICABLE. Las ediciones de esta epoca no traen
+sumario con puntos guia. Declararlo asi evita el falso cero.
+
+CUATRO PASADAS. (1) Literal/normalizada 'cald' sobre NFD sin diacriticos, con
+los cortes unidos: 26 aciertos en 23 hojas. (2) Laxa
+[gc][ao][l1i|][\s-]{0,3}[dcl][ec][rnm][ao], escrita con la clase de espacios
+en blanco y no con un espacio literal: un acierto extra, 'gaideras' en 401 h2.
+Se probo que la pasada no esta rota: reconoce 'caldera', 'gal dera' y
+'cal\ndera'. (3) Difusa ratio >= 0,78 contra caldera y calderilla: 12 formas
+distintas. (4) Difusa ampliada 0,70 a 0,78 restringida a c/g/o: 33 formas,
+todas falsos positivos (§12).
+
+ANILLO 2: 26 de los 70 terminos del config dan acierto. ACTORES: 30 de los 171
+del config aparecen con nombre y apellido completos. NUMEROS: cuatro de los 40
+arrastrados aparecen como cadena y los cuatro son coincidencia de cifra -1668
+es un folio, 1914 un ano, 2000 y 2575 importes-. REEMPLAZO: solo la formula
+'en reemplazo de', en cinco hojas. Los actos de 1913 no llevan numero, de modo
+que el §8.15 no se aplica y los identificadores de las ausencias son lugar,
+persona y organismo.
+
+§A - MENCIONES EXPLICITAS
+-------------------------
+
+TRECE entradas, todas transcriptas desde la imagen. Una de ellas -el deslinde
+de Pablo Enrique Wenner- es un aviso publicado dos veces y lleva una sola
+ficha con sus dos apariciones. Al pie va la lista de los candidatos que quedan
+para la tanda siguiente, con el contexto que da la capa previa, que NO es
+transcripcion y no debe citarse como tal.
+
+  ======================================================================
+  FUENTE: Edicion N 385, hojas 2 y 3 (folios 1464 y 1465).
+  FICHA: Decreto que designa los jurados -titulares y suplentes- de cada
+  departamento para los reclamos del registro civico. Para Caldera:
+  titulares Daniel Linares y Augusto Regis; suplentes Adolfo Vidal y
+  Silvano Murua. Firman OLIVA y Ricardo Araoz. En la hoja 3, una segunda
+  lista de un nombre por departamento da "Caldera: Sr. Escolastico M.
+  Aparicio".
+
+  MODO DE LECTURA: Dos recortes: hoja 2 columna 3, y 400-700 pt; hoja 3
+  columna 1, y 280-560 pt; 250 dpi. Transcripto desde la imagen. El
+  rotulo "Caldera" lo trae la DIFUSA: la capa previa lo lee "daldera".
+
+  TEXTO (transcripto de la imagen):
+    [hoja 2, columna 3]
+    Santa Victoria: Titulares-Sres. Manuel Aramburu y Virgilio
+    Ontiveros; suplentes: Sres. Julio C. Aparicio y Santos Cardozo.
+    Caldera: Titulares-Sres. Daniel Linares y Augusto Regis;
+    suplentes: Sres. Adolfo Vidal y Silvano Murua.
+    Anta: Titulares-Sres. Facundo P. Miy y Audelino Zigaran;
+    suplentes: Sres. Jose L. Urmendia y Cirilo A. Toledo.
+    Rivadavia: Titulares-Sres. Maximiano Aparicio y Amado Soloaga;
+    suplentes: Sres. Angel M. Ibanez y Ernesto Roldan.
+    Art. 2o.-Los reclamos deberan presentarse en la Capital, del 15
+    de Enero al 15 de Febrero de 1913 y en la campana, del 15 de
+    Febrero al 15 de Marzo del mismo ano; para cuyo efecto los
+    Jurados funcionaran por el periodo legal a contar desde el 15 de
+    Enero y 15 de Febrero respectivamente.
+    Art. 3o-Comuniquese, publiquese e insertese en el R. Oficial.
+    OLIVA
+    RICARDO ARAOZ
+    
+    [hoja 3, columna 1]
+    Molinos: Sr. Balbin Diaz.
+    Cafayate: Sr. Juan B. Peyret.
+    Campo Santo: Sr. Benigno Perez.
+    Metan: Sr. Atilio Lanzi.
+    Candelaria: Sr. Juan Serra.
+    Iruya: Sr. Tomas F. Vargas.
+    Caldera: Sr. Escolastico M. Aparicio.
+    Anta: Sr. Paulino Echazu.
+    Rivadavia: Sr. Jose N. Rana.
+
+  NOTA DE LECTURA: El encabezado de la lista de la hoja 3 queda por
+  encima del recorte y se mira en la tanda siguiente; sin el, esa nomina
+  no se puede rotular (§4.11) y por eso aqui se da como lista y no como
+  nombramiento. La lista de jurados vuelve a publicarse casi igual en
+  448 h3, en noviembre y para 1914: ver esa ficha. Inmediatamente debajo
+  de la lista de la hoja 3 aparece la formula "El Presidente de la H.
+  Camara de Diputados en ejercicio del P. Ejecutivo de la Provincia",
+  que pertenece al decreto siguiente y no a esta lista.
+
+  ======================================================================
+  FUENTE: Edicion N 390, hoja 3, columna 1 (folio 1481).
+  FICHA: Nomina de las mesas receptoras de votos por departamento.
+  Caldera tiene dos mesas: 1a, presidente titular Camilo Caceres (hijo),
+  suplente 1 Lucas Molina, suplente 2 Jose D. Soliveres; 2a, presidente
+  titular Adolfo Vidal, suplente 1 Hector Echenique, suplente 2 Ricardo
+  Valdivieso.
+
+  MODO DE LECTURA: Recorte de la columna 1, y 100-330 pt, 250 dpi.
+  Transcripto desde la imagen.
+
+  TEXTO (transcripto de la imagen):
+              LA POMA
+    1a Mesa: presidente titular Zenon Torres, suplente 1 Ricardo
+    Lozano, suplente 2 Abel Avalos.
+              CALDERA
+    1a Mesa: presidente titular Camilo Caceres (hijo), suplente 1
+    Lucas Molina, suplente 2 Jose D. Soliveres.
+    2a Mesa: presidente titular Adolfo Vidal, suplente 1 Hector
+    Echenique, suplente 2 Ricardo Valdivieso.
+              RIVADAVIA
+    1a Mesa: presidente titular Justo P. Sarmiento, suplente 1 Fausto
+    Videla, suplente 2 Ernesto Roldan.
+
+  NOTA DE LECTURA: La Poma lleva una sola mesa y Caldera dos. El
+  encabezado del acto queda fuera del recorte y se mira en la tanda
+  siguiente. La convocatoria de 391 h3 fija la eleccion para el domingo
+  2 de marzo, tres dias despues de esta edicion, y nombra a Caldera
+  entre los departamentos que eligen: las dos piezas son del mismo acto
+  electoral pero son actos distintos.
+
+  ======================================================================
+  FUENTE: Edicion N 391, hoja 3, columna 2 (folio 1485 s/ cadena).
+  FICHA: Decreto. Se acepta la renuncia de Escolastico C. Aparicio al
+  cargo de Comisario de Policia del Departamento de La Caldera y se
+  nombra en su lugar a Julio del Solar. Salta, 8 de febrero de 1913.
+
+  MODO DE LECTURA: Recorte de la columna 2 entera (x 214-412 pt mas 6 pt
+  de margen), y 140-520 pt, 250 dpi, escala de grises. Transcripto desde
+  la imagen. La fecha y los firmantes tambien se leyeron en la imagen.
+
+  TEXTO (transcripto de la imagen):
+    Habiendose aceptado en la fecha la renuncia presentada por el
+    senor Escolastico C. Aparicio del cargo de Comisario de Policia
+    del Departamento de la Caldera y siendo necesario designar la
+    persona que debe reemplazarlo:
+    
+    El P. Ejecutivo de la Provincia
+    
+    DECRETA:
+    
+    Art. 1o. Nombrase para desempenar dicho cargo al senor Julio del
+    Solar.
+    Art. 2o. El nombrado recibira del renunciante el archivo y demas
+    elementos pertenecientes a la Comisaria bajo de inventario y
+    propondra al Ministerio de Gobierno por intermedio del senor Jefe
+    de Policia las personas que deben desempenar las comisarias de
+    partido durante el corriente ano.
+    Art. 3o. Comuniquese, publiquese y dese al R. Oficial.
+    
+    Salta, Febrero 8 de 1913
+    
+    FRANCISCO M. URIBURU
+    Es copia.
+    Jose M. Outes
+    S. S.
+
+  NOTA DE LECTURA: El acto NO lleva numero, como todos los de la epoca.
+  Se imprime SIN firma de gobernador: sobre "Es copia" figura solo el
+  ministro Francisco M. Uriburu. Se declara y no se concilia (§8.3). El
+  apellido va con inicial C.; en 419 h5, 429 h3 y 448 h3 el mismo hombre
+  es "Escolastico M. Aparicio" y en 404 h3 "Escolastico Aparicio" a
+  secas. La formula de encabezado es "El P. Ejecutivo de la Provincia",
+  en bastardilla.
+
+  ======================================================================
+  FUENTE: Edicion N 391, hoja 3, columna 3 (folio 1485).
+  FICHA: Decreto de convocatoria electoral. Nombra a Caldera TRES veces:
+  entre los departamentos convocados a elegir representantes; entre los
+  que eligen un senador; y entre los que eligen un diputado. La eleccion
+  se fija para el domingo 2 de marzo.
+
+  MODO DE LECTURA: Recorte de la columna 3, y 440-700 pt, 250 dpi.
+  Transcripto desde la imagen. La capa previa imprime la primera de las
+  tres menciones como "Caldex a".
+
+  TEXTO (transcripto de la imagen):
+    Art. 1o-Convocase al pueblo de los departamentos de la Capital,
+    Cafayate, Chicoana, Campo Santo, San Carlos, Cerrillos, Caldera,
+    Metan, Vina, Rosario de la Frontera, Santa Victoria, Cachi,
+    Rosario de Lerma, Candelaria y Rivadavia, a elegir sus
+    representantes a las honorables Camaras Legislativas de la
+    Provincia en la forma siguiente: Un senador por cada uno de los
+    departamentos de la Capital, Cafayate, Chicoana, Campo Santo, San
+    Carlos, Cerrillos, Caldera, Metan, Vina, Rosario de la Frontera,
+    Santa Victoria y Cachi: Cuatro diputados por la Capital, dos por
+    Rivadavia y uno por cada uno de los departamentos de Cafayate,
+    Chicoana, Campo Santo, San Carlos, Cerrillos, Caldera, Metan,
+    Vina, Rosario de Lerma y Candelaria.
+    Art. 2o-Designase el dia domingo 2 del proximo mes de Marzo para
+    que tenga lugar dicha eleccion en todas las secciones electorales
+    convocadas por ell[a]
+
+  NOTA DE LECTURA: Caldera elige un senador y un diputado. Es el acto
+  que explica las dos mesas receptoras de 390 h3, publicadas tres dias
+  antes: el decreto de las mesas es del mismo proceso pero es otro acto
+  y lleva ficha propia. La edicion 391 trae por lo tanto DOS actos que
+  nombran al departamento, este y el de la comisaria, en la misma hoja y
+  en columnas distintas.
+
+  ======================================================================
+  FUENTE: Edicion N 399, hoja 4, columna 3 (folio 1518).
+  FICHA: Aviso de remate de la finca Lesser, ubicada en el departamento
+  La Caldera: 1.600 cuadras cuadradas, casa de campo, rastrojos de
+  cultivo y quinta. Remate al contado el 4 de junio en la confiteria
+  Jockey Club. Martillero Victor M. Saravia. Marca 345vJn.4.
+
+  MODO DE LECTURA: Recorte de la columna 3, y 520-790 pt, 250 dpi.
+  Transcripto desde la imagen. El nombre del departamento lo trae la
+  DIFUSA: la capa previa lo lee "calderi^".
+
+  TEXTO (transcripto de la imagen):
+    del senor Arquati; al Sud, Naciente y Poniente con propiedad que
+    fue de don Narciso Figueroa actualmente del senor Arquati.
+    Extension de la finca de Sud a Norte veinte cuadras por dos
+    leguas de Naciente a Poniente o sean 1.600 cuadras cuadradas.
+    La finca Lesser esta ubicada en el departamento La Caldera, el
+    punto mas pintoresco de la provincia de Salta, tiene una hermosa
+    casa de campo, grandes rastrojos de cultivo, quinta, abundante
+    agua clara durante todo el ano, a una hora de viaje en carruaje
+    de la ciudad.
+    El remate es al contado y tendra lugar el DIA 4 DE JUNIO proximo
+    a horas 4 p. m. en la confiteria Jockey Club, avenida Alsina,
+    plaza 9 de Julio
+    Por mas datos verse con el suscrito
+    Victor M. Saravia.
+    345vJn.4.
+
+  NOTA DE LECTURA: "Lesser" es a la vez el nombre de esta finca y el de
+  uno de los trece partidos del departamento que nombra el decreto de
+  404 h2. El comienzo del aviso, con la superficie y el resto de los
+  linderos, queda por encima del recorte. Victor M. Saravia es el actor
+  que mas aparece en todo el ano (14 hojas).
+
+  ======================================================================
+  FUENTE: Edicion N 401, hoja 2, columna 3 (folio 1524).
+  FICHA: Decreto que nombra a los miembros de las comisiones municipales
+  de varios departamentos y distritos. Para Caldera: Daniel Linares,
+  Camilo Caceres y Salvador Rosa.
+
+  MODO DE LECTURA: Recorte de la columna 3 entera, y 420-780 pt, 250
+  dpi. Transcripto desde la imagen. HALLAZGO DE LA PASADA LAXA: la capa
+  previa imprime el rotulo como "rGaideras", de modo que la pasada
+  literal no lo encuentra.
+
+  TEXTO (transcripto de la imagen):
+    DECRETA:
+    Art. 1o. Nombranse miembros de las comisiones municipales de los
+    departamentos y distritos que se expresan a continuacion, a los
+    senores siguientes:
+    
+              Caldera:
+    Senores Daniel Linares, Camilo Caceres y Salvador Rosa.
+              San Carlos:
+    Senores Juan R. Uruburu, Jose Miguel Serrano y Augusto
+    Modravejo.
+              Guachipas:
+    Senores Juan Mena, Delfin Nunez y Raul Gaudencio.
+              Iruya:
+    Senores Julian Poclava y Emilio Aleman.
+              Silleta:
+    Senores Jorge Gutierrez, Mariano Linares y Lucas Vidal.
+              Chicoana:
+    Senores Florentin Serrey y Jose Visich.
+              Santa Victoria:
+    Senores Samuel Montellano, Mamerto S. Aramburo, Agustin Casas
+    Alvarado, Secundino Marino (hijo) y Tito Burgos.
+              La Merced:
+    Senores Cosme Valdez, Julio Sarmiento y Miguel Arias.
+    Art. 2o. Nombrase igualmente miem[bros...]
+
+  NOTA DE LECTURA: El encabezado del decreto es el que da sentido a la
+  nomina (§4.11): sin el, "Caldera - Senores Daniel Linares..." no se
+  puede fichar. El texto se corta al pie de la columna en el Art. 2o,
+  que sigue en la hoja 3 y queda para la tanda siguiente. "Linares" se
+  imprime con tilde aparente sobre la n en el recorte; se transcribe
+  Linares, que es como lo imprimen 385 h2 y 448 h3.
+
+  ======================================================================
+  FUENTE: Edicion N 404, hoja 2, columna 1 (folio 1536).
+  FICHA: Decreto que nombra los comisarios auxiliares de los trece
+  partidos del departamento de Caldera para el corriente ano. Salta, 11
+  de abril de 1913.
+
+  MODO DE LECTURA: Dos recortes de la columna 1: encabezado y 60-175 pt,
+  cuerpo y 150-470 pt, 250 dpi. Transcripto desde la imagen. El rotulo
+  del primer partido lo trae la difusa: la capa previa lo lee
+  "$Qalderilla".
+
+  TEXTO (transcripto de la imagen):
+    LEYES Y DECRETOS
+    
+    De acuerdo con las propuestas presentadas por el senor comisario
+    de policia del departamento de Caldera para la designacion de los
+    cindadanos [sic], que deben desempenar las cocisarias [sic]
+    auxilaiares [sic] de partido durante el corriente ano
+    
+    El P. Ejecutivo de la Provincia
+    
+    DECRETA:
+    
+    Art. 1o. Nombrase comisarios auxiliares de partido en el referido
+    departamento a los siguientes senores: Para el partido de
+    Calderilla, a don Genaro Molina; para el de Vaqueros, a don
+    Guillermo Villanueva; para el de la Despenza, a don Eustaquio
+    Murua; para el de Los Porongos, a don Enrique Leconte; para el de
+    San Alejo, a don Manuel Ramos; para el de Campo Alegre, a don
+    Francisco Losaya; para el de Gallinatos, a don Silverio Caceres;
+    para el de Angosto de Arias, a don Virgilio Arevalo; para el de
+    Potrero de Castillo, a don Eloy Viveros; para el de Potrero de
+    Valencia, a don Abraham Fernandez; para el de Los Yacones, a don
+    Juan Chuchuy; para el de Los Penones, a don Liborio Guerrero; y
+    para el de Lesser, a don Pedro Vale.
+    Art. 2o. Comuniquese, publiquese y dese al R. Oficial.
+    Salta, abril 11 de 1913.
+
+  NOTA DE LECTURA: Trece partidos nombrados de una vez: es la lista mas
+  completa del departamento que da el ano y confirma como partido propio
+  a Lesser, a Gallinatos y a Angosto de Arias, los tres del anillo 2. La
+  palabra "cocisarias" y "auxilaiares" van con [sic] y tambien a E.9. La
+  forma impresa es "Despenza" con z, como la variante que ya trae el
+  config. Nueve de los trece nombrados estaban en el config como actores
+  de 1909-1912.
+
+  ======================================================================
+  FUENTE: Edicion N 404, hoja 3, columna 1 (folio 1537).
+  FICHA: Dos decretos seguidos. (a) Queda sin efecto el nombramiento de
+  Liborio Guerrero como comisario de policia del partido de Los Penones,
+  comprension del departamento de Caldera, y se confiere el cargo a
+  Enrique Leconte, comisario auxiliar del partido Los Porongos. (b) De
+  acuerdo con las ternas de la comision municipal del departamento de la
+  Caldera, se nombra juez de paz propietario a Escolastico Aparicio y
+  suplente a Vicente Vivas. Los dos, Salta, 18 de abril de 1913.
+
+  MODO DE LECTURA: Dos recortes de la columna 1 (y 430-800 y y 770-900)
+  y la columna 2 entera en dos mitades, 250 dpi. Transcripto desde la
+  imagen. El folio 1537 se leyo en el recorte de la columna 3 de la
+  misma hoja.
+
+  TEXTO (transcripto de la imagen):
+    DECRETA:
+    
+    Art. 1o. Queda sin efecto el nombramiento hecho por decreto de 12
+    del corriente mes, del senor Liborio Guerrero como comisario de
+    policia del partido de Los Penones comprension del departamento
+    de Caldera y confierese dicho cargo, al senor comisario auxiliar
+    del partido Los Porongos don Enrique Leconte.
+    Art. 2o. Comuniquese, publiquese y dese al R. Oficial.
+    
+    Salta abril 18 de 1913.
+    
+    PATRON COSTAS.
+    Macedonio Aranda.
+    Es copia - Jose M. Outes.
+    S. S.
+    
+    De acuerdo con las ternas pasadas por la comision municipal del
+    departamento de la Caldera para la provision de los cargos de
+    jueces de paz que deben funcionar en el corriente ano.
+    
+    El P. Ejecutivo de la Provincia
+    
+    DECRETA:
+    
+    Art. 1o. Nombrase juez de paz porpietario [sic] del referido
+    departamento al senor Escolastico Aparicio y suplente al senor
+    Vicente Vivas.
+    Art. 2o. Los nombrados tomaran posesion de sus cargos previo los
+    requisitos de ley.
+    Art. 3o. Comuniquese, publiquese y dese al R. Oficial.
+    
+    Salta, abril 18 de 1913.
+    
+    PATRON COSTAS.
+    Macedonio Aranda.
+    Es copia - Jose M. Outes.
+    S. S.
+
+  NOTA DE LECTURA: El decreto (a) deja sin efecto, siete dias despues,
+  uno de los trece nombramientos de la ficha anterior: Liborio Guerrero
+  duro del 11 al 18 de abril en Los Penones. El decreto de 12 que cita
+  no es el de 404 h2, que esta fechado el 11: es un acto citado y no
+  acompanado, y se lo registra en E.2 sin inferir cual es. El (b) prueba
+  que la comision municipal del departamento estaba constituida y
+  pasando ternas en abril, y que Escolastico Aparicio, que en febrero
+  renuncio a la comisaria (391 h3), en abril es juez de paz propietario.
+  "porpietario" va con [sic] y a E.9.
+
+  ======================================================================
+  FUENTE: Edicion N 409, hoja 3, columna 3 (folio 1557).
+  FICHA: Aviso de remate de una casa-quinta en el pueblo de La Caldera,
+  capital del departamento, de la sucesion de Peralta: base $ 1.500,
+  siete habitaciones, una cuadra cuadrada. Linderos: al naciente la
+  calle publica; al poniente, sur y norte, propiedad de don Jacinto
+  Guerrero. Martillero Jose Maria Leguizamon. Marca 417v1vjl.
+
+  MODO DE LECTURA: Recorte de la columna 3, y 600-830 pt, 250 dpi.
+  Transcripto desde la imagen, incluida la cifra de la base.
+
+  TEXTO (transcripto de la imagen):
+    [...] instancia, doctor Vicente Arias, el martes primero de julio
+    del corriente ano, a las 5 p. m. en el local de La Mutua,
+    Alvarado 895 y donde estara mi bandera, vendere en subasta
+    publica y dinero de contado, con base de $ 1500 una casa-quinta
+    en el pueblo de La Caldera, capital del departamento del mismo,
+    perteneciente a la citada sucesion de Peralta, compuesta de siete
+    espaciosas habitaciones y sobre una cuadra cuadrada de terreno,
+    comprendida dentro de los siguientes limites: por el naciente,
+    con la calle publica y por el poniente, sur y norte, con
+    propiedad de don Jacinto Guerrero. - Jose Maria Leguizamon,
+    martillero publico.                              417v1vjl
+
+  NOTA DE LECTURA: La base se imprime "$ 1500", sin punto de miles y sin
+  centavos, y asi se transcribe (§8.17). Jacinto Guerrero es actor del
+  config desde 1909 y aparece en cuatro hojas de 1913. Es el unico
+  importe del §A de este informe leido en la imagen.
+
+  ======================================================================
+  FUENTE: Edicion N 429, hoja 3, columna 3 (folio 1637). La misma pagina
+  esta escaneada por segunda vez dentro del archivo 419.pdf, como su
+  hoja 5: no es una segunda publicacion.
+  FICHA: Edicto del Juzgado de Paz departamental de Caldera en el juicio
+  sucesorio de Esteban Valdiviezo, iniciado por su esposa Felisa L. de
+  Valdiviezo. Caldera, 5 de agosto de 1913, E. M. Aparicio, J. de Paz
+  Deptal. Marca 497v11sp. UNA sola entrada y UNA sola aparicion.
+
+  MODO DE LECTURA: Dos recortes de la misma pagina, uno por cada
+  escaneo: 419 h5 columna 3, y 290-470 pt, y 429 h3 columna 3, y 330-470
+  pt, 250 dpi. Los dos transcriptos desde la imagen y cotejados renglon
+  por renglon. Es la aparicion que rescata la union corregida de v15: el
+  corte "Cal-/dera" va marcado solo con guion blando.
+
+  TEXTO (transcripto de la imagen):
+    juicio sucesorio de don Esteban Valdiviezo, iniciado por su
+    esposa dona Felisa L. de Valdiviezo, se llama a todos los que se
+    crean con derecho a dicha sucesion ya sea como herede-
+    rechos dentro el termino de treinta
+    ros o acreedores, hagan valer sus de-
+    dias a contar desde la primera publi-
+    cacion del presente; ante el juzgado de paz de este
+    departamento. - Caldera. - Agosto 5 de 1913. - E. M. Aparicio,
+    J. de Paz Deptal.
+                                                       497v11sp
+
+  NOTA DE LECTURA: LOS CUATRO RENGLONES DEL MEDIO ESTAN TRASPUESTOS EN
+  EL ORIGINAL y se transcriben donde estan (§8.17). Leidos en el orden
+  que el sentido pide, dicen "ya sea como herederos o acreedores, hagan
+  valer sus derechos dentro el termino de treinta dias a contar desde la
+  primera publicacion". CORRECCION DE LA TANDA ANTERIOR: la tercera
+  entrega de este informe dio esta pieza como un aviso publicado dos
+  veces, en 419 h5 y en 429 h3. NO LO ES. El folio impreso, leido en la
+  imagen, dice 1637 en la hoja 5 de 419.pdf y la hoja 3 de 429.pdf lleva
+  ese mismo 1637: es LA MISMA PAGINA, escaneada dos veces y guardada en
+  dos archivos. Lo mismo pasa con la hoja 6 de 419.pdf, folio 1638, que
+  es la hoja 4 de la edicion 429. Ver E.1 y E.9.
+
+  ======================================================================
+  FUENTE: Edicion N 441, hoja 5, columna 1 (folio 1686 s/ cadena).
+  FICHA: Edicto del Juez de Paz de Caldera en el juicio sucesorio de
+  [Ga]briel Ruiloba. Caldera, 6 de octubre de 1913, E. M. Aparicio, juez
+  de paz. Marca 540v11nv.
+
+  MODO DE LECTURA: Recorte de la columna 1, y 640-860 pt, 250 dpi.
+  Transcripto desde la imagen. El nombre del causante queda cortado por
+  el borde superior del recorte y se lee "briel Ruiloba".
+
+  TEXTO (transcripto de la imagen):
+    [...]briel Ruiloba, este juzgado a ordenado se cite por edictos
+    durante treinta dias a contar desde la primera publicacion del
+    presente, a todos los que se crean con derecho a esta sucesion ya
+    sean como herederos o acreedores se presenten ante este juzgado a
+    hacer valer sus derechos bajo apercibimiento que hubiera lugar en
+    derecho. - Caldera, octubre 6 de 1913. - E. M. Aparicio, juez de
+    paz.
+                                                       540v11nv
+
+  NOTA DE LECTURA: "este juzgado a ordenado" por "ha ordenado": errata
+  del original, [sic], y a E.9. El apellido Ruiloba esta en el config
+  por dos actores anteriores, Benancio (1909) y Felipe S. (1912); el
+  nombre de pila de este causante se completa en la tanda siguiente
+  mirando dos centimetros mas arriba. Aqui el juez firma "juez de paz" y
+  no "J. de Paz Deptal." como en agosto.
+
+  ======================================================================
+  FUENTE: Edicion N 443, hoja 4, columna 2 (folio 1693); repetido en la
+  edicion N 449, hoja 4, columna 3.
+  FICHA: Edicto de deslinde, mensura y amojonamiento de un terreno en el
+  departamento de la Caldera, solicitado por Pablo Enrique Wenner.
+  Linderos: al norte, propiedad de dona Jacoba Molina; al sur, propiedad
+  de Lucas Molina; al naciente, la cumbre del cerro que divide con el
+  Potrero de Valencia; al poniente, el Rio de la Caladera [sic].
+  Proveido del juez Alejandro Baassani, Salta, 14 de octubre de 1913.
+  Peritos propuestos: senores Pfister y Martin. UNA sola entrada, con
+  dos apariciones.
+
+  MODO DE LECTURA: Dos recortes: 443 h4 columna 2, y 270-520 pt, y 449
+  h4 columna 3, y 480-760 pt, 250 dpi. Los dos transcriptos desde la
+  imagen y cotejados entre si.
+
+  TEXTO (transcripto de la imagen):
+    Habiendose presentado el senor Pablo Enrique Wenner, con titulos
+    bastantes, solicitando deslinde, mensura y amojonamiento de un
+    terreno ubicado en el departamento de la Caldera, y encerrada
+    dentro de los siguientes limites: Al norte, con propiedad de dona
+    Jacoba Molina; al sur, con propiedad de Lucas Molina; al
+    naciente, con la cumbre del cerro que divide con el Potrero de
+    Valencia; y al poniente, con el Rio de la Caladera [sic]; el
+    senor juez de primera instancia en lo civil y comercial, doctor
+    Alejandro Baassani [sic], ha proveido lo siguiente: - Salta,
+    octubre 14 de 1913. - Por presentado con los documentos adjuntos.
+    - Hagase saber por edictos que se publicaran durante treinta
+    dias, en los diarios "La Provincia" y "Tribuna Popular" y por una
+    vez en el "Boletin Oficial", las diligencias que se van a
+    practicar y que daran principio el dia que el agrimensor senale a
+    todos los que puedan tener interes en ellas. - Tengase como
+    peritos a los propuestos senores Pfister y Martin. - A. Bas[sani]
+
+  NOTA DE LECTURA: EL AUTO ORDENA PUBLICARLO "POR UNA VEZ" EN EL BOLETIN
+  OFICIAL Y EL BOLETIN LO PUBLICA DOS VECES, el 22 de octubre y el 15 de
+  noviembre. La repeticion se comprobo sobre las dos imagenes y no sobre
+  la capa (§6). "Caladera" por Caldera y "Baassani" por Bassani son
+  erratas del original y van con [sic] y a E.9; en 449 h4 se imprimen
+  las dos igual, de modo que no son deformacion del OCR. La pasada
+  literal encuentra esta aparicion por el corte "Calde-/ra" y la de 449
+  h4 solo la encuentra la DIFUSA, que la lee "Qaladera". El solicitante,
+  Pablo Enrique Wenner, esta en el config como "pablo enrique wernner"
+  (1912): la capa de 443 h4 intercala aqui dos columnas vecinas y hace
+  aparecer como solicitante a un tal Elias Gallardo, que es de un aviso
+  contiguo. Es el modo de falla del §2.3 numero 5.
+
+  ======================================================================
+  FUENTE: Edicion N 448, hoja 3, columnas 1 y 3 (folio 1713 s/ cadena).
+  FICHA: Dos actos. (a) Designacion de un comisionado por departamento
+  para revisar las patentes de las casas de comercio: para Caldera,
+  Escolastico M. Aparicio. (b) Designacion de los jurados del registro
+  civico para 1914: Caldera, titulares Daniel Linares y Augusto Regis;
+  suplentes Adolfo Vidal y Silvano Marua [sic].
+
+  MODO DE LECTURA: Dos recortes: columna 1, y 280-470 pt, y columna 3, y
+  470-780 pt, 250 dpi. Transcripto desde la imagen. El ENCABEZADO que
+  faltaba en 385 h3 se lee aqui, en el Art. 2o de (a).
+
+  TEXTO (transcripto de la imagen):
+    [columna 1]
+    Campo Santo: Senor Benigno Perez.
+    Metan: Senor Atilio Lanzi.
+    Candelaria: Senor Juan Serra.
+    Iruya: Senor Tomas F. Vargas.
+    Caldera: Senor Escolastico M. Aparicio.
+    Anta: Senor Paulino Echazu.
+    Rivadavia: Senor Jose N. Rana.
+    Art. 2o. Los comisionados, al practicar su cometido, revisaran
+    prolijamente las patentes de las casas de comercio en general,
+    informando al ministerio de hacienda sobre las deficiencias que
+    notasen, o sobre las faltas de pago o pagos menores que se
+    [...]
+    
+    [columna 3]
+    Santa Victoria - Titulares: Senores Mamerto Aramburu y Virgilio
+    Ontiveros.
+    Suplentes: Senores Julio C. Aparicio y Santos Cardozo.
+    Caldera - Titulares: Senores Daniel Linares y Augusto Regis.
+    Suplentes: Senores Adolfo Vidal y Silvano Marua [sic].
+    Anata [sic] - Titulares: Senores Facundo P. Miy y Audelino
+    Zizaran.
+    Suplentes: Senores Jose L. nmendia [sic] y Cerilo [sic] A.
+    Toledo.
+    Rivadavia - Titulares: Senores Maximiano Aparicio y Amado
+    Soloaga.
+    Suplentes: Senores Angel M. Ibanez y Ernesto Roldan.
+    Art. 2o. Los reclamos deberan presentarse en la capital durante el
+    mes de diciembre proximo, y en la campana en el de enero 1914,
+    para cuyo efecto los jurados funcionaran por el periodo legal a
+    contar del 1o. de diciembre, y 1o. de enero 1914,
+    respectivamente.
+    Art. 3o. Comuniquese, publiquese e insertese en el registro civil
+
+  NOTA DE LECTURA: El Art. 2o de (a) RESUELVE EL ENCABEZADO QUE FALTABA
+  en la ficha de 385 h3: la lista de un nombre por departamento es de
+  COMISIONADOS para revisar patentes de comercio, y la de enero y la de
+  noviembre son dos actos distintos del mismo tipo. El acto (b) repite
+  casi palabra por palabra el de 385 h2, con los mismos cuatro nombres
+  para Caldera y con el plazo corrido un ano: los jurados de 1913 y los
+  de 1914 son las mismas cuatro personas. Erratas "Anata", "nmendia",
+  "Cerilo" y "Marua", las cuatro a E.9; en 385 h2 los mismos nombres se
+  imprimen "Anta", "Urmendia", "Cirilo" y "Murua".
+
+  CANDIDATOS DESCARTADOS TRAS MIRARLOS
+
+  416 h4    (literal)
+      "en el local del..." partido en dos por el OCR; no es el termino.
+  425 h4    (literal)
+      Lo mismo: "en el local de La Mutua", que la capa lee "eldticalde". Es el
+      falso positivo que la union corregida hace aparecer, y se descarta
+      mirando el renglon.
+  433 h4    (literal)
+      "propiedad de Florinda Cabral y senor Calderon", lindero de una finca de
+      Rosario de la Frontera.
+  448 h4    (literal)
+      Aviso de remate del aserradero de la finca del doctor Jose M. Sola: "un
+      motor con caldera", "caldera vertical con motor". Son calderas de vapor.
+  451 h4    (difusa)
+      "mi bandera" leido "jmijjian clera".
+  454 h4    (cribado eng)
+      Repeticion del aviso del aserradero de 448 h4. Mismo falso positivo.
+  390 h2, 390 h3 (difusa)
+      Isidro B. Calderon y Celso Calderon, suplentes de mesa en otros
+      departamentos.
+
+§B - VECINDAD
+-------------
+
+Se leyeron los contextos de LOS 26 TERMINOS del anillo 2 con acierto, uno por
+uno y no solo los que parecen del departamento. El reparto que sigue sale de
+esa lectura.
+
+B.1 - NUCLEOS DEL DEPARTAMENTO YA FICHADOS EN EL §A
+No se repiten aqui. Son: Calderilla, Vaqueros, la Despenza, Los Porongos, San
+Alejo, Campo Alegre, Gallinatos, Angosto de Arias, Potrero de Castillo,
+Potrero de Valencia, Los Yacones, Los Penones y Lesser, los trece partidos del
+decreto de 404 h2; Los Penones otra vez en 404 h3; Potrero de Valencia y el
+Rio de la Caladera como linderos del deslinde de 443 h4 y 449 h4; y Lesser
+como nombre de la finca rematada en 399 h4. Silvano Murua y Eustaquio Murua,
+en 385 h2 y en 404 h2.
+
+B.2 - NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+Uno, y es el que justifica el paragrafo. El decreto del 27 de marzo de 1913
+(401 h2, columna 2, mirado en la imagen) nombra comisarios de policia de
+departamentos y distritos de campana y cierra la nomina con "Penones, Julio
+Padilla.", sin decir de que departamento. Los Penones es partido de Caldera
+segun lo dice con todas las letras el decreto de 404 h3. Quince dias despues,
+el 11 de abril, el mismo Poder Ejecutivo nombra comisario auxiliar de Los
+Penones a Liborio Guerrero, y el 18 deja eso sin efecto y se lo da a Enrique
+Leconte. Son tres actos sobre el mismo partido en veintidos dias y ninguno
+menciona a los otros dos. SE DECLARA Y NO SE CONCILIA: la sesion no afirma que
+el Penones de marzo sea el de abril, porque el decreto de marzo no nombra el
+departamento.
+
+B.3 - TERMINOS QUE EN 1913 SON OTRA COSA
+Isasmendi (36 apariciones): es sobre todo Molinos -Ricardo y Domingo
+Isasmendi, Elena Ortiz de Isasmendi, Jose Davalos Isasmendi en la comision
+municipal de ese departamento-, mas la casa de comercio "Isasmendi y Cia"
+nombrada acreedora interventora, Mariano Isasmendi en una mesa de Coronel
+Moldes y Sanchez Isasmendi como lindero en Angastaco. Castellanos (21): el
+abogado Juan Jose Castellanos, agente fiscal del crimen que renuncia en marzo,
+mas Juan C. Castellanos y Aurelio Castellanos, ordenanza del Ministerio de
+Gobierno llamado al servicio militar. Murua fuera del departamento: Nicolas
+Arias Murua, ejecutante en un juicio de Salta. Rio Blanco (5): la finca de
+Oran, deslinde de Macedonio L. Rodriguez. Wierna (4): Vicente Wierna
+-filiacion natural-, Jose Antonio Wierna en una mesa de Campo Santo y Elena
+Wierna de Echenique. Quintin (4): siempre nombre de pila -Quintin Rivero,
+Quintin Mercado, Quintin Argbia-. Sauces (4): los Sauces de Guachipas, la
+finca Cuatro Sauces de Burruyacu en Tucuman, y el partido de los Sauces de
+otro departamento. Betania (3): Campo Santo, partidos de Betania y Vina y la
+estacion del Ferro Carril Central Norte. Angostura (2): la finca La Angostura
+de San Carlos. Pacara (2): la calle que va de la plaza al Pacara, en un remate
+de la ciudad. Nogales (2): la finca Nogales de Campo Santo y otra de la
+Candelaria. Entre Rios (2): la calle Entre Rios de la ciudad y un limite en
+Campo Santo. Tabacal (2): Oran. Trancas (1): "las trancas del corral", pieza
+de un corral, en una causa. Durazno (1): "quinta de duraznos". Chaile (1): el
+ciudadano Jeferino Chaile, nombrado juez repartidor del agua de la acequia de
+Olmos. Mojotoro y Estacion Mojotoro (2, la misma hoja): el decreto de marzo
+que nombra comisarios del distrito de General Guemes y de la estacion Mojotoro
+del Ferro Carril Central Norte; no es del departamento. Acheral (2): la finca
+Acheral y su fraccion "La Hina", en un deslinde que NO nombra departamento; la
+tabla no se puede atribuir a una jurisdiccion y se declara sin atribuir.
+
+B.4 - AUSENCIAS DEL ANILLO DE ACTORES
+De los 171 actores del config, 30 aparecen en 1913 con nombre y apellido
+completos. La busqueda se hizo sobre el texto CON LA PUNTUACION SUPRIMIDA, no
+solo normalizado. Los 141 restantes estan ausentes del ano, y esa ausencia se
+afirma con dos identificadores -persona y organismo, o persona y lugar-,
+porque los actos de 1913 no llevan numero. NO HAY NINGUN ACTOR CUYA BUSQUEDA
+POR NOMBRE COMPLETO FALLE EN SU PROPIO ACTO: los que las fichas del §A nombran
+aparecen todos en la busqueda automatica, de modo que en 1913 no se repite la
+falla de 1911 y 1912. Los tres grupos:
+
+Grupo 2 -los que aparecen en mas de un acto del departamento, que es el que
+arma la trama del ano-: Daniel Linares, jurado en enero (385 h2), miembro de
+la comision municipal en abril (401 h2) y jurado otra vez en noviembre (448
+h3). Augusto Regis y Adolfo Vidal, jurados en enero y en noviembre, y Vidal
+ademas presidente de la 2a mesa receptora en febrero (390 h3). Silvano Murua,
+suplente de jurado en enero y en noviembre. Camilo Caceres, presidente de la
+1a mesa en febrero y miembro de la comision municipal en abril. Lucas Molina,
+suplente de mesa en febrero y lindero del deslinde de Wenner en octubre y
+noviembre. Escolastico Aparicio, comisario que renuncia en febrero (391 h3),
+nombrado en la lista de 385 h3, juez de paz propietario en abril (404 h3) y
+firmante de los tres edictos de agosto, octubre y noviembre. Liborio Guerrero,
+comisario auxiliar de Los Penones el 11 de abril y cesado el 18. Jacinto
+Guerrero, lindero de la casa-quinta rematada en 409 h3.
+
+Grupo 1 -los que solo aparecen en su propio acto-: Genaro Molina, Eustaquio
+Murua, Silverio Caceres, Hector Echenique y Jose D. Soliveres, cada uno una
+sola vez. Grupo 3 -los que aparecen tambien fuera del departamento-: Francisco
+Aleman (5 hojas), Victor M. Saravia (14 hojas, martillero), Dario Arias (4),
+Jacinto Guerrero (4), Walter Hessling (3), Benjamin Lopez (3), Emilio
+Soliverez (3), Adolfo Agote (2), Manuel Nunez de la Rosa (2), Luis Linares (2)
+y Desiderio Ruiz (2).
+
+  Terminos del anillo 2 con acierto (apariciones):
+    isasmendi                36
+    castellanos              21
+    murua                    6
+    rio blanco               5
+    wierna                   4
+    lesser                   4
+    quintin                  4
+    sauces                   4
+    betania                  3
+    penones                  3
+    angostura                2
+    pacara                   2
+    nogales                  2
+    entre rios               2
+    los porongos             2
+    tabacal                  2
+    acheral                  2
+    vaqueros                 1
+    mojotoro                 1
+    trancas                  1
+    campo alegre             1
+    durazno                  1
+    chaile                   1
+    potrero de castillo      1
+    potrero de valencia      1
+    estacion mojotoro        1
+
+§C - LIMITROFES / §P - PLANOS / §D - INDICE
+-------------------------------------------
+
+§P. La palabra plano aparece en 25 hojas del ano. Ninguna publica un plano: el
+corpus no trae una sola lamina. Cuantas de esas remisiones tocan al
+departamento se resuelve en la tanda siguiente, junto con los avisos de
+deslinde. Techo de resolucion: 150 a 301 ppi (§1).
+
+Veinticinco hojas del ano mencionan un plano y NINGUNA lo publica: el corpus
+no trae una sola lamina. DOS de esas remisiones tocan al departamento: el
+edicto de deslinde de Pablo Enrique Wenner (443 h4 y 449 h4), que manda
+practicar diligencias de mensura y amojonamiento sin acompanar plano, y el
+aviso de la finca Lesser (399 h4), que describe la extension en cuadras
+cuadradas sin remitir a lamina alguna. Las dos se registran como citadas y no
+acompanadas.
+
+§C - LIMITROFES. El corpus no da en 1913 ningun acto de un departamento
+limitrofe que toque a La Caldera. Lo mas cercano es el decreto de marzo que
+nombra comisarios del distrito de General Guemes y de la estacion Mojotoro del
+Ferro Carril Central Norte (397 h2): el rio Mojotoro es limite del
+departamento, pero el acto es de otra jurisdiccion y no lo nombra. Se registra
+con esa linea y no se ficha.
+
+§D - INDICE. Por edicion y hoja: 385 h2 y h3 (jurados y lista); 390 h3 (mesas
+receptoras); 391 h3 (comisario, renuncia y nombramiento); 399 h4 (finca
+Lesser); 401 h2 (comision municipal); 404 h2 (trece comisarios auxiliares de
+partido); 404 h3 (Los Penones y jueces de paz); 409 h3 (remate de la
+casa-quinta); 429 h3 (edicto Valdiviezo); 441 h5 (edicto Ruiloba); 443 h4 y
+449 h4 (deslinde Wenner). Por materia: policia 404 h2, 404 h3, 391 h3;
+justicia de paz 404 h3, 429 h3, 441 h5; municipalidad 401 h2, 404 h3;
+elecciones y registro civico 385 h2, 385 h3, 390 h3, 448 h3; remates 399 h4,
+409 h3; deslindes 443 h4 y 449 h4.
+
+§E - OBSERVACIONES
+------------------
+
+E.1 DUPLICACION Y SALDOS
+Sin las .jpg de lee_auto.py no hay md5 ni dhash ni medicion de tinta. La
+duplicacion se controlo por otro camino, mas barato y en este corpus mas
+concluyente: EL FOLIO IMPRESO. Dio tres escaneos repetidos, que ninguna
+busqueda por texto habria separado de una republicacion:
+
+  419.pdf hoja 5 = folio 1637 = hoja 3 de la edicion 429
+  419.pdf hoja 6 = folio 1638 = hoja 4 de la edicion 429
+  441.pdf hoja 2 = la tapa de la edicion 441, escaneada dos veces
+
+Los cuatro folios se leyeron en la imagen. La prueba es doble: el folio
+coincide, y el contenido tambien -419 h6 y 429 h4 abren los dos con el mismo
+lindero, "de Perez y Fleming; al naciente, la misma finca Garrapatal y la
+Cueva, de Lozano Valdivieso"-, pero las dos capas previas difieren mucho entre
+si porque son dos digitalizaciones distintas de la misma pagina: el cotejo por
+texto da 0,12 y 0,03 de parecido y habria llevado a decir que son paginas
+distintas. SE DECLARA EL DUPLICADO Y SE LO DESCUENTA: 291 imagenes, 288 hojas.
+
+Esto CORRIGE dos cosas que este informe afirmo en su tercera entrega: el
+edicto sucesorio de Esteban Valdiviezo no se publico dos veces -se publico
+una, en la edicion 429- y la supuesta anomalia de la cadena de folios entre
+419 y 420 no existe. Ver E.9.
+
+SALDOS. Se contaron los resumenes ANTES de prometer la cadena: publicados en
+todo 1913 hay DOS, el de abril (411 h3) y el de setiembre (443 h3). NO HAY
+CADENA ANUAL Y NO SE PUEDE ARMAR: los dos meses no son contiguos y entre ellos
+no se publico ninguno. Lo que se leyo en la imagen, en pesos moneda nacional:
+
+  Abril de 1913 (411 h3, firmado Salta, mayo 9 de 1913)
+    saldo existente del mes de marzo .............. 116.800,89
+    total de ingresos ............................. 697.983,20
+    saldo existente en Caja para mayo ............. 107.491,74
+    total de egresos .............................. 697.983,20
+  
+  Setiembre de 1913 (443 h3, Juan C. Velarde, contador general,
+  Salta, octubre 3 de 1913; publiquese, octubre 11)
+    saldo de agosto 1913 ........................... 22.361,80
+    total de ingresos ............................. 269.681,83
+    saldo existente en caja que pasa a octubre .... 109.684,22
+    total de egresos .............................. 269.681,83
+
+La cadena queda abierta por los dos lados y con un hueco de cuatro meses en el
+medio: contra 1912 por marzo, contra 1914 por octubre, y sin nada entre mayo y
+agosto. Los saldos de mayo a agosto no estan "sin mirar": no se publicaron.
+
+E.2 COBERTURA
+288 hojas distintas presentes de las 296 que tuvo el ano (288 mas las ocho de
+las ediciones ausentes 438 y 444), es decir el 97,3 %. 263 imagenes con capa
+previa; 28 sin ninguna capa, cubiertas por el OCR de cribado y por la lectura
+de sus tapas. Imagenes miradas: CUARENTA Y CUATRO recortes -veinticuatro de
+columna y veinte de cabecera-, sobre VEINTIDOS columnas distintas de dieciocho
+hojas, mas las 36 tapas fechadas en la imagen y los siete folios de 419, 429,
+441 y 442 (385 h2 c3; 385 h3 c1; 390 h3 c1; 391 h3 c2; 399 h4 c3; 401 h2 c3;
+404 h2 c1; 404 h3 c1, c2 y c3; 409 h3 c3; 419 h5 c3; 429 h3 c3; 441 h5 c1; 443
+h4 c2; 448 h3 c3; 449 h4 c3; 401 h2 c2; 411 h3 c1 y c2; 443 h3 c2 y c3; 391 h3
+c3; 448 h3 c1). Columna perdida: NO SE HALLO NINGUNA en esas veintidos
+columnas, y decirlo sobre veintidos columnas es todo lo que autoriza el
+material mirado; sobre el resto del ano no se afirma nada. Lo que si fallo, y
+en silencio, fue la palabra suelta: seis veces, y las seis decidian una ficha.
+CITADOS Y NO ACOMPANADOS: uno, el decreto de 12 de abril de 1913 que 404 h3
+deja sin efecto; los actos del ano no llevan numero, de modo que se lo busco
+por fecha y por materia -nombramiento de Liborio Guerrero en Los Penones- y no
+aparece en el corpus. El decreto de 404 h2 es del 11 y no es ese.
+
+E.5 CORTES Y COLUMNAS
+Maqueta de tres columnas, medida una vez sobre el corpus con
+get_text('words'): las columnas arrancan en ~40, ~220 y ~400 pt sobre paginas
+de 596 a 648 pt de ancho. Esos bordes son los que se usan para recortar, por
+el ancho entero mas 6 pt de margen. Columna perdida: no se hallo ninguna en
+las seis columnas cotejadas. Lo que si se confirmo es la falla de palabra
+suelta, que con una sola version falla en silencio: la capa lee "rGaideras"
+donde la pagina dice "Caldera" (401 h2) y "$Qalderilla" donde dice
+"Calderilla" (404 h2). Las dos palabras decidian una ficha y las dos se
+miraron.
+
+E.6 REPETICIONES
+UN solo aviso del departamento se publica dos veces: el edicto de deslinde de
+Pablo Enrique Wenner, en 443 h4 y en 449 h4, AUNQUE EL AUTO DEL JUEZ ORDENA
+PUBLICARLO "POR UNA VEZ EN EL BOLETIN OFICIAL". La repeticion se comprobo
+mirando las dos imagenes, no la capa (§6), y las dos traen las mismas dos
+erratas -"Caladera" y "Baassani"-, de modo que salen de la misma composicion.
+Un segundo aviso repetido, el del aserradero de la finca del doctor Jose M.
+Sola, sale en 448 h4 y en 454 h4, pero no es del departamento: su "caldera" es
+una caldera de vapor.
+
+LO QUE PARECIA UNA TERCERA REPETICION NO LO ERA. El edicto sucesorio de
+Esteban Valdiviezo aparece en 419.pdf hoja 5 y en 429.pdf hoja 3, y este
+informe lo dio por repetido en su entrega anterior. El folio impreso dice que
+las dos son la misma pagina (E.1). Se corrige: una sola aparicion, en la
+edicion 429.
+
+En el ano hay 131 marcas de publicacion del tipo "497v11sp", con 116 numeros
+distintos. LA MARCA NO PRUEBA REPETICION: anuncia hasta cuando corre la orden
+de publicar y puede referirse a otros diarios. La prueba esta en el texto y,
+cuando decide algo, en la imagen. De los tres avisos del departamento que
+llevan marca, el de 443 h4 se repite pese a tener orden de una sola vez, y los
+de 399 h4 (345vJn.4) y 409 h3 (417v1vjl) no se repiten. El de 429 h3
+(497v11sp) tampoco: su segunda "aparicion" era un escaneo repetido.
+
+E.4 FIRMAS Y AUTORIDAD (parcial)
+Conteo sobre la capa previa del ano: la formula de encabezado "El P. Ejecutivo
+de la Provincia" aparece 113 veces, "El Poder Ejecutivo de la Provincia" 13 y
+"El Gobernador de la Provincia" 14. Conviven las tres, como en 1912, y no se
+normalizan. "Es copia" aparece 282 veces. En los firmantes: Patron Costas 188,
+Uriburu 121, Leguizamon 97, Outes 162, del Corro 3.
+
+Lo que se leyo en la imagen, en orden de fecha. (1) En enero, 385 h3 trae la
+formula "El Presidente de la H. Camara de Diputados en ejercicio del P.
+Ejecutivo de la Provincia": hay interinato, y no se vio decreto de apertura.
+(2) En la misma edicion 385 h2 el decreto de los jurados lo firman OLIVA y
+RICARDO ARAOZ. (3) El decreto del 8 de febrero (391 h3) lleva como UNICA firma
+la del ministro FRANCISCO M. URIBURU, sin firma de gobernador sobre ella, con
+"Es copia." y Jose M. Outes S. S. (4) Los decretos del 11 y del 18 de abril
+(404 h2 y h3) llevan PATRON COSTAS, Macedonio Aranda y "Es copia - Jose M.
+Outes. S. S.". Hay por lo tanto por lo menos cuatro configuraciones de firma
+en cuatro meses. LA SESION NO FIJA NINGUNA FECHA DE CAMBIO NI DE REINTEGRO:
+declara el ultimo acto mirado de cada configuracion y el primero de la
+siguiente, y deja el punto abierto hasta mirar las tapas y los decretos de
+marzo (§2.5bis, interinato sin cierre).
+
+E.7 FALSOS POSITIVOS Y NEGATIVOS (parcial)
+Del anillo 1, ya juzgados en 1913 y listados en §12 de la rubrica sin
+agregarse al config: Calderon (Isidro B. en 390 h2, Celso en 390 h3, un
+lindero en 433 h4); "una caldera vertical con motor" y "un motor con caldera"
+del aviso del aserradero (448 h4 y su repeticion en 454 h4), que son calderas
+de vapor; "clera" por bandera (451 h4); "adera" por madera (448 h4); "caderia"
+por mercaderia (392 h4, 393 h4) y por cadena (418 h3); "alder" por Alderete
+(449 h4); "conader" por con derecho (419 h4); "cialdoetor" por comercial
+doctor (400 h4). De la banda 0,70 a 0,78, las 33 formas son todas falsos
+positivos: cada, calidad, cuadra, cabrera, cualquiera, cadena, cartera,
+caneria, caseras, colera, candela, cortadera, caleula, caderes, cadaver,
+cadillal, caleta, carretilla y las demas.
+
+FALSOS NEGATIVOS CONFIRMADOS de la pasada literal, todos rescatados por otra
+pasada y todos mirados en la imagen o pendientes de mirar: la laxa salvo
+"Caldera" impreso "rGaideras" (401 h2) y la difusa salvo "Calderilla" impreso
+"$Qalderilla" (404 h2), "Caldera" impreso "daldera" (385 h2), "Calderilla"
+impreso "calderi^" (399 h4) y "la Caldera" impreso "Qaladera" (449 h4). Cuatro
+de las cinco son formas que la unica version disponible deforma en una sola
+letra.
+
+E.8 FIDELIDAD NUMERICA
+Cuadros publicados en el ano: DOS, los resumenes de la Tesoreria General de
+411 h3 y 443 h3. Los dos se miraron enteros en la imagen y de los dos se
+recalculo por lo menos un subtotal, aunque la cadena de saldos no existiera:
+que una cadena cierre, o que no haya cadena, no exime de recalcular el cuadro.
+
+ABRIL (411 h3). El subtotal de Receptoria General CIERRA EXACTO: 38.831,30 +
+16.214 + 19.651,10 + 5.147 + 996,40 + 1.901,72 + 800 + 28.023,50 = 111.565,02,
+que es lo impreso. Del lado de los ingresos, el subtotal 581.182,31 mas el
+saldo de marzo 116.800,89 dan 697.983,20, que es el total impreso: cierra. DEL
+LADO DE LOS EGRESOS NO CIERRA. Los cuatro grupos suman 464.588 + 113.567,08 +
+15.198,62 + 2.137,76 = 595.491,46, que es el subtotal impreso; pero 595.491,46
+mas el saldo para mayo 107.491,74 dan 702.983,20 y el total impreso es
+697.983,20. LA DIFERENCIA ES DE 5.000,00 EXACTOS. Dos lecturas alternativas,
+de un solo digito cada una, cerrarian la columna: que el saldo para mayo sea
+102.491,74 en vez de 107.491,74, o que el subtotal de egresos sea 590.491,46
+en vez de 595.491,46. Las dos cifras se volvieron a mirar a 600 dpi y a esa
+escala se leen 107.491.74 y 595.491.46. Se declaran la diferencia y las dos
+lecturas alternativas y NO SE CORRIGE NADA.
+
+SETIEMBRE (443 h3). La columna de ingresos se leyo entera dos veces, a 250 y a
+400 dpi. Sus diecisiete renglones son 22.361,80 / 30.655,57 / 7.585 /
+16.154,05 / 2.934,38 / 19.723,50 / 2.000 / 786,25 / 7.888,21 / 307,80 / 8.000
+/ 800 / 54.622,91 / 30 / 650 / 5.547,55 / 13.513,81, y SUMAN 193.560,83. El
+total impreso es 269.681,83, verificado a 400 dpi y coincidente con el total
+de egresos del pie de la hoja. LA DIFERENCIA ES DE 76.121,00. Ninguna lectura
+alternativa de un digito la cierra: la unica cifra que cerraria la columna por
+si sola es el renglon impreso "800.—" leido como "76.921.—", y la imagen no lo
+autoriza. SE DECLARA LA DIFERENCIA Y NO SE CONCILIA (§8.3). No se altera
+ninguna cifra y no se propone correccion.
+
+NO HUBO UN SOLO BALANCE MUNICIPAL EN TODO 1913, ni del departamento ni de
+ningun otro. Es un hecho del corpus, no una tabla que quedo sin mirar. Tablas
+no recalculadas: ninguna, porque no hay otras. El unico importe del §A es la
+base de $ 1500 del remate de 409 h3, leida en la imagen.
+
+E.9 CONTRADICCIONES (parcial)
+(a) La cadena de folios de 1913 NO hereda la de 1912. 1912 cerro en 1458 (383
+h4, segun el informe de ese ano) y 1913 abre en 1460 (384 h2, con lo que la
+tapa de 384 lleva el folio 1459). Se declara y no se concilia.
+
+(b) Dentro del ano la cadena avanza de a cuatro y CIERRA SIN UN SOLO SALTO
+desde 1460 (384 h2) hasta 1724 (451 h2). La entrega anterior de este informe
+declaro aqui una anomalia entre 419 y 420: era falsa, y se retira. El archivo
+419.pdf traia dos hojas ajenas -folios 1637 y 1638, de la edicion 429-;
+descontadas, la 419 ocupa 1595-1598 y la 420 abre en 1599, como corresponde.
+Lo mismo con la 441, que ocupa 1683-1686 y deja a la 442 abriendo en 1687. El
+folio fue el unico instrumento que detecto las tres hojas repetidas, y lo hizo
+sin mirar una sola imagen de mas.
+
+(c) Edicion corta frente a edicion incompleta, resuelto por el folio: la 388
+tiene tres hojas (folios 1475-1477) y la 389 una sola (folio 1478), y la 390
+abre en 1479-1480. La cadena avanza sin hueco: las dos salieron cortas y
+ninguna esta incompleta.
+
+(d) CUATRO TAPAS DE ENERO IMPRIMEN EL ANO ANTERIOR Y LLEVAN LA CORRECCION
+HECHA A MANO SOBRE EL PAPEL. En 384, 385, 386 y 389 la fecha esta compuesta
+"1912"; el 2 esta tachado con un trazo diagonal y al lado hay un 3. Se
+transcribe "Enero 4 de 1912" con la nota de que el 2 esta tachado y corregido
+a 3, y no se elige una de las dos lecturas. Las cinco tapas que la capa leia
+"1918" -417, 422, 429, 433 y 437- se miraron en la imagen y dicen 1913: era el
+OCR.
+
+(e) Ano editorial: ANO V hasta la 441 y ANO VI desde la 442, leido en la
+imagen en las dos tapas vecinas. Aqui la capa acerto, al reves que en 1911 y
+1912; se miro igual.
+
+(f) Erratas del original ya transcriptas, con [sic] en su ficha y aqui por
+segunda vez: "cindadanos" por ciudadanos, "cocisarias" por comisarias y
+"auxilaiares" por auxiliares, las tres en el encabezado de 404 h2;
+"porpietario" por propietario en el Art. 1o de los jueces de paz de 404 h3;
+"Es copia." sin guion en 391 h3 frente a "Es copia -" en 404 h3; "Rio de la
+Caladera" por Caldera y "Baassani" por Bassani, las dos repetidas igual en 443
+h4 y en 449 h4; "este juzgado a ordenado" por ha ordenado en 441 h5; y en 448
+h3 "Anata" por Anta, "nmendia" por Urmendia, "Cerilo" por Cirilo y "Silvano
+Marua" por Silvano Murua, este ultimo impreso "Murua" en 385 h2.
+
+(i) ERRATAS DE TAPA POR TANDAS. De la edicion 446 a la 452 la cabecera imprime
+el mes como "Moviembre" con M: se comprobo en la imagen en 450, 451 y 452 y en
+la capa en 446 y 448. Se transcribe con [sic] y se declara UNA vez, no una por
+edicion. Del mismo modo, la cabecera imprime "MUN" por "NUM" en 384 y 385.
+
+(g-bis) Cuatro renglones estan TRASPUESTOS en el original, en el edicto
+sucesorio de Esteban Valdiviezo, y la transposicion se repite identica en las
+dos apariciones (419 h5 y 429 h3). Se transcriben donde estan.
+
+(g) El mismo hombre lleva tres formas de nombre en el ano: "Escolastico C.
+Aparicio" (391 h3, mirado), "Escolastico Aparicio" (404 h3, mirado) y
+"Escolastico M. Aparicio" (419 h5, 429 h3 y 448 h3, por mirar). El config trae
+las dos ultimas. No se unifican (§15.3).
+
+(h) Un nombramiento del 11 de abril se deja sin efecto el 18 citando un
+decreto "de 12 del corriente mes" que no es el del 11 y que no esta en el
+corpus. Se declara y no se concilia.
+
+E.10 LIMITES
+Son SIETE y son limites, no pendientes: ninguno se puede levantar con mas
+trabajo de esta sesion.
+
+L1. No llegaron las salidas de lee_auto.py: no hay .tsv y por lo tanto NO
+EXISTE la confianza por hoja ni la lista de hojas 'a ojos'. L2. No hay segunda
+version del texto: ningun digito y ninguna palabra tiene desempate por segunda
+lectura; el unico desempate es la imagen. L3. No hay .jpg del script: no hay
+md5, ni dhash, ni medicion de tinta. L4. Faltan del Release las ediciones 438
+y 444, ocho hojas que el folio prueba que existieron. L5. Siete ediciones (452
+a 458, 28 hojas) no tienen capa de texto y tesseract no trae spa en esta
+sesion. L6. No hay sumario en la epoca: el cotejo sumario/cuerpo no es
+aplicable. L7. Los actos no llevan numero: no hay fecha contra numeracion.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO. El .tsv daria la confianza por hoja y con
+ella la lista de hojas "a ojos", que aqui se cubrio por otra via: las hojas de
+los candidatos, las de las dos tablas y las de las listas. Las .jpg darian
+md5, dhash y medicion de tinta, y habrian encontrado los tres escaneos
+repetidos sin necesidad de leer folios, y confirmado que no hay mas. Una
+segunda version del texto daria desempate de digitos y de palabra suelta, que
+es justo donde este ano fallo seis veces. El log diria si el script tropezo en
+alguna edicion. Las ediciones 438 y 444 agregarian ocho hojas y dos semanas de
+setiembre y octubre. Los .txt del script ahorrarian la extraccion pero no
+cambiarian una sola linea del §A.
+
+§F - CORRECCION A LA RUBRICA
+----------------------------
+
+Cinco correcciones para v16, todas salidas de este ano.
+
+F1. EL ARBOL DEL §2 DECIDE POR CORPUS Y HAY QUE DECIDIR POR EDICION. 1913
+mezcla 66 ediciones con capa previa y 7 sin ninguna capa, en el mismo Release
+y en el mismo formato de archivo. La tabla del §2 debe aplicarse edicion por
+edicion y el §0 debe declarar el reparto.
+
+F2. SIN spa, UN OCR DE CRIBADO CON eng CUBRE LAS HOJAS SIN CAPA. No sirve para
+transcribir ni para ninguna cifra, pero localiza candidatos: 28 hojas a 300
+dpi, diez segundos por hoja, en segundo plano con setsid nohup mientras la
+sesion hace otra cosa. En 1913 dio un solo acierto de anillo 1, y era un falso
+positivo, pero eso ES el resultado: sin el, esas 28 hojas quedaban declaradas
+como agujero.
+
+F3. EL FOLIO IMPRESO NO SOLO ENCADENA EDICIONES: DETECTA ESCANEOS REPETIDOS, Y
+ES EL UNICO INSTRUMENTO QUE LOS DETECTA CUANDO NO HAY md5 NI dhash. Es la
+correccion mayor de este ano. Un archivo de edicion puede traer hojas que no
+son suyas -419.pdf trae dos hojas de la edicion 429- o la misma hoja dos veces
+-441.pdf trae su tapa duplicada-. El texto NO lo detecta: las dos
+digitalizaciones de la misma pagina dan capas previas tan distintas que el
+cotejo por similitud devuelve 0,12 y 0,03, es decir "paginas distintas". La
+regla: antes de contar hojas y antes de declarar una repeticion, LEER EL FOLIO
+DE TODA HOJA DE UNA EDICION QUE TENGA MAS HOJAS QUE SUS VECINAS. El control
+cuesta un recorte de cabecera por hoja sospechosa.
+
+F4. UN AVISO QUE APARECE DOS VECES ES UNA DE TRES COSAS, NO DE DOS:
+publicacion repetida, escaneo repetido, o coincidencia. La rubrica trata las
+dos primeras como si fueran una. En 1913 el edicto de Valdiviezo parecia
+repetido -misma fecha, misma marca, la MISMA TRANSPOSICION DE CUATRO
+RENGLONES- y la identidad tipografica, que parecia la prueba definitiva, era
+en realidad el sintoma del escaneo repetido: si dos apariciones son identicas
+HASTA EN LA ERRATA DE COMPOSICION, hay que mirar el folio antes de llamarlas
+repeticion. Una publicacion realmente repetida, como la de Wenner, cae en
+hojas cuyo folio esta separado por decenas de numeros.
+
+F5. UNA TAPA PUEDE TRAER UNA CORRECCION MANUSCRITA SOBRE EL PAPEL. Las cuatro
+tapas de enero de 1913 imprimen "1912" y alguien tacho el 2 con un trazo y
+escribio un 3. No es errata de imprenta ni error de OCR: es una tercera clase
+de dato, la correccion posterior. Se transcribe lo impreso y se declara la
+tachadura, sin elegir una de las dos lecturas.
+
+CONFIG ACTUALIZADO
+------------------
+
+Se entrega la propuesta de agregados al lee_config.json vigente. No se inventa
+contenido: se parte del archivo leido en /mnt/project.
+
+  A "actores" se AGREGAN, con origen 1913 (se conservan los 171):
+  julio del solar        - comisario de policia del departamento
+  vicente vivas          - juez de paz suplente
+  salvador rosa          - comision municipal
+  enrique leconte        - comisario de Los Penones (el config trae
+                           "enrique leconte" de 1912 como leconte;
+                           se conserva y no se unifica)
+  manuel ramos           - comisario auxiliar de San Alejo
+  francisco losaya       - comisario auxiliar de Campo Alegre
+  virgilio arevalo       - comisario auxiliar de Angosto de Arias
+  eloy viveros           - comisario auxiliar de Potrero de Castillo
+  pedro vale             - comisario auxiliar de Lesser
+  jose d. soliveres      - suplente de mesa
+  ricardo valdivieso     - suplente de mesa
+  julio padilla          - comisario de Penones
+  pablo enrique wenner   - solicitante del deslinde
+  jacoba molina          - lindera del deslinde
+  esteban valdiviezo     - causante del edicto de 429 h3
+  felisa l. de valdiviezo- iniciadora de ese juicio
+  jose maria leguizamon  - martillero del remate de 409 h3
+
+SE AGREGAN LAS DOS FORMAS Y NO SE UNIFICAN, segun §15.3: "escolastico c.
+aparicio" junto a "escolastico m. aparicio" (1911) y "escolastico aparicio"
+(1908), porque el mismo hombre lleva las tres en 1913; "pablo enrique wenner"
+junto a "pablo enrique wernner" (1912); "ricardo valdivieso" junto a "ricardo
+valdiviezo". El config es una red de busqueda, no un padron.
+
+A "anillo2" NO se agrega ningun termino nuevo: los trece partidos del decreto
+de 404 h2 ya estan todos en las 70 entradas vigentes, incluidas "despenza",
+"gallinatos", "angosto de arias" y "lesser". Se deja constancia de que la
+forma impresa del rio en 443 h4 y 449 h4 es "Caladera": NO se agrega al anillo
+1 ni al 2, porque es una errata del original y no un topónimo, y agregarla
+ensuciaria la pasada literal.
+
+A "falsos_positivos" NO se agrega nada. Los de 1913 se listan en E.7 y en el
+§12 de la rubrica y se dejan fuera del config por la misma razon de siempre:
+un contexto marcado fp_conocido queda SIN RECORTE, y "caldera" de vapor
+convive en la misma hoja con avisos que podrian ser reales. A "numeros"
+tampoco: los actos de 1913 no llevan numero y los cuatro arrastrados que
+aparecen son coincidencia de cifra -un folio, un ano y dos importes-.
+
+RECUENTO
+--------
+
+  Archivos bajados ................................ 73 PDF, 74 MB
+  Ediciones presentes ............................. 73 (384 a 458)
+  Ediciones ausentes .............................. 2 (438 y 444)
+  Imagenes de hoja ................................ 291
+  Hojas distintas presentes ....................... 288
+  Escaneos repetidos descontados .................. 3
+  Hojas que tuvo el ano (por folio) ............... 296
+  Cobertura del ano ............................... 97,3 %
+  Hojas con capa previa ........................... 263
+  Hojas sin ninguna capa .......................... 28
+  Tapas fechadas .................................. 73 de 73
+  Tapas fechadas en la imagen ..................... 36
+  Ediciones dobles ................................ 4
+  Tapas fechadas en dia que la formula no admite .. 2
+  Dias de salida sin edicion ...................... 28
+  Huecos explicados por el corpus ................. 0
+  Cambio de ano editorial ......................... 1 (en la 442)
+  U+0002 en el ano ................................ 0
+  U+00AD en el ano ................................ 5.861
+  Aciertos literales del anillo 1 ................. 26
+  Aciertos que la union defectuosa perderia ....... 3
+  Aciertos extra de la laxa ....................... 1
+  Formas de la difusa >= 0,78 ..................... 12
+  Formas de la banda 0,70-0,78 .................... 33
+  Terminos del anillo 2 con acierto ............... 26 de 70
+  Actores del config con nombre completo .......... 30 de 171
+  Candidatos del anillo 1 hallados ................ 26
+  Candidatos descartados tras mirarlos ............ 7
+  Resumenes de Tesoreria publicados ............... 2
+  Cuadros publicados en el ano .................... 2
+  Subtotales recalculados ......................... 4
+  Columnas de cuadro que no cierran ............... 2
+  Balances municipales del ano .................... 0
+  Tablas no recalculadas .......................... 0
+  Terminos del anillo 2 con contexto leido ........ 26 de 26
+  Hojas que mencionan un plano .................... 25
+  Planos publicados ............................... 0
+  Imagenes miradas ................................ 44 recortes
+  Columnas cotejadas .............................. 22
+  Folios leidos en la imagen ...................... 7
+  Entradas del §A ................................. 13
+  Apariciones del §A .............................. 14
+  Avisos del departamento publicados dos veces .... 1
+  Erratas del original transcriptas ............... 18
+  Citados y no acompanados ........................ 1
+  Limites declarados .............................. 7
+  Correcciones a la rubrica (§F) .................. 5
+  Actores propuestos para el config ............... 17
+  Terminos propuestos para el anillo 2 ............ 0
+
+CIERRE. SE ENTREGA ARCHIVO. El informe se declara COMPLETO CON SIETE LIMITES
+DECLARADOS, en cuatro tandas. Todo lo mirado quedo anotado en notas.txt y no
+queda nada pendiente de anotar. Dos afirmaciones de la tercera tanda se
+retiran y se corrigen en este mismo archivo, que se rehizo entero: el edicto
+de Valdiviezo no se publico dos veces, y la cadena de folios de 1913 no tiene
+ninguna anomalia. Todo lo mirado en este turno quedo anotado en notas.txt, sin
+nada pendiente de anotar.
+

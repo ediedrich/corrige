@@ -1,0 +1,2359 @@
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA — BARRIDO LEE
+Ano 1934 — ediciones N° 1513 a 1563 — termino: La Caldera
+Rubrica LEE v16 (22/09/2026). Informe del 22/09/2026.
+
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con 7 limites declarados (E.10). No queda trabajo que esta
+sesion pueda hacer con los insumos que tiene.
+
+Version y fecha de lee_auto.py: no corresponde. El script no corrio sobre
+1934. El Release del ano no trae pre-informe, ni resultados_1934.csv, ni
+decretos_1934.csv, ni log.txt, ni recortes.zip, ni el zip de los .txt de
+lee_trabajo. Rige el §2.1 de la rubrica: la capa previa se extrajo en sesion
+con PyMuPDF, hoja por hoja, y se trabajo sobre una sola version, etiquetada
+prev.
+
+Que subio el usuario. El Release con tag 1934 de
+github.com/ediedrich/boletines-salta trae 52 assets: los 51 PDF de las
+ediciones 1513 a 1563 (91 MB) y un lee_config.json. El listado se leyo sin
+token por releases/expanded_assets/1934.
+
+Configs cotejados antes de barrer (§15.4):
+
+  config del Release:  version (ausente), hasta (ausente),
+                       actores 180, anillo2 70, numeros 40,
+                       falsos_positivos 12
+  config del proyecto: version 2026-09-22, hasta 1932,
+                       actores 554, anillo2 160, numeros 129,
+                       falsos_positivos 24
+  se usa: el del proyecto — razon: mas nuevo
+  contenido: el usado contiene al otro; la diferencia es cero en los
+             cinco campos (anillo1, anillo2, numeros, falsos_positivos,
+             reemplazo) y cero en pares nombre+apellido de actores
+
+Es el mismo asset atrasado que encontraron los barridos de 1930, 1931 y 1932:
+el del Release cierra en 1915. El informe cierra pidiendo que se suba el
+vigente. Un barrido que solo hubiera tenido el del Release habria perdido los
+374 actores y los 90 terminos de anillo 2 incorporados entre 1916 y 1932, que
+son los de la epoca inmediatamente anterior a este ano.
+
+Cotejo del anillo 2 contra la toponimia establecida (§5.1bis): NO SE PUDO
+CORRER. control_config.py exige --tabla con el tabla_parajes.py del
+repositorio mapas_caldera, y ese archivo no esta alcanzable: la sesion probo
+raw.githubusercontent en las ramas main y master y las dos devolvieron 404. Es
+un limite, no un pendiente (E.10, limite 1). Lo que si se corrio es la parte
+del cotejo que no necesita el libro, y su resultado va en el §2.
+
+Que verifico la sesion. file sobre los insumos; nproc = 1; PyMuPDF no viene
+instalado y se instalo desde pypi; tesseract 5.3.4 con eng y osd y SIN spa. Es
+la decimoquinta sesion medida seguida sin spa, de 1911 en adelante. Sin spa no
+son aplicables ni la receta de OCR de la rubrica (apartado 3) ni el modo en
+sesion (apartado 16): no hay OCR propio, no hay segunda version, no hay
+confianza por hoja, no hay .tsv y por tanto la lista de hojas "a ojos" del
+apartado 4.8 no existe.
+
+De donde salieron las imagenes y como se cotejaron. Los 51 PDF se bajaron del
+Release en una llamada y ninguno quedo por debajo de 10 kB. No hay
+EXTRAIDO.json contra el cual cotejar; el cotejo se hizo contra la serie de
+numeros de edicion, contra el calendario de viernes de 1934 y contra la cadena
+de fechas de tapa, que cierran los tres (§1).
+
+Desvios de §8.17: ninguno. La ortografia del original se conserva en todas las
+transcripciones, incluidas las erratas, que van con [sic] y se repiten en E.9.
+
+Que agregaria cada insumo que falto. El zip de los .txt de lee_trabajo daria
+la segunda version y con ella el desempate por dientes de la §8.16 sin tener
+que ir a la imagen en cada cifra. El recortes.zip y las .jpg darian md5, dhash
+y tinta por hoja medida sobre el jpeg de trabajo (la tinta se midio igual,
+rasterizando: ver §1). El pre-informe y los CSV darian el conteo de formulas
+de autoridad y la lista de decretos del ano, que aqui hubo que armar a mano.
+El log.txt diria si la corrida del script dejo hojas sin procesar. El
+tabla_parajes.py del repositorio mapas_caldera daria el cotejo del anillo 2
+del §5.1bis, que es el unico control de la rubrica que este ano quedo sin
+correr.
+
+
+§1 · CORPUS REVISADO
+--------------------
+
+51 ediciones, 2009 hojas, de la N° 1513 (viernes 5 de enero de 1934) a la N°
+1563 (viernes 21 de diciembre de 1934). Ano editorial XXVI, leido en la imagen
+de la tapa. La serie de numeros de edicion no tiene huecos: 1513 a 1563 sin
+faltantes.
+
+TECHO DE RESOLUCION: 150 ppi uniforme en las 2009 hojas, medido sobre la
+imagen incrustada de cada hoja contra el tamano de pagina. Es el mismo techo
+de 1923 a 1932 y la mitad del de 1912. Se declara aqui porque condiciona todo
+lo que sigue: a 150 ppi la palabra suelta falla en silencio, y este ano volvio
+a fallar (§E.7).
+
+PERIODICIDAD: semanal, los viernes. La formula "Aparece los Viernes" no figura
+en la tapa; los dias de salida se establecen por la fecha impresa en cada
+tapa, que dice VIERNES en las 51. 1934 tiene 52 viernes. Entre el 5 de enero y
+el 21 de diciembre hay exactamente 50 semanas y hay 51 ediciones, de modo que
+no falta ningun viernes dentro de ese tramo. El unico viernes de 1934 sin
+edicion en el corpus es el 28 de diciembre. No se busca la causa afuera y no
+se explica. No hay ediciones dobles.
+
+PAGINACION. Reinicia en cada edicion, como de 1924 en adelante, de modo que no
+hay cadena de folios corrida. El control fuerte del §2.5bis —el cotejo sumario
+/ pagina citada— NO ES APLICABLE: 1934 no publica sumario. Queda el control
+debil, la cabecera "Pag. N", y se declara con su denominador: la capa resuelve
+la cabecera en 437 de las 1958 hojas interiores, y de esas 437 el numero
+impreso coincide con el numero de hoja del PDF en 397. Los 40 restantes son
+lecturas rotas de la cabecera (un "4" por un "45", un "1" por un "17"), no
+saltos de foliatura: no se encontro ninguna edicion en que la cabecera corra
+desfasada de modo sostenido. Desde la edicion 1539 (6 de julio) la capa
+resuelve la cabecera muchisimo mas seguido —de una o dos por edicion pasa a
+veinte o treinta—: es un cambio de composicion, no de paginacion, y se declara
+sin explicarlo.
+
+PAGINAS DECLARADAS: ninguna edicion de 1934 imprime la formula "EDICION DE N
+PAGINAS". El cotejo de hojas presentes contra hojas declaradas no es aplicable
+y las hojas declaradas van como 0 en el §R.
+
+TINTA. Con PDF reales la medicion si se puede hacer, y se hizo (§6, correccion
+v16): se rasterizaron las 2009 hojas a 36 dpi en escala de grises y se midio
+el porcentaje de pixeles por debajo de 128. NO HAY NINGUNA HOJA EN BLANCO. La
+mas clara es 1514 h27 con 0,19 %, seguida de 1554 h47 con 0,26 %; las ocho
+hojas por debajo de 0,5 % se miraron por su texto y todas traen cuerpo: son
+planillas de presupuesto escolar y actos con mucho interlineado sobre escaneo
+limpio, no hojas vacias. Ninguna hoja baja de 726 caracteres de capa (mediana
+3211, maxima 4916).
+
+MARCA DE CORTE Y GUION BLANDO. U+0002 no aparece ni una vez en las 2009 hojas,
+como en todo el tramo 1908–1932. U+00AD aparece 36.954 veces y se quita JUNTO
+CON EL SALTO DE RENGLON, en ese orden, antes de cualquier pasada. Tambien se
+unen el guion duro de fin de renglon y los cortes con hasta dos signos de
+puntuacion a cada lado del salto.
+
+CONFIANZA POR HOJA: no existe. Sin .tsv no hay media ni porcentaje por debajo
+de 60, y las etiquetas pub / ver / ojos no se pueden escribir. Es un limite
+(E.10, limite 2) y la cobertura de las hojas se hizo por otra via: la pasada
+literal, la laxa, la laxa espaciada y la difusa corrieron sobre las 2009
+hojas, y las hojas con acierto se miraron una por una en el texto.
+
+
+Tabla por edicion. Las fechas se leyeron en la tapa; cuando la capa no
+la resuelve, la fecha va entre corchetes y sale del calendario de
+viernes, que cierra con las 51 ediciones sin hueco.
+
+  EDIC  FECHA DE TAPA          HOJAS  TIPO           CONFIANZA
+  ----  ---------------------  -----  -------------  ---------
+  1513  viernes 5 de enero        30  PDF imagen     no aplicable
+  1514  viernes 12 de enero       44  PDF imagen     no aplicable
+  1515  [viernes 19 de enero]     43  PDF imagen     no aplicable
+  1516  viernes 26 de enero       88  PDF imagen     no aplicable
+  1517  viernes 2 de febrero      44  PDF imagen     no aplicable
+  1518  [viernes 9 de febrero]     50  PDF imagen     no aplicable
+  1519  viernes 16 de febrero     52  PDF imagen     no aplicable
+  1520  [viernes 23 de febrero]     51  PDF imagen     no aplicable
+  1521  viernes 2 de marzo        58  PDF imagen     no aplicable
+  1522  viernes 9 de marzo        52  PDF imagen     no aplicable
+  1523  viernes 16 de marzo       46  PDF imagen     no aplicable
+  1524  [viernes 23 de marzo]     48  PDF imagen     no aplicable
+  1525  [viernes 30 de marzo]     35  PDF imagen     no aplicable
+  1526  viernes 6 de abril        46  PDF imagen     no aplicable
+  1527  viernes 13 de abril       51  PDF imagen     no aplicable
+  1528  viernes 20 de abril       48  PDF imagen     no aplicable
+  1529  [viernes 27 de abril]     56  PDF imagen     no aplicable
+  1530  viernes 4 de mayo         52  PDF imagen     no aplicable
+  1531  viernes 11 de mayo        36  PDF imagen     no aplicable
+  1532  [viernes 18 de mayo]      31  PDF imagen     no aplicable
+  1533  viernes 25 de mayo        30  PDF imagen     no aplicable
+  1534  viernes 1 de junio        24  PDF imagen     no aplicable
+  1535  viernes 8 de junio        38  PDF imagen     no aplicable
+  1536  [viernes 15 de junio]     29  PDF imagen     no aplicable
+  1537  viernes 22 de junio       50  PDF imagen     no aplicable
+  1538  [viernes 29 de junio]     48  PDF imagen     no aplicable
+  1539  [viernes 6 de julio]      36  PDF imagen     no aplicable
+  1540  viernes 13 de julio       31  PDF imagen     no aplicable
+  1541  viernes 20 de julio       35  PDF imagen     no aplicable
+  1542  viernes 27 de julio       38  PDF imagen     no aplicable
+  1543  [viernes 3 de agosto]     17  PDF imagen     no aplicable
+  1544  viernes 10 de agosto      24  PDF imagen     no aplicable
+  1545  viernes 17 de agosto      37  PDF imagen     no aplicable
+  1546  viernes 24 de agosto      40  PDF imagen     no aplicable
+  1547  viernes 31 de agosto      43  PDF imagen     no aplicable
+  1548  viernes 7 de setiembre     32  PDF imagen     no aplicable
+  1549  viernes 14 de setiembre     32  PDF imagen     no aplicable
+  1550  viernes 21 de setiembre     15  PDF imagen     no aplicable
+  1551  [viernes 28 de setiembre]     21  PDF imagen     no aplicable
+  1552  viernes 5 de octubre      22  PDF imagen     no aplicable
+  1553  viernes 12 de octubre     26  PDF imagen     no aplicable
+  1554  [viernes 19 de octubre]     59  PDF imagen     no aplicable
+  1555  viernes 26 de octubre     20  PDF imagen     no aplicable
+  1556  viernes 2 de noviembre     28  PDF imagen     no aplicable
+  1557  viernes 9 de noviembre     28  PDF imagen     no aplicable
+  1558  [viernes 16 de noviembre]     50  PDF imagen     no aplicable
+  1559  viernes 23 de noviembre     48  PDF imagen     no aplicable
+  1560  viernes 30 de noviembre     45  PDF imagen     no aplicable
+  1561  [viernes 7 de diciembre]     40  PDF imagen     no aplicable
+  1562  viernes 14 de diciembre     32  PDF imagen     no aplicable
+  1563  viernes 21 de diciembre     30  PDF imagen     no aplicable
+
+Las 11 fechas entre corchetes son las que la capa no resuelve en la tapa. No
+se miraron una por una en la imagen: se declaran como deducidas del
+calendario, que es una inferencia y va rotulada como tal (§8.4 y §8.5). Las 40
+restantes se leyeron en la capa de la propia tapa y todas dicen VIERNES y el
+dia que el calendario predice. Se miro en la imagen una sola tapa, la de 1513,
+y alli se leyeron el ano editorial y el nombre del gobernador (§2.5bis,
+correccion v16).
+
+TIPO. Las 51 son PDF de imagen con capa de texto propia del PDF, que la sesion
+extrajo con page.get_text(). No hay ZIP, no hay texto nativo y no hay
+contenedor con extension enganosa: se corrio file sobre todos.
+
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+VERSIONES Y ETIQUETAS. Una sola: prev, la capa del propio PDF extraida en
+sesion. No hay prop y no hay union. Todo desempate de cifra fue, entonces,
+contra la imagen, que es lo unico que queda cuando hay una sola version
+(§8.16).
+
+PASADAS CORRIDAS, sobre las 2009 hojas:
+
+  literal/normalizada  "cald" sobre NFD sin diacriticos, con los cortes
+                       unidos:            136 hojas, 210 aciertos
+  laxa                 [gc][ao][l1i|][dcl][ec][rnm][ao]:
+                                           52 hojas,  75 aciertos
+  laxa espaciada       separador [\s\-]{0,3} ENTRE CADA PAR de letras
+                       de caldera y de calderilla:
+                                          127 hojas, 201 aciertos
+  difusa               ratio >= 0,78 contra caldera y calderilla:
+                                           17 formas
+  difusa ampliada      0,70 a 0,78, solo palabras con c, g u o:
+                                           43 formas, todas falsas
+  anillo 2             160 terminos del config
+  actores              554 del config, por nombre completo y por apellido
+                       suelto, sobre el texto sin puntuacion
+  numeros              129 numeros de acto arrastrados
+  reemplazo            8 formulas
+
+QUE RESCATO LA LAXA ESPACIADA. Tres hojas que la literal no ve, y dos de ellas
+son actos del departamento: 1529 h3 ("la C alderilla— Mojotoro-estud"), 1538
+h3 ("jurisdiccion del departamento de la C ald era", el nombramiento del
+subcomisario de Lesser) y 1558 h7 ("de Vaqueros»— departamento de la C
+aldera", la renuncia del subcomisario de Vaqueros). Es el tercer ano seguido
+en que la variante espaciada paga: la composicion de la epoca separa las
+letras del nombre del departamento y ninguna pasada literal lo devuelve.
+
+QUE RESCATO LA DIFUSA. Una hoja mas: 1517 h44, donde el original imprime "por
+la caloera, un (1) diputado titular". Y las tres apariciones de "alderilla"
+(perdida la C inicial) y la de "aldera" caen en hojas que las otras pasadas ya
+traian. Ese es todo el rendimiento: de las 17 formas de la difusa, 4 son
+reales y 13 son falsos positivos (calderas, calera, cadera, escalera,
+escalerilla, escalerillas, cuadrilla, cuadrillas, cuadrillan, calderon,
+calavera, caleria, caloera ya contada). Conviene seguir corriendola en la
+epoca siguiente: en 1923 no rescato nada y aqui rescato una mencion real que
+la literal perdia.
+
+LA DIFUSA AMPLIADA no rescato nada. Sus 43 formas de 0,70 a 0,78 son todas
+falsas: calidad (72), cartera (42), cabrera (28), cualquiera (27), capilla
+(16), cadillal (16), galeria (12), caneria (12), calaveras (9), casilla (9) y
+la cola. Se declara porque decide si conviene correrla en la epoca siguiente:
+por ahora no paga, pero cuesta una llamada.
+
+NINGUNA PASADA DEVOLVIO CERO, de modo que la comprobacion del §5.2 no hizo
+falta.
+
+ACTORES CON SU ORIGEN. La lista se armo con el config del proyecto, que
+acumula los actores de todos los informes anteriores: 554 entradas con origen
+entre 1908 y 1946. De ellas, 80 aparecen en 1934 con nombre completo y 216
+apellidos distintos tienen al menos un acierto. El campo origen sigue sin
+normalizar: 42 entradas llevan por origen un numero de edicion de 1946 en
+lugar de un ano, tal como lo señalo la v16 §15.6, y eso impide medir cuanto
+aporta cada tramo. No se toco el config en ese punto: la correccion va en el
+config actualizado que acompana a este informe.
+
+NUMEROS ARRASTRADOS. 45 de los 129 tienen acierto en 1934, pero la mayoria son
+coincidencias de cifras cortas (40, 32, 105, 123, 132) que no identifican
+acto. Los unicos que valen como identificador son los de cuatro y cinco
+digitos, y ninguno de ellos devolvio un acto del departamento. Se declaran sin
+usarlos.
+
+IDENTIFICADORES DE LAS AUSENCIAS. Los actos de 1934 llevan numero correlativo
+de decreto (de 16798, rezagado de 1933, a 18400 y tantos), y ademas expediente
+con letra y fecha. Toda ausencia del §B se afirma con dos de esos tres, mas el
+nombre y el organismo cuando el acto no lleva numero (los avisos judiciales y
+las actas de Vialidad no lo llevan: las actas se identifican por numero de
+acta y fecha de sesion).
+
+RESULTADO DEL COTEJO DEL ANILLO 2 (§5.1bis), en la parte que se pudo correr.
+La parte que exige la toponimia del libro quedo sin correr (E.10, limite 1).
+La parte interna del control si se corrio, sobre el config del proyecto:
+
+  terminos del anillo 2 que son tambien apellido en "actores": 10
+    apaza, aramayo, castellanos, chaile, condori, isasmendi, murua,
+    nogales, toconas y "burgos de yugra"
+  solapamiento entre anillos y falsos_positivos: 0
+  terminos del anillo 2 que faltan (no verificable este ano): sin dato
+
+Los 10 apellidos producen exactamente el ruido que la v16 anuncio: en 1934
+castellanos da 80 hojas, isasmendi 47, apaza 25, mamani 18, aramayo 14 y murua
+7, y practicamente todos esos aciertos son personas o son el rio, el arroyo y
+la finca Castellanos de otro departamento. Su acierto en el anillo 2 no prueba
+vecindad territorial y asi se lo trata en el §B.3. La regla dice mover esos
+apellidos a "actores": la mayoria ya estan alli, de modo que lo que
+corresponde es sacarlos del anillo 2, y eso va propuesto en el config
+actualizado.
+
+73 de los 160 terminos del anillo 2 no tienen ni un acierto en 1934. Entre
+ellos estan casi todas las variantes de grafia acumuladas (chalcanio,
+calchanio, chalchalnio, cachanio, cachinio, despenza, queceria, santa
+getrudis, campo alegie, santa rufiea, achejal, challe, getsmani, tacones), que
+existen porque un ano las necesito, y tambien topOnimos del departamento que
+este ano simplemente no pasaron (los cedros, el amancay, miquicho, morro del
+sunchal, mesada del panteon). No se propone quitar ninguno: un termino que no
+esta en el anillo no se ve pasar, y el costo de tenerlo es cero.
+
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+129 hojas de 38 ediciones traen al menos un acierto real del anillo 1.
+Agrupadas por acto, dan 24 fichas. La linea divisoria entre una ficha y la
+siguiente es el acto, no la hoja: una obra publica que aparece en treinta y
+seis hojas con treinta y seis autorizaciones de pago distintas va en una ficha
+con sus apariciones enumeradas y con los puntos sustantivos transcriptos,
+porque lo que el barrido tiene que dejar fichado es la obra y sus decisiones,
+no cada renglon de planilla.
+
+
+A.1 · CAMINO DE LA CALDERILLA A CAMPO SANTO POR GALLINATO
+
+------------------------------------------------------------------------------
+FUENTE: Ediciones 1513 h7,8,10,11,12,14; 1516 h2,4,6,7,9,10; 1517
+h3,5,6,8,18,19,20; 1521 h11; 1522 h2,3,4,6,7; 1524 h3,4,6; 1525 h15,16,17;
+1526 h8,9,11; 1527 h12; 1530 h4,8,16; 1541 h2,4,5; 1545 h2,9; 1546 h12; 1547
+h11; 1555 h3; 1559 h8,9. Actas del Directorio de la Direccion de Vialidad de
+la Provincia, publicadas integras.
+
+FICHA: Obra publica provincial en el departamento. Camino de La Calderilla a
+Campo Santo por Gallinato; desde la edicion 1522 el titulo del acta pasa a ser
+"a Campo Santo y Guemes por Gallinato". Presidente del Directorio, ingeniero
+Jose Alfonso Peralta; jefe de seccion Victor Antonelli; sobrestante Manlio
+Bruzzo, luego Juan B. Vila y Pedro Luis Vilca; capataces Victor Bravo, Felix
+Herrera, Jose Olmos, Castulo Bravo, Domingo Gomez y Juan Fernandez; apuntador
+Arturo Aleman.
+
+MODO DE LECTURA: Capa previa (prev) para el texto; imagen para las cifras
+citadas en la nota. No hay segunda version.
+
+TEXTO:
+
+  1513 h7, punto 6º: "autorizar la adquisicion de un cajon de
+  dinamita y cien fulminantes destinados a la construccion del camino
+  de la Calderilla a Campo Santo por Gallinato".
+  
+  1516 h4, punto 15º: "aumentase en la suma de veintidos mil
+  setecientos ochenta y cinco pesos con setenta y cuatro centavos m/1.
+  los fondos destinados a la construccion del camino de la Calderilla a
+  Campo Santo por Gallinato[;] esta suma a aumentarse proviene de las
+  partidas que figuran canceladas en los puntos trece y catorce".
+  
+  1517 h8, punto 14: "se autoriza la adquisicion de cuarenta postes de
+  quebracho de cuatro caras destinados al senalamiento y quilometraje
+  del camino de la Calderilla a Campo Santo y Guemes por Gallinato".
+  
+  1522 h4, punto 14: "comunicar al P. E. que el dia once del proximo
+  mes de noviembre quedara librado al servicio publico el camino de la
+  Calderilla a Campo Santo y Guemes por Gallinato".
+  
+  1522 h7, punto 16: "aprobar el presupuesto por abovedamiento y
+  enripiado del camino de la Calderilla a Campo Santo y Guemes por
+  Gallinato, cuyo total importa la suma de sesenta y cinco mil
+  setecientos cuarenta y dos pesos con catorce centavos m/1. [$]
+  65.742[,]14 y elevar la documentacion al P. E. a los fines de su
+  correspondiente aprobacion".
+  
+  1524 h6, punto 21: "habiendose incluido por un error en las planillas
+  del camino de la Calderilla a Campo Santo por [G]allinato
+  correspondientes al mes de octubre ppdo. el importe del mismo mes de
+  la cuadrilla de conservacion a cargo del capataz Felix Herrera la que
+  asciende a la suma de un mi[l] trescientos dieciseis pesos con
+  cincuenta centavos m/1. debera descontarse esta suma de los trece mil
+  cuatrocientos setenta y dos pesos con veinte centavos m/1. que
+  f[u]eran autorizados en el punto 1º del acta nº 40".
+  
+  1526 h8: "por gastos de entierro del obrero fallecido del camino de
+  la Calderilla a C[ampo] Santo por Gallinato don Pascual Carrizo".
+  
+  1547 h11: "a Patricio Arias por jornales del peon fallecido don
+  Guillermo Arias por el mes de enero del corriente ano. $ 11,90".
+
+NOTA DE LECTURA: La obra atraviesa todo el ano y es, por lejos, la materia mas
+frecuente del departamento en 1934: 36 hojas la nombran con ese titulo. No se
+recalcularon las planillas de jornales que la acompanan: van a E.8 con su hoja
+y su criterio. Dos muertes de obreros quedan registradas al pasar, en
+renglones de pago —Pascual Carrizo y Guillermo Arias— y el Boletin no publica
+ningun acto que las trate como tales: se ficha lo que hay y no se completa. El
+cambio de titulo de "a Campo Santo" a "a Campo Santo y Guemes" en mayo no
+viene explicado por ningun acto y no se explica aqui.
+
+
+A.2 · CAMINO DE LA CALDERILLA A EL DESMONTE POR GALLINATO
+
+------------------------------------------------------------------------------
+FUENTE: Ediciones 1525 h18; 1526 h10,13; 1527 h10,11,16,21,22; 1528
+h4,5,19,20,21; 1529 h5; 1530 h4,10; 1541 h2; 1542 h5; 1545 h2,9; 1546 h15;
+1547 h10,15; 1548 h9,12,13,14,16; 1551 h3; 1553 h4,5; 1555 h6; 1560 h8; 1561
+h9. Actas del Directorio de Vialidad.
+
+FICHA: Obra publica provincial en el departamento, con ayuda federal.
+Contratista Carlos de los Rios; tecnico propuesto, ingeniero Pedro J. Frias;
+sobrestantes Juan B. Vila (trasladado) y Luis P. Vilca (declarado cesante);
+proveedores Atilio Bruzzo (postes), Capobianco y Cia. (alambre y torniquetas).
+
+MODO DE LECTURA: Capa previa (prev). Las cifras de los certificados se leyeron
+en la capa y no se miraron en la imagen: van marcadas como dudosas.
+
+TEXTO:
+
+  1525 h18, punto 6: "nombrase sobrestante de las obras a ejecutarse
+  con ayuda federal en el camino de la Calderilla a El Desmonte por
+  Gallinato al senor Juan B. Vila con una asignacion de siete pesos
+  diarios computandosele treinta dias de trabajo por mes".
+  
+  1526 h10, punto 8º: "nombrase sobrestante de 2a para las obras de
+  ayuda federal a realizarse en el camino de la Calderilla a El
+  Desmonte por [G]allinato don Pedro L[u]is Vilca, quien gozara de una
+  asignacion de cinco pesos diarios".
+  
+  1542 h5, punto 7º: "camino Calderilla a El Desmonte por Gallinato—
+  certificad[o] nº 1 provisorio.— apruebase el certificado del rubro
+  cuyo importe asciende a la suma de $ 23.163,91 m/1. y se eleva a la
+  Direccion Nacional de Vialidad".
+  
+  1548 h12, punto 4º: "camino de Calderilla a El Desmonte por
+  Gallinato—certificado nº. 2 provisorio.— apruebase igualmente el
+  certificado del titulo a favor del contratista Carlos de los Rios
+  por un importe de $ 1[1].929,14 m/1.".
+  
+  1548 h14, nota del contratista transcripta en el acta: "camino de
+  Calderilla al Desmonte por Gallinato.— estando totalmente enripiado
+  este camino y faltando para su recepcion satisfactoria y definitiva
+  pequenos detalles como ser en algunos puntos repasada con ripio
+  delgado y en otros pasada del rodillo o relleno de huellas".
+  
+  1560 h8, punto 11: "camino de la Calderilla al Desmonte por
+  [G]allinato[:] no estando en condiciones de ser recibido el enripiado
+  del camino del rubro como lo comprueba el informe elevado por el jefe
+  de la seccion don Victor Antonelli, se resuelve transcribir el mismo
+  al contratista don Carlos de los Rios".
+  
+  1561 h9, punto 20: "camino de la Calderilla a El Desmonte por
+  [G]allinato[:] vista la nota de fecha 24 del corriente del
+  contratista del camino del titulo sr. Carlos [d]e los Rios
+  solicitando la recepcion del trabajo, por estar en su concepto en
+  condiciones de ello, el Directorio resuelve no h[acer lugar]".
+
+NOTA DE LECTURA: Es la otra obra del ano y la que deja la trama mas legible:
+licitacion, contrato, dos certificados provisorios, un pedido de recepcion del
+contratista y dos negativas del Directorio, la ultima en diciembre. El
+certificado nº 1 se publica dos veces con el mismo importe (1542 h5 y 1546
+h15) y eso no es repeticion del aviso sino dos actas que tratan el mismo
+certificado. El importe del certificado nº 2 se lee "1x929,14" en la capa y no
+se miro en la imagen: la cifra va dudosa y la lectura alternativa 11.929,14 es
+la unica que resulta coherente con el orden de magnitud del nº 1, pero no se
+elige (§8.7).
+
+
+A.3 · CAMINO DE LA CALDERILLA A MOJOTORO (ESTUDIO)
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1529 h3 y h4; edicion 1530 h16. Acta del Directorio de
+Vialidad con la planilla de saldos de obras.
+
+FICHA: Obra publica provincial: estudio de camino en el departamento. Es la
+tercera traza del ano y la unica que no pasa de estudio.
+
+MODO DE LECTURA: Capa previa (prev). La hoja 1529 h3 la devuelve solo la laxa
+espaciada: la literal no la ve.
+
+TEXTO:
+
+  1529 h3, renglon 19 de la planilla: "19— la C alderilla—
+  Mojotoro-estud[io]".
+  
+  1529 h4: "saldos resultantes en la ejecucion de las siguientes obras
+  [...] la Calderilla a Mojotoro (estudio) [...] 3º el deficit de $
+  771,87 m/l. segun planilla se cancelara con fondos de la partida de
+  $ 90.000,00 acordada por decreto de noviembre 25 de 1933".
+  
+  1530 h16: "a Pedro Caffoni e hijo, su factura por cajon funebre y
+  flete del mismo a Estacion Mojotoro, para un obrero fallecido del
+  camino de [l]a Calderilla a Mojotoro por Gallinato $ 17,70".
+
+NOTA DE LECTURA: El deficit de $ 771,87 es el de la planilla entera, que cubre
+veinticuatro obras, y no el de esta: el acto no lo desagrega y aqui no se
+desagrega. Tercera muerte de obrero registrada en un renglon de pago, y
+tampoco lleva acto propio. El nombre de la traza aparece con dos formas en dos
+hojas de ediciones consecutivas —"a Mojotoro (estudio)" y "a Mojotoro por
+Gallinato"— y no se concilian.
+
+
+A.4 · CAMINO ANTIGUO SALTA A JUJUY, TRAMO VAQUEROS–LA CALDERA
+
+------------------------------------------------------------------------------
+FUENTE: Ediciones 1548 h10, punto 11; 1553 h5, punto 2º; 1561 h8. Actas del
+Directorio de Vialidad.
+
+FICHA: Obra publica provincial ejecutada POR la comision municipal del
+departamento, por administracion. Es el unico acto del ano en que Vialidad
+delega la direccion de un trabajo en la autoridad local.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  1548 h10, punto 11: "solicitud arreglo camino antiguo Salta a
+  Jujuy—tramo Vaqueros-Caldera.— contestar a la comision municipal de
+  La Caldera que oportunamente se dispondra el arreglo solicitado por
+  nota de fecha 4 del corriente".
+  
+  1553 h5, punto 2º: "camino antiguo Salta a Jujuy— tramo Vaqueros a
+  La Caldera[:] autorizase el arreglo del tramo del titulo hasta la
+  suma de $ 400 m/1 encomendando a la [M]unicipalidad de La Caldera la
+  direccion de los trabajos los que se efectuaran por administracion y
+  de acuerdo a las instrucciones que se impartiran".
+  
+  1561 h8: "planilla de jornales por el mes de junio ppdo. empleados en
+  la reparacion del camino de Vaqueros a La Caldera autorizada en acta
+  nº 67 $ 186,85[;] planilla de jornales por el presente mes empleados
+  en la reparacion del mismo camino $ 235,00[;] habiendose excedido en
+  el referido trabajo en la suma de $ 21,85 m/1 a la cantidad de $ 400
+  m/1. autorizada en acta nº 6[7]".
+
+NOTA DE LECTURA: RECUENTO PROPIO: 186,85 + 235,00 = 421,85, que excede en
+21,85 los $ 400 autorizados. El acto declara ese mismo exceso y las dos cifras
+cierran exactamente. Es el unico recuento del ano que el propio acto declara y
+que se puede cotejar contra su declaracion, y cierra. La fecha de la planilla
+de junio publicada en diciembre indica un rezago de seis meses en la
+liquidacion, y se declara sin explicarlo.
+
+
+A.5 · ORDENANZA DE IMPUESTOS Y PRESUPUESTO MUNICIPAL DE LA CALDERA
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1514, hojas 14 y 15. Decreto 16798, Salta, octubre 2 de 1933,
+expediente N. 1741—Letra M, Ministerio de Gobierno.
+
+FICHA: Hacienda municipal del departamento. Ordenanza general de impuestos,
+calculo de recursos y presupuesto de gastos de la Municipalidad de La Caldera
+para el ejercicio economico de 1933, aprobados con una observacion.
+
+MODO DE LECTURA: Capa previa (prev) para el cuerpo; imagen (1514 h14) para la
+firma y la formula de autoridad.
+
+TEXTO:
+
+  "Visto este expediente, referente a la ordenanza general de
+  impuestos y presupuesto de gastos y calculo de recursos elevado por
+  la Municipalidad de La Caldera a consideracion y resolucion del Poder
+  Ejecutivo, y proyectados para regir durante el ejercicio economico
+  del presente ano 1933;— atento al dictamen fiscal, de fecha 9 de
+  agosto ppdo. y al informe producido por Contaduria del Consejo
+  General de Educacion de [l]a Provincia, del 16 del mismo mes, y
+  considerando que no existe observacion que formular a la ordenanza
+  general de impuestos de la Municipalidad de La Caldera, como tampoco
+  al calculo de recursos[,] que en cuanto al presupuesto de gastos,
+  debe formularsele[] la siguiente observacion[:] a) aparece
+  contrariado el articulo 79 de la ley n. 68, en lo que respecta a que,
+  en ningun caso podra invertirse mas de un 25 % de la renta en sueldos
+  de empleados administrativos[.]
+  
+  Por consiguiente el Vice-Gobernador de la Provincia en ejercicio del
+  Poder Ejecutivo DECRETA: Art. 1º.— Apruebase la ordenanza general de
+  impuestos y el calculo de recursos de la Municipalidad de La Caldera,
+  para regir durante el presente ejercicio economico de 1933; y
+  apruebase, con la modificacion senalada en el dictamen fiscal, el
+  presupuesto de gastos de la citada municipalidad para el ejercicio en
+  curso[.] Art. 2º.— Desglocese [sic] del presente expediente N. 1741—
+  Letra M., la actuacion correspondiente a la rendicion de cuentas
+  elevada por la Mu[n]icipalidad de La Caldera para ser considerada por
+  separado. Art. 3º.— Remitase a la Municipalidad de La Caldera el
+  presente expediente N. 1741—Letra M., la que a su vez enviara al
+  Departamento de Gobierno copia autenticada de todo lo en el actuado,
+  para su registro e insercion en el libro correspondiente de dicho
+  Ministerio[.] Art. 4º— Comuniquese, publiquese[,] insertese[...]"
+
+NOTA DE LECTURA: Acto de hacienda municipal, y el unico del ano: en 1934 el
+Boletin NO publica ningun balance de la Municipalidad de La Caldera —cero
+aciertos de "balance municipal" en las 2009 hojas— y eso se declara como hecho
+del corpus, no como tabla sin mirar (§4.1). El decreto es de octubre de 1933 y
+se publica en enero de 1934: el rezago es de tres meses. La rendicion de
+cuentas se desglosa "para ser considerada por separado" y ese acto separado NO
+aparece en ninguna de las 2009 hojas: queda como citado y no acompanado. El
+decreto lo firma el Vice-Gobernador en ejercicio del Poder Ejecutivo, J. Arias
+Uriburu, no el gobernador titular (ver §E.4).
+
+
+A.6 · DECRETO DE MESAS RECEPTORAS Y CIRCUITOS — COLEGIO ELECTORAL Nº 2
+
+------------------------------------------------------------------------------
+FUENTE: Decreto del Superior Gobierno de la Provincia, Salta, febrero 15 de
+1934, Ministerio de Gobierno, en cumplimiento de los arts. 29, 30 y 31 del
+capitulo VI de la ley Nº 122 de elecciones de la Provincia, de enero 27 de
+1934. Publicado integro TRES VECES: edicion 1519 h26–32 (el bloque del
+departamento en h31), edicion 1520 h25–31 (bloque en h30) y edicion 1521
+h32–38 (bloque en h37).
+
+FICHA: Acto electoral. Fija la ubicacion de las mesas receptoras y sus
+circuitos para las elecciones provinciales y municipales del 4 de marzo de
+1934. Al departamento le corresponde el Colegio Electoral Nº 2, con los
+circuitos 5 y 6 y tres mesas.
+
+MODO DE LECTURA: Capa previa (prev) para ubicarlo; IMAGEN a 450 dpi (1520 h30,
+columna izquierda entera + 6 pt) para la transcripcion y para el recuento. La
+imagen fue indispensable: la capa pierde comas y en la capa la mesa nº 1
+parece tener ocho nombres cuando tiene nueve.
+
+TEXTO:
+
+  "Colegio Electoral Nº. 2—La Caldera
+  
+  Circuito numero 5
+  
+  Mesa Nº. 1—Escuela Elemental Mixta, La Caldera—Circuito:
+  Calderilla, Chalchanio, Helvecia, Getsemani, Penones, Potrero de
+  Castilla, Pueblo, San Alejo y Severino.
+  
+  Mesa Nº. 2—En La Iglesia Parroquial, La Caldera—Circuito: Abra de
+  la Sierra, Acheral, Angosto -el-, Angosto de Arrieta, Angostura,
+  Bordo -el-, Calderilla, Campo Alegre, Canada Ancha, Corral de
+  Barrancas, Churcal, Chusos -los-, Despensa, Despensilla, Higueritas,
+  Potrero de Gallinato, Lagunas -las-, Matos -los-, Mesada, Monte de
+  las Garrapatas, Mosquera, Nogalito, Potrero de Valencia, Porongos
+  -los-, Queseria, Santa Gertrudis, Santa Rufina, Sauce -los-, Sierra
+  -la-, Wierna y Yacones.
+  
+  Circuito numero 6
+  
+  Mesa Nº. 1—En La Escuela Infantil Provincial, Vaqueros—Circuito
+  Entre Rios, Estacion F.C C.N.A. Mojotoro, Lesser, Tunel -el-,
+  Vaqueros, Villa Urquiza."
+
+NOTA DE LECTURA: RECUENTO PROPIO sobre esta transcripcion: mesa 1, NUEVE
+nombres; mesa 2, TREINTA Y UNO; mesa 6/1, SEIS. Total, CUARENTA Y SEIS nombres
+en tres mesas y dos circuitos. EL ACTO NO DECLARA NINGUN NUMERO, de modo que
+no hay nada que cotejar. Elementos de cuatro palabras o mas, marcados como
+posibles nombres pegados: "Abra de la Sierra", "Monte de las Garrapatas" y
+"Estacion F.C C.N.A. Mojotoro". Los tres se resuelven como un solo nombre y no
+como dos, y la razon se escribe: los dos primeros ya estan en el anillo 2 como
+un solo toponimo desde barridos anteriores, y el tercero se resuelve por el
+paralelo del propio decreto, que dos mesas mas abajo imprime "Estacion
+F.C.C.N.A. Campo Santo" seguida de coma y de "Mojon" como elemento aparte. Con
+esa resolucion el recuento es firme en 46; sin ella el rango seria de 43 a 46.
+En la capa el recuento habria dado 45, porque la coma entre "Potrero de
+Castilla" y "Pueblo" se pierde en las tres ediciones y "potrero de castilla
+pueblo" pasa por un solo nombre de cuatro palabras. La imagen lo resuelve: hay
+coma, son dos. Es exactamente el caso que la v16 §4.1bis vino a arreglar, y
+aqui aparecio otra vez. Dos observaciones de contenido: (a) "Pueblo" y "Sierra
+-la-" estan en la lista y NO estan en el anillo 2 del config; (b) "Abra de la
+Sierra" figura en el anillo 2 como "abra la sierra", sin de, y por eso no dio
+acierto: la forma del original se agrega en el config actualizado.
+
+
+A.7 · AUTORIDADES DE MESA DEL COLEGIO ELECTORAL Nº 2
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1518, hoja 36, columna izquierda. Nomina de presidentes y
+suplentes de mesa, publicada por departamento y por circuito.
+
+FICHA: Acto electoral. Designacion de las autoridades de las tres mesas del
+departamento para la eleccion del 4 de marzo de 1934.
+
+MODO DE LECTURA: Capa previa (prev) para ubicarlo; IMAGEN a 430 dpi para la
+transcripcion: la capa corta el circuito 6 y deja los tres nombres sin
+resolver.
+
+TEXTO:
+
+  "Colegio Electoral Nº 2
+  
+  Circuito numero 5
+  Mesa Nº 1   Presidente   Robles Jose Eusebio
+               Suplente 1º  Condori Manuel
+                        2º  Fernandez Isaac
+  Mesa Nº 2   Presidente   Nigro Miguel
+               Suplente 1º  Molina Lucas
+                        2º  Alancay Angel Rudecindo
+  
+  Circuito numero 6
+  Mesa Nº 1   Presidente   Bruzzo Jose Atilio
+               Suplente 1º  Urquiza Francisco S.
+                        2º  Palma Eusebio"
+
+NOTA DE LECTURA: RECUENTO PROPIO: tres mesas, NUEVE personas, tres por mesa.
+El acto no declara numero. Es la ficha que mas trama aporta del ano, porque
+ocho de los nueve nombres ya estan en el anillo de actores: Jose Eusebio
+Robles (1929, 1930, 1932), Manuel Condori (1922, 1929), Isaac Fernandez
+(1930), Miguel Nigro (1932), Lucas Molina (1929, y como "lucas n. molina" en
+1926), Jose Atilio Bruzzo (que el config registra recien en 1946, edicion
+2675) y Francisco S. Urquiza (1923, 1929, 1932). Angel Rudecindo Alancay y
+Eusebio Palma son nuevos y van al config con origen 1934. Sobre Urquiza, ver
+A.8.
+
+
+A.8 · FRANCISCO S. URQUIZA — NOMBRAMIENTO QUE SOLO CONSTA POR SU REVOCACION
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1518, hoja 36 (esta ficha); informe LEE 1925, decreto 2674,
+que nombra subcomisario de Vaqueros "en reemplazo de D. Francisco S. Urquiza".
+
+FICHA: Continuidad de actor. Francisco S. Urquiza reaparece en 1934 como
+suplente 1º de la mesa de Vaqueros.
+
+MODO DE LECTURA: Capa previa e imagen para 1934; informe LEE 1925 como
+referencia, no como fuente barrida.
+
+TEXTO:
+
+  1518 h36: "Circuito numero 6[,] Mesa Nº 1[,] Suplente 1º
+  Urquiza Francisco S."
+
+NOTA DE LECTURA: El §5.3 de la v16 fijo la regla con este mismo caso: en 1925
+un decreto nombra un subcomisario de Vaqueros en reemplazo de Urquiza y el
+nombramiento de Urquiza no aparece en ningun tramo leido; lo que falta es el
+principio y no el final. Nueve anos despues el hombre sigue en Vaqueros y
+sigue en el papel publico, y el acto que lo puso en el cargo sigue sin
+aparecer. Se anota el hecho, se mantiene la ficha de citado y no acompanado
+abierta y NO se infiere nada sobre cuando ni por quien fue nombrado. La pieza
+que lo resolveria es el Registro Oficial del ano correspondiente.
+
+
+A.9 · CONVOCATORIA A ELECCIONES — REPRESENTACION DE LA CALDERA
+
+------------------------------------------------------------------------------
+FUENTE: Decreto del Poder Ejecutivo de enero 18 de 1934, publicado como aviso
+en las ediciones 1516 h54; 1517 h41 y h44; 1518 h47 y h50; 1519 h49 y h52;
+1520 h48 y h51; 1521 h55 y h58; 1527 h27. Doce apariciones en seis ediciones:
+el aviso se compone de dos piezas, la convocatoria y el cuadro de
+representacion, y cada edicion las trae las dos.
+
+FICHA: Acto electoral. Fija que cada elector de La Caldera vota por un senador
+titular y un suplente y por un diputado titular y un suplente, y que al
+departamento le corresponde un diputado titular, un diputado suplente, un
+senador titular y un senador suplente.
+
+MODO DE LECTURA: Capa previa (prev). La aparicion de 1517 h44 la devuelve SOLO
+la pasada difusa: el original imprime alli "por la caloera".
+
+TEXTO:
+
+  1519 h49: "de conformidad al inciso 1º.) del art. 17 y a los arts.
+  70 y 71 de la ley nº. 122[,] cada elector de los departamentos de La
+  Caldera, Anta, Santa Victoria, C[e]rrillos, Cachi, G[u]achipas, La
+  Poma, Cafayate y La Candelaria, votara por un (1) senador titular y
+  un (1) senador suplente y por un (1) diputado titular y un (1)
+  diputado suplente".
+  
+  1519 h52: "por la Capital, siete (7) diputados titulares y siete (7)
+  diputados suplentes, un (1) senador titular y un senador suplente;—
+  por La Caldera, un (1) diputado titular y un diputado suplente, un
+  senador (1) titular y un (1) senador suplente".
+  
+  1517 h44 [sic en el original]: "por la caloera, un (1) diputado
+  titular y un diputado suplente".
+
+NOTA DE LECTURA: Un aviso repetido es una sola entrada, y esta es la unica del
+ano con doce apariciones. La deduplicacion se hizo POR EL TEXTO, no por el
+numero: estos avisos no llevan numero. La aparicion de 1517 h44 es la prueba
+de por que la difusa se sigue corriendo: una sola letra rota y la pasada
+literal pierde la hoja entera.
+
+
+A.10 · MESAS POR COMISION MUNICIPAL
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1527, hoja 28. Cuadro de distribucion de mesas por comision
+municipal y circuito.
+
+FICHA: Acto electoral. Confirma, por otra via, las tres mesas del
+departamento.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  "Com. municip. de La Caldera[:] circuito nº 5 —mesas nº 1 y 2;
+  [circuito nº] 6 — [mesa nº] 1"
+
+NOTA DE LECTURA: RECUENTO PROPIO: tres mesas, en dos circuitos. Coincide con
+A.6 y con A.7. Es el unico lugar del ano donde el recuento del departamento se
+puede cotejar contra otra fuente del mismo corpus, y cierra.
+
+
+A.11 · REGISTRO CIVIL DE LA CALDERA — LAURA ARAOZ DE MURUA
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1526, hoja 6. Decreto 17284, "Salta, Enero 2 de 1932" [sic].
+
+FICHA: Cargos. Nombramiento de la encargada de la Oficina del Registro Civil
+del departamento, en reemplazo de Arturo Posse.
+
+MODO DE LECTURA: IMAGEN a 300 dpi (1526 h6, columna izquierda entera). La capa
+lee "Caldeia" y no "Caldera", y lee la fecha igual que el original.
+
+TEXTO:
+
+  "17284—Salta, Enero 2 de 1932 [sic].
+  
+  El Gobernador de la Provincia, DECRETA:
+  
+  Art. 1º.—Nombrase a la senora Laura Araoz de Murua, Encargada de la
+  Oficina del Registro Civil de La Caldera [el original imprime
+  "Caldeia": la r esta rota en la plancha], en reemplazo de don Arturo
+  Posse.
+  
+  Art. 2º.—Comuniquese, publiquese, insertese en el Registro Oficial y
+  archivese.—
+  
+  ARAOZ — A. B. ROVALETTI
+  Es copia— JULIO FIGUEROA MEDINA, Oficial Mayor de Gobierno"
+
+NOTA DE LECTURA: LA FECHA DE 1932 ES DEL ORIGINAL, NO DEL OCR: se miro en la
+imagen. El decreto inmediatamente anterior, cuyo pie cierra en la misma
+columna, y el inmediatamente posterior, 17285, dicen los dos "Salta, Enero 2
+de 1934". Un decreto numerado 17284 no puede ser de 1932 en una serie que en
+enero de 1934 va por 17285. Se transcribe, se declara contra que no coincide y
+NO se elige una lectura (§8.3 y §8.20). Va tambien a E.9. Un apellido a
+registrar: Murua, que en el config ya aparece con origen 1908, 1909, 1912,
+1931 y 1932 y que en este mismo ano vuelve como sucesion en A.15.
+
+
+A.12 · ARTURO POSSE — HABERES DEL ENCARGADO SALIENTE
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1533, hoja 1. Decreto de pago a encargados del Registro Civil,
+inciso b).
+
+FICHA: Cargos y hacienda. Liquidacion de haberes de Arturo Posse, de La
+Caldera, por los primeros dias de enero de 1934.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  "b) Arturo Posse, de La Caldera, desde el 1º al 7 de enero,
+  inclusive[,] de 1[9]34 en curso, a razon de cincuenta pesos m/1.
+  mensuales, con imputacion al inciso 9—item 1—partida 3 del
+  presupuesto vigente de 1934 en curso"
+
+NOTA DE LECTURA: Cierra el cabo que A.11 deja suelto: Posse cesa el 7 de enero
+de 1934 y Laura Araoz de Murua entra por el decreto fechado el 2 de enero. Los
+dos actos son coherentes entre si SI la fecha del 17284 es 1934, que es
+justamente lo que el original no dice. Se anota la coherencia como indicio y
+no como prueba, y no se corrige la fecha del 17284.
+
+
+A.13 · SUBCOMISARIO AD-HONOREM DE LESSER — ANTONIO ROJAS
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1538, hoja 3. Decreto 17722, Salta, abril de 1934.
+
+FICHA: Cargos. Nombramiento del subcomisario de policia ad-honorem con asiento
+en Lesser, jurisdiccion del departamento.
+
+MODO DE LECTURA: Capa previa (prev). LA HOJA LA DEVUELVE SOLO LA LAXA
+ESPACIADA: el original imprime "departamento de la C ald era".
+
+TEXTO:
+
+  "Art. 1º.— Nombrase a don Antonio Rojas, sub-comisario de policia
+  ad-honorem de la dependencia que con igual caracter tiene su asiento
+  en «Lesser», jurisdiccion del departamento de la C ald era [sic].—
+  
+  Art. 2º— Comuniquese, publiquese[,] insertese en el Registro Oficial,
+  y archivese
+  
+  AVELINO ARAOZ — ALBERTO B. ROVALETTI
+  Es copia: J. FIGUEROA MEDINA, Oficial Mayor de Gobierno"
+
+NOTA DE LECTURA: La atribucion de jurisdiccion la hace el propio acto
+—"Lesser, jurisdiccion del departamento de la Caldera"— y por eso se toma
+(§5.1ter). Es el criterio contrario al que un barrido anterior uso con
+Vaqueros en 1926. Lesser esta en el anillo 2 y es ademas apellido en el config
+(Pascual Lesser, 1929 y 1931; Antonio R. Lesser, 1932): aqui es lugar, y el
+acto lo dice.
+
+
+A.14 · SUBCOMISARIO AD-HONOREM DE VAQUEROS — RENUNCIA DE RAMON BRACHIERI
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1558, hojas 6 y 7. Decreto 18241, Salta, julio de 1934,
+expediente Nº 1636—letra P, sobre nota Nº 4602 de Jefatura de Policia.
+
+FICHA: Cargos. Aceptacion de la renuncia del subcomisario de policia
+ad-honorem del partido de Vaqueros.
+
+MODO DE LECTURA: Capa previa (prev). La hoja 7 la devuelve SOLO la laxa
+espaciada.
+
+TEXTO:
+
+  "Vista la nota nº 4602 de fecha 16 del actual de Jefatura de
+  Policia, elevando la renuncia presentada por el senor Ramon Brachieri
+  del cargo de sub-comisario de policia «ad-honorem» del partido de
+  «Vaqueros» (Dpto. de La Caldera);— atento a las razones que la motivan
+  y lo aconsejado por Jefatura de Policia[,] EL GOBERNADOR DE LA
+  PROVINCIA DECRETA: Art. 1º.— Aceptase la renunci[a] presentada por el
+  senor Ramon Bra[chieri], del cargo de sub-comisario de policia
+  «ad-honorem» de [«]Vaqueros»— departamento de la C aldera [sic].—
+  
+  Art. 2º. Comuniquese, publiquese[,] insertese en el Registro Oficial
+  y archivese.—
+  
+  ARAOZ — ALBERTO B. ROVALETTI
+  Es copia: G. OJEDA, Sub-secretario de Gobierno"
+
+NOTA DE LECTURA: Dos cosas. Primera: el acto atribuye Vaqueros al
+departamento, con esas palabras y entre parentesis, dos veces. Eso zanja para
+1934 lo que el §5.1ter le reprocho al informe de 1926, y confirma que Vaqueros
+es del departamento en esta epoca. Segunda: la renuncia se acepta y el acto NO
+nombra reemplazante. Se busco el nombramiento del sucesor en las 2009 hojas y
+no aparece: queda como vacante declarada sin cubrir dentro del ano, y no se
+infiere quien la ocupo. Ramon Brachieri esta en el config con origen 1930
+("ramon brachieri") y vuelve en 1559 h23.
+
+
+A.15 · PRESIDENTE DE LA COMISION MUNICIPAL — AUGUSTO REGIS
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1541, hojas 17 y 18. Decreto 17936, Salta, Abril 17 de 1934.
+
+FICHA: Cargos. Nombramiento del presidente de la Comision Municipal del
+Distrito de La Caldera por un nuevo periodo.
+
+MODO DE LECTURA: IMAGEN a 300 dpi (1541 h17, columna derecha entera) para el
+encabezado, el numero y la firma; capa previa para el cierre en h18.
+
+TEXTO:
+
+  "17936—Salta, Abril 17 de 1934.
+  
+  Habiendo terminado el periodo correspondiente al ejercicio del cargo
+  de Presidente de la Comision Municipal del Distrito de La Caldera; y
+  siendo necesario proveer al desempeno de esas funciones por un nuevo
+  periodo; en uso de la facultad acordada al P. Ejecutivo por el Art.
+  178 de la Constitucion,
+  
+  El Gobernador de la Provincia DECRETA:
+  
+  Art. 1º— Nombrase al Sr. Augusto Regis, Presidente de la Comision
+  Municipal del Distrito de La Caldera por el termino de funciones que
+  fija el 2º apartado del art. 182 de la Constitucion de la Provincia.
+  
+  Art. 2º.— Comuniquese, publiquese[,] insertese en el Registro Oficial
+  y archivese.—
+  
+  ARAOZ — ALBERTO B. ROVALETTI
+  Es copia: JULIO FIGUEROA..."
+
+NOTA DE LECTURA: El considerando invoca el art. 178 de la Constitucion y el
+articulo dispositivo invoca el art. 182: se transcriben los dos y no se
+concilian (§8.3). Va a E.9. Augusto Regis esta en el config con origen 1909,
+1929 y 1932: es el actor de carrera mas larga que este ano vuelve a aparecer,
+veinticinco anos despues de su primera ficha. El decreto no nombra a quien
+termina el periodo y no se infiere quien era.
+
+
+A.16 · JUECES DE PAZ DEL DISTRITO MUNICIPAL — DECRETOS 18039 Y 18040
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1548, hojas 16 y 17. Decretos 18039 y 18040, los dos "Salta,
+junio 8 de 1934", los dos "expediente Nº 1259—Letra M".
+
+FICHA: Cargos y justicia. Nombramiento del juez de paz propietario y del
+suplente del distrito municipal de La Caldera, a propuesta en terna de la
+comision municipal, por un nuevo periodo constitucional.
+
+MODO DE LECTURA: Capa previa (prev) para los dos; no se miraron en la imagen:
+los numeros de decreto van marcados como leidos en la capa.
+
+TEXTO:
+
+  "18039. Salta, junio 8 de 1934.— Expediente nº 1259—letra M.—
+  Vista la propuesta en terna elevada a consideracion y resolucion del
+  Poder Ejecutivo por la Comision Municipal del Distrito de La Caldera,
+  para proveer al nombramiento de jueces de paz, propietario y
+  suplente, de dicho municipio por un nuevo periodo constitucional de
+  funciones; y en uso de la facultad acordada al Poder Ejecutivo por el
+  art. 165 de la Constitucion, EL GOBERNADOR DE LA PROVINCIA DECRETA:
+  Art. 1º.— Nombrase al senor Fabian Alonso, juez de paz propietario
+  del distrito municipal de La Caldera, por el periodo de funciones que
+  senala el art. 165—2º apartado de la Constitucion de la Provincia.
+  Art. 2º.— Nombrase al senor Humberto Lizondo, juez de paz suplente
+  del distrito municipal de La Caldera, por el periodo de func[ion]es
+  que senala el art. 165—2º apartado de la Constitucion de la
+  Provincia.— Art. 3º.— Las funciones judiciales nombradas tomaran
+  posesion de sus cargos, previo cumplimiento a las formalidades de
+  ley.— Art. 4º— Comuniquese, publiquese[,] insertese en el R. Oficial
+  y archivese.
+  
+  AVELINO ARAOZ — A. B. ROVALETTI
+  Es copia: JULIO FIGUEROA MEDINA, Oficial Mayor de Gobierno
+  
+  18040. Salta, junio 8 de 1934.— Expediente nº 1259—Letra M.—
+  Vista la propuesta en terna elevada a consideracion y resolucion del
+  Poder Ejecutivo por la Comision Municipal del Distrito de La Caldera,
+  para proveer al nombramiento de jueces de paz, propietario y suplente
+  de dicho municipio por un nuevo periodo constitucional de funciones;
+  y en uso de la facultad acordada al Poder Ejecutivo por el art. 165
+  de la Constitucion, EL GOBERNADOR DE LA PROVINCIA DECRETA: Art. 1º.—
+  Nombrase al senor Fabian Alonso, juez de paz propietario del distrito
+  municipal de La Caldera, por el periodo de funciones que senala el
+  art. 165—2º apartado de la Constitucion de la Prot[v]incia. Art.
+  2º.— Nombrase al senor Humberto Lizondo, juez de paz suplente del
+  distrito municipal de La Caldera, por el periodo de funciones que
+  senala el art. 165—2º apartado de la Constitucion de la Provincia."
+
+NOTA DE LECTURA: DOS NUMEROS DE DECRETO CORRELATIVOS PARA EL MISMO ACTO, la
+misma fecha, el mismo expediente, las mismas dos personas y el mismo articulo
+de la Constitucion, publicados uno a continuacion del otro en la misma hoja.
+No es un aviso repetido: son dos decretos numerados. No se concilia y no se
+elige cual es el valido. Es el hallazgo del §6 nivel 3 de este ano y va
+tambien a E.1 y a E.9. La pieza que lo resolveria es el Registro Oficial de
+1934. Fabian Alonso esta en el config con origen 1932.
+
+
+A.17 · RENUNCIA DEL JUEZ DE PAZ SUPLENTE — HUMBERTO LIZONDO
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1561, hoja 7. Decreto 18355, Salta, agosto de 1934.
+
+FICHA: Cargos y justicia. Aceptacion de la renuncia del juez de paz suplente
+del distrito municipal de La Caldera, nombrado dos meses antes.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  "El Gobernador de la Provincia DECRETA: Art. 1º.— Aceptase la
+  renuncia interpuesta por el senor Humberto [L]izondo del cargo de juez
+  de paz suplente del distrito municipal de La Caldera.—
+  
+  Art. 2º.— Comuniquese, publiquese[,] insertese en el Registro Oficial
+  y archivese.—
+  
+  AVELINO ARAOZ — A. B. ROVALETTI
+  Es copia: JULIO FIGUEROA MEDINA, Oficial Mayor de Gobierno"
+
+NOTA DE LECTURA: Lizondo es nombrado el 8 de junio por dos decretos y renuncia
+antes de que termine agosto. El acto no dice el motivo y no se infiere
+ninguno. No se publica el nombramiento del reemplazante dentro del ano:
+segunda vacante declarada y no cubierta en el corpus, junto con la de A.14.
+"Eustaquio Lizondo" esta en el config con origen 1928; Humberto Lizondo es
+nuevo y va al config con origen 1934.
+
+
+A.18 · DESLINDE, MENSURA Y AMOJONAMIENTO DEL PUESTO DESPENSA
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1549, hojas 31 y 32. Aviso judicial; providencia del juez de
+la causa, "Salta, Julio de 1934", sin dia.
+
+FICHA: DOMINIO. Deslinde, mensura y amojonamiento del Puesto Despensa, parte
+integrante de la estancia La Despensa, departamento de La Caldera, solicitado
+por Alberto, Adolfo y Abel Murua.
+
+MODO DE LECTURA: IMAGEN a 340 dpi (1549 h31, pie de la columna derecha; 1549
+h32, cabeza de la columna izquierda) para los linderos y la superficie.
+
+TEXTO:
+
+  "DESLINDE— Habiendose presentado los senores Alberto[,] Adolfo y
+  Abel Murua con titulos bastantes[,] solicitando deslinde[,] mensura y
+  amojonamiento de la propiedad denominada Puesto Despensa[,] parte
+  [i]ntegrante de la estancia «La Despensa» ubicada en el departamento
+  de la Caldera[,] la que tiene una extension aproximada de DOS MIL
+  SEISCIENTAS HECTAREAS, encontrandose comprendida dentro de los
+  siguientes limites: Norte, propiedad de don Francisco Sosaya en parte
+  y en otra con el puesto Canada Seca o Penones adjudicado al heredero
+  Silvano Murua. Naciente, con propiedad del Sr. Jose M. Sola; Sud, con
+  puesto Los Matos, adjudicado a la heredera Eulalia Murua de Cornejo;
+  Poniente, con puesto Las Garrapatas y Severino de esta misma
+  sucesion; el senor Juez de la causa ha dictado la siguiente
+  providencia —Salta, Julio de 1934— Por presentados[,] por parte y por
+  constituido domicilio legal[.] Agreguense los testimonios
+  acompanados; y habiendose llenado los extremos legales del caso
+  procedase al deslinde[,] mensura y amojonamiento de la propiedad
+  individualizada como perteneciente a los solicitantes Alberto[,]
+  Adolfo y Abel Murua[...]"
+
+NOTA DE LECTURA: RECUENTO PROPIO de la enumeracion de linderos: CUATRO (Norte,
+Naciente, Sud, Poniente). El acto no declara numero. Es el acto de dominio mas
+importante del ano y el que mas toponimia del anillo 2 trae junta: Canada
+Seca, Penones, Los Matos, Las Garrapatas, Severino y La Despensa, los seis del
+departamento y los seis atribuidos por el propio acto. La providencia se fecha
+"Julio de 1934" SIN DIA: se transcribe asi y no se completa (§8.2). El acto
+ordena una mensura y por tanto un plano; ese plano NO se publica en 1934
+(ver §P). Francisco Sosaya esta en el config con origen 1932 y ya habia
+aparecido alli como desaparicion de la palabra en el OCR; aqui la capa lo
+devuelve entero. Silvano Murua (1909, 1916, 1946), Abel Murua (1931, 1932) y
+Jose M. Sola figuran en el config; Alberto y Adolfo Murua estan como "alberto
+murua" y "adolfo murua" con origen 1932. Eulalia Murua de Cornejo es nueva.
+
+
+A.19 · REMATE DE LA FINCA EL ANGOSTO
+
+------------------------------------------------------------------------------
+FUENTE: Aviso judicial del martillero M. Figueroa Echazu, publicado TRES
+veces: edicion 1551 h17–18; edicion 1555 h16–17; edicion 1558 h47. Juzgado de
+comercio, secretaria Ferrary Sosa.
+
+FICHA: DOMINIO. Venta en publica subasta de la finca El Angosto, partido del
+Angosto, departamento de La Caldera.
+
+MODO DE LECTURA: IMAGEN a 380 dpi para la superficie en las tres apariciones y
+para la base en la segunda; capa previa para el resto.
+
+TEXTO:
+
+  1555 h16: "vendere en publica subasta y al postor, con la base de
+  SIETE MIL QUINIENTOS PESOS m/n. o sean las dos terceras partes de la
+  avaluacion fiscal reducida en un 25 %[,] la finca denominada «El
+  Angosto», ubicada en el partido del Angosto, Departamento de La
+  Caldera de esta Provincia. Consta de 354 hectareas, 85 areas y 62
+  centeareas [sic]".
+  
+  1551 h18: "la finca denominada «El Angosto» ubicada en el partido del
+  Angosto, Departamento de La Caldera, de esta Provincia[.] La finca de
+  referencia consta de 364 hectareas[,] 85 areas y 62 centiareas y se
+  encuentra comprendida dentro de los siguientes limites[:] Al Norte,
+  con la finca «La Angostura» de don Daniel Linares, y con la finca
+  denominada «El Angosto» de don Julio Mercado; al Este, con la finca
+  La «Despensilla» de don Salvador Rosa; al Sud, con la finca
+  «Miraflores» del doctor Luis Linares, separada por la quebrada del
+  «Taco Huacho», y al Oeste, con la finca «Monte Quitilipe» del doctor
+  Luis Linares, separada por el brazo del Rio de la Caldera que esta
+  mas al Norte, y la nombrada finca La Angostura de don Daniel
+  Linares".
+  
+  1558 h47: "La finca de referencia consta de 364 hectareas, 85 areas,
+  62 centiareas [...] posee una casa habitacion con siete piezas y dos
+  corredores[,] parte de teja y zinc.— Sena 20 %".
+  
+  1551 h18 (continuacion): "separada en la mayor parte por el camino
+  nacional de «La Caldera» a Jujuy. Posee una casa habitacion, con
+  siete piezas y dos corredores, parte de teja y zinc[;] tiene agua
+  propia, y se trata de campo apto tanto para ganaderia como para
+  agricultura. En el acto del remate se oblara el 20 % del importe de
+  la operacion".
+
+NOTA DE LECTURA: UNA SOLA ENTRADA, porque es un aviso repetido, y la
+deduplicacion se hizo POR EL TEXTO. El numero de aviso NO habria servido: la
+aparicion de 1555 cierra con "nº 2238" y la de 1558 con un numero de la serie
+2269/2286, distinto. Es exactamente el caso que el §6 de la v16 fijo con el
+remate de Los Sauces de 1927. RECUENTO PROPIO de linderos: CUATRO (Norte,
+Este, Sud, Oeste), sin numero declarado. Y UNA CONTRADICCION QUE NO SE
+CONCILIA: la superficie es de 364 hectareas en 1551 y en 1558 y de 354
+hectareas en 1555, con las mismas 85 areas y 62 centiareas en las tres. Las
+tres se miraron en la imagen y las tres se leen sin duda. Se transcriben las
+tres y va a E.9. La base de siete mil quinientos pesos se leyo en la imagen
+porque la capa la da como "s is ie m il q u in ien to s": leida en la capa se
+habria escrito "seis mil quinientos", que es mil pesos de menos. Sirve de
+recordatorio de por que la §8.11 existe.
+
+
+A.20 · REMATE DE LAS FINCAS SAN JORGE Y SAN FELIX
+
+------------------------------------------------------------------------------
+FUENTE: Aviso judicial del martillero Jose Maria Leguizamon, publicado DOS
+veces: edicion 1552 h21 (aviso nº 2210) y edicion 1560 h43 (aviso nº 2317).
+Juicio ejecutivo Victor Ceballos contra Felisa, Jorge y Juana Aufrere, juez de
+1a instancia en lo civil, Dr. Rios.
+
+FICHA: DOMINIO. Venta en publica subasta de las fincas San Jorge y San Felix,
+departamento de La Caldera.
+
+MODO DE LECTURA: Capa previa (prev). Las cifras de base no se miraron en la
+imagen: van marcadas como dudosas.
+
+TEXTO:
+
+  1552 h21: "por disposicion del juez de 1a instancia en lo civil dr.
+  Rios y como correspondiente al juicio ejecutivo Victor Ceballos vs
+  Felisa, Jorge y Juana Aufrere, el 10 de noviembre del cte. ano a las
+  17, en mi escritorio A[l]berdi 323[,] vendere con base $ 8.000, la
+  finca San Jorge y con base de $ 8.000 tambien, la finca San Felix[,]
+  ambas ubicadas en el departamento de La Caldera".
+  
+  1560 h43: "por disposicion del juez en lo civil dr. Rios y como
+  correspondiente a los autos «ejecutivo Victor Ceballos vs Felisa,
+  Jor[ge] y J[ua]na A[uf]rere[»,] el 18 de [D]iciembre del cte ano a
+  las 17[,] en mi escritorio Alberdi 323, vendere con base de $
+  [1]0.000 [dudoso] las fincas unidas «San Jor[ge]» y «San Felix»
+  ubicadas en el departamento de La Caldera de esta Provincia".
+
+NOTA DE LECTURA: UNA SOLA ENTRADA con dos apariciones. Otra vez el numero de
+aviso no identifica el acto: 2210 en noviembre, 2317 en diciembre, el mismo
+juicio, el mismo martillero, las mismas fincas. Y otra vez cambia el dia de
+remate. Cambia ademas la forma de la venta: en noviembre son dos fincas con
+base de $ 8.000 cada una; en diciembre son "las fincas unidas" con una base
+unica que la capa da como "$ .0,000" y que no se miro en la imagen. La cifra
+queda dudosa y NO se elige lectura: podria ser 10.000 o 20.000, y los dos
+valores son compatibles con dos bases de 8.000 previas. Va a E.8.
+
+
+A.21 · HURTO EN LAS CASAS DE CARLOS SERREY Y LUIS LINARES
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1532, hojas 22 y 23. Fallo de la Sala en lo Penal de la Corte
+de Justicia, publicado integro.
+
+FICHA: JUSTICIA. Proceso por hurto cometido de noche en dos casas del
+departamento.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  "de las propias declaraciones anteriores de los prevenidos, como
+  del reconocimiento de parte de los efectos sustraidos y de los
+  t[er]minos de las denuncias formuladas resulta comprobado que los
+  sindicados han penetrado de noche en las casas de los doctores Carlos
+  Serrey y Luis Linares, en el departamento de La Caldera, y
+  aprovechandose de la ausencia de sus habitantes y valiendose de un
+  alambre que arreglaron a manera de llave, lograron abrir puerta[s,]
+  procediendo a apoderarse de diversos efectos, parte de los cuales
+  aparecen vendidos al comerciante Nestor Gonzalez y otros dejados en
+  una bolsa, en casa del citado comerciante[.]
+  
+  [...] el comerciante Nestor Gonzalez guardo en su domicilio una bolsa
+  que le entrego Cecilio Chocobar[,] que fue colocada disimuladamente
+  en una barrica y que al proceder a su requi[s]a se encontro que
+  contenia varias cosas de las hurtadas en casa del doctor Serrey".
+
+NOTA DE LECTURA: Es el unico acto judicial de fondo del ano sobre el
+departamento y el unico que nombra vecinos que no son propietarios ni
+funcionarios. Se transcribe lo que el fallo declara probado y NO se agrega
+nada: no se dice quienes fueron condenados ni a que pena, porque la parte
+dispositiva cae fuera de las dos hojas con acierto y no se la busco. Carlos
+Serrey esta en el config con origen 1916; Luis Linares, con origen 1911, y los
+dos vuelven en A.19 como colindantes de El Angosto: es decir, los dos son
+propietarios en el departamento y los dos tienen casa en el. Ese cruce es lo
+que da sentido al §B.2 de este ano.
+
+
+A.22 · SUBSIDIO PARA ROPAS DE INVIERNO — ESCUELAS DE LA CAPITAL Y DE LA CALDERA
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1545, hoja 21. Decreto en acuerdo de ministros, agosto de
+1934.
+
+FICHA: ESCUELA. Subsidio especial y por una sola vez para ropa de invierno de
+los ninos pobres de las escuelas fiscales de la Capital y de La Caldera.
+
+MODO DE LECTURA: Capa previa (prev). La cifra no se miro en la imagen: va
+dudosa.
+
+TEXTO:
+
+  "EL GOBERNADOR DE LA PROVINCIA EN ACUERDO DE MINISTROS DECRETA:
+  Art. 1º.— Concedese un subsidio especial y por una sola vez, en la
+  suma de DOS MIL CINCUENTA PESOS moneda legal ($ 2.050), para la
+  adquisicion de ropas de invierno con destino a los ninos pobres de
+  las escuelas fiscales de la Capital y de La Caldera;— y encargase de
+  dicha mision a la senorita directora de la Escuela «General Urquiza»
+  dona Mercedes Arancibia, a cuyo favor se liquidara y abonara la
+  expresada cantidad, con cargo de rendir cuenta documentada de su
+  inversion en la debida oportunidad".
+
+NOTA DE LECTURA: La cifra viene en letras y en numeros y las dos coinciden:
+dos mil cincuenta y 2.050. Es el unico control cruzado de cifra que el ano
+ofrece sin ir a la imagen, y cierra. El acto no dice que parte del subsidio va
+al departamento y no se infiere ninguna. La rendicion de cuentas se ordena y
+NO se publica en 1934: citada y no acompanada.
+
+
+A.23 · ESCUELA DE LA CALDERA «JUAN MORO DE LOPEZ»
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1554, hoja 46, item 20 del presupuesto del Consejo General de
+Educacion; y edicion 1534, hojas 6 y 7, cuadro de categorias de escuelas.
+
+FICHA: ESCUELA. La escuela del departamento en el presupuesto y en la
+clasificacion por categoria.
+
+MODO DE LECTURA: Capa previa (prev). El cuadro de 1534 h6 NO se miro en la
+imagen y sus cifras no se publican (§8.11).
+
+TEXTO:
+
+  1554 h46: "Escuelas elementales de 2a categoria.— ITEM 20.—
+  Escuela de La Caldera «Juan Moro de Lopez».— Directora[,] 2 maestras
+  a $ 100 c/u[,] profesora de labores".
+  
+  1534 h7: "tercera categoria[:] [«]Payogasta», «Quebra[ch]al», «Campo
+  Quijano», «Molinos», «Nazareno[»], [«]Luracatau», «La Caldera», «El
+  Cuchillo», «La Poma», «Seclantas», [«]La Vina[»], [«]El Vencido»,
+  «Pichanal», «Escoipe», «San Ant. de Iruya», «La Silleta», «El
+  Desmonte», «Amblayo», «San Andres», «La Union», «Guachipas», «La
+  Candelaria», «San Lorenzo», «Rosario del Dorado», «Acosta»".
+
+NOTA DE LECTURA: CONTRADICCION QUE NO SE CONCILIA: en 1534 la escuela de La
+Caldera esta en TERCERA categoria y en 1554 esta entre las de SEGUNDA. Las dos
+piezas son del mismo ano y del mismo Consejo. Puede tratarse de dos
+clasificaciones distintas —la de 1534 acompana un cuadro de cifras que no se
+miro, y podria ser de otra cosa que de escuelas— pero el informe no lo afirma:
+transcribe las dos y lo lleva a E.9. El dato firme es el presupuestario:
+directora, dos maestras a $ 100 cada una y profesora de labores. El cuadro de
+1534 h6, que trae una fila "La Caldera" con cinco columnas de numeros, queda
+como tabla NO recalculada y NO transcripta, con su hoja y su criterio, en E.8:
+no se puede atribuir a una jurisdiccion ni a una materia sin leer el
+encabezado, que esta en otra hoja y no se miro (§4.11).
+
+
+A.24 · RECEPTORIA DE RENTAS DE LA CALDERA Y LEY DEL OLIVO
+
+------------------------------------------------------------------------------
+FUENTE: Edicion 1536 h10 y edicion 1551 h12 (receptoria de rentas); edicion
+1553 h16 y h17 (ley de la region economica del olivo, sancionada con fuerza de
+ley).
+
+FICHA: NORMA y HACIENDA. Clasificacion de la Receptoria de Rentas del
+departamento y designacion de su receptor; e inclusion del departamento en la
+region economica del olivo.
+
+MODO DE LECTURA: Capa previa (prev).
+
+TEXTO:
+
+  1536 h10: "[son de] la quinta categoria las receptorias de rentas
+  de Morillo (Rivadavia), Cerrillos, La Merced (Cerrillos), Cachi[,]
+  Anta 1º circuito 14[,] Anta 1º circuito 15, Molinos, Seclantas
+  (Molinos), San Jose de Orquera (Metan), Rio Piedras (Metan), La
+  Vina, Coronel Moldes (La Vina), Iruya[,] Rivadavia Banda Sud, La
+  Caldera, Santa Victoria y La Poma".
+  
+  1551 h12: "con asiento en las localidades de Morillo (Rivadavia),
+  Cerrillo[s] y La Merced, Cachi, Anta primera circuito 14, Anta
+  primera circuito 15, Rio Piedras (Metan), La Vina, Coronel Moldes (La
+  Vina), Iruya, Rivadavia Banda Sud[,] La Caldera, Santa Victoria y La
+  Poma, respectivamente.— Los nombrados gozaran de la asignacion
+  mensual de $ 40 (cuarenta pesos) que fija la ley de presupuesto
+  vigente y con anterioridad al primero de febrero del ano en curso".
+  
+  1553 h16: "Art. 1º.— Formando parte integrante de la region
+  economica del olivo[] los departamentos de La Candelaria, Rosario de
+  la Frontera, Metan, Cafayate, Guachipas, San Carlos, La Vina,
+  Chicoana, Rosario de Lerma, Cerrillos, Capital y Caldera, de acuerdo
+  con lo establecido por la ley nacional nº 11643, declarase a la
+  Provincia, desde la promulgacion de la presente ley, acogida a los
+  beneficios de la citada ley y su decreto reglamentario".
+
+NOTA DE LECTURA: RECUENTO PROPIO de la lista de receptorias de quinta
+categoria: DIECISIETE en 1536 h10 y CATORCE en 1551 h12. Las tres que faltan
+en la segunda son Molinos, Seclantas (Molinos) y San Jose de Orquera (Metan).
+El acto no declara numero en ninguna de las dos, de modo que no hay nada que
+cotejar, y la diferencia entre las dos listas se declara sin explicarla: no se
+afirma que las tres receptorias hayan cambiado de categoria. Elementos de
+cuatro palabras o mas marcados como posibles pegados: "Anta 1º circuito 14",
+"Anta 1º circuito 15", "San Jose de Orquera (Metan)" y "Coronel Moldes (La
+Vina)"; los cuatro se resuelven como un solo elemento porque el parentesis o
+el numero de circuito los cierra. RECUENTO de la region del olivo: DOCE
+departamentos, sin numero declarado, y el departamento entra sin articulo,
+"Caldera", que es la forma del anillo 1. El nombre del receptor de La Caldera
+NO se transcribe: la lista de nombres y la lista de localidades corren en
+columnas distintas y correlativas y no se miro la imagen, de modo que
+emparejarlas seria una inferencia. Queda como pendiente de otra sesion, no
+como dato.
+
+
+§B · VECINDAD
+-------------
+
+
+B.1 · NUCLEOS YA FICHADOS QUE VUELVEN EN 1934
+
+De los 554 actores del config, 80 aparecen en 1934 con nombre completo. La
+mayoria son funcionarios provinciales que aparecen porque firman o porque
+cobran, y no prueban nada sobre el departamento. Los que si arman trama son
+estos, y todos tienen su acto en el §A:
+
+  Augusto Regis           1909, 1929, 1932  -> A.15, presidente de la
+                                               comision municipal
+  Jose Eusebio Robles     1929, 1930, 1932  -> A.7, presidente de mesa
+                                               del circuito 5
+  Manuel Condori          1922, 1929        -> A.7, suplente 1º
+  Isaac Fernandez         1930              -> A.7, suplente 2º
+  Miguel Nigro            1932              -> A.7, presidente de mesa 2
+  Lucas Molina            1926, 1929        -> A.7, suplente 1º
+  Jose Atilio Bruzzo      1946 (ed. 2675)   -> A.7, presidente de la
+                                               mesa de Vaqueros
+  Francisco S. Urquiza    1923, 1929, 1932  -> A.7 y A.8
+  Fabian Alonso           1932              -> A.16, juez de paz
+                                               propietario
+  Ramon Brachieri         1930              -> A.14, subcomisario
+                                               renunciante de Vaqueros
+  Abel Murua              1931, 1932        -> A.18, deslinde
+  Alberto y Adolfo Murua  1932              -> A.18, deslinde
+  Silvano Murua           1909, 1916, 1946  -> A.18, heredero de Canada
+                                               Seca o Penones
+  Francisco Sosaya        1932              -> A.18, lindero norte
+  Carlos Serrey           1916              -> A.19 y A.21
+  Luis Linares            1911              -> A.19 y A.21
+  Daniel Linares          1909, 1917, 1929  -> A.19, La Angostura
+  Salvador Rosa           1916, 1926, 1932  -> A.19, La Despensilla
+  Julio Mercado           1909              -> A.19, El Angosto
+  Nestor Cornejo Isasmendi 1929, 1931, 1932 -> A.20, juez de comercio
+  Pedro J. Frias          1923              -> A.2, tecnico propuesto
+                                               por el contratista
+
+El caso Bruzzo merece su renglon. El config registra a "jose atilio bruzzo"
+con origen 1946 y edicion 2675 —uno de los 42 actores cuyo campo origen es un
+numero de edicion y no un ano, que es justamente el defecto que la v16 §15.6
+mando corregir—. Aqui aparece en 1934 presidiendo la mesa de Vaqueros. Doce
+anos antes de la ficha que lo puso en el config. Su origen pasa a ser 1934 en
+el config actualizado, con 1946 conservado como reaparicion. Y en 1934 hay
+ademas un "Atilio Bruzzo" proveedor de postes (A.2) y un "Manlio Bruzzo"
+sobrestante (A.1): no se afirma que sean la misma persona ni que sean
+parientes, y los tres van al config por separado.
+
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+Este es el bloque que arma la trama del ano, y en 1934 es corto porque el
+termino satura los actos del departamento: casi todo lo que toca a La Caldera
+la nombra. Lo que queda es esto:
+
+  • Lesser. 11 hojas. En 1513 h11, 1519 h31, 1520 h30, 1521 h37 y 1527
+    h10 ("camino de Vaqueros a Lesser— suministro de ripio— se autoriza
+    el pago a favor de Arturo Aramayo por $ 80") aparece como LUGAR, y en
+    1522 h34 como apellido. La atribucion al departamento la hace A.13 y
+    no el anillo 2.
+  
+  • Vaqueros. 19 hojas. Dos actos de Vialidad la nombran sin nombrar el
+    departamento: 1527 h10, el camino de Vaqueros a Lesser, y 1561 h8, la
+    reparacion del camino de Vaqueros a La Caldera. Que Vaqueros es del
+    departamento en 1934 lo dice A.14 con esas palabras.
+  
+  • Gallinato. 73 hojas, casi todas por el nombre de la obra de A.1 y
+    A.2. En 1519 h31, 1520 h30 y 1521 h37 aparece ademas como "Potrero de
+    Gallinato", paraje del circuito 5.
+  
+  • Mojotoro. 7 hojas. En 1529 h3 y h4 y 1530 h4 y h16 como traza de
+    camino (A.3); en 1519 h31 como "Estacion F.C C.N.A. Mojotoro",
+    paraje del circuito 6 (A.6); en 1530 h4 y h16 como "Estacion
+    Mojotoro", destino de un flete funebre.
+  
+  • Severino, Penones, Canada Seca, Los Matos, Las Garrapatas, La
+    Despensa. Los seis aparecen juntos en A.18 y los seis los atribuye
+    el propio acto a la estancia La Despensa del departamento. Fuera de
+    A.18 no aparecen en ninguna otra hoja de 1934 salvo en las tres
+    publicaciones del decreto electoral.
+  
+  • Quitilipe. 2 hojas, 1551 h18 y 1558 h47, las dos del aviso de A.19,
+    como "Monte Quitilipe" del doctor Luis Linares. El config lo trae
+    como "quitilipe" y el original de 1555 h17 lo imprime "Quitipe": las
+    dos formas van al config.
+  
+  • Angostura de don Daniel Linares. 2 hojas, 1555 h17 y 1558 h47. El
+    termino estaba en el anillo 2 con esa forma larga y aqui la acerto:
+    es el unico acierto del ano de un termino compuesto largo.
+
+
+B.3 · TERMINOS QUE ESTE ANO SON OTRA COSA
+
+Se leyeron los contextos de TODOS los terminos del anillo 2 con acierto, uno
+por uno, no solo los que parecian del departamento. 87 de los 160 tienen al
+menos un acierto. Estos son los que este ano son otra cosa, y no se les
+atribuye jurisdiccion (§5.1ter):
+
+  castellanos   80 hojas. Camino de San Lorenzo a Castellanos por La
+                Montana; rio y arroyo Castellanos; el apellido (Joaquin
+                Castellanos, Ricardo Castellanos empleado de Vialidad,
+                Juan Carlos Lobo Castellanos). Ninguna del
+                departamento.
+  san jose      74 hojas. Bordo de San Jose (Campo Santo), San Jose de
+                Orquera (Metan), San Jose (El Bordo), y la advocacion.
+                Ninguna del departamento.
+  isasmendi     47 hojas. Apellido, casi siempre el juez Nestor Cornejo
+                Isasmendi. Ninguna como lugar.
+  entre rios    39 hojas. La provincia, la calle de la Capital, y el
+                paraje del circuito 6 de Vaqueros en tres hojas (A.6):
+                solo esas tres son del departamento.
+  apaza         25 hojas. Andres G. Apaza, transportista de Vialidad,
+                que trabaja EN la obra del departamento pero no consta
+                que viva en el; y Nacianceno Apaza, que el §12 de la
+                rubrica ya fijo como de Guachipas.
+  durazno       22 hojas. El Durazno de Metan y de Guachipas.
+  sauces        22 hojas. Los Sauces de La Vina; el Sauce del circuito
+                de El Bordo; "Sauce -los-" del circuito 5 en tres hojas
+                (A.6): solo esas tres.
+  manzano       21 hojas. El Manzano de Rosario de Lerma, camino a
+                Cachi. Ninguna del departamento.
+  campo alegre  20 hojas. Campo Alegre de Chicoana y de Rivadavia; y el
+                paraje del circuito 5 en tres hojas (A.6).
+  rio blanco    20 hojas. Rio Blanco de Cachi y de Zenta.
+  mamani        18 hojas. Apellido: Jose Mamani (penado indultado, 1526
+                h6), Pedro Mamani, Juan Mamani. Ninguna como lugar.
+  angosto       18 hojas. El partido del Angosto del departamento en
+                A.19 (3 hojas) y el circuito 5 en A.6 (3 hojas); el
+                resto, angostos de Oran y de otros caminos.
+  tabacal       17 hojas. Tabacal de Oran, ingenio.
+  el bordo      17 hojas. El Bordo de Campo Santo, colegio electoral
+                Nº 3; y "Bordo -el-" del circuito 5 en tres hojas.
+  potrerillo    17 hojas. El Movar, La Manga y Potrerillo, obra de
+                Vialidad en otro departamento.
+  wierna        16 hojas. Apellido (Bautista Wierna, Marcos Antonio
+                Wierna, Juan de la Cruz Wierna, todos autoridades de
+                mesa de OTROS colegios) y el paraje del circuito 5 en
+                tres hojas.
+  betania       16 hojas. Betania de Campo Santo, colegio electoral
+                Nº 3, con su estacion del F.C.C.N.A.
+  aramayo       14 hojas. Apellido: Arturo Aramayo (ripio para Vaqueros
+                a Lesser), Vicente Aramayo capataz, Manuel Aramayo
+                carpintero. Ninguna como lugar.
+  nogales       14 hojas. Los Nogales de Anta y el apellido.
+  lagunilla     8 hojas. Lagunilla de La Montana y Lagunillas de Campo
+                Santo; y el circuito 5 en tres hojas.
+  la laguna     9 hojas. Otras jurisdicciones.
+  penales       7 hojas. "Disposiciones penales", "sanciones penales":
+                falso positivo estructural del config, ya juzgado.
+  murua         7 hojas. Apellido; las tres de A.18 y A.11 son del
+                departamento, las otras no.
+  antilla       2 hojas. Antilla de Anta.
+
+Los seis hidronimos y orografias que el §5.1bis senalo como legitimos y no
+cubiertos por la toponimia de parajes —guaranguay, cuchimayo, cerro de buena
+vista, rio de wierna, quebrada de lesser, arroyo castellanos— NO dieron ni un
+acierto en 1934. Se conservan.
+
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+
+Ninguna busqueda por nombre completo dejo de devolver el propio acto de su
+actor: la prohibicion del §5.1 no se activo este ano. Las ausencias se
+escriben en los tres grupos.
+
+GRUPO 1 — aparecen SOLO en su propio acto del §A, una vez, y en ninguna otra
+hoja de las 2009:
+
+  Antonio Rojas (A.13), Eulalia Murua de Cornejo (A.18), Angel
+  Rudecindo Alancay (A.7), Eusebio Palma (A.7), Mercedes Arancibia
+  (A.22), Pascual Carrizo y Guillermo Arias (A.1, los dos obreros
+  fallecidos), Patricio Arias (A.1), Laura Araoz de Murua (A.11).
+
+Nueve personas que el Boletin de 1934 nombra una sola vez. De las nueve, dos
+estan muertas en el renglon que las nombra.
+
+GRUPO 2 — aparecen en MAS DE UN ACTO DEL DEPARTAMENTO. Es el grupo que arma la
+trama:
+
+  Humberto Lizondo      A.16 (nombrado) y A.17 (renuncia)
+  Fabian Alonso         A.16, y en el config desde 1932
+  Francisco S. Urquiza  A.7 y A.8, y el cabo abierto de 1925
+  Carlos Serrey         A.19 (no) — A.21 (hurto) y A.19 lo nombra como
+                        vecino: dos actos distintos del mismo ano
+  Luis Linares          A.19 (tres fincas colindantes) y A.21 (hurto
+                        en su casa): dos actos, y el unico propietario
+                        que aparece en los dos
+  Daniel Linares        A.19, dos fincas, en las tres apariciones
+  Abel Murua            A.18, y con Alberto y Adolfo en el mismo acto
+  Silvano Murua         A.18, como heredero de un puesto colindante
+  Ramon Brachieri       A.14 y edicion 1559 h23
+  Arturo Posse          A.11 (saliente) y A.12 (haberes)
+  Jose Eusebio Robles   A.7, y como capataz de cuadrilla de Vialidad
+                        en 1516 h10, 1517 h20, 1522 h6, 1524 h3, 1525
+                        h16 y h17, 1526 h12 y 1527 h20 — NO se afirma
+                        que sean la misma persona: el acto no lo dice,
+                        y el config trae "eusebio robles" (1932) y
+                        "jose eusebio robles" (1929, 1930, 1932) como
+                        entradas distintas, que es lo correcto
+                        mientras nada las una
+
+GRUPO 3 — aparecen TAMBIEN FUERA del departamento, de modo que su frecuencia
+en el corpus no es frecuencia en el departamento:
+
+  Nestor Cornejo Isasmendi  14 hojas; juez de comercio de la
+                            Provincia. Solo 1 es del departamento.
+  Jose Maria Decavi         13 hojas; martillero. Solo 1.
+  Jose Maria Leguizamon     29 hojas; martillero. Solo 2 (A.20).
+  Julio Figueroa Medina    233 hojas; oficial mayor de Gobierno, firma
+                            casi todos los "Es copia" del ano.
+  Francisco Ranea          109 hojas; Contaduria General.
+  Angel Neo                 50 hojas; avisos.
+  Avelino Araoz             27 hojas por nombre completo, y firma casi
+                            todos los decretos del ano como ARAOZ o
+                            A. ARAOZ.
+  Eduardo Arias             20 hojas; el config lo trae tambien como
+                            "eduardo arias (ingeniero)", 1930.
+
+La distincion vale la pena escribirla porque es la que el §17 de la rubrica
+exige para el cruce: contar un apellido "en el informe" no es contarlo "en el
+departamento". Todas las cifras de este bloque son FRECUENCIAS DE CORPUS sobre
+las 2009 hojas; la frecuencia en el departamento es la que va entre parentesis
+o en la columna "solo N".
+
+
+§C · LIMITROFES
+---------------
+
+Anillo 3, con ficha y una linea cada uno. Se registran los limitrofes que en
+1934 aparecen en el mismo acto que el departamento o en actos que lo tocan.
+
+  Capital      A.22, subsidio de ropa compartido con las escuelas
+               fiscales de La Caldera; A.24, region del olivo. Y el
+               Colegio Electoral Nº 1.
+  Campo Santo  Colegio Electoral Nº 3, contiguo en el decreto de A.6;
+               y es el destino de la obra de A.1. Su circuito toma
+               Betania, El Bordo, Cobos y Guemes.
+  Guemes       Desde mayo el titulo de la obra de A.1 la incluye
+               ("a Campo Santo y Guemes por Gallinato"); circuito
+               numero 8 del Colegio Electoral Nº 3.
+  Jujuy        A.19: la finca El Angosto esta separada en la mayor
+               parte por el camino nacional de La Caldera a Jujuy;
+               A.4: el camino antiguo Salta a Jujuy, tramo
+               Vaqueros-Caldera.
+  Rosario de   No aparece en ningun acto del departamento en 1934. Se
+  Lerma        declara la ausencia, no se la explica.
+
+
+§P · PLANOS
+-----------
+
+EL CORPUS DE 1934 NO PUBLICA NI UN SOLO PLANO. Las 2009 hojas son texto a dos
+columnas. Es el quinto ano seguido sin planos: 1929, 1930, 1931, 1932 y 1934
+(1933 no fue barrido por esta serie). La racha se arrastra al §R y es la clase
+de hecho que un informe anual no puede afirmar solo y que el cruce si puede.
+
+La palabra plano aparece en 293 de las 2009 hojas. De esas, 9 traen ademas
+caldera o calderilla en la misma hoja, y se leyeron las 9 una por una. Ocho
+son remisiones genericas de Vialidad —papel ferroprusiato para copias de
+planos, armarios para planos, el plano general de caminos, planos y
+presupuesto de caminos de otros departamentos, una solicitud de la Asociacion
+Automovilistica Argentina— y NO tocan al departamento.
+
+UNA SI LO TOCA, y se registra como CITADA Y NO ACOMPANADA: edicion 1530 hoja
+10, acta del Directorio de Vialidad sobre el camino de la Calderilla al
+Desmonte: "de adoptarse el perfil marcado en el PLANO Nº 40 se hubiera
+estrechado la calzada del camino con perjuicio del mismo, y [...] los trabajos
+proyectados segun el plano nº 40 y los efectuados con las mo[d]ificaciones
+introducidas[:] el Directorio resuelve aprobar las mencionadas
+modificaciones". El plano nº 40 no se publica.
+
+Hay una segunda remision implicita que NO se cuenta como plano citado porque
+el acto no nombra ninguna pieza: A.18 ordena una mensura y una mensura produce
+un plano, pero el auto no lo cita. Se deja anotado y no se lo cuenta.
+
+TECHO DE RESOLUCION del corpus: 150 ppi (§1). A ese techo un plano, si lo
+hubiera, no seria legible en sus cotas.
+
+
+§D · INDICE
+-----------
+
+Una entrada por acto del §A, con edicion, hoja y clase fija (§7.1). La clase
+va delante de la linea de materia y no la sustituye. Cuando un acto aparece en
+muchas hojas se indica la primera y se remite a la ficha.
+
+
+  EDIC  HOJA  CLASE            MATERIA
+  ----  ----  ---------------  ----------------------------------------
+  1513  h7    OBRA-PUBLICA     Camino de la Calderilla a Campo Santo por
+                           Gallinato, actas de Vialidad (A.1, 36
+                           hojas)
+  1514  h14   HACIENDA-MUN     Decreto 16798: ordenanza de impuestos y
+                           presupuesto municipal de La Caldera,
+                           ejercicio 1933 (A.5)
+  1516  h54   ELECTORAL        Convocatoria de enero 18 de 1934:
+                           representacion de La Caldera en la
+                           Legislatura (A.9, 12 apariciones)
+  1518  h36   ELECTORAL        Autoridades de las tres mesas del Colegio
+                           Electoral N 2 (A.7)
+  1519  h31   ELECTORAL        Decreto de febrero 15 de 1934: mesas y
+                           circuitos del Colegio Electoral N 2 (A.6,
+                           3 publicaciones)
+  1525  h18   OBRA-PUBLICA     Camino de la Calderilla a El Desmonte por
+                           Gallinato, ayuda federal (A.2, 33 hojas)
+  1526  h6    REGISTRO-CIVIL+  Decreto 17284: Laura Araoz de Murua,
+                           encargada del Registro Civil de La
+                           Caldera
+  1527  h28   ELECTORAL        Cuadro de mesas por comision municipal:
+                           La Caldera, circuitos 5 y 6 (A.10)
+  1529  h3    OBRA-PUBLICA     Camino de la Calderilla a Mojotoro,
+                           estudio, y saldos de obra (A.3)
+  1530  h10   OBRA-PUBLICA     Plano N 40 del camino Calderilla al
+                           Desmonte: citado y no acompanado (P)
+  1532  h22   JUSTICIA         Fallo de la Sala en lo Penal: hurto en
+                           las casas de Serrey y Linares (A.21)
+  1533  h1    REGISTRO-CIVIL   Haberes de Arturo Posse, encargado
+                           saliente del Registro Civil (A.12)
+  1534  h6    ESCUELA          Cuadro de categorias de escuelas: La
+                           Caldera en tercera (A.23)
+  1536  h10   HACIENDA-MUN+NO  Receptoria de Rentas de La Caldera,
+                           quinta categoria (A.24)
+  1538  h3    CARGOS           Decreto 17722: Antonio Rojas,
+                           subcomisario ad-honorem de Lesser (A.13)
+  1541  h17   CARGOS           Decreto 17936: Augusto Regis, presidente
+                           de la comision municipal (A.15)
+  1545  h21   ESCUELA          Subsidio de $ 2.050 para ropa de
+                           invierno, escuelas de la Capital y de La
+                           Caldera (A.22)
+  1548  h10   OBRA-PUBLICA     Camino antiguo Salta a Jujuy, tramo
+                           Vaqueros-Caldera, por administracion
+                           municipal (A.4)
+  1548  h16   JUSTICIA+CARGOS  Decretos 18039 y 18040: Fabian Alonso y
+                           Humberto Lizondo, jueces de paz (A.16)
+  1549  h31   DOMINIO          Deslinde, mensura y amojonamiento del
+                           Puesto Despensa, Murua (A.18)
+  1551  h12   HACIENDA-MUN     Receptores de rentas: asiento en La
+                           Caldera, $ 40 mensuales (A.24)
+  1551  h17   DOMINIO          Remate de la finca El Angosto, partido
+                           del Angosto (A.19, 3 apariciones)
+  1552  h21   DOMINIO          Remate de las fincas San Jorge y San
+                           Felix (A.20, 2 apariciones)
+  1553  h16   NORMA            Ley de la region economica del olivo:
+                           Caldera incluida (A.24)
+  1554  h46   ESCUELA          Presupuesto: escuela de La Caldera Juan
+                           Moro de Lopez, 2a categoria (A.23)
+  1558  h6    CARGOS           Decreto 18241: renuncia de Ramon
+                           Brachieri, subcomisario de Vaqueros
+                           (A.14)
+  1561  h7    JUSTICIA+CARGOS  Decreto 18355: renuncia de Humberto
+                           Lizondo, juez de paz suplente (A.17)
+
+Reparto por clase: OBRA-PUBLICA 6, ELECTORAL 4, DOMINIO 3, CARGOS 3 (mas 3 en
+combinacion), HACIENDA-MUN 3, ESCUELA 3, JUSTICIA 2 (mas 1 en combinacion),
+REGISTRO-CIVIL 2, NORMA 1 (mas 1 en combinacion). AGUAS 0, MINAS 0, OTRO 0. La
+ausencia de AGUAS en un departamento de cabecera de cuenca es un hecho del
+corpus de 1934 y se declara como tal.
+
+
+§E · OBSERVACIONES
+------------------
+
+
+E.1 · DUPLICACION Y SALDOS
+
+SIN md5 NI dhash. No llegaron las .jpg ni el recortes.zip, de modo que los
+niveles 1 y 2 del §6 no se pueden correr. Es un limite (E.10, limite 3) y la
+deduplicacion se hizo enteramente POR TEXTO, que es de todos modos el control
+primario segun la correccion v16 del §6.
+
+AVISOS REPETIDOS DEL DEPARTAMENTO: cuatro. (a) El decreto electoral de A.6,
+publicado integro tres veces, ediciones 1519, 1520 y 1521. (b) La convocatoria
+de A.9, doce apariciones en seis ediciones. (c) El remate de El Angosto de
+A.19, tres apariciones. (d) El remate de San Jorge y San Felix de A.20, dos
+apariciones. En los cuatro casos la repeticion se comprobo buscando el texto
+del aviso en el resto del corpus, no por la marca de publicacion y no por el
+numero.
+
+EL NUMERO DE AVISO NO IDENTIFICO NINGUNO DE LOS DOS REMATES. El Angosto sale
+con nº 2238 en 1555 y con un numero de la serie 2269/2286 en 1558. San Jorge y
+San Felix sale con nº 2210 en 1552 y con nº 2317 en 1560. Cotejar numeros no
+habria reunido ninguno de los dos; cotejar texto reunio los dos. Es la tercera
+confirmacion seguida de la regla que la v16 fijo con Los Sauces de 1927.
+
+LA MISMA SERIE NUMERICA EN ACTOS DISTINTOS — hallazgo de nivel 3. Los decretos
+18039 y 18040, correlativos, son el mismo acto: misma fecha, mismo expediente
+1259-M, mismas dos personas, mismo articulo de la Constitucion, publicados uno
+tras otro en la hoja 16 de la edicion 1548. No se concilia y no se elige cual
+vale. Va a E.9.
+
+SALDOS. En 1934 el Boletin publica ONCE resumenes del movimiento de Tesoreria
+General de la Provincia, firmados por el ministro de Hacienda A. Garcia Pinto
+(hijo) o por A. B. Rovaletti como ministro interino: diciembre de 1933
+(edicion 1517 h39-40) y enero a octubre de 1934 (1520 h23, 1525 h34, 1529 h55,
+1533 h29, 1538 h47, 1542 h37, 1546 h37, 1551 h20, 1555 h19, 1559 h47). Los
+resumenes de noviembre y diciembre de 1934 no se publican dentro del ano.
+
+NINGUNO DE LOS ONCE IMPRIME RENGLON DE CIERRE. El resumen abre con "A Saldo
+del mes de [anterior]" y cierra con un total de egresos, sin linea de saldo
+que pasa. La cadena se arma, entonces, POR LA APERTURA DEL MES SIGUIENTE, como
+la correccion v16 del §6 establece, y asi se declara. Las once cifras se
+leyeron EN LA IMAGEN, no en la capa, recortando el renglon de cada una a 520
+dpi:
+
+  cierre de noviembre de 1933   $  33.398,82   (ultimo digito dudoso)
+  cierre de diciembre de 1933   $  18.790,83
+  cierre de enero de 1934       $  13.704,83
+  cierre de febrero de 1934     $ 107.840,17
+  cierre de marzo de 1934       $  25.073,13
+  cierre de abril de 1934       $  31.162,14
+  cierre de mayo de 1934        $  29.126,27
+  cierre de junio de 1934       $  32.748,77
+  cierre de julio de 1934       $  33.073,81
+  cierre de agosto de 1934      $  28.451,10   (la cifra esta en parte
+                                               cubierta por una mancha
+                                               de la hoja)
+  cierre de setiembre de 1934   $  60.071,19
+
+CADENA COMPLETA, UN SOLO TRAMO, ONCE ESLABONES, sin puentes y sin cortes: de
+noviembre de 1933 a setiembre de 1934. Es la primera cadena sin cortes desde
+1925 segun los informes anteriores, y contrasta con 1926 (cinco resumenes no
+consecutivos, ninguna cadena) y con 1927 (dos tramos y un puente de una
+cifra).
+
+LA CAPA MINTIO EN UNA. Para abril la capa da 31.102,14 y la imagen dice
+31.162,14. Sesenta pesos. Si la cadena se hubiera transcripto de la capa el
+informe habria publicado una cifra falsa sin ningun modo de notarlo, porque no
+hay segunda version con que desempatar. Es el argumento entero de la §8.11 en
+un renglon.
+
+EL SALTO DE FEBRERO NO SE EXPLICA. El cierre de febrero es de $ 107.840,17
+contra $ 13.704,83 en enero y $ 25.073,13 en marzo: ocho veces el mes anterior
+y cuatro veces el siguiente. Se declara el hecho y no se adopta ninguna
+hipotesis. La pieza que lo resolveria es el detalle del resumen de febrero,
+que esta publicado (1525 h34) y que no se recalculo.
+
+RECALCULO DE CUADRO. Los once resumenes son cuadros publicados. Se recalculo
+UNO, el de enero de 1934 (edicion 1520, hoja 23), leyendo la columna entera en
+la imagen a 230 y a 700 dpi. DENOMINADOR: 1 cuadro sobre 11. Resultado:
+
+  • Los veinte renglones de la columna suman EXACTAMENTE el subtotal
+    impreso: 829.126,24. Y los cuatro subtotales parciales internos
+    cierran tambien exactos (322.555,77; 6.486,00; 557,00; 239.005,85).
+  
+  • EL TOTAL NO CIERRA. Subtotal 829.126,24 mas saldo de apertura
+    18.790,83 da 847.917,07, y el total impreso es 847.917,67. Faltan
+    SESENTA CENTAVOS.
+  
+  • Lectura alternativa que cerraria la columna (§8.7): si el saldo de
+    apertura fuese 18.791,43 el total cerraria exacto. NO SE ELIGE: la
+    cifra se miro a 520 dpi y dice 18.790,83, y el 6 del total se miro a
+    700 dpi y es inequivoco.
+
+Es el caso que el §4.1 de la rubrica anticipo con 1926: el detalle cierra y el
+que no cierra es el total. Va tambien a E.8 y a E.9.
+
+
+E.2 · COBERTURA
+
+Las cuatro pasadas, el anillo 2, los actores, los numeros y las formulas de
+reemplazo corrieron sobre las 2009 hojas, es decir sobre el 100 % del corpus.
+Lo que NO es del 100 % es lo mirado con los ojos, y eso se declara con su
+denominador:
+
+  hojas miradas en la imagen:            19 sobre 2009  (0,9 %)
+  columnas cotejadas en esas hojas:      22
+  tapas miradas en la imagen:             1 sobre 51
+  cabeceras "Pag. N" resueltas:         437 sobre 1958 hojas
+                                            interiores; coinciden 397
+  cuadros con un subtotal recalculado:    1 sobre 11
+  renglones de saldo mirados:            11 sobre 11
+  tablas recalculadas enteras:            0
+  hojas rasterizadas para medir tinta: 2009 sobre 2009 (100 %)
+
+Las 19 hojas miradas son: 1513 h1 (tapa), 1514 h14, 1518 h36, 1520 h23, 1520
+h30, 1526 h6, 1541 h17, 1549 h31, 1549 h32, 1551 h18, 1555 h16, 1558 h47, y
+las siete hojas de resumen de Tesoreria de las que se recorto el renglon de
+saldo (1517 h39, 1525 h34, 1529 h55, 1533 h29, 1538 h47, 1542 h37, 1546 h37,
+1551 h20, 1555 h19, 1559 h47 —diez, de las cuales 1520 h23 ya estaba contada).
+El criterio fue: se mira toda palabra o cifra que decide una ficha.
+
+
+E.3 · SIN MENCION Y NO MIRADO
+
+1880 de las 2009 hojas no traen ninguna mencion del anillo 1 y no se miraron
+con los ojos. Se cubrieron por las pasadas, que corrieron sobre todas, y por
+el anillo de actores, que es la red de seguridad del anillo 1 y que este ano
+no encontro nada que las pasadas hubieran perdido. No se afirma que no haya
+nada en ellas: se afirma que las cinco pasadas y los 554 actores no lo
+encontraron.
+
+La columna perdida NO se confirmo ni se descarto en ninguna hoja: no se hizo
+un cotejo columna por columna sistematico. Se declara el denominador: 22
+columnas cotejadas sobre las 19 hojas miradas, y en ninguna de esas 22 se
+encontro columna perdida. Sobre las 1990 hojas restantes no se dice nada. Es
+un limite (E.10, limite 4).
+
+
+E.4 · FIRMAS Y AUTORIDAD
+
+GOBERNADOR: Avelino Araoz, todo el ano. Leido EN LA IMAGEN de la tapa de la
+edicion 1513, no en la capa (correccion v16 del §2.5bis): la tapa dice
+"Gobierno del Excmo. Sr. Gobernador de la Pcia. Don AVELINO ARAOZ". Ano
+editorial XXVI, leido en la misma imagen.
+
+FORMULAS DE FIRMA, todas registradas y NINGUNA normalizada, porque varian
+dentro del mismo ano y del mismo gobierno:
+
+  ARAOZ                     (1526 h6, decreto 17284; 1541 h17)
+  A. ARAOZ                  (1526 h6, decreto anterior al 17284;
+                             1541 h17, decreto anterior al 17936)
+  AVELINO ARAOZ             (1538 h3; 1548 h16; 1561 h7)
+  J. ARIAS URIBURU          (1514 h14, "El Vice-Gobernador de la
+                             Provincia, en ejercicio del Poder
+                             Ejecutivo": INTERINATO)
+
+REFRENDOS: A. B. ROVALETTI y ALBERTO B. ROVALETTI, las dos formas, a veces en
+decretos consecutivos de la misma hoja. Rovaletti firma ademas como ministro
+de Hacienda interino en cuatro de los once resumenes de Tesoreria (abril,
+julio, setiembre y octubre), mientras los otros siete los firma A. Garcia
+Pinto (hijo).
+
+"ES COPIA": JULIO FIGUEROA MEDINA, Oficial Mayor de Gobierno, en 233 hojas;
+tambien como J. FIGUEROA MEDINA. Desde julio aparece G. OJEDA, Sub-secretario
+de Gobierno (1558 h7). Las dos firmas conviven: no se fija la fecha del cambio
+y no se lo llama cambio.
+
+INTERINATO SIN CIERRE. El decreto 16798, publicado en 1514 h14-15, esta
+firmado por el Vice-Gobernador en ejercicio del Poder Ejecutivo. Es de octubre
+de 1933, es decir de antes del ano barrido. El ultimo acto del interino dentro
+del corpus de 1934 es ese mismo 16798 (1514 h14) y el primer acto del titular
+es el 17284 (1526 h6, fechado enero de 1934). NO SE FIJA EL DIA DEL REINTEGRO:
+los dos actos son de anos distintos y el corpus no trae el tramo intermedio.
+
+AUTORIDAD LOCAL. Presidente de la Comision Municipal del Distrito de La
+Caldera: Augusto Regis desde abril (A.15). No se nombra a quien termino el
+periodo y no se infiere. Juez de paz propietario: Fabian Alonso desde junio;
+suplente: Humberto Lizondo desde junio y hasta agosto, sin sucesor publicado.
+Subcomisario ad-honorem de Lesser: Antonio Rojas desde abril. Subcomisario
+ad-honorem de Vaqueros: Ramon Brachieri hasta julio, sin sucesor publicado.
+Encargada del Registro Civil: Laura Araoz de Murua, en reemplazo de Arturo
+Posse, que cesa el 7 de enero.
+
+
+E.5 · CORTES Y COLUMNAS
+
+U+0002: cero apariciones en las 2009 hojas. La marca de corte de 1946 no
+existe en esta epoca, como en todo el tramo 1908-1932.
+
+U+00AD: 36.954 apariciones. Se quito JUNTO CON EL SALTO DE RENGLON y en ese
+orden, segun la receta del §2.3.2. Escrito al reves habria roto 36.954
+palabras. Se comprobo que la union pega las dos mitades a traves del salto
+sobre una muestra de renglones con repr.
+
+CORTES CON PUNTUACION INTERCALADA: la union tolera hasta dos signos a cada
+lado del salto. El guion duro de fin de renglon se une por separado. Sin esas
+dos reglas la pasada literal habria devuelto menos de 136 hojas.
+
+COLUMNA PERDIDA: no se encontro ninguna en las 22 columnas cotejadas. Sobre el
+resto no se dice nada (E.3). Un caso vecino si aparecio y no es columna
+perdida sino comas perdidas: en A.6 la capa pierde la coma entre "Potrero de
+Castilla" y "Pueblo" en las TRES publicaciones del mismo decreto, con lo cual
+el recuento de la capa da 45 y el de la imagen da 46. Que el mismo error se
+repita en tres composiciones distintas indica que es del extractor y no del
+original.
+
+
+E.6 · REPETICIONES
+
+Ver E.1. Cuatro avisos repetidos del departamento, todos reunidos por texto.
+Tres de ellos cambian algo entre apariciones: El Angosto cambia la superficie
+(354 / 364), San Jorge y San Felix cambia el dia de remate y la forma de la
+venta, y el decreto electoral cambia solo erratas de composicion.
+
+En el resto del corpus hay repeticion masiva de avisos judiciales y de edictos
+que no tocan al departamento y que no se inventariaron: no se afirma nada
+sobre ellos.
+
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+
+FALSOS POSITIVOS DEL ANILLO 1 en 1934, juzgados y descartados. Se listan en el
+informe y NO se agregan al config, segun la regla del §12: un termino del
+anillo 1 cuyo contexto contenga un falso positivo del config queda marcado
+fp_conocido y sin recorte, aunque sea real.
+
+  calderon      4 apariciones. Apellido. Ya juzgado desde 1908.
+  calderas      5. Reglamento de higiene y seguridad del trabajo
+                (1516 h22-24: inspeccion de calderas de vapor,
+                valvula de seguridad, manometro); inventario de una
+                fabrica (1537 h21); y un remate judicial de "un motor
+                130 H.P. Marshall y una caldera 130 H.P. Wilson" en
+                Estacion Dragones (1562 h30). Ninguna es el lugar.
+  caldos        4. Sustantivo comun.
+  fiscalde      1. "fiscal de" pegado.
+  localde       1. "local de" pegado.
+  calera (la)   6. Paraje de los circuitos de Rio de las Piedras y de
+                San Lorenzo. OTRO DEPARTAMENTO. Se descarta
+                nombrando la jurisdiccion.
+  cadera        1. Tarifa de asistencia medica por fracturas.
+  caleria       1. "arroyo Caleria", mensura referida a la estacion
+                Sausalito del F.C.C.N.A. Otro departamento.
+  calavera      6. Ya juzgado desde 1908.
+  escalera /
+  escalerilla   3. Ya juzgado.
+  cuadrilla(s)  328. Es el falso positivo de volumen del ano, por las
+                cuadrillas camineras de Vialidad, y es tambien el que
+                mas se parece a calderilla en la difusa (ratio
+                0,842). Ya juzgado desde 1908.
+
+FALSOS POSITIVOS DEL ANILLO DE ACTORES: los homonimos de otros departamentos
+siguen siendo el falso positivo dominante de la epoca, tal como la v16 §12 lo
+fijo. Los medidos este ano: Nacianceno y Napoleon APAZA (Guachipas, Sevilar)
+contra Andres G. Apaza, transportista que trabaja en la obra del departamento;
+Jorge MAMANI (Carahuasi) contra Jose, Pedro y Juan Mamani de 1934; Silverio
+ARAMAYO (Iruya) contra Arturo, Vicente y Manuel Aramayo. La regla que los
+separa NO es el apellido sino el acto que los atribuye, y por eso se anotan
+con su departamento y no se borran del config.
+
+FALSOS NEGATIVOS MEDIDOS. Cuatro hojas que la pasada literal no ve y que son
+reales: 1529 h3, 1538 h3 y 1558 h7 (laxa espaciada) y 1517 h44 (difusa). Dos
+de ellas son actos del departamento con ficha propia (A.13 y A.14). Sin esas
+dos pasadas el informe habria perdido el nombramiento del subcomisario de
+Lesser y la renuncia del de Vaqueros, es decir dos de las cinco fichas de
+CARGOS del ano.
+
+UN CUASI-FALSO-NEGATIVO DEL ANILLO 2 que conviene anotar: "Abra de la Sierra",
+paraje del circuito 5, NO dio acierto porque el config lo trae como "abra la
+sierra", sin la preposicion. La forma del original se agrega. Y "Pueblo" y
+"Sierra -la-", los dos parajes del circuito 5, no estan en el anillo 2 en
+ninguna forma: se agregan, con la advertencia de que "pueblo" va a producir
+ruido en todo el corpus y conviene evaluarlo en el proximo barrido antes de
+dejarlo.
+
+
+E.8 · FIDELIDAD NUMERICA
+
+CIFRAS QUE SE MIRARON EN LA IMAGEN: las once del renglon de saldo de los once
+resumenes; el subtotal y el total del resumen de enero; los veinte renglones
+de su columna; la superficie de El Angosto en sus tres apariciones; la base de
+siete mil quinientos pesos; el numero y la fecha del decreto 17284; el numero,
+la fecha y los articulos del 17936; la superficie del Puesto Despensa.
+
+CIFRAS QUE NO SE MIRARON Y VAN MARCADAS COMO DUDOSAS:
+
+  • Importe del certificado nº 2 del camino al Desmonte (1548 h12): la
+    capa da "1x929,14". Lectura alternativa 11.929,14, no elegida.
+  • Base del remate de San Jorge y San Felix en su segunda aparicion
+    (1560 h43): la capa da "$ .0,000". Podria ser 10.000 o 20.000.
+  • Numeros de decreto 18039 y 18040 (1548 h16): leidos en la capa.
+  • Todas las cifras de las planillas de jornales de A.1, A.2 y A.4.
+
+TABLAS NO RECALCULADAS, con su hoja y su criterio (§4.1):
+
+  • Diez de los once resumenes de Tesoreria (todos menos 1520 h23).
+    Criterio: no nombran el termino, ni el anillo 2, ni un actor del
+    §A. Fuera del alcance de recalculo obligatorio; sus saldos si se
+    transcribieron y encadenaron (E.1).
+  • El cuadro de 1534 h6, fila "La Caldera" con cinco columnas de
+    numeros. Criterio: el encabezado esta en otra hoja y no se miro, de
+    modo que la tabla NO SE PUEDE ATRIBUIR A UNA MATERIA y se declara
+    sin atribuir (§4.1 y §4.11). Sus cifras no se publican.
+  • Las planillas de jornales de las actas de Vialidad, en unas
+    cuarenta hojas. Criterio: nombran la obra del departamento, de modo
+    que caen dentro del alcance, pero son planillas de personal sin
+    total propio dentro del acto; el acto autoriza el pago y no declara
+    suma. Donde si hubo total declarado —A.4— se recalculo y cierra.
+  • Balances municipales del departamento: NINGUNO. 1934 no publica
+    ninguno. Hecho del corpus, no tabla sin mirar.
+
+EL UNICO RECALCULO COMPLETO DEL ANO que cierra contra una declaracion del
+propio acto es el de A.4: 186,85 + 235,00 = 421,85, y el acto declara un
+exceso de 21,85 sobre $ 400. Cierra.
+
+
+E.9 · CONTRADICCIONES
+
+Siete. Ninguna se concilia.
+
+  1. Decreto 17284 fechado "Salta, Enero 2 de 1932" entre decretos de
+     enero de 1934, en una serie que en esa fecha va por 17285. La
+     fecha es del ORIGINAL: se miro en la imagen. (A.11)
+  
+  2. Decretos 18039 y 18040: dos numeros correlativos para el mismo
+     acto, misma fecha, mismo expediente, mismas personas. (A.16)
+  
+  3. Decreto 17936: el considerando invoca el art. 178 de la
+     Constitucion y el articulo dispositivo invoca el art. 182. (A.15)
+  
+  4. Finca El Angosto: 364 hectareas en 1551 h18 y en 1558 h47, 354
+     hectareas en 1555 h16, con las mismas 85 areas y 62 centiareas en
+     las tres. Las tres miradas en la imagen. (A.19)
+  
+  5. Escuela de La Caldera: tercera categoria en 1534 h7, segunda
+     categoria en 1554 h46, el mismo ano y el mismo Consejo. (A.23)
+  
+  6. Resumen de Tesoreria de enero de 1934: el subtotal de los veinte
+     renglones cierra exacto y el TOTAL no cierra por $ 0,60. (E.1)
+  
+  7. Receptorias de rentas de quinta categoria: diecisiete en 1536 h10
+     y catorce en 1551 h12. (A.24)
+
+ERRATAS DEL ORIGINAL QUE SE REPITEN POR TANDAS, declaradas una vez aqui y no
+una por edicion (§2.5bis):
+
+  • "BOLEITN OFICIAL" por BOLETIN OFICIAL en la cabecera de hoja par
+    de varias ediciones (visto en 1541 h18 y en 1551 h18, y la capa lo
+    devuelve en las dos).
+  • "DIRECCION Y ADMINISTFACION" en la tapa de 1513, con F por R. Puede
+    ser perdida de tinta en la letra y no errata de plancha: se deja
+    anotado y no se decide.
+  • "La Caldeia" por La Caldera en 1526 h6, con la r rota en la
+    plancha.
+  • "Desglocese" por desglosese en el decreto 16798 (A.5).
+  • "centeareas" por centiareas en 1555 h16 (A.19).
+
+
+E.10 · LIMITES
+
+Siete limites. Son imposibilidades de los insumos, no trabajo pendiente:
+ninguno de los siete lo puede resolver esta sesion.
+
+  LIMITE 1. El cotejo del anillo 2 contra la toponimia establecida
+  (§5.1bis) no se pudo correr: control_config.py exige el
+  tabla_parajes.py del repositorio mapas_caldera y ese archivo no esta
+  alcanzable desde la sesion (404 en main y en master de
+  raw.githubusercontent). Se corrio la parte interna del control
+  (apellidos dentro del anillo 2, solapamiento con falsos positivos) y
+  su resultado esta en el §2. Lo que falta es la unica de las tres
+  lineas que exige el libro: cuantos toponimos establecidos faltan en
+  el anillo.
+  
+  LIMITE 2. No hay confianza por hoja. Sin .tsv no hay media ni
+  porcentaje por debajo de 60, y las etiquetas pub / ver / ojos no
+  existen. La lista de hojas "a ojos" del §4.8 NO EXISTE, con esas
+  palabras.
+  
+  LIMITE 3. No hay md5 ni dhash. Sin las .jpg y sin el recortes.zip
+  los niveles 1 y 2 del §6 no corren. La deduplicacion fue por texto.
+  
+  LIMITE 4. No hay segunda version. Con una sola version el unico
+  desempate de cifra es la imagen, y la imagen se miro en 19 hojas de
+  2009. Todo lo demas descansa en la capa.
+  
+  LIMITE 5. No hay cotejo sumario / cuerpo ni cotejo sumario / pagina
+  citada: 1934 no publica sumario. El control fuerte de paginacion del
+  §2.5bis no es aplicable y queda solo la cabecera, con su denominador
+  de 437 sobre 1958.
+  
+  LIMITE 6. No hay OCR en sesion. tesseract no trae spa. El §3 y el §16
+  no son aplicables.
+  
+  LIMITE 7. No hay log.txt, ni pre-informe, ni CSV. No se puede saber
+  si una corrida del script dejo hojas sin procesar, porque no hubo
+  corrida del script. El cotejo contra EXTRAIDO.json tampoco se pudo
+  hacer y se reemplazo por el cotejo contra la serie de numeros de
+  edicion y contra el calendario, que cierran los dos.
+
+QUE AGREGARIA CADA UNO, en una linea: el 1, la unica linea que falta del
+control del anillo 2; el 2, la lista de hojas a mirar con los ojos; el 3, la
+deteccion de hojas repetidas que el texto no ve; el 4, el desempate de las
+cifras dudosas de E.8 sin ir a la imagen; el 5, el control fuerte de
+completitud por edicion; el 6, nada en este ano, porque con capa propia el OCR
+no hacia falta; el 7, la certeza de que no falta ninguna hoja dentro de las
+ediciones presentes.
+
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+Cuatro correcciones, todas nacidas de este barrido.
+
+1. EL COTEJO DEL §5.1bis DEPENDE DE UN ARCHIVO QUE LA SESION NO PUEDE
+ALCANZAR, y la rubrica lo pide como obligatorio en el checklist. La
+v16 §5.1bis manda correr el cotejo antes de cada barrido y el §13 lo pone como
+casilla de cierre, pero el insumo —tabla_parajes.py de mapas_caldera— no esta
+en ningun Release ni en ningun repositorio alcanzable: la red de la sesion
+llega a github.com y a raw.githubusercontent, y el archivo no esta ahi.
+Propuesta: que tabla_parajes.py se suba como asset del Release de cada ano,
+junto al lee_config.json, o que el config incorpore un campo "toponimia_libro"
+con la lista. Mientras eso no pase, la casilla del §13 no se puede tildar
+nunca y conviene que la rubrica lo diga en vez de pedir lo imposible.
+
+2. LA CADENA DE SALDOS SE PUEDE ARMAR SIN NINGUN RENGLON DE CIERRE, Y ESO NO
+ES UN TRAMO INCOMPLETO. La v16 §6 dice que "un resumen puede no imprimir
+renglon de cierre: entonces se encadena por la apertura del mes siguiente y se
+dice". En 1934 NINGUNO de los once lo imprime, y sin embargo la cadena es
+completa y de un solo tramo, porque las once aperturas son consecutivas.
+Conviene que la rubrica distinga las dos cosas: una cadena sin cierres
+impresos pero con aperturas consecutivas es COMPLETA, y el §R debe poder
+decirlo. Propuesta de valor para la clave cadena_saldos:
+"un-tramo-por-aperturas", distinto de "un-tramo" y de "dos-tramos".
+
+3. EL RECUENTO DE UNA LISTA PUEDE DEPENDER DE UNA COMA, Y LA COMA SOLO ESTA EN
+LA IMAGEN. La v16 §4.1bis manda recontar sobre la propia transcripcion y
+marcar como posible pegado todo elemento de cuatro palabras o mas. Correcto,
+pero incompleto: en A.6 el elemento de cuatro palabras ("potrero de castilla
+pueblo") NO existe en el original, lo fabrica el extractor al perder una coma,
+y lo hace en las tres publicaciones del mismo decreto. La marca de pegado
+habria entregado un rango de 45 a 46 cuando el numero es 46 y es firme.
+Propuesta: agregar al §4.1bis que TODO elemento marcado como posible pegado se
+mira en la imagen antes de entregar el rango, y que si la imagen lo resuelve
+se entrega el numero y se dice que se resolvio mirando. Un rango que la imagen
+podia cerrar es un rango de mas.
+
+4. LA §8.11 NECESITA UN COROLARIO SOBRE LAS CIFRAS EN LETRAS. En A.19 la capa
+da la base como "s is ie m il q u in ien to s" y la lectura razonable de eso
+es "seis mil quinientos". La imagen dice SIETE mil quinientos. Mil pesos de
+diferencia en una cifra escrita en letras, que es justamente el formato que
+uno tiende a dar por seguro porque no son digitos sueltos. Propuesta: que
+el §8.11 diga expresamente que la regla vale tambien —y sobre todo— para las
+cifras en letras, porque ahi el OCR falla de un modo que produce una palabra
+plausible en vez de un digito roto, y una palabra plausible no se marca sola.
+
+
+§R · RECUENTO
+-------------
+
+anio: 1934
+ediciones_desde: 1513
+ediciones_hasta: 1563
+ediciones_presentes: 51
+ediciones_ausentes: 0
+hojas_presentes: 2009
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 0
+periodicidad: semanal-viernes
+dias_salida_sin_edicion: 1
+ediciones_dobles: 0
+techo_ppi: 150
+ocr_en_sesion: no
+capa_previa: extraida-en-sesion
+versiones: 1
+actos_departamento: 24
+actos_dominio: 3
+actos_hacienda_municipal: 3
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 11
+subtotales_recalculados: 1
+resumenes_tesoreria: 11
+cadena_saldos: un-tramo-por-aperturas
+columnas_cotejadas: 22
+hojas_miradas: 19
+avisos_repetidos_departamento: 4
+falsos_positivos_anillo1: 11
+limites_declarados: 7
+estado: COMPLETO
+
+
+Claves de lectura no obligatorias, agregadas por este informe y
+marcadas como tales para que el cruce pueda ignorarlas:
+
+x_hojas_anillo1: 129
+x_ediciones_con_anillo1: 38
+x_hojas_rescatadas_laxa_espaciada: 3
+x_hojas_rescatadas_difusa: 1
+x_terminos_anillo2_con_acierto: 87
+x_terminos_anillo2_sin_acierto: 73
+x_actores_config: 554
+x_actores_con_nombre_completo: 80
+x_apellidos_con_acierto: 216
+x_hojas_en_blanco: 0
+x_cabeceras_pag_resueltas: 437
+x_cabeceras_pag_denominador: 1958
+x_contradicciones_declaradas: 7
+x_config_release_atrasado: si
+x_cotejo_anillo2_libro_corrido: no
+
+
+==============================================================================
+CONFIG ACTUALIZADO
+==============================================================================
+
+No se entrega un lee_config.json nuevo en este informe: se entregan los
+AGREGADOS y los movimientos, para que el usuario los aplique sobre el config
+vigente del proyecto (version 2026-09-22, hasta 1932). La sesion no inventa el
+contenido del vigente.
+
+AGREGADOS AL ANILLO 2, con origen 1934:
+
+  "abra de la sierra"   forma del original; el config trae
+                        "abra la sierra" sin la preposicion y por eso
+                        no acerto. Se conservan las dos.
+  "pueblo"              paraje del circuito 5. ADVERTENCIA: va a
+                        producir ruido en todo el corpus; evaluarlo en
+                        el proximo barrido antes de dejarlo fijo.
+  "sierra"              paraje del circuito 5, impreso "Sierra -la-".
+  "quitipe"             forma con que 1555 h17 imprime Quitilipe.
+  "monte quitilipe"     forma completa de 1551 h18 y 1558 h47.
+  "taco huacho"         quebrada que separa El Angosto de Miraflores.
+  "miraflores"          finca del departamento, A.19.
+  "el angosto"          finca y partido del departamento, A.19.
+  "la angostura"        finca de Daniel Linares, A.19.
+  "san jorge"           finca del departamento, A.20.
+  "san felix"           finca del departamento, A.20.
+  "puesto despensa"     A.18.
+  "la despensa"         ya esta; se confirma su uso como estancia.
+  "el desmonte"         punta de la obra de A.2. ADVERTENCIA: El
+                        Desmonte es tambien escuela de tercera
+                        categoria en otro departamento (1534 h7):
+                        marcarlo como ambiguo.
+  "campo santo"         destino de la obra de A.1. ADVERTENCIA: es
+                        departamento propio; entra solo como nombre de
+                        obra y hay que tratarlo como anillo 3.
+
+AGREGADOS A ACTORES, con origen 1934:
+
+  ["antonio", "rojas", 1934]              subcomisario de Lesser
+  ["ramon", "brachieri", 1934]            ya esta con 1930; se agrega
+                                          la reaparicion
+  ["augusto", "regis", 1934]              ya esta con 1909/1929/1932
+  ["fabian", "alonso", 1934]              ya esta con 1932
+  ["humberto", "lizondo", 1934]           NUEVO
+  ["laura", "araoz de murua", 1934]       NUEVO
+  ["arturo", "posse", 1934]               NUEVO
+  ["angel rudecindo", "alancay", 1934]    NUEVO
+  ["eusebio", "palma", 1934]              NUEVO
+  ["jose atilio", "bruzzo", 1934]         CORRECCION DE ORIGEN: el
+                                          config lo trae con origen
+                                          1946 y edicion 2675; su
+                                          primera aparicion conocida
+                                          pasa a ser 1934
+  ["atilio", "bruzzo", 1934]              proveedor de postes; NO se
+                                          unifica con el anterior
+  ["manlio", "bruzzo", 1934]              sobrestante; NO se unifica
+  ["eulalia", "murua de cornejo", 1934]   NUEVA
+  ["alberto", "murua", 1934]              ya esta con 1932
+  ["adolfo", "murua", 1934]               ya esta con 1932
+  ["mercedes", "arancibia", 1934]         NUEVA
+  ["patricio", "arias", 1934]             NUEVO
+  ["carlos", "de los rios", 1934]         contratista de A.2
+  ["jose alfonso", "peralta", 1934]       presidente del Directorio de
+                                          Vialidad
+  ["victor", "antonelli", 1934]           jefe de seccion de Vialidad
+  ["juan b.", "vila", 1934]               sobrestante
+  ["luis p.", "vilca", 1934]              sobrestante
+  ["pedro luis", "vilca", 1934]           misma persona probable; NO
+                                          se unifica (§15.3)
+  ["jose", "olmos", 1934]                 capataz
+  ["felix", "herrera", 1934]              capataz
+  ["victor", "bravo", 1934]               capataz
+  ["castulo", "bravo", 1934]              capataz
+  ["domingo", "gomez", 1934]              capataz
+  ["juan", "fernandez", 1934]             capataz
+  ["andres g.", "apaza", 1934]            transportista. ANOTAR: no
+                                          confundir con Nacianceno y
+                                          Napoleon Apaza (Guachipas,
+                                          Sevilar)
+  ["arturo", "aramayo", 1934]             ripio para Vaqueros-Lesser
+  ["vicente", "aramayo", 1934]            capataz
+  ["manuel", "aramayo", 1934]             carpintero
+  ["j.", "arias uriburu", 1934]           Vice-Gobernador en ejercicio
+  ["a.", "garcia pinto (hijo)", 1934]     ministro de Hacienda
+  ["g.", "ojeda", 1934]                   ya esta con 1930 y 1932
+  ["nestor", "gonzalez", 1934]            comerciante, A.21
+  ["cecilio", "chocobar", 1934]           A.21
+  ["m.", "figueroa echazu", 1934]         martillero, A.19
+  ["mario", "figueroa echazu", 1934]      martillero, A.19
+
+MOVIMIENTOS PROPUESTOS, no ejecutados por la sesion:
+
+  • SACAR del anillo 2 los diez terminos que son apellido y que ya
+    estan en actores: apaza, aramayo, castellanos, chaile, condori,
+    isasmendi, murua, nogales, toconas y "burgos de yugra". En 1934
+    produjeron 205 aciertos de hoja y practicamente ninguno fue
+    vecindad territorial.
+  
+  • NORMALIZAR el campo origen de las 42 entradas que llevan numero de
+    edicion de 1946 en lugar de ano, segun §15.6. Empezando por
+    "jose atilio bruzzo", que este barrido movio a 1934.
+  
+  • AGREGAR a falsos_positivos, como contextos inequivocos:
+    "calderas de vapor", "inspeccion de calderas", "calera la",
+    "arroyo caleria". NO se agregan "cuadrilla" ni "calavera" ni
+    "calderon", que ya estan juzgados y que si entraran al config
+    marcarian fp_conocido a menciones reales (§12).
+  
+  • SUBIR AL RELEASE EL CONFIG VIGENTE. El asset de 1934 cierra en
+    1915 con 180 actores y 70 terminos de anillo 2, contra 554 y 160
+    del proyecto. Es la cuarta vez seguida que un barrido lo declara.
+
+
+==============================================================================
+Fin del informe. 51 ediciones, 2009 hojas, 129 hojas con acierto del
+anillo 1, 24 actos del departamento, 19 hojas miradas en la imagen.
+==============================================================================

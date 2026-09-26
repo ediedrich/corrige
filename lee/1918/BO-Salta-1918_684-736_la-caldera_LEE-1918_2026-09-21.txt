@@ -1,0 +1,1971 @@
+BOLETIN OFICIAL DE SALTA - ANO 1918 - EDICIONES N 684 A 736
+===========================================================
+
+Barrido documental forense sobre La Caldera y su vecindad. Rubrica LEE v15
+(20/09/2026), modo hibrido por ano. Informe armado en sesion el 21/09/2026.
+
+PARRAFO 0 - ADVERTENCIA PRELIMINAR
+----------------------------------
+
+ESTADO: COMPLETO, CON CUATRO LIMITES DECLARADOS. Este es el archivo del cuarto
+turno y reemplaza a los tres anteriores. Estan cerrados el parrafo A (28
+fichas, todas miradas en la imagen), el parrafo B en sus cuatro bloques, la
+autoridad, los cuadros publicados con su recalculo, la cadena de saldos, las
+repeticiones, los planos, el indice, el parrafo F y el config actualizado. No
+queda trabajo que esta sesion pueda hacer y no haya hecho. Los cuatro limites,
+que son cosas que ni esta sesion ni ninguna puede hacer sin los insumos que no
+llegaron, estan en E.10.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO. Si llegaran el .tsv, las .jpg y el log de
+lee_auto.py, este informe podria agregar la confianza por hoja y con ella la
+lista de hojas "a ojos", la deduplicacion por md5 y por dhash, la medicion de
+tinta y una segunda version del texto con que desempatar digitos. El parrafo A
+no cambiaria: sus 28 fichas salen de la imagen, que es la unica prueba que la
+rubrica acepta, y las dos hojas que la capa escondia (el apellido Caceres y el
+toponimo Yacones) aparecieron igual, por la via de mirar. Lo que si cambiaria
+es el costo: con el .tsv, buena parte de las 71 imagenes que hubo que mirar se
+habrian elegido solas.
+
+INSUMOS. De lee_auto.py no llego ninguna salida. El listado de assets del
+Release 1918 de github.com/ediedrich/boletines-salta, leido sin token por la
+pagina releases/expanded_assets/1918, trae 54 archivos: los 53 PDF de las
+ediciones 684 a 736 y un lee_config.json. No hay pre-informe, ni
+resultados_1918.csv, ni decretos_1918.csv, ni log.txt, ni recortes.zip, ni el
+zip de los .txt de lee_trabajo, ni las .jpg por hoja. Rige por lo tanto el
+modo del parrafo 2.1: la sesion extrajo la capa de texto ella misma con
+PyMuPDF.
+
+CONFIG. El lee_config.json publicado como asset del Release 1918 esta
+atrasado: trae 171 actores, el ultimo de 1915. El que esta subido al proyecto
+es posterior y es el que se uso: 234 actores (45 de 1909, 41 de 1910, 38 de
+1917, 24 de 1911, 16 de 1916, 11 de 1912, 9 de 1915, 8 de 1908 y 42 de 1946
+con la edicion por origen), 84 terminos de anillo 2, 51 numeros y 20 falsos
+positivos. La diferencia se declara aqui porque decide la red de busqueda
+entera. El anillo 1 es el mismo en los dos: caldera y calderilla.
+
+ENTORNO VERIFICADO EN ESTA SESION. nproc = 1. PyMuPDF no venia instalado y se
+instalo desde pypi. tesseract 5.3.4 esta presente pero --list-langs devuelve
+solo eng y osd: NO hay spa, de modo que no se OCRizo nada en sesion y no se
+aplican ni el parrafo 3 ni el parrafo 16. Todo lo que se leyo con los ojos se
+leyo mirando la imagen rasterizada del PDF, nunca OCRizandola. Alcanzables
+github.com, release-assets.githubusercontent.com y pypi; no alcanzable el
+sitio del Boletin.
+
+IMAGENES. Los 53 PDF se bajaron del Release en una sola llamada (30 MB). Cada
+hoja trae dos imagenes incrustadas en gris: una util de 150 ppi y una copia a
+la mitad, de 75 ppi. El techo de resolucion del ano es por lo tanto 150 ppi,
+la mitad del de 1908 a 1912 (300 a 500 ppi). La unica excepcion es la hoja de
+la edicion 703, que no es una hoja del Boletin. Aun asi el cuerpo de texto de
+1918 es grande y una vista de pagina entera a 105 dpi ya se lee; las cifras de
+tabla se miran mas de cerca.
+
+COTEJO DE LOS PDF. No hay EXTRAIDO.json contra el cual cotejar bytes y hojas,
+de modo que el cotejo se hizo contra la cadena de folios impresos (parrafo
+2.5bis), que en 1918 es una paginacion anual corrida en la forma "Pag. N".
+Resultado en el parrafo 1 y en E.2.
+
+LO QUE FALTA Y ES TRABAJO QUE ESTA SESION PUEDE HACER: nada. La lista de
+pendientes esta vacia. Se cerraron tambien los ocho puntos que las fichas del
+parrafo A habian dejado abiertos en el tercer turno, salvo los seis actos
+citados y no acompanados de E.2, que no son pendientes sino resultados: cuatro
+de ellos se buscaron por fecha y por materia y no estan en el corpus, y uno de
+esos cuatro cae justamente en la edicion 703, que es la que falta.
+
+LO QUE NO PUEDE HACER NADIE EN ESTA SESION (limites), desarrollado en E.10:
+sin .tsv no hay confianza por hoja ni lista de hojas "a ojos"; sin .jpg no hay
+md5, ni dhash, ni medicion de tinta; sin OCR propio no hay segunda version con
+que desempatar, y todo resultado se etiqueta prev; sin spa no hay OCR en
+sesion.
+
+PARRAFO 1 - CORPUS REVISADO
+---------------------------
+
+53 archivos PDF, 534 hojas presentes. La cadena de folios impresos cierra el
+ano en la pagina 587, de modo que faltan 53 hojas, repartidas como dice E.2.
+Las fechas entre corchetes son las que la capa de texto no traia y se leyeron
+en la imagen de la tapa. La columna "esp" es el porcentaje de palabras de una
+sola letra en la capa de esa edicion: es la medida de la letra espaciada que
+se explica en el parrafo 2, y en este ano hace las veces de la confianza por
+hoja que el .tsv habria dado.
+
+    ED   FECHA DE TAPA              HOJAS  FOLIO      esp  CARACT.
+    684  Enero 4                       3  1-3         51%    9995
+    685  Enero 11                      4  5-8         25%   13643
+    686  Enero 18                      4  -           33%   13901
+    687  Enero 25                      4  13-16       47%   11790
+    688  Febrero 1.o                   3  17-19       24%    9108
+    689  Febrero 8                     4  -           38%   15220
+    690  Febrero 15                    6  -           18%   14476
+    691  Febrero 22                   11  -           14%   34546
+    692  Marzo 1.o                    22  -            9%   58910
+    693  Marzo 8                       6  -           10%   21679
+    694  Marzo 15                     11  -           18%   36168
+    695  Marzo 22                     19  83-101      31%   66590
+    696  [Marzo 29]                    8  -           16%   26839
+    697  [Abril 6]                     7  -           26%   20041
+    698  Abril 12                     12  119-130     20%   44994
+    699  Abril 19                      7  -           30%   24876
+    700  [Abril 26]                    7  -           12%   25554
+    701  [Mayo 3]                     10  -           23%   32397
+    702  Mayo 10                       9  -           17%   28551
+    703  (ausente)                     1  -            0%      55
+    704  Mayo 24                      19  -           10%   62524
+    705  Mayo 31                      18  203-220     10%   63674
+    706  Junio 7                      22  -            9%   78287
+    707  Junio 14                     17  245-261      8%   57332
+    708  [Junio 21]                    9  263-271     11%   29118
+    709  [Junio 29]                   25  -           10%   88373
+    710  Julio 5                      10  -           30%   34274
+    711  Julio 12                      7  309-315     12%   21496
+    712  [Julio 19]                   13  -           13%   41043
+    713  Julio 26                     11  -           15%   33602
+    714  Agosto 2                      1  -           17%    3521
+    715  [Agosto 9]                    5  -           22%   12906
+    716  Agosto 16                     4  -            9%   10756
+    717  Agosto 23                     9  -           10%   31071
+    718  Agosto 30                     8  369-376     11%   25811
+    719  Septiembre 6                 12  377-388     21%   45720
+    720  Septiembre 13                 5  -           48%   15218
+    721  Septiembre 20                 9  -           11%   31804
+    722  Septiembre 27                 7  405-411     12%   21298
+    723  [Octubre 4]                   6  413-418     20%   18426
+    724  Octubre 11                    8  -           13%   22967
+    725  Octubre 18                    5  -           35%   15976
+    726  Octubre 25                    6  -           18%   19246
+    727  [Noviembre 2]                 9  -           11%   28583
+    728  [Noviembre 8]                 8  -           14%   26833
+    729  Noviembre 15                 12  -           19%   36381
+    730  Noviembre 22                 25  471-495     20%   90359
+    731  Noviembre 29                 17  -            8%   46459
+    732  Diciembre 6                  15  515-529     53%   54230
+    733  Diciembre 13                 19  -           10%   60340
+    734  Diciembre 20                  5  551-555     18%   15018
+    735  Diciembre 27                  5  557-561     12%   15219
+    736  [Diciembre 31] EXTRAORDINARIO   25  563-587     13%   64066
+
+La edicion 703 (que por la serie de viernes corresponde al 17 de mayo de 1918)
+no esta: el archivo 703.pdf del Release es una sola hoja con una sola linea,
+"ESTE BOLETIN NO SE ENCUENTRO EN NUESTRA BASE DE DATOS." [sic el acento], y
+sus dos imagenes son de 283 y 300 ppi, ajenas al resto del ano. No es una
+edicion corta: es una edicion ausente del origen, y asi se cuenta.
+
+TAPAS. El formato es "Ano X - Salta, <fecha> de 1918 - Num. n", sin
+declaracion de paginas y sin la formula de dias de salida que traian las tapas
+de 1911 y 1912 ("Aparece Miercoles y Sabados"). El ano editorial es X en las
+52 tapas legibles y no cambia dentro del ano. Desde la edicion 729 la tapa
+incorpora, debajo del titulo, la leyenda INTERVENCION NACIONAL PRESIDIDA POR
+EL Dr. MANUEL CARLES, y "DIRECCION Y ADMINISTRACION" pasa a "REDACCION Y
+ADMINISTRACION". La 736 se titula BOLETIN OFICIAL EXTRAORDINARIO. La tapa de
+la 715 lleva ademas, en la columna derecha, PUBLICACION OFICIAL - AL PUEBLO DE
+LA PROVINCIA DE SALTA - EL JEFE DE LA GUARNICION.
+
+CALENDARIO. El Boletin sale una vez por semana, los viernes, sin que la tapa
+lo declare. Los 52 viernes de 1918 tienen edicion, mas la extraordinaria del
+martes 31 de diciembre: no hay ni un solo dia de salida sin edicion, y no hubo
+ediciones dobles. Tres tapas, leidas todas en la imagen, se fechan el sabado
+siguiente al viernes que les tocaba: 697 (Abril 6 por Abril 5), 709 (Junio 29
+por Junio 28) y 727 (Noviembre 2 por Noviembre 1). Se declara y no se
+concilia. "Feriado", "asueto" y "adhesion" no explican nada aqui, porque no
+falta ningun viernes.
+
+PARRAFO 2 - CRITERIO DE BUSQUEDA
+--------------------------------
+
+VERSIONES. Hay una sola: la capa previa de los PDF, extraida en sesion con
+PyMuPDF (534 hojas, 1.790.470 caracteres). No hay OCR propio, de modo que todo
+resultado se etiqueta prev y no hubo desempate posible entre versiones: el
+unico desempate es la imagen.
+
+MARCA DE CORTE. U+0002 no aparece ni una vez en las 534 hojas, como en 1908 a
+1912. El guion blando U+00AD aparece 9.755 veces y es, otra vez, la unica
+marca del corte de renglon: no se imprime guion visible. La union lo quita
+JUNTO CON el salto de renglon y los espacios que lo rodean, y solo despues
+quita los sueltos, segun la correccion del parrafo 2.3 de la v15. Tambien se
+une el corte con guion visible y el corte con hasta dos signos de puntuacion
+intercalados.
+
+LETRA ESPACIADA: EL MODO DE FALLA PROPIO DE 1918. La capa previa de este ano
+separa con espacios las letras de palabras enteras, en bloques completos y
+sobre todo en los titulos, las cabeceras y las columnas apretadas. De los
+343.822 tokens del ano, 65.354 son de una sola letra: el 19 por ciento. Hay
+296 hojas con mas del 10 por ciento de tokens de una letra y 46 con mas del 30
+por ciento; la peor es 732 hoja 10, con el 81 por ciento. En una hoja asi, "c
+a l d e r a" no es "caldera" para ninguna pasada literal, exactamente como
+"Cal-<salto>dera" no lo era en 1912. El control que se aplico es de dos partes
+y esta descripto en el parrafo F.
+
+PASADAS. Las cuatro de la rubrica, corridas sobre el texto unido y normalizado
+(NFD sin diacriticos, minusculas), y ademas sobre el texto repegado que
+deshace la letra espaciada:
+
+  Literal cald ................ 32 hojas, 52 aciertos
+  Literal sobre repegado ...... las mismas 32 hojas: la letra espaciada
+                               no escondio ninguna mencion del anillo 1
+  Literal sobre el texto con
+  TODOS los espacios quitados . 71 hojas; las 39 hojas de mas son
+                               fronteras de palabra (fiscal de, local
+                               del, vocal de, radical departamento) y
+                               ninguna es una mencion
+  Laxa (con clase de espacios). 2 formas ajenas a caldera: "caldero"
+                               (704 h15, 5 veces) y "callemo" (708 h8 y
+                               727 h8), mas las coincidencias exactas
+  Difusa >= 0,78 .............. calderay (0,93), calera (0,92), caleras
+                               (0,86), calda (0,83), calilla (0,82),
+                               calavera (0,80), calderon (0,80),
+                               cadillal (0,78), caldillo (0,78)
+  Difusa ampliada 0,70-0,78 ... 47 formas, listadas en el parrafo 12
+
+La difusa vuelve a pagar: "calderay" no es una palabra sino "Caldera y", en la
+hoja 7 de la edicion 708, donde la capa pego las dos palabras. Esa hoja
+tambien da acierto literal, de modo que en 1918 la difusa no rescata ninguna
+hoja que las otras pasadas pierdan; se declara asi porque en 1909, 1911 y 1912
+si lo hacia.
+
+NINGUNA PASADA DEVOLVIO CERO, de modo que no hizo falta la prueba del parrafo
+5.2 de la v15 sobre pasadas sanas. La laxa se escribio con la clase de
+espacios en blanco y no con un espacio literal.
+
+ANILLO 2. Los 84 terminos del config. Dieron acierto 43 y no dieron acierto
+41. El reparto y los contextos van en el parrafo B, y estan pendientes de
+lectura uno por uno.
+
+ACTORES. Los 234 del config, buscados sobre el texto sin puntuacion (parrafo
+5.1). Devuelven acierto con nombre y apellido 50 de ellos. Los apellidos
+sueltos dan acierto en 108 formas y ninguno en otras 69. Queda pendiente el
+agrupamiento por contexto y la lista de los actores que la busqueda no
+devuelve ni en su propio acto, que ya tiene por lo menos un caso seguro: el
+juez de paz que firma el edicto de 724 hoja 7 como "C. Caceres" no aparece por
+"caceres" en ninguna hoja del ano, porque la capa lo imprime "cacrres".
+
+NUMEROS. A diferencia de 1908 a 1912, en 1918 los actos SI llevan numero: la
+capa trae 332 referencias a un decreto numerado, 30 a una ley y 27 a una
+resolucion. De los 51 numeros arrastrados del config dan coincidencia de cifra
+siete (1668, 1914, 1922, 2000, 1056, 1101 y 1100); ninguno se juzgo todavia.
+La regla 15 del parrafo 8, fecha contra numeracion sobre los vecinos mas o
+menos 3, SI se aplica este ano y esta pendiente.
+
+REEMPLAZO. "en reemplazo de" aparece en 32 hojas y "en su reemplazo" en 16.
+Las otras seis formulas del config no aparecen.
+
+COTEJO SUMARIO / CUERPO: NO APLICABLE. Las ediciones de 1918 no traen sumario
+con puntos guia; el cuerpo arranca en la propia tapa, debajo del titulo.
+Declarar "cero discrepancias" seria declarar que no se controlo nada.
+
+COLUMNA PERDIDA. La maqueta de 1918 es de dos columnas, no de tres: los x0 de
+las palabras se agrupan en ~30-70 pt y ~240-270 pt sobre paginas de ~485-490
+pt. Hasta aqui se cotejo contra la imagen una hoja entera, la 7 de la edicion
+730, y su capa respeta el orden de las columnas sin trasponer renglones. El
+cotejo columna por columna del resto se hace junto con la transcripcion del
+parrafo A y todavia no esta hecho: por eso NO se afirma aqui que no haya
+columna perdida en el ano.
+
+PARRAFO A - MENCIONES EXPLICITAS
+--------------------------------
+
+EDICION 689, HOJA 2
+  FUENTE: Edicion N 689, Salta, Febrero 8 de 1918, hoja 2, columnas 1 y 2.
+  FICHA: Decreto N.o 1498, Salta, Enero 31 de 1918. Nombramiento de Comisarios
+    y Sub-Comisarios de Policia de la Campana. Al departamento de Caldera se
+    nombra Comisario a D. Eustaquio Murua. Firma CORNEJO, refrenda Rafael M.
+    Zuviria, es copia Francisco J. Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, recortes por columna entera mas 6
+    pt de margen: columna 1 en dos bandas (la del nombramiento y la del
+    encabezado) y columna 2 en dos mitades. Nada de esta ficha sale de la capa
+    previa.
+  TEXTO:
+  N.o 1498
+  Siendo oportuno designar las personas que han de desempenar en el
+  corriente ano las funciones de Comisarios y Sub Comisarios de
+  Policia de la Campana
+     El Gobernador de la Provincia
+     DECRETA:
+  Art. 1o-Nombranse Comisarios y Sub-Comisarios de Policia de los
+  Departamentos y Distritos que a continuacion se expresan a los
+  siguientes Senores:
+     COMISARIOS.
+  Departamento de Anta, 1a Seccion, a D. Abraham Diez Gomez.-Dpto.
+  de Anta, 2a Seccion, a D. Jose A. Orellana Garcia.-Dpto. de
+  Cachi, a D. Napoleon Wayar.-Dpto. de Cafayate, a D. Salustiano
+  Rodriguez.-Dpto. de Caldera, a D. Eustaquio Murua.-Dpto. de
+  Campo Santo, a D. Pedro Perez del Busto.-Dpto. de Candelaria, a
+  D. Ramon Brachieri.-[sigue la nomina de los demas departamentos]
+     [columna 2]
+  Art. 2o-Los Comisarios nombrados elevaran al Ministerio de
+  Gobierno, por intermedio de la Jefatura de Policia, las propuestas
+  para el nombramiento de Comisarios Auxiliares.
+  Art. 3o-Apruebase la distribucion hecha por la Jefatura de Policia
+  del personal fijado en el Capitulo 1o, Inciso 10, Item 1o del
+  Presupuesto vigente.
+  Art. 4.o - Comuniquese, publiquese e insertese en el R. Oficial.
+     Salta, Enero 31 de 1918
+     CORNEJO.
+     RAFAEL M. ZUVIRIA
+  Es copia: -Francisco J. Lopez
+
+  NOTA DE LECTURA: El encabezado de la lista estaba en la misma columna, mas
+    arriba, y hubo que mirarlo aparte: sin el, la linea "Dpto. de Caldera, a
+    D. Eustaquio Murua" no se puede fichar, porque no dice de que es la nomina
+    (regla 4.11). La lista de SUB-COMISARIOS, que sigue en la columna 2, no
+    incluye ningun distrito del departamento: los auxiliares de Caldera se
+    nombran por separado en el decreto 1.564 de marzo, edicion 694. La fecha
+    del decreto, Enero 31, es anterior en ocho dias a la edicion que lo
+    publica.
+
+EDICION 693, HOJA 3
+  FUENTE: Edicion N 693, Salta, Marzo 8 de 1918, hoja 3, columnas 1 y 2.
+  FICHA: Decreto N.o 1.557 en acuerdo de Ministros, Salta, Marzo 4 de 1918.
+    Reorganiza las comunas de la Provincia y convierte en Municipalidades las
+    Comisiones Municipales de catorce departamentos y distritos con renta
+    superior a $ 5.000, entre ellos Caldera, a partir del 1.o de Julio.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: hoja 1 columna 1, banda del
+    encabezado del acto; hoja 3 columna 1, banda del considerando, y hoja 3
+    columna 2, banda de los articulos 6 a 8. La fecha, Marzo 4, no esta al pie
+    del acto: se leyo en la imagen del decreto N.o 50 (704 h7), que lo cita
+    con numero y fecha, y asi se declara.
+  TEXTO:
+     ACUERDO DE MINISTROS
+     N.o 1.557
+  Siendo conveniente la reorganizacion completa de las diversas
+  comunas de la Provincia, de acuerdo con la Ley Organica de
+  Municipalidades vigente, y mientras se sancione la nueva Ley
+  Organica que se proyecta; y
+     CONSIDERANDO:
+     [hoja 3, columna 1]
+  Que por la renta recaudada el ano proximo pasado, esta
+  suficientemente constatado que los departamentos y distritos de
+  Rosario de la Frontera, Rosario de Lerma, Cerrillos, Campo Santo,
+  Metan, La Candelaria, Caldera, Chicoana, Oran, La Vina, Guemes,
+  Galpon, La Merced y Embarcacion, poseen una renta superior al
+  minimun de $ 5.000 establecido no existiendo, por otra parte, sino
+  la Capital como unico centro urbano con mas de 5.000 habitantes;
+     El Gobernador de la Provincia
+     en acuerdo de Ministros
+     DECRETA:
+  Art. 1.o Desde el 1.o de Julio proximo los departamentos y
+  distritos arriba nombrados, que estan actualmente a [sigue]
+     [columna 2]
+  Art. 6.o-La inscripcion, asi como todos los actos preparatorios
+  para la eleccion de los miembros de cada Municipalidad, y la
+  eleccion misma, seran presididas y dirigidas por las actuales
+  Comisiones Municipales de acuerdo con las disposiciones de la Ley
+  Organica.
+  Art. 7.o-Instaladas las Municipalidades procederan al sorteo de sus
+  miembros para los efectos de la renovacion ordenada por el art. 173
+  de la Constitucion de la Provincia.
+  Art. 8.o-Dese cuenta oportunamente de este Decreto a la Honorable
+  Legislatura.
+
+  NOTA DE LECTURA: El acto empieza en la tapa de la edicion, sigue en la hoja
+    2 y llega a la 3: por eso el numero quedaba lejos de la mencion. Es el
+    decreto que la edicion 701 deja parcialmente sin efecto para Caldera el 24
+    de abril, y que el decreto N.o 50 del 21 de mayo anula entero. La columna
+    2 de la hoja 3 termina en el articulo 8 sin fecha ni firma a la vista, y
+    la hoja 4 arranca con otro acto: se declara y no se completa.
+
+EDICION 694, HOJA 2
+  FUENTE: Edicion N 694, Salta, Marzo 15 de 1918, hojas 2 (columna 2) y 3
+    (columna 1).
+  FICHA: Decreto N.o 1.564, Salta, Marzo 7 de 1918. Nombra los Comisarios
+    Auxiliares de Policia del departamento de La Caldera para el corriente
+    ano, a propuesta del Comisario departamental por intermedio de la Jefatura
+    de Policia. Firma CORNEJO, refrenda Rafael M. Zuviria, es copia Francisco
+    J. Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: hoja 2 columna 2, banda del
+    decreto, y hoja 3 columna 1, banda de la continuacion y el cierre. El acto
+    cruza de hoja y las dos mitades empalman sin renglon repetido: la hoja 2
+    termina en "del de Vaqueros a" y la hoja 3 arranca en "D. Nolasco
+    Echenique".
+  TEXTO:
+  N.o 1.564
+  De acuerdo con las propuestas elevadas por el Comisario del
+  Departamento de la Caldera, por intermedio de la Jefatura de
+  Policia, para la designacion de las personas que han de desempenar
+  en el corriente ano las funciones de Comisarios auxiliares
+     El Gobernador de la Provincia
+     DECRETA:
+  Art. 1o Nombranse Comisario Auxiliares de Policia, del mencionado
+  Departamento a las siguientes personas: Comisario Suplente del
+  Pueblo a D. Alejandro Ramos; del Partido de Mojotoro a D. Victor
+  Masclef; del de La Calderilla a D. Genaro Molina; del de Vaqueros a
+     [hoja 3, columna 1]
+  D. Nolasco Echenique; del de Potrero de Gallinato a D. Jose
+  Nogales; del de Lesser a D. Pedro Vale; del de Yacones a D.
+  Victorino Tolaba; del de Potrero de Castillo a D. C. Zacarias
+  Maidana; del de Potrero de Valencia a D. Venancio Ruiloba; del de
+  La Despensa a D. Francisco Isasmendi; de los de Penones y Chalchami
+  a D. Liborio Guerrero; del de Los Porongos a D. Pablo Paredes; de
+  los de Los Sauces y Campo Alegre a D. Francisco Mercado y de los de
+  San Alejo y Santa Rufina a D. Eustaquio Sarapura.
+  Art. 2o-Comuniquese, publiquese e insertese en el Registro Oficial.
+     Salta, Marzo 7 de 1918.
+     CORNEJO
+     RAFAEL M. ZUVIRIA
+  Es copia: Francisco J. Lopez
+
+  NOTA DE LECTURA: Es el acto mas denso del ano en toponimia del departamento:
+    trece partidos en una sola enumeracion. Dos formas que el config no
+    encuentra: "Yacones", que la capa previa pierde del todo (el anillo 2 lo
+    da sin acierto en las 534 hojas y aqui esta impreso), y "Chalchami", una
+    forma mas del paraje que otros anos se imprime Chalchanio, Chalcanio o
+    Chalchamo. Cinco de los nombrados estan en el config como actores de anos
+    anteriores: Genaro Molina (1909), Jose Nogales (1917), Zacarias Maidana
+    (1909), Liborio Guerrero (1909) y Francisco Mercado (1946, edicion 2465).
+
+EDICION 701, HOJA 2
+  FUENTE: Edicion N 701, Salta, Mayo 3 de 1918, hoja 2 (Pag. 148), columnas 1
+    y 2.
+  FICHA: Decreto N.o 1.660 en acuerdo de Ministros. Deja sin efecto el decreto
+    N 1.557 en cuanto convierte la Comision Municipal del departamento de la
+    Caldera en Municipalidad electiva, por haberse computado como renta un
+    saldo del ano anterior. Firma CORNEJO, refrendan Rafael M. Zuviria y
+    Manuel R. Alvarado, es copia Francisco J. Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: columna 1 entera desde el
+    encabezado del acto y columna 2 desde su arranque, mas un acercamiento a
+    600 dpi sobre la linea de la fecha. El folio "Pag. 148" se leyo en la
+    imagen y da base 147 para esta edicion.
+  TEXTO:
+  N.o 1.660
+  Habiendose incluido entre las Comisiones Municipales, convertidas
+  en Municipalidades por decreto N 1.557, la del Departamento de la
+  Caldera, cuya renta no alcanza a la suma de $ 5.000, pues en su
+  Calculo de recursos correspondiente al ano proximo pasado, que
+  haciendo a la suma de $ 6.471.44, se encuentra agregada la suma de
+  $ 3.083.94, como saldo del ano anterior, lo que ha motivado un
+  error de apreciacion en los datos que han servido de base para
+  dictar el decreto aludido, siendo en realidad la renta anual de
+  dicha Comision Municipal de $ 3.387.50.
+     Y CONSIDERANDO:
+  Que por los fundamentos del decreto ya citado y las disposiciones
+  legales pertinentes, el departamento de la Caldera no esta en
+  condiciones de ser administrado por una Municipalidad electiva.
+     El Gobernador de la Provincia
+     en acuerdo de Ministros
+     DECRETA
+  Art. 1.o-Dejase sin efecto el decreto N 1.557, en cuanto convierte
+  a la Comision Municipal del departamento de la Caldera en
+  Municipalidad electiva.
+     [columna 2]
+  Art. 2.o-Comuniquese, publiquese e insertese en el R. Oficial.
+     Salta, Abril 24 de 1913 [sic]
+     CORNEJO
+     RAFAEL M. ZUVIRIA
+     MANUEL R. ALVARADO
+  Es copia: Francisco J. Lopez
+
+  NOTA DE LECTURA: Las tres cifras se recalcularon: 6.471,44 menos 3.083,94 da
+    3.387,50, que es la renta que el decreto declara real. El cuadro cierra.
+    El ano de la fecha se miro a 600 dpi y el ultimo signo se imprime como 3:
+    se transcribe 1913 y se declara que la unica lectura posible es 1918,
+    porque la edicion que lo publica es del 3 de mayo de 1918. Este decreto y
+    el de la edicion 693 son las dos mitades del mismo asunto; el numero 1.557
+    sale de la remision y no de una lectura del propio 693.
+
+EDICION 701, HOJA 7
+  FUENTE: Edicion N 701, Salta, Mayo 3 de 1918, hoja 7, columna 2.
+  FICHA: Decreto N.o 1.653, Salta, Abril 20 de 1918. Acuerda jubilacion
+    ordinaria a la Directora de la Escuela de la Caldera, senorita Juana
+    Luque, a razon de ciento cuatro pesos cincuenta centavos mensuales desde
+    el 1 de mayo. Firma CORNEJO, refrenda M. R. Alvarado, es copia Francisco
+    J. Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2 en dos bandas
+    empalmadas. El renglon "ciento cuatro pesos cincuenta centavos" se repite
+    en el empalme de los dos recortes y se transcribe una sola vez.
+  TEXTO:
+  N.o 1.653
+     Salta, Abril 20 de 1918
+  Vistas las precedentes diligencias de jubilacion ordinaria
+  solicitada por la Directora de la Escuela de la Caldera, Senorita
+  Juana Luque; atento lo informado por la Caja de Pensiones y
+  Jubilaciones y de conformidad con lo dictaminado por el senor
+  Fiscal General, que aconseja se acceda a lo solicitado, por haberse
+  llenado todos los requisitos exigidos por la ley respectiva.
+     El Gobernador de la Provincia
+     DECRETA:
+  Art. 1.o Acuerdase jubilacion ordinaria a la Directora de la
+  Escuela de la Caldera, senorita Juana Luque, debiendo liquidarse
+  aquella a razon de ciento cuatro pesos cincuenta centavos moneda
+  nacional mensuales, a partir desde el dia primero del entrante mes
+  de Mayo.
+  Art. 2.o Comuniquese publiquese, dese al Registro Oficial y vuelva
+  a la Caja de Pensiones y Jubilaciones para su cumplimiento, previa
+  reposicion de sellos.
+     CORNEJO
+     M. R. ALVARADO
+  Es copia-Francisco J. Lopez
+
+  NOTA DE LECTURA: El importe esta escrito con letras y no con cifras, de modo
+    que no hay digito dudoso. Juana Luque no figura en el config: es actor
+    nuevo de 1918. El decreto siguiente en la misma columna, N.o 1.655,
+    tambien del 20 de abril, abre con la misma formula y NO es del
+    departamento.
+
+EDICION 702, HOJA 5
+  FUENTE: Edicion N 702, Salta, Mayo 10 de 1918, hojas 5 (columna 2) y 6
+    (columna 1, Pag. 162).
+  FICHA: Decreto N.o 1697, Salta, Mayo 6 de 1918. Nombra Juez de Paz
+    Propietario y Suplente del departamento La Caldera, a propuesta en terna
+    de la H. Comision Municipal, a los senores Casimiro Caseres y Gervasio
+    Chalar. Firma CORNEJO, refrenda Rafael M. Zuviria, es copia Francisco J.
+    Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: hoja 5 columna 2, pie, y hoja 6
+    columna 1, cabeza. El acto cruza de hoja sin renglon repetido. El folio
+    "Pag. 162" de la hoja 6 se leyo en la imagen y da base 157 para la edicion
+    702.
+  TEXTO:
+  N.o 1697
+  De acuerdo con las ternas elevadas por la H. Comision Municipal del
+  Departamento La Caldera, para el nombramiento de Jueces de Paz.
+     [hoja 6, columna 1]
+     El Gobernador de la Provincia
+     DECRETA
+  Art. 1.o-Nombranse Jueces de Paz Propietarios y Suplentes del
+  mencionado Departamento, para el ejercicio del corriente ano a los
+  Srs. Casimiro Caseres y Gervasio Chalar, respectivamente.
+  Art. 2.o-Comuniquese publiquese e insertese en el R. O.
+     Salta, Mayo 6 de 1918
+     CORNEJO
+     RAFAEL M. ZUVIRIA
+  Es copia-: Francisco J. Lopez
+
+  NOTA DE LECTURA: Casimiro Caseres es el "C. Caceres, Juez de Paz" que firma
+    el edicto sucesorio de la edicion 724, cinco meses despues: el config
+    lleva las dos grafias, caceres (1909) y caseres (1910), y el ano usa las
+    dos. Gervasio Chalar se acerca a "chalan" del config (Gervasio Chalan,
+    1911) sin ser la misma grafia; no se unifican.
+
+EDICION 704, HOJA 2
+  FUENTE: Edicion N 704, Salta, Mayo 24 de 1918, hoja 2, columna 2.
+  FICHA: Decreto N.o 25 del Ministerio de Gobierno, Salta, Mayo 16 de 1918. El
+    Interventor Nacional acepta la renuncia de D. Eustaquio Murua al cargo de
+    Comisario de Policia del Departamento de Caldera. Firmado E. Gimenez
+    Zapiola y Olvaldo Rocha [sic]; es copia Pedro R. Mom, Oficial Mayor.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2, banda que va desde el
+    cierre del acto anterior hasta el "Es copia".
+  TEXTO:
+     MINISTERIO DE GOBIERNO
+     Decreto N.o 25
+     Salta, Mayo, 16 de 1918
+  Vista la precedente renuncia del cargo de Comisario de Policia del
+  Departamento de Caldera, presentada por D. Eustaquio Murua.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o Aceptase la renuncia presentada por D. Eustaquio Murua del
+  cargo de Comisario del Departamento de Caldera.
+  Art. 2.o- Comuniquese etc.
+     (Firmado) E. GIMENEZ ZAPIOLA
+     OLVALDO ROCHA [sic]
+  Es copia: Pedro R. Mom; Oficial Mayor
+
+  NOTA DE LECTURA: Cierra el nombramiento de la edicion 689: Murua fue
+    nombrado Comisario del departamento el 31 de enero y renuncia el 16 de
+    mayo, ya bajo la Intervencion. Dos cosas para E.9: la numeracion de los
+    decretos vuelve a empezar, porque este es el N.o 25 cuando en abril iban
+    por el 1.660; y el apellido del segundo firmante se imprime OLVALDO ROCHA
+    a pocos renglones de donde el acto anterior, en la misma columna, lo
+    imprime OSVALDO ROCHA.
+
+EDICION 704, HOJA 3
+  FUENTE: Edicion N 704, Salta, Mayo 24 de 1918, hojas 2 (columna 2) y 3
+    (columna 1).
+  FICHA: Decreto N.o 27, Salta, Mayo 16 de 1918. El Interventor Nacional
+    suspende a los Sub-comisarios Auxiliares ad-honorem y redistribuye los
+    oficiales de las Comisarias de campana: al departamento de Caldera, el
+    Tte. 1o Pedro Greni.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: hoja 2 columna 2, banda del
+    encabezado, y hoja 3 columna 1, banda de la enumeracion. LAS FIRMAS Y EL
+    CIERRE NO SE LEYERON: la enumeracion sigue varias columnas mas.
+  TEXTO:
+     Decreto N.o 27
+     Salta, Mayo 16 de 1918
+  De acuerdo con los propositos enunciados en el decreto de esta
+  Intervencion de fecha 11 de Mayo proximo pasado, y siendo
+  conveniente a los mismos fines la suspension de los Sub-comisarios
+  Auxiliares de Policia que prestan servicios ad-honorem, sin
+  perjuicio de adoptar mas adelante las medidas que aconseje el
+  Departamento de Policia para suplir o atender las necesidades que
+  puedan llenar esos Sub-comisarios auxiliares.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o Nombranse Jefe del Cuerpo de Vigilantes y Bomberos de la
+  Capital al Capitan D. Romulo Gimenez; Comisario de 1a Seccion de la
+  Capital, al Tte. 1o Juan J. Palacios; de Tablada,
+     [hoja 3, columna 1]
+  a Alberico Isola; del departamento de Caldera, al Tte. 1o Pedro
+  Greni; del departamento Campo Santo, al Tte. Jose Vila Melo; del
+  departamento Candelaria, al Capitan Carlos B. Martinez; [sigue]
+
+  NOTA DE LECTURA: Este decreto deja sin efecto, de hecho, los nombramientos
+    de Comisarios Auxiliares del departamento que habia hecho el decreto 1.564
+    de marzo: suspende a todos los auxiliares ad-honorem, que son precisamente
+    los trece de los partidos de La Caldera. El decreto citado, el de la
+    Intervencion del 11 de mayo, no se busco todavia. Dos dias despues el
+    decreto N.o 39 lo modifica: ver la ficha de la hoja 6.
+
+EDICION 704, HOJA 6
+  FUENTE: Edicion N 704, Salta, Mayo 24 de 1918, hojas 5 (columna 2) y 6
+    (columna 1).
+  FICHA: Decreto N.o 39, Salta, Mayo 18 de 1918. Modifica en parte la
+    distribucion de oficiales del decreto N.o 27: de Caldera, al Teniente
+    Horacio Hornstein.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: hoja 5 columna 2, banda del
+    encabezado, y hoja 6 columna 1, banda de la enumeracion. LAS FIRMAS NO SE
+    LEYERON.
+  TEXTO:
+     Decreto N.o 39
+     Salta, Mayo 18 de 1918
+  Siendo conveniente por razones de mejor servicio modificar en parte
+  la distribucion de los oficiales destinados a las Comisarias y
+  Sub-Comisarias de campana por decreto N.o 27 de fecha 16 del
+  corriente.
+     El Interventor Nacional
+     DECRETA
+  Art. 1.o Nombrase Comisario de Pichanal, al Teniente Justo F.
+  Galarreta;
+     [hoja 6, columna 1]
+  de Cachi, al Capitan Carlos B. Martinez; de Candelaria, al Teniente
+  Juan J. Blasco; de La Poma, al Teniente 1.o Pedro Greni; de
+  Caldera, al Teniente Horacio Hornstein; de Anta 1.a Seccion, al
+  Teniente Teofilo Fernandez Laviere; y Sub-comisarios de la Capital,
+  San Lorenzo, al Sub-teniente Desiderio Tenreiro Bravo; de
+  Candelaria (Jardin), al Sub-teniente Raul Jorcino, y de Rio Piedras
+  y Sauzalito (Distrito Pichanal), al Tenien[te ...] [sigue]
+
+  NOTA DE LECTURA: Dos dias, dos comisarios distintos para el departamento: el
+    16 de mayo Pedro Greni, el 18 Horacio Hornstein, y Greni pasa a La Poma.
+    No es una contradiccion sino una correccion declarada, porque el N.o 39
+    cita al N.o 27 y dice que lo modifica. El apellido se imprime aqui
+    Hornstein y en las ediciones 708, 733 y 735 Ornstein.
+
+EDICION 704, HOJA 11
+  FUENTE: Edicion N 704, Salta, Mayo 24 de 1918, hoja 11, columna 1.
+  FICHA: Decreto del Interventor Nacional que traslada personal de la
+    Receptoria de Rentas: Escolastico Aparicio, de Caldera a Campo Santo, y
+    Pedro Perez del Busto, de Campo Santo a Caldera.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, banda del articulo 1.
+    EL NUMERO, LA FECHA Y LAS FIRMAS DE ESTE DECRETO NO SE LEYERON TODAVIA: la
+    ficha queda abierta en ese punto.
+  TEXTO:
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o Transladase en la forma que a continuacion se indica, el
+  siguiente personal de la Receptoria de Rentas: Escolastico
+  Aparicio, de Caldera a Campo Santo; Pedro Perez del Busto, de Campo
+  Santo a Caldera; Ramon Bracheri, de Candelaria a Guachipas; Jose B.
+  Avila, de San Carlos a La Vina; Isidoro Vazquez, de La Vina a San
+  Carlos; Claudio Rieri, de Chicoana a Campo Santo (General Guemes);
+  Hora[cio ...] [sigue]
+
+  NOTA DE LECTURA: Pedro Perez del Busto venia de ser nombrado Comisario del
+    departamento de Campo Santo por el decreto 1498 de enero, edicion 689, y
+    ahora pasa a la Receptoria de Caldera; en junio renuncia y lo sustituye el
+    comisario teniente Horacio Ornstein, edicion 708. Escolastico Aparicio es
+    actor del config desde 1908. El apellido se imprime aqui "Bracheri" y en
+    la edicion 689 "Brachieri".
+
+EDICION 708, HOJA 7
+  FUENTE: Edicion N 708, Salta, Junio 21 de 1918, hojas 6 y 7, columna 1.
+  FICHA: Decreto del Interventor Nacional que acepta las renuncias de Julio
+    Burgos y Pedro P. del Busto y, mientras se prevea lo que corresponda en la
+    renuncia de la Receptoria de Rentas de Caldera, designa en sustitucion de
+    del Busto al Comisario Teniente Horacio Ornstein.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, hoja 7 columna 1, banda entera
+    del acto. EL NUMERO Y LA FECHA ESTAN EN LA HOJA 6 Y NO SE LEYERON TODAVIA.
+  TEXTO:
+  [...renuncias de la Receptoria de Rentas de]
+  Caldera y de Impuestos al Consumo de Campo Santo; y atento lo
+  informado por las dependencias respectivas.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o-Aceptanse las renuncias presentadas por los senores Julio
+  Burgos y Pedro P. del Busto, de los cargos de Expendedor de Guias
+  de Alvarado (Capital), el primero, y de Receptor de Impuestos al
+  Consumo de Campo Santo, el segundo, nombrandose en su reemplazo con
+  caracter interino a los comisarios de Tablada (Capital) y Campo
+  Santo, los Tenientes Alberico Isola y Jose Vila Melo,
+  respectivamente.
+  Art. 2.o-Mientras se prevea lo que corresponda en la renuncia de la
+  Receptoria de Rentas de Caldera, designase en sustitucion de D.
+  Pedro P. del Busto al Comisario Teniente Horacio Ornstein.
+  Art. 3.o Comuniquese, publiquese [sigue]
+
+  NOTA DE LECTURA: Desde esta edicion el Boletin cambia de tipografia: el
+    cuerpo pasa a una letra moderna, mas abierta, y la capa previa mejora a la
+    par. El apellido del teniente se imprime "Ornstein" aqui y en las
+    ediciones 733 y 735, y "Hornstein" en la 704: se transcriben las dos
+    formas y no se unifican. La palabra que la difusa levanto con ratio 0,93,
+    "calderay", es esta: la capa pega "Caldera y" en el primer renglon de la
+    columna.
+
+EDICION 709, HOJA 4
+  FUENTE: Edicion N 709, Salta, Junio 29 de 1918, hoja 4, columna 1.
+  FICHA: Decreto N.o 151, Salta, Junio 19 de 1918. Nombra Comisarios
+    Inspectores ad-honorem; al Mayor Julio R. de la Vega, de los Departamentos
+    de Campo Santo y Caldera. Firmado E. Gimenez Zapiola y Osvaldo Rocha; es
+    copia P. R. Mom, Sub-secretario de Gobierno.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas
+    que cubren el acto entero.
+  TEXTO:
+     Decreto N.o 151
+     Salta, Junio 19 de 1918
+  Vista la nota que antecede y las necesidades comprobadas en las
+  giras realizadas ultimamente, por la campana, que hacen conveniente
+  las designaciones propuestas entre las cuales se encuentra provista
+  la referente al Mayor Funes, por decreto N.o 145.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o- Nombrase Comisarios Inspectores ad-honoren [sic] y sin
+  perjuicio del cargo que actualmente desempenan, al Mayor Julio R.
+  de la Vega, de los Departamentos de Campo Santo y Caldera; al Mayor
+  Julio M. Vita, de los Departamentos de Metan y Anta y al Mayor
+  Angel E. Labat, de los Departamentos de Rosario de la Frontera y
+  Candelaria.
+  Art. 2.o-Comuniquese etc.
+     Firmado: GIMENEZ ZAPIOLA
+     OSVALDO ROCHA
+  Es copia: P. R. Mom, Sub-secretario de Gobierno.
+
+  NOTA DE LECTURA: El decreto N.o 145 que cita no se busco todavia.
+    "ad-honoren" con n final esta asi en el original, y en el decreto N.o 27
+    de la edicion 704 la misma palabra se imprime "ad-honorem": se transcriben
+    las dos y no se unifican.
+
+EDICION 709, HOJA 6
+  FUENTE: Edicion N 709, Salta, Junio 29 de 1918, hoja 6, columna 2.
+  FICHA: Decreto N.o 165, Salta, Junio 20 de 1918. El Interventor Nacional
+    acepta la renuncia de D. Jose Nogales al cargo de Comisario Auxiliar de
+    Policia del Partido de Potrero de Gallinato, jurisdiccion del Departamento
+    de la Caldera. Firmado Gimenez Zapiola y Osvaldo Rocha; es copia Pedro R.
+    Mom, Sub-secretario de Gobierno.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2, banda entera del acto.
+  TEXTO:
+     Decreto N.o 165
+     Salta, Junio 20 de 1918
+  Vista la nota que antecede, del Sr. Jose Nogales, por la que hace
+  renuncia del cargo de Comisario Auxiliar de Policia del Partido de
+  Potrero de Gallinato, jurisdiccion del Departamento de la Caldera,
+     El Interventor Nacional
+     DECRETA
+  Art. 1.o-Aceptase la renuncia interpuesta por D. Jose Nogales del
+  cargo antes expresado.
+  Art. 2.o-Comuniquese, etc.
+     (Firmado) GIMENEZ ZAPIOLA
+     OSVALDO ROCHA
+  Es copia: Pedro R. Mom, Sub- secretario de Gobierno
+
+  NOTA DE LECTURA: Cierra el nombramiento del decreto 1.564 de marzo, edicion
+    694, que habia designado a Jose Nogales para ese mismo partido: tres meses
+    y medio de ejercicio. Pedro R. Mom firma aqui como Sub-secretario de
+    Gobierno y en la edicion 704 como Oficial Mayor, con veinte dias de
+    diferencia.
+
+EDICION 709, HOJA 12
+  FUENTE: Edicion N 709, Salta, Junio 29 de 1918, hoja 12, columnas 1 y 2.
+  FICHA: Decreto N.o 157, Salta, Junio 20 de 1918. Subdivide el territorio de
+    la Provincia en distritos mineros para el registro grafico del
+    Departamento Topografico. Caldera queda en el V, Distrito del Toro.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: columna 1, banda del encabezado y
+    del articulo 1, y columna 2, banda de la enumeracion de distritos. LAS
+    FIRMAS NO SE LEYERON.
+  TEXTO:
+     Decreto N.o 157
+     Salta, Junio 20 de 1918
+  Siendo conveniente, para el mejor cumplimiento del decreto Num. 54,
+  de fecha Mayo 22 de 1918, disponer la forma en que el Departamento
+  Topografico debe efectuar el registro grafico de las solicitudes
+  mineras,
+     El Interventor Nacional
+     DECRETA:
+  Art. 1o-A los efectos expresados, el territorio de la Provincia se
+  subdividira en los siguientes distritos mineros:
+  I. Distrito de Tartagal: que comprendera la mitad oriental del
+  Departamento del mismo nombre, al [Este del Rio Bermejo].
+     [columna 2]
+  II. Distrito de Oran, la mitad occidental del mismo Departamento al
+  Oeste del Bermejo y San Francisco. III. Distrito de Santa Victoria
+  e Iruya, los departamentos homonimos. IV. Distrito de nino Muerto o
+  de la Puna, la parte septentrional del Departamento La Poma. V.
+  Distrito del Toro, los Departamentos de Rosario de Lerma,
+  Cerrillos, Chicoana, Caldera, Capital, Campo Santo y Guachipas. VI
+  Distrito Calchaqui, la parte meridional del Departamento de La Poma
+  y los Departamentos La Vina, San Carlos, Cachi, Cafayate y Molinos.
+  VII. Distrito de Metan, los Departamentos de Metan, Rosario de la
+  [Frontera ...] [sigue]
+
+  NOTA DE LECTURA: Es el unico acto del ano que ubica al departamento dentro
+    de una division administrativa nueva, y explica por que los dos avisos
+    mineros del ano (ediciones 711 y 716) caen en el mismo semestre. El
+    decreto N.o 54 del 22 de mayo de 1918 que cita esta, por su fecha, dentro
+    del corpus: no se lo busco todavia.
+
+EDICION 710, HOJA 1
+  FUENTE: Edicion N 710, Salta, Julio 5 de 1918, hoja 1 (tapa), columna 2.
+  FICHA: Decreto que liquida viatico a trece soldados de tropa destinados al
+    servicio de Comisarias y Sub-Comisarias, dos de ellos a la Sub-Comisaria
+    de Mojotoro (Caldera), a cincuenta centavos moneda nacional cada uno.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2 de la tapa, banda del
+    articulo 1 al 3. EL NUMERO Y LA FECHA DEL DECRETO NO SE LEYERON: estan mas
+    arriba, en la columna 1 de la propia tapa.
+  TEXTO:
+  [...moneda] nacional, en concepto de viatico correspondiente hasta
+  el dia 30 de este mes, de (13) trece soldados de tropa destinados
+  al servicio de las Comisarias de Oran (8), de Embarcacion (1), de
+  La Poma (1), y Sub-Comisarias de Palomitas (Distrito de Guemes) (1)
+  y Mojotoro (Caldera) (2), a razon de cincuenta centavos moneda
+  nacional ($ 0.50 m/n) cada uno.
+  Art. 2.o-Los gastos que demande la ejecucion del presente decreto,
+  se efectuaran de rentas generales, con imputacion al mismo.
+  Art. 3.o-Comuniquese, publique[se ...] [sigue]
+
+  NOTA DE LECTURA: La cuenta cierra: 8 mas 1 mas 1 mas 1 mas 2 son los trece
+    soldados que el propio decreto declara. Es la unica aparicion del ano en
+    que Mojotoro figura como Sub-Comisaria con dotacion de tropa. El importe
+    esta en cifras y en letras y las dos coinciden.
+
+EDICION 711, HOJA 6
+  FUENTE: Edicion N 711, Salta, Julio 12 de 1918, hoja 6 (Pag. 313 a 315),
+    columna 1.
+  FICHA: Aviso de la autoridad minera. Miguel A. Sosa y Dermidio Arancibia,
+    descubridores de una mina de plomo y otras sustancias de primera categoria
+    llamada "20 de Febrero", ubicada en la finca "Cerro Nevado" de Garzon y
+    Pintos, jurisdiccion del Departamento La Caldera. Salta, Julio 12 de 1918.
+    Firma Waldino Biarte, E. de G. y M.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, banda entera del
+    aviso.
+  TEXTO:
+  MINA-En merito de la solicitud presentada por los senores Miguel A.
+  Sosa y Dermidio Arancibia como descubridores de una mina de plomo y
+  otras sustancias de la primera categoria, que la denominan con el
+  nombre de <20 de Febrero>, ubicada en la finca <Cerro Nevado> de
+  propiedad de los senores Garzon y Pintos, jurisdiccion del
+  Departamento La Caldera; la que no tiene minas colindantes; la
+  autoridad minera notifica a los que se consideren con derecho a
+  dicho pedimento, para que puedan presentarse a deducirlo dentro del
+  termino de ley.-Salta, Julio 12 de 1918.
+     Waldino Biarte
+     E. de G. y M.
+
+  NOTA DE LECTURA: "Cerro Nevado" es termino del anillo 2 y da su unico
+    acierto del ano en esta hoja. El aviso lleva la fecha de la propia
+    edicion. Los mismos dos solicitantes vuelven en la edicion 716 por el
+    despueble de la mina "Sara", tambien en el departamento: son dos actos
+    distintos y se fichan por separado.
+
+EDICION 712, HOJA 6
+  FUENTE: Edicion N 712, Salta, Julio 19 de 1918, hoja 6 (Pag. 322), columna
+    1.
+  FICHA: Decreto del Interventor Nacional que convoca a elecciones de
+    Electores de Gobernador, Diputados y Senadores para el 15 de septiembre y
+    declara que Caldera elige un Diputado, un Senador y dos Electores.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas.
+    EL NUMERO Y LA FECHA DEL DECRETO NO SE LEYERON. El folio "Pag. 322" se
+    leyo en la imagen y da base 317 para esta edicion.
+  TEXTO:
+  [...se remitiran a la] Junta tan pronto como se encuentren reunidas
+  las urnas necesarias.
+     Por tanto,
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o-Senalase el dia 15 de Septiembre proximo, para que tengan
+  lugar las elecciones de Electores de Gobernador y de los Diputados
+  y Senadores que han de componer la Legislatura de la Provincia.
+  Art. 2.o-A los efectos que legalmente correspondan, declarase que
+  eligen un Diputado, un Senador y dos Electores los siguientes
+  Departamentos: Cachi, Cafayate, Caldera, Campo Santo, Candelaria,
+  Cerrillos, Guachipas, Iruya, Metan, Molinos, La Poma, San Carlos,
+  Santa Victoria, y La Vina; un Senador, dos Diputados y tres
+  electores: Anta, Chicoana, Oran, Rivadavia, Rosa[rio de la Frontera
+  y Rosario de Lerma ...] [sigue]
+
+  NOTA DE LECTURA: La eleccion del 15 de septiembre no llego a hacerse con
+    esta convocatoria: la edicion 726, del 25 de octubre, convoca de nuevo
+    para el 15 de diciembre. Los dos actos se fichan por separado porque son
+    dos decretos distintos, con fechas y formulas distintas, y no una
+    republicacion del mismo aviso. La base del folio de esta edicion, 317,
+    deja una hoja ausente en la edicion 711.
+
+EDICION 716, HOJA 3
+  FUENTE: Edicion N 716, Salta, Agosto 16 de 1918, hoja 3, columna 2.
+  FICHA: Resolucion de minas, Salta, Junio 18 de 1918. Denuncia por despueble
+    de la mina "Sara", ubicada en el Departamento de la Caldera, hecha por
+    Miguel A. Sosa y Dermidio Arancibia con fecha 18 de Abril de 1918.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2, banda de la cabeza del
+    acto. EL CIERRE, LA PARTE RESOLUTIVA Y LA FIRMA NO SE LEYERON TODAVIA.
+  TEXTO:
+     MINAS
+  Salta, Junio 18 de 1918.-Vista la solicitud de denuncia por
+  despueble de la mina <Sara> ubicada en el Departamento de la
+  Caldera, hecha por los Senores Miguel A. Sosa y Dermidio Arancibia,
+  con fecha 18 de Abril de 1918.
+  Considerando: Que la ley N.o 10.273 de 12 de Noviembre de 1917
+  modificando parte del Codigo de Mineria, ha derogado la seccion I
+  del titulo IX del mismo, referente al Pueble [sic], substituyendolo
+  por otras disposiciones que deben aplicarse desde la Seccion de
+  dicha Ley.-Que el articulo 16 de la misma prescribe que a los
+  efectos de la conserva[cion] [sigue]
+
+  NOTA DE LECTURA: El acto se publica dos meses despues de su fecha. Cita una
+    ley nacional, la 10.273, que esta fuera del corpus del ano y del Boletin
+    de la Provincia: va a E.2 como citada y no acompanada.
+
+EDICION 722, HOJA 4
+  FUENTE: Edicion N 722, Salta, Septiembre 27 de 1918, hoja 4, columnas 1 y 2.
+  FICHA: Decreto N.o 113, Salta, Septiembre 23 de 1918. El Interventor
+    Nacional nombra Jueces de Agua a Angel Fernandez y Manuel A. Cornejo para
+    los Distritos de Caldera y Calderilla, a propuesta del Comisionado
+    Municipal de Caldera. Firmado M. Carles y Martin J. Lopez; es copia Josue
+    Quesada, O. Mayor.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi: columna 1, banda del encabezado y
+    los vistos, y columna 2, banda de los articulos y las firmas.
+  TEXTO:
+     Decreto N.o 113
+     Salta, Septiembre 23 de 1918.
+  Vista la nota que antecede del Sr. Comisionado Municipal de
+  Caldera, proponiendo de acuerdo con la circular respectiva de este
+  Ministerio, las personas que han de desempenar los cargos de Jueces
+  de Agua en ese Departamento.
+     El Interventor Nacional
+     DECRETA:
+     [columna 2]
+  Art. 1o Nombranse Jueces de Agua, a los senores Angel Fernandez y
+  Manuel A. Cornejo, para los Distritos de Caldera y Calderilla,
+  respectivamente.
+  Art. 2.o-Comuniquese, etc.
+     Firmado: M. CARLES
+     MARTIN J. LOPEZ.
+     Es copia:
+     Josue Quesada
+     O. Mayor
+
+  NOTA DE LECTURA: La Comision Municipal de mayo, edicion 702, es ahora un
+    Comisionado Municipal: el cambio de forma acompana a la Intervencion y se
+    registra sin conciliarlo. Este decreto y el N.o 190 de la edicion 729,
+    seis semanas despues, nombran jueces de agua para los mismos dos distritos
+    con nombres que no coinciden: va a E.9.
+
+EDICION 724, HOJA 7
+  FUENTE: Edicion N 724, Salta, Octubre 11 de 1918, hoja 7, columna 1.
+  FICHA: Edicto sucesorio. Juicio sucesorio de Don Delfin Chaile, declarado
+    abierto por auto del 10 del corriente mes del Juez de Paz Propietario
+    Departamental. Caldera, Septiembre 27 de 1918. Firma C. Caceres, Juez de
+    Paz.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas
+    que cubren el edicto entero.
+  TEXTO:
+  SUCESORIO:- Habiendose declarado abierto el juicio sucesorio de Don
+  Delfin Chaile, por auto de fecha 10 del corriente mes y ano del
+  Senor Juez de Paz Propietario Departamental, se cita, llama y
+  emplaza a los que se consideren con algun derecho a esta sucesion
+  se presenten a hacerlos valer dentro del termino de treinta dias,
+  bajo apercibimiento de lo que hubiere lugar en derecho. Caldera,
+  Septiembre 27 de 1918.
+     C. Caceres, Juez de Paz.
+
+  NOTA DE LECTURA: Es el unico acto del ano fechado EN el departamento y
+    firmado por una autoridad del departamento. El firmante es el Casimiro
+    Caseres nombrado Juez de Paz Propietario por el decreto 1697 de mayo,
+    edicion 702. El apellido del causante, Chaile, es termino del anillo 2. La
+    capa previa imprime el apellido del juez "cacrres", de modo que ninguna
+    busqueda por "caceres" ni por "caseres" devuelve esta hoja: es el falso
+    negativo mas claro del ano.
+
+EDICION 726, HOJA 2
+  FUENTE: Edicion N 726, Salta, Octubre 25 de 1918, hoja 2, columna 1.
+  FICHA: Decreto del Interventor Nacional en acuerdo de Ministros que convoca
+    a elecciones para el 15 de diciembre y declara que Caldera elige un
+    Diputado, un Senador y dos Electores.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas.
+    EL NUMERO Y LA FECHA DEL DECRETO NO SE LEYERON.
+  TEXTO:
+  [...para hacer coincidir los comicios] con los periodos
+  constitucionales de la renovacion de los poderes del Gobierno de la
+  Provincia;
+     Por tanto:
+     El Interventor Nacional
+     en acuerdo de Ministros
+     DECRETA:
+  Art. 1.o-Senalase el dia quince de Diciembre proximo para que
+  tengan lugar las elecciones de Electores de Gobernador y de los
+  Senadores y Diputados que han de formar la H. Legislatura de la
+  Provincia.
+  Art. 2.o-A los efectos legales correspondientes, declarase que
+  elijen un Diputado, un Senador y dos Electores cada uno de los
+  Departamentos siguientes: Cachi, Cafayate, Caldera, Campo Santo,
+  Candelaria, Cerrillos, Guachipas, Iruya, Metan, Molinos, La Poma,
+  San Carlos, Santa Victoria, y La Vina; un Senador, seis Diputados y
+  siete elec[tores]: La Capital [sigue]
+
+  NOTA DE LECTURA: Contra la edicion 712: la misma declaracion de
+    representacion para los mismos catorce departamentos, pero otra fecha de
+    comicio (15 de diciembre por 15 de septiembre), otra formula de sancion
+    (en acuerdo de Ministros) y otro reparto para la segunda categoria. NO es
+    el mismo aviso republicado: es la comprobacion por el texto que pide el
+    parrafo 6, y da negativo. De esta convocatoria salen los circuitos, las
+    mesas y las autoridades que publican las ediciones 730, 731 y 733.
+
+EDICION 729, HOJA 3
+  FUENTE: Edicion N 729, Salta, Noviembre 15 de 1918, hoja 3, columna 1.
+  FICHA: Decreto N.o 190, Salta, Noviembre 7 de 1918. El Interventor Nacional
+    nombra Juez de Aguas del partido de la Calderilla a D. Manuel A. Cornejo
+    Arias y Juez de Aguas del Pueblo de la Caldera a D. Rafael Fernandez, a
+    propuesta del Comisionado Municipal de la Caldera. Firmado Carles y Martin
+    J. Lopez.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, banda entera del acto.
+  TEXTO:
+     Decreto N.o 190
+     Salta, Noviembre 7 de 1918
+  Vistas las propuestas que efectua el Sr. Comisionado Municipal de
+  la Caldera para Jueces de Aguas del Partido de la Calderilla y del
+  pueblo de la Caldera.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o-Nombranse Juez de Aguas del partido de la Calderilla, al
+  ciudadano D. Manuel A. Cornejo Arias; y Juez de Aguas del Pueblo de
+  la Caldera al ciudadano D. Rafael Fernandez.
+  Art. 2o-Comuniquese, etc.
+     Firmado: CARLES
+     MARTIN J. LOPEZ
+
+  NOTA DE LECTURA: Contra el decreto 113 del 23 de septiembre, edicion 722:
+    alli el juez de agua de Caldera es Angel Fernandez y el de Calderilla
+    Manuel A. Cornejo; aqui, seis semanas despues, el de Calderilla es Manuel
+    A. Cornejo Arias y el del pueblo de la Caldera es Rafael Fernandez. El
+    segundo decreto no cita al primero ni lo deja sin efecto. No se concilia.
+    Los dos Fernandez estan en el config: Angel Fernandez (1909) y Rafael
+    Fernandez (1911).
+
+EDICION 730, HOJA 7
+  FUENTE: Edicion N 730, Salta, Noviembre 22 de 1918, hoja 7 (Pag. 477),
+    columna 1.
+  FICHA: Division en circuitos del Colegio Electoral N. 3 - CALDERA, con sus
+    cuatro mesas receptoras de votos y los parajes que cada una comprende.
+  MODO DE LECTURA: Imagen del PDF: pagina entera a 105 dpi para la maqueta y
+    columna 1 a 200 dpi para la transcripcion. El encabezado del bloque,
+    "Colegio Electoral N. 3-CALDERA", esta en la misma columna y se leyo con
+    el resto.
+  TEXTO:
+     Colegio Electoral N. 3-CALDERA
+  Mesa N. 1-En Caldera, Pueblo, Escuela Elemental Mixta-Circuito:
+  Pueblo, Potrero de Castillo, Penones y San Alejo.
+  Mesa N. 2-En Caldera, Pueblo, Iglesia Parroquial.-Circuito:
+  Angosto, Angosto de Arrieta, Angosturo, Campo Alegre, Calderilla,
+  Corral de Barrancas, Chalchanio, Despensa, Despensilla, El Acheral,
+  El Churcal, El Monte, Las Garrapatas, Los Porongos, Los Sauces,
+  Mesadas, Potrero de Valencia, Queseria, Santa Rufina, Wierna y
+  Yacone.
+  Mesa N. 3-En Vaqueros, Escuela Infantil Provincial-Circuito: Las
+  Lagunas, Lesser, y Vaqueros.
+  Mesa N, 4-En Mojotoro, Oficina de Correos-Circuito: Mojotoro,
+  Mojotorito, Potrero, de Gallinato y Tunel.
+
+  NOTA DE LECTURA: Es el inventario de parajes mas completo del ano y la
+    fuente principal de los agregados al anillo 2 que propondra el config
+    actualizado. Formas que el config no tiene: Despensilla, Corral de
+    Barrancas, El Churcal, El Monte, Las Garrapatas, Angosturo, Tunel y Las
+    Lagunas; y formas distintas de las que tiene: Yacone por yacones, Mesadas
+    por las mesadas, Queseria por queceria. El "Mesa N," de la cuarta y la
+    coma de "Potrero, de Gallinato" estan asi en el original. El folio "Pag.
+    477" se leyo en la imagen y confirma la base 471 de esta edicion.
+
+EDICION 730, HOJA 10
+  FUENTE: Edicion N 730, Salta, Noviembre 22 de 1918, hoja 10 (Pag. 480),
+    columna 1.
+  FICHA: FALSO POSITIVO DEL ANILLO 1, no es el departamento. La palabra
+    Caldera aparece como nombre de un lugar del circuito de la Mesa N. 1 del
+    Colegio Electoral Num. II de RIVADAVIA.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, banda que va desde el
+    encabezado del bloque hasta la mencion. El folio "Pag. 480" se leyo en la
+    imagen y confirma la base 471 de la edicion.
+  TEXTO:
+  Rivadavia-Colegio Electoral. Num II
+  Mesa N. 1 En Alto Verde, Escuela Nacional N. 24.-Circuito:
+  Algarrobal, Alto Verde, Agua Primera, Alvarado, Balbuena, Bule,
+  Bella Vista, Buena Vista, Bordo, Banadero, Belgrano, Corralito,
+  Caldera, Chanaral, Casa Caida, Caaguazu, Campos de los Moyanos,
+  Chorro, Desierto, El Castigado, El Pilar, [sigue]
+
+  NOTA DE LECTURA: Es el caso exacto de la regla 4.11: el renglon "Corralito,
+    Caldera, Chanaral" es indistinguible de una mencion real hasta que se mira
+    el encabezado del bloque, tres renglones mas arriba, y ese encabezado dice
+    Rivadavia. La capa previa lo traia igual de ambiguo. Se ficha como falso
+    positivo y se deja constancia en el parrafo 12 y en E.7, porque es un
+    falso positivo NUEVO: no estaba en el config ni en ninguna epoca anterior.
+
+EDICION 731, HOJA 6
+  FUENTE: Edicion N 731, Salta, Noviembre 29 de 1918, hoja 6, columna 1.
+  FICHA: Nomina de las autoridades de las cuatro mesas del Colegio Electoral
+    N.o 3 - Caldera: presidentes y suplentes primero y segundo.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas
+    desde el encabezado del bloque hasta el encabezado del bloque siguiente
+    (Colegio Electoral N.o 4 - Campo Santo), que marca el fin.
+  TEXTO:
+     Colegio Electoral N.o 3 - Caldera
+     Mesa N. 1
+  Presidente, Manuel A. Cornejo
+  Suplente 1o, Andres Fernandez
+     2o, Augusto Regis
+     Mesa N. 2
+  Presidente, Marcos E. Aparicio
+  Suplente 1o, Lucas Medinas
+     2o, Abraham Fernandez
+     Mesa N. 3
+  Presidente, Jose Andres Molinas
+  Suplente 1o, Enrique J. Rauch
+     2o, Marcelo Lamas
+     Mesa N. 4
+  Presidente, Gregorio Nogales
+  Suplente 1o, Jose Yugra Gonzalez
+     2o, Juan Cruz Nogales
+
+  NOTA DE LECTURA: Doce personas para las cuatro mesas del departamento. Cinco
+    estan en el config como actores de anos anteriores: Augusto Regis (1909),
+    Abraham Fernandez (1909), Marcelo Lamas (1909), el apellido Rauch (Jose
+    Miguel Rauch, 1910) y Yugra, que el config lleva como toponimo del anillo
+    2 y aqui es apellido. Manuel A. Cornejo, presidente de la Mesa 1, es el
+    mismo que los decretos 113 y 190 nombran Juez de Agua de Calderilla.
+
+EDICION 733, HOJA 2
+  FUENTE: Edicion N 733, Salta, Diciembre 13 de 1918, hoja 2, columna 2.
+  FICHA: Ubicacion de las cuatro mesas receptoras de votos del Colegio
+    Electoral N. 3 - Caldera, sin los circuitos.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2, banda desde el fin del
+    bloque anterior (Mesa N. 16, La Polvora) hasta el encabezado siguiente.
+  TEXTO:
+     Caldera-Colegio Electoral N. 3
+  Mesa N. 1 En Caldera, Pueblo, Escuela Elemental Mixta.
+  Mesa N. 2 En Caldera, Pueblo, Iglesia Parroquial.
+  Mesa N. 3 En Vaqueros, Escuela Infantil Provincial.
+  Mesa N. 4 En Mojotoro, Oficina de Correos.
+
+  NOTA DE LECTURA: Es la misma ubicacion que publica la edicion 730 hoja 7
+    tres semanas antes, ahora sin la enumeracion de parajes de cada circuito y
+    con el encabezado al reves ("Caldera-Colegio Electoral N. 3" en lugar de
+    "Colegio Electoral N. 3-CALDERA"). Se ficha como entrada propia y no como
+    aparicion de la anterior porque el texto no es el mismo: es mas corto y
+    esta ordenado distinto.
+
+EDICION 733, HOJA 14
+  FUENTE: Edicion N 733, Salta, Diciembre 13 de 1918, hoja 14, columna 1.
+  FICHA: Decreto N.o 252, Salta, Diciembre 6 de 1918. Nombra al Capitan D.
+    Miguel S. Gallardo para desempenar en La Caldera los cargos que ejerce el
+    Tte. don Horacio Ornstein, y pasa a Ornstein a depender directamente del
+    Ministerio de Gobierno de la Intervencion.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 1, dos bandas empalmadas.
+    LAS FIRMAS NO SE LEYERON.
+  TEXTO:
+     Decreto N. 252
+     Salta, Diciembre 6 de 1918
+     El Interventor Nacional
+     DECRETA:
+  Art. 1o Nombrase al Capitan D. Miguel S. Gallardo, para desempenar
+  en La Caldera los cargos que ejerce el Tte. don Horacio Ornstein, y
+  al Capitan don Jose M. Benegas para desempenar en Cerrillos los
+  cargos que ejerce el Tte. 1o don Alfredo Depetris.
+  Art. 2o El Teniente 1o Depetris y el Tte. Ornstein, pasaran a
+  depender directamente del Ministerio de Gobieno [sic] de esta
+  Intervencion.
+  Art. 3.o Comuniquese etc.
+
+  NOTA DE LECTURA: Cierra el recorrido de Ornstein por el departamento:
+    comisario por el decreto 39 del 18 de mayo, receptor interino de rentas
+    por el decreto de la edicion 708 en junio, relevado el 6 de diciembre y
+    con su conducta aprobada el 26 (edicion 735). "Gobieno" por "Gobierno"
+    esta asi en el original.
+
+EDICION 735, HOJA 3
+  FUENTE: Edicion N 735, Salta, Diciembre 27 de 1918, hoja 3, columna 2.
+  FICHA: Decreto del Interventor Nacional, Salta, Diciembre 26 de 1918.
+    Aprueba la conducta observada por el Tte. D. Horacio Ornstein en los
+    empleos desempenados en La Caldera a ordenes de la Intervencion, por no
+    desprenderse del sumario ningun cargo grave.
+  MODO DE LECTURA: Imagen del PDF a 200 dpi, columna 2, dos bandas empalmadas.
+    EL NUMERO DEL DECRETO Y LAS FIRMAS NO SE LEYERON.
+  TEXTO:
+     Salta, Diciembre 26 de 1918
+  Vistas las constancias del presente sumario por las que no se
+  desprenden ningun cargo grave comprobado contra el Tte. D. Horacio
+  Ornstein, y la nota informe del Sr. Jefe de Policia, que se agrega.
+     El Interventor Nacional
+     DECRETA:
+  Art. 1.o-Apruebase la conducta observada por el Tte. D. Horacio
+  Ornstein, en los empleos desempenados en La Caldera a ordenes de
+  esta Intervencion.
+  Art. 2.o-Comuniquese, esta aproba[cion ...] [sigue]
+
+  NOTA DE LECTURA: El decreto habla de "el presente sumario" sin identificarlo
+    por numero ni fecha y sin que el Boletin lo publique: es un citado y no
+    acompanado, y el unico del ano que se refiere a una actuacion en el
+    departamento. La concordancia "no se desprenden ningun cargo" esta asi en
+    el original.
+
+
+QUEDAN FUERA DEL PARRAFO A, como falsos positivos del anillo 1 juzgados por el
+contexto y listados en el parrafo 12: 695 h17 (el juez Caldillo), 704 h15
+(Gregorio Calderon), 705 h18 (Angel Calda) y 708 h4 (Angel J. Caldas). El
+quinto, 730 h10, se ficha arriba y no aqui, porque para juzgarlo hubo que
+mirar la imagen y leer un encabezado que esta a tres renglones de la mencion.
+
+Las 28 fichas cubren 32 hojas del corpus. Ocho de ellas quedan abiertas en un
+punto declarado dentro de la propia ficha: un numero, una fecha o una firma
+que no se leyo. Ninguna esta abierta en el texto que nombra al departamento.
+
+PARRAFO B - VECINDAD
+--------------------
+
+De los 84 terminos del anillo 2 dieron acierto 43 y no dieron acierto 41. Los
+contextos de los 43 se leyeron uno por uno, como manda el parrafo 5.1, sobre
+el texto sin puntuacion, y esa lectura es la que reparte los cuatro bloques
+que siguen. Lo leido aqui sale de la capa previa salvo donde se dice otra
+cosa: la imagen se miro para los terminos que caen dentro de una ficha del
+parrafo A.
+
+B.1 - NUCLEOS DEL DEPARTAMENTO YA FICHADOS EN EL PARRAFO A
+----------------------------------------------------------
+
+Veintidos terminos del anillo 2 aparecen este ano UNICAMENTE dentro de actos
+que nombran al departamento y que ya estan fichados. Se nombran y no se
+repiten:
+
+  En el decreto 1.564 (694 h2-h3) y en los circuitos electorales
+  (730 h7): calderilla, mojotoro, vaqueros, lesser, potrero de
+  gallinato, potrero de castillo, potrero de valencia, la despensa,
+  los porongos, penones, san alejo, santa rufina, sauces, campo
+  alegre, chalchanio, angosto de arrieta, wierna.
+  Solo en los circuitos (730 h7): angostura (como "Angosturo").
+  Solo en el decreto 1.564 (694 h3): isasmendi (Francisco Isasmendi,
+  comisario auxiliar de La Despensa) y nogales (Jose Nogales,
+  comisario auxiliar de Potrero de Gallinato).
+  Solo en el aviso minero (711 h6): cerro nevado.
+  Solo en las autoridades de mesa (731 h6): yugra (Jose Yugra
+  Gonzalez), que el config lleva como toponimo y aqui es apellido.
+
+Tres de esos terminos merecen una nota, porque el acierto del anillo 2 NO cae
+en la hoja donde el termino importa:
+
+"mojotoro" y "vaqueros" dan acierto tambien en 733 h2, que es la republicacion
+corta de las mesas, y "potrero de gallinato" en 709 h6, que es la renuncia de
+Jose Nogales: las tres son fichas del parrafo A.
+
+"campo alegre", "rio blanco", "sauces", "durazno", "nogales", "entre rios" y
+"pirguas" dan ademas acierto en otras hojas de la edicion 730, que son los
+circuitos de OTROS departamentos. Van al bloque B.3.
+
+"lagunilla" y "acheral" dan acierto en 730 h7, pero NO en el bloque de
+Caldera: caen en la Mesa N. 15 y su circuito, que pertenecen al colegio
+anterior de la misma columna. El circuito de Caldera tiene su propio "El
+Acheral", que la capa imprime "el achc ral" y por lo tanto no da acierto. Es
+otra palabra suelta perdida por la capa, del mismo tipo que Yacones.
+
+B.2 - NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO LO NOMBRAN
+---------------------------------------------------------
+
+Este es el bloque que justifica el parrafo, y en 1918 es breve: el Boletin de
+este ano casi siempre nombra al departamento cuando habla de el. Dos casos:
+
+SILVANO MURUA (697 h5, Abril 6). Queda vacante el puesto de auxiliar encargado
+de la venta de papel sellado por renuncia del senor Silvano Murua, y el
+Gobernador promueve a otro a ese puesto. El acto no nombra a Caldera. Silvano
+Murua esta en el config como actor de 1909 y de 1916, y el apellido Murua es
+el del comisario del departamento nombrado y renunciado en este mismo ano,
+Eustaquio Murua. No se afirma parentesco ni identidad: se registra la
+coincidencia de apellido y epoca.
+
+ESCOLASTICO APARICIO (706 h5, Junio 7). Aparece por segunda vez en el ano,
+fuera del decreto de traslados de la Receptoria que si nombra a Caldera (704
+h11). Es el unico de los trasladados que vuelve a aparecer.
+
+Y un tercero, que es el mas importante del bloque y que aparecio al buscar los
+actos citados:
+
+DECRETO N.o 50, Salta, Mayo 21 de 1918 (704 h7 y h8, leido en la imagen). El
+Interventor Nacional deja sin efecto el decreto N.o 1557 del 4 de marzo ENTERO
+-no solo para Caldera, como habia hecho el decreto 1.660 el 24 de abril- y
+suspende la inscripcion de electores abierta en los Registros; las actuales
+Municipalidades y comisiones nombradas continuan en sus funciones hasta que se
+provean los medios de reemplazarlas. El acto no nombra a Caldera ni a ningun
+departamento, pero es el que cierra el asunto que ocupa tres fichas del
+parrafo A (693, 701 h2 y, por remision, 722 y 729, donde la Comision Municipal
+ya es un Comisionado Municipal). Sin este decreto la secuencia del ano no se
+entiende, y por eso esta aqui y no en una nota.
+
+B.3 - TERMINOS QUE EN 1918 SON OTRA COSA
+----------------------------------------
+
+Veinte terminos del anillo 2 dan acierto este ano SIN relacion con el
+departamento. Se leyeron todos y este es el reparto:
+
+  castellanos (23 aciertos, el mas frecuente del ano): el Dr. Joaquin
+    Castellanos, proclamado Gobernador de la Provincia el 31 de
+    diciembre (736 h14); el Dr. Juan Jose Castellanos, abogado, en
+    cinco causas y un remate; Benjamin Castellanos, Juez de Rio de
+    Chicoana (719 h2); la finca Castellanos del partido del mismo
+    nombre, departamento de la Capital (723 h5 y 730 h5); y en Anta,
+    "Laguna de Castellanos" y "Paso de Castellanos" (730 h9).
+  nogales (19): el arroyo de los Nogales, de La Silleta, en un juicio
+    de desvio contra la Municipalidad (695 h5 a h7); Nogales como
+    oficina del Registro Civil de un circuito de Anta (730 h9, 732 h6,
+    733 h7); parajes homonimos en Guemes, Cafayate y Rosario de la
+    Frontera.
+  apaza (14): jueces de paz de Guachipas (Juan A. y Napoleon Apaza,
+    que renuncian en 711 h4 y 709 h10), Felix Apaza de Carahuasi, que
+    fallece, y autoridades de mesa de Guachipas y La Poma.
+  isasmendi (12): Jose Davalos Isasmendi, juez de Molinos; Andres
+    Isasmendi, vocal del Superior Tribunal (717 h7); Isasmendi y Cia,
+    casa de comercio de la plaza; Isasmendi Hnos. y Durand en un
+    deslinde; y los Isasmendi de La Vina.
+  entre rios (11): calles de la Capital, circuitos de Campo Santo, La
+    Vina y San Carlos, la provincia de Entre Rios y una finca de Oran.
+  campo alegre (8): Embarcacion, Metan, Chicoana y San Jose de
+    Orquera.
+  rio blanco (7): Rosario de Lerma, Nazareno, Cachi y Anta; ademas la
+    reparacion de las obras de defensa del rio Blanco en Rosario de
+    Lerma, punto Boca de la Quebrada (707 h2).
+  murua (6): ademas de los dos del bloque B.2, las barrancas de Julio
+    Murua hijo en un deslinde (698 h5), el sucesorio de Sofia Urburu
+    de Arias Murua (700 h6) y la finca El Carmen de Arias Murua, de la
+    Capital (730 h6).
+  lagunilla (5): circuitos de la Capital y una quebrada de Rosario de
+    Lerma.
+  tabacal (4): las sub-comisarias de Tabacal, departamento de Oran, y
+    la finca El Tabacal.
+  aramayo (4): Mercedes Castro de Aramayo, acreedora hipotecaria de un
+    remate que se publica dos veces, y autoridades de mesa.
+  chaile (3): Ceferino Chaile, comisario auxiliar del partido de San
+    Miguel que renuncia (710 h2) y preside una mesa (731 h8). NO es el
+    Delfin Chaile del sucesorio de Caldera.
+  durazno (3), pirguas (3), mamani (3), condori (2), quintin (2),
+    siancas (1), angostura (1), teodolinda (1), el cajon (1), manzano
+    (1), betania (1): parajes, apellidos y nombres de pila de otros
+    departamentos, sin relacion con este.
+  penales (2): no es toponimo en ninguno de los dos. Es el Codigo de
+    Procedimientos Penales (709 h18) y el reglamento de registro de
+    senales de hacienda (736 h24). El termino entro al config en 1912
+    como la forma con que el Boletin imprimia "los Penones": este ano
+    no sirve y conviene saberlo.
+
+B.4 - AUSENCIAS DEL ANILLO DE ACTORES
+-------------------------------------
+
+Las 43 personas que los actos del departamento nombran se buscaron en las 534
+hojas del ano, por nombre y apellido sin puntuacion. El reparto en los tres
+grupos del parrafo 5.1:
+
+PRIMER GRUPO, los que aparecen SOLO en su propio acto (25): Alejandro Ramos,
+Victor Masclef, Genaro Molina, Victorino Tolaba, Zacarias Maidana, Francisco
+Isasmendi, Liborio Guerrero, Pablo Paredes, Francisco Mercado, Eustaquio
+Sarapura (todos del decreto 1.564); Juana Luque; Casimiro Caseres y Gervasio
+Chalar; Pedro Perez del Busto; Rafael Fernandez; Miguel S. Gallardo; y los
+ocho de las autoridades de mesa de 731 h6 que no reaparecen: Andres Fernandez,
+Augusto Regis, Marcos E. Aparicio, Lucas Medinas, Jose Andres Molinas, Marcelo
+Lamas, Gregorio Nogales, Juan Cruz Nogales y Jose Yugra Gonzalez.
+
+SEGUNDO GRUPO, los que aparecen en MAS DE UN acto del departamento (6). Es el
+grupo que arma la trama del ano:
+
+  Horacio Ornstein / Hornstein, en seis hojas de cuatro ediciones:
+    comisario del departamento por el decreto 39 (18 de mayo),
+    receptor interino de rentas en junio, relevado el 6 de diciembre y
+    con su conducta aprobada el 26. Es la persona mas presente del ano
+    en el departamento y no es del departamento: es un oficial de la
+    Intervencion.
+  Eustaquio Murua, comisario nombrado el 31 de enero (689 h2) y
+    renunciado el 16 de mayo (704 h2).
+  Jose Nogales, comisario auxiliar de Potrero de Gallinato nombrado el
+    7 de marzo (694 h3) y renunciado el 20 de junio (709 h6).
+  Manuel A. Cornejo, juez de agua de Calderilla por el decreto 113 y
+    por el 190, y presidente de la Mesa N. 1 de Caldera (731 h6).
+  Pedro Greni, comisario del departamento por el decreto 27 y movido a
+    La Poma por el 39, dos dias despues.
+  Miguel A. Sosa y Dermidio Arancibia, los dos avisos mineros (711 h6
+    y 716 h3), siempre juntos.
+
+TERCER GRUPO, los que aparecen tambien FUERA del departamento (7): Pedro Vale
+(autoridad de mesa de otro colegio, 731 h11); Escolastico Aparicio (706 h5);
+Pedro Greni (713 h3, ademas de La Poma); Julio R. de la Vega (707 h3 y 719
+h4-h5); Miguel A. Sosa (694 h6); Dermidio Arancibia (731 h12); Angel Fernandez
+(719 h2); Abraham Fernandez (698 h1 y 736 h9-h10).
+
+Y SEIS PERSONAS A LAS QUE LA BUSQUEDA NO DEVUELVE NI SIQUIERA SU PROPIO ACTO.
+Por el parrafo 5.1 esto no es una ausencia sino una falla de la busqueda, y se
+declara nombrandolos:
+
+  Nolasco Echenique, Venancio Ruiloba y Delfin Chaile: la capa parte
+    o deforma el nombre ("venan cio ruiloba", "eclienique").
+  Enrique J. Rauch: la capa imprime "enrique l rauch".
+  Abraham Fernandez en 731 h6: la capa imprime "atfraham fernandez",
+    de modo que sus tres aciertos del ano son todos ajenos al
+    departamento y el propio se pierde.
+  Angel Fernandez en 722 h4: la capa imprime "augel fernandez", de
+    modo que el decreto que lo nombra juez de agua de Caldera no
+    aparece en su busqueda.
+  A estos seis se suman los dos falsos negativos de E.7, Caceres y
+    Yacones: ocho palabras sueltas perdidas por la capa en un ano, y
+    las ocho aparecieron mirando la imagen.
+
+Sobre esa segunda lista hay ya una advertencia que el turno siguiente tiene
+que resolver y que conviene anotar ahora, porque es un caso del parrafo 4.11:
+la hoja 7 de la edicion 730, leida en la imagen, enumera los circuitos del
+Colegio Electoral N. 3 e incluye "Yacone", "Mesadas", "Queseria",
+"Despensilla", "Corral de Barrancas", "El Churcal", "El Monte" y "Las
+Garrapatas". Varios de esos son los mismos parajes que el config lleva con
+otra grafia (yacones, las mesadas, queceria) y por eso figuran arriba como
+"sin acierto". No son ausencias del corpus: son ausencias de la forma que el
+config busca.
+
+PARRAFO C - LIMITROFES
+----------------------
+
+Los departamentos limitrofes aparecen constantemente, casi siempre en las
+mismas enumeraciones que traen a Caldera, y ninguna de esas apariciones agrega
+nada sobre el departamento. Se registran en una linea cada uno, como manda el
+parrafo 5.1:
+
+CAMPO SANTO comparte con Caldera el Comisario Inspector ad-honorem (Mayor
+Julio R. de la Vega, decreto 151) y el ida y vuelta de la Receptoria de Rentas
+(Escolastico Aparicio y Pedro Perez del Busto, decreto de 704 h11): es el
+unico limitrofe que este ano esta administrativamente atado al departamento.
+
+LA CAPITAL, ROSARIO DE LERMA y CHICOANA comparten con Caldera el V Distrito
+del Toro de la division minera (decreto 157) y aparecen con el en las dos
+convocatorias electorales.
+
+GUEMES aparece junto a Caldera en el reparto de tropa de 710 h1 (Palomitas y
+Mojotoro) y en los circuitos de 730.
+
+JUJUY solo aparece como referencia de camino dentro de un juicio de deslinde
+ajeno (707 h13, "el camino a Jujuy").
+
+PARRAFO P - PLANOS
+------------------
+
+El corpus de 1918 no publica ningun plano. La palabra aparece en 17 hojas de
+14 ediciones (691 h6, 692 h14, 694 h4, 695 h16, 696 h8, 706 h16, 709 h14 y
+h17, 710 h2, 712 h8, 718 h7, 719 h9, 725 h4 y h5, 730 h21 a h23), siempre como
+remision a un plano archivado en el Departamento Topografico o agregado a un
+expediente, y ninguna de las 17 lo reproduce.
+
+NINGUNA de esas 17 remisiones toca al departamento: ninguna cae en una de las
+32 hojas del parrafo A. Los dos avisos mineros del departamento (711 h6 y 716
+h3) no citan plano, y el decreto 157, que organiza el registro grafico de las
+solicitudes mineras y pone a Caldera en el Distrito del Toro, tampoco acompana
+el grafico que ordena llevar.
+
+Techo de resolucion: 150 ppi sobre la imagen incrustada, la mitad del de los
+anos 1908 a 1912. Con ese techo, un plano de linderos habria sido ilegible;
+conviene que quede dicho, porque el ano no lo pone a prueba.
+
+PARRAFO D - INDICE
+------------------
+
+Las 28 fichas del parrafo A, por edicion:
+
+  689 h2   Decreto 1498 - comisario del departamento: Eustaquio Murua
+  693 h3   Municipalidades por renta: Caldera incluida
+  694 h2   Decreto 1.564 - trece comisarios auxiliares de partido
+  701 h2   Decreto 1.660 - deja sin efecto la municipalidad electiva
+  701 h7   Decreto 1.653 - jubilacion de la directora Juana Luque
+  702 h5   Decreto 1697 - jueces de paz Caseres y Chalar
+  704 h2   Decreto 25 - renuncia de Eustaquio Murua
+  704 h3   Decreto 27 - comisarios de campana: Caldera a Pedro Greni
+  704 h6   Decreto 39 - modifica el 27: Caldera a Hornstein
+  704 h11  Traslados de la Receptoria de Rentas
+  708 h7   Renuncia de la Receptoria de Caldera; designa a Ornstein
+  709 h4   Decreto 151 - Comisario Inspector de Campo Santo y Caldera
+  709 h6   Decreto 165 - renuncia de Jose Nogales
+  709 h12  Decreto 157 - distritos mineros: Caldera en el del Toro
+  710 h1   Viaticos de tropa: Mojotoro (Caldera), dos soldados
+  711 h6   Mina "20 de Febrero", finca Cerro Nevado
+  712 h6   Convocatoria electoral del 15 de septiembre
+  716 h3   Despueble de la mina "Sara"
+  722 h4   Decreto 113 - jueces de agua Caldera y Calderilla
+  724 h7   Sucesorio de Delfin Chaile, firmado en Caldera
+  726 h2   Convocatoria electoral del 15 de diciembre
+  729 h3   Decreto 190 - jueces de aguas Calderilla y pueblo
+  730 h7   Colegio Electoral N. 3 - circuitos del departamento
+  730 h10  FALSO POSITIVO: la Caldera de Rivadavia
+  731 h6   Autoridades de las cuatro mesas
+  733 h2   Ubicacion de las mesas (version corta)
+  733 h14  Decreto 252 - el capitan Gallardo reemplaza a Ornstein
+  735 h3   Aprueba la conducta de Ornstein en La Caldera
+
+PARRAFO E - OBSERVACIONES
+-------------------------
+
+E.1 DUPLICACION Y SALDOS. Sin las .jpg del script no hay md5 ni dhash (limite
+2 de E.10) y la duplicacion se controlo por texto, hoja contra hoja, sobre el
+texto normalizado del ano. No hay en 1918 marcas de publicacion del tipo "251
+v Dbre 5" que en 1912 habia que comprobar: la busqueda de ese patron devuelve
+cero en las 534 hojas, y la prueba de que la pasada no esta rota es que el
+mismo patron devuelve aciertos sobre el corpus de 1912. Las dos repeticiones
+aparentes que afectan al departamento se comprobaron por el texto y dieron
+negativo: estan en E.6.
+
+CADENA DE SALDOS. El ano publica TRES resumenes mensuales del movimiento de la
+Tesoreria General, y solo tres: septiembre (decreto N.o 131, edicion 724 hoja
+6), octubre (decreto N.o 184, edicion 728 hoja 6) y noviembre (decreto N.o
+250, edicion 733 hojas 17 y 18). De los otros nueve meses no hay resumen. Con
+tres se arma una cadena corta, que cierra exacta:
+
+  Existencia de Agosto ..................... 49.565,81
+  Septiembre: existencia en caja ........... 48.866,20
+  Octubre:    existencia de caja s/ arqueo . 10.090,53
+  Noviembre:  existencia en caja ........... 31.431,85
+
+Cada resumen abre con la existencia con que cerro el anterior, sin diferencia
+de un centavo. La cadena queda abierta contra agosto por un lado y contra 1919
+por el otro, y no hay balance municipal de ningun departamento en todo el ano,
+de modo que tampoco lo hay de este: es un hecho del corpus y no una tabla que
+quedo sin mirar.
+
+E.2 COBERTURA. 53 archivos, 534 hojas, todas con capa de texto salvo la hoja
+unica del archivo 703, que no es una hoja del Boletin. La paginacion anual
+corrida se pudo anclar en 19 ediciones (38 hojas): el encabezado "Num. n -
+BOLETIN OFICIAL - Pag. N" se pierde en la capa en casi todas las hojas, de
+modo que la cadena no se leyo entera como en 1912 sino por tramos entre
+anclas. Dentro de una edicion el folio avanza de a uno sin excepcion en todas
+las anclas dobles (687, 707, 711, 732, 736). Entre anclas, el folio que falta
+mide las hojas ausentes:
+
+    TRAMO        FOLIOS  HOJAS PRESENTES  AUSENTES
+    684 -> 685        4            3         1
+    685 -> 687        8            8         0
+    687 -> 688        4            4         0
+    688 -> 695       66           63         3
+    695 -> 698       36           34         2
+    698 -> 705       84           65        19
+    705 -> 707       42           40         2
+    707 -> 708       18           17         1
+    708 -> 711       46           44         2
+    711 -> 718       60           50        10
+    718 -> 719        8            8         0
+    719 -> 722       28           26         2
+    722 -> 723        8            7         1
+    723 -> 730       58           54         4
+    730 -> 732       44           42         2
+    732 -> 734       36           34         2
+    734 -> 735        6            5         1
+    735 -> 736        6            5         1
+
+El ano cierra en el folio 587 (edicion 736, hoja 25) y hay 534 hojas
+presentes: faltan 53. La ausencia mas grande, 19 hojas, cae en el tramo
+698-705, que es justamente el que contiene la edicion 703 ausente. Tres
+anclajes se verificaron en la imagen al transcribir las fichas y los tres
+coinciden: Pag. 148 en 701 hoja 2 (base 147), Pag. 162 en 702 hoja 6 (base
+157) y Pag. 477 en 730 hoja 7 (base 471). Los dos primeros son anclas nuevas y
+cierran el tramo 701-702 sin hoja ausente: 701 ocupa los folios 147 a 156, con
+sus diez hojas presentes, y 702 arranca en el 157. Verificar en la imagen los
+demas anclajes queda pendiente.
+
+CITADOS Y NO ACOMPANADOS, seis, todos salidos de las fichas del parrafo A y
+ninguno buscado todavia salvo el primero:
+
+La ley nacional N.o 10.273 del 12 de noviembre de 1917, que la resolucion de
+minas de 716 hoja 3 invoca. Es ley nacional y esta fuera del Boletin de la
+Provincia: no se acompana y no puede acompanarse.
+
+El decreto de la Intervencion del 11 de mayo de 1918, citado por el decreto
+N.o 27 (704 hoja 2). Buscado por fecha y por materia en las 534 hojas: no
+esta. Por su fecha caeria en la edicion 703, que es la que falta.
+
+El decreto N.o 145, citado por el N.o 151 (709 hoja 4). Buscado por numero y
+por materia: no esta. Cae en el tramo de mediados de junio, donde no falta
+ninguna edicion, de modo que no se publico.
+
+El sumario contra el Tte. Ornstein, citado como "el presente sumario" por el
+decreto del 26 de diciembre (735 hoja 3), sin numero ni fecha. No se publica.
+
+DOS de los cinco que el tercer turno habia listado NO son citados y no
+acompanados, porque estan en el corpus y se encontraron buscandolos por fecha
+y por materia:
+
+El decreto N.o 1.557 del 4 de marzo, que la edicion 701 cita. Esta publicado
+en la propia edicion 693, desde la tapa: es el acto de la ficha de 693 h3,
+cuyo numero y fecha este turno cerro. Ademas lo deja sin efecto entero el
+decreto N.o 50 del 21 de mayo (704 h7-h8), que va al bloque B.2 del parrafo B.
+
+El decreto N.o 54 del 22 de mayo, que el N.o 157 cita. Esta publicado en la
+edicion 704, hoja 12.
+
+E.3 SIN MENCION Y NO MIRADO. De las 534 hojas se miraron en la imagen 61. Las
+otras 473 se leyeron en la capa previa, con las cuatro pasadas mas la literal
+repegada y la de-espaciada, y no dieron mencion del anillo 1. Dentro de esas
+473 hay un resto que no se miro y que conviene nombrar: las 46 hojas con mas
+del 30 por ciento de tokens de una sola letra, donde la capa es mas fragil.
+Ninguna de ellas da acierto en ninguna de las seis pasadas, tampoco en la
+de-espaciada, que es precisamente la que existe para ese caso. Se declara: no
+se miraron con los ojos, y la razon de no haberlo hecho es que la pasada que
+cubre su modo de falla las recorrio y devolvio cero.
+
+E.4 FIRMAS Y AUTORIDAD. Pendiente el registro completo, pero las 16 fichas ya
+dibujan el corte del ano, que es el hecho mayor de 1918 y se lee entero en los
+actos del departamento:
+
+De enero a mayo firma "El Gobernador de la Provincia", solo o "en acuerdo de
+Ministros", con la forma CORNEJO sobre las rubricas de Rafael M. Zuviria y
+Manuel R. Alvarado, y el "Es copia" de Francisco J. Lopez. Asi estan firmados
+los decretos 1498 (enero 31), 1.564 (marzo 7), 1.653 (abril 20), 1.660 (abril
+24) y 1697 (mayo 6).
+
+Desde el decreto N.o 25, del 16 de mayo, firma "El Interventor Nacional": E.
+Gimenez Zapiola con Osvaldo Rocha, y el "Es copia" de Pedro R. Mom, que el 16
+de mayo firma como Oficial Mayor y el 20 de junio como Sub-secretario de
+Gobierno. En la edicion 712 aparece ademas D. Gonzalez Gowland junto a Gimenez
+Zapiola.
+
+Desde septiembre la firma es M. CARLES con Martin J. Lopez, y el "Es copia" de
+Josue Quesada, O. Mayor: asi los decretos 113 (septiembre 23) y 190 (noviembre
+7). La tapa incorpora a la Intervencion Nacional presidida por el Dr. Manuel
+Carles recien en la edicion 729, tres meses despues de que la firma haya
+cambiado. La edicion 715 publica en tapa una alocucion del Jefe de la
+Guarnicion al pueblo de la Provincia.
+
+No se normaliza ninguna de estas formas y no se fija el dia del relevo: se
+declaran el ultimo acto de cada firma y el primero de la siguiente.
+
+E.5 CORTES Y COLUMNAS. U+0002 no aparece. U+00AD aparece 9.755 veces y se
+quita junto con el salto de renglon. La letra espaciada, propia de este ano,
+esta medida en el parrafo 2 y tratada en el parrafo F.
+
+COLUMNA PERDIDA: NO HAY NINGUNA EN LAS 47 COLUMNAS COTEJADAS, de 25 ediciones,
+que es sobre lo que se puede afirmar. En las 47 la capa respeta el orden de
+las columnas y no traspone renglones entre columnas vecinas. Con una sola
+version no habia otro control que este, y se dice sobre cuantas columnas se
+miro, porque "no hay columna perdida en el ano" sin esa cifra seria una
+afirmacion vacia.
+
+Lo que si falla, y falla en silencio, es la palabra suelta: ocho casos en el
+ano, listados en E.7 y en B.4.
+
+E.6 REPETICIONES. Pendiente el barrido general de avisos. La unica repeticion
+aparente que afecta al departamento se comprobo por el texto, como pide el
+parrafo 6, y dio negativo: las ediciones 712 y 726 traen la misma enumeracion
+de catorce departamentos que eligen un Diputado, un Senador y dos Electores,
+pero son dos decretos distintos. El de julio convoca para el 15 de septiembre
+y lo firma el Interventor Nacional solo; el de octubre convoca para el 15 de
+diciembre, lo firma en acuerdo de Ministros y reparte distinto la segunda
+categoria. Se fichan por separado.
+
+La ubicacion de las cuatro mesas del departamento aparece dos veces, en 730
+hoja 7 y en 733 hoja 2, y tampoco es una republicacion: la segunda es mas
+corta, no trae los circuitos y ordena el encabezado al reves. Tambien se
+fichan por separado.
+
+E.7 FALSOS POSITIVOS Y NEGATIVOS. Los falsos positivos del anillo 1 de este
+ano estan en el parrafo 12. Los falsos negativos confirmados contra la imagen
+son dos, y los dos se descubrieron transcribiendo:
+
+El apellido del Juez de Paz del departamento. La imagen de 724 hoja 7 dice "C.
+Caceres, Juez de Paz"; la capa imprime "cacrres". Ninguna busqueda por caceres
+ni por caseres devuelve esa hoja, aunque las dos grafias esten en el config.
+
+El toponimo Yacones. La imagen de 694 hoja 3 lo trae impreso dentro del
+decreto 1.564; la capa lo pierde, y el anillo 2 lo da sin acierto en las 534
+hojas del ano. Es la clase de falla que el parrafo 2.3 llama palabra suelta:
+falla en silencio y solo la imagen la corrige.
+
+Y un falso positivo NUEVO, que no estaba en ninguna epoca anterior: hay un
+lugar llamado Caldera en el departamento de RIVADAVIA, dentro del circuito de
+la Mesa N. 1 de su Colegio Electoral Num. II (730 hoja 10). En la capa el
+renglon es indistinguible de una mencion real; lo resuelve el encabezado del
+bloque, tres renglones mas arriba. Se ficha en el parrafo A por esa razon y se
+agrega al parrafo 12.
+
+E.8 FIDELIDAD NUMERICA. Pendiente el inventario de cuadros. Los actos del
+departamento proponen este ano dos cuentas y las dos cierran:
+
+El decreto 1.660 (701 hoja 2) declara un calculo de recursos de $ 6.471,44 que
+incluye $ 3.083,94 de saldo del ano anterior y una renta real de $ 3.387,50.
+La resta da exactamente 3.387,50.
+
+El decreto de viaticos de 710 hoja 1 declara trece soldados repartidos en Oran
+(8), Embarcacion (1), La Poma (1), Palomitas (1) y Mojotoro, Caldera (2). La
+suma da trece. El importe va en cifras y en letras y las dos coinciden.
+
+Ninguna cifra de esas dos fichas se publica sin haberla mirado en la imagen.
+
+CUADROS PUBLICADOS: TRES, y los tres se recalcularon ENTEROS, entradas y
+salidas, porque son pocos y son los unicos del ano. Los tres cierran sin una
+diferencia de un centavo:
+
+E.9 CONTRADICCIONES Y ERRATAS DEL ORIGINAL. Registradas hasta aqui:
+
+Tres tapas fechadas en sabado dentro de una serie semanal de viernes (697, 709
+y 727), leidas las tres en la imagen.
+
+El archivo 703.pdf, que ocupa el lugar de una edicion con una hoja que declara
+que la edicion no esta.
+
+La fecha del decreto 1.660 (701 hoja 2), impresa "Salta, Abril 24 de 1913" y
+mirada a 600 dpi. Se transcribe con [sic]. La lectura alternativa, 1918, es la
+unica posible porque la edicion que lo publica es del 3 de mayo de 1918, y por
+la regla 7 del parrafo 8 se escriben las dos.
+
+Los jueces de agua del departamento, nombrados dos veces en seis semanas con
+nombres que no coinciden: decreto 113 del 23 de septiembre (Angel Fernandez
+para Caldera, Manuel A. Cornejo para Calderilla) y decreto 190 del 7 de
+noviembre (Manuel A. Cornejo Arias para Calderilla, Rafael Fernandez para el
+pueblo de la Caldera). El segundo no cita al primero. No se concilia.
+
+La numeracion de los decretos, que vuelve a empezar al llegar la Intervencion:
+el 24 de abril se firma el N.o 1.660 y el 16 de mayo el N.o 25.
+
+El apellido del segundo firmante del Interventor, impreso OSVALDO ROCHA y,
+pocos renglones mas abajo en la misma columna de 704 hoja 2, OLVALDO ROCHA. Se
+transcriben los dos con [sic].
+
+El apellido del teniente, impreso Hornstein en la edicion 704 y Ornstein en la
+708, la 733 y la 735; y el del receptor Bracheri en la 704 contra Brachieri en
+la 689. No se unifican.
+
+Dos comisarios distintos para el departamento con dos dias de diferencia:
+Pedro Greni por el decreto N.o 27 del 16 de mayo y Horacio Hornstein por el
+N.o 39 del 18. NO es una contradiccion, porque el segundo cita al primero y
+declara que lo modifica; se registra por la rapidez del cambio.
+
+"ad-honorem" en el decreto N.o 27 y "ad-honoren" en el N.o 151, las dos en el
+mismo mes. "Gobieno" por Gobierno en el decreto N.o 252. "no se desprenden
+ningun cargo" en el decreto del 26 de diciembre. Todo con [sic] en su ficha.
+
+La palabra "Pueble" en 716 hoja 3, donde la ley que cita regula el despueble.
+
+E.10 LIMITES. Son cuatro y ninguno es trabajo que esta sesion pueda hacer:
+
+  1. Sin el .tsv de lee_auto.py no hay confianza por hoja, y por lo
+     tanto la lista de hojas "a ojos" del parrafo 4.8 NO EXISTE. En su
+     lugar este informe publica, por edicion, el porcentaje de palabras
+     de una sola letra, que mide el otro defecto de la capa de 1918.
+  2. Sin las .jpg por hoja no hay md5 ni dhash: la duplicacion se
+     controla por texto. Tampoco hay medicion de tinta, de modo que las
+     hojas de poca tinta se buscan por densidad de caracteres.
+  3. Sin OCR propio hay una sola version del texto: no hay segunda
+     lectura con que desempatar digitos, y el unico desempate es la
+     imagen.
+  4. tesseract no trae spa en esta sesion, de modo que no se puede
+     OCRizar nada aqui, ni siquiera una hoja suelta.
+
+  Septiembre (724 h6, decreto 131): entradas 402.025,47 mas existencia
+    de agosto 49.565,81 = 451.591,28. Salidas 402.725,08 mas
+    existencia en caja 48.866,20 = 451.591,28.
+  Octubre (728 h6, decreto 184): entradas 279.555,29 mas 48.866,20 =
+    328.421,49. Salidas 318.330,96 mas 10.090,53 = 328.421,49.
+  Noviembre (733 h17-h18, decreto 250): entradas 269.974,69 mas
+    10.090,53 = 280.065,22. Salidas 248.633,37 mas 31.431,85 =
+    280.065,22.
+
+LAS DOS DIFERENCIAS QUE APARECIERON ERAN MIAS, NO DEL ORIGINAL, y estan aqui
+porque son la leccion numerica del ano. Al recalcular sobre una vista de
+pagina entera a 110 dpi, las salidas de septiembre daban 10.000 de mas y las
+de noviembre 20 de mas. Las dos cerraron al mirar la misma cifra de cerca:
+"Obligaciones a Cobrar en Ejercicio" es 11.678 y no 21.678 (724 h6, leido a
+450 dpi), y "Ordenes de Pago" es 88.161,72 y no 88.181,72 (733 h18, leido a
+500 dpi). Con un techo de 150 ppi, una vista de pagina entera alcanza para la
+prosa y NO alcanza para los digitos: el 1 se lee 2 y el 6 se lee 8. Va al
+parrafo F.
+
+Otras cifras miradas y verificadas: los tres importes del decreto 1.660 y el
+reparto de trece soldados de 710 h1, ya dichos arriba. Erratas menores de los
+cuadros: "Caja Juvilaciones y Pensiones" en el resumen de noviembre y
+"Esistencia en Caja" en el mismo, las dos con [sic].
+
+TABLAS NO RECALCULADAS: ninguna. No quedo cuadro sin recalcular, porque el ano
+publica tres y los tres estan arriba. Las otras once hojas de baja densidad de
+caracteres que el primer turno habia marcado como posibles tablas se miraron
+en la capa y no lo son: son columnas de planillas de sueldos, formularios de
+guias y el reglamento de marcas y senales de la edicion extraordinaria,
+ninguno con total que recalcular.
+
+PARRAFO F - CORRECCION A LA RUBRICA
+-----------------------------------
+
+Una sola, y es de metodo. La v15 corrigio la union de cortes porque en 1912 la
+capa partia las palabras con guion blando. En 1918 la capa hace algo distinto
+y con el mismo efecto: SEPARA CON ESPACIOS LAS LETRAS DE PALABRAS ENTERAS. El
+19 por ciento de los tokens del ano son de una sola letra. Si la sesion corre
+la literal sobre el texto tal cual, cualquier mencion caida en un bloque
+espaciado se pierde en silencio, igual que se perdian las tres hojas de 1912.
+
+El control que se propone agregar a la rubrica tiene dos partes, y las dos se
+corrieron aqui:
+
+  a) MEDIR la letra espaciada antes de creerle a la literal: contar el
+     porcentaje de tokens de una sola letra sobre el ano. Si pasa del 5
+     por ciento, la capa esta espaciando y la literal sola no alcanza.
+  b) CORRER la literal dos veces mas: una sobre el texto "repegado",
+     que une las corridas de tres o mas tokens de una letra, y otra
+     sobre el texto con todos los espacios quitados. La primera es la
+     que puede traer menciones nuevas; la segunda es la red de
+     seguridad, y como pega palabras vecinas hay que leer sus aciertos
+     de mas uno por uno antes de descartarlos.
+
+En 1918 el resultado fue que la letra espaciada no escondio ninguna mencion
+del anillo 1: la repegada devuelve las mismas 32 hojas que la literal, y las
+39 hojas de mas de la de-espaciada son todas fronteras de palabra (fiscal de,
+local del, vocal de, radical departamento). Eso NO convierte el control en
+innecesario: es el unico modo de saberlo, y en 1912 la pregunta equivalente se
+contesto mal durante dos turnos enteros.
+
+SEGUNDA CORRECCION, sobre el parrafo 4. La v15 dice que para cifras dudosas
+conviene un recorte chico a 400 o 600 dpi, y que 600 dpi es lo que hace falta
+para decidir si un punto decimal esta impreso. Con un techo de 150 ppi eso se
+queda corto: aqui NO hay cifra no dudosa. Las dos unicas diferencias que
+aparecieron al recalcular los tres cuadros del ano fueron errores de lectura a
+110 dpi sobre digitos que no parecian dudosos (un 1 leido 2, un 6 leido 8), y
+las dos desaparecieron a 450 y a 500 dpi. La regla que conviene agregar:
+CUANDO EL TECHO DE RESOLUCION DEL CORPUS ESTA EN 150 ppi O MENOS, NINGUN
+DIGITO SE TOMA DE UNA VISTA DE PAGINA NI DE UN RECORTE DE COLUMNA; toda cifra
+que entre en un recalculo se mira en un recorte propio a 450 dpi o mas. Y el
+corolario practico: cuando un subtotal no cierra por una cantidad redonda
+-10.000, 20, 100-, lo primero que hay que sospechar no es el original sino la
+propia lectura.
+
+TERCERA, sobre el parrafo 2.5bis. La paginacion corrida no siempre se lee
+entera desde la capa, porque el encabezado puede no quedar en ella: aqui se
+recupero en 38 de 534 hojas. Sirve igual, por tramos entre anclas, y ademas
+las anclas se van confirmando solas al transcribir las fichas, porque el folio
+esta en la misma imagen. Seis de las anclas de este informe salieron de
+recortes hechos para otra cosa.
+
+CUARTA, un hecho: el techo de resolucion no es siempre de 300 ppi para arriba.
+Aqui es de 150 ppi, con una copia de 75 ppi al lado en cada hoja, y eso cambia
+el procedimiento entero, como dicen la segunda y la tercera.
+
+PARRAFO 12 - FALSOS POSITIVOS DE 1918 (para el informe, no para el config)
+--------------------------------------------------------------------------
+
+ANILLO 1. Un lugar llamado Caldera en el departamento de Rivadavia (730 h4 y
+h10), que es el falso positivo nuevo del ano y el unico que exige mirar la
+imagen para descartarlo. El juez David E. Caldillo (695 h17). Gregorio
+Calderon, de la causa Palomino contra Calderon por linea separativa (704 h15,
+cinco veces). Angel Calda, de un deslinde (705 h18). Angel J. Caldas, jefe del
+cuerpo de bomberos y vigilantes de la capital (708 h4). En la difusa ampliada,
+47 formas, todas juzgadas ruido: calera, caleras, calilla, calavera, cadillal,
+caldillo, allera, altera, cadena, caldas, callea, camdra, cuadra, madera,
+balderram, balderrama, pucarilla, aera, alea, aler, cada, cade, caer, cale,
+cara, lera, alavera, alegrar, alterar, alverza, bandera, caballeria, cabrera,
+cadaver, cadenas, caleiruria, calidad, calseri, candela, capilla, carrera,
+cartera, casilla, cerilar, cortaderas, cuadras, cualquiera, ercaderias,
+galeria, maderas, mercaderia, ocedera, padilla, vocalea.
+
+No se agregan al config, por la razon del parrafo 12 de la rubrica: un termino
+del anillo 1 cuyo contexto contenga un falso positivo del config queda marcado
+fp_conocido y sin recorte, aunque sea real.
+
+CONFIG ACTUALIZADO - QUE AGREGAR Y QUE NO
+-----------------------------------------
+
+La sesion no entrega el archivo: entrega la lista de agregados, porque el
+config vigente es el que esta subido al proyecto y conviene que el usuario lo
+edite sobre el suyo. Se conserva todo lo anterior.
+
+AL ANILLO 2, once formas nuevas, todas leidas en la imagen:
+
+  De los circuitos del Colegio Electoral N. 3 (730 h7), parajes del
+  departamento que el config no tiene: despensilla, corral de
+  barrancas, el churcal, el monte, las garrapatas, las lagunas, tunel.
+  De los mismos circuitos, formas distintas de las que el config lleva
+  y que por eso no dan acierto: yacone (el config tiene yacones),
+  mesadas (tiene las mesadas), queseria (tiene queceria), angosturo
+  (tiene angostura).
+  Del decreto 1.564 (694 h3): chalchami, una forma mas del paraje que
+  el config ya lleva como chalchanio, chalcanio y chalchamo.
+
+NO se agrega "el acheral" porque el config ya lleva acheral, ni se agrega la
+forma con que la capa lo deforma ("achc ral"), porque es ruido de una sola
+hoja y no una grafia del original. Por la misma razon no se agregan "cacrres",
+"augel fernandez" ni "atfraham fernandez": son fallas de la capa, no formas
+impresas.
+
+A LOS ACTORES, 43 entradas con origen 1918:
+
+  Del decreto 1498 y del 25: eustaquio murua.
+  Del decreto 1.564: alejandro ramos, victor masclef, genaro molina,
+  nolasco echenique, jose nogales, pedro vale, victorino tolaba,
+  zacarias maidana, venancio ruiloba, francisco isasmendi, liborio
+  guerrero, pablo paredes, francisco mercado, eustaquio sarapura.
+  Del decreto 1.653: juana luque.
+  Del decreto 1697: casimiro caseres, gervasio chalar.
+  Del decreto de traslados: escolastico aparicio, pedro perez del
+  busto.
+  De los decretos 27, 39, 252 y del de diciembre: pedro greni, horacio
+  ornstein Y horacio hornstein, las dos formas, miguel s. gallardo.
+  Del decreto 151: julio r. de la vega.
+  De los avisos mineros: miguel a. sosa, dermidio arancibia, y garzon
+  y pintos como propietarios de Cerro Nevado.
+  De los decretos 113 y 190: angel fernandez, manuel a. cornejo,
+  manuel a. cornejo arias, rafael fernandez.
+  Del sucesorio: delfin chaile.
+  De las autoridades de mesa (731 h6): andres fernandez, augusto
+  regis, marcos e. aparicio, lucas medinas, abraham fernandez, jose
+  andres molinas, enrique j. rauch, marcelo lamas, gregorio nogales,
+  jose yugra gonzalez, juan cruz nogales.
+
+De esos 43, quince ya estan en el config con otro origen y NO se duplican: se
+conservan como estan. Tres se agregan con las DOS grafias, por la regla 3 del
+parrafo 15.3: ornstein y hornstein; caseres, que el config ya lleva como
+caceres (1909) y caseres (1910) y que este ano aparece como las dos; y cornejo
+arias junto a cornejo.
+
+A NUMEROS, catorce: los decretos del ano que nombran al departamento
+
+  1498, 1557, 1564, 1653, 1660, 1697 (Gobernador, enero a mayo)
+  25, 27, 39, 50, 54, 113, 131, 151, 157, 165, 184, 190, 250, 252
+  (Intervencion Nacional, mayo a diciembre)
+  y 145, que el 151 cita y que no se publico.
+
+Conviene agregarlos aunque sean cifras bajas, porque 1918 es el primer ano de
+la serie en que los actos llevan numero y porque la numeracion se reinicia a
+mitad de ano: un 25 de 1918 no es el 25 de ningun otro ano, y sin la lista un
+barrido posterior no tiene con que cruzar.
+
+A FALSOS POSITIVOS, ninguno.
+
+Por la razon del parrafo 12: un termino del anillo 1 cuyo contexto contenga un
+falso positivo del config queda marcado fp_conocido y sin recorte, aunque sea
+real. La Caldera de Rivadavia es el caso extremo: agregarla como falso
+positivo haria que el script marcara como conocido cualquier contexto que
+traiga la palabra Rivadavia, y en 1918 hay convocatorias electorales que
+nombran a Rivadavia y a Caldera en el mismo renglon. Queda declarada en el
+informe y fuera del config.
+
+RECUENTO
+--------
+
+  Archivos PDF ............................... 53 (ediciones 684 a 736)
+  Ediciones con hojas ........................ 52
+  Ediciones ausentes del origen .............. 1 (703)
+  Hojas presentes ............................ 534
+  Folios que cubre el ano .................... 587
+  Hojas ausentes segun la cadena de folios ... 53
+  Techo de resolucion ........................ 150 ppi
+  Caracteres de la capa ...................... 1.790.470
+  U+0002 ..................................... 0
+  U+00AD ..................................... 9.755
+  Tokens de una sola letra ................... 65.354 (19%)
+  Imagenes miradas ........................... 72
+  Columnas cotejadas contra la capa .......... 50 en 26 ediciones
+  Tapas leidas en la imagen .................. 12
+  Anclas de folio verificadas en la imagen ... 6
+  Hojas con acierto del anillo 1 ............. 32
+  Candidatos del anillo 1 por fichar ......... 0
+  Falsos positivos del anillo 1 juzgados ..... 4 hojas mas 47 formas
+  Terminos del anillo 2 con acierto .......... 43 de 84
+  De ellos, del departamento ................. 22 (bloque B.1)
+  De ellos, otra cosa en 1918 ................ 20 (bloque B.3)
+  Personas de los actos del departamento ..... 43
+  Cuadros publicados ......................... 3, los tres
+                                                recalculados enteros
+  Tablas no recalculadas ..................... 0
+  Saldos encadenados ......................... 4 (agosto a noviembre)
+  Planos publicados .......................... 0 (17 hojas remiten)
+  Palabras sueltas perdidas por la capa ...... 8
+  Fichas del parrafo A ....................... 28 (7 abiertas en un
+                                                punto declarado)
+  De ellas, falsos positivos fichados ........ 1 (730 h10, Rivadavia)
+  Actos del parrafo A que cruzan de hoja ..... 6
+  Cifras recalculadas ........................ 2 cuentas, 7 cifras
+  Citados y no acompanados ................... 4 de 6 buscados
+  Limites declarados ......................... 4
+  Pendientes ................................. 0
+
+ENTREGA DE ESTE TURNO: si, este archivo, que reemplaza a los tres anteriores
+con el mismo nombre. Es el informe del ano, COMPLETO con cuatro limites
+declarados. Nada quedo sin anotar en notas.txt.

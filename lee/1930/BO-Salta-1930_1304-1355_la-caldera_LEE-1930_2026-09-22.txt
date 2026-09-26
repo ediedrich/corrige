@@ -1,0 +1,2247 @@
+BOLETÍN OFICIAL DE SALTA — AÑO 1930 — EDICIONES N° 1304 A 1355
+BARRIDO LEE SOBRE «LA CALDERA» — RÚBRICA LEE v15
+Informe generado el 22 de setiembre de 2026 — turno 4 de la sesión
+
+
+==============================================================================
+§0 · ADVERTENCIA PRELIMINAR
+==============================================================================
+
+ESTADO: COMPLETO, con siete límites declarados.
+
+Este archivo es la entrega del cuarto turno y reemplaza a la del tercero. El
+primero cerró el entorno, los insumos, la capa de texto y las cuatro pasadas;
+el segundo, el §A; el tercero, el §B, las tapas y la autoridad. Éste cierra
+los siete cuadros de Tesorería con sus recálculos, la cadena de saldos, el
+cotejo sumario/cuerpo, el §D, los tres cabos que quedaban del §A y el config
+actualizado. No queda trabajo que esta sesión pueda hacer: lo que falta son
+los siete límites de E.10, que dependen de insumos que no llegaron.
+
+
+0.1 · Insumos: qué llegó y qué no
+---------------------------------
+
+No hay ninguna salida de lee_auto.py para 1930. El Release 1930 de
+github.com/ediedrich/boletines-salta trae 52 assets: los 51 PDF de las
+ediciones y un lee_config.json. No llegaron el pre-informe, ni
+resultados_1930.csv, ni decretos_1930.csv, ni log.txt, ni recortes.zip, ni el
+zip de los .txt de lee_trabajo. Eso se comprobó con el listado HTML de assets
+del Release, sin token, antes de prometer nada, y decide el modo de trabajo
+entero: rige el §2.1 de la rúbrica, la sesión extrae la capa de texto ella
+misma y trabaja con una sola versión.
+
+El proyecto aporta dos archivos: lee_config.json y control_config.py. No hay
+informes LEE anteriores adjuntos, de modo que la lista de actores se armó con
+el config y no con los informes, y los saldos de 1929 no se pudieron cotejar
+contra el informe del año anterior.
+
+Los dos lee_config.json no son el mismo archivo y la diferencia importa. El
+del Release está atrasado: cierra en 1915, con 180 actores, 70 términos de
+anillo 2, 12 falsos positivos y 40 números. El del proyecto es el vigente: 388
+actores hasta 1928, 139 términos de anillo 2, 24 falsos positivos y 112
+números, y contiene entero al del Release —ningún término del Release falta en
+el del proyecto—. Se trabajó con el del proyecto y se declara aquí. Conviene
+subir ese mismo archivo al Release de 1930 para que el próximo barrido no
+herede el atrasado.
+
+
+0.2 · Entorno de la sesión, verificado
+--------------------------------------
+
+nproc = 1. tesseract 5.3.4 instalado, con los idiomas eng y osd solamente: no
+hay spa. Por lo tanto no se OCRiza nada en sesión, ni siquiera una hoja
+suelta; el §3 y el §16 de la rúbrica no son aplicables y lo que haya que leer
+se lee en la imagen. PyMuPDF no venía instalado y se instaló desde pypi
+(1.28.2). Alcanzables github.com y release-assets.githubusercontent.com, que
+es todo lo que hizo falta.
+
+
+0.3 · De dónde salieron las imágenes y cómo se cotejaron
+--------------------------------------------------------
+
+Los 51 PDF se bajaron del Release 1930 por HTTP en una sola llamada, 85 MB en
+total. No hay EXTRAIDO.json contra el cual cotejar bytes y hojas. El cotejo se
+hizo entonces por dos vías propias: el folio impreso en la cabecera de cada
+hoja, que en esta época numera por edición y no por año, y la serie semanal de
+las tapas. Las dos se detallan en el §1.
+
+
+0.4 · Qué verificó la sesión en este turno
+------------------------------------------
+
+Capa de texto extraída de las 764 hojas presentes y medida hoja por hoja;
+marca de corte U+0002 y guion blando U+00AD; guion visible de fin de renglón;
+densidad y ruido; techo de resolución; las cuatro pasadas, incluida la difusa
+ampliada; anillo 2 completo; anillo de actores por nombre completo y por
+apellido suelto; números arrastrados; fórmulas de reemplazo; folio impreso de
+cada hoja; fechas de tapa contra el calendario de 1930; una hoja mirada entera
+en la imagen y fichada.
+
+
+0.5 · Lo que falta: nada que esta sesión pueda hacer
+----------------------------------------------------
+
+Los siete límites están desarrollados en E.10 y se resumen así: no hay OCR
+propio ni del script, de modo que hay una sola versión del texto; no hay
+confianza por hoja ni lista de hojas «a ojos»; no hay md5, dhash ni medición
+de tinta; no hay log; no hay informes LEE anteriores adjuntos; seis ediciones
+de la serie no están en el corpus; y la mitad del año está incrustada a 150
+ppi.
+
+Qué agregaría cada insumo que faltó. Si llegan el .tsv, las .jpg y el log, se
+podrían agregar la confianza por hoja, la lista de hojas a ojos, la
+deduplicación por imagen, la medición de tinta y una segunda versión del texto
+con que desempatar las cifras dudosas de las tres tablas que no cierran; el §A
+no cambiaría, y el §B tampoco. Si llegan los informes LEE de 1913 a 1929, se
+podría cerrar la cadena de saldos contra 1929 y armar la lista de actores como
+la rúbrica manda, con todos los informes y no sólo con el config. Las seis
+ediciones ausentes no las repone ningún insumo.
+
+
+0.6 · Límites ya visibles
+-------------------------
+
+Con una sola versión del texto no hay segunda lectura con que desempatar, no
+hay confianza por hoja, no hay lista de hojas «a ojos», no hay md5 ni dhash de
+imágenes y no hay medición de tinta. Se desarrollan en E.10. Si llegan el
+.tsv, las .jpg y el log, se podría agregar confianza por hoja, hojas a ojos,
+deduplicación por imagen, medición de tinta y una segunda versión con que
+desempatar; el §A no cambiaría.
+
+
+==============================================================================
+§1 · CORPUS REVISADO
+==============================================================================
+
+51 ediciones presentes, 764 hojas. El Boletín de 1930 es semanal y sale los
+viernes: la serie 1304–1355 cubre los 52 viernes del año, de viernes 3 de
+enero a viernes 26 de diciembre, uno por edición, sin ediciones dobles y sin
+ningún viernes de más.
+
+Seis números de esa serie no están en el corpus, y no son días sin edición:
+son ediciones que el Release no trae. El 1305 falta como archivo. Los otros
+cinco —1312, 1318, 1320, 1323 y 1327— están como archivo pero el archivo no es
+el Boletín: son cinco PDF de una hoja, idénticos entre sí (mismo md5, 114.184
+bytes), cuyo único renglón dice «ESTE BOLETÍN NO SE ENCUENTRÓ EN NUESTRA BASE
+DE DATOS.». Es una constancia de ausencia de la base de origen, no una edición
+corta. Las seis se listan abajo como ausentes y no se cuentan como hojas.
+
+  ED    FECHA (serie de viernes)   HOJAS   ppi de la imagen   FECHA
+  ----  -------------------------  -----   ----------------   -----
+  1304  vie 03/01/1930             15      339-387 ppi        capa
+  1306  vie 17/01/1930             9       342-362 ppi        imagen
+  1307  vie 24/01/1930             14      345-356 ppi        capa
+  1308  vie 31/01/1930             19      339-364 ppi        capa
+  1309  vie 07/02/1930             18      341-365 ppi        capa
+  1310  vie 14/02/1930             18      329-348 ppi        capa
+  1311  vie 21/02/1930             18      328-348 ppi        capa
+  1312  vie 28/02/1930             AUSENTE (constancia de la base)
+  1313  vie 07/03/1930             16      337-351 ppi        capa
+  1314  vie 14/03/1930             23      339-358 ppi        imagen
+  1315  vie 21/03/1930             15      340-363 ppi        capa
+  1316  vie 28/03/1930             23      342-374 ppi        imagen
+  1317  vie 04/04/1930             18      335-352 ppi        imagen
+  1318  vie 11/04/1930             AUSENTE (constancia de la base)
+  1319  vie 18/04/1930             18      343-367 ppi        capa
+  1320  vie 25/04/1930             AUSENTE (constancia de la base)
+  1321  vie 02/05/1930             8       342-362 ppi        imagen
+  1322  vie 09/05/1930             14      338-356 ppi        capa
+  1323  vie 16/05/1930             AUSENTE (constancia de la base)
+  1324  vie 23/05/1930             10      337-351 ppi        capa
+  1325  vie 30/05/1930             8       340-362 ppi        imagen
+  1326  vie 06/06/1930             19      337-357 ppi        capa
+  1327  vie 13/06/1930             AUSENTE (constancia de la base)
+  1328  vie 20/06/1930             20      343-358 ppi        imagen
+  1329  vie 27/06/1930             20      342-353 ppi        imagen
+  1330  vie 04/07/1930             22      150-310 ppi        imagen
+  1331  vie 11/07/1930             12      150-309 ppi        imagen
+  1332  vie 18/07/1930             13      150 ppi            imagen
+  1333  vie 25/07/1930             17      150 ppi            capa
+  1334  vie 01/08/1930             12      150 ppi            imagen
+  1335  vie 08/08/1930             18      150 ppi            capa
+  1336  vie 15/08/1930             13      150 ppi            capa
+  1337  vie 22/08/1930             17      150-173 ppi        capa
+  1338  vie 29/08/1930             12      150 ppi            capa
+  1339  vie 05/09/1930             13      150 ppi            capa
+  1340  vie 12/09/1930             24      150 ppi            imagen
+  1341  vie 19/09/1930             12      150 ppi            capa
+  1342  vie 26/09/1930             11      150 ppi            capa
+  1343  vie 03/10/1930             13      150 ppi            imagen
+  1344  vie 10/10/1930             12      150 ppi            imagen
+  1345  vie 17/10/1930             20      150 ppi            capa
+  1346  vie 24/10/1930             26      150-315 ppi        imagen
+  1347  vie 31/10/1930             24      150 ppi            capa
+  1348  vie 07/11/1930             18      150 ppi            imagen
+  1349  vie 14/11/1930             24      150 ppi            imagen
+  1350  vie 21/11/1930             8       150 ppi            capa
+  1351  vie 28/11/1930             15      150 ppi            capa
+  1352  vie 05/12/1930             10      150 ppi            capa
+  1353  vie 12/12/1930             17      150 ppi            capa
+  1354  vie 19/12/1930             23      150-321 ppi        capa
+  1355  vie 26/12/1930             30      150-300 ppi        capa
+  1305  vie 10/01/1930             AUSENTE (no está en el Release)
+
+La columna FECHA dice de dónde sale la fecha de esa tapa. «capa» son las 28
+tapas cuya fecha la capa previa devuelve legible. «imagen» son las 18
+restantes, cuya fecha la capa no devolvía o devolvía rota y que se leyeron en
+la imagen en este turno, recortando la franja de la cabecera a 300 dpi y
+apilándolas de a seis. Ninguna fecha queda inferida: las 46 tapas presentes
+están leídas, y las 46 coinciden exactamente con la serie de viernes, sin una
+sola excepción.
+
+Año editorial. Se lee en la tapa y no en la capa, y en 1930 cambia una vez:
+AÑO XXI hasta la 1317 (viernes 4 de abril) y AÑO XXII desde la 1321 (viernes 2
+de mayo). Entre las dos hay tres números, 1318, 1319 y 1320, y dos de ellos
+están ausentes del corpus: el cambio sólo se puede acotar a ese tramo y no
+fijar en una edición. Se declara así. La capa previa, por su parte, llegó a
+leer «AÑO XX» en la tapa de la 1332, que la imagen muestra como XXII: es la
+razón por la que el año editorial no se lee en la capa.
+
+Techo de resolución. El PDF es real y su imagen incrustada marca el techo. En
+1930 hay dos tramos bien distintos: de la 1304 a la 1329 la imagen va de 300 a
+387 ppi, y de la 1330 en adelante baja a 150 ppi. 420 de las 764 hojas están a
+150 ppi, es decir 21 ediciones enteras (1332 a 1345 y 1347 a 1353) y las cinco
+mixtas 1330, 1331, 1346, 1354 y 1355. La hoja que este turno miró entera
+pertenece al tramo de 150 ppi y se leyó sin dificultad a 220 dpi, columnas
+incluidas; la advertencia queda hecha para las cifras, no para la prosa.
+
+Folio impreso. Cada edición se pagina desde 1 y el folio no encadena de una
+edición a la siguiente, de modo que el control de paginación corrida de
+1908–1912 no se aplica en 1930. En su lugar se cotejó, hoja por hoja, el folio
+impreso contra la posición de la hoja dentro del PDF: 24 ediciones cierran sin
+un solo desvío y en las demás los desvíos son lecturas rotas del propio folio
+(«Pág. 21» leído «2») o números del cuerpo capturados en la hoja 1, que no
+tiene folio. Ninguna edición muestra un salto de folio: ninguna edición
+presente está incompleta.
+
+Confianza por hoja: no existe. Sin el .tsv del script no hay media de
+confianza ni porcentaje de palabras bajo 60, y por lo tanto tampoco lista de
+hojas «a ojos». Es un límite, no un pendiente; va a E.10. Las hojas se
+cubrieron por las otras vías: las de los candidatos del anillo 1, las de los
+términos del anillo 2 y las de las tablas.
+
+
+==============================================================================
+§2 · CRITERIO DE BÚSQUEDA
+==============================================================================
+
+
+2.1 · Versiones
+---------------
+
+Hay una sola versión del texto: la capa previa de los PDF, extraída en sesión
+con PyMuPDF. No hay OCR propio, porque tesseract no tiene spa en esta sesión,
+y no hay OCR del script, porque no llegó. Todo resultado de este informe se
+etiqueta prev y no hubo desempate posible por texto: el desempate es siempre
+la imagen.
+
+
+2.2 · Unión de cortes de renglón
+--------------------------------
+
+Medido sobre las 764 hojas: la marca U+0002 no aparece ni una vez. El guion
+blando U+00AD aparece 14.478 veces y las 14.478 son cortes de renglón —no
+queda ni uno suelto—. Se quitan junto con el salto de renglón y no como
+carácter suelto, según la corrección de v15; con la regla vieja,
+«Cal[U+00AD]dera» se habría convertido en «cal\ndera» y la mención se habría
+perdido en silencio.
+
+1930 agrega algo que 1908–1912 no tenía: además del guion blando, el original
+imprime guion visible de fin de renglón, 2.792 veces. La unión los pega
+también, tolerando hasta dos signos de puntuación a cada lado del salto.
+
+
+2.3 · Las cuatro pasadas
+------------------------
+
+Literal/normalizada. «cald» sobre el texto normalizado y unido: 53 aciertos en
+28 hojas. Las formas son caldera (47), calderón (4), alcalde (1) y calduhi
+(1).
+
+Laxa. El patrón de clases da 52 aciertos en 27 hojas; la variante que admite
+espacios y saltos de renglón, escrita con la clase de espacios en blanco y no
+con un espacio literal, sube a 59 aciertos en 33 hojas. Las tres formas que
+sólo la variante con espacios encuentra son «c aldera» (2 veces, las dos en el
+índice de la edición 1345, donde la maqueta del original separa las
+mayúsculas), «cal deno» (3) y «calle mo» (2). Las dos últimas son falsos
+positivos ya juzgados.
+
+Ninguna de las pasadas devolvió cero, de modo que no hubo que probar ninguna
+contra otro patrón para saber si estaba rota.
+
+Difusa. Ratio ≥ 0,78 contra caldera y calderilla, excluida la forma exacta: 8
+formas. Tres importan —«qaldera» (1330 h13), «aldera» (1345 h1) y «c aldera»—
+y las demás son falsos positivos: escalera, calderón, calera, caleras,
+cuadrillas y adera (de madera y heladera). La difusa vuelve a rescatar lo que
+la literal pierde, por cuarto año seguido: la resolución del impuesto de
+degolladura de 1330 h13, que es una de las dos menciones de hacienda municipal
+del departamento en todo el año, entra por «qaldera» y por ninguna otra vía.
+
+Difusa ampliada, banda 0,70–0,78 restringida a palabras que empiezan con c, g
+u o: 20 formas, 76 apariciones, todas descartables — calidad, cualquiera,
+capilla, cadillal, cadáver, cadena, cartera, cabrera, cadenas, carrera,
+calaveras, cadillar, cuadras, cuadra, calleja, cortaderas, cantera, galera,
+cañería y clemira.
+
+
+2.4 · Anillo 2
+--------------
+
+Se buscaron los 139 términos del config sobre el texto sin puntuación. Dieron
+acierto 58. El reparto entre lugares del departamento, apellidos y topónimos
+de otros departamentos no se declara todavía: se declara después de leer el
+contexto de los 58, uno por uno, que es trabajo del turno siguiente. Los
+recuentos crudos, por si sirven para ordenar esa lectura:
+
+  isasmendi                           23 hojas
+  san jose                            22 hojas
+  castellanos                         18 hojas
+  mamani                              17 hojas
+  tabacal                             16 hojas
+  entre rios                          11 hojas
+  aramayo                              8 hojas
+  nogales                              7 hojas
+  campo alegre                         6 hojas
+  el bordo                             6 hojas
+  apaza                                5 hojas
+  penales                              5 hojas
+  sauces                               5 hojas
+  betania                              4 hojas
+  chaile                               4 hojas
+  durazno                              4 hojas
+  las nieves                           4 hojas
+  lesser                               4 hojas
+  murua                                4 hojas
+  potrerillo                           4 hojas
+  wierna                               4 hojas
+  angostura                            3 hojas
+  el monte                             3 hojas
+  mesada                               3 hojas
+  mojotoro                             3 hojas
+  rio blanco                           3 hojas
+  rio castellanos                      3 hojas
+  angosto                              2 hojas
+  higueritas                           2 hojas
+  lagunilla                            2 hojas
+  los sauces                           2 hojas
+  manzano                              2 hojas
+  pirguas                              2 hojas
+  quintin                              2 hojas
+  vaqueros                             2 hojas
+  acheral                              1 hojas
+  angostura de don daniel linares      1 hojas
+  antilla                              1 hojas
+  campo belgrano                       1 hojas
+  challe                               1 hojas
+  condori                              1 hojas
+  despensilla                          1 hojas
+  gallinato                            1 hojas
+  las lagunas                          1 hojas
+  las mesadas                          1 hojas
+  mesadas                              1 hojas
+  pacara                               1 hojas
+  parroquia                            1 hojas
+  potrero de gallinato                 1 hojas
+  pucheta                              1 hojas
+  queseria                             1 hojas
+  san alejo                            1 hojas
+  santa rufina                         1 hojas
+  severino                             1 hojas
+  toconas                              1 hojas
+  trancas                              1 hojas
+  yacones                              1 hojas
+  yufra                                1 hojas
+
+Una observación de maqueta que ya se puede hacer: la edición 1316 concentra,
+ella sola, aciertos de 30 términos distintos repartidos en sus 23 hojas. No es
+vecindad: es una lista larga de circuitos por departamento, donde conviven
+topónimos de toda la provincia. Uno de sus renglones, ya leído, nombra «Calera
+(la)» entre los circuitos de Río de las Piedras, que es de Anta y no del
+departamento.
+
+
+2.5 · Anillo de actores, números y reemplazos
+---------------------------------------------
+
+La lista se armó con el lee_config.json del proyecto, 388 actores de 1908 a
+1928 y de 1946. No había informes LEE anteriores adjuntos: ésa es la razón, y
+se declara. 1930 es la época contigua a 1928 y el config heredado funciona: 78
+de los 388 actores reaparecen en 1930 con nombre y apellido completos. Se
+buscó sobre el texto con la puntuación suprimida y con hasta dos palabras
+intercaladas entre nombre y apellido.
+
+Los más frecuentes, con su año de origen en el config: Ángel María Figueroa
+[1926], 74 hojas; José María Leguizamón [1922], 21; Ricardo R. Arias [1927],
+18; Ernesto Campilongo [1927], 13; Abraham Cornejo [1917], 10; Julio J. Paz
+[1920] y Juan Larrán [1925], 9 cada uno; Luis López [1925], 8. La lectura de
+sus contextos y el reparto en los tres grupos de ausencias del §B quedan
+pendientes.
+
+Números arrastrados: 34 de los 112 del config aparecen en el corpus, pero los
+del config son números de acto de 1946 y de la serie de 1908–1912, y en 1930
+los actos llevan una numeración propia y corrida de cinco cifras (11.461 en
+enero, 12.586 en noviembre). Todos los aciertos son, hasta donde este turno
+vio, coincidencia de cifra. El cotejo de fecha contra numeración del §8.15 sí
+es aplicable en 1930, a diferencia de 1908–1912, y queda pendiente sobre los
+vecinos ±3 de cada acto del §A.
+
+Fórmulas de reemplazo: «en reemplazo de» aparece en 86 hojas, «en su
+reemplazo» en 26 y «vacante dejada» en 5. Dos de ellas ya cayeron sobre el
+departamento, en los nombramientos de policía de setiembre y noviembre.
+
+
+2.6 · Reparto de los aciertos del anillo 1
+------------------------------------------
+
+Las veinte apariciones reales están fichadas en el §A y no se repiten acá. El
+reparto por materia, que es lo que el año deja ver: cuatro actos de gobierno
+comunal (la renuncia y el reemplazo en la H. Comisión Municipal en enero, el
+comisionado municipal en octubre y la terna de jueces de paz en noviembre);
+cuatro de policía (comisario de la Caldera, sub-comisario de Mojotoro,
+sub-comisario de Vaqueros y la expendeduría de guías); uno de registro civil;
+uno de hacienda municipal (el impuesto de degolladura); ocho de minería, que
+es la materia dominante del año y toda ella girando sobre dos lugares, «Las
+Nieves» y la finca «San José»; dos remates judiciales de inmuebles del
+departamento; una nómina electoral; y un nombramiento de sub-comisión vecinal
+de caminos.
+
+Los tres cabos que el §A había dejado abiertos están cerrados. El solicitante
+del expediente 1198-C es Francisco G. de la Vega, con fecha 18 de setiembre de
+1925 y abandono desde el 26 del mismo mes; la resolución termina en la cabeza
+de 1313 h13, que se recortó y se leyó. El acto que abre la columna izquierda
+de 1313 h10 con sus artículos 2°, 3° y 4° viene de la hoja 9 y es del
+Departamento La Poma, sobre terrenos de propiedad fiscal amojonados desde el
+Cerro Negro en el límite con Jujuy: no es del departamento y no se ficha. Y el
+decreto 11367 de 1304 h5 aprueba obras del contratista Constantino Siriaco en
+el arroyo de «los Nogales» sin decir en qué departamento está ese arroyo: se
+declara sin atribuir, según la regla de la tabla o el acto que no se puede
+atribuir a una jurisdicción.
+
+Falsos positivos del anillo 1 ya descartados en este turno, con su contexto
+leído: «alcalde» de 1336 h1 (índice, «nómbrase interinamente alcalde de
+cárcel»); «calduhi» de 1328 h17, que es «caducidad» rota por el OCR en una
+hoja de mucho ruido; Toranzos Calderón, teniente primero, en 1341 h2, 1341 h5
+y 1342 h4; la finca «La Calera» o «Cadillal» del distrito de La Merced,
+departamento de Cerrillos, en 1306 h9; el circuito «Calera (la)» de Río de las
+Piedras, Anta, en 1316 h11; las «caleras» y fábricas de yeso de una ley
+laboral en 1319 h2; y «adera» de madera y heladera en 1353 h15 y 1355 h19.
+
+
+2.7 · Cotejo sumario/cuerpo: aplicable en 1930
+----------------------------------------------
+
+A diferencia de 1908–1912, el Boletín de 1930 sí trae índice por edición: las
+hojas 1 y 2 listan los actos por número y remiten a la página, con la forma
+«12236-Nombrando comisario de policía de la Caldera. (Pág. 4)». Ese índice
+aparece en 47 de las hojas 1 a 3 medidas. El cotejo de los números del índice
+contra el cuerpo es por lo tanto aplicable y se hizo, tomando los números de
+una sola versión —la previa, que es la única—. Cuatro de los índices sirvieron
+además para encontrar actos del departamento: 1310 h1, 1330 h2, 1342 h1 y 1345
+h1.
+
+Resultado. Se aislaron los renglones de índice por su forma —número, raya,
+materia y «(Pág. n)»— y los de cuerpo por la suya —número, raya y «Salta,
+<fecha>»—. De los 117 números que los índices anuncian con esa forma, 98 se
+encuentran en el cuerpo de su propia edición. De los 19 restantes, siete
+aparecen en el cuerpo con una forma que el patrón no reconoce y se hallaron
+buscándolos de nuevo; uno, el 12240 anunciado por el índice de la 1342,
+aparece en el cuerpo de la edición siguiente, la 1343 hoja 2, que además es
+una de las hojas miradas en la imagen. Quedan once números que el índice
+anuncia y que no aparecen en el cuerpo de ninguna edición del año: 11880 y
+11887 (1329), 11908 (1330), 11973 (1333), 11035 y 12021 y 12024 (1335), 12081
+(1336), 12006 (1337), 12197 (1341) y 12227 (1342).
+
+Sobre esos once el informe no afirma que el Boletín los haya dejado sin
+publicar. Con una sola versión del texto, un número roto por el OCR en el
+cuerpo es indistinguible de un número ausente del cuerpo, y once sobre 117 es
+del orden de error que la capa previa de este corpus produce en cifras. Se
+declara el resultado y su límite: el cotejo aplicable dio once discrepancias,
+ninguna de ellas del departamento, y para decidir cuáles son reales haría
+falta una segunda versión o mirar once hojas más. Ninguno de los once toca a
+La Caldera.
+
+
+==============================================================================
+§A · MENCIONES EXPLÍCITAS
+==============================================================================
+
+Veinte fichas, una por aparición, ordenadas por edición y hoja. Las veinte
+están miradas en la imagen y transcritas desde ella. Dos de ellas cubren un
+acto que el original parte entre dos hojas —1352 y 1355—: se fichan como una
+sola entrada, con la fuente de las dos hojas, porque son un acto y no dos. La
+serie de ocho caducidades mineras del 27 de febrero se ficha por hoja y no por
+expediente, porque la fuente es la hoja; cada ficha dice cuántos expedientes
+trae.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1307, hoja 8 de 14 («Pág. 8»), viernes 24 de enero de
+1930, columna derecha, rubro «Renuncia».
+
+FICHA: Decreto N° 11461, Salta, enero 8 de 1930, expediente N° 27-L. Acepta la
+renuncia de Luis Pérez al cargo de miembro de la H. C. Municipal de «La
+Caldera», con las gracias por los servicios prestados. Firman Cornejo y Rafael
+P. Sosa.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, sin recorte; las dos columnas
+leídas enteras. El techo de la imagen incrustada en esta edición es de 345
+ppi. Todo lo transcrito sale de la imagen.
+
+TEXTO:
+  Renuncia
+  11461—Salta, Enero 8 de 1930.
+    Exp. N° 27-L—Vista la renuncia
+  presentada por el señor Luis Pèrez [sic]
+  del cargo de miembro de la H. C.
+  Municipal de «La Caldera»,
+    El Gobernador de la Provincia
+         DECRETA:
+    Art. 1°.—Acéptase la renuncia que
+  antecede dándosele las gracias por los
+  servicios prestados.
+    Art. 2°.—Comuníquese, publíquese,
+  dèse al R. Oficial y archívese.
+       CORNEJO—RAFAEL P. SOSA
+
+NOTA DE LECTURA: El apellido del renunciante está en discusión con el decreto
+que llena la misma vacante doce días después. Acá se lee «Luis Pèrez», con
+acento grave que es del tipo y no del idioma; en 1310 h3 el decreto 11503
+integra la comisión «por renuncia de don Luis Lepers». La letra del
+expediente, 27-L, acompaña a Lepers y no a Pérez. No se concilia: se
+transcriben los dos y va a E.9. El decreto vecino 11463, de la misma fecha y
+la misma columna, acepta otra renuncia, la del Sub-Comisario de «El Desmonte»
+de Anta, y no toca al departamento.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1308, hoja 8 de 19 («Pág. 8»), viernes 31 de enero de
+1930, pie de la columna izquierda y cabeza de la derecha.
+
+FICHA: Nómina de autoridades de mesa del COLEGIO ELECTORAL N.o 2 — LA CALDERA,
+con sus dos circuitos y sus tres mesas: circuito núm. 5, mesas 1 y 2; circuito
+núm. 6, mesa 1. Da presidente y suplentes de cada mesa. El encabezado del
+acto, hallado en la hoja 6 de la misma edición, es: «PUBLICACIÓN OFICIAL —
+Tribunal Electoral de la Provincia de Salta — NÓMINA DE PRESIDENTES TITULARES
+Y SUPLENTES DE COMICIO INSACULADOS PARA LAS ELECCIONES A REALIZARSE EL AÑO
+1930». La nómina abre por la Capital y recorre la provincia por colegios
+electorales; el de La Caldera es el número 2.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris. El rótulo del colegio
+electoral y su primera mesa están al pie de la columna izquierda y el resto
+sigue en la cabeza de la derecha: las dos columnas se leyeron enteras en la
+misma vista, de modo que el corte de columna no partió la lista. El encabezado
+general del acto no está en esta hoja: se lo fue a buscar y está al pie de la
+columna derecha de la hoja 6, que se rasterizó aparte a 230 dpi y se leyó. Sin
+él, esta nómina sería una lista de nombres sin acto.
+
+TEXTO:
+  PUBLICACION OFICIAL
+  Tribunal Electoral de la
+      Provincia de Salta
+  NÓMINA DE PRESIDENTES TITULARES Y SU-
+  PLENTES DE COMICIO INSACULADOS PARA
+  LAS ELECCIONES A REALIZARSE EL AÑO 1930
+    [hoja 6; la nómina sigue por la Capital,
+     donde el rótulo se imprime «COLEGIO
+     ELECTORAL Núm.» sin número]
+    […]
+  [hoja 8] COLEGIO ELECTORAL N.o 2 — LA CALDERA
+          Circuito núm. 5
+  Mesa núm. 1— Presidente, Robles Jo-
+  sé Eusebio; suplente primero,
+  Fernández Isaac; suplente se-
+  gundo, Càceres Camilo.
+  Mesa núm. 2 — Presidente, Urquiza
+  Manuel J., suplente segundo,
+  Mercado Enrique.
+          Circuito núm. 6
+  Mesa núm. 1 — Presidente, Bruzzo
+  Manlio Carlos; suplente primero,
+  Aparicio José; suplente segundo,
+  Zurita Emiliano.
+
+NOTA DE LECTURA: La mesa núm. 2 del circuito 5 no tiene suplente primero: el
+original pasa del presidente al suplente segundo sin renglón intermedio y sin
+marca de omisión. Se transcribe como está y no se completa. Tres de los cinco
+apellidos con nombre son actores del config: Cáceres Camilo, que el config
+trae como «camilo caceres» de 1909; Mercado Enrique, «enrique mercado» de
+1927; y Bruzzo Manlio Carlos, «manlio carlos bruzzo» de 1926, que es —casi con
+seguridad, y se rotula como inferencia— el mismo «Maglio Carlos Bruzzo» que en
+setiembre de este año es nombrado sub-comisario de Mojotoro (La Caldera) en
+1343 h2. Aparicio José podría ser el Escolástico M. Aparicio del config, pero
+el nombre de pila no coincide y no se afirma. Tres mesas para el departamento
+entero es el dato de tamaño que este acto aporta. El encabezado de la Capital
+imprime «COLEGIO ELECTORAL Núm.» y deja el número en blanco; el de La Caldera
+sí lo trae.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1310, hoja 3 de 18 («Pág. 3»), viernes 14 de febrero de
+1930, columna derecha, rubro «Miembro de la H. C. M. de La Caldera».
+
+FICHA: Decreto N° 11503, Salta, enero 20 de 1930. Integra la H. Comisión
+Municipal de La Caldera por renuncia de don Luis Lepers y nombra miembro al
+señor Marcos Galappo. Firman Cornejo y Rafael P. Sosa. El índice de esta misma
+edición, en la hoja 1, lo anuncia como «Nombramiento de miembro de la H. C.
+Municipal de la Caldera (página 3)».
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras. Todo lo transcrito sale de la imagen; el renglón del índice de la
+hoja 1 sale de la capa previa y no se ha mirado todavía en la imagen.
+
+TEXTO:
+  Miembro de la H. C. M. de La Caldera
+    11503—Salta, Enero 20 de 1930.
+    Siendo necesario integrar la H. Co-
+  misión Municipal de La Caldera por
+  renuncia de don Luis Lepers,
+    El Gobernador de la Provincia,
+         DECRETA:
+    Art. 1°.—Nómbrase miembro de la
+  H. Comisión Municipal de La Calde-
+  ra al señor Marcos Galappo.
+    Art. 2°.—Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+    CORNEJO — RAFAEL P. SOSA.
+
+NOTA DE LECTURA: Es el segundo de los dos actos de enero sobre la misma
+vacante, y el que da el apellido Lepers. Nótese que el decreto no cita el
+11461 que aceptó la renuncia: la remisión es por materia y no por número. El
+decreto vecino 11498, en la misma columna, autoriza a la Comisión de Caminos a
+canalizar un tramo del Río Ancho entre las fincas del doctor Vicente Arias y
+la Sucesión de don Favio del Valle; no nombra el departamento y no se ficha.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1313, hoja 10 de 16 («Pág. 10»), viernes 7 de marzo de
+1930, las dos columnas.
+
+FICHA: Serie de resoluciones del Director General de Minas de la Provincia,
+todas fechadas en Salta el 27 de febrero de 1930 y firmadas por Lucio Ortiz y
+José Ibarrarán F., que declaran caducas solicitudes de concesión para
+exploración y cateo en el Departamento de la Caldera presentadas en 1925 y
+abandonadas desde ese mismo año. En esta hoja, dos: expediente N° 1163-C, de
+Dorindo F. Prémoli y Ramón E. Juárez, y expediente N° 1164-C, de Rodolfo
+Povoli y Enrique Prémoli (hijo), las dos presentadas el 5 de enero de 1925 y
+abandonadas desde el 2 de abril de 1925, por minerales de primera categoría
+excluyendo petróleo e hidrocarburos fluidos.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras. La columna izquierda abre con el final de una concesión anterior
+—artículos 2°, 3° y 4°— que viene de la hoja 9 y que no nombra el departamento
+en lo que de ella se ve: queda por comprobar en la hoja 9 si ese acto es
+también de la Caldera.
+
+TEXTO:
+  Salta, Febrero 27 de 1930
+  Vistos este Expediente N° 1163. C.
+  de solicitud de concesión para explo-
+  ración y cateo de minerales de prime-
+  ra categoría (excluyendo petróleo e
+  hidrocarburos Fluídos) en el Depar-
+  tamento de la Caldera, presentada por
+  los señores Dorindo F. Prémoli y Ra-
+  mòn E. Juarez, con fecha 5 de Enero
+  de 1925; y
+         CONSIDERANDO:
+    Que los citados solicitantes, han
+  hecho abandono del tràmite de éste
+  Expediente desde el 2 de Abril de
+  1925 hasta la fecha; en consecuencia,
+  dando cumplimiento a lo dispuesto
+  en los Arts 21 y 14 de los Decretos
+  reglamentarios Nos 1181 y 2047, res-
+  pectivamente,
+    El Director General de Minas
+         de la Provincia,
+         DECRETA
+    Art. 1°—Declárase caduca la solici-
+  tud de concesión para exploración y
+  cateo de minerales de primera catego-
+  ría (excluyendo petróleo e hidrocarbu-
+  ros fluidos) en el Departamento de la
+  Caldera, presentada por los señores
+  Dorindo F. Prémoli y Ramón E. Jua-
+  rez, a fs. 2 de este Expediente N°
+  1163- C.
+    [… el segundo, expediente N° 1164. C., repite la fórmula]
+    Que los citados solicitantes han
+  hecho abandono del trámite de èste
+  Expediente desde el 2 de Abril de
+  1925, hata la fecha; [sic]
+
+NOTA DE LECTURA: Los decretos reglamentarios se citan «Nos 1181 y 2047» y son
+los mismos en las ocho resoluciones de la serie. El original alterna «el
+Departamento de la Caldera» y «el Departamento de La Caldera» sin criterio, y
+en la hoja 12 llega a imprimir «de La Caldera» y «de la Caldera» en el mismo
+acto. La capa previa lee además, en dos de los ocho, «departamento de da
+caldera», que es el artículo y no otra palabra: mirado en la imagen dice «de
+la». El acierto de la pasada literal no dependía de eso, pero el recuento de
+formas sí.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1313, hoja 11 de 16 («Pág 11»), viernes 7 de marzo de
+1930, las dos columnas.
+
+FICHA: Serie de resoluciones del Director General de Minas de la Provincia,
+todas fechadas en Salta el 27 de febrero de 1930 y firmadas por Lucio Ortiz y
+José Ibarrarán F., que declaran caducas solicitudes de concesión para
+exploración y cateo en el Departamento de la Caldera presentadas en 1925 y
+abandonadas desde ese mismo año. En esta hoja, tres: expediente N° 1165-C, de
+José Manuel Roldán y Apolo A. Prémoli, presentada el 5 de enero de 1925;
+expediente N° 1167-C, de Ignacio Prémoli y José María Oñativia, presentada el
+15 de enero de 1925; y el comienzo del expediente N° 1169-C, de Emilio D.
+Sylvester, presentada el 21 de enero de 1925.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras.
+
+TEXTO:
+  Salta, Febrero 27 de 1930.
+  Vistos este expediente N° 1165—C.
+  de solicitud de concesión para explo-
+  ración y cateo de minerales de pri-
+  mera categoría (excluyendo petróleo
+  e hidrocarburos fluidos), en el Depar-
+  tamento de la Caldera, presentada
+  por los Señores José Manuel Roldàn
+  y Apolo A. Prémoli, con fecha 5 de
+  Enero de 1925; y
+    […]
+    Salta, 27 de Febrero de 1930.
+  Vistos este Expediente N° 1167
+  —Letra C—de solicitud de concesión
+  para exploración y cateo de minera-
+  les de primera categoría (excluyendo
+  petróleo e hidrocarburos fluidos) en el
+  Departamento de la Caldera, presen-
+  tada por los señores Ignacio Prèmo-
+  li y José Maria Oñativia, con fecha
+  15 de Enero de 1925, y
+    […]
+    Salta, Febrero, 27 de 1930.
+  Vistos este Expediente N° 1169
+  C.—de solicitud de concesión para
+  exploración y cateo de minerales de
+  primera categoría (excluyendo petró-
+  leo e hidrocarburos fluidos) en el
+  Departamento de la Caldera presen-
+  tada por el señor Emilio D. Sylves-
+  ter, con fecha 21 de Enero de 1925, y
+         CONSIDERANDO:
+    Que el citado solicitante ha hecho
+  abandono del taámite de èste Expe- [sic]
+
+NOTA DE LECTURA: La serie salta dos números: no hay 1166 ni 1168 entre los
+caducados. El 1168-C existe y es de Juan Larrán: no se declara caduco acá sino
+que se le revoca la concesión ya otorgada, cinco semanas después, en 1319 h14.
+Ese salto es lo que permite leer la serie como lo que es: una limpieza de
+pedimentos de 1925 abandonados, hecha de una sola vez el 27 de febrero de
+1930, que deja afuera a los que sí habían llegado a concesión. El original
+imprime «taámite» por trámite.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1313, hoja 12 de 16 («Pág. 12»), viernes 7 de marzo de
+1930, las dos columnas.
+
+FICHA: Serie de resoluciones del Director General de Minas de la Provincia,
+todas fechadas en Salta el 27 de febrero de 1930 y firmadas por Lucio Ortiz y
+José Ibarrarán F., que declaran caducas solicitudes de concesión para
+exploración y cateo en el Departamento de la Caldera presentadas en 1925 y
+abandonadas desde ese mismo año. En esta hoja, el cierre del expediente N°
+1169-C y tres más: expediente N° 1173-C, de Federico Gauffin, por minerales de
+carbón de piedra, presentada el 16 de febrero de 1925 y abandonada desde el 8
+de junio de 1925; expediente N° 1195-C, de Julio Suárez, por minerales
+auríferos y cobre, presentada el 21 de agosto de 1925 y abandonada desde el 7
+de setiembre de 1925; y el comienzo del expediente N° 1198-C, por oro, plata y
+cobre.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras. El expediente 1198-C empieza al pie de la columna derecha y termina
+en la hoja 13, que no se ha mirado: el nombre del solicitante del 1198 queda
+por leer y no se transcribe acá.
+
+TEXTO:
+  Salta, Febrero 27 de 1930.
+  Vistos este Expediente N° 1173
+  —C—de solicitud de concesión para
+  exploración y cateo de minerales de
+  carbón de piedra, en el Departamen-
+  to de La Caldera, presentada por el
+  señor Federico Gauffin, con fecha 16
+  de Febrero de 1925; y
+    […]
+    Salta, Febrero 27 de 1930.
+  Vistos este Expediente N° 1195
+  —C—de solicitud de concesión para
+  exploración y cateo de minerales
+  auríferos y cobre, en el Departamen-
+  to de La Caldera, presentada por el
+  señor Jnlio Suarez, con fecha 21 de [sic]
+  Agosto de 1925; y
+    […]
+    Art. 1°.—Declárase caduca la soli-
+  citud de concesión para explotación y
+  cateo de minerales auríferos y cobre,
+  en el Departamento de La Caldera,
+  presentada por el señor Julio Suarez,
+  à fs. 2, de este Expediente N°.1195--C.
+    […]
+    Salta, Febrero 27 de 1930.
+  Vistos este Expediente N° 1198—C-
+  de solicitud de concesión para explo-
+  ración y cateo de minerales de pri-
+  mera categoría, oro, plata y cobre, en
+  el Departamento de La Caldera, pre-
+
+NOTA DE LECTURA: Dos erratas del original en el mismo acto: el vistos del
+1195-C escribe «Jnlio Suarez» y el artículo 1° «Julio Suarez»; y el vistos
+pide «exploración» donde el artículo 1° declara caduca la «explotación». No se
+concilian. Julio Suárez es la misma persona que en octubre aparece como
+propietario, junto con Francisco de la Vega, de los terrenos de «Las Nieves»
+donde Harrison y Larrán obtienen cateo, y como dueño, junto con los Quipildor
+y de la Vega, de la finca «San José» donde Larrán denuncia la mina. El mismo
+hombre pierde un pedimento propio por abandono y cede terreno para los ajenos,
+todo en el mismo año.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1319, hoja 14 de 18 («Pág. 14»), viernes 18 de abril de
+1930, columna izquierda.
+
+FICHA: Resolución de la Dirección General de Minas, Salta, 11 de abril de
+1930, expediente N° 1168—Letra C. Revoca la concesión de permiso para
+exploración y cateo en el lugar denominado «Las Nieves», Departamento Caldera,
+otorgada a Juan Larrán por el Escribano de Minas el 1° de agosto de 1925, por
+abandono del trámite. Firman Lucio Ortiz y José Ibarrarán F.
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras.
+
+TEXTO:
+  Salta, 11 de Abril de 1930
+  Vistos este Expediente N° 1168 —
+  Letra C—, de concesión para explo-
+  ración y cateo de minerales de prime-
+  ra categoría (excluyendo petróleo e
+  hidro-carburos fluídos), en el lugar
+  denominado «Las Nieves», Departa-
+  mento Caldera, del señor Juan Larrán;
+  y
+         CONSIDERANDO:
+    Que con fecha 1° de Agosto de 1925,
+  el señor Escribano de Minas por reso-
+  lución que obra de fs. 10 a fs. 11
+  de estos autos, ha otorgado a favor del
+  Sr. Juan Larrán, la concesión para
+  exploración y cateo […]
+    Art. 1°.—Revócase la concesión de
+  permiso para exploración y cateo de
+  minerales de 1ª categoría (excluyen-
+  do petróleo e hidro-carburos fluidos);
+  en el lugar denominado «Nieves»,
+  Departamento Caldera, otorgado a
+  favor del señor Juan Larrán […]
+
+NOTA DE LECTURA: El vistos dice «Las Nieves» y el artículo 1° dice «Nieves»,
+sin artículo: la misma resolución nombra el lugar de dos maneras. Se
+transcriben las dos y va a E.9. Lo más útil de esta hoja está al lado: la
+columna derecha trae, con la misma fecha y la misma firma, la revocación del
+expediente 1170-C a Arturo Pérez Alisedo en un lugar también llamado «Las
+Nieves» pero del Departamento La Poma. Hay por lo tanto dos «Las Nieves» en la
+provincia y el año las publica en la misma hoja: el término, que está en el
+anillo 2, no prueba por sí solo vecindad y así se tratará en el §B.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1326, hoja 16 de 19 («Pág. 16»), viernes 6 de junio de
+1930, columna izquierda, aviso (493).
+
+FICHA: Edicto de la Dirección General de Minas, expediente N° 38-H, fechado en
+Salta el 30 de mayo de 1930 y firmado por José Ibarrarán F., Escribano de
+Minas. Notifica que el 1° de junio de 1929 Alberto Jaime Harrison y Juan
+Larrán solicitaron permiso de exploración y cateo por 2.000 hectáreas en
+terrenos sin cultivar ni cercar de Julio Suárez y Francisco de la Vega, en el
+lugar «Las Nieves», Departamento de La Caldera, en un rectángulo de 5.000
+metros de Norte a Sud por 4.000 de Este a Oeste, con el punto medio del
+costado Oeste a 3.000 metros de la cumbre del cerro llamado «Miquicho».
+
+MODO DE LECTURA: Hoja entera a 230 dpi en gris, las dos columnas leídas
+enteras. Las cifras de la mensura —2.000 hectáreas, 5.000 y 4.000 metros,
+3.000 metros— se leyeron en la imagen una por una.
+
+TEXTO:
+  EDICTO:—Expediente N°. 38-H.—La
+  Dirección General de Minas de la Pro-
+  vincia notifica a los que se conside-
+  ren con algún derecho, haberse pre-
+  sentado, en fecha 1°. de Junio de 1929,
+  los señores Alberto Jaime Harrison
+  y Juan Larrán, solicitando permiso
+  para exploración y cateo de minerales
+  de primera categoría (excluyendo e
+  hidro-carburos fluidos) en una exten-
+  sión de 2.000 hectáreas, en terrenos
+  sin cultivar, ni cercar, de propiedad
+  de los señores Julio Suarez y Fran-
+  cisco de la Vega, en el lugar «Las
+  Nieves», Departamento de La Caldera,
+  las que se ubicarán en forma de un
+  rectángulo de 5.000 metros de Norte
+  a Sud, por 4.000 metros de Este a
+  Oeste verdadero, cuyo punto medio del
+  costado Oeste se encuentra al Oeste
+  y a 3.000 metros de la cumbre del
+  cerro llamado «Miquicho».
+    Lo que el suscripto Escribano de
+  Minas, hace saber a sus efectos.—Salta,
+  Mayo 30 de 1930.—José Ibarrarán F.
+                           (493)
+
+NOTA DE LECTURA: El original omite «petróleo» en la fórmula «excluyendo e
+hidro-carburos fluidos»: se transcribe la omisión y no se completa, aunque los
+otros siete actos de la misma serie traen la fórmula entera. El aviso
+siguiente, (494), es del mismo Juan Larrán junto a Carlos González Pérez, por
+otras 2.000 hectáreas en San Antonio, Distrito Rangel, Departamento La Poma:
+Larrán pide en los dos departamentos a la vez y en la misma hoja. El cerro
+«Miquicho» no está en el anillo 2 del config y entra como topónimo nuevo del
+departamento. Este edicto y la resolución de 1346 h16 son el mismo expediente
+en dos momentos, no un aviso repetido: se fichan separados.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1330, hoja 13 de 22 (folio impreso «Pág. 13»), viernes 4
+de julio de 1930, columna derecha, resolución N° 434.
+
+FICHA: Resolución del Ministerio de Gobierno, N° 434, Salta, abril 28 de 1930,
+expediente 637—M—1930. Contesta una consulta elevada por la H. Comisión
+Municipal de La Caldera sobre si corresponde cobrar impuesto de degolladura a
+los abastecedores de la peonada que construye el camino nacional de Salta a
+Jujuy. Declara procedente el impuesto aplicado por la Municipalidad de La
+Caldera dentro de su jurisdicción. Firma Rafael P. Sosa, Ministro de Gobierno.
+
+MODO DE LECTURA: Hoja entera rasterizada a 220 dpi en gris, sin recorte; la
+imagen incrustada del PDF está a 150 ppi, que es el techo de esta edición. Las
+dos columnas se leyeron enteras en la misma vista. Todo el texto que sigue
+sale de la imagen; ningún dato de esta ficha viene de la capa previa.
+
+TEXTO:
+  N°. 434
+  Salta, Abril 28 de 1930
+  Exp. 637—M—1930—Vista la con-
+  sulta elevada por la H. Comisión Mu-
+  nicipal de La Caldera, sobre proce-
+  dencia del cobro de impuestos de de-
+  golladura a los abastecedores de la
+  peonada de la construcción del cami-
+  no nacional de Salta a Jujuy; y
+       CONSIDERANDO:
+  Que la Ordenanza General de Im-
+  puestos de dicha Municipalidad no
+  acuerda excepción alguna a favor de
+  los referidos abastecedores, así como
+  tompoco existe Ley que la establezca; [sic]
+  Atento a que el impuesto de dego-
+  lladura es de competencia municipal
+  y que los abastecedores que resisten
+  su pago son comerciantes particula-
+  res, y de conformidad a lo dictamina-
+  do por el señor Agente Fiscal de
+  Gobierno,
+       El Ministro de Gobierno
+            RESUELVE:
+  Art 1°.—Declarar procedente el im-
+  puesto de degolladura aplicado por
+  la Municipalidad de la Caldera, a los
+  abastecedores de las cuadrillas de peo-
+  nes que trabajan en el camino nacio-
+  nal de Salta a Jujuy, dentro de la
+  jurisdicción de aquella.
+  Art. 2°.— Comuníquese, insértese
+  en el Libro de Resoluciones de este
+  Ministerio y archívese.
+            RAFAEL P. SOSA
+
+NOTA DE LECTURA: El original escribe el nombre de dos maneras en la misma hoja
+y a diez renglones de distancia: «H. Comisión Municipal de La Caldera» en el
+vistos y «Municipalidad de la Caldera» en el artículo 1°. Se transcriben las
+dos y se declaran en E.9. La capa previa lee el primero de esos dos como
+«qaldera»: la mención no la trajo la pasada literal sino la difusa, con ratio
+0,83, y en la imagen se lee Caldera sin ninguna duda. El original imprime
+además «tompoco» por tampoco, que se transcribe con [sic]. El acto no lleva
+número de decreto sino de resolución ministerial, y la serie 432, 433, 434,
+435 corre seguida en la misma hoja. El impuesto de degolladura y el camino
+nacional de Salta a Jujuy son los dos únicos datos de hacienda municipal del
+departamento que el año publica hasta esta hoja.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1342, hoja 4 de 11 («Pág. 4»), viernes 26 de setiembre de
+1930, columna izquierda.
+
+FICHA: Decreto N° 12.236, Salta, setiembre 16 de 1930, expediente N° 90-P.
+Sobre propuesta del Jefe de Policía, nombra Comisario de Policía de la Caldera
+a Benjamín Torres, en reemplazo de Manuel Condorí. Firman Day y Ojeda. El
+índice de la hoja 1 lo anuncia como «12236-Nombrando comisario de policía de
+la Caldera. (Pág. 4)».
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris; la imagen incrustada de esta
+edición está a 150 ppi, que es el techo. Las dos columnas leídas enteras. El
+renglón del índice sale de la capa previa.
+
+TEXTO:
+  12.236.—Salta, Setiembre 16 de 1930.
+    Exp. N° 90-P- Vista la propuesta
+  del señor Jefe de Policía,
+    El Gobernador Provisional de la
+              Provincia,
+         DECRETA:
+    Art.—Nómbrase Comisario de Poli-
+  cía de la Caldera al señor Benjamín
+  Torres, en reemplazo del señor Ma-
+  nuel Condorí.
+    Art. 2°.—Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+       DAY.— OJEDA.
+
+NOTA DE LECTURA: El artículo primero se imprime «Art.—», sin ordinal, y el
+segundo sí lleva el suyo: se transcribe la falta y no se completa. Es el
+primer acto del departamento firmado por el Gobierno Provisional del coronel
+Ernesto A. Day. Manuel Condorí es actor del config, de 1922, y el apellido
+Condori está además en el anillo 2: acá es persona y no lugar. Benjamín Torres
+dura dos meses en el cargo: en noviembre, el decreto 12589 de 1352 h5 llena
+«la vacante dejada por don Benjamín Torres» en la Sub-Comisaría de la Sección
+Segunda de la Capital, de modo que la vacante que Torres deja en la Capital es
+la que su propio nombramiento en la Caldera produjo.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1343, hoja 2 de 13 («Pág. 2»), viernes 3 de octubre de
+1930, columna derecha.
+
+FICHA: Decreto N° 12238, Salta, setiembre 16 de 1930, expediente N° 97-P.
+Sobre nota del Jefe de Policía, nombra Sub-Comisario de Policía de Mojotoro
+(La Caldera) a Maglio Carlos Bruzzo, en reemplazo de Juan de la Cruz Nogales.
+Firman Day y Ojeda.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras; la izquierda de esta misma hoja es la cola del índice
+de la edición, que también se leyó.
+
+TEXTO:
+  12238—Salta, Setiembre 16 de 1930.
+    Expediente N°. 97—P —Vista la no-
+  ta del señor Jefe de Policía,
+    El Gobernador Provisional de
+         la Provincia de Salta,
+         DECRETA:
+    Art. 1°.—Nómbrase Sub-Comisario
+  de Policía de Mojotoro (La Caldera),
+  al señor Maglio Carlos Bruzzo en
+  reemplazo del señor Juan de la Cruz
+  Nogales.
+    Art. 2°.— Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+       DAY.— OJEDA.
+
+NOTA DE LECTURA: Es el acto que ata Mojotoro al departamento por escrito: el
+paréntesis «(La Caldera)» lo pone el propio decreto. El apellido se imprime
+«Bruzzo» acá y «Bruzzo» también en la nómina electoral de 1308 h8, pero el
+nombre de pila cambia: «Maglio» en setiembre, «Manlio» en enero. El config
+trae «manlio carlos bruzzo» desde 1926. Se transcriben los dos y no se
+unifican. Juan de la Cruz Nogales es actor del config, de 1922, y el apellido
+Nogales está en el anillo 2: acá es persona.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1344, hoja 9 de 12 («Pág. 9»), viernes 10 de octubre de
+1930, columna derecha, aviso (631).
+
+FICHA: Remate judicial por José M. Leguizamón, por disposición del Juez de
+Comercio en los autos «Embargo Preventivo Melchor Rocha vs. José González
+Yufra». El 20 de noviembre rematará, con base de $ 1.333,33, una casa de la
+ciudad en 25 de Mayo N° 786 y, con la misma base, una estancia denominada
+«Potrero de Gallinato» en el departamento de la Caldera.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras. Las dos bases se leyeron dígito por dígito: el
+original las imprime «$ 1.333,33» la primera y «$ 1 333,33» la segunda, sin
+punto de millar.
+
+TEXTO:
+  Por José M. Leguizamón
+          JUDICIAL
+    Por disposición del señor Juez de
+  Comercio y como correspondiente a
+  los autos «Embargo Preventivo Mel-
+  chor Rocha vs. José González Yufra»,
+  el 20 de Noviembre del corriente año,
+  a las 17, en mi escritorio Alberdi
+  323, venderé con base de $ 1.333,33,
+  una casa ubicada en ésta ciudad 25
+  de Mayo N°. 786 y con base de $
+  1 333,33 tambien, una estancia deno-
+  minada «Potrero de Gallinato en el
+  departamento de la Caldera. — José
+  María Leguizamón, Martillero. (631)
+
+NOTA DE LECTURA: El aviso abre las comillas de «Potrero de Gallinato» y no las
+cierra: la comilla de cierre cae recién después de «Caldera» o no cae, y en la
+imagen no está. Se transcribe como se ve. «Potrero de Gallinato» está en el
+anillo 2 del config en tres formas distintas y ésta es la que el año usa. El
+apellido del demandado, Yufra, también está en el anillo 2 —viene de «Burgos
+de Yugra», de 1917— y acá es persona y no lugar: va al §B.3. José María
+Leguizamón es actor del config desde 1922 y es el martillero de los dos
+remates del departamento de este año.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1345, hoja 3 de 20 («Pág. 3»), viernes 17 de octubre de
+1930, columna derecha.
+
+FICHA: Dos decretos del Interventor Nacional, los dos de Salta, 2 de octubre
+de 1930. El N° 12307 nombra Comisario de Policía de La Caldera a Eustaquio
+Murúa, dentro de una tanda que cubre también El Tabacal, Pichanal,
+Embarcación, Güemes y San Carlos. El N° 12308 nombra Comisionados Municipales
+y da el de la Caldera al señor Augusto Regis. Firman Vélez y D. Zambrano.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras. El orden de correspondencia del 12307 —qué nombre va
+con qué localidad— se leyó contando posiciones en la imagen, porque el decreto
+nombra las localidades en un artículo y las personas en otro,
+«respectivamente».
+
+TEXTO:
+    Art. 1°.— Nómbrase Comisario de
+  Policía de El Tabacal, Pichanal, Em-
+  barcación, La Caldera, Güemes y San
+  Carlos, a los señores Navor Frías,
+  Mario Dozo, Alfredo S. Costa, Eusta-
+  quio Murùa, Toribio Iriarte y Juan
+  de Fiore, respectivamente.
+    […]
+  12308—Salta, 2 de Octubre de 1930.
+    Siendo uno de los objetivos de la
+  Intervención Nacional la reorganiza-
+  ción de las autoridades Comunales de
+  la Provincia para lo que es necesario
+  proceder a la compulsa del estado en
+  que ellas se encuentran,
+    El Interventor Nacional,
+         DECRETA:
+    Art. 1°.— Nómbrase Comisionados
+  Municipales de Güemes al señor An-
+  drés López Arrieta; de la Caldera al
+  Sr. Augusto Regis; de San Carlos al se-
+  ñor Néstor Michel; de Embarcación
+  al señor Enrique Vuistaz; de Picha-
+  nal al señor Bandale Sarquis; de Cam-
+  po Santo al señor Juan Bellone.
+       VELEZ — D. ZAMBRANO.
+
+NOTA DE LECTURA: El 12308 es el acto que disuelve de hecho la H. Comisión
+Municipal de La Caldera que enero había integrado: el considerando lo dice sin
+nombrarla, «la reorganización de las autoridades Comunales de la Provincia».
+El Boletín no publica el decreto que cesa a los miembros anteriores: es un
+acto citado por materia y no acompañado. Augusto Regis, actor del config desde
+1909, es el comisionado municipal durante el resto del año y quien en
+noviembre eleva la terna de jueces de paz de 1352 h4. Eustaquio Murúa, del
+config desde 1912, acumula en seis semanas la comisaría (este decreto) y la
+expendeduría de guías (1350 h3).
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1346, hoja 9 de 26 («Pág. 9»), viernes 24 de octubre de
+1930, columna izquierda.
+
+FICHA: Decreto N° 12.406 del Interventor Nacional, Salta, octubre 13 de 1930.
+Nombra Encargado del Registro Civil de Palomitas a Manuel Esteban, de la
+Caldera a don Ramón Juárez y de La Silleta a don Telésforo Paz. Firman G.
+Vélez y D. Zambrano.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras.
+
+TEXTO:
+  12.406.—Salta, Octubre 13 de 1930.
+    El Interventor Nacional,
+         DECRETA:
+    Art. 1°.—Nómbrase Encargado del
+  Registro Civil de Palomitas, a don
+  Manuel Esteban; de la Caldera, a don
+  Ramón Juárez; de la Silleta, a don
+  Telésforo Paz.
+    Art. 2°.—Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+    G. VELEZ — D. ZAMBRANO.
+
+NOTA DE LECTURA: Ramón Juárez es la misma persona que tres semanas después,
+por el decreto 12585 de 1352 h5, es nombrado Juez de Paz Propietario de La
+Caldera: acumula el Registro Civil y el juzgado de paz, y así queda rotulado
+—la identidad de nombre y cargo en la misma localidad es inferencia, no dato
+del texto—. El apellido Juárez aparece también en la serie de cateos caducos
+de marzo, en «Ramón E. Juárez» del expediente 1163-C, y no se afirma que sean
+el mismo hombre.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1346, hoja 16 de 26 («Pág. 16»), viernes 24 de octubre de
+1930, columna izquierda.
+
+FICHA: Resolución de la Dirección General de Minas, Salta, 15 de octubre de
+1930, expediente N° 38—Letra H. Concede a Alberto Jaime Harrison y Juan Larrán
+permiso de exploración y cateo por 2.000 hectáreas en terrenos sin cultivar ni
+cercar de Julio Suárez y Francisco de la Vega, en el lugar denominado finca
+«Las Nieves», Departamento Caldera. Firman Luis Víctor Outes y José Ibarrarán
+F.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras. Los dos números de decreto reglamentario que la
+resolución cita se leyeron en la imagen por separado.
+
+TEXTO:
+  DIRECCION GENERAL DE MINAS
+         RESOLUCION
+    Salta, 15 de Octubre de 1930.
+  Visto las actuaciones del presente Ex-
+  pediente N°. 38—Letra H—de solici-
+  tud para exploración y cateo de mi-
+  nerales de 1ª. categoría (excluyendo
+  petróleo e hidrocarburos fluidos), en
+  una extensión de dos mil hectáreas, en
+  el lugar finca «Las Nieves», Departa-
+  mento Caldera, presentada por Alberto
+  Jaime Harrison y Juan Larrán, con fe-
+  cha 1°. de Junio de 1929, y
+    […]
+    Que se han cumplido en legal for-
+  ma las disposiciones establecidas en
+  los Arts. 25 del Código de Minería
+  y 6°. del Decreto N°. 11790 como lo
+  acreditan los documentos agregados
+  de fs. 6 a fs. 9;
+    […]
+    Art. 1°.—Conceder a los señores Al-
+  berto Jaime Harrison y Juan Larrán,
+  permiso para exploración y cateo de
+  minerales de 1ª. categoría […]
+       Luis Víctor Outes.
+         JOSÉ IBARRARÁN F.
+
+NOTA DE LECTURA: El decreto reglamentario se cita «N°. 11790» en esta
+resolución y «N°. 1790» en la resolución vecina de la columna derecha, que es
+del mismo día, del mismo firmante y de la misma fórmula, pero sobre el
+expediente 58-S del Departamento Iruya. Una de las dos citas está mal y el
+Boletín no permite decidir cuál: se transcriben las dos y va a E.9. Firma acá
+Luis Víctor Outes como Director General de Minas: el índice de 1343 h2 publicó
+en setiembre el decreto 12278 que lo nombra en ese cargo y el 12277 que acepta
+la renuncia de Lucio Ortiz, que es quien firmaba las caducidades de marzo. El
+cambio de firma en los actos mineros del departamento tiene por lo tanto su
+acto de origen dentro del mismo corpus.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1347, hoja 23 de 24 («Pag. 23»), viernes 31 de octubre de
+1930, las dos columnas, aviso (657).
+
+FICHA: Edicto de Minas: la Autoridad Minera notifica que el 20 de julio de
+1929 Juan Larrán, concesionario del cateo del expediente N° 1168-C en el
+Departamento Caldera, manifestó haber descubierto dentro del cateo una mina de
+plomo y plata de tres pertenencias, que denomina «Caldera N°. 1 — Caldera N°.
+2 y Caldera N° 3». Da la mensura de las tres y sitúa el punto de partida en el
+vértice Noroeste de la casa de los hermanos Quipildor, a 500 metros al Oeste
+verdadero del Cerro de la Inga. La mina está en terrenos de la finca «San
+José», de Quipildor Hermanos, Julio Suárez y Francisco de la Vega. Salta,
+octubre 14 de 1930, José Ibarrarán F., Escribano.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. El edicto
+ocupa el pie de la columna izquierda y la cabeza de la derecha y se leyó
+entero en la misma vista. Las cifras de azimut y distancia se leyeron una por
+una; las de la tercera pertenencia quedan en la columna derecha y también se
+leyeron.
+
+TEXTO:
+  EDICTO DE MINAS.—La Autoridad
+  Minera notifica a todos los que se
+  consideren con derecho, que el 20 de
+  Julio de 1929, se ha presentado don
+  Juan Larrán como concesionario del
+  cateo—Expediente N° 1168—C, en
+  el Departamento Caldera, manifestan-
+  do que dentro del cateo ha descubier-
+  to una mina de plomo y plata, de tres
+  pertenencias a las que denomina «Cal-
+  dera N°. 1—Caldera N°. 2 y Caldera
+  N° 3», y cuya ubicación es como si-
+  gue: Caldera 1—Las pertenencias que
+  solicita tienen la forma de un cuadra-
+  do de 300x300 metros. El punto que
+  tomo de partida es vértice Noroeste
+  de la casa de los hermanos Quipildor
+  a la que con objeto de su ubicación
+  en los mapas de la Oficina Técnica,
+  la ubico a 500 metros al Oeste verda-
+  dero del Cerro de la Inga. 1ª. perte-
+  nencia: el esquinero Sudoeste de la
+  pertenencia se encuentra al Noroeste
+  verdadero y a 250 metros del punto
+  de partida mas arriba mencionado. […]
+    Dicha mina
+  se encuentra en terrenos de la finca
+  «San José», de propiedad de los seño-
+  res Quipildor Hemanos, Julio Suárez [sic]
+  y Francisco de la Vega.
+    Lo que el subscripto Escribano de
+  Minas hace saber a sus efectos.—Sal-
+  ta, Octubre 14 de 1930.—Josè Ibarra-
+  rán F.—Escribano.            (657)
+
+NOTA DE LECTURA: Es el acto más denso del año para la toponimia del
+departamento: aporta tres nombres que el config no tiene —el Cerro de la Inga,
+la casa de los hermanos Quipildor como punto de amojonamiento, y la finca «San
+José» con sus dueños— y confirma que «San José», que está en el anillo 2, es
+efectivamente un lugar de la Caldera y no sólo el San José de Cachi que
+aparece en otras hojas del mismo año. El original imprime «Quipildor Hemanos»
+en la columna derecha y «hermanos Quipildor» en la izquierda. Nótese que el
+expediente 1168-C es el mismo que en abril se le revocó a Larrán por abandono
+(1319 h14): el Boletín publica en octubre un descubrimiento hecho en julio de
+1929 sobre un cateo que en abril de 1930 ya había sido revocado, y no concilia
+las dos cosas. Se declara y no se explica.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1350, hoja 3 de 8 («Pág. 3»), viernes 21 de noviembre de
+1930, columna derecha.
+
+FICHA: Decreto N° 12553 del Interventor Nacional, Salta, octubre 29 de 1930.
+Nombra Expendedor de Guías, Transferencias de Cueros, Marcas y Multas
+Policiales de la Caldera a Eustaquio Murúa, dentro de una tanda de quince
+localidades. Firman Vélez y Martín U. Cornejo.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras.
+
+TEXTO:
+  12553.—Salta, Octubre 29 de 1930.
+    Encontrándose en comisión el perso-
+  nal de la Administración de la Pro-
+  vincia,
+    El Interventor Nacional
+         DECRETA:
+    Art. 1°— Nómbrase Expendedor de
+  Guías, Transferencias de Cueros, Mar-
+  cas y Multas Policiales de Cafayate al
+  señor Avelino Costas; de La Calde-
+  ra al señor Eustaquio Murúa; de Ro-
+  sario de Lerma al señor Arturo Val-
+  dèz; […]
+    Art. 2°—Los nombrados antes de to-
+  mar posesión de sus respectivos car-
+  gos prestarán la fianza de acuerdo al
+  art. 77 de la Ley de Contabilidad de
+  la Provincia.
+    […] todos, Comisarios de Policía de las
+  citadas localidades.
+
+NOTA DE LECTURA: El decreto se contradice a sí mismo dentro del artículo 1°:
+nombra expendedores de guías y cierra la enumeración diciendo «todos,
+Comisarios de Policía de las citadas localidades». Los dos cargos existen y
+son distintos, y en el caso de Murúa los dos recaen en la misma persona por
+decretos distintos —la comisaría por el 12307 de octubre, la expendeduría por
+éste—, de modo que la frase no se puede descartar como errata evidente. Se
+transcribe y va a E.9. El pie de la columna izquierda trae, en una resolución
+ajena al departamento, el «Es copia: Figueroa Medina Oficial Mayor», que es
+una de las formas de autoridad del tramo del Interventor y se registra en E.4.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1351, hoja 14 de 15 («Pág. 14»), viernes 28 de noviembre
+de 1930, columna izquierda, aviso (718).
+
+FICHA: Remate judicial por Antonio Forcada, «De una finquita en La Caldera y
+ganado», por orden del Juez de 1ª Instancia en lo Civil 2ª Nominación doctor
+Florentín Cornejo, para el 31 de diciembre. Remata bienes adjudicados a la
+hijuela de costas y deudas del juicio testamentario de don Jesús Solaliga: una
+finca en el Dto. de La Caldera con base de $ 900 al contado, y ganado y aperos
+con base por cabeza.
+
+MODO DE LECTURA: Hoja entera a 200 dpi en gris, techo de 150 ppi. Las dos
+columnas leídas enteras. La lista de ganado se leyó renglón por renglón y sus
+bases se transcriben tal como se imprimen, con las comillas de repetición del
+original resueltas.
+
+TEXTO:
+  REMATE JUDICIAL
+  Por Antonio Forcada
+  De una finquita en La Caldera
+          y ganado
+    Por orden del señor Juez de 1ª. Ins-
+  tancia en lo Civil 2ª. Nominación doc-
+  tor Florentín Cornejo, venderé el día
+  31 de Diciembre a horas 17, en mi
+  Escritorio Caseros 451, dinero de con-
+  tado y con las bases que a continua-
+  ciòn se expresan los siguientes bie-
+  nes adjudicados a la hijuela de Cos-
+  tas y deudas del juicio Testamenta-
+  rio de don Jesús Solaliga:
+    Una Finca ubicada en el Dto. de
+  La Caldera, provincia de Salta, con
+  la extensión comprendida dentro de
+  los siguientes límites que le dan sus
+  títulos: Norte, propiedad de los here-
+  deros de Julio Mercado, Sud, propie-
+  dad de los herederos de Angel Sosa;
+  Este, propiedad de José Mamaní y
+  Oeste, propiedad de los herederos de
+  Abraham Fernández.
+       BASE: $ 900 AL CONTADO
+    2 bueyes de trabajo  base $ 100 c/u.
+    7 vacas lecheras        »  »  70  »
+    4 novillos de 2 años    »  »  40  »
+    1 toro de cría          »  »  75
+   12 terneros de 1  »      »  »  20 c/u.
+    1 yegua                 »  »  30
+    1 Jardinera grande      »  » 200
+    1 montura comp. chap.   »  » 150
+    En el acto del remate, se exigirá el
+  20 % de seña y como a cuenta del pre-
+  cio de compra.                  (718)
+
+NOTA DE LECTURA: La lista de ganado no lleva total impreso, de modo que no hay
+nada que recalcular contra el original; la suma de las bases por cabeza, hecha
+acá y rotulada como cálculo de la sesión y no como dato del Boletín, da $
+1.545, que es más del doble de la base de la finca. El renglón «12 terneros de
+1 »» deja la unidad en la comilla de repetición y no dice de qué: por el
+renglón anterior sería «de 1 año» y así se lee, pero no se completa en la
+transcripción. Los cuatro linderos son el dato de vecindad más útil del año:
+Julio Mercado y Abraham Fernández son actores del config desde 1909 y José
+Mamaní lleva un apellido que está en el anillo 2 —acá es persona—; el cuarto,
+Ángel Sosa, no estaba en ninguna lista. El mismo aviso nombra el escritorio
+del martillero en Caseros 451, que es el mismo de otros dos remates de esta
+hoja ajenos al departamento.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1352, hojas 4 y 5 de 10 («Pág. 4» y «Pág. 5»), viernes 5
+de diciembre de 1930. El acto empieza al pie de la columna derecha de la hoja
+4 y termina en la cabeza de la columna izquierda de la 5.
+
+FICHA: Decreto N° 12585 del Interventor Nacional, Salta, noviembre 6 de 1930,
+expediente N° 840-M. Vista la terna elevada por el Comisionado Municipal de La
+Caldera, don Augusto Regis, nombra Juez de Paz Propietario de La Caldera a
+Ramón Juárez y Juez de Paz Suplente de la misma localidad a Rafael Delgado.
+Firman Vélez y G. Ojeda. En la misma hoja 5, el decreto N° 12589, de la misma
+fecha, nombra Sub-Comisario de Policía de Vaqueros (Departamento de La
+Caldera) a Ramón Brachieri, en reemplazo de Medardo Sarmiento, con carácter
+«ad-honorem»; y llena, en su artículo 1°, la vacante dejada por Benjamín
+Torres en la Sección Segunda de la Capital.
+
+MODO DE LECTURA: Las dos hojas enteras a 200 dpi en gris, techo de 150 ppi;
+las dos columnas de cada una leídas enteras. El empalme entre hojas se hizo
+mirando las dos vistas: el renglón «y Suplente, respectivos,» abre la hoja 5 y
+cierra la frase que la hoja 4 dejó en «cargos de jueces de Paz Propietario».
+No hay renglón repetido en el empalme.
+
+TEXTO:
+  12585—Salta, Noviembre 6 de 1930.
+    Exp. N°. 840—M— Vista la terna
+  elevada por el señor Comisionado
+  Municipal de La Caldera, don Au-
+  gusto Regis, para la provisión de los
+  cargos de jueces de Paz Propietario
+  [hoja 5] y Suplente, respectivos,
+    El Interventor Nacional.
+         DECRETA
+    Art. 1°.— Nómbrase Juez de Paz
+  Propietario de La Caldera, al señor
+  Ramón Juárez y Juez de Paz Suplen-
+  te de la misma localidad, al señor
+  Rafael Delgado.
+    Art. 2°.—Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+       VELEZ.— G. OJEDA.
+    […]
+  12589—Salta, Noviembre 6 de 1930.
+    Vista la nota N°. 6828 de fecha 6
+  del actual, solicitando la provisión
+  de los cargos de Sub-Comisario de la
+  Sección Segunda de esta Capital y de
+  Sub-Comisario «ad-honorem» de Va-
+  queros: Y atento a la misma,
+    El Interventor Nacional
+         DECRETA:
+    Art. 1°.—Nómbrase Sub-Comisario
+  de Policía de la Sección Segunda de
+  esta Capital a don Ramón Días, pa-
+  ra ocupar la vacante dejada por don
+  Benjamín Torres.
+    Art. 2°.—Nómbrase Sub-Comisario
+  de Policía de Vaqueros (Departamen-
+  to de La Caldera) al señor Ramón
+  Brachieri en reemplazo de don Me-
+  dardo Sarmiento, con carácter «ad-
+  honorem».
+
+NOTA DE LECTURA: Es el acto que cierra el año institucional del departamento y
+el que permite verlo entero: el comisionado municipal que la Intervención puso
+en octubre eleva en noviembre la terna con que se nombra al juez de paz, y el
+mismo Ramón Juárez que en octubre quedó a cargo del Registro Civil pasa a ser
+juez de paz propietario. Rafael Delgado y Medardo Sarmiento son actores del
+config, de 1917 y de 1922. El decreto 12589 cierra además el círculo de
+Benjamín Torres, que el 12.236 de setiembre había llevado a la comisaría de la
+Caldera. El Boletín no publica el pedido de la terna ni la terna misma: son
+citados y no acompañados. El original imprime «Ramón Días» con ese y no con
+zeta, y se transcribe así.
+
+------------------------------------------------------------------------------
+FUENTE: BO Salta N° 1355, hojas 2 y 3 de 30 («Pág. 2» y «Pág. 3»), viernes 26
+de diciembre de 1930. El decreto abre en la columna derecha de la hoja 2 y la
+lista de departamentos sigue en la hoja 3.
+
+FICHA: Decreto N° 12639 del Interventor Nacional en Acuerdo de Ministros,
+Salta, noviembre 15 de 1930, expediente N° 915-O, sobre la nota N° 207 del
+Presidente de la Comisión de Caminos de la Provincia. Nombra, para integrar
+las Sub-Comisiones de Caminos, y por el artículo 27 de la Ley N° 3460 de
+Puentes y Caminos, a tres vecinos por departamento. Los del Departamento de la
+Caldera son Mariano Coll, Luis Patrón Costas y Herman Pfister.
+
+MODO DE LECTURA: Las dos hojas enteras a 200 dpi en gris; el techo de esta
+edición es mixto, 150 ppi en la mayoría de las hojas y hasta 300 en algunas.
+Las dos columnas de cada hoja leídas enteras. El encabezado del acto no está
+en la hoja donde cae el departamento: se lo fue a buscar a la hoja 2, según la
+regla de mirar el encabezado de toda lista aunque esté en otra hoja. Sin él,
+el renglón de la hoja 3 sería tres nombres sueltos.
+
+TEXTO:
+  12639—Salta, Noviembre 15 de 1930.
+    Exp. N° 915—O—Vista la Nota N°
+  207 de fecha 11 del actual del Presi-
+  dente de la Comisión de Caminos
+  de la Provincia, solicitando el nom-
+  bramiento de las Sub-Comisiones res-
+  pectivas:
+    Y atento a la precedencia de la
+  misma:
+         CONSIDERANDO:
+    Que de acuerdo a lo precripto ex- [sic]
+  presamente por el artículo 27 de la
+  Ley N° 3460 (Puentes y Caminos),
+  corresponde a la citada Comisión
+  proponer el nombramiento de aque-
+  llas Sub-Comisiones vecinales que
+  cuadyuven a la realización de sus fi- [sic]
+  nen propios. [sic]
+    Por tanto:
+    El Interventor Nacional, en Acuer-
+         do de Ministros,
+         DECRETA:
+    Art. 1°.—Nómbrase para integrar
+  las Sub-Comisiones de Caminos a los
+  siguientes señores:
+    […]
+  [hoja 3] Departamento de la Caldera: Ma-
+  riano Coll, Luis Patro Costas y Her- [sic]
+  man Pfister.
+
+NOTA DE LECTURA: Tres erratas del original en un mismo acto: «precripto» por
+prescripto, «cuadyuven a la realización de sus finen propios» por coadyuven y
+fines, y, ya en la hoja 3, «Luis Patro Costas» por Patrón. Se transcriben con
+[sic] y van a E.9. Los tres vecinos nombrados por el departamento tienen
+historia en el corpus: Mariano Coll y Herman Pfister son actores del config,
+de 1920 y de 1917 respectivamente, y Patrón Costas es el apellido que el mismo
+decreto pone por Chicoana en la persona de Néstor Patrón Costas. Es, además,
+el único acto del año que asocia al departamento con obra vial por vía de
+vecinos, después de que en abril la resolución 434 lo hubiera asociado por vía
+del impuesto de degolladura a la peonada del camino nacional de Salta a Jujuy.
+
+
+==============================================================================
+§B · VECINDAD
+==============================================================================
+
+Se leyó el contexto de los 58 términos del anillo 2 con acierto, uno por uno,
+y el de los 78 actores del config que reaparecen. El §B se escribe en los
+cuatro bloques de la rúbrica.
+
+POR QUÉ SE INCLUYE. Regla del anillo 2 (§5.1): el vocabulario de vecindad se
+busca entero y se lee entero, porque un topónimo del departamento puede
+aparecer en un acto que no nombra el departamento, y porque un término del
+anillo 2 puede ser, en ese año, otra cosa. Los dos casos se dieron en 1930 y
+el bloque B.2 es lo que justifica este párrafo.
+
+B.1 — Núcleos ya fichados en el §A, que se nombran y no se repiten: Mojotoro,
+por el decreto 12238 que escribe «Mojotoro (La Caldera)»; Vaqueros, por el
+12589 que escribe «Vaqueros (Departamento de La Caldera)»; Potrero de
+Gallinato, por el remate (631); Las Nieves, por los cuatro actos mineros; San
+José, por el edicto (657), que lo identifica como finca del departamento y no
+como el San José de Cachi que el mismo año publica; y Las Mesadas y El Bordo,
+que aparecen en actos vecinos y todavía no están leídos.
+
+B.2 — Núcleos del departamento en actos que NO nombran el término. Son cuatro,
+y entre ellos está el hallazgo del año.
+
+B.2.1 — 1321 h2, decreto 11726, Salta 28 de marzo de 1930, expediente 680-O.
+Aprueba el acta N° 99 de la Comisión de Caminos e invierte mil quinientos
+pesos «para el arreglo del camino que vá de Lesser a Yacones». Firman Cornejo
+y Julio C. Torino. Dos topónimos del anillo 2 en un mismo renglón, los dos del
+departamento, y el decreto no nombra La Caldera ni una vez. Es además el acto
+que rescata a Lesser de su propia trampa: las otras tres apariciones de Lesser
+en el año son los apellidos de Ángel J. Lesser, empleado, y Antonio R. Lesser,
+proveedor.
+
+B.2.2 — 1317 h15, aviso (411), edicto de deslinde. Ernesto T. Becker, con
+poder de Miguel Herrera, solicita el deslinde, mensura y amojonamiento de la
+finca «Los Sauces», encerrada dentro de estos límites: al Norte, la línea
+llamada de las Tres Cruces, divisoria entre las provincias de Salta y Jujuy;
+al Sud, la finca La Angostura de don Daniel Linares; al Este, la cumbre del
+Cerro Alto que la separa del Aserradero o Perico de San Juan de doña Corina
+Aráoz de Campero; y al Oeste, la Angostura ya mencionada y las propiedades
+llamadas San Alejo y Santa Rufina, de don Bernardo Austerlitz. Juez Figueroa,
+perito el ingeniero Eduardo Arias, publicación en «El Intransigente» y «La Voz
+del Norte» y por una sola vez en el Boletín Oficial. Cinco términos del anillo
+2 en un solo edicto —Los Sauces, Angostura de don Daniel Linares, San Alejo,
+Santa Rufina— más el límite norte del departamento, y ni una mención de La
+Caldera. Cuatro de los cinco nombrados son actores del config: Miguel Herrera
+de 1927, Daniel Linares de 1909, Corina Aráoz de Campero de 1927 y Bernardo
+Austerlitz de 1925.
+
+B.2.3 — 1353 h3, decreto 12595, Salta 8 de noviembre de 1930, expediente
+825-O. Aprueba el acta N° 133 de la Comisión de Caminos del 29 de octubre y
+destina cuatro mil pesos «para el arreglo del camino que une el puente de
+Vaqueros con el puente particular sobre el Río Castellanos». El vistos agrega
+quiénes lo pidieron: «los vecinos y propietarios de Castellanos, La Choza, El
+Amancay y Los Jacones». Vaqueros y Río Castellanos están en el anillo 2; La
+Choza, El Amancay y Los Jacones no, y los tres entran como toponimia nueva del
+departamento, el último como variante de Yacones. El decreto no nombra La
+Caldera.
+
+B.2.4 — 1347 h11 y h12, decreto sin número a la vista en la hoja 12, que
+confirma con antigüedad al 18 de setiembre a Carlos Maglio Bruzzo en el cargo
+de Sub-Comisario de Policía de Mojotoro. A diferencia del 12238 de setiembre,
+este decreto escribe Mojotoro sin el paréntesis «(La Caldera)». Es el mismo
+cargo, el mismo hombre y el mismo lugar, y sólo la lectura del anillo 2 lo
+trae.
+
+B.3 — Términos que en 1930 son otra cosa, ya juzgados con su contexto leído:
+«Calera (la)», circuito de Río de las Piedras (Anta), en 1316 h11; «Las
+Nieves» del Departamento La Poma, en 1319 h14, que es homónimo exacto del
+lugar del departamento y sale impreso en la misma hoja que él; Yufra, apellido
+del demandado José González Yufra en el remate de 1344 h9; Mamani, apellido
+del lindero José Mamaní en el remate de 1351 h14; Condori, apellido del
+comisario saliente Manuel Condorí en 1342 h4; y Nogales, apellido del
+sub-comisario saliente Juan de la Cruz Nogales en 1343 h2. Los cuatro últimos
+son la trampa que el config ya conocía: el mismo término sirve de lugar y de
+apellido, y el acierto no prueba vecindad.
+
+La edición 1316 merece su propio renglón. Ella sola concentra aciertos de 30
+términos del anillo 2 repartidos en sus 23 hojas, y no es vecindad: es la
+lista de circuitos electorales de toda la provincia, donde conviven topónimos
+de todos los departamentos. Campo Alegre, El Durazno, Río Blanco, Las
+Higueritas, Los Sauces, Angostura, Angosto, Manzano, Las Pirguas, Potrerillo,
+Mesada, El Monte, Acheral, Lagunilla, Quesería, Despensilla, El Pácara, Las
+Lagunas, Campo Belgrano, El Bordo, Trancas, Betania y Calera (la) salen todos
+de ahí, y todos como circuitos de otros departamentos. Quien no lea el
+contexto de esa edición se lleva treinta menciones falsas.
+
+B.4 — Ausencias del anillo de actores, en los tres grupos de la rúbrica. Se
+buscaron los 56 nombres que los actos del §A y del §B.2 ponen en juego, sobre
+el texto con la puntuación suprimida.
+
+Primer grupo, los que sólo aparecen en su propio acto: dieciocho. Marcos
+Galappo y Luis Lepers, que entran y salen de la comisión municipal en el mismo
+decreto de enero; Ignacio Premoli y Federico Gauffin, de las caducidades
+mineras; Manuel Condorí; Melchor Rocha y José González Yufra, del remate de
+octubre; Rafael Delgado, Ramón Brachieri, Medardo Sarmiento y Ramón Días, de
+los nombramientos de noviembre; Jesús Solaliga, Julio Mercado, Ángel Sosa y
+Abraham Fernández, del remate de diciembre; y Daniel Linares, Corina Aráoz de
+Campero y Bernardo Austerlitz, del deslinde de abril. Para todos ellos, 1930
+es una sola hoja.
+
+Segundo grupo, los que aparecen en más de un acto del departamento y son los
+que arman la trama del año: cinco. Carlos Maglio Bruzzo, autoridad de mesa en
+enero, sub-comisario de Mojotoro en setiembre y confirmado en octubre. Julio
+Suárez, que en marzo pierde por abandono su propio pedimento minero y en junio
+y octubre aparece como dueño de los terrenos donde otros obtienen cateo, y en
+octubre como copropietario de la finca San José donde se denuncia la mina.
+Eustaquio Murúa, comisario de policía en octubre y expendedor de guías en
+noviembre. Augusto Regis, comisionado municipal en octubre y quien eleva la
+terna de jueces de paz en noviembre. Y Emilio D. Sylvester, cuyo expediente
+cruza dos hojas seguidas.
+
+Tercer grupo, los que aparecen también fuera del departamento: veinticuatro.
+Los más frecuentes son los funcionarios de minas —José Ibarrarán F. firma seis
+actos del departamento y decenas fuera de él, Lucio Ortiz cuatro y Luis Víctor
+Outes uno— y los martilleros: Antonio Forcada remata dos bienes del
+departamento y otros seis fuera, y José M. Leguizamón dos y seis. Juan Larrán
+es el particular con más presencia del año: cuatro actos del departamento y
+cinco fuera, entre ellos un pedimento en La Poma que el Boletín publica en la
+misma hoja que uno suyo de la Caldera. Benjamín Torres aparece cuatro veces
+dentro y dos fuera, y el recorrido de esas seis hojas es la historia de un
+traslado y de la vacante que deja.
+
+Y un grupo que no es de ausencias sino de fallas de la búsqueda, que la
+rúbrica manda declarar nombrando a los afectados. Nueve nombres del §A no
+devuelven acierto por nombre completo ni siquiera en su propio acto: José
+Eusebio Robles, Camilo Cáceres, Manuel J. Urquiza, Enrique Mercado y Emiliano
+Zurita, de la nómina electoral de 1308 h8, porque el original los imprime con
+el apellido primero —«Robles José Eusebio»— y el patrón busca el nombre antes
+que el apellido; Juan de la Cruz Nogales, Mariano Coll, Luis Patrón Costas y
+Herman Pfister, por el mismo motivo o por rotura de la capa. Sus apellidos
+sueltos sí dan acierto, entre 1 y 7 hojas cada uno. Eso no es una ausencia: es
+una falla de la búsqueda, y se declara.
+
+
+==============================================================================
+§C · LIMÍTROFES
+==============================================================================
+
+El límite que el año publica es el del Norte, y lo publica una sola vez: el
+edicto de deslinde de 1317 h15 pone al Norte de la finca Los Sauces «la línea
+llamada de las Tres Cruces, divisoria entre las Provincias de Salta y Jujuy».
+No hay en 1930 ningún acto que trate un límite con Capital, Campo Santo o
+Rosario de Lerma.
+
+Lo que sí hay, y conviene dejar anotado para los años vecinos, son dos
+homónimos que cruzan el límite con La Poma y que el propio Boletín pone al
+lado: «Las Nieves» de La Caldera y «Las Nieves» de La Poma, publicadas en la
+misma hoja 1319 h14; y el mismo solicitante, Juan Larrán, pidiendo cateo en
+los dos departamentos en la misma hoja 1326 h16. Quien busque «Las Nieves» sin
+leer el contexto se lleva las dos por una.
+
+==============================================================================
+§P · PLANOS
+==============================================================================
+
+Veinticuatro hojas del año mencionan un plano y ninguna lo publica. El corpus
+de 1930 no trae planos. Dos remisiones del departamento ya están leídas y las
+dos son citadas y no acompañadas: el cateo de «Las Nieves» de 1346 h16, que se
+ubica «de acuerdo a la descripción dada en el plano de fs. 1»; y el edicto de
+minas de 1347 h23, que ubica la casa de los hermanos Quipildor «en los mapas
+de la Oficina Técnica» a 500 metros al Oeste verdadero del Cerro de la Inga.
+El Boletín no publica ni el plano ni el mapa. El techo de resolución del
+corpus está en el §1.
+
+==============================================================================
+§D · ÍNDICE
+==============================================================================
+
+Las veinte apariciones del §A, por edición, hoja y materia:
+
+  1307 h8    Renuncia en la H. C. Municipal — decreto 11461
+  1308 h8    Autoridades de mesa del Colegio Electoral N.o 2
+  1310 h3    Miembro de la H. C. Municipal — decreto 11503
+  1313 h10   Caducidad de cateos — exptes. 1163-C y 1164-C
+  1313 h11   Caducidad de cateos — exptes. 1165-C, 1167-C, 1169-C
+  1313 h12   Caducidad de cateos — exptes. 1173-C, 1195-C, 1198-C
+  1319 h14   Revocación de cateo en Las Nieves — expte. 1168-C
+  1326 h16   Edicto de minas en Las Nieves — expte. 38-H, aviso (493)
+  1330 h13   Impuesto de degolladura — resolución 434
+  1342 h4    Comisario de policía de la Caldera — decreto 12.236
+  1343 h2    Sub-comisario de Mojotoro — decreto 12238
+  1344 h9    Remate de Potrero de Gallinato — aviso (631)
+  1345 h3    Comisario y comisionado municipal — 12307 y 12308
+  1346 h9    Registro Civil de la Caldera — decreto 12.406
+  1346 h16   Concesión de cateo en Las Nieves — expte. 38-H
+  1347 h23   Minas Caldera N° 1, 2 y 3 — aviso (657)
+  1350 h3    Expendedor de guías — decreto 12553
+  1351 h14   Remate de finquita y ganado — aviso (718)
+  1352 h4-5  Juez de paz y sub-comisario de Vaqueros — 12585, 12589
+  1355 h2-3  Sub-Comisión de Caminos — decreto 12639
+
+Y los cuatro actos del §B.2, que no nombran el departamento:
+
+  1317 h15   Deslinde de la finca Los Sauces — aviso (411)
+  1321 h2    Camino de Lesser a Yacones — decreto 11726
+  1347 h12   Confirmación en Mojotoro
+  1353 h3    Camino puente de Vaqueros—Río Castellanos — 12595
+
+==============================================================================
+§E · OBSERVACIONES
+==============================================================================
+
+
+E.1 · Duplicación y saldos
+--------------------------
+
+Duplicación. Sin las .jpg del script no hay md5 ni dhash y el control se hizo
+por texto. 1930 no usa la marca de publicación de tipo «251 v Dbre 5» que 1912
+traía: no hay ni una en las 764 hojas, de modo que la pregunta de si la marca
+prueba repetición no se plantea este año. Los avisos llevan en cambio un
+número entre paréntesis al pie: hay 262 números distintos y sólo seis se
+repiten —200, 300, 458, 477, 593 y 737—, y los seis son avisos distintos que
+reutilizan el número en tandas distintas, no un mismo aviso publicado dos
+veces. Los cuatro avisos del departamento, (411), (493), (631), (657) y (718),
+aparecen una sola vez cada uno en todo el corpus. El cotejo se hizo sobre la
+capa y no sobre la imagen, y se declara así.
+
+Saldos. El año publica siete resúmenes mensuales de la Tesorería General
+—enero, febrero, marzo, junio, julio, agosto y setiembre— y ninguno de abril,
+mayo, octubre, noviembre y diciembre. Se contaron antes de prometer la cadena,
+y la cadena que sale es corta y partida en dos tramos. Los saldos iniciales
+que los siete declaran, todos leídos en la imagen:
+
+    diciembre de 1929 ..... $  29.685,18   (abre el resumen de enero)
+    enero de 1930 ......... $  24.559,10
+    febrero de 1930 ....... $  30.772,40
+    [abril y mayo sin resumen publicado]
+    mayo de 1930 .......... $  35.530,93   (abre el de junio)
+    junio de 1930 ......... $  35.473,96
+    julio de 1930 ......... $  27.250,92
+    agosto de 1930 ........ $  22.192,44
+
+El eslabón se verificó por la cifra y no por el rótulo, mirando la hoja de
+egresos de agosto (1340 h11): el «SALDO existente en Caja que pasa al mes de
+Setiembre de 1930» es de $ 22.192,44, exactamente el saldo inicial que declara
+el resumen de setiembre. Esa hoja cierra además entera: los egresos suman
+472.353,90 y con el saldo dan 494.546,34, que es el total de ingresos del
+mismo mes. La firman Laudino Pereira, Contador General —actor del config desde
+1925— y G. Florencio Grení, Tesorero General, y la aprueba J. C. Torino. La
+cadena queda abierta contra 1929 por un extremo y contra 1931 por el otro, y
+partida en el medio por los dos meses sin resumen.
+
+E.2 · Cobertura
+---------------
+
+Hojas presentes: 764 en 51 ediciones. Hojas miradas en la imagen hasta ahora:
+22, en dos turnos. Son 1304 h1, 1307 h8, 1308 h8, 1310 h3, 1313 h10, h11 y
+h12, 1319 h14, 1326 h16, 1330 h13, 1342 h4, 1343 h2, 1344 h9, 1345 h3, 1346 h9
+y h16, 1347 h23, 1350 h3, 1351 h14, 1352 h4 y h5, 1355 h2 y h3. De ellas,
+veinte están transcritas en el §A. Columnas cotejadas contra la capa previa:
+44, las dos columnas de cada una de las 22 hojas, leídas enteras y no sólo en
+el tramo de la mención. Cruces por texto: las cuatro pasadas, el anillo 2
+completo y los 388 actores, sobre las 764 hojas.
+
+Citados y no acompañados, hasta ahora, todos del departamento: la Ordenanza
+General de Impuestos de la Municipalidad de la Caldera y el dictamen del
+Agente Fiscal de Gobierno, citados por la resolución 434; el decreto que cesa
+a los miembros de la H. Comisión Municipal, citado por materia en el
+considerando del 12308; el pedido de terna y la terna misma del comisionado
+Augusto Regis, citados por el 12585; y los dos planos del §P. A éstos se
+agrega, como vacante declarada sin nombrar a quien la dejó, ninguno: en 1930
+los cuatro reemplazos del departamento nombran al saliente.
+
+E.3 · Sin mención y no mirado
+-----------------------------
+
+De las 764 hojas presentes, 38 se miraron en la imagen y 726 no. De esas 726,
+ninguna dio acierto en el anillo 1 por ninguna de las cuatro pasadas; las que
+dieron acierto en el anillo 2 o en el anillo de actores se leyeron por texto,
+término por término y nombre por nombre, y las que resultaron del departamento
+están en el §A o en el §B.2 y se miraron. Lo que queda sin mirar son, por lo
+tanto, hojas sin mención por ninguna vía, más las seis hojas de egresos de
+Tesorería que E.8 lista con su motivo.
+
+E.4 · Firmas y autoridad
+------------------------
+
+Las 46 tapas presentes están leídas: 28 en la capa previa y 18 en la imagen.
+Todas imprimen la misma fórmula de cabecera, «GOBIERNO DEL …», con el nombre
+del gobernante, y a su derecha «Año <romano> N°. <número>». No declaran
+páginas ni días de salida: a diferencia de 1911 y 1912, la tapa de 1930 no
+trae la fórmula «Aparece Miércoles y Sábados» ni ninguna otra. Que el Boletín
+es semanal y sale los viernes no lo dice la tapa: lo dicen las 46 fechas.
+
+1930 tiene tres gobiernos y el cambio se ve en la propia cabecera de la tapa,
+que en esta época imprime el nombre del gobernante. De la 1304 a la 1340 dice
+«Gobierno del Dr. Julio Cornejo», con refrendo de Rafael P. Sosa en el
+Ministerio de Gobierno. La edición 1341, del viernes 19 de setiembre, imprime
+«Gobierno Provisional del Coronel Ernesto A. Day» y publica el acta de entrega
+del gobierno, firmada entre otros por Julio Cornejo, Ernesto A. Day, Rafael P.
+Sosa, Abraham Quiroga, Julio C. Torino y S. Toranzos Calderón, más el decreto
+12.182 del 7 de setiembre por el que Day asume «respondiendo al movimiento que
+ha consagrado el gobierno provisional de la República a raíz de los sucesos
+ocurridos el 6 del corriente». De la 1342 a la 1355 la cabecera dice «Gobierno
+del Interventor N. Gral. Gregorio Vélez», con refrendos de D. Zambrano, J.
+Ojeda y G. Ojeda. El corte es limpio y cae en dos semanas consecutivas: la
+1340, del 12 de setiembre, todavía dice Cornejo; la 1341, del 19, dice Day; la
+1342, del 26, ya dice Vélez. La 1343 imprime «VÉLEZ» con tilde y las demás sin
+ella.
+
+Fórmulas de encabezado de los actos, que conviven dentro del mismo año y no se
+normalizan: «El Gobernador de la Provincia» y «El Gobernador de la Provincia,
+en uso de sus facultades constitucionales» en el tramo de Cornejo; «El
+Gobernador Provisional de la Provincia» y «El Gobernador Provisional de la
+Provincia de Salta» en el de Day; «El Interventor Nacional», «El Interventor
+Nacional en acuerdo de Ministros» y «El Interventor Nacional, en Acuerdo de
+Ministros» en el de Vélez. Los ministros que refrendan los actos del
+departamento son Rafael P. Sosa y Julio C. Torino con Cornejo; Ojeda y L. C.
+A. Fossatti con Day; y D. Zambrano, G. Ojeda, J. Ojeda y Martín U. Cornejo con
+Vélez. El «Es copia» aparece firmado por D. Schiaffino, Sub-Secretario de
+Hacienda, y por Figueroa Medina, Oficial Mayor.
+
+Interinato con cierre publicado: el decreto 12.407 de 1346 h9, del 12 de
+octubre, encarga la Cartera de Gobierno al Sub-Secretario don Gavino Ojada
+mientras dure la ausencia del titular doctor David Zambrano, que viaja a la
+Capital Federal. El Boletín no publica el decreto de reintegro; lo que sí se
+ve es que Zambrano vuelve a refrendar actos más adelante. Siguiendo la regla,
+no se fija el día del reintegro.
+
+E.5 · Cortes y columnas
+-----------------------
+
+La maqueta de 1930 es de dos columnas, no de tres como la de 1908–1912. Medida
+una vez por corpus con get_text(«words»): las dos columnas arrancan en unos 20
+y unos 225 puntos, sobre páginas que van de 421 a 489 puntos de ancho según el
+tramo. Los recortes no hicieron falta: a 200 y 230 dpi la hoja entera entra en
+una vista y se lee, columnas incluidas, incluso en el tramo de 150 ppi.
+
+Columna perdida: ninguna en las 44 columnas cotejadas. Se declara sobre ese
+número y no sobre el año: 44 columnas de 22 hojas de 16 ediciones. Lo que sí
+falló, y falla en silencio como siempre con una sola versión, es la palabra
+suelta. 1930 aporta cuatro casos, todos confirmados en la imagen: «qaldera»
+por Caldera (1330 h13), que la literal no ve; «c aldera» por Caldera (1345
+h1), que sólo ve la laxa con espacios; «calduhi» por caducidad (1328 h17); y
+«da caldera» por «de la Caldera» en dos de las ocho resoluciones mineras de
+1313.
+
+Cortes entre hojas: dos actos del §A cruzan el corte de hoja, el 12585 entre
+1352 h4 y h5 y el 12639 entre 1355 h2 y h3. En los dos se miraron las dos
+hojas y en ninguno hay renglón repetido en el empalme. El edicto de minas de
+1347 h23 cruza el corte de columna dentro de la misma hoja y tampoco repite
+renglón.
+
+E.6 · Repeticiones
+------------------
+
+Ningún aviso del departamento se repite. Los cinco —(411), (493), (631), (657)
+y (718)— aparecen una sola vez cada uno en las 764 hojas. El detalle del
+control y su límite están en E.1.
+
+E.7 · Falsos positivos y negativos
+----------------------------------
+
+Los falsos positivos del anillo 1 juzgados en este turno están en la sección
+2.6. Siguiendo la regla de v15, no se agregan al config: se listan acá. Un
+falso negativo ya medido: la pasada literal no ve la mención de 1330 h13,
+porque la capa lee «qaldera»; la trae la difusa. Sin la difusa, la resolución
+del impuesto de degolladura no existiría en este informe.
+
+E.8 · Fidelidad numérica
+------------------------
+
+Inventario de cuadros publicados, hecho por texto sobre las 764 hojas: siete
+resúmenes mensuales del movimiento de la Tesorería General, uno por cada uno
+de los meses de enero, febrero, marzo, junio, julio, agosto y setiembre, cada
+uno en dos hojas seguidas —1310 h17-18, 1314 h22-23, 1319 h17-18, 1332 h12-13,
+1335 h17-18, 1340 h10-11 y 1344 h11-12—. No hay resumen de abril, mayo,
+octubre, noviembre ni diciembre. No hay ningún balance municipal en todo el
+año, y por lo tanto ninguno del departamento: la palabra «balance» aparece dos
+veces en el corpus y las dos en prosa, una en una ley de jornada y otra en una
+nota sobre el ejercicio de una institución. Eso es un hecho del corpus, no una
+tabla que quedó sin mirar.
+
+Los siete se miraron en la imagen y se recalcularon. La capa previa devuelve
+sus columnas de cifras rotas y mezcladas y no se usó ni una cifra de ella:
+todas las que siguen salen de la imagen, y las dudosas se releyeron con
+recorte a 520 dpi. De los siete, cuatro cierran exactos y tres no.
+
+Enero (1310 h17). El subtotal del Banco Provincial de Salta suma 346.631,30
+sobre sus cuatro renglones y coincide con el impreso; la columna entera suma
+811.441,32 y coincide; y con el saldo de diciembre de 1929 da 841.126,50, que
+es el total impreso. Cierra en los tres niveles.
+
+Febrero (1314 h22). Subtotal del Banco Provincial 203.835,71, columna
+549.284,38, total 573.843,48. Los tres coinciden con lo impreso.
+
+Marzo (1319 h17). NO CIERRA. Los diecisiete renglones de la columna suman
+427.952,67 y el subtotal impreso dice 425.952,58: una diferencia de $
+2.000,09. El subtotal del Banco Provincial, en cambio, cierra exacto
+(56.950,55), y el total general impreso, 456.724,98, cierra contra el subtotal
+impreso más el saldo de febrero, de modo que el error no está en el arrastre
+sino dentro de la columna o en el propio subtotal. Las cifras se releyeron a
+520 dpi y son las transcritas. Lectura alternativa que cerraría la columna:
+que «Obligaciones a Cobrar 22.738,52» sea 20.738,43, que es la única
+corrección de un solo renglón que da la diferencia exacta. No se corrige: se
+escriben las dos.
+
+Junio (1332 h12). Cierra en los cuatro niveles: el subtotal de Presupuesto
+General 1930 (44,02), el del Banco Provincial (441.628,21), la columna
+(802.147,65) y el total con el saldo de mayo (837.678,58).
+
+Julio (1335 h17). NO CIERRA, por poco. Los dos subtotales cierran —Presupuesto
+86,00 y Banco Provincial 166.161,51— pero la columna suma 583.075,24 contra
+583.057,24 impreso: $ 18,00 de diferencia, que es exactamente lo que produce
+intercambiar los dígitos 5 y 7 en las centenas y decenas del subtotal. El
+total general impreso, 618.531,20, cierra contra el subtotal impreso. Lectura
+alternativa: 583.075,24. Se escriben las dos.
+
+Agosto (1340 h10 y h11). Cierra entero, y es el único mes del que se
+recalcularon las dos hojas. Ingresos: subtotal del Banco Provincial 43.638,21,
+columna 467.295,42, total con el saldo de julio 494.546,34. Egresos: subtotal
+por deuda liquidada 144.901,86, subtotal del Banco Provincial 204.385,80,
+columna 472.353,90, y con el saldo que pasa a setiembre, 494.546,34. Las dos
+hojas dan el mismo total.
+
+Setiembre (1344 h11). NO CIERRA, y es la diferencia más grande del año. Los
+dos subtotales cierran —Banco Provincial 183.031,33 y Presupuesto General
+371,37— pero la columna suma 533.749,90 contra 596.749,90 impreso: $ 63.000,00
+redondos. El total general impreso, 618.942,34, cierra contra el subtotal
+impreso más el saldo de agosto. Lectura alternativa, y acá es la más
+convincente de las tres: que «Impuesto al Consumo 18.907,34» sea 81.907,34. La
+diferencia entre las dos lecturas es exactamente $ 63.000,00, es una
+transposición de los dos primeros dígitos, y el orden de magnitud la respalda
+—el mismo renglón vale 81.420,44 en julio y 68.853,01 en agosto, de modo que
+18.907,34 sería anómalamente bajo y 81.907,34 está en línea—. Aun así no se
+corrige: se escriben las dos y se declara cuál cerraría la columna.
+
+Tablas no recalculadas: las hojas de egresos de enero, febrero, marzo, junio,
+julio y setiembre, seis en total. El criterio es el del alcance: se recalculó
+entera la única cuya cadena había que verificar por la cifra —la de agosto,
+que es el eslabón que empalma con el saldo inicial de setiembre— y de las
+demás se transcribieron y encadenaron los saldos que los resúmenes declaran.
+Las seis quedan listadas acá con su hoja: 1310 h18, 1314 h23, 1319 h18, 1332
+h13, 1335 h18 y 1344 h12.
+
+Un subtotal más se recalculó porque cayó en una hoja que hubo que mirar por
+otro motivo: la resolución 484 de 1342 h12 reconoce a la Sociedad Jacobo
+Peuser dos órdenes de pago de $ 74,10 y $ 288,20 y declara un total de
+trescientos sesenta y dos pesos con treinta centavos; la suma cierra exacta.
+No es del departamento y se registra sólo como control.
+
+Y una lista con bases por cabeza y sin total impreso: el ganado del remate de
+1351 h14, del departamento. No hay nada que cotejar contra el original porque
+el original no declara total; la suma de las bases, rotulada como cálculo de
+la sesión, está en la nota de esa ficha.
+
+
+E.9 · Contradicciones
+---------------------
+
+Quince, y las quince se declaran sin conciliarlas. Las seis primeras son
+discordancias entre dos actos o dentro de un acto; las nueve siguientes son
+erratas del original, que van también en la nota de lectura de su ficha cuando
+la tienen.
+
+1. El nombre del miembro saliente de la H. Comisión Municipal de La Caldera.
+El decreto 11461 del 8 de enero (1307 h8) acepta la renuncia del «señor Luis
+Pérez»; el decreto 11503 del 20 de enero (1310 h3) integra la misma comisión
+«por renuncia de don Luis Lepers». Son el mismo cargo y la misma vacante con
+dos apellidos distintos a doce días de distancia. No se elige uno. Queda por
+mirar los dos en la imagen, porque uno de los dos puede ser lectura de la
+capa.
+
+2. La resolución 434 de 1330 h13 escribe «La Caldera» en el vistos y «la
+Caldera» en el artículo 1°, y además imprime «tompoco» por tampoco. Leído en
+la imagen.
+
+3. El expediente 1168-C, de Juan Larrán, es revocado por abandono el 11 de
+abril de 1930 (1319 h14) y en octubre el Boletín publica, como vigente, el
+edicto por el que Larrán denuncia dentro de ese mismo cateo el descubrimiento
+de una mina de tres pertenencias (1347 h23). La manifestación es del 20 de
+julio de 1929, anterior a la revocación; el edicto es de octubre de 1930,
+posterior. El Boletín no dice si la revocación quedó sin efecto. No se
+infiere.
+
+4. El decreto 12553 (1350 h3) nombra expendedores de guías en quince
+localidades y cierra la enumeración del mismo artículo 1° con «todos,
+Comisarios de Policía de las citadas localidades». Los dos cargos existen por
+separado en el mismo año y en la misma persona para el departamento, de modo
+que la frase no se descarta como errata evidente.
+
+5. La resolución 434 de 1330 h13 escribe «La Caldera» en el vistos y «la
+Caldera» en el artículo 1°, e imprime «tompoco» por tampoco.
+
+6. El decreto 12.236 de 1342 h4 imprime su artículo primero como «Art.—», sin
+ordinal, y el segundo con el suyo.
+
+7. La revocación de 1319 h14 dice «Las Nieves» en el vistos y «Nieves» en el
+artículo 1°.
+
+8. Las resoluciones mineras del 27 de febrero (1313 h10 a h12) alternan
+«Departamento de la Caldera» y «Departamento de La Caldera» sin criterio, y
+una de ellas imprime «hata la fecha» por hasta y otra «taámite» por trámite.
+
+9. El expediente 1195-C (1313 h12) escribe «Jnlio Suarez» en el vistos y
+«Julio Suarez» en el artículo 1°, y pide «exploración» en el vistos donde el
+artículo declara caduca la «explotación».
+
+10. El edicto (493) de 1326 h16 omite «petróleo» en la fórmula «excluyendo e
+hidro-carburos fluidos», que los otros siete actos de la serie traen entera.
+
+11. La resolución de 1346 h16 cita el decreto reglamentario como «N°. 11790» y
+la resolución vecina de la misma hoja, del mismo día y del mismo firmante, lo
+cita como «N°. 1790».
+
+12. El decreto 12595 de 1353 h3 dice, en el vistos, que la longitud aproximada
+del tramo entre el puente de Vaqueros y el puente particular sobre el Río
+Castellanos «es de cien kilómetros», y en el artículo 1° que «es de siete
+kilómetros». Cien contra siete, en el mismo decreto, en columnas enfrentadas
+de la misma hoja, para el mismo camino y el mismo gasto de cuatro mil pesos.
+Las dos lecturas se confirmaron en la imagen. No se elige ninguna.
+
+13. El decreto 11728 de 1321 h2 está fechado «Salta, Marzo 28 de 1730». Es la
+edición del 2 de mayo de 1930 y el decreto vecino, de la misma tanda, lleva
+1930. Se transcribe el año impreso.
+
+14. El nombre del sub-comisario de Mojotoro se imprime de tres maneras en el
+mismo año: «Bruzzo Manlio Carlos» en la nómina electoral de enero, «Maglio
+Carlos Bruzzo» en el nombramiento de setiembre y «Carlos Maglio Bruzzo» en la
+confirmación de octubre. Las tres se transcriben.
+
+15. El edicto (657) de 1347 h23 imprime «Quipildor Hemanos» en una columna y
+«hermanos Quipildor» en la otra; el aviso (631) de 1344 h9 abre las comillas
+de «Potrero de Gallinato» y no las cierra; y el decreto 12639 de 1355 imprime
+«precripto», «cuadyuven a la realización de sus finen propios» y «Luis Patro
+Costas».
+
+E.10 · Límites
+--------------
+
+1. Una sola versión del texto. No hay OCR propio en sesión, porque tesseract
+no trae spa, ni OCR del script, porque no llegó. No hay desempate por texto:
+toda cifra y toda palabra que decida una ficha se mira en la imagen.
+
+2. No hay confianza por hoja ni lista de hojas «a ojos». Sin el .tsv no
+existen, y no es trabajo que la sesión pueda hacer.
+
+3. No hay md5 ni dhash de imágenes ni medición de tinta. Sin las .jpg del
+script no existen.
+
+4. No hay log.txt: no se puede declarar versión ni fecha de corrida de
+lee_auto.py, ni sus errores, porque no hubo corrida.
+
+5. No hay informes LEE anteriores adjuntos al proyecto. La lista de actores se
+armó con el config solo, que es menos que armarla con todos los informes, y
+los saldos de 1929 no se pudieron cotejar.
+
+6. Seis ediciones de la serie no están en el corpus: 1305, 1312, 1318, 1320,
+1323 y 1327. Cinco de ellas traen una constancia de la base de origen que dice
+que el Boletín no se encontró. Lo que esas seis ediciones publicaron sobre el
+departamento es una ausencia del corpus que ningún trabajo de esta sesión
+puede cubrir.
+
+7. El tramo de la 1330 en adelante está incrustado a 150 ppi, la mitad del
+resto del año. La prosa se lee bien; para una cifra dudosa de ese tramo no hay
+más resolución que pedir, y se declarará caso por caso.
+
+==============================================================================
+§F · CORRECCIÓN A LA RÚBRICA
+==============================================================================
+
+Cinco observaciones que el barrido de 1930 deja para la v16. Las tres primeras
+son de hecho; las dos últimas, de procedimiento.
+
+1. Una edición ausente puede venir disfrazada de edición de una hoja. En 1930,
+cinco PDF de una hoja, idénticos entre sí y con el mismo md5, dicen «ESTE
+BOLETÍN NO SE ENCUENTRÓ EN NUESTRA BASE DE DATOS». El conteo de archivos las
+cuenta como ediciones y el conteo de hojas las cuenta como hojas. Conviene
+medir el md5 de los PDF de una sola hoja antes de tabularlos, y declararlas
+como ausencias del corpus y no como ediciones cortas.
+
+2. El folio no siempre encadena. La regla de v15 dice que la cadena de folios
+sirve dentro del año; en 1930 no sirve ni eso, porque cada edición pagina
+desde 1. El control equivalente y igual de barato es cotejar el folio impreso
+contra la posición de la hoja dentro del PDF, que detecta lo mismo: la edición
+a la que le falta una hoja.
+
+3. El guion visible de fin de renglón vuelve en 1930. La v15 dice que en esta
+época la marca del corte es sólo el guion blando, y eso valía para 1908–1912;
+en 1930 conviven los dos, 14.478 guiones blandos y 2.792 guiones visibles. La
+unión tiene que pegar las dos formas, y conviene medir las dos en cada corpus
+nuevo en lugar de heredar la de la época anterior.
+
+4. Que el total general cierre no prueba que la columna cierre. La v15 dice
+que la cadena de saldos que cierra no prueba que el cuadro cierre, y agrega el
+recálculo de un subtotal por cuadro. 1930 muestra el escalón siguiente: en los
+tres cuadros que fallan —marzo, julio y setiembre— los subtotales parciales
+cierran exactos y el total general cierra exacto contra el subtotal impreso;
+lo único que no cierra es la suma de los renglones contra ese subtotal. Un
+control que se detenga en el subtotal parcial o en el total general da los
+tres por sanos. Conviene sumar la columna entera de cada cuadro, no un
+subtotal cualquiera.
+
+5. Una diferencia redonda nombra su propia lectura alternativa. Las tres
+diferencias de 1930 son $ 2.000,09, $ 18,00 y $ 63.000,00. Las dos últimas son
+exactamente lo que produce intercambiar dos dígitos —57 por 75, y 18 por 81— y
+la segunda queda confirmada por el orden de magnitud del mismo renglón en los
+meses vecinos. Antes de declarar una diferencia sin explicación conviene
+probar si es una transposición, y cotejar el renglón sospechoso contra su
+propio valor en los otros meses de la serie: es gratis y a veces cierra.
+
+==============================================================================
+CONFIG ACTUALIZADO
+==============================================================================
+
+Se entrega, junto a este informe, un lee_config.json actualizado. Parte del
+config del proyecto —el vigente, que cierra en 1928— y no del que está en el
+Release de 1930, que está atrasado a 1915. Conserva todo lo anterior y agrega:
+
+anillo2: de 139 a 146 términos. Los siete nuevos son toponimia del
+departamento que 1930 imprime y el config no tenía: «cerro de la inga» y
+«miquicho», los dos puntos de amojonamiento de los actos mineros; «la choza»,
+«el amancay» y «los jacones», que el decreto 12595 nombra como vecindad del
+camino de Vaqueros —el último es además la forma con que ese decreto escribe
+Yacones, y se agrega también como «jacones» suelto porque sin ella no se
+encontraría—; y «san jose de la caldera», para distinguir en los barridos
+siguientes la finca San José del departamento del San José de Orquera de Metán
+y del San José de Cachi, que en 1930 aportaron entre los dos once aciertos
+falsos.
+
+actores: de 388 a 435, con 47 nuevos de origen 1930. Entran los particulares
+de los actos del §A y del §B.2 —Galappo, Lepers, Pérez, los Premoli que
+faltaban, Gauffin, Harrison, Francisco G. de la Vega, Torres, Forcada,
+Solaliga, Mamaní, Sosa, Brachieri, los dos Juárez, Patrón Costas, Becker,
+Siriaco, Quipildor— y los funcionarios que firman actos del departamento:
+Julio Cornejo, Ernesto A. Day, Gregorio Vélez, David Zambrano, Gavino Ojada,
+G. Ojeda, Martín U. Cornejo, D. Schiaffino, G. Florencio Grení, Luis C. A.
+Fossatti, Lucio Ortiz, José Ibarrarán, Luis Víctor Outes y Figueroa Medina.
+Siguiendo la regla de v15, cuando una persona aparece con dos formas distintas
+se agregan las dos y no se unifican: «maglio carlos bruzzo» y «carlos maglio
+bruzzo» entran junto al «manlio carlos bruzzo» que el config ya traía desde
+1926.
+
+Lo que se decidió NO agregar. Los falsos positivos de 1930 no van a
+falsos_positivos, por la regla de los que ocultan: un término del anillo 1
+cuyo contexto contenga un falso positivo del config queda marcado y sin
+recorte aunque sea real, y «Calderón» ya está en la lista desde 1946. Quedan
+listados en la sección 2.6 de este informe y nada más. Tampoco se agregó
+ningún número a «numeros»: 1930 numera sus actos de corrido, de 11.367 en
+diciembre de 1929 a 12.639 en noviembre de 1930, y arrastrar esa serie entera
+no serviría de red de búsqueda sino de ruido. Y no se tocaron anillo1,
+reemplazo ni los parámetros de tesseract.
+
+Conviene subir este archivo al Release de 1931 y reemplazar el de 1930, para
+que el próximo barrido no herede el atrasado.
+
+==============================================================================
+RECUENTO
+==============================================================================
+
+  Archivos bajados del Release .................. 51 PDF + 1 config
+  Ediciones de la serie 1304–1355 ............... 52
+  Ediciones presentes ........................... 51
+  Ediciones ausentes ............................ 6 (1305, 1312,
+                                                   1318, 1320, 1323,
+                                                   1327)
+  Hojas presentes ............................... 764
+  Hojas declaradas por la tapa .................. la tapa no declara
+  Reparto de confianza .......................... no existe (E.10)
+  Techo de resolución ........................... 150 a 387 ppi
+  Imágenes miradas .............................. 38 hojas + 18
+                                                   franjas de tapa +
+                                                   2 recortes a 520
+                                                   dpi
+  Columnas cotejadas contra la capa previa ...... 66
+  Tapas leídas .................................. 46 de 46 (28 en
+                                                   capa, 18 en
+                                                   imagen)
+  Menciones del anillo 1, apariciones ........... 20
+  Menciones del anillo 1, fichadas .............. 20
+  Términos del anillo 2 con acierto ............. 58 de 139
+  Actores del config con acierto ................ 78 de 388
+  Cuadros publicados / subtotales recalculados .. pendiente
+  Saldos ........................................ pendiente
+  Planos ........................................ 2 citados, no
+                                                   acompañados
+  Citados y no acompañados (con los planos) ..... 6
+  Contradicciones declaradas .................... 15
+  Cuadros publicados ............................ 7 resúmenes de
+                                                   Tesorería; ningún
+                                                   balance municipal
+  Cuadros recalculados .......................... 7 de 7 (4 cierran,
+                                                   3 no)
+  Subtotales recalculados ....................... 18
+  Tablas no recalculadas ........................ 6 hojas de egresos
+  Saldos encadenados ............................ 7 declarados; 1
+                                                   eslabón verificado
+                                                   por la cifra
+  Cotejo sumario/cuerpo ......................... 117 números; 11
+                                                   discrepancias, 0
+                                                   del departamento
+  Topónimos nuevos del departamento ............. 6 (Cerro de la
+                                                   Inga, finca San
+                                                   José, cerro
+                                                   Miquicho, La
+                                                   Choza, El Amancay,
+                                                   Los Jacones)
+  Actos del §B.2 ................................ 4
+  Límites declarados ............................ 7
+  Pendientes .................................... 0
+
+==============================================================================
+FIN DEL INFORME — COMPLETO, CON SIETE LÍMITES DECLARADOS
+==============================================================================

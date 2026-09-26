@@ -1,0 +1,1727 @@
+BOLETIN OFICIAL DE SALTA — 1936
+BARRIDO LEE SOBRE EL DEPARTAMENTO DE LA CALDERA
+Rubrica LEE v16 (22/09/2026).  Ediciones N° 1617 a 1668.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con 6 limites declarados. Cuatro turnos. El turno 1 cerro el
+entorno, los insumos, la capa previa, las cuatro pasadas, el calendario y la
+lista de trabajo. El turno 2 cierra las tapas, la autoridad y su relevo, el
+control de paginacion con su denominador, el cotejo sumario/cuerpo, los
+planos, la cadena de saldos de Tesoreria y el §D, y amplia el §A y el §B. Lo
+que queda esta al final de esta seccion. El turno 3 cerro la repeticion por
+texto, la tinta de las hojas sospechosas, el presupuesto policial del
+departamento y el antecesor del subcomisario de Vaqueros, y encontro la unica
+mencion del ano que ninguna pasada devuelve. El turno 4 cierra el §A con
+veinte fichas, los contextos de los 84 terminos del anillo 2, las ausencias
+del anillo de actores en los tres grupos y el recalculo de los dieciseis
+cuadros del ano.
+
+0.1 · Entorno verificado
+
+nproc = 1. PyMuPDF no venia instalado y se instalo desde pypi. Tesseract 5.3.4
+trae unicamente eng y osd: NO hay spa. En consecuencia el §3 (receta de OCR) y
+el §16 (modo en sesion) no son aplicables a este barrido, y no se promete OCR
+propio de ninguna hoja. No hay jq, exiftool ni gh.
+
+0.2 · Que subio el usuario y que no
+
+El Release con tag 1936 de github.com/ediedrich/boletines-salta trae 53
+assets: los 52 PDF de las ediciones 1617 a 1668, sin huecos en el rango, y un
+lee_config.json.
+
+NO llegaron: el pre-informe, resultados_1936.csv, decretos_1936.csv, log.txt,
+recortes.zip ni el zip de los .txt de lee_trabajo. Rige entonces el §2.1: la
+sesion reconstruye la capa previa ella misma con PyMuPDF. Eso da las cuatro
+pasadas, el anillo 2, los actores, los numeros, los reemplazos, las tapas, el
+calendario, la paginacion y los §A y §B completos; y no da segunda version,
+confianza por hoja, md5 ni dhash. Las consecuencias estan desarrolladas en
+E.10.
+
+No hay log.txt que leer, y se declara con esas palabras: no hay log.
+
+0.3 · Los dos configs (§15.4)
+
+  config del Release:  version (ausente), hasta (ausente),
+                       actores 180, anillo2 70, numeros 40, fp 12
+  config del proyecto: version 2026-09-22, hasta 1932,
+                       actores 554, anillo2 160, numeros 129, fp 24
+  se usa: el del proyecto — razon: mas nuevo
+  contenido: el usado contiene al otro (0 terminos exclusivos del Release
+             en anillo1, anillo2, numeros, falsos_positivos y reemplazo,
+             y 0 actores exclusivos sobre 180)
+
+El asset del Release vuelve a estar atrasado, y esta vez mas que en 1930, 1931
+y 1932: cierra donde cerraba entonces —180 actores, 70 terminos de anillo 2—
+mientras el del proyecto llega a 1932 con 554 y 160, y ademas no lleva las
+claves version ni hasta que el §15.1 incorporo. Un barrido que solo hubiera
+tenido el del Release habria perdido los 374 actores de 1916 a 1946, que son
+los de la epoca contigua a esta. Se pide subir al Release el config vigente
+del proyecto antes del proximo ano.
+
+0.4 · Cotejo del anillo 2 (§5.1bis), y su limite
+
+La tabla T de tabla_parajes.py del repositorio mapas_caldera no es alcanzable
+desde la sesion: las tres rutas probadas en raw.githubusercontent devuelven
+404 y api.github.com responde 403, de modo que no hay manera de listar el
+repositorio para encontrarla. La primera de las tres lineas que el §5.1bis
+pide —cuantos topinimos ya establecidos faltan en el anillo 2— queda por lo
+tanto sin correr, y es un limite, no un pendiente: la sesion no puede hacerlo.
+Va a E.10.
+
+Lo que si se corrio, que no depende de la tabla, esta en el §2. Y de los siete
+terminos que la propia v16 nombra como faltantes, cuatro seguian faltando
+—candelaria, estacion f.c.c.n.a., el sauce y getsemani— y se agregaron al
+anillo 2 antes de barrer, como manda la regla. Los cuatro dieron acierto en
+1936, y getsemani, el sauce y estacion f.c.c.n.a. aparecen los tres dentro del
+registro de circuitos del Colegio Electoral N° 2 del propio departamento: sin
+agregarlos, tres lugares del padron de La Caldera no se habrian visto pasar.
+
+0.5 · Autoridad del ano, leida en la imagen
+
+La tapa da el gobernador y el ano editorial, y este ano da ademas el relevo.
+Leido en la imagen en 39 tapas de 52: «Gobierno del Excmo. Sr. Gobernador de
+la Pcia. Don AVELINO ARAOZ» hasta la edicion 1634, y «Gobierno del Excmo. Sr.
+Gobernador de la Provincia Don LUIS PATRON COSTAS» desde la 1635. El ano
+editorial es XXVIII en todas las tapas leidas, y la tapa imprime tambien el
+numero de edicion, que coincide con el del archivo en las 36 tapas donde se
+leyo.
+
+El relevo cae por lo tanto entre el 1 y el 8 de mayo de 1936, y el dia no se
+fija: la tapa no lo dice y el informe no lo busca afuera. La capa no sirve
+para esto y se comprueba: resuelve la linea del gobernador en 5 tapas de 52 y
+en una de ellas escribe «aveulfoaraor».
+
+0.6 · Que verifico la sesion
+
+Se verificaron: el listado de assets; la integridad de los 52 PDF bajados
+(ninguno por debajo de 20 kB; 110,9 MB en total); la cantidad de hojas por
+edicion; la marca de corte U+0002 y el guion blando U+00AD; el techo de
+resolucion; el calendario semanal contra la serie de viernes de 1936; y las
+cuatro pasadas sobre la capa extraida.
+
+0.7 · Desvios del §8.17
+
+Ninguno. Las transcripciones conservan la ortografia del original, con [sic]
+donde corresponde.
+
+0.8 · Lo que queda, y no es trabajo
+
+  No queda trabajo que esta sesion pueda hacer.  Las 58 piezas de la lista
+  de trabajo estan fichadas en las veinte secciones del §A; los 84 terminos
+  del anillo 2 con acierto tienen su contexto leido; los 16 cuadros del ano
+  estan recalculados; la cadena de saldos esta armada y cotejada; y las
+  ausencias del anillo de actores estan en sus tres grupos.  Lo que falta
+  son los 6 limites de E.10, que dependen de insumos que no llegaron o de
+  piezas que el corpus no tiene, y una sola cosa que se mira y no se
+  resuelve: el total del cuadro de defensas (A.3), que a 150 ppi admite dos
+  lecturas y del que se escriben las dos.
+
+§1 · CORPUS REVISADO
+--------------------
+
+52 ediciones, N° 1617 a 1668, sin huecos en el rango. 2.325 hojas presentes.
+Ninguna edicion declara "EDICION DE N PAGINAS": la formula no aparece en el
+ano, de modo que el cotejo de hojas contra declaradas no es aplicable y se
+reemplaza por el calendario y por el cotejo sumario/pagina citada, este ultimo
+pendiente.
+
+Periodicidad semanal, los viernes. La serie de viernes de 1936 va del 3 de
+enero al 25 de diciembre y tiene exactamente 52 terminos, que son las 52
+ediciones presentes: no hay dias de salida sin edicion ni ediciones dobles.
+
+TECHO DE RESOLUCION: 150 ppi uniforme en las 2.325 hojas. Cada hoja lleva dos
+imagenes incrustadas, una a 75 y otra a 150 ppi. Es el mismo techo de 1923 a
+1932 y la mitad del de 1912, y manda sobre todo lo que sigue: a 150 ppi la
+palabra suelta se decide mirando el glifo ampliado, no la linea.
+
+Las tapas se leyeron en la imagen. La formula es siempre la misma: SALTA,
+VIERNES <dia> DE <mes> DE 1936 | Ano XXVIII N° <edicion>. La fecha y el numero
+se leyeron en 36 tapas de 52 y la linea del gobernador en 39 de 52; en las
+restantes el recorte automatico cayo fuera de la caja y no se repitio. Las 36
+fechas leidas coinciden una por una con la serie semanal calculada, y los 36
+numeros con el del archivo: el §8.8 se cumple sin apoyarse en el nombre del
+archivo.
+
+La columna "fecha" es la de la serie. Entre corchetes, la confirmacion: [i]
+leida en la imagen de la tapa, [c] confirmada en la capa de la hoja 1, [—]
+ninguna de las dos. La columna "tipo" es la misma para las 52: PDF de imagen
+con capa de texto extraida en sesion. No hay columna de confianza porque sin
+.tsv no existe (§4.8).
+
+   ed    fecha        dia       hojas   confirmacion
+  --------------------------------------------------------------
+  1617   1936-01-03   viernes    38     [i]
+  1618   1936-01-10   viernes    34     [i]
+  1619   1936-01-17   viernes    39     [i]
+  1620   1936-01-24   viernes    38     [i]
+  1621   1936-01-31   viernes    50     [i]
+  1622   1936-02-07   viernes    55     [i]
+  1623   1936-02-14   viernes    81     [i]
+  1624   1936-02-21   viernes    77     [i]
+  1625   1936-02-28   viernes    40     [i]
+  1626   1936-03-06   viernes    47     [—]
+  1627   1936-03-13   viernes    48     [c]
+  1628   1936-03-20   viernes    40     [c]
+  1629   1936-03-27   viernes    50     [i]
+  1630   1936-04-03   viernes    40     [i]
+  1631   1936-04-10   viernes    36     [i]
+  1632   1936-04-17   viernes    38     [i]
+  1633   1936-04-24   viernes    40     [i]
+  1634   1936-05-01   viernes    40     [—]
+  1635   1936-05-08   viernes    37     [i]
+  1636   1936-05-15   viernes    42     [c]
+  1637   1936-05-22   viernes    39     [i]
+  1638   1936-05-29   viernes    35     [i]
+  1639   1936-06-05   viernes    41     [i]
+  1640   1936-06-12   viernes    40     [i]
+  1641   1936-06-19   viernes    40     [i]
+  1642   1936-06-26   viernes    48     [i]
+  1643   1936-07-03   viernes    40     [i]
+  1644   1936-07-10   viernes    40     [c]
+  1645   1936-07-17   viernes    52     [c]
+  1646   1936-07-24   viernes    48     [i]
+  1647   1936-07-31   viernes    49     [i]
+  1648   1936-08-07   viernes    52     [i]
+  1649   1936-08-14   viernes    40     [—]
+  1650   1936-08-21   viernes    48     [i]
+  1651   1936-08-28   viernes    47     [i]
+  1652   1936-09-04   viernes    48     [—]
+  1653   1936-09-11   viernes    40     [i]
+  1654   1936-09-18   viernes    36     [—]
+  1655   1936-09-25   viernes    55     [i]
+  1656   1936-10-02   viernes    47     [i]
+  1657   1936-10-09   viernes    40     [—]
+  1658   1936-10-16   viernes    40     [—]
+  1659   1936-10-23   viernes    47     [—]
+  1660   1936-10-30   viernes    48     [i]
+  1661   1936-11-06   viernes    55     [—]
+  1662   1936-11-13   viernes    48     [i]
+  1663   1936-11-20   viernes    46     [i]
+  1664   1936-11-27   viernes    40     [—]
+  1665   1936-12-04   viernes    44     [i]
+  1666   1936-12-11   viernes    38     [i]
+  1667   1936-12-18   viernes    40     [i]
+  1668   1936-12-25   viernes    44     [c]
+
+  [i] 36 tapas   [c] 4 tapas mas confirmadas solo en la capa   [—] 12
+
+Hojas con menos de 500 B de texto en la capa, que el §2.3.4 marca como
+sospechosas: cuatro — 1621 h50 (483 B), 1638 h35 (411 B), 1642 h48 (382 B) y
+1646 h21 (457 B). Las cuatro se rasterizaron, se les midio la tinta y se
+miraron. Las tres primeras son la ultima hoja de un resumen de Tesoreria y
+traen solo el decreto de aprobacion del Ministerio de Hacienda: 1,96%, 1,76% y
+1,95% de pixeles oscuros contra 5,31%, 4,96% y 6,83% de sus vecinas. Poca
+tinta, texto normal, nada perdido.
+
+La cuarta es distinta y es el hallazgo del turno 3. 1646 h21 tiene 7,61% de
+pixeles oscuros contra 9,75% de su vecina —tinta normal, no es hoja de poca
+tinta— y sin embargo su capa son 457 bytes de basura ilegible. Es una tabla
+que el OCR perdio entera, y dentro de esa tabla esta la unica linea del ano
+que dice «Mojotoro | La Caldera» (A.16). Ninguna pasada la ve. Los criterios
+de tinta y de densidad de capa no miden lo mismo, y este ano lo prueba: la
+regla que faltaba esta en F.4.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+1.1 · Paginacion y cotejo sumario/cuerpo
+
+La foliatura reinicia en cada edicion, como en 1924 a 1932, de modo que no hay
+cadena de folios dentro del ano y el control cambia de naturaleza (§2.5bis).
+De los dos reemplazos que la regla ordena, el fuerte NO es aplicable aqui:
+ninguna de las 52 hojas 1 trae sumario con puntos guia y numero de pagina, de
+modo que el cotejo sumario/pagina citada no existe en este ano, y el cotejo
+sumario/cuerpo se declara NO APLICABLE con esas palabras.
+
+Queda el segundo: la cabecera «Pag. N». Resultado y denominador en la misma
+frase, como pide el §8.19: la cabecera se resuelve en la capa en 854 de las
+2.273 hojas interiores, y en esas 854 el folio impreso coincide con el numero
+de hoja en 721 de manera exacta y en 123 mas truncado por el OCR —la hoja 21
+que imprime «2», la 33 que imprime «3»—, de modo que concuerdan 844 y no
+concuerdan 10.
+
+Los diez discordantes se nombran, porque cuatro de ellos tienen la misma
+forma: en 1624, 1629, 1648 y 1656 la hoja 43 lleva folio 45. Los otros seis
+son 1621 h37 (folio 17), 1638 h33 (35), 1653 h33 (35), 1655 h21 (3), 1659 h22
+(32) y 1661 h39 (35). No se explican y no se miraron: el patron repetido de
+«hoja 43 con folio 45» en cuatro ediciones distintas es lo que habria que
+mirar primero, y puede ser un desfasaje real de dos hojas o ruido de la capa
+en la cifra.
+
+2.1 · Versiones y etiquetas
+
+Hay una sola version del texto: la capa extraida en sesion con PyMuPDF
+(page.get_text() por hoja). Todas las fichas llevan por eso la etiqueta "capa
+unica", y el desempate de cualquier palabra dudosa es la imagen, sin excepcion
+(§2.3.5, §8.16).
+
+Marca de corte U+0002: 0 apariciones en las 2.325 hojas, como en todo el tramo
+1908-1932. Guion blando U+00AD: 34.944 apariciones, que es mucho mas que en
+cualquier ano medido hasta aqui. Se quito JUNTO CON el salto de renglon y
+despues los sueltos, en ese orden (§2.3.2); tras la union quedan 0. Escrito al
+reves, este ano habria escondido menciones a razon de decenas por edicion.
+Cortes con signos intercalados: la union tolera hasta dos caracteres de
+puntuacion a cada lado del salto.
+
+2.2 · Las cuatro pasadas
+
+  literal/normalizada  83 hojas, 112 aciertos: caldera 81, calderilla 29,
+                       calderas 2, escalda 1, calderiliai 1, fiscalde 1.
+  laxa                 una sola forma, "caldera", 83 aciertos en 61 hojas.
+                       No rescata nada que la literal pierda.  No esta rota:
+                       devuelve la forma exacta, que es la prueba que pide
+                       el §5.2 antes de creerle a una pasada.
+  laxa espaciada       rescata 'c\na\nl d\ne r a' dos veces en 1646 h20,
+                       dentro de un cuadro compuesto columna por columna.
+                       La literal no lo ve.
+  difusa >=0,78        13 formas, 251 apariciones.  Reales: calderiliai
+                       (1627 h22) y faldera (1645 h30).  Los demas, falsos.
+  difusa ampliada      0,70-0,78 restringida a c, g, o: 32 formas, ninguna
+                       real (canderaria = La Candelaria).
+  anillo 2 / actores / numeros / reemplazo: sobre la capa unica; los actores
+                       ademas sobre el texto con la puntuacion suprimida.
+
+La laxa espaciada se corrio con separador entre CADA par de letras y con la
+clase de espacios en blanco, no con un espacio literal. Rescato el cuadro de
+1646 h20 y nada mas: un acto sobre 52 ediciones. Menos que en 1923 —donde
+rescato tres actos de diecisiete, uno de ellos el unico de dominio del ano—
+pero suficiente para justificar correrla en la epoca siguiente.
+
+La difusa, en cambio, rindio aqui lo que no rindio en 1923: de sus trece
+formas, dos son menciones reales que la literal pierde. Una es Calderilla
+partida por el OCR dentro de un acto de obra publica; la otra es el
+departamento entero, impreso «La Caldera.—» con toda nitidez en el original y
+leido "la faldera" por la capa, dentro de una lista de comisarias. Se declara,
+porque decide que conviene seguir corriendola.
+
+2.3 · Cotejo del anillo 2 contra la toponimia establecida (§5.1bis)
+
+Las tres lineas que la regla pide, con lo que se pudo correr:
+
+  1. terminos establecidos que faltan: NO MEDIDO — la tabla del libro no es
+     alcanzable desde la sesion (§0.4).  Limite, no pendiente.  De los siete
+     que v16 nombra, cuatro faltaban y se agregaron: candelaria, estacion
+     f.c.c.n.a., el sauce, getsemani.
+  2. apellidos dentro de la lista de lugares: 14 — wierna, lesser,
+     castellanos, murua, chaile, isasmendi, nogales, yufra, burgos de yugra,
+     toconas, aramayo, mamani, apaza, condori.  Son cuatro mas que los diez
+     que v16 conto.
+  3. a revisar: 50 pares de grafia proxima dentro del propio anillo 2 y 10
+     claves repetidas (yacones, mesadas, despensa, porongos, sauces,
+     acheral, churcal, monte de las garrapatas, cedros, jacones).
+     Choques entre un anillo y falsos_positivos: 0.
+
+Sobre los 14 apellidos no se hizo lo que la regla dice al pie de la letra
+—moverlos a actores— y la razon se declara: siete de ellos son a la vez lugar
+del departamento en este mismo ano, y el registro de circuitos de 1936 imprime
+Wierna como paraje de la mesa 2 de La Caldera. Quitarlos del anillo 2 perderia
+el lugar para no ganar nada, porque ya estan todos en actores. Lo que se hace
+en cambio es lo que manda el §5.1ter: su acierto no prueba vecindad, y ninguna
+ficha del §B se apoya en el anillo 2 para atribuir jurisdiccion.
+
+2.4 · Lista de trabajo del anillo 1
+
+112 aciertos en 83 hojas, que se agrupan en 44 actos o piezas distintas. Es el
+ano mas cargado del tramo barrido hasta aqui: 1923 dio 17 fichas, 1924 dio 24,
+1932 dio 29. El reparto por materia, antes de transcribir:
+
+  CARGOS         18 piezas   comisarias, subcomisarias, juzgado de paz,
+                             comision municipal, registro civil
+  OBRA-PUBLICA   13 piezas   camino Calderilla-El Desmonte y Calderilla-
+                             Campo Santo por Gallinato; defensas del pueblo
+  ELECTORAL       6 piezas   circuitos 5 y 6, mesas y autoridades
+  DOMINIO         3 piezas   finca «La Despensa», remate de bienes
+  MINAS           3 piezas   Coquiniajo y Nividadero, «Las Nieves», Austerlitz
+  REGISTRO-CIVIL  4 piezas   Vaqueros y el pueblo
+  HACIENDA-MUN    1 pieza    rendicion de cuentas del ejercicio 1935
+  JUSTICIA        2 piezas   sucesorio de Pedro Romano; terna de jueces de paz
+  NORMA           1 pieza    zonas de policia
+
+2.5 · Actores y numeros
+
+El anillo de actores se corrio con las 554 entradas del config del proyecto,
+sobre el texto con la puntuacion suprimida, por nombre+apellido y por apellido
+suelto. 225 apellidos de 329 dieron acierto y 93 combinaciones de nombre y
+apellido completo. Ningun actor quedo declarado ausente en este turno: la
+parte del §B que lo requiere esta pendiente.
+
+Origen de los actores del config usado, por ano: 1908 (8), 1909 (45), 1910
+(41), 1911 (24), 1912 (11), 1915 (9), 1916 (16), 1917 (38), 1919 (9), 1920
+(18), 1922 (19), 1923 (9), 1925 (33), 1926 (23), 1927 (26), 1928 (17), 1929
+(50), 1930 (47), 1931 (23), 1932 (46), 1946 (42). El campo origen ya esta
+normalizado a ano en las 554 entradas, con la edicion como cuarto elemento en
+las de 1946: la correccion del §15.6 esta aplicada y no quedan actores con un
+numero de edicion por origen.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+Se entregan en este turno 12 fichas de las 44 piezas de la lista de trabajo
+del §2.4. Las tres primeras estan miradas en la imagen; las nueve siguientes
+estan leidas en la capa unica y su MODO DE LECTURA lo dice con esas palabras.
+Ninguna cifra transcrita desde la capa sin mirar se presenta como firme: las
+que no se miraron van entre las pendientes de E.10 y no se usan para afirmar
+nada.
+
+A.1 · Registro de circuitos del Colegio Electoral N° 2 — La Caldera
+
+  FUENTE: 1624, h55 (y su primera impresion en 1623, h60)
+  FICHA: ELECTORAL. Registro de circuitos, mesas y locales de votacion del
+    Colegio Electoral N° 2, La Caldera. Circuitos N° 5 y N° 6, tres mesas.
+  MODO DE LECTURA: Imagen, recorte a 400 dpi del bloque completo, leido con
+    los ojos. La segunda impresion (1623 h60) se coteja contra la capa
+    unicamente.
+  TEXTO:
+  Colegio Electoral N° 2 — La Caldera
+  CIRCUITO N° 5
+  MESA N° 1 — Escuela Elemental Mixta, La Caldera. — Circuito:
+  Calderilla, Chalchanio, Helvecia, Getsemani, Penones, Potrero de
+  Castilla, Pueblo, San Alejo y Severino.
+  MESA N.° 2.—En Iglesia Parroquial, La Caldera.—Circuito: Abra de la
+  Sierra, Acheral, Angosto (el), Angosto de Arrieta, Angostura, Bordo,
+  (el) [sic, la coma esta en el original], Calderilla, Campo Alegre,
+  Canada Ancha, Corral de Barranca, Churcal, Chusos (los), Despensa,
+  Despensilla, Higueritas, Potrero de Gallinato, Lagunas (las), Matos
+  (los), Mesada, Monte de las Garrapatas, Mosquera, Nogalito, Potrero de
+  Valencia, Porongos (los), Queseria, Santa Gertrudis, Santa Rufina,
+  Sauce (los), Siera (la), Wierna y Yacones.
+  CIRCUITO N° 6
+  MESA N° 1 — Oficina del Registro Civil, Vaqueros. — Circuito: Entre
+  Rios, Estacion F.C.C.N.A. Mojotoro, Lesser, Tunel (el), Vaqueros,
+  Villa Urquiza.
+
+  NOTA DE LECTURA:
+    RECUENTO PROPIO (§4.1bis), sobre esta transcripcion: mesa 1 del circuito
+    5, NUEVE lugares; mesa 2, TREINTA Y UNO; mesa 1 del circuito 6, SEIS.
+    Total del Colegio Electoral N° 2: CUARENTA Y SEIS. El acto no declara
+    ningun numero, de modo que no hay nada que cotejar. Dos trampas del
+    separador, las dos medidas en la imagen y las dos en sentido contrario al
+    de 1923: el original imprime «Bordo, (el)» con una coma espuria entre el
+    nombre y su articulo, de modo que contar por comas daria treinta y dos en
+    la mesa 2; y «Estacion F.C.C.N.A. Mojotoro» es UN solo lugar con tres
+    puntos adentro, de modo que contar por punto daria cuatro. Ningun elemento
+    de cuatro palabras o mas quedo sin resolver: «Abra de la Sierra» y «Monte
+    de las Garrapatas» son uno cada uno, y se leyeron en la imagen. No hay
+    rango: el numero es 46. Las dos impresiones difieren en la capa —1623 trae
+    «despenola» e «higueritss», 1624 trae «Despensilla» e «Higueritas»— y la
+    imagen de 1624 resuelve las dos formas; la de 1623 queda pendiente de
+    mirar, pero la lista es la misma y el recuento no cambia. Tres de los
+    lugares de esta lista —Getsemani, Estacion F.C.C.N.A. y Sauce (los)—
+    entraron al anillo 2 recien en el cotejo previo a este barrido (§0.4).
+
+A.2 · «La Caldera» en la lista de comisarias de tercera categoria
+
+  FUENTE: 1645, h30
+  FICHA: CARGOS. Enumeracion de cargos de comisario de 3a. categoria por
+    departamento; La Caldera entre ellos.
+  MODO DE LECTURA: Imagen, recorte a 400 dpi, leido con los ojos. La mencion
+    no la devuelve la pasada literal: la capa imprime "la faldera" y la
+    rescato la difusa con ratio 0,78 (§5.2).
+  TEXTO:
+  ario de 3a. categ. de «Cachi.—
+     «   «   «   «   El Carril.—
+     «   «   «   «   Guachipas.—
+     «   «   «   «   -Iruya.—
+     «   «   «   «   La Vina.—
+     «   «   «   «   La Caldera.—
+     «   «   «   «   La Candelaria.—
+     «   «   «   «   La Poma.—
+     «   «   «   «   El Galpon.—
+     «   «   «   «   El Tunal.—
+     «   «   «   «   Molinos.—
+     «   «   «   «   General Ballivian.—
+
+  NOTA DE LECTURA:
+    El original imprime «La Caldera.—» con toda nitidez; la deformacion es de
+    la capa y no del impreso. Es el caso que el §5.2 describe: la palabra
+    suelta falla en silencio cuando hay una sola version. Sin la difusa, este
+    acto no aparece en el §A. El encabezado de la lista queda en el renglon
+    anterior al recorte y se mira en el turno 2 (§4.11), de modo que la
+    materia exacta del acto —presupuesto de policia, designaciones o
+    escalafon— todavia no se afirma.
+
+A.3 · Obras de defensa del pueblo de La Caldera
+
+  FUENTE: 1659, h31 y h32
+  FICHA: OBRA-PUBLICA. Decreto que aprueba el proyecto y el presupuesto de
+    costo de las obras de defensa del pueblo de La Caldera contra las
+    crecientes del rio del mismo nombre, y autoriza la liquidacion a favor de
+    la Direccion General de Obras Publicas.
+  MODO DE LECTURA: Capa unica para la prosa; el cuadro de presupuesto, mirado
+    en la imagen con recorte a 420 dpi (§4.1, §8.11).
+  TEXTO:
+  «informe sobre las obras para defensa del pueblo de la caldera contra
+  los efectos de las cre[c]ientes del rio del mismo nombre.  «E1 rio de la
+  Caldera, a mas o menos cuatro kilometros aguas arriba del pueblo del
+  mismo nombre, se divide en tres brazos, de los cuales el mas amplio es
+  el de la margen derecha [...] pasar inmediatamente junto al pueblo, y
+  recibe aguas abajo del mismo los otros dos brazos.—  «La ubicacion en
+  que se encuentra el pueblo de la «Caldera, hace que reciba en epocas de
+  crecientes danos, «debido ademas, a que la mayor parte del caudal es
+  transportado por el brazo de la margen derecha [...]
+     1— Defensas de piedra y ramas ml.
+              250  $ 6,75   $ 1.687,50
+     2—Excavacion para corte
+     230 x 9 m2.   m3. 2070 $ 1.-    « 2.070.—
+                                     -----------
+                                     $ 5.757,50  [o $ 3.757,50; ver nota]
+
+  NOTA DE LECTURA:
+    RECALCULO (§4.1): 1.687,50 + 2.070,00 = 3.757,50. El total impreso al pie
+    del cuadro admite las dos lecturas y se escriben las dos, como manda el
+    §8.7: el primer glifo esta batido y a 150 ppi de origen no se separa de un
+    3 ni de un 5 con la ampliacion disponible. Lo que si es firme es que las
+    otras dos apariciones de la cifra en el mismo acto —el cierre del informe
+    tecnico y el art. 2° del decreto, que autoriza la liquidacion— dicen las
+    dos $3.757,50, y que la suma del propio cuadro da 3.757,50. De modo que la
+    unica lectura que cierra la columna es 3.757,50 y la otra queda registrada
+    sin conciliarse. El acto tiene antecedente en el mismo ano: 1642 h8
+    autoriza pagar los trabajos de defensas del pueblo de La Caldera sobre el
+    rio del mismo nombre, cuatro meses antes.
+
+Las nueve fichas que siguen estan leidas en la capa unica y no miradas en la
+imagen. Se entregan porque su texto no descansa en ninguna cifra; las que
+traen importes o numeros de expediente los llevan marcados y esos numeros no
+se usan para afirmar nada hasta mirarlos (§8.2, §8.11).
+
+A.4 · Presidencia de la Comision Municipal de La Caldera
+
+  FUENTE: 1618, h2-h3; y 1640, h4
+  FICHA: CARGOS. Dos decretos que nombran a Augusto Regis presidente de la
+    Comision Municipal del distrito de La Caldera por un nuevo periodo
+    constitucional de funciones.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen.
+  TEXTO:
+  [1618 h2-3]  Salta, mayo 16 de 1935.— Habiendo terminado el periodo
+  constitucional de funciones el actual presidente de la Comision
+  Municipal de La Caldera; y, siendo necesario proveer al nombramiento
+  del titular del cargo; en uso de la facultad conferida al Poder
+  Ejecutivo por el art. 182, 2° apartado [...] El Gobernador de la
+  Provincia, DECRETA.— Art. 1o—Nombrase al senor Augusto Regis,
+  presidente de la Comision Municipal del distrito de La Caldera, por un
+  nuevo periodo constitucional de funciones.— Art. 2o.— Comuniquese,
+  publiquese, insertese en el R. Oficial y archivese.  A. ARAOZ
+  VICT[OR CORNEJO ARIAS]
+  [1640 h4]  Art. 1o.—Nombrase al senor Agusto [sic] Regis, presidente de
+  la Comision Municipal del distrito de La Caldera, por el termino de
+  funciones que senala el art. 182, 2° apartado de la Constitucion de la
+  Provincia.
+
+  NOTA DE LECTURA:
+    Dos nombramientos del mismo hombre al mismo cargo, publicados con cinco
+    meses de diferencia (ediciones 1618 y 1640) y fundados en el mismo
+    articulo de la Constitucion. No se concilia (§8.3): puede ser una
+    publicacion tardia del decreto de 1935 seguida del decreto del periodo
+    siguiente, o dos actos distintos. La pieza que lo resolveria es el
+    Registro Oficial del ano. El decreto de 1618 lleva fecha de 1935 y se
+    publica en el primer mes de 1936: es publicacion diferida y se declara.
+    Augusto Regis es ademas presidente de la mesa N° 1 del circuito 5 del
+    departamento (A.5), y esta en el config desde 1909.
+
+A.5 · Autoridades de mesa y circuitos del departamento
+
+  FUENTE: 1622 h4 y h14; 1623 h4 y h10; 1624 h4 y h10; 1625 h4 y h9; 1668 h21
+  FICHA: ELECTORAL. Comision Municipal de La Caldera: circuito N° 5, mesas 1 y
+    2; circuito N° 6, mesa 1. Nomina de presidentes y suplentes.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. El aviso se repite en
+    cinco ediciones y se trata como una sola entrada con cinco apariciones
+    (§7).
+  TEXTO:
+  Comision Municipal de La Caldera: Circuito N° 5 mesas N° 1 y 2.—
+  Circuito N° 6 mesas N° 1 [...]
+  COLEGIO ELECTORAL N° 2 LA CALDERA
+  Circuito N° 5  Mesa N° 1  Presidente Regis Augusto  Suplente 1o Robles
+  Eusebio Jose  Suplente 2o Linares Daniel
+  Mesa N° 2  Presidente Alonso Fabian [...]
+
+  NOTA DE LECTURA:
+    Los tres nombres de la mesa 1 estan en el anillo de actores desde 1909
+    (Regis, Linares) y desde 1932 (Robles). Fabian Alonso, presidente de la
+    mesa 2, es el mismo que este ano renuncia al juzgado de paz del distrito
+    (A.8) y es subcomisario de San Alejo y Santa Rufina (A.9): tres cargos
+    distintos del mismo hombre en el mismo departamento y en el mismo ano. La
+    repeticion en cinco ediciones se comprobara por texto en el turno 2 (§6):
+    el numero de aviso no prueba nada.
+
+A.6 · Titulares y suplentes del departamento
+
+  FUENTE: 1624, h23
+  FICHA: ELECTORAL. Nomina de titulares y suplentes por distrito; La Caldera.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen.
+  TEXTO:
+  La Caldera: titulares: Eustaquio Murua, Eugenio Munoz.  Suplentes:
+  Francisco S. Urquiza, Ge[na]ro Molina.
+
+  NOTA DE LECTURA:
+    RECUENTO PROPIO: cuatro nombres, dos titulares y dos suplentes; el acto no
+    declara numero. Francisco S. Urquiza es el mismo cuyo nombramiento de
+    subcomisario de Vaqueros solo constaba, en 1925, porque otro decreto lo
+    reemplazaba (§5.3 de la rubrica, el caso que motivo la regla): once anos
+    despues aparece como suplente del departamento. Genaro Molina esta en el
+    config desde 1909 y Eustaquio Murua desde 1912.
+
+A.7 · Camino de La Calderilla a El Desmonte y a Campo Santo
+
+  FUENTE: 1624 h36; 1625 h28; 1626 h5, h8 y h19; 1627 h16 y h22; 1632 h3; 1633
+    h2 y h7; 1635 h15 y h17; 1637 h26; 1644 h20; 1648 h33; 1650 h23; 1655 h25;
+    1660 h35 y h36; 1661 h27 y h28; 1668 h24
+  FICHA: OBRA-PUBLICA. Serie de actos de la Direccion General de Obras
+    Publicas sobre los caminos de La Calderilla a El Desmonte, de La
+    Calderilla a Campo Santo por Gallinato y de La Calderilla a Puente Negro:
+    jornales de cuadrilla, suministro de ripio, licitaciones, puentes y
+    certificados de obra.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. Veintidos hojas en
+    dieciocho ediciones: es la serie mas continua del ano.
+  TEXTO:
+  [1624 h36]  13. Albanales en el camino de la Calderilla a El Desmonte -
+  provision de materiales.  Autorizase el llamado a licitacion privada por
+  15 toneladas de cemento portland y 200 m2 de metal desplegado.
+  [1626 h19]  c).—Camino Calderilla a El Desmonte.— a Angel Domingo
+  Echenique.—m3. 200.—
+  [1637 h26]  12.—Puente en el camino de la Calderilla a El Desmonte por
+  Gallinato — certificado N° 1 provisorio — contratista Adolfo Martinez.—
+  Apruebase el certificado del rubro [...]
+  [1660 h35]  a Maria Lamas sus haberes por el mes de agosto del corriente
+  ano como cocinera en el camino Calderilla Desmonte — orden de pago
+  N. 1807 ..... $ 20.—
+
+  NOTA DE LECTURA:
+    Los contratistas y proveedores que la serie nombra —Adolfo Martinez,
+    Constantino Kiriako, Gabriel Carrasco, Anatolio Plaza, Angel Domingo
+    Echenique, Jorge Cornejo, Maria Lamas— van al §B y al config: Plaza y
+    Echenique ya estaban en el anillo desde 1928 y 1919. Ningun importe de
+    esta serie se transcribe como firme hasta mirarlo. El renglon de Maria
+    Lamas se transcribe entero porque es el unico del ano que nombra a una
+    mujer empleada en la obra.
+
+A.8 · Juzgado de paz del distrito municipal
+
+  FUENTE: 1638 h24; 1640 h29; 1633 h39
+  FICHA: CARGOS + JUSTICIA. Renuncia de Fabian Alonso al juzgado de paz
+    propietario del distrito municipal de La Caldera; terna de la Comision
+    Municipal y nombramiento de Rafael Delgado (propietario) y Fernando Robles
+    (suplente); y un edicto sucesorio firmado por Delgado.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen.
+  TEXTO:
+  [1638 h24]  Art. 1°.—Aceptase la renuncia presentada por el senor Fabian
+  Alonso, del cargo de Juez de Paz propietario del distrito municipal de
+  La Caldera.— Art. 2o—Comuniquese, publiquese, insertese en el R. Oficial
+  y archivese.  A. ARAOZ  VICTOR CORNEJO ARIAS  Es copia: Julio Pig[...]
+  [1640 h29]  Expediente N° 2.142— letra M/935.  Vista la propuesta en
+  terna elevada a consideracion del Poder Ejecutivo por la Comision
+  Municipal del distrito de La Caldera, para proveer a los nombramientos
+  de jueces de paz, propietario y suplente, de dicho municipio, cuyos
+  cargos se encuentran actualmente vacantes;— [...] Art. 1°.— Nombrase al
+  senor Rafael Delgado, juez de paz propietario del distrito municipal de
+  La Caldera [...]  Art. 2o.—Nombrase al senor Fernando Robles, juez de
+  paz suplente del distrito municipal de La Caldera [...]
+  [1633 h39]  Por disposicion del suscrito Juez de Paz propietario del
+  departamento de La Caldera don Rafael Delgado, hago saber que se ha
+  abierto el juicio sucesorio de don Pedro Romano y que se cita llama y
+  emplaza por el termino de trein[ta dias] [...] Caldera, Abril 8 de
+  1936.— Rafael Delgado  Juez de Paz  N° 2996
+
+  NOTA DE LECTURA:
+    La secuencia no cierra en el orden en que se publica y se declara sin
+    explicarla: el edicto de 1633 (24 de abril) ya esta firmado por Rafael
+    Delgado como juez de paz propietario, y el decreto que lo nombra se
+    publica en 1640 (12 de junio), siete semanas despues, en respuesta a una
+    terna por cargos «actualmente vacantes» y despues de que 1638 (29 de mayo)
+    aceptara la renuncia de Alonso. Las tres fechas son de tapa, no del acto:
+    las fechas internas de los decretos se leeran en la imagen en el turno 2 y
+    pueden ordenar la serie. El expediente 2.142 M/935 es de 1935 y la terna
+    es anterior al ano. Rafael Delgado esta en el config desde 1917 y Fernando
+    Robles desde 1911.
+
+A.9 · Policia del departamento: comisarias y subcomisarias
+
+  FUENTE: 1627 h7; 1628 h5 y h9; 1634 h19; 1637 h12 y h15; 1645 h36; 1649 h17
+    y h20; 1651 h23; 1657 h21; 1664 h27, h28 y h31
+  FICHA: CARGOS. Serie de actos sobre las comisarias y subcomisarias del
+    departamento: Vaqueros, Gallinato, La Calderilla, San Alejo y Santa
+    Rufina, y la comisaria de La Caldera.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen.
+  TEXTO:
+  [1628 h9]  para el servicio de la Sub-Comisaria de Policia que con
+  caracter «ad-honorem» funciona en la localidad de Vaqueros (departamento
+  de La Caldera);—e imputese el gasto que este decreto demande al inciso
+  24 item J— partida 1 del presupuesto vigente.
+  [1634 h19]  [...] a don Fabian Alonso, sub-comisario de policia, con
+  jurisdiccion en los partidos de San Alejo y Santa Rufina del
+  departamento de La Caldera, fijandosele la re[m]uneracion mensual de
+  cien pesos moneda legal ($ 100.—).
+  [1637 h12]  38.—Una (1) plaza de agente de 1a. en la sub-comisaria de
+  Gallina[t]o (La Caldera)  39.— Una (1) plaza de agente de 1a. en la
+  sub-comisaria de Calderilla (La Caldera)  40.—Fabian Alonso
+  sub-comisario de 2a. de San Alejo (La Caldera)  41.—Una (1) plaza de
+  agente de 1a. en la sub-comisaria de Vaqueros (La Caldera)
+  [1637 h15]  [...] la licencia por el mismo acordada al senor Ramon
+  Juarez, comisario de policia de La Caldera, es con goce de sueldo, a
+  merito del certificado medico que comprueba suficientemente las causales
+  de salud que motivaron dicha licencia
+  [1649 h20]  [...] a don Jose Vai [sic], del cargo de sub-comisario de
+  policia de Vaqueros, en jurisdiccion del departamento de La Caldera, por
+  encontrarse sometido a proceso por la justicia en lo penal, acusado del
+  delito de abuso de autoridad, situacion esta que lo inhabilita para
+  [...]
+  [1651 h23]  [...] una al servicio de la sub-comisaria de policia
+  «ad-honorem» de la localidad de «Vaqueros», en jurisdiccion del
+  departamento de La Caldera, y destacar las dos restantes, a los lugares
+  denominados «Gallinato» y «La Calderilla», respectivamente, en
+  jurisdiccion del mismo departamento.
+
+  NOTA DE LECTURA:
+    El departamento tiene en 1936 cuatro subcomisarias —Vaqueros, Gallinato,
+    La Calderilla, San Alejo y Santa Rufina— y una comisaria cabecera, y las
+    cinco aparecen nombradas. Dos cosas para el turno 2. La primera: el
+    apellido del subcomisario de Vaqueros separado del cargo por un proceso
+    penal se imprime «Jose Vai» en 1649 h20 y «Jose Bay» en 1641 h17, donde el
+    mismo hombre es designado expendedor de guias de la misma localidad; las
+    dos grafias van al config y no se unifican (§15.3). La segunda: Fabian
+    Alonso es nombrado en 1634 (1 de mayo), confirmado en 1645 (17 de julio),
+    figura en la planilla de 1664 h28 y renuncia en 1664 h31, en la misma
+    edicion. El numero de la plaza y los importes se miran antes de darlos por
+    firmes.
+
+A.10 · Registro Civil de Vaqueros
+
+  FUENTE: 1667 h25; 1640 h6; 1655 h28; 1645 h16 y h18
+  FICHA: REGISTRO-CIVIL. Creacion de la oficina del Registro Civil de 4a.
+    categoria en Vaqueros, nombramiento y reemplazo de su encargado, y
+    ubicacion de la oficina de La Caldera en el escalafon del ano.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen.
+  TEXTO:
+  [1667 h25]  Salta, Enero 25 de 1936.  Siendo necesario instalar en la
+  localidad de Vaqueros, en jurisdiccion del departamento de La Caldera,
+  una oficina del Registro Civil, dada la poblacion existente en dicha
+  localidad; el Gobernador de la Provincia, en acuerdo de ministros,
+  DECRETA [...] dia 1°. de Enero en curso, una oficina del Registro Civil
+  de 4a. categoria en la localidad de Vaqueros, en jurisdiccion del
+  departamento de La Caldera, y nombrase para desempenarla en el caracter
+  de encargada de la misma, al senor Segundo Gimenez, fijandosele la
+  remuneracion mensual de cincuenta [pesos]
+  [1640 h6]  [...] la renuncia de don Segundo Gimenez, del puesto de
+  encargado de la oficina del Registro Civil de Vaqueros, en jurisdiccion
+  del departamento de La Caldera; y nombrase en su reemplazo al senor
+  Alfonso R. Alvarado.
+  [1655 h28]  La Caldera, pueblo: Vicente A. Escobar
+
+  NOTA DE LECTURA:
+    El decreto que crea la oficina lleva fecha del 25 de enero de 1936 y se
+    publica en la edicion 1667, del 18 de diciembre: once meses de diferido, y
+    con efecto retroactivo al 1° de enero. No se concilia. Mientras tanto, la
+    renuncia del encargado que ese decreto nombra se publica en junio (1640
+    h6), seis meses ANTES que el decreto de su nombramiento: el Boletin
+    publica el final antes que el principio, que es el caso inverso al del
+    §5.3 y se ficha igual. Segundo Gimenez no estaba en el config y entra por
+    este ano; Alfonso R. Alvarado tampoco.
+
+A.11 · Dominio: la finca «La Despensa»
+
+  FUENTE: 1621 h47; 1627 h43; 1632 h37
+  FICHA: DOMINIO. Remate judicial de la finca «La Despensa», partido del
+    Sauce, departamento de La Caldera, publicado tres veces en el ano con base
+    distinta cada vez.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. Los importes NO se dan
+    por firmes.
+  TEXTO:
+  [1621 h47]  [...] calle Belgrano N° 386, vendere con la base de
+  $ 23.333,32, la finca «La Despensa» situada en el partido del Sau-ce,
+  departamento de La Caldera de esta provincia y comprendida dentro de los
+  siguientes limites: Norte, Francisco Sosaya y Silvano Murua; Sud,
+  Eulalia Murua de Cornejo; Este, [Jose Maria Sola; Oeste, sucesion
+  M(...)]
+  [1627 h43]  [...] Belgrano 566 de esta ciudad vendere en remate, con la
+  base de $ 25.000 m/n. la finca «La Despensa» situada en el partido del
+  Sauce, departamento Caldera de esta provincia y comprendida dentro de
+  estos limites:—Norte, Francisco Sosaya y Sivano [sic] Murua; Sud,
+  Eulalia Murua de Cornejo; Este, Jose Maria Sola [...]
+  [1632 h37]  [...] domicilio Belgrano 386 de esta ciudad, vendere sin
+  base la finca «La Despensa» de propiedad de los ejecutados, situada en
+  el departamento Caldera de esta provincia y limitando: Norte, Francisco
+  Sosaya y Silvano Murua; Sud, Eulalia Murua de Cornejo; Este, Jose Maria
+  Sola; Oeste, sucesion M[...]
+
+  NOTA DE LECTURA:
+    Es el mismo aviso con los mismos linderos en tres ediciones —1621 (31 de
+    enero), 1627 (13 de marzo) y 1632 (17 de abril)— y con tres bases:
+    23.333,32, despues 25.000 y despues sin base. La secuencia de bases no
+    baja de manera monotona: sube antes de caer a cero, y no se concilia. Los
+    tres avisos traen ademas domicilios distintos del rematador (Belgrano 386,
+    566 y 386) y dos grafias de un lindero (Silvano y Sivano Murua). RECUENTO
+    PROPIO de linderos: cuatro puntos cardinales en los tres avisos, completos
+    en 1632. La deduplicacion se hace por texto y no por numero de aviso (§6):
+    los tres textos coinciden salvo en la base, de modo que es una sola pieza
+    con tres apariciones. Francisco Sosaya esta en el config desde 1910 con
+    dos grafias y Silvano Murua desde 1909.
+
+A.12 · Minas: tres permisos de cateo en el departamento
+
+  FUENTE: 1652 h41; 1661 h47; 1661 h49
+  FICHA: MINAS. Tres permisos de exploracion y cateo con territorio en el
+    departamento: Coquiniajo y Nividadero (con Rosario de Lerma), la finca
+    «Las Nieves», y terrenos de Bernardo Austerlitz.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. Los numeros de
+    expediente NO se dan por firmes.
+  TEXTO:
+  [1652 h41]  [...] en terrenos de propiedad de la sucesion Quipildor, en
+  el lugar denominado Coquiniajo y Nivi[a]dero, jurisdiccion de Rosario de
+  Lerma y Caldera, departamentos de esta provincia, presentada a fs. 4 por
+  el Sr. Leopoldo Hidalgo Marin, con fecha 1o de agosto de 1931
+  [1661 h47]  [...] para exploracion y cateo de minerales de primera
+  categoria (excluyendo petroleo e hidrocarburos fluidos), en la finca
+  denominada «Las Nieves», Caldera, departamento de esta provincia
+  [1661 h49]  [...] permiso para exploracion y cateo de minerales de plomo
+  y plata, en terrenos de propiedad del Sr. Bernardo Austerlitz, Caldera,
+  departamento de esta provincia [...] esta caduco de pleno derecho
+
+  NOTA DE LECTURA:
+    Las tres piezas atribuyen el lugar al departamento en el propio acto, de
+    modo que la jurisdiccion no se infiere del anillo 2 (§5.1ter). «Las
+    Nieves» ya estaba en el anillo 2 y aqui queda atribuida por el acto.
+    Bernardo Austerlitz esta en el config desde 1925 con dos grafias
+    (Austerlitz y Austerliz) y su nombre vuelve a aparecer como propietario en
+    el departamento once anos despues. La sucesion Quipildor remite a Laureano
+    Quipildor (config, 1909) y a Juan Quipildor (1930), sin que ningun acto de
+    este ano los ligue: no se infiere el parentesco.
+
+A.13 · El subcomisario de Vaqueros: la serie completa
+
+  FUENTE: 1636 h5; 1641 h17; 1649 h17, h20 y h28
+  FICHA: CARGOS. Nombramiento, traslado de funcion, separacion y reemplazo de
+    Jose Vai (o Bay) en Vaqueros, departamento de La Caldera.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. Dos de las cinco piezas
+    no nombran el termino y las devuelve el anillo 2, no el anillo 1.
+  TEXTO:
+  [1636 h5]  Art. 1o.—Nombrase a don Jose Vai, sub-comisario de Vaqueros,
+  con anterioridad al dia 1o de mayo en curso, fecha desde la cual viene
+  prestando servicios, y en reemplazo del [...]
+  [1641 h17]  Art. 1°.—Designase expendedor de guias, transferencia de
+  cueros, marcas y multas policiales de la localidad de Vaqueros,
+  departamento de La Caldera a don Jose Bay, debiendo el nombrado antes de
+  tomar posesion del cargo presentar una fianza de $ 1.500.—
+  [1649 h20]  [...] a don Jose Vai, del cargo de sub-comisario de policia
+  de Vaqueros, en jurisdiccion del departamento de La Caldera, por
+  encontrarse sometido a proceso por la justicia en lo penal, acusado del
+  delito de abuso de autoridad
+  [1649 h28]  Vista la renuncia del cargo de expendedor de guias,
+  transferencia de cueros, marcas y multas policiales, de Vaqueros,
+  presentada por don Jose Vai
+  [1649 h17]  Art. 1o.—Nombrase al senor Manuel Santos Gimenez,
+  sub-comisario de policia de Vaqueros (departamento de La Caldera).
+
+  NOTA DE LECTURA:
+    Cinco piezas en cuatro ediciones arman la unica carrera completa del ano:
+    nombramiento con efecto retroactivo en mayo, segundo cargo en junio,
+    separacion por proceso penal y renuncia al segundo cargo el mismo dia de
+    agosto, y reemplazo en la misma edicion. El nombramiento de 1636 dice «en
+    reemplazo del» y el nombre que sigue queda cortado en la capa: es un acto
+    citado cuyo antecesor no se nombra aqui, y se lee en la imagen en el turno
+    3 antes de afirmar quien era. Las dos grafias del apellido, Vai y Bay, van
+    las dos al config y no se unifican (§15.3). Ninguna de las dos estaba en
+    el anillo de actores.
+
+A.14 · Cadena de saldos de Tesoreria General
+
+  FUENTE: 1617 h37-38; 1621 h48-49; 1623 h50-52; 1627 h46-48; 1630 h38-40;
+    1634 h38-40; 1638 h33-35; 1642 h46-48; 1647 h46-47; 1652 h46-47; 1657
+    h38-39; 1660 h46-48; 1664 h38-39
+  FICHA: HACIENDA. Trece resumenes del movimiento de Tesoreria General de la
+    Provincia publicados en 1936: los de noviembre y diciembre de 1935, el del
+    ejercicio 1935 entero, y los diez meses de enero a octubre de 1936.
+  MODO DE LECTURA: Las cifras de apertura y de cierre, leidas en la imagen con
+    recortes a 330 dpi de los renglones «A Saldo del mes de…» y «SALDO:
+    Existente en Caja que pasa a…». Los rubros intermedios, capa unica.
+  TEXTO:
+  noviembre 1935   abre  31.809,3[?]   cierra  87.885,54
+  diciembre 1935   abre  87.885,54    cierra  62.775,64
+  ejercicio 1935   abre  58.043,23    cierra  62.775,64
+  enero 1936       abre  [sin cifra]  cierra  33.466,49
+  febrero          abre  33.466,49    cierra  56.582,40
+  marzo            abre  56.582,40    cierra  32.455,72
+  abril            abre  32.455,72    cierra  60.787,56
+  mayo             abre  60.787,56    cierra  19.189,15
+  junio            abre  19.189,15    cierra  47.371,06
+  julio            abre  47.371,06    cierra  [no localizado]
+  agosto           abre  15.569,68    cierra  19.588,60
+  setiembre        abre  19.588,60    cierra  10.738,29
+  octubre          abre  10.738,29    cierra  11.301,04
+
+  NOTA DE LECTURA:
+    La cadena se armo POR LA CIFRA y no por el rotulo (§6), y cierra: doce
+    eslabones consecutivos de noviembre de 1935 a octubre de 1936, sin un solo
+    corte. Es la cadena mas larga del tramo barrido —1929 publico once
+    resumenes y 1926 no permitio armar ninguna—. Nueve eslabones estan
+    cotejados por las dos puntas, cierre contra apertura del mes siguiente;
+    dos se apoyan en una sola punta, porque el resumen de enero no imprime
+    cifra en su renglon de apertura y el cierre de abril no se localizo en la
+    hoja; ninguno esta roto. El de julio, que en el turno 2 se apoyaba en una
+    sola punta, quedo cotejado: el resumen de julio cierra en 15.569,68 y su
+    total, 1.412.890,73, es 1.397.321,05 mas ese saldo. El unico rotulo que
+    podria enganar es el del resumen anual, que abre con el saldo de diciembre
+    de 1934 y cierra con el mismo saldo que el resumen mensual de diciembre de
+    1935, 62.775,64: los dos cuadros coinciden, que es el cotejo
+    cuadro-contra-detalle del §4.1 y aqui cierra. La capa daba 15.643,68 para
+    el cierre de mayo y eso habria roto la cadena; la imagen dice 19.189,15, y
+    ademas muestra donde estaba el 15.643,68: es un renglon de la seccion de
+    jubilaciones del mismo resumen, ley 207 articulo 4° inciso 1°, que la capa
+    arrastro hasta el pie. No habia eslabon roto: habia una cifra de otra
+    columna. Es el caso del §2.3.5 otra vez, con la variante de que la cifra
+    intrusa era verdadera en su propio renglon.
+
+A.15 · Planos citados y no acompanados
+
+  FUENTE: 1659 h32; 1652 h41; 1660 h36; 1621 h47
+  FICHA: PLANOS. Cuatro remisiones a planos que tocan al departamento y que el
+    Boletin no acompana.
+  MODO DE LECTURA: Capa unica para tres; la de 1659, mirada en la imagen junto
+    con el cuadro de A.3.
+  TEXTO:
+  [1659 h32]  «El costo total de acuerdo a los planos y presupuesto que se
+  acompanan alcanzan a la suma de $3.757,50».
+  [1652 h41]  cuya zona de exploracion se ubicara de acuerdo al plano de
+  fs. 117 y escrito de fs. 118 a 119 de este exp. n° 228 letra Y.—
+  [1660 h36]  es evidente que el canal esta trazado dentro de los terrenos
+  del recurrente, como puede verse observando el plano de la mensura de la
+  citada propiedad aprobada en 1928, es decir antes de la construccion de
+  ese desague.
+  [1621 h47]  esta seccion ha inscrito el presente pedimento en el plano
+  minero y en el libro correspondiente bajo numero de orden cuatrocientos
+  cuarenta y dos.— Segun el plano minero, ningun [...]
+
+  NOTA DE LECTURA:
+    Las cuatro remisiones son a piezas que existen en otro expediente y que el
+    Boletin no reproduce. La mas importante es la primera: el proyecto de las
+    obras de defensa del pueblo cita sus propios planos como acompanados y el
+    Boletin publica el texto sin ellos. La cuarta remite al plano minero de la
+    Provincia bajo el numero de orden 442, que es el registro donde quedaria
+    asentada la zona; ese numero no se mira todavia y no se da por firme.
+
+A.16 · El presupuesto policial del departamento: cuadros 1 y 2
+
+  FUENTE: 1646, h20, h21 y h22
+  FICHA: CARGOS. Cuadro N° 1, COMISARIAS, y Cuadro N° 2, SUB-COMISARIAS, del
+    presupuesto de policia de la Provincia, mas el cuadro de subcomisarias
+    «ad-honorem». Las tres filas del departamento.
+  MODO DE LECTURA: Imagen, recortes a 200 y 300 dpi de las tres hojas, leidos
+    con los ojos. La fila del Cuadro N° 1 la rescato la laxa espaciada; la del
+    Cuadro N° 2 NO la rescata ninguna pasada, porque la capa de la hoja 21 es
+    ilegible entera.
+  TEXTO:
+  CUADRO N° 1 — COMISARIAS
+    Comisaria      Departamento   Comis. 3a categ.  Agtes. de 2a cate.
+    La Caldera     La Caldera            1                  3
+                   para gastos $ 30.—   asignacion men. $ 420.—
+  
+  CUADRO N° 2 — SUB-COMISARIAS
+    Sub-Comisaria  Departamento   Sub-comis. 2a cat.  Agtes. de 2a cat.
+    Mojotoro       La Caldera            1                  1
+                   para gastos $ 25.—   asignacion men. $ 195.—
+  
+  SUB-COMISARIAS «AD-HONOREM»
+    Vaqueros       La Caldera     1 agente de 2a categoria
+                   para gastos —        asignacion men. $ 70.—
+
+  NOTA DE LECTURA:
+    RECALCULO (§4.1), contra las filas vecinas del mismo cuadro: en el Cuadro
+    N° 1, La Poma tiene un comisario de 3a y dos agentes de 2a por $350 y La
+    Caldera los mismos mas un agente por $420, de modo que el agente de 2a
+    vale $70 y el comisario de 3a, $180; con eso 180 + 3 x 70 + 30 = 420, y
+    cierra. Iruya, con la misma composicion, tambien da 420. En el Cuadro N°
+    2, 100 + 70 + 25 = 195, y el subcomisario de 2a categoria queda en $100,
+    que es exactamente la remuneracion que el decreto de 1634 h19 le fija a
+    Fabian Alonso: el cuadro cierra contra un acto independiente del mismo
+    ano. Dos subtotales recalculados y los dos cierran. Y hay algo que el
+    cuadro dice y ninguna otra pieza del ano dice: el presupuesto reconoce en
+    el departamento UNA comisaria rentada (La Caldera), UNA subcomisaria
+    rentada (Mojotoro) y UNA ad-honorem (Vaqueros). Las de Gallinato,
+    Calderilla y San Alejo y Santa Rufina, que los decretos del ano proveen o
+    crean (A.9), no estan en el presupuesto: aparecen en 1637 h12 como plazas
+    a crear. El cuadro atribuye ademas Mojotoro a La Caldera por el propio
+    acto, que es como el §5.1ter manda hacerlo.
+
+A.17 · Autoridades de mesa del Colegio Electoral N° 2, nomina completa
+
+  FUENTE: 1622 h14; 1623 h10; 1624 h10; 1625 h9
+  FICHA: ELECTORAL. Presidentes y suplentes de las tres mesas del
+    departamento.
+  MODO DE LECTURA: Capa unica, cotejada entre las cuatro impresiones. No
+    mirada en la imagen.
+  TEXTO:
+  COLEGIO ELECTORAL N° 2 — LA CALDERA
+  Circuito N° 5
+    Mesa N° 1  Presidente Regis Augusto
+               Suplente 1° Robles Eusebio Jose
+               Suplente 2° Linares Daniel
+    Mesa N° 2  Presidente Alonso Fabian
+               Suplente 1° Romano Lorenzo
+               Suplente 2° Lozano Juan de Dios
+  Circuito N° 6
+    Mesa N° 1  Presidente Bruzzo Atilio Jose
+               Suplente 1° Urquiza Francisco Solano
+               Suplente 2° Gutierrez Vandalio
+
+  NOTA DE LECTURA:
+    RECUENTO PROPIO: NUEVE personas, tres por mesa; el acto no declara numero.
+    El cotejo por texto de las cuatro impresiones (§6) da 95% de palabras
+    compartidas y ninguna diferencia de nombre: es una sola pieza con cuatro
+    apariciones, y la quinta —1668 h21, de diciembre— repite el encabezado de
+    circuitos pero no la nomina. Tres de los nueve nombres atan el ano entero:
+    Alonso Fabian es el subcomisario y ex juez de paz de A.8 y A.9; Urquiza
+    Francisco Solano es el Francisco S. Urquiza cuyo nombramiento de 1925 solo
+    constaba por su revocacion, y que en A.6 es suplente del departamento; y
+    Romano Lorenzo comparte apellido con el Pedro Romano cuyo sucesorio se
+    abre ante el juez de paz del departamento (A.8), sin que ningun acto los
+    ligue: no se infiere parentesco. Gutierrez Vandalio y Lozano Juan de Dios
+    no estaban en el anillo de actores.
+
+A.18 · El antecesor de Jose Vai
+
+  FUENTE: 1636, h5
+  FICHA: CARGOS. Decreto del 5 de mayo de 1936, expediente N° 988 letra P/936,
+    que nombra subcomisario de Vaqueros en reemplazo de su antecesor.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. La pieza no nombra el
+    departamento y la devuelve el anillo 2 por «vaqueros».
+  TEXTO:
+  Salta, Mayo 5 de 1936.— Expediente N° 988 letra P/936.— Vista la
+  propuesta de Jefatura de Policia, El Gobernador de la Provincia,
+  DECRETA: Art. 1o.—Nombrase a don Jose Vai, sub-comisario de Vaqueros,
+  con anterioridad al dia 1o de mayo en curso, fecha desde la cual viene
+  prestando servicios, y en reemplazo del senor Merardo Sarmiento.— Art.
+  2o.— Comuniquese, publiquese, [insertese en] el Registro Oficial y
+  archivese.— PATRON COSTAS  VICTOR CORNEJO ARIAS  Es copia: Julio
+  Figueroa Medina, Oficial Mayor de Gobierno
+
+  NOTA DE LECTURA:
+    En el turno 2 este nombre quedaba cortado y la ficha A.13 decia que se
+    leeria antes de afirmar quien era: es Merardo Sarmiento. El config trae
+    «medardo sarmiento» con origen 1922 y 1929, y aqui el Boletin imprime
+    Merardo. Las dos grafias se conservan y no se unifican (§15.3), y la
+    identidad de las dos personas no se afirma: lo unico probado es que el
+    Boletin de 1936 escribe Merardo. El decreto es ademas el primero del ano
+    firmado por Patron Costas en una pieza del departamento, cuatro dias
+    despues del relevo de la tapa.
+
+A.19 · El departamento en los planes y las listas de la Provincia
+
+  FUENTE: 1619 h30; 1626 h3; 1628 h5; 1631 h21; 1633 h31; 1645 h16 y h18; 1626
+    h47; 1627 h35; 1668 h21
+  FICHA: OBRA-PUBLICA + NORMA + REGISTRO-CIVIL + ELECTORAL. Diez piezas en que
+    La Caldera figura dentro de una lista provincial, sin acto propio.
+  MODO DE LECTURA: Capa unica, no miradas en la imagen. Ninguna trae cifras
+    que este informe use.
+  TEXTO:
+  [1619 h30 y 1633 h31]  siete edificios para estacion sanitaria tipo B,
+  en las localidades de Chicoana, La Vina, Galpon, J. V. Gonzalez,
+  Caldera, Tartagal y Aguaray $ 15.000 c/u
+  [1626 h3 y 1631 h21]  La Silleta, Las Saladas, Lumbreras, Rio Piedras,
+  El Tala, La Candelaria, El Galpon, Joaquin V. Gonzalez, Quebrachal
+  (Anta), Palermo (Anta), La Caldera, Tartagal, Aguaray, Coronel Sola
+  (Rivadavia), Iruya, Santa Victoria, Rivadavia.— Art. 2o.— La Direccion
+  General de Obras Publicas debera publicar [...]
+  [1628 h5]  La primera zona estara formada por las comisarias y
+  sub-comisarias establecidas dentro de los siguientes departamentos:
+  Capital, Campo Santo, La Caldera, Chicoana, Rosario de Lerma,
+  Guachipas, La Vina, Cerrillos, Metan, Rosario de la Frontera, Oran y La
+  Candelaria.
+  [1645 h16 y h18]  oficinas de tercera categoria [...] 14— La Caldera
+  [...] oficinas de cuarta categoria [...]
+
+  NOTA DE LECTURA:
+    RECUENTO PROPIO de las dos listas que enumeran: la de estaciones
+    sanitarias declara SIETE localidades y transcribe SIETE, y cierra; la de
+    la primera zona de policia no declara numero y transcribe DOCE
+    departamentos. Es el unico recuento del ano en que el acto declara un
+    numero y el numero coincide, y por eso se escribe: los dos recuentos
+    anteriores del ano —el registro de circuitos (A.1) y la nomina de mesas
+    (A.17)— no declaran numero alguno. Ninguna de las diez piezas da al
+    departamento un acto propio: lo ubican dentro de la Provincia, y sirven
+    para fechar en que planes entra y en cuales no. La estacion sanitaria tipo
+    B de Caldera se licita dos veces en el ano, en marzo y en abril, con el
+    mismo texto y $15.000 de presupuesto unitario.
+
+A.20 · La Comision Municipal: hacienda propia y pedidos de los vecinos
+
+  FUENTE: 1660 h10; 1626 h23; 1635 h16; 1642 h8; 1661 h28; 1650 h47
+  FICHA: HACIENDA-MUN + OBRA-PUBLICA + JUSTICIA. La rendicion de cuentas del
+    ejercicio 1935, los tres pedidos de los vecinos y del municipio, y el
+    remate de bienes en el pueblo.
+  MODO DE LECTURA: Capa unica, no miradas en la imagen. Los importes NO se dan
+    por firmes.
+  TEXTO:
+  [1660 h10]  Expediente N° 1337-letra M/936.— Visto este expediente, por
+  el que la Comision Municipal del distrito de La Caldera eleva a
+  consideracion y resolucion del Poder Ejecutivo la rendicion de cuentas
+  correspondiente a la inversion de la renta de dicha Comision Municipal
+  [...] Art. 1o.—Apruebase el detalle de la inversion de la renta habida
+  durante el ejercicio 1935, en la Comision Municipal del distrito de La
+  Caldera, que corre en el expediente N° 1337-letra M/936, originario del
+  Ministerio de Gobierno, y remitasela en devolucion a la citada Comision
+  Municipal.
+  [1626 h23]  Se autoriza el gasto de $ 500.— para el arreglo del camino
+  del titulo solicitado por la Comision Municipal de La Caldera por nota
+  de fecha 18 del corriente, a cuyo efecto se encarga a la misma Comision
+  de la ejecucion del trabajo.
+  [1635 h16]  11.—Vecinos de La Caldera solicitan la construccion de un
+  puente de union entre dicho pueblo y el camino nacional Salta-Jujuy.
+  [1661 h28]  4°. Solicitud de vecinos de La Caldera y Campo Santo sobre
+  limpieza del camino que partiendo del Sauce llegue a los cerros pasando
+  por el Ceibal, La Despensa, Los Penones etc.— «Com[unicase] [...] ha
+  tomado debida nota de lo solicitado y en su oportunidad se [to]maran las
+  medidas del caso.
+  [1650 h47]  vendere en remate publico, dinero de contado y sin base, los
+  siguientes bienes que se encuentran en poder de don Rafael Delgado en el
+  pueblo La Caldera de esta provincia.— Una sierra sin fin; dos
+  circulares; un motor a vapor; una garlopa; un lote de orilleros
+  desperdicios y diez y seis bueyes
+
+  NOTA DE LECTURA:
+    La rendicion se aprueba SIN publicar una sola cifra: el decreto aprueba
+    «el detalle de la inversion de la renta» que corre en el expediente y lo
+    devuelve. De modo que el ano tiene rendicion municipal aprobada y cero
+    cifras municipales publicadas, y por eso el §R lleva balances_municipales:
+    0 —que es un hecho del corpus y no una tabla sin mirar (§4.1)—. Los tres
+    pedidos tienen suerte distinta y se declara: el del municipio obtiene $500
+    y la ejecucion a su cargo; el del puente aparece en el orden del dia y su
+    resolucion no se publica; el de la limpieza del camino recibe «debida
+    nota» y nada mas. El remate de 1650 h47 es la unica pieza del ano que
+    inventaria bienes dentro del pueblo, y recae sobre los que estan en poder
+    de Rafael Delgado, que es el juez de paz propietario del departamento
+    (A.8); el aviso no dice a que juicio pertenecen ni que relacion tiene
+    Delgado con ellos, y no se infiere. RECUENTO PROPIO del inventario: seis
+    partidas —una sierra sin fin, dos circulares, un motor a vapor, una
+    garlopa, un lote de orilleros y diez y seis bueyes—; el aviso no declara
+    numero.
+
+§B · VECINDAD
+-------------
+
+B.1 · Nucleos ya fichados
+
+Diecinueve nucleos del departamento ya fichados por barridos anteriores
+vuelven a aparecer en 1936: Vaqueros (29 aciertos en 24 hojas), Mojotoro
+(22/17), Gallinato (21/20), Severino (30/22), Campo Alegre (18/16), Mesada
+(18/14), Calderilla, San Alejo (5), Santa Rufina (5), Los Penones (3), Potrero
+de Gallinato (2), Potrero de Castilla (2), Corral de Barranca (2), Monte de
+las Garrapatas (2), Helvecia (2), Getsemani (2), Despensilla (2), Chalchanio
+(2) y Canada Ancha (1). Casi todos entran por el registro de circuitos de A.1,
+que es la pieza que mas toponimia del departamento concentra en el ano.
+
+B.2 · Nucleos del departamento en actos que no nombran el termino
+
+Este es el bloque que arma la trama del ano, y en 1936 es mas grande que el §A
+de cualquier ano anterior del tramo. La obra vial del departamento se publica
+casi entera sin nombrar a La Caldera: el camino se llama «por Gallinato»,
+«Gallinato a Mojotoro», «acceso a Estacion Mojotoro desde Gallinato»,
+«Vaqueros-Lesser» o «Vaqueros-Castellanos», y el departamento no aparece.
+Trece hojas con Gallinato y siete con Vaqueros no traen ningun acierto del
+anillo 1.
+
+Dentro de esa serie hay una pieza que ningun otro bloque de este informe
+alcanza:
+
+  FUENTE: 1627 h15 y h20; 1633 h5; 1637 h24; 1653 h24
+  FICHA: OBRA-PUBLICA. El accidente del camino por Gallinato y sus
+    consecuencias administrativas. Ninguna de las cinco hojas nombra el
+    departamento.
+  MODO DE LECTURA: Capa unica, no mirada en la imagen. Las cinco las devuelve
+    el anillo 2 por «gallinato», no el anillo 1.
+  TEXTO:
+  [1627 h15]  a la empresa Guzman su factura de la fecha por tres ataudes
+  para los tres obreros fallecidos en el accidente de Gallinato y un
+  servicio funebre a uno de los mismos de acuerdo a ordenes n° 3[4]17 y
+  39[1]7—orden de pago n° 777
+  [1627 h20]  Designase a don Enrique Gutierrez capataz en reemplazo de don
+  Juan Di Bes reciente accidentado en el camino por Gallinato.
+  [1637 h24]  Puentes en el camino por Gallinato—solicitud del contratista
+  Adolfo Martinez sobre prorroga del plazo contratado.— Acuerdase la
+  prorroga de sesenta [dias]
+  [1653 h24]  a Alberto Aleman su factura de fecha 14 del cte. por seis
+  chapas de zinc para construccion de un polvorin en Gallinato de acuerdo
+  a orden n° 88[1]9 — orden de pago n° 1694  $ 31,82
+
+  NOTA DE LECTURA:
+    Tres obreros muertos y un capataz herido en el camino por Gallinato, en
+    jurisdiccion del departamento, y el hecho se publica unicamente como el
+    pago de tres ataudes y como el reemplazo del capataz. El Boletin no
+    publica el accidente: publica sus facturas. Ninguna de las dos piezas
+    nombra a La Caldera ni a los tres muertos, y el informe no los nombra
+    tampoco: no hay de donde. El capataz Juan Di Bes figura por su nombre en
+    1625 h28 al frente de la cuadrilla del camino de la Calderilla a El
+    Desmonte, de modo que la atribucion al departamento la hace el propio
+    corpus y no el anillo 2 (§5.1ter). El polvorin de Gallinato, seis meses
+    despues, explica con que se trabajaba ese camino.
+
+Otras piezas del mismo bloque, ya leidas y sin ficha propia todavia: los
+jornales del camino Vaqueros-Lesser con el capataz Gregorio Jorge (1648 h32),
+los del camino Vaqueros-Castellanos con el mismo capataz (1655 h24), el viaje
+en omnibus de los estudiantes de la Escuela Superior por San Lorenzo, Lesser y
+Vaqueros (1653 h30), y las dos piezas de Jose Vai que ya estan en A.13.
+
+B.3 · Terminos que este ano son otra cosa
+
+  candelaria   190 aciertos en 145 hojas.  Es el departamento de La
+               Candelaria, no la forma con que 1922 imprimio Calderilla.  El
+               termino se agrego al anillo 2 por el caso de 1922 y en 1936
+               rinde solo falsos positivos del anillo 1; se conserva, porque
+               la razon por la que se agrego sigue en pie para esa epoca.
+  isasmendi    125 en 94.  Apellido, sobre todo Nestor Cornejo Isasmendi,
+               juez en lo comercial.
+  castellanos  54 en 43.  Apellido, calle y el camino Vaqueros-Castellanos,
+               que si es del departamento (B.2).
+  entre rios   50 en 33.  Calle y provincia; el paraje del circuito 6 es
+               solo uno de los aciertos.
+  tabacal      41 en 35.  Oran.
+  el bordo     48 en 38.  Campo Santo en casi todos; el «Bordo (el)» del
+               circuito 5 de La Caldera es otro lugar y esta en A.1.
+  betania      19 en 15.  Otro departamento.
+  lesser       7 en 7.  Apellido en cuatro (Manuel Lesser, Pascual Lesser) y
+               lugar del departamento en tres.
+  calderas     2 aciertos, reglamento de yacimientos petroliferos (1636 h33):
+               falso positivo del anillo 1, ya juzgado en 1946 y 1912.
+  canlera      circuito de San Bernardo de las Zorras (Capital).
+  canderaria   La Candelaria (1655 h31).
+
+Leidos ya los 84 terminos con acierto, uno por uno, la clasificacion queda
+cerrada. Los que son del departamento vienen casi todos del registro de
+circuitos de A.1: angostura, queseria, nogalito, santa gertrudis, las
+garrapatas, mosquera, porongos, angosto de arrieta, la despensa, tunel,
+estacion mojotoro, y el ceival del camino del Sauce a los cerros. Los que en
+1936 son otra cosa se agregan a la lista de falsos positivos de la epoca, con
+su jurisdiccion, y tres de ellos merecen nombrarse aparte porque no son
+topinimos de ningun lado:
+
+  el cajon     «mecha para mina a $ 142,50 el cajon de 500 rollos»: es una
+               unidad de embalaje.  Ya venia juzgado como topinimo de La
+               Candelaria en 1946 y de otros departamentos en 1911 y 1912;
+               esta es una acepcion nueva.
+  penales      «intereses penales sobre pagos de los propietarios
+               frentistas»: es un adjetivo.
+  mesa redonda «3 mesas cuadradas. 1 mesa redonda. 4 sillones mimbre»: es
+               un mueble, dentro del inventario de un remate.
+
+Y los que son topinimos de otra jurisdiccion, con el departamento que el
+propio acto les asigna: el churcal y las bateas (Guachipas), rio blanco
+(Nazareno, Santa Victoria), pacara (Oran), mesadas (Pichanal, Oran), las
+mesadas (estancia en Cafayate), pirguas, antilla y bandurrias (Anta),
+higueritas (Conchas), nogales (Palomitas, Campo Santo), acheral (Los Noques,
+Capital, homonimo del Acheral del circuito 5 de La Caldera), castanares y
+angosto (lugares de la ciudad de Salta), campo belgrano y el paraiso
+(Capital), san jose (calles y templo de la Capital), lagunilla (La Montana,
+Capital), los sauces (rio que nace en Guachipas), durazno (Republica del
+Uruguay, en un domicilio), la laguna (finca «La Laguna» o «Taguaibi»). Y los
+que son apellido y no lugar en todos sus aciertos de este ano: mamani, apaza,
+condori, chaile, toconas, aramayo y quintin, este ultimo como nombre de pila
+(«Diaz Quintin Florentin»).
+
+B.3bis · Mojotoro, atribuido por el acto
+
+El Cuadro N° 2 del presupuesto de policia (A.16) atribuye Mojotoro al
+departamento de La Caldera en el propio acto, que es la unica forma valida de
+atribuir jurisdiccion (§5.1ter). Hasta este ano Mojotoro estaba en el anillo 2
+sin acto que lo respaldara en el tramo barrido. Sus 22 aciertos en 17 hojas se
+reparten entre la estacion del ferrocarril —que el registro de circuitos pone
+en el circuito 6 del departamento, «Estacion F.C.C.N.A. Mojotoro»— y el camino
+de acceso a esa estacion desde Gallinato, que es de la serie de B.2.
+
+B.4 · Ausencias del anillo de actores
+
+Cuarenta y cuatro personas del §A se buscaron en las 2.325 hojas por nombre y
+apellido en los dos ordenes, sobre el texto con la puntuacion suprimida. Antes
+de los tres grupos hay que declarar un caso que el §5.1 manda declarar
+nombrando al afectado: la busqueda por nombre completo de GENARO MOLINA no
+devuelve ninguna hoja, ni siquiera la de su propio acto (1624 h23), porque el
+original lo imprime partido, «Ge^naro Molina». Eso es una falla de la busqueda
+y no una ausencia, y no se cuenta como tal.
+
+B.4.1 · Los que solo aparecen en su propio acto — 12
+
+Vandalio Gutierrez, Eustaquio Murua, Eugenio Munoz, Fernando Robles, Pedro
+Romano, Jose Bay, Alfonso R. Alvarado, Maria Lamas, Leopoldo Hidalgo Marin y
+Bernardo Austerlitz aparecen en una sola hoja cada uno, la de su acto. Merardo
+Sarmiento y Manuel Lesser tambien, con la diferencia de que su unica hoja no
+nombra el termino: a los dos los devuelve el anillo 2 y no el anillo 1.
+
+B.4.2 · Los que aparecen en mas de un acto del departamento — 9
+
+Este es el grupo que arma la trama del ano, y todos sus aciertos caen dentro
+de hojas que nombran el termino: Fabian Alonso (9 hojas), Augusto Regis (5),
+Eusebio Jose Robles (4), Daniel Linares (4), Lorenzo Romano (4), Juan de Dios
+Lozano (3), Francisco Sosaya (3), Eulalia Murua de Cornejo (3) y Segundo
+Gimenez (2). Los seis primeros son las autoridades de mesa de A.17; los dos
+siguientes son linderos de «La Despensa» (A.11) y no aparecen en ninguna otra
+parte del Boletin del ano; el ultimo es el encargado del Registro Civil de
+Vaqueros (A.10).
+
+B.4.3 · Los que aparecen tambien fuera del departamento — 22
+
+Aqui el alcance de cada frecuencia se declara, porque el informe cubre todo el
+Boletin y no solo el departamento. Los contratistas y capataces de la obra
+vial son los que mas se reparten: Angel Domingo Echenique (14 hojas, 1 con el
+termino), Gabriel Carrasco (10 y 4), Alberto Aleman (10 y 1), Constantino
+Kiriako (7 y 3), Adolfo Martinez (6 y 4), Gregorio Jorge (6 y 2), Juan Di Bes
+(5 y 1), Anatolio Plaza (4 y ninguna), David Bayon (4 y 2). Trabajan en el
+departamento y en media Provincia, y su presencia no lo prueba: la prueban los
+actos de A.7 y B.2.
+
+Los demas del grupo son Marcos Offredi (9 hojas, 2 con el termino), Jose Vai
+(7 y 2), Manuel Santos Gimenez (7 y 1), Jorge Cornejo (7 y 2), Jose Maria Sola
+(7 y 3), Ramon Juarez (4 y 2), Antonio Badin (4 y 1), Enrique Gutierrez (4 y
+3), Atilio Jose Bruzzo (4 y 3), Francisco Solano Urquiza (3 y 2), Rafael
+Delgado (3 y 2), Silvano Murua (3 y 2) y Vicente A. Escobar (2 y 1).
+
+Una advertencia que el §17 exige y que aqui vale doble: la busqueda por
+apellido suelto da cifras mucho mayores y no son comparables. «Cornejo»
+aparece en 676 hojas y «Sola» en 186, y la enorme mayoria son Victor Cornejo
+Arias, que refrenda los decretos de las 52 ediciones, y el ministro Sola: son
+frecuencias de corpus y no de departamento. Por eso los tres grupos se armaron
+con nombre y apellido juntos, y el apellido suelto quedo como indicio.
+
+§C · LIMITROFES
+---------------
+
+Campo Santo aparece ligado al departamento en cuatro piezas: la inspeccion de
+zona de Marcos Offredi, que cubre Campo Santo y La Caldera con una partida
+mensual de ciento veinte pesos (1627 h7, 1657 h21, 1664 h27); el camino de La
+Calderilla a Campo Santo por Gallinato, que es la mitad de la serie de A.7; la
+solicitud conjunta de vecinos de La Caldera y Campo Santo por la limpieza del
+camino que parte del Sauce y llega a los cerros pasando por el Ceibal, La
+Despensa y Los Penones (1661 h28); y el camino de Gallinato a Mojotoro (B.2).
+Es el limitrofe con mas trama en el ano.
+
+Rosario de Lerma comparte con el departamento el permiso de cateo de
+Coquiniajo y Nividadero, que el propio acto atribuye a los dos (A.12). Guemes
+aparece en el nombre de dos caminos —Guemes a Agua Caliente y Calderilla a
+Guemes por Gallinato— y no como jurisdiccion.
+
+§P · PLANOS
+-----------
+
+PLANOS PUBLICADOS EN 1936: ninguno. La palabra aparece en 183 hojas y 270
+veces, y las 270 son remisiones: plano minero, plano de fojas, plano de
+mensura, croquis a escala que el proponente debe adjuntar. En las seis hojas
+donde la palabra convive con un acierto del anillo 1, ninguna trae un plano
+impreso. Se cuentan seis remisiones con la formula «que se acompana» en todo
+el ano y ninguna viene acompanada.
+
+De las 270 remisiones, cuatro tocan al departamento y estan fichadas en A.15.
+La mas importante es la del proyecto de defensas del pueblo, que cita sus
+propios planos y presupuesto como acompanados y se publica sin ellos.
+
+La serie de anos sin planos que el §9 manda arrastrar llega asi a 1929, 1930,
+1931, 1932 y 1936, con 1933 a 1935 todavia sin barrer. El techo de 150 ppi,
+uniforme en las 2.325 hojas, hace ademas ilegible cualquier plano de detalle
+que el ano hubiera llegado a publicar.
+
+§D · INDICE
+-----------
+
+Las piezas de la lista de trabajo, con edicion, hoja y clase fija (§7.1). Las
+que tienen ficha llevan su numero de seccion al final. Las que no la llevan
+quedaron reunidas en A.19 —las listas provinciales que nombran el departamento
+sin darle acto propio— y en A.20 —la Comision Municipal y los pedidos de los
+vecinos—, de modo que ninguna entrada del indice quedo sin transcribir.
+
+    1618  h2   CARGOS        Decreto que nombra a Augusto Regis presidente
+                             de la Comision Municipal  (A.4)
+    1619  h30  OBRA-PUBLICA  Estaciones sanitarias tipo «b», Caldera entre
+                             las siete localidades
+    1621  h47  DOMINIO       Remate de la finca «La Despensa», base
+                             $23.333,32  (A.11)
+    1622  h4   ELECTORAL     Circuitos 5 y 6 de la Comision Municipal  (A.5)
+    1622  h14  ELECTORAL     Autoridades de mesa del Colegio N° 2  (A.5)
+    1623  h60  ELECTORAL     Registro de circuitos del Colegio N° 2  (A.1)
+    1624  h23  ELECTORAL     Titulares y suplentes del departamento  (A.6)
+    1624  h36  OBRA-PUBLICA  Albanales, camino Calderilla-El Desmonte  (A.7)
+    1624  h55  ELECTORAL     Registro de circuitos, segunda impresion  (A.1)
+    1625  h28  OBRA-PUBLICA  Cuadrilla del capataz Juan Di Bes  (A.7)
+    1626  h3   OBRA-PUBLICA  Licitacion de estaciones sanitarias
+    1626  h5   OBRA-PUBLICA  Jornales de conservacion  (A.7)
+    1626  h19  OBRA-PUBLICA  Ripio, camino Calderilla-El Desmonte  (A.7)
+    1626  h23  OBRA-PUBLICA  $500 para el camino, por nota de la Comision
+                             Municipal de La Caldera
+    1626  h47  ELECTORAL     Cuadro de mesas por colegio electoral
+    1627  h7   CARGOS        Marcos Offredi, comisario inspector de Campo
+                             Santo y La Caldera
+    1627  h15  OBRA-PUBLICA  Tres ataudes, accidente de Gallinato  (B.2)
+    1627  h20  OBRA-PUBLICA  Reemplazo del capataz accidentado  (B.2)
+    1627  h22  OBRA-PUBLICA  Puente, camino Calderilla a Campo Santo  (A.7)
+    1627  h43  DOMINIO       Remate de «La Despensa», base $25.000  (A.11)
+    1627  h46  HACIENDA      Resumen de Tesoreria, enero  (A.14)
+    1628  h5   NORMA         Primera zona de policia, La Caldera incluida
+    1628  h9   CARGOS        Subcomisaria ad-honorem de Vaqueros
+    1630  h38  HACIENDA      Resumen de Tesoreria, febrero  (A.14)
+    1632  h37  DOMINIO       Remate de «La Despensa», sin base  (A.11)
+    1633  h39  JUSTICIA      Sucesorio de Pedro Romano ante Rafael Delgado,
+                             juez de paz del departamento  (A.8)
+    1634  h19  CARGOS        Fabian Alonso, subcomisario de San Alejo y
+                             Santa Rufina  (A.9)
+    1635  h16  OBRA-PUBLICA  Vecinos de La Caldera piden un puente de union
+                             con el camino nacional Salta-Jujuy
+    1636  h5   CARGOS        Jose Vai, subcomisario de Vaqueros  (A.13)
+    1637  h12  CARGOS        Plazas de Gallinato, Calderilla, San Alejo y
+                             Vaqueros  (A.9)
+    1637  h15  CARGOS        Licencia con goce de sueldo a Ramon Juarez,
+                             comisario de La Caldera  (A.9)
+    1638  h24  CARGOS        Renuncia de Fabian Alonso al juzgado de paz
+                             (A.8)
+    1640  h4   CARGOS        Segundo decreto sobre Augusto Regis  (A.4)
+    1640  h6   REGISTRO-CIVIL Renuncia de Segundo Gimenez; Alvarado  (A.10)
+    1640  h29  JUSTICIA      Terna: Rafael Delgado y Fernando Robles  (A.8)
+    1641  h17  CARGOS        Jose Bay, expendedor de guias de Vaqueros
+                             (A.13)
+    1642  h8   OBRA-PUBLICA  Pago de los trabajos de defensa del pueblo
+    1645  h16  REGISTRO-CIVIL La Caldera, oficina de 3a categoria
+    1645  h30  CARGOS        La Caldera en la lista de comisarias de 3a
+                             categoria  (A.2)
+    1645  h36  CARGOS        Confirmacion de Fabian Alonso  (A.9)
+    1646  h20  CARGOS        Cuadro por departamento, rescatado por la laxa
+                             espaciada
+    1646  h22  CARGOS        Vaqueros-La Caldera, un agente
+    1649  h17  CARGOS        Manuel Santos Gimenez, subcomisario  (A.13)
+    1649  h20  CARGOS        Separacion de Jose Vai por proceso penal  (A.13)
+    1650  h47  JUSTICIA      Remate de bienes en poder de Rafael Delgado en
+                             el pueblo de La Caldera
+    1651  h23  CARGOS        Tres plazas: Vaqueros, Gallinato, Calderilla
+                             (A.9)
+    1652  h41  MINAS         Cateo de Coquiniajo y Nividadero  (A.12)
+    1655  h28  REGISTRO-CIVIL La Caldera, pueblo: Vicente A. Escobar  (A.10)
+    1659  h31  OBRA-PUBLICA  Defensas del pueblo de La Caldera  (A.3)
+    1660  h10  HACIENDA-MUN  Rendicion de cuentas del ejercicio 1935 de la
+                             Comision Municipal
+    1661  h28  OBRA-PUBLICA  Vecinos de La Caldera y Campo Santo: limpieza
+                             del camino del Sauce a los cerros
+    1661  h47  MINAS         Cateo de la finca «Las Nieves»  (A.12)
+    1661  h49  MINAS         Cateo en terrenos de Bernardo Austerlitz  (A.12)
+    1664  h28  CARGOS        Planilla policial: Antonio Badin en La
+                             Calderilla  (A.9)
+    1664  h31  CARGOS        Renuncia de Fabian Alonso a la subcomisaria
+                             (A.9)
+    1667  h25  REGISTRO-CIVIL Creacion de la oficina de Vaqueros  (A.10)
+    1668  h21  ELECTORAL     Circuitos 5 y 6, ultima publicacion del ano
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicacion y saldos
+
+Sin las .jpg no hay md5 ni dhash, y el control es por texto. El aviso con
+apariciones multiples confirmado es el remate de «La Despensa» (A.11), reunido
+por el texto de sus linderos y no por su numero. La nomina de autoridades de
+mesa sale en cinco ediciones y su cotejo por texto queda pendiente.
+
+La cadena de saldos esta armada y cierra: doce eslabones consecutivos, de
+noviembre de 1935 a octubre de 1936, con trece resumenes publicados (A.14). Es
+la cadena mas larga del tramo. Se conto los resumenes antes de prometerla,
+como manda el §6.
+
+E.2 · Cobertura
+
+Las 2.325 hojas de las 52 ediciones pasaron por las cuatro pasadas, por el
+anillo 2, por el anillo de actores y por los numeros. Hojas miradas con los
+ojos, con su denominador: 4 hojas completas sobre 2.325, mas 39 tapas sobre 52
+y 26 renglones de saldo sobre los 26 de la cadena. Columnas cotejadas: 0 — el
+cotejo columna por columna no se empezo, y por lo tanto no se descarta ni se
+afirma ninguna columna perdida en ninguna hoja.
+
+E.3 · Sin mencion y no mirado
+
+2.242 hojas no tienen acierto de ninguna pasada ni del anillo 2 ni del anillo
+de actores. No fueron miradas y no se afirma nada sobre ellas.
+
+E.4 · Firmas y autoridad
+
+El ano tiene dos gobernadores y el relevo esta leido en la tapa: Avelino Araoz
+hasta la edicion 1634 (1 de mayo) y Luis Patron Costas desde la 1635 (8 de
+mayo). El dia exacto del cambio no se fija: la tapa no lo dice.
+
+Las firmas lo confirman y ademas lo miden. Contadas las apariciones por
+edicion en la capa, la firma de Patron Costas pasa de un puno en las ediciones
+1617 a 1634 a decenas desde la 1635, y la de Araoz hace el camino inverso;
+Victor Cornejo Arias refrenda a los dos y esta presente en las 52 ediciones,
+como ministro de Gobierno y como ministro de Hacienda interino. En Hacienda,
+A. Garcia Pinto (hijo) firma hasta 1634 y C. Gomez Rincon desde 1635: el
+gabinete de Hacienda cambia con el gobernador.
+
+Hay que declarar algo que no se concilia: la firma «A. Araoz» sigue
+apareciendo en decretos publicados despues del relevo, incluso en 1664 h31,
+que es de noviembre. Puede ser publicacion diferida de actos anteriores —el
+ano da tres casos probados de eso (E.9)— o ruido de la capa sobre otro Araoz,
+que los hay varios en el corpus. No se elige una lectura.
+
+E.5 · Cortes y columnas
+
+El guion blando es el hecho tecnico del ano: 34.944 apariciones, mas que en
+cualquier ano medido hasta aqui. Quitado en el orden correcto —primero junto
+con el salto de renglon, despues los sueltos— queda en 0. Quitado al reves, la
+mitad de las menciones de este informe no existirian. La marca U+0002 no
+aparece.
+
+E.6 · Repeticiones
+
+PENDIENTE el cotejo por texto de la nomina de mesas, que sale en cinco
+ediciones (1622, 1623, 1624, 1625 y 1668). Hecho el de «La Despensa» (A.11):
+tres apariciones del mismo texto con tres bases distintas.
+
+E.7 · Falsos positivos y negativos
+
+FALSOS POSITIVOS del anillo 1 en 1936, que se listan aqui y NO se agregan al
+config (§12): cuadrilla y cuadrillas (225 apariciones), calera (10), calavera
+(6), calderas del reglamento de petroleo (2), valedera, canlera, escalera,
+caderias, derilla, vcuadrilla, escalda, fiscalde; y en la difusa ampliada,
+canderaria, candela, cadillal, cortaderas y las demas de la lista del §2.2.
+
+FALSOS NEGATIVOS de la pasada literal, que es lo que importa: dos. «faldera»
+por La Caldera (1645 h30, mirado en la imagen) y «calderiliai» por Calderilla
+(1627 h22). Los dos los rescata la difusa. A esto se suman el cuadro de 1646
+h20, que solo ve la laxa espaciada, y la fila «Mojotoro | La Caldera» de 1646
+h21, que NO LA VE NINGUNA PASADA porque la capa de esa hoja es ilegible entera
+(A.16, F.4). Cuatro menciones de 113 —el 3,5%— no las devuelve la pasada
+literal, y una de las cuatro no la devuelve nada.
+
+E.8 · Fidelidad numerica
+
+Subtotales recalculados: 16 sobre 16 cuadros publicados, y se declara con ese
+denominador. Los dieciseis cierran exactos: el presupuesto de las defensas,
+1.687,50 + 2.070,— = 3.757,50 (A.3); el resumen del ejercicio 1935,
+13.317.147,44 + 62.775,64 = 13.379.923,08; el de enero, 1.428.418,53 +
+33.466,49 = 1.461.885,02; el de marzo, 1.421.507,33 + 32.455,72 =
+1.453.963,05; y las dos filas del departamento en los cuadros del presupuesto
+de policia, 180 + 3 x 70 + 30 = 420 y 100 + 70 + 25 = 195 (A.16); el resumen
+de junio, 1.216.403,10 + 47.371,06 = 1.263.774,16; y el de julio, 1.397.321,05
++ 15.569,68 = 1.412.890,73. Y los ocho que faltaban, leidos en la imagen en
+dos laminas: noviembre de 1935, 1.207.032,89 + 87.885,54 = 1.294.918,43;
+diciembre de 1935, 1.895.788,73 + 62.775,64 = 1.958.564,37; febrero,
+942.997,24 + 56.582,40 = 999.579,64; abril, 1.270.968,32 + 60.787,56 =
+1.331.755,88; mayo, 1.276.982,37 + 19.189,15 = 1.296.171,52; agosto,
+864.875,51 + 19.588,60 = 884.464,11; setiembre, 1.427.205,35 + 10.738,29 =
+1.437.943,64; y octubre, 1.197.487,57 + 11.301,04 = 1.208.788,61. No queda
+ningun cuadro sin recalcular.
+
+El recalculo corrigio ademas una lectura propia: en el turno 2 el total de
+mayo se habia leido 1.206.171,52 y es 1.296.171,52, como prueba la suma de su
+propio subtotal. Se declara porque fue un error de esta sesion y no del
+original.
+
+No hay ningun balance municipal del departamento en el ano. La rendicion de
+cuentas de la Comision Municipal de La Caldera por el ejercicio 1935 (1660
+h10) se aprueba SIN publicar el detalle: el decreto aprueba «el detalle de la
+inversion de la renta» que corre en el expediente 1337 M/936 y remite el
+expediente en devolucion. De modo que el ano tiene rendicion aprobada y cero
+cifras publicadas, y eso se declara como hecho del corpus.
+
+E.9 · Contradicciones
+
+  1. Dos decretos nombran a Augusto Regis presidente de la Comision
+     Municipal, con cinco meses de diferencia y el mismo fundamento
+     constitucional (A.4).
+  2. El edicto sucesorio firmado por Rafael Delgado como juez de paz
+     propietario se publica siete semanas antes que el decreto que lo
+     nombra, que responde a cargos «actualmente vacantes» (A.8).
+  3. La renuncia del encargado del Registro Civil de Vaqueros se publica
+     seis meses antes que el decreto que crea la oficina y lo nombra
+     (A.10).
+  4. El mismo remate sale con base $23.333,32, despues con base $25.000 y
+     despues sin base (A.11).
+  5. El total del cuadro de defensas se lee $5.757,50 o $3.757,50 y la
+     suma da 3.757,50 (A.3).
+  6. El subcomisario de Vaqueros se imprime «Jose Bay» en 1641 h17 y
+     «Jose Vai» en 1636 h5 y 1649 h20 y h28 (A.13).
+  7. La firma «A. Araoz» aparece en decretos publicados despues del relevo
+     de mayo, hasta noviembre (E.4).
+  8. En cuatro ediciones distintas —1624, 1629, 1648 y 1656— la hoja 43
+     lleva folio impreso 45 (§1.1).
+  9. El presupuesto de policia reconoce en el departamento una comisaria,
+     una subcomisaria rentada y una ad-honorem; los decretos del ano
+     proveen o crean cuatro subcomisarias mas (A.16).
+  10. El antecesor de Jose Vai en Vaqueros se imprime «Merardo Sarmiento»
+     y el config trae «Medardo Sarmiento» desde 1922 (A.18).
+  11. Erratas del original transcritas: «Bordo, (el)» con coma espuria
+     (A.1); «Agusto» por Augusto (A.4); «Sivano» por Silvano (A.11).
+
+Ninguna se concilia. Las tres primeras tienen la misma forma —el Boletin
+publica el efecto antes que la causa— y se declaran juntas sin explicarlas: la
+pieza que las resolveria es el Registro Oficial del ano, donde los decretos
+van por su fecha y no por su publicacion.
+
+E.10 · Limites declarados
+
+  1. No hay spa en tesseract: no hay OCR propio de ninguna hoja y no hay
+     segunda version.  Toda palabra dudosa se decide en la imagen.
+  2. Sin .tsv no hay confianza por hoja: la lista de hojas «a ojos» del
+     §4.8 no existe.  Las hojas se cubrieron por las pasadas y por el
+     anillo de actores sobre el texto completo.
+  3. Sin .jpg no hay md5 ni dhash.  La deduplicacion es por texto.  La
+     tinta si se pudo medir rasterizando, como corrigio v16, y se midio en
+     las cuatro hojas sospechosas.
+  4. La tabla de toponimia del libro no es alcanzable: la primera linea del
+     cotejo del §5.1bis no se pudo correr (§0.4).
+  5. No llego pre-informe ni CSV: no hay conteo de formulas de autoridad ni
+     lista de decretos del script contra la cual cotejar la propia.
+  6. El ano no publica sumario con puntos guia en ninguna de las 52 hojas
+     1: el cotejo sumario/cuerpo y el cotejo sumario/pagina citada son NO
+     APLICABLES, y el unico control de paginacion posible es la cabecera,
+     con el denominador del §1.1.
+
+Que agregaria cada insumo que falto: el zip de los .txt daria la segunda
+version y con ella el unico control real sobre la palabra suelta —este ano
+habria decidido solo el cierre de mayo y el total del cuadro de defensas—; el
+recortes.zip y las .jpg darian md5, dhash y tinta; el resultados_1936.csv
+daria la lista de decretos para cotejar la numeracion; el log.txt diria si
+alguna hoja fallo en la corrida; y tabla_parajes.py cerraria el cotejo del
+anillo 2.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+Cuatro correcciones que este ano pide, para v17.
+
+F.1 · El §5.1bis manda mover los apellidos a actores, y eso puede perder lugares
+
+De los 14 apellidos que hoy estan dentro del anillo 2, siete son a la vez
+paraje del departamento, y el registro de circuitos de 1936 imprime Wierna
+como paraje de la mesa 2 de La Caldera. Moverlos «a actores», como la regla
+dice, los sacaria del anillo de lugares sin ganar nada, porque ya estan los
+catorce en actores. Lo que corresponde es marcarlos, no moverlos: que el
+config los lleve en las dos listas y que el informe declare, cada vez, que su
+acierto no prueba vecindad. Propuesta: una clave nueva `ambiguos` en el
+config, con los terminos que son a la vez lugar y apellido, y una linea fija
+en el §2 de cada informe.
+
+F.2 · El recuento de listas necesita la regla de la coma espuria
+
+El §4.1bis previene contra el separador que falta —«Cachanio. Despensa», «El
+Monte Las Garrapatas»— y este ano dio el caso contrario: el original imprime
+«Bordo, (el)» con una coma entre el nombre y su articulo, de modo que contar
+por comas da un elemento de mas y no de menos. La regla debe decir las dos
+cosas: un articulo entre parentesis pegado a una coma se cuenta con el nombre
+que lo precede, y una sigla con puntos internos —«Estacion F.C.C.N.A.
+Mojotoro»— es un solo elemento. Las dos se miran en la imagen y ninguna se
+resuelve desde la capa.
+
+F.3 · El caso del §5.3 tiene una tercera forma: el final antes que el principio
+
+v16 ficho el nombramiento que solo consta porque otro acto lo revoca. 1936 da
+la forma completa: el decreto que crea la oficina del Registro Civil de
+Vaqueros y nombra a su encargado se publica en diciembre con fecha de enero y
+efecto retroactivo, y la renuncia de ese mismo encargado se publica en junio.
+No falta ninguna pieza: estan las dos y el Boletin las imprime al reves. La
+regla que hay que agregar no es de busqueda sino de lectura: el orden de
+publicacion no es el orden de los actos, y ninguna secuencia del §A se arma
+por numero de edicion sin haber leido la fecha interna de cada decreto en la
+imagen.
+
+F.4 · Una hoja de capa ilegible no la ve ninguna pasada, y hay que listarla
+
+El caso mas serio del ano no lo encontro ninguna de las cuatro pasadas ni el
+anillo 2 ni el anillo de actores: la fila «Mojotoro | La Caldera» del Cuadro
+N° 2 del presupuesto de policia (A.16) esta en la hoja 21 de la edicion 1646,
+cuya capa es basura ilegible de punta a punta porque el OCR no resolvio la
+tabla. Se la encontro por vecindad —la hoja 20 habia entrado por la laxa
+espaciada y la 21 figuraba en la lista de hojas de menos de 500 B— y no por
+ninguna busqueda.
+
+La regla que falta es barata: toda hoja cuya capa tenga menos de 500 B, o mas
+del 25% de caracteres no alfabeticos, se mira con los ojos, este donde este,
+porque para las pasadas esa hoja no existe. v16 ya las manda marcar como
+sospechosas en el §2.3.4 y las pone en la lista del §4.5, pero como hojas de
+poca tinta; lo que este ano muestra es otra cosa: una hoja con tinta normal
+—7,61% de pixeles oscuros, contra 9,75% de su vecina— y capa vacia es una
+tabla que el OCR perdio, y las tablas son justamente donde el departamento
+aparece nombrado en una sola linea. En 1936 fueron cuatro hojas sobre 2.325 y
+las cuatro se miraron en una sola llamada.
+
+F.5 · Seis claves que el §R deberia llevar siempre
+
+El §R de este informe lleva seis claves que la lista obligatoria del §10.2 no
+tiene, y las seis se proponen para v17 porque miden cosas que en prosa no se
+pueden cruzar entre anos.
+
+  tapas_miradas                 denominador del §8.19 para la autoridad y
+                                el calendario.  Aqui 39 de 52.
+  cabeceras_paginacion_leidas   denominador del control de foliatura.  Aqui
+                                854 de 2.273 hojas interiores.
+  autoridades                   lo que el §2.5bis manda leer en la imagen y
+                                hasta ahora quedaba solo en el §1.
+  ano_editorial                 idem; aqui XXVIII, y es lo que permitiria
+                                detectar un salto en la serie del Boletin.
+  fichas_entregadas             cuantas de las piezas de la lista de trabajo
+                                tienen ficha; sin esto, actos_departamento
+                                no dice cuanto se transcribio.
+  menciones_sin_pasada          las menciones del departamento que ninguna
+                                pasada devuelve.  Aqui 1, y es la clave que
+                                mide si el metodo esta encontrando todo.
+
+La ultima es la importante. Un ano con menciones_sin_pasada: 0 puede querer
+decir que no las hubo o que no se buscaron; lo que la vuelve util es cruzarla
+con hojas_miradas, porque una mencion que ninguna pasada devuelve solo aparece
+si alguien miro la hoja.
+
+F.6 · La cadena de saldos se arma por las aperturas, no solo por los cierres
+
+El §6 de v16 contempla que un resumen no imprima renglon de cierre y manda
+encadenar por la apertura del mes siguiente. 1936 muestra que la apertura es
+ademas el control mas barato de todos: los trece renglones «A Saldo del mes
+de…» se recortaron y se leyeron en una sola lamina, y con eso sola la cadena
+entera queda armada y cotejada, porque cada apertura es el cierre del mes
+anterior declarado por el resumen siguiente. La regla deberia decir el orden:
+primero las aperturas, en una lamina, y despues los cierres solo donde la
+cadena no cierre. De haberlo hecho al reves este ano, el cierre de mayo que la
+capa da como 15.643,68 habria mandado a buscar un eslabon roto que no existe.
+
+§R · RECUENTO
+-------------
+
+  anio: 1936
+  ediciones_desde: 1617
+  ediciones_hasta: 1668
+  ediciones_presentes: 52
+  ediciones_ausentes: 0
+  hojas_presentes: 2325
+  hojas_declaradas: 0
+  hojas_ausentes_estimadas: 0
+  periodicidad: semanal-viernes
+  dias_salida_sin_edicion: 0
+  ediciones_dobles: 0
+  techo_ppi: 150
+  ocr_en_sesion: no
+  capa_previa: extraida-en-sesion
+  versiones: 1
+  actos_departamento: 58
+  fichas_entregadas: 20
+  actos_dominio: 3
+  actos_hacienda_municipal: 1
+  planos_publicados: 0
+  planos_citados_departamento: 4
+  balances_municipales: 0
+  cuadros_publicados: 16
+  subtotales_recalculados: 16
+  resumenes_tesoreria: 13
+  cadena_saldos: doce-meses-sin-corte
+  columnas_cotejadas: 0
+  hojas_miradas: 12
+  tapas_miradas: 39
+  cabeceras_paginacion_leidas: 854
+  autoridades: dos-araoz-hasta-1634-patron-costas-desde-1635
+  ano_editorial: XXVIII
+  avisos_repetidos_departamento: 2
+  falsos_positivos_anillo1: 12
+  falsos_negativos_literal: 4
+  menciones_sin_pasada: 1
+  limites_declarados: 6
+  estado: COMPLETO
+
+
+CONFIG ACTUALIZADO: se entrega aparte, como lee_config_1936.json, con los
+agregados del ano.  Sobre el config del proyecto (version 2026-09-22,
+hasta 1932) agrega 27 actores con origen 1936 —que llevan el total a 581—,
+11 terminos al anillo 2 —que lo llevan a 171— y 17 numeros de acto, y no
+agrega ningun falso positivo, porque los de este ano se listan en E.7 y
+no se agregan al config (§12).  Conserva todo lo anterior sin tocar, y
+lleva version 2026-09-22 y hasta 1936.  Los actores incluyen las dos
+grafias de Jose Vai y Jose Bay y la de Merardo Sarmiento junto a la
+Medardo que ya estaba: no se unifican (§15.3).
+
+Fin del informe.  Turno 3 de 1936.

@@ -1,0 +1,1392 @@
+BOLETIN OFICIAL DE SALTA - ANO 1916 - EDICIONES N 587 A 635
+BARRIDO LEE SOBRE "LA CALDERA" - RUBRICA v15
+Informe generado el 21 de setiembre de 2026
+==============================================================================
+
+==============================================================================
+0 - ADVERTENCIA PRELIMINAR
+==============================================================================
+
+ESTADO: COMPLETO, CON CINCO LIMITES DECLARADOS. El parrafo A tiene doce
+entradas y catorce apariciones, todas transcriptas desde la imagen; los
+parrafos B, C, D, E y F estan escritos, el config actualizado se entrega
+aparte y no queda trabajo que esta sesion pueda hacer y no haya hecho. Los
+cinco limites de E.10 son cosas que los insumos que llegaron no permiten, no
+trabajo pendiente.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO. Si llegaran las .jpg de lee_trabajo, se
+podrian hacer la deduplicacion por md5 y dhash y la medicion de tinta, y con
+ellas la lista de hojas casi en blanco; el pre-informe y los CSV permitirian
+cotejar candidato por candidato lo que vio el script contra lo que vio la
+sesion, y el log diria si alguna hoja fallo en el OCR de la maquina. Ninguno
+de los tres cambiaria el parrafo A: la confianza por hoja, que era el limite
+de 1911 y 1912, esta cubierta en este ano por el .tsv que escribio el OCR de
+la sesion. Lo unico que no tiene sustituto es la segunda version en las 104
+hojas sin capa previa, y eso no lo da ningun insumo del script sino el propio
+PDF.
+
+QUE PUSO EL USUARIO. Del proyecto, el archivo lee_config.json. Del Release
+1916 de github.com/ediedrich/boletines-salta, cincuenta assets, que son los
+cuarenta y nueve PDF del ano y una copia del propio lee_config.json, identica
+byte a byte a la del proyecto. No llegaron el pre-informe, ni
+resultados_1916.csv, ni decretos_1916.csv, ni log.txt, ni recortes.zip, ni el
+zip de los .txt de lee_trabajo. El listado de assets se leyo de la pagina
+releases/expanded_assets/1916, que no exige token. No hay, por lo tanto,
+ninguna salida de lee_auto.py para este ano, ni version ni fecha de corrida
+que declarar, ni log que leer.
+
+QUE VERIFICO LA SESION. nproc = 1. PyMuPDF no venia instalado y se instalo
+desde pypi. Tesseract 5.3.4 presente y, como en todas las sesiones medidas,
+con eng y osd solamente: se comprobo con tesseract --list-langs antes de
+prometer nada. El modelo spa se bajo de raw.githubusercontent.com y se copio
+al tessdata del sistema, que es lo que hace que tesseract escriba tambien los
+.tsv.
+
+DE DONDE SALIERON LAS IMAGENES Y COMO SE COTEJARON. Los 49 PDF se bajaron del
+Release en una sola llamada (42 MB). No hay EXTRAIDO.json contra el cual
+cotejarlos y la cadena de folios impresos, que en 1908-1912 servia de control,
+NO EXISTE EN 1916: las hojas interiores se encabezan solo con "BOLETIN
+OFICIAL" y sin numero de folio, lo que se comprobo en la imagen de cuatro
+hojas interiores de cuatro ediciones distintas (600 h2, 620 h2, 633 h3, 587
+h4). El cotejo del corpus se hace entonces por la numeracion de las ediciones,
+que va de 587 a 635 sin un solo salto, y por el conteo de hojas, que es de
+cuatro en las cuarenta y nueve.
+
+QUE HIZO LA SESION CON EL TEXTO. La capa previa cubre 92 de las 196 hojas y se
+concentra de la edicion 615 en adelante; de la 587 a la 614 el corpus es casi
+todo imagen pura. Por eso se OCRizo el ano entero en sesion, hoja por hoja,
+rasterizando a 300 dpi en gris y corriendo tesseract con -l spa --psm 3 y
+salidas txt y tsv, en segundo plano, de modo reanudable y con escritura
+atomica: 196 hojas, unos 9,5 segundos por hoja, repartidas entre los dos
+turnos. Sobre la union de las dos versiones corrieron las cuatro pasadas, el
+anillo 2, los actores, los numeros y las formulas de reemplazo.
+
+DESVIOS DE 8.17. Ninguno deliberado. Las transcripciones conservan la
+ortografia, la puntuacion y las erratas del original; las comillas angulares
+se escriben << >> porque el archivo es texto plano de ancho fijo, y las
+palabras acentuadas se escriben sin tilde en la prosa del informe por la misma
+razon, no en las transcripciones, donde lo que se ve es lo que hay. Los
+corchetes dentro de una transcripcion marcan letras que el recorte de columna
+corta en el margen, y se declara en la nota de lectura de cada ficha.
+
+==============================================================================
+1 - CORPUS REVISADO
+==============================================================================
+
+Cuarenta y nueve ediciones, 587 a 635, sin saltos. Ciento noventa y seis
+hojas, cuatro por edicion en las cuarenta y nueve. Todas las fechas de tapa
+fueron leidas en la imagen y por eso van entre corchetes. La columna "capa"
+dice cuantas de las cuatro hojas traen texto en la capa previa del PDF; "conf"
+es la media de confianza del OCR propio sobre las cuatro hojas, calculada
+desde el .tsv.
+
+  ed.  fecha(s) de tapa                dia(s)          capa  conf
+  ----------------------------------------------------------------------
+  587  [5 enero                     ] mie             0/4   78.8
+  588  [8 enero y 12 enero          ] sab, mie        0/4   80.0
+  589  [19 enero y 22 enero         ] mie, sab        1/4   82.4
+  590  [26 enero y 29 enero         ] mie, sab        0/4   79.7
+  591  [2 febrero y 5 febrero       ] mie, sab        0/4   80.5
+  592  [8 febrero y 12 febrero      ] mar, sab        0/4   79.7
+  593  [16 febrero y 19 febrero     ] mie, sab        0/4   77.3
+  594  [22 febrero y 25 febrero     ] mar, vie        0/4   80.7
+  595  [1 marzo y 4 marzo           ] mie, sab        0/4   79.8
+  596  [8 marzo y 11 marzo          ] mie, sab        0/4   78.8
+  597  [15 marzo y 18 marzo         ] mie, sab        4/4   84.2
+  598  [22 marzo y 25 marzo         ] mie, sab        0/4   74.2
+  599  [29 marzo y 1 abril          ] mie, sab        0/4   66.8
+  600  [5 abril y 8 abril           ] mie, sab        0/4   71.2
+  601  [12 abril y 15 abril         ] mie, sab        0/4   64.3
+  602  [19 abril y 22 abril         ] mie, sab        0/4   71.8
+  603  [26 abril y 29 abril         ] mie, sab        0/4   64.8
+  604  [3 mayo y 6 mayo             ] mie, sab        0/4   72.5
+  605  [10 mayo y 13 mayo           ] mie, sab        2/4   67.1
+  606  [17 mayo y 20 mayo           ] mie, sab        0/4   68.8
+  607  [27 mayo y 31 mayo           ] sab, mie        1/4   60.2
+  608  [3 junio y 7 junio           ] sab, mie        0/4   59.4
+  609  [10 junio y 14 junio         ] sab, mie        0/4   66.5
+  610  [21 junio y 24 junio         ] mie, sab        0/4   70.3
+  611  [28 junio y 1 julio          ] mie, sab        0/4   60.0
+  612  [8 julio y 15 julio          ] sab, sab        0/4   68.8
+  613  [19 julio y 22 julio         ] mie, sab        0/4   73.0
+  614  [26 julio y 29 julio         ] mie, sab        0/4   78.1
+  615  [2 agosto y 5 agosto         ] mie, sab        4/4   69.4
+  616  [9 agosto y 12 agosto        ] mie, sab        4/4   71.3
+  617  [16 agosto y 19 agosto       ] mie, sab        4/4   73.1
+  618  [23 agosto y 26 agosto       ] mie, sab        4/4   69.3
+  619  [2 setiembre                 ] sab             4/4   73.2
+  620  [6 setiembre y 9 setiembre   ] mie, sab        4/4   72.8
+  621  [13 setiembre y 16 setiembre ] mie, sab        4/4   70.8
+  622  [20 setiembre y 23 setiembre ] mie, sab        4/4   70.8
+  623  [27 setiembre y 30 setiembre ] mie, sab        4/4   72.7
+  624  [4 octubre y 7 octubre       ] mie, sab        4/4   68.8
+  625  [11 octubre y 14 octubre     ] mie, sab        4/4   75.2
+  626  [18 octubre y 21 octubre     ] mie, sab        4/4   74.1
+  627  [25 octubre y 28 octubre     ] mie, sab        4/4   59.7
+  628  [9 noviembre y 11 noviembre  ] jue, sab        4/4   71.9
+  629  [15 noviembre y 18 noviembre ] mie, sab        4/4   69.5
+  630  [22 noviembre y 25 noviembre ] mie, sab        4/4   62.1
+  631  [29 noviembre y 2 diciembre  ] mie, sab        4/4   72.7
+  632  [6 diciembre y 9 diciembre   ] mie, sab        4/4   72.5
+  633  [13 diciembre y 16 diciembre ] mie, sab        4/4   60.4
+  634  [20 diciembre y 23 diciembre ] mie, sab        4/4   64.5
+  635  [27 diciembre y 30 diciembre ] mie, sab        4/4   60.0
+
+AnO EDITORIAL. La tapa dice ANO VII hasta la edicion 612 y ANO VIII desde la
+613, que es la del 19 y 22 de julio. Las dos tapas vecinas se leyeron en la
+imagen. La 625 imprime "ANO VHI" [sic].
+
+DIAS DE SALIDA. El membrete de la tapa 587 dice "Aparece miercoles y sabado" y
+el de la 615, "Aparece miercoles y sabados": la formula es la misma y solo
+cambia el plural. Cuarenta y siete de las cuarenta y nueve ediciones son
+dobles; solo la 587 (5 de enero) y la 619 (2 de setiembre) traen una sola
+fecha.
+
+FECHAS DE TAPA QUE LA PROPIA FORMULA NO ADMITE, las tres releidas a 330 dpi:
+la 592 se fecha FEBRERO 8 Y 12 (el 8 fue martes); la 594, FEBRERO 22 Y 25
+(martes y viernes); la 628, 9 y 11 DE NOVIEMBRE (jueves y sabado). En los tres
+casos el dia de salida inmediato queda vacio - el miercoles 9 de febrero, el
+miercoles 23 y el sabado 26 de febrero, el miercoles 8 de noviembre -, de modo
+que la lectura mas economica seria que la tapa erro el dia; no se concilia y
+se declara en E.9.
+
+DIAS DE SALIDA SIN EDICION: trece. Sabado 1 de enero; sabado 15 de enero;
+miercoles 9 de febrero; miercoles 23 y sabado 26 de febrero; miercoles 24 de
+mayo; sabado 17 de junio; miercoles 5 y miercoles 12 de julio; miercoles 30 de
+agosto; miercoles 1, sabado 4 y miercoles 8 de noviembre. Los tres de febrero
+y el de noviembre son los que estan pegados a una tapa fechada en dia habil.
+El resto queda declarado sin explicar: la busqueda de feriado, asueto, dia del
+pueblo y adhesion sobre el corpus entero queda pendiente para el turno
+siguiente.
+
+FORMATO DE TAPA. "ANO VII - SALTA, <fecha> DE 1916 - NUM. n" hasta la 611;
+desde la 612 el orden cambia a "SALTA, <dia> y <dia> DE <MES> DE 1916". No hay
+declaracion de paginas en ninguna tapa. La direccion impresa en el membrete
+pasa de CASEROS 406 (587) a CASEROS 417 (615): el punto exacto del cambio
+queda por acotar.
+
+TECHO DE RESOLUCION. Imagen incrustada de 1 bit, entre 357 y 475 ppi segun la
+hoja, con la gran mayoria entre 420 y 460: es el techo mas alto de la epoca
+barrida hasta ahora (1909, 323-370; 1911, 329-370; 1912, 300-500; 1915, 300
+exactos).
+
+==============================================================================
+2 - CRITERIO DE BUSQUEDA
+==============================================================================
+
+VERSIONES. Dos: la capa previa del PDF (prev), presente en 92 hojas, y el OCR
+propio de la sesion (prop), presente en las 196. Cada resultado se etiqueta
+prev, prop o prev+prop. En las 92 hojas con las dos hay desempate posible; en
+las 104 restantes la unica prueba es la imagen, y asi se dice en la ficha que
+corresponda.
+
+UNION DE CORTES. U+0002 no aparece ni una vez en el corpus. El guion blando
+U+00AD aparece 2.004 veces en la capa previa y se quita JUNTO CON EL SALTO DE
+RENGLON, segun la correccion de 2.3 de la rubrica; despues se quitan los
+sueltos; despues se unen los cortes con hasta dos signos de puntuacion
+intercalados a cada lado del salto.
+
+PASADAS. Literal y normalizada sobre NFD sin diacriticos: 18 hojas con
+acierto. Laxa por clases de confusion, en sus dos variantes - la segunda
+escrita con la clase de espacios en blanco, no con un espacio literal -:
+cuatro formas que no son "cald", de las cuales una, "galdera" en 592 h4, es el
+termino. Difusa con ratio mayor o igual a 0,78 contra caldera y calderilla:
+diez formas. Difusa ampliada entre 0,70 y 0,78 restringida a palabras que
+empiezan con c, g u o: veinticuatro formas, todas ruido conocido de la epoca
+(cuadra, cuadras, calidad, cualquiera, cabrera, cantera, cartera, candela,
+capilla, carretilla, galeria, cadena, camera, campera y variantes de
+Candelaria).
+
+LA PASADA QUE NO DIO CERO. Ninguna de las cuatro devolvio cero, de modo que no
+hizo falta probar ninguna contra otro patron. La laxa con espacios, que en
+1912 habia estado mal escrita, aqui devuelve las cuatro formas partidas que
+devuelve la laxa simple mas ninguna nueva, lo que es coherente con un corpus
+sin U+0002.
+
+ANILLO 2. Veintisiete de los setenta terminos del config dan acierto en 1916 y
+los contextos de los veintisiete se leyeron uno por uno, no solo los que
+parecian del departamento. Vaqueros, que es el termino de vecindad mas
+frecuente en los anos anteriores, NO da un solo acierto en todo 1916.
+
+ACTORES, NUMEROS Y REEMPLAZOS. El config trae 180 actores (42 de 1946 con
+origen en la edicion; 8 de 1908, 45 de 1909, 41 de 1910, 24 de 1911, 11 de
+1912 y 9 de 1915 con origen en el ano). Se los busco sobre el texto sin
+puntuacion, por nombre y apellido, por nombre mas inicial mas apellido y por
+apellido suelto agrupado por contexto: 29 reaparecen con nombre completo. De
+los 40 numeros arrastrados de 1946, seis dan acierto de cifra (10469, 1392,
+1668, 1797, 1914 y 2000), todos a verificar como coincidencia: en esta epoca
+los actos no llevan numero. Las formulas de reemplazo dan 13 hojas con "en
+reemplazo de" y 3 con "en su reemplazo".
+
+IDENTIFICADORES DE LAS AUSENCIAS. Como los actos de 1916 no llevan numero, los
+identificadores son lugar, persona, organismo y fecha, y asi se declara cada
+vez que se afirme una ausencia.
+
+==============================================================================
+A - MENCIONES EXPLICITAS
+==============================================================================
+
+Doce entradas, ordenadas por edicion, sobre catorce hojas. Dos entradas ocupan
+mas de una hoja: el edicto de Loma Bola sale dos veces, en 592 h4 y en 593 h3,
+y el expediente de cateo de 633 sigue de la hoja 2 a la hoja 3. Cada texto se
+transcribio desde la imagen.
+
+------------------------------------------------------------------------------
+592 h4 col. 2-3 y 593 h3 col. 3
+
+  FUENTE
+    B.O. de Salta, N 592 (tapa: FEBRERO 8 Y 12 DE 1916), hoja 4, columnas 2 y
+    3, seccion Edictos; y N 593 (tapa: FEBRERO 16 Y 19 DE 1916), hoja 3,
+    columna 3, misma seccion. Dos apariciones del mismo edicto, texto identico
+    y misma marca de publicacion.
+
+  FICHA
+    Edicto de deslinde, mensura y amojonamiento de la finca "Loma Bola",
+    ubicada en el departamento de la Caldera, pedido por el senor Alberto
+    Escudero ante el juez de 1a instancia en lo civil y comercial Martin Gomez
+    Rincon. Perito propuesto: agrimensor Herman Pfister. Secretario: Nolasco
+    Zapata. Linderos nombrados: finca "La Angostura" de Daniel Linares; finca
+    Los Porongos, que fue de Monica Diaz de Cortes y hoy del conde Garnier de
+    Turava; propiedad de Julio Mercado; arroyo de la Angostura; Francisco
+    Sosaya; Celedonia Reyes del Prado.
+
+  MODO DE LECTURA
+    Imagen. Columnas 2 y 3 de 592 h4 y columna 3 de 593 h3 recortadas por el
+    ancho entero de la columna a 250 dpi y leidas en dos mitades apaisadas con
+    40 px de solape. El acto arranca al pie de la columna 2 de 592 h4 y sigue
+    en la 3. Nada de esta ficha sale de la capa: las dos ediciones son imagen
+    pura, sin capa previa.
+
+  TEXTO (transcripcion desde la imagen)
+    Habiendose presentado el senor Alberto Escudero solicitando deslin-
+    de, mensura y amojonamiento de la finca <<Loma Bola>> ubicada en el de-
+    partamento de la Caldera - bajo los limites siguientes: - Norte, la
+    finca <<La Angostura>> de don Daniel Linares; Este, finca Los Porongos
+    que fue de Monica Diaz de Cortes, hoy del conde Garnier de Turava;
+    Sud, propiedad de don Julio Mercado; Oeste; el arroyo de la Angostura
+    separativo de las propiedades de don Francisco Sosaya y la finca
+    Angostura, y de la senora Celedonia Reyes del Prado. - El senor juez
+    de 1a instancia en lo civil y comercial doctor Martin Gomez Rincon, ha
+    ordenado se cite por el presente y por el termino de 30 dias, se
+    presenten los que se crean con derecho a las operaciones a
+    verificarse. - Teniendose como perito al senor agrimensor Herman
+    Pfister. - Lo que el subscripto secretario hace saber por medio del
+    presente. = Salta, Marzo 13 de 1916. - Nolasco Zapata, secretario.
+                                                       1286 v. 18 Mzo.
+
+  NOTA DE LECTURA
+    La fecha del edicto, "Salta, Marzo 13 de 1916", esta impresa igual en las
+    dos apariciones, y las dos salen en ediciones cuya tapa se fecha en
+    febrero. Se transcribe como esta y se declara en E.9 sin conciliarla; la
+    lectura alternativa que cerraria la cuenta es "Febrero 13", porque la
+    marca "v. 18 Mzo." es exactamente treinta y tres dias despues del 13 de
+    febrero y la hoja trae edictos fechados el 14, el 16 y el 17 de febrero.
+    No se corrige ninguna de las dos. La finca Los Porongos, que aqui es
+    lindero, es la que se remata en la edicion 600 (ficha siguiente del mismo
+    nombre).
+
+------------------------------------------------------------------------------
+593 h1 col. 3
+
+  FUENTE
+    B.O. de Salta, N 593 (tapa: FEBRERO 16 Y 19 DE 1916), hoja 1, columna 3,
+    seccion Leyes y Decretos.
+
+  FICHA
+    Decreto que acepta la renuncia de Escolastico Aparicio al cargo de miembro
+    de la Comision municipal del departamento de la Caldera y nombra en su
+    lugar, por el termino de ley, a Andres Marin. Firman Patron Costas y
+    Rafael M. Zuviria; es copia, Francisco J. Lopez.
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada por el ancho entero a 250 dpi, dos mitades
+    apaisadas. La edicion no tiene capa previa.
+
+  TEXTO (transcripcion desde la imagen)
+    Habiendo aceptado la re[nun]cia que ha interpuesto don [Es]colastico
+    Aparicio, del car[go] de miembro de la Comision [mu]nicipal del
+    departamento [de] la Caldera,
+    [El] P. E. de la Provincia
+              DECRETA:
+    Art. 1,o Nombrase miembro [de] la mencionada Comision [mu]nicipal por
+    el termino de [ley] a don Andres Marin.
+    Art. 2o Comuniquese, publi[qu]ese e insertese en el R, O.
+              PATRON COSTAS
+              Rafael M. Zuviria
+    [E]s copia: Francisco J. Lopez.
+
+  NOTA DE LECTURA
+    Los corchetes marcan las letras que el recorte de columna corta en el
+    margen izquierdo, no lecturas dudosas. El decreto se imprime sin fecha:
+    entre "insertese en el R, O." y la firma no hay linea de lugar y fecha,
+    mientras que el decreto siguiente de la misma columna si la trae ("Salta,
+    Febrero 10 de 1916"). No se le atribuye la fecha del vecino. Escolastico
+    Aparicio, que renuncia aqui, es nombrado Juez de Paz propietario del
+    departamento en la edicion 601.
+
+------------------------------------------------------------------------------
+594 h2 col. 3
+
+  FUENTE
+    B.O. de Salta, N 594 (tapa: FEBRERO 22 Y 25 DE 1916), hoja 2, columna 3.
+    Lista de autoridades de mesa por departamento, que viene continuada de la
+    edicion 593 (593 h1 cierra con "(Continuara)"). El encabezado de la nomina
+    se leyo en la imagen, en la columna 1 de 594 h1.
+
+  FICHA
+    Autoridades de las tres mesas receptoras de votos del departamento de
+    Caldera: mesa 1, presidente titular Camilo Caseres, vice primero Augusto
+    Regis, vice segundo Pedro Mendoza; mesa 2, presidente titular Pedro Arias,
+    vice primero Antonio Aguero, vice segundo Pablo Silvestre; mesa 3,
+    presidente titular Higinio Juarez, vice primero Gervacio Bejarano, vice
+    segundo Donato Arroyo.
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada por el ancho entero a 250 dpi, dos mitades
+    apaisadas. Sin capa previa.
+
+  TEXTO (transcripcion desde la imagen)
+              INSACULACION
+                   -
+              (Conclusion)
+      Nomina de los ciudadanos que deben formar las mesas receptoras de
+    votos en las elecciones provinciales durante el corriente ano, de
+    acuerdo con la insaculacion practicada por la Junta de Escrutinio, el
+    24 de Enero ppdo.
+                          [...]
+                CALDERA
+    Mesa n. 1 - Presidente titular, Ca-
+    milo Caseres; vice primero, Augusto
+    Regis; vice segundo, Pedro Mendoza.
+    Mesa n. 2 - Presidente titular, Pe-
+    dro Arias; vice primero, Antonio
+    Aguero, vice segundo, Pablo Silves-
+    tre.
+    Mesa n. 3 - Presidente titular, Hi-
+    ginio Juarez; vice primero, Gervacio
+    Bejarano; vice segundo, Donato Arro-
+    yo.
+
+  NOTA DE LECTURA
+    El encabezado no esta en esta hoja: encabeza la columna 1 de la hoja 1 de
+    esta misma edicion, bajo el titulo INSACULACION (Conclusion), y se leyo
+    alli en la imagen; la nomina viene continuada de la edicion 593, que la
+    abre con el mismo titulo y la cierra con "(Continuara)". Los departamentos
+    se suceden sin numerar: entre CAMPO DURAND y LA VINA va CALDERA. Las tres
+    mesas son las del departamento para las elecciones provinciales del ano.
+    Camilo Caseres y Augusto Regis estan en el config como actores de 1910 y
+    1909.
+
+------------------------------------------------------------------------------
+596 h1 col. 3
+
+  FUENTE
+    B.O. de Salta, N 596 (tapa: MARZO 8 Y 11 DE 1916), hoja 1, columna 3,
+    seccion Leyes y Decretos.
+
+  FICHA
+    Decreto del 4 de marzo de 1916 que nombra a Eustaquio Murua comisario de
+    policia del departamento de La Caldera, en la vacante por renuncia de
+    Manuel R. Cornejo. Firman Cornejo y Rafael M. Zuviria; es copia, Francisco
+    J. Lopez.
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada a 250 dpi, dos mitades apaisadas. Sin capa
+    previa.
+
+  TEXTO (transcripcion desde la imagen)
+    [En]contrandose vacante el [cargo] de comisario de policia [del de]
+    partamento de La Cal[dera, po]r renuncia de don Ma[nuel R.] Cornejo
+    que lo desem[penaba,]
+    [El P.] E. de la Provincia
+              DECRETA:
+    [Art.] 1.o Nombrase para ocu[par di]cho puesto a don Eusta[quio]
+    Murua.
+    [Art.] 2.o Comuniquese, publi[ques]e e insertese en el R. O.
+    [Salt]a, Marzo 4 de 1916.
+              CORNEJO
+              Rafael M. Zuviria
+    [Es co]pia: Francisco J. Lopez.
+
+  NOTA DE LECTURA
+    Los corchetes son el corte del recorte en el margen izquierdo. El mismo
+    Eustaquio Murua es nombrado expendedor de guias del departamento doce dias
+    despues (edicion 597). El apellido Cornejo aparece dos veces en la misma
+    columna con personas distintas: Manuel R. Cornejo, el comisario que
+    renuncia, y el gobernador que firma.
+
+------------------------------------------------------------------------------
+597 h2 col. 3
+
+  FUENTE
+    B.O. de Salta, N 597 (tapa: MARZO 15 Y 18 DE 1916), hoja 2, columna 3,
+    seccion Leyes y Decretos. Unica hoja del ano con mencion en las dos
+    versiones.
+
+  FICHA
+    Decreto del 16 de marzo de 1916 que nombra a Eustaquio Murua expendedor de
+    guias del departamento de la Caldera y acepta la fianza dada en su favor
+    por Silvano I. Murua, por 500 pesos moneda nacional. Firman Cornejo y
+    Manuel R. Alvarado; es copia, Juan M. Leguizamon.
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada a 250 dpi, dos mitades apaisadas. El acto esta
+    ademas en la capa previa y en el OCR propio: es la unica ficha del ano con
+    desempate posible entre versiones, y las dos coinciden en el nombre, en la
+    fianza y en el importe.
+
+  TEXTO (transcripcion desde la imagen)
+    Salta, Marzo 16 de 1916.
+    Encontrandose vacante el [c]argo de expendedor de guias [d]el
+    departamento de la Calde-[r]a,
+    [E]l P. E. de la Provivincia
+              DECRETA:
+    Art. 1.o Nombrase expende[d]or de guias del departamento [d]e la
+    Caldera a don Eustaquio Murua; aceptase la fianza da[d]a en su favor
+    por don Silva[n]o I. Murua, por la suma de [5]00 pesos moneda
+    nacional.
+    Art. 4.o Comuniquese, pu[b]liquese, e insertese en el [R]. O.
+              CORNEJO
+              Manuel R. Alvarado
+    [E]s copia: Juan M. Leguizamon.
+
+  NOTA DE LECTURA
+    Dos erratas del original, transcriptas como estan y declaradas en E.9:
+    "Provivincia" [sic] por Provincia, y "Art. 4.o" [sic] donde la serie del
+    decreto pide Art. 2.o - no hay articulos 2 ni 3. El refrendo es de Manuel
+    R. Alvarado y el "Es copia" de Juan M. Leguizamon, mientras que el decreto
+    de comisario de doce dias antes lo refrenda Zuviria y lo copia Francisco
+    J. Lopez: en 1916 las dos parejas conviven.
+
+------------------------------------------------------------------------------
+600 h3 col. 1-2
+
+  FUENTE
+    B.O. de Salta, N 600 (tapa: ABRIL 5 y 8 DE 1916), hoja 3, columnas 1 y 2,
+    seccion Remates.
+
+  FICHA
+    Remate judicial por Enrique Sylvester de la finca "Los Porongos" hoy "San
+    Luis", en el departamento de la Caldera, por el juicio ejecutivo de
+    Enrique Werner contra Humberto Graf von Garnier Turawa, ante el juez
+    Martin Gomez Rincon. Base 33.333,33 pesos, dos terceras partes de la
+    tasacion fiscal; remate el 15 de junio de 1916 en el local del Jockey Bar.
+    Extension declarada: 5.359 hectareas, 77 areas, 83 centiareas, segun
+    deslinde de los agrimensores Pfister y Martin aprobado por el Departamento
+    Topografico.
+
+  MODO DE LECTURA
+    Imagen, columnas 1 y 2 recortadas por el ancho entero a 250 dpi, dos
+    mitades apaisadas cada una. Sin capa previa.
+
+  TEXTO (transcripcion desde la imagen)
+    Por ENRIQUE SYLVESTER
+    <<Los Porongos>> hoy <<San Luis>> en el departamento de la Caldera.
+    Base 33.333.33
+    Por disposicion del senor juez de 1.a instancia en lo civil y
+    comercial doctor Martin Gomez Rincon, vendere el dia 15 de Junio del
+    corriente ano, a las 11 de la manana, en el local del Jockey Bar,
+    (Plaza 9 de Julio) donde estara mi bandera, la mejor y mas productiva
+    finca <<Los Porongos>> hoy <<San Luis>>, en el departamento de la
+    Caldera, y como perteneciente al juicio ejecutivo de Enrique Werner
+    contra Humberto Graf von Garnier Turawa. - BASE $ 33.333.33 o sean las
+    dos terceras partes de su tasacion fiscal.
+      EXTENSION - Tiene una extension de 5359 hectareas, 77 areas, 83
+    centiareas, segun deslinde practicado por los agrimensores senores
+    Pfister y Martin y aprobado por el Departamento Topografico,
+      Limites: Poniente, con las lomas altas que colindan con tierras de la
+    Caldera y Sauces hasta donde se hallan unos mojones antiguos; Norte,
+    la loma que viene dividiendo las tierras de Perico que hoy poseen los
+    herederos de don Domingo Iriarte; Naciente, siguiendo dicha cuchilla a
+    encontrar con la loma conocida por lomas de las biboras y pasando
+    dichas lomas delante de un morro alto, cabecera de la canada seca
+    donde se encuentra en medio de dichos signos al medio de la quebrada
+    que hace un mojon de piedra que divide esta pertenencia de la estancia
+    de los Penones; y al Sud, la cuchilla que sale del morro alto por el
+    Poniente, conocida por la del <<Tabacal>> o <<Pelada Muerta>> que es la
+    que divide estas tierras de los de la <<Despensa>>.
+      Titulos de primer orden.
+      Salta, Abril 12 de 1916.
+              ENRIQUE SYLVESTER.
+                    Martillero.
+
+  NOTA DE LECTURA
+    El aviso se fecha el 12 de abril de 1916 y sale en una edicion cuya tapa
+    dice 5 y 8 de abril: otra vez el contenido es posterior a la tapa (E.9).
+    Los limites traen siete terminos del anillo 2 en un solo parrafo - Sauces,
+    lomas de las biboras, canada seca, los Penones, Tabacal, Pelada Muerta y
+    la Despensa -, que es la razon por la que esta finca se ficha aqui y no en
+    vecindad. "Los Porongos" es ademas lindero del deslinde de "Loma Bola" de
+    la edicion 592.
+
+------------------------------------------------------------------------------
+601 h3 col. 1
+
+  FUENTE
+    B.O. de Salta, N 601 (tapa: ABRIL 12 y 15 DE 1916), hoja 3, columna 1,
+    seccion Leyes y Decretos.
+
+  FICHA
+    Decreto del 13 de abril de 1916 que, de acuerdo con la terna elevada por
+    la Comision municipal de la Caldera, nombra Juez de Paz Propietario del
+    departamento, por el ejercicio del corriente ano, a Escolastico Aparicio.
+    Firman Cornejo y Rafael M. Zuviria; es copia, Francisco J. Lopez.
+
+  MODO DE LECTURA
+    Imagen, columna 1 recortada desde el borde de la hoja a 250 dpi, dos
+    mitades apaisadas. Sin capa previa.
+
+  TEXTO (transcripcion desde la imagen)
+    De acuerdo con la terna elevada por la Comision muni-
+    cipal de la Caldera, para el nombramiento de Jueces de Paz,
+    El P. E. de la Provincia
+              DECRETA:
+    Art. 1.o Nombrase Juez de Paz Propietario del mencio-
+    nado departamento, para el ejercicio del corriente ano, a
+    don Escolastico Aparicio.
+    Art. 2.o Comuniquese, publiquese e insertese en el R. O,
+    Salta, Abril 13 de 1916.
+              CORNEJO
+              Rafael M. Zuviria
+    Es copia: Francisco J. Lopez.
+
+  NOTA DE LECTURA
+    El decreto nombra propietario y no menciona suplente, aunque el encabezado
+    hable de "Jueces de Paz" en plural: se transcribe como esta y no se
+    completa. Escolastico Aparicio habia renunciado a la Comision municipal
+    del departamento dos meses antes (edicion 593), y es la misma comision la
+    que ahora eleva la terna que lo propone. El config lo trae como actor de
+    1911 con la forma "escolastico m. aparicio" y de 1915 como "e. m.
+    aparicio".
+
+------------------------------------------------------------------------------
+611 h2 col. 3
+
+  FUENTE
+    B.O. de Salta, N 611 (tapa: JUNIO 28 y 1.o DE JULIO DE 1916), hoja 2,
+    columna 3, seccion Edictos.
+
+  FICHA
+    Edicto de deslinde, mensura y amojonamiento de las fincas "Santa Monica" y
+    "Quitilipe", en el departamento de la Caldera, pedido por el doctor Carlos
+    Serrey en nombre de Manuel Goica, ante el juez Martin Gomez Rincon.
+    Perito: ingeniero Herman Pfister. Secretario: Nolasco Zapata. Linderos:
+    los Yacones, San Alejo, "Getsmani" de Daniel Linares, propiedad de Abraham
+    Estrada, el camino nacional a Jujuy, el Rio de la Caldera, F. Luis Acosta
+    y Maria Arrieta.
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada a 250 dpi, dos mitades apaisadas. Sin capa
+    previa.
+
+  TEXTO (transcripcion desde la imagen)
+    DESLINDE. - Habiendose presentado el doctor Carlos Serrey con poder y
+    titulos bastantes del senor Manuel Goica, solicitando deslinde,
+    mensura y amojonamiento de las fincas <<Santa Monica>> y <<Quitilipe>>
+    ubicadas en el departamento de la Caldera y cuyos limites generales
+    son los siguientes: <<Santa Monica>>: al Poniente las cumbreras de los
+    cerros que colindan con los <<Yacones>> y <<San Alejo>>, al Sud
+    <<Getsmani>> del senor Daniel Linares, separados aquellas por una linea
+    trazada por el ingeniero Pedro Cornejo el 9 de Abril de 1889 y
+    propiedad de Abraham Estrada; al Naciente el camino nacional a Jujuy,
+    y al Norte el Rio de la Caldera. - De <<Quitilipe>>: al Sud y Poniente
+    con el Rio de la Caldera; al Norte propiedad que fue de F. Luis Acosta
+    y al naciente, propiedad que fue de dona Maria Arrieta. El senor juez
+    de 1.a instancia doctor Martin Gomez Rincon ha ordenado se cite por el
+    presente edicto y por el termino de 30 dias a los que se crean con
+    derecho a las operaciones a practicarse. Teniendo como perito
+    agrimensor al propuesto ingeniero Herman Pfister. Lo que el suscrito
+    secretario hace saber por medio del presente. - No[la]sco Zapata.
+
+  NOTA DE LECTURA
+    Es el mismo deslinde que el Boletin publico en 1912 (edicion 372), donde
+    el OCR imprimia "Oaldfera" y solo la difusa lo trajo. El apellido del
+    poderdante se lee "Goica" en la unica version disponible y en la imagen;
+    no se normaliza a Goitia ni a Goicoa. La columna no trae la fecha del
+    edicto ni la marca de publicacion a la vista: la entrada se corta con el
+    nombre del secretario y debajo empieza otro deslinde, el de Ciro Aparicio,
+    que queda por mirar. Tres terminos del anillo 2 en el mismo parrafo:
+    Yacones, San Alejo y Quitilipe.
+
+------------------------------------------------------------------------------
+616 h2 col. 1
+
+  FUENTE
+    B.O. de Salta, N 616 (tapa: 9 y 12 DE AGOSTO DE 1916), hoja 2, columna 1,
+    seccion Leyes y Decretos.
+
+  FICHA
+    Decreto del 5 de agosto de 1916 que, "a objeto de organizar de la mejor
+    manera posible la aplicacion del impuesto al consumo en los departamentos
+    de la Campana", nombra RECEPTORES DEL IMPUESTO AL CONSUMO departamento por
+    departamento; para La Caldera, Eustaquio Murua. Firman Cornejo y Manuel R.
+    Alvarado; es copia, Juan Martin Leguizamon.
+
+  MODO DE LECTURA
+    Imagen. El acto empieza al pie de la columna 1 de la hoja y sigue en la
+    columna 2: las dos se recortaron a 250 dpi por el ancho entero. El acto
+    esta tambien en la capa previa, que coincide en la frase de La Caldera.
+
+  TEXTO (transcripcion desde la imagen)
+    Salta, Agosto 5 de 1916.
+      A objeto de organizar de la mejor manera posible la aplicacion del
+    impuesto al consumo en los departamentos de la Campana
+    El Gobernador de la Provincia
+              DECRETA:
+      Art. 1.o Nombranse los siguientes receptores del impuesto al
+    consumo: Para la Candelaria, inclusive El Arenal, a don Juan Serra;
+    para Metan (1.a seccion) inclusive Lumbreras y Rio Piedras, a D.
+    Domingo Legarralde; para Metan (2.a seccion) a D. Estanislao Medrano;
+    para Campo Santo (1.a seccion) a D. Pedro Perez del Busto; para Campo
+    Santo (Guemes y Palomitas) a D. Horacio Apatie; para Rosario de Lerma,
+    a D. Welindo R. Casti-
+       [columna 2]
+    llo; para Cerrillos y La Merced, a D. Jose Baissac; para Chicoana,
+    a don Justo Caro; para Anta, a D. Paulino Echazu; para Pichanal y
+    Embarcacion, a D. Saturnino Saravia; para Oran, a D. Armando T.
+    Amezaga; para Cafayate, a don Ma[nuel] Chavarria; para Molinos, a D.
+    [A]lbin Diaz; para Cachi, a D. Antonio Lopez; para La Poma, a D. Raul
+    Gaudencio; para Coronel Moldes, a D Victor Valdez Linares; para La
+    Vina, a D. Carlos Botelli; para Guachipas y Talapampa, a D. Juan Menu;
+    para La Caldera, a D. Eustaquio Murua; para Santa Victoria, a D. Angel
+    M. Cardozo; y para Iruya, a D. Tomas Vargas.
+    Art. 2.o Comuniquese, publiquese e insertese en el R. O.
+              CORNEJO
+              Manuel R. Alvarado
+    Es copia. - Juan Martin Leguizamon
+
+  NOTA DE LECTURA
+    ESTA FICHA CAMBIO AL LEER SU ENCABEZADO. Mientras el encabezado no estuvo
+    mirado, la lista parecia una renovacion de los expendedores de guias de la
+    provincia, porque a La Caldera le toca el mismo hombre que el decreto de
+    marzo habia nombrado expendedor. El encabezado, leido en la imagen al pie
+    de la columna 1, dice otra cosa: son RECEPTORES DEL IMPUESTO AL CONSUMO, y
+    el decreto es del 5 de agosto. Es el ejemplo mas claro del ano de por que
+    la rubrica manda mirar el encabezado de toda lista antes de ficharla. El
+    nombre de Cafayate se imprime sobre un trazo de tinta que tapa el nombre
+    de pila; se transcribe entre corchetes lo que se alcanza a leer. La
+    designacion de Murua como expendedor de guias ya estaba en la edicion 597,
+    de marzo: aqui reaparece dentro de una lista provincial.
+
+------------------------------------------------------------------------------
+624 h2 col. 1
+
+  FUENTE
+    B.O. de Salta, N 624 (tapa: 4 y 7 DE OCTUBRE DE 1916), hoja 2, columna 1,
+    seccion Leyes y Decretos.
+
+  FICHA
+    Decreto del 26 de septiembre de 1916 que nombra a Salvador Rosa miembro de
+    la Comision municipal de la Caldera, en reemplazo de Adolfo Vidal,
+    dimitente, y por el termino de ley. Firman Cornejo y Rafael M. Zuviria; es
+    copia, Francisco J. Lopez.
+
+  MODO DE LECTURA
+    Imagen, columna 1 recortada desde el borde de la hoja a 250 dpi, dos
+    mitades apaisadas. Tambien esta en la capa previa, que coincide en el
+    nombre del entrante y del saliente.
+
+  TEXTO (transcripcion desde la imagen)
+    [E]ncontrandose incompleta la comi[sion] municipal de la Caldera por
+    re[nunc]ia de don Adolfo Vidal.
+    [El] Poder Ejecutivo de la Provincia
+              DECRETA:
+    [A]rt. 1.o Nombrase miembro de la [referi]da comision municipal en
+    reem[plazo] del dimitente y por el termino [de l]ey al senor Salvador
+    Rosa.
+    [A]rt. 2.o Comuniquese, publiquese e [inser]tese en el Registro
+    Oficial.
+    [Sa]lta, septiembre 26 de 1916.
+              CORNEJO.
+              Rafael M. Zuviria
+    [E]s copia - Francisco J. Lopez.
+
+  NOTA DE LECTURA
+    Los corchetes son el corte del recorte. Es el segundo relevo del ano en la
+    misma comision: en febrero salio Escolastico Aparicio y entro Andres Marin
+    (edicion 593); en septiembre sale Adolfo Vidal y entra Salvador Rosa.
+    Adolfo Vidal venia de integrar la comision desde 1915. El decreto dice
+    "por renuncia" y no acompana ni cita el acto que la acepto: va a E.2 como
+    citado y no acompanado.
+
+------------------------------------------------------------------------------
+632 h2 col. 2
+
+  FUENTE
+    B.O. de Salta, N 632 (tapa: 6 y 9 DE DICIEMBRE DE 1916), hoja 2, columna
+    2.
+
+  FICHA
+    Nomina de causas de la Camara de Justicia, mes de Septiembre, firmada por
+    Martin Gomez Rincon, donde figura la causa "Juan Campilongo versus Amado
+    Juarez, Venido en apelacion del Juzgado de Paz <<La Caldera>>, seccion
+    contrato" y, a continuacion, "Silvano Murua versus Jose Jacobelli,
+    Ejecutivo".
+
+  MODO DE LECTURA
+    Imagen, columna 2 recortada a 250 dpi, dos mitades apaisadas. Tambien en
+    la capa previa, que da el mismo texto con mas ruido.
+
+  TEXTO (transcripcion desde la imagen)
+    Mes de Septiembre - Pedido de revocatoria y nulidad en el juicio
+    Salomon Michel versus B. Saravia, Ordinario Banco Espanol versus Luid
+    Same, Ejecucion, Juan P. Alen versus Aurora Zerdan de Paz, Ejecucion,
+    Melchor Herrera versus Jacinto Romero, Ejecucion, Juan Campilongo
+    versus Amado Juarez, Venido en apelacion del Juzgado de Paz <<La
+    Caldera>>, seccion contrato, Silvano Murua versus Jose Jacobelli,
+    Ejecutivo, Maria Rivas versus Delfin Leguizamon. - Martin Gomez
+    Rincon.
+
+  NOTA DE LECTURA
+    El encabezado de la nomina dice "Juicios sentenciados en el tercer
+    trimestre del ano 1916 en el juzgado a cargo del doctor Martin Gomez
+    Rincon", y esta en la columna 1 de la misma hoja: se leyo en la CAPA
+    PREVIA y no en la imagen, y por eso se declara aqui y no en el texto de la
+    ficha. En la misma columna, unas lineas mas arriba, figura el "Sucesorio
+    Asuncion Espeche y Elias Mayo", que es la sucesion cuyo edicto firmo en
+    1915 el Juez de Paz de Caldera E. M. Aparicio; aqui aparece sin mencion
+    del departamento, de modo que esa linea no entra en esta ficha. La
+    puntuacion de la nomina es la del original: separa las causas con comas y
+    no con punto y coma.
+
+------------------------------------------------------------------------------
+633 h2 col. 3 y 633 h3 col. 1
+
+  FUENTE
+    B.O. de Salta, N 633 (tapa: 13 y 16 DE DICIEMBRE DE 1916), hoja 2, columna
+    3, seccion Edictos, y hoja 3, columna 1, donde sigue el mismo expediente.
+
+  FICHA
+    Manifestacion y pedido de cuatro unidades de cateo de Jose Maria Romero
+    Escobar, presentada al Ministro de Hacienda el 8 de noviembre de 1916, por
+    plomos argentiferos en el lugar denominado "Puesto de las Pirguas",
+    distrito de las Pirguas, departamento de la Caldera, en terrenos de Garzon
+    y Pintos, en las faldas del cerro "Cerro Nevado".
+
+  MODO DE LECTURA
+    Imagen, columna 3 recortada a 250 dpi, dos mitades apaisadas. La capa
+    previa de esta hoja intercala dos columnas y el OCR propio es el peor del
+    ano (confianza media 48,1): el texto de la ficha sale entero de la imagen.
+
+  TEXTO (transcripcion desde la imagen)
+    Salta, Noviembre 8 de 1916 - A S.S. el senor Ministro de Hacienda. -
+    S/D. - Jose Maria Romero Escobar, argentino, mayor de edad, casado,
+    con domicilio en la calle Ituzaingo N. 217 de esta ciudad, por
+    presentado que me doy ante su Senoria, expongo: Que en el lugar
+    denominado <<Puesto de las Pirguas>> distrito de las Pirguas,
+    departamento de la Caldera, y en terrenos de propiedad de los senores
+    Garzon y Pintos, ubicados en las faldas del cerro conocido con el
+    nombre de <<Cerro Nevado>> he constatado la existencia de minerales de
+    primera categoria cuya especie es de Plomos argentiferos, y deseando
+    practicar unos trabajos de exploracion, vengo a solicitar de su
+    Senoria me sean concedidas cuatro unidades de cateo de quinientas
+    hectareas cada una, por tratarse de terrenos no cercados ni labrados,
+    y los cuales ubicare en la forma siguiente: Tomando como punto de
+    partida la casa del senor Jose Ca[...], se trazara una linea llamada
+    de rumbo con direccion al norte verdadero, y medidos sobre ella dos
+    mil quinientos metros, se colocara un mojon de este mojon y con
+    direccion al Este se medira una linea de dos mil metros y a esta
+    extremidad se colocara el mojon N.o 1.o
+    
+       [633 h3, columna 1: informe del Escribano de Minas]
+    A despacho el dia nueve de Noviembre de 1916, informando al senor
+    Ministro que existen en la Escribania dos pedimientos anteriores que
+    parecen tener semejanza con el del senor Romero Escobar. En efecto, el
+    senor Casiano Hoyos por si y don Juan Larran, solicito en el lugar
+    <<El Potrero>>, finca <<El Cerro Nevado>>, de los senores Garzon y
+    Pintos y colindantes: al Norte, la Quebrada Honda, de Este a Oeste; al
+    Naciente, hasta la casa de Andres Cayo; al Poniente las cumbres que dan
+    a la Quebrada de las Animas; y al Sud, hasta donde termina la distancia
+    de dos unidades. Los senores Octavio Espeche y Odorico Diaz, tienen
+    solicitado en la misma finca, y propietarios nombrados, en la falda
+    Este del <<Cerro Nevado>>, corriendo el filon hacia la base, hasta dar
+    con un pequeno arroyo sin nombre, estando a cien metros mas o menos al
+    Norte del Rio de las Animas y colindando: al Norte, el Rio de San Jose;
+    al sud, el Abra de las minas; al Este, la junta de los Rios de San Jose
+    y de las Animas; y al Oeste, la otra falda del mismo <<Cerro
+    Nevado>>. - Waldino Riarte. - Ministerio de Hacienda Salta. Noviembre 9
+    de 1916. - Antes de proveer, vista al presente del informe del senor
+    Escrib. de Minas - Alvarado. - En la misma fecha corri la vista
+    ordenada al senor Romero Escobar, y firma. - J. Romero Escobar. -
+    Riarte. [...] A despacho el dia 20 de Noviembre 1916. - En vista de la
+    manifestacion anterior y sin perjuicio de terceros, publiquese conforme
+    al articulo 25 del C. de Mineria. - Alvarado
+
+  NOTA DE LECTURA
+    "Cerro Nevado" es termino del anillo 2 del config y aqui aparece dentro de
+    una mencion explicita del departamento. El distrito "las Pirguas" no
+    figura en el vocabulario del departamento y el nombre se asocia
+    habitualmente a otra jurisdiccion: el documento dice "departamento de la
+    Caldera" y asi se transcribe, sin conciliarlo ni corregirlo (E.9). El
+    apellido del punto de partida queda cortado por el pliegue de la hoja y se
+    marca [...]. La ficha llega hasta el primer mojon; el resto de la mensura
+    sigue en la columna y no se transcribe por no aportar identificadores. El
+    informe del escribano de minas, en la hoja 3 y leido tambien en la imagen,
+    es lo mas denso del ano en vecindad: sobre la misma finca "El Cerro
+    Nevado" de los senores Garzon y Pintos hay otros dos pedimientos
+    anteriores, uno de Casiano Hoyos por si y por Juan Larran, y otro de
+    OCTAVIO ESPECHE y ODORICO DIAZ. Odorico Diaz esta en el config como actor
+    de 1908 y Espeche es el apellido de la sucesion cuyo edicto firmo en 1915
+    el Juez de Paz de Caldera. Ninguno de esos dos pedimientos nombra al
+    departamento: por eso van al parrafo B y no a una ficha propia. El mismo
+    Romero Escobar se presenta otra vez al Ministro de Hacienda en 635 h2,
+    pero por un pedimento DISTINTO - el distrito minero denominado "Acayo", en
+    el distrito de ese mismo nombre -, de modo que ese escrito no es una
+    repeticion de este ni toca al departamento.
+
+==============================================================================
+B - VECINDAD
+==============================================================================
+
+Veintisiete terminos del anillo 2 dieron acierto y se leyeron los veintisiete
+contextos. El reparto solo se supo leyendolos: la enorme mayoria es otra cosa.
+
+B.1 - Nucleos ya fichados en el parrafo A
+-----------------------------------------
+
+Se nombran y no se repiten. Los terminos del anillo 2 que caen dentro de una
+mencion explicita son siete, y seis de ellos en un solo parrafo: los limites
+del remate de Los Porongos (600 h3) traen Sauces, las lomas de las biboras, la
+canada seca, la estancia de los Penones, el Tabacal o Pelada Muerta y la
+Despensa. Los otros: la Angostura, en los limites del deslinde de Loma Bola
+(592 h4 y 593 h3), que es la finca de Daniel Linares y el arroyo del mismo
+nombre; los Yacones, San Alejo y Quitilipe, en el deslinde de Santa Monica
+(611 h2); Cerro Nevado, en el pedido de cateo del Puesto de las Pirguas (633
+h2); y Murua, el apellido que atraviesa el ano entero.
+
+B.2 - Nucleos del departamento en actos que no nombran el termino
+-----------------------------------------------------------------
+
+Son tres, y los tres son gente.
+
+1. LOS MURUA, QUE EN 1916 ESTAN EN TODAS PARTES. Silvano L. Murua firma como
+martillero remates de toda la provincia en dieciseis hojas (608, 612, 613,
+615, 617, 618, 619, 623, 624 y 628 entre otras), sin que ninguno de esos
+avisos nombre al departamento; y en 632 h2 aparece como parte, "Silvano Murua
+versus Jose Jacobelli", en la misma nomina donde se lee la apelacion del
+Juzgado de Paz de La Caldera. Ademas, el Boletin publica dos sucesiones de
+apellido Murua que no nombran el departamento: la de dona Mercedes Murua de
+Matienzo (619 h3 y 620 h2) y la de don Nicolas Arias Murua (632 h2). Matienzo
+es apellido de dos actores del config, de 1909. No se infiere parentesco: se
+declara que el apellido aparece asi.
+
+2. ESCOLASTICO APARICIO, FUERA DE SUS DOS DECRETOS. El apellido Aparicio da
+ocho hojas. Dos son sus actos del parrafo A (593 h1 y 601 h3); en 611 h2,
+inmediatamente debajo del deslinde de Santa Monica y Quitilipe, empieza otro
+deslinde promovido por CIRO Aparicio, que continua en la hoja 3 y resulta ser
+del LOTE NUMERO TREINTA Y SEIS DEL DEPARTAMENTO DE RIVADAVIA, leido en la
+imagen: no toca al departamento, y queda declarado para que no vuelva a
+abrirse; las demas (598 h3, 617 h4, 630 h2 y h3, 631 h2) son causas judiciales
+de personas de ese apellido sin mencion del departamento.
+
+3. EL SUBCOMISARIO DE MOJOTORO. En 603 h1, columna 3, leido en la imagen:
+"Item 29o - Un sargento, $ 720; un subcomisario para Mojotoro, $ 960". Esta
+dentro de un decreto publicado anexo a la Ley de Presupuesto que enumera, item
+por item, las partidas de policia de toda la provincia; los items vecinos
+nombran Payogasta, San Jose, la B. Norte, San Agustin, Antilla, Horcones, Rio
+Piedras, Embarcacion y la estacion Pucara. LA PLANILLA NO ATRIBUYE LOS ITEMS A
+DEPARTAMENTOS: no se infiere de que jurisdiccion depende el subcomisario de
+Mojotoro. Es el unico acierto de mojotoro en todo el ano.
+
+4. LOS OTROS DOS PEDIMENTOS SOBRE EL CERRO NEVADO. El informe del escribano de
+minas de 633 h3 dice que sobre la misma finca "El Cerro Nevado" de los senores
+Garzon y Pintos pesan dos pedimientos anteriores: el de Casiano Hoyos, por si
+y por don Juan Larran, en el lugar "El Potrero", y el de OCTAVIO ESPECHE y
+ODORICO DIAZ, en la falda Este del cerro. Ninguno de los dos escritos nombra
+al departamento - solo lo nombra el de Romero Escobar, que si esta fichado -,
+y por eso van aqui. Odorico Diaz es actor del config con origen 1908.
+
+B.3 - Terminos que en 1916 son otra cosa
+----------------------------------------
+
+LA CALDERILLA, DOS VECES, Y LAS DOS EN OTRA JURISDICCION. Es el hallazgo de
+vecindad del turno y obliga a mirar con cuidado un termino que el config tiene
+en el anillo 1.
+
+La primera esta en 615 h1: un decreto del 27 de junio de 1916 que, de acuerdo
+con las propuestas elevadas POR EL COMISARIO DEL DISTRITO LA SILLETA, nombra
+comisarios auxiliares de partido, y entre ellos "para Pie de la Cuesta,
+Calderilla y Cuesta Grande, a don Abdon Sarapura". La misma lista nombra los
+partidos del Tunal, Los Sauces y Candado, Arcas y Capilla, el Toro y Tres
+Cruces, Cuevas, Potrero de Uriburu, Incahuasi, Pascha y Abra Grande, y Merced
+de Arriba, que son de la quebrada del Toro y del oeste de la capital. El
+encabezado se leyo en la columna 1 de la misma hoja, que es lo que permite
+atribuir la lista.
+
+La segunda esta en 634 h2: un edicto de deslinde de la finca "Alto del mal
+Paso" SITUADA EN EL DEPARTAMENTO DEL ROSARIO DE LERMA, pedido por el doctor
+Juan Carlos Serrey en nombre de Santiago Galazzo, cuyos limites son "Norte,
+propiedad de los herederos de Domingo Vilte y Cruz Alejandro Burgos; Sud,
+Abdon Sarapura, que separa de la propiedad de don Eustaquio Sarapura; y
+Poniente, con el Rio Grande de la Calderilla que separa de la propiedad de don
+Liberato Padilla", con fecha Salta, Noviembre 28 de 1916 y marca 1470-v-Ene.
+3.
+
+Las dos menciones comparten personas - Abdon Sarapura y Liberato Padilla, que
+en el decreto de junio reciben partidos vecinos - y las dos atribuyen
+expresamente el lugar a otra jurisdiccion. No se concilia con La Calderilla
+del departamento de La Caldera ni se infiere que sean el mismo paraje: se
+declara que en 1916 la palabra Calderilla aparece dos veces y las dos veces
+referida al Rosario de Lerma y al distrito La Silleta. Por eso no hay ficha de
+Calderilla en el parrafo A. Siguiendo 12 de la rubrica, esto NO se agrega a
+falsos_positivos del config: queda listado aqui y en E.7.
+
+B.4 - Ausencias del anillo de actores
+-------------------------------------
+
+Ninguno de los actores de los actos del parrafo A quedo sin devolver su propio
+acto: la busqueda funciona y no hay que declarar fallas de busqueda, como si
+hubo que hacer en 1911 (seis) y en 1912 (trece).
+
+PRIMER GRUPO, LOS QUE SOLO APARECEN EN SU PROPIO ACTO. Salvador Rosa (una
+hoja, 624 h2); Camilo Caseres (594 h2); Gervacio Bejarano, que reaparece en
+624 h2 pero en otro decreto y con otra persona; Donato Arroyo; Antonio Aguero;
+Pablo Silvestre; Francisco Sosaya y Celedonia Reyes del Prado, que solo estan
+en las dos apariciones del mismo edicto; Alberto Escudero, el solicitante del
+deslinde; Manuel Goica; Jose Maria Romero Escobar, cuyo apellido vuelve en 612
+h1 y 617 h2 pero referido a Manuel Romero Escobar, que es otra persona.
+
+SEGUNDO GRUPO, LOS QUE APARECEN EN MAS DE UN ACTO DEL DEPARTAMENTO. Es el que
+arma la trama del ano. EUSTAQUIO MURUA: comisario de policia del departamento
+el 4 de marzo (596 h1), expendedor de guias el 16 de marzo (597 h2) y otra vez
+expendedor en la lista provincial de agosto (616 h2). ESCOLASTICO APARICIO:
+renuncia a la comision municipal en febrero (593 h1) y es nombrado Juez de Paz
+propietario en abril, por terna de esa misma comision (601 h3). SILVANO MURUA:
+fiador de Eustaquio en marzo (597 h2) y parte en una causa de la nomina de la
+Camara en diciembre (632 h2). ADOLFO VIDAL: miembro de la comision municipal
+desde 1915 y dimitente en septiembre de 1916 (624 h2). DANIEL LINARES: lindero
+de Loma Bola en febrero (592 h4 y 593 h3) y de Santa Monica en junio (611 h2),
+con la finca "Getsmani".
+
+TERCER GRUPO, LOS QUE APARECEN TAMBIEN FUERA DEL DEPARTAMENTO. Martin Gomez
+Rincon, juez de 1a instancia, que firma los tres actos judiciales del
+departamento y otro centenar de causas de toda la provincia; Herman Pfister,
+agrimensor, perito en los dos deslindes del departamento y en cuatro asuntos
+mas (598 h2, 611 h3, 624 h3, 625 h2); Nolasco Zapata, secretario; Enrique
+Sylvester, martillero, que firma avisos en veinticuatro hojas; Julio Mercado,
+lindero de Loma Bola, cuyo apellido aparece en siete hojas; Pedro Arias e
+Higinio Juarez, presidentes de mesa, cuyos apellidos son de los mas frecuentes
+del corpus y no se pueden aislar por apellido suelto.
+
+==============================================================================
+C - LIMITROFES
+==============================================================================
+
+Los departamentos limitrofes aparecen en 1916 sin tocar a La Caldera. CAPITAL:
+el decreto de ubicacion de mesas de 593 h2 describe los circuitos de la
+capital y nombra los partidos de Buena Vista, Castellanos, San Lorenzo,
+Pichanal, Las Costas y Penalva, ninguno de ellos del departamento. ROSARIO DE
+LERMA: el deslinde de "Alto del mal Paso" (634 h2), la mina de plomo "Firmeza"
+en el lugar de Lagunilla, en terrenos de Matias Chuchuy (590 h2), y los
+partidos del distrito La Silleta del decreto de comisarios auxiliares (615
+h1). CAMPO SANTO y GuEMES figuran como departamentos de la insaculacion (594
+h1), con sus mesas, sin relacion con las de Caldera. No hay en todo el ano un
+solo acto que nombre a la vez a La Caldera y a un limitrofe, salvo el deslinde
+de Santa Monica, cuyos limites llegan al camino nacional a Jujuy.
+
+==============================================================================
+P - PLANOS
+==============================================================================
+
+El corpus no publica planos. En 592 h4 y en 593 h3 un edicto remite al "plano
+del departamento de Rivadavia" con fracciones numeradas, y en 600 h3 el remate
+de Los Porongos invoca un deslinde de los agrimensores Pfister y Martin
+"aprobado por el Departamento Topografico" que tampoco se acompana. El
+recuento de hojas que mencionan un plano y cuantas de esas remisiones tocan al
+departamento queda para el turno siguiente. Techo de resolucion, por si se
+buscara leer una cartela: 357 a 475 ppi, 1 bit.
+
+==============================================================================
+D - INDICE
+==============================================================================
+
+  592 h4 + 593 h3  Deslinde de la finca "Loma Bola" (Alberto Escudero)
+  593 h1           Comision municipal: renuncia de Escolastico
+                   Aparicio, nombramiento de Andres Marin
+  594 h2           Insaculacion: las tres mesas de CALDERA
+  596 h1           Comisario de policia: Eustaquio Murua por renuncia
+                   de Manuel R. Cornejo
+  597 h2           Expendedor de guias: Eustaquio Murua, fianza de
+                   Silvano I. Murua
+  600 h3           Remate de "Los Porongos" hoy "San Luis"
+  601 h3           Juez de Paz propietario: Escolastico Aparicio
+  611 h2           Deslinde de "Santa Monica" y "Quitilipe"
+  616 h2           Expendedores de guias de la provincia: La Caldera,
+                   Eustaquio Murua
+  624 h2           Comision municipal: Salvador Rosa por renuncia de
+                   Adolfo Vidal
+  632 h2           Camara de Justicia: apelacion del Juzgado de Paz
+  633 h2           Cateo minero: Puesto de las Pirguas, Cerro Nevado
+
+  Vecindad, sin mencion del termino:
+  603 h1           Partida de policia: un subcomisario para Mojotoro
+  611 h2 + h3      Deslinde de Ciro Aparicio: es de Rivadavia
+  633 h3           Pedimentos de Casiano Hoyos y de Octavio Espeche y
+                   Odorico Diaz sobre la misma finca Cerro Nevado
+  619 h3, 620 h2   Sucesion de Mercedes Murua de Matienzo
+  632 h2           Sucesion de Nicolas Arias Murua
+
+  Anillo 1 en otra jurisdiccion:
+  615 h1           "Calderilla" entre los partidos del distrito La
+                   Silleta
+  634 h2           "Rio Grande de la Calderilla", en el deslinde de
+                   "Alto del mal Paso", Rosario de Lerma
+
+==============================================================================
+E - OBSERVACIONES
+==============================================================================
+
+
+E.1 - Duplicacion y saldos
+--------------------------
+
+Sin las .jpg del script no hay md5 ni dhash ni medicion de tinta: la
+duplicacion se controla por texto. El unico duplicado verdadero detectado
+hasta ahora es el edicto de "Loma Bola", identico en 592 h4 y 593 h3, con la
+misma marca 1286 y la misma fecha; va como una sola entrada del parrafo A con
+dos apariciones. El inventario de cuadros y la cadena de saldos de Tesoreria
+no se hicieron todavia.
+
+E.2 - Cobertura
+---------------
+
+Hojas del ano: 196. Hojas presentes: 196. Imagenes miradas: 40 recortes de
+columna y cabecera, que cubren 22 hojas distintas, mas los cinco montajes de
+las 49 tapas y un montaje de cuatro cabeceras interiores. Columnas recortadas
+y leidas enteras: 31. Columnas cotejadas contra la capa previa: las de 597 h2,
+615 h1, 616 h1 y h2, 624 h2, 632 h2, 633 h2 y h3, y 634 h2 - las unicas hojas
+miradas que tienen capa; las demas son imagen pura y no admiten cotejo, y en
+ninguna de las cotejadas aparecio columna perdida.
+
+CITADOS Y NO ACOMPANADOS, tres. Los dos primeros, de la comision municipal del
+departamento: la renuncia de Adolfo Vidal, que el decreto de 624 h2 da por
+producida sin acompanar ni citar el acto que la acepto, y la terna elevada por
+la comision municipal de la Caldera que invoca el decreto de 601 h3, que no se
+publica. El tercero es la renuncia de Escolastico Aparicio que el decreto de
+593 h1 dice haber aceptado sin acompanar el escrito ni citar su fecha. Como
+los actos de 1916 no llevan numero, los tres se buscaron por fecha y por
+materia.
+
+E.3 - Sin mencion y no mirado
+-----------------------------
+
+Ciento setenta y cuatro hojas no fueron miradas en la imagen. Ninguna de ellas
+dio acierto del anillo 1 en ninguna de las cuatro pasadas, salvo las que estan
+en la lista de falsos positivos de E.7, juzgadas por su contexto completo y
+por la palabra aislada, no por la imagen. Los umbrales de confianza del OCR
+propio clasifican 77 hojas como "a ojos"; de esas se miraron las que traian un
+candidato, una lista o una planilla - 633 h2, que es la peor del ano, entre
+ellas -, y las demas quedan sin mirar. Se dice asi y no "no hay columna
+perdida en el ano".
+
+E.4 - Firmas y autoridad
+------------------------
+
+EN 1916 CAMBIA EL GOBERNADOR, Y EL ACTO ESTA PUBLICADO. En 595 h1, columna 3,
+leido en la imagen: "Salta, Febrero 20 de 1916. En merito del precedente
+decreto de la H. Asamblea Legislativa, queda asumido el mando gubernativo de
+la provincia, por el suscrito. Autorizase al sub-secretario...". La edicion
+595 se fecha 1 y 4 de marzo. Antes de esa fecha firma PATRON COSTAS - asi en
+el decreto de 593 h1 y en las ediciones 587 a 593 -; desde 595 en adelante
+firma CORNEJO, y el apellido Patron Costas reaparece despues solo como nombre
+de parte en causas (600, 605, 607, 608, 620, 629). No se fija el dia del
+relevo por los vecinos: lo fija el propio acto, el 20 de febrero. Conviven dos
+refrendos y dos formulas de copia: Rafael M. Zuviria con "Es copia: Francisco
+J. Lopez" y Manuel R. Alvarado con "Es copia: Juan M. Leguizamon" o "Juan
+Martin Leguizamon", y las dos parejas aparecen en la misma quincena (596 y
+597). La formula de encabezado varia: "El P. E. de la Provincia", "El Poder
+Ejecutivo de la Provincia", "El Poder Ejecutivo de la provincia", "El
+Gobernador de la Provincia" y "El P. E. de la Provincia en acuerdo de
+ministros", esta ultima en catorce hojas. No se normaliza ninguna.
+
+INTERINATOS. La palabra "interinamente" aparece en nueve hojas (609, 612, 613,
+615, 621, 627, 631 entre ellas) y en todas se refiere a cargos judiciales o
+administrativos - un juzgado a cargo interino, un despacho de fiscalia
+encargado interinamente -, no al Poder Ejecutivo. No hay en 1916 ningun acto
+firmado por el Presidente de la H. Camara en ejercicio del Poder Ejecutivo, ni
+ninguna formula de vicegobernador: las dos se buscaron y dan cero. El
+ministerio de Hacienda aparece en catorce hojas y el de Gobierno en cinco; el
+"Es copia" lo firman Francisco J. Lopez y Juan M. Leguizamon, que tambien
+firma Juan Martin Leguizamon, y las dos formas conviven en la misma edicion.
+
+E.5 - Cortes y columnas
+-----------------------
+
+No se hallo ninguna columna perdida. Se lo dice sobre las 23 columnas
+recortadas y leidas, de 15 hojas: en todas, el renglon sigue en la columna de
+al lado y el texto encadena. La capa previa de 633 h2, en cambio, INTERCALA
+DOS COLUMNAS renglon por renglon - la nomina de causas criminales con la
+manifestacion de mina -, que es el modo de falla tipico del OCR previo y que
+aqui se confirmo en la imagen. Es ademas la hoja con peor confianza propia del
+ano (48,1 de media, 60 por ciento de palabras debajo de 60).
+
+E.6 - Repeticiones
+------------------
+
+El corpus trae 226 numeros de marca distintos en 462 apariciones de la formula
+"<numero> v <fecha>". Se comprobo POR EL TEXTO, y no por la marca, si los
+avisos del departamento se repiten, que es la correccion de la v15: el edicto
+de Loma Bola sale dos veces (592 h4 y 593 h3) con la misma marca 1286 y texto
+identico; el deslinde de Santa Monica y Quitilipe sale UNA sola vez (611 h2);
+el remate de Los Porongos, UNA sola vez (600 h3), con marca 1519 que anuncia
+publicacion hasta el 29 de mayo y un remate fijado para el 15 de junio; el
+pedido de cateo, UNA sola vez (633 h2), aunque el expediente continue en la
+hoja siguiente. Es decir: de los cuatro avisos del departamento con marca, uno
+solo se repite, y la marca no lo anticipa en ningun caso.
+
+UNA REPETICION QUE NO LO ES. Jose Maria Romero Escobar vuelve a presentarse al
+Ministro de Hacienda en 635 h2, con el mismo encabezado palabra por palabra -
+argentino, mayor de edad, casado, domiciliado en la calle Ituzaingo numero 217
+-, lo que por el arranque parece la segunda publicacion del cateo de las
+Pirguas. No lo es: el escrito pide sobre un distrito minero denominado
+"Acayo", en el distrito del mismo nombre, y no nombra al departamento. Se
+comprobo leyendo el cuerpo, no el encabezado.
+
+E.7 - Falsos positivos y negativos
+----------------------------------
+
+FALSOS POSITIVOS DEL ANILLO 1 JUZGADOS EN 1916, con su hoja: "Alderete" y
+"Aldertu" (596 h1); el local del Jockey Bar leido "lecaldel" y "localdel" (599
+h4, 633 h4); la mina de cobre "Euscalduna" (622 h3); Isidoro B. Calderon, en
+la nomina de causas (630 h3); la estacion Huacalera del ferrocarril a Bolivia
+(596 h4, 617 h4); "escalera", "encalera" y "calera" de inventarios de remate
+(604 h4, 616 h4, 627 h4); "maldera" por madera (634 h4); "caderias" por
+mercaderias (618 h2); "aldereta" por el apellido del juez (627 h4); "callema"
+y "callena" (590 h4, 631 h1) y "co|dero" (607 h2), las tres formas de la laxa
+que el OCR fabrica sobre "callejera", "cadena" y "cordero". Ninguno se agrega
+al config.
+
+FALSOS POSITIVOS DEL ANILLO 2 EN 1916, leidos uno por uno. CASTELLANOS, el mas
+frecuente del ano con diecisiete hojas, es casi siempre el abogado Juan Jose
+Castellanos, y ademas Numa Castellanos, la finca Castellanos de la capital, el
+rio Castellanos que limita la jurisdiccion de San Lorenzo, el arroyo y el
+puesto de Castellanos de Anta y un partido de la capital. ISASMENDI: Jose
+Davalos Isasmendi, miembro de la comision municipal de Molinos y de Colome;
+Petrona Isasmendi; la casa Isasmendi y Cia.; y la 1a seccion Isasmendi de
+Metan. WIERNA: Jesus Wierna y Ramon Wierna, de la comision municipal y de las
+mesas de otro departamento, y la tutela de los menores Wierna. TRANCAS: seis
+de sus siete hojas son "potrancas" partido por el renglon y la septima es el
+camino de Cafayate a Trancas. SAUCES: Los Sauces del distrito La Silleta, el
+rio de los Sauces de La Candelaria y el pozo de los Sauces. CHAILE y CHALLE:
+Ceferino Chaile, comisario del partido de San Miguel; Elisa de Chaile; Lucas
+Chaile, que una hoja imprime "Challe". TEODOLINDA: Teodolinda F. de Ruiz y
+Teodolinda Vilca, linderas de sitios urbanos. CHUNAS: "hachunas" de un
+inventario de herramientas. LESSER: la estancia Lesser o Las Nieves, de la
+capital, y el sucesorio de Eliseo Lesser. NOGALES: la finca Nogales de Fenelon
+Mollinedo y Luis Nogales, ejecutado. EL CAJON: el alto del nevado del Cajon,
+de Cachi. MANZANO: el cordon de los cerros del Manzano y Patahuasi, que divide
+La Poma del Rosario de Lerma. LAGUNILLA: la mina "Firmeza" del Rosario de
+Lerma y un partido de la capital. ENTRE RIOS: la calle. GUARANGUAY: el vado,
+en Oran. QUINTIN: Quintin Rivero, miembro de una comision municipal. DESPENZA:
+la despensa de una casa en venta. ANGOSTURA, ademas del arroyo y la finca del
+departamento, la Angostura que colinda con Molinos.
+
+FALSO NEGATIVO DE LA LITERAL, uno y bien claro: en 592 h4 el OCR propio
+imprime "Galdera" con G, y la pasada literal no lo ve. Lo trajeron la laxa y
+la difusa (ratio 0,86). Sin esas dos pasadas, el edicto de "Loma Bola" habria
+entrado al informe solo por su segunda aparicion en la edicion 593, y el ano
+habria perdido una aparicion.
+
+E.8 - Fidelidad numerica
+------------------------
+
+EL ANO NO PUBLICA NINGUN CUADRO. Se lo dice despues de buscar, sobre las 288
+hojas-version, "balance", "resumen del movimiento", "movimiento de tesoreria",
+"tesoreria general", "receptoria general", "importe total", "total general" y
+"saldo". Lo que devuelven esas busquedas no son cuadros: en 597 h1 hay un
+DECRETO que manda formular el balance general de saldos activos y pasivos de
+la administracion al 31 de marzo de 1916, sin acompanar cifra alguna; en 609
+h2 y 610 h2 hay convocatorias a junta de acreedores "a objeto de la regulacion
+de los honorarios del sindico y la aprobacion del balance y gastos", tambien
+sin cifras; las menciones de Tesoreria General y Receptoria General son de
+nombramientos de empleados y de ordenes de pago sueltas. No hay un solo
+balance municipal en el ano, y por lo tanto ninguno del departamento. Se
+declara como hecho del corpus y no como tabla que quedo sin mirar.
+
+CADENA DE SALDOS: NO HAY. Con cero resumenes mensuales publicados no se puede
+armar cadena alguna, ni cerrar contra 1915 ni abrir hacia 1917. Se cuenta
+antes de prometerla, como pide la rubrica.
+
+CIFRAS TRANSCRIPTAS, todas leidas en la imagen: la base del remate de Los
+Porongos, 33.333,33 pesos, declarada como las dos terceras partes de la
+tasacion fiscal - de donde la tasacion seria 49.999,995, que el aviso no
+imprime y que no se completa -; la extension de esa finca, 5.359 hectareas, 77
+areas, 83 centiareas; la fianza de 500 pesos moneda nacional de 597 h2; las
+cuatro unidades de cateo de quinientas hectareas cada una de 633 h2, con el
+poligono de cuatro mil por cinco mil metros y "una superficie de dos mil
+hectareas iguales a las cuatro unidades", que es la unica cuenta del ano que
+se puede recalcular y que cierra: 4.000 x 5.000 metros son 2.000 hectareas, y
+4 x 500 tambien.
+
+E.9 - Contradicciones
+---------------------
+
+1. EL CONTENIDO ES POSTERIOR A LA TAPA, y no una vez. La edicion 592, fechada
+8 y 12 de febrero, trae edictos fechados el 14 y el 16 de febrero y el edicto
+de Loma Bola fechado el 13 de MARZO, con marca "v. 18 Mzo."; la edicion 600,
+fechada 5 y 8 de abril, trae el aviso de remate fechado el 12 de abril. Se
+declara sin conciliar. La lectura alternativa para el edicto de Loma Bola -
+que "Marzo" sea errata por "Febrero" - se escribe pero no se adopta: el texto
+esta impreso igual en sus dos apariciones.
+
+2. TAPAS EN DIA QUE LA FORMULA NO ADMITE: 592 (martes 8 de febrero), 594
+(martes 22 y viernes 25 de febrero) y 628 (jueves 9 de noviembre), las tres
+leidas a 330 dpi.
+
+3. ERRATAS DE TAPA: la 623 imprime "27 v 30 DE SETIEMBRE" con la y rota; la
+625, "ANO VHI" [sic] por ANO VIII.
+
+4. ERRATAS DE CUERPO, transcriptas en su ficha: "Provivincia" [sic] y "Art.
+4.o" [sic] donde la serie pide el 2.o, las dos en el decreto de 597 h2; y el
+decreto de 593 h1, que se imprime sin linea de fecha entre el articulo de
+cierre y la firma.
+
+5. UN DISTRITO EN DOS JURISDICCIONES. La manifestacion de mina de 633 h2 ubica
+el "Puesto de las Pirguas" en el "distrito de las Pirguas, departamento de la
+Caldera". El nombre no esta en el vocabulario del departamento y se asocia
+habitualmente a otra jurisdiccion. Se transcribe lo que dice el documento y no
+se corrige.
+
+E.10 - Limites
+--------------
+
+Son cinco, y son limites y no pendientes: nada de lo que sigue se puede hacer
+en esta sesion con los insumos que llegaron.
+
+1. Deduplicacion por imagen. Sin las .jpg del script no hay md5 ni dhash de
+hoja: la duplicacion se controla solo por texto.
+
+2. Medicion de tinta. Por lo mismo, no hay porcentaje de tinta por hoja y la
+regla de la hoja en blanco no se puede aplicar como la escribe la rubrica.
+
+3. Cotejo sumario/cuerpo: NO APLICABLE. En 1916, como en toda la epoca, el
+Boletin no publica sumario con puntos guia. Declararlo con cero discrepancias
+seria no haber controlado nada.
+
+4. Cadena de folios: NO APLICABLE, y esta vez por una razon distinta de la de
+1908-1912. Alli el folio impreso encadenaba dentro del ano y servia de control
+barato; en 1916 las hojas interiores no llevan folio impreso, lo que se
+verifico en la imagen. Por lo tanto tampoco se puede distinguir una edicion
+corta de una incompleta por esa via: en este ano el punto es teorico, porque
+las 49 ediciones tienen cuatro hojas.
+
+5. El pre-informe, los CSV y el log de lee_auto.py no existen para este ano:
+no hay version ni parametros de corrida que declarar ni errores de log que
+leer.
+
+LO QUE SI SE PUDO, y que en 1911 y 1912 era limite: la confianza por hoja.
+Como el modelo spa se instalo en el tessdata del sistema, tesseract escribio
+los .tsv y hay confianza y coordenadas por palabra para las 196 hojas. Con los
+umbrales de la rubrica - calibrados para otra epoca y que aqui no sirven como
+criterio de publicacion - ninguna hoja llega a "pub", 119 quedan en "ver" y 77
+en "ojos". Esos numeros se usan en este informe para ordenar el trabajo, no
+para afirmar nada sobre el texto.
+
+==============================================================================
+F - CORRECCION A LA RUBRICA
+==============================================================================
+
+Cinco cosas medidas en este barrido, para la v16.
+
+1. LA CADENA DE FOLIOS SE ACABA EN 1916. La rubrica la ofrece como el control
+barato que reemplaza a la declaracion de paginas cuando la tapa no la trae. En
+1916 la tapa sigue sin declarar paginas y ademas las hojas interiores dejan de
+llevar folio: el control no existe. Antes de prometerlo hay que buscar el
+folio en la imagen de una hoja interior, que cuesta una llamada.
+
+2. CON EL MODELO spa EN EL TESSDATA DEL SISTEMA, EL ANO ENTERO SE OCRIZA EN
+SESION Y CON TSV. Dos sesiones seguidas lo confirman. El costo es de unos 9,5
+segundos por hoja con un solo nucleo, y se puede repartir entre turnos porque
+el proceso es reanudable; lo que no sobrevive al cambio de turno es el
+proceso, que hay que relanzar.
+
+3. UN ANO PUEDE TENER CAPA PREVIA EN LA MITAD DE LAS HOJAS. No es ni el caso
+de 1911-1912 (capa en casi todas) ni el de 1915 (capa en casi ninguna): en
+1916 hay capa en 92 de 196 y concentrada en el ultimo tercio del ano. Conviene
+medirlo por hoja y no por ano, y decir en cada ficha si hubo desempate
+posible.
+
+4. EL ENCABEZADO DE UNA LISTA NO SOLO FALTA: PUEDE DESMENTIR LA FICHA. La
+rubrica ya manda leerlo. Lo que 1916 agrega es el costo de no hacerlo: la
+lista de 616 h2 reparte un cargo por departamento y a La Caldera le toca el
+mismo hombre que cuatro meses antes habia sido nombrado expendedor de guias,
+de modo que la ficha escrita sin encabezado decia "expendedores de guias" y
+parecia coherente. El encabezado, al pie de la columna anterior, dice
+"receptores del impuesto al consumo". Una ficha sin encabezado no es una ficha
+incompleta: es una ficha que puede estar mal, y conviene escribir en la nota
+que el encabezado falta ANTES de creerle a la ficha.
+
+5. LA DETECCION DE COLUMNAS POR HISTOGRAMA DE LOS x DEL .tsv FALLA CUANDO UNA
+COLUMNA TIENE POCAS PALABRAS A SU ALTURA. En 616 h2 el histograma dio tres
+picos en 864, 1594 y 2055 sobre 2305 px de ancho: se salteo la primera columna
+y corrio todo un lugar, de modo que el recorte llamado "columna 1" abarcaba
+dos columnas. No arruina la lectura, porque el recorte sigue conteniendo el
+texto, pero si arruina la referencia de columna que despues se escribe en la
+ficha. El control barato es imprimir los picos y compararlos con los tercios
+del ancho; si difieren en mas de un diez por ciento, se recorta por tercios.
+
+==============================================================================
+CONFIG ACTUALIZADO
+==============================================================================
+
+Se entrega un lee_config.json aparte, armado sobre el que vino en el proyecto
+y en el Release, que eran identicos.
+
+ACTORES: de 180 a 196. Se agregan dieciseis con origen 1916 y se conservan
+todos los anteriores: silvano i. murua (forma nueva, junto a "silvano murua"
+de 1946 y "silvano j. murua" de 1909, que no se unifican); andres marin;
+salvador rosa; manuel r. cornejo; pedro mendoza; antonio aguero; pablo
+silvestre; gervacio bejarano; donato arroyo; alberto escudero; celedonia reyes
+del prado; carlos serrey; manuel goica; jose maria romero escobar; octavio
+espeche; casiano hoyos.
+
+QUE NO SE AGREGO A ACTORES Y POR QUE. Eustaquio Murua, Escolastico Aparicio,
+Adolfo Vidal, Camilo Caseres, Augusto Regis, Higinio Juarez, Pedro Arias,
+Daniel Linares, Julio Mercado y Francisco Sosaya ya estaban, con origen 1908 a
+1915: el ano confirma el vocabulario heredado en vez de ampliarlo. Tampoco se
+agregan Martin Gomez Rincon, Herman Pfister, Nolasco Zapata ni Enrique
+Sylvester, que son el juez, el agrimensor, el secretario y el martillero de
+media provincia: cargarlos convertiria el anillo de actores en un colador.
+
+ANILLO 2: de 70 a 72. Se agregan "getsmani", la finca de Daniel Linares que
+linda al Sud con Santa Monica, y "pirguas", por el distrito y el puesto que el
+pedido de cateo ubica en el departamento. No se agrega "acayo", que es de otra
+jurisdiccion.
+
+FALSOS POSITIVOS: sin cambios, los mismos doce. Siguiendo el 12 de la rubrica,
+los falsos positivos de 1916 quedan listados en E.7 y NO se cargan: un termino
+del anillo 1 cuyo contexto contenga un falso positivo del config queda marcado
+y sin recorte, y "calderilla", que en 1916 es dos veces del Rosario de Lerma,
+es justamente el caso en que eso ocultaria una mencion verdadera en otro ano.
+
+NUMEROS: sin cambios, los mismos 40 de 1946. Los seis que dieron acierto de
+cifra en 1916 son coincidencias - importes, articulos y anos -, y esta epoca
+no numera sus actos.
+
+==============================================================================
+RECUENTO
+==============================================================================
+
+  Archivos del Release ............................ 50 (49 PDF + config)
+  Ediciones presentes ............................. 49  (587 a 635)
+  Hojas presentes / declaradas .................... 196 / no declaradas
+  Hojas con capa previa ........................... 92
+  Hojas OCRizadas en sesion ....................... 196
+  Confianza propia: pub / ver / ojos .............. 0 / 119 / 77
+  Imagenes miradas ................................ 40 recortes
+  Hojas vistas en la imagen ....................... 22 + las 49 tapas
+  Columnas recortadas y leidas enteras ............ 31
+  Columnas cotejadas contra la capa previa ........ 5
+  Hojas con acierto de la pasada literal .......... 18
+  Entradas del parrafo A / hojas .................. 12 / 14
+  Terminos del anillo 2 con acierto ............... 27 de 70
+  Actores del config que reaparecen ............... 29 de 180
+  Cuadros publicados / subtotales recalculados .... 0 / 0
+  Resumenes de Tesoreria publicados ............... 0
+  Marcas de publicacion / numeros distintos ....... 462 / 226
+  Planos publicados ............................... 0
+  Citados y no acompanados ........................ 3
+  Actores agregados al config ..................... 16 (origen 1916)
+  Limites declarados .............................. 5
+
+Estado: COMPLETO, con cinco limites declarados.

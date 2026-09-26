@@ -1,0 +1,1800 @@
+INFORME LEE 1928
+Boletin Oficial de la Provincia de Salta, ediciones N 1200 a N 1251
+Termino: La Caldera / Caldera / La Calderilla
+Rubrica LEE v15, fijada el 20/09/2026. Informe del 22/09/2026.
+
+============================================================================
+§0 - ADVERTENCIA PRELIMINAR
+============================================================================
+
+ESTADO: COMPLETO, con seis limites declarados. No queda trabajo que esta
+sesion pueda hacer y no haya hecho. Los tres pendientes que declaraba la
+version anterior de este informe estan cerrados: se recalcularon los
+subtotales de los diez cuadros de Tesoreria General publicados en el ano, se
+miro en la imagen el decreto 9306 de la edicion 1228, y el dia del mes del
+decreto 9499 se resolvio con un recorte a 600 dpi.
+
+LIMITES DECLARADOS: seis. Van desarrollados en E.10. Todos dependen de
+insumos que no llegaron y ninguno se puede levantar desde esta sesion.
+
+Insumos
+-------
+
+No se corrio lee_auto.py sobre 1928. El Release 1928 del repositorio
+ediedrich/boletines-salta trae 53 assets: los 52 PDF de las ediciones 1200 a
+1251 y un lee_config.json. No llegaron el pre-informe, ni
+resultados_1928.csv, ni decretos_1928.csv, ni log.txt, ni recortes.zip, ni
+el zip de los .txt de lee_trabajo. El listado de assets se leyo en la pagina
+releases/expanded_assets/1928, sin token.
+
+El lee_config.json del Release esta atrasado respecto del que el proyecto
+trae adjunto: el del Release tiene 180 actores y llega a 1915; el del
+proyecto tiene 289 actores y llega a 1923, 111 terminos de anillo 2, 78
+numeros y 20 falsos positivos. Se uso el del proyecto, que es el vigente, y
+se declara la diferencia para que el usuario reemplace el asset del Release.
+
+Entorno verificado en esta sesion
+---------------------------------
+
+nproc = 1. PyMuPDF no venia instalado y se instalo desde pypi. tesseract
+5.3.4 esta presente pero «tesseract --list-langs» devuelve solo eng y osd:
+NO HAY spa. Por lo tanto no se OCRizo nada en sesion; el §3 y el §16 de la
+rubrica no son aplicables a este barrido y todo lo que se decidio se decidio
+mirando la imagen.
+
+Los 52 PDF se bajaron con xargs -P 8 en una llamada: 53 MB. Son PDF reales,
+version 1.5, con capa de texto previa. La capa se extrajo en sesion con
+PyMuPDF (§2.1): 1021 hojas.
+
+Que verifico la sesion
+----------------------
+
+La marca de corte U+0002 no aparece ni una vez en las 1021 hojas. El guion
+blando U+00AD aparece 19.444 veces y es, como en 1908-1912, la unica marca
+del corte de renglon: el original no imprime guion visible. La union se
+escribio con la regla corregida de v15 §2.3, que quita el guion blando JUNTO
+CON el salto de renglon. Escrita mal, la pasada literal encontraba 37
+apariciones de «caldera»; escrita bien, encuentra 41. Las cuatro que se
+recuperan no son ruido.
+
+Techo de resolucion: 150 ppi. Cada hoja lleva dos imagenes incrustadas, una
+de 150 ppi y otra de 75 ppi, en jpeg o jpx segun la edicion, y no hay nada
+por encima de eso en ninguna de las 1021 hojas. Es la mitad del techo de
+1908-1912 (300 a 500 ppi) y condiciona todo el barrido: los recortes de este
+informe se rasterizaron a 300, 330, 360 y 400 dpi por interpolacion, sin mas
+detalle que el de 150 ppi.
+
+Dos cosas que cambian respecto de la epoca 1908-1912
+----------------------------------------------------
+
+Primera: LOS ACTOS LLEVAN NUMERO. La serie de decretos va del 6528 (3 de
+enero) al 10062 (27 de diciembre). Vuelven a aplicarse la regla §8.15 de
+fecha contra numeracion sobre los vecinos mas o menos tres, y la regla de
+identificadores multiples del §5.3 con el numero como identificador. La
+numeracion de 1908-1912 no existia y se declaraba; la de 1928 existe y se
+uso.
+
+Segunda: LAS EDICIONES TRAEN SUMARIO. Cuarenta y cinco de las 52 lo traen,
+con referencias de la forma «(pagina N)»: 1.469 referencias en el ano. La
+pagina impresa coincide con la hoja del PDF, lo que se comprobo en la imagen
+en las cabeceras «Pag. 7» de 1209 h7 y 1222 h7, «Pag. 9» de 1217 h9 y «Pag.
+14» de 1214 h14. El cotejo sumario/cuerpo, que en 1908-1912 se declaraba no
+aplicable, aqui SI es aplicable y se hizo: ver §2 y E.2.
+
+Desvios de §8.17
+----------------
+
+Ninguno buscado. El informe transcribe con las tildes y las erratas del
+original; las que no se pueden representar en el archivo, y los signos de
+apertura de guillemet, se escriben con los caracteres que el archivo admite.
+Las erratas del original van con [sic] y se repiten en E.9.
+
+============================================================================
+§1 - CORPUS REVISADO
+============================================================================
+
+52 ediciones, 1021 hojas, ninguna edicion ausente. El Boletin sale los
+viernes y AÑO XX cubre el ano calendario entero: 1928 tuvo 52 viernes, del 6
+de enero al 28 de diciembre, y hay una edicion por cada uno. No hubo ni una
+sola edicion doble ni un solo dia de salida sin edicion. Esto es un hecho
+del corpus y no un supuesto: la serie 1200-1251 no tiene huecos en el
+Release y las fechas de tapa se cotejaron una por una contra el calendario.
+
+La tapa no declara paginas y no hay folio anual corrido: la paginacion de
+1928 es por edicion, y el control que la reemplaza es el sumario. La tabla
+siguiente da, por edicion, la fecha esperada por el calendario, las hojas
+presentes y si la edicion trae sumario. Las fechas leidas en la imagen van
+entre corchetes.
+
+  ed.   fecha (viernes)        hojas   sumario
+  ----  ---------------------  -----   -------
+  1200  6 de enero                 7   no
+  1201  13 de enero               11   no
+  1202  20 de enero               14   si
+  1203  [27 de enero]             12   si
+  1204  3 de febrero              12   si
+  1205  10 de febrero             28   si
+  1206  17 de febrero             20   si
+  1207  24 de febrero              7   no
+  1208  2 de marzo                10   no
+  1209  9 de marzo                26   si
+  1210  16 de marzo               23   si
+  1211  23 de marzo               20   si
+  1212  30 de marzo               22   si
+  1213  6 de abril                20   si
+  1214  13 de abril               24   si
+  1215  20 de abril               34   si
+  1216  27 de abril               19   si
+  1217  4 de mayo                 38   si
+  1218  11 de mayo                27   si
+  1219  18 de mayo                15   si
+  1220  25 de mayo                 9   si
+  1221  1 de junio                15   si
+  1222  8 de junio                23   si
+  1223  15 de junio               23   si
+  1224  22 de junio               19   si
+  1225  29 de junio               24   si
+  1226  6 de julio                18   si
+  1227  13 de julio               17   si
+  1228  20 de julio               21   si
+  1229  27 de julio               20   si
+  1230  3 de agosto               18   si
+  1231  10 de agosto              28   si
+  1232  17 de agosto              17   no
+  1233  24 de agosto              24   si
+  1234  31 de agosto              16   no
+  1235  7 de septiembre           29   si
+  1236  14 de septiembre          12   si
+  1237  21 de septiembre          13   no
+  1238  28 de septiembre          18   si
+  1239  5 de octubre              24   si
+  1240  12 de octubre             20   si
+  1241  19 de octubre             27   si
+  1242  26 de octubre             32   si
+  1243  2 de noviembre            20   si
+  1244  9 de noviembre            29   si
+  1245  16 de noviembre           30   si
+  1246  23 de noviembre           27   si
+  1247  30 de noviembre           16   si
+  1248  7 de diciembre            11   si
+  1249  [13 de diciembre, sic]     12   si
+  1250  21 de diciembre           12   si
+  1251  28 de diciembre            8   si
+
+Hojas por edicion: de 7 (1200 y 1207) a 38 (1217). La edicion mas corta del
+ano es la primera. No hay edicion incompleta detectable: sin folio corrido
+no existe el control de v15 §2.5bis que distingue la edicion corta de la
+incompleta, y el sumario, que es el control que si hay, no deja ninguna
+referencia por encima del numero de hojas presentes salvo una, que es errata
+del OCR (E.2).
+
+Tipo y confianza: los 52 archivos son PDF reales con capa de texto previa e
+imagen incrustada. Sin el .tsv de lee_auto.py no hay confianza por hoja y no
+existe el reparto pub/ver/ojos: es un limite (E.10), no un pendiente.
+
+AÑO EDITORIAL Y AUTORIDAD DE TAPA. Las 52 tapas dicen AÑO XX: el ano
+editorial no cambia dentro de 1928. La tapa lleva el nombre del gobernador,
+y ahi cambia: «GOBIERNO DEL DR. JOAQUIN CORBALAN» de la 1200 a la 1216, y
+«GOBIERNO DEL DR. JULIO CORNEJO» de la 1217 (4 de mayo) a la 1251. El
+apellido se leyo en la imagen de la tapa de 1203: la capa previa lo lee
+«Corbacho» en casi todas las ediciones, y es ruido del OCR, no una segunda
+grafia del original.
+
+FECHA DE TAPA QUE NO CIERRA. La tapa de la edicion 1249 imprime «SALTA,
+VIERNES 13 DE DICIEMBRE DE 1928». El 13 de diciembre de 1928 fue jueves; el
+viernes de esa semana fue el 14. La tapa se leyo en la imagen a 400 dpi y
+dice 13. No es errata del OCR. Se declara y no se concilia: el informe no
+decide si el error esta en el dia de la semana o en el numero.
+
+============================================================================
+§2 - CRITERIO DE BUSQUEDA
+============================================================================
+
+Versiones
+---------
+
+Hay UNA sola version del texto: la capa previa de los PDF, extraida en
+sesion. No hubo OCR propio, porque tesseract no trae spa en esta sesion. Por
+lo tanto todo resultado se etiqueta «prev» y NO HUBO DESEMPATE POSIBLE ENTRE
+VERSIONES: cada vez que una palabra decidia una ficha, el desempate fue la
+imagen. Es el mismo regimen de 1911 y 1912.
+
+Las cuatro pasadas
+------------------
+
+LITERAL / NORMALIZADA. Patron «cald» sobre el texto unido, en NFD sin
+diacriticos: 53 aciertos en 38 hojas. Las formas: caldera 41, calderon 5,
+caldas 3, calderilla 1, calderrilla 1, caldeion 1, localde 1.
+
+LAXA. El patron de clases de v15 devuelve las mismas 41 apariciones de
+caldera, mas 5 «caldero» (que son la raiz de Calderon) y un «ga!, dema».
+Escrita ademas con la clase de espacios entre TODAS las letras, y no solo en
+el medio, recupera «c a ldera» de la edicion 1214 hoja 14, que es donde el
+original separa las letras. La pasada se probo antes de creerle: sobre texto
+artificial acierta «ca1 dera», «cal dera» partido por salto de renglon y
+«galdera». No esta rota.
+
+DIFUSA, ratio mayor o igual a 0,78 contra caldera y calderilla, sobre las
+21.941 palabras distintas del ano: once formas. Tres son reales y decisivas:
+«jalderilla» (0,90) en 1209 h7, «alderilla» (0,95) en el sumario de 1236, y
+«ldera» (0,83) en 1214 h14, que es el «c a ldera» del decreto 6777. Las
+otras ocho son ruido ya juzgado: calderon, calabera, calavera, escalera,
+calera, cadenilla, «adera» de «m adera» y «calderrilla», que no es ruido
+sino la grafia con doble r del decreto 9458 y entra por el §A.
+
+SIN LA DIFUSA, TRES ACTOS DEL DEPARTAMENTO NO EXISTIRIAN EN ESTE INFORME: la
+lista entera de mesas y parajes de 1209, el decreto 6777 que acepta la
+renuncia del comisario, y la entrada de sumario de 1236. Es el cuarto ano
+seguido en que la difusa rescata lo que la literal pierde.
+
+DIFUSA AMPLIADA, banda 0,70 a 0,78 restringida a palabras que empiezan con
+c, g u o: se corrio y no agrego ninguna aparicion real. Las formas de la
+banda son las de siempre (cuadras, calidad, cabrera, carrera, candela,
+cartera) y van a §12.
+
+ANILLO 2, ACTORES, NUMEROS Y REEMPLAZOS se corrieron sobre el texto
+normalizado y ademas sobre el texto con la puntuacion suprimida, como manda
+§5.1.
+
+Cotejo sumario / cuerpo
+-----------------------
+
+APLICABLE, por primera vez desde que el proyecto barre esta serie de anos.
+Cuarenta y cinco ediciones traen sumario; se extrajeron 1.469 referencias
+«(pagina N)» de las hojas 1 a 4 y se compararon contra el numero de hojas
+presentes de cada edicion. Una sola cae fuera de rango, en la edicion 1251,
+donde el OCR lee «44» en una edicion de 8 hojas: es errata de la capa y no
+falta de hoja. Las trece entradas de sumario que nombran el departamento se
+verificaron una por una contra el acto: las trece cierran. La unica que
+parecia no cerrar, la de 1228 («pagina 7» con el termino en la hoja 8),
+cierra igual: el decreto empieza al pie de la hoja 7.
+
+Lista de actores y su origen
+----------------------------
+
+Se busco el config vigente entero, 289 actores de doce anos y ocho ediciones
+de 1946. Reaparecen en 1928 con nombre y apellido completos 38 de ellos. Los
+que importan al departamento: Teofilo Reyes (origen 2465), Julio Mercado
+(1909), Virgilio Arevalo (1910), Herman Pfister (1917), Pedro Vale (1919),
+Pedro Arevalo (2584), Eustaquio Guerra (1922) y Juan de la Cruz Nogales
+(1922). Los ocho aparecen en actos del departamento, no en homonimias: el
+config heredado funciona a dieciseis anos de distancia de su tramo mas viejo
+de esta epoca.
+
+No se declara ausente a ningun actor cuya busqueda por nombre completo no
+devuelva su propio acto, porque en 1928 no hay actores previos con acto
+propio en el ano: los 38 que reaparecen lo hacen en actos nuevos. Las
+ausencias del §B se arman sobre los actores DE 1928, que son los que este
+barrido incorpora.
+
+Numeros arrastrados
+-------------------
+
+Los 78 numeros del config son de 1946 y de las epocas anteriores. Treinta y
+ocho dan acierto en 1928 y los treinta y ocho son coincidencia de cifra:
+anos, cantidades, importes, numeros de articulo. Ninguno es una serie de
+acto que se arrastre hasta 1928. Los numeros que este barrido aporta son
+nuevos y propios: los veintiun decretos del §A y del §B.
+
+Identificadores de las ausencias
+--------------------------------
+
+En 1928 los actos llevan numero, de modo que toda ausencia se afirma con
+numero de decreto mas fecha, y donde hay, con numero de expediente. Para las
+personas, el identificador es el cargo y el lugar.
+
+============================================================================
+§A - MENCIONES EXPLICITAS
+============================================================================
+
+Veintiuna apariciones fichadas, en veintiuna entradas, repartidas en
+dieciseis ediciones. Se ordenan por edicion y hoja.
+
+----------------------------------------------------------------------------
+A.1   (edicion 1205, hoja 8)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1205, 10 de febrero de 1928, hojas 8 y 9 (paginas 8 y 9);
+sumario en la hoja 2.
+
+FICHA: Decreto N 6569, Salta, Enero 19 de 1928. Nombramiento de Receptor de
+Rentas y Recaudador de impuestos al consumo del departamento de la Caldera a
+don Ramon Balboa. Ministerio de Hacienda.
+
+MODO DE LECTURA: Columna 2 mitad inferior de la hoja 8 y columna 1 mitad
+superior de la hoja 9, recortadas a 300 dpi sobre imagen de 150 ppi.
+Transcripcion desde la imagen. La entrada del sumario se leyo en la capa
+previa.
+
+TEXTO:
+
+  Nombramiento
+  6569-Salta, Enero 19 de 1928.
+    Encontrandose vacante el cargo de Receptor de Rentas y Recaudador de
+  impuestos al consumo del departamento de la Caldera,
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.-Nombrase para ocupar los citados cargos al senor Ramon Bal-
+  boa, quien, antes de tomar posesion de los mismos, prestara una fianza de
+  $ 5.000, de acuerdo con la Ley de Contabilidad.
+    Art. 2o.-Comuniquese, publiquese, insertese en el Registro Oficial y
+  archivese.
+        CORBALAN-A. B. ROVALETTI
+
+NOTA DE LECTURA: El sumario de la hoja 2 anuncia «Receptor de rentas y
+recaudador de impuestos de La Caldera-se nombra (pagina 8)»: la pagina
+impresa coincide con la hoja del PDF. El decreto empieza en la hoja 8 y
+termina en la 9. El decreto vecino anterior lleva refrendo triple
+(CORBALAN-A. B. ROVALETTI, ERNESTO M. ARAOZ); este lleva solo el de
+Hacienda. Balboa es el hombre que atraviesa el ano entero: ver las fichas de
+1214, 1222, 1223, 1230 y 1231.
+
+----------------------------------------------------------------------------
+A.2   (edicion 1205, hoja 12)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1205, 10 de febrero de 1928, hojas 10 a 12 (paginas 10 a
+12).
+
+FICHA: H. Junta de Escrutinio de la Provincia. Nomina de presidentes y
+suplentes de mesa. Bloque LA CALDERA, circuitos N 5 y N 6.
+
+MODO DE LECTURA: Encabezado leido en la capa previa al pie de la hoja 10; el
+bloque del departamento, en recorte de la columna 2 de la hoja 12 a 360 dpi.
+El recorte deja fuera la columna de rotulos (Presidente / suplente 1 / 2),
+que se lee en la capa previa.
+
+TEXTO:
+
+  H. JUNTA DE ESCRUTINIO DE LA PROVINCIA
+  PROVINCIA DE SALTA
+  Nomina de presidentes titulares y suplentes
+  [...]
+  LA CALDERA - Circuito N 5
+    Presidente   Regis Augusto
+    suplente 1   Guerrero Romulo Santiago
+         »   2   Lizondo Eustaquio
+    Presidente   Molina Lucas
+    suplente 1   Mercado Enrique
+         »   2   Arevalo Pedro
+  Circuito N 6
+    Presidente   Urquiza Francisco Solano
+    suplente 1   Bruzzo Manlio Carlos
+         »   2   Soria Manuel
+
+NOTA DE LECTURA: Sin el encabezado de la hoja 10 la lista no se puede
+fichar: son presidentes y suplentes de mesa, no vecinos ni electores. Seis
+nombres para el circuito 5 y tres para el 6, que es exactamente el reparto
+de mesas que declara la edicion 1209 (dos mesas en el circuito 5, una en el
+6). Urquiza Francisco Solano es, por el nombre, el mismo Francisco S.
+Urquiza que en abril renuncia a la Comision Municipal (ficha de 1218) y cuya
+concesion de agua se discute en las fichas de 1217 y 1222.
+
+----------------------------------------------------------------------------
+A.3   (edicion 1209, hoja 7)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1209, 9 de marzo de 1928, hoja 7 (pagina 7).
+
+FICHA: Ubicacion de mesas receptoras de votos y composicion de los
+circuitos. CALDERA - COLEGIO ELECTORAL N 2, circuitos N 5 y N 6.
+
+MODO DE LECTURA: Columna 2, mitades superior e inferior, recortadas a 300
+dpi. Transcripcion integra desde la imagen; el empalme entre las dos mitades
+repite el renglon «Alegre, Calderilla, Corral de Barran-».
+
+TEXTO:
+
+  Caldera Colegio Electoral N 2
+                Circuito N. 5
+    Mesa N. 1 - Escuela Elemental Mixta, La Caldera.-Circuito; - Pueblo,
+  Potrero de Castilla, Penones y San Alejo.
+    Mesa N. 2-Iglesia Parroquial, La Caldera.-Circuito: Abra, La Sierra
+  Angosto, Angosto de Arrieta, Angostura, El Acheral, El Bordo, Campo
+  Alegre, Calderilla, Corral de Barranca, Canada Ancha, Churcal, Cacha-
+  nio, Despensa, Despensilla, Helvecia, Higueritas, Las Lagunas, Mosquera,
+  Los Matos, Monte de las Garrapatas, Mesada, Nogalito, Los Porongos, Po-
+  trero de Valencia, Queseria, Severino, Santa Gertrudis, Los Sauces,
+  Santa Rufina, Wierna y Yacones.
+                Circuito Num. 6
+    Mesa N 1-Escuela Infantil Provincial, Vaqueros.--Circuito: Entre
+  Rios, Estacion Mojotoro, Lesser, Mojotoro, Mojotorito, Potrero del Galli-
+  nato, San Jose, Tunel, Vaqueros, y Villa Urquiza.
+
+NOTA DE LECTURA: Es la lista de parajes mas completa del ano. Recuento: 4
+nombres en la mesa 1, 10 en la mesa del circuito 6, y entre 30 y 31 en la
+mesa 2, segun se lea «La Sierra Angosto» como un nombre o como dos: el
+original no pone coma entre «Sierra» y «Angosto», y el decreto 9458 de la
+edicion 1231 nombra «El Angosto» como lugar aparte. Total entre 44 y 45
+parajes; no se concilia. El original imprime aqui «Calderilla» con una sola
+r, y el decreto 9458 «Calderrilla» con dos. La pasada literal no ve esta
+forma: la trajo la difusa, que la lee «jalderilla» (ratio 0,90). Doce de
+estos nombres no estaban en el anillo 2: Helvecia, Higueritas, Mosquera, Los
+Matos, Monte de las Garrapatas, Mesada, Nogalito, Severino, Canada Ancha,
+Villa Urquiza, San Jose y Potrero del Gallinato. El Acheral figura tambien,
+en la misma hoja, en el circuito de Los Noques, que no es del departamento.
+
+----------------------------------------------------------------------------
+A.4   (edicion 1214, hoja 14)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1214, 13 de abril de 1928, hoja 14 (pagina 14); sumario
+en la hoja 2.
+
+FICHA: Decretos N 6776 y N 6777, los dos de Salta, Marzo 26 de 1928.
+Renuncias del Juez de Paz Propietario y del Comisario de Policia de La
+Caldera. Ministerio de Gobierno.
+
+MODO DE LECTURA: Columna 1, mitades superior e inferior, a 300 dpi.
+Transcripcion desde la imagen. Cabecera impresa «Pag. 14» leida en el mismo
+recorte.
+
+TEXTO:
+
+  Renuncia aceptada
+  6776--Salta, Marzo 26 de 1928.
+    Exp. N 468-J--Vista la renuncia presentada por don Victorio Offredi
+  del cargo de Juez de Paz Propietario de La Caldera,
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.--Aceptase la renuncia que antecede.
+    Art. 2o,-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORBALAN-ERNESTO M. ARAOZ.
+
+  Renuncia aceptada
+  6777-Salta, Marzo 26 de 1928.
+    Exp. N 473-B--Vista la renuncia presentada por don Ramon Balvoa del
+  cargo de Comisario de Policia La Caldera,
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.-Aceptase la renuncia que antecede. [...]
+        CORBALAN-ERNESTO M. ARAOZ.
+
+NOTA DE LECTURA: El segundo decreto escribe el apellido BALVOA; los decretos
+6569, 8002, 9406 y 9464 del mismo ano escriben BALBOA, y el 8099 vuelve a
+escribir Balvoa. Se transcriben las dos formas y no se unifican. El 6777
+imprime «Comisario de Policia La Caldera», sin la preposicion. Vecinos
+mirados: 6778 (sub-comisarios de Santa Victoria), ajeno al departamento. En
+la columna 2 de la misma hoja arranca el MINISTERIO DE HACIENDA y su primer
+decreto es el 6723, del 8 de marzo, impreso despues de los del 26: el
+Boletin agrupa por ministerio y dentro de cada grupo la fecha no corre con
+la del grupo anterior.
+
+----------------------------------------------------------------------------
+A.5   (edicion 1217, hoja 9)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1217, 4 de mayo de 1928, hoja 9 (pagina 9); sumario en la
+hoja 2.
+
+FICHA: Decreto N 6867, Salta, Abril 20 de 1928, exp. N 579-M. Aprueba el
+Presupuesto de Gastos y Calculo de Recursos de la H. Comision Municipal de
+La Caldera para el ejercicio de 1928.
+
+MODO DE LECTURA: Columna 1 mitad inferior a 300 dpi y recorte chico a 400
+dpi sobre el numero del decreto. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Aprobacion de presupusto [sic]
+  6867-Salta, Abril 20 de 1928.
+    Exp. N. 579-M-Visto el Presupuesto de Gastos y Calculo de Recursos
+  sancionado por la H. Comision Mnnicipal [sic] La Caldera para el ejercicio
+  del corriente ano y careciendo de fundamento la observacion formulada
+  por el Consejo General de Educacion
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.-Apruebase el Presupuesto de Gastos y Calculo de Recursos
+  presentado por la Comision Municipal de La Caldera para el ejercicio del
+  corriente ano
+    Art. 2o.-Pasese este expediente al libro correspondiente del Ministerio
+  de Gobierno.
+    Art. 3o.-Comuniquese, publiquese dese al Registro Oficial y archivese
+        CORBALAN--ERNESTO M. ARAOZ.
+
+NOTA DE LECTURA: La capa previa lee el numero «6so7» y el pre-informe habria
+fichado un decreto 6807 que no existe: el recorte a 400 dpi dice 6867. El
+decreto NO transcribe las cifras del presupuesto municipal: aprueba un
+expediente que no acompana. Es la unica vez en el ano en que el Boletin toca
+las cuentas de la comuna, y no hay ningun balance municipal del departamento
+publicado en 1928. Dos erratas del original en el mismo acto: «presupusto»
+en el rubro y «Mnnicipal» en el vistos. Vecinos mirados: 6868 y 6870,
+ajenos.
+
+----------------------------------------------------------------------------
+A.6   (edicion 1217, hoja 11)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1217, 4 de mayo de 1928, hoja 11 (pagina 11).
+
+FICHA: Decreto N 6877, Salta, Abril 21 de 1928, exp. N 3898-C. Rechaza los
+reclamos contra la concesion del agua del Rio Wierna a don Francisco
+Urquiza.
+
+MODO DE LECTURA: Columna 2 mitad inferior a 300 dpi; el considerando, en la
+capa previa de la misma hoja. Transcripcion de la parte resolutiva desde la
+imagen.
+
+TEXTO:
+
+  [del considerando, leido en la capa previa:] «que producidas las diligen-
+  cias necesarias para constatar el merito de la segunda, la Direccion de
+  Obras Publicas, evacuando los informes aconsejados por la Comision Mu-
+  nicipal de la Caldera y el senor Fiscal General, manifiesta que; dado el
+  nacimiento y recorrido de la acequia del senor Urquiza y la circunstancia
+  de que va a morir en el Rio Vaqueros, lejos de disminuir el caudal del
+  Rio Mojotoro, tiende a aumentar el del Vaqueros, afluente de aquel»
+
+  [desde la imagen:]
+    El Gobernador de la Provinia [sic]
+              DECRETA:
+    Art. 1o.-No se hace lugar a los reclamos presentados por varios vicinos
+  [sic] del Departamento de Campo Santo y la Comision Municipal del mismo
+  Departamento, contra la concesion otorgada por decreto del 28 de Enero de
+  1924 a don Francisco Urquiza para el uso del agua del Rio Wierna, cuyo
+  derecho seguira ejerciendo en la forma y condiciones acordadas por dicha
+  concesion.
+    Art. 2o.-Pase a Escribania de Gobierno para que se inscriba en el Libro
+  de Registro de Concesiones de Agua [...]
+        CORBALAN-ERNESTO M. ARAOZ.
+
+NOTA DE LECTURA: El acto entra al §A porque el considerando nombra a la
+Comision Municipal de la Caldera como organo informante, y toda la
+hidrografia en juego es del departamento: Wierna, Vaqueros y Mojotoro. El
+decreto del 28 de Enero de 1924 se cita y no se acompana: esta fuera del
+corpus del ano (E.2). Veintiun dias despues el decreto 8023 deja sin efecto
+esa misma concesion, y no cita este decreto: ver §B.2. El original imprime
+«Provinia» y «vicinos».
+
+----------------------------------------------------------------------------
+A.7   (edicion 1218, hoja 12)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1218, 11 de mayo de 1928, hoja 12 (pagina 12).
+
+FICHA: Decreto N 6958, Salta, Abril 30 de 1928, exp. N 674-U. Renuncia de
+Francisco S. Urquiza como Miembro de la Comision Municipal de La Caldera.
+
+MODO DE LECTURA: Columna 2 a 330 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Renuncia
+  6958-Salta, Abril 30 de 1928.
+    Exp. N. 674-U-Vista la renuncia que antecede,
+    El Gobernador de la Provincia
+              DECRETA:
+    Arr. [sic] 1o.-Aceptase la renuncia interpuesta por el senor Francisco S.
+  Urquiza del cargo de Miembro de la Comision Municipal de La Caldera.
+    Art. 3o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORBALAN-ERNESTO M. ARAOZ.
+
+NOTA DE LECTURA: El decreto pasa del articulo 1 al articulo 3: NO HAY
+ARTICULO 2 impreso, y no se completa. Ademas el rotulo del primer articulo
+se imprime «Arr.» y no «Art.». Las dos cosas se ven en la imagen. El
+renunciante es el mismo Francisco Urquiza de la concesion de agua del Rio
+Wierna (fichas de 1217 y §B.2), y el mismo «Urquiza Francisco Solano» que
+preside la mesa del circuito 6 en la nomina de 1205: el Boletin no cruza los
+tres hechos en ningun lado.
+
+----------------------------------------------------------------------------
+A.8   (edicion 1221, hoja 14)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1221, 1 de junio de 1928, hoja 14 (pagina 14). Seccion de
+avisos, aviso N (2719).
+
+FICHA: Remate judicial. Efectos embargados en el distrito Vaqueros, Dept. de
+la Caldera, en el juicio de Pedro Montalvetti contra Manuel Soria.
+Martillero Indo de Campo.
+
+MODO DE LECTURA: Columna 1 a 330 dpi. Transcripcion desde la imagen; el
+encabezado del aviso y el numero (2719), en la capa previa.
+
+TEXTO:
+
+  POR INDO DE CAMPO
+  REMATE JUDICIAL
+    Por orden del senor Juez de 1a Instancia en lo Civil y Comercial, doctor
+  Carlos Gomez Rincon, en el juicio seguido por Pedro Montalvetti contra
+  don Manuel Soria, el dia primero de junio del ano 1928, en el local de la
+  Confiteria del Aguila Mitre 85, a las 6, rematare al mejor postor y dinero
+  de contado, los efectos embargados en dicho juicio y que se encuentran
+  depositados en poder del ejecutado en el Distrito Vaqueros, Dept. de la
+  Caldera:
+    2 bueyes de servicio color castano.
+    2 bueyes de servicio color osco con marcas anteojo.
+    En el acto del remate exigire el pago integro de la compra mas la comi-
+  sion que es por su cuenta. [...]                        (2719)
+
+NOTA DE LECTURA: Unico acto del ano que llega al departamento por la via de
+los avisos y no por la de los decretos, y unica mencion de bienes de un
+vecino. El aviso se publica en la misma edicion cuya tapa lleva la fecha del
+remate, 1 de junio. No lleva marca de publicacion corrida y su numero,
+(2719), no reaparece en ninguna otra hoja del ano: no se repitio (E.6).
+
+----------------------------------------------------------------------------
+A.9   (edicion 1222, hoja 6)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1222, 8 de junio de 1928, hoja 6 (pagina 6); sumario en
+la hoja 1.
+
+FICHA: Decreto N 7095, Salta, Mayo 9 de 1928. Nombra Comisario de Policia de
+La Caldera a don Julio Royo Ortiz.
+
+MODO DE LECTURA: Columna 2 mitad inferior a 300 dpi. Transcripcion desde la
+imagen.
+
+TEXTO:
+
+  Nombramiento
+  7095-Salta, Mayo 9 de 1928.
+    Vista la propuesta del senor Jefe de Policia de la Provincia,
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.-Nombrase Comisario de Policia de La Caldera a don Julio
+  Royo Ortiz. [...]
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: La capa previa lee «Julia Royo Ortiz»; la imagen dice
+Julio, y el decreto 8099 de la edicion 1223 lo confirma. El vecino anterior,
+7094, declara en acefalia la Municipalidad de Embarcacion con la misma
+formula que el 7096 usara para la de La Caldera: dos municipalidades
+intervenidas el mismo dia.
+
+----------------------------------------------------------------------------
+A.10   (edicion 1222, hoja 7)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1222, 8 de junio de 1928, hoja 7 (pagina 7); sumario en
+la hoja 2.
+
+FICHA: Decretos N 7096 y N 8002, los dos de Salta, Mayo 9 de 1928. Acefalia
+de la H. Comision Municipal de La Caldera y nombramiento de comisionado; y
+Encargado de la Oficina del Registro Civil.
+
+MODO DE LECTURA: Columna 1 mitad superior y columna 2 mitades superior e
+inferior, a 300 dpi. Transcripcion desde la imagen. Cabecera impresa «Pag.
+7» leida en el recorte.
+
+TEXTO:
+
+  Acefalia y nombramiento
+  7096-Salta, Mayo 9 de 1928.
+    Debiendo procederse a la reorganizacion de la Municipalidad de La
+  Caldera, para asegurar la existencia del regimen municipal,
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.-Declarase en acefalia la H. Comision Municipal de La Caldera.
+    Art. 2o.--Nombrase con caracter ad-honorem Comisionado de la misma
+  al senor Luis E. Guardo, hasta tanto se proceda a su reorganizacion.
+    Art. 3o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+  Nombramiento
+  8002-Salta, Mayo 9 de 1928.
+    El Gobernador de la Provincia, en uso de sus Facultades Constitucionales
+              DECRETA:
+    Art. 1o.-Nombrase Encargado de la Oficina del Registro Civil de La
+  Caldera al senor Teofilo Reyes en reemplazo de don Ramon Balboa.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: Entre los dos decretos, en la misma hoja y con la misma
+fecha, la serie salta de 7097 a 8001: novecientos numeros en un dia, con los
+dos tramos firmados por el mismo gobernador y el mismo ministro. Se declara
+y no se concilia (E.9). Teofilo Reyes vuelve en octubre como Juez de Paz
+Suplente (ficha de 1245). La acefalia de la comuna dura hasta el 26 de junio
+(ficha de 1228).
+
+----------------------------------------------------------------------------
+A.11   (edicion 1222, hoja 9)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1222, 8 de junio de 1928, hoja 9 (pagina 9).
+
+FICHA: Decreto N 8024, Salta, Mayo 12 de 1928, exp. N 802-P. Renuncia de
+Eustaquio Guerra como Sub-Comisario ad-honorem de Mojotoro, Departamento de
+La Caldera, y nombramiento de Juan de la Cruz Nogales.
+
+MODO DE LECTURA: Columna 2 mitad superior a 330 dpi. Transcripcion desde la
+imagen.
+
+TEXTO:
+
+  Renuncia y nombramiento
+  8024-Salta, Mayo 12 de 1928.
+    Exp. N. 802-P-Vista la renuncia que antecede,
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.--Aceptase la renuncia presentada por el senor Eustaquio Guerra
+  del cargo de Sub-Comisario de Policia «ad--honorem» de Mojotoro --Depar-
+  tamento de La Caldera y nombrase en su reemplazo al senor Juan de la
+  Cruz Nogales.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: Guerra habia sido nombrado en ese mismo cargo tres dias
+antes, por el decreto 8001 del 9 de mayo (§B.2), que la pasada literal no ve
+porque no nombra el termino. El nombramiento y la renuncia se publican en la
+misma edicion y en hojas contiguas, sin remision entre si. Vecinos mirados:
+8023 (§B.2) y 8025 (Chicoana).
+
+----------------------------------------------------------------------------
+A.12   (edicion 1223, hoja 14)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1223, 15 de junio de 1928, hoja 14 (pagina 14); sumario
+en la hoja 3.
+
+FICHA: Decreto N 8099, Salta, Mayo 18 de 1928. Nombra transitoriamente
+Receptor de Rentas y Expendedor de Guias de La Caldera a Julio Royo Ortiz en
+reemplazo de Ramon Balvoa. Ministerio de Hacienda.
+
+MODO DE LECTURA: Columna 1 a 330 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Nombramiento
+  8099-Salta, Mayo 18 de 1928.
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.-Nombrase transitoriamente Receptor de Rentas y Expendedor
+  de Guias, transferencia de cueros, marcas y multas policiales de La Cal-
+  dera, al senor Julio Royo Ortiz, en reemplazo de don Ramon Balvoa.
+    Art. 2o El nombrado, antes de tomar posesion de los mencionados car-
+  gos, prestara la fianza respectiva de acuerdo al Art. 77 de la Ley de
+  Contabilidad de la Provincia.
+    Art. 3o.-Comuniquese, publiquese, insertese en el R. Oficial y archivese.
+        CORNEJO--JULIO C. TORINO
+
+NOTA DE LECTURA: Royo Ortiz acumula, en nueve dias, la comisaria (decreto
+7095) y la receptoria de rentas (este), los dos cargos que Balboa dejaba. El
+decreto llama al saliente Balvoa, como el 6777 y a diferencia del 6569 que
+lo habia nombrado. El vecino siguiente es el 9004, del 19 de mayo: segundo
+salto de la serie en el ano, de 8099 a 9004 en un dia (E.9).
+
+----------------------------------------------------------------------------
+A.13   (edicion 1228, hoja 7)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1228, 20 de julio de 1928, hojas 7 y 8 (paginas 7 y 8);
+sumario en la hoja 2.
+
+FICHA: Decreto N 9306, Salta, Junio 26 de 1928. Nombra los cinco miembros de
+la H. Comision Municipal de La Caldera y cierra la acefalia.
+
+MODO DE LECTURA: Columna 2 de la hoja 7 (pie) y columna 1 de la hoja 8
+(cabeza), recortadas a 330 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Nombramientos
+  9306-Salta, Junio 26 de 1928.
+    El Gobernador de la Provincia, en uso de sus facultades constitucionales,
+              DECRETA:
+    Art. 1o.-Nombrase miembros de la H. Comision Municipal de La Caldera
+  a los senores Julio Mercado, Manuel Condori, Herman Pfister, Carlos
+  Outes y Luis Leper.
+    Art. 2o. El senor Comisionado debera entregar dicha comuna a los seno-
+  res miembros bajo un prolijo inventario.
+    Art. 3o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: El sumario de la hoja 2 lo manda a la pagina 7 y el termino
+cae en la 8: el decreto empieza al pie de una hoja y termina en la
+siguiente. No es discrepancia del sumario. Julio Mercado y Herman Pfister ya
+estaban en el config heredado, con origen 1909 y 1917 respectivamente;
+Manuel Condori renuncia un mes despues (ficha de 1231) y lo reemplaza Pedro
+Arevalo, que en febrero era suplente de mesa del circuito 5 (ficha de 1205).
+El vecino 9307, en la misma hoja y con la misma fecha, hace lo mismo con la
+Comision Municipal de Cachi: las dos comunas se reorganizan el mismo dia.
+
+----------------------------------------------------------------------------
+A.14   (edicion 1229, hoja 3)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1229, 27 de julio de 1928, hoja 3 (pagina 3).
+
+FICHA: Decreto N 9329, Salta, Junio 28 de 1928, exp. N 1246-P. Declara
+ad-honorem nombramientos de sub-comisarios de mayo, entre ellos el de
+Macedonio Martinez de Vaqueros; Caldera.
+
+MODO DE LECTURA: Columna 1 a 360 dpi para el numero, la fecha y el
+encabezado; la enumeracion de lugares, en la capa previa de la misma hoja.
+
+TEXTO:
+
+  Nombramientos
+  9329-Salta, Junio 28 de 1928.
+    Exp. N. 1246-P-Vista la solicitud del senor Jefe de Policia,
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.-Dejase establecido que los nombramientos de Sub-Comisarios
+  dados con fechas 3, 5, 9 y 18 de mayo ppdo., a favor de los senores Zaca-
+  rias Rios, El Jardin--Candelaria; Dionisio Condori, de Santa Cruz-Oran;
+  Meliton Tejerina, de Corralitos--Oran; Macedonio Martinez, de Vaqueros;
+  Caldera y Segundo Bazan de Las Curtiembres-La Vina-son con caracter
+  ad-honorem.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: El nombre del departamento aparece como aposicion del
+paraje, «Vaqueros; Caldera», con punto y coma donde el resto de la lista usa
+raya: se transcribe tal cual. El decreto cita nombramientos de los dias 3,
+5, 9 y 18 de mayo; el de Martinez es el del 9 (decreto 8001, §B.2). Dionisio
+Condori, de Santa Cruz-Oran, no es el Manuel Condori de la Comision
+Municipal: el apellido coincide y el lugar no.
+
+----------------------------------------------------------------------------
+A.15   (edicion 1230, hoja 6)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1230, 3 de agosto de 1928, hoja 6 (pagina 6); sumario en
+la hoja 2.
+
+FICHA: Decreto N 9406, Salta, Julio 18 de 1928, exp. N 904-M. Reconoce a
+Ramon Balboa los servicios prestados al frente de la Comisaria de La Caldera
+entre el 2 de abril y el 12 de mayo.
+
+MODO DE LECTURA: Columna 2 a 330 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Reconocimiento de servicios
+  9406-Salta, Julio 18 de 1928.
+    Exp. N. 904-M-Vista la presentacion de don Ramon Balboa, solicitando
+  sean reconocidos sus servicios como Comisario de Policia de la Caldera
+  prestados desde el dia 2 de Abril ppdo., hasta el 12 de Mayo del corriente
+  ano y atento los informes que corren en el mismo,
+    El Gobernador de la Provincia
+              DECRETA:
+    Art. 1o.-Reconocense los servicios prestados al frente de la Comisaria
+  de La Caldera por don Ramon Balboa desde el 2 de Abril hasta el 12 de
+  Mayo del corriente ano.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: Contradiccion con el decreto 6777: la renuncia de Balvoa al
+mismo cargo fue aceptada el 26 de marzo, y este decreto le reconoce
+servicios desde el 2 de abril. Los dos actos estan en el corpus y ninguno
+cita al otro; no se concilia. El vecino 9407 acepta la renuncia del
+sub-comisario ad-honorem de «Los Sauces» del departamento de SAN CARLOS:
+mismo nombre de paraje que un lugar del anillo 2, otro departamento (§B.3).
+
+----------------------------------------------------------------------------
+A.16   (edicion 1231, hoja 3)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1231, 10 de agosto de 1928, hoja 3 (pagina 3); sumario en
+la hoja 1.
+
+FICHA: Decreto N 9441, Salta, Julio 28 de 1928, exp. N 1488-C. Renuncia de
+Manuel Condori como miembro de la H. Comision Municipal de La Caldera y
+nombramiento de Pedro Arevalo.
+
+MODO DE LECTURA: Columna 2 a 360 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Renuncia y nombramiento
+  9441-Salta, Julio 28 de 1928.
+    Exp. N 1488-C-Vista la renuncia que antecede,
+    El Gobernador de la Provincia
+              DECRETA
+    Art. 1o.-Aceptase la renuncia presentada por don Manuel Condori del
+  cargo de miembro de la H. Comision Municipal de La Caldera y nombrase
+  en su reemplazo a don Pedro Arevalo.
+    Art. 2o-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-CARLOS ARANDA.
+
+NOTA DE LECTURA: Condori habia sido nombrado el 26 de junio y renuncia el 28
+de julio: treinta y dos dias. El decreto dice «Vista la renuncia que
+antecede» y la renuncia no se publica. El «DECRETA» va sin dos puntos, a
+diferencia del resto del ano. El vecino anterior aprueba la distribucion de
+las policias de campana «de la cual dan cuenta los cuadros adjuntos»: los
+cuadros no se publican (E.2).
+
+----------------------------------------------------------------------------
+A.17   (edicion 1231, hoja 6)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1231, 10 de agosto de 1928, hoja 6 (pagina 6).
+
+FICHA: Decreto N 9458, Salta, Julio 30 de 1928. Nombra nueve sub-comisarios
+de policia ad-honorem para trece lugares del Departamento La Caldera.
+
+MODO DE LECTURA: Columna 2 mitad superior a 300 dpi. Transcripcion integra
+desde la imagen.
+
+TEXTO:
+
+  Nombramientos
+  9458-Salta, Julio 30 de 1928.
+    El Gobernador de la Provincia en uso de sus Facultades Constitucionales,
+              DECRETA:
+    Art. 1o.-Nombranse Sub-Comisarios de Policia ad-honorem de los luga-
+  res: «Calderrilla» al senor Pedro Tejerina; de «Yacones» al senor Miguel
+  Vera; de «San Alejo» y «Santa Rufina» al Sr. Jose Romero; de «Los Sau-
+  ces», «El Angosto», «Angostura» y «Campo Alegre» al senor Virgilio Are-
+  valo, de «La Despensa» al senor Jose Ruiz, de «Potrero de Castillo» al
+  senor Loreto Vivero; de «Lesser» al senor Pedro Vale; de «Chalchanio»,
+  «Lomas Peladas» y «Antilla» al senor Ernesto Echenique; Departamento
+  La Caldera.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-LUIS C. URIBURU
+
+NOTA DE LECTURA: El acto mas denso del ano en toponimia: trece lugares
+nombrados en un solo articulo, once de los cuales estan en el anillo 2. Dos
+no estaban: «Lomas Peladas» y «Antilla». El original escribe aqui
+«Calderrilla» con doble r, contra «Calderilla» de las ediciones 1209 y 1236:
+las tres formas se leyeron en la imagen y no se unifican. «Potrero de
+Castillo» aqui y «Potrero de Castilla» en la lista electoral de 1209. Pedro
+Vale y Virgilio Arevalo ya estaban en el config, con origen 1919 y 1910.
+Pedro Tejerina renuncia doce dias despues (ficha de 1236).
+
+----------------------------------------------------------------------------
+A.18   (edicion 1231, hoja 7)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1231, 10 de agosto de 1928, hoja 7 (pagina 7).
+
+FICHA: Decreto N 9464, Salta, Agosto 1 de 1928, exp. N 1490-R. Reconoce
+servicios de ex-encargados del Registro Civil de la campana; el renglon de
+La Caldera nombra a Ramon Balboa.
+
+MODO DE LECTURA: Columna 2 a 330 dpi para el cuadro; el encabezado y el
+numero, en la capa previa de la misma hoja. El cuadro se transcribe entero
+desde la imagen.
+
+TEXTO:
+
+  Reconocimiento de servicios
+  9464-Salta, Agosto 1 de 1928.
+    Exp. N. 1490-R-Vista la nomina de ex-encargados del Registro Civil de
+  la campana elevada por la Direccion General [...] por tanto:
+    El Gobernador de la Provincia,
+              DECRETA
+    Art. 1o.-Reconocense los servicios prestados por los ex-Encargados del
+  Registro Civil de la Provincia en la siguiente forma:
+      De Tabacal . . . Elias Abecasis, 28 de Mayo al 1 Junio.
+       » Campo Santo . Samuel Cabrera, 5 de Mayo al 10 de Mayo
+       » Simbolar . . Julio Arias, 5 de Mayo al 10 de Mayo.
+       » Seclantas . . Juan M. Aguirre, 18 de Mayo al 25 de Mayo.
+       » Carahuasi . . Pascual Armella, 14 de Mayo al 1 Junio
+       » Las Mercedes . . Alfredo A. Dozo. 18 de Junio al 1 Julio
+       » La Caldera . . Ramon Balboa, 9 de Junio a 13 de Mayo. [sic]
+       » R. de Lerma . . Flavio Diez, 18 de Mayo al 21 de Mayo.
+       » Iruya . . . Hermenegildo Corbara, 5 Junio a 15 Junio
+
+NOTA DE LECTURA: El renglon del departamento imprime un periodo imposible:
+empieza el 9 de junio y termina el 13 de mayo. Se transcribe y no se
+concilia. Ninguna de las dos fechas coincide con el 9 de mayo en que el
+decreto 8002 reemplaza a Balboa al frente de esa oficina, ni con el 12 de
+mayo hasta el que el decreto 9406 le reconoce servicios en la comisaria.
+Tabacal y Carahuasi son terminos del anillo 2 usados aqui como oficinas de
+otros departamentos (§B.3). Recuento del cuadro: nueve renglones, uno por
+departamento, sin totales que recalcular.
+
+----------------------------------------------------------------------------
+A.19   (edicion 1236, hoja 5)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1236, 14 de septiembre de 1928, hoja 5 (pagina 5);
+sumario en la hoja 1.
+
+FICHA: Decreto N 9499, Salta, Agosto 11 de 1928, exp. N 1639-T. Renuncia de
+Pedro Tejerina como Sub-Comisario ad-honorem de la localidad de Calderilla,
+departamento de La Caldera.
+
+MODO DE LECTURA: Columna 2 a 360 dpi y recorte chico a 600 dpi sobre el
+numero y la fecha. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Renuncia
+  9499 -Salta, Agosto 11 de 1928.
+    Exp. N. 1639-T-Vista la renuncia que antecede,
+    El Presidente del Superior Tribunal de Justicia, en ejercicio del Poder
+  Ejecutivo de la Provincia
+              DECRETA:
+    Art. 1o.-Aceptase la renuncia interpuesta por don Pedro Tejerina del
+  cargo de Sub-Comisario de Policia ad honorem de la localidad de Calde-
+  rilla, departamento de La Caldera.
+
+NOTA DE LECTURA: El sumario de la hoja 1 lo anuncia como «Sub-comisario de
+policia ad-honoren de Calderilla-renuncia-se acepta (pagina 5)»: la pasada
+literal no ve esa entrada y la trajo la difusa, que la lee «alderilla». Aqui
+el original escribe CALDERILLA con una sola r, contra el «Calderrilla» del
+decreto 9458 que lo habia nombrado doce dias antes. La capa previa lee el
+dia del mes como «ix»; el recorte a 600 dpi lo resuelve: es 11, en la cifra
+de estilo antiguo que el original usa para el uno.
+
+----------------------------------------------------------------------------
+A.20   (edicion 1240, hoja 4)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1240, 12 de octubre de 1928, hoja 4 (pagina 4); sumario
+en la hoja 1.
+
+FICHA: Decreto N 9604, Salta, Septiembre 3 de 1928. Nombra Juez de Paz
+Propietario de La Caldera a don Ramon Aufrere.
+
+MODO DE LECTURA: Columna 2 a 330 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Nombramiento
+  9604-Salta, Septiembre 3 de 1928.
+    Encontrandose vacante el cargo de Juez de Paz Propietario de La Caldera
+  por renuncia de don Victorio Offredi, aceptada por decreto N 6776 de 26
+  Marzo del corriente ano y atenta a la terna elevada por la H. Comision
+  Municipal de esa localidad,
+    El Presidente del Superior Tribunal de Justicia, en ejercicio del Poder
+  Ejecutivo de la Provincia
+              DECRETA:
+    Art. 1o.-Nombrase Juez de Paz Propietario de La Caldera para el ejer-
+  cicio del corriente ano al senor Ramon Aufrere; quien debera tomar pose-
+  sion del cargo previas las formalidades de ley.
+    Art. 2o.-Solicitese de dicha Comision Municipal la terna correspondiente
+  para la provision del cargo de Juez de Paz Suplente que esta vacante
+    Art. 3o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        TAMAYO-L. C. URIBURU.
+
+NOTA DE LECTURA: Unico acto del ano que cita por numero y fecha otro acto
+del departamento, y la cita cierra: el decreto 6776 esta en el corpus (ficha
+de 1214). El juzgado estuvo vacante cinco meses y ocho dias. Firma TAMAYO,
+el Presidente del Superior Tribunal en ejercicio del Poder Ejecutivo: no hay
+en el corpus decreto de apertura ni de cierre de ese interinato (E.4).
+Debajo arranca el MINISTERIO DE HACIENDA con el decreto 9572, del 27 de
+agosto, impreso despues de este que es del 3 de septiembre.
+
+----------------------------------------------------------------------------
+A.21   (edicion 1245, hoja 3)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1245, 16 de noviembre de 1928, hoja 3 (pagina 3); sumario
+en la hoja 1.
+
+FICHA: Decreto N 9750, Salta, Octubre 19 de 1928, exp. N 2060-M. Nombra Juez
+de Paz Suplente de La Caldera a don Teofilo Reyes.
+
+MODO DE LECTURA: Columna 1 a 360 dpi. Transcripcion desde la imagen.
+
+TEXTO:
+
+  Nombramiento
+  9750-Salta, Octubre 19 de 1928.
+    Exp. N 2060-M-Vista la terna elevada por la Comision Municipal de La
+  Caldera, para la provision del cargo de Juez de Paz Suplente de esa loca-
+  lidad, puesto que se encuentra vacante,
+              Por tanto:
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.-Nombrase Juez de Paz Suplente de La Caldera para el ejercicio
+  del corriente ano a don Teofilo Reyes.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-L. C. URIBURU.
+
+NOTA DE LECTURA: Cierra el pedido de terna del articulo 2 del decreto 9604,
+sin citarlo. Teofilo Reyes es el mismo que en mayo tomo la oficina del
+Registro Civil por el decreto 8002: el config lo traia ya desde el barrido
+de 1946, con origen en la edicion 2465. La vacante del suplente nunca se
+explica: ningun decreto del ano acepta la renuncia ni declara el cese del
+anterior, y no se infiere quien era (E.2).
+
+----------------------------------------------------------------------------
+A.22   (edicion 1246, hoja 5)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1246, 23 de noviembre de 1928, hojas 5 y 6 (paginas 5 y
+6).
+
+FICHA: Decreto N 9794, Salta, Noviembre 3 de 1928, exp. N 2206-F. Renuncia
+de Macedonio Martinez como Sub-Comisario ad-honorem de Vaqueros (Caldera) y
+nombramiento de Anatolio Plaza.
+
+MODO DE LECTURA: Columna 2 de la hoja 5 a 330 dpi para el vistos y el
+articulo 1; la cola del articulo 1 y el nombre del reemplazante, en la capa
+previa del arranque de la hoja 6.
+
+TEXTO:
+
+  Renuncia y nombramiento
+  9794 Salta, Noviembre 3 de 1928.
+    Exp. N 2206 F. Vista la renuncia interpuesta por el Sub--Comisario de
+  Policia ad--honorem de Vaqueros (Caldera) don Macedonio Martinez,
+    El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.-Aceptase la renuncia interpuesta por don Macedonio Martinez,
+  del cargo de Sub--Comisario de Policia ad--honorem de Vaqueros (Caldera)
+  y nombrase en su reemplazo al senor Anatolio Plaza.
+    Art. 2o.-Comuniquese, publiquese, dese al Registro Oficial y archivese.
+        CORNEJO-LUIS C. URIBURU
+
+NOTA DE LECTURA: Es el unico decreto del ano que imprime el numero sin raya
+de separacion: «9794 Salta». El departamento va entre parentesis detras del
+paraje, forma que no se repite en ningun otro acto. Martinez habia sido
+nombrado el 9 de mayo (decreto 8001, §B.2) y confirmado como ad-honorem el
+28 de junio (decreto 9329): tres actos para un cargo sin sueldo. El nombre
+del reemplazante se leyo en la capa previa y no en la imagen.
+
+----------------------------------------------------------------------------
+A.23   (edicion 1250, hoja 3)
+----------------------------------------------------------------------------
+
+FUENTE: BO Salta N 1250, 21 de diciembre de 1928, hoja 3 (pagina 3).
+
+FICHA: Decreto N 9995, Salta, Diciembre 4 de 1928, exp. N 4462-P. Aprueba la
+cuenta por la confeccion de 14.762 boletas de Contribucion Territorial para
+1929, con la lista de departamentos que incluye La Caldera. Ministerio de
+Hacienda.
+
+MODO DE LECTURA: Columna 2 a 360 dpi. Transcripcion desde la imagen; la cola
+de la lista de departamentos, en la capa previa de la misma hoja.
+
+TEXTO:
+
+  Aprobacion de una cuenta
+  9995-Salta, Diciembre 4 de 1928.
+    Visto el Exp. No. 4462-P-por el que la senorita Martna Arias, Lola
+  Ulibarri, Virginia Perez y senora C. P. Tactagi, gestionan el pago de su
+  cuenta por $ 738.10-por concepto de la confeccion de 14.762 boletas de
+  Contribucion Territorial para el ano 1929, de los siguientes departamen-
+  tos; La Capital, La Vina, Chicoana, Guachipas, Campo Santo, Metan, La
+  Candelaria, Rosario de la Frontera, Anta, Oran, Rivadavia, Cafayate
+  Cerrillos, La Caldera, Rosario de Lerma, Iruya, [...]
+
+NOTA DE LECTURA: Recalculo: 738,10 dividido por 14.762 da exactamente $ 0,05
+por boleta. La cuenta cierra. La lista no atribuye boletas por departamento,
+de modo que no se puede saber cuantas correspondieron a La Caldera, y no se
+infiere. El original imprime «Cafayate Cerrillos» sin coma entre los dos
+departamentos, y «Martna» por Marina.
+
+============================================================================
+§B - VECINDAD
+============================================================================
+
+POR QUE SE INCLUYE: regla §5.1 de la rubrica. El anillo 2 es el vocabulario
+de vecindad del config; un termino del anillo 2 puede ser otra cosa, y por
+eso se leyeron los contextos de TODOS los terminos que dieron acierto, uno
+por uno, y no solo los que parecian del departamento.
+
+De los 111 terminos del anillo 2, 57 dieron acierto en 1928. El reparto real
+solo se supo leyendolos: «isasmendi», con 302 aciertos en 178 hojas, es de
+lejos el termino mas frecuente del anillo y en 1928 no es un lugar sino una
+persona.
+
+B.1 - Nucleos ya fichados en el §A
+----------------------------------
+
+Vaqueros, Mojotoro, Calderilla / Calderrilla, Yacones, San Alejo, Santa
+Rufina, Los Sauces, El Angosto, Angostura, Campo Alegre, La Despensa,
+Potrero de Castillo / Potrero de Castilla, Lesser, Chalchanio, Penones, Rio
+Wierna, Rio Vaqueros y los treinta y un parajes de la mesa 2 del circuito 5.
+Estan en las fichas A.2, A.3, A.6, A.9, A.13, A.15, A.17 y A.21 y no se
+repiten aqui.
+
+B.2 - Nucleos del departamento en actos que NO nombran el termino
+-----------------------------------------------------------------
+
+Son tres y justifican el paragrafo entero: sin el anillo 2, dos decretos del
+departamento se habrian perdido, y uno de ellos es el que cierra el asunto
+mas largo del ano.
+
+[1222/7] Decreto N 8001, Salta, Mayo 9 de 1928. «Nombrase Sub-Comisarios de
+Policia de Mojotoro con caracter ad-honorem a don Eustaquio Guerra y de
+Vaqueros a don Macedonio Martinez.» CORNEJO-CARLOS ARANDA. Numero, fecha y
+texto leidos en la capa previa; la hoja se miro en la imagen para los
+decretos 7096 y 8002. No nombra el termino: los dos parajes son del
+departamento y lo prueban los decretos 8024, 9329 y 9794, que si lo nombran.
+
+[1222/9] Decreto N 8023, Salta, Mayo 12 de 1928, rubro «Sin efecto». Deja
+sin efecto la concesion a titulo precario y eventual del uso de los
+sobrantes del agua del Rio Wierna, cien litros por segundo, otorgada a don
+Francisco S. Urquiza por decreto del 28 de Enero de 1924. Considerando: «Que
+el mantenimieto [sic] de dicha concesion es inconveniente». CORNEJO-CARLOS
+ARANDA. Columna 1 mitad inferior a 300 dpi; transcripcion desde la imagen.
+Es el reverso exacto del decreto 6877 del 21 de abril (§A, 1217 h11), que
+habia rechazado los reclamos contra esa misma concesion, y no lo cita. Entre
+los dos, el 30 de abril, Urquiza habia renunciado a la Comision Municipal
+del departamento (§A, 1218 h12). Los tres actos estan en el corpus; ninguno
+remite a otro.
+
+[1217/11] Dentro del decreto 6877, fichado en el §A, el considerando
+describe la hidrografia del departamento sin nombrar el termino en ese
+tramo: el nacimiento y recorrido de la acequia, su desembocadura en el Rio
+Vaqueros, el caudal del Rio Mojotoro y la playa del Rio Wierna. Cuatro
+terminos del anillo 2 en un mismo considerando.
+
+B.3 - Terminos que en 1928 son otra cosa
+----------------------------------------
+
+ISASMENDI, 302 aciertos en 178 hojas, es NESTOR CORNEJO ISASMENDI, juez de
+primera instancia, cuya firma cierra los edictos de todo el ano. Ni un solo
+acierto es el paraje ni la familia del departamento.
+
+NOGALES: en 1928 es sobre todo Nogales de Anta, primera y cuarta seccion,
+con comisaria propia que se traslada a Monasterio y con expendedor de guias;
+y es el apellido de Juan de la Cruz Nogales, que si es del departamento
+(ficha A.13).
+
+LESSER: ademas del paraje del decreto 9458, es el apellido de Antonio R.
+Lesser, que presenta presupuesto por colocacion de vidrios en la Casa de
+Gobierno (1240 h3 y h4), y de Eliseo Lesser, fundador del «Partido Obrero
+Independiente» (1227 h15).
+
+WIERNA: ademas del rio, es el apellido de Bautista Wierna, Juez de Paz de
+Rosario de Lerma (1247 h4), y de Juan de la Cruz Wierna en una lista
+electoral (1205 h20).
+
+LOS SAUCES es tambien un paraje de San Carlos con sub-comisario propio (1230
+h6, decreto 9407) y otro de Rosario de Lerma (1209 h21). TABACAL y CARAHUASI
+son, en el decreto 9464, oficinas del Registro Civil de otros departamentos.
+EL ACHERAL es tambien circuito de Los Noques (1209 h7) y fraccion en
+Guachipas (1209 h17). CAMPO ALEGRE aparece en seis circuitos de cinco
+departamentos distintos. ANGOSTURA, ANGOSTO, RIO BLANCO, EL MANZANO,
+LAGUNILLA, DURAZNO, MESADAS, PIRGUAS, QUESERIA, PACARA, LAS VIBORAS,
+BETANIA, SANTA GERTRUDIS y TRANCAS aparecen casi exclusivamente en la nomina
+de circuitos electorales de la edicion 1209, que recorre la provincia
+entera: son homonimos de otros departamentos.
+
+ARAMAYO es, en 1928, Socorro Aramayo, ordenanza y luego maestra, y dos
+sucesorios (Manuel Aramayo y Jose Aramayo). MAMANI, APAZA y CONDORI aparecen
+sobre todo en padrones y en edictos; el unico Condori del departamento es
+Manuel Condori de la Comision Municipal. CHAILE es Nicanor Chaile, proveedor
+de monturas a la Jefatura de Policia (1247 h6). QUINTIN es Quintin Conde,
+propietario lindero en la Capital (1208 h7) y elector (1205 h12): el falso
+positivo ya juzgado en 1911 y 1912. CASTELLANOS, ENTRE RIOS y EL BORDO
+siguen siendo, como en 1912, apellido y calle, finca y topónimo de Campo
+Santo respectivamente.
+
+B.4 - Ausencias del anillo de actores
+-------------------------------------
+
+Los actores de 1928 se buscaron en todo el corpus del ano, por nombre y
+apellido, por nombre mas inicial mas apellido, y por apellido suelto
+agrupado por contexto, sobre el texto con la puntuacion suprimida. Se
+ordenan en los tres grupos de v15.
+
+PRIMER GRUPO, los que solo aparecen en su propio acto: Victorio Offredi,
+Luis E. Guardo, Carlos Outes, Luis Leper, Loreto Vivero, Jose Ruiz, Jose
+Romero, Miguel Vera, Ernesto Echenique, Anatolio Plaza y Ramon Aufrere. De
+Guardo, Leper, Vivero y Aufrere ni el apellido suelto da otro acierto en
+todo el ano: son nombres que el Boletin escribe una sola vez.
+
+SEGUNDO GRUPO, los que aparecen en mas de un acto del departamento, y son
+los que arman la trama del ano: RAMON BALBOA / BALVOA, en seis actos (6569,
+6777, 8002, 8099, 9406 y 9464), nombrado receptor de rentas en enero,
+renunciado como comisario en marzo, reemplazado en el Registro Civil en
+mayo, reemplazado en la receptoria en mayo, y reconocido dos veces en julio
+y agosto; FRANCISCO S. URQUIZA, en cuatro (la nomina de 1205, el 6877, el
+6958 y el 8023), presidente de mesa en febrero, concesionario de agua
+confirmado en abril, renunciado a la Comision Municipal el 30 de abril y
+despojado de la concesion el 12 de mayo; JULIO ROYO ORTIZ, en dos (7095 y
+8099), que en nueve dias toma los dos cargos que Balboa deja; TEOFILO REYES,
+en dos (8002 y 9750); PEDRO AREVALO, en dos (la nomina de 1205 y el 9441);
+MACEDONIO MARTINEZ, en tres (8001, 9329 y 9794); EUSTAQUIO GUERRA, en dos
+(8001 y 8024); MANUEL CONDORI, en dos (9306 y 9441); PEDRO TEJERINA, en dos
+(9458 y 9499).
+
+TERCER GRUPO, los que aparecen tambien fuera del departamento: JULIO
+MERCADO, miembro de la Comision Municipal, comparte apellido con Enrique
+Mercado, suplente de mesa del mismo circuito, y con menciones de otros
+departamentos que no se le atribuyen. HERMAN PFISTER aparece en cinco hojas,
+y solo la de 1228 es del departamento; las otras son avisos comerciales y
+una causa. VIRGILIO AREVALO aparece una sola vez, en el 9458, pero el
+apellido Arevalo suelto da aciertos en cuatro departamentos. JUAN DE LA CRUZ
+NOGALES aparece una vez en el departamento y el apellido Nogales siete
+veces, seis de ellas en Anta.
+
+============================================================================
+§C - LIMITROFES
+============================================================================
+
+Campo Santo entra por la puerta del agua: son sus vecinos y su Comision
+Municipal los que reclaman contra la concesion del Rio Wierna (decreto 6877,
+ficha A.6), y es el pueblo de Campo Santo el que en noviembre motiva las
+obras de defensa contra los avances del Rio Mojotoro (1244 h3 a h5). Los dos
+rios son del departamento y los dos expedientes se resuelven mirando aguas
+arriba.
+
+La Capital aparece por Lagunilla, paraje homonimo donde se instala una
+escuela nacional de la ley 4874 (1214 h11 y h12), y por el lindero de
+Quintin Conde hacia Lagunilla y Cobos (1208 h7). Rosario de Lerma aparece
+por El Manzano, con sub-comisario propio (1229 h8), y por Bautista Wierna.
+Ninguno de los tres casos es del departamento.
+
+============================================================================
+§P - PLANOS
+============================================================================
+
+El corpus de 1928 no publica ningun plano. La palabra aparece en 45 hojas
+del ano y NINGUNA de esas 45 hojas nombra el termino ni un nucleo del
+departamento: no hay una sola remision a plano que toque a La Caldera en
+todo 1928. No hay, por lo tanto, plano citado y no acompanado del
+departamento. Techo de resolucion: 150 ppi.
+
+============================================================================
+§D - INDICE
+============================================================================
+
+  ed.  hoja  que hay
+  ---- ----  ----------------------------------------------------
+  1205    8  A.1  Decreto N 6569, Salta, Enero 19 de 1928
+  1205   12  A.2  H
+  1209    7  A.3  Ubicacion de mesas receptoras de votos y composi
+  1214   14  A.4  Decretos N 6776 y N 6777, los dos de Salta, Marz
+  1217    9  A.5  Decreto N 6867, Salta, Abril 20 de 1928, exp
+  1217   11  A.6  Decreto N 6877, Salta, Abril 21 de 1928, exp
+  1218   12  A.7  Decreto N 6958, Salta, Abril 30 de 1928, exp
+  1221   14  A.8  Remate judicial
+  1222    6  A.9  Decreto N 7095, Salta, Mayo 9 de 1928
+  1222    7  A.10 Decretos N 7096 y N 8002, los dos de Salta, Mayo
+  1222    9  A.11 Decreto N 8024, Salta, Mayo 12 de 1928, exp
+  1223   14  A.12 Decreto N 8099, Salta, Mayo 18 de 1928
+  1228    7  A.13 Decreto N 9306, Salta, Junio 26 de 1928
+  1229    3  A.14 Decreto N 9329, Salta, Junio 28 de 1928, exp
+  1230    6  A.15 Decreto N 9406, Salta, Julio 18 de 1928, exp
+  1231    3  A.16 Decreto N 9441, Salta, Julio 28 de 1928, exp
+  1231    6  A.17 Decreto N 9458, Salta, Julio 30 de 1928
+  1231    7  A.18 Decreto N 9464, Salta, Agosto 1 de 1928, exp
+  1236    5  A.19 Decreto N 9499, Salta, Agosto 11 de 1928, exp
+  1240    4  A.20 Decreto N 9604, Salta, Septiembre 3 de 1928
+  1245    3  A.21 Decreto N 9750, Salta, Octubre 19 de 1928, exp
+  1246    5  A.22 Decreto N 9794, Salta, Noviembre 3 de 1928, exp
+  1250    3  A.23 Decreto N 9995, Salta, Diciembre 4 de 1928, exp
+  1222    7  B.2 Decreto N 8001, Salta, Mayo 9 de 1928
+  1222    9  B.2 Decreto N 8023, Salta, Mayo 12 de 1928, rubro «S
+  1217   11  B.2 Dentro del decreto 6877, fichado en el §A, el co
+
+============================================================================
+§E - OBSERVACIONES
+============================================================================
+
+E.1 - Duplicacion y saldos
+--------------------------
+
+DUPLICACION. Sin las .jpg de lee_auto.py no hay md5 ni dhash: se controlo la
+duplicacion por texto. Los avisos del ano llevan numero entre parentesis;
+hay 249 numeros distintos y solo seis aparecen mas de una vez: 2575, 2649,
+2666, 2873, 2922 y 2936. Ninguno es del departamento. El aviso de remate de
+Vaqueros, (2719), aparece una sola vez en todo el ano: no se repitio. Las
+marcas de publicacion corrida del tipo «251 v Dbre 5», que en 1912 eran 119,
+aqui son una sola: el Boletin de 1928 no usa esa forma. Nivel 3, misma serie
+numerica en actos distintos: no se encontro ninguna.
+
+SALDOS. La Tesoreria General publica DIEZ resumenes mensuales en 1928, y no
+doce: diciembre de 1927 (1202 h13 y h14), enero (1206 h19 y h20), febrero
+(1212 h22), abril (1219 h13 y h14), mayo (1223 h23), junio (1228 h20 y h21),
+julio (1231 h25 y h26), agosto (1237 h12 y h13), setiembre (1241 h25 y h26)
+y noviembre (1249 h11 y h12). Faltan marzo y octubre.
+
+CADENA, ARMADA POR LA CIFRA Y NO POR EL ROTULO, con los renglones de saldo
+leidos en la imagen:
+
+  diciembre 1927   abre  15.547,52   cierra  80.872,53
+  enero            abre  80.872,53   cierra  24.849,07
+  febrero          abre  24.849,07   cierra  52.593,84
+  [marzo: no publicado]
+  abril            abre  68.643,27   cierra  12.887,64
+  mayo             abre  12.887,64   cierra  sin renglon
+  junio            abre  10.282,32   cierra  sin renglon
+  julio            abre   3.136,62   cierra  38.003,63
+  agosto           abre  38.003,63   cierra  sin renglon
+  setiembre        abre   7.597,60   cierra  17.798,06
+  [octubre: no publicado]
+  noviembre        abre   7.775,06   cierra  35.464,20
+
+CUATRO PARES ENCADENAN EXACTOS: diciembre con enero, enero con febrero,
+abril con mayo y julio con agosto. Los demas no se pueden cotejar, por dos
+razones distintas que conviene no mezclar. Primera: marzo y octubre no se
+publican, de modo que entre febrero y abril, y entre setiembre y noviembre,
+hay un mes entero sin cuadro (52.593,84 contra 68.643,27; 17.798,06 contra
+7.775,06). Segunda, y es un hallazgo: TRES DE LOS DIEZ CUADROS SE PUBLICAN
+SIN EL RENGLON DEL SALDO DE CAJA FINAL. Los de mayo, junio y agosto terminan
+en el total de la columna y no imprimen la linea «Saldo existente en caja
+que pasa al mes de...» que los otros siete si imprimen. El saldo de esos
+tres meses solo se conoce por el renglon de apertura del cuadro siguiente,
+que lo declara: hay una sola fuente para esa cifra y no hay cotejo posible.
+
+El saldo de apertura de julio es 3.136,62 en la imagen y 3.136,63 en la capa
+previa. Se toma el de la imagen, que es la regla.
+
+BALANCES MUNICIPALES. En 1928 se publica UNO SOLO: el Balance de Tesoreria
+de la Municipalidad de Metan, del 1 de julio al 30 de setiembre de 1928
+(1241 h27), que abre con un saldo al 30 de junio de $ 47,79. No hay ninguno
+de La Caldera. El unico acto del ano que toca las cuentas de la comuna, el
+decreto 6867, aprueba un presupuesto cuyo expediente no se acompana.
+
+E.2 - Cobertura
+---------------
+
+Imagenes miradas: 57 recortes, sobre 37 hojas de 22 ediciones. Columnas
+cotejadas contra la capa previa: 40, de 22 ediciones. En ninguna de esas 40
+columnas se encontro columna perdida. La afirmacion vale sobre esas 40
+columnas y no sobre las 2.042 del ano. Los cuadros de Tesoreria ocupan el
+ancho entero de la hoja y no dos columnas: sus veinte hojas se miraron
+enteras, en mitades.
+
+CRUCES. El sumario de cada edicion se cruzo contra el cuerpo: 13 entradas
+del departamento, 13 que cierran. Los vecinos mas o menos tres de cada acto
+del §A y del §B se miraron o se leyeron en la capa: 6723, 6778, 6868, 6870,
+7094, 7097, 8001, 8003, 8004, 8006, 8022, 8025, 9004, 9307, 9330, 9407,
+9457, 9459, 9572, 9751.
+
+CITADOS Y NO ACOMPANADOS. Uno solo: el decreto del Poder Ejecutivo del 28 de
+Enero de 1924 que concede a Francisco Urquiza el uso del agua del Rio
+Wierna. Lo citan el 6877 y el 8023 y esta fuera del corpus del ano. Se busco
+por fecha y por materia, que es como se busca cuando no se tiene el numero;
+el decreto no lo da. Ademas: los «cuadros adjuntos» de la distribucion de
+policias de campana (1231 h3) no se publican; la terna de la Comision
+Municipal que funda los decretos 9604 y 9750 no se publica; y la vacante del
+Juez de Paz Suplente que el 9604 declara no nombra a quien la dejo ni cita
+la aceptacion de su renuncia, de modo que es tambien un acto citado y no
+acompanado, en el sentido de v15 §5.3. No se infiere quien era.
+
+NO QUEDAN PENDIENTES. Los tres que declaraba la version anterior de este
+informe se cerraron: los diez cuadros de Tesoreria tienen ahora todos sus
+subtotales recalculados y la cadena de saldos esta armada por la cifra (E.1
+y E.8); el decreto 9306 se miro en la imagen; y el dia del decreto 9499 se
+resolvio a 600 dpi, es el 11 de agosto.
+
+E.3 - Sin mencion y no mirado
+-----------------------------
+
+984 de las 1021 hojas no se miraron en la imagen. De esas, la enorme mayoria
+no tiene ninguna relacion con el departamento: la busqueda del anillo 1, del
+anillo 2, de los actores, de los numeros y de las formulas de reemplazo se
+corrio sobre las 1021. Las 20 hojas de cuadros de Tesoreria se miraron
+enteras. Lo que queda sin mirar y podria merecerlo son las 45 hojas que
+mencionan planos, ninguna de las cuales nombra al departamento.
+
+E.4 - Firmas y autoridad
+------------------------
+
+DOS GOBERNADORES. Joaquin Corbalan firma hasta la edicion 1216 (27 de
+abril); Julio Cornejo desde la 1217 (4 de mayo). La tapa lo declara y los
+refrendos lo confirman.
+
+CINCO MINISTROS FIRMANTES: A. B. Rovaletti y Ernesto M. Araoz con Corbalan;
+Carlos Aranda, Julio C. Torino y Luis C. Uriburu con Cornejo. Julio C.
+Torino y L. C. Uriburu se imprimen indistintamente con nombre completo, con
+inicial y con las dos.
+
+DOS INTERINATOS, los dos SIN CIERRE PUBLICADO. Primero: «El Presidente del
+Superior Tribunal de Justicia, en ejercicio del Poder Ejecutivo de la
+Provincia» firma los decretos 9499 (11 de agosto) y 9604 (3 de septiembre);
+el segundo lleva la firma TAMAYO. No hay en el corpus decreto de apertura ni
+de cierre de ese interinato: se declaran el primer y el ultimo acto del
+interino y no se fija el dia del reintegro. Segundo: el sumario de la
+edicion 1245 anuncia «Mando gubernativo de la provincia-queda en posesion el
+titular doctor Julio Cornejo (pagina 2)», y ese acto SI cierra un
+interinato, pero el corpus no trae el decreto que lo abrio.
+
+TRES FORMULAS DE ENCABEZADO conviven: «El Gobernador de la Provincia» (96
+hojas), «El P. Ejecutivo de la Provincia» (14) y «El Presidente del Superior
+Tribunal de Justicia, en ejercicio del Poder Ejecutivo» (8), mas «en acuerdo
+de ministros» (77) y «en uso de sus Facultades Constitucionales». No se
+normaliza. El original imprime ademas «El Gobernador de la Probincia» (1214
+h14) y «El Gobernador de la Provinia» (1217 h11).
+
+E.5 - Cortes y columnas
+-----------------------
+
+La marca U+0002 no existe en este corpus. El corte de renglon se marca solo
+con U+00AD, 19.444 veces, sin guion visible impreso. La union corregida de
+v15 recupera cuatro apariciones de «caldera» que la union defectuosa perdia.
+
+El corte con signos intercalados se busco con la tolerancia de dos signos de
+puntuacion a cada lado del salto y no aparecio ningun caso decisivo.
+
+Maqueta: dos columnas por hoja, la primera entre los 8 y los 232 puntos y la
+segunda entre los 224 y los 452, sobre paginas de unos 455 por 680 puntos.
+Se midio una vez para el corpus contando los x0 de las palabras, y esos
+bordes sirvieron para los 33 recortes. Una columna entera a 300 dpi da unos
+1.410 pixeles por mitad: cada mitad entra sola y se lee.
+
+E.6 - Repeticiones
+------------------
+
+Ver E.1. Ningun acto ni aviso del departamento se repite en 1928.
+
+E.7 - Falsos positivos y negativos
+----------------------------------
+
+FALSOS NEGATIVOS DE LA CAPA PREVIA, todos corregidos en la imagen: el numero
+del decreto del presupuesto municipal, que la capa lee «6so7» y el original
+dice 6867; «Julia» Royo Ortiz por Julio; el apellido del gobernador, que la
+capa lee «Corbacho» en casi todas las tapas y el original dice CORBALAN; y
+las tres formas que solo la difusa ve (jalderilla, alderilla, ldera).
+
+FALSOS POSITIVOS DEL ANILLO 1 EN 1928: la «caldera tubular» no aparece este
+ano; si aparecen Calderon (cinco veces, apellido), Caldas (tres), «localde»
+por «local de», «caldeion» por Calderon, y en la difusa calavera, calabera,
+escalera, calera, cadenilla y «adera» de «m adera». Se listan aqui y NO se
+agregan al config, por la regla de §12: un termino del anillo 1 cuyo
+contexto contenga un falso positivo del config queda marcado fp_conocido y
+sin recorte, aunque sea real.
+
+E.8 - Fidelidad numerica
+------------------------
+
+RECALCULOS DE LOS ACTOS DEL DEPARTAMENTO. Decreto 9995: 738,10 dividido por
+14.762 boletas da exactamente 0,05 por boleta; la cuenta cierra. Decreto
+9464: el cuadro tiene nueve renglones, uno por departamento, y no lleva
+total. Edicion 1209: el recuento de parajes de las tres mesas del
+departamento da entre 44 y 45 segun se lea «La Sierra Angosto» como uno o
+como dos nombres; el original no lo decide y este informe tampoco.
+
+RECALCULOS DE LOS DIEZ CUADROS DE TESORERIA. Se recalcularon 31 subtotales,
+y los diez cuadros tienen al menos uno que cierra exacto: Calculo de
+Recursos 1927 y Banco Provincial en diciembre de 1927, con el total general
+del cuadro; Calculo de Recursos 1927 y Nueva Pavimentacion en enero;
+Documentos descontados y Banco Provincial en abril; Banco Provincial en
+mayo; Receptoria, Consumo, Nueva Pavimentacion y Banco Provincial en junio y
+en julio; Consumo, Nueva Pavimentacion y Banco Provincial en agosto;
+Receptoria, Consumo y Nueva Pavimentacion en setiembre; Receptoria, Consumo
+y Banco Provincial en noviembre.
+
+CINCO COLUMNAS NO CIERRAN, y las cinco se leyeron partida por partida en la
+imagen a 400 o 600 dpi antes de afirmarlo. En cada caso se escribe la
+lectura alternativa que cerraria la columna, sin corregir. (1) Enero,
+Calculo de Recursos 1928: 30,00 mas 400,35 da 430,35 y el impreso dice
+430,55, veinte centavos; cerraria si el Impuesto Herencias fuera 400,55. (2)
+Mayo, Receptoria General: las quince partidas suman 150.391,28 y el impreso
+dice 150.591,28, doscientos pesos; cerraria si Patentes Generales fuera
+16.049,25 en vez de 15.849,25, que es como la imprime el original, sin punto
+decimal. (3) Mayo, Impuesto al Consumo: las seis partidas suman 61.543,95 y
+el impreso dice 61.643,95, cien pesos; cerraria si Cigarrillos fuera
+25.102,72. (4) Julio, total general de ingresos: los dieciseis subtotales
+suman 614.247,20 y el impreso dice 613.847,20, cuatrocientos pesos; no hay
+una sola partida cuya lectura alternativa cierre la columna, y el error se
+arrastra al total con saldo, 616.983,82, y de ahi al pie de egresos, que
+cuadra contra el total equivocado. (5) Setiembre, Banco Provincial de Salta:
+213.949,02 mas 96.856,17 mas 52.000,00 da 362.805,19 y el impreso dice
+361.805,19, mil pesos; cerraria si la Ley 852 fuera 95.856,17.
+
+DOS COLUMNAS QUE NO CERRABAN CONTRA LA CAPA PREVIA Y SI CIERRAN CONTRA LA
+IMAGEN, que es exactamente la razon por la que ninguna cifra de hoja
+escaneada se publica sin mirarla: en agosto, Fosforos es 2.843,89 y no
+2.943,89 como lee la capa, y con esa cifra la Receptoria General cierra en
+209.879,52; en noviembre, el 50 por ciento de Frentistas es 8.037,59 y no
+3.037,59, y con esa cifra la Nueva Pavimentacion cierra en 9.318,72.
+
+TABLAS NO RECALCULADAS. Dos. El cuadro de distribucion de las policias de
+campana que el decreto de 1231 h3 dice llevar adjunto y que el Boletin no
+publica. Y el Balance de Tesoreria de la Municipalidad de Metan (1241 h27):
+es de otro departamento, no nombra el termino ni el anillo 2 ni un actor, y
+queda declarado aqui con su hoja y su criterio.
+
+E.9 - Contradicciones
+---------------------
+
+1. EL MISMO APELLIDO, DOS GRAFIAS. BALVOA en los decretos 6777 y 8099;
+BALBOA en los decretos 6569, 8002, 9406 y 9464. Todas leidas en la imagen.
+No se unifican.
+
+2. EL MISMO LUGAR, DOS GRAFIAS. «Calderilla» en la edicion 1209 y en el
+decreto 9499; «Calderrilla» en el decreto 9458. Las tres leidas en la
+imagen. El 9458 nombra a Tejerina en «Calderrilla» y el 9499, doce dias
+despues, le acepta la renuncia en «Calderilla».
+
+3. RENUNCIA ACEPTADA Y SERVICIOS POSTERIORES RECONOCIDOS. El decreto 6777,
+del 26 de marzo, acepta la renuncia de Balvoa como Comisario de Policia de
+La Caldera. El decreto 9406, del 18 de julio, le reconoce servicios al
+frente de esa misma comisaria DESDE EL 2 DE ABRIL hasta el 12 de mayo.
+Ninguno de los dos cita al otro.
+
+4. PERIODO IMPOSIBLE. El decreto 9464 reconoce a Balboa, como ex-Encargado
+del Registro Civil de La Caldera, el periodo «9 de Junio a 13 de Mayo». La
+fecha de inicio es posterior a la de cierre. Ademas ninguna de las dos
+coincide con el 9 de mayo en que el decreto 8002 lo reemplaza en esa
+oficina.
+
+5. DECRETO SIN ARTICULO 2. El decreto 6958 pasa del «Arr. 1o» [sic] al «Art.
+3o». No se completa y no se infiere que decia el articulo que falta.
+
+6. LA SERIE DE DECRETOS SALTA DOS VECES. De 7097 a 8001 el 9 de mayo de
+1928, dentro de la misma hoja y con el mismo gobernador y el mismo ministro;
+y de 8099 a 9004 entre el 18 y el 19 de mayo. Los dos saltos caen entre
+vecinos mirados. Se declaran y no se explican.
+
+7. LA TAPA DE 1249 SE FECHA EN UN DIA QUE SU PROPIA FORMULA NO ADMITE:
+«VIERNES 13 DE DICIEMBRE DE 1928», y el 13 de diciembre fue jueves. Leida en
+la imagen a 400 dpi.
+
+8. ERRATAS DEL ORIGINAL, transcriptas con [sic] en su ficha y repetidas
+aqui: «presupusto» y «Mnnicipal» (decreto 6867); «vicinos» y «Provinia»
+(decreto 6877); «Probincia» (1214 h14); «Arr.» (decreto 6958);
+«mantenimieto» (decreto 8023); «Martna» por Marina y «Cafayate Cerrillos»
+sin coma (decreto 9995); «Vaqueros; Caldera» con punto y coma donde el resto
+de la lista usa raya (decreto 9329); «9794 Salta» sin raya entre numero y
+lugar.
+
+9. CINCO COLUMNAS DE LOS CUADROS DE TESORERIA NO CIERRAN CONTRA SUS PROPIAS
+PARTIDAS, por veinte centavos, cien, doscientos, cuatrocientos y mil pesos;
+y TRES DE LOS DIEZ CUADROS SE PUBLICAN SIN EL RENGLON DEL SALDO DE CAJA
+FINAL. Todo esto va desarrollado en E.8 y en E.1 y no se concilia.
+
+10. EL ORDEN DE IMPRESION NO SIGUE NI LA FECHA NI EL NUMERO. El Boletin
+agrupa por ministerio, y dentro de una misma hoja el MINISTERIO DE HACIENDA
+puede abrir con un decreto anterior a los del grupo que lo precede: 6723 del
+8 de marzo despues de los del 26 de marzo (1214 h14); 9572 del 27 de agosto
+despues del 9604 del 3 de septiembre (1240 h4).
+
+E.10 - Limites
+--------------
+
+Son seis, y ninguno es trabajo que esta sesion pueda hacer.
+
+1. NO HAY SEGUNDA VERSION DEL TEXTO. No se corrio lee_auto.py y tesseract no
+trae spa en esta sesion, de modo que no hubo OCR propio. Todo resultado va
+etiquetado «prev» y el unico desempate posible fue la imagen.
+
+2. NO HAY CONFIANZA POR HOJA. Sin el .prop.tsv del script no existen la
+media de confianza ni el porcentaje de palabras bajo 60, y por lo tanto no
+existe la lista de hojas «a ojos» del §4.8. Las hojas se cubrieron por otras
+tres vias: las de los candidatos del anillo 1, las de los cuadros y las de
+las listas.
+
+3. NO HAY DEDUPLICACION POR IMAGEN. Sin las .jpg no hay md5 ni dhash: la
+duplicacion se controlo por texto, que es mas debil.
+
+4. NO HAY MEDICION DE TINTA. Sin las .jpg no se puede medir el porcentaje de
+pixeles oscuros y no se puede listar hojas en blanco o con poca tinta.
+
+5. TECHO DE RESOLUCION DE 150 ppi. Es la mitad del de 1908-1912. Todo
+recorte de este informe es una interpolacion de esa imagen. Donde el
+original imprime cifras pequenas o puntos decimales, 150 ppi puede no
+alcanzar, y por eso el dia del decreto 9499 quedo como [ilegible] hasta que
+se pruebe un recorte a 600 dpi.
+
+6. NO HAY log.txt NI CSV. No se puede declarar version ni fecha de corrida
+de lee_auto.py, ni parametros, ni errores de OCR, porque no hubo corrida.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO. Si llegaran el .tsv, las .jpg y el log,
+se podrian agregar la confianza por hoja y la lista de hojas «a ojos», la
+deduplicacion por md5 y dhash, la medicion de tinta y una segunda version
+con que desempatar las palabras dudosas sin recurrir a la imagen. El §A no
+cambiaria: sus veintiuna fichas estan transcriptas desde la imagen, que es
+la fuente de ultima instancia, y ninguna depende de una lectura que una
+segunda version pudiera corregir.
+
+============================================================================
+§F - CORRECCION A LA RUBRICA
+============================================================================
+
+Propuestas para v16, salidas de este barrido.
+
+1. EL FOLIO ANUAL CORRIDO NO ES UN CONTROL DE ESTA SERIE, SINO DE UNA EPOCA.
+v15 §2.5bis lo trata como el control barato que reemplaza a la declaracion
+de paginas. En 1928 no existe: la paginacion es por edicion y el folio se
+imprime como «Pag. N» en la cabecera, que la capa previa no captura. Antes
+de prometer la cadena de folios conviene mirar una cabecera.
+
+2. CUANDO VUELVE EL SUMARIO, VUELVE EL COTEJO. v15 declara el cotejo
+sumario/cuerpo «no aplicable en toda la epoca» sobre la base de 1908-1912.
+En 1928 hay sumario en 45 de 52 ediciones y el cotejo es el control mas
+barato y mas productivo del ano: 1.469 referencias verificadas contra las
+hojas presentes en una sola llamada. La regla deberia decir que la
+aplicabilidad se mide en cada corpus y no se hereda de la epoca anterior.
+
+3. LA LAXA CON ESPACIOS TIENE QUE ADMITIRLOS ENTRE TODAS LAS LETRAS, NO SOLO
+EN EL MEDIO. v15 corrigio el separador para que fuera la clase de espacios
+en blanco, pero lo dejo en una sola posicion del patron. En 1928 el original
+separa «c a ldera» con espacios despues de la primera y de la segunda letra,
+y el patron de v15 no lo alcanza. El patron correcto intercala el separador
+entre las siete clases.
+
+4. UN TECHO DE RESOLUCION BAJO NO ES UN LIMITE MENOR: CAMBIA EL PRESUPUESTO
+DE TURNO. A 150 ppi hay cifras que no se deciden a 300 dpi y hay que volver
+con recortes chicos a 400 o 600. La rubrica declara el techo en §8.10 pero
+no dice que conviene medirlo en el primer turno y ajustar el plan: en 1928
+se midio a tiempo y por eso el numero 6867 se resolvio; el dia del 9499 no,
+y quedo pendiente.
+
+5. UN SUBTOTAL POR CUADRO ES POCO CUANDO EL CUADRO TIENE VARIOS. v15 pide
+«al menos un subtotal por cuadro publicado». En 1928, si se hubiera
+recalculado uno solo por cuadro, habrian quedado sin ver cuatro de las cinco
+columnas que no cierran, porque en todos los cuadros hay al menos un
+subtotal que si cierra. La regla deberia pedir TODOS los subtotales impresos
+del cuadro, que es barato cuando la capa previa trae la columna de cifras, y
+reservar la imagen para los que no cierren. De los 31 recalculados asi, la
+capa acerto en 29 y fallo en 2, y los dos fallos se detectaron justamente
+porque la columna no cerraba.
+
+6. CONVIENE COMPROBAR QUE EL CUADRO TRAE SU RENGLON DE SALDO FINAL ANTES DE
+PROMETER LA CADENA. v15 dice que de todo balance se transcriben el saldo
+inicial y el saldo de caja final. En 1928 tres de los diez cuadros no
+imprimen el segundo. La cadena se puede armar igual, porque el cuadro
+siguiente declara el saldo del mes anterior, pero entonces no hay cotejo:
+hay una sola fuente para esa cifra, y conviene decirlo asi.
+
+7. UN BALANCE MUNICIPAL DE OTRO DEPARTAMENTO ES UN HECHO DEL CORPUS Y HAY
+QUE BUSCARLO ANTES DE AFIRMAR QUE NO HAY NINGUNO. La version anterior de
+este informe decia que en 1928 no se publica ningun balance municipal. Es
+falso: se publica el de Metan. Lo que es cierto es que no se publica ninguno
+de La Caldera. La diferencia importa, porque la primera afirmacion describe
+al Boletin y la segunda al departamento.
+
+8. CUANDO LOS ACTOS VUELVEN A LLEVAR NUMERO, LA REGLA §8.15 VUELVE A DAR
+FRUTO, Y DA UNO NUEVO: los saltos de serie. En 1928 la serie salta dos veces
+mas o menos novecientos numeros en un dia. Eso no lo encuentra ninguna
+pasada de termino: lo encuentra mirar los vecinos mas o menos tres, que la
+rubrica manda mirar por otra razon. Conviene decir que el control de vecinos
+sirve tambien para medir el regimen de la serie, y no solo para fechar un
+acto.
+
+============================================================================
+CONFIG ACTUALIZADO - QUE SE AGREGA Y QUE NO
+============================================================================
+
+Se entrega lee_config.json actualizado. Conserva todo lo anterior.
+
+ANILLO 2, se agregan catorce terminos, todos leidos en la imagen: helvecia,
+higueritas, mosquera, los matos, monte de las garrapatas, mesada, nogalito,
+severino, canada ancha, villa urquiza, san jose, potrero del gallinato (los
+doce de la lista de 1209 que faltaban), y lomas peladas y antilla (del
+decreto 9458). Se agrega ademas calderrilla al anillo 1, que es la grafia
+con doble r del decreto 9458.
+
+ACTORES, se agregan veintitres con origen 1928: victorio offredi, ramon
+balboa, ramon balvoa (las dos formas, por la regla de v15 §15.3), julio royo
+ortiz, luis e. guardo, francisco s. urquiza, macedonio martinez, anatolio
+plaza, pedro tejerina, miguel vera, jose romero, jose ruiz, loreto vivero,
+ernesto echenique, ramon aufrere, carlos outes, luis leper, augusto regis,
+romulo santiago guerrero, eustaquio lizondo, manlio carlos bruzzo, manuel
+soria y indo de campo. No se agregan los que ya estaban (teofilo reyes,
+julio mercado, manuel condori, herman pfister, pedro arevalo, virgilio
+arevalo, pedro vale, eustaquio guerra, juan de la cruz nogales): se
+conservan con su origen viejo, que es lo que prueba que el config aguanta
+dieciseis anos.
+
+NUMEROS, se agregan los veintiun decretos del departamento: 6569, 6776,
+6777, 6867, 6877, 6958, 7095, 7096, 8001, 8002, 8023, 8024, 8099, 9306,
+9329, 9406, 9441, 9458, 9464, 9499, 9604, 9750, 9794 y 9995. Esta es la
+primera epoca desde 1946 en que la clave numeros recibe algo util.
+
+FALSOS POSITIVOS, no se agrega ninguno. Los de 1928 (calderon, caldas,
+localde, calera, calavera, calabera, cadenilla, escalera) quedan listados en
+E.7 y fuera del config, por la regla de §12: un falso positivo en el config
+oculta el acierto real que comparta contexto con el.
+
+============================================================================
+RECUENTO
+============================================================================
+
+Archivos y ediciones: 52 PDF, 52 ediciones, N 1200 a N 1251, sin huecos.
+Hojas presentes: 1021. Hojas declaradas: la tapa de esta epoca no declara
+paginas. Hojas ausentes: ninguna detectable.
+
+Reparto de confianza: no existe (limite 2).
+
+Imagenes miradas: 57 recortes sobre 37 hojas de 22 ediciones. Columnas
+cotejadas contra la capa previa: 40, de 22 ediciones, sin columna perdida en
+ninguna.
+
+Menciones por anillo: anillo 1, 50 apariciones en 36 hojas candidatas, de
+las que 21 se fichan en el §A; anillo 2, 57 terminos con acierto de los 111
+del config, con 3 entradas en el §B.2; anillo de actores, 38 actores
+heredados reaparecen y 23 se incorporan.
+
+Cuadros publicados: 11. Diez resumenes de Tesoreria General y un balance
+municipal, el de Metan; ninguno del departamento. Subtotales recalculados:
+31 sobre los diez cuadros de Tesoreria, mas el del decreto 9995 y el
+recuento de parajes de 1209. De los 31, veintiseis cierran exacto y cinco
+no. Tablas no recalculadas: 2, el cuadro de policias de campana que no se
+publica y el balance de Metan.
+
+Saldos: diecisiete renglones de saldo leidos en la imagen; cadena cortada
+por dos meses no publicados, marzo y octubre, y por tres cuadros sin renglon
+de cierre, mayo, junio y agosto. Cuatro pares encadenan exactos.
+
+Planos: ninguno publicado, ninguna remision que toque al departamento.
+
+Limites declarados: 6. Pendientes: 3.
+
+
+Fin del informe LEE 1928.

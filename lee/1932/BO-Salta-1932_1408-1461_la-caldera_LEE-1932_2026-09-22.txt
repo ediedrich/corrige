@@ -1,0 +1,2940 @@
+BARRIDO LEE — BOLETÍN OFICIAL DE LA PROVINCIA DE SALTA — AÑO 1932
+Ediciones N° 1408 a N° 1461. Término: «La Caldera».
+Rúbrica LEE v15 (20/09/2026). Informe generado el 22/09/2026.
+
+
+§0 · ADVERTENCIA PRELIMINAR
+===========================
+
+ESTADO: COMPLETO, con siete límites declarados. Cuarto y último turno del
+barrido de 1932. Están cerrados el corpus, las cuatro pasadas, el §A con sus
+28 entradas, el §B en sus cuatro bloques, el §C, el §P, el §D, la cadena anual
+de saldos de Tesorería, el inventario de cuadros y el config actualizado. No
+queda trabajo que esta sesión pueda hacer: lo que falta son límites, y están
+en E.10.
+
+QUÉ AGREGARÍA CADA INSUMO QUE FALTÓ, en una línea: el .tsv daría confianza por
+hoja y con ella la lista de hojas «a ojos»; las .jpg darían md5, dhash y
+medición de tinta; el log diría qué falló en la corrida; los CSV y el
+pre-informe darían una SEGUNDA VERSIÓN del texto, que es lo único que habría
+cambiado algo este año: con ella, las dos fallas de palabra suelta de E.5
+—«mivrua» y la desaparición de «Sosauya»— se habrían visto sin necesidad de
+mirar la imagen. El §A no cambiaría: los 37 candidatos ya están localizados y
+juzgados.
+
+QUÉ PUSO EL USUARIO. En el proyecto, «lee_config.json» y «control_config.py».
+En GitHub, el Release con tag 1932 de ediedrich/boletines-salta, leído por la
+página de assets expandidos, que trae 55 assets: los 54 PDF de las ediciones
+1408 a 1461 y una copia de «lee_config.json». No llegaron el pre-informe, ni
+«resultados_1932.csv», ni «decretos_1932.csv», ni «log.txt», ni
+«recortes.zip», ni el zip de los .txt de lee_trabajo. No hay, por lo tanto,
+ninguna salida de lee_auto.py para este año, ni «EXTRAIDO.json».
+
+LOS DOS CONFIG NO SON EL MISMO ARCHIVO, y esto se declara antes de seguir. El
+del Release trae 180 actores, 70 términos de anillo 2, 40 números y 12 falsos
+positivos, y sus actores llegan hasta 1915. El del proyecto trae 388 actores,
+139 términos de anillo 2, 112 números y 24 falsos positivos, con actores hasta
+1928. El asset del Release está atrasado. Este barrido usa el del proyecto,
+que es el más nuevo, y lo dice acá porque cambia lo que el barrido ve pasar:
+los 208 actores de 1916 a 1928 que el Release no tiene son justamente los de
+la época más cercana a 1932.
+
+DE DÓNDE SALIERON LAS IMÁGENES Y CÓMO SE COTEJARON. Los 54 PDF se bajaron del
+Release en una llamada (145 MB). Los 54 son PDF reales, versión 1.5, con capa
+de texto; diez de ellos (1452 a 1461) vienen con compresión zip deflate. Sin
+«EXTRAIDO.json», el cotejo se hizo contra la cadena de folios impresos, que en
+1932 corre dentro de cada edición y no de edición en edición (§1 y §F).
+
+QUÉ VERIFICÓ LA SESIÓN. nproc = 1. PyMuPDF no venía instalado y se instaló
+desde pypi. tesseract 5.3.4 está, pero «tesseract --list-langs» devuelve sólo
+«eng» y «osd»: NO HAY «spa». Por lo tanto no se OCRizó nada en sesión, el §3 y
+el §16 de la rúbrica no son aplicables, y todo lo que no está en la capa
+previa se leyó mirando la imagen. Están convert, montage, identify, unzip, git
+y curl; no están jq, exiftool ni gh. github.com y sus dominios de descarga
+respondieron sin token.
+
+DESVÍOS DE §8.17: ninguno. Las transcripciones conservan tildes, eñes, «N.o»,
+«1º», renglones traspuestos y erratas con [sic].
+
+QUÉ AGREGARÍA CADA INSUMO QUE FALTÓ: el .tsv daría confianza por hoja y con
+ella la lista de hojas «a ojos»; las .jpg darían md5, dhash y medición de
+tinta; el log diría qué falló en la corrida; los CSV y el pre-informe darían
+una segunda versión del texto con que desempatar cada palabra dudosa. Ninguno
+de ellos cambiaría el §A: los candidatos del anillo 1 ya están localizados y
+se juzgan en la imagen.
+
+
+§1 · CORPUS REVISADO
+====================
+
+54 ediciones, 1482 hojas, 4.705.575 caracteres de capa previa (media de 3.175
+por hoja). Ninguna hoja tiene cero caracteres. Ocho hojas quedan por debajo de
+500 B de texto y están en la lista de trabajo.
+
+TECHO DE RESOLUCIÓN. Cada hoja trae dos imágenes en gris superpuestas que
+ocupan la página entera: una de ~150 ppi y otra de ~75 ppi. El techo real del
+año es 150 ppi —menos de la mitad del de 1908-1912, que iba de 300 a 500— y
+eso significa que rasterizar a 400 o 600 dpi no agrega un solo detalle: sólo
+agranda el mismo píxel. A 250 dpi el renglón se lee sin esfuerzo; las cifras
+dudosas hay que decidirlas con el contexto y no con más resolución.
+
+DÍAS DE SALIDA. La tapa de 1932 no declara páginas y no declara fórmula de
+salida, pero la serie es semanal y sale los viernes: 1408 el viernes 1° de
+enero y 1460 el viernes 30 de diciembre, que son el primero y el último de los
+53 viernes del año. Las fechas leídas en la capa (17 de ellas) caen todas en
+el viernes que les toca. La edición 1461 queda fuera de la serie y se trata
+aparte.
+
+  ED    fecha                     h.   hojas  folio  observación
+  ----  ------------------------  --   ----  -----  --------------------
+  1408  [viernes 1 de enero]          40     ok  
+  1409  [viernes 8 de enero]          25     ok  
+  1410  [viernes 15 de enero]         27     ok  
+  1411  [viernes 22 de enero]         19     ok  
+  1412  viernes 29 de enero           16     ok  
+  1413  viernes 5 de febrero     *    24     ok  
+  1414  viernes 12 de febrero    *    14     ok  
+  1415  viernes 19 de febrero    *    54     ok  
+  1416  viernes 26 de febrero    *    34     ok  
+  1417  [viernes 4 de marzo]          26     ok  
+  1418  viernes 11 de marzo      *    18     ok  
+  1419  viernes 18 de marzo           23     ok  
+  1420  viernes 25 de marzo      *    17     ok  
+  1421  viernes 1 de abril       *    18     ok  
+  1422  viernes 8 de abril       *    23     ok  
+  1423  viernes 15 de abril      *    24     ok  
+  1424  viernes 22 de abril      *    14     ok  
+  1425  viernes 29 de abril      *    22     ok  
+  1426  viernes 6 de mayo        *    15     ok  
+  1427  viernes 13 de mayo            26     ok  
+  1428  viernes 20 de mayo            27     ok  
+  1429  viernes 27 de mayo       *    28     ok  
+  1430  viernes 3 de junio       *    21     ok  
+  1431  viernes 10 de junio      *    26     ok  
+  1432  viernes 17 de junio      *    24     ok  
+  1433  viernes 24 de junio      *    19     ok  
+  1434  viernes 1 de julio            36     ok  
+  1435  viernes 8 de julio       *    30     ok  
+  1436  viernes 15 de julio           21     ok  
+  1437  viernes 22 de julio      *    14     ok  
+  1438  viernes 29 de julio           15     ok  
+  1439  viernes 5 de agosto           14     ok  
+  1440  viernes 12 de agosto     *    19     ok  
+  1441  viernes 19 de agosto          24     ok  
+  1442  viernes 26 de agosto     *     5     ok  
+  1443  viernes 2 de setiembre   *     6     ok  
+  1444  viernes 9 de setiembre   *    36     ok  
+  1445  viernes 16 de setiembre  *    46     ok  
+  1446  viernes 23 de setiembre  *    43     ok  
+  1447  [viernes 30 de setiembre]      40     ok  
+  1448  viernes 7 de octubre     *    27     ok  
+  1449  viernes 14 de octubre    *    38     ok  
+  1450  viernes 21 de octubre    *    48     ok  
+  1451  viernes 28 de octubre         20     ok  
+  1452  viernes 4 de noviembre   *    36     ok  
+  1453  viernes 11 de noviembre  *    50     ok  
+  1454  viernes 18 de noviembre  *    39     ok  
+  1455  viernes 25 de noviembre       44     ok  
+  1456  viernes 2 de diciembre   *    38     ok  
+  1457  viernes 9 de diciembre   *    32     ok  
+  1458  viernes 16 de diciembre       30     ok  
+  1459  viernes 23 de diciembre       48     ok  
+  1460  viernes 30 de diciembre       32     ok  
+  1461  (sin tapa)               *    27     +4  faltan las hojas 1 a 4
+
+Las fechas entre corchetes se leyeron EN LA IMAGEN. Las marcadas con asterisco
+no se pudieron leer en la capa de la tapa y están puestas por la serie
+semanal: son INFERENCIA, no lectura, y ninguna ficha del §A se apoya en ellas.
+Las demás salen de la capa de la tapa y caen todas en el viernes que les toca.
+
+DOS FECHAS DE LA CAPA ERAN FALSAS Y LA IMAGEN LO MOSTRÓ. La capa de la tapa de
+1417 da «Salta, 20 de febrero de 1032» y la de 1447 da «Salta, 18 de agosto de
+1932»; las dos se apartan de la serie semanal. Miradas en la imagen, las tapas
+dicen «SALTA, VIERNES 4 DE MARZO DE 1932» y «Salta, Viernes 30 de Septiem. de
+1932»: lo que la capa había levantado era la fecha del primer decreto de la
+hoja, no la de la tapa. La serie queda confirmada en los dos casos.
+
+CONTROL DE PAGINACIÓN. En 1932 el folio impreso se reinicia en cada edición:
+la hoja N lleva impreso «Pág. N». Se leyó el folio de 1.093 de las 1.482 hojas
+—el resto lo perdió el OCR de cabecera— y en 53 de las 54 ediciones el
+desfasaje mayoritario es cero, de modo que ninguna edición tiene hojas
+faltantes en el medio. La excepción es 1461, donde el desfasaje es constante y
+vale 4: su primera hoja presente lleva impreso «Pág. 5». Le faltan las cuatro
+primeras hojas, tapa incluida, y no están en el Release. Es edición
+incompleta, no edición corta.
+
+
+§2 · CRITERIO DE BÚSQUEDA
+=========================
+
+VERSIONES. Una sola: la capa previa de los PDF, extraída en sesión con PyMuPDF
+(§2.1 de la rúbrica). No hay OCR propio, porque no hay «spa» en esta sesión y
+porque no llegó ninguna salida de lee_auto.py. Todo resultado se etiqueta
+«prev» y NO HUBO DESEMPATE POSIBLE entre dos versiones: el único desempate es
+la imagen, y se usó en cada palabra que decide una ficha.
+
+MARCA DE CORTE. U+0002 no aparece ni una vez en las 1.482 hojas. El guion
+blando U+00AD aparece 29.051 veces y las 29.051 son corte de renglón: no hay
+un solo U+00AD suelto. La unión los quita JUNTO CON el salto de renglón y con
+hasta dos signos de puntuación intercalados a cada lado, según §2.3 de v15.
+
+COTEJO SUMARIO / CUERPO: no aplicable. Las ediciones de 1932 no traen sumario
+con puntos guía; el cuerpo arranca en la misma tapa, debajo del encabezado de
+ley.
+
+LAS CUATRO PASADAS, sobre el texto normalizado NFD sin diacríticos y con los
+cortes unidos:
+
+  literal «cald»            60 aciertos en 36 hojas
+  laxa (sin «cald»)         15 aciertos en 13 hojas
+  difusa >= 0,78            47 aciertos en 29 hojas
+  difusa ampliada 0,70     229 aciertos
+
+Ninguna pasada devolvió cero, así que no hizo falta probar si estaba rota; aun
+así la laxa se probó contra su propio caso límite y lo encontró (ver abajo).
+
+LA LAXA CON CLASE DE ESPACIOS PAGÓ EN 1932. Escrita como manda v15, con
+[\s\-]{0,3} entre letras, devolvió en la hoja 1 de la edición 1409 la forma «c
+a l d e r a»: el rótulo del departamento impreso con letras espaciadas dentro
+de la convocatoria de senadores y diputados. Con un espacio literal, o sin la
+variante, ese acto no aparece en ninguna pasada. Es el único caso de letra
+espaciada del año, y se comprobó buscándolo aparte sobre las 1.482 hojas.
+
+LA DIFUSA, en cambio, no aportó nada propio este año: sus 47 aciertos son
+cuadrilla y cuadrillas (40), calavera (3), escalera (2) y calera (2), todos
+falsos positivos ya juzgados o resueltos en §E.7. La banda ampliada 0,70-0,78
+restringida a c, g y o dio 25 formas, todas vocabulario corriente.
+
+ANILLO 2. El config del proyecto trae 139 términos; 54 dieron acierto en 1932.
+Se leerán los contextos de los 54, no sólo de los que parecen del
+departamento.
+
+ANILLO DE ACTORES. El config trae 388 personas de 1908 a 1928 y de las
+ediciones de 1946. De ellas, 95 aparecen en 1932 con nombre completo. La
+búsqueda corre sobre el texto con la puntuación suprimida, no sólo
+normalizado.
+
+NÚMEROS. En 1932 los actos VUELVEN A LLEVAR NÚMERO: se hallaron 490 decretos
+rotulados con número y fecha, entre 13819 y 15918. Eso reactiva §5.3 y §8.15,
+que en 1908-1912 no se aplicaban. Los números arrastrados del config (112)
+dieron 41 aciertos, todos coincidencia de cifra con montos, artículos y
+expedientes.
+
+FÓRMULAS DE REEMPLAZO. «en reemplazo de», 87; «en su reemplazo», 13; «vacante
+producida», 2; «vacante dejada», 1; las otras cuatro, cero.
+
+
+§A · MENCIONES EXPLÍCITAS DEL TÉRMINO
+=====================================
+
+La literal dio 60 aciertos en 36 hojas, repartidos en las formas «caldera»
+(48), «calderilla» (8), «calderon» (2), «caldos» (1) y «caldoa» (1); la laxa
+agrega la hoja de letras espaciadas. Las formas «calderon», «caldos» y
+«caldoa» son falsos positivos y van a E.7. Hay 28 entradas, TODAS CERRADAS CON
+LA IMAGEN. Varias cubren más de una hoja, porque un acto publicado por
+entregas o un aviso con varias salidas es una sola entrada con varias
+apariciones: así se tratan el edicto de deslinde (hojas 26 y 27 de la 1429),
+el expediente minero (1415 h13 y 1434 h12), el remate del camión (1416 h31 y
+1427 h20), el remate de la casa (1434 h15, 1439 h13 y 1446 h41), el gasto de
+caminos de agosto (1445 h34 y h35) y el de noviembre (1457 h1 y h2).
+
+EL AÑO SE DEJA LEER COMO UNA SOLA HISTORIA, y conviene decirlo antes de las
+fichas porque es lo que ordena el §B. En diciembre de 1931 el Interventor
+oficializa la boleta del Demócrata Nacional para la Comisión Municipal de La
+Caldera, con dos nombres (1410). El 17 de enero se vota; el 10 de febrero el
+Interventor en Acuerdo de Ministros aprueba la elección y los declara electos
+(1416). El 4 de marzo, el Vice-Presidente 1o del Senado en ejercicio del Poder
+Ejecutivo nombra Presidente de esa Comisión a Augusto Regis (1419). En abril
+cambia el Comisario de Policía (1425). El 1o de mayo se transmite el mando; el
+11 de mayo el nuevo Gobernador acepta la renuncia del Encargado del Registro
+Civil y nombra otro (1430); el 13 nombra los dos Jueces de Paz sobre terna de
+la Comisión Municipal (1430), y el 9 de junio acepta la renuncia de uno de
+ellos, que se va del municipio (1433). Todo el año corre, en paralelo, la obra
+del camino a Jujuy (1430, 1435, 1445, 1457) y, sobre el final, el estudio del
+camino de La Calderilla a Mojotoro (1456). El 30 de diciembre se aprueba el
+presupuesto del municipio (1460).
+
+
+A.1 · Edición 1409, hoja 1
+--------------------------
+
+FUENTE. BO Salta N° 1409, viernes 8 de enero de 1932, hoja 1, col. 2.
+
+FICHA. Convocatoria a los legisladores provinciales titulares electos el 8 de
+noviembre y en los comicios complementarios del 22, para constituir las
+Cámaras bajo la presidencia del Interventor Nacional. Bajo el rótulo CALDERA:
+Senador titular Sr. Florentino M. Serret; Diputado titular Sr. José María
+Leguizamón.
+
+MODO DE LECTURA. Imagen incrustada de 150 ppi rasterizada a 250 dpi; columna 2
+entera, en dos mitades apiladas en horizontal. El encabezado del acto que
+precede a la lista queda en la columna 1 y NO se miró: la ficha no dice de qué
+decreto se trata ni quién lo firma.
+
+  TEXTO (transcripción desde la imagen):
+
+          Legisladores provinciales titulares
+  electos en los comicios del 8 de No-
+  viembre ppdo. y complementarios del
+  22 del mismo mes, que a continua-
+  ción se expresan, para que, bajo la
+  presidencia del suscrito Interventor
+  Nacional, procedan a constituir las
+  Honorables Cámaras de Diputados y
+  Senadores y designar sus autoridades:
+  
+               —CAPITAL—
+    SENADOR TITULAR:   Dr. ANTONIO ORTELLI.—
+    DIPUTADOS TITULARES: Sr. JOSE VICENTE SOLA.
+        »      »      » CESAR I. PIPINO.
+        »      »      » JOSE MEJUTO GONZALEZ.
+        »      »      » OSVALDO R. RLASCO. [sic]
+        »      »      » PEDRO R. PASTORE.
+        »      »      » CARLOS H. SALAMONE.
+        »      »      » ARTURO PEÑALVA.
+  
+               —CALDERA—
+    SENADOR TITULAR: Sr. FLORENTINO M. SERREY.
+    DIPUTADO   »     » JOSE MARIA LEGUIZAMON.
+  
+             —CAMPO SANTO—
+    SENADOR TITULAR: Sr. PARLO MESPLE. [sic]
+    DIPUTADO   »     » FELIX FLORES.
+
+  NOTA DE LECTURA:
+  - ESTA ES LA FICHA QUE LA PASADA LITERAL NO VE. El rótulo del
+    departamento está impreso en versalitas con las letras separadas, y en
+    la capa previa sale como «c a l d e r a»: no contiene la cadena «cald»
+    y ninguna búsqueda literal lo alcanza. Lo encontró la laxa escrita con
+    la clase de espacios en blanco, como manda v15.
+
+  - El rótulo dice CALDERA, sin artículo, igual que los demás rótulos de
+    departamento de la lista.
+
+  - «RLASCO» por Blasco y «PARLO MESPLE» por Pablo Mesplé se transcriben
+    como se imprimen; son erratas de composición del original, no del OCR:
+    se leyeron en la imagen.
+
+  - José María Leguizamón figura en el config con origen 1922 y es, con 74
+    hojas, el segundo actor más frecuente de 1932.
+
+
+A.2 · Edición 1410, hoja 2
+--------------------------
+
+FUENTE. BO Salta N° 1410, hoja 2, cols. 1 y 2.
+
+FICHA. Decreto 14294 (Salta, Diciembre 31 de 1931), Exp. N° 5684 Letra P.
+Oficializa la boleta de sufragio del partido Demócrata Nacional para la
+Comisión Municipal del distrito de 3a. categoría de La Caldera, con los
+candidatos Salvador Rosa y Pedro Arévalo. Firman MARTINEZ - M. Gómez.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 y 250 dpi; mitad inferior de la
+columna 1 y columna 2 entera. Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+  14294—Salta, Diciembre 31 de 1931.
+       Exp. N°. 5684 Letra — P.—
+          Vista la comunicación de fe-
+  cha 28 de Diciembre en curso, del
+  Presidente del Comitè del partido
+  «Demócrata Nacional» en La Calde-
+  ra, solicitando la oficialización de la
+  lista de candidatos y del modelo de
+  boleta de sufragio que acompaña;— y
+  atento que, el partido político recu-
+  rrente ha satisfecho los requisitos ne-
+  cesarios al objeto señalado,
+          El Interventor Nacional,
+                DECRETA:
+    Art. 1°.— Apruébase a los efectos
+  de su oficializacion la boleta de su-
+  fragio correspondiente a los siguien-
+  tes candidatos:
+             SALVADOR ROSA,
+             PEDRO AREVALO,
+  que para los cargos de miembros de
+  la Comisión Municipal del distrito de
+  3a. categoría de La Caldera, sostendrá
+  el partido Demócrata Nacional.
+    Art. 2°.-- Hágase conocer el presen-
+  te Decreto del señor Comisionado Mu-
+  nicipal de La Caldera, a los efectos
+  consiguientes.
+    Art. 3°.— Comuníquese, publíquese,
+  dése al Registro Oficial y archívese.
+        MARTINEZ - M. GOMEZ
+
+  NOTA DE LECTURA:
+  - El decreto es de 1931 y se publica en 1932: la fecha del acto y la de
+    su publicación no coinciden, y el informe no las concilia.
+
+  - Lo firma MARTINEZ - M. GOMEZ. La tapa de esta misma edición encabeza
+    «GOBIERNO DEL EXCMO. Sr. INT. Nacional DON ERASMO MARTINEZ», leída en
+    la imagen, mientras que las tapas de 1408 y 1409 encabezan «DR.
+    MARIANO GOMEZ». Las dos cosas se declaran y no se concilian: ver E.4 y
+    E.9.
+
+  - El decreto habla del «señor Comisionado Municipal de La Caldera», un
+    cargo de la intervención, a quien hay que hacer conocer el acto; no lo
+    nombra.
+
+  - Salvador Rosa figura en el config con origen 1916 y Pedro Arévalo con
+    origen 2584 (edición de 1946). Los dos vuelven en la edición 1416 como
+    electos.
+
+
+A.3 · Edición 1410, hoja 7
+--------------------------
+
+FUENTE. BO Salta N° 1410, hoja 7.
+
+FICHA. Nómina de autoridades de mesa del Colegio Electoral N° 2 — LA CALDERA,
+circuitos 5 y 6: mesa 1 en la Escuela Elemental Mixta de La Caldera
+(presidente Fernando Robles, suplentes José Eusebio Robles y Augusto Regis);
+mesa 2 en la Iglesia Parroquial de La Caldera (presidente Miguel Nigro,
+suplentes Fabián Alonso y Lorenzo Romano, los tres de La Calderilla); circuito
+6, mesa 1 en la Escuela Infantil Provincial de Vaqueros.
+
+MODO DE LECTURA. Imagen de 150 ppi a 250 dpi; columnas 1 y 2 enteras, cada una
+en dos mitades. Todo el texto de la ficha sale de la imagen, con su
+encabezado.
+
+  TEXTO (transcripción desde la imagen):
+
+    Colegio Electoral N° 2- La Caldera.
+  
+            Circuito N. 5
+             Mesa N° 1
+    Escuela Elemental Mixta--La Cal-
+  dera Presidente Robles Fernando La
+  Caldera » Sup. 1o Robles José Euse-
+  bio La Caldera » » 2° Regis Augusto
+  La Caldera
+             Mesa N° 2
+    Iglesia Parroquial—La  Caldera
+  Presidente Nigro Miguel La Calde-
+  rilla » Sup. 1° Alonso Fabián La
+  Calderilla » » 2° Romano Lorenzo
+  La Calderilla
+  
+            Circuito N° 6
+             Mesa N° 1
+    Escuela Infantil Provincial— Va-
+  queros Presidente Urquiza Francisco
+  S. Villa Urquiza » Sup. 1° Aparicio
+  José, Vaqueros » » 2° Zamora Pedro
+  Gregorio, Vaquero,
+    Colegio Electoral N° 3 -Campo Santo
+
+  NOTA DE LECTURA:
+  - EL ENCABEZADO ESTÁ IMPRESO AL PIE DEL BLOQUE ANTERIOR. «Colegio
+    Electoral N° 2- La Caldera.» cierra la mesa N° 3 del colegio que viene
+    antes —la de la Oficina del Registro Civil de La Montaña— y recién
+    después abre el «Circuito N. 5». Lo mismo hace «Colegio Electoral N° 3
+    -Campo Santo», que cierra el circuito 6. Por la maqueta parecen pies
+    de lista y por el contenido son encabezados: se transcriben donde
+    están, como manda §8.17, y se dice acá cómo hay que leerlos.
+
+  - EL COLEGIO ELECTORAL N° 2 DEL DEPARTAMENTO ABARCA VAQUEROS Y VILLA
+    URQUIZA. El circuito 5 vota en el pueblo de La Caldera y en la Iglesia
+    Parroquial, con autoridades domiciliadas en La Caldera y en La
+    Calderilla; el circuito 6 vota en la Escuela Infantil Provincial de
+    Vaqueros, con autoridades de Vaqueros y de Villa Urquiza. Es el
+    documento del año que mejor dibuja el territorio del departamento.
+
+  - TRES DE ESTOS NOMBRES VUELVEN EN LOS DECRETOS: Robles Fernando y
+    Robles José Eusebio, Alonso Fabián y Regis Augusto. Fabián Alonso y
+    Eusebio Robles son los dos Jueces de Paz nombrados en mayo (edición
+    1430) y Augusto Regis es el Presidente de la Comisión Municipal
+    nombrado en marzo (edición 1419).
+
+  - El original imprime «Vaquero,» en singular y con coma en el último
+    renglón, donde los dos anteriores dicen «Vaqueros».
+
+
+A.4 · Edición 1415, hoja 13
+---------------------------
+
+FUENTE. BO Salta N° 1415, hoja 13, y N° 1434, hoja 12 (resolución del mismo
+expediente).
+
+FICHA. EDICTO DE MINAS y su resolución. Alfredo P. Rigón y Joaquín Grané piden
+permiso de exploración y cateo de minerales de plomo y plata en 150 hectáreas
+de terrenos sin cercar, labrar ni cultivar, de propiedad de Bernardo
+Austerlitz, Departamento Caldera. La edición 1434 publica el RESUELVE que
+concede el permiso, con remisión al plano de fs. 1.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franjas verticales de la columna
+que trae el término en cada una de las dos hojas. En la 1415 la descripción
+del rectángulo sigue abajo y NO se leyó entera.
+
+  TEXTO (transcripción desde la imagen):
+
+  [1415 h13]
+  la Provincia notifica a todos los que
+  se consideren con algun derecho, para
+  que lo hagan valer, en la forma y
+  dentro del término de ley, que, el 12
+  de Enero de 1932, los señores Alfre-
+  do P. Rigón y Joaquín Grané solici-
+  tan permiso para exploración y cateo
+  de minerales de Plomo y Plata, en
+  una extensión de 150 hectareas, en
+  terrenos sin cercar, labrar ni cultivar,
+  de propiedad del señor Bernardo Aus-
+  terlitz, Departamento Caldera de esta
+  Provincia, las que se ubicarán del
+  modo siguiente:-en forma de un rec-
+                      [sigue]
+  
+  [1434 h12]
+              RESUELVE
+    1:—Concéder a los señores Alfre-
+  do P. Rigón y Joaquín Grané, sin
+  perjuicio de derechos de terceros,
+  permiso para exploración y cateo de
+  minerales de plomo y plata, en una
+  extensión de ciento cincuenta (150
+  Has.) hectáres, en terrenos sin culti-
+  var, labrar ni cercar, de propiedad
+  del señor Bernardo Austerlitz, juris-
+  dicción del Dpto. de la Caldera de
+  esta Provincia, las que se ubicarán
+  de acuerdo a la descripción dada en
+  el plano de fs. 1—y escrito de fs. 3
+  del presente exp.; debiendo los con-
+  cesionarios sujetarse a todas las obli-
+  gaciones y responsabilidades estable-
+                      [sigue]
+
+  NOTA DE LECTURA:
+  - ES LA ÚNICA REMISIÓN A UN PLANO DEL DEPARTAMENTO EN TODO EL AÑO, junto
+    con la del edicto que la precede: «el plano de fs. 1» no está
+    publicado. Va a §P como plano citado y no acompañado.
+
+  - El orden de las tres prohibiciones cambia entre el edicto y la
+    resolución: «sin cercar, labrar ni cultivar» en 1415 y «sin cultivar,
+    labrar ni cercar» en 1434. Se transcriben las dos.
+
+  - El edicto escribe «Departamento Caldera», sin la preposición ni el
+    artículo, y la resolución «Dpto. de la Caldera». «hectáres» y
+    «Concéder» son erratas del original.
+
+  - Bernardo Austerlitz figura en el config con origen 1925. Sus terrenos
+    del departamento vuelven en la edición 1434, hoja 11, y en la 1449,
+    hoja 22, que no se miraron.
+
+
+A.5 · Edición 1416, hoja 1
+--------------------------
+
+FUENTE. BO Salta N° 1416, viernes 26 de febrero de 1932, hoja 1, cols. 1 y 2.
+
+FICHA. Decreto 14445 (Salta, Febrero 10 de 1932), Expediente N° 5985 Letra E.
+Aprueba las elecciones municipales del 17 de enero y declara electos, para la
+Comisión Municipal de La Caldera, a Salvador Rosa y Pedro Arévalo. Firma el
+Interventor Nacional en Acuerdo de Ministros.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 y 250 dpi; mitad inferior de la
+columna 1 y columna 2 entera. Todo el texto de la ficha sale de la imagen,
+encabezado incluido.
+
+  TEXTO (transcripción desde la imagen):
+
+  14445—Salta Febrero 10 de 1932. .
+     Expediente N°. 5985 Letra E.—
+         Siendo necesario constituir
+  los Cuerpos Municipales, a cuyo car-
+  go estará el Gobierno Comunal de los
+  Distritos existentes en la Provincia,
+  de conformidad al resultado de las
+  elecciones realizadas el 17 de Enero
+  ppdo. de que dan cuenta las Actas de
+  los escrutinios practicados por las
+  respectivas Juntas Escrutadoras crea-
+  das por el Art. 17 del Decreto Regla-
+  mentario de Diciembre 9 de 1931,
+        El Interventor Nacional
+        en Acuerdo de Ministros
+              DECRETA:
+    Art. 1°.— Apruébanse las elecciones
+  municipales que tuvieron lugar el día
+  17 de Enero ppdo. por las que han
+  resultado electos para integrar
+  
+    1°.—El Concejo Deliberante de la Ca-
+              pital a los señores
+      Arrigó Morosini
+      Pedro Baldi
+      Merardo Cuellar
+      Mariano Esteban
+      Rafael Barni
+      Primitivo Varela
+      Carlos dè los Ríos
+      P. Martín Cordoba  y
+      Julio Suares
+    2°.— La Comisión Municipal de San
+              Lorenzo
+      Juan G. Martearena y
+      Antonio Torres
+    3°.— La Comisión Municipal de La
+              Caldera
+      Salvador Rosa  y
+      Pedro Arévalo
+    4°.— El Concejo Deliberante de Cam-
+              po Santo
+      Facundo Cabrera
+      Arno Newber
+      Juan López
+      Salomón Jorge Rajal y
+      Joaquín Rueda
+
+  NOTA DE LECTURA:
+  - EL ENCABEZADO EXPLICA LA LISTA, y por eso se miró la columna 1 aunque
+    el término aparezca en la columna 2: sin él, «La Comisión Municipal de
+    La Caldera — Salvador Rosa y Pedro Arévalo» no se puede fichar, porque
+    no dice si es una proclamación, un nombramiento o una nómina de
+    candidatos. Es una aprobación de elecciones.
+
+  - La lista sigue más abajo con otros distritos, que no se transcriben.
+
+  - Entre la oficialización de la boleta (edición 1410, decreto 14294) y
+    esta aprobación hay un solo par de nombres para los dos cargos: la
+    lista del Demócrata Nacional resultó electa sin competencia visible en
+    el Boletín.
+
+
+A.6 · Edición 1416, hoja 31
+---------------------------
+
+FUENTE. BO Salta N° 1416, hoja 31, y N° 1427, hoja 20 (segundo aviso del mismo
+remate).
+
+FICHA. REMATE JUDICIAL de un camión marca «Chevrolet» en los autos ejecutivos
+contra Rafael Delgado, expediente 6516/931, ante el Juez de 1a. Instancia y
+2a. Nominación en lo Civil Dr. Florentín Cornejo, adscripto Cullel. El camión
+está en poder del depositario judicial Ramón Juárez, en La Caldera. Primer
+aviso para el 29 de febrero de 1932; segundo aviso para el 16 de mayo.
+Martillero Francisco P. Herrera (segundo aviso: Francisco Peñalba Herrera).
+Marcas 1080 y 1489.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franjas verticales de la columna
+que trae el término en las dos hojas. Los dos textos se cotejaron entre sí EN
+LA IMAGEN.
+
+  TEXTO (transcripción desde la imagen):
+
+  [1416 h31]
+  nación en lo Civil, doctor Florentín
+  Cornejo, recaída en los autos ejecuti-
+  vos contra Rafael Delgado, expedien-
+  te N°. 6516|931, a cargo del adscrip-
+  to Cullel; El día 29 de Febrero de
+  1932, a horas 17, en mi Escritorio
+  J. M. Leguizamòn 434, remataré sin
+  base, dinero de contado, un camión
+  marca «Chevrolet», en estado de con-
+  servación, que se encuentra en poder
+  del depositario judicial señor Ramón
+  Juárez en La Caldera. Seña: el 50%
+  se exigirá en el acto del remate. Co-
+  misión: a cargo del comprador.
+       FRANCISCO P. HERRERA
+                Martillero
+                      (1080)
+  
+  [1427 h20]
+  del adscripto señor Cullel, el día 16
+  de Mayo próximo a horas 17, en mi
+  escritorio J. M. Leguizamón N° 434,
+  remataré sin base, dinero de contado,
+  un camión marca «Chevrolet», en
+  buen estado de conservación, que se
+  encuentra en poder del depositario
+  judicial señor Ramón Juárez, en la
+  Caldera. Seña: el 50 % se exigirá en
+  el acto del remate. Comisión a cuen-
+  ta del comprador.
+       Francisco Peñalba Herrera
+                Martillero
+                        1489
+
+  NOTA DE LECTURA:
+  - RAFAEL DELGADO ESTÁ SIENDO EJECUTADO MIENTRAS EL ESTADO LO EMPLEA. El
+    mismo hombre al que la Comisión de Caminos designa capataz de la
+    cuadrilla del camino a Jujuy (edición 1430, hoja 17), al que se le
+    liquidan jornales y comida durante todo el año, y que renuncia al
+    Juzgado de Paz suplente del distrito, pierde su camión en remate
+    judicial en febrero y de nuevo en mayo. Que sea la misma persona no lo
+    dice ningún acto; la coincidencia de nombre, fecha y lugar se declara
+    y no se resuelve. Ver E.9.
+
+  - DOS AVISOS, NO UNA REPETICIÓN. El primero dice «en estado de
+    conservación» y el segundo «en buen estado de conservación»; el
+    primero firma con iniciales y el segundo con el apellido completo; el
+    primero pone la marca entre paréntesis y el segundo sin ellos. Que el
+    remate de febrero se repita en mayo indica que el primero no se
+    realizó, y el Boletín no publica por qué: va a E.2.
+
+  - El expediente se imprime «6516|931» con barra vertical.
+
+
+A.7 · Edición 1419, hoja 1
+--------------------------
+
+FUENTE. BO Salta N° 1419, viernes 18 de marzo de 1932, hoja 1, col. 2.
+
+FICHA. Decreto 14543 (Salta, Marzo 4 de 1932). Nombramiento del Presidente de
+la Comisión Municipal del Distrito de 3a. Categoría de La Caldera: Augusto
+Regis. Firman ROVALETTI - G. Ojeda.
+
+MODO DE LECTURA. Imagen incrustada de 150 ppi rasterizada a 250 dpi; columna 2
+entera recortada por el ancho de la columna, en dos mitades apiladas en
+horizontal. Todo el texto de la ficha sale de la imagen. La fecha de tapa sale
+de la imagen; el AÑO editorial de esta tapa quedó fuera del recorte y no se
+leyó.
+
+  TEXTO (transcripción desde la imagen):
+
+  14543—Salta, Marzo 4 de 1932.
+    Debiendo designarse el Presidente
+  de la Comisión Municipal del Distrito
+  de 3a. Categoría de La Caldera, con
+  arreglo a la facultad conferida al Po-
+  de Ejecutivo por el Art. 178 de la
+  Constitución de la Provincia,
+    El Vice-Presidente 1o del H. Senado,
+  en ejercicio del Poder Ejecutivo de la
+  Provincia,
+              DECRETA.
+    Art. 1o—Nómbrase al señor Augus-
+  to Regis, Presidente de la Comisión
+  Municipal de La Caldera, por el tèr-
+  mino fijado por el Art. 182 de la Cons-
+  titución de la Provincia.
+    Art. 2o—Comuníquese, publíquese,
+  dése al Registro Oficial y archívese
+       ROVALETTI—G. OJEDA.
+
+  NOTA DE LECTURA:
+  - «Pode Ejecutivo» por «Poder Ejecutivo», tal como se imprime [sic]; el
+    renglón siguiente abre con «de Ejecutivo».
+
+  - El acto no lo firma el Gobernador ni un Interventor: lo firma el
+    Vice-Presidente 1o del H. Senado en ejercicio del Poder Ejecutivo. La
+    tapa de esta misma edición encabeza «GOBIERNO DEL Sr. DON ...», sin el
+    tratamiento de Interventor Nacional que llevan las tapas de enero y
+    febrero.
+
+  - Augusto Regis figura en el config con origen 1909, y en 1932 vuelve
+    como Presidente de la Comisión Municipal.
+
+
+A.8 · Edición 1419, hoja 10
+---------------------------
+
+FUENTE. BO Salta N° 1419, hoja 10.
+
+FICHA. Pago a un inspector por la inspección efectuada al lugar denominado
+«Calchanío», departamento de La Caldera, con informe de Contaduría General de
+fecha 4 de febrero.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna
+que trae el término. El encabezado de la resolución —su número y su fecha—
+queda arriba del recorte y NO se miró; sí se miró el acto siguiente, que lleva
+«N° 663» y fecha Salta, Marzo 9 de 1932, de modo que la resolución fichada es
+anterior a ese número.
+
+  TEXTO (transcripción desde la imagen):
+
+    Art. 1°—Autorízase la liquidación
+  y pago de la cantidad de 24 pesos
+  m/n. ($ 24.—, a favor del Inspector
+  del Departamento del Trabajo, don
+  Domingo Néstor Herrera, por con-
+  cepto de dos (2) días de viático a
+  razón de 12 pesos m/n. ($ 12.), diarios,
+  correspondientes a la inspección que
+  efectuara en el lugar denominado
+  «Calchanio» — Departamento de La
+  Caldera.
+    Art. 2°—Tómese razón por Conta-
+  duría General a sus efectos, impu-
+  tándose el gasto autorizado por esta
+  Resolución al Anexo B—Inc. 15—
+  Item 1°—Partida 10—del presupues-
+  to vigente.
+    Art. 3°.—Comuníquese, insértese en
+  el Libro de Resoluciones, y archíve-
+  se.
+    G. OJEDA—JULIO F. MEDINA
+        Oficial Mayor de Gobierno
+
+  NOTA DE LECTURA:
+  - EL SUBTOTAL CIERRA: dos días a $12 diarios son los $24 que el Art. 1°
+    autoriza. Va a E.8.
+
+  - La hoja imprime «Calchanio», sin tilde, que es la forma que el config
+    ya tiene. Las otras dos grafías del config para el mismo paraje
+    —chalchanio y cachanio— no aparecen en 1932.
+
+  - NO ES UN DECRETO NI LO FIRMA EL GOBERNADOR: es una resolución
+    ministerial que se inserta en el Libro de Resoluciones y no en el
+    Registro Oficial, firmada por G. Ojeda y por el Oficial Mayor de
+    Gobierno Julio F. Medina. Es la segunda pieza del §A resuelta así,
+    junto con la de 1456 h21. Ver E.4.
+
+  - El original abre el paréntesis de «($ 24.—» y no lo cierra.
+
+  - El Departamento del Trabajo manda un inspector a un paraje del
+    departamento y el Boletín no publica el informe de esa inspección: va
+    a E.2 como citado y no acompañado.
+
+
+A.9 · Edición 1425, hoja 12
+---------------------------
+
+FUENTE. BO Salta N° 1425, hoja 12.
+
+FICHA. Decreto sin número leído en la imagen, anterior al 14669 del 11 de
+abril. Nombra a Ramón Juárez Comisario de Policía de La Caldera, con
+anterioridad al 10 del corriente mes, en reemplazo de don Eustaquio Murúa.
+Firman ROVALETTI - G. Ojeda.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna
+que trae el término, del ancho entero de la columna. El NÚMERO DEL DECRETO NO
+SE MIRÓ: queda arriba del recorte. La capa previa da 14668 como número del
+acto inmediatamente anterior en la misma columna; ese dato sale de la capa y
+no de la imagen, y por eso el número no se afirma.
+
+  TEXTO (transcripción desde la imagen):
+
+  N°. 1615 de fecha 7 de Abril del cte.
+  mes de la Jefatura de Policía, y
+  atento a la propuesta de nombra-
+  miento de que la misma informa,
+     El Vice Presidente 1° del H. Senado
+       en Ejercicio del Poder Eje-
+          cutivo de la Provincia,
+              DECRETA:
+    Art. 1°.—Nómbrase al señor Ra-
+  mòn Juarez Comisario de Policía de
+  La Caldera con anterioridad al 10
+  del Corriente mes, en reemplazo de
+  don Eustaquio Murúa.
+    Art. 2°.—Tómese razón por Conta-
+  duría General y Jefatura de Policía
+  a sus efectos.
+    Art. 3°. Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+       ROVALETTI. - G. OJEDA.
+
+  NOTA DE LECTURA:
+  - EUSTAQUIO MURÚA ESTÁ EN EL CONFIG CON ORIGEN 1912, es decir que el
+    anillo de actores lo trajo desde un barrido hecho veinte años antes de
+    este. Acá sale del cargo de Comisario de Policía del departamento.
+
+  - El decreto nombra «con anterioridad al 10 del Corriente mes»: fecha
+    los efectos hacia atrás y no dice desde cuándo cesó Murúa. No se
+    infiere.
+
+  - Ramón Juárez concentra tres cargos del departamento en 1932:
+    depositario judicial (ediciones 1416 y 1427), Comisario de Policía
+    (ésta) y Encargado del Registro Civil (ediciones 1430 y 1458). Si es
+    la misma persona no lo dice ninguno de los actos, y el informe no lo
+    afirma.
+
+
+A.10 · Edición 1429, hoja 26
+----------------------------
+
+FUENTE. BO Salta N° 1429, hoja 26, col. 1.
+
+FICHA. EDICTO DE DESLINDE promovido por Ángel R. Bascari, con poder y títulos
+de Silvano Y. Murúa y de su esposa Fanny Ovejero Lacroix de Murúa, sobre las
+fincas «Las Garrapatas», «Cañada Seca o Peñones», «El durazno o Peñones», «Los
+Matos» y «Severino», en el departamento de La Caldera, con sus linderos.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1,
+del ancho entero de la columna. El edicto sigue abajo y NO se leyó entero: la
+transcripción corta donde corta el recorte, y se dice.
+
+  TEXTO (transcripción desde la imagen):
+
+    EDICTO DE DESLINDE: Habiéndose
+  presentado el señor Angel R. Bascari,
+  con poder y títulos snficientes de don
+  Silvano Y. Murúa y de su esposa do-
+  ña Fanny Ovejero Lacroix de Murúa,
+  solicitando deslinde, mensura y amo-
+  jonamiento de las fincas denominadas
+  «Las Garrapatas», «Cañada Seca o
+  Peñones», «El durazno o Peñones»,
+  «Los Matos» y «Severino», ubicadas
+  en el departamento de «La Caldera,
+  de esta provincia, y comprendida den-
+  tro de los siguientes límites: Finca
+  «Las Garrapatas» limita: Este, puesto
+  La Despensa; Oeste, finca Los Poron-
+  gos, de don Daniel Linares; Sud,
+  Puesto Severido; Norte, Puesto Ca-
+  ñada Seca o Peñones. — Finca «Ca-
+  ñada Seca o Peñones», limita: Sud,
+  Puestos Las Garrapatas y Despensa;
+  Norte, finca Peñones, de Silvano Y.
+  Murúa, Este, Peñones, de Francisco
+  Sosauya y herederos de Liborio Gue-
+  rrero, y Oeste, estancia Los Poron-
+  gos, de don Daniel Linares. — Finca
+  «El Durazno o Los Peñones», limi-
+  ta: Norte, propiedad de los herederos
+  Campos; Sud, sucesión de Silvano
+  Murúa, antes de Salvador Murúa; Es-
+  te, herederos de Liborio Guerrero, an-
+  tes de José María Murúa; Oeste, Daniel
+  Linares. —Finca «Los Matos», limita:
+  Este, Ceibal o Algarrobal, de la su-
+  cesión del doctor Josè María Solá, con
+  la cual se encuentra dividida en la
+  forma siguiente: Desde el mojón que
+  está en el camino de la Punta de Agua,
+  línea recta hacia el Poniente, hasta dar con
+  la puerta de la Cañada de la Iglesia,
+  y de ésta, para arriba, a un lado de
+  dicho arroyo; dividiéndose también
+  Los Matos con Severino, siguiendo
+  el mismo arroyo desde el mojón pa-
+  ra arriba, hasta salir a la mesada del
+  Panteón y siguiendo la línea por la
+  cuchilla que va por La Laguna y por
+  el Morro del Sunchal, hasta dar con
+  la encrucijada del Acheral. — Finca
+  «Severino», limita: Norte, Las Garra-
+  patas; Sud, con el puesto La Despen-
+  sa, y Oeste, El Nogalito, de Salvador
+  Rosa; el señor Juez de 1a. Instancia
+  y 1a. Nominación en lo Civil, ha dic-
+  tado el siguiente auto: «Salta, Marzo
+  30 de 1932. — AUTOS Y VISTOS: Por
+                      [sigue]
+  
+    [de la hoja 27, renglones anteriores a los citados:]
+  hasta dar con la cuchilla que divide
+  con el Paraiso; Oeste, El Acheral, de
+  los herederos Toledo; Norte, con el
+  puesto La Despensa, de los señores
+  Adolfo, Alberto y Abel Murúa, divi-
+  diéndolo desde el mojón puesto en el
+  camino de la Punta de Agua,
+
+  NOTA DE LECTURA:
+  - LA ENTRADA CUBRE LAS HOJAS 26 Y 27: el edicto sigue en la hoja
+    siguiente y las dos se miraron. La transcripción está ordenada por
+    cómo se leyó y no por el orden del original, y se dice.
+
+  - SALVADOR ROSA, MIEMBRO DE LA COMISIÓN MUNICIPAL ELECTO EN ENERO, ES
+    ACÁ EL PROPIETARIO DE EL NOGALITO, lindero oeste de la finca Severino.
+    Es el único acto del año que ata a un funcionario del departamento con
+    una propiedad del departamento.
+
+  - La hoja 27 agrega seis topónimos que el config NO tiene: el Paraíso,
+    el camino de la Punta de Agua, la Cañada de la Iglesia, la mesada del
+    Panteón, La Laguna y el Morro del Sunchal. Van al config actualizado.
+
+  - El puesto La Despensa es «de los señores Adolfo, Alberto y Abel
+    Murúa»: tres Murúa más, ninguno de ellos en el config.
+
+  - ES LA PIEZA MÁS DENSA DEL AÑO PARA EL ANILLO 2: en un solo edicto
+    aparecen Las Garrapatas, Cañada Seca, Peñones, El Durazno, Los Matos,
+    Severino, Los Porongos, La Despensa y el Ceibal, nueve términos del
+    anillo 2 con su posición relativa.
+
+  - El original abre la comilla de «La Caldera» y no la cierra: «en el
+    departamento de «La Caldera, de esta provincia» [sic]. También imprime
+    «snficientes» por suficientes y «Puesto Severido» a tres renglones de
+    la finca «Severino»; las dos formas se transcriben como están y van a
+    E.9.
+
+  - El mismo paraje se imprime de dos maneras dentro del mismo edicto: «El
+    durazno o Peñones» en la enumeración y «El Durazno o Los Peñones» en
+    los límites.
+
+  - LA CAPA PREVIA NO TRAE LA PALABRA «SOSAUYA», que la imagen imprime con
+    toda claridad en el lindero este de Cañada Seca. Una búsqueda por ese
+    apellido sobre la capa devuelve cero en las 1.482 hojas: es una falla
+    del OCR y no una ausencia. Se declara en E.5 y en E.7.
+
+  - Daniel Linares, Liborio Guerrero, Silvano Murúa y José María Solá
+    están los cuatro en el config, con orígenes 1909, 1909, 1909/1916 y
+    1925. Ángel R. Bascari, con origen 1927, es acá el apoderado.
+
+
+A.11 · Edición 1430, hoja 3
+---------------------------
+
+FUENTE. BO Salta N° 1430, hojas 2 y 3.
+
+FICHA. Aceptación de la renuncia de Rafael Delgado al cargo de Juez de Paz
+Suplente del Distrito Municipal de 3a. Categoría de «La Caldera», y, en la
+misma hoja, aceptación de la renuncia de Ramón Juárez al puesto de Encargado
+de la Oficina de Registro Civil de La Caldera, fundada en incompatibilidades.
+Firman A. ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna
+que trae el término. Del primer decreto sólo se miró el cierre —el encabezado,
+con su número y su fecha, queda en la hoja 2 y NO se miró—; el nombre del
+renunciante sale de la CAPA PREVIA de la hoja 2 y no de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+  del cargo de Juez de Paz Suplente
+  del Distrito Municipal de 3a. Catego-
+  ría de «La Caldera».
+    Art. 2o.—Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+     A. ARAOZ - A. B. ROVALETTI.
+
+  NOTA DE LECTURA:
+  - La firma sale acá como «A. ARAOZ» y en la hoja 5 de la misma edición
+    como «ARAOZ» a secas: se transcriben las dos formas y no se normaliza.
+
+  - Rafael Delgado renuncia como Juez de Paz Suplente en esta edición y en
+    la hoja 17 de la MISMA EDICIÓN es designado capataz de la cuadrilla
+    del camino a Jujuy. Que sea la misma persona no lo dice ningún acto y
+    el informe no lo afirma; la coincidencia se declara en E.9.
+
+
+A.12 · Edición 1430, hoja 5
+---------------------------
+
+FUENTE. BO Salta N° 1430, hoja 5, col. 2.
+
+FICHA. Decreto 14811 (Salta, Mayo 11 de 1932), Exp. N° 743 Letra R. Nombra a
+José Manuel Fernández Encargado de la Oficina de Registro Civil de La Caldera,
+en reemplazo de Ramón Juárez, que renunció. Firman ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2,
+del ancho entero de la columna. Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+  14811—Salta, Mayo 11 de 1932.
+     Exp. N° 743—Letra R.—Encon-
+  trándose vacante el puesto de En-
+  cargado de la Oficina de Registro Ci-
+  vil de La Caldera, por renuncia del
+  ex-titular, D. Ramón Juárez,
+     El Gobernador de la Provincia:
+              DECRETA.
+    Art. 1°.—Nómbrase a don José Ma
+  nuel Fernández, Encargado de la Ofi-
+  cina de Registro Civil de La Calde-
+  ra, en reemplazo de D. Ramón Juá-
+  rez, que renunció.
+    Art. 2°—Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+       ARAOZ - A. B. ROVALETTI.
+
+  NOTA DE LECTURA:
+  - ESTA VACANTE SÍ NOMBRA AL QUE LA DEJÓ y cita la causa, a diferencia de
+    las de 1912 que v15 puso como ejemplo de «citado y no acompañado»: la
+    renuncia está publicada en la hoja 3 de esta misma edición.
+
+  - José Manuel Fernández figura en el config con origen 1927.
+
+  - La hoja 3 de la edición 1458 vuelve sobre el mismo puesto y da a Ramón
+    Juárez como encargado «desde el día 10 hasta el 16 de Mayo de 1932»,
+    cinco días después de este nombramiento. Las dos cosas se transcriben
+    y no se concilian: ver E.9.
+
+
+A.13 · Edición 1430, hoja 7
+---------------------------
+
+FUENTE. BO Salta N° 1430, hoja 7, col. 1 y col. 2.
+
+FICHA. Decreto 14818 (Salta, 13 de Mayo de 1932), Expediente N° 799 Letra M.
+Nombra Juez de Paz Propietario a Fabián Alonso y Juez de Paz Suplente a
+Eusebio Robles, del Distrito Municipal de 3a. Categoría de La Caldera, sobre
+terna elevada por la H. Comisión Municipal. Firman ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen incrustada de 150 ppi rasterizada a 250 dpi; columnas
+1 y 2 recortadas enteras, cada una en dos mitades. Todo el texto de la ficha
+sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+  14818—Salta, 13 de Mayo de 1932.
+        Expediente N°. 799 Letra M.—
+         Vista la propuesta en ter-
+  na elevada a consideración y resolu-
+  ción del P. E., por la H. Comisión
+  Municipal del Distrito de 3a. Catego-
+  ría de La Caldera, para efectuar
+  nombramientos de Jueces de Paz de
+  su jurisdicciòn, conforme lo estatuye
+  el Art. 165 de la Constitución de la
+  Provincia;— y en uso de la facultad
+  conferida al P. E. en dicho Art. 165,
+     El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1o.— Nómbrase a Don Fabian
+  Alonso, Juez de Paz Propietario del
+  Distrito Municipal de 3a. Categoria
+  de La Caldera, por el término de fun-
+  ciones que fija el 2o. apartado del
+  Art. 165 de la Constitución de la
+  Provincia.
+    Art. 2o.— Nómbrase a don Euse-
+  bio Robles, Juez de Paz Suplente del
+  Distrito Municipal de 3a. Categoría
+  de La Caldera, por el tèrmino de
+  funciones que fija el 2o. apartado del
+  Art. 165 de la Constitución de la
+  Provincia.
+    Art- 3o.— Los funcionarios judicia-
+  les nombrados tomarán posesión de
+  sus cargos prévio cumplimiento de
+  las formalidades de Ley.
+    Art. 4o.—Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+     ARAOZ—A .B. ROVALETTI.
+
+  NOTA DE LECTURA:
+  - El acto se reparte entre las dos columnas de la hoja: el vistos cierra
+    la columna 1 y el articulado abre la columna 2. Se recortaron las dos
+    columnas enteras y se cotejaron renglón a renglón contra la capa
+    previa, sin renglón perdido.
+
+  - Inmediatamente después, en la misma columna, arranca un decreto
+    rotulado «13819—Salta, Mayo 13 de 1932.»: mil números por debajo del
+    anterior y con la misma fecha. Se transcribe como se imprime y no se
+    concilia; va a E.9.
+
+  - Fabián Alonso y Eusebio Robles figuran los dos, en la edición 1410,
+    como autoridades de mesa del departamento (Alonso por La Calderilla,
+    Robles por La Caldera).
+
+
+A.14 · Edición 1430, hoja 17
+----------------------------
+
+FUENTE. BO Salta N° 1430, hoja 17, col. 2.
+
+FICHA. Resolución sobre el camino a Jujuy en el tramo comprendido entre la
+casa de Rauch y La Caldera, unos seis kilómetros: ensanche, abovedamiento y
+enripiado por administración, con una cuadrilla de un capataz a cinco pesos
+m/l. diarios y veinticinco hombres a un peso con setenta centavos m/l., más la
+comida; el capataz da la comida y se le reconocen ochenta centavos por día
+trabajado y por peón. Se designa capataz a Rafael Delgado. Invoca la Ley N°
+3460 y firma El Gobernador de la Provincia.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2.
+El número del acto NO está en el recorte y no se miró.
+
+  TEXTO (transcripción desde la imagen):
+
+  del camino a Jujuy en el tramo com-
+  prendido entre la casa de Rauch y
+  La Caldera; vale decir, en una ex-
+  tensión aproximada de seis kilóme-
+  tròs, se resuelve efectuar los traba-
+  jos de ensanche del camino, aboveda-
+  miento y enripiado, pôr administra-
+  ción, a cuyo efecto se formará una
+  cuadrilla compuesta de un capatáz a
+  cinco pesos m/l. diarios y veinticinco
+  hombres con un jornal de Un peso
+  con setenta centavos m/l., más la co-
+  mida. El capatáz dará la comida a
+  los peones y se les reconocerá ochen-
+  ta centavos por día trabajado y por
+  peón. Se designa capatáz al señor
+  Rafael Delgado»; y,
+           CONSIDERANDO.
+    Que las medidas adoptadas por la
+  Comisión de Caminos, se encuentran
+  conformes con las atribuciones que
+  por Ley N°. 3460 le son propias.
+    Por tanto:
+     El Gobernador de la Provincia
+              DECRETA:
+
+  NOTA DE LECTURA:
+  - LOS NÚMEROS DE ESTE ACTO SE RECALCULAN Y NO CIERRAN CONTRA NADA,
+    porque el acto no publica total: veinticinco hombres a $1,70 son
+    $42,50 por día, más $5 del capataz son $47,50 de jornales diarios, y
+    la comida agrega $20 por día ($0,80 por veinticinco peones). El costo
+    diario de la cuadrilla es entonces $67,50, cifra que el Boletín no
+    imprime. Se anota en E.8 como recálculo sin contraparte publicada.
+
+  - El texto entrecomillado es la transcripción de un acta de la Comisión
+    de Caminos dentro del decreto: la comilla de cierre está después de
+    «Rafael Delgado» y la de apertura no está en el recorte.
+
+  - El original imprime «capatáz» con tilde las cuatro veces.
+
+
+A.15 · Edición 1433, hoja 1
+---------------------------
+
+FUENTE. BO Salta N° 1433, hoja 1, col. 2.
+
+FICHA. Decreto 14.894 (Salta, Junio 9 de 1932), Exp. N° 992 Letra R. Acepta la
+renuncia de Eusebio Robles al cargo de Juez de Paz Suplente del Distrito
+Municipal de «La Caldera», presentada el 5 del corriente, por deber ausentarse
+definitivamente del Municipio. Firman ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2,
+del ancho entero de la columna, con el rótulo MINISTERIO DE GOBIERNO y el de
+DECRETOS. Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+        MINISTERIO DE GOBIERNO
+              DECRETOS
+  14.894 —     Salta, Junio 9 de 1932.
+     Exp. N°. 992 — Letra R. — Vis-
+  ta la renuncia interpuesta con fecha
+  5 del corriente, por don Eusebio Ro-
+  bles, del cargo de Juez de Paz Su-
+  plente del Distrito Municipal de «La
+  Caldera», dado que deberá ausentar-
+  se definitivamente de dicho Municipio,
+     El Gobernador de la Provincia,
+              DECRETA:
+    Art. 1°. — Acéptase la renuncia in-
+  terpuesta por don Eusebio Robles, del
+  cargo de Juez de Paz Suplente del
+  Distrito Municipal de «La Caldera».
+    Art. 2°.—Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+       ARAOZ—A. B. ROVALETTI
+
+  NOTA DE LECTURA:
+  - EL NÚMERO SE IMPRIME CON PUNTO DE MILLAR —«14.894»— donde el decreto
+    14818 de la edición 1430 lo imprime sin punto. Las dos formas conviven
+    en el año y se transcriben como se ven.
+
+  - Eusebio Robles había sido nombrado Juez de Paz Suplente el 13 de mayo
+    por el decreto 14818 (ficha de 1430 h7) y renuncia veintitrés días
+    después. El cargo queda vacante y el Boletín no publica el reemplazo
+    dentro del año: se registra en E.2 como destino abierto.
+
+  - Un Eusebio Robles —«Robles José Eusebio»— figura como suplente de mesa
+    de La Caldera en la nómina de la edición 1410.
+
+
+A.16 · Edición 1434, hoja 15
+----------------------------
+
+FUENTE. BO Salta N° 1434, hoja 15 (primera de las tres apariciones del remate
+de la casa).
+
+FICHA. Primer aviso del remate de la casa del departamento la Caldera, con los
+mismos linderos y las mismas medidas que los avisos de las ediciones 1439 y
+1446. Martillero A. Salvatierra; marca 1560.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna
+que trae el término. El encabezado del aviso queda arriba del recorte y NO se
+miró.
+
+  TEXTO (transcripción desde la imagen):
+
+  tasación fiscal, una casa ubicada en
+  el Departamento la Caldera, de esta
+  Provincia, limitada; Norte y Oeste,
+  Calle publica, Sud y Este, propiedad
+  Luque Hermanos. de metrcs 14 50
+  de frente por 47 metros de fondo
+          A. SALVATIERRA
+            Martillero:      (1560)
+
+  NOTA DE LECTURA:
+  - SON TRES APARICIONES Y NO DOS. Con ésta, el remate de la casa sale en
+    las ediciones 1434, 1439 y 1446, con marcas 1560, 1610 y ninguna. La
+    entrada del §A correspondiente (1439 h13) queda corregida: la serie es
+    1434 con base, 1439 con base de $2.500 y 1446 sin base.
+
+  - Acá el original escribe «el Departamento la Caldera», sin «de» y sin
+    mayúscula en el artículo, «Calle publica» en singular y sin tilde, y
+    «metrcs 14 50» sin punto decimal. Las tres se transcriben como se ven.
+
+  - El punto decimal de «14 50» no se pudo decidir: a 150 ppi, que es el
+    techo del año, no hay resolución que agregue detalle, y las otras dos
+    apariciones imprimen «14.50».
+
+
+A.17 · Edición 1435, hoja 11
+----------------------------
+
+FUENTE. BO Salta N° 1435, hojas 11 y 12.
+
+FICHA. Decreto que manda librar orden de pago por $894 m/l. a nombre de la
+Comisión de Caminos, importe total de varias cantidades, entre ellas $24 m/l.
+por transporte de campamento de Salta a Río Wierna y de Río Wierna a La
+Calderilla. Invoca el Decreto de 17 de mayo de 1932 (Exp. 823 Letra C), que
+aprobó el Inciso 8° del Acta N° 175 de la Comisión de Caminos del 6 de mayo.
+Imputación a «Cuenta comisión de Caminos—Ley N° 3460—A Reintegrar», con cargo
+al saldo del crédito de cien mil pesos del Banco Provincial de Salta. Firman
+ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franjas verticales de las dos
+hojas, con el folio «Pág. 11» y «Pág. 12» visibles. El encabezado del decreto,
+con su número, queda arriba del recorte y NO se miró.
+
+  TEXTO (transcripción desde la imagen):
+
+  [1435 h11]
+  sentada por dicho capataz por $ 24
+  m/l., por transporte de campamento
+  de Salta, a Río Wierna y de Río
+  Wierna a La Calderilla y se resuelve
+  pedir al P. E. libre una orden de
+  pago a nombre de la Comisión de Ca-
+  minos por la suma de $ 894 m/l.,
+  importe total de las cantidades men-
+  cionadas, debiendose elevar a dicho
+  Ministerio la correspondiente rendi-
+  ción de cuentas y comprobantes tan
+  pronto se pague al personal de la
+  cuadrilla, de conformidad al Decreto
+  de Mayo 17 de 1932.—Exp. N° 823.
+  Letra C,-»;—Atento al informe de Con-
+  taduría General del 20 del corriente
+  mes; y
+  
+  [1435 h12]
+  Veinte y cuatro pesos m/l., ($ 24.00),
+  por concepto de gastos de transporte
+  de campamento de Salta, a Río Wier-
+  na y de Río Wierna a La Calderilla,
+  cuyas obras se dispusieran por De-
+  creto de fecha 17 de Mayo de 1932
+  en curso—Exp. N° 832—Letra C;—y
+  con cargo de elevar al Poder Ejecu-
+  tivo la rendiciòn de cuentas y com-
+  probantes para su aprobación.
+    Art. 2°.—Tómese razón por Conta-
+  duría General a sus efectos, impután-
+  dose el gasto autorizado por este De-
+  creto a «Cuenta comisión de Cami-
+  nos—Ley N° 3460 – A Reintegrar»;
+  debiendo liquidarse el importe respec-
+  tivo mediante Orden de pago con
+  cargo a los fondos de saldo del crédi-
+  to de Cien mil pesos moneda legal,
+  depositados en el Banco Provincial
+  de Salta y provenientes de la opera-
+  ciòn concertada con el Banco Espa-
+  ñol del Río de la Plata por Decreto
+  de fecha 5 de Abril ppdo.
+    Art. 3°.— Comuniquese, publiquese.
+  insértese en el R. Oficial y archivese,
+       ARAOZ—A .B. ROVALETTI.
+
+  NOTA DE LECTURA:
+  - EL MISMO EXPEDIENTE, DOS NÚMEROS, EN HOJAS CONTIGUAS DEL MISMO
+    DECRETO: la hoja 11 cita «Exp. N° 823. Letra C» y la hoja 12 «Exp. N°
+    832—Letra C». Una de las dos cifras está mal y el Boletín no permite
+    decidir cuál. Se transcriben las dos y va a E.9.
+
+  - ACÁ SE IDENTIFICA UNO DE LOS ACTOS CITADOS Y NO ACOMPAÑADOS. El
+    «Decreto de fecha 5 de Abril ppdo.» que la ficha de 1435 h13 dejó sin
+    materia resulta ser el que concertó con el Banco Español del Río de la
+    Plata la operación de crédito de cien mil pesos con que se pagan las
+    obras del camino. Sigue sin publicarse en el año, pero ya se sabe de
+    qué trata.
+
+  - EL SUBTOTAL NO SE PUEDE RECALCULAR: el decreto declara $894 como
+    «importe total de las cantidades mencionadas» y sólo una de esas
+    cantidades —los $24 del transporte a La Calderilla— está a la vista en
+    el recorte. Va a E.8 como cuadro no recalculado, con su motivo.
+
+  - Es la tercera obra del departamento del año: Salta–Río Wierna–La
+    Calderilla, junto con el camino a Jujuy y el estudio del camino de La
+    Calderilla a Mojotoro.
+
+
+A.18 · Edición 1435, hoja 13
+----------------------------
+
+FUENTE. BO Salta N° 1435, hoja 13, col. 1.
+
+FICHA. Decreto que aprueba el Punto 15 del Acta N° 178 de la Comisión de
+Caminos, de fecha 16 de junio de 1932: arreglo del camino nacional antiguo de
+Salta a Jujuy en el tramo comprendido entre el pueblo de la Caldera y el Abra
+de Tres Cruces, por administración, con la misma cuadrilla a las órdenes del
+capataz Rafael Delgado. Firman ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1.
+El número del decreto NO está en el recorte y no se miró; la capa previa
+tampoco trae ninguno antes de la mención en esta hoja.
+
+  TEXTO (transcripción desde la imagen):
+
+  15 del Acta N° 178 de fecha 16 del
+  corriente mes, que dice:
+      «Camino Nacional Salta a
+         Jujuy—Arreglo
+    Autorizar el arreglo del camino
+  nacional antigüo de Salta a Jujuy
+  en el tramo comprendido entre el
+  pueblo de la Caldera y el Abra de
+  Tres Cruces trabajo que se efectuará
+  por administración con la misma cua-
+  drilla que actualmente arregla otro
+  tramo del camino nuevo a las órdenes
+  del capataz Rafael Delgado».
+       El Gobernador de la Provincia
+              DECRETA:
+    Art. 1°.—Apruébase el Punto 15
+  del Acta N° 178 de fecha 16 Junio
+  de 1932 en curso, de la Comisión de
+  Caminos de la Provincia, con refe-
+  rencia a la obra:— «Camino Nacional
+  Salta a Jujuy Arreglo—», precedente-
+  mente inserto.
+    Art. 2°.— Tómese razón por
+  Contaduria General a sus efectos,
+  debiendo hacerse la liquidación y
+  pago de la obra autorizada de confor-
+  midad con el Decreto de fecha 5 de
+  Abril ppdo., que arbitró los fondos
+  para sufragarla.
+    Art. 3°.—Comuniquese, publiquese,
+  insèrtese en el R. Oficial y archivese
+       ARAOZ—A. B. ROVALETTI
+
+  NOTA DE LECTURA:
+  - ACTO CITADO Y NO ACOMPAÑADO: el «Decreto de fecha 5 de Abril ppdo.,
+    que arbitró los fondos» no se identifica por número. Se busca por
+    fecha y materia en el resto del año y el resultado va a E.2.
+
+  - El original imprime «antigüo» con diéresis y «la Caldera» con
+    minúscula en el acta transcripta, aunque el mismo Boletín escriba «La
+    Caldera» en los decretos. Se transcribe como se ve.
+
+  - Rafael Delgado aparece por tercera vez en el año como capataz de la
+    cuadrilla del camino a Jujuy (ediciones 1430, 1435 y 1445).
+
+
+A.19 · Edición 1439, hoja 13
+----------------------------
+
+FUENTE. BO Salta N° 1439, hoja 13, col. 1.
+
+FICHA. Aviso JUDICIAL. Remate del 10 de agosto, en el Bar Boston, de una casa
+en el pueblo de la Caldera, con base de $2.500 —dos terceras partes de su
+tasación fiscal—, en el juicio «Ejecutivo seguido por Delicia Junco de Bertini
+vs Avelina Cornejo de Murúa». Martillero A. Salvatierra; marca de publicación
+1610.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1.
+Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+              JUDICIAL
+    Por disposición del señor Juez de
+  Primera Instancia Segunda Nomi-
+  nación, en lo Civil, como correspon-
+  diente al juicio «Ejecutivo seguido
+  por Delicia Junco de Bertini vs Ave-
+  lina Cornejo de Murúa», el día 10 de
+  Agosto corriente año á horas 10 en el
+  Bar Boston, venderé con base de
+  $ 2.500; ó sean las dos terceras partes
+  de su tasación fiscal una casa ubica-
+  da en el pueblo de la Caldera, cuyos
+  limites son: Norte y Oeste, calles pú-
+  blica, Sud y Este, con propiedad de
+  Luque Hermanos; extención, 14.50
+  frente por 47 metros de fondo.
+              A. SALVATIERRA
+                      1610
+
+  NOTA DE LECTURA:
+  - «calles pública» en singular y «extención» con c se transcriben como
+    se imprimen.
+
+  - El mismo inmueble y el mismo juicio vuelven en la hoja 41 de la
+    edición 1446 con otra fecha y SIN BASE. No es un aviso repetido: es
+    otro aviso del mismo remate, y por eso las dos apariciones van juntas
+    en esta entrada y no se cuentan como duplicación. Ver E.6.
+
+  - Avelina Cornejo de Murúa lleva el apellido Murúa, que el config trae
+    desde 1908; el acto no dice que sea del departamento.
+
+
+A.20 · Edición 1445, hoja 34
+----------------------------
+
+FUENTE. BO Salta N° 1445, hojas 34 y 35, col. 2.
+
+FICHA. Decreto 15137 según la capa previa (Salta, agosto de 1932). Autoriza un
+gasto de $1.847,24 m/l. a nombre de la Comisión de Caminos: jornales de la
+cuadrilla del Camino Nacional de Salta a Jujuy por $1.323,24, comida dada a
+los peones por el capataz Rafael Delgado por $495 y factura de $29 por
+traslado de campamento y transporte de caños desde La Calderilla a El Angosto,
+departamento de La Caldera.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2
+de la hoja 34. El acto sigue en la hoja 35, que NO se miró. El número 15137
+sale de la CAPA PREVIA y no de la imagen, y por eso se dice de dónde sale.
+
+  TEXTO (transcripción desde la imagen):
+
+  [...] cuatro centavos m|n. ($ 1.323.24), co-
+  mo también e l importe de la comida
+  dada a los peones por el capataz D.
+  Rafael Delgado por la suma de Cua-
+  trocientos noventa y cinco pesos m|n.
+  ($ 495.-), y factura de gastos pre-
+  sentada por el nombrado capataz en
+  la cantidad de Veintinueve pesos
+  ($ 29.-) por concepto de traslado
+  de campamento y transporte de ca-
+  ños desde La Calderilla a El Angosto
+  -Departamento de La Caldera;- y
+  atento al informe de Contaduría Ge-
+  neral, de fecha 9 de Agosto en curso,
+        EL GOBERNADOR DE LA
+             PROVINCIA
+            D E C R E T A :
+    Art. 1°.—Autorízase el gasto de
+  la cantidad de UN MIL OCHO-
+  CIENTOS CUARENTA y SIETE
+  PESOS con VEINTICUATRO Cen-
+  tavos moneda legal ($ 1.847.24), cu-
+  yo importe deberá liquidarse a nom-
+  bre de la Comisión de Caminos de la
+  Provincia para que pueda abonar;
+  -los jornales correspondientes a la
+  cuadrilla de peones que trabaja en las
+  obras de reparación del CAMINO
+  NACIONAL de SALTA a JUJUY,
+  que ascienden a la cantidad de Un
+  Mil Trescientos Veintitres pesos con
+  [sigue en la hoja 35]
+
+  NOTA DE LECTURA:
+  - ESTE CUADRO CIERRA Y SE RECALCULÓ IGUAL, como manda v15: 1.323,24 +
+    495,00 + 29,00 = 1.847,24, que es exactamente la cifra que el Art. 1°
+    autoriza, en cifras y en letras. Va a E.8 como subtotal recalculado.
+
+  - El original escribe «m|n.» con barra vertical donde en otras hojas
+    imprime «m/l.»; se transcribe como se ve.
+
+  - La transcripción arranca cortada porque el recorte empieza ahí: los
+    renglones anteriores, que traen el comienzo del vistos y el número del
+    decreto, quedan pendientes de mirar.
+
+
+A.21 · Edición 1445, hoja 35
+----------------------------
+
+FUENTE. BO Salta N° 1445, hoja 35, col. 1 (continuación del decreto de la hoja
+34).
+
+FICHA. Cierre del decreto de gastos del camino a Jujuy: los haberes del
+capataz Rafael Delgado y los $495 de manutención de los peones se abonan a los
+señores PATRÓN COSTAS Y CÍA., de esta Capital, en mérito de la cesión que
+Rafael Delgado hizo a esa casa comercial de todos los haberes que pudieran
+corresponderle como Sobrestante de la cuadrilla, más importes de mercaderías y
+comida suministrada a los peones de su dependencia.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1
+de la hoja 35. Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+  concepto de traslado de campamen-
+  to y transporte de caños de La Cal-
+  derilla a El Angosto; y debiendo en
+  cuanto a los haberes correspondientes
+  al capataz Don Rafael Delgado co-
+  mo capataz de la mencionada cua-
+  drilla, como también la cantidad de
+  Cuatrocientos Noventa y Cinco pe-
+  sos m|n. ($ 495.-) importe de los
+  gastos de manutención de los peones
+  a cargo de dicho capataz, abonarlos
+  a favor de los señores Patrón Costas
+  y Cía., de esta Capital, en mérito de
+  la cesión hecha a estos últimos por
+  Don Rafael Delgado de todos los ha-
+  beres que le pudieran corresponder
+  como Sobrestante de la cuadrilla del
+  referido camino de Salta a Jujuy, im-
+  portes de mercaderías y comida su-
+  ministrada a los peones de su
+  dependencia.
+    Art. 2°.—La Comisión de Cami-
+
+  NOTA DE LECTURA:
+  - ACÁ SE CIERRA LA HISTORIA DE RAFAEL DELGADO Y ES LA PIEZA MÁS
+    REVELADORA DEL AÑO. El capataz de la cuadrilla del camino a Jujuy no
+    cobra: sus haberes van, por cesión, a una casa comercial de la Capital
+    que le provee mercaderías y comida para los peones. En febrero y en
+    mayo del mismo año le rematan el camión en juicio ejecutivo. El
+    Boletín publica las tres cosas y no las relaciona; el informe tampoco
+    las relaciona, las pone juntas.
+
+  - El decreto lo llama «capataz» en un renglón y «Sobrestante» en otro,
+    para el mismo hombre y la misma cuadrilla. Se transcriben los dos y no
+    se unifica.
+
+  - La casa cesionaria se imprime «Patrón Costas y Cía.». El apellido
+    aparece en 29 hojas del año en contextos que no son éste, y se reparte
+    en B.3.
+
+
+A.22 · Edición 1446, hoja 41
+----------------------------
+
+FUENTE. BO Salta N° 1446, hoja 41, col. 1 (segunda aparición del aviso
+anterior).
+
+FICHA. Segundo aviso del mismo remate: 27 de septiembre, a horas 17, Bar
+Boston, SIN BASE y dinero de contado, misma casa del pueblo de la Caldera, con
+extensión de 14.50 metros de frente por 47 de fondo y los mismos linderos.
+Martillero A. Salvatierra.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1.
+Todo el texto de la ficha sale de la imagen.
+
+  TEXTO (transcripción desde la imagen):
+
+    Por disposición del señor Juez en
+  lo Civil Segunda Nominación y co-
+  mo correspondiente al juicio "Eje-
+  cutivo seguido por Delicia Junco de
+  Bertini vs. Avelina Cornejo de Mu-
+  rua" el 27 de Septiembre del corrien-
+  te año , a horas 17, en el Bar Boston
+  de esta ciudad, venderé sin base y di-
+  nero de contado una casa ubicada en
+  el pueblo de la Caldera de esta Pro-
+  vincia, con extensión de 14.50 me-
+  tros de frente por 47 metros de fon-
+  do, siendo sus límites: Norte y Oeste
+  calles públicas; Sud y Este propiedad
+  de Luque Hermanos.
+              A. Salvatierra
+                Martillero
+
+  NOTA DE LECTURA:
+  - ENTRE LOS DOS AVISOS EL REMATE PERDIÓ LA BASE: el primero salía con
+    base de $2.500 y éste sale sin base y dinero de contado. El Boletín no
+    publica la resolución que ordenó el cambio: se registra en E.2 como
+    acto citado y no acompañado, por fecha y materia.
+
+  - Este aviso no lleva marca de publicación, y el primero sí (1610). La
+    comparación entre los dos se hizo sobre la IMAGEN de las dos hojas, no
+    sobre la capa.
+
+  - El primero escribe «calles pública» y «extención»; éste, «calles
+    públicas» y «extensión». Uno usa comillas angulares y el otro, rectas.
+
+
+A.23 · Edición 1456, hoja 21
+----------------------------
+
+FUENTE. BO Salta N° 1456, hoja 21, col. 2.
+
+FICHA. Resolución del Ministro de Gobierno, Exp. N° 2244 Letra O. Autoriza un
+gasto de $80,50 a la Comisión de Caminos por los jornales del estudio del
+traslado de un nuevo camino destinado a unir las localidades de La Calderilla
+y Mojotoro, por la Quebrada de Gallinato, con informe de Contaduría General
+del 17 de noviembre.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2.
+El rótulo MINISTERIO DE GOBIERNO se ve cortado en el borde superior del
+recorte y no se transcribe como parte del acto.
+
+  TEXTO (transcripción desde la imagen):
+
+    Exp. N° 2244 —Letra O.—Visto es-
+  te Expediente, por el que la Comisión
+  de Caminos de la Provincia eleva a
+  la aprobación y pago del Poder Eje-
+  cutivo, una planilla de jornales por
+  la suma de Ochenta pesos con cincuen-
+  ta centavos moneda legal ($ 80.50),
+  correspondiente a los gastos efectua-
+  dos por el estudio del traslado de un
+  nuevo camino destinado a unir las
+  localidades denominadas La Calderilla
+  y Mojotoro, por la Quebrada de Ga-
+  llinato, y atento al informe de Conta-
+  duría General de fecha 17 de Noviem-
+  bre en curso,
+        El Ministro de Gobierno
+              RESUELVE:
+    Art. 1°.—Autorízase el gasto de la
+  cantidad de Ochenta pesos con cin-
+  cuenta centavos moneda legal ($ 80.50),
+  que se liquidará y abonará a la Co-
+  misión de Caminos de la Provincia,
+  a objeto de que proceda a cancelar
+  los jornales habidos en los trabajos
+  de estudio del nuevo trazado del ca-
+  mino de La Calderilla a Mojotoro,
+  por la Quebrada de Gallinato, con
+  arreglo a la planilla respectiva agre-
+  gada a este Expediente N° 2244—Le-
+  tra O., y con cargo de rendir cuenta
+  oportunamente.
+
+  NOTA DE LECTURA:
+  - NO ES UN DECRETO: lo resuelve el Ministro de Gobierno, sin
+    intervención del Gobernador y sin número de decreto. Es la única pieza
+    del §A firmada así, y se registra en E.4.
+
+  - LA PLANILLA DE JORNALES ESTÁ CITADA Y NO ACOMPAÑADA: el acto la
+    declara agregada al expediente y el Boletín no la publica, de modo que
+    los $80,50 no se pueden recalcular. Va a E.8.
+
+  - El acto une tres términos del anillo 2 en una sola frase —La
+    Calderilla, Mojotoro y Gallinato— y es el segundo camino del
+    departamento que aparece en el año, junto al de Salta a Jujuy.
+
+
+A.24 · Edición 1456, hoja 26
+----------------------------
+
+FUENTE. BO Salta N° 1456, hoja 26, col. 2.
+
+FICHA. Ley de caza. Título I, Art. 1°: divide el territorio de la Provincia en
+tres zonas; la segunda comprende los departamentos de Campo Santo, Caldera y
+Rosario de Lerma, con una excepción.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2.
+El encabezado de la ley (su número y la fórmula de promulgación) queda arriba
+del recorte y NO se miró: la ficha no dice qué número tiene esta ley.
+
+  TEXTO (transcripción desde la imagen):
+
+                L E Y:
+              T I T U L O  I
+             DE LA CAZA
+    Artículo 1°.—A los efectos de la ca-
+  za se divide el territorio de la Pro-
+  vincia en tres zonas. Comprende la
+  primera zona los departamentos de
+  Chicoana, La Viña y Guachipas; la
+  segunda zona comprende los depar-
+  tamentos de Campo Santo, Caldera y
+  Rosario de Lerma, exceptuándose
+  de este último departamento la par-
+  te del mismo comprendida en la ter-
+  cera zona; y la tercera zona compren-
+  de los departamentos de la Capital,
+  Cerrillos y la parte Sudeste del de-
+  partamento de Rosario de Lerma
+  comprendida entre las estaciones
+  Pucará, Quijano y Río Blanco y los
+  pueblos de la Silleta y El Encón.
+    Artículo 2°.—El territorio no com-
+  prendido dentro de las tres zonas
+  establecidas en el artículo anterior,
+  se considerará como zona libre.
+    Artículo 3°.—A partir del año 1933
+  se cazará cada año en una sola zona,
+  empezando por la primera zona y si-
+  guiéndola en turno la segunda y la
+  tercera, de tal manera que siempre
+  una zona permanezca dos años sin
+  ser batida.
+    Artículo 4°.—El período de caza se
+  iniciará el 1°. de Mayo y terminará
+  el 31 de Agosto de cada año.
+    Artículo 5°.—Tendrá derecho a cazar
+  con armas de fuego toda persona
+                      [sigue]
+
+  NOTA DE LECTURA:
+  - LISTA DE DEPARTAMENTOS QUE NOMBRA EL TÉRMINO: se lee entera, como
+    manda §4.10, y por eso se transcriben las tres zonas y no sólo la
+    segunda.
+
+  - La ley escribe «Caldera» sin artículo, igual que el rótulo electoral
+    de la edición 1409 y al revés de los decretos, que escriben «La
+    Caldera» y «de La Caldera».
+
+  - El departamento queda en la segunda zona y, por el Art. 3°, le toca
+    ser batido en el segundo año del turno que empieza en 1933: el efecto
+    cae fuera del corpus del año y no se infiere.
+
+
+A.25 · Edición 1457, hoja 1
+---------------------------
+
+FUENTE. BO Salta N° 1457, hojas 1 y 2, col. 2 de la hoja 1 y col. 1 de la hoja
+2.
+
+FICHA. Decreto sobre el Expediente N° 1582 Letra O: planilla de jornales y
+gastos de la cuadrilla del Camino Nacional de Salta a Jujuy en el tramo
+comprendido entre el pueblo de La Caldera y el Abra de Tres Cruces, elevada
+por Nota N° C-J2 11 del 22 de agosto. Tres partidas: a) $360,45 de jornales;
+b) $127,60 de manutención de los peones, a pagar a la Casa Patrón Costas y
+Cía. por la cesión de Rafael Delgado; c) $60 de traslado de campamentos, a
+favor del propio Delgado. Imputación a «Cuenta Comisión de Caminos—Ley N°
+3460—A Reintegrar».
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franjas verticales de las dos
+hojas. El total impreso se leyó en la imagen de la hoja 1.
+
+  TEXTO (transcripción desde la imagen):
+
+  [1457 h1]
+    Exp. N° 1582—Letra O.—Visto es-
+  te Expediente, relativo a la planilla
+  de jornales elevada a la aprobación y
+  pago del Poder Ejecutivo por el se-
+  ñor Presidente de la Comisión de Ca-
+  minos de la Provincia, por Nota
+  N° C—J2 11 de fecha 22 de Agosto
+  ppdo., y correspondientes a los peo-
+  nes de la cuadrilla que trabaja en el
+  Camino Nacional de Salta, a Jujuy,
+  en el tramo comprendido entre el
+  pueblo de La Caldera y el Abra de
+  Tres Cruces, planilla que asciende a
+  la cantidad de Trescientos sesenta pe-
+  sos con cuarenta y cinco centavos mo-
+  neda legal ($ 360.45), como también
+  el importe de Ciento veinte y siete
+  pesos con sesenta centavos moneda le-
+  gal ($ 127.60), de la manutención de
+  los peones a cargo del capatáz de
+  cuadrilla don Rafael Delgado, y la
+  factura presentada por dicho capatáz
+  
+  [1457 h2]
+  comprendido entre el pueblo de La
+  Caldera y el Abra de Tres Cruces;
+    b) Ciento veintisiete pesos cos se-
+  senta centavos moneda legal ($127.60),
+  importe correspondiente a los gastos
+  de manutención de peones de dicha
+  cuadrilla a cargo del capatáz don Ra-
+  fael Delgado, que deberá abonarse a
+  la Casa Patrón Costas y Cía., de esta
+  Capital, como así también los habe-
+  res que correspondan a don Rafael
+  Delgado, en su carácter de capatáz
+  de cuadrilla, en mérito de la cesión
+  hecha por el mismo a la citada Casa
+  comercial de los referidos haberes y
+  demás efectos provistos a los peones; y
+    c) Sesenta pesos moneda legal ($ 60.)
+  importe correspondiente a los gastos
+  de traslado de campamentos, a favor
+  del capatáz don Rafael Delgado.
+    Art. 2°.—Tómese razón por Conta-
+  duría General a sus efectos, realizán-
+  dose la liquidación y pago del impor-
+  te total autorizado por este Decreto,
+  con imputación a «Cuenta Comisión
+  de Caminos—Ley N° 3460—A Rein-
+  tegrar», y mediante Orden de Pago a
+  favor de la Comisión de Caminos, y
+
+  NOTA DE LECTURA:
+  - EL SUBTOTAL CIERRA: 360,45 + 127,60 + 60,00 = 548,05, y $548.05 es
+    exactamente la cifra que la hoja 1 imprime como total autorizado. Va a
+    E.8 como segundo cuadro del año que se recalcula y cierra.
+
+  - «ciento veinte y siete» en la hoja 1 y «Ciento veintisiete» en la hoja
+    2, para la misma partida y en el mismo decreto. Y «pesos cos sesenta
+    centavos» [sic] por «con». Se transcriben los tres.
+
+  - La nota de la Comisión de Caminos se cita como «N° C—J2 11», que a 150
+    ppi no se puede desarmar con seguridad en letra y número: se
+    transcribe tal como se ve y se marca como cifra dudosa.
+
+  - LA PLANILLA MISMA NO ESTÁ PUBLICADA: los $360,45 de jornales no se
+    pueden abrir por peón ni por día. Va a E.8.
+
+
+A.26 · Edición 1458, hoja 3
+---------------------------
+
+FUENTE. BO Salta N° 1458, hoja 3, col. 2.
+
+FICHA. Nómina de ex-encargados de oficinas de Registro Civil con los días que
+desempeñaron el cargo; el punto 4°) da a Ramón Juárez como ex-encargado de la
+oficina de La Caldera «desde el día 10 hasta el 16 de Mayo de 1932 en curso».
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2.
+El encabezado del acto —qué se liquida y con qué motivo— queda arriba del
+recorte y NO se miró: la ficha no dice de qué acto forma parte la nómina.
+
+  TEXTO (transcripción desde la imagen):
+
+    3°.)—Maria Elena Lobo de Benavente,
+  ex-Encargada de la oficina de Regis-
+  tro Civil de La Merced, desde el día
+  10 hasta el 14 de 1932 en curso;
+    4°.)—Ramon Juarez, ex-Encargado
+  de la oficina de Registro Civil de La
+  Caldera, desde el día 10 hasta el 16
+  de Mayo de 1932 en curso;
+    5°.)—Fernando Martinez, ex-Encarga-
+  do de la oficina de Registro Civil de
+  Campo Santo, desde el día 18 de
+  Abril hasta el 15 de Julio de 1932
+  en curso;
+
+  NOTA DE LECTURA:
+  - EL RENGLÓN DEL PUNTO 3°) NO DICE EL MES: «desde el día 10 hasta el 14
+    de 1932 en curso», sin nombre de mes. Se transcribe con el hueco y no
+    se completa por el renglón vecino.
+
+  - CONTRADICE AL DECRETO 14811. La renuncia de Ramón Juárez se aceptó en
+    la edición 1430 y su reemplazante fue nombrado el 11 de mayo; acá el
+    Boletín lo da en el cargo hasta el 16. Las dos cosas se transcriben y
+    ninguna se corrige. Ver E.9.
+
+
+A.27 · Edición 1458, hoja 27
+----------------------------
+
+FUENTE. BO Salta N° 1458, hoja 27, col. 2.
+
+FICHA. Aviso de remate de ganado que se encuentra en «El Angosto»,
+departamento de La Caldera, en poder del administrador judicial Dn. Pedro
+Yañez. Detalle de nueve renglones de hacienda; seña del 20%. Martillero
+Antonio Forcada; marca de publicación 1828.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 2.
+El encabezado del aviso —juzgado, juicio y fecha del remate— queda arriba del
+recorte y NO se miró.
+
+  TEXTO (transcripción desde la imagen):
+
+  -- 12 vacas con cria al pie.
+     20 vacas viejas sin cría.
+      8 terneras de  1 año.
+     17 terneros de  1 año.
+      7 tamberas de 2  años.
+      5 novillos de 2 años.
+      7 tamberas de 3  años.
+     11 novillos de 3 años.
+      6 toros de  8 años.
+    Este ganado se encuentra en
+  «El Angosto», departamento de
+  La Caldera, en poder del administra-
+  dor judicial Dn. Pedro Yañez.
+    En el acto del remate se exigirà
+  el 20 % de seña y como a cuenta del
+  precio de compra, siendo la comisión
+  del martillero por cuenta del com-
+  prador.
+              ANTONIO FORCADA
+                Martillero      1828
+
+  NOTA DE LECTURA:
+  - LA LISTA SE RECALCULÓ: 12 + 20 + 8 + 17 + 7 + 5 + 7 + 11 + 6 = 93
+    cabezas. El aviso NO publica total, de modo que no hay contra qué
+    cotejar la suma; se anota en E.8.
+
+  - «El Angosto» del departamento vuelve acá por segunda vez en el año: la
+    primera es el traslado de caños de la edición 1445.
+
+  - El original imprime «cria» sin tilde en el primer renglón y «cría» con
+    tilde en el segundo.
+
+
+A.28 · Edición 1460, hoja 7
+---------------------------
+
+FUENTE. BO Salta N° 1460, viernes 30 de diciembre de 1932, hoja 7, col. 1.
+
+FICHA. Decreto 15445 según la capa previa. El Gobernador en Acuerdo de
+Ministros aprueba la Ordenanza General de Impuestos, Presupuesto de Gastos y
+Cálculo de Recursos de la Municipalidad de 3a. Categoría de La Caldera para el
+ejercicio 1932, manda elevar la rendición de cuentas de 1931 y ordena tramitar
+ante el Consejo de Educación el saldo deudor por renta escolar atrasada.
+Expediente 1392 Letra M. Firman ARAOZ - A. B. Rovaletti.
+
+MODO DE LECTURA. Imagen de 150 ppi a 215 dpi; franja vertical de la columna 1,
+con el folio «Pág. 7» visible en la cabecera. El número 15445 sale de la CAPA
+PREVIA y no de la imagen: el encabezado del decreto queda arriba del recorte.
+
+  TEXTO (transcripción desde la imagen):
+
+        El Gobernador de la Provincia,
+          en Acuerdo de Ministros,
+              DECRETA:
+    Art. 1°.—Apruébase la Ordenanza
+  General de Impuestos, Presupuesto
+  de Gastos y Cálculo de Recursos de
+  la Municipalidad de 3a Categoría de
+  La Caldera, para regir durante el
+  presente ejercicio económico de 1932,
+  debiendo la Municipalidad citada
+  elevar al Poder Ejecutivo, la Rendi-
+  ción de Cuentas corrspondiente al
+  ejercicio económico fenecido 1931.
+    Art. 2°.—La Municipalidad de La
+  Caldera deberá iniciar ante el Con-
+  sejo de Educación de la Provincia la
+  tramitación necesaria para dejar per-
+  fectamente establecido el saldo deudor
+  por concepto de renta escolar atrasa-
+  da, de conformidad a las disposiciones
+  de los Arts. 8 y 9 de la Ley número
+  44 sobre Emisión de Obligaciones de
+  la Provincia.
+    Art. 3°.—Remítase a la Municipali-
+  dad de La Caldera el presente Ex-
+  pediente número 1392—Letra M., la
+  que a su vez enviará al Departa-
+  mento de Gobierno copia autenticada
+  de todo lo actuado, para su registro
+  en el Libro correspondiente de dicho
+  Ministerio.
+    Art. 4°—Comuníquese, publíquese,
+  insértese en el R. Oficial y archívese.
+       ARAOZ—A. B. ROVALETTI
+
+  NOTA DE LECTURA:
+  - EL PRESUPUESTO MUNICIPAL ESTÁ APROBADO Y NO ESTÁ PUBLICADO: el decreto
+    aprueba la Ordenanza General de Impuestos y el Cálculo de Recursos del
+    municipio y el Boletín no imprime ni una cifra de ellos. Es la tabla
+    más importante del año para el departamento y va a E.8 y a E.2 como
+    citada y no acompañada.
+
+  - Tampoco está publicada la rendición de cuentas de 1931 que el Art. 1°
+    manda elevar, ni el saldo deudor por renta escolar del Art. 2°.
+
+  - El original imprime «corrspondiente» [sic] y escribe «3a Categoría»
+    sin punto abreviativo, al revés de los decretos de mayo.
+
+  - Nótese que el año se cierra con el municipio en deuda con el Consejo
+    de Educación y que la Comisión Municipal que lo administra es la
+    electa en enero (edición 1416) con Augusto Regis de presidente desde
+    marzo (edición 1419).
+
+
+Candidatos del anillo 1 todavía no mirados
+------------------------------------------
+
+Cada renglón es una hoja con al menos un acierto literal o laxo. El contexto
+que se transcribe acá sale de la CAPA PREVIA y no de la imagen: sirve para
+ordenar el trabajo, no para fichar.
+
+  1408 h6  (2)
+      pag. 6 bo l e t in o f ic ia l local denominada ^defensa comunal».
+      art. 2°— hagase conocer el presente decreto, del comisionado m u
+  1409 h6  (1)
+      rgos de concejales del municipal de 2a. categoria de- tartagal,
+      sostendra la agrupacion local denominada «defensa comunal».* art.
+      2o.— hagase conocer
+  1409 h8  (1)
+      os de concejales del municipio de 2a. categoria de tartagal,
+      sostendra la agrupacion local denominada «union pro-comuna a
+      guara}». art. 2°. — hagase c
+  1409 h12  (1)
+      io de 2a. categoria de rosario de la frontera primera seccion,
+      sostendra la agrupacion local denominada « centro d¿ la juventud d
+      emocratica*. art.' 3
+  1410 h18  (1)
+      a num . 3 escuela nal n° 25— san lorenzo pte. villoldo j.
+      marcelino-s. lorenzo » sup. i° calderon cruz mda. corta » » 2o
+      martinez basilio a. » » mesa
+  1411 h5  (1)
+      nicipal de 2". categoria de rosario de la frontera— r .
+      seccionsostendra la agrupacion local deno minada «union vecinal».
+      art 2. •.— hagase conocer el
+  1411 h7  (1)
+      oncejales por el municipio de i a. . categoria de la capital,
+      sostendra la agrupacion local denominada «d efen sa com unal».
+      art. 2o— hagase conocer e
+  1411 h9  (1)
+      concejales por el municipio de 2a. categoria de general guemes,
+      sostendra la agrupacion local denominada: «union popular». art.
+      2°. — hagase conocer e
+  1412 h3  (2)
+      para los cargos de concejales por el municipio de campo santo
+      sostendra la agrupacion local deno. minada «defensa comunal». art.
+      2o. — hagase conocer
+  1414 h9  (1)
+      or el ciudadano antonio f. freytes,* invocando el caracter de
+      miembro,de la agrupacion local denominada «union vecinal», con
+      respecto a la validez del
+  1421 h16  (1)
+      hoy con patricio pucay al naciente, con propiedad que fue de don
+      nicolas arias hoy de calderon/ por el poniente, con propiedad de
+      don simon'ordonez sa
+  1422 h23  (1)
+      un terreno de claudio saravia; oeste con lote 11 de bernardino
+      medrano y al este, con la calle rondeau. base $ 106.00 al
+      contadoun lite.de terreno sob
+  1423 h16  (1)
+      rraga, v iii— 28— 1929. por ello, y no resultando destruida en el
+      caso la presuncion legal de mandato por las razones que anota el
+      fallo recurrido. la
+  1427 h20  (1)
+      servacion, que se encuentra en poder del depositario» judicial
+      senor ramon juarez, en la caldera. sena: el 50 % se exigira en el
+      acto del remate. comi
+  1430 h2  (1)
+      lgado, del cargo de juez de paz suplente del distrito municipal de
+      3a. categoria de «la caldera», e l gobernador de la provincia, d e
+      c r e t a : a rt
+  1434 h11  (1)
+      var, labrar ni cercados, de -propiedad del senor bernardo
+      austerlitz, departamento de la^caldera de esta provincia; y
+  1434 h12  (1)
+      ar ni cercar, de propiedad _ del senor bernardo austerlitz,
+      jurisdiccion del d pto. de la caldera de <esta provincia, las que
+      se ^ubicaran <de acuerdo
+  1435 h12  (1)
+      ncepto de gastos de transporte de campamento de salta, a riow
+      ierna y de rio wierna a ¿ a calderilla, cuyas obras se
+      'dispusieran por d ecreto de fech
+  1456 h18  (2)
+      ca: «queda absolutamente prohibido adicionar el vino y vender cojj
+      mo tal: u i n)--los caldos que contengan substancias colorantes
+      extranas, glucosas
+  1457 h2  (1)
+      •pag. 2 b o l e t in o f ic ia l -comprendido entre el pueblo de
+      iva caldera y el abra de tres cruces; b) ciento veintisiete peses
+      eos sesenta centavo
+
+
+§B · VECINDAD
+=============
+
+Se leyó el contexto de los 54 términos del anillo 2 que dieron acierto, uno
+por uno, y no sólo el de los que parecen del departamento. El reparto sólo se
+supo leyéndolos, y es tajante: la enorme mayoría del volumen del anillo 2 en
+1932 NO es del departamento. Los dos términos más frecuentes del año
+—isasmendi, con 116 aciertos, y castellanos, con 43— son apellidos en todas
+sus apariciones.
+
+
+B.1 · Núcleos del departamento ya fichados en el §A
+---------------------------------------------------
+
+Se nombran y no se repiten. La Calderilla (anillo 1); Vaqueros y Villa
+Urquiza, en el circuito 6 del Colegio Electoral N° 2 (1410 h7); Calchanío
+(1419 h10); Mojotoro y Gallinato, en el camino desde La Calderilla (1456 h21);
+El Angosto, en el traslado de caños y en el remate de hacienda (1445 h34-35 y
+1458 h27); y los del edicto de deslinde de 1429: Las Garrapatas, Cañada Seca,
+Peñones, El Durazno, Los Matos, Severino, Los Porongos, La Despensa, El
+Acheral y El Nogalito.
+
+SEIS TOPÓNIMOS DEL DEPARTAMENTO QUE EL CONFIG NO TIENE, todos de la hoja 27 de
+la edición 1429: el Paraíso, el camino de la Punta de Agua, la Cañada de la
+Iglesia, La Laguna, el Morro del Sunchal y la mesada del Panteón. Van al
+config actualizado.
+
+
+B.2 · Núcleos del departamento en actos que NO nombran el término
+-----------------------------------------------------------------
+
+Es el bloque que justifica el parágrafo, y en 1932 es corto. Uno solo es
+indiscutible: LA HOJA 27 DE LA EDICIÓN 1429, la continuación del edicto de
+deslinde, que no escribe «La Caldera» ni una vez y sin embargo trae El
+Acheral, La Despensa, Las Garrapatas, Severino, Los Matos, El Nogalito y seis
+topónimos nuevos, todos del departamento. Si el barrido se hubiera quedado en
+las hojas que nombran el término, esa hoja no existiría, y con ella se habría
+perdido que El Nogalito es de Salvador Rosa y que La Despensa es de los Murúa.
+
+Dos más, con reserva. La hoja 6 de la edición 1413 manda limpiar los pasos del
+río Mojotoro «que conducen a Betania y Campo Santo»: el río es el límite del
+departamento y el acto es de Campo Santo, de modo que se registra sin
+atribuirlo. La hoja 5 de la edición 1440 habla de reparaciones «desde
+Lagunilla hasta Cobos», y Lagunilla figura en el anillo 2 desde 1946; en 1932
+el único uso claro de Lagunilla es como domicilio de un suplente de mesa de La
+Montaña (1410 h7), que es de la Capital. No se atribuye.
+
+
+B.3 · Términos que en 1932 son otra cosa
+----------------------------------------
+
+ISASMENDI, 116 aciertos en 88 hojas, ninguno del departamento: es el apellido
+de Severo Isasmendi Ortiz, diputado; de Néstor Cornejo Isasmendi, Juez en lo
+Civil de 1a. Nominación, que firma decenas de edictos; y de Abraham Cornejo
+Isasmendi, diputado. En 1912 el mismo término era una casa de comercio con
+doce causas; en 1932 es un apellido de la magistratura y de la legislatura. Se
+revalida por época, como manda §12.
+
+CASTELLANOS, 43 aciertos: el doctor Francisco Aráoz Castellanos, Presidente
+del Departamento de Higiene; Eustaquio Castellanos, autoridad de mesa de
+Sauzalito; los Castellanos de Anta —la finca, el arroyo y la «segunda
+fracción»—; y «Paso de Castellanos», de Bautista Wierna, en Anta. Ninguno del
+departamento.
+
+WIERNA: Marcos A. Wierna, autoridad de mesa de El Canil (Chicoana), y Bautista
+Wierna, nombrado Juez de Paz Propietario de la 1a. Sección del distrito
+municipal de ROSARIO DE LERMA (1433 h2), no de La Caldera. Es el falso
+positivo que más se parece a un acierto y por eso se miró el decreto entero en
+la imagen.
+
+LESSER: Antonio R. Lesser, vidriero que presenta presupuestos y cuentas al
+Gobierno (1429 h6, 1434 h13), y Pascual Lesser en una nómina. Apellido, no
+quebrada.
+
+PENALES, cinco aciertos y los cinco son el adjetivo: «consecuencias penales»,
+«disposiciones fiscales y penales». El término entró al config en v15 como la
+forma con que 1912 imprimía «los Peñones», y en 1932 no rinde un solo acierto
+útil y sí cinco de ruido. Se señala en el config actualizado.
+
+EL RESTO, apretado: san josé, betania, el bordo, mamani, aramayo, apaza,
+chaile, murua, tabacal, antilla, sauces, los sauces, nogales y queseria son,
+en 1932, apellidos o localidades de otros departamentos, la mayoría recogidos
+por la enorme nómina provincial de autoridades de mesa de la edición 1410;
+angostura es la de Ituyuro, en Orán; manzano y río blanco son de Rosario de
+Lerma; angosto es el de Quirusillal, en Orán; churcal y entre ríos son fincas
+de los valles; durazno es el Paso del Durazno de Metán; mesada y las mesadas
+son «Las Mesadas o Mesada y Quirusillas o San Gabriel»; potrerillo, campo
+alegre y lagunilla aparecen en listas de obras viales de otros departamentos;
+el monte es el de Seclantás; quintín es Quintín Conde, apoderado del partido
+socialista; pucheta y higueritas son apellido y finca del Río Salado.
+
+UNA SOLA HOJA EXPLICA CASI TODO EL RUIDO DEL AÑO: la nómina provincial de
+autoridades de mesa de la edición 1410, que ocupa las hojas 5 a 20 y nombra
+centenares de parajes de toda la provincia. Veinte de los cincuenta y cuatro
+términos con acierto deben su primer acierto a esa nómina, y es también la
+hoja que trae el §A del departamento.
+
+
+B.4 · Ausencias del anillo de actores, en los tres grupos
+---------------------------------------------------------
+
+PRIMERO, LOS QUE SÓLO APARECEN EN SU PROPIO ACTO. Buscados por apellido suelto
+sobre el texto sin puntuación, en las 1.482 hojas, estos nombres no salen de
+las hojas que ya los fichan: Augusto Regis (2 hojas, las dos del §A), Salvador
+Rosa (3), Pedro Arévalo (2), Fabián Alonso (2), Eusebio Robles (3), Fernando
+Robles (1), Miguel Nigro (1), Lorenzo Romano (1), Ramón Juárez (6), José
+Manuel Fernández (1), Daniel Linares (1), Liborio Guerrero (1), Francisco S.
+Urquiza (1), Luque Hermanos (3), Rigón (3) y Grané (2). Las autoridades del
+departamento no tienen vida pública fuera de los actos que las nombran.
+
+SEGUNDO, LOS QUE APARECEN EN MÁS DE UN ACTO DEL DEPARTAMENTO. Son los que
+arman la trama del año y son tres. RAMÓN JUÁREZ: depositario judicial del
+camión de Rafael Delgado en febrero y en mayo (1416 h31, 1427 h20), Comisario
+de Policía del departamento en abril (1425 h12), Encargado del Registro Civil
+hasta su renuncia en mayo (1430 h3 y h5) y otra vez en la nómina de haberes de
+diciembre (1458 h3): seis hojas, todas del departamento, cuatro papeles
+distintos. RAFAEL DELGADO: once hojas —Juez de Paz suplente que renuncia,
+capataz de la cuadrilla del camino a Jujuy, cedente de sus propios haberes a
+Patrón Costas y Cía. y ejecutado en dos remates—. SALVADOR ROSA: candidato en
+diciembre, electo en febrero y propietario de El Nogalito en el edicto de
+mayo.
+
+TERCERO, LOS QUE APARECEN TAMBIÉN FUERA DEL DEPARTAMENTO. FLORENTINO M.
+SERREY, senador titular por Caldera, aparece en diez hojas del año y en
+NINGUNA de ellas se lo liga al departamento: firma como Presidente del Senado
+y aparece en asuntos de la Capital. ÁNGEL R. BASCARI, apoderado en el
+deslinde, sale en doce hojas, once de ellas ajenas. SILVANO MURÚA, siete
+hojas, dos del deslinde y cinco de la legislatura. Los martilleros A.
+SALVATIERRA (19 hojas), ANTONIO FORCADA (26) y FRANCISCO PEÑALBA HERRERA (34)
+trabajan en toda la provincia. PATRÓN COSTAS Y CÍA. aparece en 29 hojas.
+BERNARDO AUSTERLITZ, en tres, dos del departamento.
+
+UN CASO QUE NO ES UNA AUSENCIA Y HAY QUE DECIRLO ASÍ. La búsqueda de EUSTAQUIO
+MURÚA, el comisario al que Ramón Juárez reemplaza, devuelve CERO aciertos en
+las 1.482 hojas, incluida la hoja que trae su propio acto. No es una ausencia:
+la capa previa imprime ahí «eustaquio mivrua», y ninguna búsqueda por su
+apellido lo alcanza. Se declara nombrándolo, como manda §5.1.
+
+Y UN SEGUNDO CASO DEL MISMO TIPO, encontrado por la imagen y no por la
+búsqueda: FRANCISCO SOSAUYA, lindero este de Cañada Seca en el edicto de
+deslinde. Su apellido se lee sin esfuerzo en la imagen y NO ESTÁ EN LA CAPA de
+esa hoja: buscarlo sobre el texto devuelve cero en todo el año. Si el §A se
+hubiera fichado desde la capa, ese lindero no existiría.
+
+
+Anillo 2 · términos con acierto, por volumen
+--------------------------------------------
+
+  isasmendi                   116 aciertos en  88 hojas
+  castellanos                  43 aciertos en  37 hojas
+  san jose                     29 aciertos en  21 hojas
+  betania                      23 aciertos en  13 hojas
+  mamani                       19 aciertos en  11 hojas
+  murua                        15 aciertos en  10 hojas
+  el bordo                     15 aciertos en  10 hojas
+  potrerillo                   13 aciertos en   6 hojas
+  tabacal                      10 aciertos en   6 hojas
+  lesser                       10 aciertos en   4 hojas
+  wierna                        9 aciertos en   7 hojas
+  angostura                     9 aciertos en   5 hojas
+  manzano                       9 aciertos en   4 hojas
+  penones                       8 aciertos en   1 hojas
+  chaile                        6 aciertos en   4 hojas
+  penales                       5 aciertos en   5 hojas
+  aramayo                       5 aciertos en   5 hojas
+  angosto                       5 aciertos en   4 hojas
+  churcal                       4 aciertos en   4 hojas
+  antilla                       4 aciertos en   3 hojas
+  las garrapatas                4 aciertos en   2 hojas
+  durazno                       4 aciertos en   2 hojas
+  despensa                      4 aciertos en   2 hojas
+  apaza                         4 aciertos en   2 hojas
+  mesada                        3 aciertos en   3 hojas
+  lagunilla                     3 aciertos en   3 hojas
+  severino                      3 aciertos en   2 hojas
+  mojotoro                      3 aciertos en   2 hojas
+  los matos                     3 aciertos en   2 hojas
+  la despensa                   3 aciertos en   2 hojas
+  canada seca                   3 aciertos en   1 hojas
+  campo alegre                  3 aciertos en   1 hojas
+  sauces                        2 aciertos en   2 hojas
+  rio blanco                    2 aciertos en   2 hojas
+  el monte                      2 aciertos en   2 hojas
+  vaqueros                      2 aciertos en   1 hojas
+  porongos                      2 aciertos en   1 hojas
+  los porongos                  2 aciertos en   1 hojas
+  calchanio                     2 aciertos en   1 hojas
+  acheral                       2 aciertos en   1 hojas
+  villa urquiza                 1 aciertos en   1 hojas
+  quintin                       1 aciertos en   1 hojas
+  queseria                      1 aciertos en   1 hojas
+  pucheta                       1 aciertos en   1 hojas
+  nogalito                      1 aciertos en   1 hojas
+  nogales                       1 aciertos en   1 hojas
+  mesadas                       1 aciertos en   1 hojas
+  los sauces                    1 aciertos en   1 hojas
+  las mesadas                   1 aciertos en   1 hojas
+  higueritas                    1 aciertos en   1 hojas
+  gallinato                     1 aciertos en   1 hojas
+  entre rios                    1 aciertos en   1 hojas
+  el acheral                    1 aciertos en   1 hojas
+  arroyo castellanos            1 aciertos en   1 hojas
+
+
+§C · LIMÍTROFES
+===============
+
+Los departamentos que lindan con La Caldera aparecen en 1932 sobre todo por
+sus caminos y por la ley de caza. CAMPO SANTO comparte con el departamento el
+río Mojotoro, cuyos pasos se mandan limpiar en la edición 1413, y queda con él
+en la segunda zona de caza (1456 h26); su Concejo Deliberante se integra en el
+mismo decreto que la Comisión Municipal de La Caldera (1416 h1). ROSARIO DE
+LERMA queda también en la segunda zona, con una parte suya exceptuada hacia la
+tercera, y es donde Bautista Wierna resulta Juez de Paz en junio (1433 h2). LA
+CAPITAL aporta el otro extremo de los dos caminos del año: el de Salta a Jujuy
+y el de Salta a Río Wierna. JUJUY, que no es departamento sino provincia, es
+el destino del camino nacional cuyo tramo entre el pueblo de La Caldera y el
+Abra de Tres Cruces ocupa cuatro actos del año.
+
+Ninguno de esos actos se ficha en el §A, porque ninguno es del departamento;
+se registran acá con una línea, como manda el anillo 3.
+
+
+§P · PLANOS
+===========
+
+EL CORPUS DE 1932 NO PUBLICA NI UN SOLO PLANO. Ciento cincuenta hojas de las
+1.482 nombran un plano —en edictos de minas, en deslindes, en licitaciones de
+caminos y en remates— y ninguna lo acompaña.
+
+DOS DE ESAS REMISIONES TOCAN AL DEPARTAMENTO, y son la misma: el edicto de
+minas de la hoja 13 de la edición 1415 y la resolución que lo concede, en la
+hoja 12 de la 1434, que ubica las 150 hectáreas de cateo en terrenos de
+Bernardo Austerlitz «de acuerdo a la descripción dada en el plano de fs. 1—y
+escrito de fs. 3 del presente exp.». El plano de fs. 1 queda registrado como
+CITADO Y NO ACOMPAÑADO.
+
+TECHO DE RESOLUCIÓN para cualquier plano que apareciera: 150 ppi, el del año
+entero. Es menos de la mitad del de 1908-1912 y no alcanzaría para leer una
+cartela.
+
+
+§D · ÍNDICE
+===========
+
+Las 28 entradas del §A, por edición y hoja. Varias cubren más de una hoja: la
+entrada se indexa por la primera.
+
+  1409 h1   Convocatoria a los legisladores provinciales titulares electos
+             el 8 de noviembre y en los comicios complementarios del 22,
+             para constituir las Cámaras…
+  1410 h2   Decreto 14294 (Salta, Diciembre 31 de 1931), Exp. N° 5684 Letra
+             P. Oficializa la boleta de sufragio del partido Demócrata
+             Nacional para la Comisión Mu…
+  1410 h7   Nómina de autoridades de mesa del Colegio Electoral N° 2 — LA
+             CALDERA, circuitos 5 y 6: mesa 1 en la Escuela Elemental Mixta
+             de La Caldera (presidente…
+  1415 h13  EDICTO DE MINAS y su resolución. Alfredo P. Rigón y Joaquín
+             Grané piden permiso de exploración y cateo de minerales de
+             plomo y plata en 150 hectáreas …
+  1416 h1   Decreto 14445 (Salta, Febrero 10 de 1932), Expediente N° 5985
+             Letra E. Aprueba las elecciones municipales del 17 de enero y
+             declara electos, para la C…
+  1416 h31  REMATE JUDICIAL de un camión marca «Chevrolet» en los autos
+             ejecutivos contra Rafael Delgado, expediente 6516/931, ante el
+             Juez de 1a. Instancia y 2a.…
+  1419 h1   Decreto 14543 (Salta, Marzo 4 de 1932). Nombramiento del
+             Presidente de la Comisión Municipal del Distrito de 3a.
+             Categoría de La Caldera: Augusto Regi…
+  1419 h10  Pago a un inspector por la inspección efectuada al lugar
+             denominado «Calchanío», departamento de La Caldera, con informe
+             de Contaduría General de fech…
+  1425 h12  Decreto sin número leído en la imagen, anterior al 14669 del 11
+             de abril. Nombra a Ramón Juárez Comisario de Policía de La
+             Caldera, con anterioridad a…
+  1429 h26  EDICTO DE DESLINDE promovido por Ángel R. Bascari, con poder y
+             títulos de Silvano Y. Murúa y de su esposa Fanny Ovejero
+             Lacroix de Murúa, sobre las fi…
+  1430 h3   Aceptación de la renuncia de Rafael Delgado al cargo de Juez de
+             Paz Suplente del Distrito Municipal de 3a. Categoría de «La
+             Caldera», y, en la misma h…
+  1430 h5   Decreto 14811 (Salta, Mayo 11 de 1932), Exp. N° 743 Letra R.
+             Nombra a José Manuel Fernández Encargado de la Oficina de
+             Registro Civil de La Caldera, e…
+  1430 h7   Decreto 14818 (Salta, 13 de Mayo de 1932), Expediente N° 799
+             Letra M. Nombra Juez de Paz Propietario a Fabián Alonso y Juez
+             de Paz Suplente a Eusebio …
+  1430 h17  Resolución sobre el camino a Jujuy en el tramo comprendido
+             entre la casa de Rauch y La Caldera, unos seis kilómetros:
+             ensanche, abovedamiento y enripi…
+  1433 h1   Decreto 14.894 (Salta, Junio 9 de 1932), Exp. N° 992 Letra R.
+             Acepta la renuncia de Eusebio Robles al cargo de Juez de Paz
+             Suplente del Distrito Munic…
+  1434 h15  Primer aviso del remate de la casa del departamento la Caldera,
+             con los mismos linderos y las mismas medidas que los avisos de
+             las ediciones 1439 y 14…
+  1435 h11  Decreto que manda librar orden de pago por $894 m/l. a nombre
+             de la Comisión de Caminos, importe total de varias cantidades,
+             entre ellas $24 m/l. por …
+  1435 h13  Decreto que aprueba el Punto 15 del Acta N° 178 de la Comisión
+             de Caminos, de fecha 16 de junio de 1932: arreglo del camino
+             nacional antiguo de Salta …
+  1439 h13  Aviso JUDICIAL. Remate del 10 de agosto, en el Bar Boston, de
+             una casa en el pueblo de la Caldera, con base de $2.500 —dos
+             terceras partes de su tasac…
+  1445 h34  Decreto 15137 según la capa previa (Salta, agosto de 1932).
+             Autoriza un gasto de $1.847,24 m/l. a nombre de la Comisión de
+             Caminos: jornales de la cua…
+  1445 h35  Cierre del decreto de gastos del camino a Jujuy: los haberes
+             del capataz Rafael Delgado y los $495 de manutención de los
+             peones se abonan a los señore…
+  1446 h41  Segundo aviso del mismo remate: 27 de septiembre, a horas 17,
+             Bar Boston, SIN BASE y dinero de contado, misma casa del pueblo
+             de la Caldera, con exten…
+  1456 h21  Resolución del Ministro de Gobierno, Exp. N° 2244 Letra O.
+             Autoriza un gasto de $80,50 a la Comisión de Caminos por los
+             jornales del estudio del trasl…
+  1456 h26  Ley de caza. Título I, Art. 1°: divide el territorio de la
+             Provincia en tres zonas; la segunda comprende los departamentos
+             de Campo Santo, Caldera y R…
+  1457 h1   Decreto sobre el Expediente N° 1582 Letra O: planilla de
+             jornales y gastos de la cuadrilla del Camino Nacional de Salta
+             a Jujuy en el tramo comprendid…
+  1458 h3   Nómina de ex-encargados de oficinas de Registro Civil con los
+             días que desempeñaron el cargo; el punto 4°) da a Ramón Juárez
+             como ex-encargado de la o…
+  1458 h27  Aviso de remate de ganado que se encuentra en «El Angosto»,
+             departamento de La Caldera, en poder del administrador judicial
+             Dn. Pedro Yañez. Detalle d…
+  1460 h7   Decreto 15445 según la capa previa. El Gobernador en Acuerdo de
+             Ministros aprueba la Ordenanza General de Impuestos,
+             Presupuesto de Gastos y Cálculo d…
+
+
+§E · OBSERVACIONES
+==================
+
+
+E.9 · Contradicciones (abierta)
+-------------------------------
+
+1. Numeración fuera de orden. En la hoja 7 de la edición 1430, inmediatamente
+después del decreto 14818 del 13 de mayo de 1932, se imprime «13819—Salta,
+Mayo 13 de 1932.»: mil números por debajo y el mismo día. Se transcribe como
+está y no se concilia.
+
+2. El año editorial cambia en la SEGUNDA edición del año, no en el cambio de
+calendario: la tapa de 1408 imprime «Año XXIII N°. 1408» y la de 1409 «Año
+XXIV N° 1409». Las dos se leyeron en la imagen. No se explica.
+
+3. EL DECRETO 14294, DEL 31 DE DICIEMBRE DE 1931, LO FIRMA «MARTINEZ - M.
+GOMEZ» y se publica en la edición 1410, cuya tapa encabeza «INT. Nacional DON
+ERASMO MARTINEZ», mientras las tapas de 1408 y 1409 encabezan «INT. Nacional
+DR. MARIANO GOMEZ». Las tres cosas se leyeron en la imagen. El informe no
+decide quién era Interventor el 31 de diciembre de 1931 ni en qué carácter
+firma cada uno.
+
+4. RAMÓN JUÁREZ, DOS VECES A LA VEZ. Su renuncia al Registro Civil de La
+Caldera se acepta en la edición 1430 y su reemplazante se nombra el 11 de mayo
+(decreto 14811); la nómina de la hoja 3 de la edición 1458 lo da en el cargo
+«desde el día 10 hasta el 16 de Mayo de 1932». No se concilia.
+
+5. RAFAEL DELGADO, DOS VECES EN LA MISMA EDICIÓN. En la 1430 renuncia al cargo
+de Juez de Paz Suplente del distrito (hoja 3) y es designado capataz de la
+cuadrilla del camino a Jujuy (hoja 17). Ningún acto dice que sea la misma
+persona y el informe no lo afirma.
+
+6. EL MISMO NÚMERO, DOS GRAFÍAS. El año imprime «14818» sin punto y «14.894»
+con punto de millar, las dos leídas en la imagen.
+
+7. UN EXPEDIENTE CON DOS NÚMEROS EN HOJAS CONTIGUAS DEL MISMO DECRETO. La hoja
+11 de la edición 1435 cita «Exp. N° 823. Letra C» y la hoja 12, que es la
+continuación literal del mismo acto, «Exp. N° 832—Letra C». Una de las dos
+está mal y el Boletín no permite decidir cuál.
+
+8. La misma semana, el mismo cargo y dos grafías del mes: la tapa de 1447
+imprime «Septiem.» donde el resto del año imprime «Setiembre». Se transcribe
+como se ve.
+
+
+E.1 · Duplicación y saldos
+--------------------------
+
+LA CADENA ANUAL DE SALDOS DE TESORERÍA CIERRA ENTERA, y es la primera vez en
+esta época que se puede decir eso. El corpus publica DOCE resúmenes mensuales
+del movimiento de la Tesorería General, de diciembre de 1931 a noviembre de
+1932, contra los cuatro de 1912 y el único de 1911. Los doce saldos se leyeron
+EN LA IMAGEN, uno por uno, en el renglón «A Saldo del mes de …» que abre los
+INGRESOS de cada resumen:
+
+  saldo al cierre de noviembre de 1931 ....... $  81.022,06
+  saldo al cierre de diciembre de 1931 ....... $  13.601,91
+  saldo al cierre de enero de 1932 ........... $  12.133,31
+  saldo al cierre de febrero de 1932 ......... $  31.345,10
+  saldo al cierre de marzo de 1932 ........... $  19.408,32
+  saldo al cierre de abril de 1932 ........... $  11.203,94
+  saldo al cierre de mayo de 1932 ............ $  13.275,75
+  saldo al cierre de junio de 1932 ........... $  17.123,55
+  saldo al cierre de julio de 1932 ........... $  12.559,53
+  saldo al cierre de agosto de 1932 .......... $  11.066,26
+  saldo al cierre de setiembre de 1932 ....... $  23.084,48
+  saldo al cierre de octubre de 1932 ......... $  15.690,64
+
+LA CADENA SE ENCADENÓ POR LA CIFRA Y NO POR EL RÓTULO, como manda v15, y
+además se cotejó contra el otro extremo del cuadro: el resumen de agosto
+cierra con «POR SALDO: Existente en Caja que pasa al mes de Setiembre de 1932
+… 11.066,26», y el resumen de setiembre abre con «A Saldo del mes de Agosto de
+1932 $ 11.066,26». Coinciden al centavo. Los dos renglones se leyeron en la
+imagen, en hojas distintas de ediciones distintas.
+
+LA CADENA QUEDA ABIERTA POR LOS DOS EXTREMOS y se declara así: contra 1931 por
+el saldo de noviembre de 1931, que este corpus recibe y no origina, y contra
+1933 por el saldo de noviembre de 1932, porque el resumen de diciembre de 1932
+no se publica dentro del año.
+
+LA CAÍDA DE ENERO ES EL HECHO DEL AÑO EN ESTA SERIE: la Tesorería pasa de
+$81.022,06 a $13.601,91 en un mes y ya no vuelve a acercarse a esa cifra en
+los doce meses siguientes, que se mueven entre $11.066,26 y $31.345,10. El
+Boletín no explica el salto y el informe tampoco.
+
+DUPLICACIÓN. Sin las .jpg del script no hay md5, ni dhash, ni medición de
+tinta: la duplicación se controló por texto y, en los casos del §A, por imagen
+contra imagen. Ver E.6.
+
+CÓMO SE MANDAN PUBLICAR ESTOS CUADROS, que es lo que explica sus marcas: el
+despacho del Ministerio de Hacienda que aprueba cada resumen ordena publicarlo
+«por el término de ocho días en dos diarios de la localidad, y por una sola
+vez en el BOLETIN OFICIAL». La orden de ocho días es para los diarios; en el
+Boletín, una sola vez. Es exactamente lo que v15 dedujo en 1912 sobre las
+marcas de publicación, dicho por el propio acto.
+
+
+E.2 · Cobertura
+---------------
+
+ACTOS CITADOS Y NO ACOMPAÑADOS, hasta acá cinco, los cinco sin número con que
+buscarlos y por lo tanto buscados por fecha y materia: el decreto del 5 de
+abril que arbitró los fondos del camino a Jujuy (citado en 1435 h13); la
+planilla de jornales del Expediente 2244 Letra O (citada en 1456 h21); la
+Ordenanza General de Impuestos y el Cálculo de Recursos del municipio, y la
+rendición de cuentas de 1931 (los tres aprobados o mandados por 1460 h7); y la
+resolución que convirtió el remate con base de 1439 h13 en el remate sin base
+de 1446 h41.
+
+UNO DE LOS OCHO SE IDENTIFICÓ ESTE TURNO. El «Decreto de fecha 5 de Abril
+ppdo. que arbitró los fondos» del camino a Jujuy resulta ser, según la hoja 12
+de la edición 1435, el que concertó con el Banco Español del Río de la Plata
+la operación de crédito de cien mil pesos depositada en el Banco Provincial de
+Salta. Sigue sin publicarse, pero ya no es un decreto sin materia.
+
+HOJAS QUE NOMBRAN EL TÉRMINO Y NO SE MIRARON: dos, y ninguna agrega un acto.
+La hoja 11 de la edición 1434 repite el vistos del expediente minero de
+Bernardo Austerlitz que la hoja 12 resuelve; de esa hoja se miró la columna de
+la ley y no la que trae la mención. La hoja 22 de la edición 1449 NO es del
+departamento: es la Ley N° 37, que exonera de la contribución directa a la
+señora Gabriela López de Austerlitz por su casa de la calle Juan B. Alberdi
+466 de la Capital, y entró en la lista por el apellido y no por el término.
+
+DESTINO ABIERTO. El cargo de Juez de Paz Suplente del distrito queda vacante
+el 9 de junio por la renuncia de Eusebio Robles y el Boletín no publica
+reemplazo en lo que resta del año. Se declara así y no se infiere.
+
+
+E.4 · Firmas y autoridad (abierta)
+----------------------------------
+
+1932 es un año de tres gobiernos y el encabezado de tapa los va registrando.
+La cadena, leída en la línea de tapa de las 54 ediciones y confirmada en la
+imagen donde se indica:
+
+  1408-1409  Excmo. Sr. Int. Nacional Dr. Mariano Gómez  [imagen]
+  1410-1411  Excmo. Sr. Int. Nacional Don Erasmo Martínez  [imagen]
+  1412       línea de tapa ilegible en la capa; sin mirar
+  1413-1416  Excmo. Sr. Int. Nacional Dr. Fernando Valenzuela
+  1417-1427  Sr. Don Alberto B. Rovaletti  [1417 en imagen]
+  1428-1460  Excmo. Sr. Gobernador de la Pcia. Don Avelino Aráoz
+  1461       sin tapa en el Release
+
+DOS COSAS QUE NO SE CONCILIAN Y SE DECLARAN. La primera: la tapa de 1417 a
+1427 encabeza «GOBIERNO DEL Sr. DON ALBERTO B. ROVALETTI», sin el tratamiento
+de Excmo. y sin decir en qué carácter; el decreto 14543 de la edición 1419,
+mirado en la imagen, lo firma «El Vice-Presidente 1o del H. Senado, en
+ejercicio del Poder Ejecutivo de la Provincia». La tapa no dice eso y el
+informe no lo completa por ella. La segunda: el decreto 14818, del 13 de mayo,
+ya lo firma ARAOZ como Gobernador, y la primera tapa que lo encabeza es la de
+1428, del 20 de mayo. No hay decreto de asunción a la vista y no se fija el
+día: se declaran el último acto firmado por Rovaletti y el primero firmado por
+Aráoz cuando se cierren los vecinos ±3 del §A.
+
+EL DÍA DE LA TRANSMISIÓN DEL MANDO LO DA UN ACTO AJENO AL DEPARTAMENTO. El
+decreto 14803, del 10 de mayo, sobre una contribución al diario «La Montaña»,
+habla del número extraordinario aparecido «el día 1o. de Mayo en curso, con
+motivo de la transmisión del mando gubernativo de la Provincia». Ese renglón,
+leído en la imagen de la hoja 3 de la edición 1430, fecha la asunción de Aráoz
+el 1o de mayo de 1932 y explica por qué el decreto 14818, del 13 de mayo, ya
+lo firma él mientras la tapa recién lo encabeza en la edición 1428. No hay
+decreto de asunción publicado: el dato es indirecto y se declara como tal.
+
+UNA FIRMA QUE NO ES DE DECRETO. La resolución de la edición 1456 sobre el
+camino de La Calderilla a Mojotoro la firma «El Ministro de Gobierno» y no
+lleva número de decreto: es la única pieza del §A resuelta así.
+
+Rovaletti aparece además como refrendante de Aráoz («ARAOZ—A. B. ROVALETTI»),
+y con nombre completo en 99 hojas del año: es el actor más frecuente del
+corpus. Figura en el config con origen 1925.
+
+
+E.5 · Cortes y columnas (abierta)
+---------------------------------
+
+COLUMNA PERDIDA: no se encontró ninguna, y se dice sobre cuántas columnas. Se
+recortaron y cotejaron contra la capa previa 33 columnas de 23 hojas, de
+quince ediciones distintas. La maqueta de 1932 es de dos columnas y un acto
+puede repartirse entre las dos, como el decreto 14818 de la edición 1430; en
+los casos en que eso pasó se recortaron las dos columnas enteras y no faltaba
+un renglón.
+
+LO QUE SÍ FALLA ES LA PALABRA SUELTA, Y FALLA EN SILENCIO, igual que en 1911 y
+1912. Dos casos medidos este año, los dos encontrados mirando: «mivrua» por
+Murúa, que borra al comisario saliente del departamento de todas las
+búsquedas; y «Sosauya», que la imagen imprime y la capa no tiene en absoluto.
+El primero deforma una palabra, el segundo la hace desaparecer, y el segundo
+es el más peligroso porque no deja rastro que una difusa pueda alcanzar.
+
+LA CAPA TAMBIÉN LEVANTA DATOS DEL LUGAR EQUIVOCADO: las fechas de tapa de las
+ediciones 1417 y 1447 (ver §1). No es un corte ni una columna perdida: es el
+orden de lectura de la página.
+
+
+E.6 · Repeticiones (abierta)
+----------------------------
+
+DOS SERIES DE AVISOS, Y NINGUNA ES UNA REPETICIÓN. La casa del pueblo de la
+Caldera sale TRES veces —1434 h15, 1439 h13 y 1446 h41, con marcas 1560, 1610
+y ninguna—, con el mismo juicio, el mismo inmueble y los mismos linderos, pero
+con fechas distintas y con una diferencia de fondo: los dos primeros con base
+y el tercero sin base y dinero de contado. El camión Chevrolet de Rafael
+Delgado sale DOS veces —1416 h31 y 1427 h20, marcas 1080 y 1489—, para el 29
+de febrero y para el 16 de mayo. Los cinco textos se cotejaron EN LA IMAGEN,
+hoja contra hoja, no en la capa, y ninguno es igual a otro: cambian la fecha,
+la base, la firma del martillero y hasta la ortografía. No se descarta
+ninguno.
+
+LAS MARCAS DE PUBLICACIÓN NO PRUEBAN NADA, como manda v15. El aviso de la casa
+que NO lleva marca es justamente el tercero de la serie, y los dos que sí la
+llevan son los que salieron una sola vez cada uno.
+
+
+E.8 · Fidelidad numérica (abierta)
+----------------------------------
+
+LOS CUADROS PUBLICADOS DEL AÑO, LOCALIZADOS Y NO TRANSCRIPTOS. El corpus trae
+una serie regular de RESÚMENES DEL MOVIMIENTO de Tesorería, repartidos en
+pares de hojas, en las ediciones 1410, 1416, 1419, 1423, 1428, 1432, 1436,
+1441, 1446, 1450, 1454 y 1457: doce en total, es decir uno por mes, contra los
+cuatro que tuvo 1912 y el único que tuvo 1911. Hay además diez hojas con la
+palabra «balance» y cuatro con «demostración» o «estado demostrativo». NINGUNO
+SE TRANSCRIBIÓ TODAVÍA, de modo que LA CADENA ANUAL DE SALDOS NO SE AFIRMA en
+este turno: se cuentan los resúmenes antes de prometerla, como manda v15, y
+acá el recuento dice doce y la promesa queda para el turno siguiente.
+
+NO HAY NINGÚN BALANCE MUNICIPAL DEL DEPARTAMENTO en las 1.482 hojas. Lo que
+hay es el decreto que aprueba el presupuesto municipal sin publicar una sola
+cifra de él (edición 1460).
+
+SUBTOTALES RECALCULADOS, cinco hasta acá. Primero, el gasto de la edición
+1445: 1.323,24 de jornales más 495,00 de comida más 29,00 de traslado dan
+1.847,24, que es exactamente lo que el Art. 1° autoriza en cifras y en letras.
+CIERRA. Segundo, la hacienda del remate de la edición 1458: 12 + 20 + 8 + 17 +
+7 + 5 + 7 + 11 + 6 = 93 cabezas; el aviso no publica total, así que no hay
+contra qué cotejar. Tercero, la cuadrilla de la edición 1430: 25 hombres a
+1,70 son 42,50, más 5,00 del capataz son 47,50 de jornal diario, y la comida
+agrega 20,00 (0,80 por 25 peones); total 67,50 por día, cifra que el acto no
+imprime. Cuarto, el viático de la edición 1419: dos días a $12 son los $24 que
+el Art. 1° autoriza. CIERRA. Quinto, la planilla de caminos de la edición
+1457: 360,45 de jornales más 127,60 de manutención más 60,00 de traslado dan
+548,05, y $548.05 es la cifra que la hoja 1 imprime como total autorizado.
+CIERRA.
+
+UN CUADRO PUBLICADO RECALCULADO ENTERO, como manda v15 aunque la cadena
+cierre: el de INGRESOS de julio de 1932 (edición 1441, hoja 23), leído renglón
+por renglón en la imagen. Los cinco Cálculos de Recursos suman 24.372,61 y ése
+es el subtotal impreso; los cinco renglones del Banco Provincial de Salta
+suman 180.979,65 y ése es el subtotal impreso; los doce del Banco Español del
+Río de la Plata suman 87.615,75 y, junto con los 242.156,10 de Receptoría,
+Consumo y Pavimentación, dan los 535.124,11 de la columna; y 17.123,55 de
+saldo inicial más 535.124,11 dan exactamente los 552.247,66 del total general.
+CIERRA SIN UNA DIFERENCIA DE UN CENTAVO, en veinticinco renglones.
+
+UN CUADRO QUE NO SE PUEDE RECALCULAR Y SE DECLARA CON SU MOTIVO: el de la
+edición 1435, que autoriza $894 como «importe total de las cantidades
+mencionadas» y publica una sola de esas cantidades, los $24 del transporte a
+La Calderilla. Los otros once resúmenes mensuales se transcribieron en su
+saldo y no se recalcularon enteros, porque la cadena cierra y el criterio de
+§4 lo permite; el de julio se recalculó entero justamente para no confiar en
+que la cadena pruebe el cuadro.
+
+DE LOS CINCO RECÁLCULOS DE ACTOS, TRES CIERRAN EXACTO Y DOS NO TIENEN CONTRA
+QUÉ CERRAR, porque el acto no publica total. Ninguno falla. Es lo contrario de
+1912, donde los dos subtotales leídos enteros fallaban los dos.
+
+TABLAS DEL DEPARTAMENTO CITADAS Y NO PUBLICADAS: la Ordenanza General de
+Impuestos, el Presupuesto de Gastos y el Cálculo de Recursos de la
+Municipalidad de La Caldera, aprobados por el decreto de la edición 1460 sin
+que el Boletín imprima una sola cifra; la rendición de cuentas de 1931; y la
+planilla de jornales del Expediente 2244. Es el hueco numérico más grande del
+año para el departamento.
+
+El inventario de cuadros publicados de todo el corpus —balances, resúmenes de
+Tesorería, cuadros de recursos— todavía no está hecho y queda para el turno
+siguiente.
+
+
+E.7 · Falsos positivos y negativos (abierta)
+--------------------------------------------
+
+FALSOS POSITIVOS DEL ANILLO 1 EN 1932, para la lista de §12 y no para el
+config: Calderón (dos veces, como apellido de autoridad de mesa y como lindero
+de una propiedad), «caldos» y «caldoa» en la ley de vinos de la edición 1456,
+y en la difusa cuadrilla y cuadrillas (40 de los 47 aciertos), calavera —la
+finca «Calavera o Bella Vista» de Chicoana, que el config ya trae como falso
+positivo—, escalera y «Calera», que acá es el apellido del doctor Fernando
+Calera Vital, médico perito. La banda ampliada 0,70-0,78 dio 25 formas, todas
+vocabulario corriente.
+
+LA LAXA TIENE UN FALSO POSITIVO PROPIO Y MASIVO: «cal deno», que es «local
+denominada», la fórmula con que los decretos electorales nombran a las
+agrupaciones vecinales. Doce de los quince aciertos de la laxa son ése, y uno
+de ellos cruza el salto de renglón. Ya estaba juzgado para 1911 y se revalida.
+
+FALSOS NEGATIVOS MEDIDOS: dos, los dos de E.5 —«mivrua» y la desaparición de
+«Sosauya»—. Los dos se encontraron mirando la imagen y ninguna pasada los
+habría alcanzado.
+
+
+E.10 · Límites (abierta)
+------------------------
+
+1. Una sola versión del texto: sin OCR propio no hay segunda lectura con que
+desempatar un dígito; el único desempate es la imagen.
+
+2. Sin .tsv no hay confianza por hoja y por lo tanto NO EXISTE la lista de
+hojas «a ojos» del §4.8. Es un límite, no un pendiente.
+
+3. Sin las .jpg del script no hay md5, ni dhash, ni medición de tinta: la
+duplicación se controla por texto.
+
+4. El techo de resolución del año es 150 ppi: no hay recorte a 400 ni a 600
+dpi que agregue detalle.
+
+5. La edición 1461 está incompleta en el Release: faltan sus hojas 1 a 4, y
+con ellas su tapa. Es un límite del corpus.
+
+6. La cadena anual de saldos queda abierta por los dos extremos: contra 1931,
+que este corpus no origina, y contra 1933, porque el resumen de diciembre de
+1932 no se publica dentro del año.
+
+7. El presupuesto de la Municipalidad de La Caldera está aprobado y no
+publicado: ninguna cifra del municipio es recuperable de este corpus, ni por
+búsqueda ni mirando. No es un pendiente: el Boletín no las imprimió.
+
+
+CONFIG ACTUALIZADO
+==================
+
+Se entrega la lista de AGREGADOS, no un archivo nuevo, y se dice qué se
+decidió no agregar. La sesión usó el «lee_config.json» del proyecto (388
+actores, 139 términos de anillo 2, 112 números, 24 falsos positivos), no el
+del Release, que está atrasado.
+
+
+Al anillo 2 · seis topónimos del departamento que el config no tiene
+--------------------------------------------------------------------
+
+  el paraiso            punta de agua         canada de la iglesia
+  mesada del panteon    la laguna             morro del sunchal
+
+Los seis salen de la hoja 27 de la edición 1429, leída en la imagen, y son
+linderos de las cinco fincas del deslinde. Ninguno aparecería en un barrido
+que sólo buscara el término.
+
+
+A «actores» · las personas del §A de 1932, con origen 1932
+----------------------------------------------------------
+
+  augusto regis          salvador rosa         pedro arevalo
+  fabian alonso          eusebio robles        fernando robles
+  miguel nigro           lorenzo romano        ramon juarez
+  jose manuel fernandez  rafael delgado        angel r. bascari
+  adolfo murua           alberto murua         abel murua
+  fanny ovejero lacroix de murua               francisco sosauya
+  florentino m. serrey   francisco s. urquiza  jose aparicio
+  pedro gregorio zamora  delicia junco de bertini
+  avelina cornejo de murua                     a. salvatierra
+  antonio forcada        pedro yanez           alfredo p. rigon
+  joaquin grane          francisco penalba herrera
+  domingo nestor herrera                       erasmo martinez
+  alberto b. rovaletti   avelino araoz         a. garcia pinto
+  francisco ranea        r. del carlo          j. davalos leguizamon
+  julio f. medina        g. ojeda
+
+Y UNA FORMA DEFORMADA QUE HAY QUE AGREGAR PARA QUE EL BARRIDO LA ENCUENTRE,
+como manda §15.3: «mivrua», que es como la capa de 1932 imprime el apellido
+Murúa del comisario saliente. Sin ella, Eustaquio Murúa no existe para ninguna
+búsqueda sobre esta capa.
+
+
+Lo que se decidió NO agregar
+----------------------------
+
+A «falsos_positivos», NADA. Los del año —Calderón, «caldos», «caldoa», «cal
+deno», Calera Vital, calavera, cuadrilla— quedan listados en E.7 y en §12 y no
+entran al config, por la razón de §12: un término del anillo 1 cuyo contexto
+contenga un falso positivo del config queda marcado y sin recorte, aunque sea
+real.
+
+A «numeros», NADA. Los 490 decretos numerados de 1932 (13819 a 15918) son una
+serie propia del año y no números arrastrados; ninguno se cita sin
+acompañarse.
+
+Y UNA BAJA QUE SE PROPONE Y NO SE EJECUTA: el término «penales» del anillo 2,
+que v15 agregó como la forma con que 1912 imprimía «los Peñones». En 1932 da
+cinco aciertos y los cinco son el adjetivo «penales». No se quita desde acá
+porque el config es de todas las épocas y 1912 lo necesita; se señala para que
+el usuario decida.
+
+
+§F · CORRECCIÓN A LA RÚBRICA (borrador para v16)
+================================================
+
+1. EL TECHO DE RESOLUCIÓN BAJA CON LA ÉPOCA, no sube. §8.10 viene anotando
+300-500 ppi para 1909-1912; 1932 trae 150 ppi y dos imágenes superpuestas por
+hoja (una de 150 y una de 75). El consejo de §4 de recortar a 400 o 600 dpi
+para cifras dudosas NO SIRVE en este corpus y conviene que la rúbrica diga que
+primero se mide el ppi incrustado y recién después se elige la escala.
+
+2. LA MAQUETA DE 1932 ES DE DOS COLUMNAS, no de tres. Medidas con
+get_text('words'), las dos columnas arrancan en ~35 y ~240 pt sobre páginas
+que van de 474 a 508 pt de ancho, y el ancho de página cambia de edición en
+edición: los bordes hay que medirlos por hoja, no fijarlos una vez por corpus
+como alcanzó en 1912.
+
+3. EL FOLIO SE REINICIA EN CADA EDICIÓN. v15 aprendió que la cadena de folios
+no se hereda de un año al otro; 1932 agrega que puede no ser cadena en
+absoluto. Acá el control equivalente es interno: hoja N lleva impreso «Pág.
+N», y el desfasaje constante delata la edición a la que le faltan hojas de
+adelante. Así salió 1461, con desfasaje 4.
+
+4. LA VARIANTE CON ESPACIOS DE LA LAXA SIRVE PARA LOS RÓTULOS, no sólo para
+los cortes de renglón. En 1932 los nombres de departamento se imprimen con
+letras espaciadas en las convocatorias electorales, y «c a l d e r a» sólo la
+encuentra la laxa escrita con la clase de espacios.
+
+5. LOS ACTOS VUELVEN A ESTAR NUMERADOS. §5.3 y §8.15 quedaron suspendidos para
+1908-1912 por falta de numeración; en 1932 hay 490 decretos numerados entre
+13819 y 15918 y las dos reglas vuelven a aplicarse. Conviene que la rúbrica
+diga que el régimen de numeración se mide en cada año y no se hereda en
+ninguna de las dos direcciones.
+
+6. EL CONFIG DEL RELEASE PUEDE ESTAR ATRASADO RESPECTO DEL CONFIG DEL
+PROYECTO. §14.2 pide subir «lee_config.json» como asset; en 1932 el asset
+tiene 180 actores contra 388 del proyecto. El checklist debería incluir
+cotejar los dos y declarar cuál se usó.
+
+8. UNA PALABRA PUEDE FALTAR ENTERA EN LA CAPA, no sólo estar deformada. §2.3 y
+§11 vienen tratando el problema del OCR como deformación —«Tacones» por
+Yacones, «Oaldfera» por Caldera, «mivrua» por Murúa—, que una difusa puede
+rescatar. En 1932 apareció el caso peor: «Sosauya» se lee sin esfuerzo en la
+imagen y NO ESTÁ en la capa de esa hoja. Una palabra ausente no deja rastro
+que ninguna pasada pueda alcanzar, y por eso la regla «toda palabra que decide
+una ficha se mira» no alcanza: hay que mirar también los renglones vecinos de
+la palabra que sí se encontró.
+
+9. LA CADENA DE SALDOS PUEDE SER COMPLETA, y conviene que la rúbrica diga que
+el recuento previo sirve en las dos direcciones. v15 aprendió a contar los
+resúmenes antes de prometer la cadena porque 1911 tenía uno y 1912 cuatro;
+1932 tiene doce, uno por mes, y la cadena cierra al centavo. El recuento no es
+sólo una defensa contra prometer de más: también dice cuándo se puede
+prometer.
+
+10. EL ACTO PUEDE DECIR ÉL MISMO CÓMO SE PUBLICA. Los despachos que aprueban
+los resúmenes de Tesorería ordenan publicarlos «por el término de ocho días en
+dos diarios de la localidad, y por una sola vez en el BOLETIN OFICIAL». v15
+dedujo de 1912 que la marca de publicación puede referirse a otros diarios;
+1932 lo trae escrito. Conviene que §6 cite esta fórmula.
+
+11. UN AVISO DE REMATE PUEDE SALIR TRES VECES SIN SER NUNCA UNA REPETICIÓN. El
+remate de la casa del pueblo de la Caldera sale en tres ediciones, dos con
+base y una sin base, y el del camión en dos. Lo que los distingue no es la
+marca de publicación sino una condición de fondo, y sólo se ve cotejando
+imagen contra imagen.
+
+7. LA FECHA QUE LA CAPA LEVANTA DE UNA TAPA PUEDE SER LA DEL PRIMER DECRETO.
+§2.5bis manda leer el año editorial en la tapa y no en la capa; 1932 agrega
+que lo mismo vale para la fecha. En 1417 y 1447 la capa devolvió la fecha del
+decreto que abre la hoja, que está a semanas de la de tapa. El control barato
+es la serie de salida: toda fecha de la capa que se aparte de ella se mira.
+
+
+RECUENTO
+========
+
+  archivos bajados del Release .................. 54 PDF, 145 MB
+  ediciones .................................... 54 (1408 a 1461)
+  hojas presentes .............................. 1482
+  hojas ausentes ............................... 4 (1461, hojas 1 a 4)
+  reparto de confianza ......................... no aplicable (sin .tsv)
+  imágenes miradas ............................. 62 recortes, 52 hojas
+  columnas cotejadas contra la capa previa ..... 33 en 23 hojas
+  tapas leídas en la imagen .................... 6
+  menciones del anillo 1, hojas candidatas ..... 37
+  entradas del §A .............................. 28
+  hojas del corpus que cubren esas entradas .... 36
+  hojas candidatas sin mirar ................... 2 (E.2)
+  subtotales recalculados ...................... 5 (3 cierran, 0 fallan)
+  cuadros publicados ........................... 12 resúmenes mensuales
+  cuadros recalculados enteros ................. 1 (cierra al centavo)
+  cuadros no recalculados, con motivo .......... 12
+  saldos transcriptos y encadenados ............ 12 (la cadena cierra)
+  balances municipales del departamento ........ 0
+  planos publicados / citados .................. 0 / 1 del departamento
+  actos citados y no acompañados ............... 8
+  términos del anillo 2 con acierto ............ 54
+  actores del config con nombre completo ....... 95
+  decretos numerados detectados ................ 490 (13819-15918)
+  cuadros publicados / subtotales recalculados . pendiente
+  gobiernos registrados en la tapa ............. 4 en 54 ediciones
+  límites declarados ........................... 7
+

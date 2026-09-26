@@ -1,0 +1,1615 @@
+==============================================================================
+BOLETIN OFICIAL DE SALTA — 1929 — BARRIDO LEE «LA CALDERA»
+==============================================================================
+
+Informe LEE 1929. Ediciones N° 1252 a 1303 (52 ediciones, 815 hojas).
+Rubrica LEE v15 (20/09/2026). Armado el 22/09/2026 (turno 4).
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con siete limites declarados (E.10). Cuatro turnos. No queda
+trabajo que esta sesion pueda hacer y no haya hecho: los 26 candidatos del
+anillo 1 estan mirados y fichados, los 74 terminos del anillo 2 con acierto
+estan leidos uno por uno, las 52 tapas estan cotejadas contra el calendario
+—doce de ellas en la imagen—, los once cuadros de Tesoreria estan mirados y
+encadenados, el cotejo sumario/cuerpo esta hecho por acto y el config va
+actualizado. Lo que falta no lo puede hacer nadie con estos insumos, y esta en
+E.10.
+
+QUE AGREGARIA CADA INSUMO QUE FALTO. Si llegaran el .tsv, las .jpg, el log y
+los CSV de lee_auto.py, se podrian agregar: la confianza por hoja y con ella
+la lista de hojas «a ojos» de §4.8; la deduplicacion por md5 y dhash, hoy
+hecha por texto; la medicion de tinta; y una segunda version del texto con que
+desempatar las palabras sueltas. El §A no cambiaria: sus veinte fichas estan
+transcriptas desde la imagen y no dependen de ninguna capa. Lo que si podria
+cambiar es el margen del §B, donde una segunda version acaso traeria algun
+acierto que la unica capa parte, como partio «alvarez tam ayo» y «corina de
+cam peros».
+
+ENTREGA DE ESTE TURNO: si, un archivo, que es este. Es un informe parcial y se
+declara como tal; se rehizo entero, con el mismo nombre que el del turno
+anterior, que queda reemplazado.
+
+QUE SUBIO EL USUARIO. Al proyecto: lee_config.json y control_config.py. Al
+Release 1929 de github.com/ediedrich/boletines-salta: 53 assets, que son los
+52 PDF de las ediciones 1252 a 1303 y un lee_config.json. No llegaron el
+pre-informe, resultados_1929.csv, decretos_1929.csv, log.txt, recortes.zip ni
+el zip de los .txt de lee_trabajo. Es decir: no hay ninguna salida de
+lee_auto.py para 1929, como en 1911 y 1912.
+
+DOS CONFIG, Y NO DICEN LO MISMO. El lee_config.json del Release 1929 esta
+atrasado: trae 70 terminos de anillo 2, 180 actores, 40 numeros y 12 falsos
+positivos, y sus actores llegan hasta 1915. El del proyecto trae 139 terminos
+de anillo 2, 388 actores, 112 numeros y 24 falsos positivos, con actores de
+1916, 1917, 1919, 1920, 1922, 1923, 1925, 1926, 1927 y 1928. El segundo
+contiene al primero termino por termino: no hay una sola entrada que este en
+el Release y no en el proyecto. Se barrio 1929 con el del proyecto, que es el
+que corresponde a la epoca, y se declara aqui para que el usuario reemplace el
+asset del Release.
+
+DE DONDE SALIERON LAS IMAGENES Y COMO SE COTEJARON. Los 52 PDF se bajaron del
+Release por HTTP, 93 MB en una llamada. No hay EXTRAIDO.json, de modo que el
+cotejo de integridad no se pudo hacer contra bytes y hojas declaradas. Tampoco
+sirve la cadena de folios de §2.5bis: en 1929 la paginacion es interna de cada
+edicion («Pag. 2», «Pag. 3»...) y no corre a lo largo del año. El control que
+si existe en esta epoca, y que no existia en 1908-1912, es la numeracion
+corrida de los actos (§2.5ter).
+
+QUE VERIFICO LA SESION. nproc = 1. PyMuPDF no venia instalado y se instalo
+desde pypi. tesseract 5.3.4 con eng y osd unicamente: sin spa, de modo que no
+se OCRizo nada en sesion y no se aplican el §3 ni el §16. Todo lo mirado se
+miro en la imagen incrustada del PDF, rasterizada con PyMuPDF.
+
+TECHO DE RESOLUCION. Cada hoja trae dos imagenes DCTDecode en gris: una de 969
+x 1440 px y otra de 484 x 720 px sobre una pagina de unos 465 x 691 pt. La
+grande da 150 ppi y la chica 75. El techo real es entonces 150 ppi, muy por
+debajo de los 300-500 ppi de 1912: pedir mas dpi al rasterizar interpola y no
+agrega tinta. La contrapartida medida es que a 150 ppi el cuerpo del Boletin
+de 1929 se lee sin esfuerzo (vease la hoja 3 de la edicion 1266); lo que queda
+al limite son los renglones de fecha de las tapas, en tipo condensada, que
+hubo que recortar y ampliar.
+
+DESVIO DECLARADO. §4.1, en la redaccion de v15, pide recalcular al
+menos un subtotal de cada cuadro publicado. En 1929 los cuadros son
+once y se recalcularon dos subtotales de uno solo (el de enero). El
+motivo esta en E.8 y no es la falta de tiempo: es el techo de 150
+ppi, que no permite asegurar los digitos de las columnas de cifras
+chicas sin una segunda version con que desempatar. Lo que si se hizo
+en los once es mirar y transcribir sus saldos inicial y final, que
+es lo que la cadena necesita.
+
+§1 · CORPUS REVISADO
+--------------------
+
+52 ediciones, 1252 a 1303, del viernes 4 de enero al viernes 27 de diciembre
+de 1929. Todas son PDF reales con capa de texto propia del PDF (no hay ZIP ni
+texto plano). 815 hojas. Ninguna tapa declara numero de paginas, de modo que
+la columna «declaradas» no existe en esta epoca. No hay .tsv del script y por
+lo tanto no hay confianza por hoja: la columna se deja vacia y el asunto
+vuelve en E.10 como limite.
+
+Las fechas marcadas entre corchetes se leyeron en la imagen: son las doce que
+la capa daba ilegibles o con un digito dudoso. Las otras cuarenta salen de la
+capa previa y coinciden con el calendario. Once de las doce miradas
+confirmaron el calendario; la que no es la de la edicion 1275, que esta en
+E.9.
+
+  ed.   fecha de tapa            hojas  capa  chars/hoja
+  ------------------------------------------------------------
+  1252  4 de enero                  8   si    2413
+  1253  11 de enero                11   si    2836
+  1254  18 de enero                11   si    3274
+  1255  25 de enero                10   si    3078
+  1256  1 de febrero                9   si    3193
+  1257  [8 de febrero]              5   si    2964
+  1258  15 de febrero              12   si    3076
+  1259  22 de febrero              10   si    2820
+  1260  [1o. de marzo]             23   si    3260
+  1261  [8 de marzo]               26   si    3434
+  1262  [15 de marzo]              12   si    2928
+  1263  22 de marzo                16   si    3225
+  1264  29 de marzo                24   si    3156
+  1265  5 de abril                 12   si    3451
+  1266  [12 de abril]              31   si    3303
+  1267  19 de abril                14   si    3140
+  1268  26 de abril                13   si    2843
+  1269  3 de mayo                  24   si    3191
+  1270  10 de mayo                 12   si    3168
+  1271  17 de mayo                  9   si    3078
+  1272  [24 de mayo]               35   si    3246
+  1273  31 de mayo                 24   si    3229
+  1274  7 de junio                 10   si    3088
+  1275  [13 de junio]               8   si    3283
+  1276  21 de junio                10   si    2917
+  1277  28 de junio                12   si    2677
+  1278  5 de julio                  8   si    3210
+  1279  12 de julio                20   si    1624
+  1280  19 de julio                11   si    3118
+  1281  26 de julio                34   si    3390
+  1282  2 de agosto                12   si    3072
+  1283  [9 de agosto]              16   si    2868
+  1284  16 de agosto               20   si    2898
+  1285  23 de agosto               16   si    2967
+  1286  30 de agosto               20   si    2895
+  1287  6 de setiembre             16   si    3186
+  1288  13 de setiembre             8   si    2753
+  1289  [20 de setiembre]          10   si    1936
+  1290  27 de setiembre            20   si    3034
+  1291  4 de octubre               14   si    2983
+  1292  11 de octubre              19   si    2855
+  1293  18 de octubre              11   si    3083
+  1294  25 de octubre              19   si    2990
+  1295  [1o. de noviembre]         26   si    3052
+  1296  [8 de novbre.]             16   si    2938
+  1297  15 de noviembre            14   si    2870
+  1298  [22 de noviembre]          14   si    3013
+  1299  29 de noviembre            15   si    2931
+  1300  6 de diciembre              9   si    2951
+  1301  13 de diciembre            11   si    2581
+  1302  20 de diciembre            23   si    3265
+  1303  27 de diciembre            22   si    3284
+
+Los dias de salida los declara la fecha de tapa: el Boletin de 1929 sale los
+viernes, uno por semana. 1929 tuvo exactamente 52 viernes y hay exactamente 52
+ediciones, una por cada uno: no hay dias de salida sin edicion, no hay
+ediciones dobles y no hay huecos de calendario que explicar. Es el primer año
+de esta serie en que el calendario cierra solo.
+
+El año editorial es AÑO XXI en las 52 tapas, sin cambio de numero romano en el
+año, y el gobierno es el del Dr. Julio Cornejo de punta a punta.
+
+Hojas por edicion: de 5 (edicion 1257) a 35 (edicion 1272), con una media de
+15,7. La edicion 1295, de 26 hojas, lleva sobre el renglon de fecha el titular
+«Nueva Constitucion de la Provincia de Salta»: es la que publica la
+Constitucion.
+
+Densidad de la capa: la hoja mas pobre trae 672 caracteres (1277 h12) y la mas
+rica 4.004 (1287 h7), con una media de 3.040. Ninguna hoja queda por debajo
+del umbral de 500 B de §2.3.4, de modo que no hay hojas sin capa ni hojas en
+blanco por ese camino. La medicion de tinta, que seria el otro camino,
+necesita las .jpg del script y no se pudo hacer.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+VERSIONES. Una sola: la capa de texto del PDF, reconstruida en sesion con
+PyMuPDF (§2.1), hoja por hoja, 815 archivos .prev.txt. No hay OCR propio del
+script ni se pudo hacer en sesion por falta de spa. Todo resultado se etiqueta
+«prev» y no hubo desempate posible entre dos lecturas: el unico desempate es
+la imagen.
+
+MARCA DE CORTE. U+0002 no aparece ni una vez en las 815 hojas, como en
+1908-1912. El guion blando U+00AD aparece 14.315 veces y es, otra vez, la
+marca del corte de renglon sin guion visible impreso. La union lo quita junto
+con el salto de renglon, segun la regla corregida de v15 §2.3.2. Medida del
+efecto en este corpus: la pasada literal da 32 hojas con la union correcta y
+31 si el guion blando se quita como caracter suelto. La hoja que se pierde es
+la 4 de la edicion 1276.
+
+CORTES CON SIGNOS INTERCALADOS. La union tolera ademas hasta dos signos de
+puntuacion a cada lado del salto y el guion visible de fin de renglon.
+
+COTEJO SUMARIO/CUERPO. En 1929 SI hay sumario, y es una diferencia con
+1908-1912: la tapa de varias ediciones trae un indice de actos con remision de
+pagina entre parentesis, en lugar de puntos guia. Las hojas con puntos guia de
+este corpus no son sumarios sino planillas de creditos suplementarios.
+
+El cotejo se hizo por acto sobre las seis tapas que nombran el termino, y
+cierra en cuatro de seis. Cierran: 1269 («nombramiento de comisario de policia
+de la caldera», pagina 4, acto en la hoja 4); 1271 («jueces da p«,z
+propietario y suplente de la caldora», pagina 3, acto en la 3); 1272
+(«receptor de rentas de la caldera—se nombra», pagina 12, acto en la 12); y
+1300 («jueces de paz propietario y suplente, de la caldera», pagina 3, acto en
+la 3). No cierran, las dos por una pagina y en sentidos opuestos: 1264, cuyo
+sumario manda a la pagina 7 y cuyo acto esta en la 8; y 1293, cuyo sumario
+manda a la pagina 8 y cuyo acto esta en la 7. El numero de pagina impreso en
+la cabecera coincide siempre con el numero de hoja del PDF, de modo que el
+desfase es del sumario y no de la foliacion. Se declara y no se concilia.
+
+COLUMNA PERDIDA. La maqueta es de dos columnas, que arrancan en unos 30 y unos
+240 pt sobre paginas de unos 465 pt de ancho. En la unica hoja cotejada hasta
+ahora —1266 h3— la capa reproduce la columna izquierda entera y despues la
+derecha entera, en orden y sin trasponer renglones. Con una sola hoja cotejada
+no se puede afirmar nada sobre el año: el cotejo columna por columna se hace
+en los turnos siguientes y el informe declarara sobre cuantas columnas se
+miro.
+
+PASADAS. Las cuatro de §5.2, sobre la unica version disponible.
+
+  1. Literal/normalizada: «cald» sobre NFD sin diacriticos, con los
+     cortes unidos. 32 hojas, 40 apariciones.
+  2. Laxa: [gco][ao][l1i|][dcl][ec][rnm][ao]. Dos formas: «caldera»
+     (27 hojas) y «caldero» (3 hojas, todas Calderon).
+  3. Laxa con espacios y saltos, escrita con la clase de espacios en
+     blanco y no con un espacio literal: agrega las formas «c a ld e
+     r a» y «c a ld e ra», que la literal no ve porque el OCR de
+     1929 separa las letras dentro de la palabra. Una de ellas cae
+     en una hoja que ninguna otra pasada trae: 1258 h2.
+  4. Difusa >= 0,78 contra caldera y calderilla: cuatro formas —
+     «calera» (1261 h16), «adera» (1297 h6, por «m adera»),
+     «calavera» y «escalera».
+  5. Difusa ampliada 0,70-0,78 sobre palabras con c, g u o inicial:
+     19 formas, todas ya juzgadas o triviales (cabrera, cadena,
+     cadenas, cadillal, calaveras, calera, calidad, calleja, camera,
+     caneria, capilla, carrera, cartera, cayeran, cortadera, cuadra,
+     cuadras, cualquiera, galeria).
+
+PASADAS QUE DEVUELVEN CERO. Ninguna de las cuatro devolvio cero en 1929, de
+modo que la comprobacion de v15 §5.2 no hizo falta aqui. De todos modos se
+probo la laxa con dos cadenas de control —«la caldera» y «c a l\nd e r a»— y
+las dos dan positivo: la expresion esta sana y cruza el salto de renglon.
+
+ANILLO 2. Se busco el vocabulario del config del proyecto: 139 terminos, de
+los cuales 74 dan al menos un acierto en 1929. Los contextos de los 74 se leen
+en el turno del §B, uno por uno, sin elegir los que «parecen» del
+departamento.
+
+ACTORES. 388 entradas del config, buscadas por nombre y apellido sobre el
+texto con la puntuacion suprimida. 71 dan acierto con nombre y apellido en
+1929: el config heredado de 1908-1928 funciona en esta epoca. 91 apellidos no
+dan ni un acierto en todo el año; el reparto entre ausencia real y falla de
+busqueda se hace en el §B.
+
+NUMEROS. Los 112 del config, buscados sobre el texto sin puntuacion. Los de
+cinco digitos son los interesantes, porque en 1929 caen dentro de la serie del
+año: 10062, 10220, 10266, 10469, 10520, 10642, 10775, 11198, 11226 y 11322
+aparecen cada uno en una hoja. Se leen en el turno del §B para decidir si son
+el acto citado por un año anterior o una coincidencia de cifra.
+
+IDENTIFICADORES DE LAS AUSENCIAS. En 1929, y a diferencia de 1908-1912, los
+actos SI llevan numero, de modo que la regla de §5.3 se aplica con numero y
+fecha, y §8.15 (fecha contra numeracion sobre los vecinos ±3) vuelve a ser
+aplicable.
+
+§2.5ter · LA NUMERACION CORRIDA DE LOS ACTOS (CONTROL DE ESTA EPOCA)
+--------------------------------------------------------------------
+
+Cada acto del Poder Ejecutivo se imprime encabezado por un numero de cinco
+cifras seguido de la fecha: «10306— Salta, Marzo 7 de 1929.». La serie no
+reinicia con el año: viene corrida de años anteriores. En las 815 hojas se
+leyeron 608 encabezados de esa forma, con 601 numeros distintos, y el cuerpo
+de la serie va de 10026 (edicion 1252, 4 de enero) a 11354 (edicion 1302, 20
+de diciembre). Los valores sueltos fuera de ese rango —35, 680, 754, 1022,
+1072, 1323, 1352, 6237, 20395, 30160— son lecturas erradas del OCR sobre
+numeros de cinco cifras y se resolveran en la imagen cuando toquen un acto
+fichado.
+
+Esto reemplaza en 1929 a la cadena de folios que en 1908-1912 servia para
+distinguir la edicion corta de la incompleta: aca el control de completitud es
+la serie de actos. Dos consecuencias practicas. La primera: los rangos por
+edicion se encadenan sin superponerse (1252:10026, 1253:10036-10041,
+1254:10043-10059, 1255:10060-10081, y asi hasta 1302:11354), de modo que no
+falta ninguna edicion entera. La segunda: los saltos dentro de la serie son
+frecuentes y no prueban por si mismos que falte una hoja, porque no todos los
+actos se publican; el recuento hoja por hoja se hace en el turno del §B.
+
+La otra consecuencia es sobre el config. Los diez numeros de cinco cifras del
+config que caen dentro del rango de 1929 son actos que un barrido anterior
+anoto como citados; que aparezcan aca es lo que hay que comprobar, y es la
+razon por la que la clave «numeros» existe.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+Veinte fichas sobre veintiuna hojas, todas transcriptas desde la imagen. El
+orden es por edicion. No quedan candidatos del anillo 1 sin mirar.
+
+------------------------------------------------------------------------------
+EDICION 1258 — HOJA 2
+
+FUENTE. Edicion N° 1258, viernes 15 de febrero de 1929, hoja 2, columna 2.
+
+FICHA. Designacion de autoridades de mesa: Colegio Electoral N° 2 — La
+Caldera, circuitos 5 y 6.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi. Es la hoja que ninguna
+pasada literal trae: el OCR imprime «c a ld e ra» con las letras separadas y
+solo la laxa con la clase de espacios la encuentra.
+
+TEXTO.
+  C. Electoral N° 2—La Caldera
+              Circuito   N·  5
+    Mesa N° 1, Presidente: Regis Augusto, Suplente 1°. Robles José
+    Eúsebio, Suplente 2°. Guerrero Rómulo Santiago.
+    Mesa N°. 2, Presidente: Molina Lucas, Suplente 1°. Arévalo
+    Pedro, Suplente 2° Mercado Enrique
+              Circuito   N·  6
+    Mesa N° 1, Presidente: Bruzzo Manlio Carlos, Suplente 1°.
+    Urquiza Francisco Solano, Suplente 2°. Zurita Emiliano.
+
+NOTA DE LECTURA. Nueve nombres, y siete de ellos estaban ya en el anillo de
+actores del config, heredados de barridos de otros años: Augusto Regis (1909),
+Romulo Santiago Guerrero (1928), Lucas Molina (1909 y 1926), Pedro Arevalo
+(edicion 2584 de 1946), Enrique Mercado (1927), Manlio Carlos Bruzzo (1926) y
+Francisco S. Urquiza (1923). Es la comprobacion mas limpia del año de que el
+config de la epoca sirve: la hoja que las pasadas literales no ven es, al
+mismo tiempo, la que el anillo de actores habria traido igual. Tres semanas
+despues, la edicion 1261 publica las mesas de estos mismos circuitos con sus
+parajes.
+
+------------------------------------------------------------------------------
+EDICION 1260 — HOJA 8
+
+FUENTE. Edicion N° 1260, viernes 1o. de marzo de 1929, hoja 8, columna 2.
+
+FICHA. Decreto 10174, del 31 de enero de 1929: convocatoria a elecciones de
+convencionales para la reforma total de la Constitucion Provincial; Caldera
+elige dos.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  10174—Salta, Enero 31 de 1929.
+    Debiendo procederse a la renovación de los miembros de las H. H.
+    C. C. Legislativas de la Provincia [...] como así tambien
+    verificarse las elecciones de Convecionales para la reforma total
+    de la Constitución Provincial de conformidad a la Ley N° 9705 de
+    fecha Octubre 3 de 1928,
+    El Gobernador de la Provincia
+    DECRETA
+    Art. 1°--Convócase al pueblo de la Provincia de Salta a elegir
+    los Convencionales para la reforma de la Constitución Provincial
+    en la siguiente forma: siete Convecionales por el Departamento de
+    la Capital; tres por cada uno de los Departomentos de: Rosario de
+    la Frontera, Rosario de Lerma, Rivadavia, Orán, Chicoana y Anta;
+    dos por cada uno de los de: Cafayate, Cerrillos, Iruya, Caldera,
+    Candelaria, Molinos, Santa Victoria, Guachipas, La Viña, La Poma,
+    Campo Santo, San Carlos, Metán y Cachi.
+
+NOTA DE LECTURA. El original imprime «Convecionales» dos veces y
+«Departomentos» una. La Ley N° 9705 del 3 de octubre de 1928, que manda la
+reforma, es un acto citado y no acompañado: esta fuera del corpus del año.
+Esta convocatoria es la razon por la que la edicion 1295, del 1o. de
+noviembre, publica la Nueva Constitucion de la Provincia, y por la que las
+ediciones 1258, 1260 y 1261 traen las listas electorales que aportan cuatro de
+las fichas de este §A.
+
+------------------------------------------------------------------------------
+EDICION 1260 — HOJA 9
+
+FUENTE. Edicion N° 1260, viernes 1o. de marzo de 1929, hoja 9, columna 1.
+
+FICHA. Continuacion del decreto 10174: representantes legislativos por
+departamento; Caldera elige un diputado.
+
+MODO DE LECTURA. Imagen, columna 1 entera a 200 dpi.
+
+TEXTO.
+  Art. 2°.—Convócase al pueblo de los Departamentos que a
+    continuación se expresan a elegir sus representantes en las H. H.
+    C. C. Legislativas por el periodo constitucional en la forma
+    siguiente: un Senador por los Departamentos de: Chicoana, La
+    Viña, La Poma, Campo Santo y San Carlos; un Senador y un Diputado
+    por cada uno de los Departamentos de: Cafayate, Iruya, Molinos,
+    Santa Victoria y Guachipas; dos Diputados por los Departamentos
+    de: Capital, Rosario de la Frontera y Chicoana; y un Diputado por
+    cada una de los de: Cerrillos, Rivadavia, Orán, Caldera y
+    Candelaria,
+    Art. 3°.—Desígnase el Domingo 3 de Marzo próximo para que tenga
+    lugar dichas elecciones en las circunscripciones electorales
+    convocadas.
+    Art. 4°.—Comuníquese, publíquese, dése al Registro Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU.
+
+NOTA DE LECTURA. Caldera elige un diputado y ningun senador, y dos
+convencionales. Los tres cargos se cubren con los nombres que proclama la
+Union Civica Radical siete hojas mas adelante, en la misma edicion: Julio Royo
+Ortiz diputado, Alberto Álvarez Tamayo y Carlos Outes convencionales. El
+decreto se publica el 1o. de marzo y la eleccion es el domingo 3: dos dias
+despues.
+
+------------------------------------------------------------------------------
+EDICION 1260 — HOJA 16
+
+FUENTE. Edicion N° 1260, viernes 1o. de marzo de 1929, hoja 16, columna 2.
+
+FICHA. Proclamacion de candidatos de la Union Civica Radical por el
+departamento Caldera para las elecciones del 3 de marzo.
+
+MODO DE LECTURA. Imagen. Columna 2 entera recortada a 200 dpi y partida en dos
+mitades. El encabezado del bloque —«Proclamados por la Union Civica Radical»—
+esta en la hoja 15 y se leyo en la capa, no en la imagen.
+
+TEXTO.
+  Dpto. CALDERA — Diputado: Sr. Julio Royo Ortíz. Covencionales:
+  Dres. Alberto Álvarez Tamayo y Carlos Outes.
+
+NOTA DE LECTURA. La lista corre por departamentos desde la hoja 15 y el bloque
+de Caldera abre la columna 2 de la hoja 16, inmediatamente despues de
+Cerrillos. El original imprime «Covencionales» por convencionales. Mas abajo,
+en la misma columna, arrancan otros dos bloques con sus propios encabezados
+—«Proclamados por electores contribuyentes del Depto. de Metan» y «Proclamados
+por el Partido Socialista—Seccion Salta»—, de modo que la atribucion
+partidaria de Caldera depende del encabezado de la hoja 15 y no de la hoja 16.
+Julio Royo Ortiz es, en este mismo año, comisario de policia de La Caldera:
+renuncia al cargo por esta candidatura (edicion 1264) y deja ademas la
+receptoria de rentas (edicion 1272).
+
+------------------------------------------------------------------------------
+EDICION 1261 — HOJA 5
+
+FUENTE. Edicion N° 1261, viernes 8 de marzo de 1929, hoja 5, columnas 1 y 2.
+
+FICHA. Ubicacion de mesas receptoras de votos: Colegio Electoral N° 2 — La
+Caldera, circuitos 5 y 6, con la nomina de parajes de cada mesa.
+
+MODO DE LECTURA. Imagen. Las dos columnas de la hoja, recortadas enteras a 200
+dpi y partidas en dos mitades cada una. Es la pieza mas larga del año y se
+transcribe completa.
+
+TEXTO.
+  Cole6io Electoral N· 2·.—La Caldera
+              Circuito N·  5
+    Mesa N° 1.—Escuela Elemental Mixta, La Caldera.—Circuito:
+    Pueblo, Potrero de Castilla, Peñones y San Alejo.
+    Mesa N° 2.—Iglesia Parroquirl, La Caldera.—Circuito: Abra La
+    Sierra, Angosto, Angosto de Arrieta, Angostura, Acheral (El),
+    Bordo (El), Campo Alegre, Calderilla, Corral de Barranca,
+    Cañada Ancha, Churcal, Calchanio, Despensa, Despensilla,
+    Helvecia, Higueritas, Lagunas (Las), Mosquera, Matos (Los),
+    Monte de las Garrapatas, Mesada, Nogalito, Porongos, (Los),
+    Potrero de Valencia, Queseria, Severino, Santa Getrudis,
+    Sauces (Los), Santa Rufiea, Wierna y Yacones.
+              Circuito N·  6
+    Mesa N° 1.—Escuela Infantil Provincial, Vaqueros.—Circuito:
+    Entre Rios, Estación Mojotoro, Lesser, Mojotoro, Mojotorito,
+    Potrero del Gallinato, San José, Tunel, Vaqueros y Villa,
+    Urquiza.
+
+NOTA DE LECTURA. Cuarenta y cinco parajes en tres mesas: cuatro en la mesa 1
+del circuito 5, treinta y uno en la mesa 2 y diez en la mesa 1 del circuito 6.
+El acto no declara ningun total, de modo que no hay recuento del original
+contra el cual cotejar el de la transcripcion. Erratas del original,
+transcriptas: «Cole6io» por Colegio; «Parroquirl» por Parroquial; «Santa
+Rufiea» por Santa Rufina; «Porongos, (Los)» y «Villa, Urquiza» con la coma
+corrida de lugar. El encabezado esta en la misma columna, inmediatamente antes
+de la mesa 1, y cierra el bloque del colegio N° 1: se leyo entero para no
+fichar la nomina sin saber de que es. Nueve de estos nombres no estan en el
+anillo 2 del config con esta forma —Abra La Sierra, Lagunas (Las), Matos
+(Los), Monte de las Garrapatas y Potrero del Gallinato si estan; Calchanio,
+Santa Getrudis y Santa Rufiea estan como variantes— y el cotejo fino va en el
+bloque de config del ultimo turno.
+
+------------------------------------------------------------------------------
+EDICION 1262 — HOJA 4
+
+FUENTE. Edicion N° 1262, viernes 15 de marzo de 1929, hoja 4, columna 2.
+
+FICHA. Decreto 10189, del 4 de febrero de 1929: suspension del sub-comisario
+ad-honorem de Vaqueros y designacion de un interino.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi. El numero del acto se
+leyo en la imagen.
+
+TEXTO.
+  10189=Salta, Febrero 4 de 1929.
+    Exp. N° 243—P—Vista la nota del señor Jefe de Policía,
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1°=Apruébase la resolución N° 5 de la Jefatura de Policía
+    de fecha 30 de Enero ppdo, por la que suspende en sus funciones
+    al Sub-Comisario de Policía «ad-honorem» de Vaqueros (La
+    Caldera) don Anatolio Plaza y se designa interinamente en su
+    reemplazo a don Medardo Sarmiento por el tiempo que dure la
+    suspensión del titular.
+    Art. 2.—Comuníquese, publíquese, dése al Registro Oficial y
+    archívese.
+    CORNEJO–L. C. URIBURU.
+
+NOTA DE LECTURA. El original imprime el signo «=» donde los demas actos llevan
+raya, dos veces: en «10189=Salta» y en «Art. 1°=Apruébase». El articulo de
+cierre se numera «Art. 2.» sin la volada. El decreto aprueba una resolucion de
+la Jefatura de Policia que no se publica: es un acto citado y no acompañado
+(resolucion N° 5 de la Jefatura, 30 de enero de 1929). Anatolio Plaza y
+Medardo Sarmiento estan los dos en el anillo de actores, con origen 1928 y
+1922.
+
+------------------------------------------------------------------------------
+EDICION 1264 — HOJA 8
+
+FUENTE. Edicion N° 1264, viernes 29 de marzo de 1929, hoja 8, columna 2.
+
+FICHA. Decreto 10255, del 22 de febrero de 1929: renuncia de Julio Royo Ortiz
+como comisario de policia de La Caldera y nombramiento de Teofilo Reyes como
+interino.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  10255—Salta, Febrero 22 de 1929.
+    Exp. N° 383-P—Vista la renuncia presentada por don Julio Royo
+    Ortiz del cargo de Comisario de Policía de La Caldera, por haber
+    sido proclamado candidato a Diputado a la H. Legislatura,
+    El Gobernador de la Provincia,
+    DECRETA:
+    Art. 1°.—Acéptase la renuncia interpuesta por don Julio Royo
+    Ortiz del cargo de Comisario de Policía de La Caldera.
+    Art. 2°.—Nómbrase Comisario de Policía interino de esa
+    localidad al señor Teófilo Reyes.
+    Art. 3°.—Comuníquese, publíquese, dése al Registro Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU.
+
+NOTA DE LECTURA. La tapa de esta edicion anuncia el acto: «renuncia del
+comisario de policia de la caldera y nombramiento en su reemplazo (pagina 7)»,
+y el acto esta en la pagina 8. La remision del sumario no cierra por una
+pagina; se declara y no se concilia. El decreto es del 22 de febrero y la
+proclamacion que lo motiva se publica en la edicion 1260, del 1o. de marzo: el
+Boletin publica el efecto antes que la causa.
+
+------------------------------------------------------------------------------
+EDICION 1264 — HOJA 9
+
+FUENTE. Edicion N° 1264, viernes 29 de marzo de 1929, hoja 9, columna 1.
+
+FICHA. Decreto 10260, del 25 de febrero de 1929: remuneracion del
+sub-comisario de Mojotoro, departamento La Caldera.
+
+MODO DE LECTURA. Imagen, columna 1 entera a 200 dpi.
+
+TEXTO.
+  10260—Salta, Febrero 25 de 1929.
+    El Gobernador de la Provincia, en uso de sus Facultados
+    Constitucionales,
+    DECRETA:
+    Art. 1°—Fíjase una remuneración mensual de cien pesos moneda
+    nacional con anterioridad al día 1° del corriente mes al
+    Sub-comisario de Policía de Mojotoro—Departamento La Caldera
+    don Juan de la Cruz Nogales.
+    Art. 2°—Este gasto se hará con imputación al presente decreto,
+    con cargo de dar cuenta oportunamente a la H. Legislatura.
+    Art. 3°.—Comuníquese, publíquese, dése al R. Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU J. C. TORINO.
+
+NOTA DE LECTURA. La capa daba a entender una baja del sub-comisario; la imagen
+dice lo contrario: le fija sueldo a un cargo que hasta entonces no lo tenia.
+Es la razon por la que el juicio no se cierra sobre la capa. El original
+imprime «Facultados» por facultades. Juan de la Cruz Nogales esta en el anillo
+de actores con origen 1922. Este decreto lleva dos refrendos, Uriburu y
+Torino, donde los vecinos llevan uno solo.
+
+------------------------------------------------------------------------------
+EDICION 1266 — HOJA 26
+
+FUENTE. Edicion N° 1266, viernes 12 de abril de 1929, hoja 26, columna 2.
+
+FICHA. Edicto sucesorio de Andres Ramirez, dictado por el Juez de Paz Suplente
+del departamento, firmado en Caldera el 3 de abril de 1929.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  Sucesorio:—Por disposición del suscrito Juez de Paz Suplente de
+    este Departamento, se cita llama y. emplaza por el término de 30
+    días, a contar desde la primera publicación del presente, a todos
+    los que se consideren con algun derecho a los bienes dejados por
+    fallecimiento de don
+              Andrès Ramirez,
+    ya sean como herederos o acreedores, para que dentro del término
+    fijado comparezcan por ante este Juzgado a deducir sus acciones
+    en forma bajo apercibimiento de lo que hubiere lugar por
+    derecho.—Caldera, Abril 3 de 1929. Tiófilo Reyes, J. de P. S.
+                                                          3703
+
+NOTA DE LECTURA. El original imprime «Tiófilo» por Teofilo. El firmante es el
+mismo Teofilo Reyes que en febrero fue comisario interino de policia del
+departamento (edicion 1264) y que en abril sera nombrado Juez de Paz Suplente
+por decreto (edicion 1271): aqui ya firma como tal el 3 de abril, veinte dias
+antes del decreto de nombramiento, que es del 23. Se declara y no se concilia.
+El 3703 al pie es el numero de orden del aviso, no una marca de vencimiento de
+la publicacion. En la misma columna, el edicto inmediatamente anterior cierra
+«Güemes, Abril 6 de 1919», con el año tres lustros corrido; es del mismo
+cuerpo de edictos de 1929 y la errata es del original.
+
+------------------------------------------------------------------------------
+EDICION 1268 — HOJA 10
+
+FUENTE. Edicion N° 1268, viernes 26 de abril de 1929, hojas 10 y 11 (columna 2
+de la 10 y columna 1 de la 11).
+
+FICHA. Deslinde, mensura y amojonamiento de la finca Angostura o Angosto de
+Arias, departamento de La Caldera, promovido por Daniel Linares.
+
+MODO DE LECTURA. Imagen, las dos columnas enteras a 200 dpi. El aviso empieza
+al pie de una hoja y termina en la siguiente.
+
+TEXTO.
+  DESLINDE:—Habiéndose presentado don Daniel Linares por sus
+    propios derechos con títulos bastantes, solicitando deslinde,
+    mensura y amojonamiento, de la finca ANGOSTURA O ANGOSTO DE
+    ARIAS, ubicada en el Departamento de la Caldera, según lo
+    acredita con títulos acompañados, y comprendida dentro de los
+    siguientes limites: Norte, Los Sauces, que fué de don Domingo
+    Royo, hoy de propiedad de don Miguel Herrera, y con la Estancia
+    de la señora Corina de Camperos, llamada Los Cedros; Naciente,
+    con Los Porongos, de propiedad del presentante; Poniente, con la
+    finca Santa Rufina de don Bernardo Austerlitz; y por el Sud, con
+    la finca de don Julio Rorcado.—El señor Juez de la causa ha
+    dictado la siguiente providencia: Salta, Abril 23 de 1929.
+    Por presentado y por constituido el domicilio legal.—Habiendose
+    llenado los requisitos exigidos por el Art. 570 del C. de Proc.
+    C. y C. Practíquense por el perito propuesto, don José F.
+    Campilongo, las operaciones de deslinde, mensura y amojonamiento
+    de la finca Angostura o Angosto de Arias, situada en el Dpto. de
+    la Caldera de esta Provincia.—Posesiónesele del cargo en
+    cualquier audiencia y publíquense edictos en los diarios por el
+    término de treinta días y por una vez en el Boletín Oficial
+    [...] Figueroa.—Lo que el suscrito Secretario hace saber a sus
+    efectos.—Salta, Abril 24 de 1929. E. Sanmillán,      3097
+
+NOTA DE LECTURA. Cinco linderos, y los cinco son toponimia del departamento:
+Los Sauces, la estancia Los Cedros, Los Porongos, Santa Rufina y la finca de
+Julio Rorcado. Los Cedros no figura en el anillo 2 del config y es la
+propuesta mas clara de este año para agregarlo. El original imprime «Rorcado»,
+que puede ser Rocado o Rorcado y no se decide con 150 ppi: se transcribe como
+se ve. La providencia manda publicar «por una vez en el Boletin Oficial», lo
+que hace de este aviso un caso de control para §6: se busco su texto en el
+resto del corpus y no se repite. Daniel Linares, Miguel Herrera, Domingo Royo,
+Bernardo Austerlitz y Sanmillan estan todos en el anillo de actores, con
+origenes 1909, 1927, 1911, 1925 y 1917: cinco de los seis nombres propios del
+aviso vienen del config heredado.
+
+------------------------------------------------------------------------------
+EDICION 1269 — HOJA 4
+
+FUENTE. Edicion N° 1269, viernes 3 de mayo de 1929, hoja 4, columna 2.
+
+FICHA. Decreto 10.389, del 22 de marzo de 1929: nombramiento de Manuel Condori
+como comisario de policia de la Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  10.389—Salta, Marzo 22 de 1929.
+    Exp. N°. 614—P—Vista la nota del señor Jefe de Policía,
+    El Gobernador de la Provincia,
+    DECRETA:
+    Art. 1°.—Nómbrase Comisario de Policía de la Caldera a don
+    Manuel Condorí en reemplazo de don Teófilo Reyes quién
+    desempeñaba dicho cargo interinamente.
+    Art. 2°.—Comuniquese, publíquese dése al Registro Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU
+
+NOTA DE LECTURA. Este acto imprime el numero con punto de millar —«10.389»— y
+el inmediato siguiente de la misma columna lo imprime con coma —«10,396»—,
+mientras que la mayoria del año lo imprime sin separador. Las tres formas
+conviven y no se normalizan. Manuel Condori esta en el anillo de actores con
+origen 1922. Cierra la sucesion del año en el cargo: Royo Ortiz hasta febrero,
+Reyes interino de febrero a marzo, Condori desde marzo.
+
+------------------------------------------------------------------------------
+EDICION 1271 — HOJA 3
+
+FUENTE. Edicion N° 1271, viernes 17 de mayo de 1929, hoja 3, columna 2.
+
+FICHA. Decreto 10491, del 23 de abril de 1929: jueces de paz propietario y
+suplente de La Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi. El numero del acto y el
+del acto vecino se leyeron los dos en la imagen, por lo que se dice en la
+nota.
+
+TEXTO.
+  10491—Salta, Abril 23 de 1929.
+    Exp. N°s 850 y 851-M—Vista la terna elevada por la H. Comisión
+    Municipal de La Caldera para el nombramiento de Jueces de Paz
+    Propietario y Suplente para el ejercicio del corriente año,
+    El Gobernador de la Provincia,
+    DECRETA:
+    Art. 1°.—Nómbrase Jueces de Paz Propietario y Suplente de La
+    Caldera para el ejercicio del corriente año a los señores Ing.
+    Joaquín Echaniz y Teófilo Reyes; respectivamente.
+    Art. 2°.—Los nombrados tomarán posesión de sus cargos prévias
+    las formalidades de Ley.
+    Art. 3°.—Comuníquese, publíquese, dése al Registro Oficial y
+    archívese.
+    CORNEJO—L. C. URIBURU
+
+NOTA DE LECTURA. DOS ACTOS DISTINTOS LLEVAN EL MISMO NUMERO. Inmediatamente
+debajo de este decreto, en la misma columna y bajo el epigrafe «Licencia», se
+imprime «10491—Salta, Abril 23 de 1929. Exp. N°. 846-P», que concede treinta
+dias de licencia al comisario de policia de Guachipas Jose Maria Villafañe y
+nombra en su lugar a Benjamin Estéban. Son dos actos con materia, expediente y
+destinatarios distintos y un solo numero, en la misma fecha y en la misma
+columna. Los dos numeros se leyeron en la imagen. Es el hallazgo de §6 nivel 3
+del año y vuelve en E.9. La tapa de esta edicion anuncia el acto como «Jueces
+da p«,z propietario y suplente de la Caldora», con el nombre del departamento
+deformado en el original.
+
+------------------------------------------------------------------------------
+EDICION 1272 — HOJA 12
+
+FUENTE. Edicion N° 1272, viernes 24 de mayo de 1929, hoja 12, columna 2.
+
+FICHA. Decreto 10514, del 27 de abril de 1929: receptoria de rentas de La
+Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  10514-—Salta, Abril 27 de 1929.
+    CONSIDERANDO:
+    Que es de imprescindible necesidad regularizar la Receptoría de
+    Rentas del Departamento de La Caldera,
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1°.—Nómbrase provisionamente Receptor de Rentos de La
+    Caldera a la señorita Clara Iradi en reemplazo de don Julio Royo
+    Ortíz.
+    Art. 2°.—La nombrada, antes de tomar posesión del cargo,
+    prestará la fianza respectiva de acuerdo al art. 77 de la Ley de
+    Contabilidad de la Provincia
+    Art. 3°.—Comuníquese, publíquese, insértese en el R. Oficial y
+    archívese.
+    CORNEJO—J. C. TORINO.
+
+NOTA DE LECTURA. El decreto no lleva vistos ni numero de expediente, a
+diferencia de casi todos sus vecinos: abre directamente con el considerando.
+El original imprime «provisionamente» y «Receptor de Rentos». El cargo se da a
+una mujer, y el decreto conserva el masculino del cargo. Tercer cargo del
+departamento que deja Julio Royo Ortiz en cuatro meses, despues de la
+comisaria de policia; el refrendo aqui es Torino y no Uriburu, porque la
+materia es de Hacienda.
+
+------------------------------------------------------------------------------
+EDICION 1274 — HOJA 3
+
+FUENTE. Edicion N° 1274, viernes 7 de junio de 1929, hoja 3, columna 1.
+
+FICHA. Decreto 10617, del 27 de mayo de 1929: aprobacion de la ordenanza de
+impuestos y del presupuesto de la Comision Municipal de La Caldera.
+
+MODO DE LECTURA. Imagen, columna 1 entera a 200 dpi.
+
+TEXTO.
+  10617—Salta, Mayo 27 de 1929.
+    Exp. N° 865-M—Vista la Ordenanza de impuestos y presupuestos de
+    gastos y cálculo de recursos, presentados por la H. Comisión
+    Municipal de La Caldera, para el ejercicio del corriente año, lo
+    informado por el Consejo General de Educación y dictaminado por
+    el Fiscal General,
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1°.—Apruébase la Ordenanza de Impuestos y Presupuesto de
+    Gastos y Cálculo de Recursos, presentado por la H. Comisión
+    Municipal de La Caldera, para el ejercicio del corrente año.
+    Art. 2°.—Pásese al libro correspondiente del Ministerio de
+    Gobierno. Fecho, devuèlvase a la H. Comisión Municipal de
+    referencia.
+    Art. 3°.—Comuníquese, publíquese, dése al R. Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU
+
+NOTA DE LECTURA. El decreto aprueba el presupuesto pero NO lo publica: ni el
+total de gastos ni el calculo de recursos aparecen en el Boletin, y el
+articulo 2° manda devolver la pieza a la Comision Municipal. No hay entonces
+cuadro que recalcular para el departamento en 1929, y el presupuesto es un
+acto citado y no acompañado. El original imprime «corrente». La tapa de la
+edicion 1269 anuncia, cinco ediciones antes, «aprobacion de la ordenanza de
+impuestos y el presupuesto de gastos»: el sumario adelanta el acto que recien
+se publica aqui.
+
+------------------------------------------------------------------------------
+EDICION 1286 — HOJA 17
+
+FUENTE. Edicion N° 1286, viernes 30 de agosto de 1929, hoja 17, columna 2.
+
+FICHA. Decreto 10.910, del 5 de agosto de 1929: liquidacion a cuenta al
+catastrador que termino la catastracion de Campo Santo, Caldera y La Viña.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  10.910  Salta, Agosto 5 de 1929.
+    Vista la nota del señor Director de la Comisión de Catastro Exp.
+    N°. 3463 D, elevando la solicitud del señor Adeodato Aybar, en la
+    cual éste manifiesta que teniendo urgente necesidad de la suma de
+    $ 500, y habiendo terminado la catastración de los Departamentos
+    de Campo Santo, Caldera y La Viña, pide se le liquide la citada
+    suma a cuenta de la remuneración que le sea fijada; y atento a lo
+    manifestado por el señor Director de la Comisión de Catastro y al
+    informe de Contaduría General,
+    El Presidente de la H. Cámara de Diputados, en ejercicio del
+    Poder Ejecutivo de la Provincia,
+    DECRETA:
+    Art. 1°. - Liquídese por Contaduría General, la suma de $ 500
+    (Quinientos pesos m/l) al señor Director de la Comisión de
+    Catastro, para que éste a su vez haga entrega de esa cantidad al
+    Catastrador señor Adeodato Aybar a cuenta de la remuneración que
+    le sea fijada oportunamente por el P. Ejecutivo, e impútese este
+    gasto a la Ley N°. 9720 de 6 de Octubre de 1928.
+
+NOTA DE LECTURA. Dos cosas, ninguna de ellas sobre el departamento. La
+primera: el acto lo dicta el Presidente de la H. Camara de Diputados en
+ejercicio del Poder Ejecutivo, y el decreto vecino inmediato de la misma
+columna firma «BAVIO J. C. TORINO», de modo que el interino es E. F. Bavio; no
+hay a la vista decreto de apertura ni de cierre de ese ejercicio y no se fija
+su alcance. La segunda: el numero 10910 esta en la clave «numeros» del config,
+arrastrado por un barrido anterior, y aqui se ve que corresponde a esta
+liquidacion. La remuneracion del catastrador queda sin fijar: es un acto
+futuro, no un acto citado. La Ley N° 9720 del 6 de octubre de 1928 esta fuera
+del corpus.
+
+------------------------------------------------------------------------------
+EDICION 1292 — HOJA 9
+
+FUENTE. Edicion N° 1292, viernes 11 de octubre de 1929, hoja 9, columna 2.
+
+FICHA. Ley N° 11078, sancionada el 27 de setiembre y promulgada el 1o. de
+octubre de 1929: trabajos en la playa del rio Mojotoro y aguas de las juntas
+del Wierna con el de La Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi. El texto arranca al pie
+de la columna 1 y el renglon de empalme —«Río Mojotoro, para reconcentrar el»—
+se repite en los dos recortes.
+
+TEXTO.
+  11078
+    El Senado y Cámara de Diputados de la Provincia de Salta,
+    Sancionan con Fuerza de
+    LEY:
+    Art. 1°.—Autorízase a la Municipalidad del Departamento de Campo
+    Santo a efectuar los trabajos que conceptúe necesarios en la
+    Playa del Río Mojotoro, para reconcentrar el agua, desde las
+    juntas del Rio de Wierna con el de La Caldera, vigilar y
+    prohibir se abran nuevas bocas-tomas no autorizadas por Ley.
+    Art. 2°.—Comuníquese, etc.
+    Dada en la Sala de Sesiones de la H. Legislatura de la Provincia
+    de Salta, a veintisiete del mes de Setiembre de mil novecientos
+    veintinueve.
+    C. A. Aranda — W. Toledo Vice 2°
+    M. B. Figueroa — E. Campilongo
+    DEPARTAMENTO DE GOBIERNO, Octubre 1°. de 1929.
+    Téngase por Ley de la Provincia, comuníquese, publíquese, dése
+    al Registro Oficial y archívese.
+    CORNEJO — L. C. URIBURU.
+
+NOTA DE LECTURA. La ley autoriza obras sobre el agua que baja del
+departamento, pero el sujeto autorizado es la Municipalidad de Campo Santo: es
+el unico acto del año en que el departamento aparece como origen de un recurso
+y no como jurisdiccion. Las leyes de este año llevan el numero solo, en
+renglon aparte y sin fecha pegada, a diferencia de los decretos. La ley
+inmediatamente anterior de la misma hoja lleva las mismas cuatro firmas con
+otro presidente del Senado —Jose M. Decavi en lugar de C. A. Aranda—, las dos
+fechadas el mismo dia: se transcribe y no se concilia.
+
+------------------------------------------------------------------------------
+EDICION 1293 — HOJA 7
+
+FUENTE. Edicion N° 1293, viernes 18 de octubre de 1929, hoja 7, columnas 1 y
+2.
+
+FICHA. Ley N° 11088, sancionada el 27 de setiembre y promulgada el 2 de
+octubre de 1929: quinientos pesos para un terreno en el pueblo de La Caldera
+con destino a la Casa Municipal.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi; el bloque de firmas de la
+promulgacion se leyo tambien en la columna 1.
+
+TEXTO.
+  11088
+    El Senado y Cámara de Diputadon de la Provincia de Salta,
+    sancionan con fuerza de
+    LEY:
+    Art. 1°—Autorízase al P. Ejecutivo a invertir hasta la suma de
+    quinientos pesos m/nacional ($ 500.) en la adquisición de un
+    terreno en el pueblo de La Caldera, Capital del mismo
+    Departamento, con destino a la Casa Municipal.
+    Art. 2.—Los gastos que demande el cumplimiento de la presente
+    Ley se harán de Rentas Generales con inputación a la misma.
+    Art. 3.—Comuníquese, etc.
+    DADA EN LA SALA DE SESIONES DE LA H. LEGISLATURA DE LA PROVINCIA
+    DE SALTA, A VEINTISIETE DIAS DEL MES DE SEPTIEMBRE DEL AÑO MIL
+    NOVECIENTOS VEINTINUEVE.
+    J. M. Decavi — E. F. Bavio
+    M. B. Figueroa — E. Campi!ongo
+    MINISTERIO DE HACIENDA:—Salta, Octubre 2 de 1929.
+    Téngase por Ley de la Provincia, cúmplase, comuníquese,
+    publíquese, insértese en el R. Oficial y archívese.
+    CORNEJO—J. C. TORINO.
+
+NOTA DE LECTURA. Es el acto del año que mas dice sobre el pueblo: lo nombra
+«Capital del mismo Departamento» y le compra el terreno de la Casa Municipal.
+El original imprime «Diputadon» e «inputación». La misma hoja imprime la
+formula de sancion dos veces, una con «SETIEMBRE» y otra con «SEPTIEMBRE», las
+dos en versalita y las dos del 27 del mismo mes. La ley autoriza el gasto pero
+no consta en el corpus el acto que lo ejecuta: la compra del terreno no se
+publica en 1929.
+
+------------------------------------------------------------------------------
+EDICION 1294 — HOJA 15
+
+FUENTE. Edicion N° 1294, viernes 25 de octubre de 1929, hoja 15, columna 2.
+
+FICHA. Decreto 11103, del 4 de octubre de 1929: comision de Julio Royo Ortiz
+como receptor de rentas de La Caldera por el ejercicio de 1928.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi. La cifra se leyo en
+cifras y en letras y las dos coinciden.
+
+TEXTO.
+  11103—Salta, Octubre 4 de 1929.
+    Visto el Exp. N° 7334 R en el que el señor Julio Royo Ortiz
+    reclama el pago de la comisión que se le adeuda por la percepción
+    de valores fiscales correspondientes al ejercicio de 1928, y
+    siendo necesario abonar a la brevedad posible este crédito, dado
+    el tiempo transcurrido desde que la suma correspondiente ingresò
+    en Tesorería General; y atento al informe de Contaduría General y
+    en uso de las facultades conferidas por el art. 7 de de la Ley de
+    Contabilidad,
+    El Gobernador de la Provincia, en acuerdo de Ministros
+    DECRETA:
+    Art. 1°—Liquídese a favor del señor Julio Royo Ortiz la suma de
+    $ 154.02 (ciento cincuenta y cuatro pesos con dos centavos
+    m/legal) importe de su comisión como Receptor de Rentas de La
+    Caldera, debiendo efectuarse este gasto de Rentas Generales y con
+    imputación al presente acuerdo.
+
+NOTA DE LECTURA. Ultima aparicion de Julio Royo Ortiz en el año: cobra en
+octubre de 1929 la comision de 1928, seis meses despues de haber dejado la
+receptoria. La cifra es la unica del departamento que el Boletin publica en
+1929 con centavos, y se imprime dos veces —en cifras y en letras— sin
+discrepancia. El original imprime «art. 7 de de la Ley».
+
+------------------------------------------------------------------------------
+EDICION 1294 — HOJA 19
+
+FUENTE. Edicion N° 1294, viernes 25 de octubre de 1929, hoja 19, columna 2.
+
+FICHA. Remate judicial de una casa quinta de cinco hectareas en Vaqueros,
+departamento de la Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  Por Francisco Peñalba Herrera
+              JUDICIAL
+    Por disposición del Señor Juez de 1a. Instancia en lo Civil y
+    Comercial Dr. Néctor Cornejo Isasmendi; dictado en los autos
+    Ejecutivo expediente N°. 1274, a cargo del adscripto Figueroa, el
+    dia 30 de Octubre del corriente año a horas 16, en mì escritorio
+    20 de Febrero 199, venderé con la vase de $ 1.000 m/n. o sean las
+    2/3 partes de su avaluación, una casa quinta ubicada en Vaqueros
+    Dpto. de la Caldera con una extensión de cinco hectareas más o
+    menos; dentro de los siguientes límites: Al Norte, con la
+    propiedad de la Señora de Bianchi; Sud con el Río Vaqueros; Este
+    con propiedad de Arturo Fernandez, y Oeste con la finca del
+    Doctor Carlos Outes.
+    El comprador oblará en el acto del remate el 30 % de seña y a
+    cuenta de la compra. Comisiòn a cargo del comprador.—Francisco
+    Peñalba Herrera Martillero                            (242)
+
+NOTA DE LECTURA. La cifra cierra: si mil pesos son las dos terceras partes, la
+avaluacion es de mil quinientos. Es el unico acto del año que da linderos
+dentro de Vaqueros, y uno de ellos es el doctor Carlos Outes, proclamado
+convencional por el departamento ocho meses antes (edicion 1260): el hombre
+que Caldera vota tiene finca en Caldera. El original imprime «la vase» por la
+base. El numero entre parentesis al pie, (242), es el orden del aviso: en 1929
+los avisos se numeran asi y no con la marca de vencimiento de la publicacion
+que usaba 1912, que aparece solo dos veces en todo el año.
+
+------------------------------------------------------------------------------
+EDICION 1300 — HOJA 3
+
+FUENTE. Edicion N° 1300, viernes 6 de diciembre de 1929, hoja 3, columna 2.
+
+FICHA. Decreto 11300, del 25 de noviembre de 1929: jueces de paz propietario y
+suplente de Caldera.
+
+MODO DE LECTURA. Imagen, columna 2 entera a 200 dpi.
+
+TEXTO.
+  11300—Salta, Noviembre 25 de 1929
+    Exp. N°. 2536-M-Vista la terna que eleva la H. Comisión
+    Municipal de Caldera, para la provisión de los cargos de Jueces
+    de Paz Propietario y Suplente de esa localidad,
+    El Gobernador de la Provincia,
+    DECRETA:
+    Art. 1°.—Nómbrase Jueces de Paz Propietario y Suplente de
+    Caldera a los señores Ingeniero Joaquín Echaniz y Teófilo Reyes,
+    respectivamente.
+    Art. 2°.—Comuníquese, publíquese, dése al R. Oficial y
+    archívese.
+    CORNEJO—LUIS C. URIBURU.
+
+NOTA DE LECTURA. Los dos nombres son los mismos que el decreto 10491 de abril,
+y el decreto no dice para que ejercicio nombra: no se infiere. El departamento
+se nombra aqui «Caldera» sin articulo, dos veces, mientras que en abril se lo
+nombraba «La Caldera». El acto vecino inmediato —11299, del mismo dia— acepta
+la renuncia de Luis C. Uriburu como Sub-Secretario de Gobierno y Encargado del
+despacho de la Cartera de Gobierno, y el siguiente —11301, tambien del mismo
+dia— nombra Ministro Secretario de Estado en el Departamento de Gobierno al
+Ingeniero Rafael P. Sosa; sin embargo este decreto, impreso entre los dos,
+todavia lleva el refrendo de Uriburu. Se declara en E.4 y no se concilia.
+
+------------------------------------------------------------------------------
+
+FALSOS POSITIVOS, JUZGADOS EN LA IMAGEN — 7 hojas
+
+  1258 h1   «Mesa N° 9. Presidente: Toranzo Calderón Samuel»:
+            apellido.
+  1258 h6   «C. Electoral N° 10—Cerrillos [...] Presidente: Caldas
+            Angel José»: apellido, y de otro departamento.
+  1266 h16  «Art. 23—Las calderas deberán [estar situadas a una
+            distancia no menor] de 40 metros de cada pozo»:
+            recipiente de vapor, en el reglamento de yacimientos
+            petroliferos.
+  1266 h17  idem, dos apariciones mas en el mismo reglamento.
+  1277 h9   «cumbres altas del cerro Punta de Plata [...] herederos
+            Calderón»: apellido, lindero en otro departamento.
+  1261 h16  «San Isidro, Barrancas, Cerro Negro, El Cebilar, Los
+            Ceibos, La Cañada, Castillejo, La Calera, Carahuasi,
+            Mesada Larga, Los Nogales, Morenillo, Mesada Corta, El
+            Quemado, Los Rosales»: La Calera en una lista de
+            circuitos de otro departamento. Se leyo entera por el
+            riesgo de §12: «calera» oculta terminos del anillo 1.
+  1276 h4   Sergio Gonzalez Calderon, en una junta de acreedores.
+            Es el unico de los siete que NO se miro en la imagen:
+            el OCR parte la palabra y la busqueda por coordenadas
+            no la ubica en la hoja. Se juzga por la capa y se dice.
+
+LA TRAMA DEL AÑO, EN UNA LINEA. Julio Royo Ortiz entra al año como comisario
+de policia y receptor de rentas de La Caldera, es proclamado candidato a
+diputado por la Union Civica Radical y en cuatro meses deja los dos cargos;
+Teofilo Reyes lo reemplaza interinamente en la comisaria, es desplazado de
+ella por Manuel Condori en marzo y termina el año como Juez de Paz Suplente,
+cargo que ya firmaba en abril, veinte dias antes de su nombramiento. La
+Legislatura le compra al pueblo el terreno de su Casa Municipal y le aprueba
+el presupuesto sin publicarlo. Y Daniel Linares, que en 1912 era lindero de
+San Alejo, pide en 1929 el deslinde de Angostura o Angosto de Arias.
+
+§B · VECINDAD
+-------------
+
+De los 139 terminos del anillo 2, 74 dan al menos un acierto en 1929 y los 74
+se leyeron uno por uno. El reparto sorprende y solo se supo leyendolos: la
+mayor parte de los aciertos del año no viene de actos del departamento sino de
+UNA hoja, la 5 de la edicion 1261 —la nomina de circuitos electorales de toda
+la provincia, que ocupa diecisiete hojas y repite los mismos nombres de paraje
+en departamentos distintos—. Treinta y dos de los 74 terminos aciertan
+unicamente ahi.
+
+B.1 · Nucleos ya fichados en el §A
+No se repiten. Son: La Caldera y Calderilla (1258 h2, 1260 h8, h9 y h16, 1261
+h5, 1262 h4, 1264 h8 y h9, 1266 h26, 1268 h10 y h11, 1269 h4, 1271 h3, 1272
+h12, 1274 h3, 1286 h17, 1292 h9, 1293 h7, 1294 h15 y h19, 1300 h3); Vaqueros,
+Mojotoro, Wierna, los cuarenta y cinco parajes de la nomina electoral del
+departamento, y los cinco linderos del deslinde de Angosto de Arias, entre
+ellos Los Porongos y Santa Rufina.
+
+B.2 · Nucleos del departamento en actos que NO nombran el termino
+Tres, y ninguno de los tres se puede atribuir con certeza.
+
+(a) Edicion 1266, hoja 8: se aprueba la ejecucion de los trabajos de la
+Comision de Caminos «para la construccion del camino que une el lugar
+denominado Lagunilla con la Estacion Mojotoro», con autorizacion para invertir
+57.418,76 (cincuenta y siete mil cuatrocientos diez y ocho pesos setenta y
+seis centavos m/legal). La tapa de la edicion lo anuncia en el sumario.
+Estacion Mojotoro es, segun la propia nomina electoral de 1261, circuito 6 del
+departamento; Lagunilla, en cambio, fue juzgada en 1911 como toponimo de la
+Capital, y en esta misma edicion 1263 aparece una finca Lagunilla del doctor
+Arturo S. Torino. El acto no nombra jurisdiccion. Se declara sin atribuir,
+como manda §4.1.
+
+(b) Edicion 1270, hoja 11: en un deslinde se describe como lindero «al oeste
+la finca Mosquera propiedad del señor Daniel Linares», con El Saladillo de los
+herederos de Hilarion Echenique al este y el rio de las Pavas al norte.
+Mosquera figura en la nomina de parajes de la mesa 2 del departamento y Daniel
+Linares es el mismo que pide el deslinde de Angosto de Arias. Pero seis
+ediciones despues, en 1296 hoja 10, un decreto crea «una sub-comisaria
+ad-honorem en la finca Mosquera departamento de Campo Santo». O son dos fincas
+del mismo nombre o la atribucion de una de las dos es equivocada: se
+transcriben las dos y no se concilian.
+
+(c) Edicion 1292, hoja 14: una ley manda construir sobre la margen izquierda
+del rio Mojotoro obras para los pueblos de Betania, Campo Santo y Güemes. Es
+la pieza gemela de la ley 11078 ya fichada, y como ella trabaja sobre agua que
+baja del departamento sin nombrarlo.
+
+B.3 · Terminos que en 1929 son otra cosa
+Isasmendi, con 183 aciertos en 112 hojas —casi una de cada siete del año—, es
+en 1929 el doctor Nestor Cornejo Isasmendi, Juez de Primera Instancia en lo
+Civil y Comercial de cuarta nominacion, que encabeza los edictos judiciales.
+No es la casa de comercio de 1912 ni el apellido de los Isasmendi de 1911: es
+un juez, y su nombre es el termino mas frecuente del anillo 2 en todo el
+corpus sin aportar un solo dato de vecindad.
+
+Castellanos, el abogado y las fincas de Anta, mas «Paso de Castellanos de don
+Severo Paz» y el «rio Castellanos» de un remate de la edicion 1290, cuyos
+linderos —el Moyar, Guanacos, los Zigaran— son de otro departamento. Chaile es
+don Nicanor Chaile, proveedor que presenta facturas. Lesser es Pascual Lesser,
+empleado publico, y el sucesorio de Justiniano Lesser. Wierna es la familia de
+Rosario de Lerma: Bautista Wierna, encargado del registro civil, y Juan de la
+Cruz Wierna, presidente de mesa en La Viña. Nogales, Mamani, Apaza, Aramayo,
+Condori y Murua son apellidos de autoridades de mesa. Quintin es nombre de
+pila (Quintin Conde, Quintin Orquera, Quintin Mercado). Mosquera es tambien la
+finca de Campo Santo de B.2(b). Las Mesadas y El Potrerillo, rematadas en la
+edicion 1256, estan «todas ubicadas en el departamento de Cafayate». El
+Manzano es el de Rosario de Lerma; Tabacal, el de Oran; Betania, la de Campo
+Santo; Entre Rios, San Jose, Campo Alegre, Rio Blanco, El Bordo, Los Sauces,
+Durazno, Angostura, Angosto, Despensa, Despensilla, Churcal, Queseria, Mesada,
+Higueritas, Potrerillo, Pirguas, Antilla y el resto de los homonimos aciertan
+en las nominas electorales de otros departamentos.
+
+Ninguno de estos se agrega a falsos_positivos: por §12, los falsos positivos
+de una epoca se listan en el informe y no se cargan al config, porque un
+termino del anillo 1 cuyo contexto contenga un falso positivo queda marcado y
+sin recorte aunque sea real.
+
+B.4 · Ausencias del anillo de actores
+Primero, lo que no es una ausencia. Dos de los actores del §A no aparecen ni
+en su propio acto cuando se los busca por nombre y apellido sobre el texto sin
+puntuacion: Alberto Álvarez Tamayo, convencional proclamado por el
+departamento (edicion 1260), y Corina de Camperos, lindera de Angosto de Arias
+(edicion 1268). Los dos estan leidos en la imagen; lo que falla es la
+busqueda, porque el OCR parte el apellido («alvarez tam ayo», «corina de cam
+peros»). Se los nombra, como manda §5.1, y no se los declara ausentes.
+
+GRUPO 1 — solo aparecen en su propio acto. Clara Iradi, receptora de rentas,
+una sola hoja en todo el año (1272 h12). Augusto Regis y Manlio Carlos Bruzzo,
+presidentes de mesa, una sola hoja cada uno (1258 h2). El ingeniero Joaquin
+Echaniz, juez de paz propietario, dos hojas, que son sus dos nombramientos
+(1271 h3 y 1300 h3) y nada mas: el juez de paz propietario del departamento no
+vuelve a aparecer en el Boletin en todo el año.
+
+GRUPO 2 — aparecen en mas de un acto del departamento. Es el grupo que arma la
+trama de 1929. Teofilo Reyes, trece hojas: comisario interino en febrero,
+desplazado en marzo, firmante de edictos como Juez de Paz Suplente en abril y
+nombrado en ese cargo el 23 de abril y otra vez el 25 de noviembre. Julio Royo
+Ortiz, cuatro hojas: proclamado candidato, renuncia a la comisaria, deja la
+receptoria y cobra en octubre la comision de 1928. Juan de la Cruz Nogales,
+trece hojas, sub-comisario de Mojotoro. Manuel Condori, tres. Daniel Linares,
+dieciocho, entre ellas el deslinde de Angosto de Arias y la finca Mosquera de
+B.2(b). Carlos Outes, diez: convencional proclamado por el departamento en
+marzo y lindero de la casa quinta rematada en Vaqueros en octubre.
+
+GRUPO 3 — aparecen tambien fuera del departamento, y por eso su acierto no
+prueba vecindad. Nestor Cornejo Isasmendi (103 hojas), Anatolio Plaza (55),
+Miguel Herrera (43), Arturo Fernandez (35), Medardo Sarmiento (17), Jose F.
+Campilongo (18), Adeodato Aybar (13) y Francisco Peñalba Herrera (12),
+martillero. De estos, Plaza y Sarmiento son los unicos con cargo en el
+departamento, y los dos aparecen sobre todo en listas electorales de otras
+jurisdicciones.
+
+Del config heredado, 71 de los 388 actores dan acierto con nombre y apellido
+en 1929 y 91 apellidos no dan ninguno. Los 91 no se declaran ausentes uno por
+uno: son, en su mayoria, personas de 1908 a 1912 y de 1946, y la distancia de
+epoca explica el silencio sin necesidad de identificadores. Los que si se
+declaran ausentes con dos identificadores son los del §A y del §B de los
+barridos de 1927 y 1928, que son la epoca contigua, y esa lista se cierra con
+el config del ultimo turno.
+
+§C · LIMITROFES
+---------------
+
+Los limitrofes del departamento aparecen en 1929 casi siempre como
+jurisdiccion vecina y no como vinculo. Campo Santo es el mas presente: la ley
+11078 lo autoriza a trabajar sobre el agua que baja de las juntas del Wierna
+con el de La Caldera; la ley de la edicion 1292 hoja 14 le manda obras sobre
+la margen izquierda del Mojotoro para Betania, Campo Santo y Güemes; la
+catastracion del decreto 10.910 lo agrupa con Caldera y La Viña; y la
+sub-comisaria de la finca Mosquera de la edicion 1296 es suya, con la duda de
+B.2(b). La Capital aparece por Lagunilla, en el camino a la Estacion Mojotoro
+(B.2 a), y por San Lorenzo, cuya sub-comisaria se cubre en el mismo decreto
+que la de Mojotoro (edicion 1264, hoja 9). Rosario de Lerma aparece por los
+Wierna y por El Manzano, las dos veces como homonimia y no como vecindad.
+
+§D · INDICE
+-----------
+
+Por materia, con la edicion y la hoja de cada entrada.
+
+  Policia
+    Sub-comisario ad-honorem de Vaqueros, suspension ... 1262 h4
+    Comisario de La Caldera, renuncia de Royo Ortiz .... 1264 h8
+    Sub-comisario de Mojotoro, remuneracion ............ 1264 h9
+    Comisario de La Caldera, nombramiento de Condori ... 1269 h4
+  Justicia de paz
+    Jueces de paz, nombramiento (abril) ................ 1271 h3
+    Jueces de paz, nombramiento (noviembre) ............ 1300 h3
+    Edicto sucesorio firmado en Caldera ................ 1266 h26
+  Municipalidad y rentas
+    Receptoria de rentas, nombramiento de Clara Iradi .. 1272 h12
+    Ordenanza y presupuesto municipal, aprobacion ...... 1274 h3
+    Comision del receptor de rentas, liquidacion ....... 1294 h15
+    Terreno para la Casa Municipal, ley 11088 .......... 1293 h7
+  Elecciones y reforma constitucional
+    Convocatoria, convencionales por departamento ...... 1260 h8
+    Convocatoria, diputados por departamento ........... 1260 h9
+    Autoridades de mesa del Colegio Electoral N° 2 ..... 1258 h2
+    Ubicacion de mesas y nomina de parajes ............. 1261 h5
+    Proclamacion de candidatos por la U. C. R. ......... 1260 h16
+  Tierras y aguas
+    Deslinde de Angostura o Angosto de Arias ........... 1268 h10-11
+    Remate de casa quinta en Vaqueros ................. 1294 h19
+    Ley 11078, aguas del Wierna y de La Caldera ....... 1292 h9
+    Catastracion del departamento, liquidacion ........ 1286 h17
+
+§P · PLANOS
+-----------
+
+El corpus de 1929 no publica un solo plano. Veinte de las 815 hojas mencionan
+la palabra «plano», siempre para remitir a uno que no se acompaña: planos de
+mensura en los deslindes, planos de obra en las licitaciones. Ninguna de esas
+veinte remisiones es de un acto del departamento —el deslinde de Angosto de
+Arias manda practicar las operaciones pero no remite a plano alguno—, de modo
+que §P se cierra sin entradas. El techo de resolucion, que seria el dato
+relevante si hubiera planos, es 150 ppi.
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicacion y saldos.
+DUPLICACION. Sin las .jpg del script no hay md5 ni dhash: la duplicacion se
+controlo por texto. No se hallo ningun aviso repetido del departamento (vease
+E.6).
+
+SALDOS. 1929 publica once resumenes mensuales del movimiento de la Tesoreria
+General: diciembre de 1928 y enero, febrero, marzo, abril, mayo, julio,
+agosto, setiembre, octubre y noviembre de 1929. Falta el de junio, que no sale
+en ninguna edicion del año, y el de diciembre, que caeria en 1930. Contra el
+unico resumen de 1911 y los cuatro de 1912, es la cadena mas larga de la
+serie. Los veintiun saldos —inicial y final de cada cuadro— se miraron en la
+imagen, recortando el renglon a 210 dpi.
+
+  cuadro (edicion)      saldo que trae     saldo que pasa
+  ------------------------------------------------------------
+  dic. 1928 (1253)      35.464,20 (nov.)   57.082,84 -> enero
+  enero    (1259)       57.082,84          32.206,19 -> febrero
+  febrero  (1262)       32.206,19          48.670,64 -> marzo
+  marzo    (1266)       48.670,64          213.078,84 -> abril
+  abril    (1272)       213.078,84         38.108,13 -> mayo
+  mayo     (1277)       38.108,13          36.994,01 -> junio
+  [junio: no publicado] —                  —
+  julio    (1283)       42.797,39          45.326,74 -> agosto
+  agosto   (1288)       55.326,74          28.754,23 -> setiembre
+  setiembre(1292)       28.754,23          92.202,15 -> octubre
+  octubre  (1297)       92.202,15          37.714,28 -> noviembre
+  noviembre(1301)       37.714,28          33.886,28 -> diciembre
+
+La cadena cierra exacta en cinco eslabones seguidos, de diciembre de 1928 a
+mayo de 1929: lo que cada cuadro dice que pasa al mes siguiente es, sin un
+centavo de diferencia, lo que el cuadro siguiente dice que trae. Despues se
+rompe dos veces.
+
+PRIMERA ROTURA, y no es una contradiccion: junio. El resumen de mayo deja en
+caja 36.994,01 para junio y el de julio arranca de 42.797,39 como saldo de
+junio. Los dos numeros son correctos y no se cotejan entre si, porque miden
+puntas distintas de un mes cuyo movimiento el Boletin no publico. El eslabon
+falta y se declara faltante.
+
+SEGUNDA ROTURA, y esta si lo es: julio. El resumen de julio (edicion 1283,
+hoja 16) cierra con «SALDO: Existente en caja para Agosto de 1929 —
+45.326,74». El resumen de agosto (edicion 1288, hoja 7) abre con «A Saldo del
+mes de Julio de 1929 — $ 55.326,74». Son diez mil pesos de diferencia y la
+diferencia esta en un solo digito, el primero: 4 contra 5. Los dos numeros se
+ampliaron a 600 dpi por separado y los dos se leen sin ninguna duda; el resto
+de las cifras es identico hasta el centavo. No se corrige ni se elige una: se
+transcriben las dos y se declara tambien en E.9. Es, ademas, el caso que §8.7
+describe —una lectura alternativa cerraria la cadena—, con la particularidad
+de que aqui la lectura alternativa no existe: el original imprime dos cifras
+distintas.
+
+La cadena queda abierta por los dos extremos: contra 1928, porque el primer
+cuadro del corpus es el de diciembre de 1928 y su saldo de noviembre
+(35.464,20) no tiene con que cotejarse aqui; y contra 1930, porque los
+33.886,28 que pasan a diciembre de 1929 esperan un resumen que este año no
+publica.
+
+E.2 · Cobertura.
+815 hojas con capa reconstruida y buscadas por las cinco pasadas. Imagenes
+miradas: 38 —una hoja entera, doce renglones de fecha de tapa, veinte columnas
+enteras, una lamina de cinco falsos positivos, un cuadro de Tesoreria
+completo, veintiun renglones de saldo y dos ampliaciones a 600 dpi—. Columnas
+cotejadas contra la capa previa: 22, en 20 hojas de 15 ediciones. En ninguna
+de las 15 se encontro columna perdida ni renglones traspuestos: la capa
+reproduce la columna izquierda entera y despues la derecha entera. Lo que si
+fallo en esas mismas columnas es la palabra suelta, y fallo en silencio:
+«baja» por remuneracion en 1264 h9, «Cole6io» y «Parroquirl» en 1261 h5,
+«Caldora» en el sumario de 1271. Toda palabra que decide una ficha se miro.
+
+E.3 · Sin mencion y no mirado.
+789 de las 815 hojas no dan acierto en ninguna pasada del anillo 1 y no se
+miraron con los ojos. Es lo esperado y se declara.
+
+E.4 · Firmas y autoridad — parcial.
+Las 52 tapas dicen «GOBIERNO DEL DR. JULIO CORNEJO» y «Año XXI». Formulas de
+encabezado leidas en la imagen, todas en el mismo año: «El Gobernador de la
+Provincia», «El Gobernador de la Provincia, en uso de sus Facultados
+Constitucionales» y, en los actos sin vistos, el considerando directo. Los
+refrendos se reparten por materia: LUIS C. URIBURU en los de Gobierno, J. C.
+TORINO en los de Hacienda (la receptoria de rentas, la ley del terreno), y los
+dos juntos en el decreto 10260. En las leyes firman el Presidente del H.
+Senado y el de la H. C. de Diputados con sus secretarios, y el Presidente del
+Senado cambia entre dos leyes de la misma fecha y la misma hoja (Decavi y
+Aranda, las dos del 27 de setiembre).
+
+CAMBIO DE MINISTRO SIN CIERRE. El 25 de noviembre, tres decretos consecutivos:
+el 11299 acepta la renuncia de Luis C. Uriburu como Sub-Secretario de Gobierno
+y Encargado del despacho de la Cartera de Gobierno; el 11300 —el de los jueces
+de paz de Caldera— lleva todavia su refrendo; y el 11301 nombra Ministro
+Secretario de Estado en el Departamento de Gobierno al Ingeniero Rafael P.
+Sosa. Los tres son del mismo dia y estan impresos en la misma hoja. No hay
+decreto de apertura del interinato de Uriburu a la vista: se declara el ultimo
+acto que firma y el primero del titular, y no se fija el dia del relevo. Queda
+por relevar quien firma el «Es copia» en 1929, que no aparece en ninguna de
+las columnas miradas.
+
+EJERCICIO DEL PODER EJECUTIVO POR EL PRESIDENTE DE LA CAMARA DE DIPUTADOS. El
+decreto 10.910, del 5 de agosto (edicion 1286, hoja 17), lo dicta «El
+Presidente de la H. Camara de Diputados, en ejercicio del Poder Ejecutivo de
+la Provincia», y el decreto vecino de la misma columna firma «BAVIO J. C.
+TORINO»: el interino es E. F. Bavio, el mismo que preside la Camara en las
+leyes de setiembre. No hay a la vista decreto de apertura ni de cierre de ese
+ejercicio. Se declaran el acto que se vio y no se fija el alcance del
+interinato.
+
+E.5 · Cortes y columnas.
+U+0002: cero apariciones. U+00AD: 14.315, todas como marca de corte de renglon
+sin guion visible. La union corregida rescata la hoja 4 de la edicion 1276,
+que con la union defectuosa de v13-v14 no habria aparecido. Es el tercer
+corpus seguido en que esa regla cambia el resultado.
+
+E.6 · Repeticiones.
+En 1929 los avisos no llevan la marca de vencimiento de la publicacion que
+usaba 1912 —«251 v Dbre 5»—: llevan un numero de orden al pie, a veces suelto
+(3703, 3097, 3095) y a veces entre parentesis (241, 242, 243). La marca
+antigua aparece solo dos veces en las 815 hojas. La repeticion se comprobo
+entonces como manda §6: buscando el texto de cada aviso del departamento en el
+resto del corpus. Los tres avisos fichados —el edicto sucesorio de la edicion
+1266, el deslinde de la 1268 y el remate de la 1294— no se repiten en ninguna
+otra hoja del año, y el deslinde es ademas el caso de control, porque su
+propia providencia manda publicarlo «por una vez en el Boletin Oficial». El
+cotejo se hizo sobre la capa y no sobre la imagen, y se declara asi.
+
+E.7 · Falsos positivos y negativos.
+Falsos positivos de esta epoca, seis de los siete confirmados en la imagen y
+el septimo (1276 h4) juzgado por la capa: Calderon como apellido (Toranzo
+Calderon, Gonzalez Calderon, herederos Calderon); Caldas como apellido (Angel
+Jose Caldas, presidente de mesa en Cerrillos); «calderas» como recipiente de
+vapor, en el reglamento de yacimientos petroliferos de la edicion 1266;
+«fiscal denominada», que la laxa con espacios trae como «cal deno» seis veces
+y «cal de no» una; «al demandado», que trae como «o al dema» cuatro veces;
+«calle Moro Diaz», que trae como «calle mo»; «m adera» por madera, en la
+difusa. Siguiendo §12, estos NO se agregan al config: se listan aca.
+
+E.8 · Fidelidad numerica.
+CUADROS PUBLICADOS: once, todos resumenes mensuales de la Tesoreria General.
+No hay un solo balance municipal en el corpus, y por lo tanto ninguno del
+departamento: el presupuesto de la Comision Municipal de La Caldera se aprueba
+por decreto (edicion 1274) y se devuelve sin publicarse. Eso es un hecho del
+corpus y no una tabla que quedo sin mirar.
+
+SUBTOTALES RECALCULADOS: dos, los dos del cuadro de enero de 1929 (edicion
+1259, hoja 9). Impuesto al Consumo: 42.459,59 + 29.068,60 + 1.080 + 3.489,50 +
+211 + 7.699,90 = 84.008,59, y el impreso dice 84.008,59. Nueva
+Pavimentacion-Ley 1185: 5.459,55 + 844,10 = 6.303,65, y el impreso dice
+6.303,65. Los dos cierran al centavo.
+
+SUBTOTAL NO RECALCULADO DEL MISMO CUADRO, con su motivo: el de Receptoria
+General, que el original cierra en 90.218,40. La suma de los renglones tal
+como se leen a 150 ppi no da esa cifra, pero la columna mezcla partidas de
+1929, de 1928 y rentas atrasadas en sangrias distintas y varios renglones se
+imprimen sin punto decimal visible. A este techo de resolucion no se puede
+decidir si la diferencia es del original o de la lectura, y §8.2 manda no
+completar: se declara no recalculado y no se publica una diferencia que podria
+ser propia.
+
+TABLAS NO RECALCULADAS: los diez cuadros restantes de Tesoreria (ediciones
+1253 h10, 1262 h11, 1266 h30, 1272 h18, 1277 h11, 1283 h15, 1288 h7, 1292 h18,
+1297 h13 y 1301 h10), por el mismo motivo. De los diez se miraron y
+transcribieron los saldos, que es la cifra que la cadena necesita y la unica
+que este informe publica de ellos. Las planillas de creditos suplementarios de
+las ediciones 1284 y 1294 tampoco se recalcularon: ninguna nombra el termino,
+el anillo 2 ni un actor del §A, de modo que estan fuera del alcance de §4.1.
+
+CIFRAS DEL DEPARTAMENTO, todas miradas: $ 500 del terreno de la Casa Municipal
+(ley 11088); $ 154,02 de la comision de Royo Ortiz, impresa en cifras y en
+letras sin discrepancia (decreto 11103); $ 100 mensuales del sub-comisario de
+Mojotoro (decreto 10260); $ 1.000 de base del remate de Vaqueros, que el aviso
+declara como las dos terceras partes de la avaluacion, de donde la avaluacion
+es de 1.500 y el calculo cierra; y $ 500 de la liquidacion al catastrador
+(decreto 10.910). El presupuesto municipal no lleva cifra publicada.
+
+E.9 · Contradicciones.
+Una, y esta leida en la imagen. La tapa de la edicion 1275 imprime «SALTA,
+VIERNES 13 DE JUNIO DE 1929», y el 13 de junio de 1929 fue jueves: el viernes
+de esa semana fue el 14. No es errata del OCR —la capa y la imagen dicen lo
+mismo— y no se concilia. Es el mismo fenomeno que v15 registro en 1912 con
+cuatro tapas fechadas en dias que su propia formula no admite, con la
+diferencia de que aca la formula («Aparece los viernes») se cumple en las
+otras 51.
+
+LA CONTRADICCION MAYOR DEL AÑO esta en los saldos y se desarrolla en E.1: el
+resumen de julio deja en caja 45.326,74 para agosto y el de agosto declara
+haber recibido 55.326,74 de julio. Diez mil pesos, un solo digito de
+diferencia, las dos cifras leidas a 600 dpi.
+
+CONTRADICCIONES DEL ORIGINAL HALLADAS EN EL §A, cada una tambien en la nota de
+lectura de su ficha: (a) dos actos distintos con el numero 10491, en la misma
+fecha y la misma columna de 1271 h3; (b) Teofilo Reyes firma como Juez de Paz
+Suplente el 3 de abril (edicion 1266) y es nombrado en ese cargo el 23 de
+abril (edicion 1271); (c) la tapa de 1264 remite el acto de La Caldera a la
+pagina 7 y el acto esta en la 8; (d) dos leyes de la misma fecha y la misma
+hoja llevan distinto Presidente del H. Senado (1292 h9); (e) la ley 11088
+imprime «SETIEMBRE» y «SEPTIEMBRE» en la misma hoja; (f) el decreto 11299
+numera dos articulos «2°» y ninguno «3°»; (g) el numero de acto se imprime sin
+separador, con punto de millar («10.389») y con coma («10,396»), las tres
+formas en la misma columna; (h) un edicto de la misma plana que el de Caldera
+cierra «Güemes, Abril 6 de 1919» por 1929; (i) el sumario de la edicion 1264
+manda a la pagina 7 un acto que esta en la 8, y el de la 1293 manda a la 8 uno
+que esta en la 7. Erratas de palabra transcriptas con [sic] en sus fichas:
+Cole6io, Parroquirl, Santa Rufiea, Covencionales, Facultados, provisionamente,
+Receptor de Rentos, corrente, Diputadon, inputación, Tiófilo, Caldora.
+
+Erratas de la capa que NO son del original y que conviene dejar anotadas para
+no confundirlas: el OCR lee «1928» el año de las tapas 1289 y 1302, «1829» el
+de 1283, «1919» el de 1268, «1949» el de 1264 y «1959» el de 1255 y 1270; y
+lee «1260» el numero de la edicion 1268. Las que se miraron en la imagen dicen
+1929 y el numero correcto.
+
+E.10 · Limites (no son pendientes: la sesion no puede levantarlos).
+
+  L1. Sin las salidas de lee_auto.py no hay .tsv y por lo tanto no
+      hay confianza por hoja: la lista de hojas «a ojos» de §4.8 no
+      existe en este informe.
+  L2. Sin las .jpg no hay md5 ni dhash ni medicion de tinta: la
+      deduplicacion se hace por texto.
+  L3. Sin OCR propio no hay segunda version y no hay desempate entre
+      lecturas: el unico desempate es la imagen.
+  L4. tesseract no trae spa en esta sesion, de modo que la segunda
+      version tampoco se pudo fabricar aca.
+  L5. No hay EXTRAIDO.json: la integridad de cada PDF no se coteja
+      contra bytes y hojas declaradas.
+  L6. Ninguna tapa declara numero de paginas y la paginacion no
+      corre a lo largo del año: la completitud de cada edicion se
+      controla por la serie de actos, que no cubre las hojas de
+      avisos ni las de la seccion judicial.
+  L7. El techo de resolucion es 150 ppi, la mitad de la mitad del de
+      1912: no hay recorte a 400 o 600 dpi que agregue tinta, y las
+      cifras dudosas se deciden con lo que hay o se declaran.
+
+§F · CORRECCION A LA RUBRICA (provisional, se cierra con el informe)
+--------------------------------------------------------------------
+
+F.1. 1929 es epoca nueva y no la de 1908-1912. Tres cosas cambian a la vez:
+los actos llevan numeracion corrida de cinco cifras; hay sumario en la tapa,
+con remision de pagina y sin puntos guia; y la paginacion es interna de cada
+edicion. La rubrica da por sentado, en §2.5bis y en §5.3, un regimen que aca
+no rige.
+
+F.2. El control de completitud de esta epoca es la serie de actos, no la
+cadena de folios. Conviene que §2.5bis lo diga con esas palabras y que el
+checklist lo pida.
+
+F.3. El techo de resolucion puede bajar de un año al siguiente. De 300-500 ppi
+en 1912 a 150 ppi en 1929, sobre PDF reales del mismo repositorio. La regla de
+§4 —«para cifras dudosas, recorte chico a 400 o 600 dpi»— no es aplicable
+cuando la imagen incrustada tiene 150 ppi: lo unico que se gana es
+interpolacion. Hay que medir el ppi de la imagen antes de prometer un recorte
+de detalle.
+
+F.4. El config que viaja con el Release puede estar atrasado respecto del que
+esta en el proyecto. Conviene comparar los dos antes de barrer y usar el mas
+nuevo, diciendolo en el §0.
+
+F.9. Dos cifras del original pueden diferir en un solo digito y obligar a
+ampliar por separado cada una al maximo que el corpus permite. A 150 ppi, la
+ampliacion a 600 dpi no agrega tinta pero si separa los trazos lo bastante
+para decidir un 4 de un 5. Conviene hacerlo siempre que una diferencia sea una
+potencia redonda de diez: es el perfil tipico del error de composicion, y
+tambien el del error de lectura.
+
+F.8. Cuando la cadena de saldos tiene un mes sin publicar, el saldo que sale
+del mes anterior y el que entra al mes siguiente NO son el mismo numero y no
+se cotejan entre si: miden las dos puntas del mes que falta. Declararlos como
+discrepancia seria un error. §6 conviene que lo diga, porque la tentacion de
+restarlos es fuerte.
+
+F.7. Un año puede tener una hoja que concentre casi todos los aciertos del
+anillo 2 sin aportar vecindad: en 1929, la nomina provincial de circuitos
+electorales de la edicion 1261 ocupa diecisiete hojas y es la unica fuente de
+treinta y dos de los setenta y cuatro terminos con acierto. Conviene detectar
+esa hoja temprano y leer el resto del anillo 2 contra ella, porque de otro
+modo el recuento de aciertos por termino no dice nada.
+
+F.6. Cuando los actos llevan numeracion corrida, el control de §6 nivel 3 —la
+misma serie numerica en actos distintos— deja de ser un hallazgo raro y pasa a
+ser un control de rutina que conviene correr sobre el año entero, no solo
+sobre los actos fichados. En 1929 el primer par colisionado aparecio en la
+primera columna mirada con dos actos a la vista.
+
+F.5. Para localizar el renglon de fecha de una tapa conviene anclarse en las
+coordenadas de una palabra vecina («Boletin», «publicaciones») y no en un
+porcentaje de la altura de la hoja: la maqueta de la tapa se corre entre
+ediciones y tres recortes se perdieron por eso.
+
+CONFIG ACTUALIZADO
+------------------
+
+Se entrega un lee_config.json que conserva todo lo anterior y agrega lo de
+1929. Queda en 143 terminos de anillo 2, 438 actores, 129 numeros y 24 falsos
+positivos.
+
+ANILLO 2 — cuatro agregados
+  + abra la sierra   Paraje de la mesa 2 del circuito 5, en la
+                     nomina de 1261 h5. El config no lo tenia.
+  + santa rufiea     Como el original imprime Santa Rufina en esa
+                     misma nomina. Sin esta forma, la busqueda no
+                     encuentra el paraje en 1929.
+  + los cedros       Estancia de la señora Corina de Camperos,
+  + cedros           lindera al norte de Angostura o Angosto de
+                     Arias (1268 h10). Es el toponimo nuevo del
+                     año: no estaba en ninguna forma.
+
+QUE SE DECIDIO NO AGREGAR AL ANILLO 2. «Pueblo», que es el primer circuito de
+la mesa 1 y es demasiado generico para buscar. «Calderilla», que ya esta en el
+anillo 1 y no necesita estar dos veces. Y los cuarenta parajes restantes de la
+nomina, que el config ya traia, con variante o sin ella.
+
+ACTORES — cincuenta agregados, con origen 1929
+Los veinte del §A, los del §B y los firmantes: Julio Royo Ortiz, Teofilo
+Reyes, Manuel Condori, Anatolio Plaza, Medardo Sarmiento, Juan de la Cruz
+Nogales, Joaquin Echaniz, Clara Iradi, Daniel Linares, Alberto Álvarez Tamayo,
+Carlos Outes, Andres Ramirez, Corina de Camperos, Bernardo Austerlitz, Domingo
+Royo, Miguel Herrera, Jose F. Campilongo, Ernesto Campilongo, Adeodato Aybar,
+Francisco Peñalba Herrera, Nestor Cornejo Isasmendi, Augusto Regis, Jose
+Eusebio Robles, Romulo Santiago Guerrero, Lucas Molina, Pedro Arevalo, Enrique
+Mercado, Manlio Carlos Bruzzo, Francisco Solano Urquiza, Emiliano Zurita,
+Arturo Fernandez, Rafael P. Sosa, Luis C. Uriburu, J. C. Torino, Julio
+Cornejo, E. F. Bavio, Nicanor Chaile, Bautista Wierna, Pascual Lesser, Carlos
+Gomez Rincon, Enrique Sanmillan, Gilberto Mendez, Hilarion Echenique, Arturo
+S. Torino, Jose M. Decavi, C. A. Aranda, W. Toledo, M. B. Figueroa, Severo Paz
+y Cesar Venzano.
+
+Se agregan con su forma de 1929 y se conservan las formas anteriores de la
+misma persona, como manda §15.3.3: «jose f. campilongo» junto a «ernesto
+campilongo» (1927), que pueden ser dos personas o una mal leida y no se
+unifican; «augusto regis» junto a «augusto rejis» (1908); «francisco solano
+urquiza» junto a «francisco s. urquiza» (1923); «lucas molina» junto a «lucas
+n. molina» (1926). El config es una red de busqueda, no un padron.
+
+NUMEROS — dieciocho agregados
+Los trece actos del §A —10174, 10189, 10255, 10260, 10389, 10491, 10514,
+10617, 10910, 11078, 11088, 11103 y 11300—, los tres del cambio de ministro
+—11299, 11300 y 11301—, el 10.396 que comparte columna con el nombramiento de
+Condori, y los dos actos citados y no acompañados: la Ley N° 9705 del 3 de
+octubre de 1928, que manda la reforma constitucional, y la Ley N° 9720 del 6
+de octubre de 1928, a la que se imputa la catastracion. A diferencia de
+1908-1912, 1929 SI aporta numeros: sus actos van numerados y la serie corre.
+
+FALSOS POSITIVOS — ninguno. Por §12, los de 1929 —Calderon, Caldas, «calderas»
+de vapor, «fiscal denominada», «al demandado», «calle Moro Diaz», «m adera»,
+La Calera— se listan en E.7 y NO se cargan al config, porque marcarlos alli
+dejaria sin recorte a cualquier mencion real cuyo contexto los contenga.
+
+RECUENTO
+--------
+
+  archivos y ediciones .......... 52 PDF, ediciones 1252 a 1303
+  hojas presentes ............... 815
+  hojas declaradas .............. ninguna tapa las declara
+  reparto de confianza .......... no aplicable (sin .tsv)
+  imagenes miradas .............. 38
+  columnas cotejadas ............ 22, en 20 hojas de 15 ediciones
+  menciones anillo 1 ............ 26 hojas candidatas; 20 fichas
+                                  sobre 21 hojas; ninguna sin mirar
+  falsos positivos .............. 7 hojas, 6 juzgadas en la imagen
+  terminos del anillo 2 ......... 74 con acierto, de 139
+  actores con nombre completo ... 71 de 388
+  cuadros publicados ............ 11 resumenes de Tesoreria; 2
+                                  subtotales recalculados, 10
+                                  cuadros no recalculados
+  saldos ........................ 22 transcriptos; cadena de 10
+                                  eslabones, 5 cierran exactos, 1
+                                  falta (junio) y 1 no cierra
+                                  (julio, $ 10.000)
+  planos ........................ ninguno publicado; 20 hojas los
+                                  mencionan, ninguna del dpto.
+  limites declarados ............ 7
+
+ESTADO: COMPLETO, con siete limites declarados. Cuatro turnos.

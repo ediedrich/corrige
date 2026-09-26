@@ -1,0 +1,1724 @@
+BARRIDO LEE — BOLETIN OFICIAL DE SALTA, ANO 1925
+Ediciones N° 1043 a 1094 — termino: LA CALDERA
+Informe de sesion — 22 de septiembre de 2026 — turno 4 y ultimo
+Rubrica LEE v15 (20/09/2026)
+
+§0 · ADVERTENCIA PRELIMINAR
+===========================
+ESTADO: COMPLETO, con seis limites declarados. Este es el informe del cuarto
+turno y reemplaza a los tres anteriores, con el mismo nombre de archivo.
+Estan hechos el corpus, la capa, las cuatro pasadas, las tapas, el
+calendario, la paginacion, el §A con sus 25 fichas, el §B en sus cuatro
+bloques, la autoridad, los nueve cuadros con su subtotal recalculado, la
+cadena de saldos, el cotejo sumario/cuerpo, las repeticiones, el §P, el
+indice y el lee_config.json actualizado. Los seis limites estan en E.10: son
+cosas que ni esta sesion ni ninguna otra puede hacer con estos insumos, no
+trabajo que haya quedado sin hacer.
+
+QUE SUBIO EL USUARIO. El Release 1925 de
+github.com/ediedrich/boletines-salta trae 53 assets: los 52 PDF de las
+ediciones 1043 a 1094, sin huecos en la serie, y un lee_config.json. NO
+llegaron el pre-informe, resultados_1925.csv, decretos_1925.csv, log.txt,
+recortes.zip ni el zip de los .txt de lee_trabajo. Es decir: ninguna salida
+de lee_auto.py. El listado de assets se leyo de
+releases/expanded_assets/1925, que no exige token.
+
+DOS CONFIG, Y CUAL SE USO. El lee_config.json del Release esta atrasado:
+trae 180 actores, con origen hasta 1915, 70 terminos de anillo 2, 40 numeros
+y 12 falsos positivos. El lee_config.json adjunto al proyecto es el vigente:
+289 actores, con origen hasta 1923, 111 terminos de anillo 2, 78 numeros y
+20 falsos positivos. Se barrio con el del proyecto, que es el que
+corresponde a la epoca, y se declara la diferencia porque el que el usuario
+tiene junto a los PDF de 1925 no es el que uso o usaria el script.
+
+DE DONDE SALIERON LAS IMAGENES. Los 52 PDF se bajaron del Release en una
+sola llamada (41 MB). Son PDF reales, version 1.6, con dos imagenes
+DeviceGray por hoja: una de 1069 x 1477 px y otra de la mitad de lado. Sobre
+el ancho de pagina impreso, la mayor da 150 ppi en las 798 hojas del ano,
+sin una sola excepcion. Ese es el techo de resolucion de 1925 y es la mitad
+del de 1908-1912 (300-500 ppi). No hay EXTRAIDO.json: el cotejo de
+integridad se hizo por hojas por edicion y por la cadena de folios (§1).
+
+QUE VERIFICO LA SESION. nproc = 1. PyMuPDF no venia instalado y se instalo
+desde pypi. tesseract 5.3.4 esta, pero --list-langs devuelve solo eng y osd:
+NO hay spa. Por lo tanto no se OCRiza nada en sesion (§3 y §16 no
+aplicables) y no hay segunda version del texto: todo resultado va etiquetado
+prev y el desempate, cuando hace falta, es la imagen.
+
+DESVIOS DE §8.17. Ninguno. Las transcripciones que entren en el §A
+conservaran la ortografia original, con [sic] donde haga falta.
+
+LO QUE QUEDO SIN MIRAR EN LA IMAGEN, y que un turno mas cubriria: las dos
+hojas mineras de las fichas armadas solo con la capa (1069/15 con 1077/7, y
+1072/15), las tres hojas del §B.2 (1046/2, 1084/16, 1090/14), el numero de
+la ley de 1084/7, el articulo 2° de 1087/5 y la cabecera del decreto de
+1087/4. Ninguna de esas seis cosas cambia una ficha: cambian el modo de
+lectura de una ficha, y por eso van declaradas en cada una y no como
+pendientes del informe.
+
+(lista de trabajo del primer turno, conservada:)
+  1. Cerrar las cuatro fichas que quedaron incompletas: el numero y la cola
+del decreto de 1087/4; el articulo 2° de 1087/5; el numero de la ley de
+1084/7; y las dos fichas mineras que se armaron solo con la capa previa
+(1069/15 con 1077/7, y 1072/15), que deberian mirarse en la imagen.
+  2. Volver sobre los tres actos del §B.2 en la imagen: los tres se
+clasificaron leyendo la capa previa y ninguno se miro.
+  3. Actores: falta el barrido del apellido suelto agrupado por contexto
+para los apellidos que devuelven decenas de aciertos (Arias 215, Figueroa
+259, Gomez 115, Sola 140), y las formulas de reemplazo (80 + 52 aciertos).
+  4. Autoridad: formulas de encabezado, refrendos, "Es copia", el cambio de
+gobierno de mayo y los interinatos.
+  5. Tablas y saldos: inventario de cuadros publicados, un subtotal
+recalculado por cuadro y la cadena de Tesoreria.
+  6. Cotejo sumario/cuerpo: en 1925 SI hay sumario con remisiones "(Pagina
+N)"; es aplicable y esta sin hacer.
+  7. Fechas de tapa ilegibles en la capa (1049, 1054, 1070, 1084, 1094) y
+las cuatro que imprimen 1926 (1078, 1083, 1087, 1089): mirarlas en la
+imagen.
+  8. Repeticiones de avisos, §P, indice y config actualizado.
+
+§1 · CORPUS REVISADO
+====================
+52 ediciones, 1043 a 1094, sin huecos en la serie. 798 hojas. Media de 15,3
+hojas por edicion; la mas corta es 1056 y 1077, con 8; la mas larga 1048,
+con 27. Todas las tapas declaran viernes y 1925 tuvo 52 viernes, del 2 de
+enero al 25 de diciembre: hay una edicion por viernes y ningun dia de salida
+sin edicion. No hay ediciones dobles.
+
+PAGINACION. En 1925 el folio NO es una cadena anual corrida como en
+1908-1912: cada edicion se pagina desde 1, y la cabecera de cada hoja
+imprime "Pag. N" a la izquierda o a la derecha del rotulo BOLETIN OFICIAL.
+Se comprobo sobre las 746 hojas 2 a n del año: la capa previa alcanza a leer
+ese "Pag. N" en 24 de ellas, y en las 24 coincide exactamente con el numero
+de hoja dentro de la edicion, sin una sola discrepancia. Sobre esa base no
+hay indicio de hoja interior faltante; las 722 restantes no son ilegibles en
+el papel sino en la capa, porque el OCR de esta epoca destroza el renglon de
+cabecera. Las remisiones del sumario ("Pagina 3", "Pagina 8") usan esa misma
+numeracion por edicion.
+
+Las tapas no declaran cantidad de paginas. Tipo: PDF real con imagen y capa
+de texto previa en las 798 hojas; ninguna hoja con cero caracteres y ninguna
+por debajo de 500 B. Media de 3.074 caracteres por hoja. Confianza: sin el
+.tsv del script no hay medida de confianza por hoja; la columna va en blanco
+y el reparto pub/ver/ojos no existe (E.10).
+
+ED.  HOJAS  FECHA DE TAPA
+1043    19   [viernes 2 de enero de 1925] — Ano XVI
+1044    14   [viernes 9 de enero de 1925] — Ano XVII
+1045    21   viernes 16 de enero de 1925
+1046    16   [viernes 22 de enero de 1925] (sic: el 22 fue jueves)
+1047    22   viernes 30 de enero de 1925
+1048    27   [viernes 6 de febrero de 1925] — Ano XVII
+1049    23   viernes [dia ilegible en la capa] de febrero de 1925
+1050    19   viernes 20 de "hebrero" [sic] de 1925
+1051    18   viernes 27 de febrero de 1925
+1052    13   viernes 6 de marzo de 1925
+1053    22   viernes 13 de marzo de 1925
+1054    20   viernes [dia ilegible en la capa] de marzo de 1925
+1055    15   viernes 27 de marzo de 1925
+1056     8   viernes 3 de abril de 1925
+1057    14   viernes 10 de abril de 1925
+1058    12   viernes 17 de abril de 1925
+1059    12   viernes 24 de abril de 1925
+1060    23   viernes 1o de mayo de 1925
+1061    11   viernes 8 de mayo de 1925
+1062    12   viernes 15 de mayo de 1925
+1063    16   viernes 22 de mayo de 1925
+1064    12   viernes 29 de mayo de 1925
+1065    14   viernes 5 de junio de 1925
+1066    14   viernes 12 de junio de 1925
+1067    16   viernes 19 de junio de 1925
+1068    16   viernes 26 de junio de 1925
+1069    16   viernes 3 de julio de 1925
+1070    14   sin fecha legible en la capa
+1071    17   viernes 17 de julio de 1925
+1072    15   viernes 24 de julio de 1925
+1073    11   viernes 31 de julio de 1925
+1074    12   viernes 7 de agosto de 1925
+1075    14   viernes 14 de agosto de 1925
+1076    12   viernes 21 de agosto de 1925
+1077     8   viernes 28 de agosto de 1925
+1078    14   viernes 4 de septiembre de 1926 (sic 1926)
+1079    14   viernes 11 de septiembre de 1925
+1080    10   viernes 18 de septiembre de 1925
+1081    14   viernes 25 de septiembre de 1925
+1082    13   viernes 2 de octubre de 1925
+1083    13   viernes 9 de octubre de 1926 (sic 1926)
+1084    17   viernes 1[6] de octubre de 1925
+1085    16   viernes 23 de octubre de 1925
+1086    17   viernes 30 de octubre de 1925
+1087    15   viernes 6 de noviembre de 1926 (sic 1926)
+1088    12   viernes 13 de noviembre de 1925
+1089    13   viernes de 20 noviembre de 1926 (sic orden y 1926)
+1090    15   viernes de 27 noviembre de 1925 (sic orden)
+1091    14   viernes 4 de diciembre de 1925
+1092    19   viernes 11 de diciembre de 1925
+1093    15   viernes 18 de diciembre de 1925
+1094    19   viernes 2[5] de diciembre de 1925
+
+Los corchetes marcan lo leido en la imagen. Las fechas sin corchetes salen
+de la capa previa. "(sic 1926)" es lo que imprime la tapa y esta pendiente
+de confirmar en la imagen.
+
+§2 · CRITERIO DE BUSQUEDA
+=========================
+VERSIONES. Una sola: la capa previa de los PDF, extraida por la sesion con
+PyMuPDF (§2.1), 798 hojas en tres llamadas. No hay version propia porque no
+hay spa en tesseract. Todo resultado se etiqueta prev. No hubo desempate por
+version posible en ningun punto: el unico desempate es la imagen.
+
+UNION DE CORTES. Medida sobre el corpus entero: U+0002 no aparece ni una
+vez; U+00AD aparece 15.115 veces y las 15.115 estan seguidas de salto de
+renglon, sin guion visible. Se aplico la regla de v15 §2.3: primero U+00AD
+junto con el salto, despues los sueltos, despues el guion visible con hasta
+dos signos de puntuacion a cada lado. Se controlo el efecto: con la union
+defectuosa de v13-v14 la pasada literal da las mismas 35 hojas que con la
+correcta. En 1925 la regla no gano ni perdio hojas en el anillo 1; se aplico
+igual y se declara la medicion, porque en 1912 habia ganado tres.
+
+LAS PASADAS.
+  Literal/normalizada: "cald" sobre NFD sin diacriticos, con los cortes
+unidos. 35 hojas.
+  Laxa estricta: 36 hojas. Laxa con huecos, escrita con la clase de espacios
+en blanco [\s\-]{0,3} entre cada clase: 42 hojas, es decir 7 que la literal
+no trae. En 1925 esto no es un detalle: el OCR de esta epoca mete espacios
+dentro de las palabras y las formas que aparecen son "c a ld e ra", "c
+aldera", "c ald era", "c ald e ra" y "caidera". Tres de esas 7 hojas son
+sumarios y decretos del departamento.
+  Difusa >= 0,78 contra caldera y calderilla, sobre todas las palabras de
+cada hoja, excluida la forma exacta: 7 hojas, formas calavera (2), cadera
+(2), calde, aldera, aldea y caidera.
+  Difusa ampliada 0,70-0,78, restringida a palabras con c, g u o inicial: 62
+hojas y 15 formas distintas, todas ya juzgadas (E.7).
+  Anillo 2, actores, numeros y reemplazo: sobre la unica version, y los
+actores tambien sobre el texto con la puntuacion suprimida.
+
+PASADA COMPACTA, PROBADA Y DESCARTADA. Como esta epoca parte las palabras
+con espacios, se probo una pasada sobre el texto con todos los espacios
+suprimidos. Da 89 hojas, 54 mas que la literal, y se clasificaron los 58
+contextos nuevos uno por uno: salvo tres, que la laxa con huecos ya trae,
+todos son "vocal de", "fiscal de", "local de", "tabacal don" y "troncal
+del". No aporta nada que la laxa con huecos no traiga y aporta mucho ruido:
+se descarta y se declara probada.
+
+NINGUNA PASADA DEVOLVIO CERO, asi que no hizo falta probar que una pasada
+muda estuviera rota.
+
+ACTORES. Lista tomada del lee_config.json del proyecto: 289 entradas, con
+origen 1908, 1909, 1910, 1911, 1912, 1915, 1916, 1917, 1919, 1920, 1922,
+1923 y las ediciones de 1946. Es la lista de la epoca y funciona: 71 de los
+289 dan acierto en 1925 por nombre y apellido. Los tres nombres que mas
+pesan son Pedro J. Aranda (73 hojas), Jose Maria Leguizamon (31) y Julio
+Figueroa S. (31). Carlos Murua y Julio Royo Ortiz, los dos del departamento,
+reaparecen en 1925 y estan en el §A pendiente.
+
+NUMEROS. Los 78 numeros arrastrados dan acierto en 39 casos, pero en 1925
+los actos del Boletin llevan numero de decreto propio (2453, 2465, etc.),
+asi que los aciertos de numeros arrastrados se juzgan uno por uno en el
+turno siguiente y por ahora no se afirma nada sobre ellos.
+
+§A · MENCIONES EXPLICITAS
+=========================
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1046, viernes 22 de enero de 1925, hoja 9, columna unica. El
+encabezado de la lista esta dos hojas antes, en la hoja 7.
+FICHA: Junta de Escrutinio. "Composicion de mesas receptoras de votos para
+las elecciones a realizarse en 1925". Colegio Electoral Num. 5—Caldera: dos
+mesas, con presidente y dos suplentes cada una.
+MODO DE LECTURA: Imagen. Columna, y 300-420, a 300 dpi. El encabezado de la
+lista se leyo en la capa previa de la hoja 7 y NO en la imagen.
+TEXTO:
+  [hoja 7:] JUNTA DE ESCRUTINIO
+  Composición de mesas receptoras de votos para las elecciones a
+  realizarse en 1925.
+  [hoja 9:]
+  Colegio Electoral Núm. 5—Caldera
+             MESA NUM. 1
+  Presidente  Robles Fernando
+  Suplente 1°. Fernandez Angel
+     «     2°. Molina Lucas
+             MESA NUM. 2
+  Presidente  Béjarano Cirilo E.
+  Suplente 1°. Valencia Anastacio
+     «     2°. Arevalo Pedro
+NOTA DE LECTURA: Sin el encabezado de la hoja 7 esta lista no se puede
+fichar: el rotulo "Colegio Electoral Num. 5—Caldera" solo dice de que
+departamento es, no de que acto (§4.11). La lista imprime el apellido antes
+del nombre, al reves que el resto del Boletin. Tres de los seis nombres ya
+estaban en el config con origen anterior: Angel Fernandez y Lucas Molina con
+origen 1909 y Pedro Arevalo con origen 2584 (1946). El apellido Valencia es
+el mismo de los dos sucesorios del Juzgado de Paz del departamento (fichas
+de 1056 y 1081); no se infiere parentesco.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1047, viernes 30 de enero de 1925, hoja 22, columna unica ancha.
+Repetido identico en 1048 hoja 27, 1049 hoja 23, 1050 hoja 19 y 1051 hoja
+18: cinco apariciones, una sola entrada.
+FICHA: Decreto de convocatoria, Salta, Enero 28 de 1925, sin numero. Convoca
+al pueblo a elegir representantes ante la H. Legislatura y asigna a Caldera
+un diputado. Fija el domingo 1° de marzo para la eleccion. Firman GUEMES y
+LUIS LOPEZ.
+MODO DE LECTURA: Imagen. Columna unica, y 500-610, a 300 dpi: el tramo donde
+cae el departamento. El encabezado y el cierre se leyeron en la capa previa.
+TEXTO:
+  [capa:] MINISTERIO DE GOBIERNO
+  Elecciones de Senadores y Diputados a las HH. Cámaras
+  Legislativas de la Provincia
+  DECRETO DE CONVOCATORIA
+  Salta, Enero 28 de 1925
+  [imagen:] ...dos Diputados; por cada uno de los departamentos de
+  Anta, La Viña, La Poma, Campo Santo y Rosario de Lerma un
+  Senador; por cada uno de los de Santa Victoria, Guachipas,
+  Cafayate, Molinos e Iruya un Senador y un Diputado, y por cada
+  uno de los de Rivadavia, Caldera, Orán, Candelaria y Cerrillos
+  un Diputado.
+  Art. 2°—Desígnase el Domingo 1° de Marzo próximo para que tenga
+  lugar dicha elección en todas las circunscripciones electorales
+  convocadas.
+  Art. 3°—Comuníquese, publíquese, dése al Registro Oficial
+  [capa:] GUEMES—LUIS LOPEZ
+NOTA DE LECTURA: El decreto no lleva numero: es de los que en esta epoca se
+publican solo con rubro y fecha. Es el unico acto del año que se repite, y
+se repite cinco veces en cinco ediciones seguidas, entre el 30 de enero y el
+27 de febrero, es decir hasta el viernes anterior a la eleccion. La
+repeticion se comprobo buscando el texto en el resto del corpus y no por una
+marca de publicacion (E.6). Caldera queda en el grupo de departamentos que
+eligen diputado y no senador.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1048, viernes 6 de febrero de 1925, hoja 6, columna 2. El
+encabezado esta en la hoja 5 y el anuncio en el sumario, hoja 1.
+FICHA: Decreto que fija la ubicacion de las mesas receptoras de votos para
+la eleccion del domingo 1° de marzo. Caldera, Colegio Electoral Num. 5: mesa
+1 en la Escuela Elemental Mixta de Caldera y mesa 2 en la Iglesia
+Parroquial. Vaqueros, Colegio Electoral Num. 6: mesa 1 en la Escuela
+Infantil Provincial y mesa 2 en la Oficina de Correos de Mojotoro.
+MODO DE LECTURA: Imagen. Columna 2, y 410-540, a 300 dpi, que cubre Caldera
+y el rotulo de Vaqueros. Las dos mesas de Vaqueros se leyeron en la capa
+previa y NO en la imagen.
+TEXTO:
+  [hoja 5:] Art. 1°.—La ubicación de las mesas receptoras de
+  votos, para las elecciones a realizarse el domingo 1° de marzo
+  próximo será la siguiente:
+  [hoja 6:]
+                      Caldera
+  Colegio Electoral Núm.  5—
+  Mesa N° 1—Escuela Elemental Mìxta, Caldera.
+    «   »  2—Iglesia Parroquial.
+                     Vaqueros
+  Colegio Electoral Núm.  6—
+  [capa:] Mesa N° 1—Escuela Infantil Provincial.
+  [capa:]   «   »  2—Oficina de Correos, Mojotoro.
+NOTA DE LECTURA: El departamento tiene dos colegios electorales, el 5
+(Caldera) y el 6 (Vaqueros), y cuatro mesas en total. Es el acto que fija
+donde se vota, y se corresponde con el de la edicion 1046, que fija quien
+preside. Vaqueros y Mojotoro son terminos del anillo 2: aqui aparecen dentro
+de un acto que nombra al departamento, de modo que van al §A y no al §B.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1050, viernes 20 de febrero de 1925, hojas 3 y 4 (columnas 2 y
+1). Anunciado en el sumario, hoja 1.
+FICHA: Decreto N° 2152, Salta, Febrero 3 de 1925, rubro "Aprobando un
+presupuesto". Aprueba el presupuesto de Attilio Fantoni por 3.302 pesos
+moneda legal para reparaciones urgentes en el local que ocupa la Comisaria
+de la Caldera, por riesgo de derrumbe. Exp. N° 6524, Letra E. Firman GUEMES,
+LUIS LOPEZ y J. C. TORINO, en acuerdo de Ministros.
+MODO DE LECTURA: Imagen. Recorte de la columna 2 de la hoja 3 (y 560-700) y
+de la columna 1 de la hoja 4 (y 20-500), a 300 dpi sobre un original de 150
+ppi. El acto arranca al pie de la hoja 3 y sigue en la hoja 4: numero, fecha
+y rubro se leyeron en la hoja 3; el cuerpo, el importe y las firmas en la
+hoja 4.
+TEXTO:
+  2152—Salta, Febrero 3 de 1925
+  Vista la comunicaciòn de la Je-
+  [hoja 4] fatura de Policía (Exp. N° 6524, Letra E.) con la que
+  acompaña una nota pasada por la Comisaría de la Caldera, por la
+  que se solicita autorizaciòn para efectuar en el local que
+  aquella ocupa, reparaciones de carácter urgente en virtud de
+  existir la posibilidad de derrumbe de parte del edificio, atento
+  el presupuesto que se acompaña y lo informado por el
+  Departamento de Obras Públicas y Contaduría General,
+  El Poder Ejecutivo de la Provincia en acuerdo de Ministros,
+  DECRETA:
+  Art° 1°.—Apruèbase el presupuesto presentado por el señor
+  Attilio Fantoni por la suma de Tres mil trescientos dos pesos
+  moneda legal a que ascienden las reparaciones a efectuarse en el
+  local de la Comisaría de la Caldera.
+  Art. 2°.—Dèse cuenta en oportunidad a la H. Legislatura, y
+  pàsese este expediente a Contaduría General y Jefatura de
+  Policía; publìquese, é insertese en el Registro Oficial
+  GUEMES—LUIS LÓPEZ—J. C. TORINO
+NOTA DE LECTURA: El sumario de la hoja 1 lo anuncia asi: "Policia de la
+campaña—Comisaria de la Caldera—se aprueba un presupuesto para reparaciones.
+(Pagina 3)", y la remision es correcta. El importe va escrito en letras y no
+en cifras, de modo que no hay digito dudoso. El apellido Fantoni se leyo en
+la imagen.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1050, viernes 20 de febrero de 1925, hoja 15, columna 1. El
+encabezado esta al pie de la hoja 14.
+FICHA: Junta de Escrutinio. Lista de candidatos que sostendra el partido
+«Union Provincial» para legisladores. Por Caldera, Diputado: Julio Suarez.
+Cierra "Salta, Febrero 12 de 1925. Julio Figueroa S. (Presidente.) M. T.
+Frias. (Secretario.)".
+MODO DE LECTURA: Imagen. Columna 1, y 420-500, a 300 dpi. El encabezado y el
+pie de firma se leyeron en la capa previa.
+TEXTO:
+  [hoja 14:] JUNTA DE ESCRUTINIO
+  Candidatos que sostendrá el partido «Unión Provincial» para
+  legisladores en las elecciones a realizarse el domingo...
+  [hoja 15:]
+                    Candelaria
+  Diputado:  Domingo A. Teseyra
+                     Caldera
+  Diputado:  Julio Suarez
+                 Rosario de Lerma
+  Senador:  Martín V. Cornejo
+  [capa:] Salta, Febrero 12 de 1925. Julio Figueroa S.
+  (Presidente.) M. T. Frias. (Secretario.)
+NOTA DE LECTURA: La misma hoja trae, a continuacion, listas de candidatos
+proclamados por cinco contribuyentes en otros departamentos: por Caldera no
+hay ninguna. Julio Figueroa S., que firma como Presidente de la Junta, ya
+estaba en el config con origen 1923, y es uno de los tres nombres que mas
+aciertos dan en todo el año (31 hojas).
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1056, viernes 3 de abril de 1925, hoja 7, columna 1. Seccion de
+edictos, sin anuncio en sumario.
+FICHA: Edicto sucesorio del Juzgado de Paz de Caldera por el fallecimiento
+de doña Maria Asuncion Gutierrez de Valencia. Firma "Carlos F.
+Martinez.—Juez de Paz". Numero de orden de publicacion (962).
+MODO DE LECTURA: Imagen. Columna entera, y 285-470, a 300 dpi.
+TEXTO:
+  SUCESORIO.—Por disposición del suscrito Juez de Paz de Caldera,
+  se cíta, llama y emplaza por el término de treinta días a contar
+  desde la primera publicación del presente, a todos los que se
+  consideren con derecho a los bienes dejados por fallecimiento de
+  doña María Asunción Gutierrez de Valencia, ya séan como
+  herederos o acreedores, para que dentro de dicho tèrmino
+  comparezcan por ante este Juzgado a deducir sus acciones en
+  forma, bajo apercibimiento de lo que hubiere lugar en derecho.—
+  Caldera, Marzo 30 de 1925.—Carlos F. Martinez.—Juez de Paz.
+                                                          (962)
+NOTA DE LECTURA: El apellido del Juez de Paz se leyo en la imagen letra por
+letra porque decide la ficha: aqui dice Martinez y en el edicto de la
+edicion 1081, del mismo Juzgado y del mismo año, dice Matienzo (E.9). No se
+concilia. El nombre de la causante va impreso en negrita y algo mas grande,
+como es uso en los edictos de esta epoca.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1058, viernes 17 de abril de 1925, hoja 9, columna 2. Seccion de
+edictos.
+FICHA: Edicto de la Autoridad Minera, expediente N° 1166-C. Rodolfo Povoli y
+Enrique Premoli (hijo) solicitan, con fecha 20 de enero de 1925, permiso de
+exploracion y cateo de minerales de primera categoria en el Departamento La
+Caldera, cuatro unidades (2.000 has.), en la finca «San Alejo y Santa
+Rufina» de Bernardo Austerlitz. Salta, abril 7 de 1925. Zenon Arias. Aviso
+(971).
+MODO DE LECTURA: Imagen. Columna 2, y 395-560, a 300 dpi.
+TEXTO:
+  ...miso de exploración y cateo de minerales de primera categoría
+  (Excluyendo petróleo y demas hidrocarburos fluidos) en el
+  Departamento La Caldera, en una extension de cuatro unidades
+  (2.000 Has.) en terrenos sin cultivar, labrar, ni cercar de la
+  finca «San Alejo y Santa Rufina» de propiedad del señor Bernardo
+  Austerlitz que reside en esta ciudad, calle Alberdi N° 374, y en
+  la forma de un rectángulo de 4.000 metros, de Norte á Sud, por
+  5.000 metros, de Este á Oeste, las que se ubicaràn del modo
+  siguiente: Partiendo del punto denominado «Abrita Mayo ó Abra
+  Mayito», con rumbos [astronómicos N. 29° O. y S. 29° E., se
+  medirán 1.800.00 y 2.200.00 metros respectivamente para formar
+  el costado este del pedimento.—Salta, Abril 7 de 1925. Zenón
+  Arias. (971)]
+NOTA DE LECTURA: San Alejo y Santa Rufina son dos terminos del anillo 2 y
+aqui aparecen como una sola finca. El pedimento es gemelo del de la edicion
+1072 (expediente 1165-C): misma finca, mismo dueño, misma fecha de
+presentacion, mismo punto de partida y el rectangulo dado vuelta. La capa
+previa imprime el punto de partida como "abrita mayo o abra mayito" y la
+edicion 1072 lo imprime al reves, "abra mayito o abrita mayo" (E.9). Lo que
+va entre corchetes sale de la capa.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1063, viernes 22 de mayo de 1925, hoja 3, columna 2. Anunciado
+en el sumario, hoja 1.
+FICHA: Decreto N° 2453, Salta, Mayo 11 de 1925, rubro "Comisario de «La
+Caldera»". Nombra Comisario de Policia de La Caldera a Carlos Murua, en
+reemplazo de Julio Royo Ortiz. Exp. N° 7017 letra E. Firman CORBALAN y
+ERNESTO M. ARAOZ.
+MODO DE LECTURA: Imagen. Columna entera, y 140-470, a 320 dpi.
+TEXTO:
+  Comisario de «La Caldera»
+  2453—Salta, Mayo 11 de 1925.
+  Atento lo solicitado por la Jefatura de Policía en este
+  expediente N°. 7017 letra E,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Nómbrase Comisario de Policía de La Caldera al señor
+  Carlos Murùa en reemplazo de don Julio Royo Ortiz.
+  Art. 2°.—Tome razón Jefatura de Policía, Contaduría General;
+  comuníquese, publíquese, dèse al Registro Oficial y archívese.—
+  CORBALAN—ERNESTO M. ARÁOZ.
+NOTA DE LECTURA: La capa previa lee la fecha como "mayo xi-de 1925"; la
+imagen dice Mayo 11, con el 11 compuesto en versalitas romanas, que es lo
+que confunde al OCR. Los dos apellidos, Murua y Royo Ortiz, ya estaban en el
+config: Carlos Murua con origen 1908 y Julio Royo Ortiz con origen 1922. El
+sumario de la hoja 1 remite a la pagina 3 y la remision es correcta.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1063, viernes 22 de mayo de 1925, hoja 8, columna 2. Anunciado
+en el sumario, hoja 2.
+FICHA: Decreto N° 2465, Salta, Mayo 12 de 1925, rubro "Receptor de La
+Caldera". Nombra a Carlos Murua Receptor de Rentas y Recaudador de Impuestos
+al Consumo del Departamento de «La Caldera», con fianza de 5.000 pesos
+conforme al Art. 77 de la Ley de Contabilidad. Firman CORBALAN y A. B.
+ROVALETTI.
+MODO DE LECTURA: Imagen. Columna entera, y 380-700, a 320 dpi.
+TEXTO:
+  Receptor de La Caldera
+  2465—Salta, Mayo 12 de 1925.
+  Debiendo procederse a la reorganización del personal dependiente
+  del P. Ejecutivo,
+  El Gobernador de la Provincia,
+  DECRETA:
+  Art. 1°.—Nòmbrase Receptor de Rentas y Recaudador de Impuestos
+  al Consumo del Departamente [sic] de «La Caldera» al señor
+  Carlos Murúa.
+  Art. 2°.—El nombrado, antes de tomar posesión de estos cargos,
+  prestarà la fianza de $ 5.000 de acuerdo a lo dispuesto por el
+  Art. 77 de la Ley de Contabilidad.
+  Art. 3°.—Comuniquese, publiquese, insértese en el Registro
+  Oficial y archívese.—CORBALÁN—A. B. ROVALETTI.
+NOTA DE LECTURA: El original imprime "Departamente" por Departamento: se
+transcribe con [sic] y se declara en E.9. Este decreto usa la formula "El
+Gobernador de la Provincia", y el 2453, del dia anterior, usa "El Poder
+Ejecutivo de la Provincia": las dos conviven y no se normalizan. La cifra de
+la fianza se leyo en la imagen: 5.000, con punto de millar. Carlos Murua
+acumula asi, en dos dias, la comisaria y la receptoria del departamento.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1064, viernes 29 de mayo de 1925, hoja 7, columnas 1 y 2.
+Anunciado en el sumario, hoja 2.
+FICHA: Decreto N° 2500, Salta, Mayo 19 de 1925, rubro "Edos. de Registro
+Civil". Nombra Encargados de las Oficinas del Registro Civil de «Caldera» y
+«General Guemes» a Jose Delgado y Dardo Tula, en reemplazo de Carlos F.
+Matienzo y Ramon L. Ontiveros respectivamente. Firman CORBALAN y ERNESTO M.
+ARAOZ.
+MODO DE LECTURA: Imagen. Columna 1, y 500-625, a 320 dpi. La continuacion,
+al tope de la columna 2, se leyo en la capa previa y NO en la imagen: los
+nombres de los reemplazados, Matienzo y Ontiveros, quedan declarados como
+lectura de capa.
+TEXTO:
+                                      Edos. de Registro Civil
+  2500—Salta, Mayo 19 de 1925
+  Encontràndose en comisiòn el personal dependiente del P. E.,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Nòmbrase Encargados de las Oficinas del Registro Civil
+  de «Caldera» y «General Güemes» a los señores José Delgado y
+  Dardo Tula, en reemplazo de los señores Carlos F. [Matienzo y
+  Ramón L. Ontiveros, respectivamente.
+  Art. 2°.—Comuníquese, publíquese, dése al Registro Oficial y
+  archívese.—CORBALÁN—ERNESTO M. ARÁOZ.]
+NOTA DE LECTURA: Lo que va entre corchetes sale de la capa previa y no de la
+imagen (§8.5). La linea del numero no lleva punto final despues de 1925. El
+apellido Matienzo importa: es el mismo que firma como Juez de Paz de la
+Caldera en la edicion 1081, y el que la edicion 1056 imprime Martinez.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1067, viernes 19 de junio de 1925, hoja 4, columnas 1 y 2.
+Anunciado en el sumario, hoja 1.
+FICHA: Decreto N° 2575, Salta, Junio 2 de 1925, rubro "Renuncia". Acepta la
+renuncia de Julio Royo Ortiz como miembro de la H. Comision Municipal de
+Caldera. Firman CORBALAN y ERNESTO M. ARAOZ.
+MODO DE LECTURA: Imagen. Columna 2, y 60-400, a 320 dpi, mas la linea del
+numero al pie de la columna 1, y 630-700.
+TEXTO:
+                                                      Renuncia
+  2575—Salta, Junio 2 de 1925.
+  Vista renuncia elevada por el señor Julio Royo Ortiz del cargo
+  de miembro de la H. Comisión Municipal de Caldera.
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Acéptase la renuncia interpuesta por don Julio Royo
+  Ortiz del cargo de miembro de la Municipalidad de la Caldera.
+  Art. 2°.—Comuníquese, publíquese, dése al Registro Oficial y
+  archívese. CORBALÁN—ERNESTO M. ARÀOZ.
+NOTA DE LECTURA: La capa previa lee el numero como "2Ó75"; la imagen dice
+2575. El propio decreto nombra al cuerpo de dos maneras en cuatro renglones:
+"H. Comisión Municipal de Caldera" en el visto y "Municipalidad de la
+Caldera" en el articulo 1°. Se transcriben las dos y no se normaliza. El
+renunciante es el mismo Julio Royo Ortiz que el decreto 2453 acababa de
+reemplazar en la comisaria.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1069, viernes 3 de julio de 1925, hoja 15, columna 2, y ed.
+1077, viernes 28 de agosto de 1925, hoja 7: dos apariciones del mismo
+expediente, una sola entrada.
+FICHA: Expediente N° 1168-C. Edicto de la Autoridad Minera: Juan Larran
+solicita, con fecha 21 de enero de 1925, permiso de exploracion y cateo en
+el departamento La Caldera, finca «Las Nieves» de los señores Garzon y
+Pintos y en terrenos del señor E. Quipildor, cuatro unidades (2000
+hectareas). Salta, 25 de junio de 1925, Zenon Arias. En la edicion 1077 se
+publica el auto de concesion del 1° de agosto de 1925, que otorga el permiso
+sin perjuicio de derechos de terceros.
+MODO DE LECTURA: Capa previa en las dos apariciones; NO se miro la imagen de
+ninguna de las dos. Se declara asi: esta ficha es la unica del §A que no
+tiene lectura de imagen (§8.5).
+TEXTO:
+  [capa, ed. 1069:] EDICTO:—Expediente N° 1168-C. La autoridad
+  minera notifica a los que se consideren con algun derecho,
+  haberse presentado en fecha 21 de enero de 1925 el señor Juan
+  Larran solicitando permiso de exploración y cateo de minerales
+  de la primera categoría (excluyendo petróleo y demas
+  hidrocarburos fluidos) en el departamento La Caldera finca «Las
+  Nieves» terrenos sin cultivar, labrar ni cercar de propiedad de
+  los señores Garzón y Pintos y en terrenos también del señor E.
+  Quipildor, en una extensión de cuatro unidades (2000 hectáreas)
+  [capa, ed. 1077:] ...conceder al presentante don Juan Larran,
+  sin perjuicio de derechos de terceros, permiso de exploración y
+  cateo de minerales de la primera categoría [...] en terrenos de
+  la finca «Las Nieves», jurisdicción del departamento de Caldera
+NOTA DE LECTURA: El auto de concesion dice que el pedimento fue anotado en
+la Seccion Minas del Departamento Topografico bajo el N°. 87 y que las
+publicaciones se acreditaron con los diarios y el Boletin Oficial agregados
+de fs. 7 a 9: es decir que el propio expediente da fe de la publicacion de
+la edicion 1069. El apellido Quipildor ya estaba en el config, con origen
+1909 (Laureano Quipildor); aqui la inicial es E. y no se infiere que sea la
+misma persona. El auto remite a un plano de fs. 4 que el Boletin no publica
+(§P).
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1070, viernes 10 de julio de 1925, hoja 6, columna 2. Anunciado
+en el sumario, hoja 1.
+FICHA: Decreto N° 2671, Salta, Junio 25 de 1925, rubro "Nombramientos".
+Nombra para integrar la H. Comision Municipal de Caldera, desintegrada, a
+Daniel Linares, Rafael Delgado y Genaro Molina. Firman CORBALAN y ERNESTO M.
+ARAOZ.
+MODO DE LECTURA: Imagen. Columna 2, y 320-620, a 300 dpi.
+TEXTO:
+                                                Nombramientos
+  2671—Salta, Junio 25 de 1925.
+  Encontrándose desintegrada la H. Comisión Municipal de Caldera.
+  El Poder Ejecutivo de la Provincia
+  DECRETA :
+  Art. 1°.--Nómbrase para integrar la referida Comisión Municipal
+  a los señores Daniel Linares, Rafael Delgado y Genaro Molina.
+  Art. 2°.—Comuníquese, publíquese dése al Registro Oficial y
+  archivese. CORBALAN—ERNESTO M. ARÁOZ
+NOTA DE LECTURA: Los tres nombrados estaban ya en el config con origen
+anterior: Daniel Linares y Genaro Molina con origen 1909, Rafael Delgado con
+origen 1917. El visto termina en punto y no en coma, de modo que el decreto
+no tiene considerando: se transcribe asi. Rafael Delgado reaparece en agosto
+y en octubre en el Registro Civil del mismo departamento.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1070, viernes 10 de julio de 1925, hoja 7, columna unica.
+FICHA: Decreto N° 2674, Salta, Junio 25 de 1925. Nombra Subcomisario
+ad-honorem de «Vaqueros», Caldera, a Antonio Aguero (hijo) en reemplazo de
+D. Francisco S. Urquiza; y crea una Subcomisaria Auxiliar en «Lachiguana»,
+Anta primera seccion. Exp. N° 7163 letra E. Firman CORBALAN y ERNESTO M.
+ARAOZ.
+MODO DE LECTURA: Imagen. Columna unica de la hoja, y 330-560, a 300 dpi.
+TEXTO:
+  2674—Salta. Junio 25 de 1925
+  Atento lo solicitado por la Jefatura de Policía en este
+  expediente N°. 7163. letra E.
+  El Poder Ejecutivo de la Provincia,
+  DECRETA:
+  Art. 1°.—Nómbrase con caràcter ad—honorem Subcomisario de
+  «Vaqueros» Caldera, al señor Antonio Agüero (hijo) en reemplazo
+  de D. Francisco S. Urquiza.
+  Art. 2°.—Créase una Subcomisaría Auxiliar en «Lachiguana», Anta
+  primera sección, y nómbrase para desempeñarla con caràcter
+  ad--honorem al propuesto D. Silverio Diaz.
+  Art. 3°.—Comunìquese, publíquese dése al Registro Oficial y
+  archivese CORBALÁN—ERNESTO M. ARÁOZ.
+NOTA DE LECTURA: Esta hoja va a una sola columna ancha y no a dos, como el
+resto de la edicion. El acto nombra a Vaqueros como localidad de Caldera sin
+preposicion: "Subcomisario de «Vaqueros» Caldera". Antonio Aguero estaba en
+el config con origen 1916 y Francisco S. Urquiza con origen 1923.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1072, viernes 24 de julio de 1925, hoja 15, columna 1. Seccion
+de edictos.
+FICHA: Edicto de la Autoridad Minera, expediente N° 1165-C. Jose Manuel
+Roldan y Apolo A. Premoli solicitan, con fecha 20 de enero de 1925, permiso
+de exploracion y cateo en el departamento de «La Caldera», cuatro unidades
+(2.000.00 has.), en la finca «San Alejo y Santa Rufina» de Bernardo
+Austerlitz. Salta, abril 7 de 1925. Zenon Arias. Aviso (1115).
+MODO DE LECTURA: Capa previa. NO se miro la imagen de esta hoja: se declara.
+TEXTO:
+  [capa:] EDICTO:—Expediente N° 1165-C. La autoridad minera
+  notifica a los que se consideren con algun derecho haberse
+  presentado con fecha 20 de enero de 1925, los señores José
+  Manuel Roldán y Apolo A. Premoli, solicitando permiso de
+  exploración y cateo de minerales de primera categoría
+  (excluyendo petróleo y demas hidrocarburos fluidos) en el
+  departamento de «La Caldera», en una extensión de cuatro
+  unidades {2.000.00 has.) en terrenos sin cultivar, labrar, ni
+  cercar, de la finca «San Alejo y Santa Rufina», de propiedad del
+  señor Bernardo Austerlitz, quien reside en esta ciudad, calle
+  Alberdi N° 374
+NOTA DE LECTURA: La misma hoja trae, a renglon seguido, una "FE DE ERRATA"
+sobre la seccion edictos del Boletin N°. 1071 del 17 del actual, que no toca
+a este pedimento. El original abre parentesis con llave y lo cierra con
+parentesis: "{2.000.00 has.)". Es el gemelo del expediente 1166-C de la
+edicion 1058.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1075, viernes 14 de agosto de 1925, hoja 11, columna 2. Seccion
+de edictos.
+FICHA: Edicto de deslinde, mensura y amojonamiento de las fincas «Sauce» o
+«Paraiso» y de la fraccion Ceival, ubicadas en el departamento de Campo
+Santo y parte en el de La Caldera, pertenecientes al Dr. Jose Maria Sola.
+Decreto de Salta, junio 19 de 1925. Agrimensor nombrado: Juan Piatelli.
+MODO DE LECTURA: Imagen. Columna 2, y 150-300, a 300 dpi. La descripcion de
+linderos, que esta en la columna 1, se leyo en la capa previa.
+TEXTO:
+  [capa, col. 1:] ...la 2ª o sea la fracción «Ceival»; tiene por el
+  norte y naciente los «Noques», de Reymundo Echenique y con la
+  fracción denominada «Mosquera», del señor Daniel Linares; por el
+  sud, con la finca El Sauce, antes de los señores Patrón Hermanos
+  y hoy del Dr. Solá, y poniente «La Despensa», de los herederos
+  Murúa
+  [imagen, col. 2:] ...nado a fojas 15 y las declaraciones
+  contenidas en el escrito que antecede, téngase por iniciado el
+  juicio de deslinde mensura y amojonamiento de las fincas «Sauce»
+  o «Paraíso», y de la fracciòn Ceival ubicadas en el Departamento
+  de Campo Santo y parte en el de La Caldera, de esta Provincia,
+  perteneciente al Dr. José María Solá, cuyos límites se
+  especifican en los títulos presentados y escritos de fojas 15 y
+  17. Téngase por nombrado al agrimensor señor Juan Piatelli,
+  quien previa posesión del cargo, en legal forma, debe-...
+NOTA DE LECTURA: Es el acto del año que mas nombres del departamento junta
+en un solo renglon: «La Despensa» de los herederos Murua y el apellido
+Echenique, los dos del config; y Daniel Linares, que dos meses antes, por el
+decreto 2671, habia sido nombrado miembro de la Comision Municipal de
+Caldera. El decreto manda publicar los edictos treinta dias en los diarios
+Nueva Epoca y La Voz del Norte y por una sola vez en el Boletin Oficial: se
+busco el texto en el resto del corpus y no se repite (E.6). El limite se lee
+"parte en el de La Caldera" sin decir que parte.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1076, viernes 21 de agosto de 1925, hoja 2, columnas 1 y 2.
+Anunciado en el sumario, hoja 1.
+FICHA: Decreto N° 2765, Salta, Agosto 7 de 1925, rubro "Licencia". Concede
+veinte dias de licencia sin goce de sueldo a Jose Delgado, Encargado del
+Registro Civil de La Caldera, y nombra en su reemplazo, mientras dure la
+ausencia del titular, a Rafael Delgado. Exp. N° 6764 Letra F. Firman
+CORBALAN y ERNESTO M. ARAOZ.
+MODO DE LECTURA: Imagen. Linea del numero y rubro al pie de la columna 1 (y
+640-690) y cuerpo entero en la columna 2 (y 80-420), a 300 dpi.
+TEXTO:
+                                                       Licencia
+  2765—Salta, Agosto 7 de 1925.
+  Vistos este Exp. N° 6764, Letra—F, en el que corre la solicitud
+  de licencia formulada por el Encargado del Registro Civil de La
+  Caldera don Josè Delgado,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Concédese veinte días de licencia sin goce de sueldo al
+  Encargado del Registro Civil de La Caldera don José Delgado.
+  Art. 2°.—Nómbrase en su reemplazo mientras dure la ausencia del
+  titular a don Rafael Delgado.
+  Art. 3°.—Tome razòn Dirección del Registro Civil, Contadurìa
+  General; comuníquese, publíquese, dése al Registro Oficial y
+  archìvese.
+  CORBALÁN—ERNESTO M. ARÁOZ.
+NOTA DE LECTURA: El numero de expediente se imprime 6764 con "Letra—F" en el
+visto; la capa previa lo lee "letra— p". Se leyo la F en la imagen. Es el
+tercer acto del año sobre el Registro Civil del departamento y el segundo en
+que Rafael Delgado entra por Jose Delgado.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1080, viernes 18 de septiembre de 1925, hoja 9. Seccion de
+edictos.
+FICHA: Edicto de Minas, expediente 1195-C. Cita a los que se consideren con
+derecho al pedimento de cateo iniciado por Julio Juarez en terreno del
+solicitante y de los herederos de Juan A. Pinto, en el Departamento La
+Caldera, cuatro unidades (2000 hectareas). Salta, 10 de septiembre de 1925.
+Zenon Arias. Aviso (1178).
+MODO DE LECTURA: Imagen. Recorte y 170-300 a 280 dpi.
+TEXTO:
+  Edicto de Minas.—Cítase á los que se consideren con derecho al
+  pedimento de cateo iniciado por Julio Juarez, bajo expediente
+  1195 C en terreno del solicitante y herederos de Juan A. Pinto,
+  en el Departamento La Caldera, en una extensión de cuatro
+  unidades (2000 hectáreas); que se ubicarán en forma de un
+  rectángulo dè 5000 metros de Norte á Sud, verdadero por 4000
+  metros de Este á Oeste, y cuyo [esquinero noroeste se encuentra
+  a 5700 metros del Cerro Escalante, medido sobre una linea que
+  partiendo de dicha cumbre tiene un azimut verdadero de 87°30.—
+  Salta, 10 de septiembre de 1925. Zenón Arias—E. de M. (1178)]
+NOTA DE LECTURA: Unico de los cinco pedimentos del año que se ubica por un
+cerro y no por una finca: el Cerro Escalante, que no esta en el anillo 2. La
+capa lee el numero de aviso como "(ri.78)". Lo que va entre corchetes sale
+de la capa.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1081, viernes 25 de septiembre de 1925, hoja 10, columna 2.
+Seccion de edictos, sin anuncio en sumario.
+FICHA: Edicto sucesorio del Juzgado de Paz de la Caldera por el
+fallecimiento de don Juan Valencia. Firma "Carlos F Matienzo, Juez de Paz".
+Numero de orden de publicacion (1183).
+MODO DE LECTURA: Imagen. Columna 2, y 350-530, a 300 dpi.
+TEXTO:
+  SUCESORIO.—Por disposición del suscripto Juez de Paz de la
+  Caldera, se cita y emplaza por el término de treinta días á
+  contar desde la primera publicación del presente á todos los que
+  se consideren con derecho á los bienes quedado [sic] por
+  fallecimiento de don Juan Valencia, ya sean como herederos o
+  acreedores, para que dentro de dicho tèrmino comparezcan por
+  ante este Juzgado a deducir sus acciones en forma, bajo
+  apercibimiento lo que hubiere lugar por derecho.—Caldera Agosto
+  9 de 1925.—Carlos F Matienzo, Juez de Paz.          (1183)
+NOTA DE LECTURA: El original imprime "bienes quedado" donde el edicto de la
+edicion 1056 imprime "bienes dejados": se transcribe con [sic]. El apellido
+del Juez se leyo en la imagen: Matienzo, sin punto despues de la F. Los dos
+sucesorios del año en este Juzgado llevan el mismo apellido de familia entre
+los causantes, Valencia; no se infiere parentesco.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1081, viernes 25 de septiembre de 1925, hoja 12, columna 2.
+Seccion de edictos.
+FICHA: Edicto de la Autoridad Minera, expediente N° 1169-G. D. Emilio D.
+Sylvester solicita, con fecha 21 de enero de 1925, permiso de exploracion y
+cateo en terrenos incultos de la finca Las Nieves de Garzon y Pintos,
+Departamento de La Caldera, cuatro unidades (2.000 hectareas). Salta,
+septiembre 11 de 1925. Zenon Arias. Aviso (1192).
+MODO DE LECTURA: Imagen. Columna 2, y 300-420, a 300 dpi.
+TEXTO:
+  La Autoridad Minera notifica a los que se consideren con algun
+  derecho, haberse presentado con fecha 21 de Enero de 1925, D.
+  Emilio D. Sylvester solicitando permiso de Exploración y cateo
+  de minerales de 1ª categoría. (Excluyendo petróleo y demás
+  hidrocarburos fluidos) en terrenos incultos de la finca Las
+  Nieves de Garzòn y Pintos, Departamento de La Caldera, en una
+  extensión de cuatro unidades [(2.000 hectáreas) en forma de
+  rectángulo de cuatro mil metros de este a oeste por cinco mil de
+  sud a norte, encontrándose el esquinero sud-este a cuatro mil
+  metros al oeste del vértice 49 del deslinde de las fincas Las
+  Nieves, pasando por el vértice 49 del citado deslinde ejecutado
+  por el agrimensor P. Arias el año 1889.—Salta, Septiembre 11 de
+  1925.—Zenón Arias. (1192)]
+NOTA DE LECTURA: Este edicto y el del expediente 1168-C se apoyan los dos en
+el vertice 49 del deslinde de Las Nieves, que el aviso fecha en 1889 y
+atribuye al agrimensor P. Arias: es un deslinde anterior al corpus y queda
+como citado y no acompañado (E.2). El propio aviso dice "a cuatro mil metros
+al oeste del vertice 49 [...] pasando por el vertice 49", con el mismo
+numero dos veces, donde el edicto del expediente 1168-C habla de los
+vertices 49 y 48: se transcribe como esta y no se corrige. Lo que va entre
+corchetes sale de la capa.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1084, viernes 16 de octubre de 1925, hoja 7, columna 2.
+FICHA: Ley sin numero legible en la hoja, sancionada el 24 de septiembre de
+1925: exonera del pago de la Contribucion Directa, por los años 1921 a 1924
+inclusive, a la señora Jacoba L. de Gomez y Hermanas, por la propiedad que
+poseen en el Departamento de Caldera. Firman V. CORNEJO ARIAS y R. P.
+COSTAS, presidentes de las Camaras, y ADOLFO ARAOZ y JOSE M. SOLA (hijo),
+secretarios. Promulgada por el Ministerio de Hacienda el 30 de septiembre de
+1925.
+MODO DE LECTURA: Imagen. Columna 2, y 150-300, a 300 dpi, y cabecera de la
+hoja, y 20-160, a 260 dpi. El rubro y el numero de la ley NO se encontraron
+en las dos hojas leidas.
+TEXTO:
+  [El Senado y Cámara de Diputados] de la Provincia de Salta,
+  sancionan con fuerza de LEY:
+  Art. 1°.—Exonèrase del pago de la Contribución Directa, por los
+  años 1921 al 1924 inclusive, á la señora Jacoba L. de Gómez y
+  Hermanas, por la propiedad que poseen en el Departamento de
+  Caldera.
+  Art. 2°.—Comuníquese, etc.
+  Dada en la Sala de Sesiones de la H. Legislatura en Salta, á
+  veinticuatro días del mes de Septiembre de mil novecientos
+  veinticinco.
+  V. CORNEJO ARIAS          R. P. COSTAS
+  Pte. de la H. C. de Diputados   Pte. del H. Senado
+  Adolfo Aráoz              José M. Solá (hijo)
+  Srio. de la H. C. de Ddos.    Srio. del H. Senado
+  [capa:] MINISTERIO DE HACIENDA:—Salta, Septiembre 30 de 1925.
+  Téngase por ley de la Provincia, cúmplase, comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese.—
+  CORBALAN—A. B. ROVALETTI
+NOTA DE LECTURA: La ley anterior de la misma hoja es la N° 2886 y la
+siguiente la N° 2888: el numero de esta quedaria en el medio, pero no se
+leyo y no se infiere. Jacoba L. de Gomez es, casi con seguridad, la "jacoba
+luquez de gomez" que el config trae con origen 1911: aqui aparece con
+inicial y no con el apellido entero, de modo que la identificacion se
+declara y no se da por hecha. La exoneracion cubre cuatro años de
+contribucion directa por una propiedad del departamento y no dice cual es la
+propiedad.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1087, viernes 6 de noviembre de 1925, hoja 4, columna unica
+derecha.
+FICHA: Decreto que crea tres agentes de Policia de primera y trece de
+segunda para el servicio de las Subcomisarias Auxiliares ad-honorem, entre
+ellas Mojotoro (Caldera) y Vaqueros (Caldera). El numero y la fecha del
+decreto quedan PENDIENTES de lectura.
+MODO DE LECTURA: Imagen. Recorte y 415-555 a 280 dpi. No se leyo todavia la
+cabecera del acto ni su cierre: la ficha esta incompleta y se declara asi.
+TEXTO:
+  Art. 1°.—Creánse tres agentes de Policía de primera y trece de
+  segunda cuya distribución fijarà la Jefatura de Policía con
+  destino al servicio de las Subcomisarías Auxiliares ad-honorem
+  de: Mojotoro (Caldera); Chañar Muyo (Anta 2ª. Sección); Urundel
+  (Orán) Animaná (San Carlos); Desmonte (Anta 1ª. Sección); La
+  Isla (Capital); Esteco (Metán); Palomitas (Campo Santo); Rio
+  Seco (Anta 1ª. Sección): Vaqueros (Caldera); Tolombón
+  (Cafayate); Los Noques é Higuerillas (Capital); Horcones [...]
+NOTA DE LECTURA: Es la unica lista del año que nombra dos parajes del
+departamento a la vez, y los nombra con el departamento entre parentesis,
+que es lo que permite atribuirlos sin inferencia. La lista sigue mas alla de
+"Horcones" y ese tramo no se leyo: pendiente.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1087, viernes 6 de noviembre de 1925, hoja 5, columnas 1 y 2.
+Anunciado en el sumario, hoja 1.
+FICHA: Decreto N° 2947, Salta, Octubre 24 de 1925, rubro "Renuncia y
+nombramiento". Acepta la renuncia de Jose A. Delgado como Encargado del
+Registro Civil de la Caldera y nombra en su reemplazo a Rafael Delgado.
+Expediente N°. 6865, letra F. Firman CORBALAN, ERNESTO M. ARAOZ y A. B.
+ROVALETTI.
+MODO DE LECTURA: Imagen. Columna 1, y 495-650, a 300 dpi; el cierre y las
+firmas, al tope de la columna 2.
+TEXTO:
+                                       Renuncia y nombramiento
+  2947—Salta, Octubre 24 de 1925.—
+  Vista la renuncia elevada por el Encargado del Registro Civil
+  don José A. Delgado ( Expediente N°. 6865, letra F.)
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Acéptase la renuncia que presenta don José A. Delgado
+  del cargo de Encargado del Registro Civil de la Caldera y
+  nombrase en su reemplazo a don Rafael Delgado.
+  [Art. 2°.—...] CORBALÁN—ERNESTO M. ARÁOZ.—A. B. ROVALETTI.
+NOTA DE LECTURA: El decreto 2500 lo habia nombrado como "José Delgado" y
+este lo llama "José A. Delgado": se transcriben las dos formas y no se
+unifican. El renglon del cierre esta partido entre las dos columnas y el
+articulo 2° no se leyo entero: lo que va entre corchetes queda pendiente.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1087, viernes 6 de noviembre de 1925, hoja 15, columna 1.
+Seccion de edictos.
+FICHA: Sentencia del Juzgado de Primera Instancia en lo Civil y Comercial de
+Segunda Nominacion, a cargo del doctor Carlos Gomez Rincon, del 28 de
+octubre de 1925: declara disuelta la sociedad «Levilly y Compañia»,
+constituida en 1917 entre Francisco Sabatie y Emilio Oliver Levilly para
+explotar la mina de plomo «Pulpera» (Jujuy) y el establecimiento de
+fundicion situado en el departamento de La Caldera denominado Mojotoro.
+Demandantes: Superville y Compañia. Aviso (1276).
+MODO DE LECTURA: Imagen. Columna 1, y 390-520, a 300 dpi.
+TEXTO:
+  ...explotación de la mina de plomo denominada «Pulpera» ubicada
+  en la Provincia de Jujuy y el establecimiento de fundición
+  situado en el Departamento de la Caldera de esta Provincia
+  denominado Mojotoro. Sociedad que tenía por asiento la Provincia
+  de Salta, sin costas, a mérito de la conformidad manifestada por
+  los demandados—Hágase saber esta resolución mediante edictos que
+  se publicarán durante quince días en dos diarios de la ciudad y
+  [capa:] por una sola vez en el «Boletín Oficial»
+NOTA DE LECTURA: Es el unico acto del año que registra una actividad
+industrial en el departamento: un establecimiento de fundicion llamado
+Mojotoro, que aqui aparece como parte del activo de una sociedad que se
+disuelve. La capa previa imprime la fecha de la sentencia como "octubre 28
+de i^s."; ese renglon NO se miro en la imagen y el año de la sentencia queda
+como lectura de capa. Mojotoro es termino del anillo 2 y aqui viene dentro
+de un acto que nombra al departamento: va al §A.
+
+------------------------------------------------------------------------
+FUENTE: Ed. 1088, viernes 13 de noviembre de 1925, hoja 2, columnas 1 y 2.
+Anunciado en el sumario, hoja 1.
+FICHA: Decreto N° 2962, Salta, Octubre 29 de 1925, rubro "Renuncia y
+nombramiento". Acepta la renuncia de Carlos Murua como Comisario de Policia
+del Departamento de La Caldera, dandole las gracias por los servicios
+prestados, y nombra en su lugar a Francisco Arias. Expediente N° 7469 letra
+E. Firman CORBALAN y ERNESTO M. ARAOZ.
+MODO DE LECTURA: Imagen. Columna 1, y 540-718, y columna 2, y 130-240, a 300
+dpi.
+TEXTO:
+                                       Renuncia y nombramiento
+  2962—Salta, Octubre 29 de 1925.
+  Visto èste expediente N° 7469, letra E, en el que la Jefatura de
+  Policía, eleva la renuncia presentada por don Carlos Murúa del
+  cargo de Comisario de Policía de! Departamento de La Caldera y
+  atento a la propuesta formulada en el mismo,
+  El Poder Ejecutivo de la Provincia
+  DECRETA:
+  Art. 1°.—Acéptase la renuncia interpuesta por don Carlos Murúa
+  del cargo de Comisario de Policia del Departamento La Caldera,
+  dàndosele las gracias por los servicios prestados.
+  Art. 2°.—Nómbrase en lugar del dimitente al señor don Francisco
+  Arias.
+  Art. 3°.—Comuníquese, publiquese, dèse al Registro Oficial y
+  archívese.
+  CORBALÁN—ERNESTO M. ARÁOZ.
+NOTA DE LECTURA: La capa previa lee el numero como "3962"; la imagen dice
+2962, y la serie de la edicion lo confirma, porque el acto siguiente es el
+2963. El nombre del reemplazante se leyo en la imagen: Francisco Arias. Con
+este decreto Carlos Murua deja la comisaria en octubre, seis meses despues
+de haber entrado por el decreto 2453; el decreto no dice nada de la
+receptoria de rentas que el decreto 2465 le habia dado, y no se infiere que
+la haya dejado.
+
+§B · VECINDAD
+=============
+El anillo 2 dio acierto en 37 de los 111 terminos del config, con 253
+aciertos repartidos en unas 200 hojas. Se leyo el contexto de los 37, uno
+por uno, y no solo de los que parecian del departamento. Los terminos con
+acierto, por peso:
+
+  isasmendi (28); apaza (27); castellanos (23); murua (12); tabacal (12);
+betania (11); nogales (8); aramayo (8); penales (6); el bordo (6); vaqueros
+(5); mojotoro (5); entre rios (5); el monte (5); quintin (4); parroquia (4);
+wierna (3); lesser (2); santa rufina (2); san alejo (2); rio blanco (2);
+mamani (2); angostura (1); cornisa (1); durazno (1); chaile (1); pacara (1);
+lagunilla (1); la despensa (1); sauces (1); acheral (1); santa gertrudis
+(1); condori (1); angosto (1); queseria (1); quebrada de lesser (1); rio
+vaqueros (1)
+
+B.1 · Nucleos ya fichados en el §A
+----------------------------------
+Se nombran y no se repiten: Vaqueros y Mojotoro (mesas receptoras de 1048/6,
+subcomisarias de 1070/7 y 1087/4, fundicion de 1087/15); San Alejo y Santa
+Rufina, que en 1925 son una sola finca (pedimentos de 1058/9 y 1072/15); La
+Despensa de los herederos Murua y la fraccion Ceival (deslinde de 1075/11);
+y la Iglesia Parroquial de Caldera, que es mesa receptora (1048/6). El
+termino "parroquia" da cuatro hojas y nueve aciertos en el año: ocho son
+iglesias parroquiales de otros departamentos y uno es la de Caldera.
+
+B.2 · Nucleos del departamento en actos que NO nombran el termino
+-----------------------------------------------------------------
+Son tres, y son los que justifican el paragrafo: ninguno de los tres habria
+aparecido por el anillo 1.
+
+  1. Ed. 1046, hoja 2. Decreto 2077, Salta, 31 de diciembre de 1924, rubro
+"No ha lugar", expediente N° 2129 letra D. Rechaza la presentacion de la
+sucesion de Juan M. Sosa, de Bernardo Moya por el doctor Joaquin
+Castellanos, de Luis Patron Costas, Ignacio Ortiz y Petrona M. de Zerda
+contra la autorizacion dada al Comando de la 5a. Division de Ejercito para
+clausurar el camino particular del establecimiento «Campo Belgrano», el que
+usa "el publico que transita la quebrada de Lesser, con molestias para la
+instruccion de la tropa". En reemplazo se abriria otro que, costeando el rio
+Vaqueros, conduce a la misma localidad, "y que ha sido siempre el camino
+nacional". Obras Publicas informa que la variante agrega unos dos kilometros
+sobre un total de trece contados desde la plaza 9 de Julio de Salta. POR QUE
+SE INCLUYE: quebrada de Lesser y rio Vaqueros son terminos del anillo 2 y el
+acto decide el acceso al departamento; el decreto no nombra a Caldera ni una
+vez (§5.1). Leido en la capa previa; no se miro la imagen.
+
+  2. Ed. 1084, hoja 16. Edicto de deslinde, mensura y amojonamiento de las
+fincas «Castañares», «Tres Cerritos» y «La Candelaria» o «Portezuelo
+Grande», del departamento de la Capital, a pedido de Dolores Torino de Ortiz
+y Maria Francisca Catalina Ortiz de Pereyra Rosas. Castañares limita al
+norte con el rio Mojotoro hasta el punto denominado «el Angosto del rio
+Mojotoro»; al naciente con parte de la finca «La Lagunilla» de doña Lucinda
+Quiroz; y al poniente con el camino carril a Jujuy y Bolivia, que la separa
+de «Buena Vista o Campo Belgrano», propiedad del gobierno nacional, "hasta
+el cruce de dicho camino con el rio Mojotoro, o Vaqueros". POR QUE SE
+INCLUYE: Mojotoro, Angosto y Lagunilla son terminos del anillo 2 y el acto
+dibuja el limite sur del departamento desde el lado de la Capital. Ademas
+hace una equivalencia que conviene registrar y no conciliar: llama al mismo
+curso "el rio Mojotoro, o Vaqueros". Leido en la capa previa.
+
+  3. Ed. 1090, hoja 14. Remate judicial por Jose Ma. Leguizamon, por
+disposicion del juez doctor Gomez Rincon y correspondiente al juicio de
+disolucion de la sociedad Levilly y Cia.: se vende, con base de $ 222.144,5,
+"la fundicion metalurgica de Mojotoro y la mina La Pulpera ubicada en
+Jujuy". POR QUE SE INCLUYE: es el mismo establecimiento que la sentencia de
+1087/15 situa "en el departamento de La Caldera", pero el aviso de remate no
+nombra al departamento: sin el anillo 2 la venta de la fundicion del
+departamento no se veria. Leido en la capa previa. La cifra de la base lleva
+coma decimal de un solo digito, "222,144.5", y se transcribe como esta.
+
+B.3 · Terminos que en 1925 son otra cosa
+----------------------------------------
+Se leyeron todos los contextos. El reparto:
+  isasmendi (28 hojas): apellido en todos los casos — Ricardo J., Domingo
+S., Mariano y Carlos, Filomena Mazzetti de Isasmendi, y N. Cornejo Isasmendi
+como secretario. Ninguno es topónimo.
+  apaza (27): apellido, sobre todo en las mesas receptoras de Guachipas y
+Carahuasi, y en dos sucesorios.
+  castellanos (23): el doctor Joaquin Castellanos como letrado, Benjamin
+Castellanos, Francisco Araoz Castellanos, y la subcomisaria de «Castellanos,
+departamento de la Capital».
+  murua (12): apellido. Cuatro hojas son Carlos Murua, que esta en el §A;
+una es Eustaquio Murua, nombrado en una comision municipal de otro
+departamento; una es «La Despensa de los herederos Murua», que esta en el
+§A; y una es "Anastacio Muruaga", que no es el apellido.
+  tabacal (12): «El Tabacal» de Oran, con su ingenio San Martin del Tabacal
+y su subcomisario Navor J. Frias.
+  betania (11): Betania, departamento de Campo Santo, con su subcomisaria y
+su escuela nacional N° 28.
+  nogales (8, 25 aciertos): apellido — el juicio de divorcio de los esposos
+Nogales, Jose Santos Nogales e Inocencia Aramayo — y el arbol frutal en una
+lista de plantacion.
+  aramayo (8): apellido — Dionicio, Agustin, Francisco, Jose Pio y Mercedes
+Diaz de Aramayo.
+  penales (6, 8 aciertos): NINGUNO es topónimo. Los ocho son el adjetivo:
+"sanciones penales", "disposiciones penales", "codigo de procedimientos
+penales". Es el termino que v15 agrego al config por la forma con que 364 h4
+de 1912 imprimia «los Peñones»; en 1925 solo produce ruido (§F).
+  el bordo (6): El Bordo de Campo Santo y el de Anta 1a. seccion, los dos
+con subcomisaria.
+  entre rios (5): la finca «Entre Rios» del lote 2 de Simon Arapa, la calle
+Entre Rios de la ciudad, la provincia de Entre Rios y una finca de un plano
+de riego.
+  el monte (5, 9 aciertos): sustantivo comun en descripciones de linderos y
+en un pleito por ganado de la finca «La Falda».
+  quintin (4): nombre de pila — Quintin Clodomiro Romano, Quintin Cortez,
+Quintin S. Aguirre — y la finca «San Quintin o San Rafael» de Velarde.
+  wierna (3): apellido. Cesar Wierna, nombrado Juez de Riego de la zona de
+la quebrada del Toro entre Ojo de Agua y Villa Sola por el decreto 2860 del
+23 de septiembre, y subcomisario de «San Bernardo», Rosario de Lerma; y
+Arturo Wierna, en Estadistica. Ninguno toca al departamento.
+  lesser (2): una es la quebrada de Lesser del §B.2; la otra es el apellido,
+en una division de condominio de Justiniano Lesser.
+  rio blanco (2): Rio Blanco de Rosario de Lerma y Rio Blanco con Cuesta
+Azul, en el norte.
+  mamani (2), condori (1), chaile (1): apellidos, en comisiones municipales
+y mesas receptoras de otros departamentos.
+  angostura (1): "la angostura del rio Seco", Oran.
+  durazno (1): "duraznos" en una lista de frutales.
+  pacara (1, 2 aciertos): tarifa de maderas por tonelada.
+  sauces (1): «Los Sauces», Guachipas.
+  acheral (1): finca lindera del rio Zenta, Oran.
+  santa gertrudis (1, 3 aciertos): finca de Chicoana, en un expediente de
+riego.
+  lagunilla (1) y angosto (1): los dos caen en el mismo acto del §B.2, el
+deslinde de Castañares.
+  cornisa (1): no es el paraje. Es la palabra "comisarios" leida por el OCR:
+"diez y seis idem para cornisarios, subcomisarios y oficiales de policia".
+  queseria (1): tampoco. Es "queserian", del verbo, partido por el renglon:
+"los gastos que tales trabajos originasen, los queserian reembolsados".
+
+B.4 · Ausencias del anillo de actores
+-------------------------------------
+Se busco a las 34 personas que los actos del §A nombran, sobre el texto
+normalizado y sobre el texto sin puntuacion. Van en los tres grupos que pide
+la rubrica.
+
+PRIMER GRUPO — solo aparecen en su propio acto, y en ningun otro lugar del
+año: Dardo Tula (registro civil), Attilio Fantoni (el presupuesto de la
+comisaria), Bernardo Austerlitz (dueño de San Alejo y Santa Rufina), Rodolfo
+Povoli, Juan Piatelli (agrimensor), Reymundo Echenique, Julio Juarez, Jacoba
+L. de Gomez, Francisco S. Urquiza, Antonio Aguero (hijo) y Francisco Arias.
+Para estos once, el acto del §A es toda su presencia en 1925.
+
+SEGUNDO GRUPO — aparecen en mas de un acto del departamento. Es el grupo que
+arma la trama del año:
+  Carlos Murua: comisario en mayo (1063/3), receptor de rentas dos dias
+despues (1063/8), y renunciante a la comisaria en octubre (1088/2). En
+1063/4 aparece ademas como el reemplazado en la receptoria de Rivadavia, "en
+reemplazo de don Carlos Murua": es decir que el mismo dia que entra en
+Caldera sale de otro departamento.
+  Julio Royo Ortiz: sale de la comisaria en mayo (1063/3) y renuncia a la
+Comision Municipal en junio (1067/4), con su anuncio de sumario en 1067/1.
+  Rafael Delgado: miembro de la Comision Municipal en junio (1070/6),
+encargado interino del Registro Civil en agosto (1076/2) y titular en
+octubre (1087/5). Tres cargos del mismo departamento en cinco meses.
+  Jose (o Jose A.) Delgado: entra al Registro Civil en mayo (1064/7), pide
+licencia en agosto (1076/2) y renuncia en octubre (1087/5).
+  Daniel Linares: miembro de la Comision Municipal en junio (1070/6) y, en
+agosto, lindero de la fraccion Ceival con su finca «Mosquera» (1075/11).
+  Carlos F. Matienzo: sale del Registro Civil de Caldera en mayo (1064/7) y
+firma como Juez de Paz de la Caldera en agosto (1081/10).
+  Juan Larran: aviso en julio (1069/15) y concesion en agosto (1077/7), el
+mismo expediente 1168-C.
+
+TERCER GRUPO — aparecen tambien fuera del departamento: Zenon Arias,
+Escribano de Minas, firma 44 hojas del año, de las cuales cinco son los
+pedimentos de Caldera; Julio Figueroa S., 37 hojas, preside la Junta de
+Escrutinio; Jose Maria Sola (hijo), 21 hojas, es a la vez secretario del H.
+Senado y el dueño de las fincas del deslinde de 1075/11; Jose Manuel Roldan,
+5 hojas; Ramon L. Ontiveros, 4, que sale del Registro Civil de Caldera y
+entra en otros; Julio Suarez, 2; Emilio D. Sylvester, 2.
+
+BUSQUEDAS QUE FALLAN, Y POR QUE. Siete personas nombradas en el §A no
+aparecen ni en su propio acto cuando se las busca por nombre y apellido:
+Genaro Molina, Fernando Robles, Angel Fernandez, Lucas Molina, Cirilo E.
+Bejarano, Anastacio Valencia y Pedro Arevalo. No son ausencias: son fallas
+de la busqueda, y se declaran nombrandolas (§5.1). Las causas son dos y las
+dos son de esta epoca. La primera: la lista de mesas receptoras de 1046/9
+imprime el apellido ANTES del nombre, al reves que el resto del Boletin, de
+modo que el patron nombre-apellido no engancha. La segunda: el OCR parte las
+palabras con espacios interiores, y "a revalo pedro" no contiene ni
+"arevalo". Buscando sobre el texto con los espacios suprimidos aparecen
+cinco de los siete, incluido Genaro Molina en su propio decreto 2671. Cirilo
+E. Bejarano no aparece ni asi, porque la capa lo imprime "hejarano"; se leyo
+en la imagen. Fernando Robles aparece tambien con el patron invertido.
+
+FALSOS NEGATIVOS DEL ANILLO 2. Cuatro terminos del config que el año SI
+tiene, y que la busqueda no devuelve por la misma razon: «Las Nieves», que
+no esta en el anillo 2 y es la finca de tres pedimentos; «Cerro Escalante»,
+que tampoco esta; «Ceival», que tampoco; y «Campo Belgrano», el
+establecimiento del camino de la quebrada de Lesser. Los cuatro se proponen
+para el config (§F).
+
+§C · LIMITROFES
+===============
+Los limitrofes del año salen todos del §B.2 y no agregan actos propios. La
+Capital aparece en el deslinde de Castañares y Tres Cerritos, que fija el
+limite por el rio Mojotoro; Campo Santo aparece dos veces: en el deslinde de
+las fincas del Dr. Sola, que estan "en el departamento de Campo Santo y
+parte en el de La Caldera" (1075/11, que esta en el §A), y en Betania y El
+Bordo, que son de Campo Santo y no del departamento (§B.3). Jujuy aparece
+por la mina La Pulpera, que iba en el mismo remate que la fundicion de
+Mojotoro. No hay en 1925 ningun acto de limites entre Caldera y un vecino.
+
+§P · PLANOS
+===========
+El corpus no publica ni un plano. La palabra aparece en 22 de las 798 hojas
+y en todas es una remision a un plano que esta en un expediente y no en el
+Boletin. Dos de esas 22 hojas coinciden con un termino del departamento, y
+una de las dos es una remision propia: el auto de concesion del expediente
+1168-C (1077/7) dice que la ubicacion del pedimento se aclaro "como se
+expresa en el escrito corriente a fs. 5 y plano de fs. 4". Ese plano queda
+registrado como citado y no acompañado. El techo de resolucion del corpus es
+150 ppi en las 798 hojas, la mitad que en 1908-1912: si hubiera cartela de
+plano, no se leeria.
+
+§D · INDICE
+===========
+Los 25 actos del §A por materia, con su edicion y su hoja.
+
+GOBIERNO Y POLICIA DEL DEPARTAMENTO
+  Comisaria de la Caldera, presupuesto de reparaciones por 3.302 m/l — decr.
+2152, ed. 1050 h. 3-4
+  Comisario de La Caldera, Carlos Murua por Julio Royo Ortiz — decr. 2453,
+ed. 1063 h. 3
+  Subcomisario ad-honorem de Vaqueros, Antonio Aguero (hijo) por Francisco
+S. Urquiza — decr. 2674, ed. 1070 h. 7
+  Agentes para las subcomisarias auxiliares, entre ellas Mojotoro y Vaqueros
+— ed. 1087 h. 4
+  Comisario de La Caldera, renuncia de Carlos Murua y nombramiento de
+Francisco Arias — decr. 2962, ed. 1088 h. 2
+
+MUNICIPALIDAD Y REGISTRO CIVIL
+  Encargados del Registro Civil de Caldera y General Guemes, Jose Delgado y
+Dardo Tula — decr. 2500, ed. 1064 h. 7
+  Renuncia de Julio Royo Ortiz a la Comision Municipal — decr. 2575, ed.
+1067 h. 4
+  Integracion de la Comision Municipal: Daniel Linares, Rafael Delgado y
+Genaro Molina — decr. 2671, ed. 1070 h. 6
+  Licencia de Jose Delgado, interino Rafael Delgado — decr. 2765, ed. 1076
+h. 2
+  Renuncia de Jose A. Delgado, titular Rafael Delgado — decr. 2947, ed. 1087
+h. 5
+
+HACIENDA
+  Receptor de Rentas y Recaudador de Impuestos al Consumo, Carlos Murua,
+fianza de 5.000 — decr. 2465, ed. 1063 h. 8
+  Exoneracion de Contribucion Directa 1921-1924 a Jacoba L. de Gomez y
+Hermanas — ley sin numero legible, ed. 1084 h. 7
+
+ELECCIONES
+  Decreto de convocatoria: Caldera elige un diputado — 28 de enero, ed. 1047
+h. 22, 1048 h. 27, 1049 h. 23, 1050 h. 19 y 1051 h. 18
+  Autoridades de las dos mesas del Colegio Electoral Num. 5 — ed. 1046 h. 9
+  Ubicacion de las mesas: Caldera colegio 5, Vaqueros colegio 6 — ed. 1048
+h. 6
+  Candidato de la Union Provincial por Caldera, Julio Suarez — ed. 1050 h.
+15
+
+JUSTICIA DE PAZ
+  Sucesorio de Maria Asuncion Gutierrez de Valencia, juez Carlos F. Martinez
+— ed. 1056 h. 7
+  Sucesorio de Juan Valencia, juez Carlos F Matienzo — ed. 1081 h. 10
+
+MINAS
+  Exp. 1166-C, Povoli y Premoli, San Alejo y Santa Rufina — ed. 1058 h. 9
+  Exp. 1168-C, Juan Larran, Las Nieves — ed. 1069 h. 15 y, con el auto de
+concesion, ed. 1077 h. 7
+  Exp. 1165-C, Roldan y Premoli, San Alejo y Santa Rufina — ed. 1072 h. 15
+  Exp. 1195-C, Julio Juarez, herederos de Juan A. Pinto — ed. 1080 h. 9
+  Exp. 1169-G, Emilio D. Sylvester, Las Nieves — ed. 1081 h. 12
+
+PROPIEDAD E INDUSTRIA
+  Deslinde de «Sauce» o «Paraiso» y la fraccion Ceival, del Dr. Jose Maria
+Sola — ed. 1075 h. 11
+  Disolucion de Levilly y Cia.: la fundicion Mojotoro — ed. 1087 h. 15
+
+Y los tres actos del §B.2, que no nombran al departamento: el camino de la
+quebrada de Lesser (ed. 1046 h. 2), el deslinde de Castañares por el rio
+Mojotoro (ed. 1084 h. 16) y el remate de la fundicion de Mojotoro (ed. 1090
+h. 14).
+
+§E · OBSERVACIONES
+==================
+
+E.1 · Duplicacion y saldos
+--------------------------
+DUPLICACION. Sin las .jpg del script no hay md5, ni dhash, ni medicion de
+tinta (E.10). Se controlo por texto y esta en E.6: un solo acto repetido en
+el año.
+
+SALDOS. La Tesoreria General publico NUEVE resumenes mensuales en el año —
+diciembre de 1924, enero, febrero, marzo, abril, mayo, agosto, septiembre y
+noviembre de 1925 —, y no publico los de junio, julio ni octubre. Se
+contaron antes de prometer la cadena. Los saldos, leidos en la imagen salvo
+donde se dice:
+
+  saldo de noviembre de 1924 ............. $  9.573,79
+  pasa al mes de enero de 1925 .......... $  5.684,55
+  pasa al mes de febrero de 1925 ........ $  3.911,42
+  pasa al mes de marzo de 1925 .......... $ 31.507,45
+  saldo del mes de marzo (apertura abril)  $ 20.419,45
+  pasa al mes de mayo de 1925 ........... $  3.024,17
+  pasa al mes de junio de 1925 .......... $ 12.389,18
+  saldo del dia 31 de julio de 1925 ..... $  5.805,46
+  de caja al 31 de agosto de 1925 ....... $ 16.834,78
+  de caja al 30 de septiembre de 1925 ... $ 14.375,46
+  saldo del dia 31 de octubre de 1925 ... $  5.591,77
+  saldo al dia 30 de noviembre de 1925 .. $  3.516,16
+
+LA CADENA SE ARMA EN DOS TRAMOS Y NO EN UNO. Primer tramo, cinco enlaces
+seguidos que cierran exactos: el resumen de diciembre de 1924 cierra en
+5.684,55 y el de enero abre en 5.684,55; enero cierra en 3.911,42 y febrero
+abre alli; febrero cierra en 31.507,45 y marzo abre alli; marzo cierra con
+la "existencia en caja que pasa al mes de Abril" y abril abre en 20.419,45;
+abril cierra en 3.024,17 y mayo abre alli. Mayo cierra en 12.389,18 y ahi se
+corta, porque junio y julio no se publicaron. Segundo tramo: agosto cierra
+en 16.834,78 y septiembre abre en 16.834,78, un enlace exacto. Septiembre
+cierra en 14.375,46 y ahi se corta otra vez, porque octubre no se publico;
+noviembre abre con el saldo del 31 de octubre, 5.591,77, que no se puede
+cotejar contra nada.
+
+La cadena queda abierta por los dos extremos del año: contra 1924, porque el
+primer resumen publicado es el de diciembre de 1924 y su apertura, 9.573,79,
+es el saldo de noviembre de 1924, que esta fuera del corpus; y contra 1926,
+porque el ultimo publicado es el de noviembre y cierra en 3.516,16. Seis de
+los doce enlaces posibles del año calendario se pudieron cerrar; los otros
+seis no existen porque el resumen no se publico.
+
+El unico enlace que no se leyo entero en la imagen es el cierre de marzo: la
+hoja 1057/14 dice "saldo existente en caja que pasa al mes de Abril de 1925"
+y la cifra no se aislo en la capa; se da por el lado de la apertura de
+abril, que si se leyo. Se declara y no se concilia.
+
+E.2 · Cobertura
+---------------
+798 hojas con capa leida y pasada, 52 ediciones. Imagenes miradas: 4
+recortes de tapa (1043, 1044, 1046, 1048), una vista general de 1067 hoja 4,
+y 29 recortes de columna o de tramo de columna en 22 hojas — 1046/9,
+1047/22, 1048/6, 1050/3, 1050/4, 1050/15, 1056/7, 1058/9, 1063/3, 1063/8,
+1064/7, 1067/4, 1070/6, 1070/7, 1075/11, 1076/2, 1080/9, 1081/10, 1081/12,
+1084/7, 1087/4, 1087/5, 1087/15 y 1088/2 —, repartidos en 13 vistas.
+Columnas cotejadas contra la capa previa: 26, en 22 hojas. En ninguna de las
+26 aparecio columna perdida ni renglon traspuesto entre columnas vecinas; si
+aparecieron, sistematicamente, palabras partidas con espacios interiores.
+Citados y no acompañados: dos — el deslinde de las fincas Las Nieves
+ejecutado por el agrimensor P. Arias en 1889, en que se apoyan dos
+pedimentos mineros, y el plano de fs. 4 del expediente 1168-C (§P).
+
+COTEJO SUMARIO/CUERPO. En 1925 SI es aplicable, por primera vez desde 1907:
+las ediciones traen sumario en las hojas 1 a 3 con remisiones del tipo
+"(Pagina 8)", y esa numeracion es la misma del folio impreso en la cabecera,
+que coincide con el numero de hoja dentro de la edicion (§1). Se cotejaron
+las NUEVE remisiones del sumario que nombran al departamento. Ocho caen
+donde dicen: 1050 a la pagina 3, 1063 a la 3 y a la 8, 1064 a la 7, 1070 a
+la 6, 1076 a la 2, 1087 a la 5 y 1088 a la 2. Una falla: el sumario de la
+edicion 1067 anuncia la renuncia de Julio Royo Ortiz a la Comision Municipal
+de «la Caldera» en la pagina 3, y el decreto 2575 esta entero en la pagina
+4; la pagina 3 no nombra al departamento ni al renunciante. Se declara y no
+se concilia. Los numeros del sumario se tomaron de una sola version, la
+previa, como manda la regla, y el cuerpo tambien, porque version propia no
+hay.
+
+E.3 · Sin mencion y no mirado
+-----------------------------
+De las 798 hojas, 752 no dieron acierto en ninguna pasada del anillo 1 y no
+se miraron. De las 46 candidatas, 22 se miraron en la imagen. Quedan sin
+mirar: las dos hojas mineras de las fichas armadas solo con la capa (1069/15
+con 1077/7, y 1072/15), las cinco repeticiones del decreto de convocatoria
+salvo la primera, las nueve hojas de sumario que solo anuncian un acto
+fichado, y los 7 falsos positivos, que se juzgaron por contexto. Las tres
+hojas del §B.2 tampoco se miraron.
+
+E.4 · Firmas y autoridad
+------------------------
+CAMBIO DE GOBIERNO. La tapa dice GOBIERNO DEL DR. ADOLFO GUEMES hasta la
+edicion 1060 y GOBIERNO DEL DR. JOAQUIN CORBALAN desde la 1061, del 8 de
+mayo. Pero la tapa llega tarde: el cuerpo fecha la trasmision del mando el
+1° de mayo de 1925, y lo dice de una manera oblicua — un decreto de 1070/5
+aprueba el pago de 1.430 pesos a un tal Camerano por "el lunch servido en
+los salones de la Gobernacion el dia primero de mayo ppdo. con motivo de la
+trasmision del mando gubernativo". La firma de Guemes aparece en 18
+ediciones, de la 1043 a la 1060; la de Corbalan, de la 1060 a la 1094. La
+edicion 1060 trae las dos: es el numero del cambio. Cuidado con contar el
+apellido Guemes a ciegas: aparece 66 veces en el año y 29 de ellas son el
+departamento de General Guemes.
+
+FORMULAS DE ENCABEZADO. Conviven tres y no se normalizan: "El Poder
+Ejecutivo de la Provincia" (66 veces), "El Gobernador de la Provincia" (57)
+y el agregado "en acuerdo de Ministros" (110 veces sobre las dos
+anteriores). La forma "El P. Ejecutivo de la Provincia", que era corriente
+en 1912, no aparece ni una vez en 1925. Los dos decretos de Caldera de mayo
+muestran la convivencia en dos dias: el 2453, del 11 de mayo, encabeza "El
+Poder Ejecutivo de la Provincia" y el 2465, del 12, "El Gobernador de la
+Provincia".
+
+REFRENDOS. Bajo Guemes firman Luis Lopez y J. C. Torino; el decreto 2152, de
+la comisaria de la Caldera, los trae a los dos, en acuerdo de Ministros.
+Bajo Corbalan firman Ernesto M. Araoz en Gobierno (233 apariciones) y A. B.
+Rovaletti en Hacienda (62). Los decretos del departamento reparten limpio:
+comisaria, registro civil y comision municipal llevan Araoz; la receptoria
+de rentas, que es Hacienda, lleva Rovaletti.
+
+"ES COPIA". En 1925 no existe: la formula no aparece ni una vez en las 798
+hojas. Es una diferencia neta con 1912, donde habia que registrar quien la
+firmaba. Aqui el acto cierra con la firma del gobernador y el ministro y
+nada mas.
+
+INTERINATO, Y ESTA VEZ CON CIERRE. Se abre y se cierra dentro del año, a
+diferencia del de 1912:
+  Ley N° 2819, dada el 31 de agosto de 1925 y promulgada el 2 de septiembre,
+autoriza al Gobernador a ausentarse del territorio por hasta treinta dias.
+La firman R. Patron Costas como Presidente del H. Senado y Victor Cornejo
+Arias como Presidente de la Camara de Diputados.
+  Decreto de "Delegacion de mando", Salta, 2 de septiembre de 1925: el
+Gobernador, "teniendo necesidad de salir del territorio de la provincia, por
+breves dias" y "encontrandose ausente el señor Presidente del H. Senado",
+delega el mando, en cumplimiento del art. 116 de la Constitucion, en el
+Presidente de la H. Camara de Diputados, doctor D. Victor Cornejo Arias. La
+capa previa lee el numero como "ssis" y NO se miro en la imagen: el numero
+de ese decreto queda sin establecer.
+  Durante el interinato, el Presidente de la Camara de Diputados firma en
+ejercicio del Poder Ejecutivo al menos dos decretos, los dos publicados en
+1080/3.
+  Decreto N° 2828, Salta, 7 de septiembre de 1925, rubro "Trasmision del
+mando gubernativo": "encontrandose de regreso en esta capital el Excmo.
+señor Gobernador de la Provincia, doctor Joaquin Corbalan", queda en
+posesion del mando. El interinato duro cinco dias, del 2 al 7 de septiembre,
+y las dos puntas estan publicadas.
+
+NUMERACION. En 1925, a diferencia de 1908-1912, los decretos SI llevan
+numero, corrido y creciente dentro del año: 2077 en la edicion 1046 (que es
+todavia de diciembre de 1924) y 2962 en la 1088. Sobre los vecinos ±3 de
+cada acto del §A no aparecio ningun desorden: el 2453 y el 2454 son del
+mismo 11 de mayo, el 2465 y el 2466 del mismo 12, el 2962 y el 2963 del
+mismo 29 de octubre. Los actos que NO llevan numero son los de la
+Legislatura publicados como ley con rubro propio, el decreto de convocatoria
+del 28 de enero y los edictos.
+
+E.5 · Cortes y columnas
+-----------------------
+U+0002: cero apariciones. U+00AD: 15.115, todas seguidas de salto de
+renglon. El modo de falla de esta capa no es el corte de palabra sino el
+espaciado interior: el OCR escribe "L ic e n c ia", "E sciib ie n te", "c a
+ld e ra". Por eso la laxa con huecos es aca la pasada que rescata, y no la
+difusa. Columna perdida: no confirmada ni descartada todavia, porque no se
+cotejo ninguna columna contra la imagen. No se afirma que no la haya.
+
+E.6 · Repeticiones
+------------------
+En 1925 los avisos NO llevan la marca de publicacion tipo "251 v Dbre 5" que
+en 1912 obligaba a distinguir el anuncio de la repeticion: se buscaron esas
+marcas en el corpus entero y no hay ninguna. Lo que llevan es un numero de
+orden entre parentesis al pie — (962), (1115), (1178), (1183), (1192),
+(1276) — que es un numero de aviso y no una fecha de vencimiento.
+
+La repeticion se comprobo, por lo tanto, por el texto, buscando una frase
+distintiva de cada acto del §A en las 798 hojas. Resultado: de los 25 actos
+fichados, uno solo se repite, y es el decreto de convocatoria electoral del
+28 de enero, que sale identico en cinco ediciones seguidas — 1047, 1048,
+1049, 1050 y 1051 —, es decir todos los viernes desde el 30 de enero hasta
+el 27 de febrero, ultimo viernes antes de la eleccion del domingo 1° de
+marzo. Va como una sola entrada del §A con cinco apariciones.
+
+Los dos pedimentos sobre «San Alejo y Santa Rufina» (expedientes 1166-C y
+1165-C) NO son una repeticion: son dos solicitudes distintas, de
+solicitantes distintos, sobre la misma finca y el mismo dia, publicadas con
+catorce ediciones de diferencia. El cotejo se hizo sobre la capa y no sobre
+la imagen, y se declara asi (§6).
+
+E.7 · Falsos positivos y negativos
+----------------------------------
+Falsos positivos del anillo 1 ya clasificados por contexto en este turno,
+sin mirar imagen todavia:
+  1048/8: "escuela nacional n° 63 Calavera o Bella Vista", un local de mesa
+electoral de otro departamento.
+  1048/20 y 1079/6: "cadera", region del cuerpo, en dos causas criminales.
+  1052/13: "la aldea Santillan", Tucuman.
+  1092/14 y 1092/15: "calle Maipu", por la laxa con huecos ("calle ma").
+  1094/3: "diario local de mayor circulacion", idem ("cal de ma").
+  Difusa ampliada, 15 formas: cualquiera (12), cabrera (11), calidad (9),
+cuadras (7), cuadra (5), cadaver (4), cadena (4), caneria (4), capilla (2),
+cartera (2), cualqueira, galeria, cadenas, caliepa, calaveras. Todas
+coinciden con lo ya juzgado para 1911 y 1912 y ninguna se agrega al config
+(§12).
+
+Falsos positivos del anillo 2 que NO son topónimo en ninguna epoca y que
+conviene sacar del config: "penales", que en 1925 da ocho aciertos y los
+ocho son el adjetivo; "cornisa", que solo engancha la palabra "comisarios"
+mal leida; y "queseria", que solo engancha "queserian". Los tres se
+desarrollan en §B.3 y se proponen en §F.
+
+E.8 · Fidelidad numerica
+------------------------
+CUADROS PUBLICADOS EN EL AÑO: nueve, y los nueve son el resumen mensual del
+movimiento de la Tesoreria General de la Provincia, firmado por Laudino
+Pereyra, Contador General, y Ricardo F. Usandivaras, Tesorero General, y
+aprobado por decreto del Ministerio de Hacienda. Estan en 1045/20-21,
+1050/17-18, 1053/21-22, 1057/13-14, 1061/10-11, 1066/13-14, 1079/13-14,
+1083/12-13 y 1092/18-19. NO hay en 1925 un solo balance municipal, ni de
+Caldera ni de ningun otro departamento: es un hecho del corpus y no una
+tabla que quedo sin mirar. Tampoco hay tabla alguna dentro de un acto del §A
+o del §B.
+
+SE RECALCULO AL MENOS UN SUBTOTAL DE CADA UNO DE LOS NUEVE. Cierran los
+nueve. Lo que el recalculo mostro no es que el original falle — falla la
+capa previa, y el recalculo es lo que apunta al digito:
+
+  Diciembre de 1924 (1045/20). Receptoria General: los quince renglones
+suman 121.486,54 contra 121.486,54 impreso. Tambien cierran Impuestos al
+Consumo (67.667,71), Calculo de Recursos (23.605,51), Banco Provincial
+(197.069,89) y el transporte (474.030,40). Cinco subtotales, cinco exactos.
+  Enero de 1925 (1050/17). Receptoria General 1925: 55.562,79 contra
+55.562,79. Tambien cierran el bloque de 1924 (80.256,87), Impuestos al
+Consumo (68.715,61) y el transporte (207.186,21). Ojo con el transporte: el
+renglon "Aguas Corrientes Campaña 30.—" NO entra en el subtotal de Calculo
+de Recursos, que es 2.620,94, pero SI entra en el transporte. El cuadro esta
+bien; lo que engaña es la sangria.
+  Febrero de 1925 (1053/21). Receptoria General 1925: 116.456,34 exacto;
+bloque de 1924: 9.443,76 exacto; el total de la receptoria, 129.788,69,
+cierra sumando los dos mas la renta atrasada.
+  Marzo de 1925 (1057/13). Aqui el recalculo trabajo. Sumada como la lee la
+capa, la Receptoria General da 199.837,56 contra 199.837,86 impreso: faltan
+treinta centavos. La capa lee "Bosques 14.886.S1"; a 600 dpi la imagen dice
+14.886,81, y con esa cifra la columna cierra exacta. Lo mismo en Impuestos
+al Consumo: sumado con "Cigarros 900" da 56.510,41 contra 56.570,41 impreso,
+sesenta pesos de diferencia; a 600 dpi la imagen dice 960,—. Con las dos
+lecturas el transporte, 339.014,60, cierra al centavo. Las dos cifras se
+miraron a 600 dpi expresamente porque el recalculo las señalo.
+  Abril de 1925 (1061/10). Igual: sumada desde la capa, la Receptoria
+General falla por 2,06. Leida en la imagen — Bosques 7.748,34 y Vinos
+17.279,16, donde la capa daba 7.746,34 y 17.279,10 — suma 163.094,94 contra
+163.094,94 impreso. Exacto.
+  Mayo de 1925 (1066/13). Receptoria General: cierra en 134.292,49 solo si
+el renglon de Azucar es 1.833,32 y no 11.833,32, que es como podria leerse
+la capa. Impuestos al Consumo: 62.331,19 exacto. Calculo de Recursos: cierra
+en 26.671,75 solo si Eventuales es 637,16 y no 627,16. El transporte,
+314.122,60, cierra con esas dos lecturas. ESTAS DOS NO SE MIRARON EN LA
+IMAGEN: son la lectura que cierra la columna, y se declaran como tal, con la
+otra al lado (§8.7).
+  Agosto de 1925 (1079/13-14). El pie cierra: 469.300,80 mas el saldo de
+caja al 31 de agosto, 16.834,78, da 486.135,58 contra 486.135,5[?] impreso,
+cuyo ultimo digito la capa no resuelve.
+  Septiembre de 1925 (1083/12-13). El pie da 887.834,85 mas 14.375,46 igual
+a 902.210,31, contra 902.210,35 impreso: cuatro centavos. La lectura que
+cierra es 887.834,89, y la capa imprime ahi "887834.85>-", con un signo
+pegado. No se miro en la imagen: se declaran las dos lecturas.
+  Noviembre de 1925 (1092/18-19). Cierra exacto y sin ayuda: 567.314,74 mas
+5.591,77 igual a 572.906,51, que es lo impreso.
+
+CIFRAS DUDOSAS QUE QUEDAN DECLARADAS, sin corregir: el ultimo digito del
+total de agosto; los cuatro centavos de septiembre; y las dos lecturas de
+mayo. Ninguna toca al departamento: los nueve cuadros son de la Tesoreria de
+la Provincia y no hay en ellos un renglon de Caldera.
+
+TABLAS NO RECALCULADAS: ninguna. Los nueve cuadros del año tienen su
+subtotal recalculado.
+
+E.9 · Contradicciones
+---------------------
+Registradas en este turno, sin conciliar:
+  1046 fecha su tapa "VIERNES 22 DE ENERO DE 1925", leido en la imagen. El
+22 de enero de 1925 fue jueves; el viernes fue el 23. No es errata del OCR y
+no se concilia.
+  Cuatro tapas imprimen el ano siguiente: 1078 "4 de septiembre de 1926",
+1083 "9 de octubre de 1926", 1087 "6 de noviembre de 1926" y 1089 "20 de
+noviembre de 1926", las cuatro leidas por ahora en la capa. Pendiente
+confirmarlas en la imagen; si se confirman, son una errata por tanda como
+las de 1912.
+  1089 y 1090 imprimen la fecha con el orden invertido: "viernes de 20
+noviembre" y "viernes de 27 noviembre".
+  Los dos pedimentos sobre la misma finca imprimen el punto de partida al
+reves: «Abrita Mayo ó Abra Mayito» en el expediente 1166-C (1058/9) y «Abra
+Mayito o Abrita Mayo» en el 1165-C (1072/15).
+  El edicto del expediente 1169-G (1081/12) se apoya dos veces en el mismo
+vertice: "a cuatro mil metros al oeste del vertice 49 [...] pasando por el
+vertice 49", donde el del 1168-C habla de los vertices 49 y 48.
+  El deslinde de Castañares (1084/16) llama al mismo curso de agua "el rio
+Mojotoro, o Vaqueros".
+  El decreto 1165-C abre parentesis con llave y lo cierra con parentesis:
+"{2.000.00 has.)".
+  El edicto de 1081/10 imprime "bienes quedado" donde el de 1056/7 imprime
+"bienes dejados".
+  El Juzgado de Paz del departamento firma sus dos edictos sucesorios del
+año con dos apellidos distintos, los dos leidos en la imagen: "Carlos F.
+Martinez" el 30 de marzo (1056/7) y "Carlos F Matienzo" el 9 de agosto
+(1081/10). El decreto 2500, de mayo, nombra a un "Carlos F. Matienzo"
+saliente del Registro Civil de Caldera. No se concilia.
+  El decreto 2465 imprime "Departamente de «La Caldera»" por Departamento, y
+el edicto de 1081/10 imprime "bienes quedado" por bienes dejados o quedados.
+Se transcriben con [sic].
+  El decreto 2575 llama al mismo cuerpo "H. Comision Municipal de Caldera"
+en el visto y "Municipalidad de la Caldera" en el articulo 1°, en cuatro
+renglones.
+  El decreto 2500 nombra "José Delgado" y el 2947 "José A. Delgado" para el
+mismo cargo y la misma persona aparente.
+  La capa previa lee mal tres numeros de decreto que la imagen aclara: 2575
+leido "2Ó75", 2962 leido "3962" y la fecha del 2453 leida "mayo xi". Ninguno
+se tomo de la capa.
+  El ano editorial cambia de XVI a XVII en la edicion 1044, con las dos
+tapas vecinas leidas en la imagen: 1043 dice Ano XVI y 1044 dice Ano XVII.
+La capa previa lee XVI tambien en 1048, donde la imagen dice XVII: se
+confirma la regla de v14 de leer el ano editorial en la tapa y no en la
+capa.
+
+E.10 · Limites
+--------------
+Son limites, no pendientes: ninguna sesion ni este corpus los levanta.
+  1. No hay salidas de lee_auto.py para 1925. Sin el .tsv no hay confianza
+por hoja y la lista de hojas "a ojos" del §4.8 NO EXISTE. Se cubriran por
+otra via: las hojas de los candidatos, las de tablas y las de listas.
+  2. Sin las .jpg del script no hay md5, ni dhash, ni medicion de tinta. La
+duplicacion se controla por texto y se declara asi.
+  3. tesseract no trae spa en esta sesion: no hay segunda version del texto
+y por lo tanto no hay cotejo de digitos entre versiones (§8.16). La unica
+prueba es la imagen.
+  4. El techo de resolucion es 150 ppi en las 798 hojas, la mitad que en
+1908-1912. Las cifras chicas de cuadro se leeran al maximo que el archivo
+permite, que es reescalar 150 ppi, no leer a 400 o 600 ppi como pedia §4.
+  5. No hay EXTRAIDO.json: no se puede cotejar byte a byte lo bajado contra
+lo que produjo la maquina del usuario.
+  6. No hay log.txt: no hay errores de corrida que leer.
+QUE AGREGARIA CADA INSUMO QUE FALTO: el .tsv daria confianza por hoja y la
+lista de hojas a ojos; las .jpg darian deduplicacion por imagen y medicion
+de tinta; una segunda version daria desempate de digitos; el log diria si el
+script fallo en alguna hoja. Ninguno de ellos cambiaria el §A, que se decide
+mirando la imagen.
+
+§F · CORRECCION A LA RUBRICA
+============================
+Propuestas nacidas de este turno, para v16:
+  1. La epoca de 1925 parte las palabras con ESPACIOS, no con guiones: "c a
+ld e ra". La laxa con huecos deja de ser una variante y pasa a ser la pasada
+principal del anillo 1 en esta epoca. Conviene decirlo en §5.2 con esta
+forma medida.
+  2. La pasada compacta (suprimir todos los espacios y buscar cald) se probo
+y se descarta: 54 hojas nuevas, 51 de ellas "vocal de", "fiscal de" y "local
+de". Conviene dejarlo escrito para que no se vuelva a probar.
+  3. El techo de resolucion puede caer a la mitad de un ano al otro.
+Conviene medirlo siempre y no heredarlo: §8.10 lo pide, pero §4 sigue
+suponiendo que hay 400 y 600 ppi disponibles para cifras dudosas, y en 1925
+no los hay.
+  4. El Release puede traer un lee_config.json atrasado respecto del que
+esta en el proyecto. Conviene comparar los dos y declarar cual se uso, como
+se hizo aca.
+  5. LA PASADA COMPACTA SE DESCARTA PARA EL ANILLO 1 Y SE ADOPTA PARA EL
+ANILLO DE ACTORES. Es la correccion de metodo de este barrido. Suprimir los
+espacios y buscar "cald" produce 54 hojas nuevas y 51 son "vocal de",
+"fiscal de" y "local de": la raiz es demasiado corta. Suprimir los espacios
+y buscar un apellido entero no tiene ese problema, porque el apellido es
+largo, y recupera cinco de las siete personas que la busqueda normal no
+encuentra ni en su propio acto (§B.4). La regla que se propone: compacta NO
+para el anillo 1, compacta SI para actores y para topónimos de mas de seis
+letras.
+  6. Cuando una lista invierte el orden y pone el apellido antes del nombre,
+el anillo de actores se cae entero sin avisar. Conviene que la busqueda de
+actores pruebe siempre las dos ordenes.
+  7. CORRECCION A LO QUE ESTE MISMO INFORME PENSO EN SU TERCER TURNO. Tres
+terminos del anillo 2 dieron en 1925 puro ruido: "penales" (ocho veces el
+adjetivo), "cornisa" (engancha "comisarios" mal leido) y "queseria"
+(engancha "queserian"). La primera reaccion fue proponer sacarlos del
+config. Es un error, y conviene dejarlo escrito: La Cornisa y La Queseria
+son parajes reales del camino y del departamento, y "penales" entro en v15
+por la forma con que 1912 imprime «los Peñones». Que un año no los use no
+los vuelve falsos: los sacaria del barrido de todos los años que vienen. Lo
+que se hace es lo contrario — se conservan en el anillo 2 y se agregan a
+falsos_positivos los contextos inequivocos que los ensucian: "disposiciones
+penales", "sanciones penales", "procedimientos penales" y "cornisarios". La
+regla general: un topónimo del anillo 2 no se saca por dar ruido en un año;
+se le agrega el contexto que lo ensucia.
+  8. Cuatro topónimos que el año usa no estan en el anillo 2 y se agregan:
+«Las Nieves», finca de tres pedimentos mineros; «Ceival», fraccion del
+deslinde del Dr. Sola; «Cerro Escalante», que ubica un cuarto pedimento; y
+«Campo Belgrano», el establecimiento del camino de la quebrada de Lesser.
+
+CONFIG ACTUALIZADO
+==================
+Se entrega un lee_config.json actualizado, armado sobre el del proyecto (que
+es el vigente) y no sobre el del Release (que esta atrasado). Queda en 322
+actores, 115 terminos de anillo 2, 78 numeros y 24 falsos positivos.
+
+SE AGREGA a actores, con origen 1925, 33 entradas: las personas de los actos
+del §A y del §B.2 que el config no tenia. Son Jose Delgado, Dardo Tula,
+Ramon L. Ontiveros, Francisco Arias, Cirilo E. Bejarano, Anastacio Valencia,
+Julio Suarez, Jose Maria Sola (hijo), Juan Piatelli, Zenon Arias, Juan
+Larran, Emilio D. Sylvester, Julio Juarez, Bernardo Austerlitz, Rodolfo
+Povoli, Enrique Premoli, Apolo A. Premoli, Jose Manuel Roldan, Attilio
+Fantoni, Reymundo Echenique, Carlos F. Martinez, Victor Cornejo Arias,
+Ernesto M. Araoz, A. B. Rovaletti, Joaquin Corbalan, Adolfo Guemes, Luis
+Lopez, J. C. Torino, Jacoba L. de Gomez, Carlos Gomez Rincon, Laudino
+Pereyra, Ricardo F. Usandivaras y Navor J. Frias.
+
+SE CONSERVAN los 289 anteriores, y conviene decir por que se nota: ONCE de
+las personas que los actos de Caldera de 1925 nombran ya estaban en el
+config con origen anterior — Carlos Murua (1908), Angel Fernandez, Lucas
+Molina, Genaro Molina y Daniel Linares (1909), Jacoba Luquez de Gomez y
+Fernando Robles (1911), Antonio Aguero (1916), Rafael Delgado (1917), Julio
+Royo Ortiz y Carlos F. Matienzo (1922), Francisco S. Urquiza y Julio
+Figueroa S. (1923), Pedro Arevalo (1946). El config heredado no solo sirve:
+es lo que hizo visible la continuidad entre 1922 y 1925, trece años despues
+del ultimo barrido de la epoca.
+
+SE AGREGAN dos formas nuevas del mismo apellido, sin unificar y sin elegir:
+"Carlos F. Martinez" junto a "Carlos F. Matienzo", que es como el mismo
+Juzgado de Paz firma en marzo y en agosto; y "Jacoba L. de Gomez" junto a
+"Jacoba Luquez de Gomez" de 1911. El config es una red de busqueda, no un
+padron (§15.3).
+
+SE AGREGA al anillo 2: las nieves, ceival, cerro escalante y campo belgrano.
+
+SE AGREGA a falsos_positivos, solo contextos inequivocos: "disposiciones
+penales", "sanciones penales", "procedimientos penales", "cornisarios" y
+"calavera o bella vista".
+
+SE DECIDE NO AGREGAR: los falsos positivos del anillo 1 del año (cadera,
+aldea, calle Maipu, diario local de mayor, vocal de, fiscal de, local de).
+Van listados en E.7 y no al config, porque un termino del anillo 1 cuyo
+contexto contenga un falso positivo queda marcado fp_conocido y sin recorte,
+aunque sea real (§12). Tampoco se agregan numeros: en 1925 los decretos
+llevan numeracion propia y corrida, de modo que los numeros arrastrados no
+tienen nada que arrastrar.
+
+RECUENTO
+========
+Archivos: 52 PDF, 41 MB. Ediciones: 52 (1043-1094), sin huecos.
+Hojas presentes: 798. Declaradas: las tapas no declaran paginas.
+Reparto de confianza: no existe (sin .tsv).
+Imagenes miradas: 4 recortes de tapa y 45 recortes de columna o de renglon,
+mas una vista general de hoja, en 18 vistas; dos de esos recortes a 600 dpi,
+para decidir un digito.
+Columnas cotejadas contra la capa previa: 32, en 28 hojas.
+Candidatos del anillo 1: 46 hojas; 39 con contexto real, 7 falsos positivos
+clasificados. Fichas escritas: 25, de las cuales 2 quedan declaradas
+incompletas.
+Anillo 2: 37 terminos con acierto de 111, 253 aciertos; contextos leidos:
+los 37. Nucleos en actos que no nombran el termino: 3. Terminos que en 1925
+son otra cosa: 32, de los cuales 3 no son topónimo en ninguna epoca
+(penales, cornisa, queseria).
+Actores: 71 de 289 con acierto por nombre y apellido; 34 personas de los
+actos del §A buscadas en todo el año; 7 busquedas declaradas fallidas y no
+ausentes.
+Repeticiones: 1 acto repetido, con 5 apariciones.
+Cuadros publicados: 9, los nueve de la Tesoreria General; balances
+municipales: 0. Subtotales recalculados: al menos uno por cuadro, 18 en
+total, y los nueve cuadros cierran. Tablas no recalculadas: 0.
+Saldos: 12 transcritos; 6 enlaces cerrados de 12 posibles, en dos tramos;
+los otros 6 no existen porque el resumen no se publico.
+Cotejo sumario/cuerpo: aplicable; 9 remisiones al departamento cotejadas, 8
+correctas, 1 discrepante.
+Planos: 22 hojas los mencionan, ninguna los publica; 1 citado y no
+acompañado del departamento.
+Config: 322 actores (33 nuevos con origen 1925), 115 terminos de anillo 2 (4
+nuevos), 24 falsos positivos (5 nuevos), 78 numeros (sin cambios).
+Limites declarados: 6.
+
+ENTREGA DE ESTE TURNO: si, dos archivos — el informe entero rehecho, en
+estado COMPLETO con seis limites declarados, y el lee_config.json
+actualizado. Queda sin anotar en notas.txt: nada.

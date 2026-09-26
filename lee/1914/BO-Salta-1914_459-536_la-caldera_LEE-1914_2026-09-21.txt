@@ -1,0 +1,1029 @@
+BOLETIN OFICIAL DE SALTA - ANO 1914 - EDICIONES N 459 A 536
+BARRIDO LEE SOBRE EL DEPARTAMENTO DE LA CALDERA
+Rubrica LEE v15 (20/09/2026). Informe del 21/09/2026.
+
+
+PARRAFO 0 - ADVERTENCIA PRELIMINAR
+==================================
+
+ESTADO: CON PENDIENTES. El corpus quedo barrido entero por las cuatro pasadas
+sobre las dos versiones, pero las transcripciones desde la imagen estan hechas
+solo en parte: el parrafo A quedo cerrado, con catorce actos fichados y
+transcritos desde la imagen, y lo que falta es lo que va alrededor: los
+contextos de los las tapas de las cuarenta y seis ediciones que solo existen
+como imagen, y los cuadros de Tesoreria. La lista completa esta al pie de este
+parrafo.
+
+Insumos. No llego ninguna salida de lee_auto.py. El Release 1914 de
+ediedrich/boletines-salta trae 71 assets y los 71 son PDF: no hay pre-informe,
+ni resultados_1914.csv, ni decretos_1914.csv, ni log.txt, ni recortes.zip, ni
+el zip de los .txt de lee_trabajo. El unico insumo del proyecto es
+lee_config.json. La lista de assets se leyo de releases/expanded_assets/1914,
+que no exige token.
+
+Corpus bajado. Los 71 PDF, 53 MB, en una llamada. Ediciones N 459 a 536, con
+siete numeros ausentes y consecutivos: 487, 488, 489, 490, 491, 492 y 493, que
+no estan en el Release. La edicion 470 no es un boletin: es una hoja unica que
+dice "ESTE BOLETIN NO SE ENCONTRO EN NUESTRA BASE DE DATOS", de modo que las
+ediciones realmente disponibles son 69 y no 71. La edicion 466 trae dos hojas
+y las demas cuatro.
+
+Lo que esta sesion verifico: nproc = 1; PyMuPDF no instalado, se instalo desde
+pypi; tesseract 5.3.4 con eng y osd solamente.
+
+Correccion mayor a la rubrica: tesseract SI puede quedar con spa en sesion. El
+archivo spa.traineddata esta en
+raw.githubusercontent.com/tesseract-ocr/tessdata, que es dominio alcanzable,
+pesa 18 MB y se copia en el tessdata del contenedor. Donde v15 dice que sin
+spa no se OCRiza en sesion (parrafos 1, 3 y 16), corresponde bajarlo. Este ano
+dependio enteramente de eso: sin OCR propio el barrido habria cubierto 23
+ediciones de 69.
+
+De donde salieron los textos. Solo 23 de las 69 ediciones traen capa de texto.
+Las otras 46 son PDF de una imagen por hoja, a 420 a 460 ppi, con cero
+caracteres extraibles. La sesion extrajo la capa previa donde la habia (70
+hojas con texto) y OCRizo con tesseract -l spa --psm 3, a 300 dpi en gris, las
+279 hojas del ano, en segundo plano, de manera reanudable y atomica, a unos 14
+segundos por hoja. Las 279 hojas quedaron OCRizadas.
+
+Lo que esto da y lo que no. Da: las cuatro pasadas, el anillo 2, los actores,
+los numeros, los reemplazos, la confianza por hoja (del tsv propio) y, en las
+23 ediciones con capa, la union de dos versiones con desempate. No da: md5 ni
+dhash de las imagenes del script, ni medicion de tinta, ni los recortes del
+script, ni el log de la corrida, porque no hubo corrida.
+
+Pendientes al cierre de este turno, en orden de trabajo: (1) las fechas de
+tapa de las cuarenta y seis ediciones sin capa y el calendario del ano,
+incluido el punto en que el ano editorial pasa de VI a VII; (2) leer los ocho
+cuadros de Tesoreria ya localizados y cerrar la cadena de saldos; (3) las
+ausencias del anillo de actores en sus tres grupos; (4) indice, parrafo F y
+config actualizado.
+
+
+PARRAFO 1 - CORPUS REVISADO
+===========================
+
+71 archivos, 69 ediciones utiles, 279 hojas. Las fechas que siguen son las de
+las tapas con capa de texto; las de las ediciones sin capa se fijan en el
+turno siguiente y por eso esta tabla esta incompleta y se declara asi.
+
+  ED.   HOJAS  CAPA    TAPA (fecha impresa)
+  459     4    no      [pendiente]
+  460     4    si      SALTA, Enero 7 de 191[?] - AÑO VI - NÚM. 460
+  461     4    si      SALTA, Enero 10 de 1913 - AÑO VI - NÚM. 461
+  466     2    si      SALTA, Febrero 11 de 191[?] - AÑO VI - NÚM. 466
+  470     1    si      no es un boletin: hoja de "no se encontro"
+  483     4    si      SALTA, MAYO 16 DE 1914 - AÑO VI - NUM. 483
+  504     4    si      SALTA, MIERCOLES 12 DE AGOSTO DE 1914 - AÑO VI
+  505     4    si      SALTA, AGOSTO 19 DE 1914 - AÑO VI - NUM. 505
+  509     4    si      SALTA, SEPTIEMBRE 5 DE 1914 - AÑO VI - NUM. 509
+  510     4    si      SALTA, SEPTIEMBRE 9 DE 1914 - AÑO VI - NUM. 510
+  511     4    si      SALTA, SEPTIEMBRE 1[2] DE 1914 - AÑO VI
+  512     4    si      SALTA, SEPTIEMBRE 16 DE 1914 - AÑO VI
+  513     4    si      SALTA, SEPTIEMBRE 19 DE 1914 - AÑO VI
+  522     4    si      SALTA, OCTUBRE 31 DE 1914 - AÑO VII - NÚM. 522
+  525     4    si      SALTA, NOVIEMBRE 14 y 18 1914 - AÑO VII (doble)
+  526     4    si      SALTA, NOVIEMBRE 21 DE 1914 - AÑO VII
+  527     4    si      [tapa ilegible en la capa; pendiente en imagen]
+  528     4    si      [tapa ilegible en la capa; pendiente en imagen]
+  533     4    si      SALTA, DICIEMBRE 16 [y] 19 de 1914 - AÑO VII
+  534     4    si      SALTA, DICIEMBRE 23 DE 1914 - AÑO VII
+  535     4    si      SALTA, DICIEMBRE 26 DE 1914 - AÑO VII
+  536     4    si      SALTA, DICIEMBRE 30 DE 1914 - AÑO VII - NUM. 536
+
+Las tapas de enero y febrero imprimen el ano equivocado. La 461 dice "Enero 10
+de 1913" sin correccion alguna; la 460 y la 466 traen el ultimo digito del ano
+tachado con una raya diagonal y corregido, de modo que se lee "191" mas un
+digito rehecho. El calendario decide: el Boletin aparece miercoles y sabados,
+y 7 y 10 de enero y 11 de febrero caen miercoles y sabado en 1914, no en 1913.
+Se transcribe lo impreso y se declara en E.9; la correccion a mano es del
+ejemplar digitalizado y no del original impreso, y no se concilia.
+
+El ano editorial pasa de AÑO VI a AÑO VII entre la edicion 513 (19 de
+septiembre) y la 522 (31 de octubre); el punto exacto cae dentro del tramo sin
+capa y se fija en el turno siguiente, leyendo las tapas en la imagen.
+
+Techo de resolucion. Las imagenes incrustadas de los PDF sin capa dan entre
+420 y 460 ppi sobre paginas de unos 600 por 860 puntos, que es mas alto que
+1911 y 1912. La edicion 466 es la excepcion: sus dos hojas traen imagenes de
+unos 108 ppi, muy por debajo del resto, y es ademas la unica de dos hojas.
+
+
+Paginacion corrida
+------------------
+
+El folio impreso en la cabecera de las hojas 2 a 4 se leyo desde la capa donde
+la hay. La cadena va de 1760 en 460 h. 2 a 2057 en 535 h. 4, dentro del ano.
+No se hereda de 1913 ni se proyecta a 1915: la rubrica v15 ya establecio que
+la cadena no es continua entre anos. La lectura completa de la cadena, que es
+la unica forma barata de distinguir la edicion corta de la incompleta, queda
+pendiente porque depende de los folios de las ediciones sin capa.
+
+
+PARRAFO 2 - CRITERIO DE BUSQUEDA
+================================
+
+Versiones. En 23 ediciones hay capa previa y OCR propio, y cada resultado se
+etiqueta prev, prop o prev+prop. En las 46 restantes solo existe el OCR propio
+de esta sesion y todo resultado se etiqueta prop, sin desempate posible por
+segunda version: el desempate es la imagen.
+
+Marca de corte y guion blando. U+0002 no aparece ni una vez en el ano. U+00AD
+aparece 2.121 veces en la capa previa, y la union lo quita JUNTO CON el salto
+de renglon, como manda v15; el OCR propio no produce guion blando pero si
+guiones visibles de fin de renglon, que la union tambien pega tolerando hasta
+dos signos de puntuacion intercalados a cada lado del salto.
+
+Las cuatro pasadas corrieron sobre 344 textos de hoja. La literal dio aciertos
+en 15 hojas. La laxa, escrita con la clase de espacios en blanco y no con un
+espacio literal, dio 15 aciertos, de los que la gran mayoria son la formula
+"condenando al demandado", que produce "o al dema". La difusa dio doce formas
+distintas; tres de ellas son menciones reales que la literal pierde: "valdera"
+en 482 h. 2, "ualdera" en 484 h. 3 y "vcaldera" en 521 h. 3. Ninguna pasada
+devolvio cero, de modo que no hubo que probar ninguna contra otro corpus.
+
+Cotejo sumario/cuerpo: no aplicable. En esta epoca el Boletin no trae sumario
+con puntos guia. Se declara para no contar cero discrepancias sin haber
+controlado nada.
+
+Actores. La lista se tomo del config, que trae 171 entradas de 1946 y de 1908
+a 1912. La busqueda corre sobre el texto con la puntuacion suprimida, no solo
+normalizado. Veintitres actores heredados reaparecen en 1914 con nombre y
+apellido completos.
+
+Numeros de acto: no aplicable. Los actos de 1914 no llevan numero, como los de
+1908 a 1912. Los dos unicos aciertos de la clave numeros del config son
+coincidencias de cifra: el propio ano 1914 y un importe redondo de 2000. La
+regla de fecha contra numeracion (8.15) no se aplica y se declara.
+
+
+PARRAFO A - MENCIONES EXPLICITAS
+================================
+
+Van primero las apariciones ya miradas y transcritas desde la imagen. Las que
+faltan estan listadas al final del parrafo con su hoja y su via de hallazgo,
+para que se vea que estan identificadas y no miradas, no que no existen.
+
+
+A.1 - Edicion N 463, hoja 3
+---------------------------
+
+FUENTE: BO Salta N 463, h. 3, cols. 3 y 4 - seccion Remates. Solo version
+propia: esta edicion no tiene capa. Folio impreso: 1773.
+
+FICHA: Primer remate del ano de la finca "San Alejo" y "Santa Rufina", 17.874
+hectareas, en el departamento de La Caldera. Base 5,50 pesos la hectarea.
+Remate el 21 de febrero de 1914 en el Jockey Club. Martillero M. R. Alvarado,
+por orden del juez Vicente Arias, en el juicio de division de condominio de
+los herederos Fernandez.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. El titulo esta impreso en cuerpo grande y se lee sin ampliar; la
+extension y la base se leyeron en la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  POR M. R. ALVARADO
+  
+  jjExtraordinario remate!! - La finca mas importante del Depar[-]
+  tamento de La Caldera - SAN ALEJO Y SANTA RUFINA - 17874 hectareas
+  - Venta por division de condominio - Base: $ 5.50 la hectarea -
+  Liberales condiciones de pago
+  
+  El dia veintiuno de febrero de 1914 [a] horas 4 p. m., en el local
+  del Jockey Club, calle Alsina numero 62, [fr]ente a la plaza 9 de
+  Julio, de es[ta] ciudad de Salta, vendere en pu[b]lico remate, por
+  orden del senor [ju]ez de primera instancia doctor Vi[ce]nte Arias,
+  dictada en el juicio de [di]vision de condominio de los herede[r]os
+  Fernandez y de comun acuerdo [d]e todos sus propietarios actuales, la
+  [h]ermosa finca "San Alejo" y "San[ta] Rufina", ubicada en el
+  departamen[to] de La Caldera de esta provincia, [a] cinco leguas de
+  la capital, a la que [es]ta unida por un esplendido camino
+  [ca]rretero.
+  
+  Extension: 17.874 hectareas, 27 [ar]eas y 19 metros cuadrados, segun
+  [co]nsta de la mensura practicada por [el] agrimensor senor Walter
+  Hesling, [ap]robada por el Departamento Topo[-]grafico y
+  judicialmente.
+  
+  Limites: Norte, provincia de Ju[ju]y, Cabana del senor Marcos
+  Zorri[lla], Uracatao o Pueblo Viejo y pro[pie]dad del senor Gabino
+  Sanchez; es[te,] la finca Angostura, del senor Da[...]
+
+NOTA DE LECTURA: Los corchetes de esta transcripcion marcan lo que corta el
+borde del recorte, no lo que falta en el original. La cifra grande imprime
+17874 sin punto de millar; el cuerpo, 17.874. Este es el primero de los tres
+remates de la misma finca que el ano publica.
+
+
+A.2 - Edicion N 469, hoja 2
+---------------------------
+
+FUENTE: BO Salta N 469, h. 2, col. 3 - Leyes y Decretos. Solo version propia.
+Ninguna pasada del anillo 1 trajo esta hoja: el OCR rompe la palabra Caldera
+en el renglon y el acto entro por el anillo 2, por el termino mojotoro.
+
+FICHA: Decreto del P. Ejecutivo de 13 de febrero de 1914: nombra subcomisario
+de policia de la Estacion Mojotoro, jurisdiccion del Departamento de la
+Caldera, a Jose Nogales, con antiguedad del 11 de octubre del ano anterior, en
+la vacante por renuncia del que lo desempenaba.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. Transcripcion integra desde la imagen, con fecha, firmas y "Es
+copia".
+
+TEXTO (transcripcion desde la imagen):
+
+  Encontrandose vacante el cargo de subcomisario de policia de la
+  Estacion Mojotoro por renuncia del que lo desempenaba y de acuerdo
+  con la propuesta presentada por el senor Jefe de Policia.
+  
+  El P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o. Nombrase subcomisario de policia de la Estacion Mojotoro,
+  jurisdiccion del Departamento de la Caldera al senor Jose Nogales con
+  antiguedad del 11 de octubre del ano ppdo., desde cuya fecha se hizo
+  cargo del referido puesto.
+  Art. 2o. Comuniquese, publiquese y dese al R. Oficial.
+  
+  Salta, febrero 13 de 1914.
+  
+                                     PATRON COSTAS.
+                                     Julio Cornejo.
+  Es copia: Jose M. Outes
+            S. S.
+
+NOTA DE LECTURA: Este acto es la razon por la que el anillo 2 se corre entero
+y se leen todos sus contextos, incluidos los terminos que parecen ser otra
+cosa. Las cuatro pasadas del anillo 1 no lo trajeron. El apellido del
+nombrado, Nogales, es a su vez termino del anillo 2, donde figura por el
+arroyo de Los Nogales y como falso positivo de apellido en 1911 y 1912; aqui
+el apellido es el que importa. El decreto de julio de 504 h. 2 reorganiza esa
+misma subcomisaria y da las gracias al "subcomisario cesante" sin nombrarlo:
+no se infiere que sea Nogales, y los dos actos se registran por separado.
+
+
+A.3 - Edicion N 476, hoja 4
+---------------------------
+
+FUENTE: BO Salta N 476, h. 4, cols. 1 y 2 - seccion Remates. Solo version
+propia.
+
+FICHA: Segundo remate del ano de "San Alejo" y "Santa Rufina", 17.874
+hectareas, en el departamento de La Caldera. Base rebajada a 4,25 pesos la
+hectarea. Remate el martes 12 de mayo de 1914, en el escritorio de calle
+Espana 530. Mismo martillero, mismo juez, mismo juicio.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. El titulo, la base, la fecha y la extension se leyeron en la imagen;
+el resto del cuerpo es identico al de 463 h. 3 y se coteja renglon a renglon
+contra aquel.
+
+TEXTO (transcripcion desde la imagen):
+
+  jjExtraordinario remate!! - La finca mas importante del Departa[-]
+  mento de La Caldera - San Alejo y Santa Rufina - 17.874 hectareas
+  - Venta por division de condominio - Base: $ 4.25 la hectarea -
+  Liberales condiciones de pago.
+  
+  El dia martes 12 de Mayo de 1914 a horas 4 p. m. en mi escritorio
+  calle Espana numero 530 frente a la plaza 9 de Julio, de esta ciudad
+  de Salta, vendere en publico remate, por orden del senor juez de
+  primera instancia, doctor Vicente Arias, dictada en el juicio de
+  division de condominio de los herederos Fernandez y de comun acuerdo
+  de todos sus propietarios actuales, la hermosa finca "San Alejo" y
+  "Santa Rufina", ubicada en el departamento de La Caldera de esta
+  provincia, a cinco leguas de la capital, a la que esta unida por un
+  esplendido camino carretero.
+  
+  Extension: 17.874 hectareas, 27 areas y 19 metros cuadrados, segun
+  consta de la mensura practicada por el agrimensor senor Walter
+  Hesling, aprobada por el Departamento Topografico y judicialmente.
+  
+  Limites: Norte, provincia de Jujuy, Cabana del senor Marcos
+  Zorrilla, Uracatao o Pueblo Viejo y propiedad del senor Gabino
+  Sanchez; este, la finca Angostura, del senor Daniel Linares,
+  propiedades de Eusebio Herrera, Francisco Sosayo, Arturo Escudero
+  (hoy G. Quevedo) y Abelardo Figueroa; sur, propiedad de [...]
+
+NOTA DE LECTURA: Aqui el apellido del lindero se imprime "Sosayo", donde 509
+h. 3 imprime "Sosavo" y el deslinde de Campo Alegre "Sosaya" [sic]: tres
+formas del mismo apellido en el mismo ano, que no se unifican. "Arturo
+Escudero (hoy G. Quevedo)" es el mismo Gumersindo Quevedo en cuyo poder esta
+depositada la hacienda de los remates de mayo.
+
+
+A.4 - Edicion N 478, hoja 1
+---------------------------
+
+FUENTE: BO Salta N 478, h. 1, cols. 2 y 3 - Leyes y Decretos. Solo version
+propia.
+
+FICHA: Decreto del P. Ejecutivo que nombra los comisarios de policia de los
+departamentos y distritos de campana para el corriente ano. Para La Caldera
+nombra a Julio del Solar.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. La lista se leyo en la imagen. La fecha y la firma de este decreto
+caen en la columna siguiente y no se miraron: no se toma la fecha del decreto
+vecino, que es del 14 de abril de 1914.
+
+TEXTO (transcripcion desde la imagen):
+
+  Siendo oportuno proceder al nom[b]ramiento de las personas que deben
+  [d]esempenar las comisarias de poli[c]ia de los departamentos y
+  distritos [d]e campana durante el corriente ano.
+  
+  [E]l P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o. Nombrase comisario de [p]olicia de los departamentos y
+  distri[t]os a los siguientes senores, Rosario [d]e Lerma a don
+  Welindo R. Castillo; [C]achi a don Napoleon Wayar, Calde[-][r]a, a
+  don Julio del Solar, Campo [S]anto, a don Pedro Perez del Busto,
+  Metan, a don Domingo Legarralde, Rosario de la Frontera, a don
+  Ar[-]mando D. Amezaga, Rosario de la Frontera 2a. seccion, a don
+  Julio Pe[-]reyra, Candelaria, a don Abraham Diez Gomez, Anta, a don
+  Ricardo Usandivaras, Oran, a don Santiago Gonzalez Perez, Santa
+  Victoria, a [d]on Abelardo Figueroa, Distrito La Merced, a don
+  Emeterio Royo, La Silleta, a don Rafael Suares To[-]rino; del
+  Carril, a don Ricardo San[...]
+
+NOTA DE LECTURA: El nombre del comisario del departamento - Julio del Solar -
+es el dato que el ano no vuelve a dar: el decreto de noviembre de 525 h. 2
+dicta a propuesta del "senor comisario de policia del departamento de Caldera"
+sin nombrarlo. No se infiere que sea la misma persona; se registran los dos
+actos. Abelardo Figueroa, que aqui va a Santa Victoria, es lindero de San
+Alejo y de la Angostura.
+
+
+A.5 - Edicion N 480, hoja 2
+---------------------------
+
+FUENTE: BO Salta N 480, h. 2, col. 1 - seccion Judicial. Solo version propia.
+Folio impreso: 1839.
+
+FICHA: Aviso de remate judicial de carros, mulas, caballares mestizos, vacas y
+bueyes depositados en poder de Gumersindo Quevedo en la Caldera, por orden del
+juez A. Bassani. Martillero Ricardo Lopez. Remate el miercoles 13 de mayo.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  JUDICIAL
+  
+  POR RICARDO LOPEZ
+  De carros, mulas, caballares mestizos, vacas y bueyes
+  
+  El dia miercoles 13 de mayo a las 2 en punto, en el Jockey Club,
+  Avenida de la Plaza 9 de Julio y por orden del juez de primera
+  instancia doctor A. Bassani, vendere a la mas alta oferta y dinero de
+  contado los siguientes bienes: cuatro carros para mulas, en buen uso;
+  dieciseis mulas en buen uso; dieciseis mulas gordas, marca 5;
+  cuarenta animales caballares mestizos peruanos; veinte vacu[nos]
+  entre bueyes y vacas, todos con la [ma]rca 5; y todo depositado en
+  poder [d]e don Gumersindo Quevedo en la Caldera. Los compradores
+  entregaran el 10 por ciento de la venta en el acto del remate.
+  
+                                     Ricardo Lopez.
+                                     Martillero.
+
+NOTA DE LECTURA: Este aviso vuelve a salir en 478 h. 2, 482 h. 2 y 484 h. 3, y
+el cotejo por texto muestra que no son la misma publicacion repetida: la de
+484 h. 3 se remata el viernes 22 de mayo y lleva otras marcas de publicacion.
+El cotejo de esas tres apariciones se hizo sobre la capa y no sobre la imagen,
+y asi se declara. El OCR propio imprime el termino "valdera" en 482 h. 2 y
+"ualdera" en 484 h. 3: las dos las trajo la difusa y ninguna la literal.
+
+
+A.6 - Edicion N 485, hoja 1
+---------------------------
+
+FUENTE: BO Salta N 485, h. 1, col. 3 - Leyes y Decretos. Capa previa: no hay
+(edicion sin texto extraible). Version propia: OCR de sesion, confianza de la
+palabra 88,6.
+
+FICHA: Decreto del P. E. de 9 de mayo de 1914: nombra a Escolastico Aparicio
+miembro de la comision municipal del departamento de La Caldera, en la vacante
+dejada por Salvador Rosa, que traslado su domicilio a la ciudad.
+
+MODO DE LECTURA: Recorte de la columna entera (ancho de columna + 6 pt) a 250
+dpi, en dos mitades apiladas de a dos en horizontal. Transcripcion integra
+desde la imagen. Ningun dato de esta ficha sale de la capa.
+
+TEXTO (transcripcion desde la imagen):
+
+  Estando vacante el puesto de miembro de la comision municipal
+  del departamento de la Caldera, por haber trasladado su
+  domicilio a esta ciudad el senor Salvador Rosa que lo
+  desempenaba,
+  
+  El P. Ejecutivo de la Provincia
+  
+  DECRETA:
+  
+  Art. 1o. Nombrase miembro de la referida comision municipal
+  al senor Escolastico Aparicio.
+  Art. 2o. Comuniquese, publiquese e insertese en el R. Oficial.
+  
+  Salta, mayo 9 de 1914.
+  
+                                PATRON COSTAS.
+                                Macedonio Aranda.
+  Es copia: J. M. Outes
+            S. S.
+
+NOTA DE LECTURA: La fecha, los dos firmantes y el "Es copia" se leyeron en la
+imagen. El decreto no lleva numero: los actos de esta epoca no se numeran
+(regla 8.15 no aplicable). Escolastico Aparicio es actor heredado del config
+con origen 1908, y aqui reaparece con nombre completo. El acto declara la
+vacante nombrando a quien la dejo, a diferencia del caso de 1912 registrado en
+la rubrica.
+
+
+A.7 - Edicion N 501, hoja 4
+---------------------------
+
+FUENTE: BO Salta N 501, h. 4, col. 1 - seccion Judicial. Solo version propia.
+Folio impreso: 1925.
+
+FICHA: Aviso de remate judicial sin base de animales vacunos que se encuentran
+en poder de Antonio Villegas, en La Caldera, por disposicion del Juez Federal,
+en el juicio de accion negatoria de Jose Cobach contra Daniel Linares.
+Martillero Jose Maria Leguizamon. Remate el martes 4 de agosto.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi en dos mitades
+apiladas. Transcripcion integra desde la imagen, incluido el detalle de los
+animales.
+
+TEXTO (transcripcion desde la imagen):
+
+  POR JOSE MARIA LEGUIZAMON
+  
+  JUDICIAL - SIN BASE
+  
+  Por disposicion del senor Juez Federal de esta Seccion y como
+  perteneciente al juicio de accion negatoria de Jose Cobach contra
+  Daniel Linares, el martes 4 de agosto del corriente ano, a las 5
+  p. m., en el local de "La Mutua", Buenos Aires 184, vendere sin base
+  y dinero de contado, los siguientes animales vacunos que se
+  encuentran en poder del senor Antonio Villegas, en La Caldera, y que
+  son: Dos torunos de cuatro anos arriba, un novillo de 4 anos, trece
+  vacas de 4 anos, una vaca con ternera de ano al pie, dos vaquillonas
+  de 3 anos.
+  
+                                     Jose Maria Leguizamon.
+                                     Martillero.
+                                     958v4ag
+
+NOTA DE LECTURA: Los dos nombres del juicio son actores heredados: Jose
+Cobach, con origen 1912, y Daniel Linares, con origen 1909. Este es el cuarto
+acto del ano en que aparece Linares, despues del lindero de San Alejo, el
+remate de la Angostura y el Jurado de 527 h. 2. El recuento de animales del
+aviso - dos, uno, trece, una, dos - suma diecinueve cabezas y el aviso no
+publica total, de modo que no hay total que recalcular.
+
+
+A.8 - Edicion N 504, hoja 2
+---------------------------
+
+FUENTE: BO Salta N 504, h. 2, col. 3 y h. 3, col. 1 - Leyes y Decretos. Las
+dos versiones: capa previa y OCR propio. La capa previa imprime "estacion
+mojotorp"; el OCR propio imprime "saldera" por Caldera. Ninguna de las dos
+versiones sola habria dado el acto por las dos vias.
+
+FICHA: Decreto del P. E. de julio de 1914: organiza el personal de la
+subcomisaria de la estacion Mojotoro, jurisdiccion del departamento de La
+Caldera, y nombra subcomisario a Benjamin Lopez por el ejercicio del corriente
+ano.
+
+MODO DE LECTURA: Dos recortes de columna entera a 250 dpi (h. 2 col. 3 y h. 3
+col. 1), cada uno en dos mitades apiladas. Transcripcion integra desde la
+imagen. La fecha del decreto no esta a la vista en ninguna de las dos columnas
+miradas y no se toma del decreto vecino.
+
+TEXTO (transcripcion desde la imagen):
+
+  Siendo necesario proceder a la organizacion del personal de la
+  subcomisaria de la estacion Mojotoro, jurisdiccion del
+  departamento de la Caldera
+  
+  Ejecutivo de la Provincia.
+  
+  DECRETA:
+  
+  Art. 1o. Nombrase subcomisario de policia de la referida
+  estacion pa- [corte de columna; sigue en la hoja 3] ra el
+  ejercicio del corriente ano, senor Benjamin Lopez.
+  Art. 2o. Densele al subcomisar[io] cesante las gracias por
+  los servici[os] prestados.
+  Art. 3o. Comuniquese, publique[se] y dese al R. Oficial.
+  
+                                PATRON COSTAS
+                                Julio Cornejo.
+  Es copia: J. M. Outes
+            S. S.
+
+NOTA DE LECTURA: La formula de encabezado esta impresa "Ejecutivo de la
+Provincia.", sin "El P." [sic]: el decreto vecino de la misma columna si
+imprime "El P. Ejecutivo de la Provincia." Se transcribe como esta y se
+declara en E.9. El acto no lleva fecha propia a la vista. El subcomisario
+cesante no se nombra: es una vacante sin nombre, del tipo registrado en la
+rubrica 5.3. Benjamin Lopez es actor heredado con origen 1909. Los renglones
+de la hoja 3 estan cortados por la derecha en el recorte y se completan entre
+corchetes solo donde la palabra esta partida por el borde del recorte, no por
+el original.
+
+
+A.9 - Edicion N 509, hoja 3
+---------------------------
+
+FUENTE: BO Salta N 509, h. 3, cols. 2 y 3 - avisos de remate. Las dos
+versiones. Folio impreso en la cabecera: 1958.
+
+FICHA: Aviso de remate judicial de la finca "San Alejo" y "Santa Rufina",
+17.874 hectareas, en el departamento de La Caldera, por division de condominio
+de los herederos Fernandez, ordenado por el juez de primera instancia Vicente
+Arias. Martillero M. R. Alvarado. Remate el lunes 5 de octubre. Base 3,20
+pesos la hectarea.
+
+MODO DE LECTURA: Tres recortes de columna a 250 y 300 dpi, en mitades apiladas
+de a dos en horizontal. El titulo y el cuerpo se leyeron en la imagen. La
+transcripcion va por partes: los renglones que el borde del recorte corta se
+cierran con corchetes, y eso es corte del recorte, no del original.
+
+TEXTO (transcripcion desde la imagen):
+
+  jjExtraordinario remate!! - La fi[n]ca mas importante del Departa[-]
+  mento de La Caldera - San Alej[o] y Santa Rufina- 17.874 hectare[as]
+  - Venta por division de condomi[-]nio - Base: $ 3.20 la hectarea -
+  Liberales condiciones de pago.
+  
+  El dia lunes 5 de octubre de 191[4] a horas 4 p. m. en mi escritorio
+  c[a]lle Espana numero 530 frente a [la] plaza 9 de Julio, de esta
+  ciudad d[e] Salta, vendere en publico remat[e] por orden del senor
+  juez de primer[a] instancia doctor Vicente Arias, di[c]tada en el
+  juicio de division de co[n]dominio de los herederos Fernande[z] y de
+  comun acuerdo de todos su[s] propietarios actuales, la hermosa fi[n]ca
+  "San Alejo" y "Santa Rufina" ubicada en el departamento de L[a]
+  Caldera de esta provincia, a cinc[o] leguas de la capital, a la que
+  est[a] unida por esplendido camino ca[-]rretero.
+  
+  Extension: 17.874 hectareas, 27 areas y 19 metros cuadrados, segun
+  consta de la mensura practicada por el agrimensor senor Walter
+  Hesling aprobada por el Departamento Topo[-]grafico y judicialmente.
+  
+  Limites: Norte, provincia de Ju[-]juy, Cabana del senor Marcos
+  Zorri[-]lla, Uracatao o Pueblo Viejo y pro[-]piedad del senor Gabino
+  Sanchez; e[s]te, la finca Angostura, del senor Da[-]niel Linares,
+  propiedades de Eusebi[o] Herrera, Francisco Sosavo, Artur[o] Escudero
+  (hoy G. Quevedo) y Abe[-]lardo Figueroa; sur, propiedad d[e] don
+  Daniel Linares, herederos de[...]
+  
+  [final del aviso, columna siguiente] ...canteras que se estan
+  explotando. [...] hay grandes yacimientos de cal, que se [presta a]
+  una explotacion en [gran escala; y de] arcilla, cuyas mues[tras
+  obtuvieron] premio en la exposi[cion de Bueno]s Aires de 1911.
+  [...] existiendo en ella [una escuela n]acional con asistencia [de
+  ...]ta alumnos.
+  
+  Se vendera bajo la [base de] tres pesos vein[t]e cen[tavos la
+  hecta]rea, con las siguientes [condiciones de] pago: Diez por
+  cien[to en el acto] del remate; veinticin[co por ciento] al firmarse
+  la escritu[ra, la] que debera efectuarse [dentro de los] treinta dias
+  siguientes [...] con perdida de lo en[treg]ado si el comprador no
+  [...] y el saldo del 65 por [ciento en dos c]uotas iguales a 6 y 12
+  [meses] con el interes del sie[te por ciento] anual y garantia
+  hipo[tecaria sobre la m]isma propiedad. [Comision: e]l 2 por ciento
+  por [el co]mprador.
+  
+                                     M. R. Alvarado.
+                                     Martillero.
+                                     9[6]7v5oct
+
+NOTA DE LECTURA: La cifra de la extension costo dos lecturas. A 250 dpi el
+titulo parece decir 17.374, y asi se ficho en el turno anterior contra las dos
+versiones de texto, que leen 17.874. El recorte a 500 dpi de esa misma palabra
+dice 17.874, y el aviso de 463 h. 3, impreso en cuerpo grande, dice 17874 sin
+lugar a duda. Vale 17.874. Queda como leccion de metodo en el parrafo F: en
+esta tipografia 250 dpi no alcanza para decidir entre un 3 y un 8, y la regla
+de mirar la imagen no sirve de nada si la imagen se mira demasiado chica. Este
+es el tercero de los tres remates que el ano publica de la misma finca, con la
+base rebajada cada vez. El apellido del lindero se imprime "Sosavo" aqui y
+"Sosaya" en el deslinde de Campo Alegre de 512 h. 4 [sic]: no se unifica. El
+agrimensor Walter Hesling y los linderos Marcos Zorrilla, Arturo Escudero,
+Abelardo Figueroa y Daniel Linares son todos actores heredados del config. El
+aviso lleva marca de publicacion 9[6]7v5oct, que dice hasta cuando corre la
+orden de publicar y no prueba repeticion; la repeticion se comprueba aparte,
+por el texto.
+
+
+A.10 - Edicion N 510, hoja 4
+----------------------------
+
+FUENTE: BO Salta N 510, h. 4, col. 3 - edictos. Las dos versiones. Folio
+impreso: 1961.
+
+FICHA: Edicto del juez de paz del departamento de La Caldera en el juicio
+sucesorio de don Salustiano Caro, citando a herederos y acreedores. Septiembre
+de 1914.
+
+MODO DE LECTURA: Dos recortes de columna a 260 y 280 dpi. La columna quedo
+cortada por los dos bordes y la transcripcion se completa entre corchetes con
+lo que dice la capa previa, que en este edicto es legible; esos corchetes son,
+por lo tanto, capa y no imagen, y asi se declaran.
+
+TEXTO (transcripcion desde la imagen):
+
+  [Habiendose de]clarado abierto el [juicio sucesorio de] don Salustiano
+  [Caro, el senor jue]z de paz del depar[tamento de la] Caldera, ha
+  ordenado [se cite por el] presente a todos los [interesados para]
+  que se presenten [ya sea como her]ederos o acreedores [a hacer valer
+  sus] derechos. - La [Caldera, septiembr]e 3 de 1914. - E[...]
+  [jue]z de paz.
+                                     959v9ot
+
+NOTA DE LECTURA: El nombre de pila se lee "Salustiano" en la imagen y
+"Galustiano" en la capa previa; vale la imagen. El nombre del juez de paz que
+firma no se alcanza a leer en el recorte y no se completa: el ano no da otro
+acto que lo nombre. Es el unico acto del ano en que el departamento aparece
+como sede de un juzgado de paz en funciones.
+
+
+A.11 - Edicion N 512, hoja 4
+----------------------------
+
+FUENTE: BO Salta N 512, h. 4, col. 1 - edictos. Las dos versiones.
+
+FICHA: Edicto de deslinde, mensura y amojonamiento de la finca Campo Alegre,
+en el departamento de La Caldera, pedido por Francisco Sosaya ante el juez
+Francisco F. Sosa; agrimensor propuesto Ettore Chiostri. Salta, 16 de
+septiembre de 1914, firmado Nolasco Zapata, secretario.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi, en dos mitades
+apiladas. Transcripcion integra desde la imagen.
+
+TEXTO (transcripcion desde la imagen):
+
+  Habiendose presentado el senor Francisco Sosaya con titulos bastantes
+  solicitando deslinde, mensura y amojonamiento de la finca Campo
+  Alegre situada en el departamento de la Caldera comprendida dentro
+  de los siguientes limites: Al norte, propiedad de los Mercado; al
+  naciente, terrenos que fueron de Abelino Costas; al sur, con los
+  mismos sucesores de Costas y de Jose Fernandez, y al oeste, de estos
+  mismos sucesores Fernandez. El senor juez de primera instancia en lo
+  civil y comercial, Dr. Francisco F. Sosa, ha ordenado se cite por el
+  presente por el termino de 30 dias se presenten los que se crean con
+  derechos a las operaciones a verificarse. Teniendose como agrimensor
+  propuesto al senor Ettore Chiostri. Lo que el subscripto secretario
+  hace saber por medio del presente. - Salta, septiembre 16 de 1914. -
+  firmado, Nolasco Zapata, secretario.
+
+NOTA DE LECTURA: Campo Alegre es termino del anillo 2 y falso positivo ya
+juzgado en 1911 y 1946 (los Campo Alegre de Chicoana, Oran y Rivadavia). Aqui
+no hay duda: el propio edicto lo situa en el departamento. Los linderos "los
+Mercado" remiten al mismo apellido que aparece como lindero en el deslinde de
+1946 y en el remate de la Angostura.
+
+
+A.12 - Edicion N 521, hoja 3
+----------------------------
+
+FUENTE: BO Salta N 521, h. 3, col. 2 - avisos de remate. Solo version propia:
+esta edicion no tiene capa. El OCR propio imprime "vcaldera" en el titulo, con
+confianza 15,9, y solo la difusa lo trajo.
+
+FICHA: Aviso de remate judicial de la finca "Angostura", en el departamento de
+La Caldera, base 20.000 pesos, por orden del juez Francisco F. Sosa.
+Martillero Ricardo Lopez. Remate el 23 de diciembre en el Jockey Bar.
+
+MODO DE LECTURA: Recorte de la columna entera a 260 dpi, en dos mitades
+apiladas. Transcripcion integra desde la imagen, incluida la base y la
+tasacion.
+
+TEXTO (transcripcion desde la imagen):
+
+  Por RICARDO LOPEZ
+  
+  La importante finca "Angostura" - En la Caldera - Base, pesos
+  20.000.
+  
+  El dia 23 de diciembre del corriente ano, a las 4 en punto, en el
+  Jockey Bar, plaza 9 de Julio, Avenida Alsina, y por orden del senor
+  juez de primera instancia doctor Francisco F Sosa, vendere a las mas
+  alta oferta, dinero de contado y con la base de las dos terceras
+  partes de su tasacion fiscal de 30.000 pesos o sean veinte mil de
+  base, la importante finca denominada "Angostura", ubicada en el
+  departamento de la Caldera, de esta provincia, comprendida en los
+  siguientes limites: Por el norte, propiedad de Francisco Sosaya; por
+  el este, con la finca "Loma Bola" y propiedades de Julio Mercado y
+  Lauredo Peralta; por el sur, propiedad de Abelardo Figueroa y por el
+  oeste, con propiedad de herederos de Jose Manuel Fernandez.
+  
+  Es finca de gran rendimiento y destinada a valer cien mil pesos en
+  cuanto mejore un poco la situacion economica.
+  
+  El comprador entregara el 10 o|o en el acto del remate, como sena y
+  por cuenta pago.
+  
+                                     Ricardo Lopez.
+                                     v23div
+
+NOTA DE LECTURA: Recalculo: dos tercios de 30.000 son 20.000, que es la base
+impresa. Cierra. La finca Angostura es la misma que el aviso de San Alejo (509
+h. 3) da como lindera al este y atribuye a Daniel Linares; aqui se remata sin
+nombrar propietario. Loma Bola, Angostura y Los Porongos son terminos del
+anillo 2. La marca de publicacion v23div no prueba repeticion.
+
+
+A.13 - Edicion N 525, hoja 2
+----------------------------
+
+FUENTE: BO Salta N 525, h. 2, col. 3 - Leyes y Decretos. Solo version propia.
+Folio impreso: 2019.
+
+FICHA: Decreto de 5 de noviembre de 1914, dictado por el Presidente del Senado
+en ejercicio del P. Ejecutivo a propuesta del comisario de policia del
+departamento de Caldera: nombra comisario auxiliar de policia del partido Los
+Porongos a Carlos Bongarnier.
+
+MODO DE LECTURA: Recorte de la columna entera a 250 dpi, en dos mitades
+apiladas. Transcripcion integra desde la imagen, con los dos firmantes y el
+"Es copia".
+
+TEXTO (transcripcion desde la imagen):
+
+  De acuerdo con la propuesta elevada por el senor comisario de policia
+  del departamento de Caldera,
+  
+  El Presidente del Senado en ejercicio del P. Ejecutivo de la
+  provincia.
+  
+  DECRETA
+  
+  Art. 1o. Nombrase comisario auxiliar de policia del partido Los
+  Porongos al senor Carlos Bongarnier.
+  Art 2o. Comuniquese, publiquese y dese al R. Oficial.
+  Salta, noviembre 5 de 1914.
+  
+                                     LEGUIZAMON.
+                                     Julio Cornejo.
+  Es copia: Jose M. Outes
+            S. S.
+
+NOTA DE LECTURA: El departamento se nombra aqui sin articulo, "departamento de
+Caldera", y no "de La Caldera" como en los demas actos del ano. Los Porongos
+es termino del anillo 2 heredado del config y este es su unico acto del ano.
+El Ejecutivo lo ejerce el Presidente del Senado, Leguizamon: el interinato se
+registra en E.4 y no se le fija dia de cierre sin decreto de reintegro a la
+vista. En la misma columna, un decreto del 3 de noviembre encarga la cartera
+de Hacienda al ministro de Gobierno Julio Cornejo mientras dure la ausencia
+del titular Macedonio Aranda, ausentado a la Capital Federal.
+
+
+A.14 - Edicion N 527, hoja 2
+----------------------------
+
+FUENTE: BO Salta N 527, h. 2, cols. 2 y 3 - Leyes y Decretos. Las dos
+versiones.
+
+FICHA: Decreto del Presidente del Senado en ejercicio del P. Ejecutivo que
+nombra los Jurados que han de entender en los reclamos del empadronamiento de
+capitales en giro y clasificacion de patentes fijas para 1915, departamento
+por departamento. La entrada de La Caldera: titulares Daniel Linares y
+Bernardo Austerlitz; suplentes Adolfo Videl y Silvano Murua.
+
+MODO DE LECTURA: Dos recortes de columna a 260 y 280 dpi, en mitades apiladas.
+La lista entera se leyo en la imagen, y con ella el encabezado del decreto,
+que es lo que permite saber de que es la nomina.
+
+TEXTO (transcripcion desde la imagen):
+
+  Estando nombrados por decreto de la fecha los comisionados que han de
+  practicar el empadronamiento de los capitales en giro y clasificacion
+  de patentes fijas para el proximo ano 1915 y correspondiendo en
+  consecuencia designar los Jurados que han de entender en los
+  reclamos, segun las disposiciones pertinentes de la ley de la
+  matria [sic],
+  
+  El Presidente del Senado en ejercicio del Poder Ejecutivo de la
+  Provincia
+  
+  DECRETA:
+  
+  Art. 1o. Nombrase Jurados para entender en los reclamos relativos al
+  empadronamiento de capitales en giro del ano 1915 a las siguientes
+  personas:
+  
+  [...]
+  
+  Caldera - Titulares: senores Daniel Linares y Bernardo Austerlitz;
+  suplentes: senores Adolfo Videl y Silvano Murua.
+  
+  [...]
+  
+  Art. 2o. Los reclamos deberan presentarse en la capital durante el
+  mes de diciembre proximo, y en la[s] mes de diciembre y los de la
+  segunda en el mes de enero de 1915; para cuyo efecto, funcionaran los
+  Jurados por el periodo legal, a contar de las fechas en que se
+  dispone la terminacion del empadronamiento y clasificacion de la
+  Capital y de la campana.
+  
+  Art. 4o. Es obligatorio de los comisionados, dar aviso a los Jurados
+  respectivos de estar los registros terminados y a su disposicion, a
+  los fines de los reclamos que se hubieren presentado; debiendo, una
+  vez vencido el plazo para el funcionamiento de estos ultimos,
+  recabarlos y elevarlos al Ministerio de Hacienda, con las actas y
+  demas constancias que acrediten su depuracion.
+  
+  Art. 5o. Comuniquese, publiquese e insertese en el Registro Oficial.
+  
+                                     LEGUIZAMON.
+                                     Julio Cornejo.
+  Es copia: Miguel Arias, oficial 1o.
+
+NOTA DE LECTURA: Cuatro nombres del departamento en un mismo acto. Daniel
+Linares es actor heredado con origen 1909 y en 1914 aparece ademas como
+propietario de la finca Angostura en el aviso de 509 h. 3: es del segundo
+grupo del parrafo B. Silvano Murua es actor heredado con origen en la edicion
+2675 de 1946 - un apellido que cruza cuarenta anos - y Adolfo Videl se imprime
+asi donde el config trae "adolfo vidal", de 1908: se transcribe como esta y se
+agregan las dos formas al config. Bernardo Austerlitz no figura en ningun
+informe anterior. El decreto pasa del articulo 2o. al 4o. sin imprimir un 3o.
+[sic]. El "Es copia" lo firma Miguel Arias como oficial 1o., no un Secretario:
+es la tercera forma del ano.
+
+
+Apariciones del anillo 1 no fichadas por separado
+-------------------------------------------------
+
+  478 h.2  lit prop      remate de Quevedo, aparicion cotejada por texto
+  482 h.2  dif "valdera" remate de Quevedo, aparicion cotejada por texto
+  484 h.3  dif "ualdera" remate de Quevedo, con fecha propia (22 de mayo)
+
+Dos hojas mas dieron acierto literal y son falso positivo del anillo 1, ya
+juzgados: 478 h. 2 y 534 h. 3 traen motores con caldera en remates de
+maquinaria, y 467 h. 1 un articulo de reglamento que prohibe surtir del cano
+de servicio a toda maquina a vapor o caldera. La primera de esas hojas es,
+ademas, mencion real por otra via, y por eso figura en las dos listas.
+
+
+PARRAFO B - VECINDAD
+====================
+
+B.1 - Nucleos ya fichados en el parrafo A: Estacion Mojotoro (504) y la
+comision municipal del departamento (485). No se repiten aqui.
+
+B.2 - Nucleos del departamento en actos que no nombran el termino: pendiente,
+porque depende de la lectura de los contextos del anillo 2.
+
+B.3 - Terminos del anillo 2 con acierto en 1914, con el numero de apariciones
+y las hojas donde caen. Los contextos se leen uno por uno en el turno
+siguiente, que es lo que decide cuales son del departamento y cuales son otra
+cosa.
+
+  castellanos   14    466 469 476 481 484 502 510 514 ...
+  quintin       12    460 ...
+  isasmendi     11    459 496 516 518 524 527 529 533
+  angostura      9    463 476 509 516 521 523 529
+  san alejo      6    463 476 509 514
+  santa rufina   4    476 509
+  betania        4    466
+  lesser         3    464 495
+  entre rios     3    512
+  la despensa    3    469
+  gallinato      2    485
+  chaile         2    516 529
+  el cajon       2    459 479
+  mojotoro       1    469
+  durazno        1    534
+  murua          1    527
+  teodolinda     1    501
+  nogales        1    523
+  rio blanco     1    494
+  loma bola      1    521
+  penales        1    469
+
+Sobre mojotoro conviene una advertencia: la busqueda literal del termino da un
+solo acierto, y sin embargo el acto de la subcomisaria de la estacion Mojotoro
+esta fichado en el parrafo A. Las dos versiones deforman la palabra: la capa
+previa imprime "mojotorp" y el OCR propio "Mojotoro,," pegado a la coma. Es el
+caso de la palabra suelta que falla en silencio, y confirma que toda palabra
+que decide una ficha se mira.
+
+B.4 - Ausencias del anillo de actores: pendiente. Los veintitres actores
+heredados que si aparecen con nombre completo estan en el parrafo 2; el
+reparto en los tres grupos que manda la rubrica exige antes la busqueda por
+apellido suelto agrupada por contexto.
+
+
+PARRAFO C - LIMITROFES / PARRAFO P - PLANOS / PARRAFO D - INDICE
+================================================================
+
+Pendientes los tres. Sobre planos se adelanta un dato: el corpus no publica
+ninguno, y el recuento de hojas que remiten a un plano sin acompanarlo se hace
+en el turno siguiente.
+
+
+PARRAFO E - OBSERVACIONES
+=========================
+
+E.1 Duplicacion y saldos. Sin las jpg del script no hay md5 ni dhash: la
+duplicacion se controla por texto, y el resultado de hacerlo es el hallazgo
+del ano. Lo que parecia un aviso repetido tres veces - el remate de San Alejo
+y Santa Rufina en 463, 476 y 509 - son tres remates distintos de la misma
+finca, con el mismo texto y con la base rebajada cada vez: 5,50 pesos la
+hectarea el 21 de febrero, 4,25 el 12 de mayo y 3,20 el 5 de octubre, una
+caida del 42 por ciento en ocho meses sobre una finca de 17.874 hectareas. Lo
+mismo pasa con el remate de la hacienda depositada en poder de Gumersindo
+Quevedo: las cuatro apariciones no son una publicacion repetida, porque la de
+484 h. 3 se remata el 22 de mayo y la de 480 h. 2 el 13. Contarlos como
+repeticiones habria borrado seis actos. Ninguna de las dos series se juzgo por
+la marca de publicacion, que dice hasta cuando corre la orden de publicar y no
+prueba nada sobre repeticion. De la cadena de saldos hay por ahora un solo
+resumen de caja leido, el de junio de 1914, que arranca con el saldo de mayo.
+
+E.2 Cobertura. 279 hojas, las 279 con OCR propio y 70 con capa previa.
+Imagenes miradas: veinte. Columnas recortadas y leidas: diecisiete, de doce
+ediciones. Todas las hojas candidatas del anillo 1 quedaron miradas.
+
+E.4 Firmas y autoridad. Hasta agosto firma el gobernador Patron Costas; en
+noviembre firma LEGUIZAMON como Presidente del Senado en ejercicio del Poder
+Ejecutivo, en las dos fichas de 525 y 527. No hay a la vista decreto de
+apertura ni de cierre de ese interinato, de modo que se declaran el ultimo
+acto del titular y el primero del interino y no se fija el dia del reintegro.
+Hay ademas un interinato ministerial con fecha propia: el 3 de noviembre se
+encarga la cartera de Hacienda al ministro de Gobierno Julio Cornejo mientras
+dure la ausencia de Macedonio Aranda, ausentado a la Capital Federal. Los
+refrendos vistos son Macedonio Aranda (mayo) y Julio Cornejo (julio, agosto y
+noviembre). El "Es copia" aparece en tres formas: J. M. Outes S. S., Jose M.
+Outes S. S. y Miguel Arias, oficial 1o. Se registran las tres y no se
+normaliza. La formula de encabezado varia dentro del mismo ano: "El P.
+Ejecutivo de la Provincia", "El P. E. de la provincia", "El Presidente del
+Senado en ejercicio del P. Ejecutivo de la provincia" y, en el decreto de
+Mojotoro, "Ejecutivo de la Provincia." a secas.
+
+E.5 Cortes y columnas. Las columnas de esta epoca arrancan en tres bandas
+regulares sobre paginas de unos 600 puntos. No se detecto columna perdida en
+las tres columnas cotejadas, que es una afirmacion sobre tres columnas y no
+sobre el ano.
+
+E.7 Falsos positivos de 1914, para no volver a discutirlos dentro de la epoca:
+en el anillo 1, la caldera de maquina a vapor del reglamento de aguas
+corrientes (467 h. 1) y los motores con caldera de los remates de maquinaria
+(478 h. 2, 534 h. 3); en la laxa, la formula "condenando al demandado", que
+produce "o al dema" una y otra vez, y "calle ma" de los deslindes urbanos; en
+la difusa, "caderias" por mercaderias, "escalera", "cadilla" y "aludiera".
+
+E.9 Contradicciones. El ano impreso en las tapas de enero y febrero (1913 por
+1914), con dos de las tres corregidas a mano sobre el ejemplar. La formula de
+encabezado del decreto de Mojotoro, impresa "Ejecutivo de la Provincia." sin
+"El P.". El resumen de caja de junio encabeza "A saldo de mayo 19114" [sic],
+con un digito de mas. El decreto de Jurados de 527 h. 2 pasa del articulo 2o.
+al 4o. sin imprimir un 3o. La tapa de la edicion 508 se fecha el 2 de
+septiembre de 1914 y se numera "NUM. 509", que es el numero de la edicion
+siguiente: queda anotado para mirarlo en la imagen. El apellido del lindero de
+San Alejo se imprime "Sosavo" en 509 h. 3 y "Sosaya" en 512 h. 4, y el
+suplente de Jurados "Adolfo Videl" donde el config trae "Adolfo Vidal".
+
+E.8 Fidelidad numerica. La extension de San Alejo y Santa Rufina es 17.874
+hectareas, 27 areas y 19 metros cuadrados, confirmada a 500 dpi en 509 h. 3 y
+en cuerpo grande en 463 h. 3. El informe del turno anterior publico 17.374 por
+haber mirado esa palabra a 250 dpi, que en esta tipografia no alcanza para
+separar un 3 de un 8. La base de la Angostura recalculada cierra: dos tercios
+de 30.000 son los 20.000 impresos. Las tres bases sucesivas de San Alejo -
+5,50, 4,25 y 3,20 - se leyeron cada una en su imagen.
+
+E.10 Limites declarados, es decir lo que ningun trabajo de esta sesion puede
+resolver: (1) no hay md5 ni dhash de imagenes, porque no llegaron las jpg del
+script; (2) no hay medicion de tinta por la misma razon; (3) no hay log de
+corrida de lee_auto.py, porque no hubo corrida; (4) las ediciones 487 a 493 no
+estan en el Release y no se pueden barrer; (5) la edicion 470 no existe como
+boletin en el origen de los PDF; (6) en las 46 ediciones sin capa previa no
+hay segunda version con que desempatar por texto, y el desempate es siempre la
+imagen.
+
+
+RECUENTO PROVISORIO
+===================
+
+  archivos bajados ................................. 71
+  ediciones utiles ................................. 69
+  hojas ............................................ 279
+  hojas con capa previa ............................ 70
+  hojas con OCR propio de la sesion ................ 279
+  hojas candidatas del anillo 1 .................... 16
+  actos fichados ................................... 13
+  apariciones cotejadas solo por texto ............. 3
+  terminos del anillo 2 con acierto ................ 21
+  actores heredados que reaparecen ................. 23
+  imagenes miradas ................................. 20
+  limites declarados ............................... 6
+
+
+FIN DEL INFORME - ESTADO: CON PENDIENTES

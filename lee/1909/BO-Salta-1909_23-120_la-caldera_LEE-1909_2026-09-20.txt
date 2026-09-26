@@ -1,0 +1,992 @@
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - AÑO 1909
+Ediciones N° 23 a 120 (2/6 de enero a 31 de diciembre de 1909)
+Barrido LEE 1909 - departamento de La Caldera
+Rúbrica LEE v12 (modo híbrido) - informe del 20/09/2026
+
+§0 · ADVERTENCIA PRELIMINAR
+===========================
+Estado del informe: CON PENDIENTES. Todas las menciones del §A se buscaron en
+las dos versiones de texto de las 398 hojas y se miraron en la imagen de los PDF
+originales, pero quedan partes sin mirar que se enumeran en E.3 y E.10 (fechas y
+firmas de tres decretos, la vecindad del §B, el fallo de San Alejo y Santa
+Rufina completo y sus posibles repeticiones). Lo que no se miró está dicho en
+cada ficha.
+
+Modo: el usuario escribió "LEE" sin argumentos; como el único insumo eran
+salidas de lee_auto.py para un solo año, se conmutó a "LEE 1909" (§0 de la
+rúbrica).
+
+Insumos recibidos: (1) 1909.zip con la carpeta lee_trabajo\1909 sin imágenes:
+.prev.txt, .prop.txt, .prop.tsv y EXTRAIDO.json de 98 ediciones y 398 hojas; (2)
+las cuatro hojas de la N° 23 en .jpg; (3) los 98 PDF originales, clonados del
+repositorio público de GitHub ediedrich/boletines-salta (commit 4dae6a5), cuyos
+tamaños y cantidad de hojas coinciden uno a uno con EXTRAIDO.json. No se
+recibieron el pre-informe, los CSV, el log.txt, los recortes ni el
+lee_config.json: la versión del script, sus parámetros efectivos y sus errores
+no se pueden declarar. Se asume, sin verificar, la configuración descrita en la
+rúbrica (tesseract spa, psm 3, 300 dpi).
+
+Techo de resolución: las imágenes incrustadas en los PDF tienen entre 323 y 370
+ppi. Para mirar se rasterizó cada página a 300 dpi en gris con PyMuPDF y se
+recortó la columna; cifras dudosas, al doble.
+
+Qué verificó la sesión sobre la corrida: la capa previa (PDF con texto, sin
+marca U+0002, pero con 15.716 guiones blandos U+00AD al fin de renglón que la
+unión de cortes de la rúbrica no contempla); el reparto de confianza; las 98
+tapas; el cotejo del anillo 1 con búsquedas propias en las dos versiones; la
+columna perdida en la imagen. El cotejo sumario/cuerpo no es aplicable: las
+ediciones de 1909 no traen sumario con puntos guía (§2.3). Los decretos de 1909
+no llevan número: la regla 15 (fecha contra numeración) no es aplicable.
+
+Transcripciones: se dan desde la imagen, con la ortografía del original y [sic]
+donde corresponde. Desvío respecto de §8.17: los renglones del original no se
+conservan (el texto va corrido), salvo en listas. Cortes de fin de renglón
+reconstruidos sin marca.
+
+
+§1 · CORPUS REVISADO
+====================
+98 ediciones, N° 23 a 120; 398 hojas presentes contra 398 contadas en los PDF.
+Hojas por edición: 4 en 87 ediciones; 3 en las N° 30, 32, 37, 39, 40 y 41; 2 en
+la N° 31; 8 en las N° 56, 57 y 62; 6 en la N° 58. Todas las ediciones son PDF
+reales con capa de texto previa.
+
+Periodicidad: "Aparece Miércoles y Sábados". Tapa: "AÑO I" hasta la N° 97
+(13/10) y "AÑO II" desde la N° 98 (16/10). Ediciones dobles (miradas): N° 23,
+"Enero 2 y 6 de 1909", y N° 91, "Setiembre 18 y 22 de 1909". La N° 120 es del
+viernes 31/12 (mirado). Miércoles o sábados sin edición: sábado 6/2, miércoles
+24/2, sábado 10/4, miércoles 5/5 y miércoles 26/5. Que el 24/2 sea Miércoles de
+Ceniza, el 10/4 Sábado Santo y el 26/5 el día siguiente al 25 de Mayo es
+INFERENCIA: no se buscaron decretos de feriado o asueto.
+
+Fechas de tapa: 79 leídas en la capa de texto y 24 miradas en la imagen (N° 23,
+30, 31, 32, 36, 39, 44, 47, 48, 54, 55, 56, 59, 61, 68, 80, 91, 95, 96, 97, 99,
+103, 106, 109, 120). La serie es monótona y cae en miércoles y sábados salvo la
+N° 120.
+
+Paginación corrida desde 1908: la N° 23 lleva folios 108 a 110 en las hojas 2 a
+4 (la tapa sin folio; 107 es inferencia). No se revisó la paginación del resto
+del año (E.3).
+
+Confianza (umbrales v12 sobre el OCR propio): pub 0, ver 385, ojos 13; media
+82,5. Hojas "ojos": 23h1, 24h2, 26h4, 28h2, 28h3, 28h4, 29h2, 29h4, 30h2, 43h4,
+50h3, 62h8, 105h3. La 23h1 (media 62,7) se lee bien en la imagen: los umbrales
+no sirven para esta tipografía.
+
+
+§2 · CRITERIO DE BÚSQUEDA
+=========================
+Versiones: capa previa del PDF (prev) y OCR propio (prop), unidas; cada
+resultado se etiquetó por versión. Unión de cortes: marca U+0002, guion común y,
+agregado en esta sesión, guion blando U+00AD.
+
+Anillo 1: "cald" sobre texto normalizado; laxa con y sin espacio intermedio (sin
+formas nuevas fuera de "cald"); difusa >= 0,78 contra caldera/calderilla
+(calderon, calde, calavera, aldea, cuadrilla, calera, caderias, calderos,
+escalera: todo descartado con contexto salvo 107h4 "calera" = Caldera) y
+ampliada 0,70-0,78 (sólo 26h4 "CaMera" = Caldera). Anillo 2: los 37 términos de
+v12 más potrero de castillo, senda de las animas, angosto de arrieta,
+calderilla, cuarteadero y los sauces. Anillo de actores: los de 1908 (Vidal,
+Figueroa, Murúa, Rejis/Regis, Aparicio, Díaz, Fressart, Chuchuy) y los surgidos
+en 1909 (§2.1); búsqueda por nombre y apellido laxos.
+
+2.1 Actores surgidos en 1909 (origen: acto del §A): Angel Fernández, Silvano J.
+Murúa, Rafael Usandivaras, Jacinto Guerrero, Belisario Benitez, Carlos Matienzo,
+Augusto Regis/Rejis, Abelardo Figueroa, Adolfo Vidal, Daniel Linares, Genaro
+Molina, Adolfo Agote, Julio Mercado, Francisco H. Leeds, Guillermo Haaton,
+Teodoro Reyes, Liborio/Livorio Guerrero, Modesto Mantilla, Zacarías Maidana,
+Abraham Fernández, Silverio Cáceres, Marcelo Lamas, Victoriano Viverò, Benjamín
+López, Andrés V. Matienzo, Abdòn Choque, Héctor Echenique, Higinio Juárez, Darío
+Moya, Laureano Quipildor, Benancio Ruiloba, David Segovia, Antonio Vera, Miguel
+Ceballos, Daniel Aràmbulo, Desiderio Gumiel, Camilo Cáceres, Carlos Murúa, Juan
+Chuichui, Lucas Molina, José Manuel Alfaro, Escolástico M. Aparicio, Laureano
+Catacata, Manuel Nuñez de la Rosa, Macedonio Benitez, Justo R. Aguilar, Walter
+Hesling, Susana Aguilera.
+
+Identificadores usados para afirmar ausencias: lugar (partidos del
+departamento), persona (actores) y organismo (comisión municipal, juzgado de
+paz, comisaría). No hay números de acto.
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - AÑO 1909
+Ediciones N° 23 a 120 (2/6 de enero a 31 de diciembre de 1909)
+Barrido LEE 1909 - departamento de La Caldera
+Rúbrica LEE v12 (modo híbrido) - informe del 20/09/2026
+
+§A · MENCIONES EXPLÍCITAS
+=========================
+Veintidós actos con mención real del anillo 1, en 20 hojas. Todas se miraron en
+la imagen del PDF (300 dpi) salvo lo que cada ficha dice. Los datos de firma
+entre corchetes son del OCR y no se miraron.
+
+
+A.1 · Comisiones municipales (13/01/1909)
+-----------------------------------------
+FUENTE: N° 26, hoja 4, col. 1-2.
+FICHA: Decreto del P. E., Gobierno. Salta, Enero 13 de 1909. LINARES / SANTIAGO
+M. LOPEZ.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. La
+previa lee "CaMera" y la propia desplaza "Caldera." de columna.
+
+TEXTO:
+  Considerando oportuno designar las personas que deben desempeñar las
+  Comisiones Municipales de los departamentos y distritos de campaña y no
+  pudiendo estos nombramientos efectuarse conforme lo prescribe el art. 173 de
+  la constitución, por cuanto la mayor parte de aquellas corporaciones no han
+  verificado el sorteo requerido para la renovación por mitad de sus miembros.
+  El P. E. de la Provincia DECRETA: Art. 1º Nombranse miembros de las comisiones
+  municipales de los departamentos y distritos que à continuación [se expresan á
+  los señores siguientes: - no mirado] [...] Caldera [en negrita] Señores: Angel
+  Fernández, Sivano [sic] Murua (hijo), doctor Rafael Usandivaras, Jàcinto
+  Guerrero y Belisario Benitez. [...] Art. 2º Las comisiones nombradas se
+  instalarán, recibiendo de las cesantes el archivo y demàs pertenencias, y
+  pasaràn al P. Ejecutivo las ternas para el nombramiento de los jueces de Paz,
+  lo mismo que el presupuesto de gastos para el corriente año. Art. 3º
+  Comuníquese, publíquese y dese al R. Oficial. Salta, Enero 13 de 1909. LINARES
+  SANTIAGO M. LOPEZ.
+
+NOTA DE LECTURA: Se transcribe la parte del departamento y el marco del decreto;
+los demás departamentos se omiten. Tres de los cinco miembros renuncian en el
+año (A.6, A.11, A.12).
+
+
+A.2 · Convocatoria a elecciones legislativas (06/02/1909)
+---------------------------------------------------------
+FUENTE: N° 32, hoja 2, col. 3.
+FICHA: Decreto del P. E. Salta, Febrero 6 de 1909. LINARES / SANTIAGO M. LOPEZ /
+Es copia. José M. Outes. S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Debiendo procederse á la renovación del personal de las Honorables
+  Legislaturas de la Provincia, de conformidad cen [sic] lo prescripto en los
+  artículos 63, 70 y 78 de la Constitución y 39 de la ley de elecciones de la
+  provincia y en virtud de lo comunicado por los señores presidentes de ambas
+  càmaras eu [sic] que dan cuenta de las vacantes que deben producirse en el
+  corriente año— El P. Ejecutivo de la Provincia DECRTETA [sic]: Art. 1º
+  Convócase al pueblo de los departamentos de la Capital, Cerrillos, San Carlos,
+  Chicoana, Viña, Campo-Santo, Cafayate, Santa Victoria, Rosario de la Frontera,
+  Rosario de Lerma, Caldera, Molinos, Metán, Rivadavia y Candelaria á elegir sus
+  representantes á las Honorables Càmaras Legislativas, en la proporción
+  siguiente: Nn [sic] senador por la Capital y uno por cada uno de los
+  departamentos de Cerrillos, San Carlos, Cachi, Chicoana, Viña, Campo Santo,
+  Cafayate, Santa Victoria y Rosario de la Frontera: Cuatro diputados por la
+  Capital y uno por cada uno de los departamentos de Cerrillos, San Carlos,
+  Viña, Campo Santo, Rosario de la Frontera, Rosario de Lerma, Caldera, Molinos,
+  Metán, Rivadavia y Candelaria. Art. 2º Designase el dia domingo 7 de Marzo
+  próximo para que tenga lugar dicha elección. Art. 3º Comuníquese á quienes
+  corresponda, publíquese é insértese en el Registro Oficial. Salta, Febrero 6
+  de 1909. LINARES SANTIAGO M. LOPEZ Es copia. José M. Outes. S. S.
+
+NOTA DE LECTURA: Caldera elige un diputado y ningún senador. Cachi figura entre
+los senadores y no en la convocatoria del art. 1º: se registra sin conciliar
+(E.9).
+
+
+A.3 · Cuadro de inversión de las rentas municipales de 1908
+-----------------------------------------------------------
+FUENTE: N° 33, hoja 2, col. 1 (nota) y col. 2-3 (cuadro).
+FICHA: Nota del presidente municipal al Ministro de Gobierno y cuadro;
+providencias del Departamento de Gobierno del 9/2/1909.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Cuadro mirado entero al 45 % y la columna de importes a escala 1:1.
+
+TEXTO:
+  [col. 1] Caldera, Enero 15 de 1909. A S. S. el señor Ministro de Gobierno.
+  Salta. Señor Ministro; Tengo el honor de dirigirme á S. S. adjuntándole el
+  cuadro demostrativo de la inversión de las rentas municipales de este
+  departamento en el año 1908. Me es grato saludar á S. S. muy atentamente.
+  ANGEL FERNANDEZ. P. M. Departamento de Gobierno Salta, Febrero 9 de 1909.
+  Publíquese con el cuadro adjunto y archívese. LOPEZ.
+
+  [col. 2] Cuadro demostrativo de la inversión de las rentas municipales de este
+  departamento en el año 1908. ENTRADAS: Por saldo líquido que paso del año 1908
+  al 1208 [sic] $ 283.77. Producido de la venta por licitación de los impues.
+  municipales en el corriente año de 1908 » 1150.—. Producido de los derechos de
+  cementerio en el corriente año de 1908. » 50.—. Suma total $ 1483.77. SALIDAS:
+  Al Consejo Gral. de Educación por el 20 % adicional sobre el valor de 1200
+  pesos m/n c/l. produdido [sic] en el año 1908 $ 200.—. Abonado al secretario y
+  comisario municipal durante el año 1908, según comprobante número 1. » 180.—.
+  Abonado al farolero municipal en todo el año 1908, según comprábante [sic]
+  núm. 2. » 54.—. Por limpieza del camino nacional en el trayecto desde el
+  Angosto de Arias hasta Castañares y parte de la Calderilla, según comprobante
+  núm. 3. » 293.60. Por gastos de alumbrado público, impresión de talonarios,
+  latas para patentes y gastos de escritorio, según comprobante número 4. »
+  91.90. Dado á la comisión de señoras para festejar la función del Rosario,
+  según comprobante número 5 » 65.—. Por media docena sillas para la comisión
+  municipal, según comprobante número 6. » 30.—. Abonado por la construcción de
+  un lazareto con motivo de la peste la viruela, según comprobante número 7. »
+  63.10. Remuneración al tesorero municipal durante el año 1908, según
+  comprobante núm. 8. » 50.—. Por limpieza y compostura de acequias de la
+  población, según comprobante núm. 9 » 16.55. Por compra de 3 faroles con sus
+  respectivas lámparas, según comprobante núm. 10 » 18.—. Por compostura de
+  goteras en los cuartos parroquiales, según comprobante núm. 11. » 7.—. Por un
+  poste de quebracho y labrar 2 postes más para los faroles del alumbrado, según
+  comprobante núm. 12. » 13.—. Abonado al maestro Cruz Escalante por 2 brazos de
+  fierro para los faroles del alumbrado público, según comprobante núm. 13. »
+  5.—. [col. 3] Abonado á Cosme Ramos por compostura del alambrado del
+  cementerio y para cavar una sepultura para un pobre de solemnidad, comp.
+  número 14 » 5.—. Abonado al maestro Tayala por compostura de 1 puerta de los
+  cuartos parroquiales, según comprobante núm. 15 » 1.—. Abonado à la patrulla
+  que sirvió en los días de carnaval, según comp. núm. 16. » 30.—. Para festejar
+  el 9 de Julio, según comprobante núm. 17 » 80.50. Existencia en caja » 280.12.
+  $ 1483.77. Caldera, Dbre. 31 de 1908. ANGEL FERNANDEZ. P. M. Carlos Matienzo.
+  Departamento de Gobierno Salta, Febrero 9 de 1909. Publíquese y archívese.
+  LOPEZ.
+
+NOTA DE LECTURA: Recalculado: entradas 283,77 + 1150 + 50 = 1483,77 (cierra);
+salidas 18 partidas + existencia = 1483,77 (cierra). El 20 % de 1200 es 240 y se
+imprime 200 (E.8). La cifra "1.—" (comp. 15) tiene un glifo dudoso entre 1 y 4;
+el total cierra con 1. La mención de la Calderilla es la única del anillo 1 en
+forma "Calderilla" en 1909, fuera de A.5; que el tramo de camino esté en el
+departamento es inferencia. Hay tres entradas del anillo 1 en la hoja.
+
+
+A.4 · Remate de haciendas de la sucesión Catacata (1ª vez)
+----------------------------------------------------------
+FUENTE: N° 33, hoja 4, col. 1-2.
+FICHA: Aviso del martillero Manuel Nuñez de la Rosa, Salta, Febrero, 8 de 19o9;
+remate del 15 de Febrero; juez doctor Julio Figueroa.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Cifras del cuadro ampliadas al doble.
+
+TEXTO:
+  Remate de hacienda. El 15 de Febrero, á las 3 1/2 de la tarde, en la Agencia
+  de la Villalonga, Plaza 9 de Julio, donde estara la bandera de remate, venderé
+  sin base y al contado, por orden del juez doctor Julio Figueroa, en el juicio
+  sucesorio de don Laureano Catacata, lo siguiente. 353 cabezas de ganado
+  vacuno; 31 " " " yeguarizo; 10 " " " caballar; 1 " " " asnal; 11 " " " mular;
+  124 " " " ovino; 1 " " " cabrio. DETALLE: 84 vacas con cria, 38 id sin cria,
+  40 id de 3 años, 21 id de 2, 36 terneras de 1 año, 17 [en cursiva] novillos de
+  cuenta, 12 novillos de 4 años, 35 id de 3, 34 id de 2, 29 terneros de 1 año, 7
+  bueyes, 10 toros de cuenta, 7 yeguas con cria, 8 id nuevas sin cria, 3 id
+  regular edad, 4 potrancas de 3 años, 2 potrancas de 2 años, 3 potres [sic] de
+  3 años, 3 id de 1, 1 padròn de regular edad, 6 caballos regular edad, 4 id
+  viejos, 1 [en cursiva] burro garañòn, 3 mulas manzas [sic] nuevas, 8 machos
+  mansos id., 78 ovejas con cria, 46 id sin cria, 2 cabras con cria, 5 id sin
+  id, 1 chivo cap., 1 id padre, 1 lote de muebles y ropas usadas etc. El dinero
+  lo depositeré en el Banco, para retirar lo que corresponda á la hacienda que
+  se entregue, devolviendo el remanente, en su caso. Como el inventario se hizo
+  en Enero de 19o8, las haciendas han adelantado un año en sus edades, lo que
+  debe tener presente el interesado. Las haciendas las recibirá el comprador del
+  Potrero de Castillo (Caldera) donde se hará la entrega. Salta, Febrero, 8 de
+  19o9. Manuel Nuñez de la Rosa. Martillero.
+
+NOTA DE LECTURA: Recalculado: vacuno, detalle 363 con bueyes y toros (346 sin
+ellos) contra 353 impreso; yeguarizo 31, caballar 10, asnal 1, mular 11 y ovino
+124 cierran; cabrío, detalle 9 contra 1 impreso (E.8, sin corregir). Número de
+aviso no mirado. Segundo remate de la misma sucesión en A.20.
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - AÑO 1909
+Ediciones N° 23 a 120 (2/6 de enero a 31 de diciembre de 1909)
+Barrido LEE 1909 - departamento de La Caldera
+Rúbrica LEE v12 (modo híbrido) - informe del 20/09/2026
+
+A.5 · Comisarios de partido del departamento (12/02/1909)
+---------------------------------------------------------
+FUENTE: N° 35, hoja 3, col. 1-2.
+FICHA: Decreto del P. E. Salta, Febrero 12 de 1909. LINARES / SANTIAGO M. LOPEZ
+/ José M. Outes, S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Vistas las propuestas presentadas por el Comisario de Policia del Departamento
+  de la Caldera para el nombramiento de Comisario de Partido El P. E. de la
+  Provincia DECRETA: Art. 1º Nómbrase Comisario Suplente de Policia del referido
+  Departamento al señor Jacinto Guer[mancha]ero; y Comisario auxiliar del
+  Partido de San Alejo y Santa Rufina, à don Angel Fernandez; del de la
+  Calderilla á don Genaro Molina, del de Vaqueros á don Adolfo Agote, del de los
+  Sauces y Angostos de Arias á don Julio Mercado, del de la Despenza [sic] á don
+  Francisco Leeds, del de los Porongos á don Teodoro Reyes, del de Peñones y
+  Chalchanio à don Liborio Gerrero [sic], del de Mojotoro à don Modesto
+  Mantilla, del de Potrero de Castillo á don Zacarias Maidana, del de Potrero de
+  Valencia à don Abraham Fernandez, del de Potrero de Gallinato á don Silverio
+  Cáceres, del de Lesser á don Marcelo Lamas, y del de los Yacones á don
+  Victoriano Viverò. Art. 3º Comuníquese, publiquese y dése al R. Oficial.
+  Salta, Febrero 12 de 1909. LINARES SANTIAGO M. LOPEZ. Es còpia José M. Outes,
+  S. S.
+
+NOTA DE LECTURA: El decreto salta del Art. 1º al Art. 3º: no hay Art. 2º en el
+original (mirado). Es la lista de partidos de la comisaría del departamento en
+1909. "Calderilla" aparece como partido, con artículo ("de la Calderilla").
+
+
+A.6 · Renuncia de Silvano J. Murúa a la comisión municipal
+----------------------------------------------------------
+FUENTE: N° 36, hoja 3, col. 1.
+FICHA: Decreto del P. E. Salta, Febrero 18 de 1909. LINARES / SANTIAGO M. LOPEZ
+/ José M. Outes, S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Habiendo aceptado en la fecha la renuncia presentada por el señor Silvano J.
+  Murúa del cargo de miembro de la comisión municipal del departamento de la
+  Caldera— El P. E. de la Provincia DECRETA: Art. 1º Nómbrase para integrar
+  dicha comisión municipal al señor Abelardo Figueroa. Art. 2º Comuníquese á los
+  nombrados publiquese y dése al R. Oficial. Salta, Febrero 18 de 1909. LINARES
+  SANTIAGO M. LOPEZ. José M. Outés, S. S.
+
+NOTA DE LECTURA: En A.1 el nombre se imprime "Sivano Murua (hijo)"; que sean la
+misma persona es inferencia.
+
+
+A.7 · Jueces de paz de Rivadavia y Caldera
+------------------------------------------
+FUENTE: N° 36, hoja 3, col. 1 y col. 2 arriba.
+FICHA: Decreto del P. E. Salta, Febrero 18 de 1909. LINARES. / SANTIAGO M.
+LOPEZ. / Es copia— José M. Outes. S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  De acuerdo con las ternas presentadas por las comisiones municipales de los
+  departamentos de Rivadavia y Caldera para la designación de los ciudadadanos
+  [sic] que deben desempeñar la justicia en esos departamentos— El P. E. de la
+  Provincia DECRETA: Art. 1º Nómbrase Juez de Paz propietario del departamento
+  de Rivadavia al señor Francisco C. Filpo y suplente á don Pablo Agüero y del
+  departamento de la Caldera á los señores Carlos Matienzo y Augusto Regis,
+  propietario y suplente respectivamente. Art. 2º Los nombrados tomarán posesión
+  de sus cargos prévias las formalidades de ley y los propietarios recibirán de
+  los antecesores el archivo y pertenencias de los juzgados bajo de inventario.
+  Art. 3º Comuníquese, publiquese y dése al R. Oficial. Salta, Febrero 18 de
+  1909. LINARES. SANTIAGO M. LOPEZ. Es copia— José M. Outes. S. S.
+
+NOTA DE LECTURA: Regis renuncia como suplente en A.8.
+
+
+A.8 · Renuncia de Augusto Regis como juez de paz suplente
+---------------------------------------------------------
+FUENTE: N° 37, hoja 3, col. 1.
+FICHA: Decreto del P. E. Salta, Marzo 1º de 1909. LINARES / SANTIAGO M. LOPEZ. /
+José M. Outes.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Habiéndose aceptado en la fecha la renuncia presentada por el señor Augusto
+  Regis del cargo de Juez de Paz suplente del departamento de la Caldera y
+  siendo necesario designar la persona que debe reemplazarlo, de acuerdo con las
+  ternas presentadas por la comisión municipal del mismo— El P. E. de la
+  Provincia DECRETA: Art. 1º Nómbrase Juez de Paz suplente del referido
+  departamento para el ejercicio del corriente año, al señor Jacinto[mancha]
+  Guerrero. Art. 2º El nombrado tomarà posesión del cargo, prévios los
+  requisitos de ley. Art. 3º Comuníquese, publiquese y dése al R. Oficial.
+  Salta, Marzo 1º de 1909. LINARES SANTIAGO M. LOPEZ. José M. Outes.
+
+NOTA DE LECTURA: Jacinto Guerrero queda como comisario suplente (A.5), miembro
+de la comisión municipal (A.1) y juez de paz suplente.
+
+
+A.9 · Nombramiento de veedores del departamento (Código Rural)
+--------------------------------------------------------------
+FUENTE: N° 51, hoja 2, col. 3.
+FICHA: Nota de Carlos Matienzo; providencia de Gobierno, Salta, Abril 20 de
+1909, D. ZAMBRANO, HIJO; acta labrada en Caldera el 8/4/1909.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. Los
+dos o tres primeros renglones de la nota de Matienzo quedaron fuera del recorte
+(sólo OCR).
+
+TEXTO:
+  [...] bramiento de veedores que deben regir en el corriente año, de
+  conformidad al art. 33 del Código Rural. Saluda á S. S. muy atte. Carlos
+  Matienzo. Departamento de Gobierno Salta, Abril 20 de 1909. Hágase de la lista
+  adjunta la publicación prevenida en el art. 33 del Código Rural. D. ZAMBRANO,
+  HIJO. En este pueblo de Caldera, capital del departamento del mismo nombre, á
+  los ocho dias del mes de Abril del año mil novecientos nueve, yo el suscrito
+  Juez de Paz del departamento y los señores Daniel Linares y Jacinto Guerrero,
+  ambos propietarios y vecinos de este departamento y en cumplimiento à lo
+  establecido en el art. 33 del Código Rural en vigencia, se procedió á nombrar
+  veedores en este departamento para el ejercicio del corriente año à los
+  señores siguientes: Sección San Alejo y Santa[mancha]Rufina, Andrés V.
+  Matienzo; La Despensa, Abdòn Choque; Los Porongos, Teodoro Reyes; Los Peñones,
+  Livorio Guerrero; Chalcanio, Héctor Echenique; Vaqueros, Higinio Juárez;
+  Wierna, Darío Moya; del Potrero de Castillo, don Laureano Quipildor; id de
+  Gallinatos, S[falta una letra]lverio Caceres; id de Valencia, Benancio
+  Ruiloba; Lesser, David Segovia; Los Yacones, Antonio Vera; Los Sauces y
+  Angosto de Arrieta y Quecería, Miguel Ceballos; Bandera Angosta y Mojotoro,
+  Daniel Aràmbulo; Mojotorillo y Chaguadero, Desiderio Gumiel. Con lo cual se dá
+  por terminado el acto y firman por ante mí que certifico.—Diniel [sic]
+  Linares—Jacinto Guerrero—Carlos Matienzo, Juez de Paz. Es copia fiel del
+  original que queda archivado en este Juzgado. Carlos Matienzo.
+
+NOTA DE LECTURA: Única mención de "pueblo de Caldera, capital del departamento".
+La lista de secciones difiere de la de A.5 (Chalcanio contra Chalchanio; Bandera
+Angosta, Mojotorillo, Chaguadero y Quecería sólo aquí).
+
+
+A.10 · Comisario de la estación Mojotoro
+----------------------------------------
+FUENTE: N° 51, hoja 3, col. 1.
+FICHA: Decreto del P. E. Salta, Abril 22 de 1909. LINARES / D. ZAMBRANO, HIJO. /
+Es copia— José M. Outes S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Vista la propuesta que, por el órgano correspondiente ha elevado el comisario
+  de policía del departamento de la Caldera, para la provisión del cargo de
+  comisario de la estación Mojotoro— El P. E. de la Provincia DECRETA: Art. 1º
+  Nómbrase comisario de policía del partido de la estación Mojotoro, comprensión
+  del departamento de la Caldera, al señor Benjamín López. Art. 2º Comuníquese,
+  publíquese y dése al al [sic] Registro Oficial. Salta, Abril 22 de 1909.
+  LINARES D. ZAMBRANO, HIJO. Es copia— José M. Outes S. S.
+
+NOTA DE LECTURA: La previa intercala en esta hoja renglones de dos columnas
+(E.5).
+
+
+A.11 · Renuncia de Jacinto Guerrero a la comisión municipal
+-----------------------------------------------------------
+FUENTE: N° 51, hoja 3, col. 3.
+FICHA: Decreto del P. E. Salta, Abril 22 de 1909. LINARES / D. ZAMBRANO, HIJO. /
+Es cópia— José M. Outes, S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. La
+propia pierde "de la Caldera" tras "Departamento:".
+
+TEXTO:
+  Habiéndose aceptado en la fecha la renuncia presentada por el señor
+  [mancha]Jacinto Guerrero del cargo de Miembro de la Comisión Municipal del
+  Departamento de la Caldera. El P. Ejecutivo de la Provincia DECRETA: Art. 1º
+  Nómbrase Mienbro [sic] de la Comisión Municipal del referido Departamento, al
+  señor Adolfo Vidal. Art. 2º Comuníquese, publiquese y dèse al R. Oficial.
+  Salta, Abril 22 de 1909. LINARES D. ZAMBRANO, HIJO. Es cópia— José M. Outes,
+  S. S.
+
+NOTA DE LECTURA: Adolfo Vidal es actor de 1908 (jurado de patentes).
+
+
+A.12 · Reemplazo del Dr. Rafael Usandivaras en la comisión municipal
+--------------------------------------------------------------------
+FUENTE: N° 58, hoja 4, col. 2.
+FICHA: Decreto del P. E. sin fecha impresa. LINARES / D. ZAMBRANO, HIJO. / Es
+copia— José M. Outes, S. S.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Ninguna de las cuatro pasadas lo encontró: el corte "Cal-/dera" viene con signos
+en medio en las dos versiones. Hallado por el anillo de actores.
+
+TEXTO:
+  Leyes y decretos. Encontrándose incompleta la comisión municipal del
+  departamento de la Caldera por renuncia del señor doctor don Rafael
+  Usandivaras— El P. Ejecutivo de la Provincia DECRETA: Art. 1º Nòmbrase para
+  integrar dicha comisión municipal al señor Augusto Regis por el término de
+  ley. Art. 2º Comuníquese, publíquese y dése al R. O. LINARES D. ZAMBRANO,
+  HIJO. Es copia— José M. Outes, S. S.
+
+NOTA DE LECTURA: No hay fecha entre el art. 2º y la firma. La N° 58 es del
+22/5/1909. Falso negativo del anillo 1: E.7.
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - AÑO 1909
+Ediciones N° 23 a 120 (2/6 de enero a 31 de diciembre de 1909)
+Barrido LEE 1909 - departamento de La Caldera
+Rúbrica LEE v12 (modo híbrido) - informe del 20/09/2026
+
+A.13 · Deslinde de las fincas San Alejo y Santa Rufina
+------------------------------------------------------
+FUENTE: N° 59, hoja 4, col. 1 (final) y col. 2.
+FICHA: Edicto del juzgado de 1ª instancia del Dr. Vicente Arias; Salta, mayo 17
+de 1909; Mauricio Sanmillán.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Número de aviso no mirado.
+
+TEXTO:
+  En el juicio sobre división de condominio de las fincas San Alejo y Santa
+  Rufina, seguido por los señores Benitez y Aguilar contra la familia Fernàndez,
+  èl señor juez de 1ª instancia doctor don Vicente Arias por auto de 10 del
+  corriente mes ha ordenado se proceda al deslinde general de las fincas
+  nombradas por el perito señor Walter Hesling, señalándose para que de princio
+  [sic] la operación el dia 23 de Junio entrante.—Las fincas á deslindarse; se
+  èncuentran ubicadas en el departamento de La Caldera y bajo los siguientes
+  límites: por el sud con propiedad de los señores Garzon y Pinto; herederos del
+  doctor Desiderio Ruiz y Silverio Bejarano: por el naciente, con propiedad de
+  los señores Daniel Linares, Abelardo Figueroa é ingeniero Nolasco Cornejo; por
+  el norte, con propiedad de Francisco Sasaya, Domingo Royo y la finca Cerro
+  Negro, provincia de Jujuy; y al poniente concluyen las propiedades en el Cerro
+  Nevado: su punta màs alta. Lo que se hace saber á todos los que estubieren
+  [sic] interesados en dicha operación, para que hagan valer sus derechos dentro
+  del término de 30 dias, contados desde la primera publicación del presente
+  edicto.— Salta, mayo 17 de 1909. Mauricio Sanmillán
+
+NOTA DE LECTURA: La propia lee "familia Hernández"; la imagen dice Fernàndez. La
+previa traspone el renglón "fincas á deslindarse..." a otra columna (E.5).
+Mismas fincas que A.22.
+
+
+A.14 · Sorteo de mesas receptoras para electores de gobernador
+--------------------------------------------------------------
+FUENTE: N° 84, hoja 1 (acta) y hoja 2 (lista); cierre en hoja 4.
+FICHA: Acta de insaculación, Salta, 10 de agosto de 1909; Santos 2º Mendoza,
+Secretario del Superior Tribunal.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Cierre parcial: el principio de los renglones de firmas quedó fuera del recorte.
+
+TEXTO:
+  [ACTA] de insaculación para Elecciones Provinciales. En la Ciudad de Salta, á
+  diez dias del mes de Agosto del año mil novecientos nueve, reunidos en el
+  Salon de la honorable Legislatura, el señor Presidente de la H. C. de
+  Diputados, en ausencia del señor Presidente del H. Senado, don Félix
+  Usandivaras, el señor Presidente del Superior Tribunal de Justicia, Dr. Flavio
+  Arias; el señor Fiscal General, doctor Delfin G. Leguizamón y el suscrito
+  secretario del Superior Tribunal de Justicia, en cumplimiento de lo prescrito
+  por el art. 22 de la Ley de Elecciones; procedieron á sorteo de los ciudadanos
+  inscriptos, para determinar los que han de formar las mesas receptoras de
+  votos en las elecciones para Electores de Gobernador para el próximo periodo
+  Constitucional, resultando los siguientes ciudadanos: [...]
+
+  Caldera
+  1a SERIE
+  Propietarios           Suplentes
+  Abelardo Figueroa      Lucas Molina
+  Camilo Cáceres         Adolfo Vidal
+  Carlos Murúa           Silvano Murùa
+  Juan Chuichui          Angel Fernández
+  Genaro Molina          José Manuel Alfaro
+
+  [hoja 4, cierre] [...]NDIVARAS—FLAVIO ARIAS [...]IN G. LEGUIZAMON Santos 2º
+  Mendoza Secretario
+
+NOTA DE LECTURA: "Juan Chuichui" es, probablemente, el Juan Chuchuy de 1908 (A.3
+de 1908) y de la N° 52 h1 (§B): identidad no afirmada. Caldera tiene una sola
+serie.
+
+
+A.15 · Locales de las mesas receptoras de votos
+-----------------------------------------------
+FUENTE: N° 85, hoja 3, col. 3 (encabezado) y hoja 4, col. 1-2.
+FICHA: Decreto del P. E.; cierre en h4 col. 2: Salta, Agesto [sic] 20 de 1909.
+LINARES. DAVID ZAMBRANO (HIJO).
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. Que
+el cierre de la col. 2 sea el de este decreto se infiere de su posición.
+
+TEXTO:
+  Siendo necesario fijar la ubicación de las mesas receptoras de votos en las
+  elecciones provinciales en virtud del nuevo sorteo practicado por la Junta
+  Central de Insaculación, teniendo á la vista el Padrón Cívico Provincial y de
+  acuerdo con la autorización conferida en el art. 21 de la Ley de Elecciones
+  Provinciales— El P. Ejecutivo de la Provincia DECRETA: [...] Seccion Caldera
+  [en negrita] Para la primera série el àtrio de la iglesia parroquial. [...]
+  Art 2º Comuniquese publiquese é insértese en el Regtistro [sic] Oficial.
+  Salta, Agesto [sic] 20 de 1909. LINARES. DAVID ZAMBRANO (HIJO)
+
+NOTA DE LECTURA: Coincide con la serie única de A.14.
+
+
+A.16 · Correlación del Registro Cívico Provincial
+-------------------------------------------------
+FUENTE: N° 89, hoja 4, col. 1-2.
+FICHA: Decreto del P. E. Considerandos, fecha y firma NO MIRADOS.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  [...] DECRETA: Art. 1º La oficina del Registro Civil de la capital y los
+  Juzgados de Paz de los departamentos de Rivadavia, Candelaria, Anta (Piquete),
+  Caldera, Rosario de la Frontera y parroquia de la Candelaria de esta ciudad,
+  en los cuadernos del Registro Cívico Provincial que respectivamente obraran en
+  su poder, dentro de los cinco días de recibir el presente, procederán á
+  correlacionar la numeración de los ciudadanos inscriptos conforme à lo
+  dispuesto en el artículo 8º de la ley electoral; à cuyo efecto [...] en el
+  departamento de la Caldera se dará el número 178 al número 1 de la ampliación,
+  y así sucesivamente; [...] Art. 4º Toda duda que se origine en le [sic]
+  aplicación del presente decreto, será consultada con el Ministerio de
+  Go[bierno] [...]
+
+NOTA DE LECTURA: Implica, por inferencia, 177 inscriptos anteriores en el
+registro cívico del departamento. En el mismo artículo, para la Candelaria de la
+capital: "el número 509 al 105 de la 2ª série, por haber terminado la
+inscripción anterior en el número 108" (E.9).
+
+
+A.17 · Comisario auxiliar del partido de la Despensa
+----------------------------------------------------
+FUENTE: N° 91, hoja 3, col. 1 (final) y col. 2 arriba.
+FICHA: Decreto del P. E. LINARES / D. ZAMBRANO (hijo) / Es copia— José M. Outes.
+Fecha: el OCR da "Salta, Setiembre 9 de 1909" antes del decreto, NO MIRADA.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Encontrándose vacante el puesto de comisario auxiliar de policía del partido
+  de la Despensa por renuncia del que lo desempeñaba don Francisco H. Leeds y de
+  acuerdo con la propuesta presentada por el señor comisario de policía del
+  departamento de la Caldera, El P. Ejecutivo de la Pro[v]incia DECRETA: Art. 1º
+  Nómbrase comisario auxiliar de policía del partido de la Despensa,
+  jurisdicción del departamento de la Caldera á don Guillermo Haaton. Art. 2º
+  Comuníquese, publiquese y dèse al R. Oficial. LINARES D. ZAMBRANO (hijo) Es
+  copia— José M. Outes
+
+NOTA DE LECTURA: Dos menciones en el mismo acto. Francisco Leeds fue nombrado en
+A.5. Ninguna de las dos versiones de texto trae el nombre Haaton.
+
+
+A.18 · Remate de derechos sobre la finca Angosto de Arrieta
+-----------------------------------------------------------
+FUENTE: N° 92, hoja 4, col. 2.
+FICHA: Aviso del martillero Ricardo López; juez doctor Julio Figueroa; remate
+del 2 de noviembre; aviso "310 v. Nbre 2".
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+
+TEXTO:
+  Por Ricardo López DE LA FINCA ANGOSTO DE ARRIETA Derechos y acciones El dia
+  dos de Noviembre del corriente año, á las 4 en punto en el local «Los
+  Catalanes», calle Caseros esquina Balcarce, y por órden del señor juez de
+  primera instancia doctor Julio Figueroa, venderé á la más alta oferta y dinero
+  de contado, los derechos y acciones á una décima parte de la finca ANGOSTO DE
+  ARRIETA, ubicada en la Caldera y cuyos límites son: al Este propiedad de Julio
+  Mercado, Augusto Rejis y Susana Aguilera; al Sud la estancia Quitilipe; al
+  Oeste el camino nacional y propiedad de Nolasco J. Cornejo, y al Norte
+  propiedades de Cornejo y Mercado. La base de la acción en vènta son
+  trescientos pesos la finca está tasada en tres mil. El comprador oblara el
+  importe en el acto del remate, RICARDO LÓPEZ Martillero 310 v. Nbre 2.
+
+NOTA DE LECTURA: Recalculado: 300 es la décima parte de 3000 (cierra). El aviso
+debía repetirse hasta el 2/11 y no aparece en las ediciones 93 a 103 en ninguna
+versión de texto: no se miraron (E.6).
+
+
+A.19 · Jurados y clasificadores de patentes para 1910
+-----------------------------------------------------
+FUENTE: N° 105, hoja 2 col. 3 y hoja 3 col. 1 y col. 3.
+FICHA: Dos decretos de Hacienda, Salta, 4 de Noviembre de 1909 (según el OCR);
+LINARES / Juan Martín Leguizamón / Conforme— C. M. Serrey, Subsecretario (OCR,
+no mirado).
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna.
+Fechas y firmas sólo por OCR.
+
+TEXTO:
+  [Jurados] Habiendo designado por decreto de la fecha las comisiones
+  clasificadoras de patentes para 1910 en la capital y departamentos de la
+  campaña, y siendo necesario constituir los Jurados que de[ben entender en los
+  reclamos...] [...] Caldera [en negrita] Titulares—Sres. Adolfo Vidal, Abelardo
+  Figueroa y Augusto Regis. Suplente—Sr. Daniel Linares. [...] [Clasificadores]
+  [...] Cerrillos—Sr. Segundo Gòmez. Caldera—Sr. Escolástico M. Aparicio. [...]
+
+NOTA DE LECTURA: Repite el esquema de 1908 (A.1 y A.2 de 1908): Vidal y Figueroa
+otra vez jurados; Regis reemplaza a Murúa y el suplente pasa de Augusto Rejis a
+Daniel Linares; Aparicio sigue de clasificador.
+
+
+A.20 · Licitación del edificio de la Policía de La Caldera
+----------------------------------------------------------
+FUENTE: N° 107, hoja 4, col. 3.
+FICHA: Aviso del Gobierno de la Provincia; Salta, Nbre. 15 de 1909; Ernesto
+Arias [Escribano de Gobierno, según OCR].
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. La
+propia lee "calera".
+
+TEXTO:
+  [GOBIERNO DE LA PROVINCIA, LICITACION - OCR] Llámase á licitación hasta el dia
+  25 del corriente mes, para la construcción de un edificio destinado á la
+  Policía de La Caldera. Las propuestas deberán presenterse [sic] en planillas
+  que dará á los interesados la Oficina de Inspección de Obras Públicas,
+  acompañadas de un sello de cinco pesos en la Subsecretaría de Hacienda, hasta
+  las 3 p. m. del expresado dia, hora en que se abrirán en presencia de los
+  interesados que concurran. Los planos y pliegos de condiciones á que deberá
+  sujetarse la construción [sic], están á disposición de los interesados en la
+  Oficina de Inspección de Obras Públicas, donde pueden ser examinados en horas
+  de despacho, y en donde también se darán todos los datos que se soliciten.
+  Salta, Nbre. 15 de 1909. Ernesto Arias
+
+NOTA DE LECTURA: El aviso "229 v. Nbe. 30" que precede es de otro edicto. En
+1909 se licitan comisarías en Cerrillos, Coronel Moldes, La Viña y La Merced
+(§C).
+
+
+A.21 · Remate de haciendas de la sucesión Catacata (2ª vez)
+-----------------------------------------------------------
+FUENTE: N° 113, hoja 4, col. 2-3.
+FICHA: Aviso de Manuel Nuñez de la Rosa, "419 v. D. 14."; juez Julio Figueroa
+Salguero; remate del 14/12.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. Un
+renglón de la col. 3 quedó cortado en el recorte y se lee en la vista siguiente.
+
+TEXTO:
+  Por MANUEL NUÑEZ DE LA ROSA JUDICIAL El dia 14 de Diciembre corriente á horas
+  4 p m en el local de la Agencia de la Villalonga, plaza 9 de Julio, avenida
+  Caseros, donde estará la bandera de remate, por orden del señor Juez doctor
+  Julio Figueroa Salguero, venderé en público remate, AL MAYOR POSTOR Y AL
+  CONTADO las haciendas que quedan de la sucesión de don Laureano Catacata, cuyo
+  detalle aproximativo es: 6[ilegible] vacas con cría, 32 vacas de 4 á 5 años,
+  13 id de 3 á 4 años, 36 tamberas de 2 á 3 años, 17 novillos de cuenta, 25
+  novillos de 3 á 4 años, 77 terneros de 1 á 2 años, 35 terneros de hierra.
+  Condiciones: El comprador abonará dentro de las 24 horas el importe al
+  martillero, en efectivo ó por medio de un certificado de depósito judicial á
+  la orden del mencionado Juez, para poder pedir la entrega de la hacienda.
+  Hecha la entrega de la hacienda, se le devolverá el importe de los animales
+  que faltaren. Dichos bienes se encuentran] en el Potrero de Castillo,
+  departamento de la Caldera, de donde los recibirá el comprador. Será nule
+  [sic] toda compra que se hiciere en este remate y no se ajuste á las
+  condiciones de la venta M. NUÑEZ DE LA ROSA. 419 v. D. 14. Martillero.
+
+NOTA DE LECTURA: Sin total impreso: no hay suma que cotejar. Segundo dígito de
+las vacas con cría ilegible. Ver A.4 y §B (juicio Bertolozzi contra la
+sucesión).
+
+
+A.22 · Rendición de cuentas de las fincas San Alejo y Santa Rufina
+------------------------------------------------------------------
+FUENTE: N° 114, hoja 2, col. 1 (sólo la frase con la mención).
+FICHA: Sentencia del Juzgado del Dr. J. Figueroa S., Salta, Noviembre 15 de 1909
+(encabezado según OCR), juicio de Macedonio Benitez y Justo R. Aguilar contra
+Angel Fernández.
+
+MODO DE LECTURA: Mirado en la imagen del PDF a 300 dpi, recorte de columna. Sólo
+se miró el párrafo con la mención; el resto del fallo es OCR.
+
+TEXTO:
+  [...] Que, asimismo el demandado reconoce haber sido administrador de las
+  referidas fincas ubicadas en el departamento de la Caldera. [...]
+
+NOTA DE LECTURA: El encabezado del juicio aparece en las N° 112 h1, 114 h1 y 115
+h1: si el fallo se publicó más de una vez o es una continuación no se verificó
+en la imagen (E.6). El OCR de 115 h3 dice "el señor Fernández (hoy sus
+herederos)". Mismas fincas que A.13.
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - AÑO 1909
+Ediciones N° 23 a 120 (2/6 de enero a 31 de diciembre de 1909)
+Barrido LEE 1909 - departamento de La Caldera
+Rúbrica LEE v12 (modo híbrido) - informe del 20/09/2026
+
+§B · VECINDAD
+=============
+Todo el §B sale del texto (OCR previo y propio); NO se miró en la imagen. Cada
+entrada dice por qué se incluye.
+
+  - B.1 · N° 52 h1. Superior Tribunal: causa seguida por Juan Chuchuy contra
+    Norberto Tarifa y esposa por cobro de pesos. POR QUÉ: actor de 1908 (A.3 de
+    1908: Chuchuy "domiciliado en el Departamento de la Caldera"); sería la
+    segunda instancia de aquel fallo (inferencia).
+  - B.2 · N° 26 h1-h3 (sentencia del juez Julio Figueroa, 4/12/1908) y N° 114 h1
+    (Superior Tribunal, 4/9/1909): juicio de Domingo Bertolozzi contra la
+    sucesión de Laureano Catacata. POR QUÉ: actor (causante de la sucesión cuyas
+    haciendas están en Potrero de Castillo, A.4 y A.21).
+  - B.3 · N° 97 h4: edicto del juicio testamentario de don Carlos Murúa. POR
+    QUÉ: homónimo de un actor (A.14); identidad no afirmada. En la misma hoja,
+    decreto sobre el comisario de policía de la estación Mojotoro (A.10).
+  - B.4 · N° 112 h1-h2 y N° 115 h1-h3: sentencia sobre la rendición de cuentas
+    de San Alejo y Santa Rufina (Benitez y Aguilar contra Angel Fernández), con
+    "el señor Fernández (hoy sus herederos)" en 115 h3 y "los arrenderos de «San
+    Alejo»" en 115 h2. POR QUÉ: mismo juicio que A.22.
+  - B.5 · Anillo 2 en causas criminales: N° 37 h1, acusado "domiciliado en
+    Vaqueros"; N° 58 h4, acusado "domiciliado en Lesser"; N° 60 h3, casa de
+    negocio de José A. Molina "en Vaqueros". POR QUÉ: topónimos del
+    departamento; que Vaqueros sea el partido de La Caldera y no el río u otra
+    finca es inferencia.
+
+Actores fuera de su acto (homónimos posibles, relación no afirmada): Francisco
+H. Leeds, menor autorizado a ejercer el comercio (N° 27 h2); Adolfo Agote, de la
+razón social «Agote ...» (N° 50 h3); Julio Mercado, suplente en otra lista (N°
+28 h3); Benjamín López, comisario de "la Hoyada" (N° 57 h3); Daniel Linares,
+colindante en Campo Santo (N° 99 h4); Antonio Vera, procesado (N° 38 h3-h4) y en
+un padrón (N° 58 h5); Macedonio Benitez (N° 73 h2, 112 h2); Walter Hesling,
+agrimensor, en seis edictos de otros departamentos. No aparecen fuera de sus
+actos: Belisario Benitez, Genaro Molina (salvo A.14), Guillermo Haaton, Zacarías
+Maidana, Marcelo Lamas, Victoriano Viverò, Laureano Quipildor, Benancio Ruiloba,
+Desiderio Gumiel, Susana Aguilera, Escolástico Aparicio.
+
+
+§C · LIMÍTROFES
+===============
+  - C.1 · N° 53 h2 (OCR): procesado "domiciliado en Mojotoro, jurisdicción del
+    departamento de Campo Santo". Contradice A.10, que pone la estación Mojotoro
+    en "comprensión del departamento de la Caldera" (E.9).
+  - C.2 · A.13: la finca Cerro Negro, provincia de Jujuy, linda al norte con San
+    Alejo y Santa Rufina.
+  - C.3 · Licitaciones de comisarías en otros departamentos del mismo año (OCR):
+    Cerrillos (N° 76-77, 83), Coronel Moldes (N° 89, 90, 96), La Viña (N° 98) y
+    La Merced (N° 116).
+
+
+§P · PLANOS
+===========
+El corpus no trae planos. Techo de resolución: 323-370 ppi en las imágenes
+incrustadas de los PDF.
+
+
+§D · ÍNDICE
+===========
+  A.1  N° 26 h4   13/01  Comisiones municipales
+  A.2  N° 32 h2   06/02  Convocatoria a elecciones
+  A.3  N° 33 h2   09/02  Cuadro de rentas municipales 1908
+  A.4  N° 33 h4   08/02  Remate Catacata (Potrero de Castillo)
+  A.5  N° 35 h3   12/02  Comisarios de partido
+  A.6  N° 36 h3   18/02  Renuncia de S. J. Murúa
+  A.7  N° 36 h3   18/02  Jueces de paz
+  A.8  N° 37 h3   01/03  Renuncia de A. Regis (juez suplente)
+  A.9  N° 51 h2   08/04  Veedores del Código Rural
+  A.10 N° 51 h3   22/04  Comisario de la estación Mojotoro
+  A.11 N° 51 h3   22/04  Renuncia de J. Guerrero (comisión)
+  A.12 N° 58 h4   s/f    Reemplazo de R. Usandivaras
+  A.13 N° 59 h4   17/05  Deslinde San Alejo y Santa Rufina
+  A.14 N° 84 h1-2 10/08  Sorteo de mesas receptoras
+  A.15 N° 85 h4   20/08  Locales de votación
+  A.16 N° 89 h4   s/m    Registro Cívico (N° 178)
+  A.17 N° 91 h3   s/m    Comisario de la Despensa
+  A.18 N° 92 h4   s/m    Remate Angosto de Arrieta
+  A.19 N° 105 h2-3 04/11 Jurados y clasificadores 1910
+  A.20 N° 107 h4  15/11  Licitación de la Policía
+  A.21 N° 113 h4  s/m    Remate Catacata (2a vez)
+  A.22 N° 114 h2  15/11  Rendición de cuentas San Alejo
+  (s/f: sin fecha impresa; s/m: fecha no mirada)
+
+
+§E · OBSERVACIONES
+==================
+
+E.1 · Duplicación y saldos
+--------------------------
+Sin .jpg del script no se calcularon md5 ni dhash; los 98 PDF son archivos
+distintos con tamaños distintos. A.4 y A.21 son dos remates distintos de la
+misma sucesión (fechas, lugares y detalles distintos), no duplicados. Saldos: el
+cuadro municipal de A.3 cierra (saldo inicial 283,77; existencia final 280,12).
+NO se armó la cadena de saldos de Tesorería del año: no se buscaron los balances
+(E.10).
+
+
+E.2 · Cobertura
+---------------
+Hojas miradas: 23 h1-h4 enteras; tapas de 24 ediciones; y en recortes: 26 h4, 32
+h2, 33 h2 (entera al 45 %), 33 h4, 35 h3, 36 h3, 37 h3, 51 h2, 51 h3, 58 h4, 59
+h4, 84 h1, 84 h2, 84 h4, 85 h3, 85 h4, 89 h4, 91 h3, 92 h4, 105 h2, 105 h3, 107
+h4, 113 h4, 114 h2. Cotejo sumario/cuerpo: no aplicable (sin sumario). Citados y
+no acompañados: el decreto "de la fecha" que designa las comisiones
+clasificadoras (A.19) está en la misma edición; no hay actos citados por número.
+
+
+E.3 · Sin mención y no mirado
+-----------------------------
+  - Hojas "ojos" no miradas: 24 h2, 28 h2-h4, 29 h2, 29 h4, 30 h2, 43 h4, 50 h3,
+    62 h8 (105 h3 sólo en parte).
+  - Fechas y firmas no miradas: A.16, A.17 (fecha), A.19; considerandos de A.16;
+    párrafo de A.1 entre el art. 1º y la lista.
+  - Paginación corrida: revisada sólo en la N° 23.
+  - Feriados de los cinco días sin edición: no buscados.
+  - §B entero: sólo OCR.
+
+
+E.4 · Firmas y autoridad
+------------------------
+Gobernador: Luis Linares en todos los actos mirados. Gobierno: Santiago M. López
+hasta A.8 (1/3); D. Zambrano, hijo, desde A.9 (providencia del 20/4) y en
+A.10-A.12, A.15 ("DAVID ZAMBRANO (HIJO)") y A.17. Según el OCR, la N° 49 (17/4)
+trae su nombramiento como ministro y la N° 72 la reasunción de Linares tras un
+período en que firma "el Presidente del Senado en ejercicio del P. Ejecutivo"
+(N° 65 a 75): NO mirado. Hacienda (OCR): Juan Martín Leguizamón, con C. M.
+Serrey de subsecretario. "Es copia": José M. Outes, S. S., en todos los decretos
+de Gobierno mirados. Numeración: los decretos de 1909 no llevan número; la regla
+15 no se aplica.
+
+
+E.5 · Cortes y columnas
+-----------------------
+  - La capa previa marca los cortes con guion blando U+00AD (15.716 veces; la
+    propia, 0). Sin quitarlo, "Cal-/dera" no se une.
+  - N° 58 h4: el corte "Cal-,/¡dera" trae signos en medio en la previa; la
+    propia desordena el bloque. Ninguna pasada lo halló (A.12).
+  - N° 59 h4: la previa traspone el renglón "fincas á deslindarse; se encuentran
+    ubi-" a la columna vecina; la propia pierde el renglón del naciente.
+    Confirmado en la imagen.
+  - N° 51 h3: la previa intercala renglones de dos columnas; la propia pierde
+    "de la Caldera".
+
+
+E.6 · Repeticiones
+------------------
+Los avisos A.18 ("310 v. Nbre 2", publicado el 25/9) y A.21 ("419 v. D. 14")
+aparecen una sola vez en el texto; su repetición en las ediciones siguientes no
+se buscó en la imagen. El fallo de A.22 tiene encabezado en las N° 112, 114 y
+115: publicación repetida o continuación, sin verificar.
+
+
+E.7 · Falsos positivos y negativos
+----------------------------------
+Falsos negativos: 26 h4 previa "CaMera" (difusa 0,77); 107 h4 propia "calera",
+que además coincide con el falso positivo conocido "calera" del config; 58 h4 en
+las dos versiones; 59 h4 propia "familia Hernández" por Fernández; 91 h3: el OCR
+no trae "Haaton".
+
+Falsos positivos descartados con contexto: apellido Calderón (Celso, Florentín,
+Daniel, Ignacio, Eusebio, Dermidio, Pedro); "S. de Alcalde" (25 h4); "calavera",
+lugar de Chicoana (59 h3); "aldea", "cuadrilla", "escalera", "mercaderias",
+"Cámara"/"calmara"; finca "Camera" de Rosario de Lerma (64 h4); Cuarteadero
+(Rosario de Lerma); San Agustín de La Merced; Nogales, Lagunilla, Manzano,
+Betania, El Cajón, Durazno, Entre Ríos y Chaile como apellidos u otros lugares;
+"potrancas" en la laxa de Trancas.
+
+
+E.8 · Fidelidad numérica
+------------------------
+  - A.3: el 20 % de 1200 es 240; se imprime 200. El resto del cuadro cierra;
+    glifo dudoso 1/4 en el comprobante 15.
+  - A.4: vacuno, 353 impreso contra 363 del detalle (346 sin bueyes ni toros);
+    cabrío, 1 impreso contra 9 del detalle.
+  - A.16: Candelaria de la capital, "509 al 105" y "terminado ... en el número
+    108".
+  - A.21: segundo dígito de las vacas con cría ilegible.
+  - Tablas no recalculadas: listas y padrones numerados de las N° 56, 57, 58 y
+    62; estadística del Juzgado del Crimen de 1908 (N° 23 h3); balances de otros
+    municipios; balances de Tesorería (no buscados).
+
+
+E.9 · Contradicciones
+---------------------
+  - Mojotoro: "comprensión del departamento de la Caldera" (A.10) contra
+    "jurisdicción del departamento de Campo Santo" (N° 53 h2, OCR).
+  - Nombres: Sivano/Silvano Murúa; Rejis/Regis; Chalchanio (A.5) y Chalcanio
+    (A.9); Gerrero/Guerrero; Despenza/Despensa.
+  - A.2: Cachi elige senador y no figura en la convocatoria del art. 1º.
+  - N° 23: decreto del 31/12/1908 que nombra jueces de paz de Cerrillos "durante
+    el año de 1908"; remate de la Receptoría el "lunes 5 de Enero de 1908" (el
+    5/1/1909 fue martes); edictos fechados "diciembre 24 de 19o9" y "Febrero de
+    1o98".
+
+
+E.10 · Límites
+--------------
+No se recibieron el pre-informe, el log, los CSV, los recortes ni el config. No
+se miraron el §B, las hojas "ojos" restantes, los balances de Tesorería ni los
+feriados. La búsqueda del anillo 1 se apoya en el texto: A.12 muestra que un
+corte con signos intercalados escapa a las cuatro pasadas, así que puede haber
+otras menciones no halladas. No se leyeron enteras las 398 hojas.
+
+
+§F · CORRECCIÓN A LA RÚBRICA
+============================
+  - Unión de cortes: quitar también U+00AD, y unir "Cal" + signos + salto +
+    "dera" (tolerar puntuación entre las mitades). Aplicar lo mismo en
+    lee_auto.py.
+  - Quitar "calera" de falsos_positivos: ocultó A.20 en la versión propia.
+  - Cotejo sumario/cuerpo: declarar "no aplicable" cuando no hay sumario (1909).
+  - Calendario: leer ediciones dobles ("2 y 6", "18 y 22") en la tapa antes de
+    listar días sin edición.
+  - Umbrales de confianza: no sirven para 1908-1909; la hoja "ojos" 23 h1 se lee
+    bien.
+  - Insumos: los PDF pueden venir de GitHub (repositorio público por año); se
+    cotejan contra EXTRAIDO.json.
+  - Mirar: detectar las columnas por las reglas verticales y recortar con
+    margen; a 300 dpi una columna de 1909 mide ~800 px.
+  - El anillo de actores funciona también como red de seguridad del anillo 1
+    (A.12).
+
+
+RECUENTO
+--------
+  - Archivos: 98 PDF (N° 23 a 120), 398 hojas presentes, 398 contadas; ninguna
+    ausente por conteo (paginación no revisada salvo N° 23).
+  - Ediciones dobles: 2. Días de salida sin edición: 5.
+  - Confianza (OCR propio): pub 0, ver 385, ojos 13.
+  - §A: 22 actos en 20 hojas, 31 menciones del anillo 1; todos mirados, con
+    partes pendientes.
+  - §B: 5 entradas, sólo OCR. §C: 3. Planos: 0.
+  - Tablas recalculadas: 3 (A.3, A.4, A.18). No recalculadas: las de E.8.
+  - Hojas miradas: las de E.2.
