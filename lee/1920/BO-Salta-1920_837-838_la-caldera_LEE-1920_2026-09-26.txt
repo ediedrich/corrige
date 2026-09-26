@@ -1,0 +1,604 @@
+================================================================================
+BOLETÍN OFICIAL DE SALTA - AÑO 1920 - COMPLEMENTO: EDICIONES N° 837 Y 838
+BARRIDO LEE SOBRE EL DEPARTAMENTO DE LA CALDERA
+LEE v17 — 1920, complemento 837-838 · informe armado el 2026-09-26
+================================================================================
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con tres límites declarados (E.10).
+
+Modo. Es un complemento (flujo editorial v1, §5.4): el corpus son sólo las
+ediciones 837 y 838, que no estaban en el Release cuando se armó el informe de
+1920 del 21/09/2026 (rúbrica v15, archivo
+BO-Salta-1920_788-839_la-caldera_LEE-1920_21-09-2026.txt, en corrige/lee/1920).
+Rige la rúbrica LEE v16 con los cambios del §5 del flujo. Además de las reglas
+de v16, este informe dice qué afirmaciones del informe anterior cambian con lo
+nuevo, cada una con su prueba: están en E.11.
+
+Resultado en una línea. Las dos ediciones no nombran al departamento ni traen
+ningún acto que lo toque: el §A queda vacío y el §B sólo tiene homónimos y
+topónimos de otros departamentos. Lo que cambia del informe anterior es de
+corpus y de control, no de contenido: dos ediciones dejan de estar ausentes, el
+calendario de diciembre se cierra, la cadena de folios se corrige y cambian tres
+afirmaciones de E.4 y dos de E.9 (E.11).
+
+Insumos. Inventario del Release 1920 por releases/expanded_assets/1920: 52 PDF
+numerados de 788 a 839, dos de ellos (793 y 822) avisos del repositorio de
+origen, más avisos.txt, dos pre-informes (2026-09-22 y 2026-09-26),
+resultados_1920.csv, decretos_1920.csv, log.txt, recortes_1920.zip,
+lee_config.json y lee_textos_1920.zip. Llegó todo. Se usó el pre-informe
+vigente, el de fecha más nueva:
+BO-Salta-1920_la-caldera_PRE-INFORME-LEE_2026-09-26.txt. Su §A no trae ningún
+candidato del anillo 1 en 837 ni en 838, y la sesión lo comprobó por su cuenta
+(§2). decretos_1920.csv viene vacío (43 bytes, sólo la cabecera), como declara
+el propio pre-informe: «0 números distintos».
+
+Corrida de lee_auto.py, según log.txt: la segunda corrida, del 26/09/2026 a las
+18:31, procesó 52 archivos y 554 hojas, con capa previa útil en 542 y OCR propio
+en 0 hojas. Las 12 hojas con OCR propio son las de la corrida del 22/09 y
+ninguna es de 837 ni de 838. lee_auto.py sha f9a69a713e25 según estado.json; el
+log no trae errores.
+
+Textos. lee_textos_1920.zip trae, para 837 y 838, sólo las .prev.txt y el
+EXTRAIDO.json: 10 y 14 hojas, capa nativa en las 24, ninguna .prop ni .tsv. De
+modo que para este complemento hay UNA versión y no hay confianza por hoja: el
+alivio del §5.1 del flujo no alcanza a estas dos ediciones. EXTRAIDO.json
+coincide con los PDF del Release en bytes (1.056.608 y 1.361.434) y en hojas (10
+y 14); la capa extraída por la sesión con PyMuPDF coincide con las .prev.txt en
+largo por hoja, con diferencias de 1 a 14 caracteres.
+
+Config. config del Release: version 2026-09-22, hasta 1932, actores 554, anillo2
+160. config del proyecto (corrige/config/lee_config.json): version 2026-09-26,
+hasta 1932, actores 575, anillo2 166. Se usa el del proyecto — razón: más nuevo.
+Contenido: el usado contiene al otro en actores, anillo 2, números y falsos
+positivos; no hubo que agregar nada antes de barrer. El config no se cambia en
+este complemento.
+
+Entorno, verificado: nproc = 1; PyMuPDF instalado desde pypi; tesseract con eng
+y osd, sin spa, de modo que no hubo OCR en sesión. Toda lectura propia es
+lectura de la imagen.
+
+Qué verificó la sesión: las cuatro pasadas y el anillo 2, los actores, los
+números y las fórmulas de reemplazo sobre las 24 hojas; las dos tapas y las ocho
+vecinas (830 a 836 y 839) en la imagen; la cadena de folios en la imagen; la
+integridad de las dos ediciones por continuidad de texto; tinta, md5 y dhash de
+las 24 hojas; y las cinco fichas del §B y las cuatro piezas de autoridad en la
+imagen. Desvíos del §8.17: ninguno.
+
+Qué agregaría cada insumo que faltó: el OCR propio de 837 y 838, con su .tsv,
+daría segunda versión y confianza por hoja; habría encontrado a Nacianseno
+Apaza, que la capa lee «Apasa» (E.7). No cambiaría el §A.
+
+§1 · CORPUS REVISADO
+--------------------
+
+Dos ediciones, 24 hojas, las dos completas. Fechas y número leídos en la imagen
+de la tapa, igual que el año editorial y el gobernador.
+
+  Ed.  Fecha de tapa          Hojas  Folios impresos     Capa     Versión
+  ---  ---------------------  -----  ------------------  -------  -------
+  837  [Viernes] Diciembre 17    10  [1645] 1646-1654    prev     única
+  838  [Viernes] Diciembre 24    14  [1657] 1658-1670    prev     única
+
+Las dos tapas imprimen «Año XII» y «Gobierno del Dr. Joaquín Castellanos»,
+leídos en la imagen. El día de la semana no lo imprime la tapa: 17 y 24 de
+diciembre de 1920 fueron viernes, que es la regularidad observada del año. El
+folio de la tapa no está impreso y va entre corchetes: el de 837 se infiere de
+la cadena (836 cierra en 1644 y 837 h2 imprime 1646); el de 838 se infiere de su
+hoja 2 (1658), y se discute en E.2.
+
+Integridad. 837 h10 cierra la edición con el colofón «Imprenta Oficial» y el
+remate de Ricardo López terminado, leído en la imagen de la hoja entera. 838 h1
+termina en «Reconócese a don Ciro Torres López, a don Claudio Tapia» y 838 h2
+sigue «y a don Nicanor Aranda», confirmado en la imagen: entre la tapa y la hoja
+2 no falta ninguna hoja. 838 h14 cierra con «Imprenta Oficial». Ninguna de las
+dos es una edición incompleta.
+
+Tipo y resolución. PDF reales, versión 1.5, una imagen por hoja a 300 ppi en las
+24; cuatro hojas (837 h1, 838 h5, 838 h12, 838 h14) traen una segunda imagen, a
+299, 300 o 301 ppi. Techo de resolución: 300 ppi, el mismo que el resto del año.
+Maqueta: 430 a 448 pt de ancho por 643 a 675 de alto, a dos columnas.
+
+Densidad. Entre 1.421 (837 h10) y 3.427 caracteres por hoja (837 h1); ninguna
+hoja por debajo de 500. Tinta medida rasterizando a 100 dpi: entre 5,49 % (837
+h10) y 9,87 % (838 h1) de píxeles oscuros. Ninguna hoja en blanco ni por debajo
+del 5 %.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+Versión. Una sola, la capa previa (.prev.txt del Release), con etiqueta prev. El
+desempate es la imagen.
+
+Unión de cortes. U+0002: cero. U+00AD: 268, los 268 seguidos de salto de
+renglón; se quitaron junto con el salto y después los sueltos (ninguno). Guion
+visible seguido de salto: 214, de ellos 8 con un signo intercalado entre el
+guion y el salto. La clase de signos tolerados incluye las comillas y acentos
+tipográficos (U+2018, U+2019, U+201C, U+201D, U+00B4), que es la corrección que
+pedía el §F siete del informe anterior. La literal da cero sobre el texto crudo
+y cero sobre el unido.
+
+Las cuatro pasadas, sobre las 24 hojas. Literal «cald» sobre NFD sin
+diacríticos: cero. Laxa [gco][ao][l1i|][dcl][ec][rnm][ao]: cero. Laxa espaciada,
+con la clase [\s\-]{0,3} entre cada par de letras: cero. Difusa, ratio ≥ 0,78
+contra caldera y calderilla: cero. Difusa ampliada, 0,70 a 0,78, palabras con c,
+g u o inicial: dos formas, «cada» y «calidad», ninguna del departamento. Prueba
+de que los ceros son ceros: las mismas funciones, sobre 795 y 832, dan 7
+aciertos en la literal, 7 en la laxa y 8 en la espaciada; y la difusa devuelve
+«calderon» en 806. Las pasadas no están rotas.
+
+Anillo 2: los 166 términos del config, sobre el texto normalizado y sin
+puntuación. Tres dan acierto: castellanos (41), san jose (2) e isasmendi (1).
+Los contextos de los tres se leyeron uno por uno (§B).
+
+Cotejo del anillo 2 contra la toponimia establecida (§5.1bis). No se rehízo en
+este complemento: el config del proyecto ya incorpora el cotejo de v16 (166
+términos contra 87 del config con que se barrió 1920). Se declara en tres líneas
+como lo pide la regla: términos establecidos que faltan, no medido en esta
+sesión; apellidos en la lista de lugares, al menos uno con efecto en este corpus
+(«apaza», E.7); términos a revisar, no medido.
+
+Actores: los 575 del config, sobre el texto sin puntuación, en tres formas
+—nombre y apellido con hasta dos palabras en el medio, apellido y nombre
+invertidos (la corrección del §F ocho del informe anterior) y inicial y
+apellido—. Dan acierto sólo la autoridad del año (Joaquín Castellanos, Julio J.
+Paz, M. López Domínguez, D. López Reyna, C. A. Lallera, Julio N. Bastiani) y
+cinco coincidencias de nombre, leídas una por una en B.4 y E.7. Ningún actor del
+§A del informe anterior aparece en 837 ni en 838: se buscaron además por
+apellido suelto Cáceres (y la forma «cqres»), Coll, Martínez, Ocaranza,
+Arancibia, Fernández y Regis, con cero en los siete; Araoz aparece dos veces en
+838 h11 como parte de la razón social «Araoz, Alemán y Cía.», en un decreto de
+patentes.
+
+Números arrastrados: de los 130 del config, dos coinciden: 1668, que es el folio
+impreso de 838 h12, y 40, que es «Art. 4°» leído por la capa en 837 h3. Ninguno
+es remisión.
+
+Fórmulas de reemplazo: «en su reemplazo» 4 veces, «en reemplazo de» 3,
+«encontrándose vacante» 1. Las ocho se leyeron en contexto: Comisión Municipal
+de Molinos, Imprenta Oficial, Superintendencia de Riego, Catastro, Registro
+Civil de San Carlos, Departamento Central de Policía, Oficina de Estadística e
+Inspección de Rentas. Ninguna es del departamento.
+
+Identificadores de las ausencias: número de decreto, lugar, persona y organismo.
+Los decretos de 837 y 838 van del N° 1189 (837 h5) al N° 1235 (838 h6), fechados
+entre el 20 de noviembre y el 7 de diciembre de 1920.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+Ninguna. Las cuatro pasadas dan cero sobre las 24 hojas y el cero está probado
+(§2). No hay ficha que mirar en la imagen y no hay falso positivo del anillo 1
+que descartar.
+
+§B · VECINDAD
+-------------
+
+Se leyeron los contextos de los tres términos del anillo 2 con acierto y de los
+actores con acierto. Resultado: ningún acto de 837 ni de 838 toca al
+departamento.
+
+B.1 · Núcleos ya fichados en el §A
+
+Ninguno: el §A del complemento está vacío.
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+
+Ninguno. Se leyeron además, por ser actos de policía, registro y nombramientos
+de campaña, los que podrían tocar al departamento sin nombrarlo, y todos nombran
+otra jurisdicción. Los dos mirados en la imagen: el decreto N° 1205 (838 h7),
+que crea siete sub-comisarías auxiliares en el Departamento de Rivadavia, y el
+N° 1209 (838 h8), que autoriza tres escuelas nacionales en Tonono (Orán), Tintín
+(Cachi) y Chamical (Capital). Leídos en la capa: sub-comisaría del kilómetro
+1280, Orán (837 h6); Registro Civil de la 1ª sección de Rivadavia (837 h7);
+Registro Civil del departamento de San Carlos (838 h8); Registro Civil de La
+Merced (838 h9); comisario de El Galpón (838 h9); intervención municipal de El
+Carril (838 h10); Comisión Municipal de Molinos (837 h5); Comisión Municipal de
+San Carlos (837 h5); intervención municipal de Rosario de Lerma (837 h5);
+Comisión Municipal de La Silleta (838 h6).
+
+B.3 · Términos que en 837 y 838 son otra cosa
+
+  castellanos (41) - firma del Gobernador, Dr. Joaquín Castellanos, en los
+    decretos y en las dos tapas. Ningún acierto es toponímico.
+  san jose (2) - la finca San José de San Isidro, Rivadavia (837 h8), y la
+    escuela elemental de San José de Cachi (838 h12). Fichas abajo.
+  isasmendi (1) - el Dr. Andrés A. Isasmendi, representante ante el
+    Intendente de Antofagasta (838 h4). Ficha abajo.
+
+................................................................................
+FUENTE: Edición N° 837, hoja 8, columna 1, cabecera Pág. 1652.
+
+FICHA: Edicto de deslinde, mensura y amojonamiento de la finca «San José», en el
+pueblo de San Isidro, Departamento de Rivadavia.
+
+MODO DE LECTURA: PDF real, 300 ppi. Recorte de la columna 1 a 160 dpi; se
+leyeron los cinco renglones que ubican la finca.
+
+TEXTO (transcripción desde la imagen):
+
+  apoderado, solicitando deslinde,
+  mensura y amojonamiento de la
+  finca «San José» ubicada en el pue-
+  blo de San Isidro Departamento
+  de Rivadavia, de ésta provincia,
+
+NOTA DE LECTURA: Acierto del anillo 2 por «san jose». El propio edicto atribuye
+la finca a Rivadavia: no es la San José del departamento. B.3.
+
+................................................................................
+FUENTE: Edición N° 838, Salta, Diciembre 24 de 1920, hoja 4, columna 1, cabecera
+Pág. 1660.
+
+FICHA: Decreto en acuerdo de Ministros: nombra representantes del Gobierno ante
+el Intendente de la Provincia de Antofagasta al Dr. Andrés A. Isasmendi y a Luis
+de los Ríos.
+
+MODO DE LECTURA: PDF real, 300 ppi. Recorte de la columna 1 a 160 dpi.
+Transcripción del artículo 1 desde la imagen.
+
+TEXTO (transcripción desde la imagen):
+
+  Art. 1°.--Nómbranse representan-
+  te del Gobierno de esta Provincia
+  ante el señor Intendente de la Pro-
+  vincia de Antofagasta, al Dr. don
+  Andrés A. Isasmendi y al señor
+  don Luis de los Ríos, con la misión
+  especial enunciada.
+
+NOTA DE LECTURA: Acierto del anillo 2 por «isasmendi», que la rúbrica v16 ya
+marca como apellido y no como lugar. Andrés A. Isasmendi figuraba en el B.3 del
+informe anterior. Nada lo ubica en el departamento. B.3.
+
+................................................................................
+FUENTE: Edición N° 838, hoja 12, columna 2, cabecera Pág. 1668.
+
+FICHA: Decreto N° 1212 del 29 de noviembre de 1920, que resuelve un trámite ante
+la Caja de Pensiones y Jubilaciones en el que figura la escuela elemental de San
+José de Cachi.
+
+MODO DE LECTURA: PDF real, 300 ppi. Recorte de la columna 2 a 170 dpi; se leyó
+el renglón del acierto y los cuatro siguientes. El vistos empieza en la hoja
+anterior y no se miró.
+
+TEXTO (transcripción desde la imagen):
+
+  elemental de San José de Cachi, y
+  atento al informe producido por la
+  Comisión Administradora de la Ca-
+  ja de Pensiones y Jubilaciones y
+  al dictámen del señor Fiscal Gene-
+
+NOTA DE LECTURA: Acierto del anillo 2 por «san jose». El acto lo sitúa en Cachi.
+B.3. La materia exacta del decreto no se leyó: sólo el tramo del acierto.
+
+................................................................................
+
+B.4 · Ausencias del anillo de actores
+
+De los 575 actores, dan acierto en el complemento los seis de la autoridad del
+año (E.4) y cinco coincidencias; ninguno de los actores del departamento.
+
+Grupo uno, los que sólo aparecen en su propio acto: ninguno, porque el
+complemento no tiene actos del departamento.
+
+Grupo dos, los que aparecen en más de un acto del departamento: ninguno.
+
+Grupo tres, los que aparecen fuera del departamento: Juan Manuel Ramos,
+adscripto a la División de Investigaciones (837 h7), coincidente en nombre con
+Manuel Ramos, comisario de partido de San Alejo en 1919, sin acto que los
+identifique; y Nacianseno Apaza, Juez de Paz de Guachipas (838 h14). Las dos
+fichas van abajo. Las otras tres coincidencias son falsos positivos de la forma
+inicial y apellido o de las palabras intercaladas, y van a E.7.
+
+................................................................................
+FUENTE: Edición N° 837, Salta, [Diciembre 17] de 1920, hoja 7, columna 1, folio
+impreso [1651, no legible en la cabecera; entre 1650 y 1652].
+
+FICHA: Decreto cuyo encabezado y número no se miraron: aprueba los servicios de
+Juan Manuel Ramos como adscripto a la División de Investigaciones, del 7 de
+setiembre al 7 de octubre de 1920.
+
+MODO DE LECTURA: PDF real, imagen incrustada a 300 ppi. Recorte por el ancho
+entero de la columna más 6 pt, rasterizado a 160 dpi. Transcripción del artículo
+2 desde la imagen; el encabezado del decreto no se miró.
+
+TEXTO (transcripción desde la imagen):
+
+  Art. 2°.--Apruébase los servicios
+  prestados como adscripto a la Di-
+  visión de Investigaciones por don
+  Juan Manuel Ramos, desde el 7
+  de Setiembre hasta el 7 de Octu-
+  bre ppdo.
+
+NOTA DE LECTURA: Acierto del anillo de actores por «manuel ramos», actor de 1919
+(comisario de partido de San Alejo, departamento de Caldera, decreto 213, 745
+h7). El acto no atribuye a Juan Manuel Ramos ningún departamento: no se afirma
+que sea la misma persona y no se le atribuye vecindad. Grupo tres del B.4.
+
+................................................................................
+FUENTE: Edición N° 838, hoja 14, columna 2, cabecera Pág. 1670.
+
+FICHA: Edicto sucesorio firmado en Guachipas, 18 de diciembre de 1920, por el
+Juez de Paz Nacianseno Apaza.
+
+MODO DE LECTURA: PDF real, 300 ppi. Recorte de la columna 2 a 160 dpi.
+Transcripción desde la imagen del cierre del edicto.
+
+TEXTO (transcripción desde la imagen):
+
+  bimiento de Ley.--Guachipas, Di-
+  ciembre 18 de 1920.
+      Nacianseno Apaza Juez de Paz.
+
+NOTA DE LECTURA: La imagen dice «Nacianseno Apaza»; la capa lee «Nacianseno
+Apasa», y por eso ni el anillo 2 («apaza») ni el actor del config («nacianceno
+apaza», 1920) lo devuelven: es falla de la búsqueda y va a E.7. Es el Juez de
+Paz de Guachipas ya descartado por jurisdicción en la rúbrica v16 §12. Grupo
+tres del B.4.
+
+................................................................................
+
+Los demás actores no aparecen en 837 ni en 838. Se declara que la búsqueda por
+nombre y apellido, por el orden invertido, por inicial y apellido, y por
+apellido suelto para los del §A del informe anterior, no los devolvió. Ningún
+actor del departamento queda en el caso del §5.1 de la rúbrica (búsqueda que no
+devuelve ni su propio acto), porque ninguno tiene acto en este corpus.
+
+§C · LIMITROFES
+---------------
+
+Sin entradas. Ningún acto de 837 ni de 838 nombra a Capital, Campo Santo o
+Rosario de Lerma en relación con La Caldera o sus parajes. La intervención
+municipal de Rosario de Lerma (837 h5, decreto N° 1190) se declara terminada y
+no toca al departamento.
+
+§P · PLANOS
+-----------
+
+No hay planos publicados en 837 ni en 838, y la palabra «plano» no aparece en
+ninguna de las 24 hojas: no hay planos citados. Techo de resolución, 300 ppi. El
+dato de serie del año no cambia: 1920 no publica ningún plano.
+
+§D · INDICE
+-----------
+
+Sin entradas del departamento: el complemento no tiene §A. Para que el índice
+sea cruzable se listan, con la clase fija, las piezas del §B.
+
+  837  h7   CARGOS       Servicios de Juan Manuel Ramos, adscripto a
+                        Investigaciones (homónimo, sin atribución)
+  837  h8   DOMINIO      Deslinde de la finca San José, San Isidro,
+                        Rivadavia (otro departamento)
+  838  h4   OTRO         Representantes ante el Intendente de
+                        Antofagasta (Andrés A. Isasmendi)
+  838  h12  OTRO         Decreto 1212, escuela de San José de Cachi
+                        (otro departamento)
+  838  h14  JUSTICIA     Edicto sucesorio del Juez de Paz de Guachipas,
+                        Nacianseno Apaza (otro departamento)
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación y saldos
+
+md5 de la imagen incrustada: 24 valores distintos. dhash de 256 bits: ningún par
+a distancia ≤ 16 entre las 24 hojas. No hay duplicación de archivo.
+
+Saldos. 837 y 838 no publican ningún resumen del movimiento de Tesorería: las
+palabras «tesorería», «existencia» y «saldo» dan cero en las 24 hojas, y las dos
+apariciones de «movimiento» y «resumen» (838 h2 y h4) son un considerando sobre
+expedientes del Superior Tribunal y otro sobre gastos de movilidad de la
+policía. Los resúmenes de noviembre y diciembre de 1920, que el informe anterior
+dio por faltantes, siguen faltando: el complemento lo confirma para estas dos
+ediciones.
+
+E.2 · Cobertura
+
+Hojas miradas en la imagen: 16 de 24. Las 10 de 837 menos h6 y h9, es decir, h1
+(tapa), h2, h3 y h5 (cabecera), h4 (Bastiani), h7 (Ramos), h8 (San José) y h10
+(entera); y de 838, h1 (tapa y pie), h2 (cabecera y dos firmas), h3 (decreto
+1226), h4 (Isasmendi), h7 (decreto 1205), h8 (decreto 1209), h12 (San José) y
+h14 (cabecera y edicto). Fuera del complemento se miraron las tapas de 830 a 836
+y de 839 y la cabecera de 839 h2. Hojas del complemento con acierto del anillo 1
+no miradas: ninguna, porque no hay.
+
+Cadena de folios, leída en la imagen en las cabeceras de 837 h2, h3, h5 y h10,
+838 h2 y h14, y 839 h2: 836 cierra en 1644; 837 va de 1646 a 1654 con la tapa en
+1645; 838 abre en 1658 y cierra en 1670; 839 abre en 1674. De modo que la serie
+salta dos folios entre 837 y 838 (1655 y 1656, si la tapa de 838 es 1657) y
+otros dos entre 838 y 839 (1671 y 1672, si la tapa de 839 es 1673), y las dos
+ediciones del complemento están completas (§1). Los saltos se declaran con su
+magnitud y no se explican.
+
+Citados y no acompañados: el decreto N° 1226 liquida a los Ministros Julio J.
+Paz y M. López Domínguez «las suplencias de que hace mención el considerando», y
+el considerando no dice desde cuándo ni hasta cuándo tuvieron las dos carteras a
+la vez: los decretos que encargaron esas suplencias no están en el complemento.
+Uno.
+
+E.3 · Sin mención y no mirado
+
+De las 24 hojas, ninguna da acierto del anillo 1; 22 dan acierto del anillo 2 o
+de actores, casi todas por la firma del Gobernador. Ocho no se miraron en la
+imagen (837 h6 y h9; 838 h5, h6, h9, h10, h11 y h13): no se afirma que no
+contengan nada; se afirma que ninguna red las trajo hacia el departamento.
+
+E.4 · Firmas y autoridad
+
+Gobernador: Dr. Joaquín Castellanos, en las dos tapas, leído en la imagen, y
+como firma de los decretos. Fórmulas de encabezado, leídas en la capa: «El
+Gobernador de la Provincia», «El Gobernador de la Provincia en acuerdo de
+Ministros» y una vez «El Poder Ejecutivo de la Provincia» (838). Refrendos:
+Julio J. Paz y M. López Domínguez, por separado o juntos en los acuerdos, como
+en el resto del año. Es copia: D. López Reyna y C. A. Lallera.
+
+Tres cosas nuevas. Primera: la firma del Es copia se lee en la imagen «Celso A.
+Lallera» (838 h2, segundo decreto de la hoja) y «C. A. Lallera» (838 h2,
+primero). La forma «Celso A. Latiera» que el informe anterior daba como lectura
+de la capa es de la capa: el nombre impreso es Lallera. Segunda: el decreto N°
+1226, del 3 de diciembre (838 h3, leído en la imagen), dice que los Ministros
+Paz y López Domínguez «tuvieron a su cargo simultáneamente las carteras de
+Gobierno y Hacienda», y les liquida el emolumento «por las suplencias». Tercera:
+el Dr. Julio N. Bastiani aparece en 837 h4, leído en la imagen, no como refrendo
+sino encargado de recabar ofertas en representación del Gobierno. Las tres tocan
+a E.4 del informe anterior y van a E.11.
+
+E.5 · Cortes y columnas
+
+Columna perdida: se cotejó el orden de renglones de la capa contra la imagen en
+5 columnas de las 48 del complemento (837 h10 columnas 1 y 2; 838 h3 columna 1;
+838 h7 columna 1; 838 h8 columna 2), y en las cinco coincide y no falta ningún
+renglón. No se afirma nada sobre las 43 restantes. La palabra suelta falla como
+en el resto del año: «Apasa» por Apaza (838 h14), «Latiera», «Frailera» y
+«Lgaliera» por Lallera, «Salta» como «Safra» en la tapa de 837.
+
+E.6 · Repeticiones
+
+Ninguna pieza del departamento, porque no hay. Se cotejaron por texto las 24
+hojas contra las 530 restantes del año, con tramos de doce palabras: las cuatro
+coincidencias más largas (838 h14 con 834 h5, 837 h7 con 796 h8, 837 h8 con 794
+h4 y 837 h10 con 788 h10) son fórmula de edicto o de remate, sin texto propio en
+común; las demás son fórmula de cierre de decreto y la Ley 204 de la tapa. No se
+juzgaron una por una las coincidencias menores, y así se declara.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1: ninguno.
+
+Actores, falsos positivos: «manuel gomez» (1910) por «José Manuel Salto, Roque
+Gómez», dos personas distintas en la nómina del decreto 1205, leída en la
+imagen; «julio arias» y «jose arias» por el ingeniero Víctor J. Arias,
+superintendente interino de Riego (838 h7, capa); «rafael p. sosa» por Salvador
+R. Sosa, Oficina de Estadística (838 h10, capa); «miguel reyes» por Jesús M.
+Reyes, sucesorio (838 h14, capa); «abelardo lopez» por «D. López Reyna». Ninguno
+se agrega al config.
+
+Falso negativo: Nacianseno Apaza (838 h14). El config tiene «apaza» en el anillo
+2 y al actor «nacianceno apaza» (1920); la capa lee «Nacianseno Apasa», y ni el
+término ni el actor lo devuelven. Es la falla de la palabra suelta con una sola
+versión, no una ausencia.
+
+E.8 · Fidelidad numérica
+
+No hay cuadros ni balances en 837 ni en 838. Listas recontadas sobre la
+transcripción propia (§4.1bis): el decreto 1205 enumera siete lugares
+(Rivadavia, Belgrano, San Carlos, San Isidro, Santo Domingo, Victorica Sud y
+Victorica Norte) y declara «siete»: RECUENTO PROPIO 7, cierra; nombra siete
+sub-comisarios, sin número declarado. El decreto 1209 enumera tres localidades y
+declara «tres»: RECUENTO PROPIO 3, cierra. Ninguna de las dos es del
+departamento.
+
+E.9 · Contradicciones
+
+Uno: la cadena de folios salta dos folios dos veces entre ediciones completas
+(E.2). Dos: la capa lee «Safra» por «Salta» en la tapa de 837; la imagen dice
+Salta. Tres: el informe anterior, en su E.9 seis, llama «tercera» familia
+tipográfica a la cursiva de la tapa de 839; las tapas de 830 a 839, miradas en
+la imagen, muestran una sola familia cursiva desde la 831 hasta la 839,
+incluidas 837 y 838, y el mes con mayúscula inicial en todas. Se declara la
+discrepancia con el informe anterior y se toma la imagen.
+
+E.10 · Límites
+
+Uno. Una sola versión para 837 y 838: sin OCR propio no hay desempate y la única
+prueba de una palabra es la imagen. Dos. Sin .tsv no hay confianza por hoja: la
+lista de hojas a ojos del complemento no existe; las hojas se cubrieron por las
+redes y por tinta (§1). Tres. No hay sumario con puntos guía: el cotejo sumario
+contra cuerpo es no aplicable. Las ediciones 793 y 822 siguen ausentes del año,
+pero no son parte de este complemento.
+
+E.11 · Afirmaciones del informe anterior que cambian
+
+Cada una con la prueba de este complemento. Las demás afirmaciones del informe
+del 21/09/2026 quedan como estaban: las diez entradas del §A, el B.2 «ninguno»,
+los planos en cero, la ausencia de repeticiones de piezas del departamento y la
+cadena de saldos con noviembre y diciembre faltantes.
+
+  1. Ediciones ausentes: eran 4 (793, 822, 837, 838); son 2 (793 y 822).
+     Ediciones reales: eran 48; son 50. Hojas de Boletín: eran 528; son
+     552, y las distintas 550. Prueba: §1 de este informe.
+  2. E.10, límite siete: se reduce a 793 y 822.
+  3. §1 y E.9 tres, calendario: los viernes 17 y 24 de diciembre tienen
+     edición (837 y 838, tapas en la imagen). Diciembre no tiene días de
+     salida sin edición; el viernes sin edición que declaró el informe
+     anterior, el 17 de setiembre, no cambia.
+  4. §F dos: «837 y 838 juntas ocupaban de 1645 a 1673» era una
+     estimación. Leído: 837 ocupa 1645-1654 y 838 1657-1670, completas,
+     con saltos de dos folios antes de 838 y antes de 839 (E.2).
+  5. §1, tabla, fila de 839: los folios son 1674-1680 y no 1676-1680
+     (cabecera de 839 h2 en la imagen). Y la «cadena de 1081 a 1680 sin un
+     solo salto que no se explique por una edición ausente» (E.9 cinco)
+     deja de ser cierta: los saltos de E.2 no se explican por ausencias.
+  6. E.9 seis: la cursiva de tapa no es una tercera familia de 839; es la
+     misma desde 831 (E.9 tres de este informe).
+  7. E.4: el Es copia se imprime Lallera, con Celso A. por nombre (838
+     h2); «Latiera» es de la capa.
+  8. E.4: el reparto por materia entre Paz y López Domínguez tuvo un
+     tramo, sin fecha en el decreto, en que los dos tuvieron las dos
+     carteras «simultáneamente», con suplencias pagadas (decreto 1226, 838
+     h3).
+  9. E.4: Julio N. Bastiani no se limita a las ediciones 790-807; aparece
+     en 837 h4, como encargado de recabar ofertas, no como refrendo.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+Tres propuestas, para la próxima versión.
+
+Uno. El cotejo de la cadena de folios supone que la tapa gasta un folio. En 837
+lo gasta (1645); en 838 y en 839 la serie salta dos más. La regla debería pedir,
+antes de inferir el folio de la tapa, la continuidad del texto entre la tapa y
+la hoja 2, que es lo que distingue un salto de numeración de una hoja faltante.
+
+Dos. En un complemento, las redes de búsqueda del año entero (repeticiones por
+texto, anillo de actores) se corren contra todo el año y no sólo contra las
+ediciones nuevas: así se hizo aquí, y conviene escribirlo.
+
+Tres. Los apellidos que el anillo 2 conserva como lugares (§5.1bis) fallan igual
+que las palabras sueltas: «apaza» no devolvió «Apasa». Para los actores ya
+descartados por jurisdicción conviene guardar en el config la deformación de la
+capa como segunda grafía, igual que el §15.3 manda hacer con los topónimos.
+
+§R · RECUENTO
+-------------
+
+anio: 1920
+ediciones_desde: 837
+ediciones_hasta: 838
+ediciones_presentes: 2
+ediciones_ausentes: 0
+hojas_presentes: 24
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 0
+periodicidad: semanal-viernes
+dias_salida_sin_edicion: 0
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: textos-del-release
+versiones: 1
+actos_departamento: 0
+actos_dominio: 0
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 0
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 5
+hojas_miradas: 16
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 0
+limites_declarados: 3
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 50
+avisos_release: 2
+complemento: 837-838
