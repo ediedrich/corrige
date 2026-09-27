@@ -1,0 +1,545 @@
+LEE v17 — 1949 complemento (pendientes del informe del 27/09/2026)
+==================================================================
+Boletín Oficial de la Provincia de Salta, año 1949, ediciones N 3308 a 3589.
+Complemento del informe
+BO-Salta-1949_3308-3589_la-caldera_LEE-1949_2026-09-27.txt (en adelante, «el
+informe base»). Rúbrica: rubrica-lee-v16.md del repositorio corrige, con los
+cambios de LEE v17 (flujo-editorial.md, §5). Sesión del 27/09/2026.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: COMPLETO (con límites). Nivel de lectura: imagen. Este complemento no
+trae ediciones nuevas: el Release de 1949 sigue con 281 PDF (3308 a 3589, sin la
+3395; inventario releído hoy desde la máquina de Eduardo: 292 assets, los mismos
+que el informe base más sus dos copias subidas). Su objeto son los seis
+pendientes que el informe base nombró al pie de su §0. Cerrados los seis, el año
+pasa de CON PENDIENTES a COMPLETO, y el §R de este complemento reemplaza al del
+informe base para todo el año (por eso sus claves ediciones_desde y
+ediciones_hasta son las del año entero). El nombre del archivo lleva el rango de
+ediciones cuyas imágenes se miraron en esta sesión: 3309 a 3578.
+Regla de v17 §5.4: qué afirmaciones del informe base cambian. Se listan en E.2
+con su ficha o su renglón; las más importantes: (1) los resúmenes de Tesorería
+publicados en el año no son diez sino catorce, y la cadena de saldos se arma
+entera, de octubre de 1948 a octubre de 1949, con un solo puente; (2) los «dos
+decretos de becas» del 7 de diciembre (3570 h13 y h16) son uno solo, el
+18.308-A, con tres tramos del Hogar San Cayetano de Vaqueros (ficha nueva
+B.2.5); (3) Conrado Marcuzzi pasa del grupo 2 al grupo 3 del anillo de actores:
+construye también las estaciones sanitarias de El Galpón y de El Tala.
+Insumos. Desde la nube, github.com sigue respondiendo 403 para
+ediedrich/boletines-salta («GitHub access to this repository is not enabled for
+this session»). El trabajo sobre las imágenes se hizo en la máquina de Eduardo,
+carpeta «boletines», subcarpeta _sesion1949 (los 281 PDF que dejó allí la sesión
+del informe base), con PyMuPDF 1.28.2 instalado en esta sesión en la máquina
+(pip --user). A la nube pasaron lee_textos_1949.zip, decretos_1949.csv,
+lee_config.json y log.txt, y los recortes que se miraron, en cinco zip dentro de
+_sesion1949/_c49 (tinta, saldos2, cierres, zoom, listas) más una hoja suelta
+(3340_h7.png). raw.githubusercontent.com responde desde la nube: de ahí salieron
+flujo-editorial.md, estado.json, la rúbrica LEE v16, lee_config.json y los
+informes LEE 1947, 1948 y 1949 (clon de corrige).
+Config (v16 §15.4 y v17 §5.2): config de corrige, version 2026-09-27, hasta
+1949, 655 actores, 182 términos de anillo 2, 280 números (es el que entregó el
+informe base); foto del Release, version 2026-09-27, hasta 1932. Se usó el de
+corrige. Este complemento no cambia el config y no entrega lee_config.json.
+Entorno de la sesión: nube con PyMuPDF; máquina con 2 núcleos, Python 3.10 y
+PyMuPDF instalado en esta sesión; sin tesseract con spa en ninguno de los dos:
+no hay OCR en sesión.
+Qué verificó la sesión, por pendiente: (1) cadena de Tesorería: 14 resúmenes
+localizados por texto, sus renglones de apertura y cierre mirados en recortes a
+200 ppp (dos cifras dudosas, a 300 y 500 ppp) y un subtotal por resumen
+recalculado sobre la imagen a 100-110 ppp (E.1, E.8); (2) listas: las tres del
+decreto 18.480-G (A.49) y las tres del 18.308-A (B.2.5) transcritas y recontadas
+en la imagen a 170 ppp; (3) los 224 números arrastrados distintos, en contexto
+de acto, sobre la capa; (4) los 655 actores por nombre completo, por inicial y
+apellido y por apellido suelto, agrupados por contexto, y los actores de 1948 y
+1949 por primera vez sobre todo el corpus; (5) las 68 hojas de menos de 5 % de
+tinta que faltaban, en planchas a 45 ppp; (6) el anillo 2 de los términos
+genéricos, grupo por grupo.
+Al cerrar: qué agregaría cada insumo que falta. Acceso de la nube al Release:
+evitaría el paso por la máquina. Tesseract con spa: segunda versión propia fuera
+de las 198 hojas de lee_auto. El resumen de Tesorería de noviembre de 1948 (en
+el corpus de 1948, si se publicó): convertiría el único puente de la cadena en
+un tramo leído. El Registro Oficial de 1949: los decretos citados y no
+acompañados del informe base (E.3), que siguen sin acompañar.
+
+§1 · CORPUS REVISADO
+--------------------
+El del informe base, sin cambios: 281 ediciones presentes (3308 a 3589; falta la
+3395), 4.869 hojas presentes, 4.932 declaradas en 280 tapas. Tinta medida de
+nuevo en la máquina sobre las 4.869 hojas (píxeles < 170 a 50 ppp): el resultado
+coincide con el del informe base hoja por hoja en el tramo bajo: ninguna bajo
+0,5 %, 70 bajo 5 %, la menor 3400 h23 (0,643 %) y la segunda 3423 h16 (1,562 %).
+Hojas miradas en la imagen en este complemento: 84, de las cuales 67 no se
+habían mirado en el informe base (68 de tinta baja, 27 de Tesorería, 4 de listas
+y 1 de un número arrastrado, con solapamientos).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versión: la capa del PDF («prev», 4.869 hojas) del zip de textos, normalizada
+como en el informe base (NFD sin diacríticos, U+00AD y guion de corte unidos,
+puntuación suprimida para actores y números).
+Números arrastrados. El config trae 280 números; los 53 agregados por el informe
+base son de 1949 y ya estaban en sus fichas; los otros 227 (224 distintos, tres
+repetidos con punto de mil) se buscaron precedidos, a no más de dos palabras,
+por decreto, ley, resolución, expediente, ordenanza, contrato, acta, catastro,
+partida o «N°». Resultado: 852 aciertos de 113 números. Se leyeron los 95 cuyo
+contexto trae un año de 1940 a 1948 junto al número, un término del
+departamento, o las palabras decreto o ley (sin contar la Ley nacional 11.867 de
+transferencias de comercio, 198 aciertos, ni los avisos numerados 5024 y 5036,
+que son del año). Los que tocan al departamento son todos citas dentro de actos
+ya fichados: 10.668/48 (A.19), 10.241/48 (A.33), 12.581/48 y su variante 12.531
+(A.19, A.23), 10.960/48 y 12.131/48 (en el acto de 3359 h4 del §A). Uno se miró
+en la imagen porque su origen es un acto del departamento de 1948: el 10.755-A
+(en 1948, ascenso del enfermero de La Caldera Teodoro Gómez), citado dos veces
+en el decreto 13.880-A del 5 de febrero de 1949 (3340 h7 c2), que prorroga
+designaciones interinas de Sanidad: Simón Araiz, reemplazado por Carlos A.
+Yañez, y el Dr. Aníbal Arabel, reemplazado por el Dr. Oscar J. Arabel; el
+decreto no nombra ningún lugar del departamento. Los demás son coincidencias de
+numeración (expedientes, avisos, resoluciones y leyes de otra serie: por ejemplo
+el 7321/47 de los mercados de Pichanal, el 8024/48 de la iglesia de Campo Santo,
+el 6867/47 de un expediente de aguas de Campo Santo). Ningún número arrastrado
+trae un acto nuevo del departamento.
+Actores. Los 655 del config, sobre el texto sin puntuación, en tres formas:
+nombre completo (127 actores con acierto), inicial y apellido (124 actores,
+7.364 aciertos) y apellido suelto (510 actores, 250.539 aciertos). Los aciertos
+se agruparon por texto (un aviso repetido es un grupo) y se leyeron: todos los
+grupos de nombre completo y de inicial, descontadas las firmas de funcionarios
+conocidos que los producen (Lucio A. Cornejo, Tristán C. Martínez, C. R. Aranda
+y otras; 80 grupos), es decir 173 grupos; y, del apellido suelto, los grupos en
+que el apellido va a menos de 90 caracteres de un cargo (comisario, juez de paz,
+receptor, registro civil, enfermero, guarda, estafeta, maestro, director de
+escuela, comisión o intendencia municipal, agente): 216 grupos de actores de
+1940 en adelante, leídos uno por uno. Los 1.172 grupos de apellido suelto con
+cargo de actores anteriores a 1940 se contaron y no se leyeron: la identidad con
+una persona de hace más de diez años no se puede acreditar por el apellido, y lo
+que importa de ellos, que el grupo esté en un acto del departamento, lo cubre la
+pasada siguiente. Control por el otro lado: se listaron todas las apariciones
+del anillo 1 en hojas que el informe base no cita (87 grupos de texto) y todas
+son repeticiones de avisos del §A o renglones de actos ya fichados (salvo
+«Roberto Caldera» y «Berlo Caldera», 3561 h15, falsos positivos ya juzgados).
+HALLAZGO del anillo de actores: los 31 actores que el informe base agregó al
+config por sus actos de 1949 (y los de 1948 que agregó el informe de ese año) no
+se habían corrido sobre el corpus de 1949: el informe base corrió los 624 que
+había antes de agregarlos. Corridos ahora, dan lo que va a B.4.
+Anillo 2, términos genéricos. 78 términos que son otra cosa o de otra
+jurisdicción, o genéricos (candelaria, san jose, entre rios, castellanos, el
+bordo, mamani, apaza, aramayo, isasmendi, nogales, murua, betania, tabacal,
+mojotoro, potrerillo, durazno, sauces, mesada, angosto, despensa y los demás del
+§B.3 del informe base): 5.877 aciertos en 1.441 grupos de texto. Clasificados
+por lo que dice el propio texto a 200 caracteres: 606 grupos atribuidos por el
+acto a otro departamento o provincia, 351 de personas, 102 con un término del
+departamento cerca y 382 sin atribución. Los 102 y los 382 se leyeron uno por
+uno: los primeros son repeticiones de fichas del §A y del §B (Finca San José y
+Entre Ríos en Vaqueros, Campo Alegre, San Cayetano de Vaqueros, las becas de
+B.2.5) o textos de la Capital (la finca «Castellanos» y la estancia «Lesser o
+Las Nieves», ya en §C); de los segundos, ampliada la ventana a 1.000 caracteres,
+269 quedan atribuidos a otra jurisdicción por el propio acto y 81 se leyeron sin
+atribución: nombres de pila y apellidos (Candelaria Zerpa, Candelaria Bargas),
+calles, Paraná, deslindes de Guachipas y Cafayate, circuitos de otros
+departamentos. De los 351 de personas, se leyeron los 66 con un cargo o una
+propiedad cerca. Ninguno trae un acto nuevo del departamento. Un solo lugar
+queda sin jurisdicción: «Los Nogales», donde revista un enfermero de Sanidad
+(Luis Rodríguez, 3448 h10 y 3545 h15; también en los sumarios 3448 h3 y 3510
+h2); el acto no dice de qué departamento es y el informe no lo atribuye (v16
+§5.1ter).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+Sin actos nuevos: las 51 fichas del informe base rigen. Se agrega a una de ellas
+el recuento que quedó pendiente.
+
+A.49 · recuento propio (complemento)
+FUENTE: 3578 h4 c1-c2 (Salta, sábado 17 de diciembre de 1949)
+FICHA: Decreto N 18.480-G, ya fichado. Se transcriben las tres listas enteras de
+las oficinas de Registro Civil de la campaña por categoría. Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 170 ppp, las dos columnas enteras (arts. 1 a 4
+completos).
+TEXTO:
+  Art. 2° — Serán PRIMERA CATEGORIA, con la asignación mensual de DOSCIENTOS
+  PESOS M|N. ($ 200.— m|n.), las siguientes Oficinas: DEPARTAMENTO ANTA:
+  Joaquín V. González; DPTO. CAMPO SANTO: General Güemes; DPTO. CHICOANA:
+  Chicoana; DPTO. GENERAL SAN MARTIN: Tartagal, Embarcación; DPTO. IRUYA:
+  Iruya; DPTO. METAN: Metán, El Galpón; DEPTO. ORAN: Orán, Tabacal; DEPTO.
+  ROSARIO DE LA FRONTERA: Rosario de la Frontera; DPTO. ROSARIO DE LERMA:
+  Rosario de Lerma; DPTO. SANTA VICTORIA: Santa Victoria.
+  Art. 3° — Serán de SEGUNDA CATEGORIA con la asignación mensual de CIENTO
+  CINCUENTA PESOS M|N. ($ 150.— m|n.), las siguientes Oficinas: DEPARTAMENTO
+  ANTA: Las Lajitas, Quebrachal, Tolloche; DPTO. CACHI: Cachi, Payogasta;
+  DPTO. CAFAYATE: Cafayate; DPTO. CAMPO SANTO: Campo Santo; DPTO. CERRILLOS:
+  Cerrillos, La Merced; DPTO. CHICOANA: El Carril; DPTO. GRAL. SAN MARTIN:
+  Aguaray, Urundel; DPTO. LA VIÑA: Coronel Moldes; DPTO. LOS ANDES: San
+  Antonio de los Cobres; DPTO. MOLINOS: Luracatao, Molino.; DPTO. ORAN:
+  Pichanal; DPTO. ROSARIO DE LA FRONTERA: El Potrero; DPTO. ROSARIO DE LERMA:
+  Campo Quijano, La Silleta; DPTO. RIVADAVIA: Coronel Juan Solá; DPTO. SAN
+  CARLOS: San Carlos, Angastaco; DPTO. SANTA VICTORIA, Nazareno.
+  Art. 4° — Serán de TERCERA CATEGORIA, con la asignación mensual de CIEN
+  PESOS M|N. ($ 100.— m|n.), las siguientes Oficinas: DEPARTAMENTO ANTA:
+  Apolinario Saravia, Chañar Muyo, General Pizarro, El Sauzal, El Desmonte, El
+  Piquete, El Valle, El Vencido, Gaona, Luis Burela, Macapillo, Paso de la
+  Cruz, Rosario del Dorado, Santo Domingo, Miraflores, Nuestra Señora de
+  Talavera; DPTO. CACHI: San José de Cachi; DPTO. CAFAYATE: Las Conchas; DPTO.
+  CAMPO SANTO: Palomitas, Quisie; DPTO. DE LA CAPITAL: La Montaña, La Quesera,
+  San Lorenzo; DPTO. CHICOANA: Escoipe; DPTO. GENERAL SAN MARTIN: Algarrobal,
+  Acambuco, Corralitos, Dragones, General Ballivian, Luna Muerta, Pocitos, Río
+  Caraparí; DPTO. GUACHIPAS: Acosta, Alemania, El Durazno, Guachipas, Las
+  Juntas, Pampa Grande, Vaquería DPTO. IRUYA: San Antonio de Iruya; DPTO. LA
+  CALDERA: La Caldera; DPTO LA CANDELARIA: El Tala, La Candelaria; DPTO LA
+  POMA. LA POMA, El Potrero; DPTO. LA VIÑA: La Viñc Talapampa; DPTO. LOS
+  ANDES: Tolar Grande; DPTO. METAN: Río Piedras, Los Rosales, San José de
+  Orquera, Tala Muyo; DPTO. MOLINOS: Seclantás; DPTO. ORAN: Arbol Solo Río
+  Pescado, San Andrés, Santa Cruz, Colonia Santa Rosa; DPTO. ROSARIO DE LA
+  FRONTERA: Horcones, Las Saladas, Arenal, El Naranjo; DPTO. ROSARIO DE LERMA:
+  El Gólgota, El Toro, Incahuasi; La Cantera, San Bernardo de las Zorras,
+  Santa Rosa de Tastil, El Manzano; DPTO. RIVADAVIA: Algarrobal, Belgrano,
+  Colonia Buena Ventura, El Espinillo, Hito N° 1, La Paz, La Unión, Los
+  Blancos, Rivadavia, San Isidro San Miguel, Santa Victoria; DPTO. SAN CARLOS:
+  Amblayo; DPTO. SANTA VICTORIA: Los Toldos.
+NOTA DE LECTURA: RECUENTO PROPIO: primera categoría, 13 oficinas en 10
+departamentos; segunda, 24 en 16; tercera, 83 en 22; en total 120. El acto no
+declara número, de modo que no hay nada que cotejar. Posibles nombres pegados:
+«Arbol Solo Río Pescado» y «La Viñc Talapampa» se imprimen sin coma y se cuentan
+como dos cada uno porque las dos mitades son localidades conocidas; si se
+contaran como una, la tercera categoría daría 81 y el total 118: rango 118 a
+120. Los siete elementos de cuatro palabras o más (Paso de la Cruz, Nuestra
+Señora de Talavera, San José de Cachi, San Antonio de Iruya, San José de
+Orquera, San Bernardo de las Zorras, Santa Rosa de Tastil) son nombres de un
+solo lugar. «El Potrero» está en la segunda (Rosario de la Frontera) y en la
+tercera (La Poma). Erratas: «Molino.» y «La Viñc» [sic]. La Caldera es la única
+oficina del departamento en las tres listas; Vaqueros no figura en ninguna (lo
+que el informe base leyó hasta Orán queda confirmado en el art. 4 entero);
+«Vaquería» es de Guachipas.
+
+§B · VECINDAD
+-------------
+
+B.2 · Núcleos del departamento en actos que no nombran el término (agregado)
+
+B.2.5 · Becas del Patronato de Menores, diciembre
+FUENTE: 3570 h12 c2 a h16 c2 (Salta, miércoles 7 de diciembre de 1949); los
+tramos del Hogar en h12 c3 a h13 c1, h13 c2 y h16 c1-c2
+FICHA: B.2. Decreto N 18.308-A. Salta, diciembre 3 de 1949. Expediente N
+10993-49. Visto el decreto 16400 (B.2.3), regulariza las becas del Patronato
+Provincial de Menores por haberse introducido modificaciones, y las aprueba por
+colegio y por meses. El Hogar Agrícola «San Cayetano» de Vaqueros, a $ 70 cada
+uno, aparece en tres tramos: por ocho meses (50 renglones), por seis meses (20)
+y por cinco meses (7). Clase: ESCUELA.
+MODO DE LECTURA: imagen, 170 ppp (encabezado, arts. 1 y 2 y los tres tramos del
+Hogar enteros); el art. 3 y las firmas (Emilio Espelta, Salvador Marinaro), de
+la capa.
+TEXTO:
+  Decreto N° 18308-A. / Salta, diciembre 3 de 1949. / Expediente N° 10993-49.
+  / Visto el decreto N° 16400 por el que se aprueban las becas acordadas por
+  la Junta Ejecutiva del Patronato Provincial de Menores y siendo necesario
+  regularizar la situación de los beneficiarios por haber introducido algunas
+  modificaciones en las mismas, / El Gobernador de la Provincia / D E C R E T
+  A : / Art. 1° — Apruébanse las becas prorrogadas y acordadas por la Junta
+  Ejecutiva del Patronato Provincial de Menores para el período escolar del
+  corriente año, a cada uno de los Colegios e Instituciones en la forma que a
+  continuación se determina: / A) POR OCHO MESES [...] 3°) HOGAR AGRICOLA "SAN
+  CAYETANO" DE VAQUEROS / A razón de $ 70 — c|uno / 1. — Domingo Manuel Alvero
+  / 2. — Hipólito Alvarez / 3. — Miguel Angel Caiguará / 4. — Eduardo Cruz /
+  5. — Pablo Albornóz / 6. — Panfilo Ruiz / 7. — Lorenzo Escobar / 8. — Hugo
+  Fernández / 9. — Juan Gómez / 10. — Miguel Gómez / 11. — César Gutiérrez /
+  12. — José Maisares / 13. — Roberto Mamaní / 14. — Sabino Caro / 15. — Juan
+  C. Nieva / 16. — Ruben Ontivero / 17. — Ramón Pachao / 18. — Ramón Retambay
+  / 19. — Fausto Ruiz / 20. — Marcial Ruiz / 21. — Fortunato Torfe / 22. —
+  Pablo Toledo / 23. — Javier Unco / 24. — Juan José Nanni / 25. — Adolfo
+  Martinez / 26. — Ramón Jorge Giménez / 27. — Francisco Garabito / 28. —
+  Carlos Alberto Gonzalez / 29. — José Marcos Castillo / 30. — Julio
+  Valdiviezo / 31. — Vilfredo Burgos / 32. — Carlos Beltrán / 33. — Eugenio
+  Homes / 34. — Clemente Juárez / 35. — Salustiano Castillo / 36. — Antonio
+  Tejerina / 37. — Wenceslao Díaz / 38. — Aniceto Ayùzo / 39. — Remón Benito
+  Lascano / 40. — Cándido Colque / 41. — Pedro Marcelo Colque / 42. — José
+  Eduardo Mamaní / 43. — Marcos Alancay / 44. — Oscar Eusebio Figueroa / 45. —
+  Arsenio Cardozo / 46. — Juan Carlos Marques / 47. — Florencio Marques / 48.
+  — Ernesto Ruiz / 49. — Pánfilo Ruiz / 50. — Ricardo Emidere Libera / [...]
+  C) POR SEIS MESES [...] 3°) HOGAR AGRICOLA "SAN CAYETANO" DE VAQUEROS / A
+  razón de $ 70.— c|uno. / 1. — Pedro Silvio Cayo / 2. — Adalberto Domínguez /
+  3. — Luis Alberto Paz / 4. — Antonio Remigio Oropeza / 5. — Juan Augusto
+  Yrigoyen / 6. — Felipe Tejerina Gaspar / 7. — Marcos Tolaba / 8. — Abel
+  Chávez / 9. — Juan Carlos Vilte / 10. — Luis Gutierrez / 11. — Rolando
+  Estrada / 12. — Santos Vergara / 13. — Juan Eugenio Bontunet / 14. — Roque
+  Aguilera / 15. — Rodolfo José Cantón / 16. — Juan Robles / 17. — Arturo
+  Robles / 18. — Ramón Mariani / 19. — Apolonio Colque / 20. — Hugo Lorenzo
+  Gramajo / D) POR CINCO MESES [...] 13°) HOGAR AGRICOLA "SAN CAYETANO" DE
+  VAQUEROS, A RAZON DE $ 70 — c|uno / 1. — Juan Carlos Olivera / 2. — Timoteo
+  Aparicio / 3. — Jesus Acoria / 4. — Juan Carlos Flores / 5. — Benito Guantay
+  / 6. — Gregorio Dearte / 7. — José Guerra / [...] E) POR 4 MESES [...] F)
+  POR TRES MESES [...] G) POR DOS MESES [...] H) POR UN MES [...] Art. 2° — El
+  gasto autorizado por el presente [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 50 + 20 + 7 = 77 renglones numerados del
+Hogar, correlativos en cada tramo; el acto no declara número. El 16400-A de
+julio (B.2.3) traía 74 nombres y un renglón 75 en blanco. Cotejo nombre por
+nombre contra B.2.3: 62 coinciden letra por letra o con variante de grafía
+(Maizares/Maisares, Torres/Torfe, Nani/Nanni, Wilfredo/Vilfredo, Ayuso/Ayùzo,
+Lazcano/Lascano, Callo/Cayo, Bautunet/Bontunet, Rearte/Dearte y otras); dos
+cambian de apellido en el mismo número de orden (6: «Pánfilo Díaz» en julio,
+«Panfilo Ruiz» en diciembre; 34: «Clemente Anastacio Guari» y «Clemente
+Juárez»), y tres son nuevos (48 Ernesto Ruiz, 49 Pánfilo Ruiz, 50 Ricardo
+Emidere Libera). «Panfilo Ruiz» y «Pánfilo Ruiz» figuran dos veces en el mismo
+tramo (6 y 49). No se concilia (E.9). Con 50 becas por ocho meses, 20 por seis y
+7 por cinco, a $ 70, el Hogar sumaría $ 38.850 (cálculo propio; el decreto no
+imprime subtotal por establecimiento). No es un acto «del departamento» en el
+sentido del §A: los becados son menores internados por el Patronato, como dice
+la nota de B.2.3. Corrige al informe base, que describió «otros dos decretos» en
+3570 h13 y h16: es un solo decreto con tres tramos.
+
+B.4 · Anillo de actores: cambios sobre el informe base
+- Conrado Marcuzzi pasa del grupo 2 al grupo 3 («también fuera del
+  departamento»): además de la Estación Sanitaria y de la escuela de La Caldera
+  (A.17, A.19, A.23) construye la Estación Sanitaria Tipo A de El Galpón (3397
+  h9, 3409 h8, 3432 h6, 3455 h7, 3502 h5, 3564 h11), la de El Tala (3348 h10,
+  3455 h8, 3552 h5, 3570 h8: decreto 18.275-E, certificado de imprevistos de $
+  69.256,06, adjudicación por decreto 9304) y una escuela primaria en Rosario
+  (3389 h5, sin departamento en el renglón); 34 hojas con su nombre completo en
+  el año, 30 que el informe base no cita, además de la licitación de Guachipas
+  (3334 h7).
+- Carlos Serrey: cuarta aparición fuera del departamento, como antiguo
+  propietario lindero de un inmueble de la calle Rivadavia 840 de la Capital
+  (posesión treintañal, 3515 h11).
+- Rafael López, lindero antiguo de la finca Vaqueros en la Ley 1134 (A.36): el
+  corpus trae 83 hojas con «Rafael López»; son del ingeniero Rafael López
+  Azuara, perito en deslindes y Administrador de Vialidad (3428 h11 y avisos
+  repetidos; 3458 h8). Que sean la misma persona no está acreditado.
+- Juan Antonio Cornejo (A.29): fuera de su edicto, «Juan Antonio Cornejo
+  Capobianco», propietario de un terreno que el Ministerio compra en
+  mensualidades (3420 h5); identidad no acreditada.
+- Odilón Santiago Aguirre, enfermero en Vaqueros (3387 h7), Arminda Fuentes de
+  Lamberto (3526 h5), Justo Pastor Lizondo (3485 h6), Manuel F. Serrey (3536
+  h5), Aquiles Casale, Lorenza Lozano, Emma Saravia de Solá y Mercedes Solá,
+  Marcos Abraham Gutierrez, Emilio Alberto Ratel, Isaac Fernández, Argentina
+  Suárez Wilde de Serrey: sólo en sus propios actos y sus repeticiones (grupo
+  1). «M. Sola» e «I. Fernández» por inicial devuelven al director del Boletín
+  (Juan M. Solá, en todas las tapas) y a un juez adscripto: ruido.
+- Los tres socios de «L. A. Cornejo y Cía.» (A.2: Lucio Argentino Cornejo
+  Mollinedo, Hugo Enrique Jovanovies, David Hugo Peyret) sólo en su contrato y
+  sus repeticiones (3310 a 3314).
+- Ausencias, ahora sobre todas las búsquedas (anillo 1, anillo 2 leído grupo por
+  grupo, actores por nombre, inicial y apellido, números): no se nombra en 1949
+  comisario ni subcomisario de La Caldera ni de Vaqueros; no se nombra Receptor
+  de Rentas del departamento; no aparece Claudio Murúa como guarda sanitario de
+  La Caldera. Son afirmables con dos identificadores (nombre y cargo; cargo y
+  lugar).
+
+§C · LIMITROFES
+---------------
+Sin cambios sobre el informe base, más una: El Galpón (Metán) y El Tala (La
+Candelaria), estaciones sanitarias del mismo contratista que la de La Caldera
+(B.4).
+
+§P · PLANOS
+-----------
+Sin cambios: ningún plano impreso del departamento. Las 68 hojas de tinta baja
+no traen planos.
+
+§D · INDICE
+-----------
+Sólo lo nuevo o cambiado; el índice del informe base rige para el resto.
+  3570 h12  B.2.5 ESCUELA — Becas, decreto 18.308-A: San Cayetano de Vaqueros,
+                77 renglones en tres tramos
+  3578 h4   A.49  REGISTRO-CIVIL — Recuento: 13, 24 y 83 oficinas; La Caldera
+                única del departamento
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación, tinta y saldos
+Tinta: las 68 hojas de menos de 5 % que el informe base no miró se miraron en
+planchas de doce a 45 ppp. Ninguna está en blanco; ninguna bajó de 0,5 %. Son
+hojas ralas de cuatro clases: cuadros de presupuesto por partidas (3341 h4 a
+h20, 3362 h6 a h8, 3393 h9, 3405 h8, 3409 h10, 3505 h11 y h12, 3510 h5 y otras),
+resúmenes y balances (Tesorería, Municipalidad de la Capital, sociedades
+anónimas: 3400 h18 a h22), finales de edición con el aviso de la Secretaría de
+la Nación y el pie de imprenta (3372 h18, 3398 h18, 3433 h12, 3437 h22 y otras),
+y hojas sueltas: la portada de la Constitución (3457 h16), el cuadro de
+coparticipación de 3536 h9 (A.38) y el cierre de una sentencia (3430 h14).
+Ninguna trae un acto nuevo del departamento.
+Saldos: el informe base contó diez resúmenes y dio por faltantes febrero, mayo,
+octubre, noviembre y diciembre. La búsqueda por texto de la fórmula «resumen del
+movimiento que ha tenido Tesorería General» devuelve catorce resúmenes distintos
+en el corpus, más la doble de la 3384:
+  oct. 1948     3309 h13-15  abre 90.927,46   cierra 65.058,29
+  dic. 1948     3336 h11-12  abre 51.594,20   cierra 55.759,51
+  ene. 1949 *   3353 h11-12  ejercicio 1948: sin renglón de saldo
+  ene. 1949     3365 h20-21  abre 55.759,51   cierra 53.991,63
+  feb. 1949     3390 h17-19  abre 53.991,63   cierra 51.173,24
+  mar. 1949 *   3383 h15     ejercicio 1948: sin renglón de saldo (doble 3384
+  h15)
+  mar. 1949     3410 h16-18  abre 51.173,24   cierra 64.134,26
+  abr. 1949     3423 h14-16  abre 64.134,26   cierra 107.071,11
+  may. 1949     3445 h18-20  abre 107.071,11  cierra 28.432,15
+  jun. 1949     3469 h20-22  abre 28.432,15   cierra 13.424,26
+  jul. 1949     3502 h23-25  abre 13.424,26   cierra 160.788,86
+  ago. 1949     3523 h18-20  abre 160.788,86  cierra 193.912,42
+  sep. 1949     3539 h17-19  abre 193.912,42  cierra 160.626,64
+  oct. 1949     3571 h22-24  abre 160.626,64  cierra 31.030,37
+Cadena, por la cifra: un solo tramo, de octubre de 1948 a octubre de 1949, con
+un puente. El resumen de noviembre de 1948 no está en el corpus de 1949; su
+apertura es el cierre de octubre (65.058,29, «Saldo en Caja que pasa al mes de
+Noviembre de 1948») y su cierre es la apertura de diciembre (51.594,20, «A Saldo
+del mes de Noviembre de 1948»): el puente queda con sus dos cifras registradas.
+Las once junturas de diciembre de 1948 a octubre de 1949 encadenan exactas. Los
+rótulos coinciden con los meses en las catorce. Los dos resúmenes marcados con
+asterisco son del ejercicio 1948 en su período complementario (enero y marzo de
+1949: «Ejercicio 1948»), no traen saldo de caja y no entran en la cadena: se
+publican aparte de los del ejercicio corriente del mismo mes. Noviembre y
+diciembre de 1949 saldrían en 1950. Balances municipales del departamento:
+ninguno (el de 3491 h18-19, 3492 h19-20 y 3493 h16-17 es de la Municipalidad de
+la Capital, firmado por el intendente Carlos Xamena).
+
+E.2 · Cobertura y cambios sobre el informe base (v17 §5.4)
+- §0 del informe base, pendientes: los seis quedan cerrados (este §0). Estado
+  del año: de CON PENDIENTES a COMPLETO.
+- E.1 del informe base, «diez resúmenes» y «faltan febrero, mayo, octubre,
+  noviembre y diciembre»: son catorce; faltan sólo noviembre de 1948 (puente) y
+  noviembre y diciembre de 1949 (1950). «Enero (3353 h12, decreto)»: la 3353
+  trae el resumen entero de enero del ejercicio 1948 (h11-12), no sólo su
+  aprobación. «Marzo (3383 h15 y su doble; 3410 h16)»: son dos resúmenes
+  distintos, el de 3383 del ejercicio 1948 y el de 3410 del ejercicio 1949.
+  cadena_saldos: de «no-armada» a «un-tramo-con-puente».
+- B.2.3 del informe base, «otros dos decretos de becas» en 3570 h13 y h16: es
+  uno solo, el 18.308-A (B.2.5), que empieza en h12.
+- A.49 del informe base, «no se recontaron las tres listas»: 13, 24 y 83 (A.49
+  de este complemento).
+- B.4 del informe base, grupo 2: Marcuzzi pasa al grupo 3; las ausencias ya no
+  valen «sobre el anillo 1, el anillo 2 leído y los actores por nombre completo»
+  solamente, sino sobre todas las búsquedas.
+- §2 del informe base, anillo 2 genérico «por muestra»: leído grupo por grupo;
+  ningún cambio de fichas.
+- E.3 y E.10 del informe base, «las 68 hojas no miradas» y «números arrastrados
+  no buscados»: cerrados sin fichas nuevas.
+- Superlativos y recuentos del informe base que no cambian: La Caldera sigue
+  siendo la única oficina de Registro Civil del departamento clasificada; el año
+  sigue sin planos; los 51 actos del §A siguen siendo 51.
+
+E.3 · Sin mención y no mirado
+Los citados y no acompañados del informe base siguen sin acompañar: la búsqueda
+de números arrastrados no devolvió el texto de los decretos 10.668/48, 10.241/48
+ni 12.581/48, sólo sus citas en los actos ya fichados. No mirados en la imagen:
+el art. 3 y las firmas del 18.308-A (capa), las secciones del 18.308-A que no
+son del Hogar (otros colegios), los 1.172 grupos de apellido suelto de actores
+anteriores a 1940 (contados, §2).
+
+E.4 · Firmas y autoridad
+Sin cambios. Tesorería: Manuel L. Albeza, Tesorero General, firma los resúmenes
+hasta el de septiembre de 1949; el de octubre lo firma Florentín Torres,
+«Contador Mayor — Tesorero General Interino» (3571 h24); Juan Armando Molina,
+Presidente de la Contaduría General (en el de junio, «Contador Gral. de la
+Provincia», 3469 h22); E. Cabezas al pie desde marzo.
+
+E.5 · Cortes y columnas
+Columnas cotejadas en la imagen contra la capa en este complemento: seis (3578
+h4 c1-c2; 3570 h12 c3, h13 c1-c2, h16 c1). En 3570 la capa intercala las
+columnas: el art. 3 y las firmas del 18.308-A salen en la capa en medio del
+tramo D, y las secciones E a H después. Columna perdida confirmada: ninguna.
+
+E.6 · Repeticiones
+Sin cambios. Los resúmenes de Tesorería salen una vez cada uno, salvo el de
+marzo del ejercicio 1948 (3383 h15 y su segundo escaneo en 3384 h15, ya
+declarado).
+
+E.7 · Falsos positivos y negativos
+Falsos negativos rescatados: ninguno nuevo del departamento. Falsos positivos de
+la inicial: «a cornejo» (Lucio A. Cornejo), «c martinez» (Tristán C. Martínez,
+escribano secretario), «c r aranda» (juez), «m sola» (Juan M. Solá, director del
+Boletín), «i fernandez» (juez adscripto). No se agregan al config (v16 §12).
+
+E.8 · Fidelidad numérica
+Tesorería: un subtotal por resumen, como mínimo, recalculado sobre la imagen:
+oct. 1948, Fondos con afectación especial (44.036,86 + 4.683,97 + 1.000.003,62 =
+1.048.724,45) y Valores a devolver (nueve renglones, 197.338,41); dic. 1948,
+Retención Leyes 770 y 292 (155.792,90), Valores a devolver (216.748,41) y Fondos
+disponibles (2.884.868,46); ene. 1949 ej. 1948, los cinco subtotales de egresos
+y el total 2.023.837,81; ene. 1949, Pagos por presupuesto (658.998,47), Fondos
+disponibles (729.411,18), Valores a devolver (298.440,26) y Deuda exigible
+(1.366.909,18); feb., Valores a devolver (206.296,22), Pagos por presupuesto
+(1.535.533,23) y Deuda exigible (608.459,85); mar. ej. 1948, ingresos
+(49.381,55); mar., Valores a devolver (108.048,—), Pagos por presupuesto
+(931.588,40) y Deuda exigible (140.200,56); abr., cinco subtotales de egresos
+(604.534,91 y 1.581.597,37); may., cuatro (386.132,26 y 2.152.729,94); jun.,
+cuatro (1.011.250,70 y 2.099.469,73); jul., cinco (3.326.235,33 y otros); ago.,
+Cálculo de recursos (12.542,—); sep., Pagos por presupuesto y Plan de obras
+(2.687.024,88) y Valores a reintegrar (356.139,65); oct., Plan de obras
+(514.859,47) y Cálculo de recursos (535,20). Cierran todos. En el de octubre de
+1948 la primera lectura a 110 ppp dio una diferencia de 20,00 en Valores a
+devolver; a 300 ppp el renglón «Impuestos a los Réditos» dice 189,50 y no
+169,50, y el subtotal cierra.
+Cifras dudosas: el cierre de junio (3469 h22) sale con el primer dígito
+empastado; a 500 ppp se lee 13.424,26, igual a la apertura de julio. La apertura
+de abril (3423 h14) trae una mancha sobre la coma decimal; a 200 ppp, 64.134,26,
+igual al cierre de marzo, que se imprime «64'134.26» con apóstrofo por punto
+[sic] (3410 h18).
+Listas recontadas en este complemento: A.49 (tres listas, 120 oficinas, rango
+118 a 120) y B.2.5 (tres tramos, 77 renglones).
+
+E.9 · Contradicciones
+Nuevas, sin conciliar: B.2.5 contra B.2.3 (Pánfilo Díaz y Panfilo Ruiz en el
+renglón 6; Clemente Anastacio Guari y Clemente Juárez en el 34); B.2.5 repite
+«Panfilo Ruiz» (6) y «Pánfilo Ruiz» (49) en el mismo tramo. Erratas: «Molino.» y
+«La Viñc» (A.49); «64'134.26» (3410 h18); el resumen de septiembre se fecha
+«Salta, octubre de 1949», sin día (3539 h19).
+
+E.10 · Límites
+Los del informe base, salvo el pendiente: falta la edición 3395; 100 hojas
+declaradas y ausentes en 85 ediciones; la 3584 no deja leer sus páginas
+declaradas; sin spa no hay segunda versión propia fuera de las 198 hojas de
+lee_auto; sin las .jpg no hay md5 ni dhash; dos cifras de A.8 ilegibles. Se
+agrega uno: el resumen de Tesorería de noviembre de 1948 no está en el corpus y
+la cadena pasa por un puente (E.1). Siete límites.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. Los resúmenes de Tesorería se cuentan por la fórmula de su título y no por el
+rótulo del saldo: la búsqueda de «resumen del movimiento que ha tenido
+tesorería» sobre la capa devolvió los catorce; el informe base, que los buscó
+por «saldo», vio diez. Se propone escribir la fórmula en el config como término
+de control y declarar en E.1 cuántas hojas la traen.
+2. Los actores que el propio informe agrega al config se corren sobre el corpus
+del mismo año antes de cerrar el §B: el informe base agregó 31 y no los corrió,
+y fueron ellos los que dieron el cambio de grupo de Marcuzzi. Regla propuesta
+para v17 §5: «el anillo de actores se corre dos veces, antes de fichar y después
+de agregar los actores del año».
+3. Tinta y planchas en la máquina: con PyMuPDF instalado en la máquina (pip
+install --user pymupdf), la medición de las 4.869 hojas tardó unos seis minutos
+en dos procesos y las planchas de 68 hojas pesaron 2,8 MB. Eso evita pasar los
+PDF a la nube; se propone como procedimiento para 1950 en adelante.
+4. En los años con resúmenes del ejercicio anterior en período complementario
+(enero a marzo), el §R debería contarlos aparte: se propone la clave
+resumenes_tesoreria_complementarios. En 1949 son dos (enero y marzo).
+
+§R · RECUENTO
+-------------
+anio: 1949
+ediciones_desde: 3308
+ediciones_hasta: 3589
+ediciones_presentes: 281
+ediciones_ausentes: 1
+hojas_presentes: 4869
+hojas_declaradas: 4932
+hojas_ausentes_estimadas: 100
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 32
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 51
+actos_dominio: 5
+actos_hacienda_municipal: 6
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 9
+subtotales_recalculados: 23
+resumenes_tesoreria: 14
+cadena_saldos: un-tramo-con-puente
+columnas_cotejadas: 61
+hojas_miradas: 429
+avisos_repetidos_departamento: 14
+falsos_positivos_anillo1: 9
+limites_declarados: 7
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 281
+avisos_release: 0
