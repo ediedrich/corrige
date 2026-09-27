@@ -1,0 +1,2982 @@
+LEE v17 — 1949
+==============
+Boletín Oficial de la Provincia de Salta, año 1949, ediciones N 3308 a 3589.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5). Sesión del 27/09/2026.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES. Nivel de lectura: imagen. Las 51 fichas del §A y las 4
+del §B se miraron en la imagen del PDF; en varias, partes accesorias (firmas,
+artículos finales, renglones cortados en el borde) se completaron de la capa y
+cada ficha lo dice en su MODO DE LECTURA. Ninguna ficha se leyó sólo de la capa.
+Los pendientes están nombrados al pie de este apartado y en E.10; el año es de
+los largos (281 ediciones, 4.869 hojas) y v17 §5.5 prefiere un informe con
+pendientes nombrados a uno completo que no miró lo que dice haber mirado.
+Insumos. Desde la nube, github.com responde 403 para ediedrich/boletines-salta
+(«GitHub access to this repository is not enabled for this session»), como en
+LEE 1947 y 1948. El inventario del Release y sus assets se bajaron desde la
+máquina de Eduardo (app de escritorio, carpeta «boletines», subcarpeta
+_sesion1949) y se pasaron a la sesión: el pre-informe, decretos_1949.csv,
+lee_config.json, lee_textos_1949.zip, log.txt, resultados_1949.csv y los 281 PDF
+(en once tar). No se bajaron recortes_1949_parte1-3.zip: los recortes se
+hicieron de nuevo desde los PDF. raw.githubusercontent.com sí responde desde la
+nube: de ahí salieron flujo-editorial.md, estado.json, la rúbrica LEE v16 y el
+config de corrige.
+Inventario del Release (expanded_assets/1949, leído desde la máquina): 281 PDF,
+N 3308 a 3589, con un hueco: falta la 3395 (entre la 3394, viernes 22 de abril,
+y la 3396, lunes 25 de abril; sería el sábado 23). Sin avisos de «no se
+encontró». Nueve assets más:
+BO-Salta-1949_la-caldera_PRE-INFORME-LEE_2026-09-27.txt (único pre-informe del
+Release; en la carpeta local queda también el del 2026-09-23, que no se usó),
+decretos_1949.csv, lee_config.json, lee_textos_1949.zip, log.txt,
+recortes_1949_parte1..3.zip, resultados_1949.csv.
+lee_auto.py: sha f9a69a713e25 (estado.json). El log registra cuatro corridas:
+tres del 23/09/2026 y una del 27/09/2026 06:11-07:56, todas sobre 281 archivos
+(capa útil en 4.671 de 4.869 hojas; 198 ocrizadas en la primera corrida, 0
+nuevas en la última). Sin errores de extracción. Cotejo de la corrida: los 281
+PDF del Release tienen las mismas hojas que el zip de textos (4.869 contra
+4.869) y la capa extraída en sesión con PyMuPDF coincide en largo con la del zip
+en todas las hojas (diferencia de más de 50 caracteres en 0 de 4.869).
+Config (v16 §15.4 y v17 §5.2):
+  config del Release: version 2026-09-27, hasta 1932, actores 581, anillo2 167
+  config de corrige:  version 2026-09-27, hasta 1948, actores 624, anillo2 173
+  se usa: corrige — razón: único válido (v17 §5.2) y más nuevo
+  contenido: el de corrige contiene al del Release; difiere en 43 actores de
+  1947 y 1948, 6 términos de anillo 2 (hogar agricola san cayetano, la
+  calderilla, chusos, abra de la sierra, el angosto, san cayetano) y 89 números.
+El pre-informe se corrió con la foto vieja (hasta 1932): no buscó los 43 actores
+ni los 6 términos. La sesión corrió todas las búsquedas con el config de
+corrige. Se pide que la foto del Release se actualice con el config que se
+entrega (v16 §15.4).
+Config entregado: lee_config.json completo, version 2026-09-27, hasta 1949;
+agrega 31 actores de 1949 (origen con edición), 9 términos de anillo 2 (los del
+cotejo, §2) y 53 números de acto; no agrega falsos positivos (v16 §12). Total:
+655 actores, 182 términos, 280 números.
+Entorno de la sesión: nproc 2; tesseract 5 con eng y osd, sin spa: no hay OCR en
+sesión. PyMuPDF 1.28 en la nube; la máquina no lo tiene instalado.
+Qué verificó la sesión: las 281 tapas en la imagen (número, año editorial,
+páginas declaradas, día y fecha), con relectura a 130 ppp de las 20 cuyas
+páginas no coincidían; el gobernador de la tapa en las transiciones; el cotejo
+de hojas y de largo de capa contra el zip en las 4.869 hojas; las cuatro
+pasadas, la variante espaciada y una quinta sobre el texto sin espacios ni
+signos; la difusa ampliada; el anillo 2 con sus 98 términos con acierto; los 624
+actores del config por nombre completo; 9 cuadros que nombran al departamento,
+recalculados (E.8); la tinta de las 4.869 hojas.
+Pendientes (trabajo que la sesión puede hacer y no hizo en este turno):
+- La cadena de saldos de la Tesorería General: diez resúmenes publicados (E.1);
+  no se transcribieron saldos.
+- Recontar sobre la imagen las tres listas del decreto 18.480-G (A.49) y las dos
+  listas de becas de 3570 h13 y h16 (B.2.3).
+- Los números arrastrados del config (227): no se buscaron en este turno (E.10).
+- Los actores del config por inicial y apellido, y por apellido suelto: sólo se
+  corrió el nombre completo (§2).
+- Las 68 hojas con menos del 5 % de tinta que no se miraron (ninguna baja del
+  0,5 %; E.1).
+- El anillo 2 de los términos genéricos (candelaria, san jose, entre rios,
+  castellanos, el bordo, mamani, apaza, aramayo, isasmendi y otros) se leyó por
+  muestra de los primeros grupos, no uno por uno (§2).
+Al cerrar: qué agregaría cada insumo que faltó. Acceso de la nube al Release:
+evitaría el paso por la máquina (unos veinte minutos de transferencia);
+tesseract con spa: una segunda versión propia en las 4.671 hojas con capa; el
+Registro Oficial de 1949: los decretos citados y no acompañados (10.668/48,
+10.241/48, 12.581/48) y la ley 1135.
+
+§1 · CORPUS REVISADO
+--------------------
+281 ediciones presentes, N 3308 (lunes 3 de enero) a 3589 (viernes 30 de
+diciembre). Falta la 3395 (sábado 23 de abril, por la secuencia; no está en el
+Release: límite). 4.869 hojas presentes. Páginas declaradas en las tapas: 4.932
+en 280 ediciones; en la 3584 (sábado 24 de diciembre) el número de páginas de la
+tapa está empastado y no se lee (16 hojas presentes).
+- 3 ediciones traen hojas que la tapa no cuenta: 3384 (declara 12, trae 15): sus
+  hojas 13 a 15 son las páginas 13 a 15 de la 3383 del día anterior (cabecera
+  «Salta, abril 6»), un segundo escaneo; 3400 (declara 20, trae 23): h18 a h23,
+  balance de una sociedad anónima (aviso 4781), en hojas desplegadas; 3457
+  (declara 16, trae 31): h17 a h31, la Constitución de la Provincia de Salta en
+  suplemento paginado aparte.
+- 85 ediciones traen menos hojas que las declaradas: 73 una menos, 9 dos menos y
+  3 tres menos; en total, 100 hojas declaradas y ausentes. En 76 de las 85 la
+  última hoja presente lleva el pie «Talleres Gráficos Cárcel Penitenciaria»: el
+  contenido cierra, y qué son las hojas que faltan no se sabe. Se declara y no
+  se explica.
+Tapas, leídas en la imagen las 281 (tiras a 70 ppp; relectura a 130 ppp de 20).
+Año editorial «XL» de 3308 a 3538 (sábado 29 de octubre) y «XLI» desde 3539
+(lunes 31 de octubre). En 1947 y 1948 el cambio fue a mediados de agosto; en
+1949, a fin de octubre: se declara y no se explica. Erratas de tapa: «AÑO XI» en
+3457 y «AÑO LXI» en 3560. «No.» hasta 3530 y «N°» desde 3531. «SETIEMBRE» salvo
+«SEPTIEMBRE» en 3501 y 3502. Día de la semana y fecha: coinciden en las 281;
+fechas estrictamente crecientes, sin ediciones dobles. La tapa dice «APARECE LOS
+DIAS HABILES».
+Gobernador en la tapa: Dr. Lucio Alfredo Cornejo hasta la 3425 (miércoles 1 de
+junio); Sr. Emilio Espelta desde la 3426 (jueves 2 de junio). Leído en la imagen
+en 3400, 3410, 3418, 3420, 3424, 3426, 3539 y 3540 (recuadro del Poder
+Ejecutivo) y en la capa de las demás donde la capa lo resuelve.
+Días hábiles (lunes a sábado) sin edición: 32. Explicados por actos del propio
+corpus: 16/4 (Sábado de Gloria, feriado, decreto publicado en 3438 h4); 13/6
+(feriado, 3435 h8); 17/6 (feriado por el aniversario de la muerte de Güemes,
+3439 h3 y 3503 h5). Sin explicar en el corpus (29): 1/1, 6/1, 28/2, 1/3, 16/3,
+19/3, 14/4, 15/4, 23/4 (la 3395 que falta), 2/5, 25/5, 26/5, 16/6, 20/6, 29/6,
+9/7, 12/8, 15/8, 17/8, 30/8, 13/9, 14/9, 15/9, 12/10, 17/10, 18/10, 1/11, 8/12 y
+31/12. No se buscó la causa afuera.
+Resolución: una imagen por hoja; 300 ppp en 4.838 hojas y 150 ppp en 31 (medido
+con PyMuPDF). Es el techo de lectura: a 150 ppp y con el tipo roto, dos cifras
+de A.8 no se leen.
+Capa de texto: el PDF trae capa propia en las 4.869 hojas; lee_auto la juzgó
+útil en 4.671 y ocrizó 198 (versión «prop», confianza media 58,9: 2 «ver», 196
+«ojos», ninguna «pub», pre-informe §1).
+Tabla por edición (fecha leída en la imagen; páginas declaradas / presentes; «<»
+o «>» marcan diferencia):
+  3308  lun   3/01  16/15  <
+  3309  mar   4/01  16/15  <
+  3310  mie   5/01  12/12
+  3311  vie   7/01  12/12
+  3312  sab   8/01  14/14
+  3313  lun  10/01  20/19  <
+  3314  mar  11/01  20/19  <
+  3315  mie  12/01  14/14
+  3316  jue  13/01  20/19  <
+  3317  vie  14/01  14/14
+  3318  sab  15/01  10/10
+  3319  lun  17/01  18/18
+  3320  mar  18/01  20/20
+  3321  mie  19/01  14/13  <
+  3322  jue  20/01  18/18
+  3323  vie  21/01  12/12
+  3324  sab  22/01  16/16
+  3325  lun  24/01  12/11  <
+  3326  mar  25/01  12/11  <
+  3327  mie  26/01  26/26
+  3328  jue  27/01  16/15  <
+  3329  vie  28/01  16/16
+  3330  sab  29/01  16/15  <
+  3331  lun  31/01  12/12
+  3332  mar   1/02  14/14
+  3333  mie   2/02  10/9   <
+  3334  jue   3/02  14/14
+  3335  vie   4/02  16/16
+  3336  sab   5/02  12/12
+  3337  lun   7/02  22/22
+  3338  mar   8/02  12/11  <
+  3339  mie   9/02  10/10
+  3340  jue  10/02  14/14
+  3341  vie  11/02  28/28
+  3342  sab  12/02  10/9   <
+  3343  lun  14/02  16/13  <
+  3344  mar  15/02  14/12  <
+  3345  mie  16/02  12/10  <
+  3346  jue  17/02  16/14  <
+  3347  vie  18/02  12/9   <
+  3348  sab  19/02  20/20
+  3349  lun  21/02  12/12
+  3350  mar  22/02  14/14
+  3351  mie  23/02  12/11  <
+  3352  jue  24/02  16/15  <
+  3353  vie  25/02  12/12
+  3354  sab  26/02  20/19  <
+  3355  mie   2/03  12/12
+  3356  jue   3/03  12/12
+  3357  vie   4/03  12/12
+  3358  sab   5/03  14/14
+  3359  lun   7/03  14/14
+  3360  mar   8/03  18/17  <
+  3361  mie   9/03  14/14
+  3362  jue  10/03  20/20
+  3363  vie  11/03  16/16
+  3364  sab  12/03  16/16
+  3365  lun  14/03  22/21  <
+  3366  mar  15/03  20/20
+  3367  jue  17/03  16/16
+  3368  vie  18/03  22/22
+  3369  lun  21/03  28/28
+  3370  mar  22/03  14/14
+  3371  mie  23/03  18/17  <
+  3372  jue  24/03  18/18
+  3373  vie  25/03  18/17  <
+  3374  sab  26/03  18/18
+  3375  lun  28/03  16/15  <
+  3376  mar  29/03  16/16
+  3377  mie  30/03  14/14
+  3378  jue  31/03  22/21  <
+  3379  vie   1/04  28/28
+  3380  sab   2/04  20/19  <
+  3381  lun   4/04  16/16
+  3382  mar   5/04  16/16
+  3383  mie   6/04  16/15  <
+  3384  jue   7/04  12/15  >
+  3385  vie   8/04  20/20
+  3386  sab   9/04  14/14
+  3387  lun  11/04  18/18
+  3388  mar  12/04  12/12
+  3389  mie  13/04  16/16
+  3390  lun  18/04  20/19  <
+  3391  mar  19/04  14/13  <
+  3392  mie  20/04  10/10
+  3393  jue  21/04  20/20
+  3394  vie  22/04  12/11  <
+  3396  lun  25/04  14/13  <
+  3397  mar  26/04  22/22
+  3398  mie  27/04  18/18
+  3399  jue  28/04  14/13  <
+  3400  vie  29/04  20/23  >
+  3401  sab  30/04  20/20
+  3402  mar   3/05  10/10
+  3403  mie   4/05  14/14
+  3404  jue   5/05  16/16
+  3405  vie   6/05  22/21  <
+  3406  sab   7/05  22/22
+  3407  lun   9/05  16/16
+  3408  mar  10/05  18/18
+  3409  mie  11/05  28/27  <
+  3410  jue  12/05  18/18
+  3411  vie  13/05  30/30
+  3412  sab  14/05  20/19  <
+  3413  lun  16/05  16/16
+  3414  mar  17/05  16/16
+  3415  mie  18/05  20/20
+  3416  jue  19/05  12/12
+  3417  vie  20/05  18/18
+  3418  sab  21/05  14/13  <
+  3419  lun  23/05  16/16
+  3420  mar  24/05  14/14
+  3421  vie  27/05  18/18
+  3422  sab  28/05  20/18  <
+  3423  lun  30/05  18/16  <
+  3424  mar  31/05  18/16  <
+  3425  mie   1/06  18/15  <
+  3426  jue   2/06  14/12  <
+  3427  vie   3/06  16/16
+  3428  sab   4/06  16/16
+  3429  lun   6/06  14/14
+  3430  mar   7/06  14/14
+  3431  mie   8/06  20/20
+  3432  jue   9/06  16/16
+  3433  vie  10/06  12/12
+  3434  sab  11/06  14/14
+  3435  mar  14/06  18/18
+  3436  mie  15/06  18/17  <
+  3437  sab  18/06  22/22
+  3438  mar  21/06  16/16
+  3439  mie  22/06  14/14
+  3440  jue  23/06  16/16
+  3441  vie  24/06  16/16
+  3442  sab  25/06  14/13  <
+  3443  lun  27/06  12/12
+  3444  mar  28/06  14/14
+  3445  jue  30/06  22/20  <
+  3446  vie   1/07  18/18
+  3447  sab   2/07  16/16
+  3448  lun   4/07  18/18
+  3449  mar   5/07  18/17  <
+  3450  mie   6/07  12/12
+  3451  jue   7/07  16/16
+  3452  vie   8/07  12/12
+  3453  lun  11/07  18/18
+  3454  mar  12/07  14/14
+  3455  mie  13/07  18/18
+  3456  jue  14/07  12/12
+  3457  vie  15/07  16/31  >
+  3458  sab  16/07  22/22
+  3459  lun  18/07  16/16
+  3460  mar  19/07  12/12
+  3461  mie  20/07  14/14
+  3462  jue  21/07  16/16
+  3463  vie  22/07  12/12
+  3464  sab  23/07  12/12
+  3465  lun  25/07  12/12
+  3466  mar  26/07  20/20
+  3467  mie  27/07  22/22
+  3468  jue  28/07  16/16
+  3469  vie  29/07  22/22
+  3470  sab  30/07  28/28
+  3471  lun   1/08  24/24
+  3472  mar   2/08  22/22
+  3473  mie   3/08  20/20
+  3474  jue   4/08  24/24
+  3475  vie   5/08  18/17  <
+  3476  sab   6/08  16/15  <
+  3477  lun   8/08  18/18
+  3478  mar   9/08  14/14
+  3479  mie  10/08  22/22
+  3480  jue  11/08  16/14  <
+  3481  sab  13/08  16/16
+  3482  mar  16/08  14/14
+  3483  jue  18/08  16/16
+  3484  vie  19/08  16/16
+  3485  sab  20/08  20/19  <
+  3486  lun  22/08  16/16
+  3487  mar  23/08  20/20
+  3488  mie  24/08  18/18
+  3489  jue  25/08  18/18
+  3490  vie  26/08  14/14
+  3491  sab  27/08  20/19  <
+  3492  lun  29/08  20/20
+  3493  mie  31/08  18/17  <
+  3494  jue   1/09  20/19  <
+  3495  vie   2/09  14/14
+  3496  sab   3/09  10/10
+  3497  lun   5/09  12/12
+  3498  mar   6/09  12/12
+  3499  mie   7/09  10/10
+  3500  jue   8/09  12/12
+  3501  vie   9/09  12/12
+  3502  sab  10/09  26/25  <
+  3503  lun  12/09  18/18
+  3504  vie  16/09  14/13  <
+  3505  sab  17/09  26/25  <
+  3506  lun  19/09  14/14
+  3507  mar  20/09  12/11  <
+  3508  mie  21/09  16/16
+  3509  jue  22/09  12/12
+  3510  vie  23/09  22/22
+  3511  sab  24/09  26/25  <
+  3512  lun  26/09  16/15  <
+  3513  mar  27/09  20/20
+  3514  mie  28/09  24/24
+  3515  jue  29/09  18/18
+  3516  vie  30/09  14/14
+  3517  sab   1/10  14/14
+  3518  lun   3/10  24/24
+  3519  mar   4/10  16/16
+  3520  mie   5/10  22/22
+  3521  jue   6/10  20/20
+  3522  vie   7/10  14/14
+  3523  sab   8/10  20/20
+  3524  lun  10/10  20/20
+  3525  mar  11/10  22/22
+  3526  jue  13/10  14/14
+  3527  vie  14/10  16/16
+  3528  sab  15/10  14/14
+  3529  mie  19/10  12/12
+  3530  jue  20/10  14/13  <
+  3531  vie  21/10  20/20
+  3532  sab  22/10  14/14
+  3533  lun  24/10  20/20
+  3534  mar  25/10  18/17  <
+  3535  mie  26/10  20/19  <
+  3536  jue  27/10  28/27  <
+  3537  vie  28/10  24/23  <
+  3538  sab  29/10  28/28
+  3539  lun  31/10  34/34
+  3540  mie   2/11  36/36
+  3541  jue   3/11  38/37  <
+  3542  vie   4/11  28/28
+  3543  sab   5/11  34/34
+  3544  lun   7/11  38/37  <
+  3545  mar   8/11  44/43  <
+  3546  mie   9/11  28/27  <
+  3547  jue  10/11  22/22
+  3548  vie  11/11  14/14
+  3549  sab  12/11  24/24
+  3550  lun  14/11  12/11  <
+  3551  mar  15/11  16/16
+  3552  mie  16/11  16/16
+  3553  jue  17/11  18/18
+  3554  vie  18/11  18/18
+  3555  sab  19/11  16/15  <
+  3556  lun  21/11  14/14
+  3557  mar  22/11  12/12
+  3558  mie  23/11  20/19  <
+  3559  jue  24/11  26/25  <
+  3560  vie  25/11  14/14
+  3561  sab  26/11  28/28
+  3562  lun  28/11  16/16
+  3563  mar  29/11  20/20
+  3564  mie  30/11  22/22
+  3565  jue   1/12  18/18
+  3566  vie   2/12  24/24
+  3567  sab   3/12  22/21  <
+  3568  lun   5/12  18/17  <
+  3569  mar   6/12  22/22
+  3570  mie   7/12  28/27  <
+  3571  vie   9/12  26/25  <
+  3572  sab  10/12  24/23  <
+  3573  lun  12/12  18/18
+  3574  mar  13/12  16/16
+  3575  mie  14/12  18/18
+  3576  jue  15/12  14/13  <
+  3577  vie  16/12  18/18
+  3578  sab  17/12  20/19  <
+  3579  lun  19/12  20/19  <
+  3580  mar  20/12  20/19  <
+  3581  mie  21/12  10/10
+  3582  jue  22/12  14/14
+  3583  vie  23/12  16/15  <
+  3584  sab  24/12   ?/16
+  3585  lun  26/12  12/12
+  3586  mar  27/12  18/18
+  3587  mie  28/12  20/19  <
+  3588  jue  29/12  18/18
+  3589  vie  30/12  18/17  <
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa del PDF («prev») en las 4.869 hojas; OCR propio de lee_auto
+(«prop») en 198; búsqueda sobre cada una por separado. Unión: U+0002 no aparece;
+U+00AD aparece 125.902 veces y se quita junto con el salto; guion de corte con
+hasta dos signos a cada lado.
+Pasadas, con su resultado:
+- Literal «cald» (NFD, sin tildes): 614 aciertos en 323 hojas (304 de la capa,
+  19 del OCR propio); 403 «caldera» y 43 «calderilla»; el resto, falsos
+  positivos (calderón 107, caldas 27, calderete, «localde», E.7). Quitados
+  Calderón y Caldas quedan 203 hojas candidatas: 192 con acierto real y 11 sólo
+  con falsos positivos (Roberto Caldera, «calda», «caoldra», Ángel J. Caldas,
+  Calderón partido; E.7).
+- Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: fuera de las formas con «cald», dos
+  aciertos, «callera» (3315 h13, «calle»+«ra») y «caidero» (3473 h5, «Calderón»
+  partido): ruido. Se probó que no está rota: devuelve todas las formas
+  literales.
+- Laxa espaciada, separador [\s\-\.,'’]{0,3} entre cada par de letras: cuatro
+  aciertos («cal / dera» en 3447 h2 y h7, 3569 h22; «cald.era» en 3576 h12),
+  todos dentro de actos ya fichados por otras apariciones.
+- Quinta pasada, sobre el texto sin espacios ni signos (propuesta en LEE 1948
+  §F): dos hojas que las cuatro no ven: 3411 h13 («mecánico encargado calderas»,
+  falso positivo) y 3536 h2 (sumario de la Ley 1134, «vaqueroslacaldera»; el
+  acto está en A.36).
+- Difusa (ratio >= 0,78): 165 aciertos; reales: «caltdera» (3331 h6: el nombre
+  cortado entre dos columnas, A.3, que sólo la difusa devuelve), «paldera» (3438
+  h5), «cdldera» (3566 h23), «calderd», «calderillt», «calderillaj»,
+  «lazcaldera», dentro de actos fichados. Falsos: «calda» (cada, 3339 h7 y 3505
+  h13), «caoldra» (cobrará, 3499 h6), calderón, calera, calavera, cadera, aldea,
+  cuadrilla. Difusa ampliada (0,70-0,78, c/g/o): 1.568 aciertos, ninguno real.
+- Sobre la versión «prop»: 19 hojas; reales, las que la capa también tiene;
+  «calderord» (3467 h3) es Calderón, «ecald400» (3547 h3) es ruido.
+Cotejo con el pre-informe: sus candidatos del anillo 1 cubren las hojas reales
+salvo las que devuelven sólo la difusa y la quinta pasada (3331 h6, 3536 h2); de
+los suyos que la sesión no ficha, todos son falsos positivos (Calderón, Caldas,
+«calda»).
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas:
+  1) faltantes: 5 nombres del circuito del departamento en A.39 no estaban o
+  estaban en otra forma: «montes de las garrapatas», «estacion f c nacional
+  general belgrano», «tunel», «matos» y «villa urquiza» (se agregan); se agregan
+  también «sauzal o curuzu», «curuzu», «santa monica», «fraccion de vaqueros»,
+  «finca vaqueros» y «partido de la calderilla».
+  2) apellidos dentro del anillo 2: los 11 de 1948, sin cambio (apaza, aramayo,
+  condori, chaile, isasmendi, murua, nogales, toconas, castellanos, burgos de
+  yugra, mamani); «wierna» aparece este año como apellido (Marcos Wierna, Nelly
+  E. Wierna, Mercedes Wierna) y «severino» como nombre de pila (B.3).
+  3) a revisar: 80 términos sin ningún acierto en 1949, de 178.
+Anillo 2 sobre el texto sin puntuación: 98 términos con acierto. Se agruparon
+los contextos por texto y se leyeron: los de los 60 términos propios del
+departamento, grupo por grupo; los de los términos que son otra cosa o de otra
+jurisdicción (candelaria, san jose, entre rios, castellanos, el bordo, tabacal,
+apellidos), por muestra de los primeros grupos de cada uno. HALLAZGO: el término
+«tacones», que el config conserva como deformación de Yacones desde 1911,
+devolvió seis apariciones de la licitación de Vialidad del camino «Salta a Los
+Yacones» (B.2.4), que ni la literal ni «yacones» veían. Resultado en B.2, B.3 y
+C.
+Actores: los 624 del config, por nombre completo (nombre-apellido y
+apellido-nombre) sobre el texto sin puntuación: 89 con acierto. Se leyeron los
+contextos de los que tocan al departamento (B.4). No se corrieron la inicial más
+apellido ni el apellido suelto (pendiente, §0). Números arrastrados: no se
+buscaron (pendiente). Fórmulas de reemplazo: leídas en los actos del §A.
+Identificadores de las ausencias: nombre, cargo, lugar y número de acto (el año
+numera los decretos en una sola serie con sufijo de ministerio: A, E, G).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+51 actos del departamento, ordenados por edición. Los repetidos son una entrada
+cada uno, con sus apariciones en FUENTE.
+
+A.1
+FUENTE: 3308 h7 c2-c3 a h8 c1 (Salta, lunes 3 de enero de 1949)
+FICHA: Decreto N 13129-A. Salta, diciembre 28 de 1948. Expediente N 11.314/948.
+Autoriza al Banco de Préstamos y Asistencia Social a distribuir $ 50.000 de sus
+utilidades: subsidios a instituciones y $ 100 a cada cooperadora de las escuelas
+nacionales y provinciales que detalla, entre ellas la Escuela Nacional N 250 de
+San Francisco (La Caldera) y la Escuela Provincial «Bernabé López», Vaqueros, La
+Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 180 ppp (encabezado, art. 2 desde «Asociación Madres
+Cristianas», art. 3 y las dos nóminas enteras, firmas).
+TEXTO:
+  Decreto No. 13129-A. / Salta, Diciembre 28 de 1948. / Expediente No.
+  11.314/948. / Visto este expediente en el cual el Banco de Préstamos y
+  Asistencia Social solicita autorización para distribuir de las utilidades del
+  ejercicio económico - financiero del año que termina, la suma de $ 50.000.—,
+  entre las diversas instituciones de beneficiencia [sic] de asistencia social,
+  etc., cooperadoras escolares de la de la [sic] Provincia y cuatrocientos
+  ancianos e invalidos, de conformidad al detalle que obra de fojas 2 a 21 de
+  estas actuaciones; [...] Art. 2o. — [...] Asociación Pro - Hogar Escuela San
+  Cayetano .. " 2.000.— [...] Art. 3o. — Autorízase al BANCO DE PRESTAMOS Y
+  ASISTENCIA SOCIAL a otorgar un subsidio extraordinario, en la suma de cien
+  pesos ($ 100.—), a cada una de las cooperadoras de las escuelas nacionales y
+  provinciales que se detallan a continuación: / Escuelas Nacionales / No. 12 El
+  Bordo, (Anta). / " 13 Palermo (Cachi). / " 19 La Merced de arriba (Rosario de
+  Lerma). / " 36 Higueras (Iruya). / " 41 Hornillos (Santa Victoria). / " 43 La
+  Candelaria (Departamento La Candelaria). / " 50 Amblayo (San Carlos). / " 60
+  Las Conchas (Cafayate). / " 66 Escoipe (Chicoana). / " 71 Acosta (Guachipas).
+  / " 75 La Poma (La Poma). / " 77 Horcones (Rosario de la Frontera). / " 79
+  Paso del Durazno (Metán). / " 101 Piedras Moradas (La Viña). / " 149 El Carmen
+  (Campo Santo). / " 170 Pluma del Pato (Rivadavia). / " 141 Villa Sarmiento
+  (Cerrillos). / " 250 San Francisco (La Caldera). / " 249 Pocitos (Orán). / "
+  287 Pastos Grandes (Los Andes). / " 125 Seclantás adentro (Molinos). / " 284
+  Indalecio Gómez (Dpto. Capital). / " 208 El Jardín (La Candelaria). / " 124
+  Ceibal (La Candelaria). / " 213 San Pedro (La Candelaria). / " 257 Potrerillos
+  (La Candelaria). / " 6 Río Ancho (Capital). / " 167 Amaycha (Molinos). / " 177
+  General Güemes (Campo Santo). / " 93 Campo Quijano (Rosario de Lerma). / " 67
+  Potrero de Díaz (Chicoana). / " 70 Chivilme (Chicoana). / " 105 El Bordo
+  (Chicoana). / " 253 La Puerta (Molinos). / Escuelas Provinciales / "Bernabé
+  López", Vaqueros, La Caldera). / "Dr. Manuel A. Acevedo", Sumalao,
+  (Cerrillos). / "Tte. Gral. E. Frías", Pucará (Rosario de Lerma). / "Dr. Tomás
+  Arias", Osma, (La Viña). / "Dr. Bernardo Frías", Pueblo (Guachipas). / "Dr.
+  Francisco Alsina", Los Sauces (San Carlos). / "Dr. V. de la Plaza", Pueblo
+  (Cachi). / "Dr. Indalecio Gómez), Pueblo (Molinos). / "Coronel F. Cornejo,
+  Pueblo (Campo Santo). / "Juana Manuela Gorriti", San José (Metán). / "Coronel
+  Pedro J. Saravia", El Bordo (Metán). / "Coronel A. Saravia", Pichanal (San
+  Martín). / Yuchan .. .. .. .. .. .. .. / "Aarón Castellanos", El Naranjo
+  (Rosario de la Frontera). / "Coronel Jorge Vidt", Las Saladas (Rosario de la
+  Frontera. / "Dr. Pedro Arias", El Tala (La Candelaria). / "Coronel Juan Solá",
+  Colanzuli (Iruya). / "Coronel Calixto Gauna", Ceibalito (Anta). / "Dr. Abraham
+  Cornejo", Pueblo (Chicoana). / Art. 4o. — Comuníquese, publíquese, insértese
+  en el Registro Oficial y archívese. / LUCIO A. CORNEJO / Danton J. Cermesoni /
+  Es copia: / Alejandro Gauffín / Oficial 1° (Auxiliar 1°) del Ministerio de
+  Acción Social y Salud Pública
+NOTA DE LECTURA: RECUENTO PROPIO: escuelas nacionales, 34 renglones numerados;
+provinciales, 18 con nombre más el renglón «Yuchan» con línea de puntos, sin
+nombre de escuela ni departamento (19 renglones). Total 52 a 53, según se cuente
+«Yuchan». El acto no declara número de cooperadoras, de modo que no hay nada que
+cotejar; a $ 100 cada una darían $ 5.200 o $ 5.300. RECALCULO: no se hizo la
+suma del art. 2 contra los $ 50.000 (el art. 1 y parte del art. 2 van en la hoja
+7 c2, compuestos fuera de orden: «Social de Metán .. $ 1.000» y dos renglones
+más quedan debajo del «DECRETA»; E.8). La Nacional 250 de San Francisco es la
+única nacional atribuida a La Caldera; el número 250 precede al 249 en el orden
+de impresión. «Pro-Hogar Escuela San Cayetano» ($ 2.000) va sin lugar: el acto
+no lo atribuye a ningún departamento (v16 §5.1ter).
+
+A.2
+FUENTE: 3310 h9 c3 a h10 c3; repetido en 3311 h10-11, 3312 h12-13, 3313 h17,
+3314 h17 y 3315 h12 (seis apariciones, e/5 al 11/1/49); sumario en 3310 h3, 3311
+h3, 3312 h3, 3313 h3 y 3315 h3
+FICHA: Aviso N 4469, Contratos Sociales. Escritura N 250 del 23 de diciembre de
+1948 ante el escribano Martín Orozco (Registro N 20). Lucio Argentino Cornejo
+Mollinedo, Hugo Enrique Jovanovies y David Hugo Peyret constituyen «L. A.
+Cornejo y Compañía — Sociedad de Responsabilidad Limitada», para explotar
+obrajes de carbón, leña y postes; aportan el negocio «La Leñatera del Norte» y
+los montes de las fincas «Argumero» y «San Germán» (Mojotoro, departamento de
+Campo Santo) y «Los Porongos», «sita en el departamento Caldera». Capital $
+100.000. Clase: DOMINIO+OTRO.
+MODO DE LECTURA: imagen, 190 ppp (cláusula primera a tercera en 3310 h9 c3;
+cierre en 3312 h13 c1); cláusulas cuarta a undécima, de la capa (3310 h10).
+TEXTO:
+  No. 4469 — ESCRITURA NUMERO DOSCIENTOS CINCUENTA. — SOCIEDAD DE
+  RESPONSABILIDAD LIMITADA. — En la ciudad de Salta, República Argentina, a los
+  veintitrés días del mes de diciembre del año mil novecientos cuarenta y ocho;
+  ante mí, Escribano Público Nacional, titular del Registro número Veinte,
+  comparecen los señores: Lucio Argentino Cornejo Mollinedo, Hugo Enrique
+  Jovanovies y David Hugo Peyret, todos argentinos, casados en primeras núpcias,
+  domiciliados en esta capital, mayores de edad, hábiles, de mi conocimiento,
+  doy fé, como de que por este acto formalizan el siguiente contrato de
+  Sociedad. Primero: Los comparecientes constituyen en la fecha una sociedad de
+  responsabilidad limitada, que tiene por objeto la explotación de obrajes en
+  los ramos de carbón, leña, y postes para alambrar, sirviendo de base para las
+  operaciones sociales el negocio de la misma naturaleza que tienen establecido
+  en esta ciudad de Salta, en la Avenida Belgrano número mil noventa y nueve,
+  cuyo negocio funciona bajo la denominación de "La Leñatera del Norte", y los
+  montes de las fincas "Argumero" y "San Germán", ubicadas en el lugar
+  denominado Mojotoro, departamento de Campo Santo, y "Los Porongos", sita en el
+  departamento Caldera, todas en jurisdicción de esta provincia de Salta, cuyos
+  montes son actualmente explotados mediante contratos de locación, que los
+  socios, al igual que el referido negocio, transfieren a la actual sociedad sin
+  reserva de ninguna naturaleza. [...] Segundo: La sociedad girará desde hoy
+  bajo la razón social de "L. A. Cornejo y Compañía" — Sociedad de
+  Responsabilidad Limitada", durará cinco años contados desde la fecha de este
+  contrato [...] Tercero: El capital social lo constituye la suma de cien mil
+  pesos moneda nacional de curso legal, dividido en acciones de un mil pesos de
+  igual moneda cada una, que los socios han suscrito en la proporción de:
+  treinta y tres acciones y un tercio de acción el señor Lucio Argentino Cornejo
+  Mollinedo; treinta y tres acciones y un tercio de acción, el señor Hugo
+  Enrique Jovanovies, y treinta y tres acciones y un tercio de acción el señor
+  David Hugo Peyret [...] Quinto: El señor David Hugo Peyret, será el encargado
+  exclusivo y directo de la explotación de los montes [...] previa lectura y
+  ratificación firman los comparecientes con los testigos del acto, don
+  Francisco V. Saravia y don Adolfo A. Sylvester [...] Entre líneas: do—Valen:
+  Lucio A. Cornejo. — H. E. Jovanovies. — D. H. Peyret. — Tgo: F. V. Saravia. —
+  Tgo: A. Sylvester. — Ante mí: MARTIN OROZCO. — Hay un sello y una estampilla
+  CONCUERDA con su matríz; doy fé. / e/5 al 11/1/49.
+NOTA DE LECTURA: RECALCULO: 33 1/3 × 3 = 100 acciones de $ 1.000 = $ 100.000;
+cierra. El acto atribuye Mojotoro al departamento de Campo Santo (las fincas
+«Argumero» y «San Germán») y «Los Porongos» al departamento Caldera; no dice
+dónde queda Los Porongos dentro del departamento ni su superficie, ni de quién
+son las tierras (los montes se explotan «mediante contratos de locación»). El
+socio firma «Lucio A. Cornejo», como firma el gobernador los decretos de enero
+de 1949; que sea la misma persona es INFERENCIA NO ACREDITADA: el contrato no
+dice su cargo ni su profesión (E.9). La cláusula sexta sale partida en la capa
+de 3310 h10 (renglones de c1 y c2 entremezclados); no cambia lo transcripto. En
+3313 h17 la capa trae dos veces el renglón «Caldera, todas en jurisdicción…» por
+el cruce de columnas; esa aparición no se miró en la imagen (se cotejó por texto
+contra 3312).
+
+A.3
+FUENTE: 3331 h6 c1-c2 (Salta, lunes 31 de enero de 1949)
+FICHA: Resolución N 97-A del Ministerio de Acción Social y Salud Pública. Salta,
+enero 26 de 1949. Expediente N 10.123/49. Autoriza a la Dirección Provincial de
+Sanidad a fijar desde el 1 de enero a la enfermera de «La Caldera», Arminda
+Funes de Lamberto, $ 100 mensuales de viáticos y movilidad para los traslados a
+Vaqueros. Clase: CARGOS.
+MODO DE LECTURA: imagen, 190 ppp (resolución entera).
+TEXTO:
+  Resolución No. 97-A. / Salta, Enero 26 de 1949. / Expediente No. 10.123/49. /
+  Visto lo solicitado por la Dirección Provincial de Sanidad y lo informado por
+  Contaduría de la citada Repartición, / El Ministro de Acción Social y Salud
+  Pública / R E S U E L V E : / Art. 1o. — Autorízase a la Dirección Provincial
+  de Sanidad a fijar con anterioridad al 1o. de enero en curso, a la enfermera
+  de "La Caldera" señora ARMINDA FUNES DE LAMBERTO, la cantidad de CIEN PESOS
+  MONEDA NACIONAL ($ 100.—), mensuales por concepto de viáticos y movilidad,
+  para atender los gastos de traslado a la localidad de Vaqueros, en
+  cumplimiento de su misión. / 2o. — El gasto que demande el cumplimiento de
+  esta Resolución se imputará al Anexo E, Inciso VIII, Gastos Generales,
+  Principal 1, Parcial 49 de la Ley de Presupuesto en vigor. / 3o. —
+  Comuníquese, dése al Libro de Resoluciones, etc. / DANTON J. CERMESONI / Es
+  copia. / Antonio I. Zambonini Davies / Oficial Mayor de Acción Social y Salud
+  Pública
+NOTA DE LECTURA: El nombre del departamento está cortado entre columnas («La
+Cal-» al pie de c1, «dera"» al tope de c2) y la capa lo une como «caltdera»: la
+literal no lo devuelve y lo rescata la difusa (ratio 0,93; §2). Arminda Funes de
+Lamberto es actora de 1948 (config); reaparece en A.15 y A.35.
+
+A.4
+FUENTE: 3334 h4 c3 (Salta, jueves 3 de febrero de 1949); sumario en 3334 h2
+FICHA: Decreto N 13743-E. Salta, enero 28 de 1949. Orden de Pago N 490 del
+Ministerio de Economía. Expediente N 63/E.49. Declara a la empresa constructora
+«E.C.O.R.M.», adjudicataria de la obra «Estación Sanitaria Tipo "A" en La
+Caldera», acogida a los beneficios del decreto 7683/48 (adelantos sobre acopio
+de material) y manda pagar a Arquitectura y Urbanismo $ 56.857,04, el 25 % del
+monto total de la obra. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 170 ppp (decreto entero).
+TEXTO:
+  Decreto No. 13743-E. / Salta, Enero 28 de 1949. / Orden de Pago No. 490 del
+  Ministerio de Economía / Expediente No. 63/E.49. / VISTO este expediente por
+  el cual la empresa constructora "E.C.O.R.M.", solicita se la incluya en los
+  beneficios del decreto No. 7683/48, referente a adelantos sobre acopio de
+  material en la obra; teniendo en cuenta que el mismo es adjudicatario de la
+  obra: "Estación Sanitaria Tipo "A" en La Caldera", y atento a lo informado por
+  Contaduría General, / El Gobernador de la Provincia / D E C R E T A : / Art.
+  1o. — Declárase a la firma adjudicataria de la obra: "Estación Sanitaria Tipo
+  "A" en La Caldera", empresa constructora "E. C. O.R.M.", acogida a los
+  beneficios del decreto No. 7683/48. / Art. 2o. — Previa intervención de
+  Contaduría General de la Provincia, páguese por Tesorería General a favor de
+  Dirección General de Arquitectura y Urbanismo, la suma de $ 56.857.04 moneda
+  nacional (CINCUENTA Y SEIS MIL OCHOCIENTOS CINCUENTA Y SIETE PESOS CON CUATRO
+  CENTAVOS M/N.), importe del 25o/o del monto total de la obra: "Estación
+  Sanitaria Tipo "A" en La Caldera", adjudicada a la empresa constructora
+  "E.C.O.R.M.", a los efectos de poder dar cumplimiento a la reglamentación que
+  corre en los arts. 5o. al 21 inclusive del decreto No. 7683/48. / Art. 2o. —
+  El gasto que demande el cumplimiento del presente decreto se imputará al Anexo
+  I, Inciso III, Partida 1) c - del Presupuesto General de Gastos para 1949. /
+  Art. 4.o — Comuníquese, Publíquese, etc.. / LUCIO A. CORNEJO / Juan W. Dates /
+  Es copia: / Juan Pablo Ibarra / Ministerio de Economía, F. y O. Públicas
+NOTA DE LECTURA: Los artículos van 1o, 2o, 2o, 4o: falta el 3o y el 2o se
+repite; se transcribe (v16 §4.3; E.9). RECALCULO: si $ 56.857,04 es el 25 %, el
+monto total de la obra sería $ 227.428,16 (INFERENCIA de la cifra del acto; el
+monto adjudicado no se imprime aquí). El decreto de adjudicación, «No. 10668 del
+29 de julio de 1948», lo cita A.6 y no está en el corpus de 1949 (citado y no
+acompañado, E.3).
+
+A.5
+FUENTE: 3334 h7 c3 a h8 c1 (Salta, jueves 3 de febrero de 1949)
+FICHA: Decreto N 13760-E. Salta, enero 29 de 1949. Orden de Pago N 495.
+Expediente N 377-/E/949. Devuelve a Ecorm S. R. Ltda. el depósito en garantía de
+$ 1.830 hecho en la licitación de la obra «Estación Sanitaria Tipo A. de la
+Caldera». Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 170 ppp (decreto entero).
+TEXTO:
+  Decreto No. 13760-E. / Salta, Enero 29 de 1949 / Orden de Pago No. 495 del
+  Ministerio de Economía. / Expediente No. 377-/E/949. / Visto este expediente
+  en el que Dirección General de Arquitectura y Urbanismo eleva solicitud de
+  devolución del depósito en garantía de $ 1.830.—, efectuado oportunamente por
+  la firma Ecorm S. R. Ltda., con motivo del llamado a licitación de la obra:
+  "Estación Sanitaria Tipo A. de la Caldera", por una garantía de $ 12.500.— en
+  títulos del Crédito [impreso «Ciódilc»] Argentino Interno 3 o/o Serie A a la
+  orden del superior Gobierno de la Provincia de Salta; y atento lo informado
+  por Contaduría General, / El Gobernador de la Provincia / D E C R E T A : /
+  Art. 1o. — Con intervención de Contaduría General de la Provincia, páguese por
+  Tesorería General, a favor de la firma ECORM S. R. LTDA. la suma de $ 1.830.—
+  m/n. (UN MIL OCHOCIENTOS TREINTA PESOS M/N.), importe correspondiente al
+  depósito en garantía precedentemente citado. / Art. 2o. — El importe que se
+  dispone liquidar por el artículo anterior se imputará a la cuenta: "DEPOSITOS
+  EN GARANTIA". / Art. 3° — Comuníquese, publíquese, etc. / LUCIO A. CORNEJO /
+  Juan W. Dates / Es copia. [firma al pie, no leída]
+NOTA DE LECTURA: El acto devuelve $ 1.830 y dice que el depósito se reemplaza
+«por una garantía de $ 12.500 en títulos»: dos cifras que no se concilian (E.9).
+«Ciódilc» [sic] en la imagen.
+
+A.6
+FUENTE: 3337 h11 c2-c3 (Salta, lunes 7 de febrero de 1949); sumario en 3337 h2
+FICHA: Decreto N 13793-E. Salta, enero 31 de 1949. Orden de Pago N 501.
+Expediente N 404-/E/1949. Aprueba el certificado N 1, de $ 27.024,10, de la obra
+«Estación Sanitaria en La Caldera», adjudicada a Empresa E. C. O. R. M. S. R. L.
+por decreto N 10668 del 29 de julio de 1948, y manda retener el 10 % como
+garantía de obra. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 170-200 ppp (decreto entero); nombres de los firmantes,
+de la capa.
+TEXTO:
+  Decreto No. 13793-E. / Salta, Enero 31 de 1949 / Orden de Pago No. 501 del
+  Ministerio de Economía. / Expediente No. 404-/E/1949. / Visto este expediente
+  en el que Dirección General de Arquitectura y Urbanismo, eleva para su
+  aprobación el certificado No. 1, por la suma de $ 27.024,10, correspondiente a
+  la obra: "Estación Sanitaria en La Caldera", adjudicada al contratista Empresa
+  E. C. O. R. M. S. R. L. por decreto No. 10668 del 29 de julio de 1948; atento
+  a lo informado por Contaduría General, / El Gobernador de la Provincia / D E C
+  R E T A : / Art. 1o. — Apruébase el certificado No. 1 que corre a fs. 3/4 de
+  estos actuados, confeccionado por Dirección General de Arquitectura y
+  Urbanismo, por trabajos ejecutados en la obra: Estación Sanitaria en La
+  Caldera", por la Empresa E.C.O.R.M. S. R. L., el que asciende a la suma de $
+  27.024,10 (VEINTISIETE MIL VEINTICUATRO PESOS CON DIEZ CTVS. M/N).. / Art. 2o.
+  — Con intervención de Contaduría General, páguese por Tesorería General a
+  favor de la Empresa E.C.O.R.M. S. R.L., la suma de $ 27.024,10 (VEINTISIETE
+  MIL VEINTICUATRO PESOS CON DIEZ CTVS. M/N.), importe correspondiente al
+  certificado No. 1, por trabajos ejecutados en la obra: "Estación Sanitaria en
+  La Caldera". / Art. 3o. — Por Contaduría General, procédase a retener el 10
+  o/o del importe que se dispone liquidar por el artículo anterior, en concepto
+  de garantía de obra. / Art. 4o. — El gasto que demande el cumplimiento del
+  presente decreto, se imputará al Anexo I - Inciso III - Principal 1/c- del
+  Presupuesto General de Gastos vigente para el Ejercicio 1948. / Art. 5° —
+  Comuníquese, publíquese, etc. / LUCIO A. CORNEJO / Juan W. Dates / Es copia: /
+  Juan Pablo Ibarra / Ministerio de Economía, F. y O. Públicas
+NOTA DE LECTURA: Imputa al presupuesto de 1948 un decreto de enero de 1949; A.4
+imputa al de 1949 (se transcribe, E.9). El 10 % retenido sería $ 2.702,41
+(cálculo propio, el acto no lo imprime).
+
+A.7
+FUENTE: 3341 h8 c1 a h14 (Salta, viernes 11 de febrero de 1949); partidas del
+departamento en h11 y h12
+FICHA: Decreto N 13.838-E, en Acuerdo de Ministros. Salta, febrero 3 de 1949.
+Expediente N 111-A|1949. Fija el Presupuesto de Gastos de la Administración
+General de Aguas de Salta para 1949 en $ 11.341.400 y pone en vigor el plan de
+obras hidráulicas 1947|50. En el Plan de Obras: Item 1, Partida 15 «Río Mojotoro
+(Río Wierna, La Caldera y Vaqueros)» $ 20.000; Item 5, servicios con captación
+superficial en localidades que incluyen La Caldera ($ 120.000 en global); Item
+6, defensas: Partida 7 La Caldera $ 80.000, 8 Wierna $ 10.000, 9 Mojotoro $
+50.000, 10 Vaqueros $ 10.000. Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen: encabezado y considerando inicial (150 ppp, h8 c1);
+hojas 11 y 12 enteras a 110 ppp (el plan de obras). Resto del decreto (cálculo
+de recursos, firmas), de la capa.
+TEXTO:
+  Decreto No. 13.838-E. / Salta, febrero 3 de 1949. / Expediente No. 111-A|1949.
+  / Visto lo solicitado por la Administración General de Aguas de Salta, en el
+  sentido de poner en vigor para el año 1949 el Presupuesto de Gastos y Cálculo
+  de Recursos de esa repartición, que fuera aprobado por el Honora- [...] / El
+  Gobernador de la Provincia en Acuerdo de Ministros. / DECRETA: / Art. 1o. —
+  Fíjase el Presupuesto de Gastos de la Administración General de Aguas de Salta
+  para el año 1949 en la suma de $ 11.341.400 m/n. [...] / III — PLAN DE OBRAS
+  [...] 2 Obras a ejecutar de acuerdo al plan hidráulico 1947|50 / Item 1 —
+  Obras a ejecutar reembolsables por los usuarios de acuerdo con las
+  disposiciones del Código de Aguas para expropiaciones, estudios, proyectos,
+  refecciones, conservaciones, ampliaciones y construcciones, en: [...] Partida
+  15— " " Río Mojotoro (Río Wierna, La Caldera y Vaqueros 20.000.— [...] (total
+  del Item 1) 1.280.000.— [...] Item 5 — Para expropiación, estudios, proyectos,
+  conservación y refección de servicios de extensión y reducido (con captación
+  superficial), en las siguientes localidades: El Tala, Tolombón, Molinos, La
+  Caldera, La Poma, Iruya y otras localidades de la Provincia (obras de fomento)
+  120.000.— / Item 6 — Para expropiación, estudios, proyectos, conservación y
+  refección, ampliación y construcción, de obras de defensa permanentes y
+  eventuales para contener daños por crecientes o inundaciones sobre los ríos: /
+  Partida 1—Iruya 30.000.— / " 2—Colorado 30.000.— / " 3—Juramento (El Galpón)
+  10.000.— / " 4—Guachipas 10.000.— / " 5—Alemanía 10.000.— / " 6—San Antonio de
+  los Cobres 30.000.— / " 7—La Caldera 80.000.— / " 8—Wierna 10.000.— / "
+  9—Mojotoro 50.000.— / " 10—Vaqueros 10.000.— / " 11—Rosario (Toro) 20.000.— /
+  " 12—Calchaquí (Cachi) 10.000.— / " 13—Calchaquí (San José) 30.000.— / "
+  14—Chuñapampa 20.000.— / " 15—Calchaquí (San Carlos) 20.000.— / " 16—Calchaquí
+  (Animaná) 10.000.— / " 17—Chuscha (Cafayate 20.000.— / " 18—Obras imprevistas
+  60.000.— / (total del Item 6) 460.000.— [...] Art. 4° — Comuníquese,
+  publíquese, etc. / CORNEJO / Juan W. Dates / Jorge Aranda / Danton Cermesoni /
+  Es copia: / Juan Pablo Ibarra [firmas de la capa]
+NOTA DE LECTURA: RECUENTO PROPIO: Item 1, 25 partidas; Item 6, 18 partidas.
+RECALCULO: la suma de las 25 partidas del Item 1 da 1.280.000 y cierra con el
+total impreso; la de las 18 del Item 6 da 460.000 y cierra. Con 30.000 en lugar
+de 80.000 en La Caldera el Item 6 no cerraría: la lectura 80.000 es la única que
+cierra. No se recalcularon los Items 2 a 5 ni el cálculo de recursos (E.8). El
+renglón 15 del Item 1 abre paréntesis y no lo cierra («Vaqueros»). Clase del
+decreto: presupuesto de un organismo descentralizado puesto en vigor por el
+Ejecutivo «no obstante lo informado por Contaduría General», al amparo del art.
+92 inc. h) del Código de Aguas (capa).
+
+A.8
+FUENTE: 3346 h5 c2-c3 (Salta, jueves 17 de febrero de 1949)
+FICHA: Decreto N 13962-E. Salta, febrero 11 de 1949. Orden de Pago N 528.
+Expediente N 15104/1949. Liquida $ 272.688,75 a las Municipalidades: el 20 % de
+lo recaudado por «Ajuste Contribución Territorial - 1947» entre el 8 de abril y
+el 30 de septiembre de 1948, según los coeficientes del decreto 10960 del 20 de
+agosto de 1948. Renglón 30, La Caldera: $ 160,88. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 160 ppp (encabezado y cuadro entero) y 400 ppp
+(renglones 9 y 25); art. 2 a 4, de la capa.
+TEXTO:
+  Decreto No. 13962-E. / Salta, Febrero 11 de 1949. / Orden de Pago No. 528 del
+  Ministerio de Economía / Expediente No. 15104/1949. / Visto este expediente en
+  el que Contaduría General de la Provincia, solicita se expida Orden de Pago a
+  favor de Tesorería General de la Provincia, por la suma de $ 272.688.75 m/n. a
+  efectos de proceder con dicho importe a liquidar a favor de las
+  Municipalidades de la Provincia el proporcional del 20% que les corresponde
+  sobre lo recaudado por "Ajuste Contribución Territorial - 1947" durante el
+  período comprendido entre el 8 de abril y el 30 de setiembre de 1948; atento a
+  que la liquidación respectiva fué formulada en base a los coeficientes
+  aprobados por decreto No. 10960 del 20 de agosto de 1948, / El Gobernador de
+  la Provincia / DECRETA: / Art. 1o. — [...] de acuerdo al siguiente detalle: /
+  1 Salta (Capital) $ 154.734.51 / 2 Orán " 15.243.30 / 3 Metán " 13.378.11 / 4
+  Tartagal 16.164.99 / 5 Rosario de la Frontera " 15.311.47 / 6 General Güemes
+  7.272.61 / 7 Campo Santo " 2.383.30 / 8 Embarcación 4.763.87 / 9 Rosario de
+  Lerma " 2.[ilegible]87.77 / 10 Joaquín V. González " 2.724.16 / 11 Cafayate
+  2.885.05 / 12 San Antonio de los Cobres " 8.254.29 / 13 El Galpón " 2.481.47 /
+  14 Cerrillos 1.401.62 / 15 El Quebrachal 924.42 / 16 La Merced 1.139.84 / 17
+  Chicoana 1.723.39 / 18 Pichanal 2.304.22 / 19 Campo Quijano 1.595.23 / 20
+  Aguaray 1.235.28 / 21 El Tala 1.273.46 / 22 El Potrero 1.175.28 / 23 Río
+  Piedras 589.01 / 24 San Carlos 561.74 / 25 Las Lajitas [ilegible]81.72 / 26 El
+  Carril 869.88 / 27 San Lorenzo 1.216.19 / 28 Colonia Santa Rosa 768.98 / 29
+  Coronel Moldes " 627.19 / 30 La Caldera " 160.88 / 31 Cachi " 305.42 / 32
+  Urundel " 313.59 / 33 Guachipas " 147.25 / 34 La Candelaria " 114.53 / 35
+  Molinos " 177.25 / 36 Santa Victoria " 155.43 / 37 Angastaco " 51.81 / 38 La
+  Poma " 81.81 / 39 Iruya " 51.81 / 40 La Viña " 872.60 / 41 Coronel Solá "
+  796.25 / 42 Ciro Echesortu " 1.477.97 / 43 El Bordo " 504.48 / 44 Apolinario
+  Saravia " 643.54 / 45 Rivadavia (Banda Sud) " 261.78 / Total . . . $
+  272.688.75 / Art. 2o. — Autorízase a Contaduría General a practicar las
+  retenciones necesarias a las Municipalidades que tienen convenios firmados con
+  [...] Art. 4° — Comuníquese, publíquese, etc.
+NOTA DE LECTURA: RECUENTO PROPIO: 45 renglones numerados 1 a 45; el acto no
+declara número. El número del decreto de coeficientes se lee 10960 en la imagen;
+la capa trae «10980». RECALCULO: los 43 renglones legibles suman 269.119,26;
+faltan 3.569,49 para el total, que deben repartirse entre el renglón 9
+(2.x87,77) y el 25 (x81,72). Cierran cinco pares (2.587,77 y 981,72; 2.687,77 y
+881,72; 2.787,77 y 781,72; 2.887,77 y 681,72; 2.987,77 y 581,72). A 400 ppp el
+tipo está roto en los dos dígitos y la imagen no decide entre ellos (v16 §8.7);
+ninguno toca al departamento. El renglón 30 (La Caldera, 160,88) se lee sin
+duda. La Caldera recibe participación como municipalidad; el decreto no la
+distingue de las comisiones.
+
+A.9
+FUENTE: 3346 h9 c2 (Salta, jueves 17 de febrero de 1949); sumario en 3346 h3
+FICHA: Resolución de Minas N 672. Salta, febrero 10 de 1949. Adjudica a Enrique
+A. Zuccarino y María Josefina Mendez Alcorta de Zuccarino la mina de plomo y
+plata «Caldera 1, 2 y 3», «ubicada en el Departamento del mismo nombre, lugar
+denominado San José», Expediente N 44—L, año 1929. Clase: MINAS.
+MODO DE LECTURA: imagen, 170 ppp (resolución entera); firma del juez, de la
+capa.
+TEXTO:
+  RESOLUCIONES DE MINAS / No. 672 — Salta, Febrero 10 de 1949. / Y VISTOS: / El
+  escrito que antecede y de acuerdo con lo dispuesto por la Ley Nacional 10.273,
+  art. 7o., in fine, adjudícase a favor del señor Enrique A. Zuccarino y señora
+  María Josefina Mendez Alcorta de Zuccarino, la mina de plomo y plata
+  denominada "Caldera 1, 2 y 3", ubicada en el Departamento del mismo nombre,
+  lugar denominado San José, Exp. No. 44—L, año 1929, quienes deberán continuar
+  el trámite de este auto en forma legal y reglamentaria y sujetarse a todas la
+  obligaciones y responsabilidades establecidas en el Código de Minería, Ley
+  citada y decretos reglamentarios en vigor. / Regístrese el escrito de fs. 46 y
+  este auto en el libro "Registro de Minas" del Juzgado. / Notifíquese al señor
+  Fiscal de Gobierno, pase a Dirección de Minas y Geología para la toma de
+  razón, publíquese este auto en el Boletín Oficial de la Provincia agregándose
+  un ejemplar del mismo. / Ofíciese a Dirección de Rentas de las instrucciones
+  que imparta Dirección de Minas referente al pago del canon minero. / Para
+  notificaciones en Secretaría, señálase los días jueves de cada semana o
+  siguiente hábil si fuere feriado. / Téngase por domicilio el constituído. /
+  Repóngase las fojas. / Dr. LUIS VICTOR OUTES / Director - Juez de Minas / Ante
+  mí: / Angel Neo — Escrib. de Minas
+NOTA DE LECTURA: La adjudicación es de 1949 sobre un expediente de 1929 (44—L).
+«San José» como lugar del departamento: el acto lo atribuye a La Caldera («del
+mismo nombre»). El apellido de la adjudicataria es «Mendez Alcorta»; el config
+de 1948 la tiene como «monden alcorta de zuccarino» (LEE 1948): se agregan las
+dos formas (v16 §15.3). No se buscó el expediente 44-L en 1929 (fuera del
+corpus).
+
+A.10
+FUENTE: 3359 h4 c2-c3 (Salta, lunes 7 de marzo de 1949)
+FICHA: Decreto N 14235-E. Salta, marzo 3 de 1949. Orden de Pago N 593.
+Expediente N 848-/C/-949. Liquida $ 141.744,04 a las Municipalidades y
+Comisiones Municipales: participación en los impuestos a los Réditos, Ventas,
+Ganancias Eventuales y Beneficios Extraordinarios del cuarto trimestre de 1948
+(Ley Nacional 12.956; decreto provincial 12.131 del 23 de octubre de 1948,
+coeficientes). Renglón 30, La Caldera: $ 1.089,50. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen: hoja entera a 120 ppp, cuadro a 170 ppp y cinco
+renglones a 400 ppp.
+TEXTO:
+  Decreto No. 14235-E. / Salta, Marzo 3 de 1949. / Orden de Pago No. 593 del
+  Ministerio de Economía / Expediente No. 848-/C/-949. / VISTO el decreto No.
+  12.131 de fecha 23 de octubre próximo pasado, mediante el cual se establece el
+  coeficiente que ha de servir de base para proceder al prorrateo de la
+  participación que le corresponde a cada Municipalidad sobre el producido del
+  impuesto a los Réditos, Ventas Ganancias Eventuales y Beneficios
+  Extraordinarios; y / CONSIDERANDO: / Que por decreto nacional No. 71 de fecha
+  2 de Febrero del año en curso, el Ministerio de Hacienda de la Nación hizo
+  conocer a la Provincia de Salta la proporción que le corresponde por
+  participación de los recursos de la Ley Nacional No. 12.956, que se eleva a $
+  1.417.440.49, por el cuarto trimestre del año 1948; / Que de conformidad al
+  artículo 4o., apartado 2, de la premencionada Ley, debe distribuirse
+  trimestralmente entre las Municipalidades de su jurisdicción no menos del 10%
+  de la participación que se recibe de la Nación; [...] Art. 1o. — Por
+  Contaduría General de la Provincia, páguese a favor de Tesorería General la
+  suma de $ 141.744.04 m/n. (CIENTO CUARENTA Y UN MIL SETECIENTOS CUARENTA Y
+  CUATRO PESOS CON 04/100 M/N.) a efectos de que con dicho importe proceda a
+  liquidar a las Municipalidades y Comisiones Municipales de la Provincia el
+  producido de los impuestos a los Réditos, a las Ventas, a las Ganancias
+  Eventuales y a los Beneficios Extraordinarios por el cuarto trimestre del año
+  1948 y de acuerdo a las sumas que a continuación se detallan, debiendo tenerse
+  en cuenta las disposiciones de la Ley No. 990: / Municipalidades — Total
+  Participación / 1 Salta - Capital 57.798.09 / 2 Orán 7.316.69 / 3 Metán
+  5.142.31 / 4 Tartagal 5.748.47 / 5 Rosario de la Frontera 5.276.57 / 6 General
+  Güemes 3.130.41 / 7 Campo Santo 1.531.99 / 8 Embarcación 2.298.86 / 9 Rosario
+  de Lerma 1.689.93 / 10 Joaquín V. González 1.620.48 / 11 Cafayate 1.724.84 /
+  12 San Antonio de Los Cobres 2.510.19 / 13 El Galpón 1.677.11 / 14 Cerrillos
+  1.660.10 / 15 El Quebrachal 1.335.71 / 16 La Merced 1.583.49 / 17 Chicoana
+  1.523.39 / 18 Pichanal 1.486.08 / 19 Campo Quijano 1.526.05 / 20 Aguaray
+  1.279.96 / 21 El Tala 1.755.64 / 22 El Potrero 1.266.47 / 23 Río Piedras
+  2.319.75 / 24 San Carlos 1.175.40 / 25 Las Lajitas 1.117.37 / 26 El Carril
+  1.221.28 / 27 San Lorenzo 1.320.31 / 28 Colonia Santa Rosa 1.341.88 / 29
+  Coronel Moldes 1.411.17 / 30 La Caldera 1.089.50 / 31 Cachi 1.077.54 / 32
+  Urundel 1.608.72 / 33 Guachipas 1.097.11 / 34 La Candelaria 2.712.03 / 35
+  Molinos 1.018.04 / 36 Santa Victoria 1.110.42 / 37 Angastaco 1.135.43 / 38 La
+  Poma 1.380.79 / 39 Iruya 993.91 / 40 La Viña 1.417.41 / 41 Coronel Solá
+  1.192.71 / 42 Ciro Echesortu 1.414.52 / 43 El Bordo 1.540.31 / 44 Apolinario
+  Saravia 1.091.08 / 45 Rivadavia — Banda Sud 1.075.23 / TOTAL . . . $
+  141.744.04 / Art. 2o. — Autorízase a Contaduría General de la Provincia para
+  que practique las retenciones necesarias a las Municipalidades que tienen
+  suscripto convenios con la Dirección Provincial de Sanidad y Consejo General
+  de Educación, y asimismo a las que adeudan a la Provincia por servicios del
+  Empréstito de las leyes 712 y 770. / Art. 3o. — La presente erogación se
+  imputará a la cuenta especial " MUNICIPALIDADES DE LA PROVINCIA"
+  (Participación Ley No. 12956) - Ejercicio 1948. / Art. 4o. — Comuníquese,
+  publíquese, etc. / LUCIO A. CORNEJO / Juan W. Dates / Es copia: / Luis A.
+  Borelli / Oficial Mayor de Economía, Finanzas y O. P.
+NOTA DE LECTURA: RECUENTO PROPIO: 45 renglones numerados; el acto no declara
+número. RECALCULO: la suma de los 45 importes da 141.744,74; el total impreso es
+141.744,04, en cifras y en letras («CON 04/100»). NO CIERRA por 0,70. Se miraron
+a 400 ppp los cinco renglones con dígito dudoso (4, 7, 9, 11 y 19) y ninguno
+cambia la suma en décimos; la diferencia queda sin atribuir (E.8, E.9). El 10 %
+de 1.417.440,49 es 141.744,05: el total impreso queda un centavo por debajo. El
+renglón 30 (La Caldera) se lee sin duda.
+
+A.11
+FUENTE: 3359 h4 c3 a h5 c1 (Salta, lunes 7 de marzo de 1949)
+FICHA: Decreto N 14236-E. Salta, marzo 3 de 1949. Orden de Pago N 540.
+Expediente N 862/C/949. Liquida $ 184.349,22 a las Municipalidades: el 20 % de
+lo recaudado por «Ajuste 1947» y «Contribución Territorial 1948» entre el 1 de
+octubre y el 31 de diciembre de 1948, con los coeficientes del decreto 10960 del
+20 de agosto de 1948. Renglón 30, La Caldera: $ 108,77. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen: hoja entera a 120 ppp y columna de importes a 200 ppp.
+TEXTO:
+  Decreto No. 14236-E. / Salta, Marzo 3 de 1949. / Orden de Pago No. 540 del
+  Ministerio de Economía / Expediente No. 862/C/949. / Visto este expediente en
+  el que Contaduría General de la Provincia solicita se expida Orden de Pago a
+  favor de Tesorería General de la Provincia, por la suma de $ 184.349.22, a
+  efectos de proceder con dicho importe a liquidar a favor de las
+  "Municipalidades de la Provincia" el proporcional del 20% que les corresponde
+  sobre lo recaudado por "Ajuste 1947" y "Contribución Territorial 1948",
+  durante el período comprendido entre el 1o. de octubre al 31 de diciembre de
+  1948; atento a que la liquidación respectiva fué formulada en base a los
+  coeficientes aprobados por decreto No. 10960 de fecha 20 de agosto de 1948,
+  [...] (CIENTO OCHENTA Y CUATRO MIL TRESCIENTOS CUARENTA Y NUEVE PESOS CON
+  22/100 MONEDA NACIONAL) [...] de acuerdo al siguiente detalle: / 1 Salta
+  Capital 104.607.12 / 2 Orán 10.205.13 / 3 Metán 9.044.18 / 4 Tartagal
+  10.928.22 / 5 Rosario de la Frontera 10.352.20 / 6 General Güemes 4.916.60 / 7
+  Campo Santo 1.611.22 / 8 Embarcación 3.220.58 / 9 Rosario de Lerma 1.952.26 /
+  10 Joaquín V. González 1.841.65 / 11 Cafayate 1.950.42 / 12 San Antonio de los
+  Cobres 5.580.25 / 13 El Galpón 1.677.58 / 14 Cerrillos 947.56 / 15 El
+  Quebrachal 624.95 / 16 La Merced 770.58 / 17 Chicoana 1.165.09 / 18 Pichanal
+  1.557.75 / 19 Campo Quijano 1.078.44 / 20 Aguaray 835.10 / 21 El Tala 869.91 /
+  22 El Potrero 794.55 / 23 Río Piedras 398.20 / 24 San Carlos 379.76 / 25 Las
+  Lajitas 460.87 / 26 El Carril 588.07 / 27 San Lorenzo 822.19 / 28 Colonia
+  Santa Rosa 519.86 / 29 Coronel Moldes 424.— / 30 La Caldera 108.77 / 31 Cachi
+  206.47 / 32 Urundel 212.— / 33 Guachipas 99.55 / 34 La Candelaria 77.43 / 35
+  Molinos 119.82 / 36 Santa Victoria 105.08 / 37 Angastaco 35.02 / 38 La Poma
+  55.30 / 39 Iruya 35.02 / 40 La Viña 589.92 / 41 Coronel Solá 538.89 / 42 Ciro
+  Echesortu 999.17 / 43 El Bordo 341.05 / 44 Apolinario Saravia 435.06 / 45
+  Rivadavia — Banda Sud 176.98 / TOTAL . . . $ 184.349.22 / Art. 2o. —
+  Autorízase a Contaduría General de la Provincia a practicar las retenciones
+  necesarias a las Municipalidades que tienen convenios firmados con la
+  Dirección Provincial de Sanidad, Consejo General de Educación y asimismo a las
+  que adeudan a la Provincia por servicios del Empréstito Ley No. 770. / Art.
+  3o. — El gasto que demande el cumplimiento del presente decreto se imputará a
+  la cuenta "Reparticiones Autárquicas y Municipalidades — Cuentas corrientes —
+  Ejercicio 1948". / Art. 4o. — Comuníquese, publíquese, etc. / LUCIO A. CORNEJO
+  / Juan W. Dates / Es copia: / Luis A. Borelli / Oficial Mayor de Economía,
+  Finanzas y O. P.
+NOTA DE LECTURA: RECUENTO PROPIO: 45 renglones. RECALCULO: la suma de los 45
+importes da 184.259,82; el total, en cifras y en letras, es 184.349,22. NO
+CIERRA por 89,40, que no es el efecto de un solo dígito mal leído (E.8, E.9).
+Cita los coeficientes del decreto 10960 del 20 de agosto de 1948, como el
+13962-E de febrero. La capa numeraba este decreto «1423S-E»; la imagen dice
+14236-E.
+
+A.12
+FUENTE: 3376 h5 c1-c2 (Salta, martes 29 de marzo de 1949)
+FICHA: Decreto N 14548-G. Salta, marzo 25 de 1949. Expediente N 5687/49. Crea
+con carácter «ad-honorem» una Oficina de Registro Civil en Vaqueros (Dpto. La
+Caldera), a pedido de un petitorio de vecinos para la zona que comprende
+Vaqueros, Lesser, Mojotoro, Wierna y Gallinato, y nombra para atenderla a la
+autoridad policial del lugar. Clase: REGISTRO-CIVIL+CARGOS.
+MODO DE LECTURA: imagen, 170 ppp (decreto entero).
+TEXTO:
+  Decreto No. 14548-G. / Salta, Marzo 25 de 1949. / Expediente No. 5687/49. /
+  Visto el presente expediente en el que la Dirección General del Registro
+  Civil, eleva petitorio de vecinos de la localidad de Vaqueros (Dpto. La
+  Caldera), solicitando la creación de una Oficina de Registro Civil en dicha
+  localidad, para atender las necesidades de la Zona, que comprende: Vaqueros;
+  Lesser, Mojotoro, Wierna y Gallinato; y dado los fundamentos del citado
+  petitorio, / El Gobernador de la Provincia / D E C R E T A : / Art. 1o. —
+  Créase con carácter "ad-honorem", una Oficina de Registro Civil en la
+  localidad de "VAQUEROS", (Dpto. La Caldera); y nómbrase, con igual carácter,
+  para atender la citada Oficina a la AUTORIDAD POLICIAL DEL LUGAR, hasta tanto
+  se provea en definitiva. / Art. 2.o — Comuníquese, publíquese, insértese en el
+  Registro Oficial y archívese. / LUCIO A. CORNEJO / Julio Díaz Villalba / Es
+  copia: / A. N. Villada / Oficial Mayor (oficial 5o.) de Gobierno, Justicia e
+  Instrucción Pública
+NOTA DE LECTURA: RECUENTO PROPIO: la zona enumera 5 lugares (Vaqueros, Lesser,
+Mojotoro, Wierna, Gallinato); el acto no declara número. El acto atribuye
+Vaqueros al departamento de La Caldera y pone Mojotoro dentro de la zona de
+Vaqueros; A.2 (contrato 4469) pone un lugar llamado Mojotoro en Campo Santo
+(E.9: no se concilia; el nombre puede designar lugares distintos). El petitorio
+de vecinos no se publica y no se nombra a los firmantes. El encargado es un
+cargo y no una persona: no se nombra a nadie.
+
+A.13
+FUENTE: 3383 h4 c3 (Salta, miércoles 6 de abril de 1949); sumario en 3383 h2
+FICHA: Decreto N 14693-G. Salta, marzo 31 de 1949. Expediente N 5760/49. Sobre
+terna elevada por la H. Comisión Municipal de La Caldera, nombra Juez de Paz
+Propietario del Distrito Municipal de La Caldera a Justo Pastor Lizondo
+(matrícula 2.675.061). Firma el Vicepresidente 1° del Senado en ejercicio del
+Poder Ejecutivo, Emilio Espelta. Clase: JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 170 ppp (decreto entero).
+TEXTO:
+  Decreto No. 14693-G. / Salta, Marzo 31 de 1949. / Expediente No. 5760/49. /
+  VISTO este expediente en el que la H. Comisión Municipal de La Caldera eleva
+  terna para proveer el cargo de Juez de Paz Propietario en dicha localidad; y
+  en uso de la facultad que le otorga el artículo 165 de la Constitución, / El
+  Vice-Presidente 1° del Honorable Senado de la Provincia en Ejercicio del Poder
+  Ejecutivo / D E C R E T A : / Art. 1o. — Nombrase Juez de Paz Propietario del
+  Distrito Municipal de La Caldera, a don JUSTO PASTOR LIZONDO (Matrícula número
+  2.675.061), por el término de funciones que señala el Art. 165, segundo
+  apartado de la Constitución de la Provincia. / Art 2.o — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. / EMILIO ESPELTA /
+  Julio Díaz Villalba / Es copia: / A. N. Villada / Oficial Mayor (oficial 5°)
+  de Gobierno, Justicia e Instrucción Pública.
+NOTA DE LECTURA: La terna no se publica: los otros dos propuestos no constan. El
+acto llama a La Caldera «H. Comisión Municipal» y «Distrito Municipal». Lizondo
+renuncia en agosto (A.28). El cargo de juez de paz que deja vacante no nombra a
+su predecesor: vacante sin nombre, citada y no acompañada (v16 §5.3; E.3).
+
+A.14
+FUENTE: 3385 h7 c1-c3 a h8 c1 (Salta, viernes 8 de abril de 1949)
+FICHA: Decreto N 14698-E. Salta, marzo 31 de 1949. Expediente N 1263/C/49. Abre
+un crédito de $ 4.758.000 para el Anexo I de la Ley de Gastos (obras públicas en
+ejecución). Inciso I, Principal c) «Edificación Sanitaria», Estaciones
+Sanitarias Tipo «A»: En La Caldera $ 238.800. Inciso III, Ley 868
+(expropiaciones para estaciones sanitarias y obras hospitalarias): En La Caldera
+$ 7.000. Firma el Vicepresidente 1° del Senado en ejercicio del Poder Ejecutivo.
+Clase: OBRA-PUBLICA+DOMINIO.
+MODO DE LECTURA: imagen: hoja 7 entera a 100 ppp, renglón de La Caldera a 250
+ppp; hoja 8 c1 a 150 ppp (Ley 868 a total del Inciso III, firmas).
+TEXTO:
+  Decreto No. 14698-E. / Salta, Marzo 31 de 1949. / Expediente No. 1263/C/49. /
+  Visto la necesidad de autorizar provisionalmente los créditos mínimos
+  necesarios para proseguir las obras y pago de certificados a extenderse en el
+  actual ejercicio por la continuidad de las obras públicas en ejecución; y
+  [...] El Vice-Presidente 1° del Honorable Senado de la Provincia en Ejercicio
+  del Poder Ejecutivo / D E C R E T A : / Art. 1o. — Abrese crédito por $
+  4.758000.— moneda nacional (CUATRO MILLONES SETECIENTOS CINCUENTA Y OCHO MIL
+  PESOS MONEDA NACIONAL), para ser incorporado al Anexo I, de la Ley de Gastos
+  en vigor, en la siguiente forma y proporción: [...] Principal c) "Edificación
+  Sanitaria" $ 1.580.700.— / Parciales: Dispensario Antivenéreo en Salta: $
+  20.000.— / Estaciones Sanitarias Tipo "A": / En Cerrillos $ 210.000.— / En el
+  Galpón (adquisición y ampliación) " 329.000.— / En El Tala " 96.500.— / En la
+  Caldera " 238.800.— / En Pichanal " 192.900.— / En Santa Victoria " 150.000.—
+  / En Guachipas " 160.000.— / Amueblamiento y habilitación de Estaciones
+  Sanitarias " 20.000.— / Hospitales / En Orán " 163.500.— [...] TOTAL DEL
+  INCISO I . . $ 3.525.000.— [...] INCISO III [...] Ley No. 868 — Expropiaciones
+  para estaciones sanitarias y obras hospitalarias, planes nacionales y
+  provinciales): [...] En San Carlos . . . " 6.000.— / En Guachipas " 5.000.— /
+  En Cerrillos " 20.000.— / En La Caldera " 7.000.— / En El Galpón " 5.000.— /
+  En Pichanal " 20.000.— / En Coronel Moldes (Plan Nacional) " 5.000.— / En La
+  Viña (Plan Nacional) " 5.000.— / En Joaquín V. González (Plan Nacional) "
+  2.500.— / En Rosario de la Frontera (Plan Nacional) " 6.000.— [...] TOTAL DEL
+  INCISO III . . $ 1.063.000.— / Art. 2o. — Dése cuenta oportunamente a las HH.
+  CC. Legislativas. / Art. 3o. — Comuníquese, publíquese, etc. / EMILIO ESPELTA
+  / Juan W. Dates / Es copia: / Pedro Saravia Cánepa / Oficial 1o. de Economía,
+  F. y Obras Públicas.
+NOTA DE LECTURA: RECALCULO: Principal c): 20.000 + 1.377.200 (siete estaciones)
++ 20.000 + 163.500 = 1.580.700; cierra con lo impreso, y sólo cierra con 238.800
+en La Caldera. Inciso II: 100.000 + 70.000 = 170.000; cierra. Inciso III: Ley
+746 200.000 + Ley 790 230.000 (nueve renglones) + Ley 795 70.000 + Ley 798
+445.000 + Ley 868 81.500 (diez renglones) + Ley 959 26.500 + Ley 1286 10.000 =
+1.063.000; cierra. El total del Inciso I (3.525.000) no se recalculó entero
+(E.8). Las diez partidas de la Ley 868 empiezan en h8; si hay otras en h7 c3 al
+pie, el subtotal igual cierra con estas. «$ 4.758000.—» sin punto de miles
+[sic]; 3.525.000 + 170.000 + 1.063.000 = 4.758.000, cierra con el art. 1.
+
+A.15
+FUENTE: 3387 h6 c1 a h7 c3 y ss. (Salta, lunes 11 de abril de 1949)
+FICHA: Decreto N 14.767-A. Salta, 7 de abril de 1949. Confirma, asciende y
+nombra desde el 1 de marzo y por seis meses al personal de la Dirección
+Provincial de Sanidad según el presupuesto semestral (decretos 14.286 y 14.704).
+Entre otros: Auxiliar 4° (Enfermero en Vaqueros), Odilón Santiago Aguirre;
+Auxiliar 4° (Enfermero en La Caldera), Arminda Funes de Lamberto. Firma el
+Vicepresidente 1° del Senado en ejercicio del Poder Ejecutivo. Clase: CARGOS.
+MODO DE LECTURA: imagen, 160-170 ppp (encabezado en h6 c1; renglones de Vaqueros
+y La Caldera en h7 c3). El resto de la nómina no se transcribe.
+TEXTO:
+  Decreto No. 14.767-A. / Salta, 7 de abril de 1949. / VISTOS los decretos Nros.
+  14.286 y 14.704 por los que se fija el Presupuesto de Gastos de la Dirección
+  Provincial de Sanidad, para un semestre del año en curso, a contar desde el 1°
+  de marzo; / Por ello y siendo necesario conformar la designación del personal
+  de la citada repartición a la nueva estructuración dada a su presupuesto, / El
+  Vice-Presidente 1° del Honorable Senado de la Provincia en Ejercicio del Poder
+  Ejecutivo / D E C R E T A : / Art. 1° — Confírmase, asciéndese y nómbrase con
+  anterioridad al 1° de marzo del año en curso y por el término de seis meses,
+  en los puestos, categorías y designaciones que se indican a continuación al
+  siguiente personal de la Dirección Provincial de Sanidad: / Personal
+  Administrativo [...] Auxiliar 4° (Enfermero en Vaqueros), Sr. Odilón Santiago
+  Aguirre. / Auxiliar 4° (Enfermera - Secretaria Serv. Odontológ), Sra. María
+  del Carmen Pereyra de Carrizo. / Auxiliar 4° (Enfermero en La Caldera), Sra.
+  Arminda Funes de Lamberto. / Auxiliar 4° (Enfermero en Pichanal), Sra. Blanca
+  Vargas de Velarde. [...]
+NOTA DE LECTURA: El acto trae dos puestos en el departamento: enfermero en
+Vaqueros y enfermero en La Caldera. No se recontó la nómina entera (no es una
+lista de lugares; E.8). Firma y cierre del decreto no se miraron (E.3). La
+enfermera de La Caldera ya tenía viáticos para ir a Vaqueros (A.3); desde marzo
+hay además un enfermero con asiento en Vaqueros.
+
+A.16
+FUENTE: 3397 h9 c1-c2 (Salta, martes 26 de abril de 1949)
+FICHA: Decreto N 14917-E. Salta, abril 21 de 1949. Orden de Pago N 140.
+Expediente N 1388-E|49. Paga a E. C. O. R. M. S. R. L. $ 29.506,92, certificado
+N 2 de la obra «Estación Sanitaria Tipo "A" en la localidad de La Caldera»
+(adjudicada por decreto 10.668 del 29 de julio de 1948), y retiene $ 2.950,69
+(10 %) como garantía. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto N° 14917-E. / Salta, abril 21 de 1949. / Orden de Pago N° 140 del
+  Ministerio de Economía / Expediente N° 1388-E|49 (Sub-Mesa de Entradas). /
+  Visto este expediente en el que se gestiona el pago del importe del
+  certificado N° 2 agregado a fs. 5|6 de estas actuaciones, expedido por
+  Dirección General de Arquitectura y Urbanismo por la suma de $ 29.506.92 m|n,
+  a favor de la Empresa Constructora "E. C. O. R. M. S. R. L.", por concepto de
+  trabajos efectuados en la obra Estación Sanitaria Tipo "A" en la localidad de
+  La Caldera, adjudicados por Decreto N° 10.668, de fecha 29 de Julio de 1948;
+  atento a lo informado por Contaduría General de la Provincia, / El Gobernador
+  de la Provincia / D E C R E T A : / Art. 1° — Previa intervención de
+  Contaduría Provincia, a favor de la Empresa Constructora General, páguese por
+  Tesorería General de la S. R. L. "E.C.O.R.M." la suma de $ 29.506.92
+  (VEINTINUEVE MIL QUINIENTOS SEIS PESOS CON NOVENTA Y DOS CENTAVOS M/N.)
+  importe del certificado No. 2 agregado a fs. 5/6 del expediente del epígrafe,
+  derivado de la obra de referencia. / Art. 2° — Por Contaduría General de la
+  Provincia, se procederá a retener la suma de $ 2.950.69 (DOS NIL NOVECIENTOS
+  CINCUENTA PESOS CON SESENTA Y NUEVE CENTAVOS M/N.), que corresponde al 10% de
+  la liquidación efectuada, por concepto de garantía de obras; debiendo
+  ingresarse dicho importe con crédito a la cuenta especial "DEPOSITOS EN
+  GARANTIA". / Art. 3° — El importe que se dispone liquidar por el artículo 1°
+  del presente Decreto, se imputará al Anexo I, Inciso I, Principal "Edificación
+  Sanitaria", Parcial "Estación Sanitaria" Tipo "A" en la Caldera, de la Ley de
+  Gastos en vigor. / Art. 4o. — Comuníquese, publíquese, etc. / LUCIO A. CORNEJO
+  / Julio Díaz Villalba / Ministro de Gobierno, Justicia e I. Pública a cargo
+  interinamente de la Cartera de Economía, Finanzas y Obras Públicas. / Es
+  copia: / Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y Obras Públicas.
+NOTA DE LECTURA: RECALCULO: 10 % de 29.506,92 = 2.950,69; cierra. El art. 1
+viene con los renglones traspuestos («Previa intervención de Contaduría
+Provincia, a favor de la Empresa Constructora General, páguese…»); se transcribe
+como está. «DOS NIL» [sic]. En el art. 1 la cifra sale con el último dígito
+empastado («29.506.9?»); se lee 92 por el visto y por las letras.
+
+A.17
+FUENTE: 3397 h9 c2 (Salta, martes 26 de abril de 1949)
+FICHA: Decreto N 14 918-E. Salta, abril 21 de 1949. Orden de Pago N 141.
+Expediente N 971/M/49. Paga a Conrado Marcuzzi $ 26.336,08, certificado parcial
+N 1 de la obra «Refacciones en la Escuela de La Caldera», adjudicada por decreto
+«12.[ilegible]31» del 19 de noviembre de 1948, y retiene $ 2.633,60 como
+garantía. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero) y 400 ppp (número del decreto
+de adjudicación).
+TEXTO:
+  Decreto N° 14 918-E. / Orden de Pago N° 141 del Ministerio de Economía /
+  Salta, abril 21 de 1949. / Expediente N° 971/M/49. (Sub-Mesa de Entradas). /
+  Visto este expediente en el que se gestiona el pago del importe del
+  certificado Parcial N° 1 agregado a fs. 3/4 de estas actuaciones, expedido por
+  Dirección General de Arquitectura y Urbanismo por la suma de $ 26.336.08 m/n.
+  a favor de la Empresa Constructora Conrado Marcuzzi, por concepto de trabajos
+  efectuados en la obra Refacciones en la Escuela de La Caldera, adjudicados por
+  Decreto No. 12.[ilegible]31 del 19 de noviembre de 1948; atento a lo informado
+  por Contaduría General de la Provincia, / El Gobernador de la Provincia / D E
+  C R E T A : / Art. 1° — Previa intervención de Contaduría General, páguese por
+  Tesorería General de la Provincia a favor del señor CONRADO MARCUZZI, la suma
+  de $ 26.336.08 (VEINTISEIS MIL TRECIENTOS TREINTA Y SEIS PESOS CON OCHO
+  CENTAVOS M/N.), importe del certificado Parcial N° 1 agregado a fs. 3/4 del
+  expediente del epígrafe, derivado de la obra de referencia. / Art. 2° — Por
+  Contaduría General de la Provincia, se procederá a retener la suma de $
+  2.633.60 (DOS MIL SEISCIENTOS TREINTA Y TRES PESOS CON SESENTA CENTAVOS M/N.),
+  que corresponde al 10% de la liquidación efectuada, por concepto de garantía
+  de obras; debiendo ingresarse dicho importe con crédito a la cuenta especial
+  "DEPOSITO EN GARANTIA". / Art. 3° — El importe que se dispone liquidar por el
+  artículo 1° del presente Decreto, se imputará al Anexo I, Inciso I, Principal
+  h) Varios Parcial Refacción y Ampliación de edificios fiscales existentes" de
+  la Ley de Gastos en Vigor. / Art. 4o. — Comuníquese, publíquese, etc. / LUCIO
+  A. CORNEJO / Julio Díaz Villalba / Ministro de Gobierno, Justicia e I. Pública
+  a cargo interinamente de la Cartera de Economía, Finanzas y Obras Públicas /
+  Es copia: / Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y Obras
+  Públicas.
+NOTA DE LECTURA: RECALCULO: el 10 % de 26.336,08 es 2.633,608; el acto retiene
+2.633,60 (trunca, no redondea). El número del decreto de adjudicación tiene el
+tipo roto en el segundo dígito tras el punto: la capa lee «¡2.231»; el
+certificado final (A.23, 3438 h5) lo cita como «12.581» (capa). Se miró a 400
+ppp y la imagen no decide; se deja [ilegible] (E.9). La obra se llama aquí
+«Refacciones en la Escuela de La Caldera»; en abril (3401) «Ampliación y
+refecciones escuela de la Caldera» y en junio «Refección y ampliación Escuela de
+La Caldera».
+
+A.18
+FUENTE: 3397 h12 c1-c2 (Salta, martes 26 de abril de 1949)
+FICHA: Decreto N 14933-E. Salta, abril 21 de 1949. Expediente N 960-/E/1949.
+Otorga a Federico Ebber el reconocimiento de una concesión de agua de 5,71
+l/seg. del Río Wierna para irrigar 8 Has. 3.800 m2 de la finca «Entre Ríos»,
+catastro 166, ubicada en Vaqueros, Departamento de La Caldera, con carácter
+temporal y permanente. La Intendencia Municipal de La Caldera informó que no
+tenía observación que formular. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (decreto entero; firma del ministro, de la
+capa).
+TEXTO:
+  Decreto No. 14933-E. / Salta, Abril 21 de 1949 / Expediente No. 960-/E/1949. /
+  Visto este expediente en el que el señor Federico Ebber, solicita
+  reconocimiento de concesión al uso del agua pública, para una dotación de 5,71
+  l/seg. a derivar del Río Wierna y para irrigar su propiedad denominada "Entre
+  Ríos", ubicada en Vaqueros, departamento de La Caldera, con una superficie
+  aproximada de 8 Has. 3.800 m2., catastrada bajo el No. 166; y / CONSIDERANDO:
+  / Que el recurrente ha cumplido con los requisitos establecidos en los Arts.
+  43, 47, 48, 53, 275 y 303 y concordantes del Código de Aguas; / Que a fs. 20 y
+  a pedido de Administración General de Aguas de Salta, la Intendencia Municipal
+  de La Caldera, en el informe respectivo expresa que no tiene observación
+  alguna que formular, a la solicitud mencionada, cumpliendo así el requisito
+  establecido en el artículo 350 del referido Código; / Que por Resolución del
+  H. Consejo de la misma, No. 78 de fecha 11 de febrero ppdo., se ha procedido a
+  la publicación de edictos en los diarios de esta capital, cuyos ejemplares
+  corren agregados al expediente del rubro, sin que ello hubiera dado lugar a
+  oposición de terceros; / Por tales consideraciones; atento a los dictámenes
+  producidos por el Departamento Legal de A. G. A. S. y el señor Fiscal de
+  Gobierno, / El Gobernador de la Provincia / D E C R E T A : / Art. 1o. —
+  Otórgase a favor del señor FEDERICO EBBER, el reconocimiento de una concesión
+  de agua para un caudal de 5,71 l/seg. para irrigar 8 Has. 3.800 m2. de su
+  propiedad catastro No. 166, denominada Finca "Entre Ríos", ubicada en
+  Vaqueros, Departamento de La Caldera, con carácter temporal y permanente. /
+  Art. 2o. — Déjase establecido que por no tenerse los aforos definitivos del
+  río a que se refiere el reconocimiento acordado por el artículo anterior, la
+  cantidad a concederse, queda sujeta a la efectividad y disponibilidad del río
+  en las distintas épocas del año y dejando a salvo, por lo tanto, la
+  responsabilidad legal y técnica de las autoridades correspondientes de la
+  Provincia, que oportunamente determinaren para cada época los caudales
+  definitivos, en virtud de las facultades que le confiere el Código de Aguas,
+  de la Provincia. / Art. 3o. — La concesión acordada por el presente decreto,
+  lo es con las reservas previstas en el Art. 17 y 232 y concordantes del Código
+  de Aguas. / Art. 4° — Comuníquese, publíquese, etc. / LUCIO A. CORNEJO / Julio
+  Díaz Villalba / Ministro de Gobierno, Justicia e I. Pública a cargo
+  interinamente de la Cartera de Economía, Finanzas y Obras Públicas / Es copia:
+  / Pedro Saravia Cánepa
+NOTA DE LECTURA: Federico Ebber es actor de 1948 (edicto de la misma solicitud,
+16 apariciones, LEE 1948 A.15). El acto habla de «Intendencia Municipal de La
+Caldera», mientras A.13 (marzo) dice «H. Comisión Municipal de La Caldera»
+(E.9). Los edictos de la Resolución 78 del 11 de febrero se publicaron «en los
+diarios de esta capital»; no se buscaron en el Boletín de 1949 por el número de
+resolución (sí por «Ebber»: B.4). El sumario de 3397 h2 no se miró.
+
+A.19
+FUENTE: 3401 h9 c3 a h10 c1 (Salta, sábado 30 de abril de 1949); sumario en 3401
+h3
+FICHA: Decreto N 15050-E. Salta, abril 26 de 1949. Orden de Pago N 158.
+Expediente N 1365-A|1949. Aprueba la recepción provisoria de las obras
+«Ampliación y refecciones Escuela de La Caldera», adjudicadas por decreto 12.581
+del 19 de noviembre de 1948, y devuelve a Conrado Marcuzzi el depósito del 5 %
+en garantía. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150-160 ppp (encabezado en h9 c3; considerando y parte
+dispositiva en h10 c1). Firmas, de la capa.
+TEXTO:
+  Decreto N°. 15050 - E. / Salta, abril 26 de 1949. / ORDEN DE PAGO N° 158 del
+  Ministerio de Economía / Expediente N° 1365 - A|1949. / Visto este expediente
+  en el cual corren las actuaciones relacionadas con la aprobación del acta de
+  recepción provisoria de la obra "Ampliación y refecciones Escuela de La
+  Caldera" ejecutadas por el contratista Conrado Marcuzzi, y la devolución a su
+  favor de la suma de $ 1.751.35 m|n. que el nombrado depositó oportunamente
+  como garantía del 5 o|o de los trabajos de mención; y / CONSIDERANDO: / Que
+  según consta en el acta de referencia la obra mencionada adjudicada por
+  decreto N° 12.581 de fecha 19 de noviembre de 1948 se recibió de conformidad
+  por intermedio de Dirección General de Arquitectura y Urbanismo, / Por ello y
+  atento a lo informado por Contaduría General de la Provincia, / El Gobernador
+  de la Provincia / D E C R E T A : / Artículo 1°. — Apruébase la recepción
+  provisoria de las obras "Ampliación y refecciones Escuela de La Caldera"
+  efectuada por Dirección General de Arquitectura y Urbanismo, según acta de fs.
+  2. / Art. 2°. — Previa intervención de Contaduría General, páguese por
+  Tesorería General a favor del señor CONRADO MARCUZZI, la suma de $ 1.761.35
+  (UN MIL SETECIENTOS CINCUENTA Y UN PESOS CON TREINTA Y CINCO CTVS. M|N.), por
+  devolución del importe correspondiente al 5 o|o en garantía que efectuó por el
+  concepto arriba expresado. / Art. 3°. — El importe que se dispone devolver por
+  el artículo anterior, se imputará a la cuenta "DEPOSITOS EN GARANTIA". / Art.
+  4°. — Comuníquese, publíquese, etc.
+NOTA DE LECTURA: El visto dice $ 1.751,35 y el art. 2 dice $ 1.761,35 en cifras
+y «UN MIL SETECIENTOS CINCUENTA Y UN PESOS» en letras: la cifra del artículo
+contradice su propia expresión en letras y el visto (E.9; no se concilia). Si
+1.751,35 es el 5 %, la obra sería de 35.027 pesos (INFERENCIA). Aquí el decreto
+de adjudicación se lee sin duda 12.581, que es lo que el tipo roto de A.17
+(14918-E) no dejaba leer.
+
+A.20
+FUENTE: 3414 h5 c2 (Salta, martes 17 de mayo de 1949); sumario en 3414 h2
+FICHA: Resolución N 806-E del Ministerio de Economía (a cargo interinamente del
+Ministro de Gobierno). Salta, mayo 13 de 1949. Expediente N 1772-/E/-949.
+Prorroga por 75 días el plazo de entrega de la obra «Estación Sanitaria de La
+Caldera» a Ecorm S. R. L. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (resolución entera, con el borde derecho de la
+columna cortado: los finales de renglón, de la capa); el número, del sumario (la
+imagen deja leer «80?»).
+TEXTO:
+  RESOLUCION No. 806-E. / Salta, Mayo 13 de 1949 / Expediente No. 1772-/E/-949.
+  / Visto este expediente en el que Dirección General de Arquitectura y
+  Urbanismo eleva solicitud de prórroga del plazo acordado para la entrega de la
+  obra "Estación Sanitaria de La Caldera", presentada por la Empresa "ECORM S.
+  R. L.", adjudicataria de la misma; atento a las razones que la fundamentan, /
+  El Ministro de Gobierno, Justicia e I. Pública Interinamente a cargo de la
+  Cartera / R E S U E L V E : / 1o. — Prorrogar por el término de setenta y
+  cinco (75) días más, el plazo acordado a la EMPRESA ECORM S. R. L.", para la
+  entrega de la obra "Estación Sanitaria de La Caldera". / 2o. — Comuníquese,
+  publíquese, etc. / JULIO DIAZ VILLALBA / Es copia: / Pedro Saravia Cánepa /
+  Oficial 1o. de Economía, F. y Obras Públicas
+NOTA DE LECTURA: La resolución no dice cuál era el plazo original ni desde
+cuándo corren los 75 días. Las razones de la prórroga no se publican.
+
+A.21
+FUENTE: 3424 h6 c1-c2 (Salta, martes 31 de mayo de 1949)
+FICHA: Decreto N 15.423-A. Salta, mayo 19 de 1949. Orden de Pago Anual N 62.
+Expediente N 10.436-|949. Liquida a la Dirección Provincial de Sanidad $ 84.930,
+importe semestral (marzo a agosto de 1949) de la partida de racionamiento y
+alimentos de las dependencias de campaña, y la autoriza a distribuir $ 14.155
+mensuales entre sus servicios: La Caldera, $ 500. Clase: OTRO.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto N° 15.423-A. / Salta, mayo 19 de 1949. / Orden de Pago Anual N° 62. /
+  Expediente N° 10.436-|949.- / Visto lo solicitado por la Dirección Provincial
+  de Sanidad; atento lo dispuesto en decreto N° 14.286 y lo informado por
+  Contaduría General, / El Gobernador de la Provincia / D E C R E T A : / Art.
+  1° — Por Tesorería General, previa intervención de Contaduría General de la
+  Provincia, liquídese a favor de la DIRECCION PROVINCIAL DE SANIDAD, la suma de
+  $ 84.930 (OCHENTA Y CUATRO MIL NOVECIENTOS TREINTA PESOS) m|n., importe
+  semestral, (de marzo a agosto de 1949) de la partida asignada en Presupuesto
+  para racionamiento y alimentos de las dependencias de la campaña de la citada
+  repartición; debiendo imputarse este gasto al Anexo E - Inciso VIII - Otros
+  Gastos - Principal a) 1 - Parcial 37 de la Ley de Presupuesto en vigor. / Art.
+  2° — Autorízase a la Dirección Provincial de Sanidad para distribuir el
+  proporcional mensual de catorce mil ciento cincuenta y cinco pesos ($ 14.155)
+  entre los servicios de su dependencia que se detallan a continuación y en la
+  siguiente proporción: / Hospital de Embarcación $ 900.— / Hospital de San
+  Antonio de los Cobres " 700.— / Maternidad de Rosario de Lerma " 600.— /
+  Estación Sanitaria de Rosario de Lerma " 500.— / Chicoana " 425.— / Carril "
+  480.— / Cerrillos " 600.— / La Merced " 350.— / Coronel Moldes " 425.— / Río
+  Piedras " 100.— / El Galpón " 100.— / Aguaray y Tartagal " 200.— / Joaquín V.
+  Gonzalez " 250.— / Cachi " 925.— / San Carlos " 100.— / Morrillo " 400.— /
+  Campo Santo " 100.— / Pichanal " 600.— / El Tala " 600.— / Santa Victoria "
+  300.— / Iruya " 100.— / Rosario de la Frontera " 4.000.— / La Caldera " 500.—
+  / Nazareno " 100.— / Molinos " 300.— / San Bernardo de las Zorras " 50.— /
+  Rivadavia " 50.— / Los Blancos " 50.— / La Candelaria " 50.— / El Potrero "
+  50.— / Angastaco " 50.— / Seclantás " 50.— / La Poma " 50.— / El Quebrachal "
+  50.— / Las Lajitas " 50.— / $ 14.155.— / Art. 3.o — Comuníquese, publíquese,
+  insértese en el Registro Oficial y archívese. / LUCIO A. CORNEJO / Danton J.
+  Cermesoni / Es copia: [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 35 renglones («Aguaray y Tartagal» es uno
+solo); el acto no declara número. RECALCULO: suman 14.155 y cierran con el
+total; 14.155 × 6 = 84.930, que es el importe semestral del art. 1: cierra. La
+Caldera recibe $ 500 mensuales: el acto no dice qué servicio de Sanidad es (la
+estación sanitaria está en construcción, A.4 a A.26).
+
+A.22
+FUENTE: 3431 h7 c2 a h8 c1 (Salta, miércoles 8 de junio de 1949)
+FICHA: Decreto N 15602-G. Salta, junio 1o. de 1949. En el 6o. aniversario de la
+Revolución de Junio de 1943 declara inauguradas el 4 de junio las obras públicas
+terminadas, entre ellas, por la Administración General de Aguas, «j) Obras de
+defensa sobre los ríos Vaqueros y Wierna (Caldera) y Río Pasaje (Metán)» y, por
+Arquitectura y Urbanismo, «e) Provisión de agua y ampliaciones en la Escuela
+Provincial Primaria de La Caldera». Clase: OBRA-PUBLICA+AGUAS+ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp (encabezado, incisos e) a k) de Aguas, a) a c)
+y e) de Arquitectura, art. 2); incisos a) a d) de Aguas, d) de Arquitectura y
+arts. 3 a 5, de la capa. Firmas no leídas.
+TEXTO:
+  Decreto No. 15602-G. / Salta, Junio 1o. de 1949 / Cumpliéndose el día 4 del
+  mes en curso el 6o. aniversario de la Revolución de Junio de 1943, y siendo un
+  deber del pueblo recordar la fecha en que tuvo lugar el mencionado movimiento,
+  inspirado y gestado con altos fines patrióticos; / Por ello, / El Gobernador
+  de la Provincia / D E C R E T A : / Art. 1o. — Declaránse inauguradas el día 4
+  del corriente, en conmemoración del 6o. Aniversario de la Revolución de Junio
+  de 1943, las obras públicas ejecutadas y terminadas por el Gobierno de la
+  Provincia y cumplidas por las Reparticiones que a continuación se detallan: /
+  Por la Administración General de Aguas: [...] e) Represa y canal matriz (1a. y
+  2a. etapa) en la finca "La Banda" de propiedad fiscal (Cafayate); / f) Obras
+  de toma y canal de riego en San Lorenzo (Dpto. Capital); / g) Aprovechamiento
+  hidráulico del río La Viña (Dpto. La Viña); / h) Edificio para el Departamento
+  de Ingeniería en las Oficinas centrales de la Administración General de Aguas;
+  / i) Obras de encauce en el Arroyo "El Molino" (Guachipas) y Chuñapampa (La
+  Viña); / j) Obras de defensa sobre los ríos Vaqueros y Wierna (Caldera) y Río
+  Pasaje (Metán); / k) Usinas termo-eléctricas en San Antonio de los Cobres (Los
+  Andes), Campo Santo, Rosario de la Frontera y Río Piedras (Metán). / Por la
+  Dirección General de Arquitectura y Urbanismo: / a) Edificio para la Comisaría
+  de Policía en Embarcación; / b) Mercados tipo I (Intermedio) en Coronel Moldes
+  y tipo I en La Viña; / c) Resguardo Policial Tipo C en la Capital; / d)
+  Ampliaciones y reformas en Escuelas de Manualidades de Güemes y Metán (1a.
+  etapa); / e) Provisión de agua y ampliaciones en la Escuela Provincial
+  Primaria de La Caldera.— / Art. 2o. — Desígnase al señor Presidente de la
+  Administración General de Aguas de Salta, Ingeniero don Francisco Artacho,
+  para que en representación del Poder Ejecutivo, haga uso de la palabra en
+  Cachi, en el acto de la inauguración de las obras para provisión de aguas
+  corrientes en la referida localidad y descubra una placa recordatoria.— [...]
+NOTA DE LECTURA: RECUENTO PROPIO: Aguas, 11 incisos (a a k; la capa lee el
+primero «d)»); Arquitectura, 5 incisos (a a e). El acto no declara número. El
+acto atribuye los ríos Vaqueros y Wierna a «Caldera». No designa a nadie para
+las obras de La Caldera: los oradores van a Cachi, Coronel Moldes y Coronel Juan
+Solá (capa). Las defensas del río La Caldera presupuestadas en A.7 (13.838-E, $
+80.000) no figuran: el inciso j) nombra sólo los ríos Vaqueros y Wierna.
+
+A.23
+FUENTE: 3438 h5 c1-c2 (Salta, martes 21 de junio de 1949); sumario en 3438 h2
+FICHA: Decreto N 15780-E. Salta, junio 14 de 1949. Orden de Pago N 237.
+Expediente N 2325-/M-/949. Aprueba y paga a Conrado Marcuzzi el certificado
+final N 2, $ 8.690,91, de la obra «Refección y Ampliación Escuela de La Caldera»
+(decreto 12.581 del 19 de noviembre de 1948), y retiene $ 869,09 (10 %). Firman
+Emilio Espelta, como Gobernador, y Jaime Duran. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto No. 15780-E. / Salta, Junio 14 de 1949 / Orden de Pago No. 237 del
+  Ministerio de Economía. / Expediente No. 2325-/M-/949. / Visto este expediente
+  en el que se gestiona el pago del certificado final No. 2, agregado a estas
+  actuaciones, expedido por Dirección General de Arquitectura y Urbanismo, por
+  la suma de $ 8.690,91 m/n. a favor del señor Conrado Marcuzzi, por trabajos
+  ejecutados en la obra: "Refección y Ampliación Escuela de La Caldera",
+  adjudicados por decreto No. 12581, de fecha 19 de noviembre de 1948; y atento
+  lo informado por Contaduría General, / El Gobernador de la Provincia / D E C R
+  E T A : / Art. 1o. — Apruébase el certificado final No. 2, agregado a estas
+  actuaciones, expedido por Dirección General de Arquitectura y Urbanismo, por
+  la suma de $ 8.690,91 m/n. (Ocho mil seiscientos noventa pesos con 91/100
+  M/N.), a favor del señor Conrado Marcuzzi, por trabajos ejecutados en la obra:
+  "Refección y Ampliación Escuela de La Caldera", adjudicados por decreto No.
+  12.581 de fecha 19 de noviembre de 1948.— / Art. 2o. — Previa intervención de
+  Contaduría General de la Provincia, páguese por Tesorería General a favor de
+  la firma CONRADO MARCUZZI, la suma de $ 8.690,91 m/n. (OCHO MIL SEISCIENTOS
+  NOVENTA PESOS CON 91/100 M/N.), en cancelación del certificado final No. 2,
+  por trabajos ejecutados en la obra: "Refección y Ampliación Escuela de La
+  Caldera".— / Art. 3o. — Por Contaduría General de la Provincia, procédase a
+  retener la suma de $ 869,09 (Ochocientos sesenta y nueve pesos con 09/100
+  M/N.), en concepto de 10 o/o del importe que se dispone liquidar por el
+  artículo anterior, como garantía de obra, é ingresarlos a la cuenta "Depósitos
+  en Garantía".— / Art. 4o. — El gasto que demande el cumplimiento del presente
+  decreto se imputará al Anexo I - Inciso I - Principal h) - Parcial "Refección
+  y Ampliación edificios fiscales existentes", de la Ley de Presupuesto
+  vigente.— / Art. 5° — Comuníquese, publíquese, etc. / EMILIO ESPELTA / Jaime
+  Duran / Es copia: / Pedro Saravia Cánepa
+NOTA DE LECTURA: RECALCULO: 10 % de 8.690,91 = 869,09; cierra. Con A.17
+(26.336,08, certificado parcial 1) y éste (8.690,91, final 2), los certificados
+publicados de la obra suman 35.026,99; el depósito de 1.751,35 como 5 % de A.19
+implica una obra de 35.027 (INFERENCIA; las dos cifras casi coinciden, pero el
+acto de adjudicación no está en el corpus).
+
+A.24
+FUENTE: 3442 h6 c1 (Salta, sábado 25 de junio de 1949)
+FICHA: Decreto N 15826-E. Salta, junio 21 de 1949. Expediente N 2102-/I-/949.
+Aprueba las Resoluciones 55 y 56 (Acta N 8, 15 de junio) de la Junta de Catastro
+de la Dirección General de Inmuebles, que aprueban los padrones de valores
+fiscales de los departamentos de La Caldera, Molinos, Los Andes, La Poma, Cachi,
+Metán, Rivadavia, Rosario de Lerma, Campo Santo, Rosario de la Frontera y
+Capital (Secciones A, H y G), actualizados al 31 de diciembre de 1948, para el
+impuesto territorial de 1949. Clase: HACIENDA-MUN+DOMINIO.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto No. 15826-E. / Salta, Junio 21 de 1949 / Expediente No. 2102-/I-/949.
+  / Visto este expediente en el que Dirección General de Inmuebles eleva a
+  consideración y aprobación del Poder Ejecutivo, las Resoluciones Nos. 55 y 56,
+  correspondientes al Acta No. 8, dictadas por la H. Junta de Catastro en fecha
+  15 de junio en curso; por las que se aprueban los padrones de valores fiscales
+  confeccionados por el Departamento de Avaluaciones de la misma; / Por ello, /
+  El Gobernador de la Provincia / D E C R E T A : / Art. 1o. — Apruébanse las
+  Resoluciones Nos. 55 y 56, recaídas en Acta No. 8, de fecha 15 de junio en
+  curso, por las que la H. Junta de Catastro de Dirección General de Inmuebles
+  aprueba los padrones de valores fiscales confeccionados por el Departamento de
+  Avaluaciones de la misma, correspondientes a los Departamentos de La Caldera,
+  Molinos, Los Andes, La Poma, Cachi, Metán, Rivadavia, Rosario de Lerma, Campo
+  Santo, Rosario de la Frontera, y Departamento de La Capital, Secciones "A",
+  "H" y "G", los que fueran actualizados al 31 de diciembre de 1948, para la
+  percepción del impuesto territorial por el corriente año.— / Art. 2o. —
+  Comuníquese, publíquese, etc. / EMILIO ESPELTA / Jaime Duran / Es copia: /
+  Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y Obras Públicas.
+NOTA DE LECTURA: RECUENTO PROPIO: 11 departamentos (el último con tres
+secciones); el acto no declara número. Los padrones no se publican: citados y no
+acompañados (E.3). La clase HACIENDA-MUN se da por el impuesto territorial, cuyo
+20 % se liquida a las municipalidades (A.8, A.11); el padrón en sí es de la
+Provincia.
+
+A.25
+FUENTE: 3447 h7 c3 a h8 c1 (Salta, sábado 2 de julio de 1949); sumario en 3447
+h2
+FICHA: Decreto N 15940-E. Salta, junio 27 de 1949. Orden de Pago N 249.
+Expediente N 2151/E/49. Aprueba y paga a la Empresa Constructora ECORM el
+certificado parcial N 3, $ 28.492,86, de la obra «Estación Sanitaria Tipo A en
+la Caldera»; retiene $ 2.849,29 (10 % de garantía) y $ 12.052,06 de reintegro de
+fondos anticipados (decreto 7683/48). Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto No. 15940-E. / ORDEN DE PAGO No. 249 del Ministerio de Economía. /
+  Salta, junio 27 de 1949 / Expediente No: 2151/E/49 (S.M. de Entradas) / Visto
+  este expediente en el que Dirección General de Arquitectura y Urbanismo, eleva
+  para su aprobación y pago el Certificado Parcial No. 3 por $ 28.492,86 m/n.
+  correspondiente a los trabajos realizados en la obra: "Estación Sanitaria Tipo
+  A en la Caldera" por la Empresa Constructora ECORM; / Por ello, atento a lo
+  informado por Contaduría General de la Provincia, / El Gobernador de la
+  Provincia / D E C R E T A : / Art. 1o. — Apruébase el certificado Parcial No.
+  3 de $ 28.492,86.— (VEINTIOCHO MIL CUATROCIENTOS NOVENTA Y DOS PESOS CON
+  OCHENTA Y SEIS CENTAVOS M/N.— que corre a fs. 2 y 3 de estos actuados,
+  correspondiente a los trabajos realizados en la obra: "Estación Sanitaria
+  Tipo" "A" "en la Caldera" por la Empresa Constructora ECORM.— / Art. 2o. —
+  Previa intervención de Contaduría General de la Provincia, páguese por
+  Tesorería General a favor de la Empresa Constructora ECORM la suma de $
+  28.492.86 (VEINTIOCHO MIL CUATROCIENTOS NOVENTA Y DOS PESOS CON OCHENTA Y SEIS
+  CENTAVOS M/N) por el concepto ya expresado.- / Art. 3o. — El gasto que demande
+  en cumplimiento del presente decreto, se imputará a Anexo I - Inciso I -
+  Principal c)- Parcial "Estación Sanitaria Tipo "A" en la Caldera", de la Ley
+  de Presupuesto en vigor. / Art. 4o. — Por Tesorería General de la Provincia,
+  se procederá a retener las siguientes sumas: / $ 2.849.29 en concepto 10%
+  garantía de obra é ingresarlos a la cuenta "Depósitos en garantía", y / "
+  12.052,06 en concepto de reintegro de fondos anticipados al contratista, é
+  ingresarlos a la cuenta "Valores a Regularizar - Pagos Anticipados Decreto No.
+  7683/48.— / Art. 5o. — Comuníquese, publíquese, etc. / EMILIO ESPELTA / Jaime
+  Duran / Es copia: / Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y Obras
+  Públicas
+NOTA DE LECTURA: RECALCULO: 10 % de 28.492,86 = 2.849,286; se retienen 2.849,29
+(redondea; en A.17 truncaba). La retención de 12.052,06 devuelve parte del
+anticipo del 25 % (56.857,04, A.4).
+
+A.26
+FUENTE: 3447 h8 c1-c2 (Salta, sábado 2 de julio de 1949)
+FICHA: Decreto N 15941-E. Salta, junio 27 de 1949. Orden de Pago N 250.
+Expediente N 2150/E/49. Aprueba y paga a ECORM el certificado parcial N 4, $
+31.663,53, de la obra «Estación Sanitaria Tipo "A" en La Caldera»; retiene $
+3.166,35 (10 %) y $ 5.000 de reintegro de anticipos. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto No. 15941-E. / Salta, junio 27 de 1949 / ORDEN DE PAGO No. 250 del
+  Ministerio de Economía. / Expediente No. 2150/E/49 (S.M. de Entradas). / Visto
+  este expediente en el que Dirección General de Arquitectura y Urbanismo, eleva
+  para su aprobación y pago el Certificado Parcial No. 4 por la suma de $
+  31.663,53 m/n. correspondiente a los trabajos realizados en la obra: "Estación
+  Sanitaria Tipo "A" en La Caldera", por la Empresa Constructora ECORM., / Por
+  ello, atento lo informado por Contaduría General de la Provincia., / El
+  Gobernador de la Provincia / D E C R E T A : / Art. 1o. — Apruébase el
+  Certificado Parcial No. 4 por la suma de $ 31.663,53.— (TREINTA Y UN MIL
+  SEISCIENTOS SESENTA Y TRES PESOS CON CINCUENTA Y TRES CENTAVOS — M/N.) que
+  corre a fs. 2/6 de estos actuados, correspondiente a los trabajos realizados
+  en la Obra "Estación Sanitaria Tipo "A" en la Caldera" por la Empresa
+  Constructora ECORM.— / Art. 2o. — Previa intervención de Contaduría General,
+  páguese por Tesorería General de la Provincia, a favor de la Empresa
+  Constructora ECORM la suma de $ 31.663,53.— (TREINTA Y UN MIL SEISCIENTOS
+  SESENTA Y TRES PESOS CON CINCUENTA Y TRES CENTAVOS M/N.—) por el concepto
+  expresado precedentemente.— / Art. 3o. — El gasto que demande el cumplimiento
+  del presente decreto, se imputará al Anexo I - Inciso I - Principal c)-
+  Parcial "Estación Sanitaria Tipo "A" en La Caldera", de la Ley de Presupuesto
+  en vigor.— / Art. 4o. — Por Tesorería General de la Provincia se procederá a
+  retener las siguientes sumas: / $ 3.166,35 en concepto del 10% Garantía de
+  Obra, é ingresarlos a la cuenta "Depósitos en Garantía", y / " 5.000,— en
+  concepto de reintegro de fondos anticipados al contratista, é ingresarlos a la
+  cuenta "Valores a regularizar - Pagos Anticipados Decreto 7683/48".— / Art. 5°
+  — Comuníquese, publíquese, etc. / EMILIO ESPELTA [...]
+NOTA DE LECTURA: RECALCULO: 10 % de 31.663,53 = 3.166,35; cierra. Los
+certificados 3 y 4 salen el mismo día con expedientes consecutivos (2151 y 2150)
+en orden inverso.
+
+A.27
+FUENTE: 3483 h15 c3 (Salta, jueves 18 de agosto de 1949), aviso N 5133; repetido
+en quince ediciones seguidas, 3483 a 3497 (e) 18/8 al 5/9/49); sumario en 3483
+h3 y en otras once
+FICHA: Edicto de la Administración General de Aguas de Salta, Salta 16 de agosto
+de 1949. Argentina Suárez Wilde de Serrey pide en el expediente 2392/48 el
+reconocimiento de concesión de uso del agua pública a derivar del Río La Caldera
+para su propiedad catastro N 52 del Departamento de La Caldera, de una hectárea
+aproximada: 0,203 litros por segundo, temporal y permanente. Vence el 5 de
+septiembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición); las demás,
+cotejadas por texto.
+TEXTO:
+  No. 5133 — E D I C T O / De conformidad a lo prescripto en el art. 350 del
+  Código de Aguas, se hace saber a los interesados que se ha presentado ante
+  esta Administración General de Aguas de Salta, la señora Argentina Suárez
+  Wilde de Serrey solicitando en expediente No. 2392/48 reconocimiento de
+  concesión de uso del agua pública a derivar del Río La Caldera, para regar su
+  propiedad catastrada bajo el No. 52 del Departamento de La Caldera, en una
+  superficie aproximada de una hectárea.— / El reconocimiento que se solicita en
+  de un caudal de 0,203 litros por segundo, con carácter temporal y permanente.
+  / La presente publicación vence el día 5 de septiembre de 1949, citándose a
+  las personas, que se consideren afectadas por el derecho que se solicita, a
+  hacer valer su oposición dentro de los treinta días de su vencimiento.— /
+  Salta 16 de Agosto de 1949 / ADMINISTRACION GENERAL DE AGUAS DE SALTA / e)
+  18/8 al 5/9/49
+NOTA DE LECTURA: «en de un caudal» [sic]. Apellido Serrey: el mismo del
+propietario de la finca «Vaqueros» que la Ley 1134 expropia en octubre (A.36) y
+de los solicitantes de «Sauzal o Curuzú» (A.43); el parentesco no consta
+(INFERENCIA NO ACREDITADA). El edicto no dice dónde dentro del departamento está
+el catastro 52.
+
+A.28
+FUENTE: 3485 h6 c1 (Salta, sábado 20 de agosto de 1949)
+FICHA: Decreto N 16665-G. Salta, agosto 16 de 1949. Expediente N 6964-/949.
+Acepta la renuncia de Justo Pastor Lizondo al cargo de Juez de Paz Propietario
+de La Caldera. Firma el Ministro de Gobierno en ejercicio del Poder Ejecutivo,
+J. Armando Caro. Clase: JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 170 ppp (decreto entero).
+TEXTO:
+  Decreto No. 16665-G. / Salta, Agosto 16 de 1949 / Expediente No. 6964-/949. /
+  Visto la renuncia interpuesta, / El Ministro de Gobierno, Justicia é I.
+  Pública, en ejercicio del Poder Ejecutivo, / D E C R E T A : / Art. 1o. —
+  Acéptase la renuncia presentada por Don JUSTO PASTOR LIZONDO, al cargo de Juez
+  de Paz Propietario de la localidad de La Caldera.— / Art. 2.o — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. / J. ARMANDO CARO /
+  Jorge Aranda / Sub-Secretario de Gobierno, J. e I. Pública / Interinamente a
+  cargo de la Cartera / Es copia: [...]
+NOTA DE LECTURA: El decreto no nombra reemplazante. El cargo cambia de nombre
+entre los dos actos: «del Distrito Municipal de La Caldera» (marzo) y «de la
+localidad de La Caldera» (agosto).
+
+A.29
+FUENTE: 3492 h17 c2-c3 (Salta, lunes 29 de agosto de 1949), aviso N 5182;
+repetido en quince ediciones, 3492 a 3506
+FICHA: Edicto de la Administración General de Aguas, Salta 27 de agosto de 1949.
+Juan Antonio Cornejo pide en el expediente 6813/48 reconocimiento de concesión
+para la «Fracción de la Finca Vaqueros», ubicada en Vaqueros, departamento de La
+Caldera, catastro N 205: 0,75 litros por segundo y por hectárea del Río Wierna
+para 2,6666 Has., temporal permanente. Vence el 19 de septiembre de 1949. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición); las demás,
+por texto.
+TEXTO:
+  No. 5182 —EDICTO— / En cumplimiento de lo prescripto en el Art. 350 del Código
+  de Aguas se hace saber a los interesados que se ha presentado ante esta
+  Administración General de Aguas de Salta el señor Juan Antonio Cornejo
+  solicitando en expediente No. 6813/48 reconocimiento de concesión de uso del
+  agua pública para regar su propiedad denominada "Fracción de la Finca
+  Vaqueros", ubicada en Vaqueros; departamento de La Caldera, catastro No. 205.—
+  / El reconocimiento a otorgarse sería para una dotación de 0,75 litros por
+  segundo y por hectáreas, a derivar del Río Wierna, con carácter temporal
+  permanente, para irrigar una superficie de 2,6666 Has., siempre que el caudal
+  del Río Wierna sea suficiente; en época de estiaje esta dotación se reajustará
+  proporcionalmente entre todos los regantes a medida que disminuya el caudal de
+  dicho río. / La presente publicación vence el día 19 de Setiembre de 1949,
+  citándose a las personas que se consideren afectadas por el derecho que se
+  solicita, a hacer valer su oposición dentro de los treinta días de su
+  vencimiento (Art. 351).— / Salta, 27 de Agosto de 1949 / ADMINISTRACION
+  GENERAL DE AGUAS DE SALTA
+NOTA DE LECTURA: RECALCULO: 0,75 × 2,6666 = 2,0 litros por segundo (el edicto no
+da el caudal total). La «Finca Vaqueros» de la que esta es fracción comparte
+nombre con la que expropia la Ley 1134 (catastro 141, de Manuel F. Serrey); son
+catastros distintos.
+
+A.30
+FUENTE: 3505 h13 c3 a h14 c1 (Salta, sábado 17 de septiembre de 1949); sumario
+en 3505 h2
+FICHA: Decreto N 16.917-E. Salta, septiembre 9 de 1949. Orden de Pago N 384.
+Expediente N 3024|E|1949. Aprueba y paga a «ECORM» S. R. Ltda. el certificado
+parcial N 5, $ 92.235,84, de la obra «Estación Sanitaria Tipo "A" de La
+Caldera»; retiene $ 9.223,58 (10 %) y $ 2.948,89 de reintegro de anticipos.
+Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero; el primer renglón de las
+retenciones sale cortado al pie de la imagen y la cifra se completa de la capa).
+TEXTO:
+  Decreto N° 16.917-E. / Salta, setiembre 9 de 1949 / Orden de Pago N° 384 del
+  Ministerio de Economía. / Expediente N° 3024|E|1949. (S. M. de Entradas) /
+  Visto este expediente en el que la Dirección General de Arquitectura y
+  Urbanismo, eleva para su aprobación y pago Certificado Parcial N° 5 por la
+  suma de $ 92.235.84 m|n. correspondiente a la obra "Estación Sanitaria Tipo
+  "A" de La Caldera" ejecutada por la Empresa "ECORM" S. R. Ltda.; / Por ello
+  atento a lo informado por Contaduría General de la Provincia, / El Gobernador
+  de la Provincia / D E C R E T A : / Art. 1° — Apruébase el Certificado Parcial
+  N° 5 confeccionado por Dirección General de Arquitectura y Urbanismo por la
+  suma de $ 92.235.84 (NOVENTA Y DOS MIL DOSCIENTOS TREINTA Y CINCO PESOS CON
+  OCHENTA Y CUATRO CENTAVOS M|N.), correspondiente a los trabajos ejecutados en
+  la obra "Estación Sanitaria Tipo "A" de La Caldera" por la empresa "ECORM" S.
+  R. Ltda. / Art. 2° — Previa intervención de Contaduría General de la
+  Provincia, páguese por Tesorería General a favor de la Empresa Constructora
+  "ECORM" S. R. Ltda. la suma de $ 92.235,84 (NOVENTA Y DOS MIL NOVECIENTOS
+  TREINTA Y CINCO PESOS CON OCHENTA Y CUATRO CENTAVOS MONEDA NACIONAL) en pago
+  del certificado Parcial N° 5 aprobado por el artículo anterior. / Art. 3° — El
+  gasto que demande el cumplimiento del presente Decreto, se imputará al Anexo
+  I, Inciso I, Principal c) Parcial "Estación Sanitaria Tipo "A" en La Caldera"
+  de la Ley de Presupuesto en vigor. / Art. 4° — Por Tesorería General de la
+  Provincia, se procederá a retener las siguientes sumas: / $ 9.223.58 m|n. en
+  concepto 10% garantía de obras é ingresarlos a la cuenta "Depósitos en
+  Garantía" y / $ 2.948.89 m|n. en concepto de reintegro de fondos anticipados
+  al contratista é ingresarlos a la cuenta "Valores a Regularizar, Pagos
+  anticipados, Decreto 7683|48". / Art. 5° — Comuníquese, publíquese, etc /
+  EMILIO ESPELTA / Jaime Duran / Es copia: / Pedro Saravia Cánepa / Oficial 1o.
+  de Economía, F. y Obras Públicas.
+NOTA DE LECTURA: El art. 2 dice en cifras 92.235,84 y en letras «NOVENTA Y DOS
+MIL NOVECIENTOS TREINTA Y CINCO»; el art. 1, en letras, «DOSCIENTOS»: se
+transcribe sin conciliar (E.9). RECALCULO: 10 % de 92.235,84 = 9.223,58; cierra
+con la cifra y no con la letra del art. 2.
+
+A.31
+FUENTE: 3508 h15 c1 (Salta, miércoles 21 de septiembre de 1949), aviso N 5259;
+repetido en quince ediciones, 3508 a 3522
+FICHA: Edicto de la Administración General de Aguas, Salta 20 de septiembre de
+1949. Emma Saravia de Solá y Mercedes Solá piden en el expediente 12.514|48
+reconocimiento de concesión para la «Finca San José», ubicada en Vaqueros,
+departamento de La Caldera, catastro N 19: 0,75 litros por segundo y por
+hectárea del Río Wierna para 3 Has. 3523 m2. Vence el 7 de octubre de 1949.
+Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición); las demás,
+por texto.
+TEXTO:
+  N° 5259. — EDICTO. — En cumplimiento de lo prescripto en el Art. 350 del
+  Código de Aguas se hace saber a los interesados que se han presentado ante
+  esta Administración General de Aguas las señoras Emma Saravia de Solá y
+  Mercedes Solá solicitando en expediente N° 12.514|48 reconocimiento de
+  concesión de uso del agua pública para regar su propiedad denominada "Finca
+  San José", ubicada en Vaqueros, departamento de La Caldera, catastro N°. 19. /
+  El reconocimiento a otorgarse sería para un caudal de 0.75 litros por segundo
+  y por hectotáreas [sic], a derivar del Río Wierna, para irrigar con carácter
+  temporal y permanente una superficie de 3 Has. 3523 m2., siempre que el caudal
+  del río sea suficiente en época de estiaje. Esta dotación será posible de
+  reajuste proporcionalmente entre todos los regantes a medida que disminuya el
+  caudal de dicho río. / La presente publicación vence el día 7 de octubre de
+  1949, citándose a las personas que se consideren afectadas por el derecho que
+  se solicita, a hacer valer su oposición dentro de los treinta días de su
+  vencimiento. — Salta, 20 de Setiembre de 1949.
+NOTA DE LECTURA: «San José» en Vaqueros; la mina «Caldera 1, 2 y 3» (A.9) está
+en un «lugar denominado San José» del departamento: el acto de la mina no dice
+si es el mismo lugar (E.9, no se concilia).
+
+A.32
+FUENTE: 3514 h23-h24 (Salta, miércoles 28 de septiembre de 1949), aviso N 5283;
+repetido en 3515 h17-18, 3516 h13-14, 3517 h13-14, 3518 h23-24, 3519 h15-16,
+3520 h21-22 y 3521 h19-20 (ocho apariciones, e) 28|9 al 6|10|49)
+FICHA: Decreto N 17 056-G. Salta, septiembre 22 de 1949. Convoca a elecciones
+para el domingo 27 de noviembre de 1949: Gobernador y Vicegobernador; senadores
+y diputados por departamento («LA CALDERA: Un (1) Senador titular y un (1)
+Senador suplente; un (1) Diputado titular y un (1) Diputado suplente»);
+intendentes y concejales por municipio («LA CALDERA: Un (1) Intendente, tres (3)
+Concejales titulares y tres (3) Concejales suplentes»). Cada elector de La
+Caldera vota por un senador y un diputado, y por dos concejales. Firman Emilio
+Espelta y J. Armando Caro. Clase: ELECTORAL.
+MODO DE LECTURA: imagen, 100 ppp (las dos hojas enteras de la primera
+aparición). Las otras siete, cotejadas por texto (capa), no en la imagen.
+TEXTO:
+  No. 5283.- / Decreto No. 17 056-G.- / Salta, setiembre 22 de 1949.- / Debiendo
+  tener lugar el día domingo 27 de noviembre venidero las elecciones de
+  Gobernador, Vice-Gobernador, Senadores y Diputados Provinciales, Intendente y
+  Concejales, por imperio de lo estatuído en el artículo 203, inciso b) de las
+  Disposiciones Transitorias de la Constitución de la Provincia en vigencia; y
+  con sujeción a lo dispuesto por los artículos 11, 27, 70 y 71 de la Ley N° 122
+  de Elecciones, en un todo concordante por el inciso f) del artículo precitado
+  de la Constitución, / El Gobernador de la Provincia / D E C R E T A : / Art.
+  1° — Convócase al pueblo de la Provincia para elegir Gobernador y
+  Vice-Gobernador de la Provincia el día domingo 27 de noviembre del corriente
+  año, por el período constitucional establecido en el inciso c) del artículo
+  203 (Disposiciones Transitorias) de la Constitución en vigencia. / Art. 2° —
+  Convócase al pueblo de los Departamentos que a continuación se expresan, para
+  elegir sus representantes a la Honorable Legislatura, el día domingo 27 de
+  noviembre del año en curso, de acuerdo a lo preceptuado por el inciso c) del
+  artículo 203 (Disposiciones Transitorias) de la Constitución de la Provincia,
+  en la siguiente forma: [...] LA CALDERA: Un (1) Senador titular y un (1)
+  Senador suplente; un (1) Diputado titular y un (1) Diputado suplente; [...]
+  Art. 3° — [...] Cada elector de los Departamentos de RIVADAVIA, LA CANDELARIA,
+  IRUYA, SANTA VICTORIA, LA CALDERA, CAMPO SANTO, CHICOANA, CERRILLOS, LA VIÑA,
+  GUACHIPAS, CAFAYATE, MOLINOS, SAN CARLOS, CACHI, LA POMA Y LOS ANDES, votará
+  por un (1) Senador titular y un (1) Senador suplente; por un (1) Diputado
+  titular y un (1) Diputado suplente. / Art. 4° — Convócase a los pueblos de los
+  Municipios que a continuación se detallan a elegir el día domingo 27 de
+  noviembre próximo venidero, Intendentes y Concejales, estos últimos en el
+  número que en cada caso se expresan (Artículo 176 y 177 de la Constitución de
+  la Provincia): [...] LA CALDERA: Un (1) Intendente, tres (3) Concejales
+  titulares y tres (3) Concejales suplentes; [...] Art. 5° — [...] Cada elector
+  de los Distritos Municipales de AGUARAY, ANGASTACO, ANTA — LAS LAJITAS, ANTA —
+  EL QUEBRACHAL, ANTA — JOAQUIN V. GONZALEZ, CACHI, CAFAYATE, LA CALDERA, CAMPO
+  QUIJANO, LA CANDELARIA, EL CARRIL, CERRILLOS, CHICOANA, CORONEL MOLDES,
+  EMBARCACION, EL GALPON, GUACHIPAS, IRUYA, LA MERCED, PICHANAL, MOLINOS, LA
+  POMA, RIO PIEDRAS, RIVADAVIA — Banda Norte, RIVADAVIA — Banda Sud, POTRERO
+  2da. Sec. Rosario de la Frontera, SAN ANTONIO DE LOS COBRES, SAN LORENZO,
+  (Capital), SAN CARLOS, SANTA VICTORIA, SANTA ROSA, (Orán), EL TALA, LA VIÑA,
+  URUNDEL, GENERAL ENRIQUE MOSCONI, ANTA, — APOLINARIO SARAVIA, EL BORDO (Campo
+  Santo), votará por dos (2) Concejales titulares y dos (2) Concejales
+  suplentes.- / Art. 6o. — Hágase conocer este decreto al Honorable Tribunal
+  Electoral de la Provincia, a los efectos legales consiguientes.- / Art. 7o. —
+  Circúlese, comuníquese, publíquese, en la forma prescripta por la Ley No. 122,
+  insértese en el Registro Oficial y archívese.- / EMILIO ESPELTA / J. Armando
+  Caro / Es copia: / A. N. Villada / Oficial Mayor de Gobierno, Justicia é I.
+  Pública / e) 28|9 al 6|10|49.-
+NOTA DE LECTURA: RECUENTO PROPIO: art. 2, 23 departamentos (Capital con 7
+diputados; Rosario de la Frontera, Rosario de Lerma, Metán, Anta, Orán y General
+José de San Martín con 2; los 16 del art. 3, párrafo 2, con 1). Art. 4, 44
+municipios; art. 5, 7 distritos con cuatro concejales por elector y 37 con dos:
+7 + 37 = 44, cierra con el art. 4. El acto no declara ningún número, de modo que
+no hay nada más que cotejar. En el departamento hay un solo municipio convocado,
+La Caldera: Vaqueros no figura como municipio. El art. 4 da a Campo Santo,
+Güemes, Metán, Orán y otros seis concejales titulares y el art. 5 hace votar por
+cuatro (se transcribe; E.9 no lo concilia).
+
+A.33
+FUENTE: 3520 h7 c1-c2 (Salta, miércoles 5 de octubre de 1949)
+FICHA: Decreto N 17162-E. Salta, septiembre 30 de 1949. Expedientes N 2461-A-49
+y 2907-A-49. Designa personal de la Dirección General de Arquitectura y
+Urbanismo con imputación a obras. Tres cargos se imputan a la Inspección de la
+Estación Sanitaria de La Caldera (decreto 10.241/48): Cándida Rita Poison,
+Auxiliar 6o. (Encargada Sección Compras), desde el 30 de julio; Ebe Lola Suárez,
+Ayudante Principal (Encargada de Mesa de Entradas), desde el 18 de agosto; Yone
+Mafalda Valdiviezo, Auxiliar 7o., desde el 19 de septiembre. Clase:
+CARGOS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (encabezado y los tres renglones del
+departamento, con sus vecinos); el resto de la nómina y las firmas, no
+transcriptos.
+TEXTO:
+  Decreto No. 17162-E. / Salta, setiembre 30 de 1949.- / Expedientes Nos.
+  2461-A-49 y 2907-A-49.- / Atento lo solicitadopor [sic] Dirección General de
+  Arquitectura y Urbanismo en notas de fecha 24 de agosto ppdo. y 21 de
+  setiembre en curso, / El Gobernador de la Provincia / D E C R E T A : / Art.
+  1o. — Desígnase para prestar servicio en Dirección General de Arquitectura y
+  Urbanismo, al personal que se detalla, de acuerdo a la siguiente
+  discriminación. [...] Auxiliar 6o. (Encargada Sección Compras), a la señorita
+  CANDIDA RITA POISON, a partir del día 30 de julio ppdo., con la asignación que
+  fija la Ley de Presupuesto en vigor y con imputación a la Inspección Estación
+  Sanitaria "La Caldera", Decreto N° 10.241|48. / Auxiliar 1o. (Sobreestante),
+  al señor CEFERINO MEDINA, a partir del 8 de julio ppdo., con la asignación que
+  fija la Ley de Presupuesto en vigor y con imputación a Escuela Marcos
+  Avellaneda en Metán; Decreto No. 8981-48.- / Ayudante Principal (Encargada de
+  Mesa de Entradas), a la señorita EBE LOLA SUAREZ, a partir del 18 de agosto
+  ppdo., con la asignación que fija la Ley de Presupuesto en vigor y con
+  imputación a Inspección Estación Sanitaria de "La Caldera", Decreto No.
+  10241/48.- [...] Auxiliar 7o., a la señorita YONE MAFALDA VALDIVIEZO, a partir
+  del 19 de setiembre en curso, con la asignación que fija la Ley de Presupuesto
+  en vigor y con imputación a Inspección Sanitaria de La Caldera, decreto N°
+  10241-48.- [...]
+NOTA DE LECTURA: En la capa los renglones de c1 y c2 se cruzan y parecen imputar
+a La Caldera también a Ceferino Medina y a Tilius Hannecke (hijo); en la imagen
+Medina va a la Escuela Marcos Avellaneda de Metán y Hannecke a Orán, Santa
+Victoria y Rosario de la Frontera (E.5, E.7). El decreto 10.241/48 (inspección
+de la obra) no está en el corpus (E.3). RECUENTO PROPIO: tres cargos del
+departamento; el decreto no declara número de designados.
+
+A.34
+FUENTE: 3524 h19 c2 (Salta, lunes 10 de octubre de 1949), aviso N 5313; repetido
+en quince ediciones, 3524 a 3538
+FICHA: Edicto de la Administración General de Aguas. Isaac Fernández pide en el
+expediente 1157/47 reconocimiento de derecho al uso del agua pública para «Campo
+Alegre», en el departamento de La Caldera: 0,75 litros por segundo y por
+hectárea del Río Santa Rufina para 20 hectáreas. Vence el 28 de octubre de 1949.
+Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto hasta el vencimiento); fecha y cierre,
+no leídos.
+TEXTO:
+  No. 5313 — EDICTO.— / En cumplimiento de lo prescripto en el Art. 350 del
+  Código de Aguas, se hace saber a los interesados que se ha presentado ante
+  esta Adminstración General de Aguas el señor Isaac Fernandez solicitando en
+  expediente No. 1157/47 reconocimiento de derecho al uso del agua pública para
+  regar su propiedad denominada "Campo Alegre", ubicada en el departamento de La
+  Caldera. / El reconocimiento a otorgarse sería para una dotación de agua
+  proveniente del Río Santa Rufina equivalente a 0,75 litros por segundo y por
+  hectárea, para irrigar con carácter temporal y permanente una superficie de 20
+  hectáreas, siempre que el caudal de dicho río sea suficiente, En época de
+  estiaje esta dotación se reajustará proporcionalmente entre todos los regantes
+  a medida que disminuya el caudal del Río Santa Rufina. / La presente
+  publicación vence el día 28 de Octubre de 1949, citándose a las personas [...]
+NOTA DE LECTURA: «Isa- / ac» partido en fin de renglón; la capa lee «Isaen» en
+otras apariciones. RECALCULO: 0,75 × 20 = 15 litros por segundo. «Campo Alegre»
+y «Santa Rufina» figuran en el circuito electoral del departamento (A.39).
+
+A.35
+FUENTE: 3526 h5 c1 (Salta, jueves 13 de octubre de 1949)
+FICHA: Decreto N 17287-A. Salta, octubre 6 de 1949. Expediente N 11.514-49.
+Traslada a Odilón Santiago Aguirre, enfermero en Vaqueros (provisoriamente en
+Pampa Grande), a la Asistencia Pública; a «Arminda Fuentes de Lamberto»,
+enfermera de La Caldera, a enfermera en Vaqueros; y a Rosa Alvarado, enfermera
+en San Antonio de los Cobres, a enfermera en La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp (arts. 1 a 5); el resto del decreto (nómina del
+art. 5 y firmas), no leído.
+TEXTO:
+  Decreto No. 17287-A. / Salta, octubre 6 de 1949. / Expediente No. 11.514-49. /
+  Visto la Resolución No. 301 de la Dirección Provincial de Sanidad y atento a
+  lo solicitado en la misma, / El Gobernador de la Provincia / D E C R E T A : /
+  Art. 1o. — Trasládase al actual Auxiliar 4o. —Enfermero en Vaqueros—
+  (Provisoriamente en Pampa Grande), don ODILON SANTIAGO AGUIRRE, al cargo de
+  Auxiliar 4o. —Enfermero adscripto a la Asistencia Pública— vacante por
+  creación del mismo. / Art. 2o. — Trasládase a la actual Auxiliar 4o.
+  —Enfermera de La Caldera— señora ARMINDA FUENTES DE LAMBERTO, al cargo de
+  Auxiliar 4o. —Enfermera en Vaqueros—, vacante por traslado del anterior
+  titular. / Art. 3o. — Trasládase a la actual Auxiliar 3o. —Enfermera en San
+  Antonio de los Cobres— señorita ROSA ALVARADO, al cargo de Auxiliar 4o.
+  —Enfermera en La Caldera—, en la vacante por traslado de la anterior titular.
+  / Art. 4o. — Trasládase a la actual Auxiliar 2o. —Enfermera en San José de
+  Orquera (Metán)—, señorita FRANCISCA MARTIN, al cargo de Auxiliar 2o. en
+  Tolombón (Cafayate) en la vacante por creación del mismo. / Art. 5o. —
+  Nómbrase al siguiente personal para prestar servicios en diversas dependencias
+  de la campaña, de la Dirección Provincial de Sanidad, con las remuneraciones
+  mensuales que para los respectivos cargos fija el Presupuesto vigente de la
+  citada repartición: [...]
+NOTA DE LECTURA: La enfermera se llama aquí «Arminda Fuentes de Lamberto»; en
+A.3 y A.15, «Arminda Funes de Lamberto». Se transcribe; es la misma persona por
+el cargo (INFERENCIA por el cargo y el lugar, no por el nombre). Se agrega la
+variante al config. El enfermero de Vaqueros estaba «provisoriamente en Pampa
+Grande»: el decreto no dice desde cuándo. La nómina del art. 5 no se miró en la
+imagen.
+
+A.36
+FUENTE: 3536 h5 c2 (Salta, jueves 27 de octubre de 1949)
+FICHA: Ley N 1134. Sancionada el 26 de septiembre de 1949; promulgada por el
+Ministerio de Economía, Finanzas y Obras Públicas el 21 de octubre de 1949.
+Declara de utilidad pública y sujeta a expropiación la finca «Vaqueros», del
+Departamento de La Caldera, de propiedad de don Manuel F. Serrey, catastro 141,
+avaluada en $ 300.000; las tierras se adjudicarán con preferencia a los
+agricultores que la ocupan y trabajan. Clase: DOMINIO+NORMA.
+MODO DE LECTURA: imagen, 200 ppp (ley entera, cabecera y firmas).
+TEXTO:
+  LEY N° 1134 / POR CUANTO: / EL SENADO Y LA CAMARA DE DIPUTADOS DE LA PROVINCIA
+  DE SALTA, SANCIONAN CON FUERZA DE / L E Y: / Artículo 1° — Declárase de
+  utilidad pública y sujeta a expropiación la finca denominada "Vaqueros",
+  ubicada en el Departamento de La Caldera de propiedad de don Manuel F. Serrey,
+  catastrada a los efectos del pago de la contribución territorial bajo el
+  número 141 y avaluada en trescientos mil pesos moneda nacional ($ 300.000.—
+  m|n.), y comprendida dentro de los límites siguientes: Norte, con el Río
+  Wierna y parte de la finca "Las Mesadas"; Sud, con propiedades que fueron de
+  Nicolás Arias Murua, Sulvano [sic] Murúa y Rafael López, hoy de Francisco
+  Urquiza, Nicolás Vico Gimena y Guillermo Schaeffer respectivamente; Este, con
+  parte del Río de La Caldera y el resto con propiedades pertenecientes a
+  Nicolás Vico Gimena, sucesión de Guillermo Villanueva, Julio Zambrano y Carlos
+  Outes; Oeste, con las Cumbres del Cerro Buena Vista. / Art. 2° — Las tierras
+  que se expropian en virtud de esta Ley, serán adjudicadas con preferencia, a
+  los agricultores que actualmente los ocupan y trabajan, dejándose establecido
+  que, el precio de venta no podrá ser mayor que el de la expropiación y los
+  gastos originados por la misma. / Art. 3° — El gasto que demande el
+  cumplimiento de la presente Ley se hará de Rentas Generales con imputación a
+  la misma y con cargo de oportuno reembolso. / Art. 4° — El Poder Ejecutivo
+  reglamentará la presente Ley. / Art. 5° — Comuníquese, etc. / Dada en la Sala
+  de Sesiones de la Honorable Legislatura de la Provincia de Salta, a los
+  veintiseis días del mes de septiembre de mil novecientos cuarenta y nueve. /
+  JUAN D. GAETAN / Vicepresidente 1° / JUAN A. AVELLANEDA / Presidente en
+  ejercicio / Meyer Abramovich / Secretario / Alberto A. Díaz / Secretario / POR
+  TANTO: / MINISTERIO DE ECONOMIA, FINANZAS Y OBRAS PUBLICAS / Salta, octubre 21
+  de 1949. / Téngase por Ley de la Provincia, cúmplase, comuníquese, publíquese,
+  insértese en el Registro Oficial de Leyes y archívese. / EMILIO ESPELTA /
+  Jaime Duran / Es copia: / Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y
+  Obras Públicas.
+NOTA DE LECTURA: RECUENTO PROPIO de linderos: Norte 2 (Río Wierna, parte de «Las
+Mesadas»); Sud 3 personas de antes y 3 de hoy, puestas en correspondencia
+«respectivamente»; Este 1 río y 4 titulares (Vico Gimena, sucesión Villanueva,
+Zambrano, Outes); Oeste 1. El acto no declara número. «Sulvano Murúa»: así en la
+imagen, con el apellido borroso; la capa lee «Sulvano Mur.á» [sic, se
+transcribe]. «los ocupan»: así, en masculino, por «las tierras». La ley no dice
+cuántos son los agricultores ni los nombra. El sumario de 3536 h2 lo registra;
+la quinta pasada lo halló en la capa con las palabras pegadas
+(«vaqueroslacaldera»), sin mirarlo en la imagen (E.7).
+
+A.37
+FUENTE: 3536 h8 c3 a h9 (Salta, jueves 27 de octubre de 1949)
+FICHA: Decreto N 17427-E. Salta, octubre 21 de 1949. Expediente N 3455-C-49.
+Aprueba los índices básicos para distribuir a las Municipalidades el 20 % de la
+Contribución Territorial en 1949 (art. 50 de la Ley 833), según lo recaudado por
+cada una en el ejercicio 1948. Renglón 30, La Caldera: recaudación $ 3.894,08;
+porcentaje 0,115. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen: hoja 9 entera a 100 ppp y el renglón 27 a 300 ppp;
+encabezado y considerando, de la capa.
+TEXTO:
+  Decreto N° 17427-E. / Salta, octubre 21 de 1949. / Expediente N° 3455-C-49
+  (Sub Mesa de Entradas). / Visto este expediente por el que Contaduría General
+  de la Provincia, eleva a los efectos de su aprobación los índices básicos para
+  la distribución a las Municipalidades de la Provincia del 20% del producido de
+  Contribución Territorial elaborados de conformidad a lo dispuesto por el
+  artículo 50 de la Ley N° 833, para el año 1949; y, / CONSIDERANDO: / Que los
+  índices precitados han sido elaborados en base a la información suministrada
+  recientemente por los Municipios de la Provincia y en cuanto a los que así no
+  lo hicieron se han tenido en cuenta los datos de años anteriores; [...] N°
+  Municipalidades — Recaud. Ejerc. 1948 — Porcentaje / 1 Salta — Capital
+  1.888.037.15 55.847 [...] 29 Coronel Moldes 7.826.— 0.231 / 30 La Caldera
+  3.894.08 0.115 / 31 Cachi 3.305.69 0.098 [...] 45 Rivadavia Banda Sur 1.773.20
+  0.052 / S u m a s . . . 3.380.749.— 100,000 / a)— c)— d)— e)— g)— h)— "Según
+  Ejercicio 1947" / b)— f)— "Según Ejercicio 1946" / Art. 2° — Comuníquese,
+  publíquese, etc. / ESPELTA / JAIME DURAN
+NOTA DE LECTURA: RECUENTO PROPIO: 45 renglones. RECALCULO: la recaudación suma
+3.380.749,00 y cierra con «Sumas»; los porcentajes suman 100,000 y cierran.
+3.894,08 / 3.380.749 = 0,115 %: el índice de La Caldera se deriva de su
+recaudación. La Caldera no lleva llamada: su dato es del ejercicio 1948 (las
+llamadas a) a h) marcan los municipios con datos de 1947 o 1946).
+
+A.38
+FUENTE: 3536 h9 c1 a h10 (Salta, jueves 27 de octubre de 1949)
+FICHA: Decreto N 17428-E. Salta, octubre 21 de 1949. Expediente N 3455-C-49.
+Aprueba los índices básicos para distribuir a los Municipios el 10 % de los
+impuestos a los Réditos, Ventas, Ganancias Eventuales y Beneficios
+Extraordinarios en 1949 (art. 2 de la Ley 990 del 8 de octubre de 1948). La
+Caldera: 0,975 (35 % según gastos ordinarios, en razón inversa), 0,1107 (35 %
+según gastos ordinarios 1948), 0,115 (35 % según recursos propios) y 2,5151 (20
+% en razón inversa a la población). Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen: hoja 10 entera a 100 ppp y columnas 2 a 4 a 170 ppp;
+encabezado, de la capa y de la hoja 9 a 100 ppp.
+TEXTO:
+  Decreto N° 17428-E. / Salta, octubre 21 de 1949. / Expediente N° 3455-C-49
+  (Sub Meza de Entradas). / Visto este expediente en el que Contaduría General
+  de la Provincia, eleva a los efectos de su aprobación, planilla con los
+  índices básicos para la distribución a las Municipalidades de la Provincia del
+  10% del producido de Impuestos a los Réditos, Ventas, Ganancias Eventuales y
+  Beneficios Extraordinarios elaborados de conformidad a lo dispuesto por el
+  artículo 2° de la Ley N° 990 del 8 de octubre de 1948 para el año 1949; y,
+  [...] Art. 1° — Apruébanse los índices básicos confeccionados por Contaduría
+  General de la Provincia para la distribución a los Municipios de la Provincia
+  del 10% del producido de Impuestos a los Réditos, Ventas, Ganancias Eventuales
+  y Beneficios Extraordinarios elaborados de conformidad a lo dispuesto por el
+  artículo 2° de la Ley N° 990 para el año 1949, a saber: [...] 27 San Lorenzo
+  0.943 0.3131 0.389 2.6077 [...] 30 La Caldera 0.975 0.1107 0.115 2.5151 [...]
+  100.— 100.— 100.— 100.— / Art. 2° — Comuníquese, publíquese, etc. / EMILIO
+  ESPELTA / Jaime Duran
+NOTA DE LECTURA: RECUENTO PROPIO: 45 renglones. RECALCULO: la primera columna
+suma 100,000; la segunda 100,0000 y la cuarta 100,0000 leídas a 170 ppp (a 100
+ppp se habían leído 0.0803 por 0.0603 en Guachipas y 1.0683 por 1.0883 en El
+Quebrachal, y ninguna de las dos cerraba). La tercera, «recursos propios», copia
+los porcentajes del 17427-E salvo San Lorenzo: 0.389 aquí, 0.339 allí (mirado a
+300 ppp); con 0.389 la columna suma 100,05 y no cierra; con 0.339, sí (E.8,
+E.9). La Caldera recibe en la cuarta columna más que 26 municipios: el 20 % se
+reparte en razón inversa a la población (INFERENCIA de la fórmula del
+encabezado).
+
+A.39
+FUENTE: 3538 h14 a h19; el tramo del departamento en 3538 h17 c1 (Salta, sábado
+29 de octubre de 1949), aviso N 5386; repetido en 3539 h23, 3540 h25, 3541 h26,
+3542 h17, 3543 h23, 3544 h26 y 3545 h32 (ocho apariciones del tramo)
+FICHA: Decreto N 17.484-G. Salta, octubre 26 de 1949. Designa las mesas
+receptoras de votos y sus circuitos para las elecciones del 27 de noviembre
+(convocadas por el decreto 17.056). Colegio Electoral N 2, La Caldera: Circuito
+5, mesa 1 (Escuela Elemental Mixta, La Caldera), mesa 2 (Iglesia Parroquial, La
+Caldera) y mesa 3 (Escuela Elemental Mixta, igual circuito que la 1); Circuito
+6, mesa 1 (Escuela Infantil Provincial, Vaqueros) y mesa 2 (Hogar Agrícola «San
+Cayetano», Vaqueros). Clase: ELECTORAL.
+MODO DE LECTURA: imagen, 130-170 ppp (encabezado del decreto en h14; el tramo
+del Colegio 2 entero en h17 c1, con el cierre del Colegio 1 y el comienzo del
+3). Firmas del decreto, no localizadas. Las siete repeticiones, cotejadas por
+texto.
+TEXTO:
+  No 5386 — MESAS RECEPTORAS DE VOTOS Y SUS CIRCUITOS / Decreto N° 17.484-G. /
+  Salta, Octubre 26 de 1949. / MINISTERIO DE GOBIERNO, JUSTICIA E INSTRUCCION
+  PUBLICA / Debiendo designarse el lugar en que funcionarán las mesas receptoras
+  de votos y sus circuitos en las próximas elecciones para Gobernador,
+  Vice-Gobernador, Senadores y Diputados Provinciales, Intendentes y Concejales,
+  que se realizarán el día domingo 27 de noviembre próximo; de conformidad al
+  decreto de convocatoria N° 17.056, de fecha 22 de setiembre ppdo., y con
+  sujeción a los artículos 29, 30 y 31 del Capítulo 6° de la Ley de Elecciones
+  de la Provincia; / Por consiguiente ejerciendo la facultad que al Poder
+  Ejecutivo otorga la Constitución y la Ley de Elecciones precitada, [...]
+  COLEGIO ELECTORAL N° 2. — LA CALDERA / CIRCUITO N° 5 / MESA N° 1. — Escuela
+  Elemental Mixta, La Caldera. Circuito: Calderilla, Chalchanio, Helvecia,
+  Getsemani, Peñones, Potrero de Castilla, Pueblo, San Alejo y Severino. / MESA
+  N° 2. — En la Iglesia Parroquial, La Caldera. Circuito: Abra de la Sierra,
+  Acheral, Angosto (el), Angosto de Arrieta, Angostura, Bordo (el), Calderilla.
+  Campo Alegre, Cañada Ancha, Corral de Barranca, Churcal, Chusos (los),
+  Despensa, Despensilla, Higueritas, Potrero de Gallinato, Lagunas (las), Matos
+  (los), Mesada, Montes de las Garrapatas, Mosquera, Nogalito, Potrero de
+  Valencia, Porongos (los), Quesería, Santa Gertrudis, Santa Rufina, Sauces
+  (los), Sierra (la), Wierna y Yacones. / MESA N° 3. — Escuela Elemental Mixta,
+  La Caldera. Circuito: Igual al de la mesa N° 1. / CIRCUITO N° 6. / MESA N° 1.
+  — Escuela Infantil Provincial, Vaqueros. Circuito: Entre Ríos, Estación F. C.
+  Nacional General Belgrano, Mojotoro, Lesser, Túnel (el), Vaqueros, Villa
+  Urquiza. / Mesa N° 2. — Hogar Agrícola "San Cayetano", Vaqueros. Igual
+  Jurisdicción que mesa N° 1. / COLEGIO ELECTORAL N° 3. — CAMPO SANTO [...]
+NOTA DE LECTURA: RECUENTO PROPIO: Circuito 5, mesa 1: 9 parajes; mesa 2: 31 (30
+a 32: «Montes de las Garrapatas» tiene cuatro palabras y se marca como posible
+nombre pegado, v16 §4.1bis; «Calderilla» va seguida de punto y no de coma).
+«Calderilla» está en las dos mesas: 39 a 40 parajes distintos en el circuito 5.
+Circuito 6: 7 lugares («Estación F. C. Nacional General Belgrano» es uno). El
+acto no declara ningún número. El decreto pone Mojotoro, Lesser, Entre Ríos,
+Villa Urquiza y la estación del ferrocarril en el circuito de Vaqueros, dentro
+del Colegio Electoral de La Caldera (v16 §5.1ter: la atribución la hace el
+acto). «Getsemani» sin tilde, «Quesería» con tilde, «Montes» en plural. Nombres
+nuevos para el anillo 2: «estacion f. c. nacional general belgrano», «tunel»,
+«matos», «montes de las garrapatas», «potrero de castilla» (ya estaba), «hogar
+agricola san cayetano» (ya estaba).
+
+A.40
+FUENTE: 3540 h10 c1-c2 (Salta, miércoles 2 de noviembre de 1949)
+FICHA: Decreto N 17.557-G. Salta, octubre 28 de 1949. Expediente N 7304|49.
+Concede aquiescencia al Consejo Nacional de Educación para instalar una escuela
+de la Ley Nacional 4874 en la localidad de Mojotoro (Departamento de La
+Caldera). Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp (decreto entero).
+TEXTO:
+  Decreto N° 17.557-G. / Salta, octubre 28 de 1949. / Expediente N° 7304|49. /
+  Visto este expediente en el cual la Inspección de Escuelas Nacionales en
+  Salta, solicita la correspondiente aquiescencia de este Gobierno para la
+  creación de una escuela nacional de la Ley N° 4874 en la localidad denominada
+  "Mojotoro" (Departamento de La Caldera); atento el informe respectivo del H.
+  Consejo General de Educación y no Existiendo inconveniente alguno para acordar
+  lo solicitado, / El Gobernador de la Provincia / D E C R E T A : / Art. 1° —
+  Concédese aquiescencia al HONORABLE CONSEJO NACIONAL DE EDUCACION para
+  instalar una escuela de la Ley Nacional N° 4874 en la localidad de MOJOTORO
+  (Departamento de La Caldera) de esta Provincia. / Art. 2.o — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. / EMILIO ESPELTA /
+  J. Armando Caro / Es copia: / A. N. Villada / Oficial Mayor de Gobierno,
+  Justicia é I. Pública
+NOTA DE LECTURA: La capa numeraba el decreto «17.515-e»; la imagen dice
+17.557-G. El acto atribuye Mojotoro a La Caldera (como A.39, circuito 6), a
+diferencia del contrato de enero que pone un Mojotoro en Campo Santo (A.2; E.9).
+
+A.41
+FUENTE: 3547 h10 c1 (Salta, jueves 10 de noviembre de 1949); sumario en 3547 h2
+FICHA: Decreto N 17679-E. Salta, noviembre 4 de 1949. Orden de Pago N 469.
+Expediente N 3460-E-949. Aprueba y paga a Ecorm S. R. Ltda. el certificado N 6,
+$ 18.497,36, de la obra «Estación Sanitaria Tipo A de La Caldera», y retiene $
+1.849,74 de garantía. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150-200 ppp (decreto entero).
+TEXTO:
+  Decreto N° 17679-E. / Salta, noviembre 4 de 1949. / Orden de Pago N° 469, del
+  Ministerio de Economía. / Expediente N° 3460-E-949. / Visto este expediente
+  por el que Dirección General de Arquitectura y Urbanismo eleva a consideración
+  y aprobación del Poder Ejecutivo el certificado N° 6 de la obra "Estación
+  Sanitaria Tipo A de La Caldera", por trabajos ejecutados por la Empresa
+  Constructora Ecorm S. R. Ltda., cuyo importe asciende a la suma de $
+  18.497,36; / Por ello y atento lo informado por Contaduría General de la
+  Provincia, / El Gobernador de la Provincia / D E C R E T A : / Art. 1° —
+  Apruébase el certificado N° 6 de la obra "Estación Sanitaria Tipo A. de La
+  Caldera", extendida por Dirección General de Arquitectura y Urbanismo a favor
+  de la Empresa Constructora Ecorm S. R. Ltda. / Art. 2° — Previa intervención
+  de Contaduría General de la Provincia, páguese por Tesorería General a favor
+  de la Empresa Constructora ECORM S. R. LTDA., la suma de $ 18.497.36 m|n.
+  (Diez y ocho mil cuatrocientos noventa y siete pesos con 36|100 m|n.), importe
+  del certificado N° 6 aprobado por el artículo que antecede. / Art. 3° — Por
+  Tesorería General y en oportunidad de hacerse efectivo el importe citado
+  precedentemente, se retendrá en concepto de garantía la suma d $ 1.849.74 (un
+  mil ochocientos cuarenta y nueve pesos con 74|100 m|n.) que ingresará con
+  crédito a la cuenta especial "Depósitos en Garantía". / Art. 4° — El importe
+  que se dispone liquidar por el artículo 2° del presente decreto se imputará al
+  Anexo I, Inciso 1, Principal c) Edificación Sanitaria, Parcial "Estaciones
+  Sanitarias Tipo A en La Caldera", de la Ley de Presupuesto en vigor. / Art. 5°
+  — Comuníquese, publíquese, etc. / EMILIO ESPELTA / Jaime Duran / Es copia: /
+  Pedro Saravia Cánepa / Oficial 1o. de Economía, F. y Obras Públicas.
+NOTA DE LECTURA: RECALCULO: 10 % de 18.497,36 = 1.849,74; cierra. Serie de la
+obra en 1949 (A.6, A.16, A.25, A.26, A.30 y ésta): seis certificados publicados,
+27.024,10 + 29.506,92 + 28.492,86 + 31.663,53 + 92.235,84 + 18.497,36 =
+227.420,61. El anticipo del 25 % (A.4) supone una obra de 227.428,16: la
+diferencia es de 7,55 (INFERENCIA; el monto adjudicado no está en el corpus).
+Este certificado no se llama «final»; no se buscó en el corpus la recepción de
+la obra fuera de las pasadas (E.3).
+
+A.42
+FUENTE: 3555 h14 c2 (Salta, sábado 19 de noviembre de 1949), aviso N 5447;
+repetido en quince ediciones, 3555 a 3569 (e) 19|11 al 6|12|49)
+FICHA: Edicto de la Administración General de Aguas, noviembre de 1949. Marcos
+Abraham Gutierrez pide en el expediente 2544-48 reconocimiento de concesión para
+su propiedad (terreno y casa) ubicada en La Caldera, departamento homónimo: 0,75
+litros por segundo y por hectárea del Río La Caldera para 2 Has. 3864 m2. Vence
+el 6 de diciembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición); las demás,
+por texto.
+TEXTO:
+  N° 5447 — EDICTO / En cumplimiento del Art. 350 del Código de Aguas, se hace
+  saber a los interesados que se ha presentado ante esta Administración General
+  de Aguas el señor Marcos Abraham Gutierrez solicitando en expediente N°
+  2544-48 reconocimiento de concesión de agua pública para regar su propiedad
+  (terreno y casa); ubicada en La Caldera, departamento homónimo. / El
+  reconocimiento a otorgarse sería para una dotación proveniente del Río La
+  Caldera equivalente a 0,75 litros por segundo y por hectárea, para irrigar con
+  carácter temporal y permanente un superficie de 2 Has. 3864 m2. siempre que el
+  caudal del Río La Caldera sea suficiente. En época de estiaje esta dotación se
+  reajustaría proporcionalmente entre todos los regantes a medida que disminuya
+  el caudal del río. / La presente publicación vence el día 6 de Diciembre de
+  1949, citándose a las personas que se consideren afectadas por el derecho que
+  se solicita, a hacer valer su oposición dentro de los treinta días de su
+  vencimiento. / Salta, noviembre de 1949. / ADMINISTRACION GENERAL DE AGUAS DE
+  SALTA. / e) 19|11 al 6|12|49.
+NOTA DE LECTURA: «Salta, noviembre de 1949», sin día. «un superficie» [sic].
+
+A.43
+FUENTE: 3557 h10 c3 a h11 c1 (Salta, martes 22 de noviembre de 1949), aviso N
+5453; repetido en quince ediciones, 3557 a 3571 (e) 22|11 al 9|12|49)
+FICHA: Edicto de la Administración General de Aguas, Salta 21 de noviembre de
+1949. Carlos y Manuel Serrey piden en el expediente 4450-47 reconocimiento de
+concesión para «Sauzal o Curuzú», en Vaqueros, departamento de La Caldera: 0,75
+litros por segundo y por hectárea del Río Wierna, permanente y a perpetuidad,
+para 30 has. Vence el 9 de diciembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición); las demás,
+por texto.
+TEXTO:
+  N° 5453. — EDICTO / En cumplimiento del Art. 350 del Código de Aguas, se hace
+  saber a los interesados que se han presentado ante esta Administración General
+  de Aguas los señores Carlos y Manuel Serrey solicitando en expediente N°.
+  4450-47 reconocimiento de concesión de agua pública para regar su propiedad
+  denominada "Sauzal o curuzu", ugicada [sic] en Vaquedos [sic], departamento de
+  La Caldera. / El reconocimiento a otorgarse sería para una dotación de agua
+  proveniente del Río Wierna equivalente a 0,75 litros por segundo y por
+  hactárea [sic], para irrigar con carácter permanente y a perpetuidad una
+  superficie de 30 has, siempre que el caudal de dicho río sea suficiente. En
+  época de estiaje esta dotación se reajustaría proporcionalmente entre todos lo
+  regantes del Río Wierna. / La presente publicación vence el día 9 de diciembre
+  de 1949, citándose a las personas que se consideren afectadas por el derecho
+  que se solicita a hacer valer su oposición dentro de los treinta días de su
+  vencimiento. / Salta, noviembre 21 de 1949. / Administración General de Aguas
+  de Salta / e|22|11 al 9|12|49.
+NOTA DE LECTURA: Tres erratas en un renglón: «ugicada», «Vaquedos», «hactárea»
+[sic] (E.9); algunas apariciones posteriores corrigen «Vaqueros» (capa).
+RECALCULO: 0,75 × 30 = 22,5 litros por segundo, la mayor dotación pedida en el
+año en el departamento (sobre los once edictos de aguas del §A; superlativo de
+corpus, no del departamento).
+
+A.44
+FUENTE: 3557 h10 c3 (Salta, martes 22 de noviembre de 1949), aviso N 5454;
+repetido en quince ediciones, 3557 a 3571 (e) 22|11 al 9|12|49)
+FICHA: Edicto de la Administración General de Aguas, Salta 21 de noviembre de
+1949. El doctor Luis Linares pide en el expediente 2985/47 reconocimiento de
+concesión para «Santa Mónica y Quitilipe», en el departamento de La Caldera:
+0,75 litros por segundo y por hectárea del Río La Caldera, permanente y a
+perpetuidad, para 16 Has. Vence el 9 de diciembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, primera aparición, con tinta
+corrida en la mitad superior); las demás, por texto.
+TEXTO:
+  N° 5454 — EDICTO / En cumplimiento del Art. 350 del Código de Aguas, se hace
+  saber a los interesados que se ha presentado ante esta Administración General
+  de Aguas el doctor Luis Linares solicitando en expediente N° 2985/47
+  reconocimiento de concesión de agua pública para regar su propiedad denominada
+  "Santa Mónica y Quitilipe", ubicada en el departamento de La Caldera. / El
+  reconocimiento a otorgarse sería para una dotación de agua proveniente del Río
+  La Caldera equivalente a 0,75 litros por segundo y por hectárea, para irrigar
+  con carácter permanente y a perpetuidad una superficie de 16 Has. siempre que
+  el caudal de dicho río sea suficiente. En época de estiaje esta dotación se
+  reajustaría proporcionalmente entre todos los regantes a medida que disminuya
+  el caudal del Río La Caldera. / La presente publicación vence el día 9 de
+  diciembre de 1949, citándose a las personas que se consideren afectadas por el
+  derecho que se solicita a hacer valer su oposición dentro de los treinta días
+  de su vencimiento. / Salta, 21 de noviembre de 1949. / Administración General
+  de Aguas de Salta / e|22|11 al 9|12|49.
+NOTA DE LECTURA: RECALCULO: 0,75 × 16 = 12 litros por segundo. En 3569 h22 la
+capa trae «del rio arenales» junto a este edicto: es otro aviso de la columna
+vecina (E.5). «Quitilipe» está en el anillo 2.
+
+A.45
+FUENTE: 3561 h14 c2 (Salta, sábado 26 de noviembre de 1949)
+FICHA: Decreto N 17986-E. Salta, noviembre 19 de 1949. Expediente N 3650-C-949.
+Autoriza recargos por fletes en la venta de artículos de primera necesidad en
+las localidades del interior. En el inciso a) (mismos precios que la Capital
+para almacén) figuran Mojotoro y Betania; en el inciso b) ($ 0,05 sobre avena,
+alcohol, dulce de membrillo, fideos, sémola, yerba, arroz, agua lavandina y
+vinos) figura «La Caldera», entre Tipal y La Viña. Clase: NORMA.
+MODO DE LECTURA: imagen, 150-170 ppp (encabezado, art. 1 incisos a, b, c y el
+final de d y e). Arts. siguientes y firmas, no leídos.
+TEXTO:
+  Decreto N° 17986-E. / Salta, noviembre 19 de 1949. / Expediente N° 3650-C-949.
+  (S. M. de Entradas). / Visto este expediente en el que Dirección General de
+  Comercio e Industrias hace conocer el informe del H. Consejo Mixto de
+  Asesoramiento en Abastecimientos y Precios relativo al costo de los fletes de
+  los artículos de primera necesidad de las distintas localidades del interior
+  de la Provincia, a fin de determinar el recargo que por tal concepto debe
+  autorizarse en la venta de los mismos sobre los precios fijados para esta
+  Ciudad; / Por ello y atento a lo aconsejado por la citada Repartición, / El
+  Gobernador de la Provincia / D E C R E T A : / Art. 1° — Autorízase el recargo
+  en la venta de los artículos de primera necesidad en las distintas localidades
+  del interior de la Provincia, de la siguiente manera: / a) En Cerrillos,
+  Rosario de Lerma, Campo Quijano, La Silleta, Río Blanco, La Merced, El Carril,
+  Chicoana, Mojotoro, Betania, Campo Santo, Güemes, Cabeza del Buey, Palomitas,
+  Las Mesitas, Cruz Quemada, Virgilio Tedín, Juramento, Lumbreras, Río Piedras,
+  Schneidewin, Metán, Yatasto, Horcones, Rosario de la Frontera, Los Mogotes, y
+  Ruiz de los Llanos, regirán los mismos precios para las mercaderías generales
+  de almacén que estén en vigencia en la Ciudad de Salta. / b) En Coronel
+  Moldes, Osma, Ampascachi, Pulares, La Calavera, El Mollar, Tipal, La Caldera,
+  La Viña, Cámara, El Prado, La Maroma, Santa Ana, Escoipe, Guachipas y San
+  Lorenzo. $ 0.05 (Cinco centavos m|n.) sobre los precios que rijan para la
+  ciudad de Salta, en los siguientes artículos: avena arrollada, alcohol
+  desnaturalizado, dulce de membrillo, fideos, sémola, yerba, arroz, agua
+  lavandina y vinos. / c) En Cafayate, San Carlos, Animaná y Tolombón, autorizar
+  un recargo de $ 0.05 (cinco centavos m|n.) por kilo o litro sobre los precios
+  de la ciudad de Salta en todos los artículos de almacén. [...]
+NOTA DE LECTURA: RECUENTO PROPIO: inciso a) 27 localidades; inciso b) 16. El
+acto no declara número. El acto no dice de qué departamento es la «La Caldera»
+del inciso b): va entre localidades del valle de Lerma y de La Viña (Tipal, La
+Viña), y Vaqueros no figura en ningún inciso leído. Jurisdicción indeterminada
+(v16 §5.1ter). Mojotoro y Betania van con el precio de la Capital, sin
+departamento.
+
+A.46
+FUENTE: 3564 h20 c1 (Salta, miércoles 30 de noviembre de 1949), aviso N 5486;
+repetido en quince ediciones, 3564 a 3578 (e) 30|11 al 17|12|49)
+FICHA: Edicto de la Administración General de Aguas, Salta 29 de noviembre de
+1949. Aquiles Casale pide en el expediente 6713-47 reconocimiento de derecho al
+uso del agua pública para «Fracción de Vaqueros», en el departamento de La
+Caldera: 0,75 litros por segundo y por hectárea del Río Wierna para 2,1657 Has.
+Vence el 17 de diciembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero, borde derecho cortado; finales
+de renglón de la capa).
+TEXTO:
+  N° 5486 — EDICTO / En cumplimiento de lo prescripto en el Art. 350 del Código
+  de Aguas, se hace saber a los interesados que se ha presentado ante esta
+  Administración General de Aguas el señor Aquiles Casale solicitando en
+  expediente N° 6713-47 reconocimiento de derecho al uso de agua pública para
+  regar su propiedad denominada "Fracción de Vaqueros", ubicada en el
+  departamento de La Caldera. / El reconocimiento a otorgarse sería para una
+  dotación de agua proveniente del Río Wierna equivalente a 0,75 litros por
+  segundo y por hectárea, para irrigar con carácter temporal y permanente una
+  superficie de 2,1657 Has., siempre que el caudal de dicho río sea suficiente.
+  En época de estiaje esta dotación se reajustará proporcionalmente entre todos
+  los regantes a medida que disminuya en caudal del Río Wierna. / La presente
+  publicación vence el día 17 de Diciembre de 1949, citándose a las personas que
+  se consideren afectadas por el derecho que se solicita, a hacer valer su
+  oposición dentro de los treinta días de su vencimiento (Art. 351). / Salta,
+  noviembre 29 de 1949. / ADMINISTRACION GENERAL DE AGUAS DE SALTA / e) 30|11 al
+  17|12|49
+NOTA DE LECTURA: No dice catastro. «disminuya en caudal» [sic].
+
+A.47
+FUENTE: 3571 h19 c3 a h20 c1 (Salta, viernes 9 de diciembre de 1949), aviso N
+5523; repetido en quince ediciones, 3571 a 3585 (e) 9 al 26|12|49)
+FICHA: Edicto de la Administración General de Aguas, Salta 9 de diciembre de
+1949. Lorenza Lozano pide en el expediente 4223|48 reconocimiento de derecho al
+uso del agua pública para «El Porvenir», en La Calderilla, departamento de La
+Caldera: 0,75 litros por segundo y por hectárea del Río La Caldera, permanente y
+a perpetuidad, para 2 Has. Vence el 26 de diciembre de 1949. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero).
+TEXTO:
+  5523 — EDICTO / En cumplimiento del Art. 350 del Código de Aguas, se hace
+  saber a los interesados que se ha presentado ante esta Administración General
+  de Aguas la señora Lorenza Lozano solicitando en expediente N° 4223|48
+  reconocimiento de derecho al uso del agua pública para regar su propiedad
+  denominada "El Porvenir" ubicada en La Calderilla, departamento de La Caldera.
+  / El reconocimiento a otorgarse sería para una dotación de agua proveniente
+  del Río La Caldera equivalente a 0,75 litros por segundo y por hectárea, para
+  irrigar con carácter permanente y a perpetuidad una superficie de 2 Has.,
+  siempre que el caudal de dicho río sea suficiente. En época de estiaje esta
+  dotación se reajustará proporcionalmente entre todos los regantes a medida que
+  disminuya el caudal del Río La Caldera. / La presente publicación vence el día
+  26 de diciembre de 1949, citándose a las personas que se consideren afectadas
+  por el derecho que se solicita a hacer valer su oposición dentro de los
+  treinta días de su vencimiento (Art. 351). [...]
+NOTA DE LECTURA: Lorenza Lozano pide dos concesiones en La Calderilla el mismo
+mes (esta y la siguiente, expedientes consecutivos 4223 y 4224). El apellido
+Lozano está en el config (actores de 1947: Indalecia Dina, Narcisa y Manuel
+Lozano).
+
+A.48
+FUENTE: 3576 h12 c1 (Salta, jueves 15 de diciembre de 1949), aviso N 5535;
+repetido en catorce ediciones, 3576 a 3589 (e) 15|12|49 al 31|12|49)
+FICHA: Edicto de la Administración General de Aguas, Salta 14 de diciembre de
+1949. Lorenza Lozano pide en el expediente 4224-48 reconocimiento de concesión
+para «Finca Miraflores (fracción)», una hectárea en el partido de La Calderilla,
+catastro N 68 del Departamento de La Caldera: 0,2172 litros por segundo del Río
+La Caldera, temporal y permanente. Vence el 31 de diciembre de 1949. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto entero).
+TEXTO:
+  N° 5535 — EDICTO / En cumplimiento de lo prescripto en el Art. 350 del Código
+  de Aguas, se hace saber a los interesados que se ha presentado ante esta
+  Administración General de Aguas de Salta, la señora LORENZA LOZANO,
+  solicitando en expediente N° 4224-48 reconocimiento de concesión de uso del
+  agua pública para irrigar su propiedad denominada "Finca Miraflores
+  (fracción"; en una superficie de una hectárea, ubicada en el partido de La
+  Calderilla, catastrada bajo el N° 68 del Departamento de La Caldera. / El
+  reconocimiento que se tramita es de un caudal de 0,2172 litros por segundo, a
+  derivar del Río La Caldera, con carácter temporal y permanente. / La presente
+  publicación vence el día 31 de diciembre de 1949, citándose a las personas que
+  se consideren afectadas por el derecho que se solicita, a hacer valer su
+  oposición dentro de los treinta días de su vencimiento. / Salta, diciembre 14
+  de 1949. / Administración General de Aguas de Salta / e) 15|12|49 al 31|12|49.
+NOTA DE LECTURA: «partido de La Calderilla»: el edicto llama «partido» a La
+Calderilla. El caudal de una hectárea es 0,2172 l/s, no 0,75 como en los demás
+edictos: se transcribe. «Miraflores» es también el nombre de un paraje del río
+Juramento en el plan de obras de Aguas (A.7, Item 1, partida 7): no es el mismo
+lugar.
+
+A.49
+FUENTE: 3578 h4 c1-c2 (Salta, sábado 17 de diciembre de 1949)
+FICHA: Decreto N 18.480-G. Salta, diciembre 14 de 1949. Expediente N 7936|49.
+Clasifica en tres categorías las Oficinas de Registro Civil de la campaña según
+su movimiento anual (art. 15 de la Ley 1135 del 21 de octubre de 1949). La de La
+Caldera va en la tercera, con $ 100 mensuales: «DPTO. LA CALDERA: La Caldera».
+Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 150 ppp (encabezado, arts. 1 y 2 y el art. 4 hasta
+Orán); el resto del art. 4 y la firma, de la capa.
+TEXTO:
+  Decreto N° 18.480-G. / Salta, diciembre 14 de 1949. / Expediente N° 7936|49. /
+  Visto el presente expediente en el que la Dirección General de Registro Civil
+  eleva a consideración y aprobación del Poder Ejecutivo la nueva clasificación
+  de las Oficinas que funcionan en la campaña, teniendo muy en cuenta el
+  movimiento de cada una de ellas, y de acuerdo a lo establecido por el Art. 15
+  de la Ley N° 1135, de fecha 21 de octubre del año en curso, / El Gobernador de
+  la Provincia / D E C R E T A : / Art. 1° — Las Oficinas de Registro Civil de
+  la campaña se dividirán en 3 categorías, de acuerdo a lo establecido por la
+  ley N° 1135, de fecha 21 de octubre del año en curso, y de conformidad al
+  movimiento anual en nacimientos, defunciones y matrimonios que ha tenido cada
+  una de ellas. / Art. 2° — Serán PRIMERA CATEGORIA, con la asignación mensual
+  de DOSCIENTOS PESOS M|N. ($ 200.— m|n.), las siguientes Oficinas: [...] Art.
+  4° — Serán de TERCERA CATEGORIA, con la asignación mensual de CIEN PESOS M|N.
+  ($ 100.— m|n.), las siguientes Oficinas: DEPARTAMENTO ANTA: [...] DPTO. IRUYA:
+  San Antonio de Iruya; DPTO. LA CALDERA: La Caldera; DPTO LA CANDELARIA: El
+  Tala, La Candelaria; [...] / Art. 5.o Comuníquese, publíquese, insértese en el
+  Registro Oficial y archívese. / ESPELTA / Jorge Aranda / Sub-Secretario de
+  Gobierno [...] [firma, de la capa]
+NOTA DE LECTURA: La oficina de Vaqueros, creada «ad-honorem» en marzo (A.12), no
+figura en ninguna de las tres categorías: la palabra «Vaqueros» no aparece en la
+hoja (búsqueda sobre la capa y lectura del art. 4 en la imagen hasta Orán). El
+acto no dice por qué; puede ser por su carácter honorario (INFERENCIA NO
+ACREDITADA). No se recontaron las tres listas enteras (E.8). La Ley 1135 no se
+buscó en el corpus fuera de las pasadas (E.3).
+
+A.50
+FUENTE: 3584 h4 c2-c3 (Salta, sábado 24 de diciembre de 1949)
+FICHA: Decreto N 18.625-E. Salta, diciembre 22 de 1949. Expediente N
+1367|A|1949. Adjudica a Matías Augusto Carrillo 15 placas de bronce de 0,80 ×
+0,60, a $ 985 cada una, para los frentes de obras del Gobierno, entre ellas
+«HOSPITAL EN LA CALDERA». Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (encabezado y art. 1 hasta «San Vicente de
+Paul»); final del art. 1, art. 2 y firmas, de la capa.
+TEXTO:
+  Decreto N° 18.625-E. / Salta, diciembre 22 de 1949. / Expediente N°
+  1367|A|1949. / Visto este expediente al que corren agregadas las actuaciones
+  por las que Direción [sic] General de Arquitectura y Urbanismo solicita la
+  colocación de placas de bronce en los frentes de las diferentes obras
+  ejecutadas por el Superior Gobierno de la Provincia, y a tal efecto adjunta
+  presupuestos cotizados por distintas casas del ramo para la provisión de las
+  mencionadas placas; / Por ello, y atento a lo informado por Contaduría
+  General, / El Gobernador de la Provincia / D E C R E T A : / Art. 1° —
+  Adjudícase a favor del señor MATIAS AUGUSTO CARRILLO, con domicilio en 20 de
+  Febrero 71, de esta ciudad, la provisión con destino a Dirección General de
+  Arquitectura y urbanismo, de 15 (quince) placas de bronce, tamaño 0.80 x 0.60,
+  con la leyenda correspondiente, al precio de $ 985 m|n. (NOVECIENTOS OCHENTA Y
+  CINCO PESOS M|N), cada una, para ser colocada en los frentes de las siguientes
+  obras ejecutadas por el Superior Gobierno de la Provincia: ESCUELA AGRICOLA LA
+  MERCED; MERCADO TIPO II, CERRILLOS; HOSPITAL "SANTA TERESITA" EN CERRILLOS;
+  HOSPITAL "SANTA TERESA" EN EL TALA; HOSPITAL SAN FRANCISCO SOLANO EN EL
+  GALPON; HOSPITAL EN LA CALDERA; ESCUELA Dr. MARCOS AVELLANEDA EN METAN;
+  ESCUELA "CORONEL APOLINARIO SARAVIA" EN EL BORDO; ESCUELA "GENERAL DIONISIO
+  PUCH" EN LA VIÑA; ESCUELA "Dr. FACUNDO DE SUVIRIA" EN CAFAYATE; ESCUELA "Dr.
+  A. ARIAS DE VELAZQUEZ" EN EL TALA; ESCUELA DE MANUALIDADES DE CAFAYATE;
+  MERCADO TIPO III, EN ROSARIO DE LERMA; COMISARIA DE EMBARCACION; HOSPITAL "SAN
+  VICENTE DE PAUL" EN ORAN. / Art. 2° — El gasto que demande el cumplimiento del
+  presente decreto con exclusión de las placas correspondientes a las escuelas
+  de El Tala, Cafayate, La Viña y El Bordo, que serán pagadas directamente por
+  el Consejo General de Educación, se atenderá con los fondos que para
+  imprevistos tiene asignada cada obra. / Art. 3o. — Comuníquese, publíquese,
+  etc. / EMILIO ESPELTA / MARCELO SARAVIA BAVIO / Es copia: / Pedro Saravia
+  Cánepa
+NOTA DE LECTURA: RECUENTO PROPIO: 15 obras; el acto declara «15 (quince)
+placas»: cierra. Aquí la obra se llama «Hospital en La Caldera»; en todos los
+decretos de pago del año, «Estación Sanitaria Tipo A» (A.4 y ss.). Firma como
+ministro Marcelo Saravia Bavio (capa), no Jaime Duran: cambio de ministro de
+Economía entre noviembre y diciembre (E.4).
+
+A.51
+FUENTE: 3586 h17 c1 (Salta, martes 27 de diciembre de 1949), aviso N 5584; en
+3586, 3587, 3588 y 3589 (e) 28|12|49 al 14|1|50: sigue en 1950)
+FICHA: Edicto de la Administración General de Aguas. Emilio Alberto Ratel pide
+en el expediente 6939|47 reconocimiento de concesión para «Fracción de la finca
+Entre Ríos», en Vaqueros, departamento de La Caldera: 0,75 litros por segundo y
+por hectárea del Río Wierna, permanente y a perpetuidad, para 2 Has. 9637 m2.
+Vence el 13 de enero de 1950. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp (edicto hasta el vencimiento); fecha y cierre,
+no leídos.
+TEXTO:
+  N° 5584. — EDICTO / En cumplimiento del Art. 350 del Código de Aguas, se hace
+  saber a los interesados que se ha presentado ante esta Administración General
+  de Aguas el señor Emilio Alberto Ratel solicitando en expediente N° 6939|47
+  reconocimiento de concesión de agua pública para regar su propiedad denominada
+  "Fracción de la finca Entre Ríos", ubicada en Vaqueros, departamento de La
+  Caldera. / El reconocimiento a otorgarse sería para una dotación de agua
+  proveniente del Río Wierna equivalente a 0,75 litros por segundo y por
+  hectárea, para regar con carácter permanente y a perpetuidad una superficie de
+  2 Has. 9637 m2., siempre que el caudal de dicho río sea suficiente. En época
+  de estiaje esta dotación se reajustaría proporcionalmente entre todos los
+  regantes a medida que disminuya el caudal del Río Wierna. / La presente
+  publicación vence el día 13 de Enero de 1950, citándose a las personas que se
+  consideren afectadas por el derecho que [...]
+NOTA DE LECTURA: Otra fracción de la finca «Entre Ríos», cuyo catastro 166 (8
+Has. 3.800 m2) tiene Federico Ebber desde abril (A.18). Las publicaciones siguen
+en 1950: el año cierra con cuatro de ellas.
+
+§B · VECINDAD
+-------------
+
+B.1 · Núcleos ya fichados
+Núcleos ya fichados en años anteriores que el año retoma: la Estación Sanitaria
+Tipo «A» de La Caldera, adjudicada a ECORM por el decreto 10.668 de 1948 (A.4 a
+A.6, A.14, A.16, A.20, A.25, A.26, A.30, A.33, A.41 y A.50, donde se la llama
+«Hospital en La Caldera»); la escuela de La Caldera y su contratista Conrado
+Marcuzzi, actor de 1948 (A.17, A.19, A.23; la obra se inaugura en A.22); la
+enfermera Arminda Funes de Lamberto, actora de 1948 (A.3, A.15, A.35); Federico
+Ebber y la finca «Entre Ríos» de Vaqueros, cuyo edicto de 1948 cierra ahora con
+la concesión (A.18); la mina «Caldera 1, 2 y 3» de Zuccarino (A.9); la Oficina
+de Registro Civil (A.12, A.49) y el juzgado de paz (A.13, A.28).
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+Núcleos del departamento en actos que no nombran el término. Además de las
+cuatro fichas, se leyeron en la capa y se anotan en una línea: la Resolución
+124-A de marzo (3382 h7) ayuda a un padre aborigen de Embarcación con hijos
+becados en el Hogar Agrícola «San Cayetano» (no dice dónde está el Hogar); los
+dos decretos de becas del 7 de diciembre (3570 h13 y h16) traen el Hogar «San
+Cayetano» de Vaqueros a $ 70 por becado (leídos los encabezados en la imagen,
+listas sin recontar); el Hogar «San Cayetano» es también mesa 2 del circuito 6
+(A.39).
+
+B.2.1
+FUENTE: 3309 h6 c2 (Salta, martes 4 de enero de 1949)
+FICHA: B.2. Resolución N 207-G del Ministerio de Gobierno. Salta, diciembre 29
+de 1948. Expediente N 7741-/48. Aprueba la resolución de Jefatura de Policía del
+24 de diciembre que aplica al agente de policía de la Sub-Comisaría de Vaqueros,
+Antonio Flores, ocho días de suspensión por infracción al art. 1162 inc. 8o. del
+Reglamento General de Policía. Clase: CARGOS+JUSTICIA.
+MODO DE LECTURA: imagen, 160 ppp (resolución entera).
+TEXTO:
+  RESOLUCION No. 207-G. / Salta, Diciembre 29 de 1948 / Expediente No. 7741-/48.
+  / Visto la nota No. 2769, de Jefatura de Policía con la que eleva para su
+  aprobación la Resolución dictada con fecha 24 del mes en curso; atento a lo
+  dispuesto en la misma, / El Ministro de Gobierno, Justicia e I. Pública, / R E
+  S U E L V E : / 1o. — Aprobar la Resolución dictada por Jefatura de Policía
+  con fecha 24 de diciembre en curso, en la que se aplica al agente de Policía
+  de la Sub-Comisaría de Vaqueros, don ANTONIO FLORES, ocho (8) días de
+  suspensión en el ejercicio de sus funciones, por infracción al art. 1162 inc.
+  8o. del Reglamento General de Policía. / 2.o — Dése al Libro de Resoluciones,
+  comuníquese, etc. / JULIO DIAZ VILLALBA / Es copia: / A. N. Villada
+NOTA DE LECTURA: El acto no nombra el departamento: Vaqueros es de La Caldera
+por los actos del año que lo atribuyen (A.12, A.39). El reglamento no dice qué
+es el inciso 8o. del art. 1162. Único acto policial del año sobre la
+subcomisaría de Vaqueros hallado por las pasadas (sobre el anillo 2 leído; no es
+ausencia afirmada).
+
+B.2.2
+FUENTE: 3341 h13 (Salta, viernes 11 de febrero de 1949)
+FICHA: B.2. Mismo decreto 13.838-E (A.7), Plan de Obras de Aguas, Item 8:
+embalses en trece localidades, entre ellas «Campo Alegre» y «Angosto de
+Arrieta», con $ 1.000.000 para el Item. Clase: AGUAS.
+MODO DE LECTURA: imagen, 130 ppp (inciso entero; crédito 1.000.000 del Item, no
+desagregado).
+TEXTO:
+  Item 8 — [Para] expropiación, estudios, proyectos, ejecución, ampliación,
+  refección y conservación de obras de embalse en las siguientes localidades:
+  Coronel Moldes, (dique actual), Coronel Moldes (dique nuevo), San Andrés,
+  Itiyuro, Río Rosario, Las Conchas, La Candelaria (El Ceibal), Campo Alegre,
+  Angosto de Arrieta, El Piquete y Escalchi o Rancagua o Gibral o Río Conchas
+  (Payogasta [...] 1.000.000.—
+NOTA DE LECTURA: El acto no atribuye Campo Alegre ni Angosto de Arrieta a ningún
+departamento. Los dos nombres están en el circuito 5 de La Caldera (A.39), pero
+«Campo Alegre» es también de Chicoana (3314 h8, «Campo Alegre, Chicoana»):
+jurisdicción indeterminada (v16 §5.1ter).
+
+B.2.3
+FUENTE: 3469 h5 c1 a h8 c3 (Salta, viernes 29 de julio de 1949); el tramo de
+Vaqueros en h8 c2-c3
+FICHA: B.2. Decreto N 16400-A. Salta, julio 26 de 1949. Expediente N
+10.993-/949. Aprueba las becas prorrogadas y acordadas por la Junta Ejecutiva
+del Patronato Provincial de Menores para el período escolar, por cuatro meses.
+Entre los establecimientos: «HOGAR AGRICOLA "SAN CAYETANO" DE VAQUEROS A RAZON
+DE $ 70.— C/UNO», con 74 becados nombrados y un renglón 75 en blanco. Firma el
+Ministro de Gobierno en ejercicio del Poder Ejecutivo. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130-160 ppp (encabezado en h5 c1; el tramo del Hogar
+entero en h8 c2 y c3). El resto de la nómina, no leído en la imagen.
+TEXTO:
+  Decreto No. 16400-A. / Salta, Julio 26 de 1949 / Expediente No. 10.993-/949. /
+  Visto este expediente en el cual la Junta Ejecutiva del Patronato Provincial
+  de Menores eleva para su aprobación las becas prorrogadas y acordadas para el
+  corriente año; y / CONSIDERANDO: / Que en el Anexo E - Inciso VII - c) 1 del
+  Presupuesto vigente, se asigna al Patronato Provincial de Menores, la suma de
+  trescientos mil pesos para atender el cumplimiento de las funciones y
+  atribuciones que le confiere el decreto de su creación No. 5581/43 y para el
+  pago [...] / El Ministro de Gobierno, Justicia e I. Pública, en ejercicio del
+  Poder Ejecutivo, / DECRETA: / Art. 1o. — Apruébanse las becas prorrogadas y
+  acordadas por la Junta Ejecutiva del Patronato Provincial de Menores [...]
+  HOGAR AGRICOLA "SAN CAYETANO" DE VAQUEROS / A RAZON DE $ 70.— C/UNO / 1. —
+  Domingo Manuel Alvero / 2. — Hipólito Alvarez / 3. — Miguel Angel Caiguará /
+  4. — Eduardo Cruz / 5. — Pablo Albornóz / 6. — Pánfilo Díaz / 7. — Lorenzo
+  Escobar / 8. — Hugo Fernández / 9. — Juan Gómez / 10. — Miguel Gómez / 11. —
+  César Gutierrez / 12. — José Ambrosio Maizares / 13. — Roberto Mamaní / 14. —
+  Sabino Caro / 15. — Juan Carlos Nieva / 16. — Rubens Ontiveros / 17. — Ramón
+  Pachao / 18. — Ramón Retambay / 19. — Fausto Ruiz / 20. — Marcial Ruiz / 21. —
+  Fortunato Torres / 22. — Pablo Toledo / 23. — Javier Uncos / 24. — Juan José
+  Nani / 25. — Adolfo Martínez / 26. — Ramón Jorge Giménez / 27. — Francisco
+  Garabito / 28. — Carlos Alberto González / 29. — José Marcos Castillo / 30. —
+  Julio Miguel Valdiviezo / 31. — Wilfredo Burgos / 32. — Carlos Beltrán / 33. —
+  Eugenio Homes / 34. — Clemente Anastacio Guari / 35. — Salustiano Castillo /
+  36. — Antonio Esteban Tejerina / 37. — Wenceslao Díaz / 38. — Aniceto Ayuso /
+  39. — Ramón Benito Lazcano / 40. — Cándido Colque / 41. — Pedro Marcelo Colque
+  / 42. — Marcos Francisco Alancay / 43. — José Eduardo Mamaní / 44. — Oscar
+  Eusebio Figueroa / 45. — Arsenio Bernardino Cardozo / 46. — Florencio Márquez
+  / 47. — Juan Carlos Márquez / 48. — Pedro Silvio Callo / 49. — Adalberto de
+  los Angeles Dominguez / 50. — Luis Alberto Paz / 51. — Antonio Remigio Oropeza
+  / 52. — Juan Augusto Yrigoyen / 53. — Felipe Gaspar Tejerina / 54. — Marcos
+  Tolaba / 55. — Abel Chávez / 56. — Juan Carlos Vilte / 57. — Luis Bernardino
+  Gutiérrez / 58. — Rolando César Estrada / 59. — Santos M. Vergara / 60. — Juan
+  Eugenio Bautunet / 61. — Roque Angel Aguilera / 62. — Rodolfo José Cánton /
+  63. — Juan Robles / 64. — Arturo Robles / 65. — Ramón Mariani / 66. — Apolonio
+  Colque / 67. — Hugo Lorenzo Gramajo / 68. — Juan Carlos Olivera / 69. —
+  Timoteo Aparicio / 70. — Jesús Acoria / 71. — Juan Carlos Flores / 72. —
+  Benito Bernardo Guantay / 73. — Gergorio Roberto Rearte / 74. — José Guerra /
+  75. — [en blanco]
+NOTA DE LECTURA: RECUENTO PROPIO: 74 nombres y un renglón 75 numerado sin
+nombre; el acto no declara número. A $ 70 por mes y cuatro meses, 74 becas
+darían $ 20.720 (cálculo propio; el decreto no imprime subtotal por
+establecimiento). Los becados no son vecinos del departamento: son menores
+internados por el Patronato (en 3382 h7 la Resolución 124-A de marzo ayuda a un
+padre aborigen de Embarcación con hijos becados en el Hogar). El 7 de diciembre
+(3570 h13 y h16) otros dos decretos de becas traen el Hogar «San Cayetano» de
+Vaqueros, a $ 70 cada uno; sus listas no se recontaron (E.8). Los apellidos
+Colque, Mamaní, Guari, Alancay, Tolaba, Guantay, Vilte, Uncos: se anotan como
+frecuencia de corpus (v16 §17), no como vecindad.
+
+B.2.4
+FUENTE: 3560 h13 (primera aparición) a 3575 h16, aviso N 5466; leído en la
+imagen en 3565 h16 c2 (Salta, viernes 25 de noviembre de 1949); e) 25|11 al
+14|12|49; dieciséis ediciones con el aviso o su sumario
+FICHA: B.2. Licitación Pública N 5 de la Administración de Vialidad de Salta.
+Entre las obras del Plan de Gobierno: «Mejora progresiva del camino Salta a Los
+Yacones, tramo: Salta a San Lorenzo. Presupuesto $ 252.385,61». Apertura el 14
+de diciembre de 1949. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150-160 ppp (aviso entero, en 3565 h16).
+TEXTO:
+  N° 5466. — MINISTERIO DE ECONOMIA, FINANZAS Y OBRAS PUBLICAS. — ADMINISTRACION
+  DE VIALIDAD DE SALTA. — LICITACION PUBLICA N° 5. — Llámase a licitación
+  pública para la ejecución de las siguientes obras: / Coparticipación Federal:
+  / Camino Lumbrera a Rivadavia, tramo: Estación Río del Valle a Estación
+  Mollinedo. Presupuesto $ 681.462.90 m|n. / Camino de Lumbrera a Rivadavia,
+  tramo: Estación Mollinedo a Vizcacheral. Presupuesto $ 814.178:50 m|n. /
+  Camino San Francisco a Sumalao por San Agustín, tramo: San Francisco-Las
+  Palmas. Presupuesto $ 422.630.75 m|n. / Plan de Gobierno: / Mejora progresiva
+  del camino Salta a Los Yacones, tramo: Salta a San Lorenzo. Presupuesto $
+  252.385.61 m|n. / Mejora progresiva del camino Salta a Empalme Ruta Nacional
+  N° 34 por Cobos, tramo: Salta a La Peña. Presupuesto $ 802:161.07. / Las
+  propuestas, pliego de condiciones y especificaciones, etc., pueden ser
+  solicitados en la Administración de Vialidad de Salta, calle España 721, donde
+  serán abiertas el día 14 de Diciembre de 1949, a las 10 horas. — Ing. RAFAEL
+  J. LOPEZ AZUARA, Administrador General de Vialidad de Salta. — LUIS F. ARIAS,
+  Secretario General de Vialidad de Salta. / e) 25|11 al 14|12|49
+NOTA DE LECTURA: HALLAZGO DE METODO: la capa lee «tacones» en seis apariciones y
+«los tacones» en otras; la imagen dice «Los Yacones». Sólo el término «tacones»,
+que el anillo 2 conserva desde 1911 como deformación de Yacones, lo devolvió: la
+literal y el anillo con «yacones» no lo veían. El tramo licitado es Salta-San
+Lorenzo, en la Capital; Los Yacones es paraje del circuito electoral de La
+Caldera (A.39). El aviso no nombra el departamento. RECUENTO PROPIO: cinco
+obras; el aviso no declara número.
+
+B.3 · Términos que este año son otra cosa
+Términos que ese año son otra cosa o de otra jurisdicción (leídos en la capa;
+ninguno ficha):
+- «Wierna» apellido: Marcos Wierna, lindero en una posesión de Guachipas (3431
+  h15 y 16 apariciones más); Nelly E. Wierna y Mercedes Wierna, empleadas (3356
+  h5, 3340 h8).
+- «Lesser» apellido: Pascual Lesser, pensionado (3369 h3, h11); Víctor Lesser,
+  ayudante (3348 h12). «Estancia Lesser o Las Nieves» como lindero norte de la
+  finca «Castellanos», partido de San Lorenzo, Capital (mensura del
+  testamentario de Joaquín Castellanos, 3465 h9 y trece apariciones): va a §C.
+- «Mojotoro» como río de Campo Santo: edictos de aguas de Clara Bellone
+  (catastro 1269, Campo Santo, 3308 h15 y once apariciones), de una casa quinta
+  en Campo Santo (3393 h19 y siete), la convocatoria de usuarios del río (3440
+  h16 y cinco), la concesión de Pedro Bellone (3389 h4) y la de Julio Cornejo
+  (3576 h12). Un lugar Mojotoro de Campo Santo figura también en el contrato de
+  A.2.
+- «Castañares»: finca del departamento Capital, catastro 6541, con dotación del
+  25 % del río Vaqueros por la hijuela Castañares (3502 h21 y dieciséis
+  apariciones): el río Vaqueros riega la Capital; va a §C.
+- «Severino» nombre: sucesión de Severino Feraud (3431 h12 y más), Severino
+  Cabada (3357 h11).
+- «San Cayetano» de Seclantás, Molinos (3504 h6 y veinte apariciones).
+- «El Churcal» de Molinos (3420 h7 y cincuenta apariciones); «Punta de la
+  Mesada» de Villa Filo (3311 h9 y catorce); «Teodolinda» Rivero, legataria
+  (3420 h6); «Despensa Cordobesa», negocio (3367 h15); «Matos» apellido
+  (Francisco Matos Molina, Antonio Matos); «Helvecia» nombre de pila (Haydeé
+  Helvecia Etchenique); «Entre Ríos» provincia y calle; «Campo Alegre» de
+  Chicoana (3314 h8); «Higueritas», «Nogalito», «Quesería», «Despensilla»,
+  «Bandurrias», «Mesadas» y «Acheral» en circuitos electorales de otros
+  departamentos (3538 h18 a h28).
+
+B.4 · Ausencias y apariciones del anillo de actores
+Actores del config con acierto por nombre completo que tocan al departamento, en
+tres grupos:
+1) Sólo en su propio acto del año: Guillermo Villanueva y Francisco Urquiza
+(linderos en la Ley 1134, A.36); Enrique A. Zuccarino (A.9 y su sumario);
+Arminda Funes de Lamberto por ese nombre (A.3; como «Fuentes» en A.35).
+2) En más de un acto del departamento: Conrado Marcuzzi (A.17, A.19, A.23, más
+una licitación de la estación sanitaria de Guachipas, 3334 h7); Luis Linares
+(A.44); Isaac Fernández (A.34); Carlos Serrey (A.43, y además propietario de
+terrenos donde se pide un cateo, 3336 h5 y 96 apariciones, y demandado junto a
+Atilio Cornejo, Ángel R. Bascari y María Virginia Outes de Leguizamón en un
+juicio de reivindicación de la Provincia por una manzana de la Capital, 3390
+h13). Con los Serrey de A.27 y A.36 el apellido está en cuatro actos del
+departamento: la trama del año.
+3) También fuera del departamento: Silvano I. Murúa (1916): la Dirección General
+de Yacimientos Petrolíferos Fiscales demanda a su sucesión (expediente
+17.115|948) y cita a sus herederas Blanca Murúa de Cornejo Isasmendi, Sara Murúa
+de Colombo y Dora Murúa (3565 h13, aviso 5491, leído en la imagen, y diecinueve
+apariciones); la Ley 1134 (A.36) nombra a «Sulvano Murúa» como antiguo lindero
+sur de la finca Vaqueros; que sea la misma persona no está acreditado. Nicolás
+Vico Gimena, lindero en A.36 y contador público en un balance (3354 h19). Julio
+Zambrano, escribano en Salta (3345 h7 y ocho) y lindero en A.36. Hermann
+Pfister, perito agrimensor (3426 h9 y dieciocho). Alberto Ovejero Paz, escribano
+(3310 h9 y veintiséis). Federico Ebber no aparece fuera de A.18.
+Ausencias afirmables con dos identificadores (nombre y cargo): no se nombra en
+1949 comisario ni subcomisario de La Caldera ni de Vaqueros (la subcomisaría de
+Vaqueros consta sólo por la sanción de un agente, B.2.1); no aparece Claudio
+Murúa como guarda sanitario de La Caldera (su nombre sale una vez en la nómina
+de Sanidad de 3387 h8, leída sólo en la capa y sin lugar atribuible); no se
+nombra Receptor de Rentas del departamento. Estas ausencias valen sobre el
+anillo 1, el anillo 2 leído y los actores por nombre completo, no sobre las
+búsquedas pendientes.
+
+§C · LIMITROFES
+---------------
+Limítrofes y otras jurisdicciones con ficha de una línea:
+- Campo Santo: Mojotoro (A.2, B.3); Río Mojotoro, catastro 1269 (3308 h15).
+- Capital: finca «Castellanos», partido de San Lorenzo, lindante al norte con la
+  estancia «Lesser o Las Nieves» (3465 h9); finca «Castañares», catastro 6541,
+  regada con el 25 % del río Vaqueros (3502 h21); el tramo Salta-San Lorenzo del
+  camino a Los Yacones (B.2.4).
+- Chicoana: «Campo Alegre, Chicoana», almacén (3314 h8).
+
+§P · PLANOS
+-----------
+No se identificó ningún plano impreso en el año; la palabra «plano» aparece en
+498 hojas y ninguna de esas remisiones toca al departamento (la única cercana,
+3515 h13, es un lote de otra subdivisión). 444 hojas tienen más de una imagen
+incrustada y no se revisaron una por una como posibles planos (E.10). Planos
+citados y no acompañados del departamento: 0. Techo de resolución: 300 ppp (150
+en 31 hojas). La serie de años sin planos sigue: 1947, 1948 y 1949.
+
+§D · INDICE
+-----------
+Edición, hoja, clase fija (v16 §7.1) y materia. Un acto repetido va por su
+primera aparición.
+  3308 h7   A.1   ESCUELA — Subsidio $ 100 a cooperadoras: Nac. 250 San
+                Francisco y «Bernabé López» Vaqueros
+  3310 h9   A.2   DOMINIO+OTRO — Contrato L. A. Cornejo y Cía.: montes de «Los
+                Porongos», depto. Caldera
+  3331 h6   A.3   CARGOS — Viáticos a la enfermera de La Caldera para ir a
+                Vaqueros
+  3334 h4   A.4   OBRA-PUBLICA — Estación Sanitaria La Caldera: anticipo 25 % a
+                ECORM
+  3334 h7   A.5   OBRA-PUBLICA — Estación Sanitaria: devolución de garantía a
+                ECORM
+  3337 h11  A.6   OBRA-PUBLICA — Estación Sanitaria: certificado 1
+  3341 h8   A.7   AGUAS+OBRA-PUBLICA — Presupuesto de Aguas 1949: defensas río
+                La Caldera, Wierna, Mojotoro
+  3346 h5   A.8   HACIENDA-MUN — 20 % Contribución Territorial a municipios; La
+                Caldera $ 160,88
+  3346 h9   A.9   MINAS+DOMINIO — Mina «Caldera 1, 2 y 3», San José:
+                adjudicación a Zuccarino
+  3359 h4   A.10  HACIENDA-MUN — Réditos 4o trim. 1948 a municipios; La Caldera
+                $ 1.089,50
+  3359 h4   A.11  HACIENDA-MUN — 20 % Contribución Territorial oct-dic 1948; La
+                Caldera $ 108,77
+  3376 h5   A.12  REGISTRO-CIVIL+CARGOS — Crea Registro Civil ad honorem en
+                Vaqueros
+  3383 h4   A.13  JUSTICIA+CARGOS — Juez de Paz de La Caldera: Justo Pastor
+                Lizondo
+  3385 h7   A.14  OBRA-PUBLICA+DOMINIO — Crédito obras: estación sanitaria y
+                expropiación La Caldera
+  3387 h6   A.15  CARGOS — Personal de Sanidad: enfermeros de Vaqueros y La
+                Caldera
+  3397 h9   A.16  OBRA-PUBLICA — Estación Sanitaria: certificado 2
+  3397 h9   A.17  ESCUELA+OBRA-PUBLICA — Escuela de La Caldera: certificado
+                parcial 1, Marcuzzi
+  3397 h12  A.18  AGUAS — Concesión de agua a Ebber, finca Entre Ríos, Vaqueros
+  3401 h9   A.19  ESCUELA+OBRA-PUBLICA — Escuela de La Caldera: recepción
+                provisoria, garantía
+  3414 h5   A.20  OBRA-PUBLICA — Estación Sanitaria: prórroga de 75 días
+  3424 h6   A.21  OTRO — Racionamiento Sanidad: La Caldera $ 500 mensuales
+  3431 h7   A.22  OBRA-PUBLICA+AGUAS+ESCUELA — Inauguración: defensas Vaqueros y
+                Wierna; agua en la escuela
+  3438 h5   A.23  ESCUELA+OBRA-PUBLICA — Escuela de La Caldera: certificado
+                final 2
+  3442 h6   A.24  HACIENDA-MUN+DOMINIO — Padrones de valores fiscales de La
+                Caldera y otros
+  3447 h7   A.25  OBRA-PUBLICA — Estación Sanitaria: certificado 3
+  3447 h8   A.26  OBRA-PUBLICA — Estación Sanitaria: certificado 4
+  3483 h15  A.27  AGUAS — Edicto de aguas, Suárez Wilde de Serrey, catastro 52
+  3485 h6   A.28  JUSTICIA+CARGOS — Renuncia del Juez de Paz Lizondo
+  3492 h17  A.29  AGUAS — Edicto de aguas, J. A. Cornejo, finca Vaqueros, cat.
+                205
+  3505 h13  A.30  OBRA-PUBLICA — Estación Sanitaria: certificado 5
+  3508 h15  A.31  AGUAS — Edicto de aguas, Saravia de Solá, finca San José, cat.
+                19
+  3514 h23  A.32  ELECTORAL — Convocatoria a elecciones: La Caldera senador,
+                diputado
+  3520 h7   A.33  CARGOS+OBRA-PUBLICA — Personal de Arquitectura imputado a la
+                estación sanitaria
+  3524 h19  A.34  AGUAS — Edicto de aguas, Isaac Fernández, Campo Alegre
+  3526 h5   A.35  CARGOS — Traslados de enfermeros: La Caldera y Vaqueros
+  3536 h5   A.36  DOMINIO+NORMA — Ley 1134: expropiación de la finca «Vaqueros»
+                (Serrey)
+  3536 h8   A.37  HACIENDA-MUN — Índices Contribución Territorial 1949; La
+                Caldera 0,115
+  3536 h9   A.38  HACIENDA-MUN — Índices Réditos 1949; La Caldera
+  3538 h14  A.39  ELECTORAL — Mesas y circuitos 5 y 6 del Colegio 2, La Caldera
+  3540 h10  A.40  ESCUELA — Aquiescencia: escuela nacional en Mojotoro
+  3547 h10  A.41  OBRA-PUBLICA — Estación Sanitaria: certificado 6
+  3555 h14  A.42  AGUAS — Edicto de aguas, M. A. Gutierrez, terreno y casa
+  3557 h10  A.43  AGUAS — Edicto de aguas, C. y M. Serrey, Sauzal o Curuzú
+  3557 h10  A.44  AGUAS — Edicto de aguas, Luis Linares, Santa Mónica y
+                Quitilipe
+  3561 h14  A.45  NORMA — Recargo por fletes: «La Caldera» (jurisdicción indet.)
+  3564 h20  A.46  AGUAS — Edicto de aguas, Aquiles Casale, Fracción de Vaqueros
+  3571 h19  A.47  AGUAS — Edicto de aguas, Lorenza Lozano, El Porvenir
+  3576 h12  A.48  AGUAS — Edicto de aguas, Lorenza Lozano, Miraflores, cat. 68
+  3578 h4   A.49  REGISTRO-CIVIL — Registro Civil de La Caldera: tercera
+                categoría
+  3584 h4   A.50  OBRA-PUBLICA — Placas de bronce: «Hospital en La Caldera»
+  3586 h17  A.51  AGUAS — Edicto de aguas, E. A. Ratel, fracción Entre Ríos
+  3309 h6   B.2.1 CARGOS+JUSTICIA — Sanción a un agente de la Subcomisaría de
+                Vaqueros
+  3341 h13  B.2.2 AGUAS — Embalses: Campo Alegre, Angosto de Arrieta
+  3469 h5   B.2.3 ESCUELA — Becas: Hogar Agrícola San Cayetano de Vaqueros
+  3560 h13  B.2.4 OBRA-PUBLICA — Licitación: camino Salta a Los Yacones
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación, tinta y saldos
+Duplicación. Nivel 1 y 2 (md5 y dhash) no se calcularon en sesión; se controló
+por texto. Las hojas 13 a 15 del PDF de la 3384 son las páginas 13 a 15 de la
+3383, en un segundo escaneo (similitud de capa 0,79 en la hoja 13; §1). Los
+avisos repetidos del departamento se reunieron por texto y no por número (v16
+§6): contrato 4469 (6 apariciones), convocatoria 5283 (8), mesas 5386 (8), once
+edictos de aguas (de 4 a 15 apariciones cada uno), licitación 5466 (16).
+Tinta, medida sobre las 4.869 hojas (píxeles < 170 a 50 ppp): ninguna hoja bajo
+0,5 %; 70 bajo 5 %. Mirada la menor (3400 h23, 0,64 %: pie de un balance) y la
+segunda (3423 h16, 1,56 %: media página con el cierre de un decreto y el pie de
+imprenta). Las otras 68, no miradas (pendiente).
+Saldos. Resúmenes del movimiento de Tesorería General publicados en el año, por
+texto: diciembre de 1948 (3336 h12), enero de 1949 (3353 h12, decreto; 3365 h20,
+resumen), marzo (3383 h15 y su doble en 3384 h15; 3410 h16), abril (3423 h14),
+junio (3469 h22), julio (3502 h25), agosto (3523 h18) y septiembre (3539 h17).
+Faltan en el corpus los de febrero, mayo, octubre, noviembre y diciembre. No se
+transcribieron saldos ni se armó la cadena: pendiente. Balances municipales del
+departamento: ninguno publicado.
+
+E.2 · Cobertura
+Cobertura: 281 de 282 ediciones de la serie (falta la 3395). El departamento
+tiene 51 actos en el §A y 4 núcleos en el §B.2. De las 51 fichas, 33 son actos
+del Gobierno (decretos, resoluciones, una ley) y 18 son avisos (once edictos de
+aguas, un contrato, la convocatoria electoral, las mesas, la licitación); por
+materia, en el §D.
+
+E.3 · Sin mención y no mirado
+Citados y no acompañados: decreto 10.668 del 29 de julio de 1948 (adjudicación
+de la estación sanitaria, A.6, A.16); decreto 10.241/48 (inspección de la obra,
+A.33); decreto 12.581 del 19 de noviembre de 1948 (escuela, A.17, A.19, A.23);
+la terna de la Comisión Municipal para juez de paz (A.13); los padrones de
+valores fiscales (A.24); la Ley 1135 (A.49); el decreto 7683/48 de anticipos
+(A.4). Vacante sin nombre: el juez de paz de La Caldera antes de Lizondo (A.13);
+el reemplazante de Lizondo, no nombrado en el año (A.28). Sin mirar en la
+imagen: los sumarios de todas las ediciones (sólo capa), la nómina entera del
+decreto 14.767-A (A.15) y la del 17.162-E (A.33), y los arts. 2 a 4 del 13962-E
+(A.8).
+
+E.4 · Firmas y autoridad
+Autoridad. Gobernador en la tapa: Lucio Alfredo Cornejo hasta el 1 de junio;
+Emilio Espelta desde el 2 de junio (§1). Por los firmantes: Lucio A. Cornejo
+firma los decretos de enero a mayo (A.1 a A.12, A.16 a A.19, A.21); Emilio
+Espelta firma como «Vice-Presidente 1° del Honorable Senado de la Provincia en
+Ejercicio del Poder Ejecutivo» el 31 de marzo y el 7 de abril (A.13, A.14,
+A.15), y como Gobernador desde junio (A.23 y ss.); el 26 de julio (B.2.3) y el
+16 de agosto (A.28) firma J. Armando Caro, Ministro de Gobierno, «en ejercicio
+del Poder Ejecutivo». Interinato sin cierre: último acto del Vicepresidente en
+ejercicio leído, 7 de abril (A.15); primer acto de Cornejo después, 21 de abril
+(A.16). Ministros de Economía: Juan W. Dates (enero-marzo), Julio Díaz Villalba
+a cargo interinamente (abril-mayo, A.16 a A.20), Jaime Duran (junio-noviembre),
+Marcelo Saravia Bavio (diciembre, A.50, capa). Gobierno: Julio Díaz Villalba
+hasta junio; J. Armando Caro desde julio (en ejercicio del Poder Ejecutivo el 26
+de julio y el 16 de agosto). Acción Social: Danton J. Cermesoni. «Es copia»: A.
+N. Villada (Gobierno), Pedro Saravia Cánepa (Economía, desde marzo; Juan Pablo
+Ibarra y Luis A. Borelli antes), Alejandro Gauffín y Antonio I. Zambonini Davies
+(Acción Social).
+Numeración: una sola serie de decretos con sufijo de ministerio, de 13129-A (28
+de diciembre de 1948, A.1) a 18.625-E (22 de diciembre de 1949, A.50). No se
+midieron pares contiguos fuera de los actos del §A.
+
+E.5 · Cortes y columnas
+Cortes y columnas: el cruce de columnas en la capa atribuyó a La Caldera, en
+3520 h7, dos cargos que la imagen pone en Metán y en Orán (A.33); en 3569 h22 la
+capa pega «del rio arenales» al edicto de Linares (A.44). Columna perdida
+confirmada: ninguna. El nombre del departamento sale cortado entre columnas en
+A.3 («La Cal- / dera»), con la capa «caltdera». Columnas cotejadas en la imagen
+contra la capa: las de los 51 actos del §A y los 4 del §B, no más.
+
+E.6 · Repeticiones
+Repeticiones: se listan en la FUENTE de cada ficha. Los once edictos de aguas
+del departamento salen en series de quince ediciones seguidas (salvo los dos de
+diciembre, que siguen en 1950).
+
+E.7 · Falsos positivos y negativos
+Falsos positivos del anillo 1: Calderón (107), Caldas (27: Ángel J. Caldas, 3448
+h14), Calderete, «localde», «fiscalde», «calda» por «cada» (3339 h7, 3505 h13),
+«caoldra» por «cobrará» (3499 h6), «calderas» (3411 h13), «caldera» como
+apellido de Roberto Caldera, proveedor del Ministerio de Economía (3400 h5, 3536
+h8, 3561 h3 y h15, 3566 h8). Falsos negativos rescatados: «caltdera» por la
+difusa (A.3); «vaqueroslacaldera» por la quinta pasada (sumario de A.36); «Los
+Yacones» por el término «tacones» del anillo 2 (B.2.4). No se agregan al config
+como falsos positivos (v16 §12).
+
+E.8 · Fidelidad numérica
+Fidelidad numérica. Cuadros recalculados, con su resultado: A.7 (Item 1, 25
+partidas, cierra; Item 6, 18 partidas, cierra); A.8 (45 renglones; cierra sólo
+con cinco pares posibles de dos cifras rotas); A.10 (45 renglones; no cierra por
+0,70); A.11 (45 renglones; no cierra por 89,40); A.14 (Principal c, Incisos II y
+III, art. 1: cierran); A.21 (35 renglones y semestral: cierran); A.37
+(recaudación y porcentajes: cierran); A.38 (cuatro columnas: cierran tres, la
+tercera no por 0,05, por San Lorenzo). Listas recontadas: A.1, A.2, A.12, A.22,
+A.24, A.32, A.39, A.45, A.50, B.2.3. No recalculados: los Items 2 a 5 y el
+cálculo de recursos de A.7; el total del Inciso I de A.14; el art. 2 de A.1; la
+nómina de A.15; las tres listas de A.49.
+
+E.9 · Contradicciones
+Contradicciones y erratas, sin conciliar: A.5 (depósito de $ 1.830 y garantía de
+$ 12.500); A.6 (imputa a 1948 un decreto de 1949); A.10 y A.11 (cuadros que no
+cierran); A.4 (arts. 1, 2, 2, 4); A.19 (visto $ 1.751,35, art. 2 $ 1.761,35 en
+cifras y «cincuenta y un» en letras); A.30 (art. 2, «novecientos» en letras por
+92.235); A.38 (San Lorenzo 0.389 contra 0.339 de A.37); A.2 y A.40 (Mojotoro en
+Campo Santo y en La Caldera); A.13 y A.18 («Comisión Municipal» e «Intendencia
+Municipal» de La Caldera); A.32 (seis concejales en el art. 4, cuatro votos en
+el art. 5); A.43 («ugicada», «Vaquedos», «hactárea»); erratas de tapa «AÑO XI»
+(3457) y «AÑO LXI» (3560); A.17 (número del decreto de adjudicación con el tipo
+roto; A.19 lo da como 12.581).
+
+E.10 · Límites
+Límites (lo que el corpus o los insumos no permiten): falta la edición 3395 en
+el Release; 100 hojas declaradas y ausentes en 85 ediciones; la 3584 no deja
+leer sus páginas declaradas; sin spa no hay segunda versión propia fuera de las
+198 hojas ocrizadas por lee_auto; sin las .jpg no hay md5 ni dhash; dos cifras
+de A.8 ilegibles a 400 ppp. Pendientes: ver el cierre del §0.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. Las tapas de un año largo se leen mejor en tiras apiladas (20 por imagen, 70
+ppp, recortadas sobre la palabra «EDICION» de la hoja 1) que tapa por tapa: 281
+tapas en 15 imágenes, con relectura a 130 ppp sólo de las que no cierran contra
+las hojas. Se propone como procedimiento de §2.5bis para 1944 en adelante.
+2. Las deformaciones históricas del anillo 2 no se podan: «tacones», agregado en
+1911, devolvió en 1949 la única licitación del año sobre el camino a Los
+Yacones. Regla propuesta: un término de deformación se conserva mientras la capa
+de la época sea del mismo tipo (OCR previo del escáner).
+3. En las nóminas con imputación por renglón (personal de Arquitectura, 3520 h7)
+la capa cruza columnas y atribuye cargos al departamento que no le corresponden.
+Regla propuesta: en una nómina, todo renglón que nombra el departamento se mira
+en la imagen con sus dos vecinos.
+4. Presupuesto (v17 §5.5): 1949, con 281 ediciones y 51 actos, cupo en una
+sesión larga para el §A, el §B, las tapas y los cuadros, pero no para la cadena
+de Tesorería ni para los actores por inicial y apellido. Para 1950 en adelante
+conviene separar la cadena de Tesorería en un «LEE <año> complemento» de saldos.
+5. Los decretos de coparticipación a municipios (A.8, A.10, A.11, A.37, A.38)
+son la serie de hacienda municipal del departamento en esta época: cinco por
+año, con La Caldera siempre en el renglón 30. Se propone que el §R cuente
+«liquidaciones_municipales» aparte de «balances_municipales».
+
+§R · RECUENTO
+-------------
+anio: 1949
+ediciones_desde: 3308
+ediciones_hasta: 3589
+ediciones_presentes: 281
+ediciones_ausentes: 1
+hojas_presentes: 4869
+hojas_declaradas: 4932
+hojas_ausentes_estimadas: 100
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 32
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 51
+actos_dominio: 5
+actos_hacienda_municipal: 6
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 9
+subtotales_recalculados: 9
+resumenes_tesoreria: 10
+cadena_saldos: no-armada
+columnas_cotejadas: 55
+hojas_miradas: 362
+avisos_repetidos_departamento: 14
+falsos_positivos_anillo1: 9
+limites_declarados: 6
+estado: CON-PENDIENTES
+nivel_lectura: imagen
+pdf_release: 281
+avisos_release: 0
