@@ -1,0 +1,1337 @@
+LEE v17 — 1947
+==============
+Boletín Oficial de la Provincia de Salta, año 1947, ediciones N 2745 a 3026.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5). Sesión del 27/09/2026.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: COMPLETO, con 6 límites declarados (E.10). Nivel de lectura: imagen
+(todas las fichas del §A y del §B se miraron en la imagen del PDF).
+
+Insumos. La sesión no pudo bajar el Release desde la nube: github.com responde
+403 para ediedrich/boletines-salta («GitHub access to this repository is not
+enabled for this session»). Los mismos assets se bajaron del Release 1947 desde
+la máquina de Eduardo (conexión de la app de escritorio, carpeta «boletines») y
+se pasaron a la sesión: el pre-informe, decretos_1947.csv, lee_config.json,
+lee_textos_1947.zip, log.txt y resultados_1947.csv. Los 282 PDF se bajaron del
+Release a la máquina y se miraron allí: la sesión pidió recortes rasterizados
+con PyMuPDF y los leyó. No se bajaron recortes_1947_parte1-3.zip: los recortes
+se hicieron de nuevo desde los PDF.
+
+Inventario del Release (expanded_assets/1947, leído desde la máquina): 282 PDF,
+N 2745 a 3026, sin huecos ni avisos de «no se encontró»; 9 assets más:
+BO-Salta-1947_la-caldera_PRE-INFORME-LEE_2026-09-27.txt (único pre-informe del
+Release; en la carpeta local queda también el del 2026-09-23, que no se usó),
+decretos_1947.csv, lee_config.json, lee_textos_1947.zip, log.txt,
+recortes_1947_parte1..3.zip, resultados_1947.csv.
+
+lee_auto.py: sha f9a69a713e25 (estado.json), corrida del 27/09/2026 00:36 a
+01:04. El log registra «ERROR extrayendo 2848.pdf: code=7: cannot find page 34
+in page tree». Hallazgo de la sesión: las copias locales con que corrió lee_auto
+estaban truncadas en cinco ediciones. 2848 (178 hojas) quedó con texto sólo
+hasta h33; 2849 con 10 de 12 hojas y las hojas 7 a 10 corridas de lugar; 2850,
+2851 y 2852 con 0 hojas. La sesión extrajo de nuevo el texto de esas cinco
+ediciones desde los PDF del Release (204 hojas) y reemplazó las de 2848 y 2849.
+El pre-informe no vio esas 204 hojas: por eso omitió, entre otros, A.15, A.16 y
+la ficha 2850 h8 de E.7. Conviene volver a correr 1947 (ver §F).
+
+Config (v16 §15.4 y v17 §5.2):
+  config del Release: version 2026-09-27, hasta 1932, actores 581, anillo2 167
+  config de corrige:  version 2026-09-27, hasta 1932, actores 581, anillo2 167
+  se usa: corrige — razón: único válido (v17 §5.2); los dos son idénticos
+  contenido: iguales en anillo1, anillo2, actores, numeros y
+  falsos_positivos (0 diferencias).
+El config no tiene actores de 1933 a 1945 (el libro los leyó sin informe LEE):
+la red de actores de 1947 descansa en 1908-1932 y en los 42 de 1946.
+
+Entorno de la sesión: nproc 2; tesseract 5 con eng y osd, sin spa: no hay OCR en
+sesión. PyMuPDF 1.28.2 instalado en la máquina para rasterizar.
+
+Qué verificó la sesión: todas las tapas en la imagen (282); el cotejo de largo
+del texto contra la capa del PDF en todas las hojas; las cuatro pasadas con la
+unión corregida; la difusa ampliada y una pasada de Levenshtein; el anillo 2,
+los actores y los números; calendario, autoridad e interinato; siete resúmenes
+de Tesorería en la imagen; las hojas de poca tinta.
+
+§1 · CORPUS REVISADO
+--------------------
+282 ediciones, N 2745 (jueves 2 de enero) a 3026 (miércoles 31 de diciembre),
+sin huecos de numeración. 4.475 hojas presentes contra 4.430 declaradas en las
+tapas. La suma esconde dos cosas de signo contrario:
+  - 2 ediciones traen hojas que la tapa no cuenta: 2781 (declara 8, trae 20:
+    h8 a h20 son el «Padrón Minero de la Provincia de Salta», 13 hojas) y
+    2848 (declara 18, trae 178: h19 a h178 son el Presupuesto General, Ley
+    N 834, 160 hojas).
+  - 117 ediciones traen menos hojas que las declaradas: 113 una menos
+    (112 más la 2781 sin su padrón), 2856 y 2862 dos menos, 2897 tres menos
+    y 2779 ocho menos (declara 16 y trae 8, con los folios impresos 3, 5,
+    7, 9, 13, 15: faltan las páginas pares). Total estimado: 128 hojas
+    declaradas y ausentes.
+En las 113 ediciones con una hoja menos la última hoja presente lleva el pie
+«Talleres Gráficos Cárcel Penitenciaría» en 80 y su folio impreso coincide con
+su posición en 88. Qué es la hoja que falta no se sabe: se declara y no se
+explica. El sumario de 2770 remite a la página 8 (ausente) un aviso que está en
+la hoja 6: remisión errada, no contenido perdido.
+
+Tapas, leídas en la imagen las 282: año editorial «XXXVIII» de 2745 a 2916 (13
+de agosto) y «XXXIX» desde 2917 (14 de agosto); en 2889 y 2934 la cifra se ve
+borrosa. Día de la semana y fecha: coinciden en las 281 que los imprimen; 2848
+imprime «SALTA, MAYO, 19 DE 1947» sin día. Erratas de tapa: «LIERCOLES» (2980),
+«LIARTES» (2991, 2997). En 2911 la caja invierte los renglones de año y páginas.
+2973 compone la tapa en otra caja, más chica. El «Reg. Nacional de la Propiedad
+Intelectual» pasa de N 203.191 a 257.318 en 3010 (11 de diciembre).
+
+Días de salida: la tapa dice «APARECE LOS DIAS HABILES». Días hábiles (lunes a
+sábado) sin edición: 31. Explicados por actos del propio corpus (sin buscar
+causas afuera): 7/2 (feriado provincial, Güemes, Decreto 3121); 5/4 (feriado,
+Semana Santa, Decreto 3756); 14/4 (adhesión al feriado nacional, Decreto 3858);
+10/5 y 12/5 (feriado del IV Censo, 10 a 12 de mayo); 17/6 (feriado, aniversario
+de Güemes); 8/7 (feriado, Decreto 4958); 17/10 (feriado nacional, «Día del
+Pueblo», Decreto 6298); 23/10 (feriado, entrevista con el presidente de Bolivia,
+Decreto 6339). Sin explicar en el corpus: 1/1, 6/1, 17/2, 18/2, 20/2, 19/3, 3/4,
+4/4, 1/5, 15/5, 5/6, 20/6, 9/7, 12/8, 15/8, 30/8, 13/9, 15/9, 18/10, 1/11, 8/12
+y 25/12 (22). No hay ediciones dobles: fechas estrictamente crecientes.
+
+Resolución: imagen JPEG incrustada, una por hoja; techo medido con PyMuPDF sobre
+las 4.475: 375-399 ppi en 3.422 hojas, 400-424 en 723, 425-475 en 43, 300-374 en
+124 y 150 ppi en 162 (2812 h11-h12 y el anexo de 2848). Es más del doble del
+techo de 1923-1932 (150 ppi).
+
+Capa de texto: el PDF trae capa propia en todas las hojas salvo 2848 h42 (cuadro
+resumen del presupuesto, girado, sin capa: límite). Segunda versión (OCR propio
+de lee_auto, tesseract spa, psm 3): 173 hojas, con confianza media 61,3
+(pre-informe §1): 10 «ver», 163 «ojos»; ninguna «pub».
+
+Tabla por edición: no se transcribe entera; tapas_img (282 renglones, edición |
+año | páginas declaradas | día | fecha) queda en las notas de la sesión y su
+resumen está arriba. Ediciones con hojas de más o de menos: listadas arriba.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa del PDF («prev») en las 4.475 hojas; OCR propio («prop») en 173;
+búsqueda sobre cada una por separado. Unión: U+0002 no aparece; U+00AD aparece
+123.113 veces, 123.109 seguido de salto, y se quita junto con el salto; guion de
+corte con hasta dos signos a cada lado. Prueba de la unión: cuatro hojas tenían
+«Cal­\ndera» partido y quedaron unidas.
+
+Pasadas, con su resultado:
+  - Literal «cald» (NFD, sin tildes): 140 aciertos; 82 «caldera», 5
+    «calderilla», el resto falsos positivos (E.7).
+  - Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: sólo «caldera» y «caldero» (89 y
+    12). No devuelve nada nuevo; se probó que no está rota porque sí
+    devuelve la forma literal.
+  - Laxa espaciada, separador [\s\-\.,]{0,3} entre cada par de letras: 2
+    aciertos nuevos, 2848 h130 («la c ald era») y h146 («l a c aldera»):
+    son A.15 y A.16. Además, búsqueda sobre el texto sin espacios ni signos
+    en todas las hojas: devuelve las mismas dos y nada más.
+  - Difusa (ratio >= 0,78): 36 aciertos en 20 formas; uno real: «cgldera»,
+    2923 h2 (sumario de A.23). Difusa ampliada (0,70-0,78, c/g/o): 1.314
+    aciertos en 49 formas, ninguno real. Pasada de Levenshtein <= 2: añade
+    «qdldera» (2912 h4, ya en A.22).
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas:
+  1) faltantes: 0 de los 17 que midió v16 (todos ya agregados); 1947 aporta
+     «san cayetano» (Hogar Agrícola San Cayetano de Vaqueros), que se agrega.
+  2) apellidos dentro del anillo 2: 11 (apaza, aramayo, condori, chaile,
+     isasmendi, murua, nogales, toconas, castellanos, burgos de yugra,
+     mamani); no se mueven, porque el formato de «actores» exige nombre (§F).
+  3) a revisar: 106 términos sin ningún acierto en 1947, de 167.
+Anillo 2 sobre el texto sin puntuación: 61 términos con acierto, 2.438 aciertos
+en 1.178 hojas. Se leyeron los contextos de los 61, agrupados por texto
+(resultado en B.2, B.3 y C).
+
+Actores: los 581 del config, por nombre completo y por inicial más apellido,
+sobre el texto sin puntuación: 191 con algún acierto. Números arrastrados: 138,
+sin acierto relevante para el departamento (son de 1908-1932). Fórmulas de
+reemplazo: 10, leídas en los actos del §A.
+Identificadores de las ausencias: nombre, cargo, lugar y número de acto (el año
+numera los decretos por ministerio: G, H/E, A).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+33 actos del departamento. Los repetidos (A.9, nueve apariciones; A.32, cinco)
+son una entrada cada uno.
+
+A.1
+FUENTE: 2762 h7 c3 (Salta, 22 de enero de 1947)
+FICHA: Resolución N 229 H. Salta, Enero 21 de 1947. Expediente N 20919|1946.
+Devolución de fianza a Augusto Regis por la Receptoría de Rentas de La Caldera
+que desempeñaba Julia R. de Regis. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Visto este expediente por el cual el señor Augusto Regis, solicita le sea
+  devuelta la fianza que ha otorgado oportunamente a favor de la señora Julia R.
+  de Regis, para que desempeñara los cargos de Receptor de Rentas y Expendedor
+  de Guías, Transferencia de Cueros, Marcas y Señales y Multas Policiales de la
+  localidad de La Caldera; atento a lo informado por Dirección General de Rentas
+  y Contaduría General de la Provincia, / El Ministro de Hacienda, O. P. y
+  Fomento / RESUELVE: / 1 — Por Contaduría General de la Provincia, procédase a
+  hacer entrega al señor Augusto Regis, de la fianza que ha otorgado
+  oportunamente a favor de la señora Julia R. de Regis, a fin de que esta última
+  desempeñe los cargos de Receptor de Rentas y Expendedor de Guías,
+  Transferencia de Cueros, Marcas y Señales y Multas Policiales de la localidad
+  de La Caldera. / 2.o — Comuníquese, publíquese, etc. / JUAN W. DATES / Es
+  copia: Emidio Héctor Rodríguez / Oficial Mayor de Hacienda O. P. y Fomento
+NOTA DE LECTURA: El visto dice «desempeñara» (pasado) y el resolutivo
+«desempeñe» (presente): se transcriben los dos tiempos y no se concilian (E.9).
+El reemplazo de la receptora consta en A.3 (Gerardo Guerrero, con anterioridad
+al 1 de enero). Resolución ministerial: firma sólo el ministro.
+
+A.2
+FUENTE: 2765 h3 c2 (Salta, 27 de enero de 1947); sumario h2
+FICHA: Decreto N 2978 H. Salta, Enero 24 de 1947. Designa Jefe del Departamento
+de La Caldera para el IV Censo General de la Nación a Víctor Onesti. Clase:
+OTRO.
+MODO DE LECTURA: imagen, 200 ppp (cuerpo y renglón del sumario).
+TEXTO:
+  Visto lo solicitado por Dirección General de Estadística, Repartición que
+  tiene a su cargo las tareas de organización del IV Censo General de la Nación,
+  / El Gobernador de la Provincia / DECRETA: / Art. 1 — Desígnase Jefe del
+  Departamento de La Caldera, para las tareas del IV Censo General de la Nación,
+  al señor VICTOR ONESTI, matrícula N 3930817, D. M. 63, clase 1884, con la
+  asignación que oportunamente se le fijará como compensación mientras duren las
+  tareas del levantamiento del IV Censo. / Art. 2.o — Comuníquese, publíquese,
+  etc. / LUCIO A. CORNEJO / Juan W. Dates / Es copia: Emidio Héctor Rodríguez /
+  Oficial Mayor de Hacienda, O. P. y Fomento. || Sumario: 2978 " " " " — Designa
+  Jefe del Dpto de La Caldera para el levantamiento del IV Censo General,
+  ........ 3
+NOTA DE LECTURA: La misma matrícula (3930817) y clase (1884) aparecen en el
+Decreto N 6104-E (2960 h7, imagen), que designa a Víctor Onesti Auxiliar 7.o de
+Rentas. La identidad es por matrícula y clase: inferencia rotulada. Un «Víctor
+Onesti» firma como testigo un contrato social en la ciudad de Salta (2764 h10,
+imagen): homónimo o la misma persona, indeterminado.
+
+A.3
+FUENTE: 2769 h7 c2-c3 (Salta, 31 de enero de 1947)
+FICHA: Decreto N 3037-H. Salta, Enero 28 de 1947. Confirma receptores y
+expendedores de Rentas: La Caldera, Gerardo Guerrero. Clase: CARGOS.
+MODO DE LECTURA: imagen, 200 ppp (encabezado, lista entera y firma de h8).
+TEXTO:
+  Visto lo solicitado por el Banco Provincial de Salta y Dirección General de
+  Rentas de la Provincia; y atento a lo que dispone el art. 3 de la Ley N 744
+  promulgada el 21 de agosto de 1946. / El Gobernador de la Provincia / DECRETA:
+  / Art. 1 — Confírmase provisoriamente y con anterioridad al 1 del corriente
+  mes, al siguiente personal de Receptores, Expendedores y Recaudadores de
+  Bosques, propuesto por el Banco Provincial de Salta y Dirección General de
+  Rentas: / a) Receptores y Expendedores en: ... Iruya ........ Rodolfo D.
+  Herrera / La Caldera ..... Gerardo Guerrero / El Tala ...... Daniela A. Rodas
+  ... / b) Receptores en: Guachipas ... Baltazar Vilar / c) Expendedores en: ...
+  Mojotoro ...... Nicolás Mejías ... / d) Recaudadores de Bosques en: Joaquín V.
+  González . Rómulo Bini / Orán . . . . " " / e) Expendedor de Sellado en: Salta
+  - Capital . . . Bernarda S. de Pinto / Art. 2 — El personal consignado en el
+  ar- [sigue en h8]
+NOTA DE LECTURA: RECUENTO PROPIO sobre la transcripción: a) 45 renglones (tres
+de ellos agrupan localidades: «El Piquete, Palermo y El Dorado», «Chicoana, El
+Carril y Pulares», «Sn. Carlos y Animaná»); b) 1; c) 9; d) 2 (Orán con comillas
+de repetición); e) 1. El acto no declara número, de modo que no hay nada que
+cotejar. Mojotoro figura en c) sin departamento: jurisdicción indeterminada
+(5.1ter). La firma de h8 (LUCIO A. CORNEJO) se miró.
+
+A.4
+FUENTE: 2771 h4 c3 (Salta, 3 de febrero de 1947); sumario h2
+FICHA: Decreto N 3065 G. Salta, Enero 30 de 1947. Acepta la renuncia de Mariano
+Sivila como Juez de Paz Propietario de La Caldera. Clase: CARGOS+JUSTICIA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 3065 G. / Salta, Enero 30 de 1947. / Expediente N 5241|947. / Visto
+  la renuncia presentada, / El Gobernador de la Provincia / DECRETA: / Art. 1 —
+  Acéptase la renuncia al cargo de Juez de Paz Propietario de LA CALDERA,
+  presentada por el señor MARIANO SIVILA. / Art. 2.o — Comuníquese, publíquese,
+  insértese en el Registro Oficial y archívese. / LUCIO A. CORNEJO / José T.
+  Solá Torino / Es copia: Argentino V. Díaz / Auxiliar 5 del Ministerio de
+  Gobierno, Justicia e Instrucción Pública. || Sumario: 3065 " " " " — Acepta
+  renuncia del Juez de Paz Prop. de La Caldera, ... 4
+NOTA DE LECTURA: El nombramiento del sucesor en el cargo de propietario no
+aparece en el año (búsqueda por «juez de paz» + «caldera» en las 4.475 hojas):
+vacante declarada sin cierre, citada en B.4.
+
+A.5
+FUENTE: 2774 h3 c2-c3 (Salta, 6 de febrero de 1947); sumario h2
+FICHA: Decreto N 3109 G. Salta, Febrero 4 de 1947. Nombra a Liborio Gerardo
+Guerrero Juez de Paz Suplente del Distrito de La Caldera. Clase:
+CARGOS+JUSTICIA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 3109 G. / Salta, Febrero 4 de 1947. / Encontrándose vacante el cargo
+  de Juez de Paz Suplente de La Caldera, / El Gobernador de la Provincia /
+  DECRETA: / Art. 1.o — Nómbrase al señor LIBORIO GERARDO GUERRERO, Juez de Paz
+  Suplente del Distrito de LA CALDERA, por el término de funciones que señala el
+  Art. 165, 2 párrafo, de la Constitución de la Provincia. / Art. 2 —
+  Comuníquese, publíquese, insértese en el Registro Oficial y archívese. / LUCIO
+  A. CORNEJO / José T. Solá Torino / Es copia: Argentino V. Díaz / Auxiliar 5
+  del Ministerio de Gobierno, Justicia e Instrucción pública || Sumario: 3109 de
+  Febrero 4 " " — Nombra Juez de Paz Suplente de La Caldera, ...... 3
+NOTA DE LECTURA: Vacante declarada sin nombrar a quien la dejó: citado y no
+acompañado (5.3). «Liborio Gerardo Guerrero» (A.5), «Gerardo Guerrero» (A.3,
+A.28) y «Gerardo L. Guerrero» (A.7) pueden ser una misma persona: inferencia
+rotulada, no adoptada.
+
+A.6
+FUENTE: 2781 h18-h19 (Salta, 15 de febrero de 1947), suplemento «Padrón Minero»,
+h8-h20
+FICHA: Padrón Minero de la Provincia de Salta al 1 de julio de 1946 (Ley
+Nacional N 10.273, art. 8). Tabla «Minas vacantes», renglón 17: «Caldera 1, 2 y
+3», departamento Caldera, lugar San José. Clase: MINAS.
+MODO DE LECTURA: imagen, 120 ppp, hojas enteras.
+TEXTO:
+  MINAS VACANTES / Número de Orden | Nombre de la Mina | Expediente N - Letra |
+  Fecha de Registro | Mineral || Departamento | Lugar | Categoría | Superficie
+  en Hectáreas | Número de Pertenencias | Observaciones / ... 16 | Aguada de las
+  Piedras Blancas | 46 - M | 14| 5|926 | Mica || Campo Santo | Solo Basto | 1 |
+  27 | 3 | Sin mensura / 17 | Caldera 1, 2 y 3 | 44 - L | 30| 4|930 | Plata y
+  Plomo || Caldera | San José | 1 | 27 | 3 | " / ... / Ing. MARIANO ESTEBAN
+  Inspector General de Minas / Dr. LUIS V. OUTES Director General de Minas
+NOTA DE LECTURA: El renglón 17 se reconstruye leyendo el mismo orden en las dos
+hojas de la tabla (h18 izquierda, h19 derecha): la tabla corta en dos hojas y no
+repite el número de orden en la derecha; el emparejamiento es por posición de
+renglón (27 y 27). Las comillas de Observaciones repiten «Sin mensura» del
+renglón anterior. La lectura del renglón 16 como Campo Santo es por la misma
+posición: inferencia de alineación, declarada. RECUENTO PROPIO: 27 minas
+vacantes, numeradas 1 a 27; el cuadro no declara total.
+
+A.7
+FUENTE: 2791 h6 c1-c2 (Salta, 3 de marzo de 1947)
+FICHA: Decreto N 3333 H. Salta, Febrero 26 de 1947. Designa cuatro Jefes de
+Fracción censal para el Departamento de La Caldera. Clase: OTRO.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Vista la solicitud presentada por la Dirección General de Estadística,
+  conformada por el Delegado Técnico en la Provincia de Salta del Consejo
+  Nacional de Estadística y Censos relativa a la designación de Jefes de
+  Fracciones Censales para el departamento de La Caldera, / El Gobernador de la
+  Provincia / DECRETA: / Art. 1.o — Desígnanse los siguientes Jefes de fracción
+  para el Departamento de La Caldera: / a) De la fracción de censo urbano N 1,
+  (Pueblo de La Caldera) al señor ALEJANDRO ENRIQUE HERMAN PFISTER, L. E.
+  547259, Clase 1913. / b) De la fracción de censo rural N 2, al señor AUGUSTO
+  REGIS, Matrícula 3.991.356, Clase 1872. / c) De la fracción de censo rural N
+  3, al señor GERARDO L. GUERRERO, L. E. 3.915.257, Clase 1902. / d) De la
+  fracción de censo rural N 4, al señor HILARIO MAMANI, L. E. 3.945.404, Clase.
+  / Art. 2.o — Comuníquese, publíquese, etc. / LUCIO A. CORNEJO / Juan W. Dates
+  / Es copia: Emidio Héctor Rodríguez
+NOTA DE LECTURA: RECUENTO PROPIO: 4 jefes (a-d); el acto no declara número. d)
+imprime «Clase.» sin año: se transcribe, no se completa. Los «Jorge Mamani» y
+«Felipe Apaza» que la capa pone a continuación son del Decreto 3334-H
+(Guachipas), mirado: no son del departamento (falso positivo de vecindad).
+
+A.8
+FUENTE: 2805 h9 c2 (Salta, 20 de marzo de 1947); encabezado h7 c2
+FICHA: Decreto N 3392-H. Salta, marzo 1.o de 1947. Art. 6: designa ocho
+Oficiales Censistas para el Departamento de La Caldera. Clase: OTRO.
+MODO DE LECTURA: imagen, 200 ppp (encabezado h7 y artículo 6 entero).
+TEXTO:
+  Decreto N 3392-H / Salta, marzo 1.o de 1947. / Visto lo solicitado por
+  Dirección General de Estadística, Repartición que tiene a su cargo las tareas
+  del IV Censo General de la Nación, ... Art. 6 — Desígnanse Oficiales Censistas
+  para el Departamento de La Caldera, en las fracciones y radios censales que se
+  indican a continuación, a las siguientes personas: / FRACCION DE CENSO URBANO
+  N 1 / Del radio censal N 1, al señor TEOFILO REYES, L. E. 3920208, Clase 1885.
+  / Del radio censal N 2, al señor CLAUDIO MURUA, L E. 3913644, Clase 1906. /
+  FRACCION DE CENSO RURAL N 2 / Del radio censal N 1, al señor AGAPITO HERRERA,
+  L. E. 3903380, Clase 1913. / Del radio censal N 2, al señor VICTOR VALDIVIESO,
+  L. E. 3913748, Clase 1907. / FRACCION DE CENSO RURAL N 3 / Del radio censal N
+  1, al señor FIDEL GARCIA, L. E. 3974944, Clase 1908. / Del radio censal N 2,
+  al señor FLORENCIO CARRILLO, L. E. 3972343, Clase 1901. / FRACCION DE CENSO
+  RURAL N 4 / Del radio censal N 1, al señor TOMAS MEDRANO, L. E. 3948808. / Del
+  radio censal N 2, al señor CARLOS F. IRIARTE, L. E. 3943376, Clase 1912.
+NOTA DE LECTURA: RECUENTO PROPIO: 8 censistas en 4 fracciones (2+2+2+2); el acto
+no declara número. Tomás Medrano sin clase: se transcribe. «IRIARTE» impreso con
+la primera R borrosa («IP.IARTE» en la capa); la búsqueda de actores no lo
+devuelve (B.4). Art. 7 (Cerrillos) empieza en c3.
+
+A.9
+FUENTE: 2811 h14 c3 (27 de marzo de 1947) y ocho apariciones más
+FICHA: Edicto N 2585, rectificación de partida de nacimiento de Indalecia Dina
+Lozano, «tomo siete de La Caldera». Clase: REGISTRO-CIVIL+JUSTICIA.
+MODO DE LECTURA: imagen, 200 ppp (2811 h14-h15); las otras ocho apariciones
+cotejadas por texto contra la mirada.
+TEXTO:
+  N 2585 — EDICTO. RECTIFICACION DE PARTIDA: En el juicio "Recticación [sic] de
+  partida, s|p. NARCISA LOZANO", que se tramita ante este Juzgado de Primera
+  Instancia y Primera Nominación en lo Civil, a cargo del doctor Carlos Roberto
+  Aranda, se ha dictado sentencia, cuya parte pertinente dice: "Salta, marzo 11
+  de 1947. ...FALLO: Haciendo lugar a la demanda y en consecuencia ordenando la
+  rectificación de la partida de nacimiento de Indalecia Dina Lozano, ocurrido
+  el 15 de mayo de 1927, acta número mil setecientos ochenta y siete, folio
+  ciendo [sic] diez y siete, del tomo siete de La Caldera, en el sentido de que
+  el verdadero nombre de la madre es "Narcisa" y no Leonor como figura. Cópiese
+  notifíquese previa reposición y publíquese por ocho días en el diario que se
+  proponga a los efectos del artículo 28 de la ley 251. Cumplido, ofíciese al
+  señor Director del Registro Civil para su cumplimiento. C. R. ARANDA". / Lo
+  que el suscrito secretario hace saber a los interesados por medio del presente
+  edicto. / Salta, marzo 24 de 1947. / Carlos Enrique Figueroa, Secretario. /
+  Importe $ 10.—. e|27|3 al 7|4|47.
+NOTA DE LECTURA: Apariciones (cotejo por texto, no por número de aviso): 2811
+h14, 2812 h11, 2813 h13, 2814 h11, 2815 h13, 2816 h7, 2817 h11, 2818 h10, 2819
+h13: nueve. La marca «e|27|3 al 7|4|47» cubre esas nueve ediciones hábiles (27/3
+a 7/4, sin 3-5/4). «ciendo» por «ciento» y «Recticación» son del original (E.9).
+Es un aviso repetido: una sola entrada.
+
+A.10
+FUENTE: 2814 h12 c3 y h13 c1-c3 (Salta, 31 de marzo de 1947); sumario h3
+FICHA: Corte de Justicia, Primera Sala, 10 de marzo de 1947: oposición a la
+posesión treintañal del inmueble «San Antonio» o «San Roque», ubicado en La
+Caldera. Nieves Alemán de Robledo vs. Paulina Reyes de Alemán. Confirma la
+sentencia de primera instancia. Clase: DOMINIO+JUSTICIA.
+MODO DE LECTURA: imagen, 200 ppp (encabezado, votos de la segunda cuestión,
+resolución y sumario); el voto de nulidad de Ranea (h13 c1) se leyó en la
+imagen.
+TEXTO:
+  En Salta, a los diez días del mes de marzo [sin año en el encabezado] en el
+  Salón de Acuerdos de la Excma. Primera Sala de la Corte de Justicia, los
+  señores Ministros de la misma doctores Julio César Ranea, José M. Arias
+  Uriburu y Luis C. García, para pronunciar decisión en el exp. N 6800 del
+  Juzgado de 1a. Instancia 3a. Nominación en lo Civil, caratulado: "Oposición a
+  la posesión treintenaria del inmueble "San Antonio" o "San Roque" ubicado en
+  La Caldera Nieves Alemán de Robledo vs. Paulina Reyes de Alemán", venidos por
+  los recursos de nulidad y apelación interpuestos por la demandada y en
+  apelación por la actora en cuanto a la regulación, en contra de la sentencia
+  de fs. 115|122 vta., del 13 de julio de 1945, por la cual se hace lugar a la
+  oposición planteada y ordena se inscriba en el Registro Inmobiliario la parte
+  pertinente de la sentencia, con costas, regulando los honorarios del Dr.
+  Cuéllar en la suma de noventa pesos m/n.: ... [Arias Uriburu, 2a. cuestión:]
+  En el expediente N 21964 del Juzg. de 1a. Inst. y 1a. Nom. en lo Civil, fs.
+  31|32, juicio "Ausencia de presunción de fallecimiento de Milagro Alemán", ...
+  consta que la demandada, en 16 de agosto de 1935, denuncia, bajo su firma,
+  como bien de Milagro Alemán la misma posesión de tierra que ahora involucra
+  dentro del límite de lo que ejercitó la acción posesoria. ... sobre si "es
+  verdad que doña Milagro Alemán tuvo la posesión de la fracción de la finca
+  "San Roque o San Antonio", responde "que no" ... Perjura doblemente ... estimo
+  que los trabajos de esta instancia deben regularse en veinticinco pesos. ...
+  [García:] ... regulándose los honorarios del Dr. Cuéllar en la suma de treinta
+  pesos ... [Ranea:] ... doña Paulina Reyes de Alemán no ha podido acreditar
+  posesión sobre el inmueble objeto del litigio y que la oponente, por su parte,
+  ha ejercido sobre la fracción de que se trata posesión suficiente ... estimo
+  que los honorarios del Dr. Merardo Cuéllar deben ser regulados en la suma de
+  treinta pesos moneda nacional ... / Salta, Marzo 10 de 1947. / Y VISTOS: ...
+  LA PRIMERA SALA DE LA CORTE DE JUSTICIA: / DESESTIMA la nulidad deducida y
+  CONFIRMA en todas sus partes la sentencia recurrida, con costas, regulando los
+  honorarios del Dr. Cuéllar en veinticinco pesos por sus trabajos en esta
+  instancia. / Cópiese, notifíquese previa reposición y baje. / JULIO C. RANEA —
+  JOSE M. ARIAS URIBURU — LUIS C. GARCIA — Ante mí: Ricardo Day. — Secretario
+  Letrado. || Sumario h3: N 633 — Corte de Justicia, 1a. Sala. CAUSA: Oposición
+  a la posesión treintenaria del inmueble "San Antonio" o "San Roque" ubicado en
+  "La Caldera". Nieves Alemán de Robledo vs. Paulina Reyes de Alemán, ..... 12
+  al 13
+NOTA DE LECTURA: Dos votos regulan treinta pesos (García, Ranea) y uno
+veinticinco (Arias Uriburu); la resolución regula veinticinco. Se transcribe y
+no se concilia (E.9). La sentencia confirmada hace lugar a la oposición: gana la
+oponente, Nieves Alemán de Robledo. El mismo inmueble es objeto de A.12, edicto
+posterior (22 de abril) en que Paulina Reyes de Alemán vuelve a invocar la
+posesión treintañal ante la Tercera Nominación: se declara el orden de los dos
+actos y no se explica.
+
+A.11
+FUENTE: 2829 h4 c1 y h5 c2-c3 (Salta, 22 de abril de 1947)
+FICHA: Decreto N 3902 G. Salta, Abril 16 de 1947. Nómina de la Policía por la
+Ley de Presupuesto: «Subcomisario de 1a. (La Caldera), FRANCISCO MERCADO» y
+«Subcomisario de 3a. (La Caldera), LIBORIO CASTILLO». Clase: CARGOS.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  N 3902 G. / Salta, Abril 16 de 1947. / Expediente N.o 6003|947. / Habiéndose
+  promulgado la Ley de Presupuesto General de la Provincia para el año 1947, y
+  siendo necesario conformar a la nominación de los cargos determinados en la
+  misma, al personal de Policía de la Capital y Campaña, / El Gobernador de la
+  Provincia / DECRETA: / Art. 1.o — Confírmase, nómbrase y asciéndese, con
+  anterioridad al día 1 de abril del año en curso, en los puestos, categorías y
+  designaciones que se indican a continuación, al siguiente personal: / ANEXO C
+  — INCISO VIII — POLICIA ... [h5 c2] Subcomisario de 1a. (Río Grande), ANTONIO
+  AGÜERO. / Subcomisario de 1a. (La Caldera), FRANCISCO MERCADO. / Subcomisario
+  de 1a. (La Poma), BERNANDINO ARJONA. ... [h5 c3] Subcomisario de 3a. (Las
+  Lajitas), RAUL ROLDAN. / Subcomisario de 3a. (La Caldera), LIBORIO CASTILLO. /
+  Subcomisario de 3a. (La Isla), MANUEL PATRON. ... Subcomisario de 3a.
+  (Mojotoro), NICOLAS MEJIAS.
+NOTA DE LECTURA: Dos plazas rotuladas «(La Caldera)», una de 1a. y otra de 3a.:
+se transcriben las dos y no se concilia si son dos dependencias (E.9).
+«BERNANDINO» [sic]. «Liborio Castillo»: la capa lee «LIB0RIO» y la búsqueda de
+actores no lo devuelve ni en su propio acto: falla de la búsqueda, declarada en
+B.4. Mojotoro, sin departamento: indeterminada. Firma y fecha de publicación de
+la nómina en h7 (capa y encabezado mirado).
+
+A.12
+FUENTE: 2830 h8 c1-c2 (Salta, 23 de abril de 1947); sumario h3
+FICHA: Edicto N 2658, posesión treintañal: Paulina Reyes de Alemán, inmueble
+«San Antonio» o «San Roque» en La Calderilla, Departamento de La Caldera,
+catastro N 006. Clase: DOMINIO+JUSTICIA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  N 2658 — EDICTO: POSESION TREINTAÑAL: Habiéndose presentado doña Paulina Reyes
+  de Alemán invocando la posesión treintañal de un inmueble ubicado en La
+  Calderilla, Departamento de La Caldera, de esta Provincia, denominado "San
+  Antonio" o "San Roque", con extensión de cuatro cuadras, aproximadamente, de
+  Sud a Norte por una legua de Este a Oeste, y encerrada dentro de los
+  siguientes límites: Norte, con propiedad de don Eusebio Palma; Sud, con
+  propiedad de Abraham Fernández; Este, con las cumbres del cerro Pucheta o
+  Potrero de Valencia, y Oeste, con el río de La Caldera. Catastrada a su
+  nombre, bajo N 006, de La Caldera; el señor Juez de la causa, Tercera
+  Nominación en lo Civil Dr. I. Arturo Michel Ortíz ha dictado la siguiente
+  providencia: "Salta Febrero 11 de 1947. AUTOS Y VISTOS: Agréguese a sus
+  antecedentes. Y atento lo solicitado, lo dictaminado por el Ministerio Público
+  Fiscal a fs. 2 vta. y lo que resulta de los informes de fs. 3 vta. y 6 vta.;
+  en su mérito, cítese por edictos que se publicarán durante treinta días en los
+  diarios "La Provincia" y "Norte" y por una vez en el BOLETIN OFICIAL, a todos
+  los que se consideren con derecho al inmueble individualizado en estos autos,
+  ... Recíbase declaración, a tenor del interrogatorio propuesto a los testigos
+  Pedro Tejerina, Eusebio Robles, Manuel Condorí, Manuel Lozano, Pedro Tejerina
+  y Mariano Sivila, a cuyo efecto comisiónase al Juez de Paz P. o S. de La
+  Caldera. Para notificaciones en Secretaría señálanse los lunes o día
+  subsiguiente hábil si alguno de éstos fuere feriado. I. MICHEL ORTIZ". Juzgado
+  hoy a cargo del Dr. Alberto Austerlitz. / Lo que el suscrito Secretario hace
+  saber a sus efectos. / Salta, 22 de Abril de 1947. — Tristán C. Martínez,
+  Escribano Secretario. / Importe $ 16.—. || Sumario h3: N 2658 — Deducido por
+  doña Paulina Reyes de Alemán, sobre un inmueble ubicado en La Calderilla, ....
+  8
+NOTA DE LECTURA: RECUENTO PROPIO de testigos: 6 nombres, 5 personas (Pedro
+Tejerina dos veces): el acto no declara número. Linderos: 4. «por una vez en el
+BOLETIN OFICIAL»: la búsqueda del texto en el resto del corpus devuelve sólo
+esta edición (una aparición). Mariano Sivila, juez de paz renunciante en A.4,
+figura como testigo. Ver A.10.
+
+A.13
+FUENTE: 2842 h4 c2 (Salta, 8 de mayo de 1947); sumario h2
+FICHA: Decreto N 4241-G. Salta, mayo 5 de 1947. Aprueba la Ordenanza Impositiva
+de la Comuna del Distrito de La Caldera para 1947. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 4241-G / Salta, mayo 5 de 1947. / Visto el expediente N.o 5450|47 en
+  el que la Municipalidad de La Caldera, eleva a consideración y aprobación del
+  Poder Ejecutivo la Ordenanza General de Impuestos que ha de regir en dicho
+  Municipio en el corriente año; y atento lo dictaminado por el señor Fiscal de
+  Gobierno, / El Gobernador de la Provincia / DECRETA: / Art. 1 — Apruébase la
+  ORDENANZA IMPOSITIVA que ha de regir en la COMUNA DEL DISTRITO DE LA CALDERA,
+  durante el corriente año, y que corre de fojas 6 a 11 del expediente de
+  numeración y año arriba citado. / Art. 2 — Remítase el expediente N.o 5450|47
+  con copia autenticada de este decreto, a la Comisión Municipal de La Caldera,
+  a los efectos legales consiguientes. / Art. 3.o — Comuníquese, publíquese,
+  insértese en el Boletín Oficial y archívese. / LUCIO A. CORNEJO / Julio Díaz
+  Villalba / Es copia: A. N. Villada. / Oficial Mayor (oficial 5) de Gobierno,
+  Justicia e I. Pública. || Sumario: " " " " — Aprueba Ordenanza Impositiva de
+  la Comuna de La Caldera, ...... 4
+NOTA DE LECTURA: La ordenanza (fs. 6 a 11 del expediente) no se publica: citada
+y no acompañada. El mismo acto llama al órgano «Municipalidad», «Municipio»,
+«Comuna del Distrito» y «Comisión Municipal»: se transcriben las cuatro.
+
+A.14
+FUENTE: 2843 h16 c1 (Salta, 9 de mayo de 1947); encabezado h14 c3
+FICHA: Decreto N 4238-A. Salta, 5 de mayo de 1947. Nómina de la Dirección
+Provincial de Sanidad: «La Caldera don CLAUDIO MURUA» entre los enfermeros.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 200 ppp (encabezado y renglón).
+TEXTO:
+  Decreto N 4238-A / Salta, 5 de mayo de 1947. / Expediente N.o 10008|947. /
+  Habiéndose promulgado la Ley de Presupuesto General de la Provincia para el
+  año 1947, y siendo necesario conformar a la no- [h15] minación de los cargos
+  determinados en la misma, al personal de la Dirección Provincial de Sanidad,
+  ... [h16 c1] Ayudantes 5 (Parteras) / Chicoana Sra. MARIA L. B. D. SANCHEZ. /
+  Cachi Sra. LUBINA M. DE AHUMADA. / Rosario de la Frontera Sta. SUSANA TOLEDO.
+  / Morillos Sra. ANGELA M. DE LA SILVA. / (Enfermeros) / Rosario de Lerma don
+  FABIAN S. BALBOA. / Coronel Moldes don FRANCISCO M. MOLINA. / Morillo don
+  ROSARIO DELGADO. / La Viña Sra. ESPERANZA LL. DE LIENDRO. / La Caldera don
+  CLAUDIO MURUA. / El Carril don JULIO H. FIGUEROA.
+NOTA DE LECTURA: El renglón está bajo «Ayudantes 5 (Parteras)» y el subtítulo
+«(Enfermeros)»: el encabezado de la lista se miró. Claudio Murúa es también
+censista del radio urbano 2 (A.8): identidad por nombre, rotulada.
+
+A.15
+FUENTE: 2848 h127-h130 (Salta, 19 de mayo de 1947), anexo Ley N 834, págs.
+impresas 139-142
+FICHA: Ley N 834, Presupuesto General 1947, Administración General de Aguas,
+Inciso V, Plan de Obras, Item 6: «El Río ... La Caldera (1a. etapa) $ 50.000».
+En el mismo plan (Item 1): «Regadío en Vaqueros 1a. etapa) $ 30.000». Clase:
+AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp, hojas enteras.
+TEXTO:
+  INCISO V — PLAN DE OBRAS / APARTADO I — A ATENDER CON FONDOS DE LA LEY N 770 /
+  Item 1 — Obras a ejecutar reembolsables por los usuarios: ... Regadío en
+  Vaqueros 1a. etapa) ..... 30.000.— ... Total del Item 1 ... 822.000.— / ...
+  Item 6 — Obras de defensas permanentes o eventuales para contener daños por
+  crecientes o inundaciones sobre: El Río Rosario (Toro) (1a. etapa) 80.000.— /
+  " " Mojotoro (1a. etapa) 100.000.— / " " Chuñapampa 20.000.— / [pág. 142] El
+  Río Cachi (1.a etapa) 40.000.— / " " La Caldera (1a. etapa) 50.000.— / " "
+  Calchaquí (San José de Cachi y San Carlos) (1a. etapa) 80.000.— / " "
+  Juramento (El Galpón) (1a. etapa) 50.000.— / " " Iruya (1a. etapa) 30.000.— /
+  " " Wierna (1a. etapa) 50.000.— / Otras defensas imprevistas de emergencia en
+  distintos lugares de la Provincia 60.000.— / Total del Item 6 ... $ 560.000.—
+NOTA DE LECTURA: RECALCULO: Item 6, 10 renglones = 560.000, cierra; Item 1, 14
+renglones = 822.000, cierra; Item 2 = 718.500, cierra. El anexo ocupa 160 hojas
+(h19 a h178) de una edición que declara 18 páginas; la capa de ese anexo imprime
+las palabras con letras separadas («La C ald era») y sólo la variante espaciada
+de la laxa lo devolvió (§2). «Regadío en Vaqueros» no nombra el término: también
+va a B.2. «1a. etapa)» sin paréntesis de apertura [sic].
+
+A.16
+FUENTE: 2848 h146 (19 de mayo de 1947), anexo Ley N 834, pág. impresa 163
+FICHA: Ley N 834, Dirección Provincial de Sanidad, Inciso VI, Plan de Obras con
+fondos de la Ley 770: estaciones sanitarias en «El Tala; La Caldera; Pichanal;
+Joaquín V. González, Iruya, Santa Victoria». Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp, hoja entera.
+TEXTO:
+  INCISO VI — PLAN DE OBRAS CON FONDOS DE LA LEY N 770 / Item Unico / 1 Para
+  estudios, proyectos y construcción de nuevos edificios para estaciones
+  sanitarias, sus instalaciones y amueblamiento, en las siguientes localidades:
+  El Tala; La Caldera; Pichanal; Joaquín V. González, Iruya, Santa Victoria
+  ..... $ 370.000.— / 2 ... Dispensario Antivenéreo (1a. etapa) 50.000.— / 3 ...
+  Asistencia Pública de la Capital 400.000.— / 4 ... automotores 180.000.— /
+  Total del Item Unico ... $ 1.000.000.—
+NOTA DE LECTURA: RECUENTO PROPIO: 6 localidades en el renglón 1, que no declara
+número ni reparte el monto. RECALCULO: 370.000 + 50.000 + 400.000 + 180.000 =
+1.000.000, cierra.
+
+A.17
+FUENTE: 2867 h4 (Salta, 11 de junio de 1947)
+FICHA: Decreto N 4659-G. Salta, Junio 9 de 1947. Confirma a los Encargados de
+las Oficinas de Registro Civil de Campaña: «Teófilo D. Reyes ... La Caldera».
+Clase: REGISTRO-CIVIL+CARGOS.
+MODO DE LECTURA: imagen, 150 y 200 ppp (encabezado y renglón).
+TEXTO:
+  Decreto N 4659-G / Salta, Junio 9 de 1947. / Expediente N.o 6407|947. / Visto
+  el decreto N 2489 de fecha 7 de diciembre del año 1946, por el que se declara
+  en comisión —art. 4— al personal de todas las Oficinas de Campaña y se
+  establece —art. 5— una clasificación de cuatro categorías para las mismas
+  (1.a, 2.a, 3.a y 4.a), y CONSIDERANDO: ... El Vice-Gobernador de la Provincia
+  en ejercicio del Poder Ejecutivo / DECRETA: / Artículo 1 — Confírmase, con
+  anterioridad al día 1.o del mes en curso, al siguiente personal del Registro
+  Civil, como Encargados de las Oficinas de Campaña, de conformidad a las
+  categorías establecidas por decreto N 2489|947, ... / Nombre y Apellido |
+  Categoría | Oficina ... Teófilo D. Reyes | Segunda | La Caldera ...
+NOTA DE LECTURA: El visto fecha el decreto 2489 en 1946 y el artículo lo cita
+como «2489|947»: se transcriben los dos (E.9). Firma el Vice-Gobernador en
+ejercicio (E.4). Teófilo Reyes es censista en A.8: identidad por nombre,
+rotulada. La columna «categoría» del renglón se leyó en el recorte de la tabla.
+
+A.18
+FUENTE: 2881 h6 c1-c2 (Salta, 30 de junio de 1947)
+FICHA: Decreto N 4881-E. Salta, Junio 27 de 1947. Plan de Obras de Vialidad con
+el subsidio Ley 12.776: «23 La Calderilla a Güemes por Gallinato y Campo Santo.
+Tramo: La Calderilla a Campo Santo 15.000». Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 4881-E / Salta, Junio 27 de 1947. / Expediente N.o 17224|1947. /
+  Visto este expediente por el cual Administración de Vialidad de Salta, eleva a
+  consideración y aprobación del Poder Ejecutivo, el Plan de Obras a ejecutar
+  durante el presente año con fondos provenientes del subsidio N.o 12.776; ...
+  Art. 1 — Apruébase el siguiente Plan de Obras a ejecutar por la Administración
+  de Vialidad de Salta, durante el transcurso del presente año, con fondos
+  provenientes del subsidio Ley N.o 12776: ... [Mejoramiento de Caminos] ... 23
+  La Calderilla a Güemes por Gallinato y Campo Santo. Tramo: La Calderilla a
+  Campo Santo ..... 15.000.— / 0,8 Acceso a Estación Betania ..... 2.000.— ...
+  265.000.— / 710.000.—
+NOTA DE LECTURA: RECALCULO: mejoramiento, 17 renglones = 265.000, cierra; total
+250.000 + 45.000 + 150.000 + 265.000 = 710.000, cierra. «23» es la longitud en
+kilómetros (columna «Long. Kms.»).
+
+A.19
+FUENTE: 2886 h10 c2 (Salta, 5 de julio de 1947)
+FICHA: Decreto N 4945 E. Salta, Julio 1.o de 1947. Mercaditos municipales con el
+Decreto nacional 16515: La Caldera entre los doce «de tercera categoría» ($
+20.000). Clase: OBRA-PUBLICA+HACIENDA-MUN.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 4945 E. / Salta, Julio 1.o de 1947. / Expediente N 1600|1947. /
+  Visto el Decreto N 16515 dictado por el Superior Gobierno de la Nación el 12
+  de junio de 1947, por el que se asigna a la Provincia de Salta, la suma de $
+  2.500.000.— de la partida "Para la construcción de obras de carácter urgente
+  en el interior de la República, incluso expropiaciones de tierra"; y
+  CONSIDERANDO: Que entre dichas obras de urgencia, cuéntanse incluídas
+  indudablemente, en razón de su utilidad pública inmediata, la construcción de
+  pequeños mercados municipales para los pueblos, cuyo número de habitantes
+  oscila entre 400 y 3.000; ... Art. 1 — ... tómase la suma de $ 600.000.— ...
+  a) Doce mercaditos de segunda categoría a razón de una inversión de $ 30.000.—
+  ... en los siguientes municipios: J. V. Gonzálze [sic], Cafayate, Cerrillos,
+  La Merced, El Tala, S. A. de Los Cobres, El Galpón, Aguaray, Embarcación,
+  Pichanal, Rosario de Lerma, Campo Quijano. b) Doce mercaditos de tercera
+  categoría, a razón de una inversión de $ 20.000.— ... en los siguientes
+  municipios: San Lorenzo, El Quebrachal, Cachi, Chicoana, El Carril, Guachipas,
+  La Caldera, La Candelaria, La Poma, La Viña, Coronel Moldes, y San Carlos.
+  Art. 2 — Por Dirección General de Arquitectura y Urbanismo procédase a
+  preparar los planos correspondientes los que dentro de cada categoría deberán
+  ser de un tipo único ...
+NOTA DE LECTURA: RECUENTO PROPIO: a) 12, b) 12; el acto declara «Doce» y «Doce»:
+cierra. RECALCULO: 12 x 30.000 + 12 x 20.000 = 600.000, cierra. Los planos del
+art. 2 son planos citados y no acompañados (§P). Ver A.31: la obra de La Caldera
+se desafecta en diciembre.
+
+A.20
+FUENTE: 2887 h4 c2 (Salta, 7 de julio de 1947)
+FICHA: Decreto N 4952-E. Salta, Julio 2 de 1947. Devuelve a Antonia Vda. de
+Ramos $ 13 de patente de almacén, «negocio establecido en Lesser, departamento
+de La Caldera», cobrada dos veces por el Receptor de Rentas. Clase:
+HACIENDA-MUN.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 4952-E / Salta, Julio 2 de 1947. / Expediente N.o 17348|1947. /
+  Visto este expediente por el cual la señora Antonia Vda. de Ramos, solicita le
+  sea devuelto el valor oportunamente abonado por concepto de patente de almacén
+  al por menor N.o E 0013, año 1946, por su negocio establecido en Lesser,
+  departamento de La Caldera; y CONSIDERANDO: Que por las constancias agregadas
+  y según lo destaca Dirección General de Rentas, se ha comprobado el error
+  cometido por parte del Receptor de Rentas de la mencionada localidad, en el
+  sentido de haber cobrado dos veces el importe de la patente comentada ... Art.
+  1 — Liquídese a favor de la señora ANTONIA VDA. DE RAMOS, la suma de $ 13.—
+  (TRECE PESOS M|N.) por devolución ...
+NOTA DE LECTURA: Este acto NO estaba entre los candidatos del pre-informe: lo
+devolvió la búsqueda propia de la sesión (§2). El receptor de 1946 que cobró dos
+veces no se nombra: vacante sin nombre, citado y no acompañado (5.3).
+
+A.21
+FUENTE: 2909 h5 c3 y h6 c1 (Salta, 4 de agosto de 1947)
+FICHA: Decreto N 5276-E. Salta, Julio 30 de 1947. Coeficientes de
+coparticipación municipal: «30 La Caldera 3.068.— 0,127». Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 250 ppp.
+TEXTO:
+  Nombre | Recaudación Ejercicio 1946 | Porcentaje / ... 29 Coronel Moldes |
+  4.920.— | 0,207 / 30 La Caldera | 3.068.— | 0,127 / 31 Cachi | 2.406.— | 0,107
+  / ... 42 Ciro Echesortu | 17.814.— | 0,747 / [Total] 2.393.221.— | 100,000
+NOTA DE LECTURA: RECALCULO: recaudación, 42 renglones = 2.393.221, cierra.
+Porcentajes: con el renglón 10 leído «1,578» la columna da 100,002; con «1,576»
+da 100,000 y coincide con las liquidaciones de 5660-E; el dígito se ve «8» a 250
+ppp: se escriben las dos lecturas (8.7). El porcentaje no es proporcional a la
+recaudación (La Caldera daría 0,128; Tartagal 5,862 contra 6,286 impreso): se
+declara y no se explica. La Caldera: puesto 30 de 42 por recaudación.
+
+A.22
+FUENTE: 2912 h4 c3, h5, h8 c1 y h9 (Salta, 7 de agosto de 1947)
+FICHA: Ley N 853 de delimitación de los distritos municipales: «El Municipio de
+La Caldera abarca todo el territorio del Departamento de su mismo nombre»; La
+Caldera como lindero de seis municipios. Clase: NORMA.
+MODO DE LECTURA: imagen, 200 ppp (h4 c3, h5 entera, h8 c1 y promulgación h9).
+TEXTO:
+  LEY N 853 / Por cuanto: / El Senado y la Cámara de Diputados de la Provincia
+  de Salta, Sancionan con fuerza de / LEY: / Artículo 1 — La delimitación
+  territorial de los distritos municipales de la Provincia, se fija de la
+  siguiente manera. ... [h4 c3] Municipio de La Caldera / El Municipio de La
+  Caldera abarca todo el territorio del Departamento de su mismo nombre. ...
+  [h5] (Campo Santo) POR EL OESTE: Departamento de la Capital y La Caldera. ...
+  (Güemes) ... hasta el límite con el Departamento La Caldera; y POR EL OESTE:
+  Con el Departamento La Caldera. ... (El Bordo) POR EL NORTE: Con el
+  departamento de La Caldera y con la Provincia de Jujuy; ... (Municipio de
+  Salta) POR EL NORTE: Con los Departamentos de La Caldera y Campo Santo; ...
+  Municipio de San Lorenzo / ... POR EL NORTE: Con el Departamento de La
+  Caldera; POR EL ESTE: Desde el río Vaqueros, con el límite Oeste del Campo
+  Belgrano, siguiendo luego el curso del río San Lorenzo hasta la vía del
+  ferrocarril, y después va hacia el Sud por esta vía hasta el puente sobre el
+  río Arenales; POR EL SUD: Con el río Arenales; y POR EL OESTE: Con el
+  Departamento de Rosario de Lerma. ... [h8] Municipio de Campo Quijano / ...
+  POR EL NORTE: Con la Provincia de Jujuy; POR EL ESTE: Departamento La Caldera
+  y la Capital y el Municipio Rosario de Lerma, ... Dada en la Sala de Sesiones
+  de la Honorable Legislatura de la Provincia de Salta, a los veinticuatro días
+  del mes de julio del año mil novecientos cuarenta y siete. ... [h9] Salta,
+  agosto 2 de 1947. / Téngase por Ley de la Provincia, cúmplase, comuníquese,
+  publíquese, insértese en el Registro de Leyes y archívese. / LUCIO A. CORNEJO
+  / Julio Díaz Villalba
+NOTA DE LECTURA: RECUENTO PROPIO de menciones de La Caldera en la ley: 1 como
+municipio propio; 7 como lindero (Campo Santo, Güemes dos veces, El Bordo,
+Salta, San Lorenzo, Campo Quijano). La capa lee «esquinero Norte-Este de La
+Caldera y la finca Entre Ríos»; la imagen dice «de la finca Entre Ríos»: la
+mención no existe y se descarta (E.7). El río Vaqueros aparece como límite del
+municipio de San Lorenzo (Capital), no de La Caldera.
+
+A.23
+FUENTE: 2923 h6 c1 (Salta, 22 de agosto de 1947); sumario h2
+FICHA: Decreto N 5537-G. Salta, Agosto 20 de 1947. Adjudica a la Cárcel
+Penitenciaría una mesa escritorio y tres sillas para la Oficina de Registro
+Civil de La Caldera ($ 132.40). Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 200 ppp (cuerpo y sumario).
+TEXTO:
+  Decreto N 5537-G / Salta, Agosto 20 de 1947. / Visto el expediente N.o
+  6770|947 en el que la Dirección General del Registro Civil solicita provisión
+  de un escritorio y tres sillas, con destino a la Oficina de "La Caldera"; ...
+  Art. 1 — Adjudícase a la CARCEL PENITENCIARIA la confección de una mesa
+  escritorio y tres silla [sic], ... con destino a la Oficina de Registro Civil
+  de "La Caldera", al precio total de CIENTO TREINTA Y DOS PESOS 40|100 M|N ($
+  132.40). ... LUCIO A. CORNEJO / Julio Díaz Villalba || Sumario: 5537 " " " " —
+  Adjudica la confección de muebles para la Oficina del Registro Civil de La
+  Caldera, ..... 6
+NOTA DE LECTURA: La capa del sumario lee «cgldera»: sólo la difusa lo devolvió;
+el cuerpo lo devolvía la literal.
+
+A.24
+FUENTE: 2932 h4-h5 (Salta, 3 de septiembre de 1947)
+FICHA: Decretos N 5659-E y 5660-E. Salta, agosto 29 de 1947. Participación
+municipal en los impuestos nacionales (Ley 12.956), primero y segundo
+trimestres: La Caldera $ 117.99 y $ 266.41. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 y 200 ppp.
+TEXTO:
+  [5659-E] ... Art. 1 — Liquídese a favor de Tesorería General de la Provincia
+  la cantidad de $ 92.897.89 ... por el primer trimestre del año en curso, ...
+  Art. 2 — ... 30 La Caldera " 117.99 ... TOTAL $ 92.897.89 || [5660-E] ... Art.
+  1 — ... $ 209.775.06 ... por el segundo trimestre ... 30 La Caldera " 266.41
+  ... TOTAL ..... $ 209.775.06
+NOTA DE LECTURA: RECALCULO 5660-E: 42 renglones = 209.775,06, cierra; cada
+renglón coincide con el coeficiente de A.21 salvo el 10 (3.306,06 contra
+3.310,25). RECALCULO 5659-E: 42 renglones = 92.977,89, total impreso + 80,00; el
+renglón 9 (Rosario de Lerma, 1.088.88 en la imagen) excede en 80 lo que da su
+coeficiente (1.008,87). Se transcribe; no se corrige (E.8). La Caldera: 0,127 %
+de 92.897,89 = 117,98, impreso 117,99.
+
+A.25
+FUENTE: 2937 h4 c1-c3 y h5 c1 (Salta, 9 de septiembre de 1947)
+FICHA: Decreto N 5686-G. Salta, setiembre 5 de 1947. Con la Ley 866, designa 49
+subcomisarios de 3a. de campaña: «TOMAS MEDRANO Vaqueros (La Caldera)». Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 170-180 ppp.
+TEXTO:
+  Decreto N 5686-G / Salta, setiembre 5 de 1947. / Expediente N.o 7049|947. /
+  Visto la Ley N.o 866 de fecha 18 de agosto ppdo., por la que se crea setenta
+  (70) plazas de Sub-Comisarios de Policía de Campaña; y atento lo solicitado
+  por Jefatura de Policía en nota N.o 1822, / El Gobernador de la Provincia /
+  DECRETA: / Artículo 1 — Desígnanse, con anterioridad al día 1.o de abril del
+  año en curso, Sub-Comisarios de Policía de 3 categoría de Campaña, a las
+  personas que seguidamente se detallan, quienes deberán prestar servicio en las
+  jurisdicciones que se expresan: / NOMBRE Y APELLIDO — DEPENDENCIA / ...
+  NICOLAS CESAR AGUIRRE Talapampa (La Viña) / TOMAS MEDRANO Vaqueros (La
+  Caldera) / FRANCISCO ARROYO El Tunal (Metán) ...
+NOTA DE LECTURA: RECUENTO PROPIO: 49 designados (9 + 39 + 1); el decreto no
+declara número; la ley crea 70 plazas: 49 contra 70, se declara y no se explica.
+La ley 866 (misma hoja, c1-c2) está «Dada ... a los veintiocho días del mes de
+agosto»; el decreto la fecha «18 de agosto»: se transcriben las dos (E.9). La
+pertenencia de Vaqueros a La Caldera la atribuye el acto (5.1ter). Tomás Medrano
+es censista en A.8.
+
+A.26
+FUENTE: 2949 h12 c2 (Salta, 25 de septiembre de 1947)
+FICHA: Decreto N 5916 E. Salta, Setiembre 22 de 1947. Pide a Vialidad que
+informe por qué incluyó fuera del plan el camino «La Caldera de Santa Rufina» en
+la red provincial. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 5916 E. / Salta, Setiembre 22 de 1947. ... acta N 188 dictada por el
+  H. Consejo de la misma en fecha 28 de agosto ppdo ... Art. 1 — A excepción de
+  la resolución N.o 4967 apruébase el Acta N 188 ... Art. 2 — A los efectos de
+  la aprobación de la resolución 4967 comentada precedentemente, la
+  Administración de Vialidad de Salta deberá informar en mérito a qué
+  consideraciones ha sido incluído, fuera del plan, el camino denominado "La
+  Caldera de Santa Rufina", en la red de caminos provinciales. / Art. 3 —
+  Comuníquese, publíquese, etc. / LUCIO A. CORNEJO / Juan W. Dates
+NOTA DE LECTURA: La resolución 4967 de Vialidad no se publica: citada y no
+acompañada. La capa lee «la caldera tde santa; rufina»: la búsqueda de «santa
+rufina» sólo lo devolvió sobre el texto sin puntuación.
+
+A.27
+FUENTE: 2983 h7 c1 (Salta, 8 de noviembre de 1947); encabezado h6 c2
+FICHA: Decreto N 6655-E. Salta, noviembre 5 de 1947. Plan general de obras
+viales 1947 a 1949: «Puente S|Río La Caldera. Obras de arte Luz 150 mts.
+690.000». Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 6655-E. / Salta, noviembre 5 de 1947 / Expediente N.o 18643|1947. /
+  Visto el expediente N.o 18643 por el cual la Administración General de
+  Vialidad de Salta, comunica el plan general de obras viales, de pavimentación,
+  de obras complementarias y de adquisiciones, a ejecutar en el período 1947 a
+  1949; ... Art. 1 — Apruébase el siguiente plan ... a) FONDOS DE
+  COPARTICIPACION FEDERAL ... OBRAS A ESTUDIAR ... [h7] Puente S|Río La Caldera.
+  Obras de arte Luz 150 mts. ..... 690.000 / Cachipampa a Puente Colte ...
+  150.000 / Abras de las Lajas a Poscaya ... 200.000 / 2.431.270.27 / TOTAL DEL
+  INCISO a) ..... 6.226.470.27
+NOTA DE LECTURA: RECALCULO: obras a estudiar, 9 renglones = 2.431.270,27,
+cierra; inciso a) 1.930.000 + 855.200 + 1.010.000 + 2.431.270,27 = 6.226.470,27,
+cierra. Es obra «a estudiar», no adjudicada.
+
+A.28
+FUENTE: 2985 h7 c3 (Salta, 11 de noviembre de 1947)
+FICHA: Resolución N 423 E. Salta, Noviembre 7 de 1947. Nota de crédito de $
+541.20 al Receptor de Rentas de «la localidad de La Caldera, Departamento de la
+Capital», Gerardo Guerrero. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Resolución N 423 E. / Salta, Noviembre 7 de 1947. / Expediente N 18646|47. /
+  Visto este expediente por el cual el señor Receptor de Rentas de la localidad
+  de La Caldera, Departamento de la Capital, don Gerardo Guerrero solicita se
+  extienda Nota de Crédito a su favor por la suma de $ 541.20 m/n., por concepto
+  de estampillas aplicadas por error en las boletas de Contribución Territorial
+  ... 1 — ... extiéndase Nota de Crédito a favor del Receptor de Rentas de la
+  localidad de La Caldera, departamento de la Capital, don Gerardo Guerrero, por
+  concepto que se expresa precedentemente ...
+NOTA DE LECTURA: El acto atribuye La Caldera al Departamento de la Capital, dos
+veces. Se transcribe y no se corrige (E.9); la Ley 853 (A.22), del mismo año,
+trata a La Caldera como departamento.
+
+A.29
+FUENTE: 2993 h7 c1 (Salta, 20 de noviembre de 1947)
+FICHA: Decreto N 6875-E. Salta, noviembre 15 de 1947. Designa a Juan Carlos
+Brizuela Inspector de Zona de Comercio e Industrias en «Campo Santo, Anta y la
+Caldera». Clase: CARGOS.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Art. 1 — Desígnase Auxiliar 1.o de la Dirección General de Comercio e
+  Industrias ... al señor JUAN CARLOS BRIZUELA, M. I. N 3937922, quien se
+  desempeñará como Inspector de Zona en la Repartición indicada en los
+  Departamentos de Campo Santo, Anta y la Caldera. / Art. 2 — El gasto ...
+  "Multas Provenientes Infracción Leyes 12830 y 12983". / LUCIO A. CORNEJO /
+  Juan W. Dates
+NOTA DE LECTURA: Juan Carlos Brizuela reaparece en 3006 h6 (capa).
+
+A.30
+FUENTE: 3008 h6 c1-c2 (Salta, 9 de diciembre de 1947)
+FICHA: Decreto N 7210 E. Salta, diciembre 5 de 1947. Participación municipal,
+tercer trimestre: «30 La Caldera " 190.00». Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 y 200 ppp.
+TEXTO:
+  ... Que por decreto nacional N 789 de fecha 20 de octubre de 1947, el
+  Ministerio de Hacienda de la Nación hizo conocer a la Provincia de Salta la
+  proporción que le corresponde por participación de los recursos de la Ley
+  Nacional 12956, que se eleva a $ 1.496.032.77 por el 3er. trimestre ... Art. 1
+  — Liquídese ... la suma de $ 149.603.27 ... 30 La Caldera ..... " 190.00 ...
+  TOTAL " 149.603.27
+NOTA DE LECTURA: RECALCULO: 42 renglones = 149.513,37 = total - 89,90. El
+renglón 13 (El Galpón, 1.459.89 en la imagen) queda 90 por debajo de su
+coeficiente (1.549,89). Se transcribe; no se corrige (E.8). La Caldera: 0,127 %
+de 149.603,27 = 189,99; impreso 190.00.
+
+A.31
+FUENTE: 3016 h9 c1-c2 (Salta, 18 de diciembre de 1947); encabezado h8 c2
+FICHA: Decreto N 7321 E. Salta, Diciembre 13 de 1947. Desafecta provisoriamente
+el Mercado Tipo I de La Caldera (y los de La Candelaria, La Poma y San Carlos)
+previsto en el Decreto 4945|47. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 7321 E. / Salta, Diciembre 13 de 1947. / Expediente N 17678|1947. /
+  Visto el expediente N 17678|1947, en el que corren las actuaciones referentes
+  a la construcción de Mercados para Pueblos de Campaña; y CONSIDERANDO: ... Que
+  dado el costo resultante de las ofertas obtenido en la licitación pública, se
+  hace necesario desafectar provisoriamente el Mercado Tipo II de San Antonio de
+  Los Cobres y los de Tipo I de La Caldera, La Candelaria, La Poma y San Carlos,
+  que fueron previstos en el decreto N 4945|47, para que con dicha economía, más
+  lo previsto para el Mercado de Embarcación, se haga viable la construcción de
+  un Mercado Frigorífico en esa localidad, y a mérito de considerarse inoficiosa
+  la construcción de dichas obras en los pueblos antedichos, expresión que se
+  había manifestado por los propios habitantes; ... Art. 9 — Desaféctase
+  provisoriamente del decreto N 4945|47, los Mercados Tipo II— de San Antonio de
+  Los Cobres y Tipo I— de La Caldera, La Candelaria, La Poma y San Carlos. ...
+  LUCIO A. CORNEJO / Juan W. Dates
+NOTA DE LECTURA: A.19 pone a La Caldera entre los mercaditos «de tercera
+categoría»; 5602-E (2928 h7, capa) llama a los tipos «I y II o sea de 2a y 3a»;
+A.31 llama «Tipo I» al de La Caldera. La equivalencia de categorías no se
+concilia (E.9). La «expresión ... de los propios habitantes» no se documenta en
+el corpus: citada y no acompañada.
+
+A.32
+FUENTE: 3019 h16 c1 (22 de diciembre de 1947) y cuatro apariciones más; sumario
+h4
+FICHA: Edicto N 3345 de la Administración General de Aguas: Herman Pfister pide
+reconocimiento de 50 litros por segundo del río de La Caldera para regar la
+finca «La Helvecia», 24 hectáreas, departamento de La Caldera (expte. 331|1947).
+Clase: AGUAS+DOMINIO.
+MODO DE LECTURA: imagen, 200 ppp (3019 h16, 3021 h19 y sumario 3019 h4); 3020
+h16, 3022 h16 y 3023 h17 cotejadas por texto.
+TEXTO:
+  N 3345 — EDICTO. De conformidad con lo prescripto en el Art. 350 del Código de
+  Aguas, se hace saber a las personas interesadas que se ha presentado ante esta
+  Administración General de Aguas de Salta, el señor Herman Pfister, solicitando
+  en expediente N.o 331|1947, reconocimiento de derechos de concesión de agua
+  pública, por 50 litros por segundo, a derivar del río de La Caldera, para
+  regar la finca "La Helvecia", ubicada en el departamento de La Caldera, en una
+  extensión aproximada de 24 hectáreas. El reconocimiento de dicha concesión
+  sería de carácter temporal y permanente. Esta publicación vence el día 28 de
+  diciembre de 1947, citándose a las personas que se consideren afectadas por el
+  derecho que se solicita, a hacer valer su oposición dentro de los treinta días
+  de su vencimiento. — Salta, 20 de diciembre de 1947. — ADM. GRAL. DE AGUAS DE
+  SALTA. — Importe $ 12.—. e|22|12|47 v|27|12|47. || Sumario: N 3345 — De
+  Administración General de Aguas ... de agua a finca La Helvecia de H.
+  P[fister]
+NOTA DE LECTURA: Cinco apariciones (3019, 3020, 3021, 3022, 3023), cotejadas por
+texto: una sola entrada. En 3019 y 3022 la capa cruza columnas
+(«calderasegundo»). «temporal y permanente»: se transcribe. Alejandro Enrique
+Herman Pfister es jefe de la fracción urbana del censo (A.7): identidad por
+nombre, rotulada. El agrimensor «Hermann Pfister» de 2824-2861 (capa) no se
+identifica.
+
+A.33
+FUENTE: 3022 h6 (Salta, 26 de diciembre de 1947); encabezado h5
+FICHA: Decreto N 7423 A. Salta, 20 de Diciembre de 1947. Subsidio de $ 100 a las
+cooperadoras de escuelas: Nacional «51 Calderilla | Caldera»; Provinciales «21
+La Caldera | Pueblo» y «22 Vaqueros | La Caldera». Clase: ESCUELA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  Decreto N 7423 A. / Salta, 20 de Diciembre de 1947. / Expediente N 10760|1947.
+  / Visto este expediente por el cual el Banco de Préstamos y Asistencia Social
+  solicita autorización para invertir la suma de $ 31.000 en subsidios
+  extraordinarios a instituciones de beneficencia y cooperadoras de escuelas
+  nacionales y provinciales, ... Art. 2 — Autorízase al BANCO DE PRESTAMOS Y
+  ASISTENCIA SOCIAL a acordar un subsidio extraordinario en la suma de CIEN
+  PESOS ($ 100—) a cada una de las cooperadoras de las escuelas nacionales y
+  provinciales que se detallan a continuación: / Escuelas Nacionales ... 212
+  Entre Ríos | La Viña / 51 Calderilla | Caldera / 102 Alemania | Guachipas /
+  Escuelas Provinciales: / N 21 La Caldera | Pueblo / ... 67 La Toma | Orán / 22
+  Vaqueros | La Caldera / Art. 3.o — Comuníquese, publíquese, insértese en el
+  Registro Oficial y Archívese. / CORNEJO / José T. Sola Torino
+NOTA DE LECTURA: RECUENTO PROPIO: 33 escuelas nacionales y 20 provinciales = 53
+x 100 = 5.300; art. 1 (capa, h5), 29 entidades = 25.700; 25.700 + 5.300 =
+31.000, cierra con el visto. La columna de la derecha dice el departamento en
+las nacionales y, en las provinciales, «Pueblo» para la escuela de la cabecera:
+Escuela Provincial 21 de La Caldera pueblo, 22 de Vaqueros, Nacional 51 de
+Calderilla.
+
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS YA FICHADOS
+Actores de 1946 que reaparecen en 1947 dentro de actos del departamento: Mariano
+Sivila (A.4, A.12), Gerardo Guerrero / Liborio Gerardo Guerrero (A.3, A.5, A.7,
+A.28), Francisco Mercado (A.11), Teófilo Reyes (A.8, A.17), Tomás Medrano (A.8,
+A.25), Nicolás Mejías (A.3 y A.11, en Mojotoro, jurisdicción indeterminada),
+Julia R. de Regis (A.1), Herman Pfister (A.7, A.32). Todas miradas en la imagen,
+en sus fichas.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+B.2.1
+FUENTE: 2806 h4 c1-c2 (Salta, 21 de marzo de 1947)
+FICHA: Decreto N 3584 G. Salta, Marzo 18 de 1947. Préstamo de $ 19.200 al
+Patronato Provincial de Menores «con destino al Hogar Agrícola San Cayetano de
+Vaqueros». Clase: OTRO.
+MODO DE LECTURA: imagen, 170-200 ppp.
+TEXTO:
+  Decreto N 3584 G. / Salta, Marzo 18 de 1947. / Expediente N 5736|947. / Visto
+  el expediente N 5736|47 en el que el Banco de Préstamos y Asistencia Social,
+  solicita se apruebe una Resolución por la que se acuerda al Patronato
+  Provincial de Menores, con destino al Hogar Agrícola San Cayetano de Vaqueros,
+  un préstamo de $ 19.200 ...
+NOTA DE LECTURA: No nombra La Caldera; Vaqueros era parte del departamento (v16
+5.1ter: la pertenencia no la dice este acto; la dice A.25 y A.33).
+
+B.2.2
+FUENTE: 2848 h127 (19 de mayo de 1947), Ley N 834, pág. 139
+FICHA: Regadío en Vaqueros, 1a. etapa, $ 30.000 (Plan de obras de la
+Administración General de Aguas). Clase: AGUAS.
+MODO DE LECTURA: imagen, 150 ppp.
+TEXTO:
+  Regadío en Vaqueros 1a. etapa) ..... 30.000.—
+NOTA DE LECTURA: Transcripción y recálculo en A.15.
+
+B.2.3
+FUENTE: 2970 h4 c2-c3 (Salta, 22 de octubre de 1947)
+FICHA: Decreto N 6286-E. Salta, octubre 15 de 1947. Reparto de la partida para
+iglesias: la propuesta del Arzobispado incluye «San Cayetano (Vaqueros) $
+1.000»; el artículo 1 no la incluye. Clase: OTRO.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  [propuesta] ... Campo Santo " 2.000.— / San Cayetano (Vaqueros) " 1.000 — /
+  Santa Victoria " 2.000.— ... [art. 1] Para reparación y ampliación de las
+  Iglesias y Casas Parroquiales en: Tartagal $ 10.000.— ... Coronel Moldes "
+  2.100.— / $ 65.100.—
+NOTA DE LECTURA: RECALCULO: propuesta, 13 renglones = 99.000 (no declara total);
+art. 1, 8 renglones = 65.100, cierra.
+
+B.3 · TERMINOS QUE ESE AÑO SON OTRA COSA
+Contextos leídos de los 61 términos con acierto; no son fichas del departamento.
+Lo que el propio acto atribuye a otro departamento:
+  - mojotoro: defensas del río Mojotoro «en Betania» (2749 h7, 2759 h7,
+    2780 h6, 2783 h4, 2784 h5, 2819 h8, 2837-2862 licitación, 2846 h6,
+    2886 h6, 2951 h4; contratista Marko Vranjes); Betania es de Campo
+    Santo según los actos que la nombran. En Ley 834 (A.15) y A.3/A.11 queda
+    indeterminada.
+  - candelaria (336): departamento La Candelaria; 18 sin «la» delante,
+    ninguno es Calderilla.
+  - lesser: sucesión de Facundo y María Nieves Lesser (2911-2940, 115
+    aciertos) y Lidia Lesser de Ibarra; el único Lesser lugar es A.20.
+  - vaqueros: además de B.2, el límite del municipio de San Lorenzo (A.22) y
+    2937 h4 (A.25).
+  - campo alegre: finca de Rivadavia (remate, 2911-2927). san jose: San José
+    de Orquera (Metán) y de Cachi, iglesia de la ciudad; «Caldera | San
+    José» del padrón minero es A.6. los sauces: finca de San Carlos y
+    subcomisaría de Guachipas. el bordo: Campo Santo y Chicoana. entre
+    rios: calle y provincia; finca Entre Ríos en Ley 853 (Campo Santo).
+    santa gertrudis: Chicoana. angostura: Itiyuro (Orán) y Río Piedras.
+    la despensa: Molinos. el paraiso: Aguaray. arroyo castellanos: finca
+    Castellanos de Anta (3000-3026). la helvecia / helvecia: sólo A.32.
+  - apellidos (mamani 129, aramayo 121, condori 110, murua 78, chaile 27,
+    apaza 28, isasmendi 23, castellanos, nogales, yufra, challe, toconas,
+    severino, quintin): personas de otros departamentos o de la Capital,
+    salvo los que ya están en A.7, A.8 y A.12 (Hilario Mamani, Claudio
+    Murúa, Manuel Condorí).
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+Actores del §A de 1947, en tres grupos (búsqueda por nombre completo e inicial,
+sin puntuación, en las 4.475 hojas):
+  Grupo 1, sólo en su propio acto: Julia R. de Regis (A.1); Hilario Mamani
+  (A.7); Agapito Herrera, Víctor Valdivieso, Fidel García, Florencio Carrillo
+  (A.8); Indalecia Dina y Narcisa Lozano (A.9); Milagro Alemán (A.10);
+  Francisco Mercado (A.11); Eusebio Palma, Abraham Fernández, Pedro
+  Tejerina, Eusebio Robles, Manuel Condorí, Manuel Lozano (A.12); Antonia
+  Vda. de Ramos (A.20); Teófilo D. Reyes como encargado (A.17).
+  Grupo 2, en más de un acto del departamento (la trama del año): Mariano
+  Sivila (A.4 juez de paz que renuncia; A.12 testigo de la posesión de La
+  Calderilla); Gerardo Guerrero (A.3 receptor, A.5 juez suplente, A.7 jefe
+  censal, A.28 receptor); Augusto Regis (A.1, A.7); Teófilo Reyes (A.8,
+  A.17); Claudio Murúa (A.8, A.14); Tomás Medrano (A.8, A.25); Paulina Reyes
+  de Alemán y Nieves Alemán de Robledo (A.10, A.12); Herman Pfister (A.7,
+  A.32).
+  Grupo 3, también fuera del departamento: Víctor Onesti (A.2; Rentas,
+  2960 h7, misma matrícula; testigo en Salta, 2764 h10); Juan Carlos
+  Brizuela (A.29; 3006 h6); Nicolás Mejías (A.3, A.11; Mojotoro).
+Falla de la búsqueda, declarada (v16 §5.1): la búsqueda por nombre completo no
+devuelve su propio acto para Liborio Castillo (A.11, la capa lee «LIB0RIO») ni
+para Carlos F. Iriarte (A.8, «IP.IARTE»). No se los declara ausentes.
+Actores de 1946 sin ninguna aparición en 1947 (búsqueda completa y laxa por
+apellido): Antonio Vivas, Nicolás Ramón Oliva, Ángel Santos Núñez, Manuel
+Patrón, José Luis Álvarez, Enrique García de las Heras, Vicente Paul Prieto,
+Armando Delgado, Abraham Daher, José Godoy, Delfín Chocobar, Segundo Vega.
+Leonor Vico Gimena aparece como «Leonor C. de Vico Gimena», secretaria de una
+sociedad (2993-2995): sin atribución al departamento.
+Citados y no acompañados: la Ordenanza Impositiva de La Caldera (A.13); la
+resolución 4967 de Vialidad (A.26); la «expresión» de los habitantes que
+rechazan el mercado (A.31); los planos tipo de mercados (A.19). Vacantes sin
+nombre: el juez de paz suplente que dejó el cargo (A.5); el receptor de 1946 que
+cobró dos veces (A.20). Vacante sin cierre: el sucesor de Sivila como juez de
+paz propietario no aparece en el año.
+
+§C · LIMITROFES
+---------------
+
+C.1
+FUENTE: 2912 h5 c3 (7 de agosto de 1947)
+FICHA: Ley N 853: el municipio de San Lorenzo (departamento de la Capital) linda
+al norte con La Caldera y al este con el río Vaqueros. Clase: NORMA.
+MODO DE LECTURA: imagen, 200 ppp.
+TEXTO:
+  POR EL NORTE: Con el Departamento de La Caldera; POR EL ESTE: Desde el río
+  Vaqueros, con el límite Oeste del Campo Belgrano ...
+NOTA DE LECTURA: Transcripción completa en A.22.
+Campo Santo, Güemes, El Bordo, Salta y Campo Quijano, linderos de La Caldera en
+la misma ley: A.22. Betania (Campo Santo): acceso a la estación, A.18; defensas
+del Mojotoro, B.3.
+
+§P · PLANOS
+-----------
+No se publica ningún plano en 1947: las 32 hojas con menos de 400 caracteres de
+capa se miraron (anexos del presupuesto, cuadros girados, tapas del padrón
+minero) y ninguna es un plano. «Plano» aparece en 462 hojas; una remisión toca
+al departamento: los planos tipo de los mercaditos (A.19, art. 2), citados y no
+acompañados. Techo de resolución: 375-399 ppi en la mayoría de las hojas (§1).
+
+§D · INDICE
+-----------
+  2762  h7   HACIENDA-MUN       Res. 229 H: fianza de Julia R. de Regis, recepto
+  2765  h3   OTRO               Dto. 2978 H: Víctor Onesti, jefe censal del dept
+  2769  h7   CARGOS             Dto. 3037-H: receptor La Caldera, Gerardo Guerre
+  2771  h4   CARGOS+JUSTICIA    Dto. 3065 G: renuncia juez de paz M. Sivila
+  2774  h3   CARGOS+JUSTICIA    Dto. 3109 G: juez de paz suplente L. G. Guerrero
+  2781  h18  MINAS              Padrón minero: mina vacante «Caldera 1, 2 y 3»
+  2791  h6   OTRO               Dto. 3333 H: cuatro jefes de fracción censal
+  2805  h9   OTRO               Dto. 3392-H art. 6: ocho censistas
+  2806  h4   OTRO               Dto. 3584 G: Hogar San Cayetano de Vaqueros (B.2
+  2811  h14  REGISTRO-CIVIL     Edicto 2585: rectificación, tomo 7 La Caldera
+  2814  h12  DOMINIO+JUSTICIA   Corte: San Antonio o San Roque, confirma
+  2829  h5   CARGOS             Dto. 3902 G: subcomisarios Mercado y Castillo
+  2830  h8   DOMINIO+JUSTICIA   Edicto 2658: posesión, La Calderilla, cat. 006
+  2842  h4   HACIENDA-MUN       Dto. 4241-G: ordenanza impositiva de la comuna
+  2843  h16  CARGOS             Dto. 4238-A: enfermero Claudio Murúa
+  2848  h130 AGUAS+OBRA-PUBLICA Ley 834: defensa río La Caldera $ 50.000
+  2848  h146 OBRA-PUBLICA       Ley 834: estación sanitaria La Caldera
+  2867  h4   REGISTRO-CIVIL     Dto. 4659-G: encargado Teófilo D. Reyes
+  2881  h6   OBRA-PUBLICA       Dto. 4881-E: camino La Calderilla-Campo Santo
+  2886  h10  OBRA-PUBLICA       Dto. 4945 E: mercadito de tercera categoría
+  2887  h4   HACIENDA-MUN       Dto. 4952-E: patente de almacén en Lesser
+  2909  h5   HACIENDA-MUN       Dto. 5276-E: coeficiente 0,127
+  2912  h4   NORMA              Ley 853: Municipio de La Caldera = departamento
+  2923  h6   REGISTRO-CIVIL     Dto. 5537-G: muebles de la oficina
+  2932  h4   HACIENDA-MUN       Dtos. 5659/5660-E: $ 117.99 y $ 266.41
+  2937  h4   CARGOS             Dto. 5686-G: subcomisario de Vaqueros, T. Medran
+  2949  h12  OBRA-PUBLICA       Dto. 5916 E: camino La Caldera de Santa Rufina
+  2970  h4   OTRO               Dto. 6286-E: iglesia San Cayetano (B.2)
+  2983  h7   OBRA-PUBLICA       Dto. 6655-E: puente s/ río La Caldera
+  2985  h7   HACIENDA-MUN       Res. 423 E: nota de crédito al receptor
+  2993  h7   CARGOS             Dto. 6875-E: inspector de zona
+  3008  h6   HACIENDA-MUN       Dto. 7210 E: $ 190.00, tercer trimestre
+  3016  h9   OBRA-PUBLICA       Dto. 7321 E: desafecta el mercado
+  3019  h16  AGUAS+DOMINIO      Edicto 3345: 50 l/s del río, La Helvecia
+  3022  h6   ESCUELA            Dto. 7423 A: escuelas 51, 21 y 22
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+Avisos repetidos del departamento, por texto: A.9 (9 apariciones) y A.32 (5).
+Sin md5 ni dhash en la sesión (no se bajaron las imágenes: el control fue por
+texto).
+Tesorería General, ejercicio 1947. Se publican 7 resúmenes (febrero a agosto);
+septiembre a diciembre no se publican en el año. Enero no se publica, pero su
+cierre queda registrado por la apertura de febrero. Cadena, por la cifra, mirada
+en la imagen:
+  enero  (sin resumen)      cierre 3.955,06 (apertura de feb., 2815 h16)
+  febrero  2815 h16-17  abre 3.955,06   cierra 8.826,45   total 3.095.357,21
+  marzo    2843 h26-28  abre 8.826,45   cierra 2.231,68   total 3.045.460,93
+  abril    2865 h15-17  abre 2.231,68   cierra 11.437,56  total 1.976.877,01
+  mayo     2884 h9-11   abre 11.437,56  cierra 4.543,31   total 3.280.294,52
+  junio    2909 h18-20  abre 4.543,31   cierra 3.600,25   total 3.316.572,25
+  julio    2928 h16-18  abre 3.600,25   cierra 9.083,83   total 4.389.959,84
+  agosto   2955 h19-21  abre 9.083,83   cierra 20.084,42  total 4.077.914,35
+La cadena cierra en los 7 eslabones: un tramo, con un puente de una cifra
+(enero). El resumen de junio rotula su cierre «Saldo que pasa a junio de 1947»
+[sic]: la cifra encadena con julio; se sigue la cifra (E.9). Además se publican
+4 resúmenes del ejercicio 1946 (diciembre de 1946 y enero a marzo de 1947), no
+encadenados aquí. Ningún balance municipal de La Caldera; el único balance
+municipal del año es de La Candelaria (2865 h15).
+
+E.2 · COBERTURA
+Las 282 ediciones y las 4.475 hojas están en el corpus buscado; 204 hojas con
+texto extraído en sesión (§0). Hojas miradas en la imagen: 102 interiores y las
+282 tapas.
+
+E.3 · SIN MENCION Y NO MIRADO
+Las 173 hojas con OCR propio se buscaron con las dos versiones; 2848 h42 no
+tiene capa ni OCR propio y no se buscó (cuadro resumen girado del presupuesto;
+se miró en miniatura y no es texto corrido).
+
+E.4 · FIRMAS Y AUTORIDAD
+Gobernador: Doctor D. Lucio Alfredo Cornejo, leído en las 282 tapas. Ministros
+en la tapa: Gobierno, Dr. José T. Solá Torino hasta 2839 (5 de mayo), que de
+2822 a 2839 figura además «interinamente de Acción Social y Salud Pública»; Dr.
+Julio Díaz Villalba desde 2840 (6 de mayo), y Solá Torino pasa a Acción Social y
+Salud Pública. Hacienda, Obras Públicas y Fomento, Ing. Juan W. Dates, hasta
+2817; desde 2818 (8 de abril) el mismo como «Ministro de Economía, Finanzas y
+Obras Públicas».
+Interinato: Decreto N 4588-G (29 de mayo, 2877 h4, imagen) delega el mando en el
+Vicegobernador por viaje del Gobernador a la reunión de gobernadores; primer
+acto del Vicegobernador en ejercicio mirado: Decreto N 4610-E, 31 de mayo (2862
+h6, imagen), firma «ROBERTO SAN MILLAN». Último del interino hallado: 14 de
+junio (4726-G, 4732-E, capa); Decreto N 4736-G, 15 de junio (2873 h3, capa):
+«Encontrándose de regreso en esta provincia, S. E. el señor Gobernador ...
+pónese en posesión del mando gubernativo». A.17 (9 de junio) lo firma el
+Vicegobernador. Un decreto del 30 de junio (4909-G, 2883 h5, capa) también lleva
+la firma de San Millán: no se miró y no se fija un segundo interinato. Fórmulas:
+«El Gobernador de la Provincia», «El Gobernador de la Provincia en Acuerdo de
+Ministros», «El Vice-Gobernador de la Provincia en Ejercicio del Poder
+Ejecutivo».
+
+E.5 · CORTES Y COLUMNAS
+Columna perdida: no se encontró en ninguna de las 82 columnas miradas del §A y
+del §B. En 2912 h5 la capa une renglones de dos columnas y fabrica una mención
+(E.7). En 3019 y 3022 h16 la capa cruza columnas en el edicto de aguas. En 2848
+(anexo) la capa separa letras («C ald era»): la variante espaciada de la laxa
+fue la única que lo encontró.
+
+E.6 · REPETICIONES
+Ver E.1. El edicto de posesión A.12 sale una sola vez, como ordena.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+Falsos positivos del anillo 1, descartados por el contexto (57 aciertos):
+«caldos» (18), «Calderón» (12: Ernesto, Delfina Sánchez de, J. A. González),
+«fiscalde» (7), «calderas» (3: cuenta «Cerámica, Calderas y Canteras» y tasa de
+inspección), «tabacaldon» (2, «El Tabacal don», mirado 2802 h5), Roberto
+Caldera, contratista (3 actos: 2850 h8 mirado, 2893 h6, 2980 h9), «sala-caldera»
+(2867 h7), «caldfc», «calda», «caldel», «caldas», y tres formas del OCR propio
+sin sentido. Falsos positivos del anillo 2: B.3.
+Falso positivo de la capa descartado en la imagen: «esquinero Norte-Este de La
+Caldera» (2912 h5) es «de la finca Entre Ríos».
+Falsos negativos recuperados: A.15 y A.16 (sólo la laxa espaciada); A.20
+(ausente del pre-informe); A.23 sumario («cgldera», difusa); A.26 («santa
+rufina» partido por signos). Las 204 hojas que el pre-informe no tenía se
+buscaron con todas las pasadas.
+
+E.8 · FIDELIDAD NUMERICA
+Recalculados enteros: Ley 834 ítems 1, 2 y 6 de Aguas y único de Sanidad (A.15,
+A.16); 4881-E (A.18); 4945 E (A.19); 5276-E, recaudación y porcentajes (A.21);
+5659-E, 5660-E y 7210 E (A.24, A.30); 6655-E (A.27); 7423 A (A.33); 6286-E
+(B.2.3); tabla de minas vacantes (A.6, recuento). Tesorería: 5 subtotales en 4
+de los 7 cuadros (febrero, abril dos, julio, agosto); marzo, mayo y junio sólo
+por la cadena, porque el renglón de subtotal quedó fuera del recorte.
+Diferencias que el Boletín publica y no se corrigen: 5659-E suma 80,00 más que
+su total; 7210 E suma 89,90 menos; 5276-E da 100,002 o 100,000 según el dígito
+dudoso del renglón 10 (1,578 / 1,576).
+
+E.9 · CONTRADICCIONES
+  - A.10: honorarios de segunda instancia, 30 pesos en dos votos y 25 en uno
+    y en la resolución.
+  - A.10 y A.12: la Corte confirma el 10 de marzo la sentencia que da la
+    posesión a la oponente, y el 22 de abril se edicta la posesión
+    treintañal de la vencida sobre el mismo inmueble.
+  - A.11: dos subcomisarías rotuladas «(La Caldera)», de 1a. y de 3a.
+  - A.17: el decreto 2489 es «de 1946» en el visto y «2489|947» en el art. 1.
+  - A.25: Ley 866 dada el 28 de agosto; el decreto la fecha el 18.
+  - A.28: «La Caldera, Departamento de la Capital».
+  - A.19 / A.31: «tercera categoría» y «Tipo I» para el mismo mercado.
+  - Tesorería, junio: «Saldo que pasa a junio».
+  - Erratas: «Recticación», «ciendo» (A.9); «BERNANDINO» (A.11);
+    «Gonzálze» (A.19); «silla» (A.23); «desempeñara/desempeñe» (A.1);
+    «LIERCOLES», «LIARTES» (tapas).
+
+E.10 · LIMITES
+  1) Sesión sin acceso a GitHub para boletines-salta: los insumos se bajaron
+     desde la máquina del usuario; el contenido es el del Release.
+  2) 128 hojas declaradas en las tapas y ausentes de los PDF (§1); lo que
+     había en ellas no se puede afirmar.
+  3) Segunda versión sólo en 173 hojas; en el resto la única prueba es la
+     imagen, y se miró en todas las fichas.
+  4) 2848 h42 sin capa de texto.
+  5) Tesorería: sin resúmenes de enero ni de septiembre a diciembre.
+  6) Tinta: medida a 40 ppp con umbral 128; el umbral de v16 (5 %) no es
+     comparable: 4.107 hojas quedan debajo. Se miraron las 33 debajo de
+     0,5 %: ninguna está en blanco (portadillas del presupuesto y últimas
+     hojas con pie de imprenta).
+Qué agregaría cada insumo que faltó: el acceso directo al Release habría
+ahorrado el paso por la máquina; las imágenes de lee_trabajo, el md5 y el dhash;
+una corrida de lee_auto sobre los PDF sanos, la segunda versión de las 204 hojas
+re-extraídas.
+Control de sumarios: el sumario cita páginas que la edición tiene en 242 de 282;
+en 4 no hay sumario con puntos guía; en 2 cita una hoja declarada y ausente
+(2770 remisión errada; 2779 páginas pares faltantes); en 34 la cifra más alta
+sale de renglones de tarifa («3.50 ... 30») o de dígitos pegados de la capa
+(«51», «41»), no mirados uno por uno.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+  1) Antes de leer, cotejar hojas de EXTRAIDO.json contra el PDF del
+     Release. En 1947 lee_auto corrió sobre copias locales truncadas (2848,
+     2849 a 2852) y perdió 204 hojas sin que el pre-informe lo dijera; la
+     «capa previa útil en 4072/4238 hojas» del log no lo revela. Propuesta
+     para lee_auto: comparar el tamaño del PDF local con el del Release y
+     abortar si difiere.
+  2) Presupuesto de v17 §5.5, medido: 282 ediciones y 4.475 hojas cupieron
+     en una sesión larga, con 102 hojas interiores miradas y las 282 tapas
+     por montaje de franjas (siete tapas por imagen).
+  3) La variante espaciada no es sólo de 1923: en los anexos compuestos en
+     otra imprenta (Ley 834) reaparece.
+  4) v16 §5.1bis manda mover los apellidos a «actores», pero el formato exige
+     nombre: se propone una clave «apellidos» sin nombre, o dejarlos.
+  5) La lista «a ojos» por confianza no aplica a capas nativas del PDF: con
+     375 ppi la capa es buena y el OCR propio (media 61,3) es peor que ella.
+  6) Tinta: fijar dpi y umbral en la rúbrica para que la cifra sea
+     comparable entre años.
+  7) Pedido: subir de nuevo lee_textos_1947.zip después de volver a correr
+     1947 con los PDF sanos (2848 a 2852).
+  8) Config entregado: lee_config.json, version 2026-09-27, hasta 1947; +23
+     actores de 1947 (origen 1947 y edición), +3 términos de anillo 2 (san
+     cayetano, hogar agricola san cayetano, la calderilla) y +28 números.
+     Se conservan todos los anteriores. Misma version que el de corrige: no
+     es más vieja.
+
+§R · RECUENTO
+-------------
+anio: 1947
+ediciones_desde: 2745
+ediciones_hasta: 3026
+ediciones_presentes: 282
+ediciones_ausentes: 0
+hojas_presentes: 4475
+hojas_declaradas: 4430
+hojas_ausentes_estimadas: 128
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 31
+ediciones_dobles: 0
+techo_ppi: 375
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 33
+actos_dominio: 3
+actos_hacienda_municipal: 8
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 7
+subtotales_recalculados: 5
+resumenes_tesoreria: 11
+cadena_saldos: un-tramo-con-puente
+columnas_cotejadas: 82
+hojas_miradas: 384
+avisos_repetidos_departamento: 2
+falsos_positivos_anillo1: 57
+limites_declarados: 6
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 282
+avisos_release: 0
