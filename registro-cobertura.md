@@ -747,3 +747,60 @@ Son **16 citas cotejadas sobre 15 hojas de 15 ediciones** (14 de 1954 y una de 1
 | Privacidad: personas nombradas en las 72 líneas nuevas, cruzadas con atributos sensibles y contextos socioeconómicos en todo A | 72/72 líneas nuevas, leídas enteras, y búsqueda en todo el libro de cada nombre en contexto sensible | dos casos: el médico de 1953 descripto por su condición de extranjero en A:298, identificable por su nombre en A:306 y 04:4599 (tope 60), y un deudor de dos remates judiciales nombrado en A:314; los dos corregidos |
 | Largo de los archivos antes y después de la fase 6 | 5/5 archivos tocados por la fase 6 | ninguno cambia de largo |
 | Compilación | libro entero | Compila; 803 páginas (803 la base); 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas de antes |
+
+## Ronda 46 — agregado (28/09/2026, después de registrar el bloque anterior)
+
+El bloque anterior quedó registrado antes de que Eduardo leyera los recortes. Este agregado no lo modifica: lo completa y corrige tres cosas de él.
+
+- **Commits.** En el libro, la fase 6 quedó en dos commits: `0debc30` (el `2d942b0` de la sesión, registrado) y `d397f08` (segunda parte, con este agregado). El árbol resultante es idéntico al `ecd8dc1` que `estado.json` registra para la ronda 46.
+- **La fila de 4756 h6 del cotejo** decía «Coincide». Sobre el recorte, Eduardo lee «Río Wie_na»: falta la r en el original, y A y 22 citaban «Wierna» entre comillas. Es una **corrección silenciosa**, la segunda de la ronda, y se corrige a «Wie[r]na» en `d397f08`. Las citas cotejadas siguen siendo 16; las correcciones silenciosas pasan a dos.
+- **El año de la patente de Arévalo** (Res. 564-E, 4699 h9): A decía «1948 o 1949» y ahora dice «de los años cuarenta, con el último dígito sobreimpreso» (`d397f08`). Es una cifra tomada del informe LEE sin decidir en la imagen (aspecto 3).
+- **Notas.** Con estos dos hallazgos, la nota inicial sin tope es 76,8 (aspecto 3: 90; aspecto 4: 84). La nota inicial con tope (60,0) y la final (88,3) no cambian. Hallazgos: 12, todos aplicados; 11 en material del AMPLÍA 1954. Es lo que ya registra `mejora-ronda-46.json` en `estado.json`.
+- **Largo.** `d397f08` toca A:311 y A:314 y 22-infraestructura:223, todas dentro de lo leído en la ronda; ningún archivo cambia de largo. La cobertura acumulada sigue en 25.009 de 25.009 (100,0 %). El libro compila: 803 páginas, 0 referencias indefinidas, `.lof` con 41 entradas.
+
+### Lecturas humanas sobre el facsímil (Eduardo, 28/09/2026)
+
+Las nueve dudas de lectura de 1954 (P63) se le mostraron recortadas de los PDF del Release, a 150 ppi de origen. No suman cobertura del libro: deciden datos del informe LEE 1954.
+
+| Edición | Hoja | Duda | Sesión | Eduardo | Qué se hace |
+|---|---|---|---|---|---|
+| 4656 | 12 | Catastro del edicto 10680 (Portal) | 26 o 28 | 26 | Se toma 26; el libro no lo cita |
+| 4699 | 9 | Año de la patente de Arévalo (Res. 564-E) | 1948 o 1949 | 1943 («1913» ampliado; el tercer dígito es un 4 claro, así que 1913 no) | Tres lecturas distintas del último dígito, que está sobreimpreso: **A decía «1948 o 1949» (corregido a «de los años cuarenta, con el último dígito sobreimpreso»)** |
+| 4647 | 19 | Valor fiscal del remate 10627 | 2.450 | 2.400 | Se toma 2.400: la base, \$1.600, son sus dos tercios exactos; el libro no lo cita |
+| 4822 | 6 | Decreto citado en el art. 1.º del 12575-E | «1154?\|54» | «116-304» | Queda ilegible. El 11630-E existe (4765 h6) y es una jubilación, así que no es ese. Candidato por inferencia, no por lectura: 11843, el reajuste general de valores fiscales que cita el 12687-E. El libro no lo cita |
+| 4792 | 12 | Resolución de caducidad del 12148-E | 577?-J | 5772-J | Se toma 5772-J; el libro no lo cita |
+| 4827 | 10 | Expediente del 12687-E | 6682 o 6683 | 6688 | Queda entre 6682, 6683 y 6688; el libro no lo cita |
+| 4764 | 8 | Pensionado de Vaqueros (11627-E) | nombre ilegible, «Cleure» | Isidro o Isidoro Claure | Se registra; el libro no nombra a los pensionados |
+| 4596 | 10 | Número del decreto de B.2.1 (Carmelo Lassi) | 8437-G por la capa | 8437-G | **Ninguno de los dos: el 8437-G empieza después del art. 2.º y las firmas del decreto de Lassi. El de Lassi es el 8436-G** («Reconócense los servicios prestados», fechado «enero 11 de 1953», errata por 1954), que empieza al pie de la columna anterior (4596 h10, recorte 08b). El libro no lo cita |
+| 4756 | 6 | «Wie_na» | Wierna, casi seguro | Wie_na, errata del tipógrafo | **A y 22 corregidos a «Wie[r]na»** |
+
+### Lecturas humanas 1951–1953 (Eduardo, 28/09/2026)
+
+Doce dudas de los pendientes P48, P53 y P57, mostradas en una hoja de recortes a 150 ppi de origen. Cada lectura se contrastó con un control que no depende del ojo: los números de los decretos vecinos en la misma hoja (capa nativa del PDF), las otras apariciones del mismo aviso y el expediente. Ninguno de estos números lo cita el libro; lo que se decide corrige los informes LEE (P65).
+
+| # | Edición y hoja | Duda | Sesión | Eduardo | Control | Queda |
+|---|---|---|---|---|---|---|
+| 1 | 3983 h4 | Decreto del Hogar Escuela | 70[6?]4-A | 7864-A | La misma hoja trae el 7062-A del mismo día (18/06/1951) | **7064-A**; el 8 de la lectura es un 0 |
+| 2 | 4023 h8 | Decreto de índices municipales | 80[8?]3-E (número «en el borde») | 8063-E | El decreto siguiente, mismo día y expediente, es el 8064-E; el número sí está en la imagen | **8063-E** |
+| 3–4 | 4002 h4 y 4033 h16 | Edicto sucesorio de La Caldera | 7249 o 7243 | 7249 y 7249 | Capa y sumario dan 7249; dos apariciones leídas | **7249** |
+| 5 | 4235 h11 | Expediente y resolución del 706-A | 10.8??/952; 8?01 | 10.825/952; 820-J | Sin control externo | Lectura de Eduardo, sin confirmar: 10.825/952 y 820-J |
+| 6 | 4371 h5 | Decreto de Manuel Condori | 376?-E | 3788-E | La hoja trae 3763, 3765 y 3766, y la siguiente 3770 a 3773: es un 376x. El 3768 no aparece en otra parte | **376[8]-E**, el último dígito por la lectura de Eduardo y compatible con la serie; el penúltimo 8 es un 6 |
+| 7 | 4373 h4 | Decreto de Dina I. Lozano de Robles | 3809-E (3808 posible) | 3808-E | En la capa, el 3808-E encabeza el expediente 6691/R/52; el 3809-E de h5 es otro decreto (Vialidad, 31B/A/53) | **3808-E. El informe LEE 1953 (A.11) estaba mal** |
+| 8 | 4373 h12 | Decreto de personal de Salubridad | 3840 o 3846 | 3840-A | Coinciden | **3840-A** |
+| 9 | 4407 h7 | Decreto de pensiones | 45[2?]8-E | 4528-E | Coinciden | **4528-E** |
+| 10 | 4470 h9 | Decreto del transporte Salta–La Caldera (Mompó) | 59[5?]6-E | 5988-E | El decreto anterior en la misma hoja y del mismo día es el 5955-E | Abierto: 5956-E por la serie, 5988-E por la lectura |
+| 11 | 4479 h5 | Decreto del permiso a Donato Villa | número no leído; ¿6108? | expediente 3364 | La hoja trae 6104 y 6105, y la siguiente el 6107 | **6106-E** por la serie (sin lectura directa); expediente **3364/A/1953** |
+| 12 | 4581 h6 | Decreto de la «Expropiación Serranía en La Caldera» | 8078-E por la capa | 8077-E | El 8077-E es el decreto de al lado (expediente 5605/R); el que corresponde al expediente 5441/F es el 8078-E | **8078-E**; la lectura tomó el decreto vecino |
+
+Queda cerrada, además, la fecha del decreto 11.064 (P57): su encabezado dice «Enero 29 de 1952» (4128 h4). El «31 de enero» es el modo en que lo cita el 3243-E de 1953 (4350 h4): es una discrepancia entre fuentes, no una duda de lectura.
+
+### Catálogo de confusiones de la tipografía de 1951–1954 (primera versión)
+
+Sale de las 21 lecturas humanas de hoy (9 de 1954 y 12 de 1951–1953), comparadas con las de la sesión y con los controles.
+
+- **Números de 150 ppi, en cursiva o negrita de encabezado.** 0, 3, 5, 6, 8 y 9 se confunden entre sí: 7064 leído 7864; 376x leído 378x; 5956 o 5988; 6682, 6683 o 6688; 1154?, 116-304 o 118?. Ni la sesión ni el ojo humano deciden uno de estos dígitos sin un control.
+- **Controles que deciden**, por orden de fuerza: (1) la serie de números de los decretos vecinos de la misma hoja y la misma fecha; (2) la aritmética del propio acto (2.400 por la base de 1.600); (3) las otras apariciones del mismo aviso; (4) el sumario de la edición.
+- **Lo que aporta más el ojo humano:** las letras y las palabras (Claure, Wie_na), las erratas del original y los dígitos que la capa destroza, pero que la imagen muestra enteros (3808, 4528, 5772, 26).
+- **La falla típica de la lectura humana:** tomar el acto de al lado (8077 por 8078, y 8437 por 8436 en 1954). Las próximas hojas de dudas marcan el renglón exacto con un recuadro.
+- **Sobreimpresión y tipos rotos:** cuando un dígito está sobreimpreso (la patente de Arévalo), ni tres lecturas lo deciden; se declara el dígito como ilegible.
+
