@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-09-28T18:49:09",
+ "actualizado": "2026-09-28T19:06:16",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -4123,6 +4123,54 @@
     "P53: el expediente y la resolucion del 706-A quedan por lectura de Eduardo, sin control (P65); sigue abierta la costura del 1541-G, que exige mirar la hoja entera, y la clase del agente de A.60, que no se mostro porque es un dato personal que el libro no necesita.",
     "P57: quedan decididos A.11 (3808-E, el informe decia 3809), A.13, A.24, A.52 (por la serie), A.87 y A.92, y la fecha del 11.064 (P65); siguen abiertos el ultimo digito de A.10 (3768 tentativo) y A.49 (5956 o 5988), y el Registro Oficial de 1953."
    ]
+  },
+  {
+   "ronda": 47,
+   "tipo": "incorporacion (LECTURAS 1909-1950)",
+   "rubrica": "3.6",
+   "nota_inicial": null,
+   "nota_final": 88.3,
+   "nota_final_sin_tope": 88.3,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda_lineas": 2,
+   "fecha": "2026-09-28",
+   "base": "508b191",
+   "commit": "509f81a",
+   "nota_calculo": "Ronda de incorporacion: solo nota final (CORRIGE 3.6). La correccion 3399-E -> 3339-E mejora el aspecto 1 sin cambiar su nota entera (82); ninguna otra nota por aspecto cambia.",
+   "hallazgos": 1,
+   "aplicados": 1,
+   "descartados_falsos_positivos": 0,
+   "errores_introducidos_por_la_auditoria": 0,
+   "atrapados_por_control": 0,
+   "cotejo_facsimil": 22,
+   "lecturas_humanas": 15,
+   "archivos_que_cambian_de_largo": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P67",
+     "tipo": "lee",
+     "anios": [
+      1909,
+      1913,
+      1917,
+      1921,
+      1925,
+      1926,
+      1929,
+      1934,
+      1936,
+      1947,
+      1948,
+      1950
+     ],
+     "texto": "Corregir los informes LEE 1909-1950 con la ronda 47 (registro): 1909 A.21, 6 vacas con cria (lectura de Eduardo); 1913, Martin Lesser (Eduardo); 1917 A.10, Chalchamio y Ruiloba; 1921, Fernandez Auge[ilegible] sigue; 1925: Azucar 1.833,32, Eventuales 637,16, agosto 486.135,58, septiembre 887.834,89 (el pie cierra: se retira la diferencia de cuatro centavos); 1926, expediente 7571 sin letra; 1929, Rorcado; 1934: base de San Jorge y San Felix unidas $6.000 (no [1]0.000) y saldo de noviembre de 1933 33.398,82 (Eduardo); 1936, saldo de octubre de 1935 31.809,33 (Eduardo); 1947 A.21, renglon 10 es 1,576 y la suma da 100,000; 1948: 7886-E del 22 de enero, cita 5276, decreto del Registro Civil 11052-G; 1950: Casale 3339-E, orden de pago 662, 'RECHI', oficial 7.o Caituolo o Calluolo (abierto).",
+     "abierto": "2026-09-28",
+     "hecho": null
+    }
+   ],
+   "nota_cierre": "Lecturas y clasificacion en el registro de cobertura, ronda 47. Agrega al catalogo del flujo §5.6 el control de la cadena de saldos para los ultimos digitos de Tesoreria; va en la proxima version del flujo, junto con la correccion del §10 (P14: corrige y el libro ya son publicos)."
   }
  ],
  "pendientes": [
@@ -4802,6 +4850,27 @@
    "tipo": "herramientas",
    "anios": [],
    "texto": "Llevar a la rubrica LEE (seccion F, proxima version) el catalogo de confusiones de la tipografia 1951-1954 del registro de cobertura (ronda 46), y dos reglas: (1) todo digito dudoso de un numero de decreto se controla primero con la serie de decretos vecinos de la misma hoja y fecha, que lee_auto.py puede listar desde la capa; (2) las dudas que queden se entregan en una hoja de recortes con el renglon marcado, y las respuestas de Eduardo se guardan como 'lectura humana', separadas de lo decidido por control. Evaluar un nombre fijo para esas respuestas en flujo-editorial §9 (por ejemplo lecturas-<año>.json).",
+   "abierto": "2026-09-28",
+   "hecho": null
+  },
+  {
+   "id": "P67",
+   "tipo": "lee",
+   "anios": [
+    1909,
+    1913,
+    1917,
+    1921,
+    1925,
+    1926,
+    1929,
+    1934,
+    1936,
+    1947,
+    1948,
+    1950
+   ],
+   "texto": "Corregir los informes LEE 1909-1950 con la ronda 47 (registro): 1909 A.21, 6 vacas con cria (lectura de Eduardo); 1913, Martin Lesser (Eduardo); 1917 A.10, Chalchamio y Ruiloba; 1921, Fernandez Auge[ilegible] sigue; 1925: Azucar 1.833,32, Eventuales 637,16, agosto 486.135,58, septiembre 887.834,89 (el pie cierra: se retira la diferencia de cuatro centavos); 1926, expediente 7571 sin letra; 1929, Rorcado; 1934: base de San Jorge y San Felix unidas $6.000 (no [1]0.000) y saldo de noviembre de 1933 33.398,82 (Eduardo); 1936, saldo de octubre de 1935 31.809,33 (Eduardo); 1947 A.21, renglon 10 es 1,576 y la suma da 100,000; 1948: 7886-E del 22 de enero, cita 5276, decreto del Registro Civil 11052-G; 1950: Casale 3339-E, orden de pago 662, 'RECHI', oficial 7.o Caituolo o Calluolo (abierto).",
    "abierto": "2026-09-28",
    "hecho": null
   }

@@ -804,3 +804,54 @@ Sale de las 21 lecturas humanas de hoy (9 de 1954 y 12 de 1951–1953), comparad
 - **La falla típica de la lectura humana:** tomar el acto de al lado (8077 por 8078, y 8437 por 8436 en 1954). Las próximas hojas de dudas marcan el renglón exacto con un recuadro.
 - **Sobreimpresión y tipos rotos:** cuando un dígito está sobreimpreso (la patente de Arévalo), ni tres lecturas lo deciden; se declara el dígito como ilegible.
 
+## Ronda 47 — lecturas de Eduardo, 1909–1950 (28/09/2026)
+
+Tipo: **incorporación** (CORRIGE 3.6), por la palabra clave `LECTURAS` (flujo v2 §5.6). Base: commit `508b191`; parche `ronda-47.patch` (commit `509f81a` en la sesión). Denominador: 25.009 líneas, sin cambios de largo.
+
+### Traslado, lectura y cobertura
+
+La ronda toca dos líneas, A:271 y 04:3891. La sesión las leyó enteras, y además 04:3886–3894 como contexto. Siguen vigentes las 25.009 líneas: **25.009 de 25.009 (100,0 %)**.
+
+### Qué se decidió con controles, sin mostrarlo (§5.6.1)
+
+| Año, edición y hoja | Duda del informe LEE | Control | Queda |
+|---|---|---|---|
+| 1950 · 3793 h9 | Decreto de Aquiles Casale, «3399-E» | La imagen dice 3339; los decretos de la misma edición fechados el 21 de septiembre van del 3370 al 3373, y el de Casale es del 20 | **3339-E. El libro decía 3399-E en A:271 y 04:3891 (corregido)** |
+| 1948 · 3046 h8 | Fecha del 7886-E, «enero 22 (dudoso)» | El 7883-E y el 7885-E, en la hoja anterior, son del 22 de enero | 22 de enero de 1948 |
+| 1948 · 3083 h6 | Decreto de coeficientes citado, «52^6» | La imagen dice 5276, y el 5276-E es el decreto de coeficientes de 1947 (2909 h5) | 5276 |
+| 1948 · 3208 h8 | Número del decreto del Registro Civil, «no leído» | Se lee en la imagen | 11052-G |
+| 1925 · 1066 h13 | Azúcar, ¿1.833,32 u 11.833,32? | Se lee en la imagen, y la columna cierra con ella | 1.833,32 |
+| 1926 · 1122 h3 | Letra del expediente «7571 e» | En la imagen no hay letra después de 7571: la «e» es de la capa | 7571, sin letra |
+| 1917 · 640 h6 | «Ruiloba [dudoso]» | Se lee en la imagen, y el decreto 1.564 de 1918 nombra a Venancio Ruiloba para el mismo partido | Ruiloba |
+
+Se quitó de la hoja el renglón borrado de 1912 (362 h3), donde no hay nada que leer.
+
+### Lecturas de Eduardo (hoja `dudas-1909-1950.html`, 15 recortes con el renglón marcado)
+
+| # | Año, edición y hoja | Duda | Sesión | Eduardo | Control | Clase |
+|---|---|---|---|---|---|---|
+| 1 | 1909 · 113 h4 | Vacas con cría | «6[ilegible]» | 6 | Ninguno (el remate no imprime total) | Decidida por Eduardo: 6. La marca que sigue al 6 se toma como tinta |
+| 2 | 1913 · 444 h4 | «Ma[?]ín» Lesser | lectura obvia no escrita | Martín | Ninguno | Decidida por Eduardo |
+| 3 | 1917 · 640 h6 | «Chalcha-mio» y «Ruiloba» | Chalchamio; Ruiloba | Chalchamio; «Ralloba» | Cita cruzada: el decreto 1.564 de 1918 dice «Venancio Ruiloba» | Chalchamio, confirmada; **Ruiloba, corregida por el control** |
+| 4 | 1921 · 844 h12 | «Fernández Auge…» | [ilegible] | «Fernandez Auge» | Ninguno | Abierta: el final del nombre no se lee |
+| 5 | 1925 · 1066 h13 | Eventuales, ¿637,16 o 627,16? | 637,16 por la suma | 637,16 | La columna cierra con 637,16 | Confirmada |
+| 6 | 1925 · 1079 h13 | Total de agosto, 486.135,5? | 486.135,58 por la suma | 486.135,58 | 469.300,80 + 16.834,78 = 486.135,58 | Confirmada |
+| 7 | 1925 · 1083 h13 | Subtotal de septiembre, ¿,85 o ,89? | ,89 por la suma | 887.834,89 | 887.834,89 + 14.375,46 = 902.210,35, el total impreso | **Confirmada: el pie de septiembre de 1925 cierra y desaparece la diferencia de cuatro centavos del informe LEE 1925** |
+| 8 | 1929 · 1268 h11 | «Rorcado» o «Rocado» | Rorcado | Rorcado | Ninguno | Confirmada |
+| 9 | 1934 · 1560 h43 | Base del remate de San Jorge y San Félix unidas | «[1]0.000 [dudoso]» | $ 6.000 | Cita cruzada: el apéndice H del libro, leído sobre la imagen, da \$6.000 unidas | **6.000; el informe LEE 1934 decía [1]0.000** |
+| 10 | 1934 · 1517 h39 | Saldo de noviembre de 1933 | 33.398,8? | 33.398,82 | Ninguno en el corpus (el resumen de noviembre de 1933 es de 1933) | Decidida por Eduardo |
+| 11 | 1936 · 1617 h37 | Saldo de octubre de 1935 | 31.809,3? | 31.809,33 | Ninguno en el corpus | Decidida por Eduardo |
+| 12 | 1947 · 2909 h5 | Coeficiente del renglón 10 | 1,578 o 1,576 | 1,576 | Los coeficientes suman 100,000 sólo con 1,576 | **Confirmada por control**; la impresión de la sesión sobre el recorte (1,578) era errónea |
+| 13 | 1950 · 3596 h10 | Apellido del oficial 7.º | Ca[i]tuolo | Calluolo | Ninguno; no aparece en otro acto leído | Abierta: Caituolo o Calluolo |
+| 14 | 1950 · 3678 h5 | Orden de pago del 1423-E | 662 o 682 | 662 | Ninguno | Decidida por Eduardo |
+| 15 | 1950 · 3825 h8 | «RECHI» o «REGHI» | Rechi (la capa, reghi) | RECHI | Ninguno | Decidida por Eduardo |
+
+Balance: de 15 lecturas, 7 confirmadas por un control, 6 decididas por Eduardo, 1 corregida por el control (Ralloba) y 2 abiertas (4 y 13). El ojo humano volvió a rendir más en palabras (Martín, Rorcado, Rechi) y en dígitos finales de cifras sin control (33.398,82; 31.809,33; 662). El error volvió a ser el de una lectura que un control desmiente (Ralloba). Se agrega al catálogo del §5.6: **en los saldos de Tesorería, el último dígito queda a menudo sobreimpreso por el signo de cierre; la cadena de saldos del mes siguiente es el control, y se busca antes de mandarlo a la hoja.**
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Menciones de los números y nombres decididos en el libro | 22 formas buscadas en los 38 archivos | 3399-E en A:271 y 04:3891 (corregidos); San Jorge y San Félix (H) ya daba \$6.000; ninguna otra mención |
+| Remisiones, pedidos y aparato | sin cambios respecto de la ronda 46 | no se tocan |
+| Compilación | libro entero | Compila; 803 páginas; 0 referencias indefinidas; `.lof` con 41 entradas |
