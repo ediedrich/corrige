@@ -666,3 +666,84 @@ Son **21 citas cotejadas sobre 19 hojas de 17 ediciones**, todas en la imagen: n
 | Recuento de hojas de 1950, 1951 y 1953 contra las tapas (F:57) | 3 años | 4.274 − 128 ≠ 4.156; 4.034 − 89 ≠ 4.025; 4.350 − 70 ≠ 4.305: faltaban las ediciones con hojas que la tapa no cuenta (10, 80 y 25, según los informes LEE): corregido |
 | Largo de los archivos antes y después de la fase 6 | 10/10 archivos tocados por la fase 6 | ninguno cambia de largo |
 | Compilación | libro entero | Compila; 795 páginas (795 la base); 0 referencias indefinidas; `.lof` con 41 entradas; 2 cajas desbordadas, las mismas de antes |
+
+## Ronda 46 — auditoría con fase 6 (28/09/2026)
+
+Base: commit `cef0e1d` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1954), con la fase 6 de esta ronda en `ronda-46.patch` (commit `2d942b0` en la sesión). **Denominador medido: 25.009 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos de la ronda 45 se trasladaron por diff de `3fb5644` (el commit de la fase 6 de la ronda 45 en el repositorio, `73d6374` en su sesión) a `cef0e1d`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. En `3fb5644` estaban vigentes las 25.000 líneas (100,0 %). **El AMPLÍA 1954 agrega 9 líneas (todas en A) y hace caducar 72 líneas en 18 archivos**, y deja **24.937 vigentes sobre 25.009 (99,7 %)**.
+
+### Lectura sobre el texto (numeración de `cef0e1d`)
+
+Se leyeron **las 72 líneas caducas, enteras, por la sesión**, sin subagentes, cotejadas ficha por ficha contra el informe LEE 1954 (`BO-Salta-1954_4587-4830_la-caldera_LEE-1954_2026-09-28.txt`, 67 fichas del §A y 11 de B.2). Además se releyeron como contexto 27 líneas que ya tenían cobertura vigente; no suman cobertura, pero entran en el denominador del aspecto 7.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 280, 298, 300, 302–303, 305–314 | 15 | sesión |
+| ape/C-normativa.tex | 95, 106 | 2 | sesión |
+| ape/D-pedidos.tex | 32, 102, 177–178, 183, 189–193 | 10 | sesión |
+| ape/F-fuentes.tex | 25–26, 57, 64–66 | 6 | sesión |
+| cap/00-advertencia.tex | 21, 43 | 2 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/03-fincas.tex | 389, 938, 1031 | 3 | sesión |
+| cap/04-siglo.tex | 589–590, 3637, 3639, 3658–3660, 3894, 4557–4558, 4599, 4669, 4738 | 13 | sesión |
+| cap/09-defensas.tex | 526, 535 | 2 | sesión |
+| cap/10-expropiacion.tex | 115, 332 | 2 | sesión |
+| cap/16-redes.tex | 762, 789, 794 | 3 | sesión |
+| cap/17-aguabaja.tex | 281, 284, 353, 365 | 4 | sesión |
+| cap/18-politica.tex | 464 | 1 | sesión |
+| cap/20-opacidad.tex | 880 | 1 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 223, 545 | 2 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído (no suma cobertura): 15-hacienda:200–214; 04:1826–1830; 21-ausencias:62–66; A:155, 175.
+
+**Esta ronda: 72 líneas nuevas.** Con el contexto releído son 99 líneas y 117.317 bytes sobre 2.585.131, que en las 803 páginas de la base equivalen a **36,4 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `cef0e1d` cae dentro de estos tramos.
+
+Acumulado: 24.937 vigentes + 72 = **25.009 de 25.009 (100,0 %)**. La fase 6 toca 10 líneas: 9 dentro de lo leído en esta ronda (A:298, 306, 307, 310, 314; F:57; 04:4599, 4669; 10:115) y la 214 de 15-hacienda, releída como contexto; no cambia el largo de ningún archivo: **25.009 de 25.009 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1953 y 1954 de `boletines-salta`)
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 4593 | 5 | Decreto 8358-E, cuarto considerando | «no fué sin embargo plena»; «percibieron y perciben los arriendos correspondientes y la utilizan en su exclusivo beneficio». La cita coincide, pero **«en su exclusivo beneficio» califica el uso de la finca, no el cobro de los arriendos**, como la leía 04:4669 (corregido) |
+| 4593 | 5 | Decreto 8358-E, séptimo considerando | «a pesar de la mediación del Poder Ejecutivo»; «una justa distribución de las tierras a fraccionarse». Coincide |
+| 4593 | 5 | Decreto 8358-E, considerando de la disyuntiva | «una única solución»; «el régimen que rige los arrendatarios rurales» [sic]. Coincide; A y 04 lo parafrasean fuera de comillas |
+| 4593 | 6 | Decreto 8358-E, último considerando y arts. 1.º y 2.º | «artículo 39 de la Ley 1336»; Carlos y Manuel Serrey; Escribano de Gobierno. Coincide |
+| 4599 | 6 | Decreto 8475-A | «Hospital de La Caldera», cañerías, 14 de enero de 1954. Coincide |
+| 4643 | 12 | Decreto 9333-A | «Oficial 3.º, Méd. Hosp. La Caldera, Dr. EUGENIO ROMANOV». Coincide |
+| 4674 | 7 | Resolución 3132-A | «Consultorio Externo de la Caldera», con minúscula; el libro citaba «de La Caldera» en A y 04 (**corrección silenciosa**, corregida); «Dr. Eugenio Romanow», \$120. Coincide |
+| 4650 | 8 | Decreto 9576-G, sección femenina | Circuito 5: mesas 1 y 3 en la Escuela Elemental Mixta, mesa 2 en la Iglesia Parroquial; circuito 6: Vaqueros y estación de Mojotoro. **La iglesia tiene una mesa por sexo**, no una en total, como sumaba A (corregido) |
+| 4700 | 5 | Edicto 10954 | «Cerro Bueno Vista», catastro 112, Germán Peral, río Vaqueros, 1,05 l/s, hijuela Urquiza. Coincide |
+| 4705 | 11 | Edicto 10994 | Ma. Elena Costas de Patrón Costas, «inscrip. aguas priv», Resolución 383/54, art. 183 del Código de Aguas. Coincide |
+| 4720 | 13 | Decreto 10851-E, visto | «piedra embolsada», «Río La Caldera», \$88.928, Resolución 794 del 23 de diciembre de 1953. Coincide |
+| 4726 | 5 | Decreto 10954-E | «los trabajos de relevamiento y plano regular de la localidad de La Caldera». Coincide |
+| 4747 | 7 | Decreto 11380-G, art. 2.º | Designa interinamente al reemplazante del médico regional de Cerrillos–La Merced, «debiendo atender además los consultorios de Vaqueros», **desde el 11 de septiembre**. A lo ponía en simultáneo con mayo (corregido) |
+| 4756 | 6 | Decreto 11505-E | «completamente inutilizado a consecuencia de las crecientes del Río Wie[r]na». Coincide |
+| 4822 | 6 | Decreto 12575-E, considerandos 1.º a 3.º | \$100.000; pagaré a ciento ochenta días; «Concluir con el parcelamiento [a favor de] los arrendatarios de la finca» (el recorte corta el margen; el informe LEE lo da entero). Coincide |
+| 4466 (1953) | 11 | Decreto 5859-A | Designa desde el 18 de junio de 1953 médico regional de La Caldera a Eugenio Romanow. **Es el médico que A:298 describía por su condición de extranjero** en la fila de 1953, y que el AMPLÍA 1954 nombra en la de 1954 (P58; corregido en A:298) |
+
+Son **16 citas cotejadas sobre 15 hojas de 15 ediciones** (14 de 1954 y una de 1953), todas en la imagen: una corrección silenciosa dentro de comillas («La Caldera» por «la Caldera»), ninguna cita que cambie el sentido, y tres paráfrasis que el facsímil corrige (a qué califica «en su exclusivo beneficio», las mesas de la iglesia y la fecha del interinato de Cerrillos). No se cotejaron: 4609 h6–7 (8545-G), 4622, 4633, 4648, 4654 y 4656 h8–12 (decretos y edictos de agua), 4827 h10 (12687-E) ni 4663 h14 (9928-E).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.000/25.000 líneas vigentes en `3fb5644` | 24.937 vigentes, 72 caducas por el AMPLÍA 1954 |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`) | 316/316 `\ref{cap:…}` a capítulos posteriores | 0 sin marcar, antes y después de la fase 6 |
+| Superlativos y ausencias con 1954, 1955, «sexenio», «seis años» o 1949–1954 en la misma oración (repaso de ventana) | 19 oraciones en todo el libro, todas leídas | ninguna desmentida; A:280 («único nombre… en los seis años leídos desde la convocatoria de 1949») cierra con 1954 |
+| Superlativos con universo «quinquenio», «cinco años», 1949–1953, «años leídos», «archivo leído» o «en toda la serie», sin 1954 | 12 oraciones en todo el libro, todas leídas | **una desmentida por 1954: 15-hacienda:213–214, «las dos únicas obligaciones que el archivo leído documenta», contra la deuda con la Caja de Jubilaciones de 1954 que A:314 ya traía** (corregida: universo 1932–1940 y la tercera nombrada) |
+| Superlativos y ausencias en el texto agregado por la fase 6 | 11 reemplazos | uno, «las dos únicas… entre 1932 y 1940», con su universo declarado |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 46 | 50 de 317 oraciones con cifra en las 72 líneas nuevas | **50/50 con fuente localizable**: 21 no llevan la cita en la misma oración, y la tienen en el párrafo (04:4599, 4669; A:302) o son declaraciones de cobertura de F, 00, 01, 02, 09 y 20 cuya fuente es el propio apéndice F y el informe LEE |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 72 líneas nuevas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Dotaciones de 1954 recalculadas desde caudal y superficie | 11 cocientes de los 10 decretos y 8 de los 10 edictos | decretos 0,482 a 0,539 (el 0,482 es Vivas de Kelly); edictos 0,516 a 0,528; cierran A, D:102, 04:3894, 04:4738 y 17:353 |
+| `\pendiente{}`, ítems de D y `\label` de apéndices | 52; 284; 8/8 | 22-prospectiva dice 284: cierra |
+| Recuento de hojas de 1954 contra las tapas (F:57) | 244 ediciones | **4.634 − 96 + 7 ≠ 4.584: faltaban las 39 hojas de las dos ediciones cuya tapa no deja leer la cifra (4697, 17; 4811, 22)**; con ellas, 4.634 − 96 + 7 + 39 = 4.584 (corregido) |
+| Rango de edictos citado en A (1954) | 10 edictos de agua del informe LEE | «edictos 10676 a 10680» incluía el 10679, que no es del departamento (corregido: 10676 a 10678 y 10680) |
+| Privacidad: personas nombradas en las 72 líneas nuevas, cruzadas con atributos sensibles y contextos socioeconómicos en todo A | 72/72 líneas nuevas, leídas enteras, y búsqueda en todo el libro de cada nombre en contexto sensible | dos casos: el médico de 1953 descripto por su condición de extranjero en A:298, identificable por su nombre en A:306 y 04:4599 (tope 60), y un deudor de dos remates judiciales nombrado en A:314; los dos corregidos |
+| Largo de los archivos antes y después de la fase 6 | 5/5 archivos tocados por la fase 6 | ninguno cambia de largo |
+| Compilación | libro entero | Compila; 803 páginas (803 la base); 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas de antes |

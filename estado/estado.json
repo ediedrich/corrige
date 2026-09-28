@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-09-28T17:45:07",
+ "actualizado": "2026-09-28T18:20:02",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -3988,6 +3988,104 @@
      "hecho": null
     }
    ]
+  },
+  {
+   "ronda": 46,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 60.0,
+   "nota_inicial_sin_tope": 77.3,
+   "tope_inicial": 60,
+   "motivo_tope_inicial": "Atributo sensible sobre persona que puede estar viva e identificable: A:298 describe al médico designado en junio de 1953 como extranjero autorizado a ejercer en forma precaria sin título nacional o revalidado, y el AMPLÍA 1954 lo nombra (Eugenio Romanov/Romanow, A:306 y 04:4599); el 5859-A (4466 h11) confirma que es la misma persona. Es el riesgo que P58 anticipaba. La cobertura acumulada inicial (99,7 %) daba además tope 90.",
+   "nota_final": 88.3,
+   "nota_final_sin_tope": 88.3,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_inicial": 99.7,
+   "cobertura_ronda_lineas": 72,
+   "paginas_auditadas": 36.4,
+   "fecha": "2026-09-28",
+   "base": "cef0e1d",
+   "commit": "2d942b0",
+   "amplia_auditado": "amplia-1954",
+   "aspectos": {
+    "1": [
+     82,
+     82
+    ],
+    "2": [
+     100,
+     100
+    ],
+    "3": [
+     95,
+     100
+    ],
+    "4": [
+     87,
+     90
+    ],
+    "5": [
+     90,
+     100
+    ],
+    "6": [
+     90,
+     90
+    ],
+    "7": [
+     30,
+     100
+    ],
+    "8": [
+     95,
+     95
+    ],
+    "9": [
+     30,
+     30
+    ],
+    "10": [
+     70,
+     70
+    ],
+    "11": [
+     90,
+     90
+    ],
+    "12": [
+     100,
+     100
+    ],
+    "13": [
+     94,
+     94
+    ],
+    "14": [
+     100,
+     100
+    ],
+    "15": [
+     30,
+     90
+    ]
+   },
+   "puntos_estructurales": 3.1,
+   "puntos_corregibles": 8.6,
+   "hallazgos": 10,
+   "aplicados": 10,
+   "descartados_falsos_positivos": 0,
+   "errores_introducidos_por_la_auditoria": 9,
+   "errores_introducidos_detalle": "Nueve en material del AMPLIA 1954 (cef0e1d): nombre del medico de 1953 que A:298 describia como extranjero (A:306 y 04:4599), deudor de dos remates judiciales nombrado (A:314), recuento de hojas de 1954 sin las 39 de 4697 y 4811 (F:57), mesas de la iglesia parroquial sumadas una en total (A:307), rango de edictos 10676 a 10680 con el 10679 ajeno (A:310), 'Consultorio Externo de La Caldera' por 'de la Caldera' (A:306 y 04:4599), 'en su exclusivo beneficio' aplicado a los arriendos (04:4669), interinato de Cerrillos desde septiembre puesto en simultaneo con mayo (A:306) y 'le devuelve' por 'les devuelve' (10:115). Uno anterior al flujo que el AMPLIA 1954 debio atrapar en el repaso de ventana: 15-hacienda:213, 'las dos unicas obligaciones que el archivo leido documenta', desmentido por la deuda con la Caja de Jubilaciones que el mismo AMPLIA agrego en A:314.",
+   "atrapados_por_control": 0,
+   "cotejo_facsimil": 16,
+   "lectura_por_subagentes": "No hubo: las 72 lineas nuevas y 27 de contexto las leyo la sesion.",
+   "archivos_que_cambian_de_largo": [],
+   "pendientes_cerrados": [
+    "P58"
+   ],
+   "pendientes_nuevos": [],
+   "nota_cierre": "P58: el 5859-A (4466 h11) designa desde el 18 de junio de 1953 medico regional de La Caldera a Eugenio Romanow, el mismo que A y 04 nombran en 1954; A:298 deja de describirlo por su condicion y su titulo. P54 sigue abierto: 1954 habla de 'Hospital de La Caldera' y 'Consultorio Externo' y no nombra la estacion sanitaria. P60 a P63 no se trabajaron."
   }
  ],
  "pendientes": [
@@ -4565,7 +4663,7 @@
    ],
    "texto": "Privacidad (aspecto 15): A:298 dice que en junio de 1953 se designa un medico 'extranjero' autorizado a ejercer en forma precaria (5859-A, 4466 h11), sin nombrarlo. Si P56 suma a E a los medicos regionales de 1953 (Romanow, Alacevich), no cruzar el nombre con la condicion de extranjero ni con el titulo no revalidado: adulto de 1953, se presume vivo, y la condicion migratoria es atributo sensible (tope 60). Cotejar ademas 5859-A en la imagen, que esta ronda no miro.",
    "abierto": "2026-09-28",
-   "hecho": null
+   "hecho": "2026-09-28"
   },
   {
    "id": "P59",
@@ -4586,7 +4684,7 @@
    ],
    "texto": "Privacidad (aspecto 15): A:298 dice que en junio de 1953 se designa un medico 'extranjero' autorizado a ejercer en forma precaria (5859-A, 4466 h11), sin nombrarlo. Si P56 suma a E a los medicos regionales de 1953 (Romanow, Alacevich), no cruzar el nombre con la condicion de extranjero ni con el titulo no revalidado: adulto de 1953, se presume vivo, y la condicion migratoria es atributo sensible (tope 60). Cotejar ademas 5859-A en la imagen, que esta ronda no miro.",
    "abierto": "2026-09-28",
-   "hecho": null
+   "hecho": "2026-09-28"
   },
   {
    "id": "P59",
@@ -4642,6 +4740,6 @@
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
