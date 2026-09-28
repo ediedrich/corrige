@@ -1,0 +1,3029 @@
+LEE v17 — 1952
+==============
+Boletín Oficial de la Provincia de Salta, año 1952, ediciones N 4103 a 4343.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5). Sesión del 28/09/2026 (hora de Salta).
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: COMPLETO, con 8 límites declarados (E.10). Nivel de lectura: imagen (las
+63 fichas del §A y las 16 del B.2 se miraron en la imagen del PDF, cada una en
+los renglones que la deciden; lo que se leyó sólo en la capa está dicho en su
+MODO DE LECTURA y no decide la atribución; los renglones de B.3, B.4 y §C se
+leyeron en la capa y, los que deciden una atribución, también en la imagen).
+Insumos. La página expanded_assets/1952 del Release responde 403 desde la nube,
+como en 1950 y 1951; las URL de descarga de cada asset responden. Se bajaron por
+su nombre, tomado de estado.json (descarga.subidos):
+BO-Salta-1952_la-caldera_PRE-INFORME-LEE_2026-09-28.txt (único pre-informe en el
+Release; el log registra corridas del 23/09 cuyo pre-informe no se subió),
+decretos_1952.csv, lee_config.json, lee_textos_1952.zip, log.txt y
+resultados_1952.csv; recortes_1952_parte1..3.zip no se bajaron (los recortes se
+hicieron de nuevo desde los PDF). Los PDF, por número: 241, N 4103 a 4343, sin
+huecos (4102 y 4344 responden 404: son de 1951 y 1953); ningún aviso de «no se
+encontró». El inventario del Release no se pudo listar: que no haya otros assets
+no está comprobado (E.10).
+lee_auto.py: sha 8a1e775655ae (estado.json), corrida del 27/09/2026 23:57,
+cerrada el 28/09 00:51, con config del 27/09. El log trae cuatro corridas (23/09
+dos veces, 27/09 dos) sin errores de extracción; la del 23/09 13:15 dice
+«recortes DESACTIVADOS». Capa previa útil en 4.158 de 4.303 hojas (97 %);
+lee_auto ocrizó 145 (segunda versión). El zip de textos trae 4.303 .prev.txt,
+145 .prop.txt y .tsv y 241 EXTRAIDO.json; las hojas por edición de EXTRAIDO
+coinciden con las de los PDF en las 241; la capa que devuelve PyMuPDF es
+idéntica a .prev en las 4.303.
+Config (v16 §15.4 y v17 §5.2):
+  config de corrige: version 2026-09-28, hasta 1951, actores 717, anillo2 213,
+  numeros 406, falsos_positivos 25
+  foto del Release: version 2026-09-27, hasta 1950, actores 682, anillo2 191,
+  numeros 343, falsos_positivos 25
+  se usa: corrige — razón: único válido (v17 §5.2) y más nuevo
+  contenido: el de corrige contiene al del Release y le suma 35 actores, 22
+  términos de anillo 2 y 63 números (lo que entregó el informe de 1951). El
+  pre-informe se hizo con la foto (hasta 1950): la sesión corrió anillo 2,
+  actores y números con el de corrige.
+La sesión entrega lee_config.json actualizado (version 2026-09-28, hasta 1952):
+lo que suma está en §F.7; nada se quita.
+Entorno: nube con 2 núcleos, tesseract 5 con eng y osd, sin spa: no hay OCR en
+sesión; el modelo eng sólo se usó sobre la franja de las tapas, y toda cifra de
+tapa que no cuadraba se miró en la imagen. PyMuPDF instalado en la sesión.
+Qué verificó la sesión: las 241 tapas (número, fecha, día, páginas declaradas,
+año editorial, gobernador y ministros; las páginas declaradas de las 88
+ediciones cortas, en una plancha de la línea «EDICION DE N PAGINAS»); las
+pasadas del §2 (literal con la unión corregida, laxa, laxa espaciada, sin
+espacios, con signos, difusa, difusa ampliada y una de contexto departamental);
+el anillo 2 término por término; los 717 actores del config y los 406 números;
+calendario, autoridad y feriados; los cuatro resúmenes de Tesorería con los
+saldos mirados; tinta y resolución de las 4.303 hojas; las 1.293 hojas de menos
+de 5 % de tinta en 26 planchas; la serie de cabeceras «PAG. N».
+Al cerrar (COMPLETO): qué agregaría cada insumo que faltó. El listado del
+Release (expanded_assets): confirmaría que no hay assets fuera de los nueve de
+estado.json. Tesseract con spa: segunda versión propia en las 4.158 hojas de
+capa sola. El Registro Oficial de 1952: los resúmenes de Tesorería de febrero a
+diciembre, que el corpus no publica, y las resoluciones citadas y no acompañadas
+(E.3). Un escaneo a más de 150 ppp de 4235 h11 y 4320 h6: decidiría los dígitos
+dudosos de B.2.6 y A.60.
+
+§1 · CORPUS REVISADO
+--------------------
+241 ediciones, N 4103 (miércoles 2 de enero) a 4343 (miércoles 31 de diciembre),
+sin huecos de numeración. 4.303 hojas presentes contra 4.396 declaradas en las
+tapas.
+Ediciones con menos hojas que las declaradas: 88, 93 hojas: 86 con una menos,
+4341 con tres (declara 20, trae 17) y 4318 con cuatro (16 y 12). Ninguna con
+más. Dónde falta la hoja: en 31 de las 88 la capa resuelve la cabecera «PAG. N»
+de la última hoja presente; en 30 dice el número de hojas presentes y en 1
+(4207) la capa lee «1» por 11. En ninguna la serie de cabeceras que la capa
+resuelve salta en el medio. Lo que falta es, en esas 30, la última página; qué
+contenía no se sabe: se declara y no se explica. hojas_ausentes_estimadas: 93.
+Las páginas declaradas se leyeron primero con el modelo eng sobre la franja de
+la tapa y después en la imagen donde no cuadraban: la lectura mecánica erró en
+tres (4110 «30» por 20, 4125 «28» por 26, 4188 «16» por 18); la tabla de abajo
+trae la lectura en la imagen.
+Tapas, leídas en la imagen las 241 (franjas a 105-110 ppp): año editorial
+«XLIII» en todas salvo 4103, 4109, 4113, 4116, 4121, 4122 y 4126, que traen
+«XLII» (en 4103 y 4109 con punto final y letra nítida; en las otras cinco puede
+ser tipo roto: no se decide). Erratas de tapa: 4119 imprime «N 4118»; 4308
+imprime «N 4309»; en 4139 el número se lee «4138» y la capa lee 4139 (no se
+decide); «MAYO D E1952» (4184); «LUNES, 9 JUNIO» sin «DE» (4208); «MARTES,, 4»
+(4305); «VIERNES, NOVIEMBRE 28» con el orden invertido (4322). La tapa alterna
+SEPTIEMBRE y SETIEMBRE.
+Día de la semana y fecha: coinciden en las 241. No hay ediciones dobles: fechas
+estrictamente crecientes. Ninguna edición sale en sábado ni en domingo.
+Días de salida: la tapa dice «APARECE LOS DIAS HABILES». Días de lunes a viernes
+sin edición, del 2 de enero al 31 de diciembre: 20. Explicados por actos del
+propio corpus, 4: 3/1 (decreto 10538-G del 2 de enero, duelo por el ministro de
+Gobierno Dr. Pedro De Marco: «Suspéndanse las tareas… el día 3», 4113 h10); 26/2
+(el sumario de 4145 h2: «declara día no laborable el martes de carnaval»); 28/7
+y 29/7 (decreto 890 del 26 de julio, fallecimiento de Eva Perón: «cese total de
+actividades durante dos (2) días», firmado Durand y Jorge Aranda, 4240 h2). Sin
+explicar en el corpus, 16: 20/2, 25/2, 10/4, 11/4, 1/5, 4/6, 12/6, 20/6, 9/7,
+15/8, 26/8, 15/9, 17/10, 11/11, 8/12 y 25/12. El 4/6 coincide con el cambio de
+gobierno (§E.4). No se busca la causa afuera.
+Resolución (imagen incrustada, las 4.303 hojas): 150 ppi en 3.140 hojas y
+151-159 en 23, de la 4103 a la 4281; de la 4282 (1 de octubre) a la 4343, entre
+378 y 423 ppi (1.120 hojas en las 62 ediciones), con hoja de otro tamaño (unos
+650 x 890 pt contra 850 x 920). En 6 hojas la primera imagen es un logo de 5 a
+14 ppi y en 1 de 300: no cambian la lectura. techo_ppi: 423; la resolución de
+trabajo es 150 hasta septiembre y cerca de 400 desde octubre. Capa de texto: el
+PDF la trae en las 4.303 hojas; lee_auto la juzgó útil en 4.158 y ocrizó 145.
+Tinta (píxeles < 170 a 40 ppp, las 4.303 hojas): ninguna bajo 0,5 %; 1.293 bajo
+5 %, la menor 4149 h17 (1,00 %). Las 1.293 se miraron en 26 planchas de 50 hojas
+a 12 ppp: ninguna en blanco; son sumarios, tarifas, balances, listas y cuadros;
+desde la 4282 sólo 3 hojas bajan de 5 % (los escaneos nuevos son más oscuros).
+Hojas de otro formato: 4149 h16-h19, apaisadas (balance general del Banco
+Provincial de Salta, aviso 7918); 4244 h11 y 4245 h5-h10, escaneadas apaisadas;
+4178 h18-h20, balance y cuadro de ganancias de «La Curtidora Salteña» en otro
+formato; 4219 h19, balance de «La Arrocera del Norte S.A.»; 4179 h4, cuadro de
+impuesto a la herencia girado. Ningún plano.
+Hojas miradas en la imagen: 241 tapas, 1.293 en planchas y 116 de cuerpo a
+90-300 ppp (con solapamientos); hojas_miradas: 1.650.
+Tabla por edición (N, fecha, hojas presentes / declaradas); las fechas y las
+declaradas se leyeron en la imagen de la tapa:
+  4103 02/01 30/30   4104 04/01 17/18   4105 07/01 22/22   4106 08/01 13/14
+  4107 09/01 18/18   4108 10/01 13/14   4109 11/01 14/14   4110 14/01 19/20
+  4111 15/01 26/26   4112 16/01 19/20   4113 17/01 25/26   4114 18/01 25/26
+  4115 21/01 23/24   4116 22/01 23/24   4117 23/01 20/20   4118 24/01  9/10
+  4119 25/01 19/20   4120 28/01 17/18   4121 29/01 16/16   4122 30/01 18/18
+  4123 31/01 28/28   4124 01/02 22/22   4125 04/02 25/26   4126 05/02 28/28
+  4127 06/02 20/20   4128 07/02 27/28   4129 08/02 25/26   4130 11/02 18/18
+  4131 12/02 17/18   4132 13/02 16/16   4133 14/02 13/14   4134 15/02  7/8 
+  4135 18/02 10/10   4136 19/02 17/18   4137 21/02 16/16   4138 22/02 16/16
+  4139 27/02 16/16   4140 28/02 19/20   4141 29/02 17/18   4142 03/03 19/20
+  4143 04/03 14/14   4144 05/03 18/18   4145 06/03 18/18   4146 07/03 10/10
+  4147 10/03  8/8    4148 11/03 16/16   4149 12/03 19/20   4150 13/03 20/20
+  4151 14/03 17/18   4152 17/03 16/16   4153 18/03 18/18   4154 19/03 14/14
+  4155 20/03 16/16   4156 21/03 14/14   4157 24/03 20/20   4158 25/03 17/18
+  4159 26/03 17/18   4160 27/03 14/14   4161 28/03 18/18   4162 31/03 12/12
+  4163 01/04 18/18   4164 02/04 18/18   4165 03/04 16/16   4166 04/04 12/12
+  4167 07/04 16/16   4168 08/04 13/14   4169 09/04 13/14   4170 14/04 18/18
+  4171 15/04 18/18   4172 16/04 19/20   4173 17/04 15/16   4174 18/04 16/16
+  4175 21/04 15/16   4176 22/04 20/20   4177 23/04 18/18   4178 24/04 21/22
+  4179 25/04 20/20   4180 28/04  8/8    4181 29/04 15/16   4182 30/04 22/22
+  4183 02/05 12/12   4184 05/05 10/10   4185 06/05 15/16   4186 07/05 15/16
+  4187 08/05 18/18   4188 09/05 18/18   4189 12/05 10/10   4190 13/05 12/12
+  4191 14/05 19/20   4192 15/05 18/18   4193 16/05 16/16   4194 19/05 16/16
+  4195 20/05 18/18   4196 21/05 18/18   4197 22/05 20/20   4198 23/05 23/24
+  4199 26/05 19/20   4200 27/05 20/20   4201 28/05 18/18   4202 29/05 18/18
+  4203 30/05 20/20   4204 02/06 17/18   4205 03/06 20/20   4206 05/06 10/10
+  4207 06/06 11/12   4208 09/06 12/12   4209 10/06 22/22   4210 11/06 20/20
+  4211 13/06 18/18   4212 16/06 16/16   4213 17/06 14/14   4214 18/06  9/10
+  4215 19/06 16/16   4216 23/06 22/22   4217 24/06 20/20   4218 25/06 20/20
+  4219 26/06 20/20   4220 27/06 22/22   4221 30/06 17/18   4222 01/07 20/20
+  4223 02/07 18/18   4224 03/07 30/30   4225 04/07 22/22   4226 07/07 22/22
+  4227 08/07 14/14   4228 10/07 18/18   4229 11/07 16/16   4230 14/07 12/12
+  4231 15/07 17/18   4232 16/07 17/18   4233 17/07 14/14   4234 18/07 20/20
+  4235 21/07 20/20   4236 22/07 22/22   4237 23/07 14/14   4238 24/07 20/20
+  4239 25/07 16/16   4240 30/07 14/14   4241 31/07 11/12   4242 01/08 18/18
+  4243 04/08 15/16   4244 05/08 24/24   4245 06/08 11/12   4246 07/08 22/22
+  4247 08/08 35/36   4248 11/08 28/28   4249 12/08 18/18   4250 13/08 35/36
+  4251 14/08 33/34   4252 18/08 22/22   4253 19/08 18/18   4254 20/08 11/12
+  4255 21/08 16/16   4256 22/08 17/18   4257 25/08 22/22   4258 27/08 17/18
+  4259 28/08 11/12   4260 29/08 18/18   4261 01/09 16/16   4262 02/09 14/14
+  4263 03/09 16/16   4264 04/09 10/10   4265 05/09 23/24   4266 08/09 16/16
+  4267 09/09 20/20   4268 10/09 21/22   4269 11/09 18/18   4270 12/09 19/20
+  4271 16/09 20/20   4272 17/09 19/20   4273 18/09 20/20   4274 19/09 17/18
+  4275 22/09 20/20   4276 23/09 18/18   4277 24/09 12/12   4278 25/09 13/14
+  4279 26/09 14/14   4280 29/09 18/18   4281 30/09  9/10   4282 01/10 16/16
+  4283 02/10 16/16   4284 03/10 18/18   4285 06/10 12/12   4286 07/10 10/10
+  4287 08/10 21/22   4288 09/10 17/18   4289 10/10 21/22   4290 13/10 13/14
+  4291 14/10 16/16   4292 15/10 18/18   4293 16/10 20/20   4294 20/10 20/20
+  4295 21/10 23/24   4296 22/10 22/22   4297 23/10 14/14   4298 24/10 12/12
+  4299 27/10 32/32   4300 28/10 20/20   4301 29/10 22/22   4302 30/10 19/20
+  4303 31/10 27/28   4304 03/11 20/20   4305 04/11 23/24   4306 05/11 21/22
+  4307 06/11 24/24   4308 07/11 22/22   4309 10/11 18/18   4310 12/11 15/16
+  4311 13/11 26/26   4312 14/11 20/20   4313 17/11 22/22   4314 18/11 18/18
+  4315 19/11 17/18   4316 20/11 18/18   4317 21/11 16/16   4318 24/11 12/16
+  4319 25/11 12/12   4320 26/11 16/16   4321 27/11 18/18   4322 28/11 19/20
+  4323 01/12 16/16   4324 02/12 12/12   4325 03/12 21/22   4326 04/12 19/20
+  4327 05/12 17/18   4328 09/12 13/14   4329 10/12 14/14   4330 11/12 17/18
+  4331 12/12 16/16   4332 15/12 16/16   4333 16/12 21/22   4334 17/12 18/18
+  4335 18/12 17/18   4336 19/12 18/18   4337 22/12 17/18   4338 23/12 19/20
+  4339 24/12 19/20   4340 26/12 19/20   4341 29/12 17/20   4342 30/12 23/24
+  4343 31/12 19/20
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa del PDF («prev») en las 4.303 hojas; OCR propio de lee_auto
+(«prop») en 145; búsqueda sobre cada una por separado. Unión: U+0002 no aparece;
+U+00AD aparece 70.297 veces, 70.290 seguido de salto, y se quita junto con el
+salto; guion de corte con hasta dos signos a cada lado.
+Pasadas, con su resultado:
+  - Literal «cald» (NFD, sin tildes): 593 aciertos en 362 hojas-versión.
+    Quitados los falsos positivos conocidos del config (Calderón, caldoso,
+    «caldo» por caído, calderas), 326 contextos en 218 hojas; agrupados por
+    texto, 162 grupos: 156 son de las fichas del §A (con sus repeticiones y
+    sumarios) y 6 son otra cosa (B.3, E.7).
+  - Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: fuera de «caldera» (402), sólo
+    «caldero» (120: Calderón y afines). No rescata nada. Probada: devuelve la
+    forma literal.
+  - Laxa espaciada, separador [\s\-]{0,3} entre cada par de letras: tres hojas
+    con formas distintas de la literal: 4133 h8 («La Cal / dera», partido en dos
+    renglones sin guion: A.8, que ninguna otra pasada devolvía), 4280 h15
+    («calder a», el aviso de A.43) y 4252 h21 («mercal derias», ruido). Probada
+    contra «c a l d e\nr a» y «c-al d-era»: devuelve las dos.
+  - Pasada sin espacios ni signos (texto de la hoja reducido a letras): las
+    mismas tres hojas con más aciertos que la literal; nada más.
+  - Laxa con signos dentro de la palabra (propuesta en §F de 1951): dos
+    aciertos, los mismos de la espaciada.
+  - Difusa (ratio >= 0,78): 32 formas, 283 aciertos. Reales, todas dentro de
+    fichas ya hechas: calde, calder, calderi, caldeia, caldehas, calderq,
+    caldefa, caljera, cladera, faldera, garldera, coildera, jaqldera, lacaldera,
+    aldera (4309 h5), caletera (4255 h10). Falsas: adera (Jorge Adera y
+    «madera»), calderon, escalera, alder (Walder Yáñez), alera, caera, cadera,
+    caleras, caderia(s), balderra, canlera, cader, caderas (E.7).
+  - Difusa ampliada (0,70-0,78, iniciales c, g, o): 82 formas, 1.258 aciertos;
+    ninguna real fuera de «calderill» (19, La Calderilla, ya en fichas):
+    calidad, cabrera, cadena, cartera, galería, cuadra y afines.
+  - Pasada de contexto departamental (nueva, §F.1): «dpto., departamento,
+    partido, localidad, río, (sub)comisaría o pueblo» + «(de) la» + palabra que
+    empieza por c, excluidas Caldera, Candelaria, Capital y otras conocidas: 35
+    formas. Una real que ninguna otra pasada devolvía: «Dpto. La Calele a» en la
+    capa, «La Calde a» en la imagen (A.45). Las demás son cortes de avisos ya
+    fichados (caldo, caido, cuidexa, calae, caide, cuidete, caleteras: edictos
+    de A.35, A.33 y A.39) o de otros departamentos (Candelaria, Capital,
+    Chicoana).
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas:
+  1) faltantes: se agregan «villa vieja», «huerta vieja», «potrero del
+  castillo», «rio del potrero del castillo» (A.33), «cerro buena vista» y la
+  hijuela «urquiza» del río Vaqueros (A.59, A.12), «hogar escuela evita»,
+  «hospital doctor francisco ortelli» (A.19), «escuela juana moro de lopez»
+  (A.45), las deformaciones «los yarones», «yaconer» y «la calde a», y «finca el
+  sauce»: 13 términos. Al config de falsos positivos: «pasaje la caldera»
+  (Capital) y «caldera y dos cocinas».
+  2) apellidos dentro del anillo 2: los de siempre (apaza, aramayo, condori,
+  chaile, isasmendi, murua, nogales, toconas, castellanos, burgos de yugra,
+  mamani, wierna); en 1952 se suman «lesser» (Pascual Lesser, jubilado, 4171
+  h11; Beatriz Benigna Lesser, becada, 4338 h5) y «yufra» (Isabel Yufra de
+  Iriarte, real en A); no se mueven. «condori», «murua», «mamani» y «yufra» son
+  reales este año en fichas del §A.
+  3) a revisar: 142 términos sin acierto en 1952 (entre ellos potrero grande,
+  arroyo de valencia, santa rufina, quitilipe, mojotorillo, cuchimayo, pena
+  caida); se conservan. «la laguna» da 40 hojas: probada, son lugares de otros
+  departamentos y apellidos (B.3).
+Anillo 2, lectura: 70 de 212 términos distintos con acierto. Se leyeron los
+contextos de todos los términos propios del departamento (vaqueros y río
+vaqueros 63 hojas, higueritas 31, yufra 26, buen retiro 15, la calderilla 12,
+los yacanes 12, wierna 12, san cayetano 10, lesser 7, finca miraflores 5, hogar
+escuela de la caldera 3, finca vaqueros 3, chunas 1 y los demás) y, de los
+genéricos (san jose 247, mamani 244, candelaria 177, apaza 163, condori 154,
+castellanos 137 y los demás), los que traen caldera, calderilla, vaqueros o
+wierna en la misma hoja. Lo que da va a B.2, B.3 y §C.
+Actores: los 717 del config, sobre el texto sin puntuación: nombre completo,
+inicial y apellido, y apellido y nombre; 217 actores con acierto (4.661
+aciertos). Se leyeron los 143 contextos que traen un topónimo del departamento
+en la misma ventana: fuera de las fichas, son homónimos o coincidencias
+(Gregorio Vélez, dueño anterior de una finca «Miraflores» en La Candelaria;
+Pascual Lesser; Joaquín y Ladislao Castellanos; Erasmo Martínez; Julio Aranda).
+Segunda corrida con los nombres de las fichas de 1952: va a B.4. Actores de
+fichas cuya búsqueda por nombre completo no devuelve su propio acto: Ángel
+Finetti (la capa: «Tinetti», «EINETTI»), Corina Adela Bustamante («ODRINA»),
+Cástulo García («GASTOLO»), Isabel Yufra de Iriarte («Triarte»), Esteban Mogro
+(«Magro» en A.54): es falla de la búsqueda, no ausencia, y se declara.
+Números arrastrados: los 406 del config, precedidos por decreto, ley,
+resolución, expediente, ordenanza o contrato: 474 aciertos de 197 números (la
+mayoría, 11867, 1423, 1419 y 744: otros actos). Se leyeron los 22 contextos que
+traen un topónimo del departamento o un año de 1930 a 1949: fuera de las fichas,
+todos son coincidencias (ley 744, ley 745, ley 207, decretos 6501, 8072, 10408,
+1406, 2978 de otras materias). Los números del departamento vuelven dentro de
+actos fichados: 3712 (A.1), 2785 (A.3), 11102 (A.6).
+Pre-informe de lee_auto (rúbrica v11): 1.152 aciertos de anillo 1 en 479 hojas;
+262 fuera de los grupos de la sesión, todos falsos positivos o formas ya
+contadas (Calderón, escalera, Adera, mercaderías, caído, «acalda» por acorda,
+Walder, «jaqldera» de A.40). El pre-informe no trae 4133 h8 ni 4287 h15: sus dos
+fichas salieron de pasadas de la sesión.
+Identificadores de las ausencias (B.4): nombre y cargo, cargo y lugar, número de
+acto.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+63 fichas. Por orden de edición. Avisos repetidos: una entrada con sus
+apariciones. Una ficha nombra el departamento y lo contradice en el mismo acto
+(A.8): se ficha y no se atribuye.
+
+A.1
+FUENTE: 4111 h5 c3 y h6 c1 (Salta, martes 15 de enero de 1952)
+FICHA: Decreto N 10425-E, 26 de diciembre de 1951: da por terminadas las
+funciones de Jorge A. Rauch, Oficial 2 de Contaduría General, como Administrador
+de la Finca Vaqueros, «ubicado en el Departamento de La Caldera», designado por
+decreto 3712 del 21 de octubre de 1950; vuelve a Contaduría. Clase:
+CARGOS+DOMINIO.
+MODO DE LECTURA: imagen, 180 ppp, entero (h5 c3; firmas en h6 c1).
+TEXTO:
+  DECRETO N 10425 — E. Salta, Diciembre 26 de 1951. VISTO el Decreto N 3712 del
+  21 de Octubre de 1950 por el que se designaba al Oficial 2 de Contaduría
+  General de la Provincia don JORGE A. RAUCH, Administrador de la Finca
+  Vaqueros, ubicado en el Departamento de La Caldera; Y atento a las necesidades
+  del servicio; El Gobernador de la Provincia DECRETA: Art. 1 — Dánse por
+  terminadas las funciones del señor JORGE A. RAUCH en su carácter de
+  Administrador de la Finca Vaqueros, ubicado en el Departamento de La Caldera
+  quién en consecuencia, deberá reintegrarse a sus funciones ordinarias en
+  Contaduría General de la Provincia. Art. 2.o — Comuníquese, publíquese, etc.
+  CARLOS XAMENA. Ricardo J. Durand. Es copia: Luis A. Borelli, Oficial Mayor de
+  Economía, Finanzas y O. P.
+NOTA DE LECTURA: El decreto 3712 de 1950 (designación) es el del informe LEE
+1950 (3814 h6). El sumario de 4111 h2 lo resume «da por terminadas las funciones
+de administrador de la finca de Vaqueros y dispone su reincorporación en
+contaduría, a un empleado». La capa escribe «cuencra» y «reintegrarsU».
+
+A.2
+FUENTE: 4115 h6 c1 a c3 (Salta, lunes 21 de enero de 1952)
+FICHA: Decreto N 10597-A, fechado «8 de Diciembre de 1951», expediente 11.542/51
+(sumario del hospital «San Roque» de Embarcación y traslados): art. 15, traslada
+a la enfermera de La Caldera, Rosa Alvarado, a Coronel Moldes; art. 16, designa
+interina en La Caldera a Arminda Funes de Lamberto; art. 17, designa Enfermera
+de Vaqueros a Socorro Rearte en la vacante de la señora de Arashiro. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 170 y 200 ppp: encabezado (c1) y arts. 15 a 19 (c3);
+arts. 1 a 14 por la capa y la plancha de la hoja a 75 ppp.
+TEXTO:
+  Decreto N 10597-A. Salta, 8 de Diciembre de 1951. Expediente N 11.542|51.
+  [...] Art. 15 — Trasládase a la actual Auxiliar 4 —Enfermera de la Caldera—
+  señorita ROSA ALVARADO, al cargo de Auxiliar 4, vacante por renuncia de la
+  señora Inés Pivotti de Rodó (Dec. N 5718), para desempeñarse como enfermera de
+  Coronel Moldes. Art. 16 — Desígnase en forme [sic] interina Auxiliar 4
+  —Enfermera de La Caldera— a la señora ARMINDA FUNES DE LAMBERTO, en la vacante
+  existente por traslado de la señorita Alvarado. Art. 17 — Desígnase Auxiliar 4
+  —Enfermera de Vaqueros— a la señorita SOCORRO REARTE (C. I. [número omitido])
+  en la vacante existente por traslado de la señora de Arashiro. Art. 18 —
+  Déjase debidamente establecido que lo dispuesto en los artículos desde el 6 en
+  adelante relativos a traslados y designaciones, deberá hacerse efectivo a
+  partir del 1 de enero próximo. Art. 19 — Comuníquese, publíquese, insértese en
+  el Registro Oficial y archívese. CARLOS XAMENA. Alberto F. Caro. Es copia:
+  Martín A. Sánchez, Oficial Mayor de Acción Social y Salud Pública.
+NOTA DE LECTURA: FECHA CONTRA NUMERACIÓN (E.9): el 10597-A dice «8 de Diciembre
+de 1951» entre el 10596-A y el 10598-A, que dicen «Enero 8 de 1952», y después
+del 10512-A del 31 de diciembre. El art. 18 («a partir del 1 de enero próximo»)
+es compatible con diciembre. Se transcribe y no se concilia. «Enfermera de la
+Caldera» con minúscula en el art. 15. El original imprime «en forme interina»
+(errata, E.9). La capa lee «ARMI-NDA» y «ALVAR ADO».
+
+A.3
+FUENTE: 4116 h9 c3 a h10 c1; sumario h3 (Salta, martes 22 de enero de 1952)
+FICHA: Decreto N 10662-E, 11 de enero de 1952, expediente 2503/I/51: a pedido de
+reconsideración de Luis Linares, y por resolución 1.179 del H. Consejo de la
+A.G.A.S. (26 de julio de 1951), modifica el art. 1 del decreto 2785 del 5 de
+agosto de 1950 (expte. 2345/1/50): el caudal reconocido a «Santa Mónica» y
+«Quitilipe», catastro 62, es permanente y a perpetuidad, con turno de cuarenta
+horas semanales y 19/30 del total del río La Caldera, para 16 hectáreas, con
+dotación máxima de 0,75 l/s por hectárea. Clase: AGUAS.
+MODO DE LECTURA: imagen, 170 y 200 ppp, entero (h9 c3 el encabezado; h10 c1 el
+resto).
+TEXTO:
+  Decreto N 10662-E. Salta, Enero 11 de 1952. Expediente N 2503|I|51. Visto este
+  expediente en el que corren las actuaciones practicadas por ADMINISTRACION
+  GENERAL DE AGUAS DE SALTA, con motivo del pedido de reconsideración formulado
+  por el Dr Luis Linares sobre el caudal de agua reconocido por Decreto N 2785
+  del 5 de Agosto de 1950, para riego de sus propiedades rurales denominadas
+  "Santa Mónica" y "Quitilipi", y CONSIDERANDO: Que losolicitado por el
+  recurrente se basa en los derechos que le acuerda el Art. 395 de la Ley N 775;
+  Que la infracción producida por la Sección Técnica como así también la que
+  corresponde al Departamento Legal de la Administración General de Aguas de
+  Salta, abonan el pedido en cuestión, dando lugar a que el H. Consejo de la
+  misma haya dictado en fecha 26 de julio de 1951 la Resolución N 1.179,
+  mediante la cual se aconseja al Poder Ejecutivo a modificar el Art. 1 del
+  Decreto N 2785|50 haciendo lugar a lo solicitado, Por ello, atento al dictámen
+  del Sr. Fiscal de Estado, El Gobernador de la Provincia DECRETA: Art. 1 —
+  Modifícase el Art. 1 del Decreto N 2785 de fecha 5 de Agosto de 1950, dictado
+  en expediente N 2345|1|50, dejando establecido que el cudal de agua pública
+  cuya concesión se reconoce por el citado decreto y artículo para la irrigación
+  de los inmuebles denominados "Santa Mónica" y "Quitilipe" ubicados en el
+  Departamento La Caldera — Catastro N 62, de propiedad del Dr. Luis Linares, lo
+  es en el mismo carácter de permanente y a perpetuidad, con un turno
+  equivalente a cuarenta horas semanales, y un caudal de 19|30 del total del Río
+  La Caldera, para irrigar una superficie de diez y seis hectáreas, fijándose
+  una dotación máxima la de 0,75 l|seg. (setenta y cinco centilitros por segundo
+  y por Hectárea para la superficie regada. Art. 2 — Comuníquese, publíquese,
+  etc. — CARLOS XAMENA. Ricardo J. Durand. Es copia: Luis A. Borelli, Oficial
+  Mayor de Economía, Finanzas y O. P.
+NOTA DE LECTURA: Erratas del original, transcriptas (E.9): «losolicitado»,
+«infracción» (por «información», se infiere y no se corrige), «cudal»,
+«Quitilipi» en el visto y «Quitilipe» en el artículo, «dotación máxima la de».
+El paréntesis de la dotación no cierra. Es la primera vez en el corpus leído que
+un decreto sube a 0,75 una dotación de 0,525: el 2785-E de 1950 daba 8,4 l/s
+para 16 ha (informe LEE 1950). Lo que dice ahora es otra cosa: un turno y una
+fracción del río, con 0,75 como techo. El sumario de 4116 h3 lo resume
+«rectifica el art. 1o del decreto N 2785|50, referente a un caudal de aguas
+públicas en La Caldera». La capa lee el número «106B2.E».
+
+A.4
+FUENTE: 4128 h4 c1 a h9 (cuadro en h5) (Salta, jueves 7 de febrero de 1952)
+FICHA: Decreto N 11064-E, 29 de enero de 1952: autoriza en forma provisoria los
+créditos del plan de obras de 1952, con fondos nacionales y de otro origen, y
+deroga el decreto 7501/51. Para el departamento, en «Expropiaciones en general»:
+renglón 1, «La Caldera — Exprop. 1 manzana para construcción Estación
+Sanitaria», $ 8.000; renglón 27, «Exp. Finca Vaqueros», $ 50.000. Clase:
+OBRA-PUBLICA+DOMINIO.
+MODO DE LECTURA: imagen, 160 y 170 ppp: encabezado (h4) y renglones 1 a 5 y 19 a
+30 del cuadro (h5); el resto del cuadro por la capa.
+TEXTO:
+  Decreto N 11064—E. Salta, Enero 29 de 1952. Visto la necesidad de autorizar en
+  forma provisoria los créditos [...] plan especial de obras a desarrollarse con
+  fondos de origen nacional [...] y de otro origen [...] 2   EXPROPIACIONES EN
+  GENERAL                                  5.280.300.— 1 La Caldera — Exprop. 1
+  manzana para construc ción Estación Sanitaria                         8.000.—
+  2 El Galpón Estación Sanitaria                   15.000.— [...] 26 Cachi —
+  Exp. latifundios                     450.000.— 27 Exp. Finca Vaqueros
+  50.000.— 28 El Molino — Exp. Creación parque Grand. Bourg 400.000.— [...]
+  [...] Art. 3 — Derógase el decreto N 7501|51. [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 38 renglones en «Expropiaciones en general»
+(h5 y h6); suma recalculada 5.280.300, cierra con el impreso. Los importes de
+los renglones 1 a 5 y 19 a 30 se miraron en la imagen; los demás, en la capa, y
+la suma cierra. En la capa, el resto del cuadro (h4 a h9) no vuelve a nombrar el
+departamento: no trae los renglones de 1951 para el hospital tipo «A», la
+defensa de La Caldera, el riego de Vaqueros ni la escuela de Vaqueros (7501-E,
+informe LEE 1951, A.25); las defensas van en un renglón general, «Defensas en
+diversos ríos de la provincia», $ 150.000 (h7). Esa ausencia se afirma sobre la
+capa y el renglón de riego y defensas mirado en la plancha, no renglón por
+renglón en la imagen. El sumario de 4128 h2 no lo incluye entre los decretos del
+Ministerio de Economía de esa edición con materia legible.
+
+A.5
+FUENTE: 4128 h14 c2 y c3 (Salta, jueves 7 de febrero de 1952)
+FICHA: Decreto N 11095-E, 30 de enero de 1952, expediente 44/L/52: reconoce a
+Mercedes Sarapura de Lozano una concesión de 0,79 l/s del río La Caldera,
+permanente y a perpetuidad, para 1,5 ha bajo riego de «Buen Retiro», catastro
+73, en La Calderilla (superficie total 83,3 ha). Clase: AGUAS.
+MODO DE LECTURA: imagen, 170 ppp, entero (h14 c2 y cabeza de c3).
+TEXTO:
+  Decreto N 11095-E. Salta, Enero 30 de 1952. Expediente N 44|L|52. Visto este
+  expediente en el que la señora MERCEDES SARAPURA DE LOZANO solicita
+  reconocimiento de una concesión de agua pública para irrigar su propiedad
+  denominada "Buen Retiro", catastro N 73, ubicada en la Calderilla Departamento
+  de La Caldera, con una superficie total de 83 3000 Has. de las cuales 1.5000
+  Has. se mantienen bajo riego, y CONSIDERANDO: Que estando cumplidos los
+  requisitos legales exigidos por el Código de Aguas, procede hacer lugar al
+  reconocimiento de concesión de agua pública solicitado por la recurrente, con
+  las reservas previstas en los artículos 17 y 232 del mismo; Por ello, atento a
+  lo aconsejado en Resolución N 1862 del H. Consejo de Administración General de
+  Aguas de Salta de fecha 24 de Diciembre de 1951, lo dictaminado por el señor
+  Fiscal de Estado y a la facultad conferida por el artículo 355 del referido
+  Código de Aguas; El Vice-Presidente 1 del H. Senado de la Provincia en
+  Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Apruébase el reconocimiento de
+  una concesión de agua pública, con un caudal equivalente de 0.79 l|seg., a
+  derivar del río La Cladera, para regar con carácter permanente y a
+  perpetuidad, una superficie de 1.5000 Has. del inmueble denominado "Buen
+  Retiro", catastro N 73, ubicado en la Calderilla Departamento de La Caldera
+  propiedad de la señora MERCEDES SARAPURA DE LOZANO. — En época de estiaje,
+  esta dotación se reajustará proporcionalcente entre todos los regantes a
+  medida que disminuya el caudal del mencionado río. Art. 2 — Establécese que
+  por no tenerse los aforos definitivos del río a que se refiere la concesión
+  reconocida por el artículo anterior, la cantidad a concederse queda sujeta a
+  la efectividad de caudales del río en las distintas épocas del año dejando a
+  salvo, por lo tanto, la responsabilidad legal y técnica de las autoridades
+  correspondientes de la Provincia, que oportunamente determinarán para cada
+  época los caudales definitivos en virtud de las facultades que le otorga el
+  Código de Aguas de la Provincia. Art. 3 — La concesión reconocida por el
+  presente decreto lo es con las reservas previstas en los artículos 17 y 232
+  del Código de Aguas. Art. 4 — Comuníquese, publíquese, etc. SALVADOR MICHEL
+  ORTIZ. Nicolás Vico Gimena. Es copia: Luis A. Borelli.
+NOTA DE LECTURA: 0,79 / 1,5 = 0,527 l/s por hectárea (el 0,525 redondeado a dos
+decimales). Erratas del original (E.9): «río La Cladera», «proporcionalcente».
+Firma el Vicepresidente 1 del Senado en ejercicio del Poder Ejecutivo, Salvador
+Michel Ortiz. Es la resolución del edicto de 1951 del mismo nombre (anillo 2,
+«buen retiro», informe LEE 1951).
+
+A.6
+FUENTE: 4128 h16 c1 (Salta, jueves 7 de febrero de 1952)
+FICHA: Decreto N 11102-E, 30 de enero de 1952, expediente 46/S/52: reconoce a
+Julia Cruz de Salustri 1,6 l/s del río Wierna, permanente y a perpetuidad, para
+2 ha 9.640 m2 de la «Fracción Entre Ríos», catastro 172, en Vaqueros. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 160 ppp, entero (h16 c1).
+TEXTO:
+  Decreto N 11102-E. Salta Enero 30 de 1952. Expediente N 46|S|52. Visto este
+  expediente en el que la señora JULIA CRUZ DE SALUSTRI solicita reconocimiento
+  de una concesión de agua para irrigar su propiedad denominada Fracción "ENTRE
+  RIOS", catastro N 172, ubicada en Vaqueros, Departamento de La Caldera, con
+  una superficie total mantenida bajo riego de 2,9640 Has., y CONSIDERANDO: Que
+  estando cumplidos los requisitos legales exigidos por el Código de Aguas
+  procede hacer lugar al reconocifiento de concesión de agua pública solicitado
+  por la recurrente con las reservas previstas en los artículos 17 y 232 del
+  mismo; Por ello, atento a lo aconsejado en Resolución N 1863 del H. Consejo de
+  Administración General de Aguas de Salta, de fecha 24 de Diciembre de 1951, lo
+  dictaminado por el señor Fiscal de Estado y a la facultad conferida por el
+  artículo 355 del referido Código de Aguas; El Vice-Presidente 1 del H. Senado
+  de la Provincia en Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Apruébase
+  el reconocimiento de una concesión de agua pública, con un caudal equivalente
+  a 1,6 l|seg. a derivar del río Wierna para regar con carácter permanente y a
+  perpetuidad, una superficie de 2 Has. 9640 m2. del inmueble denominado
+  "Fracción Entre Ríos", catastro N 172, ubicado en Vaqueors Departamento de La
+  Caldera, propiedad de la señora JULIA CRUZ DE SALUSTRI. En época de estiaje
+  esta dotación se reajustará proporcionalfente entre todos los regantes a
+  medida que disminuya el caudal del citado río. [arts. 2 y 3: la fórmula de la
+  ficha anterior, con «deterfinarán»] Art. 4 — Comuníquese, publíquese, etc.
+  SALVADOR MICHEL ORTIZ. Nicolás Vico Gimena. Es copia: Luis A. Borelli.
+NOTA DE LECTURA: 1,6 / 2,964 = 0,540 l/s por hectárea: ni 0,525 ni 0,75. El
+edicto de 1950 (expte. 7670/48, informe LEE 1950) pedía 0,75 para la misma
+fracción; el expediente de este decreto es otro (46/S/52). Erratas del original
+(E.9): «reconocifiento», «Vaqueors», «proporcionalfente», «deterfinarán» (una
+«f» por «m», la misma tanda que en la ficha anterior). Resoluciones 1862 y 1863
+del H. Consejo de la A.G.A.S., las dos del 24 de diciembre de 1951, para dos
+decretos del mismo día.
+
+A.7
+FUENTE: 4132 h5 c2 y c3 (Salta, miércoles 13 de febrero de 1952)
+FICHA: Decreto N 11197-E, 5 de febrero de 1952, expediente 47/S/52: reconoce a
+Argentina Suárez Wilde de Serrey 0,20 l/s del río La Caldera, permanente y a
+perpetuidad, para «Las Chuñas», catastro 52, en La Caldera. El visto dice 0,9350
+ha bajo riego; el artículo, 0,9637 ha. Clase: AGUAS.
+MODO DE LECTURA: imagen, 165 a 450 ppp, entero; las cifras del artículo 1, a 400
+y 450 ppp.
+TEXTO:
+  Decreto N 11197—E. Salta, Febrero 5 de 1952. Expediente N 47|S|52. VISTO este
+  expediente en el que la señora ARGENTINA SUAREZ WILDE DE SERREY, solicita
+  reconocimiento de una concesión de agua pública, para irrigar su propiedad
+  denominada "Las Chuñas", catastro N 52, ubicada en La Caldera con una
+  superficie bajo riego de 0.9350 Has., y CONSIDERANDO: Que estando cumplidos
+  los requisitos legales exgidos por el Código de Aguas, procede hacer lugar al
+  reconocimiento de concesión de agua pública solicitado por la recurrente, con
+  las reservas previstas en los artículos 17 y 232 del mismo; N 1864 del H.
+  Consejo de Administración Gene ral de Aguas de Salta de fecha 24 de diciembre
+  de 1951, lo dictaminado por el señor Fiscal de Es tado y a la facultad,
+  conferida por el artículo 355 Por ello, atento a lo aconsejado en resolución
+  del referido Código de Aguas. El Vice-Presidente 1 del H. Senado de la
+  Provincia en Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Apruébase el
+  reconocimiento de una concesión de agua pública, con un caudal equivalente a
+  0.20 l|seg., a derivar del Río La Caldera para regar con carácter permanente y
+  a perpetuidad, una superficie de 0.9637 Has, del inmueble denominado "Las
+  Chuñas", de propiedad de la señora ARGENTINA SUAREZ WILDE DE SERREY. En época
+  de estiaje, esta dotación se reajustará proporcionalmente entre todos los
+  regantes a medida que disminuya el caudal del citado río. [arts. 2 y 3: la
+  fórmula] Art. 4 — Comuníquese, publíquese, etc. SALVADOR MICHEL ORTIZ. Nicolás
+  Vico Gimena. Es copia: Octavio Alberto Guerrero, Sub-Secretario de Economía.
+NOTA DE LECTURA: RENGLÓN TRASPUESTO en el considerando (E.5): «Por ello, atento
+a lo aconsejado en resolución» está impreso después de «conferida por el
+artículo 355»; se transcribe en su orden. Dos superficies distintas en el mismo
+acto, 0,9350 en el visto y 0,9637 en el artículo (E.9), no conciliadas. 0,20 l/s
+da 0,214 por hectárea sobre 0,9350 y 0,208 sobre 0,9637: ninguno de los
+coeficientes del año. Cifras miradas a 400 y 450 ppp: «0.20» y «0.9637» se leen
+sin duda razonable; el último dígito de la superficie podría ser 7 u 8 a esa
+resolución, y se escribe 7. El nombre es «Chuñas» con eñe en la imagen; la capa
+escribe «chunas».
+
+A.8
+FUENTE: 4133 h8 c1 (pie) y c2 (cabeza) (Salta, jueves 14 de febrero de 1952)
+FICHA: Resolución N 1384-E del Ministerio de Economía, 4 de febrero de 1952,
+expediente 15322/951: anula las boletas de contribución territorial de la
+partida 157, años 1949 ($ 202) y 1950 ($ 780), a nombre de Francisco S. Urquiza.
+El visto dice «Departamento de La Caldera»; el resuelve, «Departamento de La
+Capital». Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 160 ppp: visto (h8 c1) y resuelve (h8 c2, cabeza).
+TEXTO:
+  RESOLUCION N 1384—E. Salta, Febrero 4 de 1952. Expediente N 15322|951. VISTO
+  que en mérito a lo actuado en el expediente del rubro y conforme a lo
+  informado por Dirección General de Rentas y Contaduría General de la
+  Provincia, corresponde disponer la anulación de las Boletas de Contribución
+  Territorial de la Partida N 157 — Departamento de La Caldera, año 1949, por $
+  202.— y año 1950, por $ 780.— confeccionadas a nombre de Francisco S. Urquiza,
+  Por ello: y atento lo dictaminado por el señor Fiscal de Estado el,
+  Sub-Secretario de Economía, Finanzas y Obras Públicas Interinamente a cargo de
+  la Cartera RESUELVE: 1 — Anular las boletas de Contribución Terri- torial de
+  las partidas N 157 — Departamento de La Capital, años 1949 y 1950,
+  confeccionadas a nombre del señor Francisco S. Urquiza, por la suma de $ 202.—
+  (DOSCIENTOS DOS PESOS M|N.) y $ 780.— (Setecientos ochenta pesos m|n.)
+  respectivamente. 2 — Comuníquese, publíquese, etc. NICOLAS VICO GIMENA
+NOTA DE LECTURA: El acto se contradice en el departamento: una de las dos
+menciones es errata y el acto no permite decidir cuál (E.9). Se ficha por la
+mención del visto y no se atribuye: el libro no puede afirmar que la partida 157
+es de La Caldera sin otra fuente. Ninguna pasada literal la devolvió: la capa
+corta «La Cal / dera» en dos renglones; la halló la pasada espaciada (§2). Firma
+el ministro, aunque el resuelve habla del subsecretario a cargo.
+
+A.9
+FUENTE: 4136 h12 c3 (Salta, martes 19 de febrero de 1952); 15 apariciones por
+texto, 4136 a 4150
+FICHA: Edicto citatorio N 7857 de la A.G.A.S. (Salta, 19 de febrero de 1952):
+Lorenza Lozano pide reconocimiento de 0,525 l/s del río La Caldera, permanente y
+a perpetuidad, para una hectárea del inmueble «Fracción Miraflores», catastro
+68, en La Calderilla. Publicación «e) 19/2 al 13/3/52». Clase: AGUAS.
+MODO DE LECTURA: imagen, 170 ppp, entero (4136 h12); repeticiones por texto de
+la capa.
+TEXTO:
+  N 7857 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que Lorenza Lozano tiene solicitado reconocimiento de concesión
+  de agua pública para regar con un caudal de 0,525 litros por segundo
+  proveniente del Río La Caldera y con carácter permanente y a perpetuidad, una
+  hectárea del inmueble "Frac_ión Miraflores", catastro 68 ubicado en La
+  Caldeirlla (La Caldera). Salta, Febrero 19 de 1952. Administración General de
+  Aguas de Salta e) 19|2 al 13|3|52.
+NOTA DE LECTURA: Erratas (E.9): «Frac_ión», «Caldeirlla». Apariciones por texto:
+quince (lista al pie), dentro del plazo (4150 es del 13 de marzo); en 4141 h12 y
+4145 h11 la capa trae el aviso cortado y cruzado con otra columna (E.6). Es la
+segunda publicación: la resolución 90 del H. Consejo de la A.G.A.S., del 21 de
+enero de 1952, autorizó «una nueva publicación de edictos» (decreto 804-E, A.32
+h12). El mismo día del edicto, el decreto 11484-E reconoce a la misma persona y
+el mismo catastro para otro inmueble, «El Porvenir», 2 ha (A.11 h12). Ediciones
+con el aviso en el cuerpo (capa; el sumario no se cuenta): 4136, 4137, 4138,
+4139, 4140, 4141, 4142, 4143, 4144, 4145, 4146, 4147, 4148, 4149, 4150.
+
+A.10
+FUENTE: 4137 h7 c3 y h8 c1 (Salta, jueves 21 de febrero de 1952)
+FICHA: Decreto N 11303-E, Orden de Pago N 65, 11 de febrero de 1952, expediente
+4632/V/1951: a pedido de vecinos de Vaqueros, «jurisdicción del Departamento de
+La Caldera», pobladores y propietarios de terrenos adyacentes a la margen
+izquierda del río Vaqueros aguas abajo del puente, paga $ 900 a la A.G.A.S. para
+reparar de inmediato la defensa ubicada en ese lugar. Clase: OBRA-PUBLICA+AGUAS.
+MODO DE LECTURA: imagen, 160 y 165 ppp, entero (4137 h7 c3; imputación y firmas
+en h8 c1).
+TEXTO:
+  Decreto N 11303_E. Orden de Pago N 65. Ministerio de Economía. Salta, Febrero
+  11 de 1952. Expediente N 4632|V|1951. Visto este expediente al que se agregan
+  las actuaciones por las que vecinos de la localidad de Vaqueros, jurisdicción
+  del Departamento de La Caldera, pobladores y propietarios de terrenos
+  adyacentes a la margen izquierda del río Vaqueros aguas abajo del puente del
+  mismo nombre, se dirigen al Poder Ejecutivo solicitando la urgente realización
+  de trabajos de reparación de la defensa ubicada en el lugar indicado en mérito
+  a que el estado deficiente de la misma en la actualidad, amenaza seriamente a
+  varios pequeños predios rurales en la zona de influencia; Por ello, atento a
+  lo informado por la Secretaría deObras Públicas, Administración General de
+  Aguas de Salta y Contaduría General, El Vice-Presidente 1 del H. Senado de la
+  Provincia en Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Previa
+  intervención de Contaduría General, páguese por Tesorería General a favor de
+  ADMINISTRACION GENERAL DE AGUAS DE SALTA, la suma de $ 900.— (NOVECIENTOS
+  PESOS MONEDA NACIONAL), a fin de que con dicho importe proceda de inmediato a
+  la reparación de la defensa indicada precedentemente. Art. 2 — El gasto que
+  demande el cumplimiento del presente Decreto se imputará al ANEXO I— INCISO
+  IV— Principal 2|h— Parcial 2— de la Ley de Presupuesto vigente para 1952. Art.
+  3o. — Comuníquese, publíquese, etc. SALVADOR MICHEL ORTIZ. Nicolás Vico
+  Gimena. Es copia: Luis A. Borelli.
+NOTA DE LECTURA: El número se lee «11303» con el cero bajo la línea de columna;
+lo confirma el visto del 11545-E (B.2). La capa lo escribe «11313». Es una
+defensa «ubicada» en el lugar, que ya existía: el acto no dice cuándo se hizo.
+Sigue en el 11545-E del 27 de febrero (B.2).
+
+A.11
+FUENTE: 4141 h12 c1 (Salta, viernes 29 de febrero de 1952)
+FICHA: Decreto N 11484-E, 19 de febrero de 1952, expediente 289/L/52: reconoce a
+Lorenza Lozano 1,05 l/s del río La Caldera, permanente y a perpetuidad, para 2
+ha de «El Porvenir», catastro 68, en La Calderilla. Clase: AGUAS.
+MODO DE LECTURA: imagen, 160 ppp, hasta el art. 1; arts. 2 y 3 y firmas por la
+capa.
+TEXTO:
+  Decreto N 11484.E. Salta, Febrero 19 de 1952. Expediente N 289|L|52. Visto
+  este expediente por intermedio del cual la señora Lorenza Lozano, solicita
+  reconocimiento de una concesión de agua para irrigar su propiedad denominada
+  "El Porvenir", ubicada en La Calderilla, Departamento de La Caldera, catastro
+  N 68, con una superficie bajo riego de 2 Has.; y CONSIDERANDO: Que estando
+  cumplidos los requisitos legales exigidos por el Código de Aguas, procede
+  hacer lugar al reconocimiento de concesión de agua solicitado por la
+  recurrente, con las reservas previstas en los arts. 17 y 232 del mismo; Por
+  ello, atento a lo aconsejado en resolución N 11 del H. Consejo de
+  Administración General de Aguas de Salta, de fecha 14 de enero de 1952 lo
+  dictaminado por el señor Fiscal de Estado y a la facultad conferida por el
+  art. 355 del referido Código de Aguas, El Vice-Presidente 1 del H. Senado de
+  la Provincia en Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Apruébase el
+  reconocimiento de una concesión de agua para irrigar con carácter permanente y
+  a perpetuidad, una superficie de 2 Has. del inmueble denominado "El Porvenir",
+  catastro N 68, ubicado en La Calderilla, Departamento de La Caldera, propiedad
+  de la señora LORENZA LOZANO, con una dotación de 1,05 l|seg. a derivar del río
+  La Caldera. En época de estiaje esta dotación se reajustará proporcionalmente
+  entre todos los regantes a medida que disminuya el caudal del citado río.
+  [arts. 2 y 3: la fórmula]
+NOTA DE LECTURA: 1,05 / 2 = 0,525. CATASTRO 68 CON DOS NOMBRES (E.9): el mismo
+catastro y la misma titular figuran como «El Porvenir», 2 ha (este decreto,
+expte. 289/L/52) y como «Fracción Miraflores», 1 ha (el edicto 7857 del mismo 19
+de febrero y el decreto 804-E de julio, expte. 4224/48). Se transcriben los dos
+y no se concilian.
+
+A.12
+FUENTE: 4147 h4 c3 (Salta, lunes 10 de marzo de 1952); 14 apariciones por texto,
+4147 a 4161
+FICHA: Edicto citatorio N 7911 de la Administración General de Aguas, 10 de
+marzo de 1952: Ángel Finetti pide reconocimiento de concesión para regar con
+1,57 l/s del río Vaqueros tres hectáreas de «El Sauce», catastro 200 de La
+Caldera; en estiaje, turno de diez horas mensuales con la mitad del caudal de la
+hijuela «Urquiza». Plazo impreso: 10 al 28 de marzo. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4147 h4); repeticiones por texto de la
+capa.
+TEXTO:
+  N 7911 — EDICTO CITATORIO. A los efectos establecidos por el Código de Aguas,
+  se hace saber que Angel Finetti tiene solicitado reconocimiento de concesión
+  de agua para regar con un caudal de 1,57 litros por segundo proveniente del
+  Río Vaqueros tres hectáreas de su propiedad "El Sauce" catastro 200 de La
+  Caldera. En estiaje, tendrá un turno de diez horas mensuales con la mitad del
+  caudal de la hijuela "Urquiza". Salta, Marzo 10 de 1952. ADMINISTRACION
+  GENERAL DE AGUAS DE SALTA e) 10 al 28|3|52.
+NOTA DE LECTURA: Dotación: 1,57 l/s para 3 ha es 0,523 l/s por hectárea, la
+dotación corriente de 0,525 redondeada hacia abajo (RECUENTO PROPIO). La
+resolución que cierra el trámite es el decreto 917-E (A.34), que escribe la
+misma dotación en letras. La capa escribe «Finettí», «cencesión» y, en 4161 h13,
+parte el aviso en renglones cruzados con otra columna. Ediciones con el aviso en
+el cuerpo (capa; el sumario no se cuenta): 4147, 4148, 4149, 4150, 4152, 4153,
+4154, 4155, 4156, 4157, 4158, 4159, 4160, 4161.
+
+A.13
+FUENTE: 4150 h11 c2 (pie) y c3 (Salta, jueves 13 de marzo de 1952)
+FICHA: Decreto N 11653-E, 4 de marzo de 1952, expediente 394/D/52: reconoce a
+Ana María Cornejo de Durand 10,5 l/s del río Mojotoro, «siempre que el caudal
+del río sea suficiente», permanente y a perpetuidad, para 20 ha del inmueble
+«Mojotoro», catastro 127, «ubicado en el Departamento de La Caldera». Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 150 y 160 ppp, entero.
+TEXTO:
+  Decreto N 11653—E. Salta, Marzo 4 de 1952. Expediente N 394|D|52. VISTO este
+  expediente en el que la señora ANA MARIA CORNEJO DE DURAND solicita
+  reconocimiento de una concesión de agua pública para irrigar su propiedad
+  denominada "MOJOTORO" ubicada en el Departamento de la Caldera, catastro N
+  127, con una superficie bajo riego de 20 Has. y CONSIDERANDO: Que estando
+  cumplidos los requisitos legales exigidos por el Código de Aguas, procede
+  hacer lugar al reconocimiento de concesión de agua pública solicitado por el
+  recurrente con las reservas previstas en los artículos 17 y 232 del mismo, Por
+  ello, atento a lo aconsejado en Resolución N 85 del H. Consejo de
+  Administración General de Aguas de Salta, de fecha 24 de Enero de 1952 lo
+  dictaminado por el señor Fiscal de Estado y a la facultad conferida por el
+  artículo 355 del referido Código de Aguas, El Gobernador de la Provincia
+  DECRETA: Art. 1 — Apruébase el reconocimiento de una concesión de agua
+  pública, con un caudal equivalente a 10,5 l|seg., siempre que el caudal del
+  río sea suficiente, a derivar del río Mojotoro, para regar con carácter
+  permanente y a perpetuidad una superficie de 20 Has. del inmueble denominado
+  "MOJOTORO", catastro N 127, ubicado en el Departamente de La Caldera,
+  propiedad de la señora ANA MARIA CORNEJO DE DURAND En época de estiaje esta
+  dotación se reajustará proporcionalmente entre todos los regantes a medida que
+  disminuya el caudal del mencionado río. [art. 2: la fórmula] Art. 3 — La
+  concesión reconocida por el presente decreto, lo es con las reservas previstas
+  en los artículos 17 y 232 del Código de Aguas. Art. 5 — Comuníquese,
+  publíquese, etc. CARLOS XAMENA. Ricardo J. Durand. Es copia: Luis A. Borelli,
+  Oficial Mayor de Economía, Finanzas y O. P.
+NOTA DE LECTURA: 10,5 / 20 = 0,525. El articulado salta del 3 al 5 (E.9; v16
+§4.3). «el recurrente» por la recurrente y «Departamente», erratas. Es la
+resolución del edicto de 1951 de la misma titular sobre el Mojotoro, con
+inmueble «ubicado en La Caldera» (informe LEE 1951, A.29, 4016 h20). El Mojotoro
+no nace en el departamento: el acto atribuye el inmueble al departamento y el
+río es otro (§5.1ter). Firma el gobernador titular, Carlos Xamena, con Durand
+como ministro de Economía.
+
+A.14
+FUENTE: 4176 h14 c2 (Salta, martes 22 de abril de 1952)
+FICHA: Decreto N 12521-A, 16 de abril de 1952, expediente 10.440/52: aprueba la
+resolución 657-J (acta 45) del 27 de marzo de la Junta Administradora de la Caja
+de Jubilaciones, que acuerda jubilación ordinaria a Teófilo Reyes, empleado del
+Registro Civil de La Caldera, con haber básico mensual de $ 155,47. Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 160 ppp, entero (h14 c2).
+TEXTO:
+  Decreto N 12521-A. Salta, Abril 16 de 1952. Expediente N 10.440|52. Visto
+  éstas actuaciones en las que el empleado del Registro Civil de la Caldera, don
+  Teófilo Reyes solicita su jubilación ordinaria de conformidad a las
+  disposiciones del a t. 37 de la Ley 774, reformado por Ley 1341, y
+  CONSIDERANDO: Que la Junta Administradora de la Caja de Jubilaciones y
+  Pensiones, mediante Resolución N 657-J. (Acta N 45) hace lugar a lo solicitado
+  por encontrarse el recurrente comprendido en las disposiciones de la Ley de la
+  materia; Por ello y atento al dictamen del señor Fiscal de Estado producido
+  con fecha 7 del corriente mes y en uso de la facultad que le confiere el art.
+  46 de la Ley 774, El Gobernador de la Provincia DECRETA: Art. 1 — Apruébase la
+  Resolución N 657-J. (Acta N 45) de fecha 27 de marzo del año en curso, dictada
+  por la Junta Administradora de la Caja de Jubilaciones y Pensiones de la
+  Provincia, cuya parte dispositiva establece: "1 — Acordar al empleado del
+  Registro Civil, don TEOFILO REYES, jubilación ordinaria de conformidad con las
+  disposiciones del art. 35 de la Ley 774 reformado por Ley 1341 con un haber
+  básico mensual de CIENTO CINCUENTA Y CINCO PESOS CON CUARENTA Y SIETE CENTAVOS
+  ($ 155.47) MONEDA NACIONAL a liquidarse desde la fecha en que deje de prestar
+  servicios con más los aumentos previstos por Ley 954 y Decretos
+  complementarios en la forma y condiciones dispuestos en los mismos. "2 —
+  Mantener lo dispuesto por Resolución N 656-J. (acta N 45) en cuanto a la forma
+  de atenderse los cargos formulados". Art. 2 — Comuníquese, publíquese,
+  insértese en el Registro Oficial y archívese. CARLOS XAMENA. Alberto F. Caro.
+  Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: El visto dice art. 37 de la Ley 774 y la resolución, art. 35
+(E.9): se transcriben los dos. «a t.» por «art.» en el visto. La resolución
+656-J, citada, no está en el corpus (E.3). Teófilo Reyes es el encargado del
+Registro Civil desde 1928 (decreto 8002, informe LEE 1928) y el del acta tardía
+de 1950 (informe LEE 1950). Su renuncia por jubilación, A.25 h6.
+
+A.15
+FUENTE: 4177 h5 c3 (Salta, miércoles 23 de abril de 1952)
+FICHA: Decreto N 12529-G, 18 de abril de 1952, expediente 5759/52: concede
+aquiescencia a la Dirección Nacional de Enseñanza Primaria para instalar una
+escuela de la Ley nacional 4874 en «Potrero de Gallinato (Departamento de La
+Caldera)». Clase: ESCUELA.
+MODO DE LECTURA: imagen, 160 a 200 ppp, entero.
+TEXTO:
+  Decreto N 12529-G. Salta, Abril 18 de 1952. Expediente N 5759|52. Visto este
+  expediente en el cual la Inspección Técnica Seccional de Escuelas Nacionales,
+  solicita la correspondiente aquiescencia de este Gobierno para la creación de
+  una escuela nacional de la Ley N 4874 en la localidad de Potrero de Gallniato
+  (Departamento de La Caldera); y atento el informe respectivo del H. Consejo
+  General de Educación y no existiendo inconveniente alguno para acrodar lo
+  solicitado, El Gobernador de la Provincia DECRETA: Art. 1 — Concédese
+  aquiescencia a la DIRECCION NACIONAL DE ENSEÑANZA PRIMARIA, para instalar una
+  escuela de la Ley Nacional N 4874 en la localidad de POTRERO DE GALLINATO
+  (Departamento de La Caldera) de esta Provincia. Art. 2 — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. CARLOS XAMENA. Jorge
+  Aranda. Es copia: A. N. Villada, Oficial Mayor de Gob. J. é I. Pública a cargo
+  del despacho de la Sub-secretaría de Gob.
+NOTA DE LECTURA: Erratas (E.9): «Gallniato» en el visto, «acrodar». El número se
+lee 12529 con el 2 bajo la línea de columna; la capa, «125 29». Es la primera
+escuela nacional de un paraje del departamento que el corpus de 1946 a 1951 no
+traía; si se construyó, el año no lo dice.
+
+A.16
+FUENTE: 4182 h21 y h22 (Salta, miércoles 30 de abril de 1952)
+FICHA: Resumen del movimiento de Tesorería General de la Provincia, 1 al 31 de
+enero de 1952 (aprobado por Contaduría el 18 de abril): entre los egresos a
+«Municipalidades de la Provincia», «La Caldera ... 5.000»; el rubro suma $
+55.000 (Rosario de Lerma 30.000, Chicoana 5.000, La Caldera 5.000, Aguaray
+10.000, Las Lajitas 5.000). Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: el bloque de municipalidades (h21) y la
+aprobación (h22); los saldos por la capa.
+TEXTO:
+  [...] Municipalidades de la Provincia Municip. Rosario de Lerma $ 30.000.— "
+  Chicoana " 5.000.— " La Caldera " 5.000.— " Aguaray " 10.000.— " Las Lajitas "
+  5.000.— 55.000.— [...] (h22) Apruébase el resumen del movimiento que ha tenido
+  Tesorería General de la Provincia, desde el 1 al 31 de enero de 1952 [...]
+  Despacho, abril 18 de 1952.
+NOTA DE LECTURA: Suma propia: 30.000 + 5.000 + 5.000 + 10.000 + 5.000 = 55.000,
+igual al total impreso. Es el único resumen de Tesorería publicado en 1952 que
+trae el departamento; los otros del año (noviembre y diciembre de 1951, 4123 h26
+y 4142-4143; otro sin mes en 4157 h19) no lo nombran (E.1). El Boletín no
+publica en 1952 balance de la Municipalidad de La Caldera.
+
+A.17
+FUENTE: 4187 h8 c3 (Salta, jueves 8 de mayo de 1952)
+FICHA: Decreto N 12744-E, 30 de abril de 1952, expediente 873/I/1952: autoriza a
+la Dirección General de Inmuebles a pagar 2/3 de los viáticos al personal
+técnico que hizo los relevamientos topográficos y la mensura general de la finca
+«Vaqueros», «ubicada en el Departamento de La Caldera», aunque está dentro del
+radio de 40 km, porque sus medios de transporte, alojamiento y alimentación «no
+son normales». Clase: DOMINIO.
+MODO DE LECTURA: imagen, 160 ppp, hasta el art. 1; firmas por la capa.
+TEXTO:
+  Dereto N 12744—E. Salta, Abril 30 de 1952. Expediente N 873|I|1952. Visto este
+  expediente por el cual Dirección General de Inmuebles solicita la autorización
+  correspondiente para liquidar 2|3 de los viáticos determinados por la Ley de
+  Presupuesto al Personal Técnico que efectuó los relevamientos tos topográficos
+  y mensura general de la finca "Vaqueros" ubicada en el Departamento de La
+  Caldera; y CONSIDERANDO: Que si bien la Ley de Presupuesto en vigor determina
+  corresponde liquidarse viáticos solamente cuando la comisión funciona fuera de
+  un radio de 40 kilómetros de su sede habitual; Que en este caso la finca
+  "Vaqueros" se encuentra dentro de los 40 kilómetros dispuesto por la Ley, pero
+  con el inconveniente de que sus medios de transporte alojamiento y
+  alimentación para el personal no son normales lo que hace dificultoso el
+  desenvolvimiento de la misión encomendada; Por todo ello y sin que este caso
+  fije un antecedente para lo sucesivo, El Gob-mador de la Provincia DECRETA:
+  Art. 1 — Autorízase a la Dirección General de Inmuebles para que por
+  intermedio de su habilitación Pagadora, abone al personal Técnico que efectuó
+  los relevamientos topográficos y mensura general de la finca "Vaqueros" 2|3
+  del viáticos que determina la Ley de Presupuesto en vigor. Art. 2 —
+  Comuníquese, publíquese, etc. CARLOS XAMENA. Ricardo J. Durand. Es copia: Luis
+  A. Borelli.
+NOTA DE LECTURA: Erratas (E.9): «Dereto», «relevamientos tos», «Gob-mador», «2|3
+del viáticos». El acto no da la fecha ni el resultado de la mensura, ni dice si
+hay plano (§P: citado y no acompañado). Es la primera mensura general de la
+finca expropiada que el corpus nombra (Ley 1134 de 1949; 8701-E de 1951).
+
+A.18
+FUENTE: 4197 h10 c1 (Salta, jueves 22 de mayo de 1952)
+FICHA: Resolución N 2082-A del Ministerio de Acción Social, 14 de mayo de 1952:
+paga $ 1.100 a la Tienda La Tropical por 40 frazadas a $ 27,50 «para ser
+distribuídos entre los niños del Hogar Escuela de La Caldera». Clase: ESCUELA.
+MODO DE LECTURA: imagen, 160 ppp, entero.
+TEXTO:
+  Resolución N 2082-A. Salta, Mayo 14 de 1952. Visto la factura presentada por
+  La Tropical por provisión de frazadas con destino a este Ministerio, y para
+  ser disrtibuídos entre los niños del Hogar Escuela de La Caldera, El Ministro
+  de Acción Social y Salud Pública RESUELVE: Art. 1 — El Habilitado Pagador de
+  este Ministerio liquidará con cargo de oportuna rendición de cuentas a favor
+  de "Tienda LA TROPICAL, de esta ciudad, la suma de UN MIL CIEN PESOS MONEDA
+  NACIONAL ($1.100.—) m|n.; en concepto de cancelación de la factura presentada
+  por provisión de 40 frazadas a razón de $ 27.50 c|una, debiendo atender este
+  gasto con fondos de la partida destinada para ACCION SOCIAL —VARIOS. 2 —
+  Comuníquese, Publíquese, Dese al Libro de Resoluciones, etc. ALBERTO F. CARO.
+  Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: 40 x 27,50 = 1.100: cierra. «disrtibuídos», errata. Es el
+hogar-escuela de 1951 (informe LEE 1951: Res. 953-A y subsidio del Banco de
+Préstamos); el 1.033/1.034 de agosto lo llama «Hogar Evita» (A.19 h6 y 4248 h8).
+
+A.19
+FUENTE: 4201 h6 c2 y c3; sumario h2 (Salta, miércoles 28 de mayo de 1952)
+FICHA: Decreto N 13108-A, 22 de mayo de 1952, expediente 10.449/52: a pedido
+reiterado de autoridades y vecinos de La Caldera, destina «por el corriente año
+lectivo» el edificio del Hospital «Doctor Francisco Ortelli» de La Caldera a un
+hogar para niños en edad escolar, «HOGAR EVITA»; su contralor, a la Comisión
+«Pro-Hogar de La Caldera» presidida por el Intendente Municipal; subsidio de $
+3.000 por mes de mayo a noviembre; adscribe a la celadora Eugenia F. Ussy. El
+considerando dice que la Estación Sanitaria del pueblo atiende tres veces por
+semana, con médico y enfermera partera residentes. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp, entero (c2 y cabeza de c3).
+TEXTO:
+  Decreto N 13108-A. Salta, Mayo 22 de 1952. Expediente N 10.449|52. Visto lo
+  solicitado en forma reiterada por las autoridades y vecinos de la localidad de
+  La Caldera en el sentido de que se destine el edificio del Hospital "Dr.
+  Francisco Ortelli" a un Hogar para niños; y CONSIDERANDO: Que la petición está
+  abonada por un principio de justicia social ya que la mayoría de los niños que
+  concurren a la Escuela Provincial de La Caldera, deben hacerlo recorriendo
+  largas distancias a caballo, lo que resiente la asistencia diaria y la salud
+  física de los escolares; Que en el momento actual no es indispensable la
+  habilitación de dicho edificio como Hospital general, ya que los servicios
+  médicos asistenciales se cumplen eficazmente por intermedio de la Estación
+  Sanitaria instalada en el mismo pueblo, atendido tres veces por semana por un
+  personal médico y enfermera partera con residencia permanente en el lugar; Que
+  los niños y en especial los de los sectores más modestos, deben ser motivo de
+  preferente atención por parte del Estado, cumpliendo con normas doctrinarias
+  del régimen justicialista que así lo consagran, haciéndolos merecedores de un
+  trato de privilegio; Que el edificio de referencia se encuentra ya terminado y
+  equipado con fondos provenientes de subsidios acordados oportunamente por el
+  Banco de Préstamos y Asistencia Social y por el Ministerio de Acción Social y
+  Salud Pública; Por todo ello, El Gobernador de la Provincia DECRETA: Art. 1 —
+  Destínase por el corriente año lectivo el edificio del Hospital "Doctor
+  Francisco Ortelli" de La Caldera para que en el mismo funcione un Hogar para
+  niños en edad escolar, que se denominará "HOGAR EVITA" en homenaje a la
+  dignísima esposa del señor Presidente de la Nación. Art. 2 — La Comisión
+  Constituida 'Pro-Hogar de La Caldera" presidida por el señor Intendente
+  Municipal, señores Legisladores demás autoridades y vecinos caracterizados,
+  tendrá a su cargo el contralor de la Institución, haciéndose responsables de
+  su normal funcionamiento como así también de la conservación del edificio con
+  toda su instalación y equipos. Art. 3 — Concédese un subsidio extraordinario
+  de TRES MIL PESOS M|NACIONAL, ($ 3.000) por mes, con anterioridad al día 1 de
+  mayo y hasta el 30 de noviembre del año en curso, a la Comisión "Pro-Hogar de
+  La Caldera", representada por su presidente el señor Intendente Municipal, y
+  con destino a contribuir a los gastos que demande el funcionamiento del "HOGAR
+  EVITA". Art. 4 — A los efectos de dirigir el régimen de internados, adscríbese
+  a la Celadora del Hogar del Niño de esta ciudad, señorita EUGENIA F. USSY, al
+  "HOGAR EVITA" de La Caldera, con anterioridad al día 10 del corriente mes y
+  hasta la terminación del período lectivo, con retención del cargo de la cual
+  es titular. Art. 5 — el gasto que demande el cumplimiento del subsidio
+  acordado mediante el artículo 3 del presente decreto, deberá imputarse al
+  Anexo E, Inciso I OTROS GASTOS, Partida Principal c), Parcial 3 "Para Acción
+  Social —Varias" de la Ley de Presupuesto en vigencia. Art. 6 — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. CARLOS XAMENA.
+  Alberto F. Caro. Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: Primera vez en el corpus leído que el edificio tiene nombre:
+Hospital «Dr. Francisco Ortelli». En 1951 la Res. 953-A hablaba de «el edificio
+del Hospital de la localidad de La Caldera que fuera cedido provisoriamente para
+sede de un hogar-escuela» (informe LEE 1951). El acto distingue el Hospital
+(edificio terminado y equipado con subsidios del Banco de Préstamos y del
+Ministerio) de la Estación Sanitaria «instalada en el mismo pueblo»: son dos
+edificios. El intendente no se nombra. La cifra de mayo a noviembre son siete
+meses: $ 21.000 en total, que el acto no suma (cálculo propio, rotulado). El
+sumario de 4201 h2 lo resume «destina el edificio del hospital de La Caldera
+para hogar para niños y concede subsidio para el mismo por el cte. año en
+curso». Siguen 4213 h8 (muebles; Ussy), 4248 h8-h9 (decretos 1.033 y 1.034).
+
+A.20
+FUENTE: 4202 h4 c1 y c2 (Salta, jueves 29 de mayo de 1952)
+FICHA: Ley N 1433 (sancionada el 16 de mayo, promulgada el 26 de mayo de 1952):
+modifica la Ley 745 de 1946; para la renovación de las Cámaras se sortean dos
+grupos de departamentos, y «Caldera» queda en el Grupo A. Clase:
+ELECTORAL+NORMA.
+MODO DE LECTURA: imagen, 140 ppp, entero.
+TEXTO:
+  L E Y N 1433. POR CUANTO: EL SENADO Y CAMARA DE DIPUTADOS DE LA PROVINCIA DE
+  SALTA, SANCIONAN CON FUERZA DE LEY: Art. 1 — Derógase el artículo 1 de la Ley
+  745 de fecha 4 de setiembre de 1946. Art. 2 — Sustitúyese el artículo 2 de la
+  ley 745 por el siguiente: Art. 2 — A los fines de la renovación de ambas
+  Cámaras, previstas en los artículos 70 y 74 de la Constitución de la
+  Provincia, se practicará un sorteo constituyéndose dos grupos de
+  departamentos, a saber: Grupo A) Capital, Caldera, Candelaria, Guachipas,
+  Cafayate, Chicoana, Cachi, Molinos, La Poma, San Carlos y Los Andes. Grupo B)
+  Rosario de Lerma, Rosario de la Frontera, Metán, Anta, General José de San
+  Martín, Orán, General Martín Miguel de Güemes, Iruya, Santa Victoria, La Viña,
+  Cerrillos y Rivadavia. Art. 3 — Modifícase el artículo 4 de la Ley 745 [...]
+  Art. 4 — Comuníquese, etc. Dada en la Sala de Sesiones de la Honorable
+  Legislatura de la Provincia de Salta, a los diez y seis días del mes de mayo
+  del año mil novecientos cincuenta y dos. JAIME HERNAN FIGUEROA, Presidente.
+  RAFAEL ALBERTO PALACIOS, Secretario de la H. C. de DD. MIGUEL M. CASTILLO,
+  Vicepresidente 1. ARMANDO FALCON, Secretario del H. Senado. POR TANTO:
+  MINISTERIO DE GOBIERNO, JUSTICIA E INSTRUCCION PUBLICA. Salta, Mayo 26 de
+  1952. Téngase por Ley de la Provincia, cúmplase, comuníquese, publíquese,
+  insértese en el Registro de Leyes y archívese. CARLOS XAMENA [...]
+NOTA DE LECTURA: RECUENTO PROPIO: Grupo A, 11 departamentos; Grupo B, 12; 23 en
+total. El acto no declara número. Vaqueros no figura: es parte del departamento.
+Clase ELECTORAL porque fija el turno de renovación de los legisladores del
+departamento.
+
+A.21
+FUENTE: 4203 h11 c2; sumario h3 (Salta, viernes 30 de mayo de 1952)
+FICHA: Decreto N 13.181-A, 26 de mayo de 1952: confirma a Arminda Funes de
+Lamberto como Auxiliar 4 «Enfermera de La Caldera», cargo que venía desempeñando
+como interina por traslado de Rosa Alvarado. Clase: CARGOS.
+MODO DE LECTURA: imagen, 160 ppp, entero.
+TEXTO:
+  DECRETO N 13.181 — A. Salta, Mayo 26 de 1952. Atento a las necesidades del
+  servicio, El Gob-rnador de la Provincia DECRETA: Art. 1 — Confírmase en el
+  cargo de Auxiliar 4 —Enfermera de La Caldera—, a la señora ARMINDA FUNES DE
+  LAMBERTO, quien venía desempeñándose en dicho cargo en carácter interino por
+  traslado de la anterior titular, señorita Rosa Alvarado. Art. 2 — Comuníquese,
+  publíquese, insértese en el Registro Oficial y archívese. CARLOS XAMENA.
+  Alberto F. Caro. Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: Cierra la cadena del 10597-A (A.2 h6). El sumario de 4203 h3 lo
+resume «confirma en el cargo a una enfermera de La Caldera». Arminda Funes de
+Lamberto era en 1949-1950 enfermera de Vaqueros (informes LEE 1949 y 1950).
+Suspensión en noviembre: A.52 h8.
+
+A.22
+FUENTE: 4208 h5 c1; sumario h2 (Salta, lunes 9 de junio de 1952)
+FICHA: Resolución N 2092-A del Ministerio de Acción Social, 20 de mayo de 1952:
+paga $ 991,70 a Peral García y Cía. por artículos de menaje «con destino a la
+habilitación del Hospital de "LA CALDERA"», con fondos del subsidio nacional del
+decreto 13.895/50, distribuido por los decretos provinciales 4166/50 y 7487/51.
+Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 160 ppp, entero.
+TEXTO:
+  Resolución N 2092.A. Salta Mayo 20 de 1952. Visto la necesidad de adquirir
+  artículos de menaje con destino a la habilitación del Hospital de "LA CALDERA"
+  El Ministro de Acción Social y Salud Pública RESUELVE: 1 — El Habilitado
+  Pagador de este Ministerio, con cargo de oportuna rendición de cuentas,
+  liquidará a favor de la firma PERAL GARCIA y CIA. de esta ciudad, la suma de
+  NOVECIENTOS NOVENTA Y UN PESOS CON 70|100 ($ 991.70) MONEDA NACIONAL, en
+  concepto de cancelación de la factura presentada por la misma, por provisión
+  de artículos de menaje con destino al Hospital de "LA CALDERA". 2 — El gasto
+  que demande el cumplimiento de la presente Resolución deberá imputarse a la
+  partida destinada a "Estaciones Sanitarias Varias"; fondos provenientes del
+  subsidio nacional otorgado por decreto N 13.895|50 y que fuera distribuído por
+  el Gobierno de la Provincia, mediante decreto N 4166|50 modificado por el N
+  7487 del 13 de julio de 1951. 2 — Comuníquese, publíquese, dése al Libro de
+  Resoluciones, etc. ALBERTO F. CARO. Es copia: [Martín A. Sánchez].
+NOTA DE LECTURA: Dos puntos «2» en el resolutivo (E.9). CONTRADICCIÓN DE FECHAS
+(E.9): el 20 de mayo se compra menaje «para la habilitación del Hospital»; el
+22, el decreto 13108-A dice que «no es indispensable la habilitación de dicho
+edificio como Hospital general» y lo destina a hogar (A.19 h6). Se transcriben
+las dos y no se concilian. El sumario de 4208 h2: «cancela factura por provisión
+de art. al hospital de La Caldera». Los decretos 13.895/50 (nacional), 4166/50 y
+7487/51 son citados y no acompañados (E.3).
+
+A.23
+FUENTE: 4213 h8 c1 (Salta, martes 17 de junio de 1952)
+FICHA: Resolución N 2.119-A del Ministerio de Acción Social, 2 de junio de 1952:
+paga $ 1.394 a la Mueblería «Imperio» por el amueblamiento del Hogar «Evita» de
+La Caldera, con imputación a «Estaciones Sanitarias Varias». Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp, entero.
+TEXTO:
+  RESOLUCION N 2.119 — A. Salta, Junio 2 de 1952. Visto la factura presentada
+  por la Mueblería "Imperio" por artículos adquiridos para el amueblamiento del
+  Hogar "Evita" de La Caldera; y atento a las actuaciones producidas, El
+  Ministro de Acción Social y Salud Pública RESUELVE: 1 — El Habilitado Pagador
+  de este Ministerio, liquidará a Mueblería "IMPERIO" de esta ciudad, la suma de
+  UN MIL TRESCIENTOS NOVENTA Y CUATRO PESOS ($ 1.394) por el concepto expresado
+  precedentemente, y en un todo de conformidad a la factura presentada por dicha
+  mueblería. 2 — El gasto que demande el cumplimiento de la presente resolución
+  deberá imputarse a Estaciones Sanitarias Varias. 3 — Comuníquese, publíquese,
+  dése al Libro de Resoluciones, etc. ALBERTO F. CARO. Es copia: Martín A.
+  Sánchez.
+NOTA DE LECTURA: El amueblamiento del hogar se paga con la partida de las
+estaciones sanitarias (E.9, sin conciliar). Última resolución de Caro como
+ministro de Acción Social en el corpus de las fichas; la del 9 de junio ya la
+firma Walder Yáñez.
+
+A.24
+FUENTE: 4213 h8 c2 (Salta, martes 17 de junio de 1952)
+FICHA: Resolución N 2.121-A del Ministerio de Acción Social, 9 de junio de 1952:
+$ 446,20 para reponer ropa y útiles a Eugenia Facunda Ussy, empleada del
+Hogar-Escuela de La Caldera, que perdió una valija al viajar a hacerse cargo de
+su puesto. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp, hasta el art. 1; el resto y la firma por la
+capa.
+TEXTO:
+  RESOLUCION N 2.121 — A. Salta, JUNIO 9 de 1952. Visto lo solicitado por la
+  empleada del Hogar-Escuela de la localidad de La Caldera. Srta. Eugenia
+  Facunda Ussy y siendo propósito de éste Ministerio acceder a su pedido por
+  tratarse de un motivo justificado como es el de haber extraviado una valija de
+  su propiedad conteniendo ropas y útiles escolares en oportunidad en que
+  viajaba a dicha localidad a hacerse cargo de su puesto en el Hogar-Escuela de
+  referencia, El Ministro de Acción Social y Salud Pública RESUELVE: 1 — El
+  Habilitado Pagador de éste Ministerio liquidará con cargo de oportuna
+  rendición de cuentas a favor de la Jefe de la Sección Asistencia Social y
+  Doméstica, la suma de CUATROCIENTOS CUARENTA Y SEIS PESOS CON 20|100 ($
+  446.20) m|n., para que con dicho importe proceda a adquirir los artículos
+  detallados en el presupuesto adjunto, debiendo hacer entrega de los mismos por
+  el concepto expresado precedentemente, a la beneficiaria Srta. EUGENIA FACUNDA
+  USSY. 2 — [...] ACCION SOCIAL. — VARIOS—. 3 — Comuníquese [...] WALDER YAÑEZ.
+  Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: El mismo edificio se llama «Hogar Evita» (2.119, 13108-A) y
+«Hogar-Escuela» (esta resolución y la 2082-A): se registran los dos nombres.
+Firma el nuevo ministro, Walder Yáñez (desde el 4 de junio; tapas desde 4206).
+
+A.25
+FUENTE: 4215 h6 c1; sumario h2 (Salta, jueves 19 de junio de 1952)
+FICHA: Decreto N 13.348-G, 2 de junio de 1952: acepta la renuncia de Teófilo
+Reyes al cargo de Encargado de la Oficina del Registro Civil de La Caldera, por
+haberse jubilado, y nombra encargada a Blanca Esther Reyes. Clase:
+REGISTRO-CIVIL+CARGOS.
+MODO DE LECTURA: imagen, 160 ppp, entero; firmas por la capa.
+TEXTO:
+  DECRETO N 13.348 — G. Salta, Junio 2 de 1952. VISTO lo solicitado por la
+  Dirección General del Registro Civil, en nota N 44, de fecha 30 del mes en
+  curso, El Gob-rnador de la Provincia DECRETA: Art. 1 — Acéptase la renuncia
+  presentada por don TEOFILO REYES, al cargo de Encargado de la Oficina del
+  Registro Civil de La Caldera, por haberse acogido a los beneficios de la
+  jubilación. Art. 2 — Nómbrase Encargada de la Oficina del Registro Civil de La
+  Caldera, a la señorita BLANCA ESTHER REYES, en reemplazo de don Teófilo Reyes.
+  Art. 3 — Comuníquese, publíquese, insértese en el Registro Oficial y
+  archívese. CARLOS XAMENA. Jorge Aranda. Es copia: Ramón Figueroa, Oficial
+  Mayor Interino.
+NOTA DE LECTURA: FECHA IMPOSIBLE (E.9; v16 §8.20): un decreto del 2 de junio
+cita una nota «de fecha 30 del mes en curso». Se transcribe y no se corrige. El
+acto no dice parentesco entre los dos Reyes y no se infiere. Cierra la carrera
+de Teófilo Reyes, encargado desde 1928 (informe LEE 1928, decreto 8002). El
+sumario de 4215 h2: «acepta renuncia del encargado de la oficina del R. Civil de
+La Caldera y nombra reemplazante».
+
+A.26
+FUENTE: 4218 h5 c3 y h6 (Salta, miércoles 25 de junio de 1952)
+FICHA: Decreto N 140-E, Orden de Pago N 274, 13 de junio de 1952, expediente
+15218-952: paga $ 309 a la Dirección General de Rentas para reintegrar a Celina
+Grande Ovejero de Linares lo abonado indebidamente en concepto de pavimentación
+(Ley 380), según boletas de los catastros 57, 58, 59 y 60 ubicados en el
+Departamento de La Caldera. Clase: HACIENDA-MUN+DOMINIO.
+MODO DE LECTURA: imagen, 160 ppp, hasta el art. 1; el final y las firmas por la
+capa.
+TEXTO:
+  DECRETO N 140-E. Orden de Pago N 274 del Ministerio de Economía. Salta, Junio
+  13 de 1952. Expediente N 15218—952. Viso este expediente en el que corren las
+  actuaciones relacionadas con el reintegro de $ 309.—, a favor de la señora
+  Celina Grande Ovejero de Linares, por igual importe abonado indebidamente en
+  concepto de pavimentación —Ley N 380—, según boletas agregadas a fs. 1|4
+  correspondientes a los Catastros Nos. 57, 58, 59 y 60 ubicados en el
+  Departamento de La Caldera; atento a lo manifestado por las distintas
+  secciones de Dirección General de Rentas y lo informado por Contaduría
+  General, El Gob-rnador de la Provincia DECRETA: Art. 1 — Previa intervención
+  de Contaduría General, páguese por Tesorería General a favor de DIRECCION
+  GENERAL DE RENTAS, con cargo de oportuna rendición de cuentas, la suma de $
+  309.— (TRESCIENTOS NUEVE PESOS MONEDA NACIONAL), a fin de que proceda a
+  reintegrar el importe abonado indebidamente por la señora Celina Grande
+  Ovejero de Linares, por [...]
+NOTA DE LECTURA: RECUENTO PROPIO: cuatro catastros. Es el primer decreto del
+nuevo gobierno en las fichas del año (numeración reiniciada: 140-E el 13 de
+junio; E.4). «Viso», errata. El acto no dice por qué se cobró pavimentación
+sobre catastros rurales del departamento. Titular nombrada en un acto de
+reintegro fiscal: dato socioeconómico de una persona que puede vivir (regla de
+los 100 años); el informe lo transcribe como está y el libro decide si nombra.
+
+A.27
+FUENTE: 4219 h9 c2 (Salta, jueves 26 de junio de 1952)
+FICHA: Decreto N 214-G, 17 de junio de 1952, expediente 6584/52: da por
+terminadas, desde el 1 de junio, las funciones de doce agentes de Jefatura de
+Policía «por no presentarse a prestar servicio»; entre ellos, Miguel Cayo,
+agente plaza 88 de la Sección Primera, «afectado a La Caldera». Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 y 170 ppp: encabezado y lista hasta Florencio
+Camino; el último nombre y las firmas por la capa.
+TEXTO:
+  Decreto N 214.G. Salta, Junio 17 de 1952. Expediente N 6584|52. Atento lo
+  solicitado por Jefatura de Policía, en nota N 1818, de fecha 11 del mes en
+  curso, El Gob-rnador de la Provincia DECRETA: Art. 1 — Danse por terminadas
+  las funciones del siguiente personal de Jefatura de Policía, por no
+  presentarse a prestar servicio, con anterioridad al día 1 del corriente: [...]
+  Miguel Cayo, Agente plaza N 88 de la Sección Primera, afectado a La Caldera;
+  Segundo Peralta, Agente plaza Ng 282 de la Comisaría, Sección Tercera,
+  afectado a El Galpón; [...] Art. 2o. — Comuníquese [...] RICARDO J. DURAND.
+  Jorge Aranda.
+NOTA DE LECTURA: RECUENTO PROPIO: doce agentes (diez en la imagen, dos en la
+capa); el acto no declara número. Es una imputación de conducta («por no
+presentarse») a personas nombradas que pueden vivir: el informe la transcribe;
+el libro, si la usa, la atribuye al acto y no nombra. La nota de Jefatura se lee
+1818 en la imagen y 1819 en la capa. Un agente «afectado a La Caldera» no es
+personal de la subcomisaría: depende de la Sección Primera de la Capital.
+
+A.28
+FUENTE: 4223 h8 c1 y c2 (Salta, miércoles 2 de julio de 1952)
+FICHA: Resolución N 15-E del Ministerio de Economía, 27 de junio de 1952: para
+regularizar los pagos de participaciones a las municipalidades, manda depositar
+a cuenta en sus cuentas corrientes cantidades por municipio; La Caldera, $
+5.000. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: considerando, art. 1 y el renglón de La
+Caldera; la lista entera por la capa.
+TEXTO:
+  RESOLUCION N 15 — E. Salta, Junio 27 de 1952 CONSIDERANDO: Que es propósito
+  del Gobierno regularizar los pagos de los créditos provenientes de
+  participaciones a favor de las Municipalidades de la Provincia en la medida de
+  las disponibilidades a fin de encauzar la economía de las mismas y hacer
+  factible la realización de obras imprescindibles como así satisfacer en forma
+  regular sus obligaciones propias, Por ello, El Ministro de Economía, Finanzas
+  y O. Públicas RESUELVE: 1 — Por Tesorería de la Provincia, con la debida
+  intervención de Contaduría General, procédase a efectuar el depósito en las
+  respectivas cuentas corrientes, de las siguientes cantidades a cuenta [...] La
+  Caldera $ 5.000.— [...] NICOLAS VICO GIMENA
+NOTA DE LECTURA: RECUENTO PROPIO por la capa: 43 municipios con importe (la
+Capital no figura); la resolución no trae total. Los importes van de 5.000 a
+50.000; La Caldera en el piso, con Cachi, Molinos, Santa Victoria, La Poma,
+Iruya y otros. «Coronel Moldes 50.000» en la capa: no se miró en la imagen.
+
+A.29
+FUENTE: 4226 h6 c1 (sigue en c2) (Salta, lunes 7 de julio de 1952)
+FICHA: Decreto N 414-G, 30 de junio de 1952, expediente 6654/52: traslada al
+Sub-Comisario de 1ra. categoría de La Caldera, Francisco Arroyo, como Sub
+Comisario de 2da. categoría a Caipe (Los Andes), desde el 1 de julio, en
+reemplazo de Nicanor Reales; nombra en reingreso Sub-Comisario de 1ra. categoría
+de La Caldera a Esteban Mogro, en reemplazo de Arroyo. Clase: CARGOS.
+MODO DE LECTURA: imagen, 155 ppp: arts. 1 y 2 (c1) y cabeza de c2; el resto del
+decreto (otros cargos de la Capital) por la capa.
+TEXTO:
+  DECRETO N 414 G. Salta, Junio 30 de 1952. Expediente N 6654|52. VISTO la nota
+  N 1891, de fecha 24 del mes en curso, de Jefatura de Policía; y atento a lo
+  solicitado en la misma, El Gob-rnador de la Provincia DECRETA: Art. 1 —
+  Trasládase con el cargo de Sub Comisario de 2da. categoría y a la
+  Sub-Comisaría de la localidad de CAIPE (Los Andes), al actual Sub-Comisario de
+  1ra. categoría de La Caldera, don FRANCISCO ARROYO, a partir del día 1 de
+  julio próximo, y en reemplazo de don Nicanor Reales. Art. 2 — Nómbrase en
+  carácter de reingreso Sub-Comisario de Policía de 1ra. categoría de La
+  Caldera, al señor ESTEBAN MOGRO ([documento omitido]), a partir del día 1 de
+  julio próximo, y en reemplazo de don Francisco Arroyo. Art. 3 — Acéptase la
+  renuncia presentada por el Agente, plaza N 221 [...]
+NOTA DE LECTURA: Arroyo pasa de primera a segunda categoría: el acto lo llama
+traslado y no da motivo. Entró en 1950 trasladado de El Galpón (informe LEE
+1950). Mogro cesa el 20 de octubre (A.54 h5). El número de matrícula de Mogro se
+omite en este informe (criterio en E.10).
+
+A.30
+FUENTE: 4236 h13 c2; decreto en h12 c3 (Salta, martes 22 de julio de 1952)
+FICHA: Decreto N 756-A, 16 de julio de 1952, expediente 10.988/952: aprueba la
+Resolución N 932 (3 de julio) de la Junta de la Caja de Jubilaciones: pensiones
+a la vejez, ley 1204. Bajo «LA CALDERA», doce beneficiarios, números 1826 a
+1837: Roque Jacinto Jurado (Los Yacones), María Gachi de Hoyos (Lesser),
+Sinforoso Lamas, Tránsito Burgos de Alfaro, Saturnina Mamaní, Crecencio Victorio
+Valdéz (Mojotoro), Florinda Robles de Vivas, Manuel Quispe (Vaqueros), Rosa
+Sarapura, Melchora Poclava (Lesser), Manuela Sumbai y Mercedes Armella
+(Mojotoro). Clase: OTRO.
+MODO DE LECTURA: imagen, 200 ppp: la lista de La Caldera entera (h13 c2); el
+encabezado del decreto (h12 c3) por la capa.
+TEXTO:
+  Decreto N 756—A. Salta, Julio 16 de 1952. Expediente N 10.988|952. Visto la
+  nota N 1.000 por la cual la Caja de Jubilaciones y Pensiones eleva para su
+  aprobación la Resolución N 932 de la Junta Administradora [...] y atento a la
+  Ley 1204 de 31 de agosto por lo que se instituye pensiones a la vejez [...] El
+  Vice Gobernador de la Provincia, en Ejercicio del Poder Ejecutivo, DECRETA:
+  Art. 1 Apruébase la Resolución N 932 de fecha 3 de julio del año en curso
+  [...] "Art. 1 — Acordar pensión a la vejez, conforme a lo dispuesto por la Ley
+  1204 [...] (h13) LA CALDERA: 1826 — Roque Jacinto Jurado (Los Yacones). 1827 —
+  María Gachi de Hoyos (Lesser). 1823 [sic] — Sinforoso Lamas. 1829 — Tránsito
+  Burgos de Alfaro. 1830 — Saturnina Mamaní. 1831 — Crecencio Victorio Valdéz
+  (Mojotoro). 1832 — Florinda Robles de Vivas. 1833 — Manuel Quispe (Vaqueros).
+  1834 — Rosa Sarapura. 1835 — Melchora Poclava (Lesser). 1826 [sic] — Manuela
+  Sumbai. 1837 — Mercedes Armella (Mojotoro). CHICOANA: 1838 — Tránsito Vera de
+  Ramos.
+NOTA DE LECTURA: RECUENTO PROPIO: doce nombres, numerados de 1826 a 1837; dos
+números impresos fuera de serie: «1823» por 1828 (el tipo puede ser un 8
+cerrado; se lee 3) y «1826» por 1836 (repite el primero). Seis con lugar entre
+paréntesis: Los Yacones 1, Lesser 2, Mojotoro 2, Vaqueros 1. Mojotoro puede ser
+el paraje del departamento o el río y la zona de Güemes: el acto lo pone bajo
+«LA CALDERA». La capa entrega la lista entreverada con la de Guachipas y La
+Viña, sin números para seis de los doce: la lista se tomó entera de la imagen.
+Monto: $ 100 mensuales a cada uno (capa de h12). Firma el vicegobernador Jesús
+Méndez en ejercicio.
+
+A.31
+FUENTE: 4237 h8 c2 (Salta, miércoles 23 de julio de 1952)
+FICHA: Resolución N 33-E del Ministerio de Economía, 21 de julio de 1952,
+expediente 15115/1951: anula las boletas de contribución territorial del Hogar
+Agrícola «San Cayetano» por sus inmuebles del departamento La Caldera, partidas
+177 y 180, años 1946 a 1951, por $ 4.987,39, por estar comprendido en los arts.
+8 inc. 3 y 9 de la ley 1398. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150-160 ppp, entera, con el cuadro de boletas.
+TEXTO:
+  RESOLUCION N 33 — E. Salta, Julio 21 de 1952. Expediente N 15115|1951. Visto
+  este expediente en el cual el Hogar Agrícola "San Cayetano", solicita
+  anulación de boletas de contribución territorial, correspondiente a los
+  inmuebles de su propiedad ubicados en el Departamento de La Caldera, en mérito
+  de encontrarse comprendido en las disposiciones de los Arts. 8 Inc. 3 y 9
+  apartado último de la Ley N 1398; atento a las actuaciones practicadas por
+  Dirección General de Rentas, lo informado por Contaduría General y lo
+  dictaminado por Fiscalía de Estado, El Ministro de Economía, Finanzas y O.
+  Públicas RESUELVE: 1 — Anular las boletas de contribución territorial que a
+  continuación se detallan, confeccionadas a cargo del HOGAR AGRICOLA "SAN
+  CAYETANO", correspondientes a los inmuebles de su propiedad ubicados en el
+  Departamento de La Caldera: Partida N 177 Año 1946 por $ 270.— / 177 1947
+  778.80 / 180 1947 220.44 / 177 1948 868.80 / 180 1948 52.80 / 177 1949 119.80
+  / 180 1949 76.75 / 177 1950 900.— / 180 1950 400.— / 180 1951 400.— / 177 1951
+  900.— Total $ 4.987.39 2 — Tome razón Dirección General de Rentas [...]
+NOTA DE LECTURA: RECUENTO PROPIO: once boletas (partida 177: seis, 1946-1951;
+partida 180: cinco, 1947-1951). Suma propia: $ 4.987,39, igual al total impreso.
+La capa no trae el cuadro: sólo la imagen. Partidas 177 y 180 y el nombre
+completo del Hogar («Hogar Agrícola San Cayetano») van al config.
+
+A.32
+FUENTE: 4238 h12 c1 y c2 (Salta, jueves 24 de julio de 1952)
+FICHA: Decreto N 804-E, 18 de julio de 1952, expediente 1289/L/1952: el
+Vicegobernador en ejercicio aprueba la resolución 289 del 13 de junio de la
+Intervención de la A.G.A.S. (expte. 4224/48), que reconoce a Lorenza Lozano
+0,525 l/s del río La Caldera para 1 ha de la «Finca Miraflores (Fracción)»,
+catastro 68, en La Calderilla. El informe del inc. a) del art. 350 del Código de
+Aguas lo da «la Intendencia de Aguas respectiva». Clase: AGUAS.
+MODO DE LECTURA: imagen, 150 ppp, hasta el punto 1 de la resolución; el resto y
+las firmas por la capa.
+TEXTO:
+  Decreto N 804.E. Salta, Julio 18 de 1952. Expediente N 1289|L|1952. Visto este
+  expediente en el que la Intervención de la ADMINISTRACION GENERAL DE AGUAS DE
+  SALTA, eleva a consideración y aprobación del Poder Ejecutivo Resolución N 289
+  dictada en fecha 13 de junio próximo pasado; Por ello; El Vice Gobernador de
+  la Provincia, en Ejercicio del Poder Ejecutivo, DECRETA: Art. 1 — Apruébase la
+  Resolución N 289 [...] cuyo texto es el siguiente: "RESOLUCION N 289. — EXPTE.
+  4224|48. — SOLICITUD DE RECONOCIMIENTO DE CONCESION DE AGUA PUBLICA: VISTO
+  este expediente por intermedio del cual la señora LORENZA LOZANO solicita
+  reconocimiento de una concesión de agua para irrigar su propiedad denominada
+  Finca Miraflores (Fracción), ubicada en el Partido de La Calderilla,
+  Departamento de La Caldera, catastro N 68, con una superficie bajo riego de 1
+  Ha. y considerando: Que la recurrente ha dado cumplimiento con todos los
+  requisitos establecidos en el Código de Aguas; Que a pedido de esta
+  Administración, la Intendencia de Aguas respectiva manifiesta que no tiene
+  observación alguna que formular a lo solicitado, dándose cumplimiento a lo
+  establecido en el inc. a), Art. 350, del Código de Aguas; Que en virtud de la
+  autorización conferida mediante Resolución N 90 dictada por el H. Consejo de
+  esta Administración en fecha 21|1|52, por la que se autoriza una nueva
+  publicación de edictos cuyos ejemplares corren agregados al expediente del
+  título, sin que ello hubiere dado lugar a oposición de terceros. Por todo ello
+  y teniendo en cuenta el dictamen producido por el cuerpo de Abogados del
+  Estado y lo informado por División de Irrigación é Industria, en uso de las
+  facultades que le confiere el Decreto N 12.476, el Interventor de A. G. A. S.,
+  RESUELVE: 1 — Elevar al Poder Ejecutivo [...] aconsejando que por su
+  intermedio se apruebe el reconocimiento de una concesión de agua para irrigar
+  con carácter permanente y a perpetuidad, la propiedad de la señora LORENZA
+  LOZANO, denominada FINCA MIRAFLORES, ubicada en el Partido de La Calderilla,
+  departamento de La Caldera, catastro N 68, con una superficie de 1 Ha. y con
+  un caudal de 0,525 l|seg., a derivar del río La Caldera. [...]" Art. 2 —
+  Comuníquese, publíquese, etc. JESUS MENDEZ. Nicolás Vico Gimena. Es copia:
+  PEDRO ANDRES ARRANZ, Jefe de Despacho del M. de E. F. y O. Públicas.
+NOTA DE LECTURA: La capa lee el número «800»; la imagen, «804». La fecha de la
+resolución 90 se lee «21|L|52» en la capa y «21|1|52» es la lectura de la imagen
+a 150 ppp (un 1 con remate). Firma el Vicegobernador en ejercicio, Jesús Méndez.
+La A.G.A.S. está intervenida (decreto 12.476, citado y no acompañado en el
+corpus del año; E.3). Es la resolución del edicto 7857 (A.9 h12).
+
+A.33
+FUENTE: 4238 h17 c3 (Salta, jueves 24 de julio de 1952); 30 apariciones por
+texto, 4238 a 4267
+FICHA: Edicto N 8323, juzgado de Primera Nominación Civil: Salustiano y
+Marcelina Jurado piden posesión treintañal de la finca «Villa Vieja» y «Huerta
+Vieja», en el partido de Los Yacones, departamento de La Caldera; límites:
+Norte, Rita Arroyo; Sud, Lucio Ortiz y Luis Patrón Costas; Oeste, río del
+Potrero del Castillo; catastro 56. Salta, 22 de julio de 1952; plazo 24 de julio
+a 4 de septiembre. Clase: DOMINIO.
+MODO DE LECTURA: imagen, 220 ppp, entero, en 4238 h17 y en 4240 h9; repeticiones
+por texto de la capa.
+TEXTO:
+  N 8323 — POSESION TREINTAÑAL. — Salustiano y Marcelina Jurado, ante Juzgado
+  Primera Nominación Civil, solicita posesión treintañal, finca "Villa Vieja" y
+  "Huerta Vieja", ubicada en el partido de Los Yacones, Departamento de La
+  Caldera, con límites: Norte, propiedad de Rita Arroyo; Sud, de Lucio Ortiz y
+  Luis Patrón Costas; Oeste con Río del Potrero del Castillo. Catastro 56 La
+  Caldera. Cítese a los que se consideren con mejor derecho por treinta días. —
+  Salta, 22 de Julio de 1952. — Dr. OSCAR P. LOPEZ, Secretario Letrado. e) 24|7
+  al 4|9|52
+NOTA DE LECTURA: Linderos: RECUENTO PROPIO, cuatro (dos al Sud); no hay lindero
+Este. «solicita» en singular con dos solicitantes: así en la imagen. La capa
+escribe «Yacanes», «tacones», «yacon©s», «Yarones» y «Yaconer» según la edición;
+la búsqueda de apariciones se hizo por «Villa/Huerta Vieja» y por «Potrero del
+Castillo». Rita Arroyo ya lindaba en Los Yacones en otros años (actor del
+config). Un Roque Jacinto Jurado, de Los Yacones, recibe pensión a la vejez en
+el mismo mes (A.30). Ediciones con el aviso en el cuerpo (capa; el sumario no se
+cuenta): 4238, 4239, 4240, 4241, 4242, 4243, 4244, 4245, 4246, 4247, 4248, 4249,
+4250, 4251, 4252, 4253, 4254, 4255, 4256, 4257, 4258, 4259, 4260, 4261, 4262,
+4263, 4264, 4265, 4266, 4267.
+
+A.34
+FUENTE: 4244 h9 c3 y h10 c1 (Salta, martes 5 de agosto de 1952)
+FICHA: Decreto N 917-E, 30 de julio de 1952, expediente 1577-F-1952: aprueba la
+Resolución N 332 (23 de junio) de la Intervención de AGAS, expediente 7116/47:
+reconoce a Ángel Finetti, con carácter permanente y a perpetuidad, 1,57 l/s del
+río Vaqueros para 3 ha de «El Sauce», catastro 200, «ubicado en Vaqueros,
+departamento de La Caldera»; en estiaje, diez horas mensuales con la mitad del
+caudal de la hijuela «Urquiza». Clase: AGUAS.
+MODO DE LECTURA: imagen, 190 ppp: el decreto y el visto de la resolución (h9 c3)
+y el resuelve hasta el art. 2 (h10 c1); el art. 3 y las firmas por la capa.
+TEXTO:
+  DECRETO N 917 — E. Salta, Julio 30 de 1952. Expediente N 1577—F—1952. VISTO
+  este expediente mediante el cual, la Intervención de la ADMINISTRACION GENERAL
+  DE AGUAS DE SALTA eleva a consideración y aprobación del Poder Ejecutivo
+  Resolución N 332, dictada en fecha 23 de Junio próximo pasado [...]
+  "RESOLUCION N 332. EXPTE. N 7116|47 "SOLICITUD RECONOCIMIENTO CONCESION "AGUA
+  PUBLICA. TRAMITE FINAL. ANGEL FI- "NETTI. VISTO este expediente por intermedio
+  "del cual el señor Angel Finetti solicita reco- "nocimiento de una concesión
+  de agua pública "para irrigar su propiedad denominada "El Sau- "ce" catastro N
+  200, ubicada en Vaqueros, depar- "tamento de La Caldera, con una superficie
+  ba- "jo riego de 3 Has. [...] se ha procedido a la publicación de "edictos en
+  los diarios de esta Capital [...] sin que ello hubiera dado lugar a opo-
+  "sición de terceros. [...] RESUELVE: "1 — Elevar el presente expediente N
+  7116|47 "al Poder Ejecutivo [...] aconsejando que por su intermedio se apruebe
+  el "reconocimiento de una concesión de agua para "irrigar con carácter
+  permanente y a perpetuidad "una superficie de tres hectáreas, del inmueble
+  "denominado "EL SAUCE", catastro N 200, ubi- "cado en Vaqueros, departamento
+  de La Caldera, "propiedad del señor ANGEL FINETTI, con una "dotación de un
+  litro cincuenta y siete centíli- "tros por segundo a derivar del Río Vaqueros.
+  "En época de estiaje, se establece que la propie- "dad de referencia tendrá
+  derecho a un turno de "diez horas mensuales con la mitad del caudal "de la
+  hijuela "Urquiza". [...]
+NOTA DE LECTURA: Cierra el trámite del edicto de marzo (A.12): la resolución de
+la Intervención dice que los edictos se publicaron «en los diarios de esta
+Capital» por autorización de su Resolución 88 del 21/1/52 y que no hubo
+oposición. El expediente es de 1947. La capa escribe «Tinetti» y «EINETTI»: la
+búsqueda por el actor no lo devuelve (§2). Un mismo nombre en dos grafías de la
+capa, una sola en la imagen: «Finetti».
+
+A.35
+FUENTE: 4246 h15 c3 (Salta, jueves 7 de agosto de 1952); 12 apariciones por
+texto, 4246 a 4262
+FICHA: Edicto citatorio N 8351 de AGAS: José Martín Caro pide reconocimiento de
+concesión para regar con 1,05 l/s del río La Caldera 2 ha de su propiedad,
+catastro 21 del departamento La Caldera. Fechado dos veces: «Salta, 6 de agosto
+de 1952» y, debajo, «Salta, 8 de Agosto de 1952». Plazo: 7 al 28 de agosto.
+Clase: AGUAS.
+MODO DE LECTURA: imagen, 200 ppp, entero en 4252 h10 c3 (la capa de 4246 h15
+viene cruzada con la columna vecina); repeticiones por texto.
+TEXTO:
+  N 8351 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que JOSE MARTIN CARO tiene solicitado reconocimiento de
+  concesión de agua pública para regar con un caudal de 1,05 litros por segundo
+  proveniente del Río La Caldera, 2 Has. de su propiedad catastro 21 del
+  Departamento La Caldera. Salta, 6 de agosto de 1952. Administración General de
+  Aguas de Salta Salta, 8 de Agosto de 1952. e) 7 al 28|8|52.
+NOTA DE LECTURA: Dos fechas en el pie: la segunda es un renglón que quedó de
+otro aviso o de una recomposición (E.9). 1,05 l/s para 2 ha es la dotación de
+0,525 (RECUENTO PROPIO). El número 8351 lo lleva también, en otra sección del
+mismo número, la licitación 2 de Vialidad (camino de Lumbreras a Rivadavia): es
+la numeración de avisos del Boletín, que en 4260 y 4262 la capa atribuye a los
+dos; la búsqueda de apariciones es por el texto del aviso y no por el número.
+Ediciones con el aviso en el cuerpo (capa; el sumario no se cuenta): 4246, 4247,
+4250, 4251, 4252, 4255, 4256, 4257, 4258, 4259, 4260, 4262.
+
+A.36
+FUENTE: 4247 h19 c3 (Salta, viernes 8 de agosto de 1952)
+FICHA: Decreto N 1020-G, 5 de agosto de 1952, expediente 6892/52: da por
+terminadas desde el 1 de agosto las funciones del Sub-Comisario de 2a. categoría
+de Vaqueros (La Caldera), Manuel Córdoba Oviedo; traslada a Vaqueros al
+Sub-Comisario de 1a. de la Sección Segunda, Antonio Agüero; asciende a la
+Sección Segunda a José Marcos Aybar, Sub-Comisario de 2a. de Partido Velarde.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y arts. 1 a 3; los arts. 4 en
+adelante por la capa.
+TEXTO:
+  DECRETO N 1020-G. Salta, Agosto 5 de 1952. Expediente N 6892|52. Atento lo
+  solicitado por Jefatura de Policía en nota de fecha 24 de julio ppdo., El
+  Gobernador de la Provincia DECRETA: Art. 1 — Dánse por terminadas las
+  funciones del Sub-Comisario de Policía de 2a. categoría de Vaqueros (La
+  Caldera), don MANUEL CORDOBA OVIEDO, con fecha 1 del actual. Art. 2 —
+  Trasládase a la Sub-Comisaría de 2a. categoría de Vaqueros, al actual
+  Sub-Comisario de 1a. categoría de la Sección Segunda, don ANTONIO AGÜERO, con
+  fecha 1 del corriente. Art. 3 — Trasládase en carácter de ascenso, al cargo de
+  Sub-Comisario de 1a. categoría de la Sección Segunda, en reemplazo de don
+  Antonio Agüero, al actual Sub-Comisario de 2a. categoría de Partido Velarde,
+  don JOSE MARCOS AYBAR, con fecha 1 del mes en curso. [...]
+NOTA DE LECTURA: Agüero baja de primera a segunda categoría al pasar a Vaqueros;
+el acto no da motivo. Renuncia en septiembre y lo reemplaza Humberto Zona
+(A.42). Aybar llega a La Caldera como subcomisario en noviembre (A.54): tres
+pasos del mismo hombre en el año. La capa entrevera este decreto con el anterior
+y escribe «Caldera), don MANUEL CORDOBA» separado de «Vaqueros (La».
+
+A.37
+FUENTE: 4248 h6 c2 y c3 (Salta, lunes 11 de agosto de 1952)
+FICHA: Decreto N 1001-E, 4 de agosto de 1952, orden de pago 342, expediente
+1786/A/952: aprueba gastos por $ 1.057 y $ 230 que la Dirección General de
+Arquitectura hizo en forma directa «con el fin de hacer viable la inauguración
+del edificio construido para la Estación Sanitaria de La Caldera» (instalación
+eléctrica y arreglos sanitarios, por pedido urgente del Ministerio de Acción
+Social), y manda pagar $ 1.287. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150-170 ppp: encabezado y visto (h6 c2, pie) y
+considerando y arts. 1 y 2 (h6 c3); la imputación y las firmas por la capa.
+TEXTO:
+  Decreto N 1001—E. Salta, agosto 4 de 1952. Orden de Pago N 342, del Ministerio
+  de Economía. Expediente N 1786|A|952. Visto este expediente por el que
+  Dirección General de Arquitectura y Urbanismo trae a conocimiento del Poder
+  Ejecutivo que, a fin de hacer viable la inauguración del edificio construido
+  para la Estación Sanitaria de La Caldera, y ante un pedido formulado por parte
+  del Ministerio de Acción Social y Salud Pública, dispuso en forma urgente la
+  ejecución de los trabajos de instalación eléctrica necesarios para dotar de
+  iluminación a ese edificio, y los arreglos y modificaciones pertinentes en las
+  instalaciones sanitarias, lo que motivó la realización de gastos que asciende
+  a la suma de $ 1.057.— m|n. y $ 230.— m|n., respectivamente [...] Art. 1 —
+  Apruébanse los gastos que por $ 1.057.— [...] y $ 230.— [...] ha realizado en
+  forma directa la Dirección General de Arquitectura y Urbanismo, con el fin de
+  hacer viable la inauguración del edificio construido para la Estación
+  Sanitaria de La Caldera. Art. 2 — Previa intervención de Contaduría General,
+  páguese [...] la suma de $ 1.287.— (UN MIL DOSCIENTOS OCHENTA Y SIETE PESOS
+  MONEDA NACIONAL) [...]
+NOTA DE LECTURA: Suma propia: 1.057 + 230 = 1.287, igual a lo impreso. El acto
+no da la fecha de la inauguración. En mayo el decreto 13108-A (A.19) decía que
+la estación sanitaria ya estaba «instalada en el mismo pueblo»: el edificio
+nuevo es otro, o la estación funcionaba antes en otro lugar; el corpus no lo
+aclara. La manzana para la estación figuraba en el plan de obras de enero (A.4,
+$ 8.000).
+
+A.38
+FUENTE: 4248 h8 c3 y h9 c1 (Salta, lunes 11 de agosto de 1952)
+FICHA: Decreto N 1.034-A, 5 de agosto de 1952: modifica los arts. 2 y 3 del
+decreto 13.108 (22 de mayo): el subsidio de $ 3.000 mensuales para el «Hogar
+Evita» de La Caldera, acordado a la Comisión Pro-Hogar hasta el 30 de noviembre,
+se liquidará desde el 1 de agosto a la Sección Acción Social de la Dirección
+Provincial de Higiene y Asistencia Social, que tendrá a su cargo la aplicación
+de los fondos. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y considerandos (h8 c3); la parte
+dispositiva (h9 c1) por la capa.
+TEXTO:
+  DECRETO N 1.034 — A. Salta, Agosto 5 de 1952. Visto que por decreto N 13.108
+  de 22 de mayo del año en curso, se ha destinado el edificio del hospital "Dr.
+  Francisco Ortelli", de La Caldera, para que en mismo funciones un hogar para
+  niños en edad escolar, denominado "Hogar Evita"; y, CONSIDERANDO: Que por el
+  art. 2 del citado decreto se dispone que "la Comisión constituída Pro-Hogar de
+  "La Caldera presidida por el señor Intendente "Municipal, señores
+  legisladores, demás autorida- "des y vecinos caracterizados, tendrá a su car-
+  "go el contralor de la Institución [...] Que para contribuir a los gastos que
+  deman- de el funcionamiento del "Hogar Evita", el Po- der Ejecutivo por el
+  aludido decreto (art. 3) con- cede un subsidio extraordinario de $ 3.000 men-
+  suales a la Comisión Pro-Hogar de La Caldera, a liquidarse desde el 1 de mayo
+  y hasta el 30 de noviembre del presente año; [...] (h9) Art. 1 — Modifícanse
+  los artículos 2 y 3 del decreto N 13.198 [sic] de fecha 22 de mayo [...] el
+  subsidio de tres mil pesos ($ 3.000) mensuales [...] deberá liquidarse a
+  partir desde el 1 de agosto en curso, a favor de la Sección ACCION SOCIAL de
+  la Dirección Provincial de Higiene y Asistencia Social [...]
+NOTA DE LECTURA: El considerando cita el decreto como 13.108 y el artículo como
+13.198 (E.9): es el 13108-A de 4201. «para que en mismo funciones», así en la
+imagen. El control del subsidio pasa de la comisión de vecinos presidida por el
+intendente a una repartición provincial a los tres meses. El decreto 1.033-A,
+contiguo, trata de pensiones a la invalidez en toda la provincia y no nombra el
+departamento.
+
+A.39
+FUENTE: 4264 h4 c3 (Salta, jueves 4 de septiembre de 1952); 14 apariciones por
+texto, 4264 a 4278
+FICHA: Edicto citatorio N 8433 de AGAS, 3 de septiembre de 1952: Manuel Condori
+pide reconocimiento para regar con 2,26 l/s del río La Caldera 4 ha 3072 m² de
+su propiedad, catastro 145 de La Caldera. Plazo: 4 al 25 de septiembre. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4264 h4 y 4268 h15); repeticiones por
+texto.
+TEXTO:
+  N 8433 — EDICTO CITATORIO. A los efectos establecidos por el Código de Aguas,
+  se hace saber que MANUEL CONDORI tiene solicitado reconocimiento de concesión
+  de agua pública para regar con un caudal de 2,26 l|seg. proveniente del Río La
+  Caldera, 4 Has. 3072 m2. de su propiedad catastro 145 de La Caldera. Salta,
+  Septiembre 3 de 1952. Administración General de Aguas de Salta e) 4 al
+  25|9|52.
+NOTA DE LECTURA: 2,26 / 4,3072 = 0,525 l/s por ha (RECUENTO PROPIO). La capa de
+4264 escribe «1 Has.»: la imagen dice 4. Otro Manuel Condori (o Condorí) pide en
+noviembre por el catastro 178 (A.55): catastros distintos. «condori» es apellido
+del anillo 2. Ediciones con el aviso en el cuerpo (capa; el sumario no se
+cuenta): 4264, 4265, 4266, 4267, 4268, 4269, 4270, 4271, 4272, 4273, 4274, 4276,
+4277, 4278.
+
+A.40
+FUENTE: 4265 h18 (Salta, viernes 5 de septiembre de 1952); 15 apariciones por
+texto, 4265 a 4282
+FICHA: Edicto citatorio N 8455 de AGAS, 9 de septiembre de 1952: Dina I. Lozano
+de Robles pide reconocimiento para regar con 0,39 l/s del río La Caldera 7556 m²
+de su propiedad, catastro 163 del departamento La Caldera. Plazo: 10 de
+septiembre al 1 de octubre. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4270 h11); repeticiones por texto.
+TEXTO:
+  N 8455 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que DINA I. LOZANO de ROBLES tiene solicitado reconocimiento de
+  concesión de agua pública para regar con un caudal de 0,39 l|seg. proveniente
+  del Río La Caldera, 7556 m2. de su propiedad catastro 163 del Departamento La
+  Caldera. Salta, Septiembre 9 de 1952. Administración General de Aguas de Salta
+  e) 10|9 al 1|10|52.
+NOTA DE LECTURA: 0,39 / 0,7556 = 0,516 l/s por ha, la dotación de 0,525
+redondeada (RECUENTO PROPIO). La capa parte el aviso en dos columnas en varias
+ediciones (4270, 4277, 4279). Ediciones con el aviso en el cuerpo (capa; el
+sumario no se cuenta): 4265, 4266, 4268, 4269, 4270, 4271, 4272, 4273, 4275,
+4276, 4277, 4278, 4280, 4281, 4282.
+
+A.41
+FUENTE: 4269 h6 c2; sumario h2 (Salta, jueves 11 de septiembre de 1952)
+FICHA: Decreto N 1504-A, 2 de septiembre de 1952: vistas las necesidades de la
+Estación Sanitaria de La Caldera y caducado el decreto 12.225 (25 de marzo) que
+adscribía a la doctora Yolanda Alacevich al Hospital Regional de Güemes, dispone
+que la Dra. Alacevich, médica regional de El Galpón, pase a prestar servicios
+como Médico Regional de La Caldera, con residencia fija en la localidad. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 140 ppp, entero.
+TEXTO:
+  DECRETO N 1504 — A. Salta, Septiembre 2 de 1952. Visto las necesidades del
+  servicio en la Estación Sanitaria de La Caldera y habiendo caducado el Decreto
+  N 12.225, de fecha 25 de Marzo del año en curso, que disponía la adscripción
+  de la doctora YOLANDA ALACEVICH el Hospital Regional de Güemes dependiente del
+  Ministerio de Salud Pública de la Nación El Vice Gobernador de la Provincia,
+  en Ejercicio del Poder Ejecutivo, DECRETA: Art. 1 — Dispónese que la Doctora
+  YOLANDA ALACEVICH, Médico Regional del Galpón, dependiente de la Dirección
+  General de Salubridad, pase a prestar servicios como Médico Regional de La
+  Caldera, con residencia fija en la citada localidad. Art. 2 — Comuníquese
+  [...] JESUS MENDEZ Walder Yáñez
+NOTA DE LECTURA: Primera médica con residencia fija en La Caldera en el corpus
+de 1952; el 13108-A de mayo hablaba de atención «tres veces por semana». «el
+Hospital», así («al Hospital»). El sumario (4269 h2) resume «traslada al médico
+regional de El Galpón a La Caldera». Firma Jesús Méndez, vicegobernador en
+ejercicio.
+
+A.42
+FUENTE: 4270 h5 c3; encabezado en h4 (Salta, viernes 12 de septiembre de 1952)
+FICHA: Decreto N 1541-G, 4 de septiembre de 1952, expediente 7209/52 (movimiento
+de personal de Policía): art. 6, traslada desde el 1 de septiembre a la
+Sub-Comisaría de Vaqueros (La Caldera), con el cargo de Sub-Comisario de 2da.
+categoría, al Sub-Comisario de 1ra. de Embarcación (San Martín), Humberto Zona,
+en reemplazo de Antonio Agüero. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: arts. 4 a 8 (h5 c3); el encabezado (h4, última
+columna) por la capa.
+TEXTO:
+  [...] Art. 6 — Trasládase con anterioridad al día 1 del actual, a la
+  Sub-Comisaría de Vaqueros (La Caldera), con el cargo de Sub-Comisario de 2da.
+  categoría, al actual Sub-Comisario de 1ra. categoría de Embarcación (San
+  Martín), don HUMBERTO ZONA, en reemplazo de Antonio Aguero. Art. 7 — Acéptase
+  la renuncia presentada por don ROSARIO F. VALDIVIEZO, en el cargo de Agente
+  plaza N 336 del Escuadrón de Seguridad [...]
+NOTA DE LECTURA: El decreto al que pertenece el art. 6 se atribuye por la capa:
+el último encabezado de h4 antes del salto es el 1541-G (Jefatura de Policía,
+nota 2733). No se miró en la imagen la costura de h4 a h5 (E.10). Zona baja de
+primera a segunda categoría, como Agüero en agosto (A.36). El sumario de 4267 h2
+trae una renuncia del subcomisario de Vaqueros, Antonio Agüero (B.2).
+
+A.43
+FUENTE: 4273 h12 (Salta, jueves 18 de septiembre de 1952); 14 apariciones por
+texto, 4273 a 4287
+FICHA: Edicto citatorio N 8472 de AGAS, 17 de septiembre de 1952: Isabel Yufra
+de Iriarte pide reconocimiento para regar con 0,88 l/s del río La Caldera 1 ha
+6800 m² de su propiedad, catastro 85 del departamento La Caldera. Plazo: 18 de
+septiembre al 8 de octubre. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4277 h8); repeticiones por texto.
+TEXTO:
+  N 8472 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que ISABEL YUFRA de Iriarte tiene solicitado reconocimiento de
+  concesión de agua pública para regar con un caudal de 0.88 litros por segundo
+  proveniente del Río la Caldera, 1 Ha. 6800 m2. de su propiedad catastro 85 del
+  Departamento La Caldera. Salta, Septiembre 17 de 1952. Administración General
+  de Aguas de Salta e) 18|9 al 8|10|52.
+NOTA DE LECTURA: 0,88 / 1,68 = 0,524 l/s por ha (RECUENTO PROPIO). La capa
+escribe «Triarte» y «£5». Ediciones con el aviso en el cuerpo (capa; el sumario
+no se cuenta): 4273, 4274, 4275, 4277, 4278, 4279, 4280, 4281, 4282, 4283, 4284,
+4285, 4286, 4287.
+
+A.44
+FUENTE: 4285 h8 (Salta, lunes 6 de octubre de 1952); 15 apariciones por texto,
+4285 a 4299
+FICHA: Edicto citatorio N 8527 de AGAS, 3 de octubre de 1952: Elena Alonso de
+Juárez pide reconocimiento para regar con 1,33 l/s del río La Caldera 2 ha 5290
+m² de su propiedad, catastro 164 de La Caldera. Plazo: 6 al 27 de octubre.
+Clase: AGUAS.
+MODO DE LECTURA: imagen, 180-300 ppp (el catastro con aumento), entero;
+repeticiones por texto.
+TEXTO:
+  N 8527. — EDICTO CITATORIO A los efectos establecidos por el Código de Aguas,
+  se hace saber que Elena Alonso de Juárez tiene solicitado reconocimiento de
+  concesión de agua pública para regar con un caudal de 1,33 l|segundo
+  proveniente del Río La Caldera, 2 Has. 5290 m2. de su propiedad catastro 164
+  de La Caldera. Salta, Octubre 3 de 1952. Administración General de Aguas de
+  Salta. e|6 al 27|10|52.
+NOTA DE LECTURA: 1,33 / 2,529 = 0,526 l/s por ha (RECUENTO PROPIO). La capa lee
+«1A3» y «5296». Ediciones con el aviso en el cuerpo (capa; el sumario no se
+cuenta): 4285, 4286, 4287, 4288, 4289, 4290, 4291, 4292, 4293, 4294, 4295, 4296,
+4297, 4298, 4299.
+
+A.45
+FUENTE: 4287 h15 c2 (Salta, miércoles 8 de octubre de 1952)
+FICHA: Decreto N 1945-E, 1 de octubre de 1952: por los decretos 6136 nacional y
+1793 provincial, designa jefes departamentales para el levantamiento del Censo
+Agropecuario Nacional; «Dpto. La Calde[r]a: JUSTO PASTOR LIZONDO: Direc. Escuela
+Prov. "Juana Moro de López"». Clase: CARGOS+ESCUELA.
+MODO DE LECTURA: imagen, 140-180 ppp: encabezado, art. 1 y los renglones hasta
+Eva Perón; el resto de la lista por la capa.
+TEXTO:
+  DECRETO N 1945—E. Salta, 1 de octubre de 1952. Atento a las disposiciones de
+  los Decretos Nros. 6136 Nacional y 1793, provincial, relacionados con el
+  relevamiento del Censo Agropecuario Nacional, El Gobernador de la Provincia
+  DECRETA: Art. 1 — Desígnanse Jefes Departamentales, que tendrán a su cargo las
+  tareas de levantamiento del Censo Agropecuario Nacional, en los Departamento
+  de la Provincia que a continuación se mencionan, a las siguientes personas:
+  Dpto Capital: Agron. MARIO CESAR GRENI [...] Dpto. Iruya: RAUL A. HERMOSILLA:
+  Direc. Escuela Nacional N 142. Dpto. La Calde a [sic]: JUSTO PASTOR LIZONDO:
+  Direc. Escuela Prov. "Juana Moro de López". Dpto. La Poma: PASCUAL MAMANI:
+  Comisario de Policía. [...]
+NOTA DE LECTURA: La imagen imprime «La Calde a» (falta la r o el tipo no marcó):
+ninguna pasada sobre «cald…» completo lo devolvía; lo halló la búsqueda del
+actor Lizondo y la pasada de contexto departamental (§2). Lizondo era Juez de
+Paz Propietario de La Caldera en 1949-1951 (config); aquí figura como director
+de la escuela provincial «Juana Moro de López» (nombre del anillo 2). RECUENTO
+PROPIO por la capa: 17 renglones, 15 departamentos (Rivadavia en tres zonas); el
+decreto no nombra todos los departamentos de la provincia. Jefes que son
+comisarios de policía, intendentes o directores de escuela: el censo se apoya en
+la autoridad local.
+
+A.46
+FUENTE: 4294 h12 c3 (Salta, lunes 20 de octubre de 1952)
+FICHA: Decreto N 2110-G, 10 de octubre de 1952, expediente 7506/52: a pedido de
+la Inspección Técnica Seccional de Escuelas Nacionales, actualiza las
+aquiescencias concedidas a la Dirección Nacional de Enseñanza Primaria para
+crear escuelas nacionales en once localidades, entre ellas «Lesser»,
+Departamento Caldera, y «Vaqueros», Dpto. Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp, entero.
+TEXTO:
+  Decreto N 2110—G. Salta, Octubre 10 de 1952. Expediente N 7506|52. Visto este
+  expediente en el que la Inspección Técnica Seccional de Escuelas Nacionales,
+  solicita la actualización de las aquiescencias de la creación de varias
+  escuelas nacionales, en diversas localidades de la Provincia; Por ello, El
+  Gobernador de la Provincia DECRETA: Art. 1 — Actualízase las aquiescencias
+  concedidas a la DIRECCION NACIONAL de ENSEÑANZA PRIMARIA, para la creación de
+  escuelas nacionales en las siguientes localidades: "Ojo de Agua", Dpto. Gral.
+  Güemes; "Villa Soledad", Departamento Capital; "Los Tarcos", Dpto. Cerrillos;
+  "Chicoana", Dpto. Chicoana; "Lesser", Departamento Caldera; "Portesuelo",
+  Dpto. Capital; "El Porvenir", Dpto. R. de la Frontera; "Tres Cerritos", Dpto.
+  Capital; "La Unión", Dpto. Capital; "Vaqueros" Dpto. Caldera y "Villa Obrera",
+  Dpto. Metán. Art. 2 — Comuníquese [...] RICARDO J. DURAND
+NOTA DE LECTURA: RECUENTO PROPIO: once localidades, dos del departamento.
+«Actualízase» supone aquiescencias anteriores que el corpus de 1952 no trae; la
+de Potrero de Gallinato (12529-G, A.15) es otra localidad. El departamento se
+escribe «Caldera», sin artículo. La capa escribe «Lssser».
+
+A.47
+FUENTE: 4297 h6 c3; sumario h2 (Salta, jueves 23 de octubre de 1952)
+FICHA: Resolución N 2221-A del Ministerio de Acción Social, 21 de octubre de
+1952, expediente 11.714/52: a pedido de la visitadora a cargo del Hogar Escuela
+de La Caldera, paga $ 95 a Gaudelli y Della Ragione S.R.L. por una válvula para
+el motor Diesel marca Vendeuvre del Hogar Escuela. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp, entera.
+TEXTO:
+  RESOLUCION N 2221-A. Salta, Octubre 21 de 1952. Expediente N 11.714|52. VISTO
+  lo solicitado por la Srta. Visitadora a cargo del Hogar Escuela de la
+  localidad de la Caldera, El Ministro de Acción Social y Salud Pública
+  RESUELVE: 1 — El Habilitado Pagador de este Ministerio tomará la suma de ($
+  95.—) NOVENTA Y CINCO PESOS MONEDA NACIONAL, con la que procederá a hacer
+  efectiva, la factura presentada por la firma Gaudelli y Della Ragione S. R.
+  L., en concepto de provisión de una válvula para motor Diesel marca Vendeuvre
+  de propiedad del Hogar Escuela de la Caldera. 2 — El gasto [...] a la partida
+  destinada para Acción Social —Varios. 3 — Comuníquese [...]
+NOTA DE LECTURA: El hogar tiene motor propio: probablemente para luz o bombeo;
+el acto no lo dice. Ya no lo dirige una comisión de vecinos sino una visitadora
+(véase 1.034-A, A.38).
+
+A.48
+FUENTE: 4297 h8 (Salta, jueves 23 de octubre de 1952); 14 apariciones por texto,
+4297 a 4312
+FICHA: Edicto citatorio N 8613 de AGAS, 22 de octubre de 1952: Laura Aráoz de
+Murúa pide reconocimiento para regar con 0,36 l/s del río La Caldera 6787 m² de
+su propiedad, catastro 53 de La Caldera. Plazo: 23 de octubre al 12 de
+noviembre. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero; repeticiones por texto.
+TEXTO:
+  N 8613. — EDICTO CITATORIO A los efectos establecidos por el Código de Aguas,
+  se hace saber que Laura Aráoz de Murua tiene solicitado reconocimiento de
+  concesión de agua pública para regar con un caudal de 0,36 l/seg. proveniente
+  del Río la Caldera, 6787 m2, de su propiedad catastro 53 de La Caldera. Salta,
+  Octubre 22 de 1952. Administración General de Aguas de Salta e|23|10 al
+  12|11|52.
+NOTA DE LECTURA: 0,36 / 0,6787 = 0,530 l/s por ha (RECUENTO PROPIO). «murua» es
+apellido del anillo 2. Ediciones con el aviso en el cuerpo (capa; el sumario no
+se cuenta): 4297, 4298, 4299, 4300, 4302, 4303, 4304, 4306, 4307, 4308, 4309,
+4310, 4311, 4312.
+
+A.49
+FUENTE: 4301 h9 c3 y h10 (Salta, miércoles 29 de octubre de 1952)
+FICHA: Decreto N 2291-E, 22 de octubre de 1952, expediente 5884/C/1952: aprueba
+los índices para distribuir a los municipios el 10 % de los impuestos nacionales
+a los réditos, ventas y ganancias eventuales (ley 990, art. 2) para 1952; el
+cuadro trae cuatro columnas de porcentajes bajo un solo título: La Caldera,
+0,947 / 0,082 / 0,103 / 2,2969. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 130 ppp: el renglón 30 del cuadro con sus cuatro
+columnas y la cabecera del cuadro (h10); el decreto por la capa.
+TEXTO:
+  Decreto N 2291—E. Salta, octubre 22 de 1952. Expediente N 5884|C|1952. Visto
+  este expediente en el cual Contaduría General de la Provincia eleva [...]
+  planillas demostrativas de los índices básicos para la distribución a las
+  Municipalidades de la Provincia del producido de impuestos nacionales y
+  contribución territorial del corriente año [...] Art. 1 — Apruébense los
+  índices básicos [...] para la distribución, a los Municipios de la Provincia
+  del 10% del producido por Impuesto a los Réditos, Ventas, Ganancias Eventuales
+  y Beneficios Extraordinarios, elaborados de conformidad a lo dispuesto por el
+  Art. 2 de la Ley N 990 del 8 de octubre de 1948, para el año 1952.
+  MUNICIPALIDADES [...] PORCENTAJES % [...] 30 La Caldera .... 0.947 0.082 0.103
+  2.2969
+NOTA DE LECTURA: El acto no rotula las cuatro columnas; la primera suma 100 con
+las demás municipalidades (Capital 25,249) y es el índice; las otras tres son
+componentes o factores que el decreto no explica. No se interpreta. El
+considerando habla también de contribución territorial, que el decreto 2502-E
+(A.53) aprueba aparte.
+
+A.50
+FUENTE: 4305 h10 c2 y c3 (Salta, martes 4 de noviembre de 1952)
+FICHA: Decreto N 2413-E, 29 de octubre de 1952, expediente 6017/C/1952: aprueba
+los índices para distribuir a las municipalidades el 25 % de lo recaudado por
+Actividades Lucrativas (ley 1192, art. 55), sobre las patentes generales de 1949
+(1948 para los que no informaron): Municipalidad de La Caldera, $ 2.048,20 y
+0,336 %, puesto 30 de 48. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y renglón de La Caldera; el cuadro
+entero por la capa.
+TEXTO:
+  DECRETO — 2413—E. Salta, octubre 29 de 1952. Expediente N 6017|C|1952. Visto
+  este expediente por el que Contaduría General de la Provincia eleva [...]
+  planilla demostrativa de los índices básicos resultantes para la distribución
+  a las Municipalidades de la Provincia, del 25 % de los ingresos por concepto
+  de impuesto a las Actividades Lucrativas durante el corriente año, de
+  conformidad a lo establecido por el Art. 55 de la Ley N 1192 [...] elaborados
+  en base a los informes [...] de la Provincia en el año 1949, y en cuanto a los
+  que así no lo hicieron se han tenido en cuenta los datos del año 1948 [...] 30
+  La Caldera " 2.048.20 0.336 " [...] Total 610.240.80 100.—
+NOTA DE LECTURA: RECUENTO PROPIO del cuadro (capa): 48 municipios. Suma propia
+de los 48 importes de la capa: véase E.1 (la capa no permite cerrar la suma al
+centavo: dos renglones con cifras rotas). 2.048,20 / 610.240,80 = 0,3356 %:
+coincide con el 0,336 impreso. El encabezado se lee «2413» en la imagen; la
+capa, «24113».
+
+A.51
+FUENTE: 4305 h13 c2; sumario h3 (Salta, martes 4 de noviembre de 1952)
+FICHA: Resolución N 2237-A del Ministerio de Acción Social, 29 de octubre de
+1952, expediente 11.751/51: paga $ 943,90 a B. A. Martínez Comercial e
+Industrial por repuestos para el motor Diesel que funciona en el Hogar Escuela
+«Evita» de La Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado, visto y art. 1; el resto por la
+capa.
+TEXTO:
+  RESOLUCION N 2237—A Salta, octubre 29 de 1952 Expediente N 11.751|51 Visto en
+  este expediente la factura presentada por la firma B. A. Martínez Comercial e
+  Industrial, por la suma total de $ 943.90 m|n. en concepto de provisión de
+  repuestos con destino al motor Diesel que funciona en el Hogar Escuela "Evita"
+  de la Caldera, y habiéndose recibido los mismos de conformidad como lo informa
+  la Srta. Visitadora a cargo del Hogar Escuela de referencia, El Ministro de
+  Acción Social y Salud Pública RESUELVE: 1 — El Habilitado Pagador de este
+  Ministerio tomará de los fondos que se liquidan para Acción Social Varios, la
+  suma de ($ 943.90) [...]
+NOTA DE LECTURA: El expediente es de 1951 (11.751/51) aunque el hogar se crea en
+mayo de 1952: o el número está mal o el motor venía del hospital (E.9 no lo
+marca: no se decide).
+
+A.52
+FUENTE: 4306 h8 c1; sumario h2 (Salta, miércoles 5 de noviembre de 1952)
+FICHA: Decreto N 2434-A, 30 de octubre de 1952, expediente 11.767/52: suspende
+por tiempo indeterminado, hasta la instrucción del sumario (ley 1138, art. 103
+inc. a), a la Auxiliar 4 —Enfermera de La Caldera— Arminda Funes de Lamberto;
+designa instructor a Eusebio García y nombra enfermera interina, desde el 24 de
+octubre, a Corina Adela Bustamante. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp, entero.
+TEXTO:
+  DECRETO N 2434-A. Salta, Octubre 30 de 1952. Expediente N 11.767|52. Visto la
+  Resolución N 275 dictada por la Dirección General de Salubridad con fecha 23
+  de octubre en curso, y atento a las razones que la fundamentaron, El
+  Gobernador de la Provincia DECRETA: Art. 1 — Suspéndese en sus funciones por
+  tiempo indeterminado y hasta tanto se le instruya el sumario correspondiente,
+  de acuerdo a lo determinado por el art. 103, inciso a) de la Ley 1138, a la
+  Auxiliar 4 —Enfermera de La Caldera —dependiente de la Dirección General de
+  Salubridad, Sra. ARMINDA FUNES DE LAMBERTO. Art. 2 — Autorízase a la DIRECCION
+  GENERAL DE SALUBRIDAD para que [...] designe al Auxiliar 4 de esa Repartición
+  Dn. EUSEBIO GARCIA, para instruir el sumario aludido. Art. 3 — Desígnase en
+  carácter interino Auxiliar 4 —Enfermera de La Caldera, con anterioridad al día
+  24 de octubre del año en curso, y hasta tanto se dilucide la situación de la
+  titular Sra. Arminda Funes de Lamberto, a la Srta. CORINA ADELA BUSTAMANTE
+  [documento omitido]. Art. 4 — Comuníquese [...]
+NOTA DE LECTURA: No dice qué se le imputa: remite a la Resolución 275 de
+Salubridad, que el corpus no trae. Funes de Lamberto fue designada interina en
+enero (10597-A, A.2) y confirmada en mayo (13.181-A, A.21). Suspensión y sumario
+de una persona nombrada que puede vivir: el libro, si lo usa, lo atribuye al
+acto y no juzga. La capa escribe «ODRINA»: la imagen, «CORINA». Los números de
+documento de la interina se omiten (E.10).
+
+A.53
+FUENTE: 4308 h8 c1 a c3 (Salta, viernes 7 de noviembre de 1952)
+FICHA: Decreto N 2502-E, 3 de noviembre de 1952, expediente 6102/C/1952: aprueba
+los índices para distribuir a las municipalidades el 10 % de la Contribución
+Territorial (ley 1183/50, art. 31) según lo recaudado en 1951: La Caldera, $
+24.362,97 y 0,235 %. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: renglón de La Caldera y encabezado del art. 1;
+el resto por la capa.
+TEXTO:
+  DECRETO N 2502-E. SALTA, Noviembre 3 de 1952. Expediente N 6102|C|1952. VISTO
+  este expediente por el que Contaduría General de la Provincia eleva a
+  consideración y aprobación del Poder Ejecutivo planilla demostrativa de los
+  índices básicos resultantes para la distribución a las Municipalidades de la
+  Provincia, del 10 % del producido de la contribución territorial durante el
+  corriente año, de conformidad a lo dispuesto por el Art. 31 de la Ley N
+  1183|50 [...] Art. 1 — Apruébense los siguientes índices básicos para la
+  distribución a las Municipalidades de la Provincia, del 10% (diez por ciento)
+  del producido de los Impuestos de la Contribución Territorial [...] Total
+  recaudac. Ejercicio Año 1951 [...] 30 La Caldera " 24.362.97 0.235 " [...]
+NOTA DE LECTURA: El importe es lo recaudado por contribución territorial en el
+municipio en 1951, no lo que recibe. Salta Capital, 5.897.167,92 y 56,789 %. El
+total del cuadro no se leyó en la imagen; 24.362,97 / 0,00235 da unos 10,4
+millones (cálculo propio, orden de magnitud).
+
+A.54
+FUENTE: 4309 h5 c1; sumario h2 (Salta, lunes 10 de noviembre de 1952)
+FICHA: Decreto N 2513-G, 4 de noviembre de 1952, expediente 7755/52: da por
+terminadas, desde el 20 de octubre, las funciones del Sub Comisario de 1a.
+categoría de La Caldera, Esteban Mogro, y nombra en su reemplazo, en carácter de
+reingreso y desde el 1 de noviembre, a José Marcos Aybar. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: la parte dispositiva; encabezado por la capa.
+TEXTO:
+  Decreto N 2513—G. Salta, Noviembre 4 de 1952. Expediente N 7755|52. Visto la
+  nota N 4287, de fecha 29 de octubre ppdo., de Jefatura de Policía, El
+  Gobernador de la Provincia DECRETA: Art. 1 — Danse por terminadas las
+  funciones del Sub Comisario de 1 categoría de La Caldera, don ESTEBAN MOGRO,
+  con anterioridad al 20 de octubre ppdo., Art. 2 — Nómbrase, con anterioridad
+  al 1 del actual, Sub Comisario de 1 categoría de La Caldera, en carácter de
+  reingreso, en reemplazo de don Esteban Mogro, a don JOSE MARCOS AYBAR. Art. 3
+  — Comuníquese [...] RICARDO J. DURAND Jorge Aranda
+NOTA DE LECTURA: Mogro duró del 1 de julio (414-G, A.29) al 20 de octubre.
+«reingreso» para Aybar, que en agosto era subcomisario de la Sección Segunda
+(1020-G, A.36): el acto no explica la baja intermedia. La capa escribe «Magro»
+en el art. 2.
+
+A.55
+FUENTE: 4310 h6 (Salta, miércoles 12 de noviembre de 1952); 16 apariciones por
+texto, 4310 a 4326
+FICHA: Edicto citatorio N 8689 de AGAS, 10 de noviembre de 1952: Manuel Condorí
+pide reconocimiento para regar con 1,34 l/s del río La Caldera 2 ha 5540 m² de
+su propiedad, catastro 178 del departamento La Caldera. Plazo: 12 de noviembre
+al 2 de diciembre. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4313 h15); repeticiones por texto.
+TEXTO:
+  N 8689 — EDICTO CITATORIO A los efectos establecidos por el Código de Aguas,
+  se hace saber que Manuel Condorí tiene solicitado reconocimiento de concesión
+  de agua pública para regar con un caudal de 1.34 l/seg. proveniente del Río La
+  Caldera, 2 Has. 5540 m2. de su propiedad catastro 178 Departamento La Caldera.
+  — Salta, 10 de noviembre de 1952. Administración General de Aguas de Salta e)
+  12|11 al 2|12|52.
+NOTA DE LECTURA: 1,34 / 2,554 = 0,525 l/s por ha (RECUENTO PROPIO). Catastro
+distinto del de septiembre (145, A.39): el acto no dice si es la misma persona.
+Ediciones con el aviso en el cuerpo (capa; el sumario no se cuenta): 4310, 4311,
+4312, 4313, 4315, 4316, 4317, 4318, 4319, 4320, 4321, 4322, 4323, 4324, 4325,
+4326.
+
+A.56
+FUENTE: 4312 h9 c3; sumario h3 (Salta, viernes 14 de noviembre de 1952)
+FICHA: Decreto N 2580-G, 7 de noviembre de 1952, expediente 7807/52 (movimiento
+de Policía): art. 6, da por terminadas desde el 1 de noviembre las funciones del
+agente de La Caldera Raúl Gustavo Lobo, «en virtud a lo informado por Jefatura
+de Policía en su apartado 6». Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: arts. 1 a 6; el encabezado por la capa.
+TEXTO:
+  [Decreto N 2580—G. Salta, Noviembre 7 de 1952. Expediente N 7807|52.] [...]
+  Art. 6 — Danse por terminadas las funciones del agente de La Caldera, don RAUL
+  GUSTAVO LOBO; con anterioridad al día 1 del actual, en virtud a lo informado
+  por Jefatura de Policía en su apartado 6. Art. 7 — Comuníquese [...] RICARDO
+  J. DURAND. Jorge Aranda
+NOTA DE LECTURA: No da motivo. Lo reemplaza Domingo Rodríguez (2717-G, A.60).
+Entre corchetes, lo leído en la capa.
+
+A.57
+FUENTE: 4312 h10 c1; sumario h3 (Salta, viernes 14 de noviembre de 1952)
+FICHA: Decreto N 2582-G, 7 de noviembre de 1952, expediente 7790/52: acepta la
+renuncia de Ramón Antonio Vivas al cargo de Juez de Paz Suplente de La Caldera,
+desde el 30 de octubre. Clase: JUSTICIA.
+MODO DE LECTURA: imagen, 140 ppp, entero.
+TEXTO:
+  Decreto N 2582—G. Salta, Noviembre 7 de 1952. Expediente N 7790|52. Visto la
+  renuncia interpuesta, El Gobernador de la Provincia DECRETA: Art. 1 — Acéptase
+  la renuncia presentada por el señor RAMON ANTONIO VIVAS, al cargo de Juez de
+  Paz Suplente de la localidad de La Caldera; con anterioridad al día 30 de
+  octubre del corriente año. [...]
+NOTA DE LECTURA: El corpus de 1952 no trae su nombramiento ni el reemplazo. El
+sumario de 4312 h3 dice «renuncia presentada por el juez de paz de La Caldera»,
+sin «suplente». La capa atribuye el artículo a la cabecera del 2585-G por el
+orden de lectura: la imagen muestra el 2582-G.
+
+A.58
+FUENTE: 4313 h5 c1 (Salta, lunes 17 de noviembre de 1952)
+FICHA: Decreto N 2590-E, 7 de noviembre de 1952, expedientes 6306/C y 6307/C/52:
+aprueba las Resoluciones 1316 y 1317-J (acta 65, 3 de noviembre) de la Caja de
+Jubilaciones: pensiones a la vejez de $ 100 mensuales (ley 1204, art. 1). Bajo
+«LA CALDERA», uno: 2104, Andrés Alfaro (Vaqueros). Clase: OTRO.
+MODO DE LECTURA: imagen, 170 ppp: encabezado, art. 1 y la lista hasta San
+Carlos.
+TEXTO:
+  DECRETO N 2590—E. Salta, Noviembre 7 de 1952. Expedientes Nos. 6306|C y
+  6307|C|52. VISTO las Resoluciones Nos. 1316 y 1317—J. (Acta N 65) por las
+  cuales la Caja de Jubilaciones y Pensiones de la Provincia de Salta acuerda
+  beneficios a la vejez conforme a lo dispuesto por Ley N 1204 [...] Art. 1 —
+  Apruébense las Resoluciones Nos. 1316 y 1317—J. (Acta N 65) de fecha 3 de
+  noviembre del corriente año por las cuales se conceden beneficios a la vejez
+  [...] con un haber mensual de $ 100.— (CIEN PESOS MONEDA NACIONAL) a cada uno
+  de los solicitantes [...] CAPITAL 2088 [...] ORAN 2099 [...] 2103 — JUAN
+  CLONTE LA CALDERA 2104 — ANDRES ALFARO (Vaqueros) ROSARIO DE LA FRONTERA 2105
+  — MARCOS NICOLA [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 24 beneficiarios en total (2088 a 2111), uno
+de La Caldera. La numeración sigue la de julio (1826-1837 en 756-A): es la serie
+de la Caja, no del departamento.
+
+A.59
+FUENTE: 4313 h15 c1 (Salta, lunes 17 de noviembre de 1952); 15 apariciones por
+texto, 4313 a 4327
+FICHA: Edicto citatorio N 8707 de AGAS, 14 de noviembre de 1952: Domingo
+Ferretti y señora piden reconocimiento para regar con 3,67 l/s del río Vaqueros
+7 ha de su propiedad «Cerro Buena Vista», catastro 182 del departamento La
+Caldera; en estiaje, turno de 40 horas mensuales con todo el caudal de la
+acequia principal. Plazo: 17 de noviembre al 5 de diciembre. Clase: AGUAS.
+MODO DE LECTURA: imagen, 200 ppp, entero.
+TEXTO:
+  N 8707 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que Domingo Ferretti y señora tienen solicitado reconocimiento
+  de concesión de agua pública para regar con un caudal de 3,67 l/seg.
+  proveniente del Río Vaqueros, 7 Has. de su propiedad "Cerro Buena Vista",
+  catastro 182 Departamento La Caldera. En estiaje, tendrá turno de 40 horas
+  mensuales con todo el caudal de la acequia principal. Salta, 14 de noviembre
+  de 1952. Administración General de Aguas de Salta, e) 17|11 al 5|12|52.
+NOTA DE LECTURA: 3,67 / 7 = 0,524 l/s por ha (RECUENTO PROPIO). La capa lee «10
+horas»; la imagen, 40. «Cerro Buena Vista» va al anillo 2. Ediciones con el
+aviso en el cuerpo (capa; el sumario no se cuenta): 4313, 4314, 4315, 4316,
+4317, 4318, 4319, 4320, 4321, 4322, 4323, 4324, 4325, 4326, 4327.
+
+A.60
+FUENTE: 4320 h6 c1 (Salta, miércoles 26 de noviembre de 1952)
+FICHA: Decreto N 2717-G, 21 de noviembre de 1952, expediente 7854/52 (nota 4490
+de Jefatura de Policía): art. 8, nombra Agente de la Sub-Comisaría de La Caldera
+a Domingo Rodríguez, desde el 16 de noviembre, en reemplazo de Raúl Lobo. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: art. 8 y cabeza del 9; el encabezado por la
+capa.
+TEXTO:
+  [DECRETO N 2717—G. Salta, noviembre 21 de 1952. Expediente N 7854|52. VISTO la
+  nota N 4490 de Jefatura de Policía] [...] Art. 8 — Nómbrase Agente de la
+  Sub-Comisaría de La Caldera, al señor DOMINGO RODRIGUEZ (C. 19?6), a partir
+  del día 16 del corriente y en reemplazo de don Raúl Lobo. [...]
+NOTA DE LECTURA: La clase del agente se lee «19?6»: el tercer dígito no se
+resuelve a 140 ppp (E.10). Entre corchetes, lo leído en la capa.
+
+A.61
+FUENTE: 4333 h6 c2; sumario h2 (Salta, martes 16 de diciembre de 1952)
+FICHA: Decreto N 2888-E, 5 de diciembre de 1952, expediente 6765/A/52: aprueba
+la Resolución 12573 (acta 394, 19 de noviembre) de Vialidad: releva a José Mompó
+de una multa y le otorga permiso para ampliar su servicio de transporte de
+pasajeros entre la ciudad y Vaqueros «hasta la localidad de La Caldera»,
+formando un todo con el permiso de la Resolución 12214. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 140 ppp: puntos 2 a 4 de la resolución; encabezado por
+la capa.
+TEXTO:
+  DECRETO N 2888—E. Salta, 5 diciembre de 1952. Expediente N 6765|A|52. VISTO
+  este expediente en el que Administración de Vialidad de Salta, eleva [...]
+  copia de la Resolución N 12573 del H. Consejo de la misma, recaída en Acta N
+  394 de fecha 19 de noviembre ppdo., El Vice Gobernador de la Provincia, en
+  Ejercicio del Poder Ejecutivo, DECRETA: Art. 1 — Apruébase [...] "1 — Hacer
+  lugar ad-referendum del Poder Ejecutivo el pedido de reconsideración
+  interpuesto por el recurrente, autorizándole a no hacer efectivo el importe de
+  la pena aplicada por Resolución N 12501 [...] "2 — Hacer lugar también al
+  retiro, por parte del señor José Mompó, de la nota citada en éstos actuados.
+  "3 — Otorgar al recurente permiso para ampliar los servicios de transportes de
+  pasajeros que realiza entre esta Ciudad y Vaqueros hasta la localidad de La
+  Caldera, formando un todo con el permiso acordado por Resolución N 12214 de
+  fecha 3|11|52 y sujeto a sus mismas condiciones y fecha de vencimiento. [...]
+  JESUS MENDEZ Nicolás Vico Gimena
+NOTA DE LECTURA: La Resolución 12.214 es la del decreto 1663-E (B.2.10), que la
+fecha «3 de setiembre» (acta 386); aquí se la cita «de fecha 3|11|52» (E.9).
+Primer servicio público de pasajeros a La Caldera en el corpus de 1952: permiso
+precario y experimental por un año para Salta-Vaqueros (septiembre), ampliado
+hasta La Caldera (diciembre).
+
+A.62
+FUENTE: 4335 h10 (Salta, jueves 18 de diciembre de 1952); 9 apariciones por
+texto, 4335 a 4343
+FICHA: Edicto citatorio N 8819 de AGAS, 17 de diciembre de 1952: Margarita M. de
+Cáceres pide reconocimiento para regar con 0,44 l/s del río La Caldera 8414 m²
+de su propiedad, catastro 25 de La Caldera. Plazo: 18 de diciembre al 12 de
+enero de 1953. Clase: AGUAS.
+MODO DE LECTURA: imagen, 180 ppp, entero (4337 h10); repeticiones por texto.
+TEXTO:
+  N 8819 — EDICTO CITATORIO: A los efectos establecidos por el Código de Aguas,
+  se hace saber que Margarita M. de Cáceres tiene solicitado reconocimiento de
+  concesión de aguas pública para regar con un caudal de 0.44 l|seg. proveniente
+  del Río la Caldera, 8414 m2, de su propiedad catastro 25 de La Caldera. Salta,
+  Diciembre 17 de 1952 Administración General de Aguas de Salta e) 18|12 al
+  12|1|53
+NOTA DE LECTURA: 0,44 / 0,8414 = 0,523 l/s por ha (RECUENTO PROPIO). El plazo
+sigue en 1953: las apariciones de enero quedan para el informe de 1953.
+Ediciones con el aviso en el cuerpo (capa; el sumario no se cuenta): 4335, 4336,
+4337, 4338, 4339, 4340, 4341, 4342, 4343.
+
+A.63
+FUENTE: 4343 h4 c1 (Salta, miércoles 31 de diciembre de 1952)
+FICHA: Decreto N 3101-E, 22 de diciembre de 1952, expediente 7093/C/52: aprueba
+la Resolución N 1417-J (acta 70, 9 de diciembre) de la Caja de Jubilaciones:
+pensiones a la vejez de $ 100 mensuales. Bajo «LA CALDERA», uno: 2129, Cástulo
+García. Clase: OTRO.
+MODO DE LECTURA: imagen, 170 ppp: encabezado y visto; la lista por la capa,
+cotejada con la imagen en el renglón de La Caldera.
+TEXTO:
+  DECRETO N 3101—E. Salta, Diciembre 22 de 1952. Expediente N 7093|C|52 VISTO la
+  nota N 2.129 de fecha 15 de diciembre del corriente año, por la cual la Caja
+  de Jubilaciones y Pensiones de la Provincia de Salta, eleva para su aprobación
+  Resolución N 1417 —J— (Acta N 70), [...] Art. 1 — Apruébase la Resolución N
+  1417 —J— (Acta N 70) de fecha 9 de diciembre [...] " 1 — ACORDAR PENSION A LA
+  VEJEZ [...] con un haber mensual de $ 100.— [...] CAPITAL: " 2121 [...] ORAN:
+  " 2127 [...] LA CALDERA: " 2129 — CASTULO GARCIA " CACHI: " 2130 [...] KICARDO
+  J. DURAND [sic en la capa] Nicolás Vico Gimena
+NOTA DE LECTURA: RECUENTO PROPIO: once beneficiarios (2121 a 2131), uno de La
+Caldera. La capa escribe «GASTOLO» y numera 3101 también el decreto siguiente;
+la imagen dice 3102-E (expediente 7092/C/52, Res. 1419, caducidades), que no
+nombra el departamento. La nota de la Caja es la N 2.129, el mismo número que la
+pensión de García: coincidencia.
+
+§B · VECINDAD
+-------------
+
+B.1 · Núcleos ya fichados
+Vaqueros, Lesser, Los Yacones, La Calderilla, Mojotoro, Potrero de Gallinato,
+Las Chuñas y el Hogar San Cayetano aparecen dentro de fichas del §A (A.1, A.6,
+A.15, A.30, A.36, A.42, A.46, entre otras): no se repiten.
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+
+B.2.1
+FUENTE: 4113 h4 c2 a h5 c1 (Salta, jueves 17 de enero de 1952)
+FICHA: Decreto N 10512-A, 31 de diciembre de 1951, expediente 10.479/51
+(Hospital «Nuestra Señora del Rosario» de Cafayate): art. 4, traslada a la
+Auxiliar 4 «Enfermera de Vaqueros», Sofía Pavón de Arashiro, al hospital de
+Cafayate desde el 1 de enero. Clase: CARGOS.
+MODO DE LECTURA: imagen, 170 ppp: encabezado (h4) y art. 4 (h5); el resto por la
+capa.
+TEXTO:
+  Decreto N 10512-A. Salta, Diciembre 31 de 1951. Expediente N 10.479|51. [...]
+  Art. 4 — Trasládase a la actual Auxiliar 4 —Enfermera de Vaqueros, señora
+  SOFIA PAVON DE ARASHIRO, al cargo de Auxiliar 4 —Enfermera del Hospital
+  "Nuestra Señora del Rosario" a partir del 1 de enero próximo. [...] CARLOS
+  XAMENA. Alberto F. Caro. Es copia: Martín A. Sánchez.
+NOTA DE LECTURA: No nombra el departamento: B.2 por «Vaqueros». La vacante la
+cubre el decreto 10597-A, art. 17 (A.2 h6).
+
+B.2.2
+FUENTE: 4116 h8 c3 (Salta, martes 22 de enero de 1952)
+FICHA: Decreto N 10.657-E, 11 de enero de 1952, orden de pago 566, expediente
+4521-I-951: paga a la Dirección General de Inmuebles $ 10.000 «para gastos de
+replanteo e inventario de la Finca "Vaqueros", expropiada por el Superior
+Gobierno de la Provincia». Clase: DOMINIO.
+MODO DE LECTURA: imagen, 140 ppp: encabezado, visto y art. 1.
+TEXTO:
+  DECRETO N 10.657 — E. Salta, Enero 11 de 1952. Orden de Pago N 566. Expediente
+  N 4521—I—951. VISTO este expediente en el que Dirección General de Inmuebles,
+  solicita se liquide a su favor la suma de $ 10.000 m|n. para gastos de
+  replanteo e inventario de la Finca "Vaqueros", expropiada por el Superior
+  Gobierno de la Provincia y atento a lo informado por Contaduría General, El
+  Gobernador de la Provincia DECRETA: Art. 1 — Páguese por Tesorería General de
+  la Provincia, previa intervención de Contaduría General, a favor de Dirección
+  General de Inmuebles, la suma de $ 10.000 m|n. (DIEZ MIL PE[SOS] [...]
+NOTA DE LECTURA: No nombra el departamento. La finca Vaqueros es la del
+departamento (A.1; mensura, A.17). La cadena del año: administrador cesado
+(diciembre de 1951), replanteo e inventario (enero), $ 50.000 en el plan de
+obras (A.4), mensura (A.17) y $ 18.000 transferidos de su partida (B.2.15).
+
+B.2.3
+FUENTE: 4144 h8 c3 y h9 c1 (Salta, miércoles 5 de marzo de 1952)
+FICHA: Decreto N 11545-E, 27 de febrero de 1952, expediente 494-C-1952: la
+A.G.A.S. pide $ 2.000 para la defensa de pequeños predios cerca del puente sobre
+el río Vaqueros; como el 11303 del 11 de febrero ya le pagó $ 900, se le liquida
+la diferencia, $ 1.100, con la misma imputación. Clase: OBRA-PUBLICA+AGUAS.
+MODO DE LECTURA: imagen, 160 ppp, entero.
+TEXTO:
+  Decreto N 11545.E. Salta, Febrero 27 de 1952. Expediente N 494—C—1952. Visto
+  este expediente al que se agregan las actuaciones por las que Administración
+  General de Aguas de Salta, se dirige al Poder Ejecutivo solicitando se liquide
+  á su favor la suma de $ 2.000.— m|n. a fin de atender con dicho importe, con
+  carácter de urgente, los gastos que demandará la defensa de pequeñas predios
+  ubicados en las proximidades del puente sobre el río Vaqueros; y CONSIDERANDO:
+  Que por decreto N 11303 del 11 del corriente mes y para los mismos fines ya
+  expuestos, el Poder Ejecutivo liquidó a favor de Administración General de
+  Aguas de Salta la suma de $ 900.—; Que en consecuencia y a los efectos de
+  conjurar el peligro de que las aguas incursionen por las fincas adyacentes al
+  mencionado río, procede liquidar la diferencia que existe entre las cantidades
+  enunciadas; Por ello, El Vice-Presidente 1 del H. Senado de la Provincia en
+  Ejercicio del Poder Ejecutivo DECRETA: Art. 1 — Previa intervención de
+  Contaduría General, páguese por Tesorería General a favor de ADMINISTRACION
+  GENERAL DE AGUAS DE SALTA y a los fines indicados precedentemente, la suma de
+  $ 1.100.— m|n. (UN MIL CIEN PESOS MONEDA NACIONAL), con imputación a la
+  partida que prevé el artículo 2 del decreto N 11.303. Art. 2o. — Comuníquese,
+  publíquese, etc. SALVADOR MICHEL ORTIZ. Ricardo J. Durand. Es copia: [Luis A.
+  Borelli].
+NOTA DE LECTURA: 2.000 − 900 = 1.100: cierra. No nombra el departamento: B.2 por
+«río Vaqueros». «Es copia» y el firmante se leen en la capa (la imagen corta en
+«Es copia:»). Erratas: «pequeñas predios».
+
+B.2.4
+FUENTE: 4158 h6 c2 (Salta, martes 25 de marzo de 1952)
+FICHA: Decreto N 11.902-A, 18 de marzo de 1952, expediente 10.268/52: aprueba el
+acta 304 del Banco de Préstamos y Asistencia Social: reparto de $ 30.000 en
+subsidios extraordinarios; entre ellos, «Asociación Hogar-Escuela "San Cayetano"
+(Vaqueros), $ 2.000». Clase: OTRO.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y el renglón de San Cayetano; la
+lista por la capa.
+TEXTO:
+  DECRETO N 11.902 — A. Salta, Marzo 18 de 1952. Expediente N 10.268|52. Visto
+  este expediente en que el H. Directorio del Banco de Préstamos y Asistencia
+  Social eleva para su aprobación acta N 304, [...] Sociedad San Vicente de Paúl
+  San Francisco, $ 1.000; Centro Cultural Perpetuo Socorro, de San Alfonso, $
+  500; Asociación Hogar-Escuela "San Cayetano (Vaqueros), $ 2.000; Hogar Santa
+  Ana, $ 500; [...]
+NOTA DE LECTURA: La capa lee «Acta N 303» en el texto transcripto de la
+resolución y 304 en el decreto: no se miró en la imagen cuál trae la resolución.
+
+B.2.5
+FUENTE: 4204 h8 (y republicado en 4209 h5); rectificación en 4219 h12 (Salta,
+lunes 2 de junio de 1952)
+FICHA: Decreto N 13.222-G, 27 de mayo de 1952, expediente 6445/52: art. 10, da
+por terminadas desde el 1 de junio las funciones de los agentes Segundo
+Rodríguez y Mamerto Alancay, de la Sub Comisaría de Vaqueros, «por infracción al
+Art. 1162 Inc. 8 del Reglamento General de Policía por reiteradas veces»; art.
+11, traslada a Vaqueros a los agentes Braulio Alvarado y Manuel D. González. El
+decreto 229-G del 18 de junio (4219 h12) rectifica: Alancay era agente de la
+Comisaría Sección Tercera, plaza 245, «afectado a Vaqueros», y González cubre
+esa plaza. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: arts. 10 y 11 (4204 h8), encabezado de la
+republicación (4209 h5, 190 ppp) y arts. 1 y 2 del 229-G (4219 h12).
+TEXTO:
+  Decreto N 13222-G. Salta, Mayo 27 de 1952. Expediente N 6445|52. Visto la nota
+  N 1626, de Jefatura de Policía, de fecha 23 del mes en curso [...] Art. 10 —
+  Danse por terminadas las funciones a los Agentes SEGUNDO RODRIGUEZ y MAMERTO
+  ALANCAY de la Sub Comisaría de Vaqueros, por infracción al Art. 1162— Inc. 8—
+  del Reglamento General de Policía por reiteradas veces, esto a partir del día
+  1 de junio próximo. Art. 11 — Trasládase a los Agentes, BRAULIO ALVARADO
+  —plaza N 13— y MANUEL D. GONZALEZ— plaza N 27— de la Comisaría Primera, a la
+  Sub Comisaría de Vaqueros, en reemplazo de Rodríguez y Alancay,
+  respectivamente. [...] (4219 h12) DECRETO N 229 — G. Salta, Junio 18 de 1952.
+  Expediente N 6560|52. VISTO lo solicitado por Jefatura de Policía, en nota N
+  1786, de fecha 6 del mes en curso, El Gob-rnador de la Provincia DECRETA: Art.
+  1 — Rectifícase el artículo 10 del decreto N 13.222, de fecha 27 de mayo
+  ppdo., dejándose establecido que la baja del Agente MAMERTO ALANCAY es como
+  Agente de la Comisaría Sección Tercera, plaza N 245, afectado a Vaqueros y no
+  como titular de ésta última dependencia. Art. 2 — Rectifícase el artículo 11
+  del decreto N 13.222 [...] el traslado del Agente plaza N 27 de la Comisaría
+  Sección Primera, don MANUEL D. GONZALEZ, es para cubrir la plaza N 245 de la
+  Comisaría Sección Tercera, afectado a Vaqueros, en reemplazo de Mamerto
+  Alancay y no como Agente titular de ésta última dependencia. [...] RICARDO J.
+  DURAND.
+NOTA DE LECTURA: No nombra La Caldera: B.2 por «Vaqueros». El mismo decreto sale
+dos veces: 4204 h8 («Mayo 27») y 4209 h5, donde la imagen dice «Marzo 27»
+(errata de la republicación, E.9; el 229-G lo cita «de fecha 27 de mayo»). Es
+una imputación de conducta a personas nombradas que pueden vivir: se transcribe
+como la trae el acto. El 229-G se imprime sin ministro refrendante en la capa
+(E.4).
+
+B.2.6
+FUENTE: 4235 h11 c3 (Salta, lunes 21 de julio de 1952)
+FICHA: Decreto N 706-A, 14 de julio de 1952: trata el pedido de jubilación
+ordinaria de la maestra de la Escuela de Vaqueros, dependiente del Consejo
+General de Educación, María Concepción Ulivarri (ley 774, art. 36, reformado por
+ley 1341); la Junta de la Caja se la acuerda. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado, visto y considerandos; la parte
+dispositiva por la capa.
+TEXTO:
+  DECRETO N 706 — A. Salta Julio 14 de 1952 Expediente N 10.8??|952 Visto este
+  expediente en el que la Maestra de la Escuela de Vaqueros dependiente del
+  Consejo General de Educación de la Provincia, señorita María Concepción
+  Ulivarri, solicita jubilación ordinaria de conformidad a las disposiciones del
+  art. 36 de la Ley 774 reformado por Ley 1341 y CONSIDERANDO: Que la Junta
+  Administradora de la Caja de Jubilaciones y Pensiones de la Provincia mediante
+  resolución N 8?01 acuerda el beneficio solicitado [...]
+NOTA DE LECTURA: Dígitos del expediente y de la resolución no resueltos a 140
+ppp (E.10). La capa de este acto está entreverada con el decreto 704-G (el
+gobernador se ausenta) y no devuelve «Ulivarri» ni «Vaqueros» enteros: la pasada
+de anillo 2 la halló por «Vaqueros» partido.
+
+B.2.7
+FUENTE: 4257 h10 c3 y h11; decreto en h9 (Salta, lunes 25 de agosto de 1952)
+FICHA: Decreto N 1273-A, 19 de agosto de 1952, expediente 10.761/52: aprueba las
+becas del Patronato Provincial de Menores para 1952; bajo «HOGAR AGRICOLA "SAN
+CAYETANO" — VAQUEROS», $ 85 cada una por 12 meses: 48 renovaciones y 30 becados
+nuevos. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: el título de la sección; la lista por la capa.
+TEXTO:
+  [DECRETO N 1273—A. Salta, 19 de agosto de 1952. Expediente N 10.761|52. Visto
+  este expediente en el que la Junta Ejecutiva del Patronato Provincial de
+  Menores eleva para su aprobación las becas [...]] HOGAR AGRICOLA "SAN
+  CAYETANO" —VAQUEROS A $ 85.— c|u, por 12 meses RENOVACION DE BECAS 1. — [...]
+  48. — [...] BECADOS EN EL AÑO 1952 49. — [...] 78. — [...]
+NOTA DE LECTURA: RECUENTO PROPIO por la capa: 78 becados (1 a 48 renovaciones,
+49 a 78 nuevos); el acto no da total. 78 x 85 x 12 = $ 79.560 al año (cálculo
+propio). No se transcriben los nombres: son menores de edad en 1952. El número
+del decreto se tomó de la capa de h9.
+
+B.2.8
+FUENTE: 4267 h11 c1 y c2 (Salta, martes 9 de septiembre de 1952)
+FICHA: Decreto N 1394-G, 28 de agosto de 1952, expediente 7146/52 (nota 2622 de
+Jefatura de Policía): punto 9, acepta la renuncia del Sub-Comisario de 2da.
+categoría de Vaqueros, Antonio Agüero, desde el 1 de septiembre, «por haberse
+acogido a los beneficios de la jubilación ordinaria». Clase: CARGOS.
+MODO DE LECTURA: imagen, 90 ppp (encabezado y puntos 1 a 8) y 140 ppp (puntos 9
+y 10).
+TEXTO:
+  DECRETO N 1394—G. Salta, agosto 28 de 1952. Expediente N 7146|52. Visto lo
+  solicitado por Jefatura de Policía en nota N 2622 de fecha 25 del actual, El
+  Gobernador de la Provincia DECRETA: Art. 1 — Dispónese el siguiente movimiento
+  de personal en Jefatura de Policía: [...] 9 Se acepta la renuncia presentada
+  por el Sub-Comisario de 2da categoría de Vaqueros, don ANTONIO AGÜERO, a
+  partir del 1 de setiembre próximo, por haberse acogido a los beneficios de la
+  jubilación ordinaria. [...]
+NOTA DE LECTURA: Agüero llegó a Vaqueros el 1 de agosto (1020-G, A.36) y se
+jubila el 1 de septiembre; lo reemplaza Zona (1541-G, A.42). El sumario de 4267
+h2 lo registra.
+
+B.2.9
+FUENTE: 4267 h14 c3 (Salta, martes 9 de septiembre de 1952)
+FICHA: Resolución N 2178-A del Ministerio de Acción Social, 3 de septiembre de
+1952: a pedido del director del Hogar Agrícola «San Cayetano» de Vaqueros, para
+los niños huérfanos y abandonados alojados allí, entrega $ 1.000 como subsidio
+al director. Clase: OTRO.
+MODO DE LECTURA: imagen, 130 ppp: entera salvo el cierre, por la capa.
+TEXTO:
+  Resolución N 2178—A. Salta, Setiembre 3 de 1952. Visto lo solicitado por el
+  Director del Hogar Agrícola "San Cayetano" de Vaqueros (Salta) en favor de los
+  niños huérfanos y abandonados de sus padres que se encuentran alojados en ese
+  Hogar, a fin de satisfacer sus necesidades actuales, y siendo propósito de
+  este Ministerio contribuir con su ayuda en este caso, colaborando así con la
+  obra de "Acción Social" en que se encuentra empeñado el Gobierno de la
+  Provincia, El Ministro de Acción Social y Salud Pública RESUELVE: Art. 1 — El
+  Habilitado Pagador de este Ministerio tomará de los fondos que se liquidan
+  para Acción Social — Varios, la suma de UN MIL PESOS MONEDA NACIONAL ($
+  1.000.—) que deberá hacerla efectiva al Director del Hogar Agrícola "San
+  Cayetano" de Vaqueros, [...]
+NOTA DE LECTURA: No nombra al director.
+
+B.2.10
+FUENTE: 4275 h8 c2 y c3 (Salta, lunes 22 de septiembre de 1952)
+FICHA: Decreto N 1663-E, 16 de septiembre de 1952, expediente 505/A/1952:
+aprueba la Resolución 12.214 (acta 386, 3 de septiembre) de Vialidad: otorga a
+José Mompó, ad referéndum y a título precario por un año, permiso para servicios
+públicos experimentales de pasajeros en automotor entre la ciudad de Salta y
+Vaqueros. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: capa (la columna viene entreverada) y la imagen del art. 1 de
+la resolución a 140 ppp.
+TEXTO:
+  DECRETO N 1663—E. Salta, setiembre 16 de 1952. Expediente N 505|A|1952. Visto
+  este expediente en el cual Administración de Vialidad de Salta, eleva [...]
+  copia de la Resolución N 12.214 dictada por el H. Consejo de la misma, recaída
+  en Acta N 386 del 3 de setiembre en curso [...] "Art. 1 — Otorgar al señor
+  JOSE MOMPO, ad-referéndum del Poder Ejecutivo, permiso en forma precaria por
+  un año, para realizar experimental servicios públicos de pasajeros en
+  automotor entre la ciudad de Salta y la localidad de Vaqueros. [...]
+NOTA DE LECTURA: Se amplía hasta La Caldera en diciembre (2888-E, A.61), que
+cita esta resolución «de fecha 3|11|52» (E.9).
+
+B.2.11
+FUENTE: 4292 h6 c1; sumario h2 (Salta, miércoles 15 de octubre de 1952)
+FICHA: Decreto N 2026-E, 3 de octubre de 1952, orden de pago 439, expediente
+824/D/952: aprueba el presupuesto de AGAS por $ 7.440 para la construcción de
+defensas sobre el río Vaqueros. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y visto; la imputación por la capa.
+TEXTO:
+  DECRETO N 2026—E. Salta, octubre 3 de 1952. Orden de Pago N 439, del
+  Ministerio de Economía. Expediente N 824|D|952. Visto este expediente en el
+  que corren las actuaciones relacionadas con la construcción de defensas sobre
+  el Río Vaqueros, cuyo presupuesto confeccionado por Administración General de
+  Aguas de Salta, asciende a la suma total de $ 7.440.—; [...]
+NOTA DE LECTURA: No dice en qué tramo del río: puede ser el de la Capital (el
+río Vaqueros corre por los dos departamentos). En febrero, otra defensa sobre el
+río Vaqueros «en Vaqueros» (11303-E, A.10, $ 900) sí nombra el lugar.
+
+B.2.12
+FUENTE: 4295 h14 c1 y c2; decreto en h14 (Salta, martes 21 de octubre de 1952)
+FICHA: Decreto N 2133-A, 14 de octubre de 1952, expediente 11.409/952: becas del
+Patronato de Menores en vacantes; bajo «HOGAR AGRICOLA SAN CAYETANO — VAQUEROS —
+BECAS NUEVAS», tres becados desde el 1 de julio. Clase: ESCUELA.
+MODO DE LECTURA: capa; el título de la sección, en la imagen a 130 ppp.
+TEXTO:
+  [Decreto N 2133—A. Salta, Octubre 14 de 1952. Expediente N 11.409|952.] [...]
+  HOGAR AGRICOLA SAN CAYETANO — VAQUEROS — BECAS NUEVAS — [...] cada una Desde
+  el 1 de julio: [tres nombres] [...]
+NOTA DE LECTURA: RECUENTO PROPIO por la capa: tres; el monto por beca no se
+resuelve en la capa. Nombres de menores: no se transcriben.
+
+B.2.13
+FUENTE: 4317 h8 c1; decreto en h7 c3 (Salta, viernes 21 de noviembre de 1952)
+FICHA: Decreto N 2684-G, 18 de noviembre de 1952, anexo G, orden de pago 297,
+expediente 7660/52: liquida a la Habilitación de Pagos de Policía el subsidio
+familiar de mayo a diciembre de 1951 del Subcomisario de Vaqueros, Manuel
+Antonio Córdoba Oviedo, por $ 1.080, reconocido por el decreto 2330 del 27 de
+octubre. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: encabezado (h7 c3) y visto (h8 c1).
+TEXTO:
+  DECRETO N 2684-G. Salta, Noviembre 18 de 1952. ANEXO "G" — Orden de Pago N
+  297. Expediente N 7660|52. Visto el presente expediente en el que Jefatura de
+  Policía de la Provincia eleva planilla de [...] subsidio familiar por el
+  período de mayo a diciembre de 1951, a favor del Subcomisario de la localidad
+  de Vaqueros, don Manuel Antonio Córdoba Oviedo y por la suma total de $
+  1.080.— moneda nacional; [...]
+NOTA DE LECTURA: Córdoba Oviedo había cesado el 1 de agosto (1020-G, A.36): se
+le paga un crédito de 1951. El decreto 2330 no se halló en el corpus por número
+(E.3).
+
+B.2.14
+FUENTE: 4320 h7 c2 (Salta, miércoles 26 de noviembre de 1952)
+FICHA: Decreto N 2725-G, 21 de noviembre de 1952, expedientes 1280/52 y 2171/52:
+da el nombre de «Lima» a la calle de la ciudad de Salta que, naciendo de la
+avenida Las Malvinas, «se dirige hacia el norte hasta la localidad de Vaqueros».
+Clase: OTRO.
+MODO DE LECTURA: capa; cotejada en la imagen a 130 ppp la frase de Vaqueros.
+TEXTO:
+  DECRETO N 2725 — G Salta, noviembre 21 de 1952. Expediente N 1280|52 y agreg.
+  N 2171|52 VISTO las actuaciones [...] a la designación de una de las calles de
+  la ciudad de Salta con el nombre de "Lima", retribuyendo igual temperamento
+  adoptado por el Gobierno de la República del Perú [...] Art. 1 — Desígnase con
+  el nombre de "LIMA", la calle de esta ciudad, que naciendo de la Avenida Las
+  Malvinas, se dirige hacia el norte hasta la localidad de Vaqueros. [...]
+NOTA DE LECTURA: Vaqueros aparece como punto de llegada de un camino desde la
+Capital; el acto no dice por qué departamentos pasa.
+
+B.2.15
+FUENTE: 4326 h7 c1; decreto en h6 c3 (Salta, jueves 4 de diciembre de 1952)
+FICHA: Decreto N 2838-E, 27 de noviembre de 1952, orden de pago 550, expediente
+2392/A/1952: para pagar $ 18.000 de honorarios del Ing. Eduardo Arias en el
+juicio de expropiación de la finca La Banda (Cafayate), transfiere esa suma de
+la partida 27 «Expropiación Finca Vaqueros». Clase: DOMINIO.
+MODO DE LECTURA: capa; el art. 1 cotejado en la imagen a 130 ppp.
+TEXTO:
+  DECRETO N 2838—E Orden de Pago N 550 del Ministerio de Economía Salta,
+  noviembre 27 de 1952 Expediente N 2392|A|1952 VISTO este expediente por el que
+  el Ing. Eduardo Arias gestiona el pago de $ 18.000, importe de los honorarios
+  fijados por la H. Corte de Justicia de la Provincia por el trabajo pericial
+  realizado en el juicio "Fisco Provincial contra Ceferino Velarde Expropiación
+  Finca La Banda" [...] Art. 1 — Autorízase a Contaduría General de la Provincia
+  a transferir del Anexo I— Inciso 1— Principal 2— Parcial c) Partida 27
+  "Expropiación Finca Vaqueros", la suma de $ 18.000 [...] para reforzar la
+  Partida 15 del mismo Parcial "Cafayate Expropiación Finca La Banda" [...]
+NOTA DE LECTURA: La partida de la finca Vaqueros tenía saldo para ceder $ 18.000
+en noviembre. Eduardo Arias está en el config (1927).
+
+B.2.16
+FUENTE: 4338 h5 c2; decreto en h5 (Salta, martes 23 de diciembre de 1952)
+FICHA: Decreto N 3044-A, 17 de diciembre de 1952, expediente 11.971/952: becas
+del Patronato de Menores en vacantes; bajo «HOGAR AGRICOLA SAN CAYETANO», dos
+becas nuevas de $ 85 desde el 1 de noviembre. Clase: ESCUELA.
+MODO DE LECTURA: capa; el título de la sección en la imagen a 130 ppp.
+TEXTO:
+  DECRETO N 3044—A Salta, Diciembre 17 de 1952 Expediente N 11.971|952 VISTO
+  este expediente en el que la Junta Ejecutiva del Patronato Provincial de
+  Menores eleva para su aprobación las becas concedidas para el corriente año,
+  en las vacantes producidas por renuncias [...] HOGAR AGRICOLA SAN CAYETANO
+  Becas nuevas Desde 1 de noviembre a $ 85. m|n. cada uno. [dos nombres]
+NOTA DE LECTURA: No dice Vaqueros; se atribuye por el nombre del hogar, que en
+el año sólo designa al de Vaqueros salvo el «Hogar San Cayetano» de Metán (B.3).
+En el mismo decreto, una becada del Colegio Santa Rosa se apellida Lesser:
+apellido (B.3). La capa numera el decreto «30441».
+
+B.3 · Términos que ese año son otra cosa
+Anillo 1 (el término, fuera del departamento o en otro sentido):
+  - «Pasaje La Caldera», calle de la manzana 49 de la Capital, en un edicto de
+    remate (4215 h7). Lo atribuye el acto.
+  - «caldera» como aparato: «una caldera y dos cocinas» de más en la escuela de
+    El Tala (4156 h5, 4163 h9); «caldera del lavadero» de un hospital y
+    «calderas de los hospitales» (fuel oil, 4338 h6).
+  - «río Caldhaqui» por Calchaquí (4248 h14).
+  - «Calderón» (120: personas, sucesión de Tomasa Castro de Calderón y otras),
+    «caldoso» (el juez interino leído así, 4222 h18), «caldo» por caído (4110
+    h7).
+Anillo 2:
+  - «finca miraflores»: además de la de La Calderilla (fichas), una finca
+    «Miraflores que fue del Gral. Gregorio Vélez» en Jardín, La Candelaria
+    (4206, 4209, 4213, 4214).
+  - «castañares»: inmueble «Castañares» del departamento Capital, catastro 6541,
+    de Jaime Durán (AGAS, 4238 h10); pensión de Salomé Donaire de González,
+    «(Castañares)», bajo La Viña (4247 h13).
+  - «san cayetano»: «Hogar San Cayetano» de Metán (Res. 2271-A, 4329 h2 y h5:
+    investigación de «una situación de orden interno»); los demás son el de
+    Vaqueros (B.2).
+  - «lesser», «wierna», «condori», «murua», «mamani», «castellanos», «aramayo»,
+    «apaza»: apellidos en actos de otros lugares, salvo las fichas.
+  - «entre rios», «mojotoro»: finca «Entre Ríos» y río Mojotoro de Cobos,
+    General Güemes (Cía. Citrícola Cobos, 4278-4280); calle y provincia (49
+    hojas).
+  - «higueritas», «nogalito», «el tunal», «el recreo», «despensa», «severino»,
+    «el sauce», «los sauces», «durazno», «la laguna», «tabacal», «el bordo»:
+    lugares de Metán, Anta, Cafayate, La Viña, Orán y otros, o nombres de
+    persona.
+
+B.4 · Anillo de actores
+Actores de las fichas de 1952 buscados en todo el corpus por nombre completo,
+sin puntuación, y por apellido donde la capa lo parte:
+  1) Sólo en su propio acto (con sus repeticiones): Jorge A. Rauch, Luis
+  Linares, Teófilo Reyes y Blanca Esther Reyes, Miguel Cayo, Yolanda Alacevich
+  (además, su adscripción a Güemes: 4103 h4, 4168 h4), Raúl Gustavo Lobo, Ramón
+  Antonio Vivas, Domingo Rodríguez, Humberto Zona, Corina Adela Bustamante,
+  Eusebio García, Andrés Alfaro, Cástulo García, los doce pensionados de julio,
+  Salustiano y Marcelina Jurado, José Martín Caro, Dina I. Lozano de Robles,
+  Isabel Yufra de Iriarte, Elena Alonso de Juárez, Laura Aráoz de Murúa, Domingo
+  Ferretti, Margarita M. de Cáceres, Francisco S. Urquiza, María Concepción
+  Ulivarri.
+  2) En más de un acto del departamento: Arminda Funes de Lamberto (interina en
+  enero, confirmada en mayo, suspendida en octubre: A.2, A.21, A.52); Esteban
+  Mogro (A.29, A.54); José Marcos Aybar (A.36, A.54); Antonio Agüero (A.36,
+  B.2.8, A.42); Manuel Antonio Córdoba Oviedo (A.36, B.2.13); Ángel Finetti
+  (A.12, A.34); Lorenza Lozano (edicto y dos decretos: A.9, A.11, A.32); José
+  Mompó (B.2.10, A.61; además la multa de la Res. 12.501, 4334 h6); Raúl Lobo
+  (A.56, A.60); Eugenia F. Ussy (A.19, A.24); Manuel Condori o Condorí (A.39,
+  A.55: catastros distintos); el Hogar San Cayetano de Vaqueros (cinco actos de
+  B.2 y A.31); Jesús Méndez, vicegobernador en ejercicio, firma A.30, A.41 y
+  A.61. Es la trama del año: el edificio del hospital pasa a ser el Hogar Evita,
+  la estación sanitaria se inaugura y recibe médica con residencia fija, y la
+  subcomisaría de La Caldera y la de Vaqueros cambian de titular cuatro veces.
+  3) También fuera del departamento: Esteban Mogro, subcomisario de El Perchel
+  (Rosario de Lerma) en diciembre de 1951, con servicios reconocidos en marzo
+  (4116 h7, 4164 h5); José M. Aybar, reemplazado en la Comisaría 2a. en
+  diciembre (4338 h6, sin nombrar La Caldera); Sofía Pavón de Arashiro, en
+  Cafayate todo el año, con licencia y cesantía (4126 h14, 4203 h11 y h13, 4330
+  h6); Ana María Cornejo de Durand, ejecutante en un remate (4104-4110); Eduardo
+  Arias, perito en la expropiación de La Banda (Cafayate); Justo Pastor Lizondo,
+  sólo en su ficha (un «Lizondo» más es otro: 4216 h10, 4223 h5, 4236 h14).
+Actores del config con cargo en el departamento que no aparecen en 1952: Hellmut
+Hans Raschke (médico regional de Coronel Moldes, 4104 h7; su esposa, enfermera
+allí: no en La Caldera), Martha Davids («Davids» sólo como apellido de otra
+empleada, 4137 h6), R. P. Faustino Monti (Hogar San Cayetano, 1950), Augusto E.
+Paladini (sin acierto). Identificadores: nombre, cargo y lugar. El intendente
+municipal de La Caldera preside la comisión Pro-Hogar ({N(4201)},
+{N(4248,"1.034")}) y no se nombra en ningún acto del año.
+
+§C · LIMITROFES
+---------------
+Anillo 3, con una línea: la Capital (calle «Lima» hacia Vaqueros, B.2.14; río
+Vaqueros, cuyo tramo en B.2.11 no se nombra); General Güemes (Mojotoro: el acto
+de A.30 pone Mojotoro bajo La Caldera; el río Mojotoro y Cobos son de Güemes,
+B.3); Rosario de Lerma (El Perchel, B.4). Ningún acto de límites
+interdepartamentales en 1952.
+
+§P · PLANOS
+-----------
+1952 no publica ningún plano: las 4.303 hojas son texto, cuadros y balances
+(1.293 miradas en planchas, §1). Planos citados y no acompañados que tocan al
+departamento: ninguno por su nombre; la mensura general de la finca Vaqueros
+(A.17) supone un plano que el acto no menciona. Techo de resolución: 150 ppi de
+trabajo hasta septiembre, cerca de 400 desde octubre (§1).
+
+§D · INDICE
+-----------
+  4111  h5  CARGOS+DOMINIO           A.1     
+              Decreto N 10425-E, 26 de diciembre de 1951: da por terminadas las
+              funciones de Jorge A. Rauch, Oficial 2 de Contaduría General, como
+              Admi…
+  4113  h4  CARGOS                   B.2.1   
+              Decreto N 10512-A, 31 de diciembre de 1951, expediente 10.479/51
+              (Hospital «Nuestra Señora del Rosario» de Cafayate): art. 4,
+              traslada a …
+  4115  h6  CARGOS                   A.2     
+              Decreto N 10597-A, fechado «8 de Diciembre de 1951», expediente
+              11.542/51 (sumario del hospital «San Roque» de Embarcación y
+              traslados): …
+  4116  h8  DOMINIO                  B.2.2   
+              Decreto N 10.657-E, 11 de enero de 1952, orden de pago 566,
+              expediente 4521-I-951: paga a la Dirección General de Inmuebles $
+              10.000 «par…
+  4116  h9  AGUAS                    A.3     
+              Decreto N 10662-E, 11 de enero de 1952, expediente 2503/I/51: a
+              pedido de reconsideración de Luis Linares, y por resolución 1.179
+              del H. …
+  4128  h4  OBRA-PUBLICA+DOMINIO     A.4     
+              Decreto N 11064-E, 29 de enero de 1952: autoriza en forma
+              provisoria los créditos del plan de obras de 1952, con fondos
+              nacionales y de o…
+  4128  h14 AGUAS                    A.5     
+              Decreto N 11095-E, 30 de enero de 1952, expediente 44/L/52:
+              reconoce a Mercedes Sarapura de Lozano una concesión de 0,79 l/s
+              del río La C…
+  4128  h16 AGUAS                    A.6     
+              Decreto N 11102-E, 30 de enero de 1952, expediente 46/S/52:
+              reconoce a Julia Cruz de Salustri 1,6 l/s del río Wierna,
+              permanente y a perp…
+  4132  h5  AGUAS                    A.7     
+              Decreto N 11197-E, 5 de febrero de 1952, expediente 47/S/52:
+              reconoce a Argentina Suárez Wilde de Serrey 0,20 l/s del río La
+              Caldera, per…
+  4133  h8  HACIENDA-MUN             A.8     
+              Resolución N 1384-E del Ministerio de Economía, 4 de febrero de
+              1952, expediente 15322/951: anula las boletas de contribución
+              territorial…
+  4136  h12 AGUAS                    A.9     
+              Edicto citatorio N 7857 de la A.G.A.S. (Salta, 19 de febrero de
+              1952): Lorenza Lozano pide reconocimiento de 0,525 l/s del río La
+              Caldera…
+  4137  h7  OBRA-PUBLICA+AGUAS       A.10    
+              Decreto N 11303-E, Orden de Pago N 65, 11 de febrero de 1952,
+              expediente 4632/V/1951: a pedido de vecinos de Vaqueros,
+              «jurisdicción del …
+  4141  h12 AGUAS                    A.11    
+              Decreto N 11484-E, 19 de febrero de 1952, expediente 289/L/52:
+              reconoce a Lorenza Lozano 1,05 l/s del río La Caldera, permanente
+              y a perp…
+  4144  h8  OBRA-PUBLICA+AGUAS       B.2.3   
+              Decreto N 11545-E, 27 de febrero de 1952, expediente 494-C-1952:
+              la A.G.A.S. pide $ 2.000 para la defensa de pequeños predios cerca
+              del p…
+  4147  h4  AGUAS                    A.12    
+              Edicto citatorio N 7911 de la Administración General de Aguas, 10
+              de marzo de 1952: Ángel Finetti pide reconocimiento de concesión
+              para r…
+  4150  h11 AGUAS                    A.13    
+              Decreto N 11653-E, 4 de marzo de 1952, expediente 394/D/52:
+              reconoce a Ana María Cornejo de Durand 10,5 l/s del río Mojotoro,
+              «siempre qu…
+  4158  h6  OTRO                     B.2.4   
+              Decreto N 11.902-A, 18 de marzo de 1952, expediente 10.268/52:
+              aprueba el acta 304 del Banco de Préstamos y Asistencia Social:
+              reparto de…
+  4176  h14 REGISTRO-CIVIL           A.14    
+              Decreto N 12521-A, 16 de abril de 1952, expediente 10.440/52:
+              aprueba la resolución 657-J (acta 45) del 27 de marzo de la Junta
+              Administr…
+  4177  h5  ESCUELA                  A.15    
+              Decreto N 12529-G, 18 de abril de 1952, expediente 5759/52:
+              concede aquiescencia a la Dirección Nacional de Enseñanza Primaria
+              para insta…
+  4182  h21 HACIENDA-MUN             A.16    
+              Resumen del movimiento de Tesorería General de la Provincia, 1 al
+              31 de enero de 1952 (aprobado por Contaduría el 18 de abril):
+              entre los…
+  4187  h8  DOMINIO                  A.17    
+              Decreto N 12744-E, 30 de abril de 1952, expediente 873/I/1952:
+              autoriza a la Dirección General de Inmuebles a pagar 2/3 de los
+              viáticos a…
+  4197  h10 ESCUELA                  A.18    
+              Resolución N 2082-A del Ministerio de Acción Social, 14 de mayo de
+              1952: paga $ 1.100 a la Tienda La Tropical por 40 frazadas a $
+              27,50 «…
+  4201  h6  ESCUELA+OBRA-PUBLICA     A.19    
+              Decreto N 13108-A, 22 de mayo de 1952, expediente 10.449/52: a
+              pedido reiterado de autoridades y vecinos de La Caldera, destina
+              «por el c…
+  4202  h4  ELECTORAL+NORMA          A.20    
+              Ley N 1433 (sancionada el 16 de mayo, promulgada el 26 de mayo de
+              1952): modifica la Ley 745 de 1946; para la renovación de las
+              Cámaras s…
+  4203  h11 CARGOS                   A.21    
+              Decreto N 13.181-A, 26 de mayo de 1952: confirma a Arminda Funes
+              de Lamberto como Auxiliar 4 «Enfermera de La Caldera», cargo que
+              venía d…
+  4204  h8  CARGOS                   B.2.5   
+              Decreto N 13.222-G, 27 de mayo de 1952, expediente 6445/52: art.
+              10, da por terminadas desde el 1 de junio las funciones de los
+              agentes S…
+  4208  h5  OBRA-PUBLICA             A.22    
+              Resolución N 2092-A del Ministerio de Acción Social, 20 de mayo de
+              1952: paga $ 991,70 a Peral García y Cía. por artículos de menaje
+              «con…
+  4213  h8  ESCUELA                  A.23    
+              Resolución N 2.119-A del Ministerio de Acción Social, 2 de junio
+              de 1952: paga $ 1.394 a la Mueblería «Imperio» por el
+              amueblamiento del …
+  4213  h8  ESCUELA                  A.24    
+              Resolución N 2.121-A del Ministerio de Acción Social, 9 de junio
+              de 1952: $ 446,20 para reponer ropa y útiles a Eugenia Facunda
+              Ussy, emp…
+  4215  h6  REGISTRO-CIVIL+CARGOS    A.25    
+              Decreto N 13.348-G, 2 de junio de 1952: acepta la renuncia de
+              Teófilo Reyes al cargo de Encargado de la Oficina del Registro
+              Civil de La …
+  4218  h5  HACIENDA-MUN+DOMINIO     A.26    
+              Decreto N 140-E, Orden de Pago N 274, 13 de junio de 1952,
+              expediente 15218-952: paga $ 309 a la Dirección General de Rentas
+              para reinteg…
+  4219  h9  CARGOS                   A.27    
+              Decreto N 214-G, 17 de junio de 1952, expediente 6584/52: da por
+              terminadas, desde el 1 de junio, las funciones de doce agentes de
+              Jefatu…
+  4223  h8  HACIENDA-MUN             A.28    
+              Resolución N 15-E del Ministerio de Economía, 27 de junio de 1952:
+              para regularizar los pagos de participaciones a las
+              municipalidades, m…
+  4226  h6  CARGOS                   A.29    
+              Decreto N 414-G, 30 de junio de 1952, expediente 6654/52: traslada
+              al Sub-Comisario de 1ra. categoría de La Caldera, Francisco
+              Arroyo, co…
+  4235  h11 ESCUELA                  B.2.6   
+              Decreto N 706-A, 14 de julio de 1952: trata el pedido de
+              jubilación ordinaria de la maestra de la Escuela de Vaqueros,
+              dependiente del Co…
+  4236  h13 OTRO                     A.30    
+              Decreto N 756-A, 16 de julio de 1952, expediente 10.988/952:
+              aprueba la Resolución N 932 (3 de julio) de la Junta de la Caja de
+              Jubilacio…
+  4237  h8  HACIENDA-MUN             A.31    
+              Resolución N 33-E del Ministerio de Economía, 21 de julio de 1952,
+              expediente 15115/1951: anula las boletas de contribución
+              territorial d…
+  4238  h12 AGUAS                    A.32    
+              Decreto N 804-E, 18 de julio de 1952, expediente 1289/L/1952: el
+              Vicegobernador en ejercicio aprueba la resolución 289 del 13 de
+              junio de…
+  4238  h17 DOMINIO                  A.33    
+              Edicto N 8323, juzgado de Primera Nominación Civil: Salustiano y
+              Marcelina Jurado piden posesión treintañal de la finca «Villa
+              Vieja» y «…
+  4244  h9  AGUAS                    A.34    
+              Decreto N 917-E, 30 de julio de 1952, expediente 1577-F-1952:
+              aprueba la Resolución N 332 (23 de junio) de la Intervención de
+              AGAS, exped…
+  4246  h15 AGUAS                    A.35    
+              Edicto citatorio N 8351 de AGAS: José Martín Caro pide
+              reconocimiento de concesión para regar con 1,05 l/s del río La
+              Caldera 2 ha de su …
+  4247  h19 CARGOS                   A.36    
+              Decreto N 1020-G, 5 de agosto de 1952, expediente 6892/52: da por
+              terminadas desde el 1 de agosto las funciones del Sub-Comisario de
+              2a. …
+  4248  h6  OBRA-PUBLICA             A.37    
+              Decreto N 1001-E, 4 de agosto de 1952, orden de pago 342,
+              expediente 1786/A/952: aprueba gastos por $ 1.057 y $ 230 que la
+              Dirección Gene…
+  4248  h8  ESCUELA                  A.38    
+              Decreto N 1.034-A, 5 de agosto de 1952: modifica los arts. 2 y 3
+              del decreto 13.108 (22 de mayo): el subsidio de $ 3.000 mensuales
+              para e…
+  4257  h10 ESCUELA                  B.2.7   
+              Decreto N 1273-A, 19 de agosto de 1952, expediente 10.761/52:
+              aprueba las becas del Patronato Provincial de Menores para 1952;
+              bajo «HOGA…
+  4264  h4  AGUAS                    A.39    
+              Edicto citatorio N 8433 de AGAS, 3 de septiembre de 1952: Manuel
+              Condori pide reconocimiento para regar con 2,26 l/s del río La
+              Caldera 4…
+  4265  h18 AGUAS                    A.40    
+              Edicto citatorio N 8455 de AGAS, 9 de septiembre de 1952: Dina I.
+              Lozano de Robles pide reconocimiento para regar con 0,39 l/s del
+              río La…
+  4267  h11 CARGOS                   B.2.8   
+              Decreto N 1394-G, 28 de agosto de 1952, expediente 7146/52 (nota
+              2622 de Jefatura de Policía): punto 9, acepta la renuncia del Sub-
+              Comisa…
+  4267  h14 OTRO                     B.2.9   
+              Resolución N 2178-A del Ministerio de Acción Social, 3 de
+              septiembre de 1952: a pedido del director del Hogar Agrícola «San
+              Cayetano» de …
+  4269  h6  CARGOS                   A.41    
+              Decreto N 1504-A, 2 de septiembre de 1952: vistas las necesidades
+              de la Estación Sanitaria de La Caldera y caducado el decreto
+              12.225 (25…
+  4270  h5  CARGOS                   A.42    
+              Decreto N 1541-G, 4 de septiembre de 1952, expediente 7209/52
+              (movimiento de personal de Policía): art. 6, traslada desde el 1
+              de septiem…
+  4273  h12 AGUAS                    A.43    
+              Edicto citatorio N 8472 de AGAS, 17 de septiembre de 1952: Isabel
+              Yufra de Iriarte pide reconocimiento para regar con 0,88 l/s del
+              río La…
+  4275  h8  OBRA-PUBLICA             B.2.10  
+              Decreto N 1663-E, 16 de septiembre de 1952, expediente 505/A/1952:
+              aprueba la Resolución 12.214 (acta 386, 3 de septiembre) de
+              Vialidad: …
+  4285  h8  AGUAS                    A.44    
+              Edicto citatorio N 8527 de AGAS, 3 de octubre de 1952: Elena
+              Alonso de Juárez pide reconocimiento para regar con 1,33 l/s del
+              río La Cald…
+  4287  h15 CARGOS+ESCUELA           A.45    
+              Decreto N 1945-E, 1 de octubre de 1952: por los decretos 6136
+              nacional y 1793 provincial, designa jefes departamentales para el
+              levantami…
+  4292  h6  OBRA-PUBLICA             B.2.11  
+              Decreto N 2026-E, 3 de octubre de 1952, orden de pago 439,
+              expediente 824/D/952: aprueba el presupuesto de AGAS por $ 7.440
+              para la const…
+  4294  h12 ESCUELA                  A.46    
+              Decreto N 2110-G, 10 de octubre de 1952, expediente 7506/52: a
+              pedido de la Inspección Técnica Seccional de Escuelas Nacionales,
+              actualiz…
+  4295  h14 ESCUELA                  B.2.12  
+              Decreto N 2133-A, 14 de octubre de 1952, expediente 11.409/952:
+              becas del Patronato de Menores en vacantes; bajo «HOGAR AGRICOLA
+              SAN CAYE…
+  4297  h6  ESCUELA                  A.47    
+              Resolución N 2221-A del Ministerio de Acción Social, 21 de octubre
+              de 1952, expediente 11.714/52: a pedido de la visitadora a cargo
+              del H…
+  4297  h8  AGUAS                    A.48    
+              Edicto citatorio N 8613 de AGAS, 22 de octubre de 1952: Laura
+              Aráoz de Murúa pide reconocimiento para regar con 0,36 l/s del río
+              La Calde…
+  4301  h9  HACIENDA-MUN             A.49    
+              Decreto N 2291-E, 22 de octubre de 1952, expediente 5884/C/1952:
+              aprueba los índices para distribuir a los municipios el 10 % de
+              los impu…
+  4305  h10 HACIENDA-MUN             A.50    
+              Decreto N 2413-E, 29 de octubre de 1952, expediente 6017/C/1952:
+              aprueba los índices para distribuir a las municipalidades el 25 %
+              de lo …
+  4305  h13 ESCUELA                  A.51    
+              Resolución N 2237-A del Ministerio de Acción Social, 29 de octubre
+              de 1952, expediente 11.751/51: paga $ 943,90 a B. A. Martínez
+              Comercia…
+  4306  h8  CARGOS                   A.52    
+              Decreto N 2434-A, 30 de octubre de 1952, expediente 11.767/52:
+              suspende por tiempo indeterminado, hasta la instrucción del
+              sumario (ley 1…
+  4308  h8  HACIENDA-MUN             A.53    
+              Decreto N 2502-E, 3 de noviembre de 1952, expediente 6102/C/1952:
+              aprueba los índices para distribuir a las municipalidades el 10 %
+              de la…
+  4309  h5  CARGOS                   A.54    
+              Decreto N 2513-G, 4 de noviembre de 1952, expediente 7755/52: da
+              por terminadas, desde el 20 de octubre, las funciones del Sub
+              Comisario …
+  4310  h6  AGUAS                    A.55    
+              Edicto citatorio N 8689 de AGAS, 10 de noviembre de 1952: Manuel
+              Condorí pide reconocimiento para regar con 1,34 l/s del río La
+              Caldera 2…
+  4312  h9  CARGOS                   A.56    
+              Decreto N 2580-G, 7 de noviembre de 1952, expediente 7807/52
+              (movimiento de Policía): art. 6, da por terminadas desde el 1 de
+              noviembre l…
+  4312  h10 JUSTICIA                 A.57    
+              Decreto N 2582-G, 7 de noviembre de 1952, expediente 7790/52:
+              acepta la renuncia de Ramón Antonio Vivas al cargo de Juez de Paz
+              Suplente …
+  4313  h5  OTRO                     A.58    
+              Decreto N 2590-E, 7 de noviembre de 1952, expedientes 6306/C y
+              6307/C/52: aprueba las Resoluciones 1316 y 1317-J (acta 65, 3 de
+              noviembre…
+  4313  h15 AGUAS                    A.59    
+              Edicto citatorio N 8707 de AGAS, 14 de noviembre de 1952: Domingo
+              Ferretti y señora piden reconocimiento para regar con 3,67 l/s del
+              río …
+  4317  h8  CARGOS                   B.2.13  
+              Decreto N 2684-G, 18 de noviembre de 1952, anexo G, orden de pago
+              297, expediente 7660/52: liquida a la Habilitación de Pagos de
+              Policía …
+  4320  h6  CARGOS                   A.60    
+              Decreto N 2717-G, 21 de noviembre de 1952, expediente 7854/52
+              (nota 4490 de Jefatura de Policía): art. 8, nombra Agente de la
+              Sub-Comisar…
+  4320  h7  OTRO                     B.2.14  
+              Decreto N 2725-G, 21 de noviembre de 1952, expedientes 1280/52 y
+              2171/52: da el nombre de «Lima» a la calle de la ciudad de Salta
+              que, na…
+  4326  h7  DOMINIO                  B.2.15  
+              Decreto N 2838-E, 27 de noviembre de 1952, orden de pago 550,
+              expediente 2392/A/1952: para pagar $ 18.000 de honorarios del Ing.
+              Eduardo …
+  4333  h6  OBRA-PUBLICA             A.61    
+              Decreto N 2888-E, 5 de diciembre de 1952, expediente 6765/A/52:
+              aprueba la Resolución 12573 (acta 394, 19 de noviembre) de
+              Vialidad: rele…
+  4335  h10 AGUAS                    A.62    
+              Edicto citatorio N 8819 de AGAS, 17 de diciembre de 1952:
+              Margarita M. de Cáceres pide reconocimiento para regar con 0,44
+              l/s del río La …
+  4338  h5  ESCUELA                  B.2.16  
+              Decreto N 3044-A, 17 de diciembre de 1952, expediente 11.971/952:
+              becas del Patronato de Menores en vacantes; bajo «HOGAR AGRICOLA
+              SAN CA…
+  4343  h4  OTRO                     A.63    
+              Decreto N 3101-E, 22 de diciembre de 1952, expediente 7093/C/52:
+              aprueba la Resolución N 1417-J (acta 70, 9 de diciembre) de la
+              Caja de J…
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación, tinta y saldos
+Actos publicados dos veces: el decreto 13.222-G (4204 h8 y 4209 h5, B.2.5), con
+fecha distinta en la republicación (E.9). Tinta y resolución: §1.
+Resúmenes de Tesorería publicados en 1952: cuatro. Noviembre de 1951 (4123
+h26-h28); diciembre de 1951 (4142-4143, aprobado el 11 de febrero); enero de
+1952 del ejercicio 1951, período complementario (4157 h19-h20, sin renglón de
+saldo en la capa); enero de 1952 del ejercicio 1952 (4182 h20-h22, aprobado el
+18 de abril). Cadena, por la cifra, con los saldos mirados en la imagen a 150
+ppp:
+  nov 1951: abre 2.295.345,68 (oct) — cierra 1.689.152,70
+  dic 1951: abre 1.689.152,70 — cierra 1.678.929,17
+  ene 1952: abre 1.678.929,17 — cierra 519.351,45 (pasa a febrero)
+  [febrero a diciembre de 1952 no publicados]
+cadena_saldos: un tramo, noviembre de 1951 a enero de 1952, encadenado en los
+dos pasos. Contra el informe de 1951: su último cierre publicado era el de
+septiembre de 1951 (2.028.501,58); octubre no se publicó y la apertura de
+noviembre como «saldo de octubre» (2.295.345,68) no es puente.
+Subtotales recalculados (5): plan de obras (A.4, 38 renglones, 5.280.300,
+cierra); boletas del Hogar San Cayetano (A.31, 4.987,39, cierra); gastos de la
+estación sanitaria (A.37, 1.287, cierra); municipalidades en el resumen de enero
+(A.16, 55.000, cierra); índice de Actividades Lucrativas de La Caldera sobre el
+total (A.50, 0,3356 contra 0,336 impreso, cierra). Los balances municipales del
+año son de Aguaray (4109-4110) y La Merced (4125-4129): ninguno de La Caldera
+(balances_municipales: 0).
+
+E.2 · Cobertura
+Las 241 ediciones del año, sin huecos, 4.303 hojas; las 93 hojas faltantes de 88
+ediciones y las dudas de lectura van a E.10. La capa se leyó entera con las
+pasadas del §2; la imagen, en las hojas del §1.
+
+E.3 · Sin mención y no mirado
+Citados y no acompañados: la Resolución 275 de Salubridad que funda la
+suspensión de A.52; el decreto 12.225 (adscripción de Alacevich, citado en A.41;
+su prórroga sí está: 4168 h4); el decreto 2330 del 27 de octubre (crédito de
+B.2.13); la Resolución 12.501 (multa a Mompó: su aprobación está en 4334 h6);
+las aquiescencias anteriores que actualiza A.46; los decretos 6136 nacional y
+1793 provincial del censo (A.45); la Ley 1398 invocada en A.31. Vacantes que
+sólo constan por su revocación o su reemplazo: el nombramiento de Ramón Antonio
+Vivas como juez de paz suplente y el de Raúl Lobo como agente no están en el
+corpus. No mirado en la imagen: la costura de 1541-G entre 4270 h4 y h5 (A.42),
+los encabezados de A.56, A.60 y B.2.7 (leídos en la capa) y las listas de becas
+fuera de los títulos.
+
+E.4 · Firmas y autoridad
+Gobernador en la tapa: Sr. Carlos Xamena de la 4103 a la 4205 (3 de junio); Dr.
+Ricardo J. Durand desde la 4206 (5 de junio) hasta el cierre. La numeración de
+decretos recomienza con el nuevo gobierno: 13.348-G el 2 de junio, 140-E el 13
+de junio, 214-G el 17. Ministros en la tapa: Gobierno, Dr. Pedro De Marco en la
+4103 (murió el 2 de enero: decreto de duelo 10538-G, §1), Sr. Jorge Aranda
+«interino» desde la 4104 hasta cerca de la 4138 y sin esa marca después;
+Economía, Ricardo J. Durand hasta la 4205 y Sr. Nicolás Vico Gimena desde la
+4206 (Vico Gimena firma como ministro desde enero, sin figurar en la tapa);
+Acción Social, Dr. Alberto F. Caro hasta la 4205 y Dr. Walder Yáñez desde la
+4206.
+Interinatos del Poder Ejecutivo: Salvador Michel Ortiz, vicepresidente 1 del
+Senado en ejercicio, firma en enero y febrero (A.10, A.11); el decreto 704-G (11
+de julio, 4235 h11) y el 1393-G (28 de agosto, 4267 h11) registran ausencias del
+gobernador Durand; Jesús Méndez, vicegobernador en ejercicio, firma en julio,
+septiembre y diciembre (A.30, A.41, A.42, A.61). No se fija el día de cada
+reintegro. Firmas de subsecretario a cargo de la cartera: Octavio Alberto
+Guerrero (A.8, con firma de Vico Gimena). Se registran todas y no se concilian.
+
+E.5 · Cortes y columnas
+Columnas cotejadas entre imagen y capa: 104, las de las 79 fichas. Columna
+perdida: ninguna. Lo que falla es la palabra suelta y el orden: la lista de La
+Caldera de A.30 entreverada con la de Guachipas y La Viña, sin seis números; la
+capa atribuye el art. de Vivas a la cabecera del 2585-G (A.57) y numera 3101 el
+decreto 3102-E (A.63); cifras que deciden, mal leídas por la capa y corregidas
+en la imagen: «1 Has.» por 4 (A.39), «10 horas» por 40 (A.59), «1A3» y «5296»
+por 1,33 y 5290 (A.44), «ODRINA» por Corina (A.52), «24113» por 2413 (A.50).
+Toda palabra que decide una ficha se miró.
+
+E.6 · Repeticiones
+Por texto, sin fiarse del número de aviso: A.9 (15), A.12 (14), A.33 (30), A.35
+(12), A.39 (14), A.40 (15), A.43 (14), A.44 (15), A.48 (14), A.55 (16), A.59
+(15), A.62 (9). El número 8351 lo llevan en el mismo mes el edicto de A.35 y la
+licitación 2 de Vialidad (camino de Lumbreras a Rivadavia): el número de aviso
+no identifica el aviso. En 4141 h12 y 4145 h11 la capa trae el edicto de A.9
+cortado y cruzado con otra columna; se cuenta.
+
+E.7 · Falsos positivos y negativos
+Falsos positivos del anillo 1: Calderón (personas), Caldoso (el juez interino),
+«caldo» por caído, «caldera» aparato (escuela de El Tala; hospitales), «Pasaje
+La Caldera» de la Capital, «Caldhaqui» por Calchaquí, «adera» (Jorge Adera y
+«madera»), escalera, «Walder» (Yáñez), mercaderías, Balderrama, «canlera» por
+cantera, «acalda» por acorda: 13 formas.
+Falsos negativos que la capa habría producido y la sesión corrigió: A.8 («La Cal
+/ dera» partido sin guion, sólo por la pasada espaciada); A.45 («La Calele a»,
+en la imagen «La Calde a», sólo por la búsqueda de actores y la pasada de
+contexto); A.34 («Tinetti»); y las cifras de E.5.
+
+E.8 · Fidelidad numérica
+Dotaciones de los edictos y decretos de agua: en los once edictos del año,
+caudal sobre superficie da entre 0,516 y 0,530 l/s por hectárea (la dotación
+corriente, 0,525, redondeada). A.50: la suma de los 48 importes de la capa no
+cierra al centavo con 610.240,80 por dos renglones con cifras rotas; el
+porcentaje de La Caldera sí. A.53: 24.362,97 / 0,235 % da un total del orden de
+10,4 millones; el total impreso no se miró. No recalculados: los cuadros de
+otros departamentos, las listas de becas y de pensiones fuera de su renglón.
+
+E.9 · Contradicciones
+Se transcriben y no se concilian: A.8, La Caldera en el visto y La Capital en el
+resuelve; A.38, decreto «13.108» en el considerando y «13.198» en el artículo;
+13.222-G fechado «Mayo 27» en 4204 y «Marzo 27» en 4209 (B.2.5); la Resolución
+12.214 de Vialidad, «3 de setiembre» en 1663-E y «3|11|52» en 2888-E (B.2.10,
+A.61); A.35, dos fechas al pie del mismo edicto; A.30, «1823» por 1828 y «1826»
+repetido por 1836; A.13, los artículos saltan del 3 al 5; A.2, fechado «8 de
+Diciembre de 1951» y publicado en enero; A.51, expediente de 1951 para un hogar
+de 1952; A.19, la estación sanitaria «instalada en el mismo pueblo» en mayo y
+A.37, su edificio por inaugurar en agosto; A.27, nota 1818 en la imagen y 1819
+en la capa. Erratas de tapa: §1.
+
+E.10 · Límites
+  1) El inventario del Release no se pudo listar (403); los assets se bajaron
+    por nombre.
+  2) Sin tesseract spa en la sesión: sólo 145 hojas tienen segunda versión.
+  3) Resolución de 150 ppi hasta septiembre: no se deciden en la imagen dígitos
+    del expediente y la resolución de B.2.6, la clase del agente de A.60, el
+    número de tapa de 4139 ni el año editorial «XLII» de cinco tapas (§1).
+  4) 93 hojas declaradas y ausentes en 88 ediciones: su contenido no está.
+  5) Resúmenes de Tesorería: de 1952 sólo se publica enero; la cadena queda en
+    un tramo.
+  6) Cotejo sumario/página citada no aplicable con fiabilidad: se reemplazó por
+    la serie de cabeceras «PAG. N» de las ediciones cortas (§1).
+  7) Encabezados leídos sólo en la capa: la costura del 1541-G (A.42), 2580-G,
+    2717-G y 1273-A; la atribución de cada artículo a su decreto descansa en
+    el orden de la capa.
+  8) Datos de identidad omitidos: los números de documento, matrícula o cédula
+    de personas que pueden vivir se reemplazan por «[documento omitido]»;
+    los nombres de los menores becados no se transcriben. Están en la
+    imagen, en la hoja citada.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. Pasada de contexto departamental. La capa de 1952 escribe «Dpto. La Calele a»
+y la imagen «La Calde a» (A.45): ninguna pasada sobre la forma del nombre lo
+devuelve (la difusa da 0,62). Se propone una pasada obligatoria por contexto:
+«dpto., departamento, partido, localidad, río, (sub)comisaría» + «(de) la» +
+palabra que empiece como el término, listando toda forma que no sea un topónimo
+conocido. En 1952 dio una ficha nueva y 34 formas ya explicadas.
+2. lee_auto sin pasada espaciada. El pre-informe no trae A.8 («La Cal / dera» en
+dos renglones sin guion) ni A.45: las dos salieron de pasadas de la sesión. Se
+propone que lee_auto sume la pasada espaciada y la de contexto, y que el
+pre-informe liste sus aciertos aparte.
+3. Páginas declaradas en la tapa. La lectura mecánica de la franja erró en 3 de
+241 tapas y habría inventado 13 hojas ausentes. Se propone que v16 exija mirar
+en la imagen la línea «EDICION DE N PAGINAS» de toda edición cuyas hojas
+presentes no igualen a las declaradas (en 1952, una plancha de 88 franjas).
+4. Resolución variable dentro del año. El Release cambia de 150 a cerca de 400
+ppi en la 4282 (1 de octubre), con otro tamaño de hoja. Se propone la clave de
+§R ppi_por_tramo y que techo_ppi deje de resumir el año.
+5. Presupuesto (v17 §5.5). Año de 241 ediciones y 4.303 hojas, 63 fichas del §A
+y 16 del B.2: no cupo en una ventana de contexto (la sesión se compactó una
+vez). El costo lo ponen la imagen (unas 150 lecturas de recortes y 26 planchas)
+y la transcripción; las pasadas son baratas. Para 1953 en adelante conviene
+partir el año en dos informes (enero-junio, julio-diciembre) o entregar CON
+PENDIENTES a mitad de año.
+6. Clave nueva para el §R: meses_tesoreria_publicados (1952: 1 de 12, más
+noviembre y diciembre de 1951).
+7. Config (entregado): anillo 2 suma los 13 términos de §2 (línea 1); actores
+suma 40 nombres de las fichas de 1952 (con la edición); números suma 75 números
+de actos fichados; falsos positivos suma «pasaje la caldera», «caldera y dos
+cocinas», «caldhaqui», «jorge adera» y «walder».
+
+§R · RECUENTO
+-------------
+anio: 1952
+ediciones_desde: 4103
+ediciones_hasta: 4343
+ediciones_presentes: 241
+ediciones_ausentes: 0
+hojas_presentes: 4303
+hojas_declaradas: 4396
+hojas_ausentes_estimadas: 93
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 20
+ediciones_dobles: 0
+techo_ppi: 423
+ppi_por_tramo: 150 (4103-4281); 378-423 (4282-4343)
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 63
+actos_dominio: 5
+actos_hacienda_municipal: 8
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 7
+subtotales_recalculados: 5
+resumenes_tesoreria: 4
+meses_tesoreria_publicados: 1
+cadena_saldos: un-tramo
+columnas_cotejadas: 104
+hojas_miradas: 1650
+avisos_repetidos_departamento: 13
+falsos_positivos_anillo1: 13
+limites_declarados: 8
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 241
+avisos_release: 0
