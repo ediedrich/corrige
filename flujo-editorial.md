@@ -1,6 +1,6 @@
-# Flujo editorial de *El dispositivo caldereño* — versión 1
+# Flujo editorial de *El dispositivo caldereño* — versión 2
 
-Fijada el 26/09/2026. Unifica los proyectos «BOLETINES CALDERA» y «EL DISPOSITIVO CALDEREÑO» en uno solo, con un único estado y un único punto de entrada.
+Fijada el 26/09/2026; la versión 2 (28/09/2026) agrega el §5.6, sobre las dudas de lectura, y las palabras clave `DUDAS` y `LECTURAS`. Unifica los proyectos «BOLETINES CALDERA» y «EL DISPOSITIVO CALDEREÑO» en uno solo, con un único estado y un único punto de entrada.
 
 **La meta:** que los 119 años de 1908 a 2026 estén leídos a nivel imagen e incorporados al libro. Los que no tienen PDF cuentan como límite declarado, no como pendiente.
 
@@ -49,13 +49,18 @@ clave del mensaje, se bajan estos archivos (primera acción de la respuesta):
   LEE:      curl -fsSL $B/rubrica-lee-v16.md    -o /home/claude/lee-v16.md
             curl -fsSL $B/config/lee_config.json -o /home/claude/lee_config.json
   AMPLÍA:   git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
+  DUDAS/LECTURAS:
+            curl -fsSL $B/lee/<año>/<informe LEE del año> (nombre en estado.json)
+            git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
+            (LECTURAS baja además lo de MEJORA/CORRIGE)
   MEJORA/CORRIGE:
             curl -fsSL $B/rubrica-corrige.md     -o /home/claude/rubrica.md
             curl -fsSL $B/registro-cobertura.md  -o /home/claude/registro-cobertura.md
             git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
 
 Palabras clave: ESTADO · LEE <año> · LEE <año> complemento <ediciones> ·
-LEE lote <a>-<b> · LEE cruce <a>-<b> · AMPLÍA <años> · MEJORA (= CORRIGE).
+LEE lote <a>-<b> · LEE cruce <a>-<b> · AMPLÍA <años> · MEJORA (= CORRIGE) ·
+DUDAS <años> · LECTURAS.
 Lo que cada una hace está en flujo.md (§2 y siguientes); se lee entero.
 
 Reglas:
@@ -90,6 +95,8 @@ Reglas:
 | `LEE cruce <a>-<b>` | Cruce de informes ya entregados (v16 §17) | Archivo `LEE-cruce-…` |
 | `AMPLÍA <años>` | Incorpora al libro lo leído en esos años (§6) | `amplia-….patch` y `amplia-….json` |
 | `MEJORA` o `CORRIGE` | Ronda CORRIGE con fase 6 (§7) | `ronda-N.patch`, `registro-cobertura.md` y `mejora-ronda-N.json` |
+| `DUDAS <años>` | Arma la hoja de dudas de lectura de esos años (§5.6) | `dudas-<a>-<b>.html`, que no se registra: es para Eduardo |
+| `LECTURAS` + las respuestas pegadas | Contrasta las lecturas de Eduardo y las lleva al libro y a los pendientes (§5.6) | Si tocan el libro, lo mismo que `MEJORA`; si no, `mejora-ronda-N.json` con los pendientes |
 
 `1-siguiente.bat` elige la palabra clave que toca y la deja en el portapapeles.
 
@@ -199,6 +206,38 @@ avisos_release: 0                (avisos de «no se encontró»)
 ### 5.5 · Años con muchas ediciones (1944 en adelante)
 
 A partir de 1944 hay entre 150 y 280 ediciones por año, contra 50 antes. El presupuesto de v16 §14.4 (cuatro turnos) se mide en los primeros años de esa época y se corrige en el §F. Si un año no cabe, se entrega **CON PENDIENTES** y el pendiente queda nombrado. Eso es preferible a un informe COMPLETO que no miró lo que dice haber mirado.
+
+### 5.6 · Dudas de lectura: primero el control, después el ojo de Eduardo
+
+Nace de las 21 lecturas de Eduardo sobre recortes de 1951 a 1954 (registro de cobertura, ronda 46). La resolución de los escaneos (150 ppi en casi todo el corpus) deja dígitos y letras que la sesión no decide. Algunos los decide un control; otros, sólo un ojo humano; otros, nadie.
+
+**1. Antes de declarar una duda, se prueban los controles**, en este orden de fuerza:
+
+1. **La serie de los decretos vecinos**: los números y las fechas de los actos de la misma hoja y de la hoja siguiente (la capa nativa del PDF los da aunque falle en el acto dudoso). Un decreto del 20 de septiembre no puede llevar un número mayor que los del 21 publicados en la misma edición. *(Casos: 3399-E era 3339-E; 70[6?]4-A era 7064-A; el 7886-E es del 22 de enero porque el 7883 y el 7885 lo son; el decreto de Lassi es el 8436-G y no el 8437-G, que empieza después de sus firmas.)*
+2. **La aritmética del propio acto**: sumas, subtotales, dos tercios de una base, caudal por hectárea. *(Caso: el valor fiscal del remate 10627 es 2.400, porque la base de 1.600 son sus dos tercios.)*
+3. **Las otras apariciones** del mismo aviso, y el sumario de la edición.
+4. **La cita cruzada**: otro acto que menciona el mismo número. *(Caso: el «52?6» de 1948 es el 5276-E de 1947.)*
+
+Lo que un control decide va al informe como decidido, con el control nombrado. **No se manda a Eduardo.**
+
+**2. Catálogo de confusiones de la tipografía** (se amplía cada vez):
+
+- En números de 150 ppi, sobre todo en encabezados en cursiva o negrita, **0, 3, 5, 6, 8 y 9 se confunden entre sí**, tanto para la sesión como para el ojo humano (7064 leído 7864; 376x leído 378x; 5956 o 5988; 6682, 6683 o 6688). Ninguno de esos dígitos se da por leído sin un control.
+- **El ojo humano aporta más** en letras y palabras (Claure, «Wie_na»), en erratas del original y en dígitos que la capa destroza pero que la imagen muestra enteros (3808, 4528, 5772).
+- **Su falla típica es tomar el acto de al lado** (8077 por 8078; 8437 por 8436). Por eso cada recorte marca el renglón exacto.
+- **Un dígito sobreimpreso o una mancha** no los decide nadie: se escriben como ilegibles y se piden al Registro Oficial o a un escaneo mejor.
+- **Una lectura humana no pisa a un control.** Si la contradice, gana el control y la discrepancia se registra.
+
+**3. La hoja de dudas.** Lo que ningún control decide se reúne en una hoja HTML (`dudas-<a>-<b>.html`, que no se registra), con un recorte por caso a 250 ppp sobre la imagen del Release, **el renglón marcado con un recuadro**, la pregunta concreta, lo que dijo la sesión y una casilla por caso. Un botón copia las respuestas para pegarlas en el chat. No se muestran datos personales que el libro no necesita (años de nacimiento, documentos) ni renglones borrados donde no hay nada que leer.
+
+**4. Qué se hace con las respuestas** (palabra clave `LECTURAS`). Cada respuesta se contrasta de nuevo con los controles y se clasifica:
+
+- **decidida por control y confirmada**;
+- **decidida por Eduardo**, cuando ningún control la contradice;
+- **corregida por el control**;
+- **abierta**, con las lecturas en disputa.
+
+Si una lectura toca una frase del libro, la corrección entra como fase 6 de una ronda MEJORA, con parche y registro. Si toca sólo un informe LEE, queda como pendiente de tipo `lee`, con la lista de las fichas y la lectura que corresponde. Las lecturas y su clasificación se agregan al final del registro de cobertura, en el bloque de la ronda, **sin tocar los bloques anteriores**.
 
 ---
 
@@ -398,4 +437,4 @@ Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro 
 
 ---
 
-*Versión 1, 26/09/2026. La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
+*Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
