@@ -886,3 +886,104 @@ Balance: de 4 lecturas, 1 confirmada por un control (D3), 2 decididas por Eduard
 | Menciones en el libro de las formas decididas | 9 formas (1.984, 10703, 10702, 24.75, 5718, 5434, 5451, 1957, «Luis Linares» en 1957) en los 38 archivos | Ninguna del informe 1957; «1.984» sólo como matrícula en 19:935, ajena |
 | Duplicados en 5434 | 24 hojas, comparadas de a pares por texto y luego sobre la imagen | 2 duplicados (h21 = h19, h22 = h20) |
 | Cadena de folios 5433 a 5452 | 5 empalmes | Salto de 1 en 5433→5434 (pág. 1284) y en 5451→5452 (pág. 1636) |
+
+## Ronda 49 — auditoría con fase 6 (29/09/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1955–1957. Base: commit `770bdd3` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1955–1957), con la fase 6 de esta ronda en `ronda-49.patch` (commit `aaea202` en la sesión). **Denominador medido: 25.032 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 48 (25.009 de 25.009 en `5741b93`, el commit de la ronda 47; la 48 no tuvo parche) se trasladaron por diff a `770bdd3`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1955–1957 agrega 23 líneas (21 en A y 2 en C) y hace caducar 74 líneas en 21 archivos**, y deja **24.958 vigentes sobre 25.032 (99,7 %)**.
+
+### Lectura sobre el texto (numeración de `770bdd3`)
+
+Se leyeron **las 74 líneas caducas, enteras, por la sesión**, sin subagentes, cotejadas contra los informes LEE 1955 (`BO-Salta-1955_4831-5073_la-caldera_LEE-1955_2026-09-29.txt`), 1956 (`BO-Salta-1956_5074-5316_la-caldera_LEE-1956_2026-09-29.txt`) y 1957 (`BO-Salta-1957_5317-5561_la-caldera_LEE-1957_2026-09-29_1.txt`, el nombre que da `estado.json`), en todas las fichas que las líneas citan. Además se releyeron como contexto 36 líneas con cobertura vigente; no suman cobertura, pero entran en el denominador del aspecto 7.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 280, 303, 315–335 | 23 | sesión |
+| ape/C-normativa.tex | 106–107 | 2 | sesión |
+| ape/D-pedidos.tex | 177, 183, 190, 192–193 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 57, 64–66 | 6 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/03-fincas.tex | 389, 391–392, 475 | 4 | sesión |
+| cap/04-siglo.tex | 3639, 3658–3660, 4557–4558, 4599, 4696–4697 | 9 | sesión |
+| cap/09-defensas.tex | 526, 535 | 2 | sesión |
+| cap/10-expropiacion.tex | 149, 332 | 2 | sesión |
+| cap/13-loteo.tex | 727 | 1 | sesión |
+| cap/14-poblacion.tex | 517 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 762, 789, 794 | 3 | sesión |
+| cap/17-aguabaja.tex | 281, 284, 353 | 3 | sesión |
+| cap/18-politica.tex | 464 | 1 | sesión |
+| cap/20-opacidad.tex | 880 | 1 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 216, 223, 545 | 3 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído (no suma cobertura): 03-fincas:465–474; 22-infraestructura:205–215; 26-presencia:170–176; 20-opacidad:724–731.
+
+**Esta ronda: 74 líneas nuevas.** Con el contexto releído son 110 líneas y 123.431 bytes sobre 2.624.415, que en las 815 páginas de la base equivalen a **38,3 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `770bdd3` cae dentro de estos tramos.
+
+Acumulado: 24.958 vigentes + 74 = **25.032 de 25.032 (100,0 %)**. La fase 6 toca 10 líneas, todas dentro de lo leído en esta ronda (A:315, 318, 321, 323, 324; F:57; 03:475; 10:149; 16:794; 18:464), y no cambia el largo de ningún archivo: **25.032 de 25.032 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1955, 1956 y 1957 de `boletines-salta`)
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 4880 | 6 | Decreto 13671-E, visto | «Construcción de Defensas de Piedra Embolsada sobre Rio La Caldera». Coincide; la tilde de «Río» no se decide a 150 ppi |
+| 4880 | 11 | Decreto 13694-E, art. 1.º | Catastro Nº 26, José Ángel Portal, cinco mil metros cuadrados, «doscientos sesenta y dos milímetros por segundo». Coincide |
+| 5032 | 5 | Decreto 247-G, considerando | **Dice «una mejor organización dentro del régimen municipal, con la designación de las nuevas autoridades»**. A:318 y 18:464 citaban entre comillas «para reorganizar el régimen municipal», que es la paráfrasis de la FICHA del informe LEE 1955 (A.45), no el texto (corregido) |
+| 4842 | 7 | Decreto 12933-E, visto | Sastre y Giménez, «explotación irracional», «GETSEMANI». Coincide |
+| 4945 | 4 | Decreto 14707-S, art. 2.º | «Estación Sanitaria de La Caldera». Coincide |
+| 5091 | 5 | Decreto-ley 82-G, visto | Leyes 1741 y 1402; albergue para alumnos anexo a la escuela Juana Moro de López. Coincide |
+| 5146 | 6 | Decreto 2382-E, visto y art. 1.º | **«Estudios Embalse en Campo Alegre»**, con mayúscula las dos veces; A:323 y 10:149 citaban «Estudios embalse» (**corrección silenciosa**, corregida) |
+| 5160 | 8 | Decreto 2773-E | «con el objeto de proseguir los trabajos de perforación en la zona de Campo Alegre (Departamento La Caldera)». Coincide |
+| 5225 | 5 | Decreto 3872-E, visto y art. 1.º | El visto dice «Servicio de Aguas Corrientes en La Caldera» y el art. 1.º **«Servicios de Aguas Corrientes en la Caldera»**; A:324 y 16:794 citaban «Servicios… en La Caldera», el plural de uno y la mayúscula del otro (**corrección silenciosa**, corregida a la forma del art. 1.º) |
+| 5253 | 9 | Decreto 4489-G | «VISTA la vacancia»; «Interventor Municipal de la localidad de La Caldera», Cecilio Muñoz. Coincide |
+| 5190 | 9 | Aviso 14050 | «EL DURAZNO», «herederos de Campero», Silvano Murúa al sud, Liborio Guerra «antes» de José María Murúa. Coincide |
+| 5259 | 6 | Decreto 4576-G | «con motivo de contravenir a órdenes policiales en vigencia». Coincide |
+| 5164 | 13 | Resolución 2635-S | «VISTO la necesidad de proveer de atención médica al pueblo de La Caldera». Coincide |
+| 5513 | 17 | Decreto 10816-E, considerando | «uno de los tantos avasallamientos de la propiedad privada, efectuados por el régimen anterior, bajo el pretexto de la…». Coincide hasta el corte de renglón; el final, por el informe LEE |
+| 5521 | 15 | Licitación 593 | Consorcio Caminero Nº 12, «puente de hormigón armado, sobre el río Caldera». Coincide |
+| 5508 | 17 | Obra 517 | «Construcción Comparto Sistema de Riego, Vaqueros, La Calderilla y La Caldera». Coincide |
+| 5461 | 8 | Decreto-ley 590-E, arts. 3.º y 4.º | «veinte (20) cuotas anuales, iguales y consecutivas, sin interés». Coincide |
+
+Son **17 citas cotejadas sobre 17 hojas de 17 ediciones** (6 de 1955, 8 de 1956 y 3 de 1957), todas en la imagen: **una paráfrasis dentro de comillas** (247-G) y **dos correcciones silenciosas** de mayúscula («Embalse», «la Caldera»); ninguna cita que cambie el sentido. No se cotejaron: 4945 h4 (14705-S, las cifras de veinticinco y sesenta niños), 5039 h10–15 (450-E), 4968 h9 (15060-G, «Dpto. Capital»), 5051 h6 (681-G), 5147 h10 (2436-E, «Villa San Lorenzo») ni 5363 h6–8 (decreto-ley 408-E).
+
+### Hallazgos (seis, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:318, 18:464 | Cita del 247-G que es la paráfrasis de la ficha, no el texto | 4 | Texto del considerando |
+| 2 | A:323, 10:149 | «Estudios embalse» por «Estudios Embalse» | 4 | Mayúscula del original |
+| 3 | A:324, 16:794 | «Servicios… en La Caldera» por «Servicios… en la Caldera» | 4 | Forma del art. 1.º |
+| 4 | F:57 | 1957 «con las 244 tapas» en la misma oración que dice que la 5318 no trae tapa (el informe LEE 1957 arrastra la misma contradicción) | 7 | 243 tapas |
+| 5 | A:315 | «En septiembre la tapa del Boletín cambia cuatro veces de titular»: según el E.4 del informe LEE 1955, las tapas nombran a Durand hasta el 19 de septiembre, a Pfister el 21, a Moschini el 26 y el 28 y a Lobo desde el 3 de octubre: **cuatro titulares y tres cambios**, uno de ellos en octubre | 3 | «Entre el 19 de septiembre y el 3 de octubre la tapa nombra cuatro titulares sucesivos» |
+| 6 | 03:475 | «Que sea la misma finca lo sugieren el nombre y dos de los linderos»: coincide uno, el del oeste (Daniel Linares); el del norte es «herederos de Campero» contra «Campos», como la misma frase dice | 5 | El lindero del oeste, y el del norte sólo si Campero y Campos son la misma familia |
+
+Observación de prosa, sin restar como error (aspecto 12): A:321 y 16:794 decían que «el pueblo licita» su servicio de aguas corrientes, y la misma frase de 16 dice que lo hace la Provincia y que el municipio no figura. Corregido a «la Provincia licita» (A) y «se licita» (16).
+
+**Los seis están en material que la propia auditoría incorporó** (AMPLÍA 1955–1957, `770bdd3`); ninguno fue atrapado por un control automático antes de llegar al libro. Los hallazgos 1 a 3 los habría atrapado un control que busque cada texto entrecomillado nuevo en los bloques TEXTO del informe LEE, no en su FICHA: se corrió después de la lectura (tabla de abajo) y devuelve exactamente esos tres (P74).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.009/25.009 líneas vigentes en `5741b93` | 24.958 vigentes, 74 caducas por el AMPLÍA 1955–1957 |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`) | 316/316 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| Superlativos y ausencias sobre los temas que tocan las fichas de 1955–1957 (usina, aguas corrientes, juez de paz, comisión municipal, intendente, intervención, Hogar, embalse, puente, defensas, Registro Civil, presupuesto, balance, tomeros, Obras Sanitarias, Cerro de Buena Vista, El Durazno, médico, consultorio, albergue, pensiones, becas, minas, entre otros), en oraciones que no nombran 1955–1957 (repaso de ventana) | 40.406 oraciones del libro; 148 coincidencias, todas leídas | Ninguna desmentida. 20:728 («el único balance con cifras de todo el período»), 22:212 (el puente de \$200.000 «no vuelve a aparecer… hasta 1946») y 26:172 (la estación sanitaria, 1923–1945) tienen universo declarado anterior a 1955 |
+| Menciones de la ventana (1949–1954, «sexenio», tramos, 1955–2012, cincuenta y seis a cincuenta y ocho años) | 25.032/25.032 líneas | Ninguna desactualizada: 00, 01, 02, 04, 20, 22 y F dicen 1949–1957, cuarenta y dos de cuarenta y tres tramos y cincuenta y cinco años (1958–2012) |
+| Citas entre comillas de las 74 líneas contra el TEXTO de los informes LEE 1955–1957 (búsqueda literal, sin mayúsculas en segunda pasada) | 85 citas; 38 de actos de 1955–1957 | 33 literales; 5 discrepan: los hallazgos 1 a 3 y dos falsos positivos por mayúscula de comienzo de oración («VISTO», «VISTA»). Las 47 restantes son de años anteriores y no se buscan en estos informes |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 49 | 50 de 340 oraciones con cifra en las 74 líneas | **50/50 con fuente localizable**: 27 no llevan la cita en la misma oración y la tienen en el párrafo o en la fila remitida, o son declaraciones de cobertura de F, 00, 01 y 02 cuya fuente es el propio apéndice F y los informes LEE |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 74 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Dotaciones de 1955–1957 recalculadas desde caudal y superficie | 4 decretos de 1955 (con la superficie exacta de San Cayetano, 38,175 ha), 3 actos de 1956 | 1955: 0,525 (San Cayetano, 20,04/38,175), 0,524 (Portal), 0,525 (Apaza), 0,525 (Somerville, 26,25/50 y 36,75/70); 1956: 0,525, 0,75 y 0,525. Cierran A:319, A:326 y 17:353. La cuenta sobre «38 hectáreas» redondeadas daría 0,527: no es error, porque el decreto da 38 ha 1.750 m² |
+| Recuentos de hojas de 1955–1957 (F:57) | 3 años | 1955: 4.670 − 104 + 5 = 4.571, + 96 = 4.667; 88 = 66 + 2 + 20. 1956: 4.282 − 84 + 2 = 4.200, + 236 = 4.436; 79 = 55 + 2 + 22. 1957: 4.264 − 81 + 7 = 4.190, + 72 + 196 = 4.458; 71 = 36 + 35. Tapas: 237 + 6, 230 + 12, 240 + 3 + la 5318. Cierran. Hojas de poca tinta: 430 − 96 = 334; 108 − 30 = 78; 185 − 40 = 145. Cierran |
+| Rangos de ediciones | 3 años | 4831–5073 = 243; 5074–5316 = 243 (242 sin la 5293); 5317–5561 = 245 (244 sin la 5334); 5037–5073 = 37 ediciones a 75 ppi. Cierran con A, F, 00 y 02 |
+| Porcentajes de A | 1 (adjudicación de la obra 343) | 125.930,39 / 110.465,26 = 1,140: «un catorce por ciento más» cierra |
+| `\pendiente{}`, ítems de D y `\label` de apéndices | 52; 284; 8/8 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Privacidad: personas nombradas en las 74 líneas, cruzadas con contextos sensibles | 74/74 líneas y búsqueda en todo el libro de «gobernanta», «regente», «cuidadora» | La gobernanta intervenida en 1956 y la regente y la cuidadora sancionadas en 1957 no se nombran en ningún lugar del libro; la menor de 1957 tampoco; los deudores de los remates de 1955 a 1957 no se nombran. Sin casos |
+| Largo de los archivos antes y después de la fase 6 | 6/6 archivos tocados por la fase 6 | ninguno cambia de largo |
+| Compilación | libro entero | Compila; 815 páginas (815 la base); 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas de antes |
