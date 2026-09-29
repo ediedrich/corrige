@@ -1,0 +1,3585 @@
+LEE v17 — 1958
+===============
+
+Boletín Oficial de la Provincia de Salta, año 1958, ediciones N 5562 a 5805.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5, versión 2). Sesión del 29/09/2026 (hora de Salta).
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES (2 pendientes nombrados y 14 límites declarados en E.10).
+Los dos pendientes son trabajo que otra sesión puede hacer y no tocan ninguna
+ficha del departamento: 1) armar el tramo junio-julio de la cadena de saldos de
+la Tesorería General (tres resúmenes publicados, E.1), leyendo las dos tablas en
+la imagen, porque la capa desordena sus columnas; 2) mirar en plancha las 306
+hojas «a ojos» que lista el pre-informe (§1 del pre-informe), que esta sesión no
+miró. Nivel de lectura: imagen: las 80 fichas del §A y las de B.2 se miraron en
+la imagen del PDF en los renglones que deciden la atribución al departamento,
+los números y los importes; lo que se leyó sólo en la capa (encabezados cuyo
+número decide la serie, articulados largos, nóminas enteras, tablas de partidas)
+está dicho en el MODO DE LECTURA de cada ficha y no decide la atribución. Los
+renglones de B.3, B.4 y §C se leyeron en la capa y, los que deciden una
+atribución, también en la imagen.
+
+Aviso sobre el orden: estado.json marca «mejora_pendiente: true» (hay un AMPLÍA
+sin MEJORA posterior) y la prioridad 2 de flujo.md §3 pondría una ronda MEJORA
+antes que este LEE. El mensaje pidió «LEE 1958» y se hizo eso; la MEJORA sigue
+pendiente.
+
+Insumos. estado.json (revisado el 29/09 a las 09:38) da para 1958 un Release con
+244 PDF, sin avisos, con pre-informe y textos. La página expanded_assets/1958
+responde con un rechazo del proxy («GitHub access to this repository is not
+enabled for this session»), como en 1950 a 1957; las URL de descarga de cada
+asset responden. Se bajaron por el nombre que da estado.json:
+BO-Salta-1958_la-caldera_PRE-INFORME-LEE_2026-09-29.txt (único pre-informe
+listado, y vigente), lee_textos_1958.zip, resultados_1958.csv,
+decretos_1958.csv, log.txt y lee_config.json; recortes.zip responde 404. Los
+PDF, por número: los 244, N 5562 a 5805. El inventario del Release no se pudo
+listar: que no haya otros assets no está comprobado (E.10).
+
+Hallazgo de corpus: el archivo 5727.pdf no es la edición 5727 sino otro escaneo
+de la 5728. Su tapa dice «N 5728 — MARTES, SETIEMBRE 9 DE 1958», igual que la de
+5728.pdf; los folios impresos de sus hojas son los mismos (2842 a 2853) y las
+hojas 6, 8, 10, 13 y 15 coinciden con las de 5728 en más del 90 % del texto de
+la capa; las diferencias son de escaneo. La edición 5727 (lunes 8 de septiembre,
+por la serie de fechas y la foliatura, que salta veinte páginas entre 5726 y
+5728) no está en el corpus: hay 243 ediciones distintas en 244 archivos (§1,
+E.1, E.10). El pre-informe trata el archivo como edición propia.
+
+lee_auto.py: una sola corrida, del 29/09/2026, 07:56 a 09:35, con «listo». Capa
+previa útil en 3805 de 4129 hojas (92 %); OCR propio en 324, con 4 procesos. El
+zip de textos trae 4.129 .prev.txt, 244 EXTRAIDO.json y 324 .prop.txt con sus
+.tsv: hay segunda versión en las 324 hojas que la capa no cubría. Confianza del
+OCR propio (pre-informe): media 60,5; publicables 0, a verificar 18, a ojos 306.
+Los recortes de este informe se hicieron en la sesión desde los PDF.
+
+Config (v16 §15.4 y v17 §5.2):
+  config de corrige: version 2026-09-29, hasta 1957, actores 999, anillo2 274,
+    numeros 976, falsos_positivos 56
+  foto del Release: version 2026-09-28, hasta 1954, actores 835, anillo2 249,
+    numeros 728, falsos_positivos 42
+  se usa: corrige — razón: único válido (v17 §5.2), y más nuevo
+  contenido: el de corrige contiene al del Release; difieren en 164 actores,
+    25 términos, 248 números y 14 falsos positivos que sumaron 1955 a 1957
+
+El pre-informe se corrió con la foto de 1954: las búsquedas de la sesión se
+hicieron con el config de corrige. Se pide que la próxima corrida use el config
+vigente. La sesión entrega lee_config.json actualizado (version 2026-09-29,
+hasta 1958): lo que suma está en F.6; nada se quita.
+
+Entorno: nube con 2 núcleos, tesseract 5.3.4 con eng y osd, sin spa: no hay OCR
+en español en sesión. Con eng se ocrizaron a 300 ppp, como red de seguridad, las
+97 hojas sin segunda versión cuya capa tiene menos del 60 % de palabras
+frecuentes del corpus; no devolvió ninguna mención que las pasadas no tuvieran
+(§2). PyMuPDF, rapidfuzz y pyahocorasick instalados en la sesión.
+
+Qué verificó la sesión: las 244 tapas en planchas de franja a 80 ppp (número,
+fecha, día, páginas declaradas, año editorial) y, en la imagen, el recuadro del
+Poder Ejecutivo en 17 tapas elegidas en los cambios que marca la capa; las
+pasadas del §2, con la difusa sobre «dpto. la» de 1957; el anillo 2 término por
+término; los 932 nombres completos del config y 97 de las fichas de 1958; los
+números arrastrados; calendario, autoridad y feriados; la foliatura corrida, con
+sus dos saltos de 900 páginas mirados en la imagen (§1); resolución y tinta de
+las 4.129 hojas; en plancha, las 35 hojas de menos de 5 % de tinta.
+
+Qué agregaría cada insumo que faltó. El listado del Release: confirmaría que no
+hay assets fuera de los bajados por nombre. La edición 5727 (lunes 8 de
+septiembre): su contenido; el archivo del Release es un duplicado de 5728.
+Tesseract con spa o los .prop.txt de las 3.805 hojas restantes: segunda versión
+en todo el año, que habría devuelto por texto los renglones que la capa rompe
+(la nómina de 5584 h27, la hoja sobreimpresa 5706 h6). El Registro Oficial de
+1958: los dígitos que la imagen no decide (E.10) y los actos citados y no
+acompañados (E.3).
+
+§1 · CORPUS REVISADO
+--------------------
+243 ediciones distintas presentes en 244 archivos, N 5562 (jueves 2 de enero) a
+5805 (miércoles 31 de diciembre). Falta la 5727 (lunes 8 de septiembre, por la
+serie de fechas y la foliatura): su archivo es un segundo escaneo de 5728 (§0).
+4.129 hojas en los 244 archivos; 4.114 sin el duplicado (15 hojas).
+
+Páginas declaradas. En 240 tapas se lee la cifra; en tres el dígito sale roto
+(5627, 5639 y 5764: «EDICION DE ? PAGINAS», probablemente 8). Las 240 legibles
+declaran 4.204 páginas y traen 4.090. Ediciones con menos hojas que las
+declaradas: 98, con 114 hojas de menos por tapa. Con más: ninguna. La 5568
+declara 20 y trae 14, y la foliatura pasa sin salto (h2 = pág. 88, h14 = 100,
+5569 h2 = 102, mirados en la imagen): la edición está completa y la cifra de la
+tapa no corresponde (E.9).
+
+Foliatura. 1958 tiene paginación corrida del año: 5562 abre en la página 1 y
+5805 cierra en la 6.040 impresa (h7 = pág. 6025, imagen). La capa resuelve la
+cabecera en 974 de las 3.871 hojas interiores sin el duplicado, y fija la base
+de folios (folio menos número de hoja, en dos hojas o más) en 169 de las 243
+ediciones. Dos saltos de foliatura, cada uno de 900 páginas, mirados sus
+extremos en la imagen: entre 5741 (lunes 29 de septiembre; h5 = pág. 3097, h6 =
+3098, última página 3102) y 5742 (martes 30; h6 = pág. 4008, primera 4003); y
+dentro del paso de 5747 (martes 7 de octubre; h3 = 4087, h15 = 4099, última
+4100) a 5748 (miércoles 8; h3 = pág. 5003, primera 5001). La serie sigue
+coherente desde cada valor nuevo. Por conteo, la última página del año es la
+4.240 y no la 6.040. Se declara con sus extremos y no se explica (v16 §8.21).
+Sobre las 98 ediciones cortas: en 51 la serie salta y faltan con seguridad 57
+páginas; en 46 la capa no permite decidirlo; en una (5568) la serie pasa sin
+salto. Entre 5726 y 5728 faltan veinte páginas: la edición 5727.
+
+Tapas, leídas en la imagen las 244 (planchas de franja a 80 ppp; las dudosas a
+150 ppp). Año editorial «XLIX» en todas, salvo erratas: «AÑO XLVIII» en 5591 y
+5618, «AÑO ZLIX» en 5568 y «AÑO XLIR» en 5582. En 1957 el año editorial pasó de
+XLVIII a XLIX el 14 de agosto; en 1958 no pasa a L en ninguna tapa (E.9). Otras
+erratas de tapa: «JUEVSE» (5603), «MRRTES» (5658), «GCTUBRE» (5746), «EDICCION»
+(5794), «DICIEMBE» (5802), «13 DE JUNIO DE 1953» (5670), «SALTA» en lugar del
+día de la semana (5637 y 5787), y el número de 5718 retocado a mano. El mes
+antes del día («MARTES, SETIEMBRE 9 DE 1958») en 51 tapas, casi todas de
+septiembre a diciembre, alternando con la forma usual (E.9). La tapa del archivo
+5727 es la de 5728 (§0). El número de la tapa coincide con la serie en las otras
+243.
+
+Día de la semana y fecha: coinciden en las 243 tapas propias. No hay ediciones
+dobles: fechas estrictamente crecientes. Ninguna edición sale en sábado ni en
+domingo.
+
+Días de salida: la tapa dice «APARECE LOS DIAS HABILES». Días de lunes a viernes
+sin edición, del 1 de enero al 31 de diciembre, sin contar el 8 de septiembre
+(edición 5727 ausente): 17. Con un acto de adhesión del propio corpus en la
+fecha, 2: 17/6 (adhesión a los actos del aniversario de Güemes, 5678 h9, capa) y
+9/7 (adhesión a los actos del aniversario de la Independencia, 5691 h8, capa).
+Sin explicar en el corpus, 15: 1/1, 6/1, 17/2, 18/2, 20/2, 3/4, 4/4, 1/5, 5/6,
+20/6, 15/8, 15/9, 10/10, 8/12 y 25/12. El Decreto 12774-G (5592 h12) traslada al
+1 y 2 de marzo los festejos de carnaval del 22 y 23 de febrero por las
+elecciones del 23: no toca días hábiles. No se busca la causa afuera.
+
+Resolución (imagen incrustada, medida sobre su caja en la hoja, las 4.129
+hojas): 300 ppi en todas. techo_ppi: 300. Es el primer año de la serie con 300
+ppi en todo el corpus.
+
+Tinta (píxeles < 170 a 40 ppp, las 4.129 hojas): ninguna hoja bajo 0,5 %; 35
+bajo 5 %. Se miraron las 35 en plancha a 24 ppp: últimas hojas cortas con avisos
+y el pie de imprenta de los Talleres Gráficos de la Cárcel Penitenciaria, un
+balance de sociedad (5623 h29), cuadros de presupuesto (5566 h14, 5644 h7, 5711
+h8) y una tabla (5616 h12); ninguna es un plano ni está en blanco.
+
+Hojas miradas en la imagen: 244 tapas en plancha, 35 hojas en la plancha de
+tinta, 34 hojas de cabeceras de folio, 17 recuadros del Poder Ejecutivo (dentro
+de las tapas, no se suman) y 131 hojas de las fichas del §A, de B.2 y de sus
+controles de serie, a 90-400 ppp; hojas_miradas: 444. Las 306 hojas «a ojos» del
+pre-informe no se miraron (pendiente 2).
+
+Tabla por edición (N, fecha, hojas presentes / declaradas); fechas y
+declaradas leídas en la imagen de la tapa; «??», dígito roto; 5727, duplicado
+de 5728:
+  5562 02/01  9/10   5563 03/01  9/10   5564 07/01 21/22   5565 08/01 10/10
+  5566 09/01 14/14   5567 10/01 20/20   5568 13/01 14/20   5569 14/01 16/16
+  5570 15/01 15/16   5571 16/01 12/12   5572 17/01 19/20   5573 20/01 11/12
+  5574 21/01 11/12   5575 22/01 13/14   5576 23/01 15/16   5577 24/01 17/18
+  5578 27/01 14/14   5579 28/01 11/12   5580 29/01 12/12   5581 30/01  9/10
+  5582 31/01 19/20   5583 03/02 20/20   5584 04/02 40/40   5585 05/02  8/ 8
+  5586 06/02  9/10   5587 07/02 18/18   5588 10/02 12/12   5589 11/02 20/20
+  5590 12/02 27/28   5591 13/02  8/ 8   5592 14/02 36/36   5593 19/02  9/10
+  5594 21/02 10/10   5595 24/02 10/10   5596 25/02 10/10   5597 26/02 13/14
+  5598 27/02  8/ 8   5599 28/02 23/24   5600 03/03  7/ 8   5601 04/03  7/ 8
+  5602 05/03 14/14   5603 06/03  8/ 8   5604 07/03 10/10   5605 10/03  7/ 8
+  5606 11/03 11/12   5607 12/03 32/32   5608 13/03 19/20   5609 14/03  9/10
+  5610 17/03 11/12   5611 18/03 16/16   5612 19/03 24/24   5613 20/03 23/24
+  5614 21/03 24/24   5615 24/03 11/12   5616 25/03 24/24   5617 26/03 18/18
+  5618 27/03 32/32   5619 28/03 21/22   5620 31/03 18/18   5621 01/04 18/18
+  5622 02/04 13/14   5623 07/04 30/30   5624 08/04 14/14   5625 09/04  9/10
+  5626 10/04 20/20   5627 11/04  8/??   5628 14/04  8/ 8   5629 15/04 31/32
+  5630 16/04 11/12   5631 17/04 17/18   5632 18/04 14/14   5633 21/04 10/10
+  5634 22/04 10/10   5635 23/04 10/10   5636 24/04 17/18   5637 25/04  9/10
+  5638 28/04 14/14   5639 29/04  8/??   5640 30/04 20/20   5641 02/05 19/20
+  5642 05/05 28/28   5643 06/05 18/18   5644 07/05 32/32   5645 08/05  9/10
+  5646 09/05 25/26   5647 12/05 35/36   5648 13/05 14/14   5649 14/05 10/10
+  5650 15/05 17/18   5651 16/05 10/10   5652 19/05 10/10   5653 20/05 11/12
+  5654 21/05 15/16   5655 22/05 11/12   5656 23/05 12/12   5657 26/05 16/16
+  5658 27/05 14/14   5659 28/05  9/10   5660 29/05 10/10   5661 30/05 12/12
+  5662 02/06 18/18   5663 03/06 18/18   5664 04/06 14/14   5665 06/06  8/ 8
+  5666 09/06 18/18   5667 10/06 32/32   5668 11/06 12/20   5669 12/06  9/10
+  5670 13/06 16/16   5671 16/06 14/14   5672 18/06 21/22   5673 19/06 17/18
+  5674 23/06 18/18   5675 24/06 20/20   5676 25/06 22/22   5677 26/06 16/16
+  5678 27/06 22/22   5679 30/06 16/16   5680 01/07 18/18   5681 02/07 18/18
+  5682 03/07 12/12   5683 04/07 17/18   5684 07/07 13/14   5685 08/07 24/24
+  5686 10/07 24/24   5687 11/07 12/12   5688 14/07 15/16   5689 15/07 15/16
+  5690 16/07 16/16   5691 17/07 21/22   5692 18/07 16/16   5693 21/07 15/16
+  5694 22/07 26/26   5695 23/07 18/18   5696 24/07 20/20   5697 25/07 18/18
+  5698 28/07 25/28   5699 29/07 24/24   5700 30/07 18/18   5701 31/07 18/18
+  5702 01/08 21/24   5703 04/08 22/22   5704 05/08 16/16   5705 06/08 16/16
+  5706 07/08 17/18   5707 08/08 19/20   5708 11/08 14/14   5709 12/08 20/20
+  5710 13/08 19/20   5711 14/08 30/30   5712 18/08 18/18   5713 19/08 22/22
+  5714 20/08 23/24   5715 21/08 15/16   5716 22/08 22/22   5717 25/08 18/18
+  5718 26/08 19/20   5719 27/08 20/20   5720 28/08 25/26   5721 29/08 16/16
+  5722 01/09 21/22   5723 02/09 20/20   5724 03/09 19/20   5725 04/09 12/12
+  5726 05/09 18/18   5727 dupl 15/--    5728 09/09 15/16   5729 10/09 17/18
+  5730 11/09 28/28   5731 12/09 20/20   5732 16/09 21/22   5733 17/09 18/18
+  5734 18/09 23/24   5735 19/09 19/20   5736 22/09 19/20   5737 23/09 16/16
+  5738 24/09 19/20   5739 25/09 14/14   5740 26/09 17/18   5741 29/09 10/10
+  5742 30/09 21/22   5743 01/10 16/16   5744 02/10 19/20   5745 03/10  9/10
+  5746 06/10 13/14   5747 07/10 16/16   5748 08/10 21/22   5749 09/10 20/20
+  5750 13/10 12/12   5751 14/10 10/10   5752 15/10 13/14   5753 16/10 18/18
+  5754 17/10  9/10   5755 20/10 18/18   5756 21/10 16/16   5757 22/10 18/18
+  5758 23/10 18/18   5759 24/10 23/24   5760 27/10 19/20   5761 28/10 20/20
+  5762 29/10 15/16   5763 30/10  9/10   5764 31/10  8/??   5765 03/11 21/22
+  5766 04/11 20/20   5767 05/11 20/20   5768 06/11 24/24   5769 07/11 20/20
+  5770 10/11 12/12   5771 11/11 24/24   5772 12/11 20/20   5773 13/11 22/22
+  5774 14/11 22/22   5775 17/11 15/16   5776 18/11 18/18   5777 19/11 16/16
+  5778 20/11 15/16   5779 21/11 24/24   5780 24/11 22/22   5781 25/11 27/28
+  5782 26/11 19/20   5783 27/11 17/18   5784 28/11 19/20   5785 01/12 12/12
+  5786 02/12 12/12   5787 03/12 19/20   5788 04/12 22/22   5789 05/12 24/24
+  5790 09/12 19/20   5791 10/12 29/30   5792 11/12 12/12   5793 12/12 10/10
+  5794 15/12 12/12   5795 16/12 22/22   5796 17/12 22/22   5797 18/12 28/28
+  5798 19/12 13/14   5799 22/12 24/24   5800 23/12 17/18   5801 24/12 10/10
+  5802 26/12  8/ 8   5803 29/12  8/ 8   5804 30/12 13/14   5805 31/12 22/22
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa del PDF («prev») en las 4.129 hojas; OCR propio de lee_auto
+(«prop») en 324, las que la capa no cubría; búsqueda sobre cada una por
+separado. Además, OCR en inglés de la sesión (tesseract eng, 300 ppp) sobre 97
+hojas de capa pobre sin prop, sólo como red de seguridad.
+
+Unión: U+0002 no aparece; U+00AD aparece 68.609 veces, todas seguidas de salto,
+y se quita junto con el salto; guion de corte con hasta dos signos a cada lado.
+Probada: pega «Calde-/ra» y «cal­/dera» a través del salto.
+
+Pasadas, con su resultado:
+- Literal «cald» (NFD, sin tildes): 1.103 aciertos en las dos versiones;
+«caldera» 503 y «calderilla» 17 en la capa. Quitadas las formas que son otra
+cosa (B.3), las ventanas de ±300 caracteres de lo que queda y de las formas
+reales de la laxa, la laxa espaciada y la difusa (438 ventanas en 242 hojas) se
+agruparon por texto (solapamiento de palabras de cinco letras o más, umbral 0,6,
+ventana de 40 ediciones): 177 grupos, que se leyeron todos.
+
+- Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: fuera de «cald…», 5 aciertos: «callera»
+(5569 h3, sumario del Decreto 12064-G: real), «caidera» y «gaidera»
+(repeticiones de la mina Caldera 1, 2 y 3), «gallerano» (apellido) y
+«gollemador» (gobernador): ruido salvo el primero. Probada: devuelve la forma
+literal.
+
+- Laxa espaciada, separador [\s\-.,'’"“”]{0,3} entre cada par de letras: 39
+aciertos: «cal \ndera» en el remate de La Calderilla (A.1, catorce apariciones)
+y en el remate 1875 de Jetsemaní (A.42, veinte), «calde. \nra» y «calde \nra» en
+5643 h9 y 5650 h5 (A.24, A.28), «cal de ra» (5710 h19: «local de calle», ruido)
+y «cal \n“dera» (5742 h12, A.60), que ninguna otra pasada ni el pre-informe
+devolvían. Probada contra «c a l d e\nr a»: la devuelve.
+
+- Difusa (ratio >= 0,78, excluida la forma exacta): 28 formas en 101 aciertos.
+Reales, dentro de fichas: ilderilla, aldera, csaldera, qaldera, caldcira,
+calderflia, lacaldera, calderal (nombre de la mina), caidera, cafdera. Falsas
+(E.7): calderon, escalera, adera, cuadrilla, caderias, calera, caera, calde
+(Calderón partido), cuadrillas, cablera, alderai (5568 h5: «$ 4.053,72»),
+callera, calavera, caletera, valedera, balderfa, calderas (máquinas), calliera
+(apellido).
+
+- Difusa ampliada (0,70-0,78, iniciales c, g, o): 122 formas, 5.822 aciertos.
+Ninguna real fuera de las ya devueltas; son cada, cartera, candelaria, cantera,
+calidad, cualquiera, cabrera, cátedra y afines. Conviene seguir corriéndola: no
+rescató nada este año, y en 1957 rescató seis repeticiones.
+
+- Difusa contextual (palabra que sigue a «la» con ratio 0,62-0,78): 81 formas;
+«chaera» (Orán, un lote) y «cajde» (5584 h34, la nómina de A.9, ya devuelta); el
+resto, calle, localidad, cartera, categoría.
+
+- Difusa sobre «dpto./departamento/partido la X» (ratio >= 0,45, la pasada de
+1957): rescató «ca'dera» y «ca'dara» (el remate 1922, A.45, 5705 a 5729),
+«ca’d^ra» (5710 h16) y «cal» partido; lo demás es Candelaria, Capital y Silleta.
+
+- OCR en inglés sobre 97 hojas de capa pobre: devolvió «caldera» sólo en
+repeticiones ya fichadas (5706 h15, 5708 h8) y nada nuevo.
+
+- Anillo 2, actores y números: abajo.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas: 1) faltantes: se proponen «jetsemani» y «yetsemani» (A.42, A.45), «finca
+stanlex» (A.10), «consultorio externo de la caldera» (A.22, A.29, A.37, A.44,
+A.76), «hospital de la caldera» (A.21), «sub comisaria de mojotoro» (A.2) y
+«destacamento san alejo» (A.11), y cuatro deformaciones de la capa sin las
+cuales la literal no devuelve su acto: «csaldera» (A.5), «qaldera» (A.35), «ca
+dara» (A.45) y «la cablera» (A.76). 11 términos nuevos. 2) apellidos dentro del
+anillo 2: los de siempre (apaza, aramayo, condori, chaile, isasmendi, murua,
+nogales, toconas, castellanos, burgos de yugra, mamani, wierna, lesser, yufra,
+yugra); no se mueven. «apaza» es real en A.19 (titular del catastro) y en A.76
+(Marcelina Apaza); «nogales», en A.49 (el causante); «mamani», en A.1 (linderos)
+y en A.9 y A.46 (Colque de Mamani). 3) a revisar: 175 términos sin acierto en
+1958; se conservan. Los de otros departamentos con acierto (candelaria, el
+bordo, el tunal, tabacal, entre ríos, vaquería, betania, campo alegre de
+Guanuco, las lagunas o yacones sin departamento, angostura de la Capital y de
+Orán) se leen en B.3 y §C.
+
+Anillo 2, lectura: 99 de 274 términos con acierto. Se leyeron los contextos,
+fuera de las hojas de fichas, de todos los términos propios del departamento
+(vaqueros, yacones, los yacones, mojotoro, lesser, san cayetano, hogar agrícola
+san cayetano, luis linares, el angosto, tacones, las lagunas, las garrapatas,
+embalse en campo alegre, yugra, durazno, potrero de valencia y otros), agrupados
+por texto; y, de los genéricos y apellidos (wierna, campo alegre, castellanos,
+mamani, apaza y otros), los que traen un topónimo del departamento a ±400
+caracteres. Lo que da va a B.2, a B.3 y a §C; el resto son repeticiones de
+avisos ya fichados, sumarios y apellidos.
+
+Actores: los 932 nombres completos distintos del config (de los 999 renglones),
+con Aho-Corasick sobre el texto sin puntuación de las dos versiones: 161 con
+acierto, 1.782 aciertos. Contextos con un topónimo del departamento a ±250
+caracteres y fuera de las hojas de fichas: 45, todos repeticiones de avisos
+fichados, sumarios o apellidos, salvo los de Dardo Frías como médico regional de
+Las Costas, San Lorenzo y Vaqueros y el de Eusebia Ruiz en Vaqueros (B.2).
+Actores de las fichas de 1958 (97 formas de nombre) buscados uno por uno: B.4.
+Esa búsqueda devolvió el Decreto 12945-G (5607 h12), que revoca el nombramiento
+de A.2 y decide el apellido Flores (B.2.2). Actores de fichas cuya búsqueda por
+nombre completo no devuelve su propio acto: Augusto E. Paladini (A.3), Francisco
+González de la Vega (A.28), Werfil Gallo (A.33, «Wer / fil»), Brígida María
+Celina Grande de Ovejero (A.45), Sergia Méndez de Mogro, Corina A. Bustamante y
+Juana Guantay de Flores (A.9, capa rota), Justina Fanny Cohera de Muñoz (A.29),
+Blanca Rosa Britos y Manuel Serrey (B.2): es falla de la capa, no ausencia, y se
+declara.
+
+Números arrastrados: los 976 del config, precedidos por decreto, ley,
+resolución, expediente, catastro, partida o número: 7.081 aciertos de 536
+números. Contextos con topónimo del departamento fuera de fichas: 28, todos
+sucesorios, cátedras y licitaciones de otros departamentos (ruido).
+
+Pre-informe de lee_auto: 279 hojas-candidato del anillo 1. Cotejado contra los
+grupos de la sesión: las 47 hojas-candidato del pre-informe que la sesión no
+agrupó son «calderón», «alcalde», «caldos», «caderias», «adera», «calera»,
+«caera», «cal deno» (cantera de cal), «gallera», «gollema» y afines: ninguna es
+del departamento. La sesión agrupó diez hojas que el pre-informe no trae; de
+ellas son reales 5742 h12 (A.60) y 5758 h3 (sumario de A.67).
+
+Sumarios como control de completitud (F.2 de 1957): las 24 líneas de sumario que
+nombran el departamento tienen su acto en el §A.
+
+Identificadores de las ausencias (B.4): nombre y cargo, cargo y lugar, número de
+acto.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+80 fichas. Por orden de edición. Avisos repetidos: una entrada con sus
+apariciones. Números de documento y matrícula de personas que pueden vivir:
+omitidos (E.10). La clase de cada acto va al final de la FICHA y en el §D. Las
+remisiones internas «A de 5629» nombran la ficha por su edición; su número A.n
+está en el §D.
+
+A.1
+FUENTE: 5562 h7 c3 (Salta, jueves 2 de enero de 1958) y otras 18 apariciones
+hasta 5580 (miércoles 29 de enero): 5563 h7, 5564 h18, 5565 h9, 5566 h12, 5567
+h18, 5568 h13, 5569 h15, 5570 h13, 5571 h10-h11, 5572 h18, 5573 h10, 5574 h10,
+5575 h11, 5576 h13, 5577 h15-h16, 5578 h12, 5579 h10, 5580 h10-h11; sumarios en
+5569 h4 y 5572 h4
+FICHA: Remate judicial N 813 del martillero Arturo Salvatierra, base $
+32.361,03, el 29 de enero de 1958 a las 18 en Buenos Aires 12: el inmueble «La
+Calderilla», en el departamento de La Caldera, de 72 m de sud a norte por 2.500
+m aproximadamente de este a oeste; linderos: al norte, fracción de la misma
+finca adjudicada a Lucas Molina; al sud, herederos Mamaní; al este, cumbre de
+los cerros que la dividen de la finca «Potrero de Valencia»; al oeste, el río de
+La Caldera; título a folio 356, asientos 7 y 8 del libro 1 de La Caldera;
+partida 217. Juicio «Ejecución hipotecaria — Cooperativa Agraria del Norte Ltda.
+vs. Jorge E. Patrón Uriburu», expediente 16.831/55, juzgado de 1ª instancia, 3ª
+nominación civil y comercial. Es el aviso que el informe de 1957 fichó como A.82
+(e) 16/12/57 al 29/1/58). Clase: DOMINIO.
+MODO DE LECTURA: imagen, 130 ppp: 5562 h7 c3, el aviso entero con su encabezado.
+Las demás apariciones, en la capa, reunidas por texto (nombre del juicio,
+expediente y base).
+TEXTO:
+  N° 813 — Por: ARTURO SALVATIERRA
+  JUDICIAL — INMUEBLE
+  BASE M$N. 32.361.03
+  El día 29 de Enero de 1958, a horas 18, en el escritorio Buenos Aires 12 de
+  esta ciudad,
+  remataré con la base de Treinta y dos mil trescientos sesenta y un pesos con
+  tres centavos
+  moneda nacional, el inmueble denominado "La Calderilla", ubicado en el Dpto.
+  La Caldera, con
+  extensión de 72 mts. de Sud a Norte por 2.500 mts. aproximadamente de Este a
+  Oeste, o lo que
+  resulte tener dentro de los siguientes límites: Norte, fracción misma finca,
+  adjudicada a Lucas
+  Molina; Sud, propiedad herederos Mamaní; Este, cumbre cerros que la dividen de
+  la finca
+  "Potrero de Valencia" y Oeste, Río de La Caldera. Título folio 356, asiento 7
+  y 8 libro 1º
+  Dpto. Caldera. Nomenclatura catastral: partida 217. [...] Juicio "Ejecución
+  Hipotecaria —
+  Cooperativa Agraria del Norte Ltda. vs. Jorge E. Patrón Uriburu" Exp.
+  16.831|55. [...]
+  e) 16|12|57 al 29|1|58
+NOTA DE LECTURA: La extensión «2.500 mts.» se lee entera en la imagen de 5562 h7
+(en 1957 la decidió el control de las otras apariciones). La capa parte el
+nombre del departamento como «la cal / dera», «la cal • dera», «da uai / dera»,
+«la bale era» (5577 h15) y «cal' 1 8 libro» (5570 h13): nueve de las diecinueve
+apariciones sólo las devuelven la laxa espaciada o el texto del aviso (§2, E.7).
+Aparición: una sola entrada con sus diecinueve apariciones de 1958 (v16 §7).
+
+A.2
+FUENTE: 5564 h11 c1 (Salta, martes 7 de enero de 1958)
+FICHA: Decreto N 11914-G, 20 de diciembre de 1957, expedientes 8717/57, 9159/57,
+9052/57, 952[?]/57, 9523/57 y 9820/57: nombra en Jefatura de Policía, inciso a),
+a César Flores agente de la Subcomisaría de Mojotoro «(Dpto. La Caldera)», en
+vacante de presupuesto; los demás incisos son de otras dependencias. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 160-220 ppp: el encabezado y el inciso a) (h11 c1).
+Número y fecha, en la imagen.
+TEXTO:
+  Decreto Nº 11914-G.
+  Salta, Diciembre 20 de 1957.
+  Expedientes Nºs 8717|57; 9159|57; 9052|57; [...]; 9523|57; 9820|57.
+  [...] Art. 1º.— Nómbranse a partir de la fecha del presente Decreto al
+  siguiente personal que
+  se detalla, en Jefatura de Policía:
+  a) al señor César Flo[r]es (C. 1934— M. I. Nº [omitido] — D. M. Nº 63), en el
+  cargo de Agente
+  de la Sub Comisaría de Mojotoro (Dpto. La Caldera), en vacante de presupuesto;
+NOTA DE LECTURA: El apellido sale «Floues» en la imagen (la r, rota) y «fimos»
+en la capa; lo decide la cita cruzada (v17 §5.6.1, control 4): el Decreto
+12945-G del 13 de febrero (5607 h12, imagen, B.2) deja sin efecto este inciso a)
+y escribe «CESAR FLORES»; cita el decreto como «Nº 11914». Nombramiento que
+consta también por su revocación (v16 §5.3). La lista de expedientes se corta al
+borde de la columna en uno de ellos. Mojotoro se atribuye a La Caldera en el
+propio acto.
+
+A.3
+FUENTE: 5569 h8 c2-c3 (Salta, martes 14 de enero de 1958); sumario en 5569 h3
+(«la municipalidad de la callera»)
+FICHA: Decreto N 12064-G, 30 de diciembre de 1957, expediente 8356/57: aprueba
+la resolución de la Municipalidad de La Caldera del 27 de noviembre de 1957 que,
+vistas las propuestas de la licitación pública del 18 de noviembre para la
+construcción de la usina hidroeléctrica y la red de distribución —Vicente Moncho
+Parra, con un aumento del 31,10 %; Conrado Marcuzzi S. R. Ltda., 29,90 %;
+Augusto E. Paladini, 48,30 %— y considerando lo manifestado por la
+Administración General de A.G.A.S., adjudica la obra a Vicente Moncho Parra.
+Firmada la resolución por Cecilio Muñoz, interventor municipal. Firman el
+decreto Ramón J. A. Vásquez y Eddy Outes, ministro de Gobierno interino. Clase:
+HACIENDA-MUN+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130-150 ppp: el decreto entero (h8 c2 al pie y c3
+arriba).
+TEXTO:
+  Decreto Nº 12064-G.
+  Salta, Diciembre 30 de 1957.
+  Expediente Nº 8356|57.
+  —VISTA la Resolución elevada por la Municipalidad de La Caldera, para su
+  correspondiente
+  aprobación; [...] Art. 1º.— Apruébase la Resolución, dictada por la
+  Municipalidad de La
+  Caldera, con fecha 27 de Noviembre del año en curso, y cuyo texto íntegramente
+  se transcribe:
+  "CALDERA, Noviembre 27 de 1957.
+  "Resolución Nº — Visto y estudiadas las propuestas presentadas
+  "en la licitación pública convocada para el día 18 del cte., para la
+  construcción de una Usina
+  "Hidroeléctrica y Red de distribución por los siguientes licitantes:
+  "Vicente Moncho Parra, con un aumento del 31.10 %
+  Conrado Marcuzzi S. R. Ltda. con un aumento del 29.90 %
+  Augusto E. Paladini con un aumento del 48.30 por ciento.
+  y considerando lo manifestado por la Administración General de A. G. A. S.,
+  esta Intervención
+  Municipal — Resuelve: Adjudicar la construcción de la Usina Hidroeléctrica y
+  Red de distribución,
+  al señor Vicente Moncho Parra. [...] Firmado: Cecilio Muñóz — Interventor
+  Municipalidad de La
+  Caldera".
+  RAMON J. A. VASQUEZ / EDDY OUTES / Ministro de Gobierno, J. é I. Pública,
+  inter.
+NOTA DE LECTURA: RECUENTO PROPIO: tres licitantes; el acto no declara número. La
+resolución municipal no lleva número («Resolución Nº —»). Se adjudica al segundo
+porcentaje más bajo y no al más bajo (Marcuzzi, 29,90 %); el acto invoca lo
+manifestado por A.G.A.S. y no dice más: se transcribe y no se explica (E.9). Es
+la licitación 630 de 1957 (apertura el 18 de noviembre, A.75 de 1957): la fecha
+coincide; el número no se lee en este acto. «Muñóz» con tilde, en el original.
+
+A.4
+FUENTE: 5577 h6 c2-c3 (Salta, viernes 24 de enero de 1958)
+FICHA: Decreto N 12266-A, 10 de enero de 1958, expediente 26.307/57: reconoce
+los servicios del personal de los servicios asistenciales de la campaña de la
+Dirección de Medicina Asistencial; inciso 13), Dardo Frías, jefe de sección,
+médico regional de La Caldera, entre el 2[3?] y el 2[8?] de octubre de 1957, en
+reemplazo del Dr. Juan Carlos Martearena, «con licencia por duelo». El inciso
+1), Martearena como médico del consultorio de Villa Belgrano, del 1 al 31 de
+octubre de 1957. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120-400 ppp: encabezado, art. 1 e inciso 1) (h6 c2) e
+inciso 13) (h6 c3). Número: la serie (12265-A, del mismo 10 de enero, arriba en
+c2).
+TEXTO:
+  DECRETO Nº 12266-A.
+  SALTA, 10 de Enero de 1958.
+  Expediente Nº 26.307|57.
+  [...] Art. 1º.— Reconócense los servicios prestados por el personal que
+  seguidamente se detalla
+  y por el tiempo que en cada caso se especifica, [...]
+  1) Juan Carlos Martearena —L. E. Nº [omitido]— como Oficial 3º, Médico del
+  Consultorio de Villa
+  Belgrano, de esta ciudad, durante el tiempo comprendido entre el 1º y 31 de
+  octubre de 1957. [...]
+  13) Dardo Frías —L. E. Nº [omitido]— como Jefe de Sección, Médico Regional de
+  La Caldera,
+  durante el tiempo comprendido entre el día 2[3?] al 2[8?] de octubre de 1957,
+  en reemplazo del
+  Dr. Juan Carlos Martearena con licencia por duelo.
+NOTA DE LECTURA: Los dos días de octubre del inciso 13) no se deciden en la
+imagen (3, 5 u 8; v17 §5.6.2) y ningún otro acto del corpus fecha la licencia
+por duelo: van a E.10. El mismo decreto da a Martearena en Villa Belgrano todo
+octubre y, por el inciso 13), con licencia en La Caldera parte del mismo mes: se
+transcribe y no se concilia (E.9).
+
+A.5
+FUENTE: 5578 h8 c3 y h9 c1 (Salta, lunes 27 de enero de 1958)
+FICHA: Decreto N 12329-E, 17 de enero de 1958, expediente 5320-57: reconoce a
+María Elvira Solá (de) Patrón de Ortiz los derechos al uso del agua pública
+provenientes de usos y costumbres para el inmueble «Arnaga», catastro 100,
+situado en Vaqueros, departamento de La Caldera, y le confiere nuevo título de
+concesión con una dotación de 0,525 l/s a derivar del río Castellanos (margen
+izquierda), con carácter permanente y a perpetuidad, para una hectárea; conforme
+a la Resolución 1207 de A.G.A.S. del 7 de noviembre de 1957. Clase: AGUAS.
+MODO DE LECTURA: imagen, 130-300 ppp: el decreto entero (h8 c3 y h9 c1). Número:
+la serie (12328-E arriba en la misma hoja y 12330-E en h9, los tres del 17 de
+enero).
+TEXTO:
+  DECRETO Nº 1232[9]-E.
+  SALTA, 17 de Enero de 1958.
+  Expediente Nº 5320-57.
+  VISTO estas actuaciones por la cual la señora María Elvira Solá Patrón de
+  Ortiz solicita el
+  reconocimiento al uso de agua de dominio público para irrigar su propiedad
+  denominada "Arnaga",
+  catastro Nº 100, situada en Vaqueros, Dpto. de La Caldera; [...] por
+  Resolución Nº 1207, del
+  7 de noviembre de 1957. [...] Art. 1º.— Reconócense los derechos al uso de
+  agua del dominio
+  público invocados por la señora María Elvira Solá de Patrón de Ortiz
+  provenientes de usos y
+  costumbres, a favor del inmueble de su propiedad denominado "Arnaga", catastro
+  Nº 100, situado
+  en Vaqueros (Dpto. de La Caldera). Art. 2º.— Confiérese nuevo título de
+  concesión [...] con una
+  dotación de 0,525 l|seg., a derivar del Río Castellanos (márgen izquierda) con
+  carácter
+  permanente y a perpetuidad una superficie de una hectárea del inmueble
+  consignado en el artículo
+  anterior.
+NOTA DE LECTURA: El último dígito del número sale «9» en la imagen, en un
+encabezado de negrita donde el 9 se confunde con el 0 y el 8 (v17 §5.6.2); lo
+decide la serie: entre 12328-E y 12330-E, del mismo día. La capa lo escribe
+«13320». Es la concesión cuyo edicto publicó 1957 (A.38 de 1957, «Arnaga»). La
+capa escribe «csaldera»: la devolvió sólo la difusa (E.7).
+
+A.6
+FUENTE: 5579 h4 c1 (Salta, martes 28 de enero de 1958)
+FICHA: Decreto N 12322-E, 17 de enero de 1958, expediente 112/58: liquida a la
+Dirección de Arquitectura $ 905.398,68 en reintegro de lo invertido en octubre
+de 1957 en el Plan de Obras Públicas; entre las partidas de fondos de origen
+nacional, «Cubierto Hogar de Niños en la Caldera», H—I—I—1—D—I—2, $ 110. Clase:
+OBRA-PUBLICA+ESCUELA.
+MODO DE LECTURA: imagen, 120 ppp: el encabezado, el art. 1 y las primeras
+partidas de fondos nacionales (h4 c1).
+TEXTO:
+  DECRETO Nº 12322-E.
+  SALTA, Enero 17 de 1958.
+  Expte. Nº 112|58.
+  [...] liquídese a favor de Dirección de Arquitectura de la Provincia, con
+  cargo de oportuna
+  rendición de cuenta, la suma de $ 905.398,68 (Novecientos cinco mil
+  trescientos noventa y ocho
+  pesos con 68|100 moneda nacional), en carácter de reintegro por las
+  inversiones realizadas durante
+  el mes de octubre de 1957 en la realización del Plan de Obras Públicas [...]
+  FONDOS DE ORIGEN NACIONAL:
+  Cubierto Hogar de Niños en la Caldera
+  H—I—I—1—D—I—2 ........... $ 110.—
+NOTA DE LECTURA: El cuadro entero no se recalculó (partidas de toda la
+provincia, E.8); se transcribe la partida del departamento. La obra es el patio
+cubierto que se adjudica en abril (más adelante, 5643).
+
+A.7
+FUENTE: 5580 h4 c2 (Salta, miércoles 29 de enero de 1958); sumario en 5580 h2
+FICHA: Decreto N 12356-A, 17 de enero de 1958, expediente 26.433/57: reconoce
+los servicios de Paula Mercedes Delgado como auxiliar 1º, regente del Hogar «Dr.
+Luis Linares» de La Caldera, entre el 21 y el 26 de julio de 1957. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: el decreto entero (h4 c2).
+TEXTO:
+  DECRETO Nº 12356—A
+  SALTA, Enero 17 de 1958.
+  Expte. Nº 26.433|57.
+  —VISTO el pedido formulado por la señorita Paula Mercedes Delgado, referente
+  al reconocimiento de
+  los servicios prestados como Regente del Hogar "Dr. Luis Linares", de La
+  Caldera; [...]
+  Art. 1º.— Reconócense los servicios prestados por la señorita Paula Mercedes
+  Delgado— [...] como
+  Auxiliar 1º, Regente del Hogar "Dr. Luis Linares", de La Caldera, durante el
+  tiempo comprendido
+  entre los días 21 y 26 de julio del año 1957, [...]
+NOTA DE LECTURA: Es la regente a la que 1957 dejó cesante en julio (A.48 de
+1957, «Mercedes Paula Delgado»); el reconocimiento llega hasta el 26 de julio.
+El orden de los nombres cambia de un acto a otro (E.9).
+
+A.8
+FUENTE: 5583 h7 c3 y h8 c1 (Salta, lunes 3 de febrero de 1958)
+FICHA: Decreto N 12414-G, 24 de enero de 1958, expediente 5186/58: confirma
+desde el 1 de enero, adecuado al presupuesto 1958 (Decreto-Ley 735), al personal
+de las oficinas de campaña de la Dirección General del Registro Civil; en la
+segunda categoría de auxiliares, «53º) La Caldera, Esther Gabriela Cruz». Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 130-400 ppp: el encabezado (h7 c3) y el renglón 53º (h8
+c1). La nómina entera, en la capa.
+TEXTO:
+  Decreto Nº 124[1]4-G.
+  Salta, Enero 24 de 1958.
+  Expediente Nº 5186|58.
+  —VISTA la promulgación del Decreto Ley Nº 735 de fecha 31 de Diciembre del año
+  1957, [...]
+  Art. 1º.— Confírmase con anterioridad al día 1º de Enero del corriente año, al
+  Personal de
+  Oficinas de Campaña, dependiente de la Dirección General del Registro Civil:
+  [...]
+  52º) San José de Cachi, Ernesto Flores;
+  53º) La Caldera, Esther Gabriela Cruz;
+  54º) Acosta, Cándido Rosa Flores; [...]
+NOTA DE LECTURA: El número: el tercer dígito lo tapa una raya de columna; lo
+deciden la serie (12411-A del 22 de enero y 12415-G del 24, en h7 y h8) y el
+último dígito, legible. La nómina no se recontó entera (no nombra otro lugar del
+departamento en la capa; Vaqueros no aparece): se busca en ella «Vaqueros»,
+«Mojotoro» y «Calderilla» sin acierto. Esther Gabriela Cruz es la encargada que
+1957 confirmó (A.20 de 1957).
+
+A.9
+FUENTE: 5584 h21 c1 a h34 c2 (Salta, martes 4 de febrero de 1958); renglones del
+departamento en h22, h26, h27, h30 y h34
+FICHA: Decreto N 12531-A, 27 de enero de 1958: visto el Decreto-Ley 735
+(presupuesto 1958), confirma desde el 1 de enero al personal administrativo y
+técnico del Ministerio de Asuntos Sociales y Salud Pública. Del departamento: el
+médico regional de La Caldera, Juan Carlos Martearena; la regente interina del
+Hogar L. Linares, Teresa I. Calvelo; el auxiliar administrativo del Hogar,
+Eduardo Isijara; la enfermera de La Caldera, Corina A. Bustamante; y once cargos
+de auxiliar 5º del Hogar (mucamas, cuidadoras, lavadora, cocinera, peluquero y
+peón); más la enfermera de Vaqueros, Eusebia Ruiz. Clase: ESCUELA+CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: los dieciséis renglones del departamento. La
+nómina entera (catorce hojas), en la capa, buscada por «Caldera», «Linares»,
+«Lin.», «Vaqueros» y «Frías».
+TEXTO:
+  Decreto Nº 12531-A.
+  Salta, Enero 27 de 1958.
+  —VISTO el Decreto Ley 735 [...]
+  Art. 1º.— Confírmase con anterioridad al 1º de Enero del año en curso, al
+  siguiente personal
+  Administrativo y Técnico, del Ministerio de Asuntos Sociales y Salud Pública,
+  [...]
+  Jefe Sec. 4ª, Méd. Reg. de La Caldera, Dr. Juan Carlos Martearena; [h22]
+  Oficial 3º, Reg. int. Hogar L. Linares de La Caldera, señorita Teresa I.
+  Calvelo; [h22]
+  Auxiliar 1º Aux. Adm. Hogar "Luis Linares" Señor Eduardo Isijara; [h26]
+  Auxiliar 3º, Enferm. de La Caldera, señorita Corina A. Bustamante; [h27]
+  Auxiliar 3º, Enfermera de Vaqueros, señorita Eusebia Ruiz; [h27]
+  Auxiliar 5º, Mucama Hogar de La Caldera, Srta. Otilia Barboza; [h30]
+  Auxiliar 5º, Cuid. Niños Hogar La Caldera, Sra. Juana G. de Flores; [h30]
+  Auxiliar 5º, Cuid. Niños Hogar La Caldera, Srta. Ana Elvira Leal; [h30]
+  Auxiliar 5º Peluq. Hog. "Luis Lin." D. P. Sr. Mariano Lucas Gallardo; [h34]
+  Auxiliar 5º Lavadora Hog. La Caldera Srta. Margarita Antonia Vá[z]quez; [h34]
+  Auxiliar 5º Mucama Hog. La Caldera Sra. Ricarda Y. I. de Guido Moreno;
+  Auxiliares 5º Cuidadora de Niños Hog. La Caldera —D. Patront.— Sra. Sergia
+  Méndez de Mogro;
+  Auxiliar 5º Mucama Hog. Escuela La Caldera Sra. Epifania E. Colque de Mamani;
+  Auxiliar 5º Cocinera Hog. Esc. La Caldera Sra. Presentación G. de Valdez;
+  Auxiliar 5º Mucama Hog. Esc. La Caldera Srta. Clarisa Alcira Villegas;
+  Auxiliar 5º, Peón de Pat. Hog. La Caldera, Sr. Sixto Pastor Hugarte;
+NOTA DE LECTURA: RECUENTO PROPIO: quince renglones del departamento con el
+nombre de La Caldera o del Hogar, más uno de Vaqueros; el acto no declara número
+por dependencia, de modo que no hay nada que cotejar. El Hogar aparece de cuatro
+maneras en la misma nómina («Hogar L. Linares de La Caldera», «Hogar "Luis
+Linares"», «Hog. La Caldera», «Hog. Escuela La Caldera»). «Hugarte» es el Sixto
+Pastor Ugarte de 1956 y 1957 (E.9). La capa de h27 está rota: los renglones de
+Bustamante y de Ruiz se leyeron en la imagen; la búsqueda por nombre no los
+devuelve (B.4). Es el decreto que el 29 de abril se aclara para Carmen Uría (más
+adelante, 5647).
+
+A.10
+FUENTE: 5592 h14 c2 a h23 (Salta, viernes 14 de febrero de 1958); renglones del
+departamento en h16 c2 (lista femenina) y h22 c2-c3 (lista masculina)
+FICHA: Decreto N 12784-G, 7 de febrero de 1958: fija la ubicación de las mesas
+receptoras de votos para las elecciones generales del domingo 23 de febrero
+(Decreto nacional 11.420). En la lista femenina, «Sección electoral de La
+Caldera», distrito municipal de La Caldera: circuito 8, tres mesas (Escuela
+Elemental Mixta de La Caldera, dos; Finca Stanlex — San Alejo, una); circuito 9,
+dos mesas (Escuela Provincial Infantil de Vaqueros; Estación Ferrocarril,
+Mojotoro). En la masculina, «Sección electoral N 2 — La Caldera»: circuito 8,
+cinco mesas (Escuela Elemental Mixta; Iglesia Parroquial; Escuela Nacional 295,
+Potrero de Castilla; Escuela Nacional 250, Los Yacones; casa de Marcos
+Standlein, San Alejo); circuito 9, cuatro (Escuela Infantil Provincial,
+Vaqueros; casa de Marcos Standlein, Vaqueros; Escuela Nacional 49, Lesser;
+Escuela Nacional 160, Mojotoro). Clase: ELECTORAL.
+MODO DE LECTURA: imagen, 120-140 ppp: el encabezado (h14 c2) y los renglones del
+departamento en las dos listas (h16 c2, h22 c2-c3).
+TEXTO:
+  DECRETO Nº 12784-G.
+  Salta, 7 de Febrero de 1958.
+  Debiendo establecerse con exactitud el lugar donde deberán funcionar las mesas
+  receptoras de
+  votos, durante las próximas elecciones para autoridades nacionales,
+  provinciales y municipales
+  a efectuarse el día 23 de febrero del año en curso, [...]
+  [lista femenina, h16] SECCION ELECTORAL DE LA CALDERA / Distrito Municipal de
+  La Caldera /
+  CIRCUITO Nº 8— / MESA Nº 1.— Escuela Elemental Mixta.— La Caldera. / " " 2.—
+  Finca
+  Stanlex. — San Alejo. La Caldera. / " " 3.— Escuela Elemental Mixta. La
+  Caldera. /
+  Distrito Municipal de La Caldera / CIRCUITO Nº 9— / MESA Nº 1.— Escuela
+  Provincial
+  Infantil.— Vaqueros. / " " 2.— Estación Ferrocarril.— Mojotoro.
+  [lista masculina, h22] SECCION ELECTORAL Nº 2 — LA CALDERA / Distrito
+  Municipal de la
+  Caldera / CIRCUITO Nº 8 / MESA Nº 1.— Escuela Elemental Mixta — La Caldera. /
+  " " 2.—
+  Iglesia Parroquial — La Caldera. / " " 3.— Escuela Nacional Nº 295 — Potrero
+  de Castilla.
+  / " " 4.— Escuela Nacional Nº 250 — Los Yacones. / " " 5.— Casa de Marcos
+  Standlein —
+  San Alejo. / Distrito Municipal de la Caldera / CIRCUITO Nº 9 / MESA Nº 1.—
+  Escuela
+  Infantil Provincial Vaqueros. / " " 5.— Casa de Marcos Standlein — no .—
+  Vaqueros. /
+  " " 3.— Escuela Nacional Nº 49 — Lesser. / " " 4.— Escuela Nacional Nº 160 —
+  Mojotoro.
+NOTA DE LECTURA: RECUENTO PROPIO: lista femenina, cinco mesas (tres del circuito
+8 y dos del 9); lista masculina, nueve (cinco y cuatro); catorce en total. El
+acto no declara número por sección. En el circuito 9 masculino la segunda mesa
+lleva el número 5 («5.— Casa de Marcos Standlein»), y el orden impreso es 1, 5,
+3, 4: errata del original (E.9). «Finca Stanlex» en una lista y «Casa de Marcos
+Standlein» en la otra; «Standlein — no» (partido en la composición). Mojotoro y
+Vaqueros los atribuye a La Caldera el propio acto (distrito municipal).
+
+A.11
+FUENTE: 5608 h11 c3 y h12 c1 (Salta, jueves 13 de marzo de 1958)
+FICHA: Decreto N 12184-G, 31 de diciembre de 1957, expediente 10.161/57: aprueba
+la Resolución 296 de Jefatura de Policía (18 de diciembre de 1957) que, a pedido
+de la firma Estancia San Alejo, de propiedad de «Tansley Hnos.», crea el
+destacamento policial de San Alejo, con jurisdicción sobre San Alejo, Santa
+Rufina y Campo Alegre, asiento en el primero y dependiente de la Comisaría de La
+Caldera; acepta la cesión gratuita de un edificio y los equipos; dotación, un
+suboficial y un agente. Firma la resolución Arturo C. Sierra, comandante
+principal (R), jefe de Policía. Clase: CARGOS+OTRO.
+MODO DE LECTURA: imagen, 120 ppp: el decreto y la resolución enteros (h11 c3 y
+h12 c1).
+TEXTO:
+  DECRETO Nº 12184—G.
+  Salta, 31 de Diciembre de 1957.
+  Expediente Nº 10.161|57.
+  [...] "RESOLUCION Nº 296— SALTA, 18 de Diciembre de 1957.— JEFATURA DE POLICIA
+  VISTO: El
+  presente expediente iniciado por la firma ESTANCIA SAN ALEJO de propiedad de
+  "TANSLEY HNOS.",
+  en el que solicita la creación de un Destacamento Policial en la nombrada
+  finca San Alejo,
+  jurisdicción del Departamento de la Caldera, [...] Que del informe producido
+  por el titular de la
+  Comisaría de la Caldera se desprende que la zona que estaría bajo la
+  vigilancia del Destacamento
+  a crearse consistiría en las fincas llamadas San Alejo, Santa Rufina y Campo
+  Alegre, con asiento
+  en la primera, zona que cuenta con los caminos de acceso necesarios hasta la
+  Caldera y con
+  comunicación telefónica particular desde San Alejo a la Caldera y Campo
+  Alegre. [...] RESUELVE:
+  1º.— Créase a partir de la fecha el Destacamento Policial de SAN ALEJO, que
+  ejercerá
+  jurisdicción sobre los lugares denominados San Alejo, Santa Rufina y Campo
+  Alegre, con asiento
+  en el primero de ellos, y que dependerá de la Comisaría de Policía de la
+  Caldera. [...] 3º.— La
+  dotación para este Destacamento Policial estará integrada por un sub—oficial y
+  un Agente de
+  Policía, [...] (Fdo:) ARTURO C. SIERRA. Comandante Principal (R) Jefe de
+  Policía
+NOTA DE LECTURA: RECUENTO PROPIO: tres lugares bajo la jurisdicción del
+destacamento; el acto no declara número. El decreto es del 31 de diciembre de
+1957 y se publica el 13 de marzo. «Tansley» aquí; «Stanlex» y «Standlein» en las
+mesas electorales (A de 5592): no se concilia si es la misma casa (E.9).
+
+A.12
+FUENTE: 5610 h9 c3 (Salta, lunes 17 de marzo de 1958) y otras 15 apariciones
+hasta 5625 h7 (miércoles 9 de abril): 5611 h10, 5612 h23, 5613 h22, 5614 h22,
+5615 h9, 5616 h22, 5617 h17, 5618 h30, 5619 h19, 5620 h16, 5621 h17, 5622 h12,
+5623 h27, 5624 h13; sumarios en 5610 h3 a 5625 h3
+FICHA: Remate judicial N 1185 del martillero Miguel A. Gallo Castellanos, sin
+base, a las 17.30 de un viernes de abril de 1958 en Sarmiento 548: los derechos
+y acciones de Ana Vivas de Kelly sobre un inmueble en el pueblo de La Caldera
+que perteneció a Guillermo J. Kelly (títulos a folio 237, asiento 301, libro B
+de títulos del departamento), de 20,78 m de norte a sud por 55,42 m de este a
+oeste; linderos: al naciente, propiedad que fue de Ricardo Valdéz; al norte, la
+misma propiedad y la de Lucas Molina; al sud, Vicente Vivas; al oeste, el camino
+nacional o calle principal del pueblo. Los derechos equivalen a la mitad del
+inmueble. Partida 195, valor fiscal $ 800. Juez de Paz Letrado, secretaría 2,
+juicio «Severino Cabada vs. Ana de Kelly», ejecutivo. Clase: DOMINIO.
+MODO DE LECTURA: imagen, 120 ppp: el aviso entero en 5610 h9 c3. Las demás
+apariciones, en la capa, reunidas por el juicio y los linderos.
+TEXTO:
+  Nº 1185 — Por: MIGUEL A. GALLO CASTELLANOS — JUDICIAL — DERECHOS Y ACCIONES —
+  SIN BASE
+  El día Viernes de Abril de 1958, a horas 17.30, en mi escritorio de Avda.
+  Sarmiento Nº 548,
+  Ciudad, remataré Sin Base, los derechos y acciones que le corresponde a doña
+  Ana Vivas de
+  Kelly, sobre el inmueble ubicado en el pueblo de La Caldera, el que según
+  títulos registrados a
+  Flo. 237, As. 301 del Libro B de Títulos de ese Dpto. pertenecía a don
+  Guillermo J Kelly. Esta
+  propiedad tiene 20.78 mts. de Norte a Sud por 55.42 mts. de este a Oeste y
+  limita: al Naciente
+  con propiedad que fué de don Ricardo Valdéz; al Norte con esta misma propiedad
+  y la de don Lucas
+  Molina; al Sud con propiedad de don Vicente Vivas y al Oeste con el camino
+  nacional o sea la
+  calle principal del pueblo. Los derechos y acciones a subastarse equivalen a
+  la mitad del
+  inmueble. Nom. Catastral: Part. 195. V. Fiscal: $ 800.— m|n. Ordena señor Juez
+  de Paz Letrado,
+  Sec. Nº 2 en juicio: 'Severino Cabada vs. Ana de Kelly'— Ejecutivo. [...] e)
+  17|3 al 8|4|58.
+NOTA DE LECTURA: El día del remate no está impreso: «El día Viernes de Abril»
+(errata del original, E.9; el último día de publicación es el 8 de abril). Lucas
+Molina es también lindero del remate de La Calderilla (A de 5562). La capa lo
+escribe «Kery», «Kelly» y «Kelly”—»; el sumario da el juicio como «Severino
+Cabada vs. Ana de Kelly».
+
+A.13
+FUENTE: 5612 h15 c1-c2 (Salta, miércoles 19 de marzo de 1958)
+FICHA: Decreto N 13030-A, 19 de febrero de 1958: aprueba la Resolución 77 (19 de
+febrero) de la Caja de Jubilaciones y Pensiones, que acuerda pensiones a la
+vejez (Ley 1204, art. 1) con un haber mensual de $ 100 cada una; bajo «LA
+CALDERA»: 4626, Napoleón Quipildor (Finca El Nogalito); 4627, Zenona Vera
+(Vaqueros); 4628, Felipa Bartola Valdez de Luna (Calderilla). Clase: OTRO.
+MODO DE LECTURA: imagen, 110-400 ppp: el encabezado, el art. 1 y el rótulo de La
+Caldera con sus tres renglones.
+TEXTO:
+  DECRETO Nº 13[0]30 A.
+  SALTA, Febrero 19 de 1958.
+  [...] Art. 1º.— Apruébase la Resolución Nº 77 de fecha 19 de Febrero del año
+  en curso, emanada
+  de la Caja de Jubilaciones y Pensiones de la Provincia, cuya parte pertinente
+  dice: "Artículo
+  1º.— ACORDAR Pensiones a la Vejez, conforme a lo dispuesto por la Ley 1204, en
+  su art. 1º, con
+  un haber mensual de $ 100.— (CIEN PESOS) m/n. a cada uno de los solicitantes
+  que se detallan a
+  continuación [...]:
+  LA CALDERA
+  4626 — Napoleón Quipildor (Fca. El Nogalito);
+  4627 — Zenona Vera (Vaqueros);
+  4628 — Felipa Bartola Valdez de Luna (Calderilla);
+NOTA DE LECTURA: RECUENTO PROPIO: tres pensiones bajo LA CALDERA; el acto no
+declara número por departamento. El número del decreto: la imagen da «13?30»,
+con el tercer dígito entre 9 y 0; «13930» no cabe en la serie (13019-G a 13025-E
+son del 19 de febrero y 13039-A del 22); la capa escribe 13030. Decidido por la
+serie. El Nogalito, Vaqueros y Calderilla los atribuye el rótulo del
+departamento.
+
+A.14
+FUENTE: 5613 h13 c1-c2 (Salta, jueves 20 de marzo de 1958); sumario en 5613 h3
+FICHA: Decreto N 13090-G, 26 de febrero de 1958, expediente 8392/57: aprueba la
+resolución de la Municipalidad de La Caldera del 2 de agosto de 1957
+(«Resolución N 16» en el visto, «N 6» en el art. 1 y en el texto transcripto)
+que adjudica a Francisco Ruiz, única propuesta, la construcción del camino al
+cementerio, con entrega a noventa días; firmada por Cecilio Muñoz, interventor
+municipal, y Augusto Regis, secretario. El art. 2 deja establecido que la
+Municipalidad, en cualquier obra, debe cumplir antes las exigencias legales.
+Clase: HACIENDA-MUN+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: el encabezado, el visto y el art. 1 hasta
+«Francisco Ruiz» (h13 c1). El resto, en la capa.
+TEXTO:
+  DECRETO Nº 13090 G.
+  SALTA, Febrero 26 de 1958.
+  Expediente Nº 8392|57.
+  —VISTO el presente expediente por el cual la Municipalidad de la Caldera,
+  eleva para su
+  aprobación Resolución Nº 16— dictada por la misma comuna con fecha 2 de Agosto
+  del año ppdo., [...]
+  Art. 1º.— Apruébase la Resolución Nº 6— dictada por la Municipalidad de la
+  Caldera, con fecha 2
+  de Agosto de 1957, cuyo texto íntegramente a continuación se transcribe: "LA
+  CALDERA Agosto 2 de
+  1957. RESOLUCION Nº 6. VISTO y estudiada la única propuesta presentada por el
+  señor Francisco
+  Ruiz, [...] RESUELVE: Adjudícase al señor FRANCISCO RUIZ, la obra de
+  construcción del camino al
+  cementerio. [...] Firmado: CECILIO MUÑOZ Interventor Municipal — AUGUSTO REGIS
+  — Secretario de
+  la Municipalidad de La Caldera. [...]"
+  Art. 2º.— Déjase establecido, que la Municipalidad en
+  cualquier oportunidad que deba realizar una obra municipal, deberá dar
+  cumplimiento previamente
+  con las exigencias legales, antes de iniciar la obra,
+NOTA DE LECTURA: «Resolución Nº 16» y «Nº 6» en el mismo decreto: se transcriben
+las dos y no se elige (E.9). El monto de la obra no se publica. La capa escribe
+«La Caletera» en la firma (la difusa lo devuelve).
+
+A.15
+FUENTE: 5614 h12 c3 (Salta, viernes 21 de marzo de 1958)
+FICHA: Decreto N 13154-E, 28 de febrero de 1958, expediente 480/58: reconoce a
+Julio González los derechos al agua pública y le otorga nuevo título de
+concesión para dos hectáreas cinco mil metros cuadrados del inmueble «Terreño»,
+catastro 114, en el partido La Calderilla, departamento La Caldera, con una
+dotación de un litro treinta y un centilitros por segundo a derivar del río La
+Caldera (margen izquierda), permanente y a perpetuidad; en estiaje, un turno de
+seis horas veinte minutos cada catorce días con todo el caudal de la acequia
+Municipal. A.G.A.S., Resolución 13[6?][0?]/58. Clase: AGUAS.
+MODO DE LECTURA: imagen, 115 ppp: el decreto hasta el art. 2 (h12 c3).
+TEXTO:
+  DECRETO Nº 13154 E.
+  SALTA, Febrero 28 de 1958.
+  Expediente Nº 480/58.
+  —VISTO este expediente por el que el señor JULIO GONZALEZ solicita el
+  reconocimiento de una
+  concesión de agua del dominio público para irrigar su propiedad denominada
+  "TERREÑO", Catastro
+  Nº 114 ubicada en el Partido de la Calderilla, Departamento La Caldera, con
+  una superficie bajo
+  riego de 2 Has. 5.000 metros cuadrados; [...] Resolución Nº 13[6?][0?]|58,
+  [...]
+  Art. 1º.— Reconócense los derechos al uso del agua del dominio público
+  invocados por el señor
+  JULIO GONZALEZ y otórgase nuevo título de concesión para irrigar dos
+  hectáreas, cinco mil metros
+  cuadrados del inmueble denominado "TERREÑO", Catastro Nº 114 ubicado en el
+  Partido La
+  Calderilla, Departamento La Caldera, con una dotación de un litro, treinta y
+  un centilitros por
+  segundo, a derivar del Río La Caldera (márgen izquierda), con carácter
+  permanente y a perpetuidad.
+  En época de estiaje, la propiedad de referencia tendrá derecho a un turno de
+  seis horas veinte
+  minutos cada catorce días con todo el caudal de la acequia Municipal.
+NOTA DE LECTURA: La capa escribe «Terreno»; la imagen, «TERREÑO». El número de
+la resolución de A.G.A.S. sale «1360» en la imagen y «1369» en la capa (0 y 9,
+v17 §5.6.2); no hay control que lo decida (E.10). Caudal por hectárea: 1,31 l/s
+para 2,5 ha, 0,524 l/s/ha, el módulo de las concesiones del año (0,525 en
+«Arnaga»). Julio González ya estaba en el config (1957).
+
+A.16
+FUENTE: 5614 h13 c3 (Salta, viernes 21 de marzo de 1958); sumario en 5614 h3
+FICHA: Decreto N 13160-A, 28 de febrero de 1958: fija una sobreasignación
+mensual de $ 500 a la subregente del Hogar Escuela de La Caldera, Carmen Uría,
+desde el 1 de noviembre de 1957. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 115 ppp: el decreto entero (h13 c3).
+TEXTO:
+  DECRETO Nº 13160 A.
+  SALTA, Febrero 28 de 1958.
+  —VISTO el Memorándum de fecha 27 de Febrero en curso, y atento a lo informado
+  por la Dirección
+  de Administración del Ministerio del rubro, [...]
+  Art. 1º.— Fíjase una sobreasignación mensual de QUINIENTOS PESOS MONEDA
+  NACIONAL ($ 500.—
+  m/n.) a la Sub—Regente del Hogar Escuela de La Caldera, señorita CARMEN URIA,
+  la que deberá
+  hacerse efectiva a partir del 1º de Noviembre ppdo..
+NOTA DE LECTURA: Es la primera aparición del año de Carmen Uría; en abril se la
+da como regenta interina del Hogar del Niño de la Capital (más adelante, 5647).
+
+A.17
+FUENTE: 5614 h14 c1 (Salta, viernes 21 de marzo de 1958); encabezado en h13 c3
+FICHA: Decreto N 13161-A, 28 de febrero de 1958, expediente 26.677/57: reconoce
+servicios en los servicios asistenciales de la campaña; inciso 1), Dardo Frías,
+jefe de sección, médico regional de La Caldera, del 4 al 11 de diciembre de
+1957, en reemplazo del titular, Juan Carlos Martearena, en licencia por
+enfermedad. Clase: CARGOS.
+MODO DE LECTURA: imagen, 115 ppp: el art. 1 y el inciso 1) (h14 c1). Encabezado,
+en la capa; número: la serie (13160-A y 13162-A, del mismo 28 de febrero).
+TEXTO:
+  DECRETO Nº 13161 A.
+  SALTA, Febrero 28 de 1958
+  Expediente Nº 26.677/57. [capa]
+  [...] Art. 1º.— Reconócense los servicios prestados por el personal que
+  seguidamente se detalla
+  y por el tiempo que en cada caso se especifica, el que viene desempeñándose en
+  distintos servicios
+  asistenciales de la campaña, dependiente del Ministerio del rubro:
+  1º) DARDO FRIAS —L. E. Nº [omitido]— como Jefe de Sección —Médico Regional de
+  La Caldera—
+  durante el tiempo comprendido entre el 4 al 11 de Diciembre ppdo. en reemplazo
+  del titular del
+  cargo Doctor Juan Carlos Martearena, que se encontraba en uso de licencia por
+  enfermedad;
+NOTA DE LECTURA: La licencia de Martearena desde el 4 de diciembre la da también
+el decreto de licencias de 5629 (más adelante).
+
+A.18
+FUENTE: 5623 h19 c3 (Salta, lunes 7 de abril de 1958)
+FICHA: Decreto N 13583-A, 25 de marzo de 1958, expedientes 856-C/58 (711/58 y
+agregados de la Caja de Jubilaciones y Pensiones): aprueba la Resolución 88 (28
+de febrero) de la Caja, que rehabilita pensiones a la vejez caducadas (Ley 1204,
+art. 1 inc. a, y art. 11 del Decreto Reglamentario 5099/51), con haber de $ 100;
+bajo «LA CALDERA»: 1829, Tránsito Burgos de Alfaro. Clase: OTRO.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado, el art. 1 y los renglones de
+Capital, Anta y La Caldera (h19 c3).
+TEXTO:
+  DECRETO Nº 13583—A.
+  SALTA, Marzo 25 de 1958.
+  Expte. Nº 856—C|58 (711|58 y agreg. de la Caja de Jubilaciones y Pensiones de
+  la Provincia).
+  VISTO en estos expedientes la Resolución Nº 88 de la Caja de Jubilaciones y
+  Pensiones de la
+  Provincia, por la que se rehabilitan varias pensiones a la vejez; [...]
+  "Art. 1º — Rehabilitar las siguientes pensiones a la vejez, [...]
+  LA CALDERA:
+  1829 — Tránsito Burgos de Alfaro. (Con un haber mensual de $ 100.—)
+NOTA DE LECTURA: RECUENTO PROPIO: una pensión bajo LA CALDERA; el acto no
+declara número. Es la pensión 1829 que el Decreto 6127-A de 1957 declaró caduca
+por suficientes medios de vida (A.3 de 1957): la misma persona y el mismo
+número. El decreto no dice por qué se rehabilita, más que por «haber
+desaparecido las causas que motivaron su caducidad».
+
+A.19
+FUENTE: 5624 h9 c3 y 5624 h10 c1 (Salta, martes 8 de abril de 1958)
+FICHA: Decreto N 13644-E, 27 de marzo de 1958, expediente 892/958: reconoce a
+Benita M. de Apaza los derechos al agua pública provenientes de usos y
+costumbres para su inmueble sin nombre, catastro 84, y le confiere nuevo título
+con 4 litros 20 centilitros por segundo a derivar del río La Caldera por la
+acequia de su propiedad, para regar ocho hectáreas, permanente y a perpetuidad;
+en estiaje, reajuste proporcional entre todos los regantes. A.G.A.S., Resolución
+1349 del 13 de enero de 1958. El visto sitúa el inmueble «en La Candelaria,
+Dpto. de La Caldera» y el art. 1, «en La Calderilla, Dpto. de La Caldera».
+Clase: AGUAS.
+MODO DE LECTURA: imagen, 110 ppp: el decreto hasta el art. 2 (h9 c3). La
+superficie (ocho hectáreas), en la capa de h10 c1.
+TEXTO:
+  Decreto Nº 13644—E.
+  Salta, 27 de marzo de 1958.
+  Expediente Nº 892|958.
+  VISTO este expediente por el que la señora Benita M. de Apaza solicita el
+  reconocimiento al uso
+  de agua del dominio público para el inmueble sin nombre, de su propiedad,
+  Catastro Nº 84,
+  situado en La Candelaria, Dpto. de La Caldera; [...] por Resolución Nº 1349,
+  del 13 de enero
+  del cte. año; [...] Art. 1º.— Reconócense los derechos al uso de agua del
+  dominio público
+  invocados por la señora Benita M. de Apaza, provenientes de usos y costumbres,
+  a favor del
+  inmueble, sin nombre, de su propiedad, Catastro Nº 84, situado en La
+  Calderilla, Dpto. de La
+  Caldera. Art. 2º.— Confiérese un nuevo título de concesión a la señora Benita
+  M. de Apaza, con
+  una dotación de 4 litros 20 centilitros por segundo, a derivar del Río La
+  Caldera, por la
+  acequia de su propiedad, para regar, con carácter permanente y a perpetuidad,
+  una superficie
+  de ocho hectáreas del inmueble consignado en el artículo anterior. [h10, capa]
+NOTA DE LECTURA: «La Candelaria» y «La Calderilla» para el mismo catastro en el
+mismo decreto: se transcriben las dos y no se elige (E.9); la pertenencia al
+departamento la da el acto en los dos lugares. Control aritmético: 4,20 l/s para
+8 ha son 0,525 l/s por hectárea, el módulo de «Arnaga» (A de 5578). El número
+del decreto se lee entero en la imagen («13644—E»); la capa escribe «13642-13»
+en el decreto anterior de la misma hoja, que la imagen da 13642-E. Apaza está en
+el anillo 2 como apellido (v16 §5.1bis); aquí es la titular del catastro.
+
+A.20
+FUENTE: 5629 h17 c2 (Salta, martes 15 de abril de 1958)
+FICHA: Decreto N 13756-E, 1 de abril de 1958, expediente 1022-1958: reconoce a
+Esteban Mogro los derechos al agua pública provenientes de usos y costumbres
+para su inmueble «Lote N 6», catastro 46, en el departamento de La Caldera, y le
+confiere nuevo título con diez centilitros por segundo a derivar del río La
+Caldera (margen derecha), para dos mil metros cuadrados, permanente y a
+perpetuidad; en estiaje, un turno de 16 horas cada ocho días con la mitad del
+caudal de la acequia municipal. A.G.A.S., Resolución 1359 del 12 de diciembre de
+1957. Clase: AGUAS.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado, el considerando y los arts. 1 y
+2 (h17 c2). El turno de estiaje, en la capa.
+TEXTO:
+  DECRETO Nº 13756—E.
+  Salta, 1 de abril de 1958.
+  Expediente Nº 1022—1958.
+  VISTO este expediente por el que el señor Esteban Mogro solicita el
+  reconocimiento al uso de agua
+  del dominio público para el inmueble de su propiedad "Lote Nº 6", catastro Nº
+  46, situado en el
+  Dpto. de la Caldera; [...] por Resolución Nº 1359, del 12 de diciembre de
+  1957. [...] Art. 2º.—
+  Confiérese nuevo título de concesión al señor Esteban Mogro, con una dotación
+  de diez
+  centilitros por segundo, a derivar del río La Caldera (margen derecha), para
+  regar, con carácter
+  permanente y a perpetuidad, una superficie de dos mil metros cuadrados, del
+  inmueble de su
+  propiedad consignado en el artículo anterior. En época de estiaje, la
+  propiedad de referencia
+  tendrá derecho a un turno de 16 horas cada ocho días, con la mitad del caudal
+  de la acequia
+  municipal. [capa]
+NOTA DE LECTURA: Control aritmético: 0,10 l/s para 0,2 ha son 0,5 l/s por
+hectárea. El turno de 16 horas lo rectifica a 17 un decreto de junio (más
+adelante, 5663), que atribuye el error a la resolución de A.G.A.S. Esteban Mogro
+es nombrado juez de paz del pueblo en diciembre (más adelante, 5800); el config
+ya lo tenía (1957).
+
+A.21
+FUENTE: 5629 h18 c3 y h20 c1 (Salta, martes 15 de abril de 1958)
+FICHA: Decreto N 13764-A, 2 de abril de 1958: licencias por enfermedad
+(Decreto-Ley 622, art. 14); art. 4, cinco días a Clelia Olivera, auxiliar 5º,
+mucama del Hospital de La Caldera, desde el 13 de enero de 1958; art. 16, ocho
+días al Dr. Juan Carlos Martearena, médico regional de La Caldera, desde el 4 de
+diciembre de 1957. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: los arts. 4 (h18 c3) y 16 (h20 c1).
+Encabezado, en la capa (h18 c2); entre h18 y h20 no hay otro encabezado de
+decreto.
+TEXTO:
+  DECRETO 13764 A.
+  SALTA, Abril 2 de 1958. [capa]
+  [...]
+  Art. 4º.— Concédense cinco (5) días de licencia por enfermedad, a la señorita
+  CLELIA OLIVERA
+  —L. C. Nº [omitido]— Auxiliar 5º—Mucama del Hospital de La Caldera, a partir
+  del día 13 de
+  Enero de 1958, de conformidad a lo establecido por el Art. 14º del Decreto Ley
+  Nº 622. [...]
+  Art. 16.— Concédense ocho (8) días de licencia por enfermedad, al Dr. JUAN
+  CARLOS MARTEAREÑA
+  —L. E. Nº [omitido]— Médico Regional de La Caldera, a partir del día 4 de
+  Diciembre de 1957, de
+  conformidad a las disposiciones contenidas en el Artículo 14º del Decreto Ley
+  Nº 622.
+NOTA DE LECTURA: Ocho días desde el 4 de diciembre llegan al 11, que es el
+período de Frías en el Decreto 13161-A (A de 5614 h14): cierra. «Hospital de La
+Caldera» es la primera vez en el año que se nombra así el establecimiento.
+«MARTEAREÑA», con eñe, en el original.
+
+A.22
+FUENTE: 5642 h13 c1-c2 (Salta, lunes 5 de mayo de 1958); sumario en 5642 h3
+FICHA: Decreto N 14043-A, 23 de abril de 1958, expedientes 25.137/58, 27.243/58
+y 27.176/58: reconoce servicios; art. 3, Justina C. de Muñoz, auxiliar 5º,
+enfermera de la Estación Sanitaria de La Caldera, del 5 al 29 de febrero de
+1958. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: el art. 3 (h13 c2). Encabezado y arts. 1 y 2,
+en la capa (h13 c1).
+TEXTO:
+  DECRETO Nº 14043—A.
+  Salta, 23 de abril de 1958. [capa]
+  [...]
+  Art. 3º.— Reconócense los servicios prestados por la señora Justina C. de
+  Muñoz, al cargo de
+  Auxiliar 5º, Enfermera de la Estación Sanitaria de La Caldera, durante el
+  tiempo comprendido
+  desde el 5 al 29 de febrero del año en curso.
+NOTA DE LECTURA: Período imposible: «desde el 5 al 29 de febrero» de 1958, año
+no bisiesto; se transcribe y no se corrige (v16 §8.20, E.9). En mayo otro
+decreto le reconoce servicios del 5 de febrero al 4 de marzo como ayudante de
+enfermera del consultorio externo (más adelante, 5654), con el apellido «Cohera
+de Muñoz»: los dos períodos se superponen (E.9). El nombre del establecimiento
+cambia: estación sanitaria aquí, consultorio externo allá.
+
+A.23
+FUENTE: 5642 h13 c2 (Salta, lunes 5 de mayo de 1958); sumario en 5642 h3
+FICHA: Decreto N 14044-A, 23 de abril de 1958, expediente 27.078/58: reconoce
+los servicios del Dr. Dardo Ángel Frías como jefe de sección, médico regional de
+La Caldera, dependiente de la Dirección de Medicina Asistencial, del 6 al 12 de
+marzo de 1958, en reemplazo del titular, Juan Carlos Martearena, en licencia
+reglamentaria. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el decreto hasta el art. 1 (h13 c2).
+TEXTO:
+  DECRETO Nº 14044—A.
+  Salta, 23 de abril de 1958.
+  Expediente Nº 27.078|58.
+  VISTO estas actuaciones relacionadas con el reconocimiento de los servicios
+  prestados por el
+  doctor Dardo Angel Frías quien se desempeñara en reemplazo del Dr. Juan Carlos
+  Martearena; [...]
+  Art. 1º.— Reconócense lo sservicios prestados por el doctor Dardo Angel Frías,
+  L. E. Nº
+  [omitido], como Jefe de Sección, Médico Regional de La Caldera, dependiente de
+  la Dirección de
+  Medicina Asistencial, durante el tiempo comprendido entre el 6 de marzo y el
+  12 del mismo mes
+  del año en curso, en reemplazo del titular de dicho cargo, doctor Juan Carlos
+  Martearena, que
+  se encontraba en uso de licencia reglamentaria;
+NOTA DE LECTURA: Frías es, a la vez, médico regional de Las Costas, San Lorenzo
+y Vaqueros (B.2): en marzo se le reconocen servicios en esa regional del 1 al 31
+(5671 h6, B.2), período que contiene al de este decreto. No se concilia (E.9).
+
+A.24
+FUENTE: 5643 h9 c1-c2 (Salta, martes 6 de mayo de 1958); sumario en 5643 h3; la
+partida, en el cuadro de 5643 h8
+FICHA: Decreto N 14109-E, 25 de abril de 1958, expediente 919-58: adjudica al
+contratista Adhemar Néstor Imberti, por el sistema de ajuste alzado, la
+construcción del patio cubierto en el Hogar del Niño —La Caldera, en $
+154.984,40, la oferta más conveniente de la licitación pública. Clase:
+OBRA-PUBLICA+ESCUELA.
+MODO DE LECTURA: imagen, 115 ppp: el decreto hasta el art. 1 (h9 c1). El resto y
+el cuadro de h8, en la capa.
+TEXTO:
+  DECRETO Nº 14109—E.
+  SALTA, Abril 25 de 1958.
+  Expte. Nº 919—58.
+  VISTO este expediente por el que Dirección de Arquitectura de la Provincia
+  solicita se adjudique
+  al contratista Adhemar Néstor Imberti, la obra "Construcción de patio cubierto
+  en el Hogar del
+  Niño —La Caldera", por el sistema de "Ajuste Alzado", en la suma de $
+  154.984.40; [...]
+  Art. 1º — Adjudícase al contratista Adhemar Néstor Imberti la construcción de
+  la obra: "Patio
+  cubierto en el Hogar del Niño —La Caldera", en la suma de $ 154.984.40 (Ciento
+  cincuenta y
+  cuatro mil novecientos ochenta y cuatro pesos con 40/100 moneda nacional), por
+  el sistema de
+  ajuste alzado.
+NOTA DE LECTURA: La cifra en letras y la cifra en números coinciden. El nombre
+del establecimiento: «Hogar del Niño —La Caldera», no Hogar Escuela «Dr. Luis
+Linares» (E.9; lo mismo hizo A.76 de 1957). El primer certificado se aprueba en
+agosto (más adelante, 5712).
+
+A.25
+FUENTE: 5644 h19 c2 a h21 (Salta, miércoles 7 de mayo de 1958); el renglón del
+departamento en h21
+FICHA: Decreto-Ley N 841-E, 29 de abril de 1958, expediente 1325/58:
+redistribuye saldos no utilizados de los planes de obras 1954-1957 dentro del
+Plan de Obras Públicas 1958 (Anexo H) con arreglo a planillas analíticas; en la
+de la Administración de Vialidad de Salta (Capítulo III, Título 3, Subtítulo A,
+Rubro IV), el renglón 8: «Ayuda Financiera a Consorcio N 12 — Construcción
+puente s/Río Caldera — Plan «B» — Caminos de Fomento Agrícola», presupuesto $
+650.000, autorización de inversión en 1958, $ 400.000. Clase:
+OBRA-PUBLICA+NORMA.
+MODO DE LECTURA: imagen, 110 ppp: el renglón 8 (h21) y la cabecera de la
+planilla (h20). El articulado, en la capa (h19).
+TEXTO:
+  DECRETO LEY Nº 841 E.
+  SALTA, Abril 29 de 1958.
+  Expediente Nº 1325/58. [capa]
+  [...]
+  PLAN ANALITICO AÑO 1958 / Ministerio: Economía, Finanzas y Obras Públicas /
+  Repartición: Adm.
+  de Vialidad de Salta [...]
+  8 Ayuda Financiera a Consorcio Nº 12 — Construcción puente s|Río Caldera —
+  Plan "B" —
+  Caminos de Fomento Agrícola ........... 650.000.— 400.000.—
+NOTA DE LECTURA: Es el puente sobre el río Caldera del consorcio caminero 12 que
+1957 licitó (A.74 de 1957, licitación 593, presupuesto 1.984.[0?]88,50): el
+monto no es el mismo porque aquí es la ayuda provincial. La planilla no se
+recalculó (E.8).
+
+A.26
+FUENTE: 5647 h6 c1 a c3 (Salta, lunes 12 de mayo de 1958); el artículo, en h6 c3
+FICHA: Decreto-Ley N 83[1] A, 23 de abril de 1958: modifica el régimen del
+Seguro de Enfermedad (Decreto-Ley 669) del Instituto Provincial de Seguros; el
+art. 8 fija para los asegurados que residan en la Capital y en los departamentos
+de Cerrillos, Rosario de Lerma, Chicoana, La Viña, General Güemes, La Caldera u
+otros con servicios sanatoriales un aporte mensual del 2½ % del ingreso nominal;
+en los demás, 1½ %. Clase: NORMA.
+MODO DE LECTURA: imagen, 150-300 ppp: el encabezado (h6 c1) y el art. 8 (h6 c3).
+TEXTO:
+  DECRETO LEY Nº 83[1] A.
+  SALTA, Abril 23 de 1958.
+  [...]
+  Artículo 8º.— Los asegurados que residan en la ciudad Capital, en los
+  Departamentos de
+  Cerrillos, Rosario de Lerma, Chicoana, La Viña, General Güemes, La Caldera, o
+  en otros
+  Departamentos que cuentan con servicios sanatoriales, efectuarán mensualmente
+  un aporte
+  equivalente al 2 ½ % (dos y medio por ciento) de su ingreso nominal mensual;
+  en los demás
+  casos el aporte a efectuarse por los asegurados, será del 1 ½ % [...]
+NOTA DE LECTURA: RECUENTO PROPIO: siete jurisdicciones nombradas (la Capital y
+seis departamentos); el acto no declara número. El último dígito del número sale
+como un 1 con trazo en la imagen y la capa escribe «83Í»; el 837-A del mismo día
+está en la misma hoja: no hay serie que lo decida (E.10). El acto pone a La
+Caldera entre los departamentos «que cuentan con servicios sanatoriales»: se
+transcribe, no se evalúa.
+
+A.27
+FUENTE: 5647 h12 c2 (Salta, lunes 12 de mayo de 1958); sumario en 5647 h3
+FICHA: Decreto N 14197-A, 29 de abril de 1958: deja establecido que la
+confirmación de Carmen Uría por el Decreto 12.531 (27 de enero) es como auxiliar
+3º, subregenta del Hogar de Niños «Dr. Luis Linares» de La Caldera, dependiente
+de la Dirección de Patronato y Asistencia Social de Menores, y no como regenta
+interina del Hogar del Niño de la Capital, donde se desempeña por razones de
+servicio. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 110 ppp: el decreto entero (h12 c2).
+TEXTO:
+  DECRETO Nº 14197—A.
+  Salta, 29 de abril de 1958.
+  VISTO que por Decreto nº 12.531 de fecha 27 de enero del año en curso se
+  confirma a la Srta.
+  Cármen Uría como Auxiliar 3º, Regenta Interina del Hogar del Niño, cuando su
+  verdadero cargo es
+  como Auxiliar 3º, Sub—Regenta del Hogar de Niños "Dr. Luis Linares", de La
+  Caldera,
+  desempeñándose actualmente y debido a razones de servicio, como Regenta
+  Interina en el Hogar del
+  Niño de esta ciudad; [...] Art. 1º. — Déjase debidamente establecido que la
+  confirmación de la
+  Srta. Cármen Uría, dispuesta mediante Decreto Nº 12.531 de fecha 27 de enero
+  del año en curso,
+  lo es en el cargo de Auxiliar 3º, Sub—Regenta del Hogar de Niños "Dr. Luis
+  Linares", de La
+  Caldera, dependiente de la Dirección de Patronato y Asistencia Social de
+  Menores.
+NOTA DE LECTURA: El sumario de 5647 h3 no se leyó entero en la imagen. La capa
+da 14198 como el número siguiente de la hoja.
+
+A.28
+FUENTE: 5650 h5 c3 (Salta, jueves 15 de mayo de 1958); sumario en 5650 h2
+FICHA: Decreto N 75-G, 8 de mayo de 1958, expediente 6958/58: aprueba la
+Resolución 146 de Jefatura de Policía (29 de abril) que, a pedido de vecinos de
+Potrero de Castilla, «Dpto. de La Caldera», crea un destacamento policial en esa
+localidad bajo la jurisdicción de la Comisaría de La Caldera, con un suboficial
+y un agente, y acepta la cesión gratuita del local que ofrece Francisco González
+de la Vega. Clase: CARGOS+OTRO.
+MODO DE LECTURA: imagen, 110 ppp: el decreto y la resolución hasta el art. 3 (h5
+c3).
+TEXTO:
+  DECRETO Nº 75—G.
+  SALTA, Mayo 8 de 1958.
+  Expte. Nº 6958|58.
+  —VISTAS las presentes actuaciones en las cuales Jefatura de Policía solicita
+  se apruebe la
+  Resolución Nº 146 de fecha 29 de abril del año en curso, en la que se dispone
+  la creación de un
+  Destacamento Policial en la localidad de Potrero de Castilla, [...]
+  "RESOLUCION Nº 146.— Jefatura
+  de Policía: Salta, 29 de Abril de 1958.— Visto: El Expediente Nº 648|58. Letra
+  "C", por el que,
+  vecinos de la localidad de Potrero de Castilla, Dpto. de la Caldera) solicitan
+  la creación de una
+  Dependencia Policial en dicha localidad, [...] RESUELVE: 1º — Créase a partir
+  del día de la fecha,
+  un Destacamento Policial en la localidad de Potrero de Castilla, el que
+  actuará con igual
+  denominación, bajo jurisdicción de la Comisaría de Policía de La Caldera.—
+  2º.— La Dotación del
+  referido Destacamento estará integrada por un Sub—Oficial y un agente.— 3º.—
+  Acéptase el
+  ofrecimiento efectuado por el señor Francisco González de la Vega, [...]
+NOTA DE LECTURA: Es el segundo destacamento del año en el departamento (San
+Alejo, A de 5608). La numeración de los decretos recomienza con el gobierno
+constitucional: 70-A del 7 de mayo en la misma hoja (E.4). El paréntesis de
+«Dpto. de la Caldera)» abre mal en el original.
+
+A.29
+FUENTE: 5654 h6 c3 (Salta, miércoles 21 de mayo de 1958); encabezado en h6 c2
+FICHA: Decreto N 126-A, 12 de mayo de 1958: reconoce los servicios de Justina
+Fanny Cohera de Muñoz, auxiliar 5º, ayudante de enfermera del Consultorio
+Externo de La Caldera, del 5 de febrero al 4 de marzo de 1958. Clase: CARGOS.
+MODO DE LECTURA: imagen, 110 ppp: el art. 1 (h6 c3). Encabezado, en la capa;
+número: la serie (124-A, 125-A y 129-A en la misma hoja).
+TEXTO:
+  DECRETO Nº 126 A.
+  SALTA, Mayo 12 de 1958. [capa]
+  —VISTOS estos expedientes; [...]
+  Art. 1º.— Reconócense los servicios prestados por la Auxiliar 5º, Ayudante de
+  Enfermera del
+  Consultorio Externo de La Caldera, señora Justina Fanny Cohera de Muñóz L. C.
+  Nº [omitido],
+  durante el tiempo comprendido desde el 5 de Febrero al 4 de Marzo, del año en
+  curso.
+NOTA DE LECTURA: Se superpone con el Decreto 14043-A (A de 5642), que le
+reconoce del 5 al 29 de febrero como enfermera de la Estación Sanitaria: mismo
+comienzo, distinto cargo, distinto establecimiento y distinto fin. No se
+concilia (E.9).
+
+A.30
+FUENTE: 5663 h5 c2 (Salta, lunes 2 de junio de 1958)
+FICHA: Decreto N 242-E, 16 de mayo de 1958, expediente 1022/58: a pedido de
+A.G.A.S. (Resolución 977/58), rectifica el Decreto 13.756 del 1 de abril (A de
+5629): a la concesión de Esteban Mogro para el «Lote 6», catastro 46, del
+departamento de La Caldera, le corresponde en estiaje un turno de 17 horas cada
+8 días, y no de 16; el error venía de la Resolución 1359/57 de A.G.A.S. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 110 ppp: el decreto hasta el art. 1 (h5 c2).
+TEXTO:
+  DECRETO Nº 242—E.
+  Salta, 16 de mayo de 1958.
+  Expediente Nº 1022|58.
+  VISTO que Administración General de Aguas de Salta solicita se ratifique el
+  decreto Nº 13.756,
+  del 1º de abril del año en curso, dejando establecido que a la concesión de
+  agua que se reconoce
+  por dicho decreto a favor del señor Esteban Mogro para el riego de su
+  propiedad "Lote 6",
+  catastro Nº 46, del Dpto. de La Caldera, le corresponde un turno de 17 horas
+  cada 8 días, en
+  época de estiaje, y no de 16 como se consigna en el artículo 2º de dicho
+  decreto; [...]
+NOTA DE LECTURA: El visto dice «ratifique» y el art. 1 «Rectifícase»: se
+transcriben los dos (E.9). La numeración recomienza en mayo (E.4).
+
+A.31
+FUENTE: 5666 h10 c3 (Salta, lunes 9 de junio de 1958)
+FICHA: Decreto N 335-A, 26 de mayo de 1958: reconoce servicios; art. 6, María A.
+Acuña, auxiliar 5º, ayudante de enfermera de la Estación Sanitaria de La
+Caldera, del 6 al 31 de marzo de 1958. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: el art. 6 (h10 c3). Encabezado, en la capa;
+número: la serie (334-A y 337-A en la misma hoja).
+TEXTO:
+  DECRETO Nº 335 A.
+  SALTA, Mayo 26 de 1958. [capa]
+  [...]
+  Art. 6º.— Reconócense los servicios prestados por la señorita María A. Acuña,
+  L. C. Nº
+  [omitido], como Aux. 5º Ayudante de Enfermera, de la Estación Sanitaria de La
+  Caldera, durante
+  el tiempo comprendido entre el día 6 y 31 de marzo, inclusive, del corriente
+  año;
+NOTA DE LECTURA: Primero de cuatro actos del año con los servicios mensuales de
+Acuña (marzo, abril, mayo y junio; más adelante, 5685, 5702 y 5709).
+
+A.32
+FUENTE: 5667 h11 c1 (Salta, martes 10 de junio de 1958); encabezado en h10
+FICHA: Decreto N 351-A, 26 de mayo de 1958: licencias por enfermedad
+(Decreto-Ley 622/57, art. 14); art. 6, cinco días desde el 28 de enero de 1958 a
+Juana Guantay de Flores, auxiliar 5º, cuidadora de niños del Hogar de La
+Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: el art. 6 (h11 c1). Encabezado, en la capa
+(h10): es el último decreto de esa hoja y h11 no abre otro antes del art. 6.
+TEXTO:
+  DECRETO Nº 351—A.
+  Salta, 26 de mayo de 1958. [capa]
+  [...]
+  Art. 6º.— Concédense cinco días de licencia por enfermedad, con anterioridad
+  al día 28 de enero
+  de 1958, a la Auxiliar 5º, Cuidadora de niños, del Hogar de La Caldera, Sra.
+  Juana Guantay de
+  Flores, L. C. Nº [omitido]; de conformidad al art. 14º del Decreto Ley Nº
+  622/57.
+NOTA DE LECTURA: Otro decreto de junio le da dos licencias más, desde el 23 de
+enero y el 3 de febrero (más adelante, 5678): la del 28 de enero cae dentro de
+la del 23. No se concilia (E.9). «Guantay de Flores» aquí; «Juana G. de Flores»
+en la confirmación de enero (A de 5584).
+
+A.33
+FUENTE: 5667 h19 c1-c2 (Salta, martes 10 de junio de 1958)
+FICHA: Decreto N 391-E, 28 de mayo de 1958: visto el Decreto nacional 18.219/56,
+reglamentario del Decreto-Ley 9875/56 del Plan de Caminos de Fomento Agrícola
+(al que Salta adhirió por el Decreto-Ley 261/56), designa ad honorem a los
+intendentes municipales encargados de constituir la Comisión Vial de cada
+departamento; por el de La Caldera, «Sr. Werfil Gallo». Clase:
+OBRA-PUBLICA+CARGOS.
+MODO DE LECTURA: imagen, 110-300 ppp: el articulado y la lista de intendentes
+(h19 c2). Encabezado, en la capa (h19 c1).
+TEXTO:
+  DECRETO Nº 391 E.
+  SALTA, Mayo 28 de 1958 [capa]
+  [...]
+  Art. 1º. — Desígnense con carácter ad—honorem, encargados de constituir la
+  Comisión Vial
+  dispuesta por decreto ley nacional Nº 9875|56, con jurisdicción sobre todo el
+  Departamento y con
+  las atribuciones y deberes que dicho decreto ley y su reglamentario les
+  asignan, a los señores
+  Intendentes Municipales que a continuación se detallan: [...]
+  Por el Dpto. de Iruya, Sr. Fausto Ramos
+  Por el Dpto. de La Caldera, Sr. Wer
+  fil Gallo;
+  [...]
+NOTA DE LECTURA: RECUENTO PROPIO: diecinueve departamentos en la lista (Metán,
+Orán, San Martín, Rosario de la Frontera, Anta, Cachi, General Güemes, Chicoana,
+Rivadavia, Cafayate, Capital, Cerrillos, Iruya, La Caldera, La Viña, Los Andes,
+San Carlos, La Candelaria y La Poma); el acto no declara número. El nombre sale
+partido en la composición («Wer / fil»); se lee Werfil Gallo sin otra aparición
+en el corpus que lo confirme. Es el intendente municipal de La Caldera en mayo
+de 1958; en 1957 y hasta febrero de 1958 los actos municipales los firma el
+interventor Cecilio Muñoz (E.4).
+
+A.34
+FUENTE: 5672 h12 c1-c2 (Salta, martes 17 de junio de 1958)
+FICHA: Decreto N 504-A, 30 de mayo de 1958, expediente 27.774/58: fija desde el
+1 de enero y hasta el 31 de diciembre de 1958 una sobreasignación de $ 500
+mensuales a personal administrativo y técnico de la campaña del Ministerio de
+Asuntos Sociales y Salud Pública; entre ellos, el Dr. Juan Carlos Martearena,
+jefe de sección de 4ª, médico de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 110-130 ppp: el encabezado (h12 c1) y el renglón de
+Martearena (h12 c2). El resto de la nómina, en la capa.
+TEXTO:
+  DECRETO Nº 504 A.
+  SALTA, Mayo 30 de 1958
+  Expediente Nº 27.774|5[8]
+  —VISTO el Memorandum de fecha 16 de Mayo en curso, de la Dirección de
+  Administración del
+  Ministerio del rubro, en el que hace referencia al proyecto de
+  sobreasignaciones [...]
+  Art. 1º.— Fíjase una sobreasignación de Quinientos pesos moneda nacional ($
+  500.—), con
+  anterioridad al día 1º de Enero y hasta el 31 de Diciembre del corriente año,
+  al siguiente
+  personal Administrativo y Técnico [...]:
+  [...] Dr. Juan Carlos Martearena, Jefe de Sec.
+  de 4ª Méd. de La Caldera; [...]
+NOTA DE LECTURA: El número: la imagen da 504 y la capa «SG4»; la serie lo
+confirma (503-A, 505-A y 506-A del 30 de mayo en h11 y h13). El año del
+expediente, «53» en la imagen, es 58 por la fecha del memorándum (inferencia
+rotulada). En la misma nómina, Boris Akulov como médico regional de Chicoana
+(B.4).
+
+A.35
+FUENTE: 5674 h8 c1-c2 (Salta, lunes 23 de junio de 1958); sumario en 5674 h2
+FICHA: Decreto N 565-A, 6 de junio de 1958, expediente 27.746/58: a pedido del
+inspector del Departamento del Interior, designa con carácter interino al Dr.
+Alfredo Satué jefe de sección 4ª, médico regional de La Caldera, desde el 5 de
+mayo de 1958 y mientras dure la licencia reglamentaria del titular, Dr. Juan
+Carlos Martearena. Clase: CARGOS.
+MODO DE LECTURA: imagen, 110-300 ppp: el decreto hasta el art. 1 (h8 c1 al pie y
+c2 arriba).
+TEXTO:
+  DECRETO Nº 565 A.
+  SALTA, Junio 6 de 1958
+  Expediente Nº 27.746|58
+  —VISTO la nota cursada por el señor Inspector del Departamento del Interior
+  mediante la cual
+  solicita la designación del Dr. Alfredo Satué como Jefe de Sección 4ª, Médico
+  Regional de la
+  Caldera, mientras dure la licencia reglamentaria concedida al titular de dicho
+  cargo, Dr. Juan
+  Carlos Martearena; [...] Art. 1º.— Desígnase, con carácter interino, al doctor
+  Alfredo Satué,
+  L. E. Nº [omitido], Jefe de Sección 4ª, Médico Regional de la Caldera, a
+  partir del día 5 de
+  Mayo del año en curso, y mientras dure la licencia reglamentaria concedida al
+  titular de dicho
+  cargo, doctor Juan Carlos Martearena.
+NOTA DE LECTURA: El número: la capa lee 664 y 666 los dos decretos de la
+columna, y el sumario de h2 da «666»; la imagen da 564 y 565, y la serie los
+confirma (552-E a 561-G del 6 de junio en h6-h7, 568-A a 570-A en h9). La capa
+convierte el 5 en 6 en esta hoja (F.7). La capa escribe el departamento
+«qaldera» y «calde . ra»: los devolvió la difusa y la laxa espaciada.
+
+A.36
+FUENTE: 5676 h8 c1-c3 (Salta, miércoles 25 de junio de 1958)
+FICHA: Decreto N 647-E, 11 de junio de 1958, expediente 1822/58: liquida a la
+Dirección de Vialidad $ 2.206.959,76 en reintegro de lo invertido en abril en el
+Plan de Obras Públicas; entre las partidas, «Ayuda Financ. a Consorc. N 12
+Construcción Pte. s/Río La Caldera (Plan B Cam. Fom. Agrícola)», $ 27.034, y, de
+fondos nacionales, la «Mej. pros. Cam. Salta a Los Yacones». Clase:
+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 100 ppp: el renglón del consorcio con su importe (h8,
+franja de las tres columnas). Encabezado y partidas, en la capa.
+TEXTO:
+  DECRETO Nº 647 E.
+  SALTA, Junio 11 de 1958
+  Expediente Nº 1822|58 [capa]
+  [...] liquídese a favor de Dirección de Vialidad de la Provincia de Salta, en
+  carácter de
+  reintegro, la suma de $ 2.206.959.76 (Dos millones doscientos seis mil
+  novecientos cincuenta y
+  nueve pesos c| 76|100 moneda nacional) invertida durante el mes de Abril del
+  año en curso [...]
+  Ayuda Financ. a Consorc. Nº 12 Construcción Pte. s| Río La Caldera (Plan B.
+  Cam. Fom.
+  Agrícola) Anexo H, Inc. III, ...... 27.034.—
+NOTA DE LECTURA: El importe se lee en la imagen alineado con el renglón del
+consorcio; la columna de importes de la capa no conserva el orden de los
+renglones y el cuadro no se recalculó (E.8). La partida de Los Yacones no lleva
+importe legible en la capa (B.2).
+
+A.37
+FUENTE: 5676 h11 c1 (Salta, miércoles 25 de junio de 1958); encabezado en h10
+FICHA: Decreto N 660-A, 11 de junio de 1958: fija sobreasignaciones por zona al
+personal de los servicios asistenciales de la campaña; art. 3, desde el 1 de
+enero, para la «Zona C», $ 100 mensuales al personal médico y $ 50 al auxiliar;
+comprende, del departamento de La Caldera, el Consultorio Externo de La Caldera.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el art. 3 y el renglón del departamento (h11
+c1). Encabezado, en la capa (h10).
+TEXTO:
+  DECRETO Nº 660—A.
+  Salta, Junio 11 de 1958. [capa]
+  [...]
+  Art. 3º.— Fíjanse las siguientes sobreasignaciones, a contar desde el día 1º
+  de enero del año
+  en curso, al personal que presta servicios en los distintos servicios
+  asistenciales de la
+  denominada Zona "C", que comprende las siguientes localidades y en la
+  siguiente proporción:
+  Cien Pesos ($ 100.—) mensuales, al personal Médico.
+  Cincuenta Pesos ($ 50.—) mensuales al personal Auxiliar.
+  ZONA "C" Comprende:
+  Departamento de La Caldera
+  Consultorio Externo de La Caldera. [...]
+NOTA DE LECTURA: RECUENTO PROPIO: un establecimiento del departamento en la Zona
+C; el acto no declara número por departamento. El consultorio de Vaqueros no
+figura en la Zona C (se buscó «Vaqueros» en h10 y h11 sin acierto); no se
+infiere en qué zona está.
+
+A.38
+FUENTE: 5678 h7 c1 (Salta, viernes 27 de junio de 1958)
+FICHA: Decreto N 715-A, 13 de junio de 1958: licencias por enfermedad
+(Decreto-Ley 622/57, art. 14); art. 2, cinco días desde el 23 de enero y art. 3,
+diez días desde el 3 de febrero, a Juana G. de Flores, auxiliar 5º del Hogar
+Escuela de La Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 105 ppp: el decreto hasta el art. 3 (h7 c1).
+TEXTO:
+  DECRETO Nº 715—A.
+  Salta, 13 de junio de 1958.
+  [...]
+  Art. 2º.— Concédense cinco (5) días de licencia por enfermedad, con
+  anterioridad al día 23 de
+  enero ppdo., a la Aux. 5º, del Hogar Escuela de La Caldera, Sra. Juana G. de
+  Flores, L. C. Nº
+  [omitido], de conformidad al art. 14 del Decreto Ley Nº 622|57.
+  Art. 3º.— Concédense diez (10) días de licencia por enfermedad, con
+  anterioridad al día 3 de
+  febrero ppdo., a la Aux 5º, del Hogar Escuela de La Caldera, Sra. Juana G. de
+  Flores, L. C. Nº
+  [omitido], de conformidad al art. 14 del Decreto Ley Nº 622|57.
+NOTA DE LECTURA: Cinco días desde el 23 de enero cubren el 28, fecha de la
+licencia del Decreto 351-A (A de 5667): dos licencias que se superponen. No se
+concilia (E.9).
+
+A.39
+FUENTE: 5685 h7 c1-c2 (Salta, jueves 10 de julio de 1958)
+FICHA: Decreto N 857-A, 26 de junio de 1958: reconoce servicios en los servicios
+asistenciales; art. 1, el Dr. Dardo Frías, médico regional de Las Costas, San
+Lorenzo y Vaqueros, del 1 al 30 de abril; art. 2, María A. Acuña, auxiliar 5º,
+ayudante de enfermera de la Estación Sanitaria de La Caldera, del 1 al 30 de
+abril de 1958. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el art. 2 (h7 c2). Encabezado y art. 1, en la
+capa (h7 c1).
+TEXTO:
+  DECRETO Nº 857—A.
+  Salta, 26 de junio de 1958. [capa]
+  [...] médico regional de Las Costas,
+  San Lorenzo y Vaqueros, durante el lapso comprendido desde el 1º al 30 de
+  abril, inclusive, del
+  año en curso. [capa]
+  Art. 2º.— Reconócense los servicios prestados por la señorita María A. Acuña,
+  como Auxiliar 5º,
+  Ayudante de Enfermera de la Estación Sanitaria de La Caldera, durante el
+  tiempo comprendido
+  desde el 1º al 30 de abril, inclusive, del año en curso.
+NOTA DE LECTURA: Serie mensual de Acuña: marzo (A de 5666), abril (este), mayo
+(5702) y junio (5709). El art. 1 no nombra La Caldera: va también a B.2.
+
+A.40
+FUENTE: 5691 h9 c1-c2 (Salta, viernes 18 de julio de 1958); sumario en 5691 h2
+FICHA: Decreto N 1011-A, 7 de junio de 1958, expediente 22.934/56: a pedido de
+la ex interventora del Hogar Escuela «Luis Linares» de La Caldera, concede
+licencia sin goce de sueldo a Blanca Esperanza Rodríguez de Amaya, auxiliar 6º
+del Hogar, del 22 de septiembre al 7 de octubre de 1956 (Ley 1882, cap. VI, art.
+29), y reconoce los servicios de su reemplazante, Silvia J. Ortiz, en el mismo
+período. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 105 ppp: el encabezado y los considerandos (h9 c1). Los
+artículos, en la capa (h9 c2).
+TEXTO:
+  DECRETO Nº 1011—A.
+  Salta, 7 de junio de 1958.
+  Expediente Nº 22.934|56.
+  Visto en este expediente la nota cursada por la ex—Interventora del Hogar
+  Escuela "Luis Linares",
+  de La Caldera mediante la cual solicita el reconocimiento de servicios
+  prestados por la Srta.
+  Silvia J. Ortiz, durante el tiempo comprendido desde el 17 de setiembre al 7
+  de octubre del año
+  1956, quién se desempeñara en reemplazo de la titular Sra. Blanca Esperanza
+  Rodríguez de Amaya,
+  Auxiliar 5º, del citado Establecimiento, [...] Que siendo necesario
+  regularizar esta situación
+  ya que el Servicio de Reconocimientos Médicos y Licencias, justifica a la Sra.
+  Blanca Esperanza
+  Rodríguez de Amaya, 5 días a partir del 17 de setiembre de 1956, quedando por
+  lo tanto sin
+  justificar el período comprendido entre el día 22 de setiembre al 7 de octubre
+  de 1956; [...]
+  Art. 1º.— Acuérdase licencia sin goce de sueldo, a la Sra. Blanca Esperanza
+  Rodríguez de Amaya,
+  auxiliar 6º, del Hogar Escuela "Luis Linares", de La Caldera, durante el
+  tiempo comprendido
+  desde el 22 de setiembre hasta el 7 de octubre de 1956; [...] [capa]
+NOTA DE LECTURA: La titular es «Auxiliar 5º» en el visto y «auxiliar 6º» en el
+art. 1 (E.9). La ex interventora no se nombra (E.3). En octubre se liquida el
+crédito de Ortiz (más adelante, 5749).
+
+A.41
+FUENTE: 5696 h7 c1-c2 (Salta, jueves 24 de julio de 1958)
+FICHA: Decreto N 1109-E, 11 de julio de 1958, expediente 1937/58: otorga a
+Cecilio Muñoz una concesión de agua pública con carácter temporal-eventual para
+dieciocho hectáreas del inmueble «El Angosto», catastro 134, en el departamento
+de La Caldera, con nueve litros cuarenta y cinco centilitros por segundo a
+derivar del río Santa Rufina (margen izquierda), por la acequia comunera. Clase:
+AGUAS.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado (h7 c1) y el art. 1 (h7 c2).
+TEXTO:
+  DECRETO Nº 1109 E.
+  SALTA, Julio 11 de 1958
+  Expediente Nº 1937|58
+  —VISTO este expediente por el que el señor Cecilio Muñoz solicita el
+  otorgamiento de los derechos
+  al uso del agua del dominio público para el inmueble de su propiedad
+  denominado "El Angosto",
+  Catastro Nº 134, situado en el Departamento de la Caldera; [...] otorgamiento
+  de una concesión de
+  derecho al uso de agua del dominio público al señor Cecilio Muñoz para irrigar
+  con carácter
+  temporal - eventual, una superficie de dieciocho hectáreas del inmueble de su
+  propiedad
+  denominado "El Angosto", Catastro Nº 134, ubicado en el Departamento de la
+  Caldera, con una
+  dotación de nueve litros cuarenta y cinco centilitros por segundo, a derivar
+  del río Santa
+  Rufina (margen izquierda), por la acequia comunera.
+NOTA DE LECTURA: Control aritmético: 9,45 l/s para 18 ha son 0,525 l/s por
+hectárea. Cecilio Muñoz es el interventor municipal de 1957 y de enero de 1958
+(A de 5569 y 5613). El Angosto es topónimo de otros departamentos (Molinos en
+1957); aquí lo atribuye el acto.
+
+A.42
+FUENTE: 5698 h22 c1-c2 (Salta, lunes 28 de julio de 1958) y otras 26 apariciones
+hasta 5726 h17 (viernes 5 de septiembre): 5699 h22, 5700 h16, 5701 h16, 5702
+h16, 5703 h16, 5704 h15, 5705 h15, 5706 h16, 5707 h18, 5708 h13, 5709 h18-h19,
+5710 h16, 5711 h27, 5712 h16, 5713 h20, 5714 h22, 5715 h13, 5716 h19, 5717 h17,
+5720 h22, 5721 h15, 5722 h20, 5723 h18, 5724 h11, 5725 h11; sumarios desde 5698
+h4
+FICHA: Remate judicial N 1875 del martillero José Alberto Cornejo, «Finca en La
+Caldera», base $ 333.333,33, el 10 de septiembre de 1958 a las 18 en Deán Funes
+169: el inmueble «Jetsemaní» o «Getsemaní», en el departamento de La Caldera;
+linderos: al norte, Abelardo Figueroa, Encarnación Tedín y Edelmira Frías; al
+este, el río de La Caldera; al sud, la finca Wierna; al oeste, la cumbre del
+cerro; título a folio 19, asiento 5, libro 2 de R. I. de La Caldera; partida
+N-61, valor fiscal $ 500.000. Juicio «Embargo preventivo — Manufactura de
+Tabacos Particular V. F. Grego S. A. vs. Eduardo Osvaldo Colombres», expediente
+37.830/58, juzgado de 1ª instancia, 1ª nominación civil y comercial. Clase:
+DOMINIO.
+MODO DE LECTURA: imagen, 110 ppp: el aviso entero en 5698 h22 c1-c2. Las demás
+apariciones, en la capa, reunidas por la base y el nombre de la finca.
+TEXTO:
+  Nº 1875 JOSE ALBERTO CORNEJO
+  Judicial — Finca en "La Caldera" — Base $ 333.333.33
+  El día 10 de setiembre de 1958 a las 18.— horas, en mi escritorio: Deán Funes
+  Nº 169— Ciudad,
+  Remataré, con la Base de Trescientos treinta y tres mil trescientos treinta y
+  tres pesos con
+  treinta y tres centavos moneda nacional o sean las dos terceras partes de su
+  avaluación fiscal,
+  el inmueble denominado "Jetsemaní" o "Getsemaní", ubicado en el departamento
+  de La Caldera de
+  ésta Provincia, con la extensión que resulte tener dentro de los siguientes
+  límites generales:
+  Al Norte con propiedad de Abelardo Figueroa, de Encarnación Tedín y de
+  Edelmira Frías; al Este
+  con el Río de La Caldera; al Sud con la finca Wierna y al Oeste con la cumbre
+  del cerro, según
+  título registrado al folio 19 asiento 5 del libro 2 de R. I. de La Caldera.—
+  Nomenclatura
+  Catastral: Partida N—61—Valor fiscal $ 500.000.— [...] Ordena Sr. Juez de
+  Primera Instancia
+  Primera Nominación C. y C., en juicio: "Embargo Preventivo — Manufactura de
+  Tabacos Particular
+  V. F. Grego S. A. vs. Eduardo Osvaldo Colombres, Expte. Nº 37.830|58". [...]
+NOTA DE LECTURA: Control aritmético: la base es las dos terceras partes de $
+500.000; la capa escribe «507.con» para el valor fiscal. La misma finca sale a
+remate por otro juicio contra el mismo propietario (A siguiente, N 1922), con
+otro título y otra base (E.9). En diciembre se constituye una sociedad para
+explotarla, arrendada por Eduardo Colombres (más adelante, 5790). Abelardo
+Figueroa y Edelmira Frías son linderos de 1956-1957 (B.4).
+
+A.43
+FUENTE: 5702 h6 c1 (Salta, viernes 1 de agosto de 1958); encabezado en h5 c3
+FICHA: Decreto N 1335-A, 23 de julio de 1958: reconoce servicios y suplencias;
+art. 6, la suplencia de María A. Acuña como auxiliar 5º, ayudante de enfermera
+de la Estación Sanitaria de La Caldera, del 1 al 31 de mayo de 1958. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el art. 6 (h6 c1). Encabezado, en la capa;
+número: la serie (1334-A del 23 de julio en h5 y 1336-A en h6).
+TEXTO:
+  DECRETO Nº 1335 A.
+  SALTA, Julio 23 de 1958 [capa]
+  [...]
+  Art. 6º. — Reconócese la suplencia realizada por la señorita María A. Acuña,
+  L. C. Nº [omitido],
+  como Auxiliar 5º, Ayudante de Enfermera de la Estación Sanitaria de La
+  Caldera, durante el
+  tiempo comprendido desde el 1º al 31 de mayo, inclusive, del corriente año.
+NOTA DE LECTURA: Aquí es «suplencia»; en marzo y abril, «servicios» (E.9).
+
+A.44
+FUENTE: 5704 h10 c1 (Salta, martes 5 de agosto de 1958); sumario en 5704 h3
+FICHA: Decreto N 1428-A, 29 de julio de 1958: designa desde el 1 de agosto a
+Felipa Valdiviezo de Muñoz auxiliar 5º, ayudante de enfermera del Consultorio
+Externo de la localidad de La Caldera, en la vacante del presupuesto, y a
+Manuela A. de Bellone auxiliar principal, enfermera de El Bordo. Clase: CARGOS.
+MODO DE LECTURA: imagen, 105 ppp: el decreto hasta el art. 1 (h10 c1).
+TEXTO:
+  DECRETO Nº 1428-A.
+  SALTA, Julio 29 de 1958.
+  —VISTO estas actuaciones relacionadas con la designación de las Sras. Felipa
+  Valdiviezo de
+  Muñoz y Manuela A. de Bellone; [...] Art. 1º.— Desígnase, a partir del día 1º
+  de agosto del año
+  en curso, Auxiliar 5º, Ayudante de Enfermera del Consultorio Externo de la
+  Localidad de La
+  Caldera, a la señora Felipa Valdiviezo de Muñoz —L. C. Nº [omitido]—, en la
+  vacante existente en
+  el presupuesto vigente.
+NOTA DE LECTURA: El sumario de h3 la llama «Felida V. de Muñoz» (E.9).
+
+A.45
+FUENTE: 5704 h14 c3 (Salta, martes 5 de agosto de 1958) y otras 28 apariciones
+hasta 5733 h17 (miércoles 17 de septiembre): 5705 h14, 5706 h15, 5707 h18, 5708
+h12-h13, 5709 h18, 5710 h16, 5711 h26, 5712 h16, 5713 h19-h20, 5714 h21, 5715
+h12, 5716 h18, 5717 h17, 5718 h18, 5719 h18, 5720 h22, 5721 h14, 5722 h20, 5723
+h18, 5724 h11, 5725 h10, 5726 h16, 5728 h13 (y su duplicado 5727 h13), 5729 h11,
+5730 h23, 5731 h14, 5732 h15; sumarios
+FICHA: Remate judicial N 1922 del martillero Justo C. Figueroa Cornejo, finca
+«Yetsemaní» o «Getsemaní» en el departamento de La Caldera, el 18 de septiembre
+de 1958 a las 17.30 en Buenos Aires 93: la propiedad rural con lo edificado,
+plantado y cercado y los derechos de agua que le correspondan por sus títulos,
+usos y costumbres; linderos: al norte, Abelardo Figueroa, Encarnación Tedín y
+Edelmira Frías; al este, el río de La Caldera; al sud, la finca Wierna; al
+oeste, la cumbre del cerro; catastro 61; títulos, libro II del R. I. de La
+Caldera, folio 17, asiento 1. Juzgado civil y comercial de 1ª instancia, 5ª
+nominación, autos «Linares Brígida María Celina Grande de Ovejero de vs.
+Colombres Eduardo O.», ejecutivo. La base: «$ 120.000.00» en el título y «$
+720.000» en el cuerpo. Clase: DOMINIO.
+MODO DE LECTURA: imagen, 110 ppp: el aviso en 5704 h14 c3 y su encabezado en
+5730 h23. Las demás apariciones, en la capa, reunidas por el juicio y la finca.
+TEXTO:
+  Nº 1922 POR JUSTO C. FIGUEROA CORNEJO
+  JUDICIAL
+  Finca "Yetsemaní" o "Getsemaní" en el Dpto. de La Caldera — Base $ 120.000.00
+  M|N.
+  El día 18 de Setiembre de 1958 a horas 17.30 en mi escritorio de remates de la
+  calle Buenos
+  Aires 93 de esta ciudad REMATARE con la BASE de $ 720.000.— m|n. la propiedad
+  rural denominada
+  "Yetsemaní" o "Getsemaní" ubicada en el departamento de La Caldera de esta
+  Provincia de Salta
+  con todo lo edificado, plantado cercado y adherido al suelo, derechos de aguas
+  que le
+  corresponda de acuerdo a sus títulos usos y costumbres [...] NORTE: Con
+  propiedad de Don
+  Abelardo Figueroa de Doña Encarnación Tedín y de Doña Edelmira Frías. ESTE:
+  Con el Río de La
+  Caldera SUD: Con Finca Wierna y al OESTE con la cumbre del cerro. NOMENCLATURA
+  CATASTRAL:
+  Departamento La Caldera Catastro Nº 61 Finca Yetsemaní o Getsemaní.— TITULOS
+  Libro II del R.
+  I. de La Caldera Folio 17 Asiento 1º.— [...] en los autos "LINARES BRIGIDA
+  MARIA CELINA
+  GRANDE DE OVEJERO DE vs. COLOMBRES EDUARDO O. Ejecutivo [...]
+NOTA DE LECTURA: «$ 120.000» y «$ 720.000» en el mismo aviso, en todas las
+apariciones miradas (5704 y 5730): se transcriben los dos y no se elige (E.9);
+ninguna de las dos es dos tercios de los $ 500.000 de valor fiscal del remate
+1875. El título: folio 17, asiento 1 aquí; folio 19, asiento 5 en el 1875 (E.9).
+La capa deforma el departamento como «ca’dara», «ca'dera» y «ca d- ra»: la
+devolvieron la difusa contextual y la laxa espaciada (E.7). 5727 es un duplicado
+de 5728 (§1).
+
+A.46
+FUENTE: 5706 h6 c2 (Salta, jueves 7 de agosto de 1958); sumario en 5706 h2
+FICHA: Decreto N 1463-A, 30 de julio de 1958: acepta la renuncia de Enriqueta
+Colque de Mamani, auxiliar 5º, mucama del Hogar de Niños «Dr. Luis Linares» de
+La Caldera, desde el 2[?] de julio, y designa auxiliares 5º, mucamas del Hogar,
+a Marcelina Abaza (en la vacante de la renunciante), Nieves Guerrero y Sara
+Leal. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 105-150 ppp: el decreto en h6 c2. La hoja está impresa
+dos veces con un corrimiento (E.5) y la capa es ilegible: todo sale de la
+imagen.
+TEXTO:
+  DECRETO Nº 1463 A.
+  SALTA, Julio 30 de 1958. [...]
+  Art. 1º.— Acéptase la renuncia presentada por la señora Enriqueta Colque de
+  Mamani, al cargo de
+  Auxiliar 5º, Mucama del Hogar de Niños "Dr. Luis Linares" de La Caldera, a
+  contar desde el día
+  2[?] de julio en curso.
+  Art. 2º.— Desígnase a la señora Marcelina Abaza, Auxiliar 5º, Mucama del
+  Hogar de Niños "Dr. Luis Linares" de La Caldera, a partir de la fecha en que
+  se haga cargo de sus
+  funciones y en la vacante por renuncia de la Sra. Enriqueta Colque de Mamani,
+  que renuncia.
+  Art. 3º.— Desígnase a la señorita Nieves Guerrero, Auxiliar 5º Mucama del
+  Hogar de Niños "Dr.
+  Luis Linares" de La Caldera, a partir de la fecha en que se haga cargo de sus
+  funciones.
+  Art. 4º.— Desígnase a la señorita Sara Leal Auxiliar 5º Mucama del Hogar de
+  Niños "Dr. Luis
+  Linares" de La Caldera, a partir de la fecha en que se [...]
+NOTA DE LECTURA: RECUENTO PROPIO: tres designaciones y una renuncia; el acto no
+declara número. La mucama de la confirmación de enero es «Epifania E. Colque de
+Mamani» (A de 5584) y el sumario de h2 escribe «Enriqueta O. de Mamani»: se
+transcriben y no se unifican (E.9). El día de la renuncia no se lee
+(sobreimpresión, E.10). El número 1463 lo da la imagen y lo confirma la serie
+(1462-A en c1, 1466-A en h7).
+
+A.47
+FUENTE: 5707 h5 c3 (Salta, viernes 8 de agosto de 1958)
+FICHA: Ley N 3173: restablece la vigencia de la Ley 2023 (original 745), que
+reglamenta el sorteo de bancas legislativas; el mandato del Poder Legislativo se
+inició el 1 de mayo de 1958 y, para la renovación de las dos Cámaras (arts. 60 y
+70 de la Constitución), se sortean dos grupos de departamentos; el Grupo A:
+Capital, La Caldera, Guachipas, Cafayate, Chicoana, Cachi, Molinos, La Poma, San
+Carlos, Los Andes, Rosario de Lerma y General Güemes. Clase: ELECTORAL+NORMA.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado y los arts. 1 y 2 hasta el Grupo
+A (h5 c3). El Grupo B, en la capa.
+TEXTO:
+  LEY Nº 3173
+  POR CUANTO:
+  EL SENADO Y LA CAMARA DE DIPUTADOS DE LA PROVINCIA DE SALTA,
+  SANCIONAN CON FUERZA DE LEY
+  Art. 1º.— Restablécese la vigencia de la ley número 2023 (Original
+  745),) que reglamenta el sorteo de bancas legislativas, con las siguientes
+  modificaciones en los
+  artículos 1º y 2º:
+  Art. 1º.— El mandato de los miembros del actual Poder Legislativo se inició
+  el 1º de mayo de 1958.
+  Art. 2º.— A los fines de la renovación de ambas Cámaras, prevista en los
+  artículos 60 y 70 de la Constitución de la Provincia, se practicará un sorteo,
+  constituyéndose
+  dos grupos de departamentos, en la siguiente forma:
+  Grupo A: Capital, La Caldera, Guachipas,
+  Cafayate, Chicoana, Cachi, Molinos, La Poma, San Carlos, Los Andes, Rosario de
+  Lerma y General
+  Güemes.
+NOTA DE LECTURA: RECUENTO PROPIO: Grupo A, doce departamentos; Grupo B (capa),
+once (Rosario de la Frontera, Metán, Anta, La Candelaria, General San Martín,
+Orán, Iruya, Santa Victoria, La Viña, Cerrillos y Rivadavia); veintitrés en
+total. El acto no declara número. El paréntesis doble «745),)» es del original.
+
+A.48
+FUENTE: 5708 h8 c1-c2 (Salta, lunes 11 de agosto de 1958) y otras 4 apariciones:
+5715 h5, 5716 h11, 5717 h10, 5722 h15; sumarios en 5708 h2, 5715 h2, 5716 h3,
+5717 h3 y 5722 h3
+FICHA: Edicto de minas N 1961: petición de mensura de la mina «San Fernando», en
+el departamento de La Caldera, presentada por Antonio y Francisco Gómez en el
+expediente 100.711-P el 26 de diciembre de 1957 a las 9.15; cinco pertenencias
+de seis hectáreas descriptas desde el campamento de la mina, con el puesto viejo
+o corral Las Garrapatas como punto de referencia. Firma Roberto A. de los Ríos,
+secretario, el 24 de julio de 1958. Clase: MINAS.
+MODO DE LECTURA: imagen, 105 ppp: el aviso en 5715 h5 c1 (el encabezado y las
+cinco pertenencias). La aparición de 5708 h8, en la capa («la qaiqera»).
+TEXTO:
+  Nº 1961 — Edicto de petición de mensura de la Mina "San Fernando", ubicada en
+  el Departamento
+  de La Caldera, presentada por los señores Antonio y Francisco Gómez en
+  expediente número
+  100.711—P, el día veintiséis de Diciembre de 1957 a horas nueve y quince
+  minutos.
+  La Autoridad Minera Provincial notifica a los que se consideren con algún
+  derecho para que lo
+  hagan valer en forma y dentro del término de ley.— La zona solicitada se
+  describe en la
+  siguiente forma:
+  PERTENENCIA I: Tomando como punto de referencia y de partida el campamento de
+  la mina se miden 300 metros al Norte, 200 metros al Oeste. 300 metros al Sud y
+  por último 200
+  metros al Este, para cerrar la superficie de seis hectáreas. [...]
+NOTA DE LECTURA: RECUENTO PROPIO: cinco pertenencias de 300 por 200 metros (seis
+hectáreas cada una), treinta hectáreas; el acto no declara total. Las Garrapatas
+es topónimo del departamento en el anillo 2; aquí es un corral. El número de
+edicto, 1961, se lee en la imagen de 5715.
+
+A.49
+FUENTE: 5708 h12 c1 (Salta, lunes 11 de agosto de 1958) y otras 3 apariciones:
+5710 h15, 5711 h26, 5712 h15
+FICHA: Remate judicial N 1952 del martillero Martín Leguizamón, «Finca Potrero
+de Gallinato», base $ 75.000, el 18 de agosto a las 17 en Alberdi 323, por orden
+del juez de 1ª instancia, 4ª nominación, en el juicio sucesorio de Juan de la
+Cruz Nogales: una fracción de la finca Potrero de Gallinato, en el departamento
+de La Caldera, de ciento treinta y tres hectáreas 1143 m2 102[?] dm2; linderos:
+al norte, la finca Santa Gertrudis de los herederos de Ángel Solá; al sud,
+Carlos Durand; al este, la finca Mojotoro de los herederos de Ángel Solá; al
+oeste, fracción de la finca Gallinato de Hilario Arias. Clase: DOMINIO.
+MODO DE LECTURA: imagen, 110-120 ppp: el aviso entero (h12 c1).
+TEXTO:
+  Nº 1952 — Por: MARTIN LEGUIZAMON— JUDICIAL — FINCA POTRERO DE GALLINATO —
+  BASE: $ 75.000
+  El 18 de Agosto p. a las 17 horas en mi escritorio Alberdi 323, por orden del
+  señor Juez de
+  Primera Instancia Cuarta Nominación en juicio Sucesorio de Juan de La Cruz
+  Nogales venderé con
+  la base de Setenta y Cinco Mil pesos una fracción de la propiedad denominada
+  Potrero de
+  Gallinato, ubicada en el Departamento de La Caldera, con una superficie de
+  ciento treinta y tres
+  hectáreas, 1143 mts2. 102[?] dm.2., comprendida dentro de los siguientes
+  límites generales:
+  Norte, finca Santa Gertrudis de propiedad de los herederos de Angel Solá; Sud,
+  propiedad de
+  Carlos Durand; Este, finca Mojotoro de herederos de Angel Solá; Oeste fracción
+  de la finca
+  Gallinato de Hilario Arias.— En el acto del remate veinte por ciento del
+  precio de venta y a
+  cuenta del mismo.— Comisión de arancel a cargo del comprador.
+  Intransigente, Tribuno y Boletín Oficial.
+NOTA DE LECTURA: El último dígito de los decímetros cuadrados no se lee (E.10).
+Nogales está en el anillo 2 como apellido; aquí es el causante. Mojotoro como
+finca de los Solá.
+
+A.50
+FUENTE: 5709 h6 c2 (Salta, martes 12 de agosto de 1958)
+FICHA: Decreto N 1559-A, 31 de julio de 1958: reconoce suplencias; art. 4, la de
+María A. Acuña como auxiliar 5º, ayudante de enfermera de la Estación Sanitaria
+de La Caldera, del 1 al 30 de junio. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el art. 4 (h6 c2). Encabezado, en la capa;
+número: la serie (1557-A, 1560-A y 1561-A del 31 de julio en la misma hoja).
+TEXTO:
+  DECRETO Nº 1559—A.
+  Salta, 31 de julio de 1958. [capa]
+  [...]
+  Art. 4º.— Reconócese la suplencia realizada por la Srta. María A. Acuña como
+  Aux. 5º, Ayudante
+  Enfermera de la Estación Sanitaria de La Caldera, durante el tiempo
+  comprendido desde el 1º al
+  30 de junio ppdo.
+NOTA DE LECTURA: Cierra la serie mensual de Acuña del año: marzo a junio, sin
+huecos (A de 5666, 5685 y 5702).
+
+A.51
+FUENTE: 5710 h11 c1 (Salta, miércoles 13 de agosto de 1958) y otras 4
+apariciones: 5711 h21, 5718 h12, 5719 h13, 5724 h6; sumarios
+FICHA: Edicto de minas N 1990: petición de mensura de la mina de plomo y plata
+«Caldera 1, 2 y 3», en el lugar denominado San José del departamento de La
+Caldera, presentada por Francisco Valdez Villagrán en el expediente 44 el 10 de
+agosto de 1955 a las once; dos pertenencias descriptas desde la casa de
+Quipildor; la autoridad minera fija en $ 40.000 el capital que el descubridor
+debe invertir en cuatro años (art. 6, Ley 10.273). Proveído del 24 de junio de
+1958, firmado por Luis Chagra, juez de minas. Clase: MINAS.
+MODO DE LECTURA: imagen, 105 ppp: el aviso entero (h11 c1).
+TEXTO:
+  Nº 1990 — EDICTO DE MINAS:
+  Petición de mensura de la mina de plomo y plata denominada
+  "Caldera 1, 2 y 3", ubicada en el lugar denominado San José del departamento
+  de La Caldera,
+  presentada por el señor Francisco Valdez Villagrán en expediente número 44, el
+  día diez de
+  Agosto de 1955 a horas Once.— [...] Pertenencia 1.— Se relaciona de la casa de
+  Quipildor 300
+  mts. 45º hasta P. P. mojón 1.— [...] A lo que se proveyó.— Salta, junio 24 de
+  1958— [...]
+  Fíjase la suma de Cuarenta mil pesos M|Nacional (m$n 40.000), el capital que
+  el descubridor
+  deberá invertir en la mina, en usinas maquinarias y obras directamente
+  conducentes al beneficio o
+  explotación de la misma, dentro del término de cuatro años a contar desde la
+  fecha (Art. 6º Ley
+  Nº 10.273).— [...] Luis Chagra, Juez de [Minas]
+NOTA DE LECTURA: RECUENTO PROPIO: dos pertenencias descriptas (1 y 2), aunque el
+nombre de la mina lleva tres números; el acto no declara número. El nombre de la
+mina contiene el término: se ficha porque el acto la sitúa en el departamento.
+San José está en el anillo 2 («san jose de la caldera»). Quipildor es el
+apellido del pensionado de El Nogalito (A de 5612): no se infiere relación. En
+octubre la misma mina se declara caduca (más adelante, 5757).
+
+A.52
+FUENTE: 5712 h9 c2 (Salta, lunes 18 de agosto de 1958)
+FICHA: Decreto N 1707-E, 7 de agosto de 1958: aprueba y manda pagar el
+certificado 1 de la obra «Construcción de patio cubierto en el Hogar del Niño» —
+localidad de La Caldera, emitido por la Dirección de Arquitectura a favor del
+contratista Adhemar Néstor Imberti, por $ 91.778,35. Clase:
+OBRA-PUBLICA+ESCUELA.
+MODO DE LECTURA: imagen, 105 ppp: el decreto hasta el art. 1 (h9 c2).
+TEXTO:
+  DECRETO Nº 1707-E.
+  SALTA, Agosto 7 de 1958.
+  —VISTO que Dirección de Arquitectura de la Provincia eleva para su aprobación
+  y pago el
+  Certificado nº 1, de la obra "Construcción de patio cubierto en el Hogar del
+  Niño"— Localidad de
+  "La Caldera", emitido a favor del contratista Adhemar Néstor Imberti, por la
+  suma de $ 91.778.35.—
+  m|n.; [...] Art. 1º.— Apruébase el Certificado nº 1, [...] por la suma de $
+  91.778.35.— %.
+NOTA DE LECTURA: El certificado 1 es el 59,2 % de la adjudicación de abril ($
+154.984,40, A de 5643): cálculo de la sesión, rotulado.
+
+A.53
+FUENTE: 5719 h8 c3 (Salta, miércoles 27 de agosto de 1958); sumario en 5719 h2
+FICHA: Decreto N 1869-A, 19 de agosto de 1958: por la imprescindible necesidad
+de personal en el Hogar de Niños «Dr. Luis Linares» de La Caldera, designa a
+Inés Nieva auxiliar principal, regente, y a Feliciana Barboza auxiliar 3º,
+enfermera, desde que se hagan cargo. Firma el vicegobernador en ejercicio del
+Poder Ejecutivo. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 105 ppp: el decreto hasta el art. 2 (h8 c3).
+TEXTO:
+  DECRETO Nº 1869 A.
+  SALTA, Agosto 19 de 1958
+  —VISTO la imprescindible necesidad de contar con los servicios de personal
+  para desempeñarse en
+  el Hogar de Niños "Dr. Luis Linares" de la Caldera, a fin de mantener el
+  normal funcionamiento
+  de dicha institución; [...] El Vice Gobernador de la Provincia de Salta en
+  ejercicio del Poder
+  Ejecutivo DECRETA: Art. 1º.— Desígnase a la señorita Inés Nieva, L. C. Nº
+  [omitido], Auxiliar
+  Principal, Regente del Hogar de Niños "Dr. Luis Linares" de La Caldera, a
+  partir de la fecha en
+  que se haga cargo de sus funciones. Art. 2º.— Desígnase a la señorita
+  Feliciana Barboza, L. C. Nº
+  [omitido], Auxiliar 3º, Enfermera del Hogar de Niños "Dr. Luis Linares", de La
+  Caldera, a
+  partir de la fecha en que se haga cargo desus funciones.
+NOTA DE LECTURA: El sumario de h2 llama al hogar «Dr. Luis Güemes» (E.9). En
+enero la regente interina era Teresa I. Calvelo (A de 5584); el acto no dice qué
+pasó con ella (E.3). En diciembre la nómina del presupuesto la da como «Inés
+Nievas» (más adelante, 5791).
+
+A.54
+FUENTE: 5719 h9 c2 (Salta, miércoles 27 de agosto de 1958)
+FICHA: Decreto N 1973-E [sic; 1873-E por la serie], 19 de agosto de 1958,
+expediente 2944/58: aprueba la Resolución 1239 (28 de julio) de A.G.A.S., que
+pide al Poder Ejecutivo, entre otros movimientos, c) trasladar al auxiliar 2º
+Rafael Pacheco, tornero de las tomas de los ríos Wierna, San Alejo y Santa
+Rufina, departamento La Caldera, a las del río El Ceibal (La Candelaria), y d)
+reincorporar a Alejo Maidana como tornero (auxiliar 2º) de las tomas de los ríos
+Wierna, Santa Rufina y San Alejo, departamento La Caldera, en lugar de Pacheco.
+Clase: AGUAS+CARGOS.
+MODO DE LECTURA: imagen, 100-400 ppp: el encabezado y los incisos a) a d) (h9
+c2).
+TEXTO:
+  DECRETO Nº 1973-E.
+  SALTA, Agosto 19 de 1958.
+  Expte. Nº 2944|58.
+  —VISTO la Resolución nº 1239, del 28 de julio del año en curso, dictada por
+  Administración
+  General de Aguas de Salta que eleva para su aprobación, [...]
+  "c) Disponer el traslado del Auxiliar 2º don Rafael Pacheco que actualmente
+  presta servicios
+  como tornero en las tomas de los ríos Wierna, San Alejo y Santa Rufina,
+  Departamento La Caldera,
+  para que desempeñe las mismas funciones en tomas del Río El Ceibal, Dpto. La
+  Candelaria, en
+  lugar del titular cuya renuncia se acepta en el punto b) y por razones de
+  servicio.
+  "d) Reincorporar al señor Alejo Maidana, para que tenga a su cargo las
+  funciones de tornero
+  (Auxiliar 2º), en las tomas existentes en los ríos Wierna, Santa Rufina y San
+  Alejo,
+  Departamento La Caldera, en lugar del señor Rafael Pacheco, [...]
+NOTA DE LECTURA: El número impreso es 1973-E, claro en la imagen; la serie de la
+misma hoja (1870-E, 1871-E, 1872-E, 1874-E, 1875-E, todos del 19 de agosto) da
+1873-E; y el Decreto 2491-E, que lo modifica por el mismo expediente 2944/58, lo
+cita como «Decreto Nº 1879» (más adelante, 5742). Decide la serie (v17 §5.6.1):
+1873-E; la errata y la cita se transcriben (E.9). Alejo Maidana es el tornero
+cuya terminación registró 1957 (A.57 de 1957): aquí se lo reincorpora.
+
+A.55
+FUENTE: 5720 h8 c3 (Salta, jueves 28 de agosto de 1958)
+FICHA: Decreto N 1894-G, 20 de agosto de 1958, expedientes 8594/58 y 8595/58: da
+por terminadas desde el 16 de agosto, por razones de mejor servicio, las
+funciones del cabo de policía Juan Mario Zapata, afectado al destacamento San
+Alejo (Dpto. La Caldera), y del oficial inspector Juan Florencio Cabeza, del
+personal superior de Seguridad y Defensa, afectado a la Subcomisaría La Caldera
+(Dpto. La Caldera). Clase: CARGOS.
+MODO DE LECTURA: imagen, 105 ppp: el decreto hasta el art. 1 (h8 c3).
+TEXTO:
+  DECRETO Nº 1894—G.
+  Salta, 20 de Agosto de 1958.
+  Exptes. Nros. 8594|58 y 8595|58.
+  [...] Art. 1º.— Dánse por terminadas las funciones de los siguientes empleados
+  de Jefatura de
+  Policía, a partir del día 16 del corriente mes y año, por razones de mejor
+  servicio:
+  1º) Al Cabo de Policía don Juan Mario Zapata, afectado al Destacamento San
+  Alejo (Dpto. La
+  Caldera),
+  2º) Al Oficial Inspector don Juan Florencio Cabeza, del Personal Superior de
+  Seguridad y Defensa, afectado a la Sub-Comisaría La Caldera (Dpto. La
+  Caldera).
+NOTA DE LECTURA: «Sub-Comisaría La Caldera» aquí; «Comisaría de Policía de La
+Caldera» en los actos de los destacamentos (A de 5608 y 5650) (E.9). Primer acto
+del año con personal del destacamento de San Alejo.
+
+A.56
+FUENTE: 5722 h7 c2 (Salta, lunes 1 de septiembre de 1958); sumario en 5722 h2
+FICHA: Decreto N 1964-G, 25 de agosto de 1958: liquida $ 1.500 a la Habilitación
+de Pagos del Ministerio de Gobierno para que los entregue al senador provincial
+Gregorio del Rosario Jurado, a cargo de rendir cuenta, para los gastos de las
+fiestas patronales en honor de San Cayetano del 24 de agosto en Vaqueros (Dpto.
+La Caldera). Clase: OTRO.
+MODO DE LECTURA: imagen, 100 ppp: el decreto hasta el art. 1 (h7 c2).
+TEXTO:
+  DECRETO Nº 1964 G.
+  Salta, Agosto 25 de 1958
+  —VISTO este expediente mediante el cual el Senador Provincial don Gregorio del
+  Rosario Jurado,
+  solicita la suma de $ 1.500 m|n. para aplicar el pago de gastos con motivo de
+  las fiestas
+  patronales en honor de San Cayetano, a efectuarse en Vaqueros el día 24 del
+  corriente mes, [...]
+  Art. 1º.— [...] la suma de Un mil Quinientos pesos m|n. ($ 1.500 %), para que
+  en su oportunidad,
+  lo haga al senador provincial don Gregorio del Rosario Jurado, a los efectos
+  de atender gastos
+  que demandarán las fiestas patronales en honor de San Cayetano a realizarse el
+  día 24 del
+  corriente mes en Vaqueros (Dpto. La Caldera), y con cargo de rendir cuenta.
+NOTA DE LECTURA: El decreto es del 25 de agosto y habla del 24 «del corriente»
+como futuro (E.9). Un decreto de septiembre lo cita como «decreto nº 1954, del
+25|8|58», que acuerda $ 1.500 para las fiestas patronales de Vaqueros (5739 h4,
+imagen; repetido en 5757 h9): mismo día, mismo monto, otro número; el 1964
+impreso lo confirma la serie (1963-A y 1966-A, del 25 de agosto, en h6 y h7). Se
+transcribe la cita (E.9). Es el senador por el departamento que da el acto; el
+acto no lo dice (no se infiere).
+
+A.57
+FUENTE: 5726 h8 c3 y h9 c1 (Salta, viernes 5 de septiembre de 1958); sumario en
+5726 h2
+FICHA: Decreto N 2034-G, 27 de agosto de 1958, expediente 7921/58: vista la nota
+de la Municipalidad de La Caldera del 1 de julio con ternas para jueces de paz,
+y estando vacante el cargo de propietario, designa juez de paz propietario de la
+localidad de La Caldera, departamento del mismo nombre, a Eugenio Muñoz, y
+confirma como juez de paz suplente a Antonio R. Vivas. Firma el vicegobernador
+en ejercicio del Poder Ejecutivo. Clase: JUSTICIA.
+MODO DE LECTURA: imagen, 100-130 ppp: el decreto entero (h8 c3 y h9 c1).
+TEXTO:
+  DECRETO Nº 2034—G.
+  SALTA. Agosto 27 de 1958.
+  Expte. Nº 7921|58.
+  VISTA la nota de fecha 1º de julio del año en curso, elevada por la
+  Municipalidad de La Caldera
+  en la cual remite ternas para las designaciones de Jueces de Paz Propietario y
+  Suplente en dicho
+  Municipio, y —CONSIDERANDO: Que el cargo de Juez de Paz Propietario se
+  encuentra vacante; no así
+  el de Juez de Paz Suplente ya que en la mencionada nota figura el nombre del
+  actual Juez de Paz
+  Suplente, [...] Art. 1º — Desígnase Juez de Paz Propietario de la localidad de
+  La Caldera,
+  Departamento del mismo nombre, al señor Eugenio Muñoz, Clase 1908 —M. I. Nº
+  [omitido]— a partir
+  de la fecha que tome posesión de su cargo.
+  Art. 2º — Confírmase en el cargo de Juez de Paz
+  Suplente de la localidad de La Caldera, Departamento del mismo nombre, al
+  señor Antonio R. Vivas,
+  Clase 1893 — M. I. Nº [omitido], a partir de la fecha del presente Decreto.
+NOTA DE LECTURA: Vacancia declarada sin nombrar a quien la dejó: es un acto
+citado y no acompañado (v16 §5.3, E.3). En 1957 renunció el juez de paz titular
+Horacio Postigo (A.17 de 1957). Muñoz renuncia en octubre y Vivas en noviembre
+(más adelante, 5768 y 5779). El número se lee en la imagen con el 4 roto y lo
+sostiene la capa; el expediente 7921/58 es el mismo de la renuncia de Muñoz.
+
+A.58
+FUENTE: 5730 h6-h7 y h8 a h11 (Salta, jueves 11 de septiembre de 1958); el
+renglón del departamento en h11 c1
+FICHA: Ley N 3192, sancionada el 22 de agosto y promulgada el 5 de septiembre de
+1958: aprueba el convenio firmado en Buenos Aires el 23 de mayo por la
+representación de la Provincia en la Capital Federal; lleva anexo el «Plan de
+obras electromecánicas 1958-1961 (en miles de pesos)» del Ministerio de
+Economía, Finanzas y Obras Públicas, donde figura: «LA CALDERA: Obra Municipal.
+Usina hidroeléctrica y licitada y adjudicada. Red», presupuesto 300, año 1958,
+300. Clase: OBRA-PUBLICA+NORMA.
+MODO DE LECTURA: imagen, 100 ppp: el renglón de La Caldera con sus columnas (h11
+c1). El texto de la ley y el convenio, en la capa (h6-h7).
+TEXTO:
+  LEY Nº 3192 [capa]
+  [...] PLAN DE OBRAS ELECTROMECANICAS 1958—1961—(En miles de pesos)
+  Presupuesto / Año 1958 / Año 1959 / Año 1960 / Año 1961
+  [...]
+  LA CALDERA: Obra Municipal
+  Usina hidroeléctrica y licitada y adjudicada. Red ... 300 300 — — —
+NOTA DE LECTURA: El plan no dice a qué acto pertenece en la hoja donde está el
+renglón; lo sigue sin encabezado a la Ley 3192 (h6-h7), y así se atribuye
+(inferencia rotulada). «y licitada y adjudicada» es del original. La usina es la
+de 1957 (A.19, A.47, A.62, A.65, A.67 y A.75 de 1957) y la adjudicada a Moncho
+Parra (A de 5569).
+
+A.59
+FUENTE: 5734 h12 c3 y h13 c1 (Salta, jueves 18 de septiembre de 1958); sumario
+en 5734 h3
+FICHA: Decreto N 2263-E, 10 de septiembre de 1958, expediente 2663/58: autoriza
+a formalizar y registrar, sin el requisito previo de abonar el impuesto
+inmobiliario, la servidumbre a favor de la Municipalidad de La Caldera para
+utilizar la caída de agua que ha de dar la energía a la usina hidroeléctrica de
+esa localidad, por el carácter de beneficio público de la obra. Clase:
+HACIENDA-MUN+DOMINIO.
+MODO DE LECTURA: imagen, 120 ppp: el encabezado (h12 c3). El resto, en la capa
+(h13 c1, con la cabecera rota).
+TEXTO:
+  DECRETO Nº 2263-E.
+  SALTA, Setiembre 10 de 1958.
+  Expte. Nº 2663|58.
+  —VISTO este expediente en el que se gestiona se autorice la formalización sin
+  el requisito de
+  abonar previamente el impuesto inmobiliario, de la servidumbre otorgada a
+  favor de la
+  Municipalidad de La Caldera para la utilización del salto de agua que ha de
+  proporcionar la
+  energía necesaria para el funcionamiento de la usina hidroeléctrica de esa
+  localidad; [capa] [...]
+  Art. 1º.— Autorízase la formalización y registro, sin el requisito previo de
+  abonar el impuesto
+  inmobiliario correspondiente, de la servidumbre a favor de la Municipalidad de
+  La Caldera para la
+  utilización de la caída de agua que ha de proporcionar la energía necesaria a
+  la usina
+  hidroeléctrica de esa localidad, [...] [capa]
+NOTA DE LECTURA: El acto no nombra a los propietarios que otorgan la servidumbre
+ni el inmueble: citados y no acompañados (E.3). Es la escritura de servidumbre
+que 1957 dejó citada (A.47 de 1957).
+
+A.60
+FUENTE: 5742 h12 c3 (Salta, martes 30 de septiembre de 1958)
+FICHA: Decreto N 2491-E, 23 de septiembre de 1958, expediente 2944/58: aprueba
+la Resolución 1399 (1 de septiembre) de A.G.A.S., que pide modificar el inciso
+c) del art. 1 del «Decreto N 1879» del 19 de agosto, en el sentido de que el
+tornero Rafael Pacheco, que presta servicios en los ríos Wierna, San Alejo y
+Santa Rufina (Dpto. La Caldera), pase al sistema de riego XXI, zona A,
+Talapampa, departamento La Viña. Clase: AGUAS+CARGOS.
+MODO DE LECTURA: imagen, 110-300 ppp: el decreto y la resolución (h12 c3).
+TEXTO:
+  DECRETO Nº 2491—E.
+  Salta, 23 de setiembre de 1958.
+  Expediente Nº 2944|58.
+  VISTO que Administración General de Aguas de Salta, eleva para su aprobación
+  el texto de la
+  resolución Nº 1399, de fecha 1º de setiembre de 1958, [...]
+  "Art. 1º.— Solicitar del Poder Ejecutivo por conducto del Ministerio de
+  Economía, Finanzas y
+  Obras Públicas, modifique el Inc. c) del art. 1º del Decreto Nº 1879 dictado
+  con fecha 19 de
+  agosto de 1958, cuya copia corre agregada a fs. 13 del expediente del título,
+  en el sentido de
+  que el traslado del Auxiliar 2º (Tornero) don Rafael Pacheco, que actualmente
+  presta servicios
+  en los ríos Wierna, San Alejo y Santa Rufina (Dpto. La Caldera) sea para
+  desempeñar idénticas
+  funciones en el sistema de Riego XXI, Zona A, Talapampa, Departamento La Viña,
+  [...]"
+NOTA DE LECTURA: Cita como 1879 el decreto impreso 1973-E que la serie da como
+1873-E (A de 5719 h9): mismo expediente, misma fecha, mismo inciso c). Se
+transcribe la cita (E.9). La capa parte el departamento como «la cal / "dera»:
+sólo la laxa espaciada lo devolvió; el pre-informe no trae esta hoja (§2).
+
+A.61
+FUENTE: 5747 h6 c2-c3 (Salta, martes 7 de octubre de 1958); sumario en 5747 h2
+FICHA: Decreto N 2609-A, 29 de septiembre de 1958: acepta desde el 8 de
+septiembre la renuncia de Masao Eduardo Isijara, auxiliar 1º del Hogar Escolar
+«Dr. Luis Linares» de La Caldera, y designa en su lugar a Delma Suárez de
+Kotting auxiliar 1º, subregenta. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 100-110 ppp: el decreto (h6 c2 al pie y c3).
+TEXTO:
+  DECRETO Nº 2609—A.
+  [Salta, 29] de setiembre de 1958.
+  [VISTO] estas actuaciones la renuncia presentada por el Sr. Masao Eduardo
+  Isijara al cargo de
+  Auxiliar 1º del Hogar Escolar "Dr. Luis Linares" de La Caldera; [...] Art.
+  1º.— Acéptase la
+  renuncia presentada por el señor Masao Eduardo Isijara, L. E. Nº [omitido], al
+  cargo de Auxiliar
+  1º del Hogar Escolar "Dr. Luis Linares", de La Caldera, con anterioridad al 8
+  de setiembre en
+  curso.
+  Art. 2º.— Desígnase a la Sra. Delma Suárez de Kotting, L. C. Nº [omitido], en
+  el cargo
+  de Auxiliar 1º, Subregenta del Hogar Escolar "Dr. Luis Linares" de La Caldera,
+  en la vacante por
+  renuncia [...]
+NOTA DE LECTURA: Isijara era auxiliar administrativo en la confirmación de enero
+(A de 5584); su reemplazante es subregenta: el cargo cambia de función con la
+vacante (E.9). «Kotting» aquí; «Kortting» en la nómina de diciembre (más
+adelante, 5791).
+
+A.62
+FUENTE: 5747 h9 c1-c2 (Salta, martes 7 de octubre de 1958)
+FICHA: Decreto N 2623-E, 29 de septiembre de 1958, expediente 3465/58:
+transfiere partidas dentro del Plan de Obras Públicas de Vialidad (fondos de
+ayuda federal y recursos nacionales, ejercicio 1958); a aumentar, la obra 8,
+«Ayuda financiera a Consorcio N 12, Const. puente s/río Caldera, Plan B, Caminos
+de Fomento Agrícola», $ 350.000; en la lista a disminuir del primer grupo, la
+obra 47, «Mejora progresiva camino Salta a Los Yacones por San Lorenzo», $
+100.000. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado (h9 c1), el renglón de Los
+Yacones y el rótulo «Partidas a aumentar» (h9 c2). Los importes, en la capa.
+TEXTO:
+  DECRETO Nº 2623-E.
+  SALTA, Setiembre 29 de 1958.
+  Expte. Nº 3465|58.
+  —VISTO la transferencia de partidas solicitada en estas actuaciones por
+  Dirección de Vialidad de
+  la Provincia de Salta, dentro del Plan de Obras Públicas— Recursos Nacionales
+  Fondos de Ayuda
+  Federal Plan de Obras Públicas —Recursos Nacionales" Ejercicio 1958; [...]
+  Capítulo III, Título 3, Subtítulo A, Rubro Funcional IV, Obra 47— Mejora
+  progresiva camino
+  Salta a Los Yacones por San Lorenzo, Tramo: San Lorenzo ........ $ 100.000.—
+  [capa]
+  [...] Partidas a aumentar: [...]
+  Capítulo III, Título 3, Subtítulo A, Rubro Funcional IV,
+  Obra 8— Ayuda Financiera a Consorcio Nº 12, Const. puente s|río Caldera, "Plan
+  B", Caminos
+  de Fomento Agrícola........ $ 350.000.— [capa]
+NOTA DE LECTURA: La pertenencia de la obra 47 a la lista «a disminuir» la da el
+orden de la capa entre los rótulos, no una lectura entera de la columna en la
+imagen (E.10). La capa escribe «Les Varones» por Los Yacones. El cuadro no se
+recalculó (E.8).
+
+A.63
+FUENTE: 5749 h9 c3 y h10 c1 (Salta, jueves 9 de octubre de 1958); sumario en
+5749 h2
+FICHA: Decreto N 2681-A, 1 de octubre de 1958, expediente 22.834/56: por
+tratarse de un ejercicio vencido (art. 65 de la Ley de Contabilidad 941/48 y
+art. 35 de la Ley 705/57), reconoce un crédito de $ 647,01 a favor de Silvia J.
+Ortiz por los servicios de septiembre y octubre y el sueldo anual complementario
+de 1956, como reemplazante en el Hogar «Dr. Luis Linares» de La Caldera, y
+reserva las actuaciones en Contaduría General hasta que se arbitren los fondos.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 110 ppp: los considerandos (h9 c3) y el art. 1 (h10
+c1).
+TEXTO:
+  DECRETO Nº 2681—A.
+  [Salta, 1º] de octubre de 1958.
+  [Expediente] Nº 22.834|56.
+  [VISTO en] este expediente las planillas [de liquidación] de reconocimientos
+  de servicios de los
+  meses de setiembre y octubre [y Sueldo A]nual Complementario de [1956, a
+  favor] de la Srta. Silvia
+  J. Ortiz, [como reem]plazante en el Hogar "Dr. [Luis Linares]", de La Caldera;
+  [...]
+  [...] suma de Seiscientos cuarenta y siete pesos con 01|100 M|N. ($ 647.01), a
+  favor de la Srta.
+  Silvia J. Ortiz, en concepto de reconocimientos de servicios de los meses de
+  setiembre y octubre
+  y Sueldo Anual Complementario de 1956, por su desempeño como reemplazante en
+  el Hogar "Dr. Luis
+  Linares", de La Caldera, de acuerdo al detalle de las planillas [...]
+NOTA DE LECTURA: Los corchetes reponen, rotulados, las letras que el recorte
+deja fuera por el borde izquierdo de la columna; están en la capa. El
+expediente, 22.834/56 aquí y 22.934/56 en el Decreto 1011-A (A de 5691): 8 y 9
+en la cifra de mil (v17 §5.6.2); no hay control que lo decida (E.10).
+
+A.64
+FUENTE: 5752 h6 c3 y h7 c1 (Salta, miércoles 15 de octubre de 1958)
+FICHA: Ley N 3244, sancionada el 3 de octubre y promulgada el 13 de octubre de
+1958: amplía en $ 5.712.500 el estimado de impuestos internos unificados (Ley
+14.390) y en $ 4.570.000 el Anexo D (Gobierno), parcial «Subsidios a las
+Municipalidades de la Provincia»; el art. 3 distribuye los subsidios: La
+Caldera, $ 50.000. Clase: HACIENDA-MUN+NORMA.
+MODO DE LECTURA: imagen, 120 ppp: el tramo de la tabla desde La Caldera hasta El
+Tala (h7 c1). El articulado y el resto de la tabla, en la capa.
+TEXTO:
+  LEY Nº 3244 [capa]
+  [...] Art. 3º.— La distribución de los subsidios establecidos por el
+  artículo anterior se hará en la forma que a continuación se consigna: [...]
+  La Caldera ...................... 50.000.—
+  La Viña ......................... 50.000.—
+  Coronel Moldes .................. 50.000.—
+  San Antonio de los Cobres ....... 50.000.—
+  Tolar Grande .................... 30.000.—
+  [...]
+NOTA DE LECTURA: RECUENTO PROPIO: cuarenta y ocho municipalidades; el acto no
+declara número. Recalculada la tabla entera: la suma de los cuarenta y ocho
+importes da $ 4.570.000 y cierra con el art. 2 si Tolar Grande lleva $ 30.000,
+como da la imagen; la capa escribe «30.660», que no cerraría (control
+aritmético, E.8).
+
+A.65
+FUENTE: 5756 h5 c1 (Salta, martes 21 de octubre de 1958); sumario en 5756 h2
+FICHA: Ley N 3251, sancionada el 1 de octubre de 1958: faculta al Poder
+Ejecutivo a construir, por medio de los organismos técnicos de la Provincia y
+sobre terrenos fiscales en el pueblo de La Caldera, un edificio para la
+comisaría de policía con vivienda para su personal, que deberá incluirse en el
+Plan de Obras Públicas de 1959. Clase: OBRA-PUBLICA+NORMA.
+MODO DE LECTURA: imagen, 105 ppp: la ley entera (h5 c1).
+TEXTO:
+  LEY Nº 3251
+  POR CUANTO:
+  EL SENADO Y LA CAMARA DE DIPUTADOS DE LA PROVINCIA DE SALTA,
+  SANCIONAN CON FUERZA DE LEY:
+  Art. 1º.— Facúltase al Poder Ejecutivo para construir, por medio
+  de los organismos técnicos de la Provincia, sobre terrenos de propiedad
+  fiscal, en el pueblo de la
+  Caldera, un edificio con destino al funcionamiento de la comisaría de policía
+  y con comodidades
+  para vivienda del personal de la misma.
+  Art. 2º.— La construcción del edificio a que se refiere
+  el artículo anterior, deberá ser incluída en el Plan de Obras Públicas de la
+  Provincia, para el
+  año 1959.
+  Art. 3º.— Comuníquese, etc.
+  Dada en la Sala de Sesiones de la Honorable Legislatura
+  de la Provincia de Salta, a un día del mes de octubre del año mil novecientos
+  cincuenta y ocho.
+NOTA DE LECTURA: La promulgación no se leyó (h5, capa). El terreno fiscal no se
+identifica: citado y no acompañado (E.3).
+
+A.66
+FUENTE: 5757 h12 c1 (Salta, miércoles 22 de octubre de 1958); sumario en 5757 h3
+FICHA: Resolución de minas N 2465, expediente 44-L-1929, Salta, 12 de septiembre
+de 1958: visto que la mina de plomo y plata «Caldera 1-2 y 3», ubicada en el
+departamento de La Caldera, adeuda $ 800 de canon minero de 1951 a 1957
+(expediente 2738-D-58 de Rentas), la declara caduca por falta de pago (art. 5 de
+la Ley 10.273) y remite el expediente al Ministerio de Economía para su subasta
+pública (art. 108 del Decreto-Ley 430 y art. 7 de la Ley 10.273). Clase: MINAS.
+MODO DE LECTURA: imagen, 100 ppp: la resolución hasta el punto 3 (h12 c1).
+TEXTO:
+  Nº 2465 — Expte. Nº 44-L-1929.
+  Salta, Setiembre 12 de 1958.
+  Y VISTOS:
+  Este expediente Nº 44-L Mina denominada "Caldera 1-2 y 3, Lo informado por
+  Dirección General de
+  Rentas de la Provincia en expediente Nº 2738-D-58; y CONSIDERANDO: Que en el
+  expediente mencionado
+  Nº 2738-D 58, se da cuenta que la presente mina "Caldera 1-2 y 3" L adeuda la
+  suma de Ochocientos
+  pesos Moneda Nacional (m$n. 800), correspondiente a los años 1951, 1952, 1953,
+  1954, 1955 1956 y
+  1957 en concepto de canon minero. [...] RESUELVO: 1º.— Declarar caduca por
+  falta de pago de canon
+  minero (art. 5 de la Ley Nº 10.273) ésta mina mineral de Plomo y plata
+  denominada "Calderal- 2- y
+  3" tramitada por expediente Nº 44-L y ubicada en el Departamento de la
+  "Caldera". [...]
+NOTA DE LECTURA: RECUENTO PROPIO: siete años de canon adeudado. El expediente es
+«44-L-1929» aquí y «número 44», presentado el 10 de agosto de 1955, en el edicto
+de mensura de agosto (A de 5710): se transcriben y no se concilian (E.9). La
+petición de mensura se publica en agosto y la caducidad en octubre, con
+proveídos del 24 de junio y del 12 de septiembre. El aviso lleva «e) 17/10 al
+30/10/58» y la búsqueda por texto no devuelve otra aparición (E.6).
+
+A.67
+FUENTE: 5758 h10 c2 (Salta, jueves 23 de octubre de 1958); sumario en 5758 h3
+FICHA: Decreto N 2876-G, 13 de octubre de 1958, expediente 9321/58: a pedido de
+la Dirección General del Registro Civil (nota 381/M/12), autoriza a Augusto
+Regis, vecino de La Caldera (Pueblo), a suscribir dos actas de nacimiento y
+defunción de un miembro de la familia de la encargada de la oficina del Registro
+Civil de esa localidad, Esther Gabriela Cruz (arts. 29 y 70 de la Ley 251).
+Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 110 ppp: el decreto hasta el art. 1 (h10 c2).
+TEXTO:
+  DECRETO Nº 2876 G.
+  Salta, Octubre 13 de 1958.
+  Expediente Nº 9321|58
+  —VISTA la nota Nº 381|M|12 cursada por la Dirección General del Registro
+  Civil, con fecha 8 del
+  mes y año en curso en la que solicita se autorice al señor Augusto Regis para
+  que suscriba dos
+  actas de nacimiento y defunción de un miembro de familia de la Encargada de la
+  Oficina de la
+  Caldera, [...] Art. 1º.— Autorízase al señor Augusto Regis, vecino de la
+  localidad de La Caldera
+  (Pueblo) para que suscriba dos actas de nacimiento y defunción de un miembro
+  de familia de la
+  Encargada de la Oficina del Registro Civil de la citada localidad señorita
+  Esther Gabriela Cruz.
+NOTA DE LECTURA: Augusto Regis es el secretario municipal que firma con Muñoz en
+1957 y en la resolución de agosto de 1957 (A de 5613). El acto no dice de quién
+son las actas (no se infiere).
+
+A.68
+FUENTE: 5760 h9 c2 (Salta, viernes 24 de octubre de 1958); sumario en 5760 h2
+FICHA: Decreto N 2956-A, 17 de octubre de 1958: designa auxiliar 4º, auxiliar
+administrativo técnico del Hogar «Dr. Luis Linares» de La Caldera, a Cristóbal
+Rafael Jurado, en la vacante por ascenso de María Arévalo; la dirección del
+establecimiento determinará sus funciones. Firma el vicegobernador en ejercicio
+del Poder Ejecutivo. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 100-400 ppp: el decreto hasta el art. 1 (h9 c2).
+TEXTO:
+  DECRETO Nº 2956 A.
+  Salta, Octubre 17 de 1958.
+  [...] Art. 1º. — Desígnase, a partir de la
+  fecha del presente decreto, Auxiliar 4º, Aux. Administrativo Técnico del Hogar
+  "Dr. Luis
+  Linares", de la Caldera, al señor Cristóbal Rafael Jurado L. E. Nº [omitido],
+  en la vacante por
+  ascenso de la señorita María Arévalo.
+  La Dirección del citado establecimiento determinará las
+  funciones con que revistará el mencionado empleado.
+NOTA DE LECTURA: El número: la imagen da 2956 y la capa 2950; la serie lo decide
+(2955-A y 2957-A, del 17 de octubre, en la misma hoja). La vacante es de María
+Arévalo, que no aparece en ninguna otra ficha del año (E.3). Jurado reaparece en
+la nómina de diciembre (A de 5791).
+
+A.69
+FUENTE: 5761 h13 c2 (Salta, jueves 30 de octubre de 1958) y otras 2 apariciones:
+5768 h18, 5775 h8; sumarios en 5761 h3, 5768 h3 y 5775 h2
+FICHA: Edicto de minas N 2510: manifestación de descubrimiento de un yacimiento
+de cloruro de plata, mina «La Milagrosa», en el departamento de La Caldera,
+presentada por Ernesto Job Cuevas, «Leyes», en el expediente 2906-C el 18 de
+agosto de 1958 a las doce; el punto de extracción se ubica desde el puesto de
+Ciriaco Reynaga, dentro del cateo 2369-C-57 del solicitante; proveído del 25 de
+septiembre de 1958 que cambia el nombre de la mina, «El Milagro», por el de «La
+Milagrosa». Clase: MINAS.
+MODO DE LECTURA: imagen, 100 ppp: el aviso hasta el cambio de nombre (h13 c2).
+TEXTO:
+  Nº 2510 — Manifestación de Descubrimiento de un Yacimiento de Cloruro de
+  Plata; Mina
+  Denominada "La Milagrosa" ubicada en el Departamento de La Caldera, presentada
+  por el Señor
+  Ernesto Job Cuevas, Leyes en expediente número 2906-C. El día Dieciocho de
+  Agosto de 1958 a
+  horas doce.— [...] se ubica tomando como punto de referencia el puesto de
+  Ciriaco Reynaga que
+  es el mismo punto de referencia del cateo expte. 2369-C- [...] Salta,
+  setiembre 25 de 1958. [...]
+  Cámbiese el nombre de la presente mina denominada "El Milagro" por el de "La
+  Milagrosa" [...]
+NOTA DE LECTURA: Ernesto Job Cuevas y Ciriaco Reynaga están en el config desde
+1957 (cateo del departamento, A.73 de 1957): la manifestación sale de aquel
+cateo. «Leyes» sigue al nombre del solicitante sin puntuación que diga qué es
+(E.9).
+
+A.70
+FUENTE: 5768 h16 c2 (Salta, jueves 6 de noviembre de 1958); sumario en 5768 h3
+FICHA: Decreto N 3185-G, 30 de octubre de 1958, expediente 7921/58: acepta la
+renuncia de Eugenio Muñoz al cargo de juez de paz propietario de la localidad de
+La Caldera. Clase: JUSTICIA.
+MODO DE LECTURA: imagen, 110 ppp: el decreto entero (h16 c2).
+TEXTO:
+  DECRETO Nº 3185 — G
+  Salta, 30 de octubre de 1958
+  Expediente Nº 7921|58
+  Vista, la renuncia interpuesta,
+  [...] Artículo 1º. — Acéptase la renuncia presentada por el
+  señor Eugenio Muñoz, al cargo de juez de paz propietario de la localidad de La
+  Caldera.
+NOTA DE LECTURA: Dos meses después de su designación (A de 5726, mismo
+expediente). El decreto no da fecha a la renuncia.
+
+A.71
+FUENTE: 5769 h7 c2-c3 (Salta, viernes 7 de noviembre de 1958)
+FICHA: Decreto N 3202-E, 30 de octubre de 1958, expediente 4009/58: liquida a la
+Dirección de Vialidad $ 6.150.183,13 en reintegro de lo invertido entre el 31 de
+julio y el 22 de octubre en el Plan de Obras Públicas; entre las partidas,
+«Ayuda Financiera a Consorcio N 12, construcción s/R. Caldera», H, III, $
+64.422,60. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 110-130 ppp: el encabezado (h7 c2) y el renglón con su
+importe (h7 c3).
+TEXTO:
+  DECRETO Nº 3202-E.
+  Salta, Octubre 30 de 1958.
+  Expte. Nº 4009|58.
+  —Visto que Dirección de Vialidad de la Provincia de Salta, solicita se liquide
+  a su favor en
+  carácter de reintegro la suma de $ 6.150.183.13 m|n., invertida en la
+  realización del Plan de
+  Obras Públicas durante el período del 31 de julio al 22 de octubre de 1958;
+  [...]
+  Ayuda Financiera a Consorcio Nº 12, construcción s|R. Caldera H, III ......
+  64:422.60
+NOTA DE LECTURA: Los dos puntos en «64:422.60» son del original. El cuadro no se
+recalculó (E.8). Con A de 5676 y 5747, tercer acto del año con dinero para el
+puente del consorcio 12.
+
+A.72
+FUENTE: 5778 h5 c2 (Salta, jueves 20 de noviembre de 1958); sumario en 5778 h2
+FICHA: Ley N 3344, sancionada el 31 de octubre de 1958: modifica el art. 5 del
+Decreto-Ley 590/57 (préstamo a la Municipalidad de La Caldera para completar el
+costo de la usina eléctrica): el importe del préstamo se entregará a la
+Municipalidad una vez aprobada la adjudicación de los trabajos de instalación de
+la usina. Clase: HACIENDA-MUN+NORMA.
+MODO DE LECTURA: imagen, 110 ppp: la ley hasta el art. 1 (h5 c2).
+TEXTO:
+  LEY Nº 3344
+  POR CUANTO:
+  El Senado y la Cámara de Diputados de la Provincia de Salta,
+  Sancionan con fuerza de
+  LEY:
+  Artículo 1º. — Modifícase el artículo 5º del decreto ley número
+  590.57, que queda redactado en la siguiente forma:
+  "Art. 5º. — El importe del préstamo
+  expresado precedentemente deberá ser entregado a la Municipalidad de La
+  Caldera una vez aprobada
+  la adjudicación de los trabajos para la instalación de la usina de
+  referencia".
+NOTA DE LECTURA: El Decreto-Ley 590/57 es el préstamo de $ 200.000 de julio de
+1957 (A.47 de 1957); la adjudicación ya estaba aprobada desde el Decreto 12064-G
+(A de 5569). La ley no lo dice; se transcribe.
+
+A.73
+FUENTE: 5779 h9 c3 (Salta, viernes 21 de noviembre de 1958); sumario en 5779 h2
+FICHA: Decreto N 3408-G, 11 de noviembre de 1958, expediente 9712/58: acepta la
+renuncia de Ramón Antonio Vivas, juez de paz suplente de la localidad de La
+Caldera. Clase: JUSTICIA.
+MODO DE LECTURA: imagen, 110 ppp: el decreto entero (h9 c3). Número: la serie
+(3403-E a 3407-G, del 11 de noviembre, en la misma hoja); la imagen tapa el
+tercer dígito.
+TEXTO:
+  DECRETO Nº 34[0]8-G.
+  Salta, 11 de noviembre de 1958.
+  Expediente Nº 9712|58.
+  Vista la renuncia interpuesta,
+  [...] Art. 1º. — Acéptase la renuncia presentada por el señor
+  Juez de Paz Suplente, de la localidad de la Caldera, don Ramón Antonio Vivas.
+NOTA DE LECTURA: «Antonio R. Vivas» en su confirmación de agosto (A de 5726) y
+«Ramón Antonio Vivas» aquí (E.9). Antonio Vivas está en el config desde 1946.
+
+A.74
+FUENTE: 5790 h17 c3 y h18 (Salta, martes 9 de diciembre de 1958); sumario en
+5790 h4
+FICHA: Contrato social N 2805: primer testimonio de la escritura 641 del
+escribano Francisco Cabrera (registro 5), Salta, 2 de diciembre de 1958; Ernesto
+Belisario Saravia y Martín Miguel Saravia constituyen «Ernesto y Martín Miguel
+Saravia — Sociedad de Responsabilidad Limitada», por diez años y con $ 200.000
+de capital, para negocios agrícolas, ganaderos y afines, sobre la base de la
+explotación de la finca «Jetsemaní», en el departamento de La Caldera, arrendada
+por su propietario, Eduardo Colombres, al socio Ernesto Belisario Saravia, que
+transfiere la locación a la sociedad. Clase: DOMINIO+OTRO.
+MODO DE LECTURA: imagen, 100 ppp: las cláusulas primera y segunda (h17 c3). El
+encabezado y el capital, en la capa.
+TEXTO:
+  Nº 2805 — PRIMER TESTIMONIO.— ESCRITURA NUMERO SEISCIENTOS CUARENTA Y UNO.—
+  CONSTITUCION DE
+  SOCIEDAD DE RESPONSABILIDAD LIMITADA.— [...] a los dos días del mes de
+  Diciembre de mil
+  novecientos cincuenta y ocho [...] [capa]
+  PRIMERO: — Don Ernesto Belisario Saravia y don Martín
+  Miguel Saravia, constituyen en la fecha una sociedad de Responsabilidad
+  Limitada, que tiene por
+  objeto la realización de negocios agrícola, ganaderos y afines de toda índole,
+  sirviendo de base
+  para los negocios sociales la explotación de esta índole de la finca
+  denominada "Jetsemaní"
+  ubicada en el Departamento de La Caldera, arrendada por su propietario don
+  Eduardo Colombres al
+  socio don Ernesto Belisario Saravia, locación que este transfiere por este
+  acto a la sociedad que
+  se constituye. [...]
+  SEGUNDO: — La Sociedad girará desde la fecha bajo la denominación de
+  "ERNESTO Y MARTIN MIGUEL SARAVIA.— SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+  durará [diez años]
+NOTA DE LECTURA: La finca es la que salió a remate dos veces en septiembre
+contra Eduardo O. Colombres (A de 5698 y 5704); el contrato la da como de su
+propiedad en diciembre. El resultado de los remates no se publica en el corpus
+(E.3).
+
+A.75
+FUENTE: 5791 h6 c2 a h16 (Salta, miércoles 10 de diciembre de 1958); el renglón
+del departamento en h8 c1
+FICHA: Decreto N 3770-A, 2 de diciembre de 1958: visto el presupuesto 1958-1959
+(Ley 3318 del 3 de noviembre), confirma, promueve y designa desde el 1 de
+noviembre al personal administrativo y técnico del Ministerio de Asuntos
+Sociales y Salud Pública; del departamento: oficial 6º, regente del Hogar Luis
+Linares de La Caldera, Inés Nievas. Clase: ESCUELA+CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: el renglón (h8 c1). Encabezado y art. 1, en la
+capa (h6). La nómina (diez hojas) se buscó por «Caldera», «Linares» y
+«Vaqueros».
+TEXTO:
+  DECRETO Nº 3770-A.
+  Salta, diciembre 2 de 1958. [capa]
+  [...] Art. 1º. — Confírmase, promuévese y desígnase, al siguiente personal
+  Administrativo y
+  Técnico del Ministerio de Asuntos Sociales y Salud Pública, en las categorías
+  y funciones que en
+  cada caso se determina, a partir del 1º de noviembre del año en curso: [...]
+  Oficial 6º Regente Hog. Luis Linares de La Caldera Srta. Inés Nievas, [h8]
+NOTA DE LECTURA: RECUENTO PROPIO: un renglón del departamento. «Inés Nievas»
+aquí e «Inés Nieva» en su designación de agosto (A de 5719): se transcriben las
+dos (E.9). Los renglones de «auxiliar caldera» del Hospital del Milagro (h12)
+son calderas de calefacción (B.3).
+
+A.76
+FUENTE: 5791 h17 c1 a h20 c2 (Salta, miércoles 10 de diciembre de 1958);
+renglones del departamento en h17, h18, h19 y h20
+FICHA: Decreto N 3773-A, 2 de diciembre de 1958: visto la Ley 3318 (presupuesto
+1958-1959), confirma, promueve y designa al personal administrativo y técnico
+del Ministerio de Asuntos Sociales y Salud Pública que se desempeña en la
+campaña. Del departamento: el médico regional de La Caldera, Juan Carlos
+Martearena; el de Vaqueros y San Lorenzo, Dardo Ángel Frías; las enfermeras de
+los consultorios externos de Vaqueros (Eusebia Ruiz) y de La Caldera (Corina
+Adela Bustamante); la subregente del Hogar, Delma Suárez de Kortting; la
+ayudante de enfermera del consultorio externo, Felipa Valdiviezo de Muñoz; el
+auxiliar administrativo del Hogar, Cristóbal Rafael Jurado; y once auxiliares 5ª
+del Hogar La Caldera. Clase: ESCUELA+CARGOS.
+MODO DE LECTURA: imagen, 90-200 ppp: el encabezado (h17 c1) y los renglones del
+departamento en h17 c1, h18 c1 y c3, h19 c1 y h20 c1-c2. El renglón de
+Valdiviezo de Muñoz (h19), en la capa.
+TEXTO:
+  DECRETO Nº 3773—A.
+  SALTA, Diciembre 2 de 1958.
+  VISTO la Ley 3318, de fecha 3 de noviembre
+  del corriente año, [...]
+  Méd. Regional de Vaqueros, S. Loren., Dr. Dardo Angel Frías, [h17]
+  Méd. Regional de La Caldera, Dr. Juan Carlos Martearena, [h17]
+  Auxiliar Mayor Enfermera Consultorio Ext. Vaqueros, Srta. Eusebia Ruiz [h18]
+  Auxiliar Mayor Enfermera Consultorio Ext. La Caldera Srta. Corina Adela
+  Bustamante [h18]
+  Aux. 1ro. Sub-Regente Hogar La Caldera, Sra. Delma Suárez de Kortting [h18]
+  Aux. 3ro. Ayud. Enf. Cons. Ext. La Caldera. Sra. Felipa Valdiviezo de Muñoz,
+  [h19, capa]
+  Aux. 4to. Aux. Administrativo Hogar La Caldera, Sr. Cristóbal Rafael Jurado
+  [h19]
+  Auxiliar 5ta. Aux. Serv. Hogar La Caldera señorita Otilia Barboza. [h20]
+  Auxiliar 5ta. Aux. Serv. Hogar La Caldera señora Juana Gutntay de Flores
+  Auxiliar 5ta. Aux. Serv. Hogar La Caldera señorita Ana Elvira Leal.
+  Auxiliar 5ta. lavandera Hog. La Caldera, señorita María Antonia Vázquez.
+  Auxiliar 5ta. mucama Hog. La Caldera, señora Ricarda E. Y. de Guido Moreno
+  Auxiliar 5ta. cuidad. niños Hogar La Caldera señora Sergia Méndez de Mogro
+  Auxiliar 5ta. cocinera Hogar La Caldera. señora Presentación G. de Valdez.
+  Auxiliar 5ta. mucama Hogar La Caldera, señorita Clarisa Alcira Villegas
+  Auxiliar 5ta., mucama Hog. La Caldera, señorita Inés Nieves Guerrero.
+  Auxiliar 5ta., mucama. Hog. La Caldera, señorita Sara Leal.
+  Auxiliar 5ta., mucama Hog. La Ca[l]dera, señorita Marcelina Apaza.
+NOTA DE LECTURA: RECUENTO PROPIO: dieciocho renglones del departamento (dos
+médicos, dos enfermeras de consultorio, una ayudante de enfermera, la
+subregente, el auxiliar administrativo y once auxiliares 5ª del Hogar); el acto
+no declara número. Frente a la confirmación de enero (A de 5584), faltan la
+regente interina Calvelo, Isijara, el peluquero Gallardo, Epifania Colque de
+Mamani y el peón Hugarte, y entran Suárez de Kortting, Valdiviezo de Muñoz,
+Jurado, Nieves Guerrero, Sara Leal y Marcelina Apaza; comparación de la sesión,
+rotulada. «Marcelina Apaza» aquí y «Marcelina Abaza» en su designación (A de
+5706); «Gutntay» por Guantay; «Kortting» por Kotting (E.9). La capa escribe
+«Hog. La Cablera» en el último renglón; la imagen, «La Ca?dera» con la l rota.
+
+A.77
+FUENTE: 5794 h6 c3 (Salta, lunes 15 de diciembre de 1958) y otras 9 apariciones
+hasta 5803 h5 (lunes 29 de diciembre): 5795 h15, 5796 h17, 5797 h24, 5798 h9,
+5799 h13, 5800 h12, 5801 h5, 5802 h5; sumarios
+FICHA: Edicto citatorio N 2858 de A.G.A.S., expediente 3024-49: a los efectos
+del art. 183 del Código de Aguas, hace saber que Modesto Cruz pide la
+transferencia a su nombre de la concesión originaria reconocida por el Decreto
+4357 del 20 de marzo de 1953 (Registro de Aguas N 339), a derivar del río La
+Caldera con carácter permanente y a perpetuidad para 1 ha 6.800 m2, con 0,88
+l/s. Clase: AGUAS.
+MODO DE LECTURA: imagen, 110 ppp: el aviso (h6 c3).
+TEXTO:
+  Nº 2858 — REF: Expte. Nº 3024-49.— MODESTO CRUZ s|transferencia a su nombre
+  p|130|2,
+  EDICTO CITATORIO
+  —A los efectos establecidos por el Art. 183 del Código de Aguas, se hace saber
+  que MODESTO CRUZ tiene solicitado la transferencia a su nombre de la concesión
+  originaria
+  reconocida mediante Decreto Nº 4357 del 20 de marzo de 1953, asiento en Reg.
+  de Aguas Nº 339, a
+  derivar del Río La Caldera, con carácter permanente y a perpetuidad, para
+  irrigar una superficie
+  de 1 Ha. 6.800 m2. y con una dotación de 0,88 l|segundo del inmueble de su
+  propiedad.
+NOTA DE LECTURA: Control aritmético: 0,88 l/s para 1,68 ha son 0,524 l/s por
+hectárea, el módulo del año. El edicto no nombra el inmueble ni el catastro
+(E.3). El Decreto 4357 de 1953 no se buscó en el informe de ese año (E.10).
+
+A.78
+FUENTE: 5796 h8 c3 (Salta, miércoles 17 de diciembre de 1958)
+FICHA: Decreto N 3855-A, 5 de diciembre de 1958: licencias por enfermedad
+(Decreto-Ley 622, art. 15); art. 13, treinta días desde el 1 de septiembre a
+Margarita Vázquez, auxiliar 5º, lavandera de La Caldera. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 120 ppp: el art. 13 (h8 c3). Encabezado, en la capa (h8
+c1); es el último decreto que abre en la hoja antes del art. 13.
+TEXTO:
+  DECRETO Nº 3855-A.
+  SALTA, Diciembre 5 de 1958. [capa]
+  [...]
+  Art. 13.— Concédense treinta (30) días de licencia por enfermedad, con
+  anterioridad al día 1º de
+  setiembre del corriente año, a la Auxiliar 5º —Lavandera de La Caldera—
+  señorita Margarita
+  Vázquez —L. C. Nº [omitido]—; de acuerdo a lo que establece el artículo 15º
+  del Decreto [Ley Nº
+  622].
+NOTA DE LECTURA: «Margarita Vázquez», «Margarita Antonia Vá[z]quez» (A de 5584)
+y «María Antonia Vázquez» (A de 5791) para la lavandera del Hogar (E.9). El acto
+no dice de qué establecimiento de La Caldera; el Hogar, por las nóminas
+(inferencia rotulada).
+
+A.79
+FUENTE: 5797 h5 c1-c2 (Salta, jueves 18 de diciembre de 1958)
+FICHA: Decreto N 3281-E, 31 de octubre de 1958, expedientes 4625/58, 4665/58 y
+3554/58: liquida a la Dirección de Arquitectura el reintegro de inversiones del
+Plan de Obras Públicas; entre las partidas de fondos nacionales, «Const. Patio
+Cubierto H. Niños La Cald.», H, I, I, 1, D, I, 2, $ 696. Clase:
+OBRA-PUBLICA+ESCUELA.
+MODO DE LECTURA: imagen, 100 ppp: el encabezado (h5 c1) y el renglón con su
+importe (h5 c2).
+TEXTO:
+  DECRETO Nº 3281—E.
+  [Salta,] Octubre 31 de 1958.
+  [Expte.] Nros. 4625|58, 4665|58 y 3554|58.
+  [...] FONDOS NACIONALES:
+  Const. Patio Cubierto H. Niños La Cald. —H, I, I, 1, D, I, 2 ... $ 696.—
+NOTA DE LECTURA: El cuadro no se recalculó (E.8). Es la partida del patio
+cubierto (A de 5579, 5643 y 5712); el importe es de reintegro y no un
+certificado.
+
+A.80
+FUENTE: 5800 h8 c3 y h9 c1 (Salta, martes 23 de diciembre de 1958); sumario en
+5800 h2
+FICHA: Decreto N 4021-G, 17 de diciembre de 1958, expediente 10131/58: vista la
+nota de la Municipalidad de La Caldera del 1 de diciembre con ternas, y estando
+vacantes los cargos, designa juez de paz propietario del pueblo de La Caldera a
+Esteban Mogro y juez de paz suplente a Gregorio Mario García, desde que tomen
+posesión. Firma el vicegobernador en ejercicio del Poder Ejecutivo. Clase:
+JUSTICIA.
+MODO DE LECTURA: imagen, 110 ppp: el encabezado (h8 c3) y los arts. 1 y 2 (h9
+c1).
+TEXTO:
+  DECRETO Nº 4021-G.
+  Salta, 17 de diciembre de 1958.
+  Expediente Nº 10131|58.
+  VISTA la nota cursada por la Municipalidad de La Caldera con fecha 1º de
+  diciembre del mes en
+  curso, mediante la cual remite ternas para la designación de Jueces de Paz
+  Propietario y Suplente
+  de la mencionada localidad, y, CONSIDERANDO: Que los actuales cargos de Jueces
+  de Paz Pro[...]
+  [...] Art. 1º. — Desígnase Juez de Paz Propietario del pueblo
+  de La Caldera, al señor Esteban Mogro (C. 1921, M. I. Nº [omitido]), a partir
+  de la fecha que tome
+  posesión de su cargo.
+  Art. 2º. — Desígnase Juez de Paz Suplente del pueblo de La Caldera, al
+  señor Gregorio Mario García (C. 1915, M. I. Nº [omitido]), a partir de la
+  fecha que tome posesión
+  de sus funciones.
+NOTA DE LECTURA: Tercer juez de paz propietario del año y segundo suplente (A de
+5726, 5768 y 5779). Esteban Mogro es el concesionario del «Lote 6» (A de 5629 y
+5663); el acto no lo dice, y la identidad de nombre no se afirma como identidad
+de persona (E.9). La capa escribe la fecha de la nota municipal como «19 de
+diciembre».
+
+§B · VECINDAD
+-------------
+
+B.1 · Núcleos ya fichados
+Seis núcleos arman la trama del año en el departamento, todos con fichas en el
+§A:
+
+1) La sanidad de la campaña. El médico regional de La Caldera es Juan Carlos
+Martearena; Dardo Frías lo reemplaza en sus licencias (A.4, A.17, A.23) y, desde
+el 5 de mayo, Satué queda como regional interino (A.35); a Martearena se le fija
+una sobreasignación en junio (A.34) y consta en licencia en abril (A.21). El
+Consultorio Externo y la Estación Sanitaria de La Caldera tienen su propio
+personal: Justina Fanny Cohera de Muñoz (A.22, A.29), Felipa Valdiviezo de Muñoz
+(A.44), María A. Acuña con servicios mes a mes de marzo a junio (A.31, A.39,
+A.43, A.50), la sobreasignación de Zona C (A.37) y la nómina de la campaña del
+presupuesto 1958-1959 (A.76). La confirmación general del personal de Salud
+Pública de enero trae quince cargos de La Caldera y uno de Vaqueros (A.9); el
+seguro de enfermedad de abril pone al departamento entre los que tienen
+servicios sanatoriales (A.26).
+
+2) El Hogar Escuela «Dr. Luis Linares» de La Caldera: regente y subregente (A.7,
+A.16, A.27, A.53, A.75), cuidadoras, mucamas y lavanderas (A.32, A.38, A.46,
+A.78), renuncias y designaciones de personal (A.61, A.68), créditos de años
+anteriores (A.40, A.63) y el patio cubierto, que se adjudica a Imberti en mayo y
+se certifica y reintegra hasta diciembre (A.6, A.24, A.52, A.79). En agosto
+renuncian Enriqueta Colque de Mamani y tres mucamas (A.46) y se nombra regente a
+Inés Nieva (A.53).
+
+3) La usina hidroeléctrica del pueblo: adjudicación a Vicente Moncho Parra en
+enero (A.3), el plan electromecánico 1958-1961 (A.58), la servidumbre de la
+caída de agua (A.59) y la ley que modifica el préstamo de 1957 (A.72). La
+hacienda municipal completa el cuadro: el camino al cementerio (A.14), el
+subsidio de $ 50.000 de la Ley 3244 (A.64) y el edificio de la comisaría del
+pueblo (A.65).
+
+4) El puente sobre el río Caldera y los caminos: la ayuda al consorcio 12 por $
+400.000 (A.25), los reintegros a Vialidad (A.36, A.71), la transferencia de
+partidas de octubre (A.62) y la Comisión Vial, donde el intendente Werfil Gallo
+representa al departamento (A.33). El camino de Salta a Los Yacones, en B.2.10.
+
+5) El agua: cinco concesiones o rectificaciones de A.G.A.S. (A.5, A.15, A.19,
+A.20, A.30), la temporal-eventual de El Angosto (A.41), la transferencia de
+diciembre (A.77) y los torneros de los ríos Wierna, San Alejo y Santa Rufina,
+con Rafael Pacheco trasladado a Talapampa en septiembre (A.54, A.60).
+
+6) Policía, justicia de paz y Registro Civil: el agente de Mojotoro revocado
+(A.2; B.2.2), los destacamentos nuevos de San Alejo y de Potrero de Castilla
+(A.11, A.28), las cesantías de agosto (A.55), los jueces de paz (A.57, A.70,
+A.73, A.80) y el Registro Civil (A.8, A.67).
+
+Fuera de los núcleos: cinco remates de inmuebles del departamento (A.1, A.12,
+A.42, A.45, A.49; la finca Jetsemaní o Getsemaní dos veces, y su sociedad de
+explotación en A.74); tres edictos y una resolución de minas (A.48, A.51, A.66,
+A.69); pensiones a la vejez (A.13, A.18); la ley electoral y las mesas del 23 de
+febrero (A.10, A.47); y el subsidio a las fiestas patronales de Vaqueros (A.56).
+
+Personas que aparecen en más de un acto del departamento: Martearena (A.4, A.21,
+A.34), Dardo Frías (A.4, A.17, A.23 y B.2.1, B.2.6), María A. Acuña (cuatro),
+Justina Cohera de Muñoz (A.22, A.29), Juana Guantay de Flores (A.32, A.38,
+A.76), Carmen Uría (A.9, A.16, A.27), Enriqueta Colque de Mamani (A.9, A.46),
+Inés Nieva o Nievas (A.53, A.75), Silvia J. Ortiz (A.40, A.63), Imberti (A.24,
+A.52), Esteban Mogro (A.20, A.30, A.80), Rafael Pacheco (A.54, A.60), Eugenio
+Muñoz (A.57, A.70), Antonio R. o Ramón Antonio Vivas (A.57, A.73), Augusto Regis
+(A.67 y la usina de 1957), César Flores (A.2 y B.2.2).
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+Vaqueros, Los Yacones y Mojotoro son del departamento por los actos de agua, de
+policía y de sanidad del propio año (v16 §5.1ter: «Vaqueros, departamento de La
+Caldera» en A.5; «Sub-Comisaría de Mojotoro (Dpto. La Caldera)» en A.2).
+
+B.2.1
+FUENTE: 5578 h5 c2-c3 (Salta, lunes 27 de enero de 1958)
+FICHA: Decreto N 12309-A, 17 de enero de 1958: reconocimientos de servicios; en
+uno de sus incisos, los del Dr. Dardo Frías como Jefe de Sección, Médico
+Regional de San Lorenzo y Vaqueros, del 1 al 30 de noviembre de 1957. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 200 ppp: el inciso de Frías. Encabezado y número en la
+capa (h5 c2), confirmado en la imagen. La capa del inciso está rota.
+TEXTO:
+  [...] Dr. Dardo Frías —L. E. [omitido]— como Jefe de Sección, Médico Regional
+  de San Lorenzo y Vaqueros, durante el tiempo comprendido entre los días 1 al
+  30 de noviembre de 1957 [...]
+NOTA DE LECTURA: El mismo mes Frías reemplaza también a Martearena en La Caldera
+(A.4, por licencia): no se concilia (E.9). No nombra La Caldera; Vaqueros es del
+departamento.
+
+B.2.2
+FUENTE: 5607 h12 c1 (Salta, miércoles 12 de marzo de 1958)
+FICHA: Decreto N 12945-G, 13 de febrero de 1958, expediente 5617/58: deja sin
+efecto el inciso a) del artículo 1 del Decreto N 11914 (20 de diciembre de
+1957), que designaba a César Flores agente de la Subcomisaría de Mojotoro.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 250 ppp: el artículo 1 entero; encabezado en la capa y
+la imagen.
+TEXTO:
+  Déjase sin efecto el inc. a del artículo 1º del decreto Nº 11914, dictado por
+  esta Intervención Federal con fecha 20 de diciembre del año ppdo., mediante el
+  cual se designa al señor CESAR FLORES, en el cargo [...]
+NOTA DE LECTURA: Decide el apellido de A.2 («Floues» en la imagen de 5564) por
+cita cruzada (v17 §5.6.1, control 4). El Decreto 13322-G (5618 h23) nombra a
+otro César Flores en otra dependencia (B.4).
+
+B.2.3
+FUENTE: 5607 h12 c1-c2 (Salta, miércoles 12 de marzo de 1958)
+FICHA: Decreto de la misma hoja, que aprueba la Resolución N 5 de Jefatura de
+Policía del 3 de enero de 1958 (expediente 8/58, letra O): acepta con carácter
+transitorio el local ofrecido por Manuel Serrey para la Subcomisaría de
+Vaqueros, cerca de la encrucijada del camino nuevo y el antiguo, porque la
+actual está en un camino excéntrico. Clase: CARGOS (policía; v16 §7.1 no tiene
+clase propia).
+MODO DE LECTURA: imagen, 250 ppp: el nombre del propietario («SERRE?» en la
+capa) y la ubicación; el resto en la capa.
+TEXTO:
+  «[...] presentación que realiza el señor MANUEL SERREY, quien solicita el
+  traslado de la actual Sub-Comisaría de Vaqueros con carácter de transitorio
+  hacia otro local cuyas comodidades resultan más convenientes [...]»
+  «Aceptar con carácter transitorio del señor MANUEL SERREY el local de su
+  propiedad, ubicado cerca de la encrucijada existente entre el nuevo y el
+  antiguo [...]»
+NOTA DE LECTURA: El número del decreto aprobatorio no se leyó; el sumario de
+5607 h3 lo anuncia («Aprueba la Resolución Nº 5 dictada por Jefatura de
+Policía»). La búsqueda por «Serrey» no devuelve esta hoja (la capa lo rompe;
+B.4).
+
+B.2.4
+FUENTE: 5618 h6 c2 (Salta, viernes 28 de marzo de 1958)
+FICHA: Decreto N 13219-A, art. 2: reconoce los servicios de Blanca Rosa Britos
+como Auxiliar 3º Enfermera de Vaqueros, del 23 al 31 de diciembre de 1957, en
+reemplazo de Eusebia Ruiz, en licencia (expediente 26.678/57). Clase: CARGOS.
+MODO DE LECTURA: imagen, 200 ppp: el artículo 2. Número del decreto en la capa y
+la imagen.
+TEXTO:
+  Reconócense los servicios prestados por la Srta. Blanca Rosa Britos
+  —[omitido]—, como Auxiliar 3º Enfermera de Vaqueros, durante el tiempo
+  comprendido entre el 23 al 31 de diciembre de 1957, en reemplazo de la Srta.
+  Eusebia Ruiz, que se hallaba de licencia reglamentaria.
+NOTA DE LECTURA: Eusebia Ruiz es la enfermera de Vaqueros de 1957 (A.4 y A.22 de
+1957).
+
+B.2.5
+FUENTE: 5642 h15 (Salta, lunes 5 de mayo de 1958)
+FICHA: Decreto N 14048-A: becas del Ministerio de Asuntos Sociales para 1958;
+entre los institutos, el Hogar Agrícola San Cayetano (Vaqueros), internos con $
+250 cada uno por nueve meses. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: el rótulo del Hogar y el importe; la nómina en
+la capa. RECUENTO PROPIO de la nómina no hecho: la capa corta la lista.
+TEXTO:
+  HOGAR AGRICOLA SAN CAYETANO (Vaqueros) Internos con $ 250.— cada uno por 9
+  meses [sigue la nómina]
+NOTA DE LECTURA: El Hogar Agrícola San Cayetano es de Vaqueros (el propio acto).
+Se omiten los nombres de los internos, menores (E.10).
+
+B.2.6
+FUENTE: 5642 h17, 5646 h16, 5667 h10 y 5671 h6 (Salta, 5 de mayo a 3 de junio de
+1958)
+FICHA: Serie de Dardo Frías como Médico Regional de Las Costas, San Lorenzo y
+Vaqueros: servicios de enero (5642 h17, art. 7 de un decreto de reconocimientos
+cuyo número no se leyó), de febrero (Decreto 14162-A, 5646 h16), designación en
+el cargo (Decreto 349-A, 26 de mayo de 1958, expediente 27.747/58, 5667 h10) y
+servicios del 1 al 31 de marzo (Decreto 457-A, 5671 h6). Clase: CARGOS.
+MODO DE LECTURA: capa en los cuatro; imagen, 150 ppp, en el nombre de la
+regional y los períodos de los cuatro.
+TEXTO:
+  5667 h10: «Desígnase al doctor Dardo Frías [...] Jefe de Sección 4ª, Personal
+  Administrativo y Técnico, Médico Regional de Las Costas, San Lorenzo y
+  Vaqueros [...]»
+  5671 h6: «Reconócense los servicios prestados por el Dr. Dardo Frías [...]
+  como Jefe de Sección 4ta. Médico Regional de Las Costas, San Lorenzo y
+  Vaqueros, durante el tiempo comprendido desde el 1º al 31 de marzo, inclusive,
+  del corriente año.»
+NOTA DE LECTURA: Marzo en Las Costas, San Lorenzo y Vaqueros contiene al período
+del 6 al 12 de marzo en La Caldera (A.23): no se concilia (E.9).
+
+B.2.7
+FUENTE: 5733 h8 (Salta, miércoles 10 de septiembre de 1958)
+FICHA: Decreto N 2204-A: becas del segundo semestre; Hogar Agrícola San Cayetano
+(Vaqueros), internos con $ 250 mensuales cada uno por nueve meses: 29 renglones.
+Clase: ESCUELA.
+MODO DE LECTURA: capa; imagen, 150 ppp, en el rótulo y el último número de la
+nómina. RECUENTO PROPIO: 29; el acto no declara número.
+TEXTO:
+  HOGAR AGRICOLA SAN CAYETANO (Vaqueros) internos con $ 250.— mensuales c/u. x 9
+  meses: [nómina de 29]
+NOTA DE LECTURA: Nombres de internos, menores, omitidos (E.10).
+
+B.2.8
+FUENTE: 5770 h5 (Salta, martes 11 de noviembre de 1958)
+FICHA: Decreto N 3257-A, 31 de octubre de 1958: subsidios al Hogar «Buen Pastor»
+y al Hogar Agrícola «San Cayetano» de Vaqueros para ropa y artículos de primera
+necesidad; al San Cayetano, $ 5.000. Clase: ESCUELA.
+MODO DE LECTURA: capa; imagen, 150 ppp, en el importe.
+TEXTO:
+  Visto los subsidios solicitados por las Instituciones del Hogar «Buen Pastor»
+  y Hogar Agrícola «San Cayetano» de Vaqueros [...]
+NOTA DE LECTURA: Sin observaciones.
+
+B.2.9
+FUENTE: 5773 h5 (Salta, viernes 14 de noviembre de 1958)
+FICHA: Ley N 3311, sancionada el 31 de octubre de 1958: subsidio de $ 50.000 al
+Instituto Concepcionista Hogar Agrícola San Cayetano, «que funciona en
+Vaqueros», para moblaje, ropa, vajilla y enseres; con cargo al presupuesto de
+1959. Clase: ESCUELA+NORMA.
+MODO DE LECTURA: capa; imagen, 150 ppp, en el número de la ley y el importe.
+TEXTO:
+  [...] y al Instituto Concepcionista Hogar Agrícola San Cayetano, que funciona
+  en Vaqueros, un subsidio de cincuenta mil pesos moneda nacional ($ 50.000
+  m/n.) a cada uno, para la adquisición de moblaje, ropa, vajilla y otros
+  enseres.
+NOTA DE LECTURA: El otro beneficiario es de la Capital.
+
+B.2.10
+FUENTE: 5623 h10, 5676 h8, 5713 h11, 5747 h9 y 5769 h5 (abril a noviembre de
+1958)
+FICHA: Obra 47 del plan de Vialidad, «Mejora progresiva camino Salta a Los
+Yacones» (en 5713 y 5769, «por San Lorenzo»): renglón del plan de obras (5623
+h10), de la liquidación de abril (5676 h8, la misma hoja de A.36) y de tres
+transferencias de partidas (5713 h11, tramo Salta a San Lorenzo, a disminuir, $
+50.000; 5747 h9, A.62; 5769 h5, tramo San Lorenzo). Clase: OBRA-PUBLICA.
+MODO DE LECTURA: capa en las cinco; imagen, 150 ppp, en 5713 h11 y 5747 h9.
+TEXTO:
+  5713 h11: «Obra 47 — Mejora Progresiva Camino Salta a los Yacones y San
+  Lorenzo, Tramo Salta a San Lorenzo . . . $ 50.000.—»
+NOTA DE LECTURA: Los Yacones es del departamento; el camino pasa por San Lorenzo
+(Capital). Los tramos nombrados en 1958 son los de la Capital: no consta obra
+dentro del departamento.
+
+Cita cruzada sin ficha propia: 5739 h4 (y su repetición en 5757 h9) cita el
+subsidio de las fiestas patronales de Vaqueros como «decreto nº 1954, del
+25|8|58» (A.56 lo imprime 1964; E.8).
+
+B.3 · Términos que ese año son otra cosa
+Calderas (máquinas): el aserradero de estación Hickmann en dos series de remates
+judiciales, el 887 y el que sigue (5595 a 5599); «sierra sin fin y caldera
+Avery» en Orán (remate 2770); el auxiliar de la caldera del Hospital del Milagro
+(5791 h12); «calderas de: gobierno» en un pedido de precios (5779 h6).
+
+Apellido: Roberto Caldera (5760 h12), el contratista de 1957. Calliera,
+apellido. Formas de «cald» que son otra palabra: Calderón, alcalde (Calama),
+caldos, y las del pre-informe que la sesión no agrupó (§2).
+
+Río Mojotoro: las concesiones sobre el río Mojotoro de este año son de General
+Güemes (5566 h6, 5607 h21, 5687 a 5696); los sondeos del río Mojotoro en El
+Angosto (5722 a 5744) son del departamento Capital (§C). Ninguno atribuye el río
+al departamento; sólo A.2 atribuye Mojotoro a La Caldera.
+
+Otros del anillo 2: Wierna, Castellanos, Lesser, Mamani y Apaza como apellidos
+de personas sin relación con el departamento en su acto; Campo Alegre (remate en
+Guanuco, departamento no determinado); «Las Lagunas o Yacones», catastros 32 y
+111, remate 1897 de Leguizamón de derechos en la sucesión de Pedro Ríos (5701
+h16, 5702 h16, 5705 h15 y repeticiones): el aviso no nombra departamento y los
+catastros no se cotejan; no se atribuye (E.3); Vaquería (Guachipas); el «camino
+de salida a Vaqueros» en Chachapoya (Capital); La Candelaria, el departamento
+(§C).
+
+B.4 · Anillo de actores
+Las 97 formas de nombre de las fichas de 1958 se buscaron por nombre completo
+sobre el texto sin puntuación de las dos versiones, en todo el corpus. En tres
+grupos:
+
+1) Sólo en su propio acto (una aparición o sólo las repeticiones de su aviso):
+la mayor parte, entre ellos Esther Gabriela Cruz, Paula Mercedes Delgado,
+Tránsito Burgos de Alfaro, Clelia Olivera, Felipa Valdiviezo de Muñoz, Enriqueta
+Colque de Mamani, Feliciana Barboza, Cristóbal Rafael Jurado, Delma Suárez de
+Kotting, Margarita Vázquez, Modesto Cruz, Gregorio Mario García, Antonio y
+Francisco Gómez, Ernesto Job Cuevas, Vicente Moncho Parra, Francisco Ruiz, Ana
+Vivas de Kelly, Cecilio Muñoz y Benita M. de Apaza.
+
+2) En más de un acto del departamento: los de B.1.
+
+3) También fuera del departamento: otro César Flores nombrado en otra
+dependencia (Decreto 13322-G, 5618 h23); Esteban Mogro y Rafael Pacheco en la
+planilla de A.G.A.S. de 5618 h13; Juan Mario Zapata (5711 h9) y Juan Florencio
+Cabeza (5564 h8, 5582 h9) en otros destinos antes de su cesantía (A.55); Imberti
+en obras de Cobos y San Agustín; Valdez Villagrán en un cateo de Rosario de
+Lerma; Carmen Uría (5791 h11) y Blanca Rodríguez de Amaya (5791 h15) en otras
+planillas del mismo presupuesto; Mariano Lucas Gallardo (5686 h12); Arturo C.
+Sierra; Frías en la Asistencia Pública (5599 h14, 5635 h4, 5685 h10) y la
+jubilación de Ángel Dardo Frías (5618 h21), que no se identifica con él;
+homónimos Martearena; la familia Patrón Uriburu; Akulov en Chicoana.
+
+Fallas de la búsqueda (la capa rompe el nombre; no son ausencias): las del §2
+(Paladini, González de la Vega, Werfil Gallo, Grande de Ovejero, Méndez de
+Mogro, Bustamante, Guantay de Flores, Cohera de Muñoz), más Blanca Rosa Britos y
+Manuel Serrey (B.2.3, B.2.4).
+
+§C · LIMITROFES
+---------------
+Capital: los sondeos del río Mojotoro en El Angosto, departamento Capital (5722
+a 5744): no es El Angosto de A.41 (catastro 134 del departamento). San Lorenzo y
+Las Costas, compartidos con Vaqueros en la regional médica de Frías (B.2.1,
+B.2.6), y el camino a Los Yacones (B.2.10).
+
+General Güemes: el río Mojotoro (B.3).
+
+La Candelaria: El Ceibal y el puente sobre el arroyo Campinchango (5713 h11); el
+catastro 84 de A.19 se dice de «La Calderilla o La Candelaria» en el propio acto
+(se transcribe; E.9).
+
+La Viña: Talapampa, destino de Rafael Pacheco al dejar los ríos del departamento
+(A.60).
+
+§P · PLANOS
+-----------
+No se publicó ningún plano en las hojas miradas (las 244 tapas, las 35 de menos
+tinta y las 131 de fichas y controles); en el resto no se buscó con los ojos
+(E.10). La palabra «plano» aparece en 699 hojas; la única remisión que toca al
+departamento es el plano de mensura de la mina San Fernando (A.48), citado y no
+acompañado. Techo de resolución: 300 ppi. Serie de años sin planos publicados
+del departamento: sigue.
+
+§D · INDICE
+-----------
+Por edición y hoja; clase fija (v16 §7.1) y materia. Las fichas de B.2 llevan su
+clave.
+
+  5562  h7   DOMINIO Remate 813 (Salvatierra), La Calderilla, base $ 32.361,03
+             (continúa de 1957) (A.1)
+  5564  h11  CARGOS Dto. 11914-G, agente de la Subcomisaría de Mojotoro (César
+             Flores) (A.2)
+  5569  h8   HACIENDA-MUN+OBRA-PUBLICA Dto. 12064-G, adjudicación de la usina
+             hidroeléctrica a Vicente Moncho Parra (A.3)
+  5577  h6   CARGOS Dto. 12266-A inc. 13, Frías médico regional de La Caldera
+             por licencia de Martearena (A.4)
+  5578  h5   CARGOS Dto. 12309-A, Frías regional de San Lorenzo y Vaqueros,
+             noviembre de 1957 (B.2.1)
+  5578  h8   AGUAS Dto. 12329-E, agua de «Arnaga», catastro 100, Vaqueros (Solá
+             Patrón de Ortiz) (A.5)
+  5579  h4   OBRA-PUBLICA+ESCUELA Dto. 12322-E, reintegro del plan de obras:
+             patio cubierto del Hogar de Niños, $ 110 (A.6)
+  5580  h4   ESCUELA Dto. 12356-A, servicios de la regente Paula Mercedes
+             Delgado, julio de 1957 (A.7)
+  5583  h7   REGISTRO-CIVIL Dto. 12414-G, encargados del Registro Civil: La
+             Caldera, Esther Gabriela Cruz (A.8)
+  5584  h21  ESCUELA+CARGOS Dto. 12531-A, confirmación del personal de Salud
+             Pública: 15 cargos de La Caldera y 1 de Vaqueros (A.9)
+  5592  h14  ELECTORAL Dto. 12784-G, mesas receptoras del 23 de febrero: 5
+             femeninas y 9 masculinas en La Caldera (A.10)
+  5607  h12  CARGOS Dto. 12945-G, revoca a César Flores en Mojotoro (B.2.2)
+  5607  h12  CARGOS Res. 5 de Jefatura, local de la Subcomisaría de Vaqueros
+             (Serrey) (B.2.3)
+  5608  h11  CARGOS+OTRO Dto. 12184-G, creación del destacamento policial de San
+             Alejo (A.11)
+  5610  h9   DOMINIO Remate 1185 (Gallo Castellanos), derechos de Ana Vivas de
+             Kelly en el pueblo (A.12)
+  5612  h15  OTRO Dto. 13030-A, pensiones a la vejez: Quipildor (El Nogalito),
+             Vera (Vaqueros), Valdez de Luna (Calderilla) (A.13)
+  5613  h13  HACIENDA-MUN+OBRA-PUBLICA Dto. 13090-G, camino al cementerio
+             adjudicado a Francisco Ruiz (A.14)
+  5614  h12  AGUAS Dto. 13154-E, agua de «Terreño», catastro 114, La Calderilla
+             (Julio González) (A.15)
+  5614  h13  ESCUELA Dto. 13160-A, sobreasignación de la subregente Carmen Uría
+             (A.16)
+  5614  h14  CARGOS Dto. 13161-A inc. 1, Frías médico regional de La Caldera,
+             4-11/12/1957 (A.17)
+  5618  h6   CARGOS Dto. 13219-A art. 2, Blanca Rosa Britos, enfermera de
+             Vaqueros (B.2.4)
+  5623  h10  OBRA-PUBLICA Obra 47, camino Salta a Los Yacones (cinco actos)
+             (B.2.10)
+  5623  h19  OTRO Dto. 13583-A, rehabilita la pensión 1829 de Tránsito Burgos de
+             Alfaro (A.18)
+  5624  h9   AGUAS Dto. 13644-E, agua del catastro 84, La Calderilla o La
+             Candelaria (Benita M. de Apaza) (A.19)
+  5629  h17  AGUAS Dto. 13756-E, agua del «Lote N 6», catastro 46 (Esteban
+             Mogro) (A.20)
+  5629  h18  CARGOS Dto. 13764-A, licencias de Clelia Olivera (mucama del
+             Hospital) y de Martearena (A.21)
+  5642  h13  CARGOS Dto. 14043-A art. 3, Justina C. de Muñoz, enfermera de la
+             Estación Sanitaria (A.22)
+  5642  h13  CARGOS Dto. 14044-A, Frías médico regional de La Caldera,
+             6-12/3/1958 (A.23)
+  5642  h15  ESCUELA Dto. 14048-A, becas del Hogar Agrícola San Cayetano (B.2.5)
+  5642  h17  CARGOS Frías, regional de Las Costas, San Lorenzo y Vaqueros (serie
+             de cuatro actos) (B.2.6)
+  5643  h9   OBRA-PUBLICA+ESCUELA Dto. 14109-E, patio cubierto del Hogar del
+             Niño adjudicado a Imberti, $ 154.984,40 (A.24)
+  5644  h19  OBRA-PUBLICA+NORMA Dto.-Ley 841-E, plan 1958: ayuda al consorcio
+             12, puente sobre el río Caldera, $ 400.000 (A.25)
+  5647  h6   NORMA Dto.-Ley 83[1]-A, seguro de enfermedad: aporte del 2½ % en La
+             Caldera (A.26)
+  5647  h12  ESCUELA Dto. 14197-A, aclara el cargo de Carmen Uría, subregenta
+             del Hogar (A.27)
+  5650  h5   CARGOS+OTRO Dto. 75-G, creación del destacamento policial de
+             Potrero de Castilla (A.28)
+  5654  h6   CARGOS Dto. 126-A, Justina Fanny Cohera de Muñoz, consultorio
+             externo, 5/2-4/3 (A.29)
+  5663  h5   AGUAS Dto. 242-E, rectifica el turno de estiaje de Esteban Mogro
+             (17 horas) (A.30)
+  5666  h10  CARGOS Dto. 335-A art. 6, María A. Acuña, Estación Sanitaria, marzo
+             (A.31)
+  5667  h11  ESCUELA Dto. 351-A art. 6, licencia de Juana Guantay de Flores,
+             cuidadora del Hogar (A.32)
+  5667  h19  OBRA-PUBLICA+CARGOS Dto. 391-E, Comisión Vial: por La Caldera, el
+             intendente Werfil Gallo (A.33)
+  5672  h12  CARGOS Dto. 504-A, sobreasignación de $ 500 al médico de La
+             Caldera, Martearena (A.34)
+  5674  h8   CARGOS Dto. 565-A, Satué médico regional interino de La Caldera
+             desde el 5 de mayo (A.35)
+  5676  h8   OBRA-PUBLICA Dto. 647-E, reintegro a Vialidad de abril: puente
+             sobre el río La Caldera, $ 27.034 (A.36)
+  5676  h11  CARGOS Dto. 660-A, sobreasignación de Zona C: Consultorio Externo
+             de La Caldera (A.37)
+  5678  h7   ESCUELA Dto. 715-A, dos licencias de Juana G. de Flores (23/1 y
+             3/2) (A.38)
+  5685  h7   CARGOS Dto. 857-A art. 2, María A. Acuña, Estación Sanitaria, abril
+             (A.39)
+  5691  h9   ESCUELA Dto. 1011-A, licencia de Rodríguez de Amaya y servicios de
+             Silvia J. Ortiz (1956) (A.40)
+  5696  h7   AGUAS Dto. 1109-E, agua temporal-eventual de «El Angosto», catastro
+             134 (Cecilio Muñoz) (A.41)
+  5698  h22  DOMINIO Remate 1875 (J. A. Cornejo), finca Jetsemaní o Getsemaní,
+             base $ 333.333,33 (A.42)
+  5702  h6   CARGOS Dto. 1335-A art. 6, María A. Acuña, Estación Sanitaria, mayo
+             (A.43)
+  5704  h10  CARGOS Dto. 1428-A, Felipa Valdiviezo de Muñoz, ayudante de
+             enfermera del consultorio (A.44)
+  5704  h14  DOMINIO Remate 1922 (Figueroa Cornejo), finca Yetsemaní o
+             Getsemaní, base $ 120.000 o $ 720.000 (A.45)
+  5706  h6   ESCUELA Dto. 1463-A, renuncia de Enriqueta Colque de Mamani y tres
+             mucamas del Hogar (A.46)
+  5707  h5   ELECTORAL+NORMA Ley 3173, sorteo de bancas: La Caldera en el Grupo
+             A (A.47)
+  5708  h8   MINAS Edicto de minas 1961, mensura de la mina San Fernando
+             (Antonio y Francisco Gómez) (A.48)
+  5708  h12  DOMINIO Remate 1952 (Leguizamón), fracción de Potrero de Gallinato,
+             133 ha, base $ 75.000 (A.49)
+  5709  h6   CARGOS Dto. 1559-A art. 4, María A. Acuña, Estación Sanitaria,
+             junio (A.50)
+  5710  h11  MINAS Edicto de minas 1990, mensura de la mina Caldera 1, 2 y 3 en
+             San José (Valdez Villagrán) (A.51)
+  5712  h9   OBRA-PUBLICA+ESCUELA Dto. 1707-E, certificado 1 del patio cubierto,
+             $ 91.778,35 (A.52)
+  5719  h8   ESCUELA Dto. 1869-A, Inés Nieva regente y Feliciana Barboza
+             enfermera del Hogar (A.53)
+  5719  h9   AGUAS+CARGOS Dto. 1873-E (impreso 1973-E), torneros de los ríos
+             Wierna, San Alejo y Santa Rufina: Pacheco y Maidana (A.54)
+  5720  h8   CARGOS Dto. 1894-G, cesan el cabo Zapata (San Alejo) y el oficial
+             Cabeza (La Caldera) (A.55)
+  5722  h7   OTRO Dto. 1964-G, $ 1.500 para las fiestas patronales de San
+             Cayetano en Vaqueros (A.56)
+  5726  h8   JUSTICIA Dto. 2034-G, juez de paz propietario Eugenio Muñoz y
+             suplente Antonio R. Vivas (A.57)
+  5730  h5   OBRA-PUBLICA+NORMA Ley 3192, plan electromecánico 1958-1961: usina
+             de La Caldera, 300 (miles) (A.58)
+  5733  h8   ESCUELA Dto. 2204-A, becas del San Cayetano, 29 internos (B.2.7)
+  5734  h12  HACIENDA-MUN+DOMINIO Dto. 2263-E, servidumbre de la caída de agua
+             de la usina sin previo pago del impuesto (A.59)
+  5742  h12  AGUAS+CARGOS Dto. 2491-E, Pacheco pasa a Talapampa (modifica el
+             «1879») (A.60)
+  5747  h6   ESCUELA Dto. 2609-A, renuncia de Isijara y designación de Delma
+             Suárez de Kotting (A.61)
+  5747  h9   OBRA-PUBLICA Dto. 2623-E, transferencia de partidas: puente del
+             consorcio 12 (+$ 350.000) y camino a Los Yacones (A.62)
+  5749  h9   ESCUELA Dto. 2681-A, crédito de $ 647,01 a Silvia J. Ortiz (1956)
+             (A.63)
+  5752  h6   HACIENDA-MUN+NORMA Ley 3244, subsidios a municipalidades: La
+             Caldera, $ 50.000 (A.64)
+  5756  h5   OBRA-PUBLICA+NORMA Ley 3251, edificio para la comisaría del pueblo
+             de La Caldera (A.65)
+  5757  h12  MINAS Res. de minas 2465, caducidad de la mina Caldera 1-2 y 3 por
+             falta de canon (A.66)
+  5758  h10  REGISTRO-CIVIL Dto. 2876-G, Augusto Regis autorizado a suscribir
+             actas en el Registro Civil (A.67)
+  5760  h9   ESCUELA Dto. 2956-A, Cristóbal Rafael Jurado, auxiliar
+             administrativo del Hogar (A.68)
+  5761  h13  MINAS Edicto de minas 2510, manifestación de la mina La Milagrosa
+             (Ernesto Job Cuevas) (A.69)
+  5768  h16  JUSTICIA Dto. 3185-G, renuncia del juez de paz propietario Eugenio
+             Muñoz (A.70)
+  5769  h7   OBRA-PUBLICA Dto. 3202-E, reintegro a Vialidad: puente sobre el río
+             Caldera, $ 64.422,60 (A.71)
+  5770  h5   ESCUELA Dto. 3257-A, $ 5.000 al Hogar Agrícola San Cayetano (B.2.8)
+  5773  h5   ESCUELA Ley 3311, $ 50.000 al Hogar Agrícola San Cayetano (B.2.9)
+  5778  h5   HACIENDA-MUN+NORMA Ley 3344, modifica el préstamo de la usina
+             (Decreto-Ley 590/57) (A.72)
+  5779  h9   JUSTICIA Dto. 3408-G, renuncia del juez de paz suplente Ramón
+             Antonio Vivas (A.73)
+  5790  h17  DOMINIO+OTRO Contrato social 2805, sociedad Saravia para explotar
+             la finca Jetsemaní (A.74)
+  5791  h6   ESCUELA+CARGOS Dto. 3770-A, presupuesto 1958-1959: la regente del
+             Hogar, Inés Nievas (A.75)
+  5791  h17  ESCUELA+CARGOS Dto. 3773-A, presupuesto 1958-1959: 18 cargos de la
+             campaña en el departamento (A.76)
+  5794  h6   AGUAS Edicto 2858, transferencia a Modesto Cruz de una concesión
+             del río La Caldera (A.77)
+  5796  h8   ESCUELA Dto. 3855-A art. 13, licencia de la lavandera Margarita
+             Vázquez (A.78)
+  5797  h5   OBRA-PUBLICA+ESCUELA Dto. 3281-E, reintegro a Arquitectura: patio
+             cubierto, $ 696 (A.79)
+  5800  h8   JUSTICIA Dto. 4021-G, jueces de paz Esteban Mogro y Gregorio Mario
+             García (A.80)
+
+Recuento por clase (un acto de clase doble cuenta en las dos; sólo §A): CARGOS
+24, ESCUELA 19, OBRA-PUBLICA 13, AGUAS 9, DOMINIO 7, NORMA 7, OTRO 6,
+HACIENDA-MUN 5, JUSTICIA 4, MINAS 4, ELECTORAL 2, REGISTRO-CIVIL 2.
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación, tinta y saldos
+Duplicación: el archivo 5727.pdf es un segundo escaneo de 5728 (§0, §1),
+comprobado por la tapa, los folios y el texto de cinco hojas. Sin las .jpg no
+hay md5 de página; la repetición de avisos se comprobó por el texto (E.6).
+Tinta: §1. Resúmenes del movimiento de la Tesorería General publicados en 1958:
+3 (el de abril en 5703 h18 a h20, el de junio en 5711 h30 y el de julio en 5781
+h23 a h26). La cadena de saldos no se armó: la capa desordena las columnas de
+las tablas y hay que leerlas en la imagen (pendiente 1). Balances municipales de
+La Caldera publicados: 0.
+
+E.2 · Cobertura
+Corpus: 243 de 244 ediciones del año (sin 5727) y 4.114 hojas distintas. Pasadas
+sobre las dos versiones donde las hay (324 hojas con prop) y, como red, OCR en
+inglés en 97. Lectura de candidatos: los 177 grupos, los contextos del anillo 2
+propios del departamento y los de actores y números con topónimo; en imagen, los
+renglones que deciden cada ficha y sus controles de serie (131 hojas).
+
+E.3 · Sin mención y no mirado
+Citados y no acompañados: el Decreto 11914-G en su texto completo, fuera del
+inciso (A.2, B.2.2); el decreto nacional de vialidad que crea la Comisión
+(A.33); el Decreto-Ley 590/57, leído en su informe (A.72); el expediente de la
+usina y su documentación (A.3, A.59); el plano de la mina San Fernando (A.48);
+el número del decreto que aprueba la Resolución 5 de Jefatura (B.2.3); la
+atribución de «Las Lagunas o Yacones», catastros 32 y 111 (B.3), que un cotejo
+de catastros decidiría. Nombramientos que sólo constan por su revocación: César
+Flores (A.2, B.2.2). Las 306 hojas «a ojos» del pre-informe: no miradas
+(pendiente 2).
+
+E.4 · Firmas y autoridad
+Poder Ejecutivo en la tapa, leído en la imagen en 17 tapas: Interventor Federal
+Dr. Domingo Nogués Acuña hasta la 5640 (miércoles 30 de abril); ministro de
+Gobierno Ramón A. Vásquez hasta la 5635 y Lizárraga de la 5636 a la 5640. Desde
+la 5641 (viernes 2 de mayo): Gobernador Bernardino Biella y Vicegobernador José
+Dionisio Guzmán («Dionicio» en algunas tapas); Gobierno, Julio A. Barbarán
+Alvarado; Economía, Gaggiolo en la Intervención y después Rivetti (mayo a la
+5723), Fiore interino (5724 a 5741) y Peretti (desde la 5742); Asuntos Sociales,
+Roque Raúl Blanche en la Intervención y Belisario Castro desde mayo. La
+numeración de los decretos vuelve a empezar con el gobierno constitucional
+(mayo: 75-G, 126-A, 242-E en A.28 a A.30).
+
+E.5 · Cortes y columnas
+Actos partidos entre hojas: A.1, A.5, A.8, A.9, A.10, A.11, A.21, A.25, A.42,
+A.45, A.57, A.58, A.59, A.63, A.64, A.74, A.75, A.76, A.80 (lo dice la FUENTE de
+cada uno). En A.58 el renglón de La Caldera sigue sin encabezado a la Ley 3192
+(inferencia rotulada en la ficha). Encabezados en la columna u hoja anterior:
+cotejados por la serie.
+
+E.6 · Repeticiones
+Avisos repetidos del departamento: 9 (los remates 813, 1185, 1875, 1922 y 1952;
+los edictos de minas 1961, 1990 y 2510; el edicto de A.G.A.S. 2858), cada uno
+con una sola entrada y sus apariciones. El remate 813 continúa de 1957.
+
+E.7 · Falsos positivos y negativos
+Falsos positivos del anillo 1: unos 25 grupos (B.3). Falsos negativos rescatados
+por pasadas distintas de la literal: A.5 («csaldera», difusa), A.35 («qaldera»),
+A.45 («ca'dara»), A.60 («la cal / "dera», sólo la laxa espaciada) y A.76 («la
+cablera»). El pre-informe no trae la hoja de A.60 (§2). Sin segunda versión en
+3.805 hojas, un nombre roto de otra manera no se habría devuelto: la red en
+inglés no halló ninguno (E.10).
+
+E.8 · Fidelidad numérica
+Control de serie (v17 §5.6.1): el Decreto impreso 1973-E es el 1873-E por la
+serie de su hoja, y un decreto posterior lo cita como 1879 (A.54, A.60); los
+Decretos 564-A y 565-A, que la capa lee 664 y 666 (A.35); el 1964-G que otro
+acto cita como 1954 (A.56, 5739 h4). Control aritmético: la tabla de la Ley 3244
+recalculada entera, 48 municipalidades, $ 4.570.000, cierra con Tolar Grande en
+$ 30.000 (imagen) y no con los 30.660 de la capa (A.64). Cita cruzada: el
+apellido Flores (A.2, B.2.2). Cuadros publicados en fichas: 8; recalculados: 1
+(los demás no traen totales que cotejar).
+
+E.9 · Contradicciones
+Se transcriben y no se concilian: 5568 declara 20 páginas y trae 14 completas
+(§1); el año editorial no pasa a L en ninguna tapa; el mes antes del día en 51
+tapas; Frías en dos regionales a la vez (A.4, A.23, B.2.1, B.2.6); Martearena en
+Villa Belgrano y en licencia en La Caldera el mismo octubre (A.4); el remate
+1922 con base de $ 120.000 y de $ 720.000 en el mismo aviso, y títulos distintos
+de los del remate 1875 para la misma finca (A.45); el Decreto 1964-G del 25 de
+agosto habla del 24 como futuro (A.56); La Calderilla o La Candelaria en el
+mismo acto (A.19); el Hogar nombrado de cuatro maneras en una nómina (A.9);
+«Nieva» y «Nievas» (A.53, A.75).
+
+E.10 · Límites
+1) El inventario del Release no se pudo listar (proxy); recortes.zip da 404. 2)
+Sin spa en tesseract: no hay OCR en español en sesión; segunda versión sólo en
+324 hojas. 3) Edición 5727 ausente (su archivo duplica a 5728) y 114 hojas de
+menos por tapa en 98 ediciones; 57 faltantes comprobadas por la foliatura en 51,
+46 ediciones sin decidir. 4) Dígitos que ni la imagen ni un control deciden
+(hoja de dudas): los dos días de octubre de A.4; el último dígito del
+Decreto-Ley 83[1]-A (A.26). 5) Números de documento y matrícula de personas y
+nombres de internos menores, omitidos por decisión editorial. 6) Tres tapas con
+la cifra de páginas rota (5627, 5639, 5764). 7) Las 306 hojas «a ojos» del
+pre-informe, no miradas (pendiente 2). 8) Planos: sólo se descartan en las hojas
+miradas. 9) La cadena de saldos de la Tesorería General, no armada (pendiente
+1). 10) La foliatura se resuelve en 974 de 3.871 hojas interiores; los dos
+saltos de 900 páginas se declaran y no se explican. 11) Quince días hábiles sin
+edición sin causa en el corpus. 12) El pre-informe se corrió con la foto del
+config de 1954. 13) La atribución de «Las Lagunas o Yacones» (B.3) queda sin
+decidir. 14) El Registro Oficial de 1958, que resolvería los citados y no
+acompañados, no está en el corpus.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+F.1 · Un archivo del Release puede ser otro escaneo de la edición siguiente
+(5727.pdf = 5728). Regla propuesta para v16 §1 y para lee_auto: comparar el
+número y la fecha de cada tapa con el nombre del archivo y con la serie, y los
+folios impresos de la primera hoja interior con los de la edición vecina; si
+coinciden, el archivo es duplicado, la edición cuenta como ausente y no se barre
+dos veces.
+
+F.2 · La foliatura puede saltar hacia adelante 900 páginas (5741 a 5742 y 5747 a
+5748), además de caer como en 1957 (F.3 de 1957). El control de ediciones cortas
+debe aceptar saltos de centenas redondas cuando la serie sigue coherente desde
+el valor nuevo, y declararlos con sus extremos mirados.
+
+F.3 · En 300 ppi la capa nativa convierte 5 en 6 y 0 en 3 en encabezados de
+decretos (564/565 leídos 664/666; 13030, 2956, 504 dudosos). Un número de acto
+de la capa no se da por leído sin la serie de la hoja.
+
+F.4 · El número impreso puede ser una errata que la serie corrige (1973-E por
+1873-E) y la cita posterior puede traer un tercer número (1879). Se propone que
+la ficha lleve el número de la serie, el impreso con [sic] y la cita, y que el
+control que decide se nombre.
+
+F.5 · Presupuesto de turno (v17 §5.5): 1958, con 244 ediciones y 80 fichas, no
+cupo COMPLETO en una sesión: quedaron la cadena de saldos y las hojas «a ojos».
+La identificación del número de cada acto por la serie y la foliatura corrida
+siguen siendo lo más caro. Para años de más de 4.000 hojas conviene presupuestar
+una sesión aparte para Tesorería y hojas «a ojos».
+
+F.6 · Config: se agregan a actores 63 nombres de las fichas de 1958, con origen
+1958; al anillo 2, los 11 términos de §2; a números, 90 números de actos del §A
+y B.2; a falsos_positivos, 6 (calderas de aserradero, de sierra sin fin y de
+hospital, «calderas de: gobierno» y afines). Quedan 1.062 actores, 285 términos,
+1.066 números y 62 falsos positivos. version 2026-09-29, hasta 1958.
+
+F.7 · Catálogo de confusiones (v17 §5.6.2): se suman, para la capa en 300 ppi,
+5→6 y 0→3 en encabezados; para la imagen, el 1 con trazo que parece I o tilde
+(A.26) y la r rota que da «Floues» (A.2), decidida por cita cruzada.
+
+§R · RECUENTO
+-------------
+
+anio: 1958
+ediciones_desde: 5562
+ediciones_hasta: 5805
+ediciones_presentes: 243
+ediciones_ausentes: 1
+hojas_presentes: 4114
+hojas_declaradas: 4204
+hojas_ausentes_estimadas: 114
+hojas_excedentes: 0
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 17
+ediciones_dobles: 0
+techo_ppi: 300
+ppi_por_tramo: 300-en-4129-hojas
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 80
+actos_dominio: 7
+actos_hacienda_municipal: 5
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 8
+subtotales_recalculados: 1
+resumenes_tesoreria: 3
+cadena_saldos: no-armada
+columnas_cotejadas: 131
+hojas_miradas: 444
+avisos_repetidos_departamento: 9
+falsos_positivos_anillo1: 25
+limites_declarados: 14
+nivel_lectura: imagen
+pdf_release: 244
+avisos_release: 0
+estado: CON-PENDIENTES
