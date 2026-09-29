@@ -1,0 +1,2852 @@
+LEE v17 — 1956
+==============
+
+Boletín Oficial de la Provincia de Salta, año 1956, ediciones N 5074 a 5316.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5, versión 2). Sesión del 29/09/2026 (hora de Salta).
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+
+ESTADO: COMPLETO, con 11 límites declarados (E.10). Nivel de lectura: imagen:
+las 81 fichas del §A y las 13 de B.2 se miraron en la imagen del PDF, cada una
+en los renglones que la deciden; lo que se leyó sólo en la capa (articulados de
+A.6, A.50, A.57, A.69, A.70, A.79, A.80 y A.81, el renglón de Vaqueros de A.25,
+el final del art. 2 de A.72, montos de B.2.5 y B.2.8) está dicho en su MODO DE
+LECTURA y no decide la atribución al departamento. Los renglones de B.3, B.4
+y §C se leyeron en la capa y, los que deciden una atribución, también en la
+imagen.
+Insumos. estado.json (revisado el 29/09 a las 06:11) daba para 1956 un Release
+con 242 PDF, un aviso de edición no encontrada, pre-informe y textos. La página
+expanded_assets/1956 responde con un rechazo del proxy («GitHub access to this
+repository is not enabled for this session»), como en 1950 a 1955; las URL de
+descarga de cada asset responden. Se bajaron por el nombre que da estado.json:
+BO-Salta-1956_la-caldera_PRE-INFORME-LEE_2026-09-29.txt (único pre-informe
+listado, y vigente), lee_textos_1956.zip, resultados_1956.csv,
+decretos_1956.csv, log.txt, lee_config.json y avisos.txt; recortes.zip responde
+404. Los PDF, por número: 242, N 5074 a 5316 salvo 5293 (5070 a 5073, 5293 y
+5317 a 5320 responden 404). avisos.txt dice: «Ediciones de 1956 que el archivo
+oficial no tiene [...]: 5293»; el zip de textos trae de 5293 una hoja con «ESTE
+BOLETÍN NO SE ENCUENTRÓ EN NUESTRA BASE DE DATOS». El inventario del Release no
+se pudo listar: que no haya otros assets no está comprobado (E.10).
+lee_auto.py: la corrida que sirve es la del 29/09/2026, 05:11 a 06:09, la del
+pre-informe (el log trae tres arranques: 23/09 03:34, que ocriza con 6 procesos
+y se corta en «OCR 250/4437» sin «listo»; 27/09 18:43, sin OCR, que corre las
+búsquedas sin cerrar; y 29/09 05:11, sin OCR, que cierra con «listo»). El zip de
+textos trae 4.437 .prev.txt, 243 EXTRAIDO.json y 298 .prop.txt con sus .tsv,
+todos de las ediciones 5074 a 5090 (la corrida del 23/09 cortada): hay segunda
+versión sólo en 17 ediciones. La capa que devuelve PyMuPDF es idéntica a .prev
+en las 4.436 hojas de los 242 PDF. Los recortes de este informe se hicieron en
+la sesión desde los PDF.
+Config (v16 §15.4 y v17 §5.2):
+  config de corrige: version 2026-09-29, hasta 1955, actores 904,
+    anillo2 256, numeros 785, falsos_positivos 45
+  foto del Release: version 2026-09-28, hasta 1954, actores 835,
+    anillo2 249, numeros 728, falsos_positivos 42
+  se usa: corrige — razón: único válido (v17 §5.2), y más nuevo
+  contenido: el de corrige contiene al del Release; difieren en los 69
+    actores, 7 términos, 57 números y 3 falsos positivos que sumó 1955
+El pre-informe se corrió con la foto de 1954: las búsquedas de la sesión se
+hicieron con el config de corrige, que ya trae lo que falta. Se pide que la
+próxima corrida use el config vigente. La sesión entrega lee_config.json
+actualizado (version 2026-09-29, hasta 1956): lo que suma está en §F.7; nada se
+quita.
+Entorno: nube con 2 núcleos, tesseract 5 con eng y osd, sin spa: no hay OCR en
+sesión. PyMuPDF y rapidfuzz instalados en la sesión.
+Qué verificó la sesión: las 242 tapas en planchas de franja (número, fecha, día,
+páginas declaradas y año editorial), con zoom a 130-150 ppp sobre las dudosas;
+el bloque del Poder Ejecutivo en 27 tapas elegidas por los cambios de autoridad;
+las pasadas del §2 y una difusa contextual nueva; el anillo 2 término por
+término; los 839 nombres completos de actores del config y los 785 números;
+calendario, autoridad y feriados; la foliatura corrida del año (§1); tinta,
+resolución y capa de las 4.436 hojas; en plancha, las 30 hojas interiores de
+menos tinta y las 44 hojas de los decretos de pensiones a la vejez del año.
+Al cerrar (COMPLETO): qué agregaría cada insumo que faltó. El listado del
+Release (expanded_assets): confirmaría que no hay assets fuera de los bajados
+por nombre. Los .prop.txt de las 225 ediciones que la corrida del 23/09 no
+alcanzó, o tesseract con spa: una segunda versión de 4.138 hojas. La edición
+5293 (27 de noviembre) y las 33 páginas que faltan entre 5312 y 5313: su
+contenido. El Registro Oficial de 1956: los dígitos que la imagen no decide
+(E.10) y los actos citados y no acompañados (E.3).
+
+§1 · CORPUS REVISADO
+--------------------
+
+242 ediciones presentes, N 5074 (lunes 2 de enero) a 5316 (lunes 31 de
+diciembre); falta la 5293 (martes 27 de noviembre por la serie de fechas), de la
+que el Release trae sólo el aviso de «no se encontró». 4.436 hojas presentes. En
+230 tapas se lee la cifra de páginas: declaran 4.276 y traen 4.200. En doce no
+se lee o es dudosa: 5148 (borrada), 5156 y 5158 («1?»), 5163 y 5167 («3?»), 5192
+y 5203 («1?»), 5255 («16?»), 5265 («1?»), 5272 («28?»), 5297 («2?») y 5309
+(«12?»), que traen 20, 12, 11, 35, 37, 18, 12, 16, 16, 28, 19 y 12 hojas.
+La tapa de 5291 dice «EDICION DE 16 PAGINAS» y trae 22 hojas: la foliatura
+decide que la edición tiene 22 (5291 va de la página 3759 a la 3780 y 5292 abre
+en la 3781): es errata de tapa (E.9). Con 22 por 5291, las declaradas legibles
+son 4.282.
+Ediciones con menos hojas que las declaradas: 79, con 84 hojas de menos por
+tapa. Con más hojas que las declaradas, además de 5291: 5083 (17/16) y 5118
+(13/12).
+Foliatura. 1956 tiene paginación corrida del año: 5074 abre en la página 1 y
+5316 cierra en la 4.260. La capa resuelve la cabecera «PAG. N» en 1.517 de las
+4.194 hojas interiores, y fija la base de folios (folio menos número de hoja,
+repetido en dos hojas o más y creciente) en 190 de las 242 ediciones. Sobre las
+79 ediciones cortas: en 55 la serie salta, y faltan con seguridad 57 páginas; en
+2 la serie pasa a la edición siguiente sin salto; en 22 la capa no permite
+decidirlo. Entre 5292 (última página 3794) y 5294 (primera 3805) faltan diez
+páginas: las de la edición 5293. Un salto de la cadena va hacia atrás, de una
+página (5138/5139), y no se explica.
+Salto de foliatura. Entre 5312 (24 de diciembre, h16 «PAG. 4154», imagen) y 5313
+(26 de diciembre, h2 «PAG. 4188», imagen) la serie salta 33 páginas sin que
+falte número de edición: se declara con sus dos extremos mirados y no se explica
+(v16 §8.21).
+Tapas, leídas en la imagen las 242 (planchas de franja a 72-130 ppp; zoom a
+130-150 ppp sobre 5263, 5291, 5148, 5192 y 5193): año editorial «XLVII» hasta el
+4 de septiembre (5237) y «XLVIII» desde el 5 (5238). Erratas de tapa: «AÑO
+XLVII» en 5243 y 5246, ya en el año XLVIII; «MIRCOLES» (5085); «N 5091» impreso
+en 5097 y «N 2549» en 5249; el nombre del día invertido en 5121 (13 de marzo,
+«MARTES» impreso cabeza abajo); «EDICION DE 3? PAGINAS» antes de «AÑO» en 5163;
+«MIERCOLES, JUNIO 6 DE 1956» con el mes antes del día (5177); «SEPTIEMBRE»
+(5236) y «SETIEMBRE» en las demás; «EDISION» (5275); «DICIEMBRES» (5312); «16
+PAGINAS» en 5291. Las tapas de 5192 y 5193 son de un escaneo a otra escala (367
+x 444 pt contra 700-900 pt de las demás).
+Día de la semana y fecha: coinciden en las 242 tapas leídas. No hay ediciones
+dobles: fechas estrictamente crecientes. Ninguna edición sale en sábado ni en
+domingo.
+Días de salida: la tapa dice «APARECE LOS DIAS HABILES». Días de lunes a viernes
+sin edición, del 1 de enero al 31 de diciembre, sin contar el 27 de noviembre
+(edición 5293 ausente del Release): 18. Explicado por un acto del propio corpus,
+1: 25/5 (decreto que adhiere el Gobierno de la Intervención Federal a los actos
+por el aniversario de la Revolución de Mayo, 5174 h7, capa). Sin explicar en el
+corpus, 17: 6/1, 13/2, 14/2, 20/2, 29/3, 30/3, 1/5, 31/5, 20/6, 9/7, 15/8, 17/8,
+13/9, 14/9, 12/10, 1/11 y 25/12. No se busca la causa afuera.
+Resolución (imagen incrustada, las 4.436 hojas): 150 ppi en 1.962 hojas (5074 a
+5151, 5165 a 5193, 5225, y hojas sueltas de 5159, 5209, 5211, 5213, 5260, 5277,
+5281, 5291 y 5301); 75 ppi en 275 hojas (5152 a 5164, salvo cuatro hojas de
+5159); 300 ppi en 2.199 hojas (5194 a 5316, salvo 5225 y las sueltas).
+techo_ppi: 300. La resolución de trabajo sube al doble desde el 2 de julio
+(5194): es el hecho material más importante del año (v16 §8.10), y la inversa de
+1955, que bajó a 75 en noviembre.
+Tinta (píxeles < 170 a 40 ppp, las 4.436 hojas): ninguna bajo 0,5 %; 108 bajo 5
+%. Se miraron en plancha a 22 ppp las 30 hojas interiores de menos tinta (1,27 a
+3,79 %): últimas hojas cortas con el pie de imprenta, sumarios, balances y
+cuadros; ninguna es un plano ni está en blanco. La de menos tinta, 5152 h18, es
+una hoja de texto de 75 ppi con fondo gris. Las otras 78 de menos de 5 % no se
+miraron (E.10).
+Hojas miradas en la imagen: 242 tapas en plancha, 30 hojas en la plancha de
+tinta, 44 en la plancha de pensiones y unas 120 hojas de cuerpo a 100-170 ppp
+(con solapamientos); hojas_miradas: 436.
+Tabla por edición (N, fecha, hojas presentes / declaradas); fechas y declaradas
+leídas en la imagen de la tapa; «??», no legible o dudosa; 5293, ausente:
+
+  5074 02/01 20/20   5075 03/01 25/26   5076 04/01 22/22   5077 05/01 21/22
+  5078 09/01 20/20   5079 10/01 22/22   5080 11/01 20/20   5081 12/01 17/18
+  5082 13/01 15/16   5083 16/01 17/16   5084 17/01 21/22   5085 18/01 15/16
+  5086 19/01 10/10   5087 20/01 10/10   5088 23/01 19/20   5089 24/01 21/22
+  5090 25/01 15/16   5091 26/01 22/22   5092 27/01 16/16   5093 30/01 27/28
+  5094 31/01 24/24   5095 01/02 19/20   5096 02/02 16/16   5097 03/02 19/20
+  5098 06/02 14/14   5099 07/02  8/ 8   5100 08/02 11/12   5101 09/02  8/ 8
+  5102 10/02 17/18   5103 15/02 10/10   5104 16/02 19/20   5105 17/02 14/14
+  5106 21/02 13/14   5107 22/02 12/12   5108 23/02 12/12   5109 24/02 10/12
+  5110 27/02 10/10   5111 28/02 13/14   5112 29/02 17/18   5113 01/03 12/12
+  5114 02/03 16/16   5115 05/03 18/18   5116 06/03 15/16   5117 07/03 16/18
+  5118 08/03 13/12   5119 09/03 18/18   5120 12/03 12/12   5121 13/03 20/20
+  5122 14/03 18/18   5123 15/03 19/20   5124 16/03 21/22   5125 19/03 26/26
+  5126 20/03 24/24   5127 21/03 23/24   5128 22/03 24/24   5129 23/03 19/20
+  5130 26/03 19/20   5131 27/03 18/18   5132 28/03 22/22   5133 02/04 14/14
+  5134 03/04 13/14   5135 04/04 19/20   5136 05/04 17/18   5137 06/04 16/16
+  5138 09/04 25/28   5139 10/04 19/20   5140 11/04 17/18   5141 12/04 16/18
+  5142 13/04 20/20   5143 16/04 19/20   5144 17/04 18/18   5145 18/04 18/18
+  5146 19/04 20/20   5147 20/04 21/22   5148 23/04 20/??   5149 24/04 18/18
+  5150 25/04 21/22   5151 26/04 28/28   5152 27/04 29/30   5153 30/04 16/16
+  5154 02/05 18/18   5155 03/05 10/10   5156 04/05 12/??   5157 07/05 10/10
+  5158 08/05 11/??   5159 09/05 19/20   5160 10/05 30/30   5161 11/05 28/28
+  5162 14/05 35/36   5163 15/05 35/??   5164 16/05 26/26   5165 17/05 22/22
+  5166 18/05 34/34   5167 21/05 37/??   5168 22/05 17/18   5169 23/05 15/16
+  5170 24/05 22/22   5171 28/05 12/12   5172 29/05 14/14   5173 30/05 15/16
+  5174 01/06 24/24   5175 04/06 19/20   5176 05/06 17/18   5177 06/06 26/26
+  5178 07/06 25/26   5179 08/06 14/14   5180 11/06 26/26   5181 12/06 19/20
+  5182 13/06 19/20   5183 14/06 18/18   5184 15/06 10/10   5185 18/06 20/20
+  5186 19/06 12/12   5187 21/06 14/14   5188 22/06 25/26   5189 25/06 20/20
+  5190 26/06 12/12   5191 27/06 12/12   5192 28/06 18/??   5193 29/06 13/14
+  5194 02/07 18/18   5195 03/07 12/12   5196 04/07 16/16   5197 05/07 14/14
+  5198 06/07 15/16   5199 10/07 22/22   5200 11/07 12/12   5201 12/07 18/18
+  5202 13/07 16/16   5203 16/07 12/??   5204 17/07 18/18   5205 18/07 18/18
+  5206 19/07 14/14   5207 20/07 22/22   5208 23/07 19/20   5209 24/07 14/14
+  5210 25/07 16/16   5211 26/07 20/20   5212 27/07 16/16   5213 30/07 14/14
+  5214 31/07 24/24   5215 01/08 14/14   5216 02/08 20/20   5217 03/08 13/14
+  5218 06/08 20/20   5219 07/08 24/24   5220 08/08 18/18   5221 09/08 18/18
+  5222 10/08 19/20   5223 13/08 25/26   5224 14/08 18/18   5225 16/08 16/16
+  5226 20/08 16/16   5227 21/08 19/20   5228 22/08 18/18   5229 23/08 29/30
+  5230 24/08 26/26   5231 27/08 22/22   5232 28/08 18/18   5233 29/08 20/20
+  5234 30/08 19/20   5235 31/08 20/20   5236 03/09 12/12   5237 04/09 18/18
+  5238 05/09 20/20   5239 06/09 14/14   5240 07/09 14/14   5241 10/09 18/18
+  5242 11/09 16/16   5243 12/09 18/18   5244 17/09 18/18   5245 18/09 18/18
+  5246 19/09 30/30   5247 20/09 28/28   5248 21/09 23/24   5249 24/09 17/18
+  5250 25/09 20/20   5251 26/09 16/16   5252 27/09 12/12   5253 28/09 26/26
+  5254 01/10 11/12   5255 02/10 16/??   5256 03/10 18/18   5257 04/10 18/18
+  5258 05/10 16/16   5259 08/10 16/16   5260 09/10 20/20   5261 10/10 28/28
+  5262 11/10 22/22   5263 15/10 26/26   5264 16/10 22/22   5265 17/10 16/??
+  5266 18/10 20/20   5267 19/10 16/16   5268 22/10 16/16   5269 23/10 18/18
+  5270 24/10 18/18   5271 25/10 21/22   5272 26/10 28/??   5273 29/10 15/16
+  5274 30/10 22/22   5275 31/10 26/26   5276 02/11 13/14   5277 05/11 18/18
+  5278 06/11 17/18   5279 07/11 14/14   5280 08/11 24/24   5281 09/11 17/18
+  5282 12/11 21/22   5283 13/11 18/18   5284 14/11 17/18   5285 15/11 10/10
+  5286 16/11 10/10   5287 19/11 17/18   5288 20/11 23/24   5289 21/11 19/20
+  5290 22/11 15/16   5291 23/11 22/16   5292 26/11 14/14   5293 27/11 --/--
+  5294 28/11 16/16   5295 29/11 15/16   5296 30/11 23/24   5297 03/12 19/??
+  5298 04/12 16/16   5299 05/12 16/16   5300 06/12 23/24   5301 07/12 19/20
+  5302 10/12 20/20   5303 11/12 22/22   5304 12/12 16/16   5305 13/12 15/16
+  5306 14/12 20/20   5307 17/12 21/22   5308 18/12 17/18   5309 19/12 12/??
+  5310 20/12 17/18   5311 21/12 18/18   5312 24/12 16/16   5313 26/12 20/20
+  5314 27/12 14/14   5315 28/12 16/16   5316 31/12 24/24
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+
+Versiones: capa del PDF («prev») en las 4.436 hojas; OCR propio de lee_auto
+(«prop») en 298, las de 5074 a 5090; búsqueda sobre cada una por separado.
+Unión: U+0002 no aparece; U+00AD aparece 80.469 veces, 80.462 seguido de salto,
+y se quita junto con el salto; guion de corte con hasta dos signos a cada lado.
+Probada: pega «Cal/dera», «cal-/dera» y «cal-,/¡dera» a través del salto.
+Pasadas, con su resultado:
+  - Literal «cald» (NFD, sin tildes): 539 aciertos en 311 hojas-versión
+    («caldera» 385, «calderilla» 24). Quitadas 33 formas que son otra cosa
+    («calderón» 79, «calda» por «cada», «caldoso» apellido, «caldo» por «caído»,
+    «caldhaqui» por Calchaquí, «escaldada», «recalde», «alcalde», «fiscalde»,
+    «modificaldo» y afines, B.3), las ventanas de ±300 caracteres de lo que
+    queda y de las formas reales de la laxa y la difusa se agruparon por texto
+    (solapamiento de palabras de cinco letras o más, umbral 0,6, ventana de 40
+    ediciones, el criterio de 1954 y 1955): 460 ventanas en 208 grupos, que se
+    leyeron todos.
+  - Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: fuera de «cald…», 6 aciertos:
+    «caidera» 3 (A.5, sumario de A.62 y una repetición de A.44), «galdera»
+    (repetición de A.44), «callera» (A.1, versión prop) y «colleras» (ruido).
+    Probada: devuelve la forma literal.
+  - Laxa espaciada, separador [\s\-.,'’"“”]{0,3} entre cada par de letras: 8
+    aciertos: «cal\ndera» en A.3, A.4 (prop) y el aviso del camión y la caldera
+    de 5306-5309 (B.3); «c aldera» en A.53; «calder, a» en A.1 (prop); «cal de
+    \nra» en 5292 h9, ruido. Probada contra «c a l d e\nr a»: la devuelve.
+  - Difusa (ratio >= 0,78, excluida la forma exacta): 46 formas en 164 aciertos.
+    Reales, dentro de fichas: caidera, aldera, oaldera, galdera, caiderilla,
+    caideiilla, calddra, caldeta, caldtra, calderk, calderula, calderilli,
+    calderal, calderaj, caldlera, jcaldera. Falsas (E.7): calderón, adera
+    («heladera», «madera»), caderias, alera, calda, cader, clera, cadera,
+    balderra, cuadrilla(s), calemara, caladora, cuaderna, cualsera, walderilaf y
+    otras de una aparición.
+  - Difusa ampliada (0,70-0,78, iniciales c, g, o): 158 formas, 7.228 aciertos.
+    Reales: «caideia» (A.21), «cuidera» (A.2); las demás son cada, cualquiera,
+    cartera, calidad, cabrera, candelaria, carrera y afines.
+  - Difusa contextual (nueva en este año, §F.2): palabras que siguen a «la» con
+    ratio >= 0,62 contra caldera o calderilla: 191 formas. Rescató A.28 («la
+    qalperaa»), que ninguna otra pasada devolvía, y siete apariciones del remate
+    de A.44 («caklraa», «cajaera», «caletera», «calidera», «caldesa»,
+    «ciilhera»). El resto: calle, localidad, cartera, candelaria, categoría,
+    cámara, casilla y afines.
+  - Plancha de listas de pensiones (control fijo propuesto por 1955): las 44
+    hojas con decretos de pensiones a la vejez, a 70 ppp. A esa resolución se
+    distinguen los rótulos de departamento en mayúsculas, no los renglones; los
+    dos rótulos «LA CALDERA» identificados son los de A.28 y A.68, y los dos se
+    leyeron luego a 150-160 ppp (E.10).
+  - Anillo 2, actores y números: abajo.
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas:
+1) faltantes: se agregan «el tuscal» (lindero de A.45), «finca el durazno»
+(A.44), «hogar escolar dr. luis linares» y «hogar escolar luis linares» (forma
+de 1956), «obra 343» y «embalse en campo alegre» (A.53, A.56, B.2.3), y cinco
+deformaciones de la capa sin las cuales el remate de A.44 y la pensión de A.28
+no se devuelven («qalperaa», «caklraa», «cajaera», «caletera», «calidera»). 11
+términos nuevos. No se agregan los que contienen «cald».
+2) apellidos dentro del anillo 2: los de siempre (apaza, aramayo, condori,
+chaile, isasmendi, murua, nogales, toconas, castellanos, burgos de yugra,
+mamani, wierna, lesser, yufra, yugra); no se mueven. «apaza» es real en A.77
+(Benita N. de Apaza, titular de agua en La Caldera); «murua» en los linderos de
+A.44 y en A.40 (Claudio Murúa); «wierna» da, fuera de A.54, sólo apellidos
+(Gustavo E. Wierna, Mercedes Wierna, Alfredo Wierna, Elba Wierna de Díez Gómez,
+Milagro Wierna: B.3).
+3) a revisar: 181 términos sin acierto en 1956; se conservan. Los de otros
+departamentos con acierto (el bordo, el tunal, tabacal, candelaria, la despensa,
+entre ríos, acheral, betania, mesada de Rosario de Lerma, el durazno de Cachi y
+de Anta, mojotoro como río de Güemes y Capital) se leen en B.3.
+Anillo 2, lectura: 75 de 256 términos con acierto. Se leyeron los contextos,
+fuera de las hojas de fichas, de todos los términos propios del departamento
+(vaqueros, san cayetano, luis linares, wierna, mojotoro, potrerillo, las
+mesadas, cerro de buena vista, tacones, lesser, pucheta, yugra, murua, durazno,
+campo alegre, el tunal, las lagunas, el angosto y los demás de una o dos
+apariciones) y, de los genéricos y apellidos, los que traen un topónimo del
+departamento a ±300 caracteres. Lo que da va a B.2 (13 fichas), a B.3 y a §C; el
+resto son repeticiones de avisos ya fichados.
+Actores: los 839 nombres completos distintos de los 904 del config, sobre el
+texto sin puntuación de la capa: 117 con acierto, 1.289 aciertos. Contextos con
+un topónimo del departamento a ±250 caracteres y fuera de las hojas del anillo
+1: 13. Dan «Antonio Vivas» (el art. 1 de A.73 sigue en h5), «Eusebia Ruiz»
+(B.2.2 y A.25), el Hogar «Luis Linares» en actos que no nombran el término
+(B.2.1, B.2.9, B.2.13) y ruido (Mariano Coll Arias, oficial mayor). Actores de
+las fichas de 1956 (80 nombres) buscados por nombre completo: B.4. Actores de
+fichas cuya búsqueda por nombre completo no devuelve su propio acto: Esther
+Gabriela Cruz («Gabrinla», «Gabriula»), Germán Peral, Eddy Aurelio Ruiz, Luisa
+Sarapura, Esperanza R. de Amaya, Francisco Pistone, Cándido Colque, Cesario
+Ríos, Corina A. Bustamante, Ramón Antonio Vivas, Lucía Ferro de Perna, Delfín
+Chocobar («choco0ar»), Enriqueta Epifania Colque, Florencio Fernández Acevedo,
+Celia Irene Espinoza, Herminia Blácida Córdoba, Juliana Borja de Iriarte y
+Presentación vda. de Valdez: es falla de la capa (letras rotas, cortes de
+renglón, «Blácida» por «Plácida» en la búsqueda), no ausencia, y se declara.
+Números arrastrados: los 785 del config, precedidos por decreto, ley,
+resolución, expediente, ordenanza, contrato, catastro, partida o número: 2.021
+aciertos de 356 números. Contextos con topónimo del departamento fuera de
+fichas: 12, todos del sucesorio de Juan Lorenzo Calderón (aviso 14548), ruido.
+Pre-informe de lee_auto: 910 candidatos del anillo 1 en 356 hojas, 2.331 del
+anillo 2 y 1.240 de actores. Cotejado contra los grupos de la sesión: las 151
+hojas-candidato del pre-informe que la sesión no agrupó son «calderón»
+(fp_conocido del config, en los índices de avisos y en el sucesorio de Juan
+Lorenzo Calderón), «caderias», «adera», «alera», «cader», «balderra», «clera»,
+«cuadrilla», «cadera», «escaldada» y afines: ninguna es del departamento. La
+sesión agrupó seis hojas que el pre-informe no trae: 5142 h7 (A.28) y cinco
+falsos positivos («cahera», «cámara» dos veces, «casilla» y ruido en 5292 h9).
+Identificadores de las ausencias (B.4): nombre y cargo, cargo y lugar, número de
+acto.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+
+81 fichas. Por orden de edición. Avisos repetidos: una entrada con sus
+apariciones. Números de documento y matrícula de personas que pueden vivir:
+omitidos (E.10). La clase de cada acto va al final de la FICHA y en el §D.
+
+A.1
+FUENTE: 5076 h6 c3 (Salta, miércoles 4 de enero de 1956); sumario en h2
+FICHA: Decreto N 1184-G, 27 de diciembre de 1955, expediente 7883/55: deja sin
+efecto la designación de Augusto Regis como encargado de la Oficina del Registro
+Civil de La Caldera (decreto 879 del 2 de diciembre), declarado inepto por
+Reconocimientos Médicos, y nombra encargada a Esther Gabriela Cruz. Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 170 ppp: el decreto entero (h6 c3). El sumario de h2,
+en la capa.
+TEXTO:
+  DECRETO Nº 1184—G. SALTA, Diciembre 27 de 1955. Expediente Nº 7883|55.
+  —VISTO el decreto Nº 879, de fecha 2 del mes en curso, por el que se designa
+  Encargado de la Oficina del Registro Civil de La Caldera, al señor Augusto
+  Regis; atento al certificado de Reconocimientos Médicos, por el cual se
+  declara inepto al nombrado y lo solicitado por la Dirección General del
+  Registro Civil [...] Art. 1º — Déjase sin efecto la designación dispuesta
+  por decreto Nº 879, de fecha 2 del corriente a favor del señor AUGUSTO
+  REGIS, como Encargado de la Oficina del Registro Civil de La Caldera. Art.
+  2º — Nómbrase Encargada de la Oficina del Registro Civil de La Caldera a la
+  señorita ESTHER GABRIELA CRUZ, a partir de la fecha que tome posesión del
+  cargo. [...] Coronel (S. R.) JULIO R. LOBO Arturo Oñativia
+NOTA DE LECTURA: El decreto 879 (2 de diciembre de 1955) es de 1955 y no se
+busca en este año; queda citado y no acompañado en este corpus (E.3). La capa
+escribe «calder», «callera» y «Gabrinla»; el nombre se lee en la imagen. Cruz se
+confirma en marzo (A.20); en enero y en diciembre de 1955 firma como encargada
+Esther B. (o Blanca) de Reyes (A.9, A.18).
+
+A.2
+FUENTE: 5078 h7 c3 y h8 c1 (Salta, lunes 9 de enero de 1956)
+FICHA: Decreto N 1220-G, 30 de diciembre de 1955, expediente 7910/55, nota 2920
+de Jefatura de Policía: acepta desde el 1 del mes la renuncia de Natividad
+Tejerina, subcomisario de 1ª de la Subcomisaría de La Caldera, y nombra en su
+reemplazo a Félix Miguel Sánchez. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 y 170 ppp: encabezado (h7 c3), art. 2 a) (h7 c3) y
+art. 4 (h8 c1). El número del expediente: el último dígito es dudoso (0 o 8).
+TEXTO:
+  DECRETO Nº 1220—G. SALTA, Diciembre 30 de 1955. Expediente Nº 7910|55.
+  —Atento lo solicitado por Jefatura de Policía en nota Nº 2920 de fecha 23
+  del mes en curso, [...] Art. 2º — Acéptanse las renuncias presentadas por el
+  siguiente personal [...]: a) Sub-Comisario de 1ª categoría de la
+  Sub-Comisaría de La Caldera (Dpto. La Caldera), don NATIVIDAD TEJERINA, con
+  anterioridad al día 1º del actual [...] Art. 4º — Nómbrase Sub-Comisario de
+  1ª categoría de la Sub-Comisaría de La Caldera (Dpto. La Caldera), al señor
+  FELIX MIGUEL SANCHEZ (Clase 1909 — Matr. [matrícula omitida]), con
+  anterioridad al día 1º del actual y en reemplazo de don Natividad Tejerina.
+NOTA DE LECTURA: Sánchez es llamado «Comisario de La Caldera» en A.8, dado de
+baja en febrero (A.16) y su baja se convierte en renuncia en mayo (A.37).
+
+A.3
+FUENTE: 5079 h10 c3 y h11 c1 (Salta, martes 10 de enero de 1956)
+FICHA: Resolución N 4246-S del Ministerio de Salud Pública, 27 de diciembre de
+1955, expedientes 20.811, 20.990 y 20.991/55: liquida viáticos y gastos de
+movilidad a varios médicos; entre ellos, cuatro días de viáticos del Dr. Eugenio
+Romanov «por su viaje de La Caldera a esta ciudad», con motivo de la reunión de
+Médicos de Campaña de los días 16 y 17. Clase: OTRO.
+MODO DE LECTURA: imagen, 130 y 170 ppp: encabezado (h10 c3) y el apartado de
+Romanov (h11 c1).
+TEXTO:
+  RESOLUCION Nº 4246—S. SALTA, Diciembre 27 de 1955. Expedientes Nros. 20.811,
+  20.990 y 20.991|55. VISTO las planillas de viáticos y gastos de movilidad,
+  presentadas por diversos motivos por el Dr. Alberto Lauandos, Dra. Ludmila
+  B. de Baranov, Dr. Roberto Tanuz, Dr. Eugenio Romanov y Eduardo Gamboni;
+  [...] 4º — [...] cuatro (4) días de viáticos del Dr. EUGENIO ROMANOV, por su
+  viaje de La Caldera a esta ciudad, con motivo de la reunión de Médicos de
+  Campaña realizada en este Ministerio los días 16 y 17 del mes en curso, de
+  conformidad a las planillas que corren agregadas. 5º — Aprobar el gasto de
+  ($ 240) doscientos cuarenta pesos m|n. importe correspondiente a cuatro
+  [...] JULIO A. CINTIONI
+NOTA DE LECTURA: La numeración del apartado de Romanov (4º) se lee en la imagen
+con un dígito empastado. La capa escribe «la cal dera» (la laxa espaciada la
+devolvió).
+
+A.4
+FUENTE: 5084 h9 c3 (Salta, martes 17 de enero de 1956)
+FICHA: Decreto N 1319-S, 10 de enero de 1956, expedientes 21.007/55, 21.021/55 y
+21.045/55: art. 2, reconoce los servicios de Sixto Ugarte como peón de patio del
+Hogar Escolar «Luis Linares» de La Caldera, personal de servicio transitorio a
+sueldo, del 1 al 31 de diciembre de 1955, a $ 400 mensuales. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 170 ppp: el decreto hasta el art. 3 (h9 c3).
+TEXTO:
+  DECRETO Nº 1319—S. SALTA, Enero 10 de 1956. Expedientes Nºs. 21.007|55,
+  21.021|55 y 21.045|55. [...] Art. 2º — Reconócense los servicios prestados
+  por el señor SIXTO UGARTE, como Peón de Patio del Hogar Escolar "Luis
+  Linares" de La Caldera —Personal de Servicio Transitorio a Sueldo—, desde el
+  1º al 31 inclusive de Diciembre ppdo. y con una remuneración mensual de $
+  400.— m|n. (Cuatrocientos pesos).
+NOTA DE LECTURA: Primera pieza de una serie de once decretos que reconocen mes a
+mes los servicios de Ugarte (E.6 y B.1). La capa escribe «La Caldeja». El art.
+3, licencia de Mercedes Busto en la Asistencia Pública, no toca al departamento;
+la difusa lo devolvió por «la vaLdera» (lavandera), falso positivo.
+
+A.5
+FUENTE: 5084 h14 c2-c3 (Salta, martes 17 de enero de 1956); sumario en h3
+FICHA: Decreto N 1340-E, 10 de enero de 1956, expediente 3579-P-1955: aprueba el
+reconocimiento de una concesión de agua pública al inmueble «Cerro de Buena
+Vista», catastro 112, en Vaqueros, departamento de La Caldera, de Germán Peral,
+para dos hectáreas con 1,05 l/s del río Vaqueros; en estiaje, veinte horas
+mensuales con la mitad del caudal de la hijuela Urquiza. Clase: AGUAS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto hasta el art. 2 (h14 c2-c3).
+Número: decide la serie de la capa (1339-E y 1341-E en la misma hoja). La
+resolución de A.G.A.S., «167» o «187», no se decide.
+TEXTO:
+  DECRETO Nº 1340—E. SALTA, Enero 10 de 1956. Expediente Nº 3579—P—1955.
+  —VISTO este expediente por el cual el señor Germán Peral solicita
+  reconocimiento de una concesión de agua pública para irrigar su propiedad
+  denominada "Cerro de Buena Vista", catastro 112, ubicada en Vaqueros,
+  Departamento de La Caldera, con una superficie total bajo riego de dos
+  hectáreas; y CONSIDERANDO: Que mediante Resolución Nº 1[6 u 8]7 dictada por
+  Administración General de Aguas de Salta, se hace lugar a lo solicitado
+  [...] Art. 1º — Apruébase el reconocimiento de una concesión de agua pública
+  al inmueble denominado "CERRO DE BUENA VISTA", catastro Nº 112, ubicado en
+  Vaqueros, Departamento de La Caldera, de propiedad del señor GERMAN PERAL
+  para irrigar con carácter permanente y a perpetuidad una superficie de dos
+  hectáreas con una dotación de un litro, cinco centilitros por segundo, a
+  derivar del río Vaqueros. En época de estiaje la propiedad de referencia
+  tendrá un turno de veinte horas mensuales, con la mitad del caudal de la
+  hijuela Urquiza.
+NOTA DE LECTURA: Aritmética: 1,05 / 2 = 0,525 l/s por hectárea, la dotación de
+los decretos de 1955. El catastro 112 no es el 157 de la expropiación de Cerro
+de Buena Vista de 1953 (P59): mismo nombre, otro catastro; no se concilia. La
+capa escribe «caidera» en una de sus dos versiones.
+
+A.6
+FUENTE: 5091 h5 c2 (Salta, jueves 26 de enero de 1956); sumario en h2
+FICHA: Decreto-Ley N 82-G, 18 de enero de 1956, expediente 5106/56: deroga las
+leyes 1402 (albergue para alumnos anexo a la escuela Juana Moro de López, en La
+Caldera) y 1741 (casa del maestro en Tartagal). Clase: ESCUELA+NORMA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y considerandos (h5 c2); articulado
+y firmas, sólo capa; sumario (h2), capa.
+TEXTO:
+  DECRETO-LEY Nº 82—G. SALTA, Enero 18 de 1956. Expte. Nº 5106|56. VISTAS las
+  Leyes Nos. 1741 y 1402 por las cuales se dispone la construcción de la Casa
+  del Maestro, en Tartagal, y un albergue para alumnos, anexo a la escuela
+  Juana Moro de López, en La Caldera; y CONSIDERANDO: Que si bien el propósito
+  de las leyes antes citadas es encomiable ya que pretende solucionar
+  problemas de real existencia, no es menos cierto que la instalación del
+  albergue y de la Casa del Maestro, hecha con criterios particularistas y en
+  un lugar determinado no da solución [...] [sumario, capa:] deroga las leyes
+  nros. 1402 (faculta al P. E. a invertir una suma para construir un edificio
+  escolar en La Caldera) y 1741 [...]
+NOTA DE LECTURA: La Ley 1402 es la de 1951 ($ 150.000, albergue; P46 y A.30 de
+1951). El sumario la resume como «edificio escolar»; el considerando, como
+«albergue para alumnos»: se transcriben las dos. Que el articulado derogue ambas
+leyes se toma del sumario y de la capa (E.10).
+
+A.7
+FUENTE: 5091 h6 c3 y h7 c1 (Salta, jueves 26 de enero de 1956)
+FICHA: Decreto N 1384-G, 13 de enero de 1956, expediente 5043/56, nota 31 de
+Jefatura de Policía: da de baja desde el 16 a Florencio Sarapura, agente de la
+Subcomisaría de La Caldera, y nombra en su reemplazo a Eloy Aurelio Ruiz. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 1 c) (h6 c3); art. 2 a) (h7
+c1).
+TEXTO:
+  DECRETO Nº 1384—G. SALTA, Enero 13 de 1956. Expediente Nº 5043|56. —Atento a
+  lo solicitado por Jefatura de Policía en nota Nº 31 de fecha 5 del mes en
+  curso, [...] Art. 1º — Dase de baja a partir del día 16 del actual, al
+  siguiente personal de Jefatura de Policía: [...] c) FLORENCIO SARAPURA, en
+  el cargo de Agente de la Sub-Comisaría de La Caldera (Dpto. La Caldera)
+  (Expte. Nº 1721|S.). Art. 2º — Nómbrase al siguiente personal en Jefatura de
+  Policía: a) Agente de la Sub-Comisaría de La Caldera (Dpto. La Caldera) al
+  señor ELOY AURELIO RUIZ (Clase 1904 — Matr. [matrícula omitida]) a partir
+  del día 16 del actual y en reemplazo de don Florencio Sarapura;
+NOTA DE LECTURA: En abril el decreto 2867-G (A.35) rectifica la confirmación de
+Sarapura y de Ruiz para decir que eran agentes de El Naranjo y no de La Caldera:
+se transcriben los dos y no se concilian (E.9).
+
+A.8
+FUENTE: 5092 h7 c3 (Salta, viernes 27 de enero de 1956)
+FICHA: Decreto N 1434-G, 18 de enero de 1956, expediente 5124/56: a pedido del
+Registro Civil, autoriza a los jefes policiales de General Pizarro (Anta) y de
+La Caldera, Félix Miguel Sánchez, «Comisario de La Caldera», a suscribir actas
+de defunción de miembros de la familia de las encargadas de esas oficinas.
+Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h7 c3).
+TEXTO:
+  DECRETO Nº 1434—G. SALTA, Enero 18 de 1956. Expediente Nº 5124|56. —VISTO la
+  nota 15-M-10 en la que la Dirección de Registro Civil solicita autorización
+  para que se suscriban actas de defunción de miembros de la familia de los
+  Encargados de las localidades de General Pizarro (Dpto. de Anta) y La
+  Caldera (Dpto. de La Caldera), de acuerdo a lo dispuesto por los artículos
+  29 y 70 de la Ley 251 y Manual de Instrucciones respectivamente, [...] Art.
+  1º — Autorízase al Auxiliar del Destacamento de Gendarmería de General
+  Pizarro don JORGE EDGARDO RASSOW [...] y a don FELIX MIGUEL SANCHEZ,
+  Comisario de La Caldera (Dpto. del mismo nombre), para suscribir un acta de
+  defunción de un miembro de familia de la Encargada de la Oficina de esa
+  localidad.
+NOTA DE LECTURA: Sánchez fue nombrado subcomisario de 1ª (A.2); aquí se lo llama
+comisario (E.9). El acto no nombra a la encargada ni al difunto.
+
+A.9
+FUENTE: 5097 h5 c2 (Salta, viernes 3 de febrero de 1956)
+FICHA: Decreto N 1538-G, 27 de enero de 1956, expediente 5213/56, nota 20-M-10
+del Registro Civil: reconoce servicios de ocho encargadas de oficinas de
+campaña; entre ellas, Esther B. de Reyes, encargada del Registro Civil de La
+Caldera, del 1 al 31 de diciembre de 1955. Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h5 c2). Número: capa e
+imagen dan 1538; la serie de la hoja (1535-G, 1539-G, 1541-G) lo admite.
+TEXTO:
+  DECRETO Nº 1538—G. SALTA, Enero 27 de 1956. Expediente Nº 5213|56. [...]
+  Art. 1º — Reconócense los servicios prestados por el siguiente personal de
+  la Dirección General de Registro Civil: [...] ESTHER B. DE REYES: como
+  Encargada del Registro Civil de la Caldera, desde el 1º al 31 de Diciembre
+  de 1955.
+NOTA DE LECTURA: RECUENTO PROPIO: 8 encargadas en la lista; el acto no declara
+número, de modo que no hay nada que cotejar. En A.18 figura «Esther Blanca
+Reyes», señorita, del 1 al 17 de enero: se transcriben las dos formas.
+
+A.10
+FUENTE: 5097 h10 c2-c3 y h11 c1 (Salta, viernes 3 de febrero de 1956)
+FICHA: Resolución N 4315-S, 25 de enero de 1956, expediente 21.166/956: fija los
+importes mensuales de «caja chica» de los servicios de Salud Pública de la
+ciudad y la campaña para 1956; entre los consultorios externos, La Caldera $ 300
+y Vaqueros $ 50. Clase: OTRO.
+MODO DE LECTURA: imagen, 110 a 150 ppp: encabezado (h10 c2) y los renglones del
+departamento (h11 c1). El cuadro entero no se leyó renglón por renglón.
+TEXTO:
+  RESOLUCION Nº 4315—S. SALTA, Enero 25 de 1956. Expediente Nº 21.166|956.
+  [...] 1º — Fijar los siguientes importes mensuales, en concepto de
+  subvención "CAJA CHICA" para gastos menores de los distintos Servicios de la
+  Ciudad y Campaña, desde el 1º de enero y hasta el 31 de diciembre del año en
+  curso: [...] Consultorios Externos: [...] La Viña " 300.— A. Saravia " 710.—
+  Colonia Santa Rosa " 150.— Campo Santo " 200.— La Caldera " 300.— Vaqueros "
+  50.— Animaná " 500.— [...] JULIO A. CINTIONI
+NOTA DE LECTURA: El cuadro no imprime total; no se recalcula (E.8).
+
+A.11
+FUENTE: 5102 h8 c3 y h9 c1 (Salta, viernes 10 de febrero de 1956)
+FICHA: Decreto N 1600-E, 1 de febrero de 1956: liquida a cuenta de las
+participaciones en la recaudación de impuestos $ 25.000 a El Galpón, $ 50.000 a
+J. V. González, $ 6.000 a la Municipalidad de La Caldera y $ 15.000 a Pichanal.
+Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 130 y 150 ppp: encabezado (h8 c3) y el cuadro (h9 c1).
+TEXTO:
+  DECRETO Nº 1600—E. SALTA, Febrero 1º de 1956. —Siendo necesario liquidar
+  fondos a Municipalidades de la Provincia, a cuenta de las participaciones
+  que les corresponden sobre la recaudación de impuestos, [...] Art. 1º — Con
+  intervención de Contaduría General liquídese por Tesorería General de la
+  Provincia, a favor de las Municipalidades que a continuación se detallan,
+  las siguientes sumas de dinero, con imputación a las respectivas cuentas
+  corrientes "Reparticiones Autárquicas y Municipalidades": MUNICIPALIDAD DE
+  GALPON .. $ 25.000 MUNICIPALIDAD DE J. V. GONZALEZ " 50.000 MUNICIPALIDAD DE
+  LA CALDERA " 6.000 MUNICIPALIDAD DE PICHANAL " 15.000 [...] Coronel (S. R.)
+  JULIO R. LOBO Adolfo Aráoz
+NOTA DE LECTURA: El cuadro no imprime total; suma propia 96.000. La capa escribe
+«0 000» por el importe de La Caldera: la cifra se lee en la imagen.
+
+A.12
+FUENTE: 5109 h4 c2 (Salta, viernes 24 de febrero de 1956); sumario en h2
+FICHA: Resolución N 4361-S, 22 de febrero de 1956, expediente 21.310/56: permuta
+a la mucama del Hogar Escolar «Dr. Luis Linares» de La Caldera, Luisa Sarapura,
+con la auxiliar 6ª enfermera del Hogar de Ancianos «Gral. Arenales» de La
+Merced, Esperanza R. de Amaya. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: la resolución entera (h4 c2).
+TEXTO:
+  RESOLUCION Nº 4361—S. SALTA, 22 de Febrero de 1956. Expte. Nº 21.310|56.
+  [...] 1º — Permutar en sus respectivos cargos, a la actual Mucama del Hogar
+  Escolar "Dr. Luis Linares" de La Caldera, Srta. LUISA SARAPURA, para que
+  pase a prestar servicios al Hogar de Ancianos "Gral. Arenales" de La Merced,
+  debiendo la actual Auxiliar 6º —Enfermera del Hogar de Ancianos "Gral.
+  Arenales" de la Merced Sra. ESPERANZA R. DE AMAYA, pasar a prestar servicios
+  al Hogar Escolar "Dr. Luis Linares" de la Caldera, con las mismas categorías
+  y sueldos.
+NOTA DE LECTURA: Amaya reaparece en licencia por enfermedad, reemplazada por
+Faustina Yapura (A.46).
+
+A.13
+FUENTE: 5111 h7 c1-c2 (Salta, martes 28 de febrero de 1956)
+FICHA: Decreto N 1709-S, 15 de febrero de 1956: art. 4, reconoce los servicios
+de Sixto Ugarte como peón de patio del Hogar Escuela «Dr. Luis Linares» de La
+Caldera del 1 al 31 de enero, a $ 400 mensuales. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 y 170 ppp: encabezado y art. 4 (h7 c1-c2). Un
+expediente del encabezado no se lee entero.
+TEXTO:
+  DECRETO Nº 1709—S. SALTA, Febrero 15 de 1956. [...] Art. 4º — Reconócense
+  los servicios prestados por el Sr. SIXTO UGARTE como Peón de Patio del Hogar
+  Escuela "Dr. Luis Linares" de La Caldera, —Personal de Servicio Transitorio
+  a Sueldo— durante el tiempo comprendido desde el 1º al 31 inclusive de Enero
+  ppdo., y con una asignación mensual de Cuatrocientos ($ 400) [...]
+NOTA DE LECTURA: La capa corta el nombre del Hogar al pie de columna y cruza el
+renglón con la columna vecina («pa caldera»).
+
+A.14
+FUENTE: 5112 h8 c1 (Salta, miércoles 29 de febrero de 1956)
+FICHA: Decreto N 1730-G, 16 de febrero de 1956, expediente 5379/56, nota 343 de
+Jefatura de Policía: art. 4 b), acepta desde el 1 del mes la renuncia de «Eddy
+Aurelio Ruiz», agente de la Subcomisaría de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 4 b) (h8 c1).
+TEXTO:
+  DECRETO Nº 1730—G. SALTA, Febrero 16 de 1956. Expediente Nº 5379|56. [...]
+  Art. 4º — Acéptase la renuncia presentada por el siguiente personal de
+  Jefatura de Policía: [...] b) Por el agente de la Sub-Comisaría de "La
+  Caldera" (Dpto. La Caldera) don EDDY AURELIO RUIZ; con anterioridad al día
+  1º del actual;
+NOTA DE LECTURA: El nombre lo rectifica el decreto 1853-G (A.17): es Eloy
+Aurelio Ruiz (A.7).
+
+A.15
+FUENTE: 5114 h5 c2 (Salta, viernes 2 de marzo de 1956)
+FICHA: Decreto N 1767-G, 22 de febrero de 1956: art. 4 a), designa desde el 16
+de febrero agente de la Subcomisaría de La Caldera a Mateo José Pistone, en
+reemplazo de Eloy Aurelio Ruiz. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 4 (h5 c2). El último dígito
+del expediente (5451?) no se lee.
+TEXTO:
+  DECRETO Nº 1767—G. SALTA, Febrero 22 de 1956. [...] Art. 4º — Desígnase con
+  anterioridad al día 16 de Febrero del año en curso, al siguiente personal de
+  JEFATURA DE POLICIA: a) Agente de la Sub Comisaría de "La Caldera" (Dpto. La
+  Caldera) al señor MATEO JOSE PISTONE (C. 1913, M. I. [matrícula omitida], D.
+  M. Nº 62); en reemplazo de don Eloy Aurelio Ruiz;
+NOTA DE LECTURA: El impreso trae el nombramiento en el inciso a); la
+rectificación (A.17) lo cita como inciso c) y dice que el nombrado es Francisco
+Pistone (C. 1910): se transcriben los dos y no se concilian (E.9).
+
+A.16
+FUENTE: 5114 h5 c3 (Salta, viernes 2 de marzo de 1956)
+FICHA: Decreto N 1768-G, 22 de febrero de 1956, expediente 5409/56, nota 355 de
+Jefatura de Policía: art. 1 a), da de baja desde el 16 de febrero al
+subcomisario de 1ª de la Subcomisaría de La Caldera, Félix Miguel Sánchez.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 1 (h5 c3). Número: la imagen
+da «176[3 u 8]»; deciden la serie (1766-G y 1767-G, mismo día) y la cita cruzada
+del decreto 2899-G (A.37), que lo nombra 1768.
+TEXTO:
+  DECRETO Nº 1768—G. SALTA, Febrero 22 de 1956. Expediente Nº 5409|56. [...]
+  Art. 1º — Dése de baja al siguiente personal de JEFATURA DE POLICIA: a)
+  Sub-Comisario de 1ª categoría de la Sub-Comisaría de "La Caldera" (Dpto. La
+  Caldera) don FELIX MIGUEL SANCHEZ; con anterioridad al día 16 del actual;
+NOTA DE LECTURA: La capa no trae «cald» en esa columna: lo devolvieron el anillo
+de actores («felix miguel sanchez») y la cita de A.37. La baja se deja sin
+efecto en mayo y se convierte en renuncia (A.37).
+
+A.17
+FUENTE: 5118 h5 c2 (Salta, jueves 8 de marzo de 1956); sumario en h2
+FICHA: Decreto N 1853-G, 29 de febrero de 1956, expediente 5484/56, nota 498 de
+Jefatura de Policía: rectifica el decreto 1730 (el renunciante es Eloy Aurelio
+Ruiz y no «Eddy Ruiz») y el 1767 (el agente nombrado en La Caldera es Francisco
+Pistone, C. 1910, y no como se consignó). Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h5 c2, serie 1851-G, 1852-G,
+1853-G) y arts. 1 y 2 (h5 c2-c3).
+TEXTO:
+  DECRETO Nº 1853—G. SALTA, Febrero 29 de 1956. Expediente Nº 5484|56. —VISTA
+  la nota Nº 498 de fecha 24 del actual, de Jefatura de Policía, [...] El
+  Ministro de Economía, F. y O. Públicas en ejercicio del Mando Gubernativo
+  DECRETA: Art. 1º — Rectifícase el inc. b) del art. 4º del Decreto Nº 1730 de
+  fecha 16 del actual, por el que se acepta la renuncia del señor Eddy Ruiz,
+  en el cargo de Agente de la Sub-Comisaría de La Caldera, dejándose
+  establecido que el verdadero nombre del mismo es ELOY AURELIO RUIZ, y no
+  como se consignara erróneamente en el citado Decreto. Art. 2º — Rectifícase
+  el inc. c) del art. 4º del Decreto Nº 1767 de fecha 22 del actual, por el
+  que se nombraba al señor Mateo José Pistone, en el cargo de agente de la
+  Sub-Comisaría de La Caldera, en reemplazo de don Eloy Aurelio Ruiz;
+  dejándose establecido que dicho nombramiento es a favor del señor FRANCISCO
+  PISTONE (C. 1910 — M. [matrícula omitida] — DM. 62) y no como erróneamente
+  se consignara en el Decreto citado.
+NOTA DE LECTURA: Inciso c) en la rectificación, a) en el impreso de 1767 (E.9).
+
+A.18
+FUENTE: 5119 h10 c1-c2 (Salta, viernes 9 de marzo de 1956)
+FICHA: Decreto N 1891-G, 29 de febrero de 1956, expediente 5521/56: reconoce
+servicios del personal de campaña del Registro Civil; inciso i), la encargada de
+la oficina de La Caldera, señorita Esther Blanca Reyes, del 1 al 17 de enero.
+Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h10 c1) e inciso i) (h10 c2).
+TEXTO:
+  DECRETO Nº 1891—G. SALTA, 29 de Febrero de 1956. Expediente Nº 5521|56.
+  [...] El Ministro de Economía, F. y O. Públicas en ejercicio del mando
+  gubernativo DECRETA: Art. 1º — Reconócense los servicios del siguiente
+  personal de campaña de la DIRECCION GENERAL DE REGISTRO CIVIL: [...] i)
+  Encargada de la Oficina de Registro Civil de la Caldera, señorita ESTHER
+  BLANCA REYES, desde el 1º al 17 de enero próximo pasado.
+NOTA DE LECTURA: Hasta el 17 de enero, Reyes; desde el 18, Cruz (A.20). En A.9
+es «Esther B. de Reyes», señora. En mayo el decreto 3096-E (5167 h26, capa)
+trata un subsidio pedido por «la señorita Esther Blanca Reyes» (art. 71 del
+decreto-ley 77/56), sin nombrar el departamento: B.4.
+
+A.19
+FUENTE: 5124 h4 c1 y c3 (Salta, viernes 16 de marzo de 1956)
+FICHA: Decreto N 1959-S, 7 de marzo de 1956: reconoce los servicios de Sixto
+Ugarte como peón del Hogar Escolar «Dr. Luis Linares» del 1 al 29 de febrero, a
+$ 400 mensuales. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h4 c1) y el artículo de Ugarte (h4
+c3). Número: el tercer dígito («5») es dudoso en la imagen y la capa no da la
+serie de la hoja; no se decide (E.10).
+TEXTO:
+  DECRETO Nº 19[5?]9—S. SALTA, Marzo 7 de 1956. [...] Reconócense los
+  servicios prestados por el señor SIXTO UGARTE, como Peón —Personal de
+  Servicio Transitorio a Sueldo— desde el 1º al 29 inclusive de Febrero del
+  corriente año, en el Hogar Escolar "Dr. Luis Linares", de La Caldera, y con
+  una remuneración mensual de cuatrocientos pesos [...]
+NOTA DE LECTURA: La capa escribe «la calddra».
+
+A.20
+FUENTE: 5125 h10-h11, renglón en h11 c2 (Salta, lunes 19 de marzo de 1956)
+FICHA: Decreto N 1992-G, 8 de marzo de 1956: aprobado el presupuesto de 1956,
+confirma al personal del Registro Civil y a los encargados de las oficinas de
+campaña; en la lista, «La Caldera, a la señorita Ester Gabriela Cruz, desde el
+18-1-56». Clase: REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 80 ppp la hoja h10 y 150 ppp el renglón (h11 c2). La
+categoría del tramo de la lista en que va Cruz no se miró.
+TEXTO:
+  DECRETO Nº 1992—G. SALTA, Marzo 8 de 1956. —Habiéndose aprobado el
+  Presupuesto [...] El Ministro de Gobierno, J. é I. Pública en ejercicio del
+  mando gubernativo DECRETA: [...] La Caldera, a la señorita ESTER GABRIELA
+  CRUZ, desde el 18—1—56 [...]
+NOTA DE LECTURA: «Ester» sin h aquí; «Esther» en A.1. En la misma lista, «La
+Cantera, al señor Moisés Ruiz» no es La Caldera (falso positivo de la capa,
+B.3).
+
+A.21
+FUENTE: 5126 h10-h12; renglones en h11 c3 y h12 c1 (Salta, martes 20 de marzo de
+1956)
+FICHA: Decreto N 2040-G, 9 de marzo de 1956: aprobado el presupuesto de 1956,
+confirma al personal de Policía; en La Caldera, el auxiliar mayor José León
+Vilca desde el 1 de marzo, y reconoce al agente Eloy Ruiz del 16 de enero al 1
+de febrero. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 y 150 ppp: encabezado (h10) y los dos renglones
+(h11 c3, h12 c1). El encabezado del artículo en que va Ruiz no se miró.
+TEXTO:
+  DECRETO Nº 2040—G. SALTA, Marzo 9 de 1956. —Habiéndose aprobado el
+  Presupuesto General de Gastos [...] Art. 1º — CONFIRMASE al personal que
+  viene prestando servicios en la Policía [...] La Caldera Auxiliar Mayor,
+  JOSE LEON VILCA, desde el 1º del corriente mes. [...] La Caldera Agente,
+  ELOY RUIZ, desde el día 16 de enero al 1º de febrero ppdo.
+NOTA DE LECTURA: Lo rectifican el 2197-G (Vilca es oficial 7º, A.24) y el 2867-G
+(Ruiz y Sarapura eran de El Naranjo, A.35). En la confirmación general del
+2041-G (A.23), del mismo día, Vilca figura como auxiliar mayor de El Bordo
+(Gral. Güemes): E.9.
+
+A.22
+FUENTE: 5127 h11 c1 (Salta, miércoles 21 de marzo de 1956); sumario en h2
+FICHA: Resolución N 4398-S, 14 de marzo de 1956, expediente 21.435/56: a pedido
+de la gobernanta del Hogar Escolar «Dr. Luis Linares» de La Caldera, fija en $
+2.600 mensuales la caja chica del Hogar desde el 15, fecha en que se inicia la
+inscripción de niños. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: la resolución (h11 c1).
+TEXTO:
+  RESOLUCION Nº 4398—S. SALTA, Marzo 14 de 1956. Expediente Nº 21.435|56.
+  VISTO lo solicitado por la Gobernanta del Hogar Escolar "Dr. Luis Linares"
+  de La Caldera; y atento a lo manifestado por el Departamento Contable, [...]
+  1º — Fijar la suma de $ 2.600.00 m|n. (DOS MIL SEISCIENTOS PESOS M|N.),
+  mensuales, para gastos de caja chica del Hogar Escolar "Dr. Luis Linares" de
+  La Caldera, a partir del día 15 del corriente mes, fecha en que se iniciará
+  la inscripción de niños en ese establecimiento, a fin del normal
+  desenvolvimiento de sus funciones.
+
+A.23
+FUENTE: 5128 h4-h6; departamento en h6 c1-c2 (Salta, jueves 22 de marzo de 1956)
+FICHA: Decreto N 2041-G, 9 de marzo de 1956: confirma al personal de Policía de
+campaña por departamento; «Departamento de La Caldera»: La Caldera (cabo
+Victoriano Molina; agentes Andrés Sajama y Liborio Cabrera Savaneros), Vaqueros
+(auxiliar principal Mariano Salomón Padilla; agentes Alejandro Echazú, Cándido
+Colque y Carmelo Lasi) y Mojotoro (auxiliar principal Nicolás Mejías; agente
+Cesario Ríos). Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h4 c1) y el bloque del
+departamento (h6 c1-c2).
+TEXTO:
+  DECRETO Nº 2041—G. SALTA, Marzo 9 de 1956. [...] DEPARTAMENTO DE LA CALDERA
+  La Caldera Cabo, Victoriano Molina. Agentes: Andrés Sajama, Liborio Cabrera
+  Savaneros.— Vaqueros Auxiliar Principal: Mariano Salomón Padilla. Agentes:
+  Alejandro Echazú, Cándido Colque, Carmelo Lasi.— Mojotoro: Auxiliar
+  Principal: Nicolás Mejías.— Agente: Cesario Ríos.— DEPARTAMENTO DE LA
+  CANDELARIA [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 3 localidades y 9 personas (3, 4 y 2); el acto
+no declara número. El acto pone a Mojotoro bajo el departamento de La Caldera
+(v16 §5.1ter). «Savaneros» aquí, «Sanaberón» en A.52 y en 1955: se transcriben
+las dos. José León Vilca aparece en el mismo decreto como auxiliar mayor de El
+Bordo (E.9).
+
+A.24
+FUENTE: 5136 h5 c3 y h6 c1 (Salta, jueves 5 de abril de 1956)
+FICHA: Decreto N 2197-G, 21 de marzo de 1956, nota 1822 de Jefatura de Policía:
+art. 3, rectifica el decreto 2040 en cuanto al cargo de José León Vilca,
+auxiliar mayor de La Caldera, que lo es como oficial 7º. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h5 c3) y art. 3 (h6 c1).
+TEXTO:
+  DECRETO Nº 2197—G. SALTA, Marzo 21 de 1956. [...] Art. 3º — Rectifícase el
+  decreto Nº 2040 de fecha 9 del actual, referente al cargo del señor JOSE
+  LEON VILCA, dispuesto con anterioridad al día 1º del corriente mes, como
+  Auxiliar Mayor de La Caldera (Dpto. La Caldera), dejándose establecido que
+  lo es como Oficial 7º.
+
+A.25
+FUENTE: 5138 h4-h11; renglones en h5 c2, h7 c3, h10 c1 (Salta, lunes 9 de abril
+de 1956)
+FICHA: Decreto N 2122-S, 15 de marzo de 1956: con el presupuesto de 1956
+(decreto-ley 126) confirma desde el 1 de enero al personal de Salud Pública;
+entre otros, el oficial 3º médico regional de La Caldera, Dr. Eugenio Romanov;
+la auxiliar 3ª gobernanta del Hogar La Caldera, Eugenia Usi; la auxiliar 5ª
+enfermera de La Caldera, Corina A. Bustamante; y la auxiliar 6ª enfermera de
+Vaqueros, Eusebia Ruiz. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h4 c1) y los renglones de h5, h7 y
+h10; el de Vaqueros (h11), sólo capa.
+TEXTO:
+  DECRETO Nº 2122—S. SALTA, Marzo 15 de 1956. [...] Ofic. 3º Méd. Reg. de La
+  Caldera, Dr. Eugenio Romanov. [...] Auxiliar 3º: Gobernanta Hogar La
+  Caldera, Srta. EUGENIA USI. [...] Auxiliar 5º - Enf. La Caldera Srta
+  COR[I]NA A. Bustamante. [...] [capa:] auxiliar 6 enferm. vaqueros srta.
+  eusebia ruiz
+NOTA DE LECTURA: La lista entera no se recuenta (cientos de renglones de toda la
+Provincia; E.8). La «I» de Corina falta en el impreso.
+
+A.26
+FUENTE: 5138 h15 c3 y h16 c1 (Salta, lunes 9 de abril de 1956)
+FICHA: Decreto N 2258-G, 26 de marzo de 1956, nota 1439 de Jefatura de Policía:
+traslada desde el 1 de abril al comisario de Gral. Güemes, Juan Carlos Pesso,
+como oficial 7º (comisario) a La Caldera, en reemplazo de José León Vilca.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h15 c3) y el inciso b) (h16 c1).
+TEXTO:
+  DECRETO Nº 2258—G. SALTA, marzo 26 de 1956. [...] b) Al actual Oficial 6º
+  (Comisario) de Gral. Güemes (Dpto. del mismo nombre), don JUAN CARLOS PESSO
+  con el cargo de Oficial 7º (Comisario), a la localidad de La Caldera (Dpto.
+  La Caldera), en reemplazo de don José León Vilca.
+NOTA DE LECTURA: Vilca sigue figurando como comisario de tercera de La Caldera
+en julio (A.52) y es declarado cesante en ese cargo en septiembre (A.62); Pesso
+aparece como comisario de segunda en la nómina general de julio (5216 h9) y en
+octubre (5273 h8, capa). No se concilia (E.9).
+
+A.27
+FUENTE: 5139 h10 c2 (Salta, martes 10 de abril de 1956); sumario en h3
+FICHA: Resolución N 4434-S, 29 de marzo de 1956, expediente 21.545/56: 3º,
+traslada al oficial 3º médico regional de La Caldera, Dr. Eugenio Romanov, a La
+Viña desde el 1 de abril. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: la resolución (h10 c2).
+TEXTO:
+  RESOLUCION Nº 4434—S. SALTA, Marzo 29 de 1956. [...] 3º — Trasladar al
+  Oficial 3º Médico Regional de La Caldera, Dr. EUGENIO ROMANOV, para
+  desempeñarse en la localidad de LA VIÑA, a partir del 1º de Abril próximo, y
+  con la misma categoría.
+NOTA DE LECTURA: La vacante la cubren Dardo Frías (A.42, dejado sin efecto por
+A.36) y Juan Carlos Martearena (A.32).
+
+A.28
+FUENTE: 5142 h7 c1 (Salta, viernes 13 de abril de 1956)
+FICHA: Decreto N 2329-E, 28 de marzo de 1956, expediente 770-C-56: aprueba la
+resolución 107 de la Caja de Jubilaciones, que acuerda pensiones a la vejez (Ley
+1204) de $ 100; «LA CALDERA: 4397 - RAMON ANTONIO VIVAS». Clase: OTRO.
+MODO DE LECTURA: imagen, 160 ppp: el decreto hasta la lista (h7 c1).
+TEXTO:
+  DECRETO Nº 2329—E. SALTA, marzo 28 de 1956. Expte. Nº 770—C—56. [...] "Art.
+  1º — ACORDAR, Pensiones a la Vejez, conforme a lo dispuesto por la Ley 1204,
+  en su artículo 1º con un haber mensual de $ 100.— (CIEN PESOS M|N.), a cada
+  uno de los solicitantes que se detallan a continuación [...] "CAPITAL: 4393
+  - ANSELMA ALEMAN. "ANTA: 4394 - FELISA MIY DE ROMERO (Las Lajitas).
+  "CERRILLOS: 4395 - BIENVENIDO [ilegible] (Villa Los Tarcos). 4396 - MARTIN
+  ALBERTO MORALES (La Merced). "LA CALDERA: 4397 - RAMON ANTONIO VIVAS.
+NOTA DE LECTURA: RECUENTO PROPIO: 5 pensiones; el acto no declara número. La
+capa escribe «la qalperaa»: sólo la difusa contextual (ratio 0,62 tras «la») lo
+devolvió, y la plancha de pensiones lo confirmó. Ramón Antonio Vivas fue juez de
+paz suplente en 1952 (P52); en noviembre se designa juez de paz suplente a
+«Antonio Vivas» (A.73): la identidad no se afirma.
+
+A.29
+FUENTE: 5144 h7 c2 (Salta, martes 17 de abril de 1956)
+FICHA: Resolución N 182-G del Ministerio de Gobierno, 28 de marzo de 1956:
+autoriza la liquidación de dos días de viáticos al secretario de la H. Cámara de
+Diputados adscripto al Ministerio como encargado de Municipalidades, Emilio
+Alberto Ratel, que debe ausentarse a La Caldera y El Bordo en misión oficial.
+Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: la resolución (h7 c2).
+TEXTO:
+  RESOLUCION Nº 182—G. SALTA, marzo 28 de 1956. —Debiendo ausentarse a las
+  localidades de La Caldera y El Bordo en misión oficial, el señor secretario
+  de la H. Cámara de Diputados de la Provincia adscripto al Ministerio de
+  Gobierno, Justicia é Instrucción Pública como Encargado de Municipalidades,
+  don Emilio Alberto Ratel, [...] RESUELVE: 1º — Autorizar a la HABILITACION
+  DE PAGOS [...] a liquidar dos (2) días de viáticos y gastos de movilidad
+  [...]
+NOTA DE LECTURA: El acto no dice el motivo de la misión.
+
+A.30
+FUENTE: 5147 h10 c3 (Salta, viernes 20 de abril de 1956)
+FICHA: Decreto N 2436-E, 6 de abril de 1956: para la fijación de precios máximos
+divide la Provincia en ocho zonas; la zona 3 comprende los departamentos de
+Rosario de Lerma, La Caldera, Chicoana y Villa San Lorenzo. Clase: NORMA.
+MODO DE LECTURA: imagen, 150 ppp: el art. 1 entero (h10 c3). La planilla de
+precios del art. 2 no se miró.
+TEXTO:
+  DECRETO Nº 2436—E. SALTA, abril 6 de 1956. [...] Art. 1º — A los efectos de
+  la fijación de precios [...] divídese la Provincia en ocho zonas a saber:
+  ZONA Nº 1 [...] Capital y Cerrillos; ZONA Nº 2 [...] General Güemes, Metán,
+  Rosario de la Frontera y La Candelaria; ZONA Nº 3, que comprende los
+  Departamentos de Rosario de Lerma, La Caldera, Chicoana y Villa San Lorenzo;
+  [...] ZONA Nº 8 Santa Victoria, Iruya y La Poma.
+NOTA DE LECTURA: RECUENTO PROPIO: 8 zonas; coincide con las «ocho zonas» del
+acto. «Villa San Lorenzo» figura como departamento (en 1955, A.9, bajo La
+Caldera): se transcribe y no se concilia.
+
+A.31
+FUENTE: 5152 h15 c2 (Salta, viernes 27 de abril de 1956)
+FICHA: Decreto N 2565-S, 13 de abril de 1956, expedientes 21.342/56 y 21.576/56:
+art. 2, designa lavandera del Hogar Escolar «Dr. Luis Linares» de La Caldera,
+desde el 15 de marzo, a Margarita Antonia Vázquez, en la vacante por renuncia de
+Lucía Ferro de Perna. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 75 ppp (edición de 75 ppi): el art. 2 (h15 c2).
+TEXTO:
+  DECRETO Nº 2565—S. SALTA, Abril 13 de 1956. [...] Art. 2º — Desígnase a la
+  señorita MARGARITA ANTONIA VAZQUEZ — L. C. [documento omitido] — como
+  Lavandera del Hogar Escolar "Dr. Luis Linares" de la Caldera, con
+  anterioridad al 15 de marzo último, en la vacante por renuncia de la Sra.
+  Lucía Ferro de Perna.
+NOTA DE LECTURA: La renuncia de «Lucía F. de Pernas» se acepta desde el 1 de
+diciembre de 1955 (decreto 1129-S, 5074 h7, B.2.1); en 1955 se transcribió
+«Perna» y «Pernas».
+
+A.32
+FUENTE: 5156 h5 c1 (Salta, viernes 4 de mayo de 1956); sumario en h2
+FICHA: Resolución N 4530-S, 30 de abril de 1956: traslada al oficial 5º médico
+regional de Cerrillos, Dr. Juan Carlos Martearena, como médico regional de La
+Caldera, con la misma categoría, debiendo atender el servicio tres veces por
+semana. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp (edición de 75 ppi): la resolución (h5 c1).
+TEXTO:
+  RESOLUCION Nº 4530—S. SALTA, 30 de abril de 1956. VISTO las necesidades del
+  servicio, [...] 1º — Trasladar al actual Oficial 5º, Médico Regional de
+  Cerrillos, Doctor JUAN CARLOS MARTEARENA, como Médico Regional de La
+  Caldera, con la misma categoría y cargo, debiendo atender este servicio tres
+  veces por semana.
+NOTA DE LECTURA: En octubre Martearena figura como médico regional «de Vaqueros,
+Las Costas y San Lorenzo» reemplazando al titular Dardo Frías (B.2.11): se
+transcribe y no se infiere el cambio.
+
+A.33
+FUENTE: 5160 h8 c1 (Salta, jueves 10 de mayo de 1956)
+FICHA: Decreto N 2773-E, 26 de abril de 1956, expediente 1243/A/56: autoriza al
+jefe de la División Perforaciones de A.G.A.S. a viajar dos días a Jujuy para
+gestionar el préstamo de una perforadora rotativa y comprar coronas de diamantes
+«con el objeto de proseguir los trabajos de perforación en la zona de Campo
+Alegre (Departamento La Caldera)». Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp (hoja de 75 ppi ampliada): el decreto hasta el
+art. 1 (h8 c1). La letra del apellido del jefe de División («F[i]gueroa») está
+borrosa.
+TEXTO:
+  DECRETO Nº 2773—E. SALTA, Abril 26 de 1956. Expediente Nº 1243|A|56. VISTO Y
+  CONSIDERANDO: [...] la prórroga del préstamo de una máquina perforadora
+  rotativa y la adquisición ante la Dirección de Altos Hornos de Zapla de
+  coronas de diamantes con el objeto de proseguir los trabajos de perforación
+  en la zona de Campo Alegre (Departamento La Caldera); [...] Art. 1º —
+  Autorízase para ausentarse en comisión a la ciudad de Jujuy, por el término
+  de dos (2) días, al Jefe de la División Perforaciones de la Administración
+  General de Aguas de Salta, Dr. MARCELO F[I]GUEROA [...]
+NOTA DE LECTURA: El decreto 2382-E (B.2.3) aprueba los estudios de la obra 284,
+«Estudios embalse en Campo Alegre», sin nombrar el departamento; este acto y
+A.50 y A.57 lo atribuyen a La Caldera.
+
+A.34
+FUENTE: 5160 h9 c2 (Salta, jueves 10 de mayo de 1956)
+FICHA: Decreto N 2779-S, 26 de abril de 1956: art. 4, reconoce los servicios de
+Sixto Ugarte, peón de patio del Hogar Escolar «Dr. Luis Linares» de La Caldera,
+del 1 al 31 de marzo, a $ 400 mensuales. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 4 (h9 c2).
+TEXTO:
+  DECRETO Nº 2779—S. SALTA, 26 de abril de 1956. Exptes. nºs. 21.712|56,
+  21.712|56, 21553|56. [...] Art. 4º — Reconócense los servicios prestados por
+  el señor SIXTO UGARTE, como peón de Patio del Hogar Escolar "Dr. Luis
+  Linares" de La Caldera -personal de servicio transitorio a sueldo-, durante
+  el tiempo comprendido desde el 1º al 31 de marzo del corriente año, con una
+  remuneración mensual de $ 400.— (Cuatrocientos).
+NOTA DE LECTURA: El encabezado repite el expediente 21.712 (E.9).
+
+A.35
+FUENTE: 5161 h12 c3 (Salta, viernes 11 de mayo de 1956)
+FICHA: Decreto N 2867-G, 30 de abril de 1956, expediente 6231/56, nota 2073 de
+Jefatura de Policía: rectifica el decreto 2040 para establecer que los agentes
+Florencio Sarapura (del 1 al 16 de enero) y Eloy A. Ruiz lo fueron de El Naranjo
+(Rosario de la Frontera) «y no de La Caldera». Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y arts. 1 y 2 (h12 c3).
+TEXTO:
+  DECRETO Nº 2867—G. SALTA, Abril 30 de 1956. Expediente Nº 6231|56. [...]
+  Art. 1º — Rectifícase el decreto Nº 2040 de fecha 9 de marzo ppdo.,
+  referente a la confirmación del Agente FLORENCIO SARAPURA, dejándose
+  establecido que lo es desde el 1º al 16 de enero del año en curso, como
+  Agente de la localidad de EL NARANJO (Departamento Rosario de la Frontera),
+  y nó de La Caldera. Art. 2º — Rectifícase el decreto Nº 2040 [...] referente
+  a la confirmación del Agente ELOY A. RUIZ, dejándose establecido que lo es
+  como Agente de EL NARANJO (Dpto. Rosario de la Frontera), desde [...]
+NOTA DE LECTURA: Contradice a los decretos 1384-G, 1730-G y 1853-G (A.7, A.14,
+A.17), que los dan en la Subcomisaría de La Caldera. No se concilia (E.9).
+
+A.36
+FUENTE: 5161 h16 c3 y h17 c1 (Salta, viernes 11 de mayo de 1956); sumario en h3
+FICHA: Decreto N 2888-S, 3 de mayo de 1956: deja sin efecto el decreto 2635
+(A.42), que designaba interinamente al Dr. Dardo Frías médico regional de La
+Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h16 c3 y h17 c1).
+TEXTO:
+  DECRETO Nº 2888—S. SALTA, 3 de mayo de 1956. El Ministro de Gobierno,
+  Justicia é I. Pública En ejercicio del Mando Gubernativo DECRETA: Art. 1º —
+  Déjase sin efecto el Decreto nº 2635 de fecha 18 de abril en curso, mediante
+  el cual se designaba interinamente al Doctor Dardo Frías, Oficial 3º, Médico
+  Regional de la Caldera.— [...] ARTURO OÑATIVIA Julio A. Cintioni
+NOTA DE LECTURA: «18 de abril en curso» en un decreto de mayo; el sumario de h3
+dice «decreto 2685». Las dos se transcriben (E.9). El decreto dejado sin efecto
+se publica después, en 5164 (A.42). En julio se le reconocen a Frías los
+servicios del 18 al 30 de abril (A.48).
+
+A.37
+FUENTE: 5162 h7 c2 (Salta, lunes 14 de mayo de 1956); sumario en h2
+FICHA: Decreto N 2899-G, 3 de mayo de 1956, expediente 6276/56: deja sin efecto
+el art. 1 a) del decreto 1768 (baja del subcomisario de 1ª de La Caldera Félix
+Miguel Sánchez, desde el 16 de febrero) y le acepta con igual fecha la renuncia.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h7 c2).
+TEXTO:
+  DECRETO Nº 2899—G. SALTA, 3 de mayo de 1956. Expte. nº 6276|56. —VISTO la
+  renuncia interpuesta, y atento lo dispuesto por el artículo 1º, inciso a)
+  del decreto número 1768 de fecha 22 de febrero del año en curso, [...] Art.
+  1º — Déjase sin efecto el artículo 1º, inciso a) del decreto número 1768
+  dictado con fecha 22 de febrero próximo pasado, por el que se da de baja,
+  con anterioridad al día 16 del mismo mes, al sub-comisario de 1ra. categoría
+  de la Subcomisaría de la Caldera, don FELIX MIGUEL SANCHEZ; y acéptasele con
+  igual fecha, la renuncia presentada por el mismo.
+
+A.38
+FUENTE: 5162 h13 c3 y h14 c1 (Salta, lunes 14 de mayo de 1956)
+FICHA: Decreto N 2931-G, 4 de mayo de 1956, expediente 6282/56, nota 2120 de
+Jefatura de Policía: art. 6, da de baja desde el 1 del mes a Victoriano Molina,
+cabo de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h13 c3) y art. 6 (h14 c1).
+TEXTO:
+  DECRETO Nº 2931—G. SALTA, Mayo 4 de 1956. Expediente Nº 6282|56. [...] Art.
+  6º — Dáse de baja a don VICTORIANO MOLINA, en el cargo de Cabo de La Caldera
+  (Dpto. La Caldera), con anterioridad al día 1º del corriente mes.
+NOTA DE LECTURA: El artículo lo deja sin efecto el 3013-G cuatro días después
+(A.41). La capa escribe «molona».
+
+A.39
+FUENTE: 5162 h19 c2 (Salta, lunes 14 de mayo de 1956)
+FICHA: Decreto N 2952-S, 4 de mayo de 1956, expedientes 21.032, 21.726 y
+21.729/56: art. 2, reconoce los servicios de Sixto Ugarte, peón de patio del
+Hogar «Dr. Luis Linares» de La Caldera, del 1 al 30 de abril, a $ 450 mensuales.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado y art. 2 (h19 c2).
+TEXTO:
+  DECRETO Nº 2952—S. SALTA, 4 de mayo de 1956. Exptes. nºs. 21.032, 21.726 y
+  21.729|56. [...] Art. 2º — Reconócense los servicios prestados por el Sr.
+  SIXTO UGARTE, como Peón de Patio del Hogar "Dr. Luis Linares" de La Caldera,
+  -Personal de Servicio Transitorio a Sueldo, Novena Categoría- durante el
+  tiempo comprendido desde el 1º al 30 de abril ppdo. con una asignación
+  mensual de Cuatrocientos cincuenta pesos m|nal. ($ 450.— (Expte Nº
+  21.736|56).
+NOTA DE LECTURA: Primera vez a $ 450 (antes, $ 400). El expediente del artículo
+(21.736) no está en el encabezado: es el del art. 1 (E.9).
+
+A.40
+FUENTE: 5162 h22 c2-c3 (Salta, lunes 14 de mayo de 1956)
+FICHA: Decreto N 2965-G, 7 de mayo de 1956, expediente 3193-M-1956: aprueba la
+resolución 269 de la Caja de Jubilaciones que reconoce a Claudio Murúa, auxiliar
+4º de Salud Pública, dos años y un mes de servicios en la Municipalidad de La
+Caldera y un año, seis meses y cuatro días en Salud Pública, con cargos de $ 165
+al afiliado y $ 146,82 al patronal, y le acuerda jubilación por retiro
+voluntario. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 1 de la resolución
+transcripta (h22 c2-c3).
+TEXTO:
+  DECRETO Nº 2965—G. SALTA, mayo 7 de 1956. Expte. nº 3193—M—1956. [...] "Art.
+  1º — RECONOCER los servicios prestados por el señor CLAUDIO MURUA en los
+  siguientes períodos: DOS (2) AÑOS, UN (1) MES en la Municipalidad de La
+  Caldera y UN (1) AÑO, SEIS (6) MESES Y CUATRO (4) DIAS en el Ministerio de
+  Salud Pública y Acción Social, y formular a tal efectos cargos al mencionado
+  afiliado y al patronal por las sumas de $ 165.— (CIENTO SESENTA Y CINCO
+  PESOS MONEDA NACIONAL) y $ 146.82 m|n. (CIENTO CUARENTA Y SEIS PESOS CON
+  OCHENTA Y DOS CENTAVOS) respectivamente [...]
+NOTA DE LECTURA: El acto no fecha los dos años en la Municipalidad. El decreto
+4316-E (5247 h11, B.2.8) reconoce el crédito de $ 146,82 de aportes patronales
+de Murúa, sin nombrar el departamento.
+
+A.41
+FUENTE: 5163 h16 c1-c2 (Salta, martes 15 de mayo de 1956)
+FICHA: Decreto N 3013-G, 8 de mayo de 1956, expediente 6353/56, nota 2242 de
+Jefatura de Policía: deja sin efecto, entre otras disposiciones, el apartado 6º
+del decreto 2931 que daba por terminadas las funciones de Victoriano Molina,
+cabo de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado e inciso a) (h16 c1-c2).
+TEXTO:
+  DECRETO Nº 3013—G. SALTA, mayo 8 de 1956. Expediente Nº 6353|56. [...] Art.
+  1º — Déjanse sin efecto las disposiciones que seguidamente se detallan: a)
+  el apartado 6º del Decreto Nº 2931 de fecha 4 del actual, que disponía se
+  den por terminadas las funciones de don VICTORIANO MOLINA en el cargo de
+  cabo de la localidad de La Caldera; [...]
+NOTA DE LECTURA: «Apartado 6º» aquí; «art. 6º» en el impreso de 2931.
+
+A.42
+FUENTE: 5164 h13 c2 (Salta, miércoles 16 de mayo de 1956)
+FICHA: Decreto N 2635-S, 18 de abril de 1956: «visto la necesidad de proveer de
+atención médica al pueblo de La Caldera» por el traslado del Dr. Eugenio
+Romanov, designa interinamente desde el 18 de abril al Dr. Dardo Frías, oficial
+3º médico regional de La Caldera, que atenderá lunes, miércoles y viernes de
+9.30 a 11.30. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto hasta el art. 1 (h13 c2).
+TEXTO:
+  DECRETO Nº 2635—S. SALTA, Abril 18 de 1956. VISTO la necesidad de proveer de
+  atención médica al pueblo de La Caldera, en la vacante existente por
+  traslado de su anterior titular Dr. Eugenio Romanov, El Ministro de Gobierno
+  [...] En ejercicio del Mando Gubernativo de la Provincia DECRETA: Art. 1º —
+  Desígnase interinamente al Dr. DARDO FRIAS, Oficial 3º — Médico Regional de
+  La Caldera—, a partir del día 18 de abril en curso, debiendo atender dicho
+  facultativo el citado Servicio Médico, los días lunes, miércoles y viernes
+  de 9.30 a 11.30 horas, de acuerdo a lo establecido por la Dirección General
+  de Sanidad.
+NOTA DE LECTURA: Se publica una edición después del decreto que lo deja sin
+efecto (A.36).
+
+A.43
+FUENTE: 5181 h6 c2-c3 (Salta, martes 12 de junio de 1956)
+FICHA: Decreto N 3255-E, 6 de junio de 1956, expediente 1443-A-1956: a propuesta
+de A.G.A.S. (resolución 187) designa el personal de tomeros de los sistemas de
+riego del interior; entre ellos, Alejo Maidana (La Caldera), desde el 1 de
+enero, y Delfín Chocobar (La Caldera), desde la toma de posesión, a $ 800
+mensuales (auxiliar 4º). Clase: AGUAS+CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h6 c2) y la lista (h6 c2-c3).
+TEXTO:
+  DECRETO Nº 3255—E. SALTA, Junio 6 de 1956. Expte. Nº 1443—A—1956. VISTO la
+  Resolución Nº 187 de A.G.A.S. que propone la designación de tomeros en los
+  diferentes sistemas de riego en el interior de la Provincia, [...] ALEJO
+  MAIDANA (La Caldera) Arg. Clase 1915, Mat. Ind. [matrícula omitida], D. M.
+  63; [...] con una remuneración de $ 800.— m|n. (OCHOCIENTOS PESOS MONEDA
+  NACIONAL) —Auxiliar 4— respectivamente, y a partir de la fecha que tomen
+  posesión del cargo los señores: [...] DELFIN CHOCOBAR (La Caldera) Arg.
+  Clase 1893, Mat. Ind. [matrícula omitida], D. M. 62; también con una
+  remuneración de $ 800.— [...] ALEJANDRO LASTRA
+NOTA DE LECTURA: RECUENTO PROPIO: 2 encargados de sistema a $ 850, 18 tomeros
+desde el 1 de enero y 4 desde la toma de posesión: 24 personas, 2 de La Caldera;
+el acto no declara número. La capa escribe «choco0ar».
+
+A.44
+FUENTE: 5190 h9 c1 (Salta, martes 26 de junio de 1956); 28 apariciones por
+texto, 5190 a 5219
+FICHA: Aviso N 14050, por José Alberto Cornejo, martillero: remate el 9 de
+agosto de 1956, con base de $ 40.533,33 (dos terceras partes de la valuación
+fiscal), de la finca «El Durazno», en el departamento de La Caldera: 1.536 ha
+1.749 m², plano 37 del legajo de La Caldera, título a folio 47 asiento 6 del
+libro 2 de R.I. de La Caldera, partida 93, valor fiscal $ 60.800; hipoteca a
+favor de Ramón Yenefes por $ 40.000 y arriendo de bosque sobre 20 ha a Tomás
+Fascio Arias. Juicio «Embargo preventivo — Simplex — José A. Ferradas S.A.C.é I.
+vs. Arturo A. Quintana», Primera Instancia Cuarta Nominación C. y C. Clase:
+DOMINIO+JUSTICIA.
+MODO DE LECTURA: imagen, 140 ppp: el aviso entero en su primera aparición (h9
+c1).
+TEXTO:
+  Nº 14050 — POR JOSE ALBERTO CORNEJO — JUDICIAL — FINCA EN "LA CALDERA" —
+  BASE $ 40.533,33 EL DIA 9 DE AGOSTO DE 1956 A LAS 17 HORAS, en mi
+  escritorio: Deán Funes 169 Ciudad, remataré, con la BASE DE CUARENTA MIL
+  QUINIENTOS TREINTA Y TRES PESOS CON TREINTA Y TRES CENTAVOS MONEDA NACIONAL,
+  o sean las dos terceras partes de la valuación fiscal, la finca denominada
+  "EL DURAZNO", ubicada en el departamento de La Caldera, de ésta Provincia.—
+  Limita al Norte con los herederos de Campero; al Sud con propiedad de
+  Silvano Murúa; al Este con propiedad de Liborio Guerra, antes de José María
+  Murúa y al Oeste con propiedad de Daniel Linares.— Superficie Un mil
+  quinientas treinta y seis hectáreas. Un mil setecientos cuarenta y nueve
+  metros cuadrados, según plano archivado en Dcción. Gral. de Inmuebles bajo
+  Nº 37 del Legajo de Planos de La Caldera.— Título registrado al folio 47
+  asiento 6 del libro 2 de R.I. de La Caldera.— Nomenclatura Catastral:
+  Partida 93 —Valor fiscal $ 60.800.— La propiedad reconoce hipoteca a favor
+  del Sr. Ramón Yenefes por la cantidad de $ 40.000.00.— Gravámenes a folios
+  48—279—280 asientos 8—9—10 y 11 del libro 2 de R.I. de La Caldera.— Reconoce
+  contrato de arriendo de bosque para explotación forestal sobre 20 hectáreas,
+  a favor del Sr. Tomás Fascio Arias, registrado a folio 280 asiento 12 del
+  libro 2 R.I. La Caldera.— El comprador entregará el veinte por ciento del
+  precio de venta y a cuenta del mismo.— Ordena Sr. Juez de Primera Instancia
+  Cuarta Nominación C. y C. en juicio: "EMBARGO PREVENTIVO — SIMPLEX — JOSE A.
+  FERRADAS S.A.C.é I. VS. ARTURO A. QUINTANA".— Comisión de arancel a cargo
+  del comprador.— Edictos por 30 días en BOLETIN OFICIAL y Norte.— e) 26|6 al
+  7|8|56.
+NOTA DE LECTURA: Aritmética (control 2 de v17 §5.6): dos tercios de 60.800 son
+40.533,33: cierra. RECUENTO de linderos: 4. Plano 37 del legajo de La Caldera:
+citado y no acompañado (§P). Un Liborio Guerra y un Silvano Murúa son linderos;
+José María Murúa, antecesor. Las 28 apariciones varían en la capa («la caldesa»,
+«calidera», «caklraa», «cajaera», «caletera»): se reunieron por texto (E.6).
+
+A.45
+FUENTE: 5196 h12 c2 (Salta, miércoles 4 de julio de 1956); 29 apariciones por
+texto, 5196 a 5225
+FICHA: Aviso N 14038: el Juez de Primera Instancia Civil y Comercial Segunda
+Nominación cita por 20 días a interesados en el juicio de posesión treintañal de
+Lola Herrera sobre un inmueble en el partido de Calderilla, departamento de La
+Caldera, de 10 ha 0421 m², que limita con los sucesores de Waldina C. de Caro,
+Fermín Herrera, el Potrero de Valencia y «El Tuscal». Clase: DOMINIO+JUSTICIA.
+MODO DE LECTURA: imagen, 150 ppp: el aviso entero en su primera aparición (h12
+c2).
+TEXTO:
+  Nº 14038 — POSESION TREINTEÑAL: — El Juez de Primera Instancia Civil y
+  Comercial Segunda Nominación, cita por 20 días y emplaza por 9 días
+  posteriores a ellos a interesados en juicio posesión treinteñal solicitado
+  por LOLA HERRERA, sobre inmueble ubicado en partido Calderilla, departamento
+  La Caldera con una superficie total de 10 hectáreas 0421 metros cuadrados y
+  comprendido dentro de los siguientes Límites: Al Norte, con propiedad de los
+  sucesores de Waldina C. de Caro; al Sud, con don Fermín Herrera; al Este,
+  con el Potrero de Valencia y al Oeste, con "El Tuscal". ANIBAL URRIBARRI —
+  Secretario — Salta 7 de junio de 1956.— e) 4|7 al 16|8|56.
+NOTA DE LECTURA: RECUENTO de linderos: 4. «El Tuscal» es lindero y el aviso no
+lo sitúa. La «finca El Tuscal» del juicio de división de condominio Eleodora
+Tejerina de Pintado vs. Cecilia Tejerina y otros, que se publica en las mismas
+ediciones, tiene título en el libro G de Orán (5192 h14, capa): otro lugar
+(B.3).
+
+A.46
+FUENTE: 5201 h10 c2-c3 (Salta, jueves 12 de julio de 1956)
+FICHA: Decreto N 3553-A, 6 de julio de 1956: art. 1, designa interina auxiliar
+6ª del Hogar Escolar «Dr. Luis Linares» de La Caldera a Faustina Yapura, desde
+el 6 de junio, mientras dure la licencia por enfermedad de la titular Esperanza
+R. de Amaya; art. 6, reconoce los servicios de Sixto Ugarte del 1 al 31 de mayo.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 110 ppp: el decreto entero (h10 c2-c3).
+TEXTO:
+  DECRETO Nº 3553—A. SALTA, julio 6 de 1956. Exptes. Nos. 21.979|56,
+  21.904|56, 21.940|56, 22.009|56, 21.944|56 y 21.991|56. [...] Art. 1º —
+  Desígnase en carácter interino Auxiliar 6º del Hogar Escolar "Dr. Luis
+  Linares" de la Caldera, a la señorita Faustina Yapura — L.C. [documento
+  omitido], con anterioridad al día 6 de junio en curso, y mientras la titular
+  de dicho cargo Sra. Esperanza R. de Amaya se encuentre en uso de licencia
+  por enfermedad (Expte. Nº 21.979|56). [...] Art. 6º — Reconócense los
+  servicios prestados por el señor Sixto Ugarte, como Peón de Patio, Categoría
+  Novena —Personal de Servicio Transitorio a Sueldo— del Hogar Escolar "Dr.
+  Luis Linares" de La Caldera, durante el tiempo comprendido desde el 1º al 31
+  de mayo del corriente año (Expte. Nº 21.991|56). [...] JOSE MARIA RUDA
+  Germán O. López
+NOTA DE LECTURA: «Junio en curso» en un decreto de julio (E.9). Faustina Yapura
+había sido mucama del Hogar de Ancianos de La Merced (decreto de 5148 h9, capa;
+B.4).
+
+A.47
+FUENTE: 5201 h11 c3 (Salta, jueves 12 de julio de 1956)
+FICHA: Decreto N 3556-A, 6 de julio de 1956, expediente 22.096/56: prorroga
+desde el 1 de febrero la vigencia del decreto 14.705 de 1955, que fija una
+sobreasignación mensual de $ 400 a la auxiliar 3ª gobernanta del Hogar-Escuela
+«Dr. Luis Linares» de La Caldera, Eugenia F. Usi. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: el decreto hasta el art. 1 (h11 c3). Número:
+la imagen empasta el tercer dígito; la capa da 3556 y la serie de la edición
+(3551-A, 3553-A, 3555-A, del mismo día) lo admite.
+TEXTO:
+  DECRETO Nº 3556—A. SALTA, Julio 6 de 1956. Expte. Nº 22.096|56. VISTO el
+  decreto Nº 14.705 de fecha 8 de junio de 1955, por el que se fijó una
+  sobreasignación mensual de $ 400.— a la Gobernanta del Hogar—Escuela "Dr.
+  Luis Linares" que funciona en La Caldera; y subsistiendo aún las causales
+  que motivaron la aludida disposición, [...] Art. 1º — Prorrógase, con
+  anterioridad al 1º de febrero del año en curso, la vigencia del decreto Nº
+  14.705 de 8 de junio de 1955, por el que se fija una sobreasignación mensual
+  de $ 400.— (Cuatrocientos Pesos) a la Auxiliar 3º —Gobernanta del
+  Hogar—Escuela "Dr. Luis Linares" de la localidad de La Caldera, señorita
+  Eugenia F. Usi, [...]
+NOTA DE LECTURA: Cuatro días después el Hogar es intervenido y Usi suspendida
+(A.49).
+
+A.48
+FUENTE: 5204 h6 c2 (Salta, martes 17 de julio de 1956)
+FICHA: Decreto N 3592-A, 10 de julio de 1956, expediente 22.059/56: art. 2,
+reconoce los servicios del Dr. Dardo Frías como oficial 3º médico regional de La
+Caldera del 18 al 30 de abril, en reemplazo del titular Dr. Eugenio Romanov,
+trasladado a La Viña. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el art. 2 (h6 c2).
+TEXTO:
+  DECRETO Nº 3592—A. SALTA, Julio 10 de 1956. Expte. nº 22.059|56. [...] Art.
+  2º — Reconócense los servicios prestados por el Doctor Dardo Frías, como
+  oficial 3º -Médico Regional- de La Caldera, durante el tiempo comprendido
+  desde el día 18 al 30 de abril del corriente año, en razón de haberse
+  desempeñado en reemplazo del entonces titular Dr. Eugenio Romanov que fuera
+  trasladado a la localidad de La Viña.
+NOTA DE LECTURA: Reconoce el período de la designación que A.36 dejó sin efecto
+(A.42): se transcriben los tres actos y no se concilian.
+
+A.49
+FUENTE: 5204 h7 c1-c2 (Salta, martes 17 de julio de 1956); sumario en h2
+FICHA: Decreto N 3595-A, 10 de julio de 1956, expediente 22.249/56: por las
+denuncias de vecinos de La Caldera contra la gobernanta Eugenia Facunda Usi,
+declara intervenido el Hogar Escuela «Dr. Luis Linares» de La Caldera, designa
+interventora por 30 días a la señora «Stav[?]ula Sofía [?]rianos de Postigo» y
+suspende a Usi a resultas de la investigación. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 120 ppp: el decreto entero (h7 c1-c2). El nombre de la
+interventora es ilegible en parte.
+TEXTO:
+  DECRETO Nº 3595—A. SALTA, 10 de julio de 1956. Expte. Nº 22.249|56. Visto
+  las denuncias formuladas por vecinos de la localidad de La Caldera contra la
+  gobernanta del Hogar-Escuela "Dr. Luis Linares", Srta. Eugenia Facunda Usi;
+  atento lo informado por la Dirección General de Sanidad, y CONSIDERANDO: Que
+  está en principio acreditada la existencia de un estado de anormalidad cuya
+  subsistencia es contraria a los fines educativos y asistenciales de los
+  menores confiados a la custodia del referido Hogar; Que la buena marcha de
+  los servicios [...] exige la realización de una prolija investigación que
+  permita determinar la veracidad de los cargos formulados y delimitar las
+  consiguientes responsabilidades; Que asimismo resulta impostergable efectuar
+  un estudio racional del funcionamiento de ese establecimiento para que pueda
+  cumplir con eficacia, y de acuerdo con modernos criterios pedagógicos, la
+  nobilísima función que le compete; Por todo ello, El Interventor Federal
+  Interino de la Provincia de Salta DECRETA: Art. 1º — Declárase intervenido
+  el Hogar Escuela "Dr. Luis Linares" de la localidad de La Caldera. Art. 2º —
+  Desígnase interventora del mencionado Instituto a la señora
+  Stav[ilegible]ula Sofía [ilegible]rianos de Postigo, L. Cívica [documento
+  omitido], por el término de 30 (treinta) días, debiendo elevar un informe
+  detallado de las conclusiones a que arribe en el cometido que se le confía y
+  un plan orgánico del funcionamiento que debe cumplir el Hogar. Art. 3º —
+  Suspéndese en sus funciones a la actual gobernanta, auxiliar 3a., Srta.
+  Eugenia Facunda Usi, L. Cívica [documento omitido], a resultas de las
+  conclusiones a que arribe la investigación a realizarse. [...] JOSE MARIA
+  RUDA Germán O. López
+NOTA DE LECTURA: El acto no dice qué se denunció. La intervención se prorroga en
+noviembre y Usi es declarada cesante (A.72). El nombre de la interventora se
+pide a la hoja de dudas (E.10).
+
+A.50
+FUENTE: 5208 h12 c1 (Salta, lunes 23 de julio de 1956)
+FICHA: Decreto N 3704-E, 17 de julio de 1956, expediente 1855-A-956: liquida a
+A.G.A.S. $ 45.000 para los estudios del emplazamiento de un embalse en Campo
+Alegre, departamento de La Caldera, obra del plan de obras públicas vigente.
+Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp: el visto (h12 c1); el articulado y la
+imputación, capa.
+TEXTO:
+  DECRETO Nº 3704—E. SALTA, 17 de julio de 1956. Expte. nº 1855—A—956. VISTO
+  [...] Administración General de Aguas de Salta solicita se liquide a su
+  favor la suma de $ 45.000.— necesaria para atender los estudios para el
+  emplazamiento de un embalse en Campo Alegre, Departamento de La Caldera,
+  obra contemplada en el plan de Obras Públicas vigente; [...] [capa:]
+  (cuarenta y cinco mil pesos moneda nacional) [...] atienda los estudios del
+  embalse en Campo Alegre (Dpto. La Caldera), con imputación al Anexo H —
+  Inciso IV [...]
+
+A.51
+FUENTE: 5214 h8 c3 y h9 c1 (Salta, martes 31 de julio de 1956)
+FICHA: Decreto N 3746-A, 24 de julio de 1956, expedientes 22.246, 22.224 y
+22.218/56: art. 1, reconoce los servicios de Faustina Yapura, mucama del
+Hogar-Escolar «Dr. Luis Linares» de La Caldera, del 21 al 30 de junio, en
+reemplazo de la titular Enriqueta Epifania Colque, en licencia por enfermedad;
+art. 2, los de Sixto Ugarte del 1 al 30 de junio. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado y arts. 1 y 2 (h8 c3, h9 c1).
+TEXTO:
+  DECRETO Nº 3746—A. SALTA, julio 24 de 1956. [...] Art. 1º — Reconócense los
+  servicios prestados por la Srta. Faustina Yapura, como Mucama, Categoría
+  Novena, -Personal de Servicio Transitorio a Sueldo- del Hogar-Escolar "Dr.
+  Luis Linares" de La Caldera, durante el tiempo comprendido desde el 21 al 30
+  de junio ppdo., en reemplazo de la titular Srta. Enriqueta Epifania Colque
+  que se encontraba en uso de licencia por enfermedad. (Expte. nº 22.246|56).
+  Art. 2º — Reconócense los servicios prestados por el Sr. Sixto Ugarte, como
+  Peón de Patio [...] del Hogar -Escolar "Dr. Luis Linares", de La Caldera,
+  durante el tiempo comprendido desde el 1º al 30 de junio ppdo. (Expte. nº
+  22.246|56).
+NOTA DE LECTURA: Yapura: auxiliar 6ª interina desde el 6 de junio en A.46 y
+mucama del 21 al 30 de junio aquí. El art. 2 repite el expediente del art. 1
+(E.9). El nombramiento de Enriqueta Epifania Colque no aparece en el año (E.3).
+
+A.52
+FUENTE: 5216 h8 c2 a h10 c1; departamento en h10 c1 (Salta, jueves 2 de agosto
+de 1956)
+FICHA: Decreto N 3785-G, 30 de julio de 1956: con el presupuesto de Policía
+modificado por los decretos-leyes 231 y 238, confirma, nombra y asciende desde
+el 1 de julio al personal de Jefatura; «Departamento La Caldera»: La Caldera
+(comisario de tercera José León Vilca, cabo Victoriano Molina, agentes Andrés
+Sajama y Liborio Carrera Sanaberón), Vaqueros (oficial inspector Mariano Salomón
+Padilla; agentes Alejandro Echazú, Cándido Colque y Carmelo Lassi) y Mojotoro
+(oficial inspector Nicolás Mejías; agente Césares Ríos). Clase: CARGOS.
+MODO DE LECTURA: imagen, 100 y 110 ppp: encabezado (h8 c2) y el bloque del
+departamento (h10 c1).
+TEXTO:
+  DECRETO Nº 3785—G. SALTA, 30 de julio de 1956. Habiéndose modificado el
+  Presupuesto de Jefatura de Policía, mediante Decreto-Ley Nº 231 de fecha 3
+  de Julio en curso, y su modificatoria el Decreto Ley Nº 238 de fecha 19 del
+  actual, [...] Art. 1º — Confírmase, nómbrase y asciéndese, con anterioridad
+  al día 1º de Julio del corriente año, al personal que presta servicio en
+  Jefatura de Policía de la Provincia, [...] DEPARTAMENTO LA CALDERA: LA
+  CALDERA: Comisario de Tercera: José León Vilca. Cabo: Victoriano Molina.
+  Agentes: Andrés Sajama y Liborio Carrera Sanaberón. VAQUEROS: Oficial
+  Inspector: Mariano Salomón Padilla. Agentes: Alejandro Echazú, Cándido
+  Colque y Carmelo Lassi. MOJOTORO: Oficial Inspector Nicolás Mejías. Agente:
+  Césares Ríos.
+NOTA DE LECTURA: RECUENTO PROPIO: 3 localidades y 10 personas (4, 4 y 2); el
+acto no declara número. Frente a A.23: se agrega Vilca; «Cabrera Savaneros» pasa
+a «Carrera Sanaberón», «Lasi» a «Lassi», «Cesario» a «Césares»; Padilla y Mejías
+pasan de auxiliar principal a oficial inspector. Vilca comisario de La Caldera
+aquí, cuando A.26 había trasladado a Pesso a esa comisaría en su reemplazo
+(E.9). La capa escribe «calderarla» por «La Candelaria» (falso positivo).
+
+A.53
+FUENTE: 5225 h5 c1-c2 (Salta, jueves 16 de agosto de 1956)
+FICHA: Decreto N 3872-E, 8 de agosto de 1956, expediente 1676-A-956: aprueba la
+memoria descriptiva, cómputos, planos, pliegos y presupuesto de A.G.A.S. para la
+obra «Servicios de Aguas Corrientes en La Caldera», por $ 127.035,05 con el 10 %
+de imprevistos y el 5 % de inspección, y autoriza a llamar a licitación pública.
+Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h5 c1) y arts. 1 y 2 (h5 c2).
+Número: el último dígito está empastado en la imagen; la capa da 3872 y la serie
+(3875-E y 3876-E en h6) lo admite.
+TEXTO:
+  DECRETO Nº 387[2]—E. SALTA, Agosto 8 de 1956. Expte. nº 1676—A—956. VISTO
+  las presentes actuaciones por las que Administración General de Aguas de
+  Salta eleva a consideración y aprobación del Poder Ejecutivo, memoria
+  descriptiva, planos, pliegos de condiciones y especificaciones, como así
+  también presupuesto confeccionado para la ejecución de la obra "Servicio de
+  Aguas Corrientes en La Caldera"; [...] Art. 1º — Apruébase, en todas sus
+  partes, la memoria descriptiva, cómputos métricos, planos pliegos de
+  condiciones, especificaciones y presupuesto confeccionados por
+  Administración General de Aguas de Salta, para la ejecución de la obra
+  "Servicios de Aguas Corrientes en la Caldera", que en total asciende a la
+  suma de $ 127.035.05 (Cientos veintisiete mil treinta y cinco pesos con
+  05|00 Moneda Nacional), incluídos el 10 y 5 o|o para imprevistos é
+  inspección, respectivamente. Art. 2º — Autorízase a Administración General
+  de Aguas de Salta, a llamar a licitación pública para la adjudicación de la
+  obra de referencia, [...]
+NOTA DE LECTURA: Aritmética (control 2): el presupuesto básico de la licitación
+(A.56) es 110.465,26; por 1,15 da 127.035,05: cierra al centavo. «Cientos
+veintisiete» (sic). Planos citados y no acompañados (§P). La capa escribe «c
+aldera» (laxa espaciada).
+
+A.54
+FUENTE: 5227 h6 c2-c3 (Salta, martes 21 de agosto de 1956)
+FICHA: Decreto N 3904-E, 7 de agosto de 1956, expediente 1988-A-1956: aprueba el
+reconocimiento de una concesión de agua pública a la «Finca Wierna», catastro
+94, departamento de La Caldera, de Florencio Fernández Acevedo, para 200 ha con
+una dotación máxima de 150 l/s del río Wierna (margen izquierda), que en estiaje
+se reajusta entre todos los regantes. Clase: AGUAS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto hasta el art. 2 (h6 c2-c3).
+TEXTO:
+  DECRETO Nº 3904—E. SALTA, Agosto 7 de 1956. Expte. n: 1988—A—1956. VISTO
+  este expediente por el cual el señor Florencio Fernández solicita el
+  reconocimiento de una concesión de agua pública para irrigar su propiedad
+  denominada "Finca Wierna", catastro Nº 94, ubicada en el Departamento La
+  Caldera, con una superficie bajo riego de 200 hectáreas; y CONSIDERANDO: Que
+  mediante Resolución Nº 561 dictada por Administración General de Aguas de
+  Salta, se hace lugar a lo solicitado [...] Art. 1º — Apruébase el
+  reconocimiento de una concesión de agua pública al inmueble denominado
+  "Finca Wierna", catastro Nº 94, ubicada en el Departamento de La Caldera, de
+  propiedad del señor Florencio Fernández Acevedo, para irrigar con carácter
+  permanente y a perpetuidad, una superficie de doscientas hectáreas, con una
+  dotación máxima de ciento cincuenta litros por segundo a derivar del río
+  Wierna, (margen izquierda) y por la acequia de su propiedad. En época de
+  estiaje, esta dotación se reajustará proporcionalmente entre todos los
+  regantes a medida que disminuya el caudal del mencionado río.
+NOTA DE LECTURA: Aritmética: 150 / 200 = 0,75 l/s por hectárea, el máximo de
+abundancia. Es la concesión cuyo edicto publicó 1955 (A.48, «Acevedo», 150 l/s
+para 200 ha). «Fernández» en el visto, «Fernández Acevedo» en el artículo.
+
+A.55
+FUENTE: 5228 h4 c3 (Salta, miércoles 22 de agosto de 1956); sumario en h2
+FICHA: Decreto N 3928-A, 9 de agosto de 1956, expedientes 22.417 y 22.413/56: a
+propuesta de la Intervención del Hogar-Escuela «Dr. Luis Linares» de La Caldera,
+acepta desde el 2 de agosto la renuncia de la celadora Margarita Gladys Lizondo
+y designa en su reemplazo, desde el 10, a la maestra normal nacional María Elsa
+Valdivieso. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: el decreto hasta el art. 1 (h4 c3).
+TEXTO:
+  DECRETO Nº 3928—A. SALTA, Agosto 9 de 1956. Exptes. Nos: 22.417|56 y
+  22.413|56. VISTA la renuncia interpuesta; atento a lo informado por la
+  Oficina de Personal del Ministerio del rubro y a la propuesta formulada por
+  la Intervención del Hogar-Escuela "Dr. Luis Linares" de La Caldera, [...]
+  Art. 1º — Acéptase la renuncia al cargo de Celadora —Personal Transitorio a
+  Sueldo— 8ª categoría, del Hogar Escuela "Dr. Luis Linares" de La Caldera,
+  presentada por la Srta. Margarita Gladys Lizondo — L. C. [documento
+  omitido]—, con anterioridad al día 2 de agosto en curso; y desígnase en su
+  reemplazo a contar desde el 10 del corriente mes, a la M. N. N. Srta. María
+  Elsa Valdivieso — L. C. [documento omitido] [...]
+NOTA DE LECTURA: Valdivieso renuncia desde el 21 de septiembre (A.65).
+
+A.56
+FUENTE: 5231 h10 c2 (Salta, lunes 27 de agosto de 1956); apariciones por texto
+en 5231, 5232, 5233 y 5234
+FICHA: Aviso N 14.361 (dígito central empastado), Ministerio de Economía —
+A.G.A.S.: licitación pública para el 12 de septiembre para la ejecución de la
+obra N 343, «Servicio de Aguas Corrientes La Caldera», con presupuesto básico de
+$ 110.465,26; pliegos en San Luis 52, a $ 150. Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp: el aviso entero en su primera aparición (h10
+c2).
+TEXTO:
+  Nº 14.[?]61 — MINISTERIO DE ECONOMIA, FINANZAS Y OBRAS PUBLICAS
+  ADMINISTRACION GENERAL DE AGUAS DE SALTA Convócase a Licitación Pública para
+  el día 12 de setiembre próximo venidero a horas 11 ó día siguiente si fuera
+  feriado, para que tenga lugar la apertura de los sobres que contengan las
+  propuestas que se presentaren para la ejecución de la Obra Nº 343: SERVICIO
+  DE AGUAS CORRIENTES LA CALDERA, que cuenta con un presupuesto básico de m$n.
+  110.465,26 m|n. (CIENTO DIEZ MIL CUATROCIENTOS SESENTA Y CINCO PESOS CON
+  26|100 M|NACIONAL). Los pliegos de condiciones pueden ser consultados sin
+  cargo en el Departamento de Ingeniería de A. G. A. S., San Luis Nº 52, o
+  retirados previo pago de la suma de $ 150.— m|n. (Ciento cincuenta pesos
+  moneda nacional). LA INTERVENCION DE A. G. A. S.
+NOTA DE LECTURA: El número de aviso no se decide y no hace falta: el texto
+identifica el acto (v16 §6). 5235 h13 trae un trozo del mismo aviso cruzado con
+otra columna («servicio de . caldera»): quinta aparición probable, no asegurada
+por texto (E.6).
+
+A.57
+FUENTE: 5234 h7 c3 (Salta, jueves 30 de agosto de 1956)
+FICHA: Decreto N 4067-E, 23 de agosto de 1956, expediente 2136/A/956: liquida a
+A.G.A.S. $ 50.000 para los estudios que realiza en Campo Alegre, departamento de
+La Caldera. Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h7 c3); el articulado,
+capa.
+TEXTO:
+  DECRETO Nº 4067—E. SALTA, Agosto 23 de 1956. Expte. Nº 2136|A|956. VISTO
+  este expediente por el que Administración General de Aguas de Salta solicita
+  se liquide a su favor la suma de $ 50.000.— para poder atender con la misma
+  los estudios que realiza en Campo Alegre, Dpto. de La Caldera; Por ello y
+  atento a lo informado por Contaduría General, [...]
+NOTA DE LECTURA: Con A.50 ($ 45.000), $ 95.000 liquidados en el año para los
+estudios de Campo Alegre (suma propia).
+
+A.58
+FUENTE: 5243 h10 c1 (Salta, miércoles 12 de septiembre de 1956)
+FICHA: Decreto N 4200-A, 4 de septiembre de 1956: art. 2, reconoce los servicios
+de Sixto Ugarte, peón de patio del Hogar Escolar «Dr. Luis Linares» de La
+Caldera, del 1 al 31 de julio. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y art. 2 (h10 c1).
+TEXTO:
+  DECRETO Nº 4200—A. SALTA, Setiembre 4 de 1956. Exptes. Nºs. 22.430,
+  22.463|56, 22.463|56. [...] Art. 2º.— Reconócense los servicios prestados
+  por el señor Sixto Ugarte -C. I. [documento omitido]- como Peón de Patio
+  -Personal de Servicio transitorio a sueldo- en la categoría Novena del Hogar
+  Escolar "Dr. Luis Linares" de la Caldera durante el tiempo comprendido desde
+  el 1º al 31 de julio ppdo. (Expte. 22.446|56).
+NOTA DE LECTURA: El encabezado repite el 22.463 y no trae el 22.446 del artículo
+(E.9).
+
+A.59
+FUENTE: 5253 h9 c1 (Salta, viernes 28 de septiembre de 1956); sumario en h2
+FICHA: Decreto N 4488-G, 20 de septiembre de 1956, expediente 7966/56: acepta la
+renuncia de Eduardo O. Colambres al cargo de interventor municipal de La
+Caldera, dándole las gracias por los servicios prestados. Clase:
+CARGOS+HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h9 c1).
+TEXTO:
+  DECRETO Nº 4488—G. SALTA, 20 de setiembre de 1956. Expte. nº 7966|56. VISTA
+  la renuncia interpuesta, El Interventor Federal de la Provincia DECRETA:
+  Art. 1º — Acéptase la renuncia presentada por el señor Eduardo O. Colambres,
+  al cargo de Interventor Municipal de la localidad de La Caldera, dándosele
+  las gracias por los importantes y patrióticos servicios prestados. [...]
+  ALEJANDRO LASTRA José María Ruda
+NOTA DE LECTURA: El nombramiento de Colambres no aparece en el año: sólo consta
+por su renuncia (v16 §5.3; E.3). La intervención de la comuna es de octubre de
+1955 (A.45 de 1955).
+
+A.60
+FUENTE: 5253 h9 c1 (Salta, viernes 28 de septiembre de 1956); sumario en h2
+FICHA: Decreto N 4489-G, 20 de septiembre de 1956: «vista la vacancia», designa
+interventor municipal de La Caldera a Cecilio Muñoz. Clase: CARGOS+HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h9 c1).
+TEXTO:
+  DECRETO Nº 4489—G. SALTA, 20 de setiembre de 1956. VISTA la vacancia. El
+  Interventor Federal de la Provincia DECRETA: Art. 1º — Desígnase,
+  Interventor Municipal de la localidad de La Caldera, al señor Cecilio Muñoz.
+  Art. 2º.— Comuníquese, publíquese, insértese en el Registro Oficial y
+  archívese. ALEJANDRO LASTRA [José María Ruda]
+
+A.61
+FUENTE: 5257 h8 c2-c3 (Salta, lunes 1 de octubre de 1956)
+FICHA: Decreto N 4538-A, 25 de septiembre de 1956, expedientes 22.490, 22.358 y
+22.692/56: art. 3, reconoce los servicios de Sixto Ugarte, peón de patio del
+Hogar Escolar «Dr. Luis Linares» de La Caldera, desde el 1 de agosto. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado (h8 c2) y art. 3 (h8 c3). El
+recorte corta la fecha final del período; la capa da «al 31 de agosto».
+TEXTO:
+  DECRETO Nº 4538—A. SALTA, 25 de setiembre de 1956. Exptes. nºs. 22.490|56,
+  22.358|56 y 22.692|56. [...] Art. 3º — Reconócense los servicios prestados
+  por el señor Sixto Ugarte, C. de I. [documento omitido], como Peón de Patio
+  -categoría novena- personal transitorio a sueldo del Hogar Escolar "Dr. Luis
+  Linares" de La Caldera, desde el 1º [al 31] de agosto ppdo. (Expte. nº
+  22.692|56).
+NOTA DE LECTURA: La capa escribe «ligarte».
+
+A.62
+FUENTE: 5259 h6 c3 (Salta, miércoles 3 de octubre de 1956); sumario en h2
+FICHA: Decreto N 4576-G, 27 de septiembre de 1956, expedientes 7960/56 y
+1528/56, nota 3562 de Jefatura de Policía: deja cesante desde el 27 de
+septiembre a José León Vilca, comisario de 3ª de la dependencia policial de La
+Caldera, por infracción al art. 1162 inc. 6º del Reglamento General de Policía,
+«con motivo de contravenir a órdenes policiales en vigencia». Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero (h6 c3).
+TEXTO:
+  DECRETO Nº 4576—G. Salta, setiembre 27 de 1956. Expediente Nº 7960|56 y
+  1528|56. Visto lo solicitado por Jefatura de Policía, en nota Nº 3562 de
+  fecha 17 de setiembre del año en curso, [...] Art. 1º — Déjase cesante con
+  anterioridad al día 27 de setiembre de 1956, a don José León Vilca, en el
+  cargo de Comisario de 3ª de la dependencia policial de La Caldera, por
+  infracción al artículo 1162 inciso 6º del Reglamento General de Policía, con
+  motivo de contravenir a órdenes policiales en vigencia. [...] ALEJANDRO
+  LASTRA Juan Francisco Mathó
+NOTA DE LECTURA: El sumario (h2) escribe «caidera». Lo reemplaza Cándido Gómez
+(A.74).
+
+A.63
+FUENTE: 5261 h15 c1 (Salta, viernes 5 de octubre de 1956); sumario en h3
+FICHA: Resolución N 4849-A, 2 de octubre de 1956, expediente 22.720/56: deja
+establecido que Herminia Blácida Córdoba, designada mucama del Hogar Escuela
+«Dr. Luis Linares» de La Caldera, se desempeña desde el 27 de diciembre de 1954
+en la Mayordomía de la Asistencia Pública, con la misma categoría y funciones.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: la resolución entera (h15 c1).
+TEXTO:
+  RESOLUCION Nº 4849—A. SALTA, Octubre 2 de 1956. Expediente Nº 22.720|56.
+  —VISTO este expediente en el que el Jefe de la Oficina de Personal informa
+  que la Sra. Herminia Blácida Córdoba, designada como Mucama del Hogar
+  Escuela "Dr. Luis Linares" de La Caldera, Personal de servicio transitorio a
+  sueldo, 9º categoría, se encuentra prestando servicios en la Asistencia
+  Pública desde el día 27 de diciembre de 1954; [...] 1º.— Dejar debidamente
+  establecido, que la señora Herminia Blácida Córdoba, L. C. [documento
+  omitido], designada como Mucama del Hogar Escuela "Dr. Luis Linares" de La
+  Caldera, Personal de Servicio Transitorio a sueldo, 9º Categoría-, se
+  desempeña desde el 27 de diciembre del año 1954, en la Mayordomía de la
+  Asistencia Pública, con la misma categoría y funciones. [...] Jorge Luis
+  Fernández Pastor
+NOTA DE LECTURA: «Blácida» en el impreso. Su designación como mucama no aparece
+en el año (E.3).
+
+A.64
+FUENTE: 5262 h8 c3 y h9 c1 (Salta, lunes 8 de octubre de 1956)
+FICHA: Decreto N 4663-G, 3 de octubre de 1956, notas 3720, 3695, 3694 y 3721 de
+Jefatura de Policía: art. 3, suspende cinco días desde el 1 de octubre a
+Victoriano Molina, cabo de la dependencia policial de La Caldera, por haber
+usado diez días de licencia sin autorización. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h8 c3) y art. 3 (h9 c1). Número:
+la imagen empasta el primer dígito; decide la serie (4661-G en la misma
+columna). Un expediente del encabezado (8093?) no se lee.
+TEXTO:
+  DECRETO Nº [4]663—G. Salta, 3 de octubre de 1956. [...] Art. 3º — Suspéndese
+  en el ejercicio de sus funciones, sin obligación de prestar servicio, por el
+  término de cinco (5) días, con anterioridad al día 1º de octubre del
+  corriente año a don Victoriano Molina Cabo de la dependencia policial de La
+  Caldera, por infracción a los artículos 1160 inciso 6º 1162 incisos 7º y 8º
+  del Reglamento General de Policía, con motivo de haber hecho uso de licencia
+  por el término de 10 días sin previa autorización de Jefatura de Policía.
+
+A.65
+FUENTE: 5271 h7 c2 (Salta, jueves 25 de octubre de 1956); sumario en h2
+FICHA: Decreto N 4794-A, 16 de octubre de 1956, expediente 22.862/56: acepta
+desde el 21 de septiembre la renuncia de María Elsa Valdivieso a la celaduría
+(8ª categoría) del Hogar Escolar «Dr. Luis Linares» de La Caldera. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado y art. 1 (h7 c2).
+TEXTO:
+  DECRETO Nº 4794—A. SALTA, 16 de octubre de 1956. Expte. nº 22.862|56. [...]
+  Art. 1º — Acéptase, con anterioridad al 21 de setiembre ppdo., la renuncia
+  al cargo de Celadora del Hogar Escolar "Dr. Luis Linares" de La Caldera
+  -categoría 8ª- personal transitorio a sueldo, presentada por la señorita
+  María Elsa Valdivieso, L. C. [documento omitido]. [...] ALEJANDRO LASTRA
+  JULIO PASSERON
+
+A.66
+FUENTE: 5271 h13 c2-c3 (Salta, jueves 25 de octubre de 1956); sumario en h3
+FICHA: Decreto N 4824-E, 18 de octubre de 1956, expediente 1676/A/956: con la
+resolución 1163/56 de A.G.A.S. sobre la licitación, adjudica al contratista Luis
+A. Paterlini la obra N 343 «Servicio de Aguas Corrientes en La Caldera» por $
+125.930,39, y autoriza a A.G.A.S. a invertir $ 12.593,04 y $ 6.296,52. Clase:
+AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h13 c2) y arts. 1 y 2 (h13 c2-c3);
+el destino de las dos sumas del art. 2, capa.
+TEXTO:
+  DECRETO Nº 4824—E. SALTA, Octubre 18 de 1956.— Expte. Nº 1676|A|956.— VISTO
+  este expediente en el que Administración General de Aguas de Salta adjunta
+  copia de la Resolución Nº 1163|56, dictada en base a la licitación pública
+  convocada para la ejecución de la obra Nº 343 "Servicio de aguas
+  corrientes—La Caldera", correspondiéndole su adjudicación, en mérito al
+  resultado de la misma, a favor del contratista don Luis A. Paterlini; Por
+  ello, [...] Art. 1º — Adjudícase al contratista don Luis A. Paterlini la
+  ejecución de la obra Nº 343 "Servicio de Aguas Corrientes en La Caldera", en
+  la suma total de $ 125.930.39 (Ciento veinticinco Mil Novecientos Treinta
+  Pesos con 39|00 Moneda Nacional), de conformidad en un todo a la propuesta
+  presentada en oportunidad de su concurrencia a la licitación pública
+  convocada al efecto. Art. 2º — Autorízase a Administración General de Aguas
+  de Salta a invertir las sumas de $ 12.593.04 (Doce Mil Quinientos Noventa y
+  Tres Pesos con 04|00 M|Nacional), y $ 6.296.52 [...]
+NOTA DE LECTURA: Aritmética: el 10 % de 125.930,39 es 12.593,04 y el 5 % es
+6.296,52: cierran (imprevistos e inspección, como en A.53). La adjudicación
+supera el presupuesto básico de 110.465,26 en un 14 %. Mismo expediente que
+A.53.
+
+A.67
+FUENTE: 5272 h6 c3 y h7 c1 (Salta, viernes 26 de octubre de 1956)
+FICHA: Decreto N 4847-A, 18 de octubre de 1956, expedientes 22.882 y 22.889/56:
+segundo art. 2, reconoce los servicios de Sixto Ugarte, peón de patio del Hogar
+Escuela «Dr. Luis Linares» de La Caldera, del 1 al 30 de septiembre. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h6 c3) y el artículo (h7 c1).
+TEXTO:
+  DECRETO Nº 4847—A. Salta, Octubre 18 de 1956. Expediente Nº 22.882 y
+  22.889|56. [...] Art. 2º — Reconócense los servicios prestados por el señor
+  Sixto Ugarte (C. I. [documento omitido]), como Peón de Patio del Hogar
+  Escuela "Dr. Luis Linares" de la Caldera, -Personal de Servicio Transitorio
+  a sueldo, Novena categoría- desde el 1º al 30 de setiembre pasado. (Exp. Nº
+  22.889|56).
+NOTA DE LECTURA: El impreso trae dos «Art. 2º» (E.9).
+
+A.68
+FUENTE: 5272 h8 c3 y h9 c1 (Salta, viernes 26 de octubre de 1956)
+FICHA: Decreto N 4857-E, 18 de octubre de 1956, expediente 2132-P-56: aprueba la
+resolución 612 de la Caja de Jubilaciones que declara caducas, por fallecimiento
+de sus beneficiarios, pensiones a la vejez (Ley 1204, art. 5 inc. a); «LA
+CALDERA: 2145 — JULIANA BORJA DE IRIARTE, con anterioridad al 1-6-56». Clase:
+OTRO.
+MODO DE LECTURA: imagen, 140 y 150 ppp: encabezado (h8 c3) y el renglón (h9 c1).
+TEXTO:
+  DECRETO Nº 4857—E. SALTA, 18 de octubre de 1956. Expte. nº 2132—P—56. [...]
+  "Art. 1º — DECLARAR CADUCAS, por haber fallecido sus beneficiarios las
+  siguientes [...] "LA CALDERA: 2145 — JULIANA BORJA DE IRIARTE, con
+  anterioridad al 1-6-56.
+NOTA DE LECTURA: La lista entera no se recuenta (E.8). La R final de «Iriarte»
+está sobreimpresa.
+
+A.69
+FUENTE: 5272 h21 c1 (Salta, viernes 26 de octubre de 1956)
+FICHA: Decreto N 4896-E, 19 de octubre de 1956, expediente 2476/C/1956: aprueba
+la resolución de la Caja de Jubilaciones que acuerda jubilación ordinaria al
+director de la Escuela de La Caldera, dependiente del Consejo General de
+Educación, Justo Pastor Lizondo. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h21 c1); el art. 2 de la
+resolución, capa.
+TEXTO:
+  DECRETO Nº 4896—E. SALTA, Octubre 19 de 1956.— Expte. Nº 2476|C|1956.— VISTO
+  este expediente por el que el Director de la Escuela de La Caldera,
+  dependiente del Consejo General de Educación de la Provincia, señor Justo
+  Pastor Lizondo, solicita ante la Caja de Jubilaciones y Pensiones,
+  jubilación [...] [capa:] "Art. 2º — ACORDAR al Director de la Escuela de La
+  Caldera, dependiente del Consejo General de Educación de la Provincia, señor
+  Justo Pastor Lizondo, Mat. Ind. [matrícula omitida], el beneficio de una
+  jubilación ordinaria [...]
+NOTA DE LECTURA: Lizondo fue juez de paz y director de la escuela Juana Moro de
+López (P29, P47, P52, P56). El haber no se miró.
+
+A.70
+FUENTE: 5274 h14 c3 (Salta, martes 30 de octubre de 1956); sumario en h3
+FICHA: Decreto N 4945-G, 23 de octubre de 1956, expediente 6229/56: aprueba el
+presupuesto de gastos y cálculo de recursos de la Intervención de la
+Municipalidad de La Caldera para el ejercicio 1956, agregado a fojas 15 a 17 del
+expediente. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h14 c3); el articulado,
+capa.
+TEXTO:
+  DECRETO Nº 4945—G. SALTA, Octubre 23 de 1956. Expte. Nº 6229|56. —VISTO el
+  presente expediente en el que la Intervención de la Municipalidad de La
+  Caldera eleva a consideración y aprobación de esta Intervención Federal el
+  proyecto de Presupuesto de Gastos y Cálculos de Recursos para el presente
+  ejercicio económico; y atento a lo informado por Contaduría General a fojas
+  25 y a lo aconsejado por la Comisión de Presupuesto, Reorganización y
+  Fiscalización a fojas 25 vta., [capa:] Art. 1º — Apruébase el presupuesto de
+  gastos y cálculos de recursos de la Intervención de la Municipalidad de La
+  Caldera que ha de regir durante el presente ejercicio económico de 1956 y
+  que corre agregado de fojas 15 a fojas 17 de estos obrados. [...] JOSE MARIA
+  RUDA JULIO PASSERON
+NOTA DE LECTURA: El presupuesto no se publica: citado y no acompañado (E.3).
+Mismo expediente que la ordenanza impositiva (A.79).
+
+A.71
+FUENTE: 5284 h4 c3 (Salta, martes 13 de noviembre de 1956)
+FICHA: Resolución N 4931-A, 2 de noviembre de 1956, expediente 23.066/56:
+liquida viáticos a personal del Servicio Médico de Campaña; 6º, $ 289,40 (siete
+días) al peluquero de los Hogares de La Caldera y La Merced, Mariano Gallardo.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado (h4 c1) y apartado 6º (h4 c3).
+TEXTO:
+  RESOLUCION Nº 4931—A. SALTA, 2 de noviembre de 1956. Expte. nº 23.066|56.
+  [...] 6º — Liquidar a favor del Peluquero de los Hogares de la Caldera y La
+  Merced, Sr. Mariano Gallardo, la suma de $ 289.40 m|n. (Doscientos ochenta y
+  nueve pesos con 40|100 Moneda Nacional), importe correspondiente a siete
+  días de viáticos, de conformidad al detalle que corre agregado a estas
+  actuaciones.
+NOTA DE LECTURA: El apartado 1º liquida $ 61,40 al médico regional de La Viña,
+Eugenio Romanov (no toca al departamento).
+
+A.72
+FUENTE: 5287 h9 c1 (Salta, viernes 16 de noviembre de 1956); sumario en h3
+FICHA: Decreto N 5127-A, 12 de noviembre de 1956, expedientes 22.249/56 y
+22.926/56: por las denuncias de vecinos de La Caldera, declara cesante desde el
+10 de julio a la auxiliar 3ª gobernanta del Hogar Escolar «Dr. Luis Linares»,
+Eugenia Facunda Usi, por las conclusiones del sumario, y prorroga hasta el 31 de
+diciembre la intervención del Hogar dispuesta por el decreto 3595/56. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y arts. 1 y 2 (h9 c1), con el art.
+2 cortado al pie; su final, capa. Número: la imagen empasta el primer dígito;
+decide la serie (5123-A a 5126-A en h8, 5130-G en h9).
+TEXTO:
+  DECRETO Nº [5]127—A. SALTA Noviembre 12 de 1956. —VISTAS las actuaciones que
+  corren en los expedientes números 22.249|56 y 22.926|56 que se relacionan
+  con las denuncias formuladas por vecinos de La Caldera en contra de la
+  Gobernanta del Hogar Escolar "Dr. Luis Linares", señorita Eugenia F. Usi;
+  atento a lo informado por el señor Interventor de la Dirección General de
+  Sanidad a fs. 4|5, a lo aconsejado por el señor Asesor Letrado en su
+  dictamen de fs. 51|53 y a la Resolución emanada del Ministerio del rubro,
+  [...] Art. 1º.— Declárase cesante con anterioridad al día 10 de julio del
+  año en curso, a la Auxiliar 3º -Gobernanta del Hogar Escolar "Dr. Luis
+  Linares", de La Caldera, señorita Eugenia Facunda Usi L. C. [documento
+  omitido] en virtud de las conclusiones a que se llegó en el sumario recaído
+  en los expedientes Nºs. 22.249|56 y 22.926|56. Art. 2º.— Prorrógase hasta el
+  31 de diciembre del año en curso, la Intervención dispuesta por decreto Nº
+  3595|56 al Hogar Escolar "Dr. Luis Linares" de La Caldera [...]
+NOTA DE LECTURA: Ninguno de los tres actos (A.47, A.49 y éste) dice qué se
+denunció. La capa escribe «qaldeiia» y «oaldera».
+
+A.73
+FUENTE: 5292 h4 c3 y h5 c1 (Salta, lunes 26 de noviembre de 1956); sumario en h2
+FICHA: Decreto N 5291-G, 20 de noviembre de 1956, expedientes 1559/56 y 1328/56:
+designa jueces de paz titular y suplente del distrito municipal de La Caldera a
+Horacio Postigo y Antonio Vivas, y del de El Bordo (Gral. Güemes) a Carlos H.
+Miy y Serafín Salva. Clase: JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h4 c2), art. 1 (h4 c3 y h5 c1) y
+art. 2 (h5 c1).
+TEXTO:
+  DECRETO Nº 5291—G. SALTA, 20 de noviembre de 1956. Expte. nº 1559|56 y
+  1328|56. [...] Art. 1º — Desígnase, Jueces de Paz Titular y Suplente del
+  Distrito Municipal de LA CALDERA, a los señores HORACIO POSTIGO (M. I.
+  [matrícula omitida]) y ANTONIO VIVAS (M. I. [matrícula omitida]),
+  respectivamente. Art. 2º — Desígnase Jueces de Paz Titular y Suplente del
+  Distrito Municipal de EL BORDO (Dpto. General Güemes), a los señores CARLOS
+  H. MIY [...] y SERAFIN SALVA [...], respectivamente.
+NOTA DE LECTURA: Cubre las vacantes que dejaron en 1955 David M. Serrey y
+Salvador López (A.53 y A.55 de 1955), sin nombramiento hasta aquí. La
+interventora del Hogar es «[...] de Postigo» (A.49): el parentesco no se afirma.
+«Antonio Vivas» y el Ramón Antonio Vivas de A.28: identidad no acreditada. El
+nombre de Vivas, que sigue en h5, lo devolvió además el anillo de actores.
+
+A.74
+FUENTE: 5296 h11 c1 y h12 c2 (Salta, jueves 29 de noviembre de 1956)
+FICHA: Decreto N 5386-G, 26 de noviembre de 1956, expediente 8515/56: movimiento
+de personal de Policía; inciso 17), asigna al cargo de comisario de 3ª de la
+Comisaría de La Caldera al oficial inspector Cándido Gómez, en reemplazo de José
+León Vilca. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h11 c1) e inciso 17) (h12 c2).
+TEXTO:
+  DECRETO Nº 5386—G. SALTA, Noviembre 26 de 1956.— Expte. Nº 8515|56.— [...]
+  17) Al cargo de Comisario de 3º de la Comisaría de La Caldera (Dpto. La
+  Caldera), al actual Oficial Inspector del Personal Superior de Seguridad y
+  Defensa, don Cándido Gómez, en reemplazo de don José León Vilca;
+NOTA DE LECTURA: «Comisaría» aquí; «Sub-Comisaría» en enero y febrero (A.2,
+A.7). En diciembre se nombra a otro oficial inspector «en reemplazo de don
+Cándido Gómez» (5310 h9, capa; B.4).
+
+A.75
+FUENTE: 5297 h7 c2 y h8 c1 (Salta, viernes 30 de noviembre de 1956)
+FICHA: Resolución N 4994-A, 27 de noviembre de 1956, expedientes 23.171 y
+23.169/56: 3º, dos días de suspensión desde el 12 de noviembre a Presentación
+vda. de Valdez, cocinera del Hogar Escuela «Dr. Luis Linares» de La Caldera, por
+falta de disciplina. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 140 y 150 ppp: encabezado y apartado 3º (h7 c2, h8 c1).
+TEXTO:
+  RESOLUCION Nº 4994—A. SALTA, 27 de noviembre de 1956. Exptes. Nros. 23.171 y
+  23.169|56. VISTOS estos expedientes en los que se solicitan se apliquen
+  sanciones disciplinarias al personal que se detalla en los mismos; atento a
+  la gravedad de las faltas cometidas [...] 3º — Aplicar dos (2) días de
+  suspensión a la Sra. PRESENTACION VDA. DE VALDEZ, (L. C. [documento
+  omitido]), Cocinera del Hogar Escuela "Dr. Luis Linares" de La Caldera,
+  -Personal Transitorio a Sueldo, Octava Categoría-, con anterioridad al día
+  12 de noviembre en curso, en razón de la falta de disciplina incurrida en el
+  desempeño de sus funciones. Expte. Nº 23.169|56.
+
+A.76
+FUENTE: 5300 h6 c1 y h7 c1 (Salta, martes 4 de diciembre de 1956); sumario en h2
+FICHA: Resolución N 5013-A, 30 de noviembre de 1956: por el concurso de precios
+23, adjudica a la firma Dergan E. Nallar los artículos de vestir para el Hogar
+del Niño de la ciudad y el Hogar Escolar «Dr. Luis Linares» de La Caldera, por $
+3.042,78. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 120 y 150 ppp: la resolución entera (h6 c1, h7 c1).
+TEXTO:
+  RESOLUCION Nº 5013—A. SALTA, Noviembre 30 de 1956.— VISTO este expediente en
+  el que corren agregadas las propuestas presentadas al Concurso de Precios Nº
+  23 realizado para la provisión de artículos de vestir con destino al Hogar
+  del Niño de esta ciudad y Hogar Escolar "Dr. Luis Linares" de La Caldera; y
+  CONSIDERANDO: Que del estudio practicado por la Oficina de Compras de este
+  Ministerio sobre las propuestas efectuadas, resulta más conveniente la
+  efectuada por la firma Dergan E. Nallar, según cuadro comparativo de precios
+  que corre a fs. 14; [...] 1º.— Adjudicar a la firma Comercial Dergan E.
+  Nallar, los artículos de vestir que se detallan a fs. 15 de estas
+  actuaciones con destino al Hogar del Niño y Hogar Escolar "Dr. Luis
+  Linares", cuyo total asciende a la suma de $ 3.042,78 m|n. (Tres Mil
+  Cuarenta y Dos Pesos Con 78|100 Moneda Nacional) [...] JULIO PASSERON
+NOTA DE LECTURA: El acto no separa lo que va a cada Hogar.
+
+A.77
+FUENTE: 5302 h7 c2 (Salta, lunes 10 de diciembre de 1956); 13 apariciones por
+texto, 5302 a 5314
+FICHA: Aviso N 14869, edicto citatorio de A.G.A.S.: Benita N. de Apaza solicita
+reconocimiento de concesión de agua pública para regar 8 ha de su propiedad,
+catastro 84 de La Caldera, con 4,20 l/s del río La Caldera. Clase: AGUAS.
+MODO DE LECTURA: imagen, 150 ppp: el edicto entero en su primera aparición (h7
+c2).
+TEXTO:
+  Nº 14869 — EDICTO CITATORIO.— A los efectos establecidos por el Código de
+  Aguas, se hace saber que Benita N. de Apaza, tiene solicitado reconocimiento
+  de concesión de agua pública para regar con un caudal de 4,20 l|seg.,
+  proveniente del Río La Caldera, 8 Has. de su propiedad catastro 84 de La
+  Caldera.— ADMINISTRACION GENERAL DE AGUAS DE SALTA.— e) 10 al 21|12|56.—
+NOTA DE LECTURA: Aritmética: 4,20 / 8 = 0,525 l/s por hectárea. «Apaza» está en
+el anillo 2 como apellido; aquí es titular de agua en el departamento, como
+Andrés Glicerio Apaza en 1955 (A.15 de 1955).
+
+A.78
+FUENTE: 5308 h9 c1-c2 (Salta, martes 18 de diciembre de 1956); sumario en h3
+FICHA: Resolución N 5055-A, 12 de diciembre de 1956, expediente 23.335/56: por
+los concursos de precios 1, 3 y 11, adjudica la provisión de comestibles a los
+Hospitales de la Capital, Hogar del Niño, Centro de Higiene Social, Hogar de
+Ancianos de La Merced y Hogar Escolar de La Caldera a seis firmas, por $
+27.194,10. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: la resolución y el cuadro (h9 c1-c2).
+TEXTO:
+  RESOLUCION Nº 5055—A. SALTA, Diciembre 12 de 1956. Expte. Nº 23.335|56.
+  —VISTO en este expediente la necesidad de proveer de comestibles a los
+  Hospitales de la Capital, Hogar del Niño, Centro de Higiene Social, Hogar de
+  Ancianos de La Merced, Hogar Escolar de La Caldera, dependientes de este
+  Ministerio; [...] 1º.— Adjudicar a las firmas que se especifican a
+  continuación, la provisión de comestibles por el importe total que en cada
+  uno se consigna, lo que hace un total general de Veintisiete Mil Ciento
+  Noventa y Cuatro Pesos con 10|100 M|N. ($ 27.194.10), con destino a los
+  Hospitales de la Capital, Hogar del Niño, Centro de Higiene Social, Hogar de
+  Ancianos de La Merced y Hogar Escolar de La Caldera: Abraham Sivero .... $
+  10.569.05 Guamper S. R. L. .... " 7.514.35 Domingo Batule é Hijos .... "
+  355.00 Antonio Bayo (h). .... " 2.085.00 José García Vega é Hijos .... "
+  3.0[8]2.50 Molino Cintioni Hnos. .... " 3.[5]88.20 Total General: $
+  27.1[9]4.10
+NOTA DE LECTURA: SUBTOTAL RECALCULADO: 10.569,05 + 7.514,35 + 355 + 2.085 +
+3.082,50 + 3.588,20 = 27.194,10, que coincide con el total en letras; la suma
+decide los tres dígitos empastados (control 2 de v17 §5.6). El acto no separa lo
+que va al Hogar.
+
+A.79
+FUENTE: 5311 h8 c1-c2 (Salta, viernes 21 de diciembre de 1956); sumario en h2
+FICHA: Decreto N 5566-G, 12 de diciembre de 1956, expediente 6229/56: aprueba la
+Ordenanza Impositiva que regirá en la Intervención Municipal de La Caldera
+durante el año, agregada a fojas 3 a 13 del expediente. Clase:
+HACIENDA-MUN+NORMA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h8 c1-c2); el articulado,
+capa.
+TEXTO:
+  DECRETO Nº 5566—G. SALTA 12 de diciembre de 1956. Expte. nº 6229|56. VISTO
+  el presente expediente en el que la Intervención Municipal de La Caldera,
+  eleva a consideración y aprobación de esta Intervención Federal la Ordenanza
+  Impositiva que ha de regir en dicha Comuna durante el presente año; y atento
+  a lo aconsejado por la Comisión de Presupuesto, de Reorganización y
+  Fiscalización de la Administración Provincial a fs. 27, [capa:] Art. 1º —
+  Apruébase la ordenanza impositiva que ha de regir en la intervención
+  municipal de La Caldera durante el corriente año y que corre a fojas 3 a
+  fojas 13 del expediente de numeración y año arriba citados. [...] RUDA
+  MARTINEZ DE HOZ (h)
+NOTA DE LECTURA: La ordenanza no se publica: citada y no acompañada (E.3). Se
+aprueba a dos semanas del cierre del año que debía regir.
+
+A.80
+FUENTE: 5313 h12 c2 (Salta, miércoles 26 de diciembre de 1956)
+FICHA: Decreto N 5632-A, 17 de diciembre de 1956, expediente 23.107/56: a pedido
+de la interventora del Hogar Escuela «Dr. Luis Linares» de La Caldera, reconoce
+los servicios de las celadoras Luisa Elva Rodríguez y Mercedes Paula Delgado (1
+de septiembre a 31 de octubre) y del peón de patio Sixto Ugarte (1 al 31 de
+octubre). Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h12 c2); los tres
+artículos, capa.
+TEXTO:
+  DECRETO Nº 5632—A. SALTA, 17 de diciembre de 1956. Expte. Nº 23.107|56.
+  —VISTO este expediente en el que la Interventora del Hogar Escuela "Dr. Luis
+  Linares" de la La Caldera, solicita reconocimiento de servicios prestados en
+  ese establecimiento por las Srtas. Luisa Elva Rodríguez y Mercedes Paula
+  Delgado y Sr. Sixto Ugarte; [...] [capa:] art. 1º reconócense los servicios
+  prestados por la srta. luisa elva rodriguez [...] como celadora -personal
+  transitorio a sueldo -categoría 8ª- del hogar escuela "dr. luis linares" de
+  la caldera, durante el tiempo comprendido entre el 1º de setiembre y 31 de
+  octubre del año en curso. art. 2º [...] mercedes paula delgado [...]
+  celadora [...] art. 3º [...] sixto ugarte [...] peón de patio [...]
+  categoría 9ª [...] entre el 1º y 31 de octubre del año en curso.
+NOTA DE LECTURA: «de la La Caldera» (sic). Última pieza de la serie de Ugarte:
+no se halló el reconocimiento de noviembre ni el de diciembre (B.1).
+
+A.81
+FUENTE: 5315 h9 c2 (Salta, viernes 28 de diciembre de 1956)
+FICHA: Decreto N 5682-G, 20 de diciembre de 1956, expediente 8018/56: a pedido
+de la Escuela «Juana Moro de López» de La Caldera, liquida $ 785 para que la
+Cárcel Penitenciaria fabrique un cofre para guardar la Bandera Argentina con
+destino a esa escuela. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 150 ppp: encabezado y visto (h9 c2); el art. 1, capa.
+TEXTO:
+  DECRETO Nº 5682—G. SALTA, 20 de diciembre de 1956. Expte. Nº 8018|56. VISTO
+  este expediente en el que la Escuela "Juana Moro de López" de La Caldera,
+  solicita la donación de un cofre para guardar la Bandera Argentina, Por
+  ello, y conforme a la constancia del presupuesto presentado por la Dirección
+  de la Cárcel Penitenciaria a fs. 2 y atento a lo informado por Contaduría
+  General a fs. 3 de estos obrados, [capa:] Art. 1º — Previa intervención de
+  Contaduría General liquídese por Tesorería General de la Provincia la suma
+  de setecientos ochenta y cinco pesos moneda nacional ($ 785) [...] en
+  concepto de la fabricación de un cofre con destino a la escuela "Juana Moro
+  de López" de La Caldera [...]
+
+§B · VECINDAD
+-------------
+
+B.1 · Núcleos ya fichados
+Vaqueros (subcomisaría, enfermería, Hogar Agrícola San Cayetano), La Calderilla
+(el partido Calderilla de A.45), el río La Caldera (A.77), el río Vaqueros y la
+hijuela Urquiza (A.5), la finca y el río Wierna (A.54), Campo Alegre (A.33,
+A.50, A.57), el Potrero de Valencia (A.45), Mojotoro (por atribución de A.23 y
+A.52), la finca El Durazno (A.44), el Hogar Escolar «Dr. Luis Linares», la
+escuela Juana Moro de López, la Estación Sanitaria y consultorio (A.10), el
+Registro Civil, el juzgado de paz, la subcomisaría (comisaría desde noviembre) y
+la Municipalidad de La Caldera aparecen dentro de fichas del §A: no se repiten.
+Los núcleos que sólo aparecen en actos que no nombran el término van a B.2.
+Serie del año: los reconocimientos mensuales de servicios de Sixto Ugarte, peón
+de patio del Hogar, se publican para diciembre de 1955 y de enero a octubre de
+1956 (A.4, A.13, A.19, A.34, A.39, A.46, A.51, A.58, A.61, A.67, A.80): once
+meses seguidos; noviembre y diciembre de 1956 no aparecen en el año.
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+
+B.2.1
+FUENTE: 5074 h7 c1 (Salta, lunes 2 de enero de 1956)
+FICHA: Decreto N 1129-S, 23 de diciembre de 1955, expedientes 20.931/55,
+20.925/55 y 20.96[?]/55: art. 2, acepta desde el 1 de diciembre la renuncia de
+Lucía F. de Pernas, lavandera del Hogar Escuela «Dr. Luis Linares». No nombra el
+departamento. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y art. 2 (h7 c1).
+TEXTO:
+  DECRETO Nº 1129—S. SALTA, Diciembre 23 de 1955. [...] Art. 2º.— Acéptase la
+  renuncia presentada por la señora LUCIA F. DE PERNAS, como Lavandera del
+  Hogar Escuela "Dr. Luis Linares" —personal de servicio transitorio a sueldo—
+  con anterioridad al día 1º de Diciembre del corriente año.
+NOTA DE LECTURA: La vacante la cubre A.31 («Lucía Ferro de Perna»).
+
+B.2.2
+FUENTE: 5083 h5 c2 (Salta, lunes 16 de enero de 1956)
+FICHA: Decreto N 1268-S, 4 de enero de 1956: designa interina auxiliar 6ª
+enfermera de Vaqueros, desde el 15 de diciembre, a Blanca Rosa Britos, en
+reemplazo de la titular Eusebia Ruiz, en licencia reglamentaria. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y art. 1 (h5 c2).
+TEXTO:
+  DECRETO Nº 1268—S. SALTA, Enero 4 de 1956. Exptes. Nos. 20.995|55,
+  20.998|55, 20.961|55, 20.960|55 y 20.992|55. [...] Art. 1º — Desígnase en
+  carácter interino Auxiliar 6º —Enfermera de Vaqueros— a la señora BLANCA
+  ROSA BRITOS, con anterioridad al día 15 de diciembre ppdo., en reemplazo de
+  la titular señorita Eusebia Ruiz, en uso de licencia reglamentaria.
+NOTA DE LECTURA: Eusebia Ruiz se confirma en A.25. Una «Eusebia Ruiz» es actora
+en un juicio por alimentos contra Carmen Antonio Britos (5156 h3, 5167 h30,
+capa): identidad no acreditada (B.4).
+
+B.2.3
+FUENTE: 5146 h6 c2-c3 (Salta, jueves 19 de abril de 1956); sumario en h2
+FICHA: Decreto N 2382-E, 3 de abril de 1956, expediente 359-A-1956: aprueba los
+estudios de A.G.A.S. para la obra N 284, «Estudios embalse en Campo Alegre», y
+la autoriza a realizar los trabajos por vía administrativa. No nombra el
+departamento. Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado (h6 c3); el articulado, capa.
+TEXTO:
+  DECRETO Nº [2382—E]. SALTA, Abril [3] de 1956. Expte. Nº 359|[A|1956]. VISTO
+  este expediente por el que Administración General de Aguas de Salta solicita
+  aprobación de los estudios realizados por dicha Repartición para la
+  ejecución de la obra 284 "Estudios Embalse en Campo Alegre" [...] [capa:]
+  art. 1º apruébanse los estudios realizados por administración general de
+  aguas de salta para la ejecución de la obra nº 284 estudios embalse en campo
+  alegre autorizándose a dicha repartición a realizar los trabajos por vía
+  administrativa [...]
+NOTA DE LECTURA: El número y la fecha, cortados por el recorte, se completan de
+la capa. Campo Alegre lo atribuyen a La Caldera A.33, A.50 y A.57.
+
+B.2.4
+FUENTE: 5154 h7 c1 (Salta, miércoles 2 de mayo de 1956)
+FICHA: Resolución N 202-G, 23 de abril de 1956: concede sesenta días de licencia
+por enfermedad desde el 28 de marzo al agente de policía de Vaqueros Alejandro
+Echazú. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: encabezado (h7 c1); el resuelve, capa.
+TEXTO:
+  [capa:] resolución nº 202-g salta 23 de abril de 1956 visto este expediente
+  en el que el agente de policía de vaqueros don alejandro echazu solicita
+  sesenta (60) días de licencia por enfermedad [...] resuelve 1º conceder
+  sesenta (60) días de licencia por enfermedad con goce de sueldo a favor del
+  agente de policía de vaqueros don alejandro echazu con anterioridad al día
+  28 de marzo ppdo. [...]
+NOTA DE LECTURA: Echazú figura en A.23 y A.52; otras licencias suyas en 5247 h16
+(capa, B.4).
+
+B.2.5
+FUENTE: 5156 h5 c2 (Salta, viernes 4 de mayo de 1956); sumario en h2
+FICHA: Resolución N 4531-S, 30 de abril de 1956, expediente 21.626/56: acuerda
+un subsidio al Hogar «San Cayetano» de Vaqueros para gastos imprevistos. Clase:
+ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y visto (h5 c2); el monto y el
+director, capa.
+TEXTO:
+  RESOLUCION Nº 4531—S. SALTA, 30 de abril de 1956. Expte. 21.626|56. VISTO
+  este expediente, en el que el Hogar "San Cayetano" de Vaqueros, solicita un
+  subsidio para sufragar gastos imprevistos; y atento lo informado por el
+  Departamento Contable de este Ministerio, [capa:] 1º acordar un subsidio de
+  $ 10.000 m|n. (diez mil pesos moneda nacional) al hogar agrícola san
+  cayetano de vaqueros, a fin de sufragar gastos imprevistos, debiendo el
+  departamento contable liquidar al director del citado hogar hno. segundo
+  baroffio en partidas de $ 5.000 cada una [...]
+NOTA DE LECTURA: Las partidas (2 de $ 5.000) cierran con el total de la capa; no
+se miraron en la imagen.
+
+B.2.6
+FUENTE: 5218 h6 c3 y h7 c1 (Salta, lunes 6 de agosto de 1956)
+FICHA: Decreto N 3798-A, 31 de julio de 1956, expediente 22.003/56: aprueba las
+becas prorrogadas por el Consejo de la Dirección de Patronato y Asistencia
+Social de Menores para 1956, por $ 400.930; entre ellas, las renovaciones del
+Hogar Agrícola San Cayetano (Vaqueros), internos a $ 85 mensuales por 12 meses.
+Clase: ESCUELA.
+MODO DE LECTURA: imagen, 120 ppp: encabezado (h6 c3) y el rótulo del Hogar (h7
+c1). Los nombres de los becados (menores) no se transcriben.
+TEXTO:
+  DECRETO Nº 3798—A. SALTA, julio 31 de 1956. Expte. nº 22003—56. VISTO este
+  expediente en el que el señor Presidente del Consejo de la Dirección de
+  Patronato y Asistencia Social de Menores, eleva para su aprobación las becas
+  prorrogadas para el año en curso; [...] Art. 1º — Apruébanse las becas
+  prorrogadas por el Consejo de la Dirección de Patronato y Asistencia Social
+  de Menores, a favor de estudiantes carentes de recursos para cursar estudios
+  durante el corriente año [...] por la cantidad total de ($ 400.930.—)
+  Cuatrocientos Mil Novecientos Treinta pesos Moneda Nacional. RENOVACIONES DE
+  BECAS: HOGAR AGRICOLA SAN CAYETANO (VAQUEROS) Internos con $ 85 mensuales
+  c|u. x 12 [...] [nombres de menores omitidos]
+NOTA DE LECTURA: La lista no se recuenta ni se recalcula el total (nombres de
+menores; E.8).
+
+B.2.7
+FUENTE: 5241 h8 c1 (Salta, jueves 13 de septiembre de 1956)
+FICHA: Decreto N 4153-E, 3 de septiembre de 1956, expediente 2527-V-956: aprueba
+la memoria, pliego, cómputos, planos y presupuesto de Vialidad de Salta para la
+obra «Alcantarilla en el Camino de Salta a Los Yacones por San Lorenzo», por $
+92.227,36 con $ 4.391,78 de imprevistos (5 %). No nombra el departamento. Clase:
+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y visto (h8 c1).
+TEXTO:
+  DECRETO Nº 4153—E. SALTA, 3 de Setiembre de 1956. Expte. nº 2527—V—956.
+  VISTO este expediente por el que Administración de Vialidad de Salta eleva
+  para su aprobación memoria descriptiva, propuesta, pliego complementario de
+  condiciones, cómputos métricos, planos y presupuesto confeccionados para la
+  ejecución de la obra "Alcantarilla en el Camino de Salta a Los Yacones por
+  San Lorenzo" que en total asciende a la suma de $ 92.227.36 incluidos $
+  4.391.78, del 5% de Imprevistos; [...]
+NOTA DE LECTURA: Aritmética: 4.391,78 es el 5 % de 87.835,58, y 87.835,58 +
+4.391,78 = 92.227,36: cierra. Los Yacones es paraje de La Caldera en las fichas
+de años anteriores; el acto no lo atribuye (v16 §5.1ter). La capa escribe
+«tacones».
+
+B.2.8
+FUENTE: 5247 h11 c1-c2 (Salta, viernes 21 de septiembre de 1956)
+FICHA: Decreto N 4316-E, 6 de septiembre de 1956, expediente 2174-C-55: reconoce
+un crédito a favor de la Caja de Jubilaciones por $ 146,82 de aportes patronales
+omitidos sobre los haberes de Claudio Murúa, por pertenecer a un ejercicio
+vencido. No nombra el departamento. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 140 ppp: el final del visto con el nombre (h11 c1);
+encabezado y monto, capa.
+TEXTO:
+  [capa:] decreto nº 4316-e salta 6 de setiembre de 1956 expte. nº 2174-c-55
+  visto este expediente por el que la caja de jubilaciones y pensiones de la
+  provincia solicita el ingreso a su favor de la suma de $ 146.82 m|n. en
+  concepto de aportes patronales omitidos de realizar oportunamente sobre los
+  haberes correspondientes al señor claudio murua [...]
+NOTA DE LECTURA: Es el cargo patronal que fija A.40 (Municipalidad de La Caldera
+y Salud Pública).
+
+B.2.9
+FUENTE: 5257 h5 c3 y h6 c1 (Salta, lunes 1 de octubre de 1956)
+FICHA: Decreto N 4522-A, 25 de septiembre de 1956, expediente 23.416(3)/956:
+declara cesante desde el 16 de agosto a Celia Irene Espinoza, celadora del Hogar
+Escuela «Dr. Luis Linares», por abandono de su empleo; la renuncia que presentó
+no se tiene en cuenta porque fue fechada el mismo día del abandono y presentada
+varios días después. No nombra el departamento. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 90 y 150 ppp: el decreto entero (h5 c3, h6 c1). Número:
+la imagen empasta el primer dígito («?522»); decide la serie (4521-G antes,
+4523-A después).
+TEXTO:
+  DECRETO Nº [4]522—A. SALTA, 25 de setiembre de 1956. Expte. nº 23.416 (3)
+  año 1956. VISTO este expediente, y CONSIDERANDO: Que está acreditado que la
+  Celadora del Hogar Escuela "Dr. Luis Linares" Srta. Celia Irene Espinoza,
+  hizo abandono de puesto intempestivamente el día 16 de agosto del corriente
+  año, sin haber regresado al mismo, [...] Art. 1º — Déjase cesante con
+  anterioridad al día 16 de agosto del corriente año, a la Celadora del Hogar
+  Escuela "Dr. Luis Linares", -Personal transitorio a sueldo categoría 7ª-
+  Srta. Celia Irene Espinoza, por haber hecho abandono de su empleo. [...]
+  ALEJANDRO LASTRA Jorge Luis Fernández Pastor
+NOTA DE LECTURA: Categoría 7ª aquí; las celadoras de A.55, A.65 y A.80 son de
+8ª. Su nombramiento no aparece en el año (E.3).
+
+B.2.10
+FUENTE: 5271 h12 c1 (Salta, jueves 25 de octubre de 1956)
+FICHA: Decreto N 4817-E, 18 de octubre de 1956, expediente 2527/V/956: con la
+resolución 165 de Vialidad, adjudica al contratista Pedro Betella la
+«Alcantarilla en el camino Salta a Los Yacones por San Lorenzo» por $ 83.649,45,
+un 4,77 % menos que el presupuesto oficial. No nombra el departamento. Clase:
+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y considerandos (h12 c1).
+TEXTO:
+  DECRETO Nº 4817—E. SALTA, Octubre 18 de 1956.— Expte. Nº 2527|V|956.— VISTO
+  la Resolución Nº 165 del 20 de setiembre en curso, por la que Administración
+  de Vialidad de Salta aprueba la adjudicación, a favor del contratista Pedro
+  Betella, la realización de la obra "Alcantarilla en el camino Salta a Los
+  Yacones por San Lorenzo", por un importe total de $ 83.649.45; y
+  CONSIDERANDO: Que esta propuesta significa una disminución del 4,77 o|o del
+  presupuesto oficial; Que si bien las propuestas formuladas por los señores
+  José Ciotta y V. Mazuranic están aún más bajas que la anterior, ha habido
+  que dejarlas fuera de concurso por haber transgredido el Art. 1º, párrafo 3º
+  del pliego general [...]
+NOTA DE LECTURA: Aritmética: 87.835,58 (presupuesto sin imprevistos de B.2.7)
+por 0,9523 da 83.645,8; 83.649,45 es 4,767 % menos: cierra con el redondeo del
+acto.
+
+B.2.11
+FUENTE: 5272 h7 c1 (Salta, viernes 26 de octubre de 1956)
+FICHA: Decreto N 4848-A, 18 de octubre de 1956, expedientes 22.817 y 22.850/56:
+art. 1, reconoce los servicios del Dr. Juan Carlos Martearena como oficial 5º
+médico regional de Vaqueros, Las Costas y San Lorenzo, del 19 de septiembre al 9
+de octubre, en reemplazo del titular Dr. Dardo Frías, en licencia reglamentaria.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: encabezado y art. 1 (h7 c1).
+TEXTO:
+  DECRETO Nº 4848—A. Salta, Octubre 18 de 1956. Expedientes Nºs. 22.817|56, y
+  22.850|56 [...] Art. 1º — Reconócense los servicios prestados por el doctor
+  Juan Carlos Martearena, L. E. [documento omitido], como Oficial 5º Médico
+  Regional de Vaqueros, Las Costas y San Lorenzo- desde el 19 de setiembre al
+  9 de octubre en curso, en razón de haberse desempeñado en reemplazo del del
+  titular de dicho cargo Dr. Dardo Frías que se encontraba en uso de licencia
+  reglamentaria. (Expediente nº 22.817|56).
+NOTA DE LECTURA: «del del» (sic). Martearena era médico regional de La Caldera
+desde mayo (A.32) y Frías, interino de La Caldera en abril (A.42, A.36, A.48):
+el acto no dice cuándo Frías pasó a titular del servicio de Vaqueros.
+
+B.2.12
+FUENTE: 5289 h7 c2 (Salta, miércoles 21 de noviembre de 1956)
+FICHA: Decreto N 5207-A, 14 de noviembre de 1956, expediente 22.941/56: aprueba
+las nuevas becas otorgadas por la Junta Ejecutiva del Patronato Provincial de
+Menores en las vacantes del año; entre ellas, en el Hogar Agrícola San Cayetano
+(Vaqueros), internos a $ 85 mensuales desde junio. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 130 ppp: encabezado (h7 c1) y el rótulo del Hogar (h7
+c2). Los nombres de los becados (menores) no se transcriben.
+TEXTO:
+  DECRETO Nº 5207—A. SALTA, 14 de noviembre de 1956. Expte. nº 22.941|56.
+  Visto este expte. en que la Junta Ejecutiva del Patronato Provincial de
+  Menores, solicita se aprueben las nuevas becas otorgadas por esa Junta, en
+  las vacantes producidas en los distintos colegios durante el Cte. año [...]
+  HOGAR AGRICOLA SAN CAYETANO (VAQUEROS) con $ 85.— mensuales, internos, desde
+  el mes de junio. [nombres de menores omitidos]
+NOTA DE LECTURA: RECUENTO PROPIO del bloque del Hogar, en la imagen: 3 becas; el
+acto no declara número.
+
+B.2.13
+FUENTE: 5291 h5 c1 a h7 c1 (Salta, viernes 23 de noviembre de 1956)
+FICHA: Decreto-Ley N 322-A, 14 de noviembre de 1956: reestructura el Ministerio
+de Asuntos Sociales y Salud Pública; art. 13, incorpora la Dirección de
+Patronato y Asistencia Social de Menores a la Subsecretaría de Asuntos Sociales
+y dispone que pase a depender de ella «el Hogar Escolar Doctor Luis Linares». No
+nombra el departamento. Clase: NORMA+ESCUELA.
+MODO DE LECTURA: imagen, 140 ppp: encabezado (h5 c1) y el art. 13 (h7 c1).
+TEXTO:
+  DECRETO—LEY Nº 322—A. SALTA, 14 de noviembre de 1956. Visto el proyecto de
+  reestructuración del Ministerio de Asuntos Sociales y Salud Pública; y,
+  CONSIDERANDO: Que en fecha 25 de junio del cte. año, se dictó el Decreto-ley
+  Nº 228, por cuyo Art. [...] se encargaba a dicho Ministerio la formulación
+  de un Plan de reestructuración [...] Art. 13 — [...] la Dirección de
+  Patronato y Asistencia Social de Menores con las funciones establecidas en
+  los artículos 2º y 4º del Decreto-Ley Nº 146|56. Pasa a depender de la
+  Dirección de Patronato y Asistencia Social de Menores el Hogar "Doctor Luis
+  Linares".
+NOTA DE LECTURA: El Ministerio cambió de nombre en el año: «Salud Pública y A.
+Social» en la tapa de 5164 (16 de mayo), «Asuntos Sociales y Salud Pública» en
+la de 5240 (7 de septiembre) y en las firmas desde julio (A.46): E.4.
+
+B.3 · Términos que ese año son otra cosa
+Términos que este año son otra cosa, con su contexto leído en la capa y, los que
+tocan el término, en la imagen:
+- «caldera» como aparato: el remate de «una caldera con motor» y «una caldera
+con motor acondicionado» del juicio Abramovich vs. Carbajal (5147 a 5155, dos
+avisos), la «caldera de calefacción» de la Casa de Gobierno y su ayudante Roque
+Jacinto Burgos (5219 h10, 5259 h9, 5283 h6), la «caldera de 70 m2. calefacción»
+de un remate de materiales (5263 a 5268), el autoclave «Chanberlam» con caldera
+de cobre (5246 h6), el «camión Dodge y caldera» vertical de alta presión (5306 a
+5310, aviso 14900), «motores y calderas» en una ordenanza de Tartagal (5182
+h16).
+- «La Cantera, al señor Moisés Ruiz» en la lista de A.20 (la capa da «caldera»
+cerca por cruce de renglón); «la Cahera» por «la Cartera» (5118 h6); «la
+caitlara» y «la calmara» por «Cámara» (5171 h8, 5239 h12); «la caeiila» por
+«casilla» (5256 h9); «calderarla» por «La Candelaria» (5216 h10).
+- Calderón: Juan Lorenzo Calderón (sucesorio 14548, 5256 a 5285), Félix Velarde
+Calderón y otros; Calchaquí («caldhaqui», 5220, 5229); Ismael Caldoso, Gerónimo
+Caldoso, Toribia Caldoso (5129, 5185, 5274).
+- Anillo 2 en otros departamentos: Campo Alegre de Natalia y Marcelo Gutiérrez
+(camino de Santa Rosa a El Pedregal, 53 apariciones, 5074 a 5184); El Tunal
+(Metán, Anta, La Viña; acequia y cooperativa); El Durazno de Payogasta (Cachi) y
+de la finca Los Pozos (Anta); mesada de Rosario de Lerma (mina Chani); Las
+Lagunas (Madrejones); El Angosto (quebrada Chagrauhaico); Antilla (La
+Candelaria); El Paraíso (Chicoana); Las Víboras (Anta); Nogalito (Metán); Santa
+Gertrudis (Chicoana); El Recreo (La Viña); Potrerillo (Cafayate); Mojotoro como
+río de Güemes y Capital (acequias, 5152 a 5297); Villa Castañares (Capital); San
+Cayetano como mina, almacén de la Capital, farmacia de Rosario de Lerma y paraje
+del camino a San Lorenzo; la finca El Tuscal del juicio de división de
+condominio de Eleodora Tejerina de Pintado, con título en el libro G de Orán
+(5192 a 5225).
+- Wierna, apellido: Gustavo E. Wierna (contador), Mercedes Wierna, Alfredo
+Wierna, Elba Wierna de Díez Gómez (Registro Civil de El Toro), Milagro Wierna;
+Lesser: Beatriz Benigna Lesser (becaria); Pucheta: Leticia Pucheta (Orán);
+Yugra: Leopoldo Alberto Yugra (enfermero de Río del Valle); Toconas: Luciano y
+Octaviano Toconas; Murúa: José Desiderio Murúa, Patricio Murúa, Abel Vicente
+Murúa y Domitila Murúa de Méndez (Candelaria), sin contexto del departamento.
+
+B.4 · Anillo de actores
+Actores de las fichas de 1956 (75 nombres) y los 839 nombres completos del
+config, buscados en todo el corpus por nombre completo, sin puntuación, y por
+apellido donde la capa lo parte:
+1) Sólo en su propio acto (con sus repeticiones): Augusto Regis, Natividad
+Tejerina, Esther B. de Reyes, Luisa Sarapura, Esperanza R. de Amaya, Mateo José
+(Francisco) Pistone, Andrés Sajama, Carmelo Lasi (Lassi), Nicolás Mejías,
+Cesario (Césares) Ríos, Corina A. Bustamante, Ramón Antonio Vivas, Emilio
+Alberto Ratel, Margarita Antonia Vázquez, Lucía Ferro de Perna, Alejo Maidana,
+Delfín Chocobar, Lola Herrera, Fermín Herrera, Waldina C. de Caro, Silvano
+Murúa, Liborio Guerra, José María Murúa, Daniel Linares, Ramón Yenefes, Tomás
+Fascio Arias, Arturo A. Quintana, José A. Ferradas, Enriqueta Epifania Colque,
+Florencio Fernández Acevedo, Margarita Gladys Lizondo, Eduardo O. Colambres,
+Cecilio Muñoz, Celia Irene Espinoza, Herminia Blácida Córdoba, Juliana Borja de
+Iriarte, Mariano Gallardo, Presentación vda. de Valdez, Benita N. de Apaza,
+Luisa Elva Rodríguez, Mercedes Paula Delgado, Blanca Rosa Britos, Segundo
+Baroffio, Stav[?]ula Sofía [?]rianos de Postigo.
+2) En más de un acto del departamento (la trama del año): Sixto Ugarte (once
+meses de servicios); Félix Miguel Sánchez (A.2, A.8, A.16, A.37); Florencio
+Sarapura y Eloy (Eddy) Aurelio Ruiz (A.7, A.14, A.17, A.21, A.35); José León
+Vilca (A.21, A.23 en El Bordo, A.24, A.26, A.52, A.62, A.74); Victoriano Molina
+(A.23, A.38, A.41, A.52, A.64); Mariano Salomón Padilla, Alejandro Echazú y
+Cándido Colque (A.23, A.52; Echazú también B.2.4); Liborio Cabrera Savaneros o
+Carrera Sanaberón (A.23, A.52); Juan Carlos Pesso (A.26); Eugenio Romanov (A.3,
+A.25, A.27, A.42, A.48); Dardo Frías (A.36, A.42, A.48, B.2.11); Juan Carlos
+Martearena (A.32, B.2.11); Eugenia Facunda Usi (A.25, A.47, A.49, A.72); Esther
+Gabriela Cruz (A.1, A.20); Esther Blanca Reyes (A.9, A.18); Faustina Yapura
+(A.46, A.51); María Elsa Valdivieso (A.55, A.65); Luis A. Paterlini (A.66);
+Claudio Murúa (A.40, B.2.8); Eusebia Ruiz (A.25, B.2.2); Justo Pastor Lizondo
+(A.69; juez de paz y director en años anteriores); Horacio Postigo y Antonio
+Vivas (A.73).
+3) También fuera del departamento: José León Vilca, subcomisario de Santa Rita
+de las Vertientes (Campo Santo), promovido a subcomisario de 1ª en enero (5077
+h9, capa); Juan Carlos Pesso, comisario de Güemes y luego de segunda (5128 h5,
+5166 h8, 5216 h9, 5273 h8); Dardo Frías, médico regional de Cerrillos y La
+Merced (5128 h10) y oficial 8º de la Dirección de Sanidad (5142 h9); Juan Carlos
+Martearena, médico de consultorio de la Asistencia Pública (5152 h15, 5244 h4);
+Eugenio Romanov, médico regional de La Viña (5284 h4, 5297 h8); Faustina Yapura,
+mucama del Hogar de Ancianos de La Merced (5148 h9); Luis A. Paterlini,
+contratista de otras obras de A.G.A.S. (5201 h10, 5234, 5244 h9); Cándido Gómez,
+en la nómina policial general (5128 h5, 5216 h9) y reemplazado como oficial
+inspector en diciembre (5310 h9); Liborio Cabrera Sanaberón, licencia (5306 h7);
+Alejandro Echazú, licencias (5247 h16); Esther Blanca Reyes, subsidio del
+decreto 3096-E (5167 h26); Horacio Postigo, vendedor de la heladería «Los Andes»
+junto con Humberto Postigo (5221 h16 a 5223, capa; identidad no acreditada);
+Dergan E. Nallar, proveedor del Hogar de Ancianos (5275 h2, 5297); Pedro
+Betella, otra obra (5091). Eusebia Ruiz, actora en un juicio por alimentos (5156
+h3, 5167 h30; identidad no acreditada).
+Nombramientos que sólo constan por su revocación o reemplazo (v16 §5.3): el de
+Eduardo O. Colambres como interventor municipal (A.59); el de Herminia Blácida
+Córdoba como mucama del Hogar (A.63); el de Enriqueta Epifania Colque como
+mucama (A.51); el de Celia Irene Espinoza como celadora (B.2.9); el de Margarita
+Gladys Lizondo como celadora (A.55); el de Dardo Frías como titular del servicio
+de Vaqueros (B.2.11). Ninguno aparece en el año.
+
+§C · LIMITROFES
+---------------
+
+Limítrofes con acto que los nombra junto al departamento: El Bordo (Gral.
+Güemes), en la misión de A.29 y en los jueces de paz de A.73; La Merced
+(Cerrillos), en la permuta de A.12 y el peluquero de A.71; Cerrillos, de donde
+viene Martearena (A.32); Villa San Lorenzo, como departamento de la zona 3 de
+precios (A.30); San Lorenzo, en el servicio médico de Vaqueros y Las Costas
+(B.2.11) y en el camino a Los Yacones (B.2.7, B.2.10); La Viña, destino de
+Romanov (A.27). Ninguno es acto del departamento.
+
+§P · PLANOS
+-----------
+
+1956 no publica ningún plano: las 30 hojas de menos tinta miradas en plancha son
+texto, cuadros o sumarios, y la única hoja sin capa (5110 h10) es la última de
+su edición, con avisos y el pie de imprenta, mirada en la misma plancha. Techo
+de resolución: 300 ppi desde julio, 150 antes y 75 en mayo. La palabra «plano»
+aparece en 660 hojas; las remisiones a planos que tocan al departamento son 2:
+el plano 37 del legajo de La Caldera de la finca El Durazno (A.44, 28
+apariciones) y los planos de la obra de aguas corrientes aprobados por el 3872-E
+(A.53). Los dos son planos citados y no acompañados.
+planos_citados_departamento: 2.
+
+§D · INDICE
+-----------
+
+  5074  h7  ESCUELA                  B.2.1
+              Renuncia de la lavandera Lucía F. de Pernas (Hogar «Dr. Luis
+              Linares»).
+  5076  h6  REGISTRO-CIVIL           A.1
+              Deja sin efecto a Regis y nombra a Esther Gabriela Cruz, Registro
+              Civil.
+  5078  h7  CARGOS                   A.2
+              Renuncia de Natividad Tejerina; nombra subcomisario a Félix Miguel
+              Sánchez.
+  5079  h10 OTRO                     A.3
+              Viáticos del Dr. Eugenio Romanov, médico de La Caldera.
+  5083  h5  CARGOS                   B.2.2
+              Blanca Rosa Britos, enfermera interina de Vaqueros.
+  5084  h9  ESCUELA                  A.4
+              Servicios de Sixto Ugarte, peón del Hogar «Luis Linares»,
+              diciembre de 1955.
+  5084  h14 AGUAS                    A.5
+              Concesión de agua a Cerro de Buena Vista, catastro 112, Germán
+              Peral.
+  5091  h5  ESCUELA+NORMA            A.6
+              Deroga la Ley 1402 (albergue de la escuela Juana Moro de López).
+  5091  h6  CARGOS                   A.7
+              Baja del agente Florencio Sarapura; nombra a Eloy Aurelio Ruiz.
+  5092  h7  REGISTRO-CIVIL           A.8
+              Autoriza al comisario Félix Miguel Sánchez a suscribir un acta de
+              defunción.
+  5097  h5  REGISTRO-CIVIL           A.9
+              Servicios de Esther B. de Reyes, Registro Civil, diciembre de
+              1955.
+  5097  h10 OTRO                     A.10
+              Caja chica de los consultorios de La Caldera ($ 300) y Vaqueros ($
+              50).
+  5102  h8  HACIENDA-MUN             A.11
+              Participación de impuestos: $ 6.000 a la Municipalidad de La
+              Caldera.
+  5109  h4  ESCUELA                  A.12
+              Permuta de Luisa Sarapura (Hogar) con Esperanza R. de Amaya (La
+              Merced).
+  5111  h7  ESCUELA                  A.13
+              Servicios de Sixto Ugarte, enero.
+  5112  h8  CARGOS                   A.14
+              Renuncia del agente «Eddy» (Eloy) Aurelio Ruiz.
+  5114  h5  CARGOS                   A.15
+              Designa agente a «Mateo José» (Francisco) Pistone.
+  5114  h5  CARGOS                   A.16
+              Baja del subcomisario Félix Miguel Sánchez.
+  5118  h5  CARGOS                   A.17
+              Rectifica: Eloy Aurelio Ruiz y Francisco Pistone.
+  5119  h10 REGISTRO-CIVIL           A.18
+              Servicios de Esther Blanca Reyes, Registro Civil, 1 al 17 de
+              enero.
+  5124  h4  ESCUELA                  A.19
+              Servicios de Sixto Ugarte, febrero.
+  5125  h10 REGISTRO-CIVIL           A.20
+              Confirma a Ester Gabriela Cruz, encargada del Registro Civil.
+  5126  h10 CARGOS                   A.21
+              Confirma a José León Vilca (La Caldera) y reconoce a Eloy Ruiz.
+  5127  h11 ESCUELA                  A.22
+              Caja chica de $ 2.600 para el Hogar «Dr. Luis Linares».
+  5128  h4  CARGOS                   A.23
+              Confirmación policial: La Caldera, Vaqueros y Mojotoro.
+  5136  h5  CARGOS                   A.24
+              Vilca, oficial 7º de La Caldera.
+  5138  h4  CARGOS                   A.25
+              Confirma a Romanov, Usi, Bustamante (La Caldera) y Eusebia Ruiz
+              (Vaqueros).
+  5138  h15 CARGOS                   A.26
+              Traslada al comisario Juan Carlos Pesso a La Caldera.
+  5139  h10 CARGOS                   A.27
+              Traslada al médico regional Romanov a La Viña.
+  5142  h7  OTRO                     A.28
+              Pensión a la vejez 4397 a Ramón Antonio Vivas.
+  5144  h7  HACIENDA-MUN             A.29
+              Viaje del encargado de Municipalidades a La Caldera y El Bordo.
+  5146  h6  AGUAS+OBRA-PUBLICA       B.2.3
+              Aprueba los estudios de la obra 284, embalse en Campo Alegre.
+  5147  h10 NORMA                    A.30
+              Zonas de precios: La Caldera en la zona 3.
+  5152  h15 ESCUELA                  A.31
+              Lavandera Margarita Antonia Vázquez en lugar de Lucía Ferro de
+              Perna.
+  5154  h7  CARGOS                   B.2.4
+              Licencia del agente de policía de Vaqueros Alejandro Echazú.
+  5156  h5  CARGOS                   A.32
+              Traslada al Dr. Juan Carlos Martearena como médico regional de La
+              Caldera.
+  5156  h5  ESCUELA                  B.2.5
+              Subsidio al Hogar Agrícola San Cayetano de Vaqueros.
+  5160  h8  AGUAS+OBRA-PUBLICA       A.33
+              Perforaciones en Campo Alegre (Dpto. La Caldera): viaje a Jujuy.
+  5160  h9  ESCUELA                  A.34
+              Servicios de Sixto Ugarte, marzo.
+  5161  h12 CARGOS                   A.35
+              Rectifica: Sarapura y Ruiz, agentes de El Naranjo y no de La
+              Caldera.
+  5161  h16 CARGOS                   A.36
+              Deja sin efecto la designación del Dr. Dardo Frías.
+  5162  h7  CARGOS                   A.37
+              La baja de Félix Miguel Sánchez se convierte en renuncia.
+  5162  h13 CARGOS                   A.38
+              Baja del cabo Victoriano Molina.
+  5162  h19 ESCUELA                  A.39
+              Servicios de Sixto Ugarte, abril ($ 450).
+  5162  h22 HACIENDA-MUN             A.40
+              Servicios de Claudio Murúa en la Municipalidad de La Caldera.
+  5163  h16 CARGOS                   A.41
+              Deja sin efecto la baja de Molina.
+  5164  h13 CARGOS                   A.42
+              Designa interinamente al Dr. Dardo Frías, médico regional.
+  5181  h6  AGUAS+CARGOS             A.43
+              Tomeros de riego de La Caldera: Alejo Maidana y Delfín Chocobar.
+  5190  h9  DOMINIO+JUSTICIA         A.44
+              Remate de la finca El Durazno, partida 93, base $ 40.533,33.
+  5196  h12 DOMINIO+JUSTICIA         A.45
+              Posesión treintañal de Lola Herrera, partido Calderilla, 10 ha.
+  5201  h10 ESCUELA                  A.46
+              Faustina Yapura, auxiliar interina; servicios de Ugarte, mayo.
+  5201  h11 ESCUELA                  A.47
+              Prorroga la sobreasignación de la gobernanta Eugenia F. Usi.
+  5204  h6  CARGOS                   A.48
+              Servicios del Dr. Dardo Frías, 18 al 30 de abril.
+  5204  h7  ESCUELA                  A.49
+              Intervención del Hogar Escuela y suspensión de la gobernanta Usi.
+  5208  h12 AGUAS+OBRA-PUBLICA       A.50
+              $ 45.000 para estudios del embalse de Campo Alegre.
+  5214  h8  ESCUELA                  A.51
+              Servicios de Faustina Yapura (mucama) y de Ugarte, junio.
+  5216  h8  CARGOS                   A.52
+              Confirmación policial de julio: La Caldera, Vaqueros y Mojotoro.
+  5218  h6  ESCUELA                  B.2.6
+              Becas del Hogar Agrícola San Cayetano (Vaqueros).
+  5225  h5  AGUAS+OBRA-PUBLICA       A.53
+              Aprueba el proyecto de aguas corrientes de La Caldera ($
+              127.035,05).
+  5227  h6  AGUAS                    A.54
+              Concesión de agua a la finca Wierna, 200 ha, 150 l/s.
+  5228  h4  ESCUELA                  A.55
+              Renuncia de la celadora Lizondo; designa a María Elsa Valdivieso.
+  5231  h10 AGUAS+OBRA-PUBLICA       A.56
+              Licitación de la obra 343, aguas corrientes de La Caldera.
+  5234  h7  AGUAS+OBRA-PUBLICA       A.57
+              $ 50.000 para estudios en Campo Alegre.
+  5241  h8  OBRA-PUBLICA             B.2.7
+              Alcantarilla del camino Salta-Los Yacones por San Lorenzo:
+              proyecto.
+  5243  h10 ESCUELA                  A.58
+              Servicios de Sixto Ugarte, julio.
+  5247  h11 HACIENDA-MUN             B.2.8
+              Crédito de aportes patronales de Claudio Murúa.
+  5253  h9  CARGOS+HACIENDA-MUN      A.59
+              Renuncia del interventor municipal Eduardo O. Colambres.
+  5253  h9  CARGOS+HACIENDA-MUN      A.60
+              Designa interventor municipal a Cecilio Muñoz.
+  5257  h5  ESCUELA                  B.2.9
+              Cesantía de la celadora Celia Irene Espinoza (Hogar «Dr. Luis
+              Linares»).
+  5257  h8  ESCUELA                  A.61
+              Servicios de Sixto Ugarte, agosto.
+  5259  h6  CARGOS                   A.62
+              Cesantía del comisario José León Vilca.
+  5261  h15 ESCUELA                  A.63
+              Herminia Blácida Córdoba, mucama del Hogar, presta servicios en la
+              Asistencia Pública.
+  5262  h8  CARGOS                   A.64
+              Suspensión del cabo Victoriano Molina.
+  5271  h7  ESCUELA                  A.65
+              Renuncia de la celadora María Elsa Valdivieso.
+  5271  h12 OBRA-PUBLICA             B.2.10
+              Adjudica la alcantarilla a Pedro Betella.
+  5271  h13 AGUAS+OBRA-PUBLICA       A.66
+              Adjudica la obra de aguas corrientes a Luis A. Paterlini ($
+              125.930,39).
+  5272  h6  ESCUELA                  A.67
+              Servicios de Sixto Ugarte, septiembre.
+  5272  h7  CARGOS                   B.2.11
+              Martearena, médico regional de Vaqueros, Las Costas y San Lorenzo.
+  5272  h8  OTRO                     A.68
+              Caduca la pensión 2145 de Juliana Borja de Iriarte.
+  5272  h21 ESCUELA                  A.69
+              Jubilación del director de la escuela, Justo Pastor Lizondo.
+  5274  h14 HACIENDA-MUN             A.70
+              Aprueba el presupuesto 1956 de la Intervención Municipal.
+  5284  h4  ESCUELA                  A.71
+              Viáticos del peluquero de los Hogares de La Caldera y La Merced.
+  5287  h9  ESCUELA                  A.72
+              Cesantía de la gobernanta Usi; prórroga de la intervención del
+              Hogar.
+  5289  h7  ESCUELA                  B.2.12
+              Nuevas becas del Hogar Agrícola San Cayetano (Vaqueros).
+  5291  h5  NORMA+ESCUELA            B.2.13
+              Decreto-ley 322: el Hogar «Dr. Luis Linares» pasa a Patronato de
+              Menores.
+  5292  h4  JUSTICIA+CARGOS          A.73
+              Jueces de paz: Horacio Postigo, titular; Antonio Vivas, suplente.
+  5296  h11 CARGOS                   A.74
+              Cándido Gómez, comisario de 3ª de La Caldera.
+  5297  h7  ESCUELA                  A.75
+              Suspensión de la cocinera Presentación vda. de Valdez.
+  5300  h6  ESCUELA                  A.76
+              Ropa para el Hogar Escolar: adjudicación a Dergan E. Nallar.
+  5302  h7  AGUAS                    A.77
+              Edicto de agua de Benita N. de Apaza, catastro 84, 4,20 l/s.
+  5308  h9  ESCUELA                  A.78
+              Comestibles para el Hogar Escolar de La Caldera y otros ($
+              27.194,10).
+  5311  h8  HACIENDA-MUN+NORMA       A.79
+              Aprueba la ordenanza impositiva 1956 de la Intervención Municipal.
+  5313  h12 ESCUELA                  A.80
+              Servicios de Rodríguez, Delgado y Ugarte en el Hogar.
+  5315  h9  ESCUELA                  A.81
+              Cofre para la bandera de la escuela Juana Moro de López ($ 785).
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicación, tinta y saldos
+Actos publicados dos veces con el mismo texto: ninguno entre los del
+departamento. El decreto 2635-S (A.42) se publica una edición después del que lo
+deja sin efecto (A.36): son dos actos. Tinta y resolución: §1. Pares dhash a
+distancia <= 16: no hay recortes.zip ni sección de dhash legible en el
+pre-informe; no se miraron (E.10).
+Resúmenes de Tesorería General publicados en 1956: ninguno (el «movimiento de
+Tesorería» de 5182 h19 es de una municipalidad, la de Tartagal por la hoja
+anterior) (meses_tesoreria_publicados: 0). La cadena de saldos no se puede
+armar: cadena_saldos: no-armable.
+Balances municipales del año: de otros municipios (Urundel, El Galpón, El
+Potrero, Coronel Moldes, San Antonio de los Cobres, Tartagal); ninguno de La
+Caldera (balances_municipales: 0). El presupuesto y la ordenanza impositiva de
+la Intervención Municipal de La Caldera se aprueban y no se publican (A.70,
+A.79).
+Subtotales recalculados (6): el proyecto de aguas corrientes (110.465,26 x 1,15
+= 127.035,05, A.53); la adjudicación (10 % y 5 % de 125.930,39, A.66); el total
+de comestibles (27.194,10, A.78); la base de El Durazno (dos tercios de 60.800,
+A.44); el presupuesto de la alcantarilla (87.835,58 + 5 %, B.2.7); la
+participación municipal (suma propia 96.000, A.11, sin total impreso). Cocientes
+de dotación por hectárea: 0,525 en A.5 y A.77; 0,75 en A.54 (máximo de
+abundancia). Cuadros publicados que nombran el término o un paraje del
+departamento: 4 (caja chica de A.10, participación de A.11, comestibles de A.78,
+becas de B.2.6); recalculados 2 (A.11 y A.78); los otros dos, no (E.8).
+
+E.2 · Cobertura
+242 de las 243 ediciones del año, 4.436 hojas; la edición 5293, las hojas
+faltantes y las dudas de lectura van a E.10. La capa se leyó entera con las
+pasadas del §2; la segunda versión (prop) cubre 298 hojas (5074 a 5090); la
+imagen, las 436 hojas del §1.
+
+E.3 · Sin mención y no mirado
+Citados y no acompañados: el decreto 879 de 1955 (A.1); la resolución 1[6 u 8]7
+de A.G.A.S. (A.5) y la 561 (A.54); la resolución 187 de tomeros (A.43); la
+1163/56 de la licitación (A.66); el decreto 14.705 de 1955 (A.47), que es de
+1955; el presupuesto (fojas 15 a 17) y la ordenanza impositiva (fojas 3 a 13) de
+la Intervención Municipal (A.70, A.79); las resoluciones 107 y 612 de la Caja de
+Jubilaciones sólo por su parte dispositiva (A.28, A.68); la resolución de la
+Caja que jubila a Lizondo (A.69); el sumario de los expedientes 22.249 y
+22.926/56 contra la gobernanta y el informe de la interventora (A.49, A.72); los
+decretos-leyes 126, 146, 228, 231 y 238/56 (A.25, B.2.13, A.52). Vacantes sin
+nombre: ninguna del departamento. Nombramientos que sólo constan por su
+revocación o reemplazo: B.4, último párrafo. Servicios de Ugarte en noviembre y
+diciembre: no se reconocen en ningún acto mirado. No mirado en la imagen: los
+renglones de los cuadros de A.10 y A.25 fuera de los del departamento; la
+planilla de precios de A.30; los articulados de A.6, A.50, A.57, A.69, A.70,
+A.79, A.80 y A.81 (vistos y encabezados, sí).
+
+E.4 · Firmas y autoridad
+Tapas (imagen de 27 bloques del Poder Ejecutivo y la capa de las 242):
+Interventor Federal Coronel (S. R.) Julio R. Lobo del 2 de enero al 15 de mayo
+(5163, imagen), con los ministros Dr. Arturo Oñativia (Gobierno), Ing. Adolfo
+Aráoz (Economía, hasta 5142 en la imagen) y Dr. Julio A. Cintioni (Salud Pública
+y A. Social); desde 5146 (19 de abril, imagen) Oñativia figura también como
+ministro de Economía interino. La tapa de 5164 (16 de mayo) trae ya a Ruda
+(Gobierno), José Alfredo Martínez de Hoz como ministro de Economía interino y el
+Dr. Germán Osvaldo López (Salud Pública y A. Social); desde 5165 (17 de mayo,
+imagen): Interventor Federal Dr. Alejandro Lastra, con el Dr. José María Ruda
+(Gobierno) y el Dr. José Alfredo Martínez de Hoz (Economía, «(h)» desde
+noviembre). Salud Pública pasa a llamarse Asuntos Sociales y Salud Pública (tapa
+de 5240) y su ministro es López hasta el 25 de septiembre (5250, imagen) y el
+Prof. Julio Passerón desde el 11 de octubre (5262, imagen). El director del
+Boletín es Juan Raymundo Arias todo el año (5074, 5200, imagen).
+Interinatos en los actos del departamento: el ministro de Economía en ejercicio
+del mando gubernativo firma el 29 de febrero (1853-G, 1891-G); el ministro de
+Gobierno Oñativia, «en ejercicio del mando gubernativo», el 18 de abril y el 3 y
+4 de mayo (2635-S, 2888-S, 2899-G, 2931-G, 2952-S); José María Ruda, ministro de
+Gobierno «en ejercicio del Poder Ejecutivo», el 6 de julio (3553-A, 3556-A); el
+«Interventor Federal Interino» firma el 10 de julio (3592-A, 3595-A), el 4 de
+septiembre (4200-A), el 3 de octubre (4663-G), el 23 de octubre (4945-G) y el 12
+y el 17 de diciembre (5566-G, 5632-A); Juan Francisco Mathó, subsecretario de
+Gobierno a cargo de la cartera, refrenda el 27 de septiembre (4576-G); Jorge
+Luis Fernández Pastor, subsecretario de Asuntos Sociales a cargo de la cartera,
+el 25 de septiembre y el 2 de octubre (4522-A, 4849-A). Se registran todas y no
+se concilian; no se fija el día de ningún reintegro. El cambio de Interventor
+entre el 15 y el 17 de mayo no se explica fuera del corpus.
+
+E.5 · Cortes y columnas
+Columnas cotejadas entre imagen y capa: 132, las que contienen las fichas del §A
+y de B.2. Columna perdida: ninguna. Lo que falla es el cruce de columnas y la
+palabra: la capa cruza renglones de la columna vecina en el remate de El Durazno
+(28 apariciones) y en la posesión de Lola Herrera; escribe el término de 60
+maneras (§2); pierde el renglón «LA CALDERA» en A.28 («la qalperaa»); lee «0
+000» por 6.000 (A.11), «molona» por Molina (A.38), «choco0ar» (A.43), «ligarte»
+y «ugab» por Ugarte, «calderarla» por La Candelaria. Desde julio (300 ppi) la
+capa no mejora en la misma proporción que la imagen. Toda palabra que decide una
+ficha se miró.
+
+E.6 · Repeticiones
+Por texto, sin fiarse del número de aviso: remate de El Durazno (A.44, 28
+ediciones, 5190 a 5219), posesión treintañal de Lola Herrera (A.45, 29, 5196 a
+5225), licitación de la obra 343 (A.56, 4 seguras, 5231 a 5234, y un trozo en
+5235), edicto de Benita N. de Apaza (A.77, 13, 5302 a 5314). 4 avisos del
+departamento repetidos. Los recuentos son de ediciones con al menos un pasaje
+reconocible del aviso en la capa.
+
+E.7 · Falsos positivos y negativos
+Falsos positivos del anillo 1: las 33 formas de §2 y los contextos de B.3.
+Falsos negativos que la capa habría producido y la sesión corrigió: A.28 (sólo
+la difusa contextual y la plancha de pensiones); A.16 (sólo el anillo de actores
+y la cita de A.37); el nombre de Vivas en A.73 (anillo de actores); siete
+apariciones de A.44 (difusa y difusa contextual); A.53 y A.3 (sólo la laxa
+espaciada); y los trece actos de B.2, que no nombran el término.
+
+E.8 · Fidelidad numérica
+Dotaciones de agua: 0,525 l/s por hectárea en A.5 (1,05 l/s para 2 ha) y A.77
+(4,20 para 8); 0,75 en A.54 (150 para 200), máximo de abundancia. Aguas
+corrientes: 110.465,26 de básico, 127.035,05 con imprevistos e inspección,
+125.930,39 adjudicado (114 % del básico). Campo Alegre: $ 45.000 (A.50) y $
+50.000 (A.57). No recalculados: el cuadro de caja chica de A.10 (sin total
+impreso, cientos de renglones de toda la Provincia); la confirmación de personal
+de A.25 (lista de toda la Provincia); las becas de B.2.6 y B.2.12 (nombres de
+menores); la lista entera de caducidades de A.68.
+
+E.9 · Contradicciones
+Se transcriben y no se concilian: Sarapura y Ruiz agentes de La Caldera (A.7,
+A.14, A.17, A.21) o de El Naranjo (A.35); Vilca auxiliar mayor de La Caldera
+(A.21) y de El Bordo (A.23) en decretos del mismo día; Pesso trasladado a La
+Caldera en reemplazo de Vilca desde el 1 de abril (A.26) y Vilca comisario de La
+Caldera en julio (A.52) y cesante en septiembre (A.62); Sánchez «subcomisario»
+(A.2, A.16, A.37) y «comisario» (A.8); «Eddy» y «Eloy» Aurelio Ruiz (A.14,
+A.17); «Mateo José» y «Francisco» Pistone, e inciso a) o c) (A.15, A.17);
+«Esther B. de Reyes», señora, y «Esther Blanca Reyes», señorita (A.9, A.18);
+«Esther» y «Ester» Gabriela Cruz (A.1, A.20); «Cabrera Savaneros» y «Carrera
+Sanaberón», «Lasi» y «Lassi», «Cesario» y «Césares» (A.23, A.52); el decreto que
+deja sin efecto la designación de Frías se publica antes que ella, la llama
+«2685» en el sumario y dice «abril en curso» en mayo (A.36, A.42), y los
+servicios del período se reconocen igual (A.48); «apartado» y «art.» 6º (A.38,
+A.41); «junio en curso» en un decreto de julio (A.46); expedientes repetidos en
+los encabezados o ausentes de ellos (A.34, A.39, A.51, A.58); dos «Art. 2º»
+(A.67); «Cientos veintisiete» (A.53); «del del» (B.2.11); «de la La Caldera»
+(A.80); «Blácida» (A.63); «Villa San Lorenzo» como departamento (A.30); el
+catastro 112 de Cerro de Buena Vista (A.5) frente al 157 de 1953; «Comisaría»
+(A.74) y «Sub-Comisaría» (A.2, A.7). Erratas de tapa: §1 (la de 5291, 16 por 22
+páginas, la decide la foliatura).
+
+E.10 · Límites
+1) El inventario del Release no se pudo listar (el proxy rechaza
+expanded_assets); los assets se bajaron por nombre. recortes.zip no está (404).
+2) La edición 5293 (27 de noviembre) no está: el archivo oficial no la tiene;
+por la foliatura tenía 10 páginas (3795 a 3804).
+3) Sin tesseract spa en la sesión y con .prop sólo de 5074 a 5090: 4.138 hojas
+sólo tienen capa.
+4) Resolución de 75 ppi en 5152 a 5164 y de 150 hasta junio: no se deciden en la
+imagen, y ningún control los decide, el tercer dígito de 19[5?]9-S (A.19), la
+resolución 1[6 u 8]7 de A.G.A.S. (A.5), un expediente de A.13 y otro de A.64, el
+último dígito del expediente de A.2 y de A.15, el número del aviso de A.56 (no
+hace falta), el apellido de la interventora del Hogar (A.49) y un apellido de la
+lista de pensiones (A.28, Cerrillos). Van a la hoja de dudas si Eduardo la pide
+(v17 §5.6).
+5) 84 hojas declaradas y ausentes en 79 ediciones: su contenido no está; en 55
+la serie de folios salta y faltan con seguridad 57 páginas; en 2 no salta; 22
+quedan sin decidir. Las cifras de páginas de doce tapas no se leen o son dudosas
+(§1).
+6) El salto de foliatura de 4154 a 4188 entre 5312 y 5313 no se explica en el
+corpus; lo resolvería la colección encuadernada del año.
+7) Resúmenes de Tesorería General: ninguno publicado en 1956.
+8) 78 hojas de menos de 5 % de tinta no se miraron en plancha, ni los pares
+dhash; que 1956 no publique planos se afirma sobre las 30 hojas miradas en
+plancha y la capa. La plancha de pensiones, a 70 ppp, reconoce rótulos de
+departamento, no renglones: que no haya otras pensiones del departamento se
+afirma sobre esa plancha y las pasadas, no sobre la lectura de cada renglón.
+9) Articulados leídos sólo en la capa: los de A.6, A.50, A.57, A.69, A.70, A.79,
+A.80 y A.81, el renglón de Vaqueros de A.25, el final del art. 2 de A.72, el
+resuelve de B.2.4, el monto de B.2.5 y el encabezado de B.2.8; la atribución al
+departamento no descansa en ellos.
+10) Datos de identidad omitidos: los números de documento, cédula o matrícula de
+personas que pueden vivir se reemplazan por «[documento omitido]» o «[matrícula
+omitida]»; los nombres de los menores becados no se transcriben. Están en la
+imagen, en la hoja citada.
+11) Días hábiles sin edición: 17 sin explicación en el corpus (§1).
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+1. Resolución que sube. Desde el 2 de julio de 1956 (5194) el escaneo es de 300
+ppi, el doble del de 1951 a 1955, y del 27 de abril al 16 de mayo (5152 a 5164)
+baja a 75. El §R lleva la clave ppi_por_tramo que pidieron 1954 y 1955; se
+propone que v17 la vuelva obligatoria y que la hoja de dudas priorice los tramos
+de 75 y 150.
+
+2. Difusa contextual. La difusa por palabra suelta (umbral 0,78) no devolvió la
+pensión de A.28 («la qalperaa», ratio 0,53) ni cinco formas del remate de A.44;
+una difusa restringida a la palabra que sigue a «la» (o a «departamento»,
+«dpto.», «partido»), con umbral 0,62, los devolvió con 191 formas a leer, casi
+todas descartables de un vistazo (calle, localidad, cartera). Se propone sumarla
+como quinta pasada fija desde 1956.
+
+3. Plancha de pensiones. La plancha de 1955 se hizo con las 44 hojas del año: a
+70 ppp no se leen los renglones, sólo los rótulos. Se propone que v17 pida 110
+ppp como mínimo y la plancha sólo de las columnas con rótulos de departamento
+(se ubican por la capa aunque falle el nombre), o que lee_auto marque como
+candidata toda lista de pensiones.
+
+4. Series mensuales. Los reconocimientos de servicios de un mismo empleado
+(Ugarte, once meses) llenan el §A de fichas casi iguales. Se propone permitir
+una ficha de serie con todas sus fuentes, como un aviso repetido, sin perder el
+número de decreto de cada mes (el §D los lista uno por uno).
+
+5. Controles de lectura (v17 §5.6) que decidieron este año: la serie de la hoja
+decidió 1340-E, 1768-G, 3556-A, 4522-A, 4663-G y 5127-A; la cita cruzada
+(2899-G) decidió 1768-G; la aritmética decidió los tres dígitos empastados de
+A.78 (27.194,10) y confirmó los montos de A.53, A.66 y A.44; la foliatura
+decidió que la tapa de 5291 miente (22 páginas y no 16). Se propone sumar la
+foliatura corrida al catálogo como control del número de páginas de una edición.
+
+6. Cambio de gobierno. El cambio de Interventor de mayo (Lobo por Lastra) y de
+ministros se lee mejor en las tapas que en la capa, que sólo los resuelve en 3
+de 242. Se repite el pedido de 1955 de una clave de autoridad por tramo en
+el §R.
+
+7. Config (entregado): anillo 2 suma los 11 términos del §2 (267); actores suma
+53 nombres de las fichas de 1956 que no estaban, con año y edición, entre ellos
+las dos grafías cuando el año trae dos (957); números suma 96 números de actos,
+avisos y expedientes fichados (881); falsos positivos suma sólo contextos
+inequívocos: «caldera de calefaccion», «caldera vertical de alta presion»,
+«camion dodge y caldera», «caldera con motor», «caldera de 70 m2», «autoclave
+chanberlam con caldera» (51). Nada se quita.
+
+§R · RECUENTO
+-------------
+
+anio: 1956
+ediciones_desde: 5074
+ediciones_hasta: 5316
+ediciones_presentes: 242
+ediciones_ausentes: 1
+hojas_presentes: 4436
+hojas_declaradas: 4282
+hojas_ausentes_estimadas: 84
+hojas_excedentes: 2 ediciones
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 18
+ediciones_dobles: 0
+techo_ppi: 300
+ppi_por_tramo: 150 (1962 hojas); 75 (275, 5152-5164); 300 (2199, 5194-5316)
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 81
+actos_dominio: 2
+actos_hacienda_municipal: 7
+planos_publicados: 0
+planos_citados_departamento: 2
+balances_municipales: 0
+cuadros_publicados: 4
+subtotales_recalculados: 6
+resumenes_tesoreria: 0
+meses_tesoreria_publicados: 0
+cadena_saldos: no-armable
+columnas_cotejadas: 132
+hojas_miradas: 436
+avisos_repetidos_departamento: 4
+falsos_positivos_anillo1: 33
+limites_declarados: 11
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 242
+avisos_release: 1
