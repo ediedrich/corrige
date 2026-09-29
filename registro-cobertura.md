@@ -855,3 +855,34 @@ Balance: de 15 lecturas, 7 confirmadas por un control, 6 decididas por Eduardo, 
 | Menciones de los números y nombres decididos en el libro | 22 formas buscadas en los 38 archivos | 3399-E en A:271 y 04:3891 (corregidos); San Jorge y San Félix (H) ya daba \$6.000; ninguna otra mención |
 | Remisiones, pedidos y aparato | sin cambios respecto de la ronda 46 | no se tocan |
 | Compilación | libro entero | Compila; 803 páginas; 0 referencias indefinidas; `.lof` con 41 entradas |
+
+## Ronda 48 — lecturas de Eduardo, 1957 (29/09/2026)
+
+Tipo: **lecturas sin cambio en el libro** (CORRIGE 3.6), por la palabra clave `LECTURAS` (flujo v2 §5.6). Base: commit `5741b93`. No hay parche. 1957 no está incorporado (`libro.incorporado: null`), y ninguna de las formas decididas aparece en el libro. Denominador: 25.009 líneas, sin cambios. La cobertura acumulada sigue en **25.009 de 25.009 (100,0 %)**. Todo lo que sigue corrige sólo el informe `BO-Salta-1957_5317-5561_la-caldera_LEE-1957_2026-09-29.txt`, y queda como pendiente P68.
+
+### Qué se decidió con controles, sin mostrarlo (§5.6.1)
+
+| Edición y hoja | Duda del informe LEE | Control | Queda |
+|---|---|---|---|
+| 5511 h12 | Decreto de la concesión del río Vaqueros, «107[0?]3-E» (capa «107C3») | Serie: en la misma hoja están el 10702-E, también del 10 de octubre, y el 10704-E | **10703-E**. Se sacó de la hoja antes de entregarla |
+| 5434 h1 | Tapa, «EDICIÓN DE 2? PÁGINAS»; el PDF tiene 24 hojas | Cadena de folios, y cotejo sobre la imagen: h21 repite a h19 (pág. 1303) y h22 repite a h20 (pág. 1304). La edición va de la pág. 1285 a la 1306: **22 páginas** | 22, confirmado por Eduardo (D3). El Release tiene **2 hojas duplicadas**. La 5433 termina en la pág. 1283, así que la 1284 no está en el Release o es un salto de numeración (abierto) |
+| 5451 h1 | Tapa, «24?», débil; el PDF tiene 21 hojas | Cadena de folios: 5451 va de la pág. 1615 a la 1635, y la 5452 empieza en la 1637 | La tapa sigue ilegible (D4). La cadena da una edición de **22 páginas**, a la que le falta en el Release la última (pág. 1636). No se toma «24» |
+
+### Lecturas de Eduardo (hoja `dudas-1957.html`, 4 casos con el renglón marcado)
+
+| # | Edición y hoja | Duda | Sesión | Eduardo | Control | Clase |
+|---|---|---|---|---|---|---|
+| D1 | 5521 h15 y 5535 h7 | Presupuesto del puente sobre el río Caldera (A.74, licitación 593), 1.984.?88,50 | La capa da «088» en seis apariciones y «988» en una | 1.984.088,50 [seguro] | Ninguno decide (el aviso no trae desglose); la lectura coincide con seis de las siete apariciones | **Decidida por Eduardo: $ 1.984.088,50** |
+| D2 | 5429 h22 | Expediente de la Res. 5718-A (A.35), ¿24.753 o 24.756? | «24.75g»; el informe transcribió 24.756/57 | 24.753/57 [seguro] | Cita cruzada: la Res. 5982-A (A.50), que aprueba el concurso autorizado por la 5718, lleva el 24.753/57. No la contradice | **Decidida por Eduardo, apoyada por la cita cruzada: 24.753/57. El informe decía 24.756/57** |
+| D3 | 5434 h1 | Páginas declaradas en la tapa | «2?» | 22 [seguro] | Cadena de folios más duplicados: 22 páginas | **Confirmada por control** |
+| D4 | 5451 h1 | Páginas declaradas en la tapa | «24?» | ilegible | Cadena de folios: 22 páginas, y falta la última | **Abierta en la tapa.** La extensión de la edición la decide la cadena |
+
+Balance: de 4 lecturas, 1 confirmada por un control (D3), 2 decididas por Eduardo (D1, y D2 con una cita cruzada que la acompaña) y 1 ilegible (D4), que la cadena de folios deja acotada. No hubo lecturas corregidas por un control. Se suma al catálogo del §5.6: **cuando las hojas del PDF no coinciden con las páginas de la tapa, antes de mandar la tapa a la hoja se corre la cadena de folios y se buscan hojas repetidas. Una hoja duplicada no tiene folio nuevo; una faltante deja un salto entre ediciones.** La sesión lo aplicó después de entregar la hoja, y con eso D3 y D4 no hacían falta.
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Menciones en el libro de las formas decididas | 9 formas (1.984, 10703, 10702, 24.75, 5718, 5434, 5451, 1957, «Luis Linares» en 1957) en los 38 archivos | Ninguna del informe 1957; «1.984» sólo como matrícula en 19:935, ajena |
+| Duplicados en 5434 | 24 hojas, comparadas de a pares por texto y luego sobre la imagen | 2 duplicados (h21 = h19, h22 = h20) |
+| Cadena de folios 5433 a 5452 | 5 empalmes | Salto de 1 en 5433→5434 (pág. 1284) y en 5451→5452 (pág. 1636) |
