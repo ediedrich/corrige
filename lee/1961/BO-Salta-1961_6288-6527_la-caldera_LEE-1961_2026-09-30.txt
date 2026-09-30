@@ -1,0 +1,2757 @@
+LEE v17 — 1961
+==============
+
+Boletín Oficial de la Provincia de Salta, año 1961, ediciones N 6288 a 6527.
+Barrido documental del término «La Caldera» y su vecindad. Rúbrica:
+rubrica-lee-v16.md del repositorio corrige, con los cambios de LEE v17
+(flujo-editorial.md, §5, versión 2). Sesión del 30/09/2026 (hora de Salta).
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES (2 pendientes nombrados y 12 límites declarados en E.10).
+Los pendientes son trabajo que otra sesión puede hacer y no cambian ninguna
+atribución al departamento: 1) mirar enteras en la imagen las 764 hojas «a ojos»
+del pre-informe y las 525 de menos de 5 % de tinta que no se miraron (de 543;
+163 son del suplemento del Presupuesto en 6472); la sesión las cubrió con las
+dos versiones de texto, que existen en 4.499 de las 4.663 hojas; 2) recalcular
+un subtotal del resumen de la Tesorería de diciembre de 1960 (6350 h19-h20),
+cuyo bloque no se ubicó (E.1).
+Nivel de lectura: imagen. Las 61 fichas del §A y las 10 de B.2 se miraron en la
+imagen del PDF, de 115 a 300 ppp, en los renglones que deciden la atribución al
+departamento, en los números de acto y en los importes; lo que en una ficha se
+leyó sólo en la capa está dicho en su MODO DE LECTURA y no decide ninguna
+atribución. Desvío de v16 §8.17: en las transcripciones las tildes y eñes se
+restituyeron al copiar desde la imagen; alguna tilde del original puede faltar.
+Los números, nombres y fechas se transcriben como en la imagen.
+
+Insumos. estado.json (revisado el 30/09 a las 18:14) da para 1961 un Release con
+240 PDF, sin avisos, con pre-informe y textos, y la lista de lo subido. La
+página expanded_assets/1961 responde con un rechazo del proxy («GitHub access to
+this repository is not enabled for this session»), como en 1950 a 1960; las URL
+de descarga de cada asset responden. Se bajaron por el nombre que da
+estado.json: BO-Salta-1961_la-caldera_PRE-INFORME-LEE_2026-09-30.txt (único
+pre-informe listado, y vigente), lee_textos_1961.zip, resultados_1961.csv,
+decretos_1961.csv, log.txt y lee_config.json. Los PDF, por número: los 240, N
+6288 a 6527, 773 MB. El inventario del Release no se pudo listar: que no haya
+otros assets no está comprobado (E.10).
+
+lee_auto.py: cuatro arranques entre el 29/09 (19:50) y el 30/09 (18:06). Los dos
+primeros terminaron con OSError 28, «No space left on device», al guardar
+recortes en la etapa 6; el tercero no registra cierre; el cuarto (30/09, 13:59)
+retomó desde las búsquedas y cerró con «listo» a las 18:06. Capa previa útil en
+4.144 de 4.663 hojas (89 %); OCR propio en 4.499 hojas (el segundo arranque
+amplió la corrida a casi todo el año), con 4 procesos. El zip de textos trae
+4.663 .prev.txt, 4.499 .prop.txt con sus .tsv y 240 EXTRAIDO.json: hay segunda
+versión en 4.499 hojas. Confianza del OCR propio (pre-informe): media 79,3;
+publicables 106, a verificar 3.629, a ojos 764.
+
+Hallazgos de corpus: 1) El 21 de noviembre la provincia queda intervenida
+(decretos nacionales 10.870 y 10.871): el Comisionado Nacional Especial Víctor
+Hugo Fleitas asume el mando (Decreto 1-G), declara caducos los mandatos de los
+poderes ejecutivo y legislativo, pone en comisión al poder judicial y a «las
+autoridades municipales de la provincia» (Decreto 7-G), y desde el 23 gobierna
+el Interventor Federal Enrique Escobar Cello; la numeración de los decretos
+vuelve a 1 (E.4). 2) La edición 6472 (9 de octubre) trae como suplemento el
+Presupuesto General 1960/61 (Ley 3587): 223 hojas de cuadros por inciso y
+categoría, sin desglose por localidad; ninguna pasada devuelve en él el
+departamento (E.3). 3) La foliatura de las siete primeras ediciones continúa la
+de 1960 (3.633 a 3.724) y desde 6295 recomienza en 93; entre 6469 y 6470 salta
+1.000 (§1). 4) Un subtotal de la Tesorería no cierra por cien pesos exactos
+(febrero de 1961; E.1). 5) El pre-informe no trae 29 hojas con mención real que
+la sesión halló en la segunda versión (§2).
+
+Config (v16 §15.4 y v17 §5.2):
+  config de corrige: version 2026-09-30, hasta 1960, actores 1137, anillo2 325,
+numeros 1192, falsos_positivos 70
+  foto del Release: version 2026-09-30, hasta 1960, actores 1137, anillo2 325,
+numeros 1192, falsos_positivos 70 (mismo contenido; difiere sólo el formato del
+archivo)
+  se usa: corrige — razón: único válido (v17 §5.2)
+  contenido: iguales
+Entrega lee_config.json (version 2026-09-30, hasta 1961; actores 1181, anillo2
+349, numeros 1271, falsos_positivos 75): lo que suma está en F.6; nada se quita.
+
+Entorno: nube con 2 núcleos, tesseract 5.3.4 con eng y osd, sin spa: no hay OCR
+en español en sesión, ni hizo falta (hay segunda versión). PyMuPDF, rapidfuzz y
+pyahocorasick instalados en la sesión.
+
+Qué verificó la sesión: las 240 tapas en planchas de franja a 95 ppp, y a
+200-250 las dudosas (número, fecha, día, páginas declaradas, año editorial y
+Poder Ejecutivo); las pasadas del §2, con la difusa ampliada, sobre las dos
+versiones; el anillo 2 término por término; 1.099 formas de nombre del anillo de
+actores; calendario, foliatura, autoridad e interinatos; resolución y tinta de
+las 4.663 hojas, y en plancha a 22 ppp las 18 de menos de 0,5 % de tinta; los 13
+resúmenes de la Tesorería General y su cadena de saldos, en la imagen.
+
+Qué agregaría cada insumo que faltó. El listado del Release: confirmaría que no
+hay assets fuera de los bajados por nombre. El Registro Oficial de 1961: los
+dígitos que ni la imagen ni un control deciden (E.10) y los actos citados y no
+acompañados (E.3). recortes.zip: nada que la sesión no haya hecho desde los PDF.
+
+§1 · CORPUS REVISADO
+--------------------
+240 ediciones presentes. N 6288 (lunes 2 de enero) a 6527 (viernes 29 de
+diciembre); ninguna ausente en la serie de números. 4.663 hojas en los 240
+archivos, de las cuales 223 son el suplemento del Presupuesto General en 6472;
+sin el suplemento, 4.440 hojas de edición.
+
+Páginas declaradas. Se leen en las 240 tapas; en cuatro la segunda cifra sale
+manchada (6337, 6349, 6456 y 6457) y la foliatura la da (18, 20, 20 y 20). Las
+236 legibles declaran 4.476 páginas; con las cuatro, 4.554. Ediciones con menos
+hojas que las declaradas: 76, con 118 hojas de menos; las más cortas, 6385 (44
+declaradas, 32 hojas), 6405 (24 y 15) y 6450, 6434 y 6442 (5 de menos cada una).
+Con más: 6337 (18 y 20), 6441 (16 y 17) y 6501 (22 y 23). Sin el suplemento de
+6472, las hojas presentes suman 4.440 contra 4.554 declaradas.
+
+Foliatura. 1961 tiene paginación corrida del año, con dos anomalías. La cabecera
+«PAG. N» se resolvió por las dos capas (primeros 160 y últimos 200 caracteres)
+en 2.528 hojas interiores de 4.200; fijó la base de folios (folio menos número
+de hoja, en dos hojas o más) en 237 de las 240 ediciones, y en 2.357 hojas el
+folio leído coincide con esa base. Entre ediciones consecutivas con base, 236
+pares se cotejaron contra las páginas declaradas: cierran 221. Las anomalías: 1)
+las siete primeras ediciones (6288 a 6294, del 2 al 11 de enero) continúan la
+foliatura de 1960, de 3.633 a 3.724, y 6295 (12 de enero) recomienza en 93, que
+es el folio que le toca si el año se hubiera foliado desde 1 en 6288
+(16+8+28+10+10+10+10 = 92); 2) entre 6469 (5 de octubre, base 3.234) y 6470 la
+base salta a 4.250: mil folios de más, que siguen hasta fin de año (la última
+base es 5.528, en 6527). Ninguna de las dos se explica. Los otros pares que no
+cierran: 6336-6337 y 6337-6338 (se compensan: 6337 empieza dos folios antes),
+6417-6418 (24 contra 26), 6472-6473 y 6473-6474 (se compensan), 6500-6501 y
+6501-6502 (se compensan; 6501 trae una hoja de más), 6514-6515 (14 contra 16),
+6521-6522 (16 contra 20) y 6523-6524 (18 contra 20); los cuatro sin compensación
+no se explican. No se afirma de las ediciones cortas qué página falta (E.10).
+
+Tapas, leídas en la imagen las 240. Año editorial: LII en las 240. Poder
+Ejecutivo: «Sr. BERNARDINO BIELLA, Gobernador de la Provincia» hasta 6500 (20 de
+noviembre); «VICTOR HUGO FLEITAS» en 6501 y 6502 (21 y 22 de noviembre), con el
+cargo de Comisionado Nacional Especial en el recuadro; «Dr. ENRIQUE ESCOBAR
+CELLO» desde 6503 (23 de noviembre), con «INTERVENTOR FEDERAL» desde 6507. El
+Registro Nacional de la Propiedad Intelectual de la tapa pasa de 653.928 a
+692.788 en 6433 (8 de agosto). Erratas de tapa: «MIERCOLES, MARZO 2» (6327; fue
+jueves), «JUEVES, NOVIEMBRE 22» (6502; fue miércoles), «MARTE, 2 DE MAYO»
+(6366), «SEPTIEMBRE» con p en 6457, 6459 y 6466 (setiembre en las demás), fecha
+con el mes delante del día de la semana en 6295; número impreso 8384 y 8385 por
+6384 y 6385, 5?97 por 6497, y última cifra de 6358 y tercera de 6365 entre 3 y 8
+(catálogo; la serie decide); sin signo de número en 6381, 6503, 6504, 6513 y
+6527. 6475 y 6514 traen la tapa con la transparencia de la hoja siguiente. La
+tapa dice «Aparece los días hábiles» todo el año.
+
+Día de la semana y fecha: coinciden en 238 tapas; no coinciden en 6327 y 6502.
+No hay ediciones dobles: fechas estrictamente crecientes. Ninguna edición sale
+en sábado ni en domingo.
+
+Días de salida sin edición, de lunes a viernes: 20. Con un acto del propio
+corpus que los explica: 14/4 (feriado para la administración provincial, sumario
+de 6363 h2, leído en la capa). Con una mención que no es acto: 30 y 31/3
+(«feriado próximo de Semana Santa», edictos de 6331 h4 y 6336 h4). Sin explicar
+en el corpus: 6/1, 13/2, 14/2, 20/2, 1/5, 25/5, 1/6, 20/6, 15/8, 17/8, 13/9,
+14/9, 15/9, 12/10, 1/11, 8/12 y 25/12 (17). La búsqueda fue por «feriado»,
+«asueto», «no laborable» y «adhiérese» en las hojas 1 a 4; no se busca la causa
+afuera.
+
+Resolución (imagen principal de cada hoja, medida sobre su caja, las 4.663): 300
+ppi en 3.502; 150 ppi en 1.160, con 66 ediciones enteras a 150 (6288 a 6308,
+todo enero; 6326 a 6346, del 1 al 29 de marzo; 6348 a 6350; 6359 a 6365; 6370 y
+6371; 6377 a 6386, del 17 al 31 de mayo; 6473 y 6488) y 24 parciales; 91 ppi en
+una (6353 h15). techo_ppi: 300.
+
+Tinta (píxeles < 170 a 40 ppp, las 4.663 hojas): 18 bajo 0,5 %; 543 bajo 5 %
+(163 en el suplemento de 6472). Se miraron las 18 en plancha a 22 ppp: quince
+son la última hoja de una edición, con sólo el pie de los Talleres Gráficos de
+la Cárcel Penitenciaria, y tres son portadillas de anexos del suplemento (Poder
+Judicial, Deuda Pública, Plan de Obras); ninguna está en blanco ni es un plano.
+Las otras 525 no se miraron (pendiente).
+
+Hojas miradas en la imagen: 240 tapas en plancha, 18 en la plancha de tinta, 27
+hojas de la Tesorería (renglones de saldo y bloques de subtotal) y 83 hojas de
+las fichas del §A y de B.2, de sus cabeceras en la hoja anterior y de sus
+controles (sumarios, series), a 110-300 ppp; hojas_miradas: 368.
+
+Tabla por edición (N, fecha, hojas presentes / páginas declaradas en la tapa;
+6472 con sus 14 hojas de edición); fechas y declaradas leídas en la imagen de la
+tapa:
+  6288 02/01 16/ 16   6289 03/01  8/  8   6290 04/01 28/ 28   6291 05/01 10/ 10
+  6292 09/01 10/ 10   6293 10/01 10/ 10   6294 11/01 10/ 10   6295 12/01 20/ 20
+  6296 13/01 28/ 28   6297 16/01 26/ 26   6298 17/01 22/ 22   6299 18/01 24/ 24
+  6300 19/01 10/ 10   6301 20/01 16/ 16   6302 23/01 14/ 14   6303 24/01 10/ 10
+  6304 25/01 18/ 18   6305 26/01 18/ 18   6306 27/01  8/  8   6307 30/01 14/ 14
+  6308 31/01 18/ 18   6309 01/02 14/ 14   6310 02/02 13/ 14   6311 03/02 17/ 18
+  6312 06/02 13/ 14   6313 07/02 10/ 10   6314 08/02  8/  8   6315 09/02 16/ 16
+  6316 10/02 18/ 18   6317 15/02  8/  8   6318 16/02 11/ 12   6319 17/02 11/ 12
+  6320 21/02 23/ 24   6321 22/02 26/ 26   6322 23/02 31/ 32   6323 24/02 26/ 26
+  6324 27/02 28/ 28   6325 28/02 15/ 16   6326 01/03 12/ 12   6327 02/03 18/ 18
+  6328 03/03 16/ 16   6329 06/03 14/ 14   6330 07/03 14/ 14   6331 08/03 14/ 14
+  6332 09/03 10/ 10   6333 10/03 18/ 18   6334 13/03 14/ 14   6335 14/03 14/ 14
+  6336 15/03 10/ 10   6337 16/03 20/18?   6338 17/03 16/ 16   6339 20/03 16/ 16
+  6340 21/03 20/ 22   6341 22/03 14/ 14   6342 23/03 12/ 12   6343 24/03 10/ 10
+  6344 27/03 18/ 18   6345 28/03 14/ 14   6346 29/03 20/ 20   6347 03/04 16/ 16
+  6348 04/04 14/ 14   6349 05/04 20/20?   6350 06/04 22/ 22   6351 07/04 20/ 20
+  6352 10/04 18/ 18   6353 11/04 16/ 18   6354 12/04 10/ 10   6355 13/04 16/ 16
+  6356 17/04 20/ 20   6357 18/04 10/ 10   6358 19/04 22/ 22   6359 20/04 28/ 28
+  6360 21/04 34/ 34   6361 24/04 18/ 18   6362 25/04 16/ 16   6363 26/04 24/ 24
+  6364 27/04 23/ 24   6365 28/04 12/ 12   6366 02/05 12/ 12   6367 03/05 16/ 16
+  6368 04/05 20/ 20   6369 05/05 20/ 20   6370 08/05 14/ 14   6371 09/05 20/ 20
+  6372 10/05 16/ 16   6373 11/05 18/ 18   6374 12/05 16/ 16   6375 15/05 16/ 16
+  6376 16/05 22/ 22   6377 17/05 16/ 16   6378 18/05 20/ 20   6379 19/05 18/ 18
+  6380 22/05 28/ 28   6381 23/05 12/ 12   6382 24/05 12/ 12   6383 26/05 12/ 12
+  6384 29/05 10/ 10   6385 30/05 32/ 44   6386 31/05 22/ 22   6387 02/06 22/ 22
+  6388 05/06 20/ 20   6389 06/06 18/ 18   6390 07/06 15/ 16   6391 08/06  9/ 10
+  6392 09/06 21/ 22   6393 12/06 22/ 22   6394 13/06 14/ 14   6395 14/06  9/ 10
+  6396 15/06 10/ 10   6397 16/06 18/ 18   6398 19/06 19/ 20   6399 21/06 11/ 12
+  6400 22/06 11/ 12   6401 23/06 12/ 12   6402 26/06 10/ 10   6403 27/06 20/ 20
+  6404 28/06 22/ 22   6405 29/06 15/ 24   6406 30/06 22/ 22   6407 03/07 16/ 16
+  6408 04/07 11/ 12   6409 05/07 12/ 12   6410 06/07 18/ 18   6411 07/07 20/ 20
+  6412 10/07 21/ 22   6413 11/07 14/ 14   6414 12/07 14/ 14   6415 13/07 10/ 10
+  6416 14/07 10/ 10   6417 17/07 25/ 26   6418 18/07 19/ 20   6419 19/07 22/ 22
+  6420 20/07 14/ 14   6421 21/07 16/ 16   6422 24/07 16/ 16   6423 25/07 15/ 16
+  6424 26/07 20/ 20   6425 27/07 23/ 24   6426 28/07 17/ 18   6427 31/07 21/ 22
+  6428 01/08 22/ 22   6429 02/08 19/ 20   6430 03/08 18/ 18   6431 04/08 17/ 18
+  6432 07/08 33/ 34   6433 08/08 31/ 34   6434 09/08 29/ 34   6435 10/08 20/ 20
+  6436 11/08 26/ 26   6437 14/08 26/ 26   6438 16/08 24/ 24   6439 18/08 22/ 22
+  6440 21/08 22/ 22   6441 22/08 17/ 16   6442 23/08 13/ 18   6443 24/08 14/ 14
+  6444 25/08 22/ 22   6445 28/08 18/ 18   6446 29/08 12/ 12   6447 30/08 36/ 36
+  6448 31/08 17/ 18   6449 01/09 20/ 20   6450 04/09 23/ 28   6451 05/09 20/ 24
+  6452 06/09 20/ 24   6453 07/09 19/ 20   6454 08/09 15/ 16   6455 11/09 18/ 18
+  6456 12/09 20/ 2?   6457 18/09 20/ 2?   6458 19/09 17/ 18   6459 20/09 11/ 12
+  6460 21/09 13/ 14   6461 22/09 12/ 12   6462 25/09 20/ 20   6463 26/09 12/ 12
+  6464 27/09 19/ 20   6465 28/09 12/ 12   6466 29/09 16/ 16   6467 02/10 19/ 20
+  6468 03/10 23/ 24   6469 04/10 16/ 16   6470 05/10 11/ 12   6471 06/10 19/ 20
+  6472 09/10 14/ 14   6473 10/10 15/ 16   6474 11/10 18/ 18   6475 13/10 35/ 36
+  6476 16/10 23/ 24   6477 17/10 19/ 20   6478 18/10 23/ 24   6479 19/10 13/ 14
+  6480 20/10 19/ 20   6481 23/10 20/ 20   6482 24/10 21/ 22   6483 25/10 20/ 20
+  6484 26/10 12/ 12   6485 27/10 19/ 20   6486 30/10 28/ 28   6487 31/10 14/ 14
+  6488 02/11 11/ 12   6489 03/11 25/ 26   6490 06/11 21/ 22   6491 07/11 20/ 20
+  6492 08/11 25/ 26   6493 09/11 24/ 24   6494 10/11 38/ 38   6495 13/11 38/ 38
+  6496 14/11 44/ 44   6497 15/11 41/ 42   6498 16/11 41/ 42   6499 17/11 16/ 16
+  6500 20/11 13/ 14   6501 21/11 23/ 22   6502 22/11 22/ 22   6503 23/11 19/ 20
+  6504 24/11 11/ 12   6505 27/11 26/ 28   6506 28/11 26/ 26   6507 29/11 29/ 30
+  6508 30/11 26/ 26   6509 01/12 33/ 34   6510 04/12 35/ 36   6511 05/12 24/ 24
+  6512 06/12 24/ 24   6513 07/12 27/ 28   6514 11/12 15/ 16   6515 12/12 20/ 20
+  6516 13/12 12/ 12   6517 14/12 24/ 24   6518 15/12 22/ 22   6519 18/12 13/ 14
+  6520 19/12 15/ 16   6521 20/12 19/ 20   6522 21/12 14/ 14   6523 22/12 20/ 20
+  6524 26/12 16/ 16   6525 27/12 18/ 18   6526 28/12 24/ 24   6527 29/12 15/ 16
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones. Dos: la capa nativa del PDF (prev) en las 4.663 hojas y el OCR propio
+de lee_auto.py (prop, tesseract spa, psm 3) en 4.499; etiqueta en cada ficha.
+Las búsquedas corren sobre las dos y se unen por hoja.
+
+Marca de corte U+0002: ninguna en la capa. Guion blando U+00AD: 127.077 en la
+capa prev; se quita junto con el salto de renglón y después los sueltos; guion
+de corte con hasta dos signos a cada lado. Probada: pega «La Cal[U+00AD]/dera» y
+«La Calde[U+00AD]/ra» a través del salto (6325 h9, 6385 h6, 6501 h12, 6394 h8,
+entre otras). No pega «cal,/dera» ni «cal./dera», con coma o punto y sin guion
+(6371 h11 y 6457 h6 en la capa prev): los devuelve la laxa espaciada.
+
+Pasadas, con su resultado:
+- Literal «cald» (NFD, sin tildes): 545 aciertos en las dos versiones; «caldera»
+321, «ricaldes» y variantes 140 (el sucesorio de Silisque Vicente Ricaldes y el
+de Valerio Ricaldes), «calderas» 19, «calderon» 11, «escalda» 6 (Agustín
+Escalada Yriondo). Quitadas las formas que son otra cosa (B.3), las 367
+posiciones que quedan, con las de la laxa espaciada y la difusa, caen en 129
+hojas; se leyeron sus ventanas de ±250 caracteres (163 ventanas) y se agruparon
+por acto.
+- Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: fuera de «cald…», 54 aciertos:
+«gallerano» (apellido), «callera» y ruido, y tres reales: «la galdera» (A de
+6466) y «la caidera» (A de 6334 y 6337). Probada: devuelve la forma literal.
+- Laxa espaciada, separador [\s\-.,'’"“”•|]{0,3} entre cada par de letras: 18
+aciertos sin la forma pegada («c aldera» 13, «c a ld e ra», «c a ldera»,
+«cal\ndera», «cal.\n\ndera», «cal,\ndera»), todos en la capa prev y todos en
+hojas que la literal ya traía por la otra versión. Probada contra «c a l d e r
+a»: la devuelve. En 1961 la capa prev separa letras en muchas hojas («D iciem
+bre», «E N E R O»): la variante es necesaria aunque no rescate un acto nuevo.
+- Difusa (ratio >= 0,78, excluida la forma exacta): 61 formas en 287 aciertos.
+Reales, dentro de fichas: «caidera», «galdera», «caldara», «caldery», «caldeva»,
+«calqera», «cardera» (el original imprime «La Cardera», A de 6449), «celdera»,
+«culdera», «calderai», «caldera1» y «aldera» (de «c aldera»). Falsas (E.7):
+calera, adera, escalerillas, calderas, capdevilla, escalera, calavera, calderon,
+caderias, calrera, cablera, alera, caera, cadera, carilla, caler, caltera,
+callera y otras.
+- Difusa ampliada (0,70-0,78, iniciales c, g, o): 183 formas, 10.297 aciertos.
+Trae dos formas reales, «cfddera» (sumario de 6352 h2) y «calarra» (6341 h9),
+las dos en hojas ya halladas por la otra versión; el resto es cada, cartera,
+candelaria, cabrera, cualquiera y afines. Rescata, entonces, lecturas, no actos.
+- Mirada de hojas: ningún acto del §A salió sólo de mirar.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), en tres
+líneas: 1) faltantes: 24 formas nuevas de 1961 (Huaico Hondo, Ovejería, río
+Nieves, Abra de Mayo ya estaba; «destacamento policial los yacones»,
+«departamento policial de los yacones», «puesto caminero vaqueros», «colegio san
+cayetano», «club tradicion», «club juvenil gallinato», «escuela primaria dr.
+bernabe lopez», «sub comisaria de la caldera», «juzgado de paz de la caldera»,
+«comision municipal de la caldera» y las formas rotas de la capa que ninguna
+pasada literal devuelve: «caldeva», «calqera», «caldetar», «celdera», «cfddera»,
+«culdera», «calarra», «caldery», «cardera», «caldara»), que se agregan (F.6). 2)
+apellidos dentro del anillo 2: los de siempre (apaza, aramayo, condori, chaile,
+isasmendi, murua, nogales, toconas, castellanos, burgos de yugra, mamani,
+wierna, lesser, yufra, yugra); no se mueven; «yufra» es real en A de 6489 (Sixto
+Yufra). 3) a revisar: 240 términos sin acierto en 1961; se conservan.
+
+Anillo 2, lectura: 85 de 325 términos con acierto. Se leyeron los contextos,
+fuera de las hojas de fichas, de todos los términos propios del departamento
+(vaqueros, mojotoro, yacones, los yacones, tacones, jacones, getsemani,
+chalchanio, huerta vieja, gallinato, potrero de castillo, abra de mayo, lesser,
+wierna, yufra, yugra, lagunilla, potrerillo, durazno, luis linares, san
+cayetano, las garrapatas, finca el milagro, el angosto, finca sauzal y los de
+las fichas), agrupados por texto; y, de los genéricos y apellidos, los que traen
+un topónimo del departamento a ±250 caracteres. Lo que da va a B.2, B.3 y §C; el
+resto son repeticiones de avisos fichados, sumarios, apellidos y homónimos de
+otros departamentos.
+
+Actores: 1.099 formas de nombre (los 1.137 actores del config, más 60 formas de
+las fichas de 1961 armadas antes de la búsqueda), con Aho-Corasick sobre el
+texto sin puntuación de las dos versiones: 185 con acierto. Los contextos fuera
+de las hojas de fichas se leyeron para todos los que traen un topónimo del
+departamento a ±250 caracteres (uno: Celina Grande Ovejero de Linares, 6290 h27,
+una hipoteca en Capital: otra cosa) y para los de 1960 y 1961 uno por uno (B.4).
+Actores de fichas cuya búsqueda por nombre completo no devuelve su propio acto:
+Alcide Cruz («aleide»), Feliciana Barboza («teliciana berbeza»), Isabel Suárez
+de Flores («su<« rez»), Santiago Arédes y Juan Bautista López («4y $des»,
+«dobez»), Otilia Aurora Barboza de Viltes («viltes», A de 6337), Margarita
+Vázquez de Salvatierra (la forma del config es «margarita v de salvatierra») y
+Rosa Balsano de Grazziano (la del config es «balsamo de grazziani»): es falla de
+la capa o de la forma del nombre, no ausencia, y se declara.
+
+Números arrastrados: los de las fichas de 1960 (config) y los de 1961, buscados
+por la serie de decretos que la sesión armó desde las dos capas (3.597
+encabezados «Decreto N ... -G/A/E» con fecha). Sirvió como control de serie para
+los números del §A; ningún número arrastrado de 1960 reaparece con un topónimo
+del departamento fuera de las fichas.
+
+Pre-informe de lee_auto: 313 hojas-candidato del anillo 1. Comunes con las 129
+de la sesión: 95. Las 218 que sólo trae el pre-informe son «ricaldes» (61),
+«calderas» (6), «calderón» (5), «escalada» (1) y 145 de la difusa y la laxa
+(calera, madera, capdevilla, escalera, escalerillas, calavera, Tomás
+Cabrera...), todas falsas salvo una: el sumario de 6318 h2, que imprime «La
+Caldera» y la capa lee «ha cadera»; su acto es la A de 6318 (F.1). La sesión
+halló 34 hojas que el pre-informe no trae, todas por la versión prop: 29 con
+mención real (6318 h4, 6323 h8, 6341 h9, 6348 h8, 6351 h7, 6362 h5, 6363 h14,
+6374 h6, 6385 h7, 6392 h7, 6397 h8, 6404 h16, 6405 h12, 6406 h6, 6411 h8, 6432
+h23, 6437 h6, 6438 h14, 6445 h8, 6457 h6, 6466 h2, 6478 h9, 6485 h12, 6489 h15,
+6490 h11, 6491 h10, 6501 h3, 6502 h5 y 6520 h7) y 5 que son otra cosa (B.3: la
+caldera de ocho atmósferas en 6382 h8, «Caldera La Merced» en 6407 h11 y la
+caldera a vapor de la ex fábrica de Metán en 6496 h23, 6497 h22 y 6498 h19)
+(F.2).
+
+Sumarios como control de completitud: las 20 líneas de sumario que nombran el
+departamento, Vaqueros, el Hogar o Gallinato (6318 h2, 6322 h2, 6339 h2, 6352
+h2, 6385 h2, 6394 h2, 6404 h2, 6428 h2, 6434 h2, 6438 h2, 6439 h2, 6449 h2, 6457
+h2, 6466 h2, 6485 h3, 6490 h3, 6501 h3, y las de los edictos de minas y aguas en
+h2-h4) tienen su acto en el §A o en B.2.
+
+Identificadores de las ausencias (B.4): nombre y cargo, cargo y lugar, número de
+acto.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+61 fichas. Por orden de edición. Avisos repetidos: una entrada con sus
+apariciones. Números de documento, libreta y matrícula de personas que pueden
+vivir, y la causa de las licencias: omitidos (E.10). La clase de cada acto va al
+final de la FICHA y en el §D. Las remisiones «A de 6360» nombran la ficha por su
+edición (y hoja, cuando hay dos en la misma edición); su número A.n está en el
+§D.
+
+A.1
+FUENTE: 6288 h9 c1 (Salta, lunes 2 de enero de 1961)
+FICHA: Decreto N 15.835-G, 27 de diciembre de 1960, diez expedientes (7.363/60 y
+otros): concede subsidios para festejos patronales a municipalidades e
+instituciones; uno de 5.000 pesos a Rosario del G. Jurado, senador, para los
+Festejos Patronales de La Caldera. Clase: OTRO.
+MODO DE LECTURA: imagen, 150 ppp: la columna entera, del encabezado al art. 3.
+El número, claro.
+TEXTO:
+  DECRETO N 15.835 — G.
+  Salta, Diciembre 27 de 1.960.
+  Expedientes Nos: 7.363/60; 7.841/60; 1.433/60; 7.774/60; 7.727/60; 1.406/60;
+  7.651/60; 7.980/60; 1.350/60 y 7.730/60.
+  En las presentes actuaciones se gestionan subsidios para Municipalidades é
+  Instituciones con motivos de festejos patronales; y [...]
+  Artículo 1 — Concédese subsidios a favor de las Municipalidades é
+  Instituciones que seguidamente se detallan por los montos que se especifican
+  en los mismos: [...]
+  Rosario del G. Jurado — Senador — Festejos Patronales de La Caldera .... "
+  5.000.— [...]
+  $ 60.000.—
+NOTA DE LECTURA: RECUENTO PROPIO: 9 renglones (Rivadavia-Banda Sud 6.000;
+Cerrillos 6.000; Jurado/La Caldera 5.000; Campo Santo 8.000; El Bordo 5.000;
+Rosario de Lerma 15.000; La Merced 4.000; Agrupación Gauchos de Güemes 3.000;
+Rogelio G. Haro/Colonia Santa Rosa 8.000); suman 60.000, igual al total en
+cifras y al importe en letras del art. 2 (Sesenta Mil Pesos). El acto no declara
+el número de beneficiarios. Expedientes: 10. Rosario del Jesús Jurado, senador
+por el departamento en las fichas de 1960 (config): aquí 'Rosario del G. Jurado'
+[sic o variante].
+
+A.2
+FUENTE: 6315 h4 c1 (Salta, jueves 9 de febrero de 1961)
+FICHA: Decreto N 16.081-A, 13 de enero de 1961: licencias por maternidad (Dec.
+Regl. 10.113/60); ítem 4, Otilia Barboza de Vilte, Auxiliar 5ta., mucama del
+Hogar de Niños Dr. Luis Linares de la localidad de La Caldera, 42 días desde el
+1/12/60. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: cabecera y el renglón del ítem 4.
+TEXTO:
+  DECRETO N 16.081 — A.
+  Salta, Enero 13 de 1.961.
+  Visto los certificados expedidos por el Servicio de Reconocimientos Médicos y
+  Licencias [...] mediante los cuales se concede licencia por maternidad a
+  diverso personal [...]
+  4) Otilia Barboza de Vilte Lib. Cív. N [omitido] Auxiliar 5ta. Mucama del
+  Hogar de Niños Dr. Luis Linares de la localidad de La Caldera; 42 (cuarenta y
+  dos días) a partir del 1|12|60; en base al art. 22 del Decreto N 10.113.
+NOTA DE LECTURA: Número de libreta omitido (E.10). Barboza de Vilte aparece en
+seis actos del año (A de 6337, 6351, 6385; B.4).
+
+A.3
+FUENTE: 6318 h4 c3 (Salta, jueves 16 de febrero de 1961)
+FICHA: Decreto N 16282-G, 27 de enero de 1961, expediente 5177-61, nota 29-M-15
+del Registro Civil del 24 de enero: encarga interinamente la Oficina del
+Registro Civil de La Caldera (Pueblo) a la Autoridad Policial mientras dure la
+licencia reglamentaria de la titular, Ester Gabriela Cruz. Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero, con firmas.
+TEXTO:
+  DECRETO N 16282—G.
+  SALTA, Enero 27 de 1961.
+  Expte. N 5177—61.
+  VISTO lo solicitado por la Dirección General del Registro Civil en nota n
+  29—M—15 de fecha 24 de enero del año en curso, [...]
+  Artículo 1 — Encárgase interinamente de la Oficina del Registro Civil de la
+  localidad de La Caldera (Pueblo) a la Autoridad Policial de la mencionada
+  localidad, mientras dure la licencia reglamentaria de la titular señorita
+  Ester Gabriela Cruz.
+  Art. 2 — Comuníquese [...]
+  BERNARDINO BIELLA
+  JULIO A. BARBARAN ALVARADO
+NOTA DE LECTURA: Mismo trámite que en 1960 (informe 1960, A de 6067). 'Ester'
+aquí; 'Esther' en A de 6428 y en A de 6347 (E.9).
+
+A.4
+FUENTE: 6322 h5 c1-c2; sumario 6322 h2, pág. 537 (Salta, jueves 23 de febrero de
+1961)
+FICHA: Decreto N 16377-G, 7 de febrero de 1961, expediente 5217-61: vacante el
+Juzgado de Paz Titular de La Caldera, designa Juez de Paz Propietario, por dos
+años, a Liborio Gerardo Guerrero (art. 165 de la Constitución). Clase:
+JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: el decreto entero, repartido entre el pie de
+c1 y la cabeza de c2.
+TEXTO:
+  DECRETO N 16377—G.
+  SALTA, Febrero 7 de 1961.
+  Expte. N 5217—61.
+  Encontrándose vacante el Juzgado de Paz Titular de la localidad de La Caldera
+  y atento las prescripciones establecidas en el artículo 165 de la Constitución
+  de la Provincia, [...]
+  Artículo 1 — Desígnase por un período constitucional de dos años Juez de Paz
+  Propietario de la localidad de La Caldera, al señor Liborio Gerardo Guerrero —
+  M. I. N [omitido] —, a partir de la fecha del presente decreto.
+NOTA DE LECTURA: CONTROL DE SERIE: 16376-G y 16378-G, del mismo 7 de febrero, en
+la misma hoja. El sumario de h2 trae el acto; su capa escribe 'liborio gh.
+quetteto' (F.1).
+
+A.5
+FUENTE: 6323 h8 c3 (Salta, viernes 24 de febrero de 1961)
+FICHA: Decreto N 16435-A, 9 de febrero de 1961, nota 32 de la Dirección de
+Patronato: reconoce los servicios de Celedonio Aquino, Auxiliar 5, peón en el
+Hogar Dr. Luis Linares de La Caldera, del 1 de abril al 30 de junio de 1960.
+Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: la cabecera (número, fecha, nota); el artículo
+en la capa (prop y prev concuerdan).
+TEXTO:
+  DECRETO N 16435—A.
+  SALTA, Febrero 9 de 1961.
+  Nota N 32, Dirección de Patronato y Asistencia Social de Menores.
+  [...] Artículo 1 — Reconócense los servicios prestados por el señor Celedonio
+  Aquino —L. E. en trámite—, en la categoría de Auxiliar 5 del Departamento de
+  Patronato y Asistencia Social de Menores y que se desempeñaba como peón en el
+  Hogar "Dr. Luis Linares", de La Caldera, durante el tiempo comprendido desde
+  el 1 de abril hasta el 30 de junio del año 1960.
+NOTA DE LECTURA: El pago de esos servicios, por ejercicio vencido, es el Decreto
+19.220-A del 14/8/1961 (6445 h6), que no nombra el departamento (B.4).
+
+A.6
+FUENTE: 6325 h9 c2 (Salta, martes 28 de febrero de 1961); y 6326 h7, 6327 h12,
+6328 h11, 6329 h7, 6330 h7, 6331 h3, 6332 h4, 6333 h12, 6334 h8; sumarios en
+h2-h3
+FICHA: Edicto de minas N 7.724: Francisco Fernández Cornejo, expediente 3.563-F,
+23 de agosto de 1960, pide permiso de cateo de 2.000 ha 'en el Departamento de
+La Caldera y Rosario de Lerma', desde el mojón del Alto del Volcán (Rosario de
+Lerma); dentro de la zona, el punto de la mina Don Juan (expte. 3.211/R/59).
+Clase: MINAS.
+MODO DE LECTURA: imagen, 130 ppp: el edicto entero en 6325 h9 c2. Las otras
+nueve apariciones, en la capa, reunidas por solicitante y expediente.
+TEXTO:
+  N 7.724 — Solicitud de Permiso para Exploración y Cateo de Minerales de
+  Primera y Segunda Categoría, en una zona de dos mil hectáreas, ubicada en el
+  Departamento de La Caldera y Rosario de Lerma, presentada por el señor
+  Francisco Fernández Cornejo en Expediente número 3.563 F. el día veintitrés de
+  Agosto de 1.960, a horas diez. [...] Del mojón de piedra del Alto del Volcán
+  (Rosario de Lerma), se medirán 2.500 mts. al Este, 2.000 mts. al Norte, de
+  este 5.000 mts. al Oeste, de este punto 4.000 mts. al Sud, de este punto 5.000
+  mts. al Este y de este 2.000 mts. al Norte, quedando así cerrado el perímetro
+  de 2.000 hectáreas solicitadas. Dentro de la zona peticionada se encuentra
+  inscripto el Punto de manifestación de descubrimiento de la mina "Don Juan"
+  Expediente 3.211/R/59 [...]
+NOTA DE LECTURA: ARITMÉTICA: la poligonal es un rectángulo de 5.000 por 4.000 m
+= 2.000 ha: cierra. La marca que cierra el edicto, 'e) 28 — 2 — al — 13 — 3 —
+61', se lee en la imagen al pie (6325 h9 c3, encima del 7.723); abarca diez
+ediciones, del 28/2 (6325) al 13/3 (6334), y hay diez apariciones: cierra. La
+marca 'e) 2 al 15-3-61' que la capa pone delante del número es la del edicto
+anterior. Sumarios: 6325 h2 a 6334 h2-h3.
+
+A.7
+FUENTE: 6325 h9 c3 (Salta, martes 28 de febrero de 1961); y 6326 h7, 6327 h12,
+6328 h11, 6329 h7, 6330 h7, 6331 h4, 6332 h4, 6333 h13, 6334 h8
+FICHA: Edicto de minas N 7.723: Herman Pfister y Wenceslao F. Cornejo ('Correjo'
+en el original), expediente 3.564/P, 24 de agosto de 1960, piden cateo de 2.000
+ha en el Departamento de La Caldera y Rosario de Lerma, desde el mismo mojón;
+superpuesto en 108 ha con el cateo 3.360/D, quedan libres 1.892 ha. Clase:
+MINAS.
+MODO DE LECTURA: imagen, 130 ppp: el edicto entero en 6325 h9 c3; las demás
+apariciones por texto.
+TEXTO:
+  N 7.723 — Solicitud de Permiso de Cateo y Exploración de Minerales de Primera
+  y Segunda Categoría, en una zona de dos mil hectáreas ubicada en el
+  Departamento de La Caldera y Rosario de Lerma, presentada por los Sres. Herman
+  Pfister y Wenseslao F. Correjo en Expediente número 3.564/P, el día
+  veinticuatro de Agosto de 1.960 a horas nueve. [...] Del mojón de piedra "Alto
+  del Volcán" (Rosario de Lerma), se medirán 2.500 mts. al Este, de ese punto
+  2.000 mts. al Norte, de este punto 5.000 mts. al Este, de ese punto 4.000 mts.
+  al Sud, de este punto 5.000 mts. al Oeste y de este punto 2.000 mts. al Norte
+  [...]. Inscripta gráficamente la superficie solicitada, ésta resulta
+  superpuesta en 108 hectáreas aproximadamente al cateo Expediente número
+  3.360/D, quedando una superficie libre aproximada de 1.892 hectáreas. A lo que
+  se proveyó. Salta, Febrero 10 de 1.961. [...] [...]
+NOTA DE LECTURA: ARITMÉTICA: 2.000 - 108 = 1.892: cierra. 'Correjo' [sic] por
+Cornejo; 'Wenseslao' [sic]. La poligonal repite la de 7.724 con Este y Oeste
+trocados en el tercer y el quinto tramo: una de las dos descripciones cierra
+hacia el oeste del mojón y la otra hacia el este; no se concilia (E.9).
+Herman(n) Pfister: su sucesión se abre en julio (edicto 8703, 6416 h4 y
+siguientes; B.4).
+
+A.8
+FUENTE: 6326 h4 c2 (Salta, miércoles 1 de marzo de 1961)
+FICHA: Decreto N 16515-G, 18 de febrero de 1961, expediente 5307/61, nota 172 de
+Jefatura de Policía: da de baja desde el 1 de febrero al agente Manuel Maizo, de
+la Sub-Comisaría de La Caldera, por no reunir las condiciones mínimas para el
+desempeño. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: el decreto entero.
+TEXTO:
+  DECRETO N 16515 — G.
+  SALTA, Febrero 18 de 1961
+  Expediente N 5307/61
+  —VISTO la nota N 172 de fecha 7 de febrero del año en curso, elevada por
+  Jefatura de Policía de la Provincia, y atento a lo solicitado en la misma,
+  [...]
+  Art. 1 — Dáse de baja a partir del día 1 de febrero del presente año, al
+  Agente de Policía (F. 3480/2351) don MANUEL MAIZO, de la Sub-Comisaría de La
+  Caldera, por no reunir las condiciones mínimas para el desempeño de sus
+  funciones.
+NOTA DE LECTURA: Maizo, actor de 1960. Vuelve dos veces sin el departamento:
+6340 h8 (reconocimiento de servicios del 19/1 al 16/2) y 6449 h9 (nueva
+designación como agente, P. 2373, en reemplazo de Francisco Adrián Lozano): B.4.
+La baja 'a partir del 1 de febrero' y servicios reconocidos 'hasta el 16 de
+febrero' no se concilian (E.9).
+
+A.9
+FUENTE: 6334 h8 c3 (Salta, lunes 13 de marzo de 1961); y 6335 h8, 6336 h4, 6337
+h14, 6338 h10, 6339 h12, 6340 h12, 6341 h9, 6342 h5, 6343 h4
+FICHA: Edicto citatorio N 7831, expediente 4499/48: 'Manufactura de Tabacos
+Particular V. F. Grego S.A.' pide la transferencia a su nombre de la concesión
+del Decreto 7151 del 8/10/1953: 216 horas quincenales con las 19/30 partes del
+caudal del río La Caldera, 30 ha del inmueble Getsemaní, catastro 61,
+departamento La Caldera. Clase: AGUAS.
+MODO DE LECTURA: imagen, 120 ppp: el edicto entero en 6334 h8. Las demás
+apariciones, por texto (firma, catastro, turno).
+TEXTO:
+  EDICTO CITATORIO:
+  —A los efectos establecidos por el art. 183 del Código de Aguas, se hace saber
+  que "Manufactura de Tabacos Particular V. F. Grego Sociedad Anónima" tiene
+  solicitado las transferencia a su nombre de la concesión original reconocida
+  mediante Decreto N 7151 del 8/X/53, para irrigar con un turno de 216 horas
+  quincenales con las 19/30 avas partes del caudal del río La Caldera, 30 Has.
+  del inmueble "Getsemaní", catastro N 61; carácter Permanente y a Perpetuidad:
+  ubicado en el Departamento La Caldera.— En época de abundancia de agua, tendrá
+  derecho al uso de un caudal de hasta 0.75 litros por segundo por hectárea bajo
+  riego.
+  SALTA — Administración General de Aguas
+  e) 13 al 24/3/61.
+NOTA DE LECTURA: Diez apariciones para diez días hábiles del 13 al 24 de marzo:
+cierra. 'Grego' en el edicto, 'Greco' en el decreto que lo resuelve (A de 6440):
+E.9. La capa escribe el departamento como 'cald.-ra', 'calarra', 'culdera' y
+'caidera' en distintas apariciones (F.1). El trámite termina en el Decreto
+19157-E (A de 6440).
+
+A.10
+FUENTE: 6337 h9 c2 (Salta, jueves 16 de marzo de 1961)
+FICHA: Decreto N 16.748-A, 8 de marzo de 1961: licencias por maternidad; ítem 2,
+Otilia Aurora Barboza de Viltes, Aux. 5, mucama del Hogar del Niño de La
+Caldera, 42 días desde el 17/2/61. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120-150 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 16.748 — A.
+  Salta, Marzo 8 de 1961
+  Visto los certificados expedidos por el Servicio de Reconocimientos Médicos y
+  Licencias, [...] mediante los cuales se concede licencia por maternidad [...]
+  2) Otilia Aurora Barboza de Viltes — L. C. N [omitido] — Aux. 5 — Mucama —
+  Hogar del Niño de la Caldera, 42 (Cuarenta y dos) días a partir del 17|2|61,
+  en base Art. 22 — Decreto 10.113.
+NOTA DE LECTURA: 'Viltes' [sic]; 'Hogar del Niño de la Caldera' por el Hogar
+Linares. La capa: 'caldeva' (difusa). Segunda licencia por maternidad de 42 días
+en tres meses (A de 6315, desde el 1/12/60); no se concilia (E.9).
+
+A.11
+FUENTE: 6339 h9 c3 (Salta, lunes 20 de marzo de 1961); sumario 6339 h2, pág. 831
+FICHA: Decreto N 16.834-G, 13 de marzo de 1961, expediente 5.480/1961: acepta
+desde el 3 de marzo la renuncia de Ramón Antonio Vivas, Juez de Paz Suplente de
+Campaña de La Caldera. Clase: JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: el decreto entero.
+TEXTO:
+  DECRETO N 16.834 — G.
+  Salta, Marzo 13 de 1.961.
+  Expediente N 5.480/1.961.
+  Vista la renuncia elevada por el señor Juez de Paz Suplente de Campaña de la
+  localidad de La Caldera, (Dpto. del mismo nombre) Sr. Ramón Antonio Vivas,
+  [...]
+  Artículo 1 — Acéptase la renuncia presentada por el Sr. Ramón Antonio Vivas,
+  al cargo de Juez de Paz Suplente de la localidad de La Caldera (Dpto. del
+  citado nombre), a partir del día 3 de marzo, fecha de la misma.
+NOTA DE LECTURA: La suplencia se cubre en octubre (A de 6490: Esteban Mogro, por
+terna de la Municipalidad). El nombramiento de Vivas no está en el corpus de
+1961.
+
+A.12
+FUENTE: 6347 h8 c1-c3 (Salta, lunes 3 de abril de 1961)
+FICHA: Decreto N 16.964-G, 21 de marzo de 1961, expediente 5.485/1961:
+promulgada la Ley de Presupuesto 3.587 (22/2/1961), confirma desde el 1 de enero
+al personal de la Dirección General del Registro Civil; entre los encargados de
+tercera categoría, 'Esther Gabriela Cruz, La Caldera'. Clase:
+REGISTRO-CIVIL+CARGOS.
+MODO DE LECTURA: imagen, 120-140 ppp: cabecera, art. 1 y el renglón.
+TEXTO:
+  DECRETO N 16.964 — G.
+  Salta, Marzo 21 de 1.961.
+  Expediente N 5.485/1.961.
+  Habiéndose promulgado la Ley de Presupuesto N 3.587 de fecha 22 de febrero del
+  año en curso, [...]
+  Artículo 1 — Confírmanse a partir del día 1 de enero del año en curso, al
+  personal de la Dirección General del Registro Civil que seguidamente se
+  detallan: [...]
+  Teodoro Casimiro, La Poma
+  Esther Gabriela Cruz, La Caldera
+  Josefa de Jesús Orellana de Fernández, El Vencido [...]
+NOTA DE LECTURA: Vaqueros no figura en la nómina (búsqueda de 'vaquer' en h8 y
+h9: sólo 'Vaquería', Guachipas); la oficina de Vaqueros se provee en mayo (A de
+6374). La nómina entera no se recontó (E.8): sólo el renglón del departamento y
+sus vecinos.
+
+A.13
+FUENTE: 6348 h8 c1, pág. 972 (Salta, martes 4 de abril de 1961); y 6355 h10,
+6362 h5, 6363 h14; sumarios 6348 h2, 6355 h3, 6362 h2, 6363 h3
+FICHA: Edicto de minas N 7970: manifestación de descubrimiento de un yacimiento
+de plata y plomo, mina 'Argentina', en el departamento de La Caldera, presentada
+por Ramón Moreno Lobo, expediente 2795-M, 16 de mayo de 1958; referencia, la
+confluencia de los arroyos La Ovejería y Huaico Hondo, que forman el río Nieves.
+Clase: MINAS.
+MODO DE LECTURA: imagen, 130 ppp: el encabezado y la descripción en 6348 h8; el
+resto en la capa.
+TEXTO:
+  N 7970 — MANIFESTACION DE DESCUBRIMIENTO DE UN YACIMIENTO DE PLATA Y PLOMO,
+  MINA DENOMINADA "ARGENTINA" UBICADA EN EL DEPARTAMENTO DE LA CALDERA
+  PRESENTADA POR EL SEÑOR RAMON MORENO LOBO EN EXPEDIENTE NUMERO 2795 — M. EL
+  DIA DIECISEIS DE MAYO DE 1958 A HORAS ONCE Y TREINTA MINUTOS.
+  La Autoridad Minera Provincial notifica a los que se consideren con algún
+  derecho para que lo hagan valer en forma y dentro del término de ley. La zona
+  peticionada se describe en la siguiente forma: Debe tomarse como punto de
+  referencia la confluencia de los arroyos "La Ovejería" y el de "Huaico Hondo"
+  los que forman el "Río Nieves" [...] Salta, marzo 28 de 1961. [...] e) 4-13 y
+  24-4-61
+NOTA DE LECTURA: Cuatro apariciones (6348, 4/4; 6355, 13/4; 6362, 25/4; 6363,
+26/4) contra tres fechas de la marca (4, 13 y 24 de abril): falta el 24 (6361,
+búsqueda por solicitante y por expediente) y hay dos días seguidos después; no
+se explica (E.9). En 6339 h6 'Moreno Lobo' es Francisca Nelda Rosa Moreno Lobo
+de Martínez (jubilación): otra persona. Huaico Hondo y Ovejería vuelven en la
+mina Juanita (A de 6431).
+
+A.14
+FUENTE: 6349 h5 c2-c3, pág. 983 (Salta, miércoles 5 de abril de 1961)
+FICHA: Decreto N 1698[3/4]-A, 22 de marzo de 1961, expediente 2005-C-1960:
+aprueba la Resolución 1389-J de la Caja de Jubilaciones (9/12/1960) que acuerda
+pensiones a la vejez de 300 pesos (Ley 1204); bajo 'LA CALDERA', la 5189, a
+Pablo Acuña. Clase: OTRO.
+MODO DE LECTURA: imagen, 120-150 ppp: cabecera del decreto (c2) y la lista (c3).
+Número: la imagen da 16984; la capa, 16983 (E.10).
+TEXTO:
+  DECRETO N 16984—A.
+  SALTA, Marzo 22 de 1961.
+  Expte. N 2005—C—1960 (N 5346/60 y agregados de la Caja de Jubilaciones y
+  Pensiones de la Provincia).
+  [...] "Art. 1 — Acordar Pensiones a la Vejez de acuerdo a las disposiciones de
+  la Ley 1204, con un haber mensual de $ 300.— m|n. (Trescientos Pesos Moneda
+  Nacional), conforme a la Ley N 3193|58 [...] a los solicitantes que a
+  continuación se detallan: [...]
+  "LA CALDERA:
+  5189 — Acuña, Pablo"
+NOTA DE LECTURA: RECUENTO PROPIO de lo mirado: Capital 5152-5183 (32), Anta
+5184-5186 (3), Cachi 5187-5188 (2), La Caldera 5189 (1); la lista sigue fuera
+del recorte y no se recontó entera. Sin lugar dentro del departamento.
+
+A.15
+FUENTE: 6351 h7 c1 (Salta, viernes 7 de abril de 1961)
+FICHA: Decreto N 17.069-A, 28 de marzo de 1961: licencias por enfermedad; ítem
+6, Otilia Aurora Barboza de Vilte, Auxiliar 5, mucama del Hogar del Niño de la
+localidad de La Caldera, 36 días desde el 12/1/61. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120-150 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 17.069 — A.
+  Salta, 28 de Marzo de 1961
+  Visto los certificados [...] mediante los cuales se concede licencia por
+  enfermedad a diverso personal [...]
+  6) Otilia Aurora Barboza de Vilte — L. C. N [omitido] — Auxiliar 5 — Mucama
+  del Hogar del Niño de la localidad de La Caldera — treinta y seis (36) días, a
+  partir del 12—1—61 en base al Art. 13 del Decreto N 10113.
+NOTA DE LECTURA: Licencia por enfermedad desde el 12/1 dentro de la de
+maternidad desde el 1/12/60 (A de 6315): se superponen; no se concilia (E.9).
+
+A.16
+FUENTE: 6352 h4 c2 (Salta, lunes 10 de abril de 1961); sumario 6352 h2, pág.
+1044
+FICHA: Decreto N 17072-A, 28 de marzo de 1961: da por terminadas desde el 18 de
+febrero, por abandono de servicio (art. 5 del Decreto 3820), las funciones de
+María Margot Portal, Ayudante 9, personal de servicio del Hogar de Niños Dr.
+Luis Linares de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: el decreto entero.
+TEXTO:
+  DECRETO N 17072—A—
+  Salta, Marzo 28 de 1.961.—
+  Visto estas actuaciones y lo manifestado por el señor Regente del Hogar de
+  Niños "Dr. Luis Linares" de la Caldera, de que la señorita María Margot Portal
+  — Ayudante 9 — Personal de Servicio del citado Hogar, hizo abandono de sus
+  funciones el día 18 de febrero ppdo., [...]
+  Artículo 1.— Dánsele por terminadas las funciones del Ayudante 9 — Personal de
+  servicio del Hogar de Niños "Dr. Luis Linares" de la Caldera, señorita María
+  Margot Portal, a partir del día 18 de febrero del año en curso, por abandono
+  de servicios de acuerdo a lo que establece el Art. 5 del Decreto N 3820
+  (Acuerdo General de Ministros).
+NOTA DE LECTURA: FECHA: la capa da 'marzo 23' y la imagen '28'; decide el
+CONTROL DE SERIE: 17.069-A es del 28 de marzo (A de 6351), de modo que 17072 no
+puede ser del 23. La vacante se cubre en agosto (A de 6439, Ledys Hetel Royo).
+Sumario: capa 'celdera', difusa 'cfddera' (F.1).
+
+A.17
+FUENTE: 6360 h5 c2 a h10 c1, págs. 1187-1192 (Salta, viernes 21 de abril de
+1961)
+FICHA: Decreto N 17.219-A, 10 de abril de 1961: con la Ley de Presupuesto
+3587/61, confirma desde el 1 de enero al personal del Ministerio de Asuntos
+Sociales y Salud Pública en dependencias del interior; renglones del
+departamento: médico regional de La Caldera, Juan C. Martearena; médico regional
+de Vaqueros y San Lorenzo, Dardo Frías; enfermeras de consultorio externo en
+Caldera (Corina A. Bustamante) y Vaqueros (Eusebia Ruiz); auxiliar de servicio
+en La Caldera (Alcide Cruz). Clase: CARGOS.
+MODO DE LECTURA: imagen, 130-140 ppp: cabecera (h5 c2) y los cinco renglones (h8
+c2, h8 c3, h10 c1). La nómina de seis hojas no se leyó entera.
+TEXTO:
+  DECRETO N 17.219 — A.
+  Salta, 10 de Abril de 1961
+  Visto la Ley N 3587/61, mediante la cual se aprueba el Presupuesto para el
+  Ejercicio 1960/61; y siendo necesario confirmar al personal dependiente del
+  Ministerio de Asuntos Sociales y Salud Pública, teniendo en cuenta el cambio
+  del nomenclador [...]
+  Art. 1. — Confírmase, promuévase y desígnase al siguiente personal [...] que
+  se desempeña en distintas dependencias del Interior de la Provincia [...] a
+  partir del día 1 de enero del año en curso: [...]
+  Aux. Princ., Médico Reg. La Caldera, Dr. Juan C. Martearena,
+  Aux. Princ., Médico Reg. Vaqueros y San Lorenzo, Dr. Dardo Frías, [...]
+  Ayud. 3 Enfer. Cons. Exter. Caldera, Srta. Corina A. Bustamante. [...]
+  Ayud. 3 Enfer. Cons. Exter. Vaqueros, Srta. Eusebia Ruiz. [...]
+  Ayud. 9 Aux. Serv. La Caldera, Srta. Alcide Cruz.
+NOTA DE LECTURA: RECUENTO PROPIO: 5 renglones del departamento (3 La Caldera, 2
+Vaqueros). 'Caldera' sin artículo en el de Bustamante [sic]. La capa prop
+escribe 'martcarena' y 'caidera' (laxa y difusa); Alcide Cruz sólo está en la
+capa prev ('aleide'). Martearena es dado de baja como médico de Vaqueros y San
+Lorenzo en junio (B.2 de 6404) y figura en licencia como médico de La Caldera en
+octubre (A de 6501): E.9.
+
+A.18
+FUENTE: 6360 h10 c2-c3, pág. 1192 (Salta, viernes 21 de abril de 1961)
+FICHA: Decreto N 17.221-A, 10 de abril de 1961: confirma al personal de la
+Dirección de Patronato y Asistencia Social de Menores; renglones del
+departamento: Alejandro Damián Teyssier, regente del Hogar Linares 'La Caldera';
+Rosa Balsano de Grazziano, administrativa en La Caldera; Feliciana Barboza e
+Isabel Suárez de Flores, enfermeras en La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y los cuatro renglones (h10 c3).
+TEXTO:
+  DECRETO N 17.221 — A.
+  Salta, 10 de Abril de 1961
+  [...] Art. 1 — Confírmase, promuévase y desígnase al siguiente personal:
+  Administrativo Técnico — Profesionales — Sub — Técnico — Obrero y de
+  Maestranza — Servicios y Docente [...] que se desempeña en distintas
+  dependencias de la "Dirección de Patronato y Asistencia Social de Menores"
+  [...]
+  Auxiliar 3, Reg. H. Linares "La Caldera", Sr. Alejandro Damián Teyssier. [...]
+  Ayud. 9, Administrativa, La Caldera, señora Rosa Balsano de Grazziano. [...]
+  Ayud. 3, Enf. La Caldera, Srta. Feliciana Barboza.
+  Ayud. 9, Enf. La Caldera, Sra. Isabel Suárez de Flores.
+NOTA DE LECTURA: RECUENTO PROPIO: 4 renglones con el departamento. En el bloque
+'auxiliar servicios' de la hoja 11, sin lugar, figuran seis empleados del Hogar
+que otros actos del año sitúan en La Caldera (Celedonio Aquino, Margarita
+Vázquez de Salvatierra, Otilia Barboza de Vilte, María Margot Portal, Marcelina
+Apaza de Zerpa, Sergia Méndez de Mogro): B.4, grupo 2. 'Balsano de Grazziano'
+aquí; 'Bálsamo de Grazziani' en 1960 (E.9). SERIE: 17.218, 17.219, 17.220 y
+17.221-A, todos del 10/4.
+
+A.19
+FUENTE: 6367 h6 c2 (Salta, miércoles 3 de mayo de 1961)
+FICHA: Decreto N 17.362-G, 21 de abril de 1961, expediente 5864-1961: aprueba
+cinco resoluciones de Jefatura de Policía; la 189, del 11 de abril, crea desde
+el 1 de mayo el Destacamento Policial 'Los Yacones' (Departamento La Caldera),
+de la II Zona con asiento en Campo Quijano: un cabo, dos agentes y 250 pesos
+mensuales para gastos. Clase: OTRO.
+MODO DE LECTURA: imagen, 150 ppp: cabecera del decreto y la resolución entera.
+TEXTO:
+  DECRETO N 17.362 — G.
+  Salta, Abril 21 de 1961
+  Expediente N 5864 — 1961
+  Visto lo solicitado por Jefatura de Policía en notas Nos. 420, 421, 423 y 424
+  de fechas 12 de abril y N 428 de fecha 13 de abril del año en curso, [...]
+  Art. 1 — Apruébanse las resoluciones Nos. 190, 189, 187, 169 y 191, dictadas
+  por Jefatura de Policía, cuyos textos dicen: [...] "RESOLUCION N 189 — SALTA,
+  abril 11 de 1961.— VISTO: La necesidad de crear un Destacamento Policial en el
+  lugar denominado "Los Yacones" Dpto. de La Caldera, el Jefe de Policía de la
+  Provincia, RESUELVE: 1 Crear a partir del día 1 de mayo próximo, el
+  Destacamento Policial "Los Yacones" (Departamento La Caldera) bajo la
+  jurisdicción de la II Zona con asiento en Campo Quijano, compuesto de una
+  dotación de 1 Cabo y 2 Agentes, y una Partida mensual para gastos de $ 250
+  m|n. (DOSCIENTOS CINCUENTA PESOS). 2 — Suministros, proveerá el armamento
+  moviliario y demás elementos necesarios para su funcionamiento. [...]"
+NOTA DE LECTURA: La Caldera queda en la II Zona policial con cabecera en Campo
+Quijano (Rosario de Lerma). Primer agente destinado al 'Departamento Policial de
+los Yacones': Ambrosio Colque, en el Decreto 17.367-G del mismo día (B.2 de
+6367). La capa lee 'abril a de 1961' y reduce la 190 a '19'.
+
+A.20
+FUENTE: 6371 h8 c3 a h10 c1, pág. 1402 (Salta, martes 9 de mayo de 1961)
+FICHA: Decreto N 17486-A, 28 de abril de 1961: licencias por enfermedad; ítem
+47, Margarita V. de Salvatierra, Ayudante 9, personal de servicio del Hogar de
+La Caldera, 15 días desde el 17/3/61. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: cabecera (h8 c3) y renglón (h10 c1).
+TEXTO:
+  DECRETO N 17486—A.
+  SALTA, Abril 28 de 1961.
+  VISTO los certificados expedidos por el Servicio de Reconocimientos Médicos y
+  Licencias [...] mediante los cuales se concede licencia por enfermedad a
+  diverso personal [...]
+  47) Margarita V. de Salvatierra — L. E. N [omitido] Ayudante 9 Personal de
+  Servicio del Hogar de La Caldera, 15 (quince) días a partir del 17|3|61, en
+  base a lo que establece el Art. 13 del Decreto N 10.113.
+NOTA DE LECTURA: En el mismo decreto, Prudencio Acuña es 'auxiliar de caldera'
+del Policlínico San Bernardo (B.3). Salvatierra, actor de 1960.
+
+A.21
+FUENTE: 6371 h11 c1-c2 (Salta, martes 9 de mayo de 1961)
+FICHA: Decreto N 17491-A, 28 de abril de 1961, expediente 35.643/61: desestima
+por infundada la denuncia de Rosa Tránsito Navarro, Ayudante 9, cocinera del
+Hogar Dr. Luis Linares de La Caldera, contra el regente, y le acepta la renuncia
+desde el 1 de enero. Clase: CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: cabecera, visto y art. 1; el art. 2 en la
+capa.
+TEXTO:
+  DECRETO N 17491_A.
+  SALTA, 28 Abril de 1961.
+  Expediente N 35.643/61.
+  VISTO en este expediente las actuaciones relacionadas con el sumario
+  administrativo practicado oportunamente con motivo de esclarecer los cargos
+  formulados por la empleada del Hogar "Dr. Luis Linares", de La Caldera,
+  señorita Rosa Tránsito Navarro en contra del señor Regente del citado Hogar y
+  teniendo en cuenta que de las conclusiones arribadas en el mismo resulta sin
+  fundamentos dichos cargos; [...]
+  Artículo 1 — Desestímase la denuncia formulada por la señorita Rosa Tránsito
+  Navarro, Ayudante 9, Cocinera del Hogar "Dr. Luis Linares", de La Caldera, en
+  contra del Regente del citado Hogar, por ser infundados los términos de la
+  misma, de acuerdo a las conclusiones arribadas en el sumario administrativo
+  practicado oportunamente.
+  Art. 2 — Acéptase la renuncia presentada por la señorita Rosa Tránsito Navarro
+  al cargo de Ayudante 9 Personal de Obrero y de Maestranza del Hogar "Dr. Luis
+  Linares", de La Caldera, a partir del día 1 de enero del año en curso.
+NOTA DE LECTURA: El regente no se nombra en el acto; el del Hogar es Alejandro
+Damián Teyssier en el Decreto 17.221-A (A de 6360), de modo que la
+identificación es inferencia y no se afirma. Cocinera (art. 1) y personal obrero
+y de maestranza (art. 2): dos categorías para el mismo cargo; se transcribe.
+Vacante cubierta en agosto (A de 6439).
+
+A.22
+FUENTE: 6371 h12 c2 (Salta, martes 9 de mayo de 1961)
+FICHA: Decreto N 174[3/9]9-A, 28 de abril de 1961, expediente 35.95?/61:
+autoriza a la Oficina de Compras de Asuntos Sociales a llamar a licitación
+pública por comestibles por unos 1.800.000 pesos para doce establecimientos,
+entre ellos el Hogar Dr. Luis Linares de La Caldera, para mayo y junio. Clase:
+OTRO.
+MODO DE LECTURA: imagen, 150 ppp: el decreto hasta la lista. Número: 17499 en la
+imagen, 17439 en la capa; no hay control que decida (E.10).
+TEXTO:
+  DECRETO N 17499 — A.
+  SALTA, Abril 28 de 1961.
+  Expediente N 35.95?/61.
+  —VISTO los pedidos adjuntos a estas actuaciones, relacionados con la
+  adquisición de comestibles con destino a distintos servicios dependientes del
+  Ministerio del rubro; [...]
+  Art. 1 — Autorízase a la Oficina de Compras del Ministerio de Asuntos Sociales
+  y Salud Pública, a llamar a Licitación Pública para la adquisición de
+  comestibles, por un importe aproximado de $ 1.800.000.— m|n. (Un Millón
+  Ochocientos Mil Pesos Moneda Nacional), con destino a: Policlínico Regional
+  "San Bernardo" — Hospital del Milagro — Hospital Josefa Arenales de Uriburu —
+  Centro de Vías Respiratorias para Varones — Hogar San Lorenzo — Hogar Dr. Luis
+  Linares de La Caldera — Guardería Dr. Luis Güemes — Hogar del Niño — Hogar del
+  Niño de La Merced — Escuela Dr. Eduardo Wilde — Departamento de Maternidad e
+  Infancia — Centro de Higiene Social — para los meses de mayo y junio [...]
+NOTA DE LECTURA: RECUENTO PROPIO: 12 destinos; el acto no declara número. La
+compra de verdura, fruta, pollos, pescado y huevos para julio y agosto es el
+Decreto 18105-A (A de 6397). Una sola serie de 28/4 en la hoja (17486, 17491),
+que no decide entre 3 y 9.
+
+A.23
+FUENTE: 6374 h6 c1 (Salta, viernes 12 de mayo de 1961)
+FICHA: Decreto N 17573-G, 3 de mayo de 1961, expediente 5990/61: designa
+encargada de la Oficina de tercera categoría del Registro Civil de Vaqueros
+(Dpto. La Caldera) a Dora Elina Barroso. Clase: REGISTRO-CIVIL+CARGOS.
+MODO DE LECTURA: imagen, 140 ppp: art. 2 y fecha; el número en la capa
+('17573--g'), coherente con la serie de principios de mayo (17.5xx).
+TEXTO:
+  SALTA, 3 de Mayo de 1961.
+  Expediente N 5990|61.
+  VISTO lo solicitado por la Dirección General del Registro Civil en notas n s.
+  125 y 126 de fechas 25 de abril del año en curso, [...]
+  Art. 2 — Desígnase Encargada de la Oficina de 3ra. categoría del Registro
+  Civil de la localidad de Vaqueros (Dpto. La Caldera) a la señorita Dora Elina
+  Barroso, L.C. N [omitido] C. 1937, a partir de la fecha que tome posesión de
+  su servicio.
+NOTA DE LECTURA: El art. 1 designa encargada en Río Pescado (Orán). La
+confirmación de marzo (A de 6347) no traía encargado en Vaqueros.
+
+A.24
+FUENTE: 6385 h6 c1 (Salta, martes 30 de mayo de 1961); sumario 6385 h2
+FICHA: Decreto N 17757-A, 16 de mayo de 1961, nota 121 del Patronato: acepta la
+renuncia de Otilia Barboza de Vilte, Ayudante 9, auxiliar de servicios del Hogar
+Dr. Luis Linares de La Caldera. Clase: CARGOS.
+MODO DE LECTURA: imagen, 200-250 ppp: cabecera y renglón del sumario; el cuerpo
+en la capa.
+TEXTO:
+  DECRETO N 17757 —A.—
+  SALTA, Mayo 16 de 1961.
+  Nota N 121 del Patronato y Asist. S. de Menores.—
+  Visto la renuncia presentada por la señora Otilia Barboza de Vilte, al cargo
+  de Ayudante 9, auxiliar de servicios del Hogar "Dr. Luis Linares", de La
+  Caldera; [...]
+  (sumario) "A. S." 17757 — Acéptase la renuncia presentada por la Sra. Otilia
+  Barboza de Vilte del Hogar Dr. Luis Linares de la Caldera.
+NOTA DE LECTURA: La capa del sumario da 17767 y la del cuerpo 177587; la imagen
+da 17757 en los dos (control 3, sumario). Su reemplazo corre desde el 1 de abril
+(A de 6439, arts. 3 y 7), antes de la aceptación: E.9.
+
+A.25
+FUENTE: 6385 h7 c1 (Salta, martes 30 de mayo de 1961)
+FICHA: Decreto N [1]7763-A, 16 de mayo de 1961, expediente 2150-C-1961: aprueba
+la Resolución 1[5/6]98-J de la Caja (13 de abril), pensiones a la vejez 5316 a
+5367; bajo 'LA CALDERA', la 5341, a Victorino Tolaba (Los Yacones). Clase: OTRO.
+MODO DE LECTURA: imagen, 120 ppp: cabecera y lista. La primera cifra del número
+está tapada; la serie del día (17757-A, A de 6385 h6) la da.
+TEXTO:
+  DECRETO N [1]7763. —A.—
+  SALTA, Mayo 16 de 1961 —
+  Expediente N 2150—C—1961 [...]
+  Visto en estos expedientes la Resolución 1598—J— de la Caja de Jubilaciones y
+  Pensiones de la Provincia que acuerda las pensiones a la vejez 5316 y 5367
+  [...]
+  "Art. 1.— Acordar pensiones a la Vejez de acuerdo a las disposiciones de la
+  Ley 1204 [...]
+  LA CALDERA
+  5341 — Tolaba, Victorino (Los Yacones)
+NOTA DE LECTURA: La resolución es 1598-J en el visto y 1698-J en el art. 1
+(catálogo 5/6; E.10). 'las pensiones a la vejez 5316 y 5367' [sic, por 'a']. Los
+Tolaba de Los Yacones son linderos en el edicto de Federico Figueroa (B.2 de
+6288); Victorino no figura entre ellos (Santos y Victorio). 5340 Ramos,
+Maximiana (Lorohuasi) es de Cafayate.
+
+A.26
+FUENTE: 6392 h7 c3, pág. 1787 (Salta, viernes 9 de junio de 1961)
+FICHA: Decreto N 17.982-A, 31 de mayo de 1961, expediente 2153-C-1961: pensiones
+a la vejez; bajo 'LA CALDERA', la 5391, a Desiderio Rocha (Vaqueros). Clase:
+OTRO.
+MODO DE LECTURA: imagen, 120-150 ppp: cabecera (c2) y renglón (c3).
+TEXTO:
+  DECRETO N 17.982 — A.
+  Salta, 31 de Mayo de 1961
+  Expediente N 2153 — C — 1961 (N 1894—61 y agregados de la Caja de Jubilaciones
+  y Pensiones de la Provincia).
+  [...] LA CALDERA
+  5391 — Rocha, Desiderio (Vaqueros).
+  GRAL. GÜEMES
+  5392 — Cardozo, Pedro
+NOTA DE LECTURA: Un solo renglón del departamento.
+
+A.27
+FUENTE: 6394 h8 c2-c3 (Salta, martes 13 de junio de 1961)
+FICHA: Decreto N 18.079-E, 6 de junio de 1961, expediente 1076-1961: aprueba
+planillas de inversiones o imputaciones de Dirección de Arquitectura; renglón
+'Edificio Policial en La Caldera', partida H I III 6 D III 7, 300 pesos. Clase:
+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 18.079 — E
+  Salta, 6 de Junio de 1961.
+  Expediente N 1076 — 1961
+  VISTO las presentes actuaciones por las que Dirección de Arquitectura de la
+  Provincia eleva planillas de inversiones o imputaciones [...]
+  Refección de Comisarías. H. I, III, 6, D, III, 3 .... " 179.037.82
+  Edificio Policial en La Caldera. H. I, III, 6, D, III, 7 ..... " 300.—
+  Pabellón Penados Cárcel Modelo. H. I, III, 6, E, II, 1 ...... " 91.117.46
+NOTA DE LECTURA: La misma partida (H I III 6 D III 7) figura con 100.000 pesos
+en la transferencia de septiembre (A de 6457 h7) y con 1.500 en la liquidación
+de octubre (A de 6507): tres actos de distinta naturaleza; se declara la serie
+en E.8 y no se concilia. Capa 'calde-'.
+
+A.28
+FUENTE: 6397 h8 c3 (Salta, viernes 16 de junio de 1961)
+FICHA: Decreto N 18105-A, 7 de junio de 1961, expediente 36.220/61: autoriza a
+la Oficina de Compras de Asuntos Sociales a llamar a licitación pública por
+verdura, fruta, pollos, pescado y huevos, por unos 1.800.000 pesos, para doce
+establecimientos, entre ellos el Hogar Dr. Luis Linares de La Caldera, para
+julio y agosto. Clase: OTRO.
+MODO DE LECTURA: imagen, 130-140 ppp: el decreto entero hasta el art. 2, con el
+renglón del Hogar.
+TEXTO:
+  DECRETO N 18105—A.
+  SALTA, Junio 7 de 1961.
+  Expediente N 36.220|61.
+  Visto los pedidos adjuntos a estas actuaciones; relacionados con la
+  adquisición de verdura, fruta, pollos, pescados y huevos con destino a los
+  distintos servicios dependientes del Ministerio del rubro, [...]
+  Artículo 1. — Autorízase a la Oficina de Compras del Ministerio de Asuntos
+  Sociales y Salud Pública, a llamar a LICITACION PUBLICA para la adquisición de
+  Verdura, Fruta, Pollos, Pescado y Huevos, por un importe aproximado de $
+  1.800.000.—m/n. (UN MILLON OCHOCIENTOS MIL PESOS MONEDA NACIONAL), con destino
+  a: Policlínico Regional "San Bernardo" — Hospital del Milagro — Hospital J.A.
+  de Uriburu — Centro Vías Respiratorias de Varones — Departamento de Maternidad
+  é Infancia — Hogar del Niño — Guardería Dr. "Luis Güemes" — Hogar San Lorenzo
+  — Hogar Dr. Luis Linares" de La Caldera — Hogar del Niño de La Merced —
+  Escuela Dr. "Eduardo Wilde" y Centro de Higiene Social — para los meses de
+  julio y agosto del año en curso.
+NOTA DE LECTURA: RECUENTO PROPIO: 12 destinos (el acto no declara número), los
+mismos doce de la licitación de abril (A de 6371 h12) en otro orden. Mismo
+importe aproximado.
+
+A.29
+FUENTE: 6404 h9 c1-c2 (Salta, miércoles 28 de junio de 1961)
+FICHA: Decreto N [1]81[9/6]6-E, 12 de junio de 1961, expediente 1585/1961:
+aprueba el Certificado de Acopio de Materiales N 1 de la Escuela Primaria Dr.
+Bernabé López (Vaqueros, Dpto. de La Caldera), a favor del contratista Walter E.
+Lerario, por 326.201,70 pesos. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150-170 ppp: el decreto entero. Número: primera cifra
+tapada, tercera 9 o 6 (catálogo); capa '8198' y '38195'. No hay control que
+decida (E.10).
+TEXTO:
+  DECRETO N 18196-E.
+  SALTA, 12 de Junio de 1961.
+  Expediente N 1585|1961.
+  VISTO que el Consejo General de Educación, eleva para su aprobación el
+  Certificado de Acopio de Materiales n 1 "Construcción Escuela Primaria Dr.
+  Bernabé López" (Vaqueros, Dpto. de La Caldera), emitido a favor de la Empresa
+  Contratista Ing. Walter E. Lerario, por la suma de $ 326.201.70 m|n.; [...]
+  Artículo 1 — Apruébase el Certificado de Acopio de Materiales n 1
+  "Construcción Es[cuela ...]" [...]
+  BERNARDINO BIELLA
+  PEDRO J. PERETTI
+NOTA DE LECTURA: Primer certificado de la obra adjudicada por el Decreto 15839-G
+(B.2 de 6288, 1.733.043,51 pesos). Serie de certificados del año: A de 6424,
+6434, 6449, 6457 h6, 6485; suma en E.8.
+
+A.30
+FUENTE: 6404 h16 c3 (Salta, miércoles 28 de junio de 1961); y 6405 h12, 6406
+h18, 6407 h12, 6408 h8
+FICHA: Remate judicial N 8677 (martillero Ricardo Gudiño), 4 de julio de 1961:
+sin base, un camión Diamond-T modelo 1956, chapa municipal N 100 de La Caldera,
+en poder del depositario Arturo Pegoraro; autos 'Canetti, Amadeo vs. Pegoraro,
+Arturo - Ejecutivo', expediente 40.266/60, Juzgado de 1a. Instancia 1a.
+Nominación Civil y Comercial. Clase: OTRO.
+MODO DE LECTURA: imagen, 120 ppp: el aviso hasta el depositario (6404 h16); los
+autos en la capa. Las demás apariciones, por texto.
+TEXTO:
+  N 8677. - POR: RICARDO GUDIÑO. JUDICIAL - 1 CAMION DIAMOND - MOD. 1956 - SIN
+  BASE.
+  EL DIA MARTES 4 DE JULIO DE 1961, a horas 18.00, en mi escritorio de la calle
+  Pellegrini N 237, de esta ciudad: REMATARE: SIN BASE: 1 Camión marca Diamond-T
+  modelo 1956 - Chapa Municipal N 100 de La Caldera.— El citado vehículo se
+  encuentra en poder del Depositario Judicial señor Arturo Pegoraro, con
+  domicilio en la calle San Martín N 1827, de esta ciudad de Salta.— [...]
+  Ordena el señor Juez de 1a. I. 1a. Nom. en lo Civil y Comercial en los autos:
+  "Canetti, Amadeo vs. Pegoraro, Arturo - Ejecutivo - Expte. N 40.266/60". [...]
+  e) 28/6 al 4/7/61.
+NOTA DE LECTURA: Cinco apariciones para cinco días hábiles del 28/6 al 4/7 (28,
+29, 30/6; 3 y 4/7): cierra. Pegoraro, actor de 1960 (config).
+
+A.31
+FUENTE: 6406 h5 c3 a h6 c1, pág. 2014 (Salta, viernes 30 de junio de 1961)
+FICHA: Decreto N 18243-A, 19 de junio de 1961, memorándum 402 de Salud Pública:
+deroga el Decreto 6207/1959 y reclasifica la provincia en cuatro zonas para el
+'Suplemento por zona desfavorable' de médicos regionales, guardas sanitarios y
+choferes full-time; La Caldera, en la zona D (700 pesos mensuales). Clase:
+NORMA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera, considerando, arts. 1 a 3.
+TEXTO:
+  DECRETO N 18243 — A.
+  Salta, Junio 19 de 1961
+  Memorándum N 402 de Subsecretaría de Salud Pública,
+  —VISTO el decreto N 6207 de fecha 27 de febrero del año 1959, mediante el cual
+  se clasifica el territorio de la Provincia a los efectos de la liquidación por
+  Suplemento por zona desfavorable; y [...]
+  Art. 1. — Déjase sin efecto el Decreto N 6207 de fecha 27 de febrero del año
+  1959.
+  Art. 2. — Clasifícase el territorio de la Provincia de Salta en las siguientes
+  zonas, a efectos de la liquidación por "Suplemento por zona desfavorable":
+  [...] ZONA "D"
+  Departamento de Rosario de Lerma
+  " " Chicoana
+  " " La Caldera
+  " " Campo Santo
+  " " Cerrillos
+  Art. 3. — El "Suplemento por zona desfavorable" se liquidará mensualmente, por
+  los importes que en cada caso se consigna a los Sres. Médicos Regionales,
+  Guardas Sanitarios y|o Choferes [...]: —ZONA "A" — $ 1.600.— m|n. [...] —ZONA
+  "D" — $ 700.— m/n. (setecientos pesos m/n).
+NOTA DE LECTURA: RECUENTO PROPIO: A 3 (Santa Victoria, Iruya, La Poma); B 5
+(Rivadavia, Anta 1ra. 2da. Sec., Molinos, San Carlos, Los Andes); C 9 (Cafayate,
+La Viña, Anta 3ra. Sección, Metán, Orán, General San Martín, Rosario de la
+Frontera, Guachipas, La Candelaria); D 5; total 22 renglones, 21 departamentos
+(Anta en dos zonas). Capital, General Güemes y Cachi no figuran. El acto no
+declara número. Importes B 1.500 y C 1.000 en la capa.
+
+A.32
+FUENTE: 6411 h8 c1-c2, pág. 2096 (Salta, viernes 7 de julio de 1961)
+FICHA: Decreto N 18308-G, 26 de junio de 1961: renueva por un año (art. 182 de
+la Constitución) a los presidentes de comisiones municipales de diez
+localidades; La Caldera: Werfil Gallo, nombrado el 7 de mayo de 1961. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 120-130 ppp: cabecera y la tabla, partida entre dos
+columnas (localidad y cargo en c1; nombre y fecha en c2).
+TEXTO:
+  DECRETO N 18308 — G.
+  SALTA, Junio 26 de 1961.
+  —Siendo necesario renovar las autoridades de las Comisiones Municipales en
+  distintas localidades del interior de la Provincia de conformidad a lo
+  estatuido por la Constitución Provincial que en su artículo 182 establece:
+  "......los Presidentes de Comisiones Municipales durarán un año en el
+  desempeño de sus funciones y pueden ser reelectos"; [...]
+  Art. 1. — Desígnanse Presidentes de Comisiones Municipales, por un nuevo
+  período legal de funciones —de un año a las personas y en las localidades que
+  seguidamente se detallan [...]:
+  LOCALIDAD CARGO NOMBRE FECHA DE NOMBR. [...]
+  LA CALDERA: Presidente Werfil Gallo 7|mayo|1961
+NOTA DE LECTURA: RECUENTO PROPIO: 10 nombres contra 10 renglones de localidad;
+el acto no declara número. La atribución de Gallo a La Caldera sale de alinear
+renglones entre dos columnas (E.5). La de Gergis (Gral. Baliván) es del
+21/10/1960, anterior al decreto de renovación: se transcribe. En noviembre la
+Intervención declara en comisión a las autoridades municipales de toda la
+provincia (Decreto 7-G, 21/11; E.4).
+
+A.33
+FUENTE: 6421 h6 c2 (Salta, viernes 21 de julio de 1961)
+FICHA: Decreto N 18570-E, 10 de julio de 1961, expediente 254/61: a pedido de
+Aguas de Salta, otorga a Obras Sanitarias de la Nación una concesión de 25 l/s a
+derivar del río La Caldera para reforzar el agua de bebida de la ciudad de
+Salta. Clase: AGUAS.
+MODO DE LECTURA: imagen, 120 ppp: el decreto entero.
+TEXTO:
+  DECRETO N 18570 — E.
+  SALTA, Julio 10 de 1961.
+  Expediente N 254|61.
+  —VISTO que Administración General de Aguas de Salta solicita se conceda a
+  favor de Obras Sanitarias de la Nación la cantidad de 25 l|seg. (Veinticinco
+  litros por segundo) a derivar del río La Caldera, a fin de reforzar el caudal
+  con que actualmente abastece de agua para bebida a la ciudad de Salta;
+  Por ello, lo dictaminado por Fiscalía de Gobierno y disposiciones contenidas
+  en el art. 40 de la Ley N 755,
+  [...] Art. 1. — Otórgase una concesión de 25 l|seg. (veinticinco litros por
+  segundo), a derivar del río La Caldera, a favor de Obras Sanitarias de la
+  Nación, tendiente a reforzar el caudal con que actualmente abastece de agua,
+  para bebida a la ciudad de Salta.
+  Art. 2. — Comuníquese [...]
+  BERNARDINO BIELLA
+NOTA DE LECTURA: Sin punto de toma, sin carácter (permanente o eventual) y sin
+catastro: sólo el río. Ley '755' en la imagen, '756' en la capa (el Código de
+Aguas es la 775, citada en A de 6432).
+
+A.34
+FUENTE: 6424 h6 c3 (Salta, miércoles 26 de julio de 1961)
+FICHA: Decreto N 18627-E, 11 de julio de 1961, expediente 1896-1961: aprueba el
+Certificado Parcial Provisorio de Obra N 1 de la Escuela Primaria Dr. Bernabé
+López, de Vaqueros, Dpto. La Caldera, por 219.670,70 pesos, a favor de Walter E.
+Lerario. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: visto y art. 1.
+TEXTO:
+  DECRETO N 18627—E.
+  SALTA, Julio 11 de 1961.
+  Expte. N 1896—1961.
+  VISTO que el Consejo General de Educación, eleva para su aprobación el
+  Certificado Parcial Provisorio de Obra N 1, correspondiente a la obra
+  "Construcción Escuela Primaria Dr. Bernabé López, de Vaqueros Dpto. La
+  Caldera", emitido por Dirección de Arquitectura de la Provincia a favor del
+  contratista Ing. Walter E. Lerario, por la suma de $ 219.670.70 m|n. [...]
+  Artículo 1 — Apruébase el Certificado Parcial Provisorio de Obra N 1, por un
+  importe de $ 219.670.70 m|n., emitido por Dirección de Arquitectura de la
+  Provincia a favor del contratista Ing. Walter E. Lerario, correspondiente a la
+  obra "Construcción Escuela Primaria Dr. Bernabé López, de Vaqueros Dpto. de La
+  Caldera", prevista dentro del Plan de Obras [...]
+NOTA DE LECTURA: Plan de Obras Públicas del Consejo General de Educación,
+ejercicio 1960/61.
+
+A.35
+FUENTE: 6428 h6 c2-c3 (Salta, martes 1 de agosto de 1961); sumario 6428 h2, pág.
+2396
+FICHA: Decreto N 18765-G, 20 de julio de 1961, expediente 7158-61 (notas 197 y
+198-M-15 del Registro Civil, 18 de julio): encarga la Oficina del Registro Civil
+del Pueblo de La Caldera a la Autoridad Policial mientras dure la ausencia de la
+titular, Esther Gabriela Cruz, en licencia por enfermedad. Clase:
+REGISTRO-CIVIL.
+MODO DE LECTURA: imagen, 130-300 ppp: cabecera y art. 1. Número: 18766 a 130
+ppp, 18765 a 300; decide el sumario de h2 (control 3), que da 18765 a este acto
+y 18766 al siguiente ('Liquida partida').
+TEXTO:
+  DECRETO N 18765—G.
+  SALTA, Julio 20 de 1961.
+  Expte. N 7158—61.
+  VISTO las Notas Nos. 197 y 198—M—15, de fechas 18 de julio del año en curso,
+  elevadas por la Dirección General del Registro Civil, y atento a lo solicitado
+  en las mismas, [...]
+  Artículo 1. — Encárgase de la Oficina del Registro Civil del Pueblo de La
+  Caldera (Del Departamento del mismo nombre), a la Autoridad Policial, del
+  mencionado lugar, hasta tanto dure la ausencia de su titular, señorita Esther
+  Gabriela Cruz, quién se encuentra de licencia por enfermedad.
+  Art. 2. — Desígnase Encargada de la Ofi[cina ...] (otra localidad) [...]
+  BERNARDINO BIELLA
+  OLBER DOMENICHELLI
+NOTA DE LECTURA: Segunda encargatura a la policía en el año (A de 6318, enero,
+por licencia reglamentaria). Firma Olber Domenichelli en la cartera de Gobierno
+(E.4). La capa escribe 'caldery' (difusa).
+
+A.36
+FUENTE: 6431 h4 c1 (Salta, viernes 4 de agosto de 1961); y 6438 h14, 6445 h8;
+sumarios 6431 h2, 6438 h3, 6445 h2
+FICHA: Edicto de minas N 9041: manifestación de descubrimiento de un yacimiento
+de plomo, mina 'Juanita', en los departamentos de Rosario de Lerma y La Caldera,
+presentada por Alondo (sic) Ramos Meliado, expediente 3536-R, 14 de julio de
+1960; muestra de la quebrada del arroyo Huaico Hondo, 300 m al sur de su
+confluencia con el río Ovejería. Clase: MINAS.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y primer párrafo en 6431 h4; resto
+en la capa.
+TEXTO:
+  N 9041 — Manifestación de Descubrimiento de un Yacimiento de "Plomo" Mina
+  denominada "Juanita", ubicada en los Departamentos de Rosario de Lerma y La
+  Caldera, presentada por el señor Alondo Ramos Meliado en expediente número
+  3536-R. El día catorce de Julio de 1960 a horas Nueve y Cincuenta Minutos.
+  La Autoridad Minera Provincial notifica a los que se consideren con algún
+  derecho para que lo hagan valer en forma y dentro del término de ley. — La
+  zona peticionada se describe en la siguiente forma: La muestra acompañada ha
+  sido extraída de la quebrada que ha formado el arroyo llamado Huaico Hondo, a
+  300 metros aproximadamente al Sud de la confluencia del Río Ovejería con el
+  citado arroyo Huaico Hondo.— [...] Salta, agosto 2 de 1961. [...] e) 4, 16 y
+  28-8-61.
+NOTA DE LECTURA: Tres apariciones (4/8, 16/8, 28/8) para tres fechas: cierra.
+'Alondo Ramos Meliado' [sic]; el actor de 1959 es 'Alonso Ramos Mellado'. Mismo
+paraje que la mina Argentina (A de 6348), que ésta atribuye sólo a La Caldera.
+
+A.37
+FUENTE: 6432 h23 c3, pág. 2491 (Salta, lunes 7 de agosto de 1961); y 6433 h21,
+6434 h22
+FICHA: Edicto citatorio N 9050, expediente 2751/A/60: Manuel Araya y Luisa
+Teresita Oggero de Araya piden permiso precario, temporal-eventual, por 25,25
+l/s del río Chalchanio (margen izquierda), por canal a construir desde la
+Fracción IV, para regar 50 ha del inmueble Chalchanio, Fracción III, catastro
+16, departamento de La Caldera. Clase: AGUAS.
+MODO DE LECTURA: imagen, 120 ppp: el edicto entero en 6432 h23; las otras dos
+por texto.
+TEXTO:
+  N 9050 — REF. Exp. N 2751|A|60 s|permiso precario p. 4|3.—
+  — EDICTO CITATORIO —
+  —A los efectos establecidos por el Art. 183 del Código de Aguas, se hace saber
+  que MANUEL ARAYA y LUISA TERESITA OGGERO DE ARAYA tienen solicitado un permiso
+  precario sujeto a revocación en cualquier momento, sin indemnización de
+  ninguna naturaleza, sin perjuicio de terceros, dejando establecido que ello no
+  implica conceder derechos, sino un permiso en forma graciable, para
+  utilización de un caudal de 25,25 l|segundo, a derivar del río Chalchanio
+  (márgen izquierda) mediante un canal a construirse y el cual arrancaría desde
+  la Fracción IV, carácter TEMPORAL—EVENTUAL, para riego de una superficie de 50
+  Has. del inmueble "CHALCHANIO", Fracción III, catastro N 16, ubicado en el
+  Departamento de La Caldera.— De conformidad a lo establecido en el Art. 13 del
+  Código de Aguas (Ley 775).
+  SALTA, — Administración General de Aguas.
+NOTA DE LECTURA: ARITMÉTICA: 25,25 l/s para 50 ha = 0,505 l/s por ha (el acto no
+lo declara). Tres apariciones (7, 8 y 9 de agosto). En 1960 la finca Chalchanio,
+catastro 34, era de Tezanos Pinto (informe 1960, A de 6070): aquí es la Fracción
+III, catastro 16; la relación entre catastros no se afirma.
+
+A.38
+FUENTE: 6434 h5 c2 (Salta, miércoles 9 de agosto de 1961)
+FICHA: Decreto N 18818-A, 21 de julio de 1961, expediente 2198-C-1961: pensiones
+a la invalidez (Decreto-Ley 703, leyes 813/47 y 3362/59, 300 pesos); bajo 'LA
+CALDERA', la 1315, a Juana Flores (Vaqueros). Clase: OTRO.
+MODO DE LECTURA: imagen, 130-150 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 18818—A.
+  SALTA, Julio 21 de 1961.
+  Expte. N 2198—C—1961 (N 2620|60 y agregados de la Caja de Jubilaciones y
+  Pensiones [...])
+  [...] Ley N 703, refrendado por la Ley 813|47 y 3362|59, con un haber mensual
+  de $ 300.— m|n. (Trescientos Pesos Moneda Nacional), a liquidarse desde el mes
+  de la fecha en que la presente resolución sea aprobada por el Poder Ejecutivo
+  de la Provincia, a los solicitantes que a continuación se detallan:
+  C A P I T A L [...]
+  LA CALDERA
+  1315 — Flores, Juana (Vaqueros).
+  CHICOANA
+  1316 — Herrera, Armindo.
+NOTA DE LECTURA: Capital 1306-1314 (9). Un solo renglón del departamento.
+
+A.39
+FUENTE: 6434 h7 c2 (Salta, miércoles 9 de agosto de 1961); sumario 6434 h2
+FICHA: Decreto N 18940-E, 27 de julio de 1961, expediente 2086/1961: aprueba el
+Certificado de Ajuste Provisorio N 1 (variaciones de costo de mano de obra) de
+la Escuela Primaria de Vaqueros (Dpto. La Caldera), por 35.979,86 pesos, a favor
+de Walter E. Lerario. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: visto y art. 1.
+TEXTO:
+  DECRETO N 18940 — E.
+  SALTA, Julio 27 de 1961.
+  Expediente N 2086|1961.
+  —VISTO que Dirección de Arquitectura de la Provincia eleva para su aprobación
+  el Certificado de Ajuste Provisorio N 1— (Liquidación de Variaciones de Costo
+  de Mano de Obra Ejecutada) por un importe de $ 35.979.86 m|n. emitido por
+  dicha repartición a favor del Contratista Ing. Walter E. Lerario,
+  correspondiente a la obra —Construcción Escuela Primaria de Vaqueros— (Dpto.
+  La Caldera), [...]
+  Art. 1. — Apruébase el Certificado de Ajuste Provisorio N 1 (Liquidación de
+  Variaciones de Costo de Mano de Obra Ejecutada), por un importe de $ 35.979.86
+  m|n. (Treinta y Cinco Mil Novecientos Setenta y Nueve Pesos Con 86|100 Moneda
+  Nacional) [...]
+NOTA DE LECTURA: Cifra y letras cierran.
+
+A.40
+FUENTE: 6437 h6 c3 (Salta, lunes 14 de agosto de 1961)
+FICHA: Ley N 3633, de Organización de la Justicia en lo Penal, sancionada el 25
+de julio de 1961 y promulgada en agosto: el art. 3 divide la provincia en tres
+distritos judiciales y pone a La Caldera en el Distrito Capital o Centro. Clase:
+JUSTICIA+NORMA.
+MODO DE LECTURA: imagen, 120 ppp: art. 3 entero; sanción y promulgación en la
+capa (día de promulgación ilegible en la capa, no mirado).
+TEXTO:
+  Art. 3 — DISTRITOS.— A los fines de la competencia territorial, la provincia
+  se divide en tres distritos judiciales formados por los siguientes
+  departamentos:
+  a) Distrito Capital o Centro;
+  Capital: La Poma, Molinos, Cachi, San Carlos, Chicoana, La Viña, Cafayate
+  Guachipas, Cerrillos, La Caldera, General Güemes, Santa Victoria e Iruya.
+  b) Distrito Judicial del Norte.
+  Orán, San Martín y Rivadavia.
+  c) Distrito Judicial del Sur:
+  Metán, Anta, Rosario de la Frontera y La Candelaria.
+NOTA DE LECTURA: RECUENTO PROPIO: Centro 14 (Capital y 13), Norte 3, Sur 4 = 21
+departamentos. No figuran Rosario de Lerma, Campo Santo ni Los Andes; el acto no
+declara número, de modo que no hay nada que cotejar, y no se infiere a qué
+distrito irían. La instalación de los tribunales la suspende la Intervención por
+el Decreto-Ley 1-G del 27/11/1961 (B.1).
+
+A.41
+FUENTE: 6437 h8 c2-c3 (Salta, lunes 14 de agosto de 1961)
+FICHA: Decreto N 19053-E, 3 de agosto de 1961, expediente 1809/61: transferencia
+de partidas del plan de Aguas de Salta; disminuye en 3.100.000 pesos la partida
+II-9-E-I-18, 'Ampl. Partidas Obras Electromec. Ley 3192', que incluye La Caldera
+entre siete localidades. Clase: AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130-150 ppp: cabecera y renglón, con las columnas
+DISMINUCION y AUMENTO.
+TEXTO:
+  DECRETO N 19053 — E.
+  SALTA, Agosto 3 de 1961.
+  Expediente N 1809|61.
+  —VISTO estas actuaciones por la que Administración General de Aguas de Salta
+  solicita transferencia de partidas dentro del Plan [...]
+  FONDOS PROVINCIALES: DISMINUCION AUMENTO
+  CAP. II— TIT. 9— SUBT. E— I— N 18 Ampl. Partidas Obras Electromec. Ley 3192—
+  Inc. Local El Galpón, La Caldera, J. V. González, Cafayate, Aguaray Campo
+  Santo y Güemes ....... $ 3.100.000.—
+  CAP. II—TIT. 9— SUBT. E— R. F. 6— Adq. Rep. Mant. de grupos electrógenos de
+  Usinas de A.G.A.S. (Dptos. Varios). ............ $ 3.000.000.—
+NOTA DE LECTURA: RECUENTO: 7 localidades en el renglón. El cuadro no se
+recalculó entero (E.8). La misma partida recibe 2.400.000 pesos en octubre (A de
+6490 h12).
+
+A.42
+FUENTE: 6438 h5 c1-c2 (Salta, miércoles 16 de agosto de 1961); sumario 6438 h2,
+pág. 2647
+FICHA: Decreto N 19.077-[G], 4 de agosto de 1961, expediente 5152-1961: aprueba
+el Presupuesto de Gastos y Cálculo de Recursos de la Municipalidad de La Caldera
+para 1961, por 812.516,85 pesos. Clase: HACIENDA-MUN.
+MODO DE LECTURA: imagen, 120-180 ppp: el decreto entero. La cabecera no trae
+letra de ministerio ('19.077 —'); el sumario lo pone en Gobierno.
+TEXTO:
+  DECRETO N 19.077 —
+  Salta, 4 de Agosto de 1961
+  Expediente N 5152 — 1961.
+  Por las presentes actuaciones la Municipalidad de La Caldera (Dpto. del mismo
+  nombre) eleva para su aprobación el presupuesto de gastos y cálculos de
+  recursos, que a de regir en la citada comuna para el período año 1961, y cuyos
+  valores estimativos ascienden a $ 812.516,85; [...]
+  Art. 1. — Apruébase el Presupuesto de Gastos y Cálculos de Recursos de la
+  Municipalidad de La Caldera — (Dpto. del mismo nombre), valores considerados
+  en la suma de $ 812.516,85 m|n. (Ochocientos Doce Mil Quiniento Dieciséis
+  Pesos con Ochenta y Cinco Centavos Moneda Nacional), que a de corresponder
+  para la vigencia del ejercicio año 1961; cuadro comparativo de éste que corre
+  de fs. 13 a fs. 16 de estas actuaciones.
+  Art. 2 — Comuníquese [...]
+  BERNARDINO BIELLA
+  JULIO A. BARBARAN ALVARADO
+NOTA DE LECTURA: Cifra y letras cierran ('Quiniento' [sic]). El presupuesto no
+se publica: citado y no acompañado (fs. 13 a 16; E.3). SERIE: 19.076-G, del
+mismo día, inmediatamente antes.
+
+A.43
+FUENTE: 6439 h6 c1-c2 (Salta, viernes 18 de agosto de 1961); sumario 6439 h2,
+págs. 2671-2672
+FICHA: Decreto N 19119-A, 3 de agosto de 1961, expediente 36.604-61: normaliza
+el personal del Hogar Dr. Luis Linares de La Caldera: designa a María Julia
+Tudela (vacante de Rosa Tránsito Navarro), Ledys Hetel Royo (de María Margot
+Portal) y Dominiciana Cardozo de Colque (de Otilia Barboza de Vilte); da de baja
+por abandono, antes del 25 de marzo, a Marcelina Apaza de Zerpa y designa en su
+lugar a Nicolasa Mercado de Lizondo; reconoce servicios de abril a junio. Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: el decreto entero, con firmas.
+TEXTO:
+  DECRETO N 19119—A.
+  SALTA, Agosto 3 de 1961.
+  Expte. N 36.604—61.
+  VISTO en estas actuaciones, las designaciones, reconocimientos de servicios y
+  cesantía, para personal del Hogar "Dr. Luis Linares" de La Caldera, y siendo
+  necesario normalizar la situación de dicho personal; [...]
+  Artículo 1 — Desígnase a partir de la fecha en que se haga cargo de sus
+  funciones a la señorita María Julia Tudela [...] en la categoría de Ayudante
+  9— Personal Obrero y de Maestranza del Hogar "Dr. Luis Linares" de La Caldera,
+  en cargo vacante por renuncia de Rosa Tránsito Navarro.
+  Art. 2 — [...] a la señorita Ledys Hetel Royo [...] Ayudante 9 —Auxiliar de
+  Servicios del Hogar "Dr. Luis Linares" de La Caldera, en cargo vacante por
+  cesantía de María Margot Portal.
+  Art. 3 — Desígnase a partir del día 1 de julio del corriente año a la señora
+  Dominiciana Cardozo de Colque [...] en cargo vacante por renuncia de Otilia
+  Barboza de Vilte.
+  Art. 4 — Dáse por terminadas las funciones de la Ayudante 9 —Auxiliar de
+  Servicios del Hogar "Dr. Luis Linares" de La Caldera señora Marcelina Apaza de
+  Zerpa, con anterioridad al 25 de marzo del año en curso y en virtud de
+  encontrarse comprendida en las disposiciones del Art. 5 del Decreto N 3820
+  (Abandono de Servicios).
+  Art. 5 — Desígnase a partir del día 1 de julio del corriente año, fecha desde
+  la cual continúa prestando servicios, a la señora Nicolasa Mercado de Lizondo
+  [...] en reemplazo de Marcelina Apaza de Zerpa, quién fuera dejada cesante.
+  Art. 6 — Reconócense los servicios prestados por la señora Nicolasa Mercado de
+  Lizondo [...] entre el 1 de abril al 30 de junio inclusive del corriente año,
+  en reemplazo de Marcelina Apaza de Zerpa [...]
+  Art. 7 — Reconócense los servicios prestados por la señora Dominiciana Cardozo
+  de Colque [...] entre el 1 de abril al 30 de junio inclusive del corriente
+  año, en reemplazo de Otilia Barboza de Vilte que renunciara.
+  [...] BERNARDINO BIELLA
+  BELISARIO SANTIAGO CASTRO
+NOTA DE LECTURA: RECUENTO PROPIO: 7 artículos dispositivos sobre 6 personas; 3
+vacantes con su acto en el año (Navarro, A de 6371 h11; Portal, A de 6352;
+Barboza, A de 6385 h6). La cesantía de Apaza de Zerpa no tiene acto propio en el
+corpus: consta sólo por este decreto (v16 §5.3). Barboza reemplazada desde el
+1/4 y su renuncia aceptada el 16/5 (E.9). Sumario: capa 'caldetar' (F.1).
+
+A.44
+FUENTE: 6440 h7 c3 (Salta, lunes 21 de agosto de 1961)
+FICHA: Decreto N 19157-E, 10 de agosto de 1961, expediente 2075-1961: aplica el
+art. 233 del Código de Aguas, reconoce a Manufactura de Tabacos Particulares V.
+F. Greco S. A. los derechos del Decreto 7151 (8/10/1953) y le otorga nuevo
+título para regar 30 ha de Getsemaní, catastro 61, departamento de La Caldera,
+con 216 horas quincenales y las 19/30 partes del río La Caldera (margen
+derecha), permanente y a perpetuidad. Clase: AGUAS.
+MODO DE LECTURA: imagen, 130 ppp: el decreto entero, con firmas.
+TEXTO:
+  DECRETO N 19157—E.
+  SALTA, Agosto 10 de 1961.
+  Expte. N 2075—1961.
+  VISTO este expediente por el cual la firma "Manufactura de Tabacos
+  Particulares V. F. Greco S. A.", solicita la aplicación del artículo 233 del
+  Código de Aguas para el inmueble denominado "Getsemaní", Catastro N 61,
+  ubicado en el Departamento de La Caldera, con una superficie bajo riego de 30
+  Hás.; y [...] Resolución N 936 de fecha 21 de junio del año en curso; [...]
+  Artículo 1 — Reconócense los derechos al uso del agua del dominio público ya
+  establecidos mediante Decreto N 7151 de fecha 8 de Octubre de 1953 a nombre de
+  la actual propietaria del predio "Manufactura de Tabacos Particulares V. F.
+  Greco S. A." y otórgase nuevo título de concesión para irrigar treinta
+  hectáreas del inmueble denominado "Getsemaní", Catastro N 61, ubicado en el
+  Departamento de La Caldera, y sujeta a un turno de doscientos dieciséis horas
+  quincenales con las 19/30 avas partes del caudal del Río La Caldera (márgen
+  derecha) y con carácter "Permanente y a Perpetuidad".— En época de abundancia
+  de agua, tendrá derecho al uso de un caudal de hasta setenta y cinco
+  centilitros por segundo por hectárea bajo riego.
+  Art. 2. — La concesión reconocida es con las reservas previstas en los
+  artículos 17 y 232 del Código de Aguas.
+  [...] BERNARDINO BIELLA
+  PEDRO J. PERETTI
+NOTA DE LECTURA: Cierra el trámite del edicto 7831 (A de 6334); 'Particular V.
+F. Grego' en el edicto (E.9). SERIE: 19158-E, del mismo día, a continuación.
+
+A.45
+FUENTE: 6449 h5 c3 (Salta, viernes 1 de septiembre de 1961); sumario 6449 h2,
+págs. 2869-2870
+FICHA: Decreto N 19248-E, 21 de agosto de 1961, expediente 2266-1961: aprueba el
+Certificado Parcial Provisorio de Obra N 2 de la Escuela Primaria Dr. Bernabé
+López de Vaqueros (Dpto. La Caldera; 'La Cardera' en el art. 1), por 145.449,60
+pesos, a favor de Walter E. Lerario. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: visto y art. 1.
+TEXTO:
+  DECRETO N 19248—E.
+  SALTA, Agosto 21 de 1961.
+  Expte. N 2266—1961.
+  VISTO que Dirección de Arquitectura de la Provincia eleva para su aprobación
+  el Certificado Parcial Provisorio de Obra N 2, por un monto de $ 145.449.60
+  m|n., emitido por dicha repartición a favor del Contratista Ing. Walter E.
+  Lerario, correspondiente a la obra "Construcción Escuela Primaria Dr. Bernabé
+  López de Vaqueros (Dpto. La Caldera, cuya ejecución se encuentra prevista en
+  el Plan de Obras Públicas del Consejo General de Educación — Ejercicio
+  1960—61; [...]
+  Artículo 1 — Apruébase el Certificado Parcial Provisorio de Obra N 2, por un
+  importe de $ 145.449.60 m|n. (Ciento Cuarenta y Cinco Mil Cuatrocientos
+  Cuarenta y Nueve Pesos con 60|100 Moneda Nacional), que fuera emitido por
+  Dirección de Arquitectura de la Provincia a favor del contratista Ing. Walter
+  E. Lerario, correspondiente a la obra: "Construcción Escuela Primaria Dr.
+  Bernabé López de Vaqueros (Dpto. La Cardera), prevista dentro [...]
+NOTA DE LECTURA: 'La Cardera' [sic] (E.9); la difusa la devuelve ('cardera').
+Paréntesis sin cerrar en el visto [sic]. CONTROL DE SERIE: en el sumario, 19249
+(22/8, feriado en Gral. Güemes) a continuación.
+
+A.46
+FUENTE: 6453 h9 c1-c2 (Salta, jueves 7 de septiembre de 1961)
+FICHA: Decreto N 19428-G (sic), 30 de agosto de 1961, expediente 2232-C-1961:
+aprueba la Resolución 350-P de la Caja (10 de agosto): pensiones a la vejez 5460
+a 5467 y, en el art. 2, rehabilita la Pensión a la Vejez N 4741 de Gregorio
+Yavi, de Vaqueros, departamento de La Caldera. Clase: OTRO.
+MODO DE LECTURA: imagen, 120-140 ppp: cabecera y resolución.
+TEXTO:
+  DECRETO N 19428 —G.—
+  SALTA, Agosto 30 de 1961.
+  Expte. 2232—C—1961 (N 3342|61 y agregados de la Caja de Jubilaciones y
+  Pensiones de la Provincia).
+  Visto en estos expedientes la resolución número 350— P. de la Caja de
+  Jubilaciones [...]
+  Art. 2 — REHABILITAR la Pensión a la Vejez N 4741 perteneciente al señor
+  GREGORIO YAVI de la localidad de Vaqueros, departamento de La Caldera, de
+  conformidad a las disposiciones del art. 1 Inc. a) de la Ley N 1204 y art. 11
+  del Decreto Reglamentario N 5099|51.
+NOTA DE LECTURA: Letra G en un decreto de pensiones, que el resto del año lleva
+A [sic]. RECUENTO: 5460-5467 = 8 pensiones nuevas, ninguna del departamento.
+
+A.47
+FUENTE: 6457 h6 c1 (Salta, lunes 18 de septiembre de 1961); sumario 6457 h2
+FICHA: Decreto N 19515-E (sin fecha), expediente 2522-1961: aprueba el
+Certificado de Acopio de Materiales N 2 de la Escuela Primaria Dr. Bernabé López
+(Vaqueros, Dpto. La Caldera), a favor de Walter Lerario, por 197.552,55 pesos
+(197.522,55 en el visto). Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: el decreto hasta el art. 1.
+TEXTO:
+  DECRETO N 19515 —E.—
+  EXPEDIENTE N 2522 — 1961.
+  Visto que Dirección de Arquitectura de la Provincia, eleva para su aprobación
+  el Certificado de Acopio de Materiales N 2, correspondiente a la obra
+  "Construcción Escuela Primaria Dr. Bernabé López — Vaqueros — Dpto. La
+  Caldera", emitido a favor del contratista Ing. Walter Lerario, por la suma de
+  $ 197.522,55 m|n., obra ésta cuya ejecución se encuentra prevista en el Plan
+  de Obras Públicas del Consejo General de Educación — Ejercicio 1960|1961.
+  [...] Artículo 1 — Apruébase el Certificado de Acopio de Materiales N 2,
+  correspondiente a la obra "Construcción Escuela Primaria Dr. Bernabé López —
+  Vaqueros — Dpto. La Caldera", emitido a favor del contratista Ing. Walter
+  Lerario, en la suma de $ 197.552,55 m|n. (Ciento Noventa y Siete Mil
+  Quinientos Cincuenta y Dos Pesos con 55|100 Moneda Nacional) [...]
+NOTA DE LECTURA: DISCREPANCIA: 522 en el visto, 552 en el artículo; las letras
+dan 552 (E.9). Falta el renglón de fecha [sic]; la serie (19494-A del 4/9,
+19524-E del 5/9, en la misma edición) lo ubica en los primeros días de
+septiembre, como inferencia.
+
+A.48
+FUENTE: 6457 h7 c2-c3 (Salta, lunes 18 de septiembre de 1961)
+FICHA: Decreto N 19.524-E, 5 de septiembre de 1961, expediente 2556-1961:
+transferencia de partidas de Dirección de Arquitectura; renglón III-6-D-III-7,
+'Const. Edif. Policial en La Caldera', 100.000 pesos. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 19.524 — E.
+  Salta, Setiembre 5 de 1961
+  Expediente N 2556 — 1961
+  VISTO que Dirección de Arquitectura de la Provincia solicita en estas
+  actuaciones transfe[rencia ...]
+  III—6—D—III—6 Construc. Local Policial en General Güemes ...... " 250.000.—
+  III—6—D—III—7 Const. Edif. Policial en La Caldera ........ " 100.000.—
+  III—6—D—III—8 Const. Edif. Comisaría en Metán ...... " 500.000.—
+NOTA DE LECTURA: Columna (aumento o disminución) no mirada: el importe se
+transcribe sin signo (E.10). Serie de la partida en E.8.
+
+A.49
+FUENTE: 6466 h7 c1 (Salta, viernes 29 de septiembre de 1961); sumario 6466 h2,
+pág. 3181
+FICHA: Decreto N 19669-G, 21 de septiembre de 1961, expediente 7180/61: concede
+5.000 pesos al Club Juvenil 'Gallinato' (Dpto. La Caldera) para un equipo de
+fútbol para niños. Clase: OTRO.
+MODO DE LECTURA: imagen, 120 ppp: el decreto hasta el art. 1.
+TEXTO:
+  DECRETO N 19669 —G.—
+  SALTA, Setiembre 21 de 1961.
+  EXPEDIENTE N 7180|61.
+  A fs. 1 de estas actuaciones el presidente del Club Juvenil "Gallinato", del
+  (Dpto. La Caldera), solicita un subsidio para adquirir equipos de fútbol para
+  la práctica de niños de esa entidad;
+  Por ello, y atento a lo informado por la Oficina de Compras y Suministros del
+  Ministerio de Gobierno, Justicia e Instrucción Pública a fs. 2, [...]
+  Artículo 1 — Concédese un subsidio en la suma de $ 5.000—m|n. (Cinco Mil Pesos
+  Moneda Nacional) a favor del Club Juvenil "Gallinato" del (Dpto. La Caldera),
+  para que con dicho importe proceda a adquirir los elementos que componen el
+  equipo de fútbol a que se hace referencia precedentemente.
+NOTA DE LECTURA: El presidente del club no se nombra. La capa escribe 'la
+galdera' en el visto (laxa) y el sumario 'la "caldera'.
+
+A.50
+FUENTE: 6478 h9 c2 (Salta, miércoles 18 de octubre de 1961)
+FICHA: Decreto N 19913-G, 5 de octubre de 1961, expediente 7920-61, nota 1037 de
+Jefatura (27 de septiembre): reconoce los servicios de Vidal V. Jurado Noble
+como Auxiliar 4, Oficial Inspector de la Sub Comisaría de La Caldera, del 3 al
+21 de septiembre. Clase: CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y visto; el artículo en la capa.
+TEXTO:
+  DECRETO N 19913—G.
+  SALTA, Octubre 5 de 1961.
+  Expte. N 7920—61.
+  VISTO la Nota N 1037 de fecha 27 de setiembre del año en curso, elevada por
+  Jefatura de Policía [...]
+  Artículo 1 — Reconócense los servicios prestados desde el día 3 al 21
+  inclusive del mes de setiembre del año en curso, en el cargo de Auxiliar 4 —
+  Oficial Inspector de la Policía de Salta de la Sub Comisaría de La Caldera,
+  por el señor Vidal V. Jurado Noble.
+NOTA DE LECTURA: El Decreto de 6462 h6 (capa) lo da de baja 'desde el día 3 de
+setiembre' como Oficial Inspector (F. 1990, P. 616), sin nombrar destino; este
+decreto le reconoce servicios desde ese mismo día hasta el 21 (E.9, B.4). La
+capa lee el número '199153'.
+
+A.51
+FUENTE: 6485 h12 c1 (Salta, viernes 27 de octubre de 1961); sumario 6485 h3
+FICHA: Decreto N 20114-E, 17 de octubre de 1961, expediente 3018/1961: aprueba
+el Certificado de Ajustes Provisorio N 2 de la Escuela Primaria Dr. Bernabé
+López, Vaqueros, Dpto. La Caldera, por 9.488,91 pesos, a favor de Walter E.
+Lerario. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 120 ppp: cabecera y visto.
+TEXTO:
+  DECRETO N 20114 — E.
+  SALTA, Octubre 17 de 1961.
+  Expediente N 3018|1961
+  —VISTO que Dirección de Arquitectura de la Provincia, eleva para su aprobación
+  el Certificado de Ajustes Provisorio N 2— Liquidación de Variaciones de Costo
+  por Mano de Obra Ejecutada, correspondiente a la obra "Construcción Escuela
+  Primaria Dr. Bernabé López — Vaqueros Dpto. La Caldera" emitido a favor del
+  contratista Ing. Walter E. Lerario, por la suma de $ 9.488.91 m|n., obra ésta
+  cuya ejecución se encuentra prevista en el Plan de Obras Públicas del Consejo
+  General de Educación Ejercicio 1960|61, [...]
+NOTA DE LECTURA: El último de los seis certificados de la obra que trae el
+corpus de 1961; su suma, en E.8.
+
+A.52
+FUENTE: 6489 h14 c3 a h15 c1 (Salta, viernes 3 de noviembre de 1961)
+FICHA: Decreto N 20167-A, 18 de octubre de 1961, expediente 2024-Y-1960: aprueba
+la Resolución 457-P de la Caja (12 de septiembre), que reajusta la jubilación de
+Sixto Yufra computándole servicios en la Comisión Municipal de La Caldera (1 de
+enero de 1930 a 30 de diciembre de 1931) y en la Municipalidad de Salta
+(1932-1933). Clase: OTRO.
+MODO DE LECTURA: imagen, 120-130 ppp: cabecera, visto y art. 1 de la resolución.
+TEXTO:
+  DECRETO N 20167 — A.
+  SALTA, Octubre 18 de 1961
+  Expediente N 2024—Y—1960 (N 3849|52 y 2176|52 de la Caja de Jubilaciones y
+  Pensiones de la Provincia).
+  —VISTO en estos expedientes la Resolución número 457—P de la Caja de
+  Jubilaciones y Pensiones de la Provincia, que reajusta la jubilación acordada
+  a don Sixto Yufra por decretos 6315|53 y 16.11?|51 con la computación de 4
+  años de servicios no incluidos en los cuadros jubilatorios anteriores
+  desempeñados en la Comisión Municipal de La Caldera del 1 de enero de 1930 al
+  30 de diciembre de 1931 y en la Municipalidad de la ciudad de Salta desde el 1
+  de enero de 1932 hasta el 31 de diciembre de 1933; [...]
+  "Art. 1. — RECONOCER los siguientes servicios prestados por el señor SIXTO
+  YUFRA en las Reparticiones que a continuación se detallan:
+  Municipalidad de La Caldera: DOS (2) Años y formular a tal efecto, cargos al
+  afiliado y al patronal, por las sumas de $ 115.20 m|n. (Ciento Quince Pesos
+  con Veinte Centavos Moneda Nacional) a cada uno de ellos, de conformidad a las
+  disposiciones del artículo 14 de la Ley 1341;
+  Municipalidad de la Ciudad de Salta: UN (1) Año y formular cargos al afiliado
+  y al patronal por las sumas de $ 216.— m|n. [...]
+NOTA DE LECTURA: CONTRADICCIÓN INTERNA: el visto computa dos años en Salta
+(1932-1933) y 4 en total; la resolución reconoce uno en Salta, y 2 + 1 = 3
+(E.9). 'Comisión Municipal' en el visto y 'Municipalidad' en la resolución: se
+transcriben los dos. Yufra reaparece sin el departamento en 6304 h9 (Resolución
+1113-J, otro reajuste): B.4. Última cifra del decreto de 1951 ilegible.
+
+A.53
+FUENTE: 6490 h11 c2 (Salta, lunes 6 de noviembre de 1961); sumario 6490 h3
+FICHA: Decreto N 20.209-G, 19 de octubre de 1961, expediente 7854-1961: por
+terna de la Municipalidad de La Caldera (nota del 19 de septiembre), designa
+Juez de Paz Suplente de La Caldera por dos años a Esteban Mogro. Firman Biella y
+Pedro J. Peretti, Ministro de Gobierno interino. Clase: JUSTICIA+CARGOS.
+MODO DE LECTURA: imagen, 130 ppp: el decreto entero y el renglón del sumario.
+TEXTO:
+  DECRETO N 20.209 — G.
+  Salta, 19 de Octubre de 1961
+  Expediente N 7854 — 1961
+  En nota de fecha 19 de setiembre del año en curso, la Municipalidad de La
+  Caldera, eleva terna para designar Juez de Paz Suplente en la misma y atento
+  lo prescripto en el artículo 165 de la Constitución de la Provincia. [...]
+  Art. 1. — Desígnase por un período constitucional de dos años Juez de Paz
+  Suplente de La Caldera, al señor Esteban Mogro, L. C. N [omitido], a partir de
+  la fecha que tome posesión de su función.
+  [...] BERNARDINO BIELLA
+  PEDRO J. PERETTI
+  Ministro de Gobierno Interino
+NOTA DE LECTURA: Cubre la suplencia vacante desde el 3 de marzo (A de 6339). La
+terna no se publica (citada y no acompañada). Sumario 'Esteban Mog?o'; capa
+'estehan mog +.'. Un Esteban Mogro, auxiliar 7, en una nómina de 6358 h8 (capa,
+sin destino): B.4, sin afirmar identidad.
+
+A.54
+FUENTE: 6490 h12 c3 a h13 c1 (Salta, lunes 6 de noviembre de 1961)
+FICHA: Decreto N 20216-E, 19 de octubre de 1961, Resolución 1468 del Consejo
+General de Aguas: renglón II-9-E-I-18, 'Ampl. partidas obras electromecánicas
+Ley 3192', que incluye La Caldera, con 2.400.000 pesos. Clase:
+AGUAS+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 20216—E.
+  SALTA, Octubre 19 de 1961.
+  VISTO que Administración General de Aguas de Salta, mediante Resolución N 1468
+  dictada por su Consejo General en fecha 27 de [...]
+  II, 9, E, I, N 18 — Ampl. partidas obras electromecánicas Ley 3192, incluídas
+  las localidades El Galpón, La Caldera, J. V. González, Cafayate, Aguaray, C.
+  Santo y Güemes ............... " 2.400.000.—
+NOTA DE LECTURA: Misma partida que la disminuida en agosto (A de 6437 h8); se
+declara la serie en E.8.
+
+A.55
+FUENTE: 6491 h9 c3 a h10 c1, pág. 4674 (Salta, martes 7 de noviembre de 1961)
+FICHA: Decreto N 20250-A, 23 de octubre de 1961, expediente 2277-C-1961:
+pensiones a la vejez; bajo 'LA CALDERA', la 5490 a Santiago Arédes y la 5491 a
+Juan Bautista López, los dos de Vaqueros. Clase: OTRO.
+MODO DE LECTURA: imagen, 120-150 ppp: cabecera y lista.
+TEXTO:
+  DECRETO N 20250—A.
+  SALTA, Octubre 23 de 1961.
+  Expte. N 2277—C—1961 (N 4247|61 y agregados de la Caja de Jubilaciones y
+  Pensiones de la Provincia).
+  [...] LA CALDERA:
+  5490 — Arédes, Santiago (Vaqueros)
+  5491 — López, Juan Bautista (Vaqueros)
+  Gral. GÜEMES: [...]
+NOTA DE LECTURA: Dos renglones del departamento, ambos en Vaqueros. La capa
+escribe 'dobez' por López.
+
+A.56
+FUENTE: 6491 h10 c2 (Salta, martes 7 de noviembre de 1961)
+FICHA: Decreto N 20251-A, 23 de octubre de 1961, expediente 2276-C-1961: aprueba
+la Resolución 493-P de la Caja (28 de septiembre): pensiones a la invalidez 1322
+a 1329; bajo 'LA CALDERA', la 1327, a Andrea Viveros (Potrero de Castillo).
+Clase: OTRO.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y lista entera.
+TEXTO:
+  DECRETO N 20251 — A.
+  SALTA, Octubre 23 de 1961.
+  Expediente N 2276—C—1961 (N 4115|61 y agregados de la Caja de Jubilaciones y
+  Pensiones de la Provincia).
+  —VISTO en estos expedientes la Resolución N 493—P. de la Caja [...] que
+  acuerda las pensiones a la invalidez números 1322 a 1329 [...]
+  LA CALDERA:
+  1327 — Viveros, Andrea (Potrero de Castillo)
+NOTA DE LECTURA: RECUENTO PROPIO: 8 renglones (1322 a 1329); el visto dice
+'números 1322 a 1329' = 8: cierra. SERIE: 20250 y 20251, contiguos y del mismo
+día. Cayetana Viveros es lindera en Los Yacones (B.2 de 6288); Andrea no se
+relaciona.
+
+A.57
+FUENTE: 6496 h8 c1 (Salta, martes 14 de noviembre de 1961)
+FICHA: Decreto N 20475-A, 31 de octubre de 1961, expediente 37.095/61: acepta la
+renuncia de Nicolasa Mercado de Lizondo, Ayudante 9, personal de servicios de la
+Dirección de Patronato y Asistencia Social de Menores (La Caldera). Clase:
+CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: cabecera y visto.
+TEXTO:
+  DECRETO N 20475 — A.
+  Salta, Octubre 31 de 1961.
+  Expediente N 37.095|61.
+  —VISTO la renuncia presentada por la señora Nicolasa Mercado de Lizondo al
+  cargo de Ayudante 9 Personal de Servicios de la Dirección de Patronato y
+  Asistencia Social de Menores (La Caldera); [...]
+  Art. 1. — Acéptase la renuncia pre[sentada ...]
+NOTA DE LECTURA: Designada en agosto en el Hogar Linares, en reemplazo de
+Marcelina Apaza de Zerpa (A de 6439).
+
+A.58
+FUENTE: 6501 h12 c1 (Salta, martes 21 de noviembre de 1961); sumario 6501 h3
+FICHA: Decreto N 20.691-A, 31 de octubre de 1961, expediente 36.960-1961:
+reconoce los servicios del Dr. Antonio Carlos Araujo como Médico Regional de La
+Caldera, del 11 al 27 de septiembre, en reemplazo del Dr. Juan Carlos
+Martearena, en licencia reglamentaria. Clase: CARGOS.
+MODO DE LECTURA: imagen, 120 ppp: cabecera, visto y comienzo del art. 1; fechas
+en la capa.
+TEXTO:
+  DECRETO N 20.691 — A.
+  Salta, 31 de Octubre de 1961
+  Expediente N 36.960 — 1961
+  Visto el reconocimiento de servicios solicitado a favor del Doctor Antonio
+  Araujo, como Médico Regional de La Caldera en reemplazo del Dr. Juan Carlos
+  Martiarena que se encuentra en uso de licencia reglamentaria. [...]
+  Art. 1. — Reconócense los servicios prestados por el Dr. Antonio Carlos
+  Araujo, en la categoría de Auxiliar Principal — Médico Regional de La
+  Calde[ra], en reemplazo del Dr. Juan Carlos Martearena que se encontraba en
+  uso de licencia reglamentaria, durante el tiempo comprendido entre el 11 al 27
+  de setiembre inclusive del año en curso.
+NOTA DE LECTURA: 'Martiarena' en el visto, 'Martearena' en el art. 1 [sic].
+Martearena: A de 6360 (La Caldera) y B.2 de 6404 (baja en Vaqueros y San
+Lorenzo): E.9. Araujo aparece en otros actos sin el departamento (médico de
+guardia de la Asistencia Pública, 6301 h9): B.4.
+
+A.59
+FUENTE: 6502 h5 c1 (Salta, miércoles 22 de noviembre de 1961)
+FICHA: Decreto N 20707-G, 31 de octubre de 1961, expediente 8139/61: concede
+subsidios en especie (copas, una plaqueta y joyas) por 5.420 pesos al Club
+Tradición de La Caldera, a 'El Círculo' y a 'Los Centros Vecinales'. Clase:
+OTRO.
+MODO DE LECTURA: imagen, 120-140 ppp: cabecera, visto y art. 1 hasta la copa del
+Club Tradición; el resto en la capa.
+TEXTO:
+  DECRETO N 20707 — G.
+  Salta, Octubre 31 de 1961
+  Expediente N 8139|61.
+  —Por el presente expediente el "Club Tradición" de La Caldera, "El Círculo" y
+  "Los Centros Vecinales" solicitan donación de premios a efecto de instituirlos
+  a sus respectivos fines;
+  Por ello, y atento lo informado por Contaduría General de la Provincia a fojas
+  17 de estos obrados, [...]
+  Art. 1. — Concédese subsidios por las sumas de $ 800.— m|n.; 1.320.— m|n.; y $
+  3.300.— m|n. [...] a favor de las instituciones recurrentes, en carácter de
+  donación, consistentes en: una copa para el "Club Tradición" de La Caldera;
+  una copa para "El Círculo"; y una plaqueta de ónix, un collar y un par de aros
+  de cristal y perlas para la reina de "Los Centros Vecinales".
+  Art. 2. — [...] la suma de cinco mil cuatrocientos veinte pesos moneda
+  nacional ($ 5.420.— m|n.) [...]
+NOTA DE LECTURA: ARITMÉTICA: 800 + 1.320 + 3.300 = 5.420 = letras; imputación
+2.120 + 3.300 = 5.420: cierra. 'reina' es lectura probable de la capa 'rema' (no
+mirada; rotulada). No se atribuye 'El Círculo' ni 'Los Centros Vecinales' al
+departamento: el acto sólo sitúa al Club Tradición.
+
+A.60
+FUENTE: 6507 h8 c2 a h9 c1 (Salta, miércoles 29 de noviembre de 1961)
+FICHA: Decreto N 20818-E, 31 de octubre de 1961, expediente 3727/61: planilla de
+Dirección de Arquitectura; renglón 'Constr. Edif. Policial en La Caldera', H I
+III 6 D III 7, 1.500 pesos. Clase: OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 20818 —E—
+  SALTA, Octubre 31 de 1961.
+  Expediente N 3727|61.
+  VISTO que Dirección de Arquitectura de la Pro[vincia ...]
+  Refec. de Comisarías Varias ... H, I, III, 6, D, III, 3: ...... " 173.282.20
+  Constr. Edif. Policial en La Caldera
+  H, I, III, 6, D, III, 7: ..... " 1.500.—
+  Refec. de Comisaría en Metán ...
+NOTA DE LECTURA: Tercera aparición de la partida (E.8). La capa lee 'caldere'.
+Lo que el decreto dispone con la planilla (aprobación o liquidación) no se miró.
+
+A.61
+FUENTE: 6513 h17 c3 a h18 (Salta, jueves 7 de diciembre de 1961); y 6520 h7,
+6527 h9
+FICHA: Edicto de minas N 10013: petición de mensura de la mina de plomo 'Abra de
+Mayo', en el departamento de La Caldera, presentada por Fernando Payo y otros,
+expediente 100.738-P, 27 de diciembre de 1957: seis pertenencias desde el centro
+del Abra de Mayo; capital a invertir, 40.000 pesos. Clase: MINAS.
+MODO DE LECTURA: imagen, 130 ppp: encabezado y pertenencias I a IV en 6513 h17;
+el resto en la capa.
+TEXTO:
+  N 10013 — Edicto de Petición de Mensura de la Mina de Plomo Denominada "Abra
+  de Mayo" Ubicada en el Departamento de La Caldera Presentada por el Señor
+  Fernando Payo y otros en expediente Número 100.738-P El día Veintisiete de
+  Diciembre de 1957 a Horas Doce y Treinta Minutos. La Autoridad Minera
+  Provincial notifica a los que se consideren con algún derecho para que lo
+  hagan valer en forma y dentro del término de ley. La zona peticionada se
+  describe en la siguiente forma: Pertenencia I. Se toma como punto de
+  referencia y de partida el centro del Abra de Mayo y se miden 100 metros al
+  Este, 300 metros al Sud, 200 metros al Oeste, 300 metros al Norte y por último
+  100 metros al Este cerrando así una superficie de seis hectáreas. [...] A lo
+  que se proveyó. Salta mayo 8 de 1959. [...] Fíjase la suma de cuarenta mil
+  pesos moneda nacional [...] Luis Chagra. Juez de Minas [...] Salta, diciembre
+  4 de 1961 [...] e) 7, 19 y 29—12—61
+NOTA DE LECTURA: RECUENTO PROPIO: seis pertenencias (I a VI); la I, 200 por 300
+m = 6 ha: cierra con 'seis hectáreas'. Tres apariciones para tres fechas (7/12,
+19/12, 29/12 = 6513, 6520, 6527): cierra. Capa 'ulicalda' por 'ubicada' en 6513
+h17.
+
+§B · VECINDAD
+-------------
+
+B.1 · Núcleos ya fichados
+Núcleos del departamento que el §A ya ficha y que reaparecen en actos que no
+nombran el término, o que el §A retoma de años anteriores (las remisiones van
+por edición; el número A.n, en el §D):
+- Hogar de Niños Dr. Luis Linares (La Caldera): trece actos del §A (A de 6315,
+6323, 6337, 6351, 6352, 6360 h10, 6371 h8, h11 y h12, 6385 h6, 6397, 6439,
+6496). En el bloque «auxiliar servicios» del Decreto 17.221-A (6360 h11, capa),
+sin lugar, figuran seis de su personal (B.4). El pago de los servicios de
+Celedonio Aquino por ejercicio vencido es el Decreto 19.220-A del 14/8/1961
+(6445 h6, capa), que no nombra el departamento.
+- Registro Civil de La Caldera (Esther Gabriela Cruz): A de 6318, 6347 y 6428;
+en 1960, A de 6067 y 6270 del informe de ese año. Vaqueros: A de 6374.
+- Juzgado de Paz de La Caldera: A de 6322 (propietario), 6339 (renuncia del
+suplente) y 6490 (suplente por terna municipal).
+- Getsemaní y el río La Caldera: A de 6334 (edicto) y 6440 (título); concesión
+del río a Obras Sanitarias, A de 6421.
+- Escuela Primaria Dr. Bernabé López de Vaqueros: adjudicada en B.2 de 6288
+(Decreto 14.718/1960 en el informe de 1960); seis certificados en el §A; pago en
+B.2 de 6493.
+- Ley 3633: el Decreto-Ley N 1-G del 27 de noviembre (Interventor Federal; 6512
+h5, capa; sumario 6512 h2) suspende hasta nueva disposición la instalación de
+los tribunales previstos por la Ley 3633 (A de 6437) y la vigencia del Código
+Procesal Penal (Ley 3645). No nombra el departamento.
+- Comisión Municipal de La Caldera: A de 6411 (presidente) y 6438 (presupuesto);
+el Decreto 7-G del 21 de noviembre (6512 h6, capa) declara en comisión a las
+autoridades municipales de toda la provincia (E.4).
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+10 fichas, por orden de edición.
+
+B.2.1
+FUENTE: 6288 h10 c1-c2 (Salta, lunes 2 de enero de 1961)
+FICHA: Decreto N 15839-G, 27 de diciembre de 1960, expediente 8415/60: aprueba
+la Resolución 898 del Consejo General de Educación (14/12/1960), que aprueba la
+licitación del 2[3/8] de octubre para la Escuela Primaria Bernabé López de
+Vaqueros y la adjudica a Walter Lerario por 1.733.043,51 pesos (ajuste alzado y
+precios unitarios). Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 150 ppp: visto, considerando y resolución.
+TEXTO:
+  DECRETO N 15839 — G.
+  Salta, Diciembre 27 de 1960
+  Expediente N 8415|60
+  —Las presentes actuacioes están relacionadas con la construcción de la
+  escuelaa primaria —Bernabé López— de Vaqueros por el Consejo General de
+  Educación y autorizada por el Poder Ejecutivo de la Provincia mediante Decreto
+  N 14718 de fecha 21|X|60 [...]
+  Art. 1. — Apruébase la Resolución N 898 de fecha 14 de diciembre del año en
+  curso, dictada por el Consejo General de Educación [...] Empresa Constructora
+  Walter Lerairo, por el monto total de $ 1.733.043.51; Empresa Constructora de
+  Pedro Caprotta, por el monto total de $ 1 896.735.85; Empresa Constructora de
+  Isidoro Leonarduzzi por el monto total de $ 1.83?.713.72; Empresa Constructora
+  de A. Pellegrini y H. Doyle, por el monto total de $ 1.850.937.28 [...]
+  Resuelve: — Art. 1. — Aprobar la Licitación Pública llevada a cabo en la
+  Dirección de Arquitectura de la Provincia el día 28 de octubre del cte. año
+  para la Construcción de la Escuela —Escuela Primaria Bernabé López de
+  Vaqueros.— Art. 2. — Adjudicar a la Empresa Constructora de Walter Lerario, la
+  construcción de la Obra —Escuela Primaria Bernabé López de Vaqueros por el
+  sistema de precios unitarios|ajuste alzado, en la suma de $ 1.733.043.51 m|n.
+  (Un Millón Setecientos Treinta y Tres Mil Cuarenta y Tres Pesos Con Cincuenta
+  y Un Centavos Mon. Nacional) [...]
+NOTA DE LECTURA: No nombra el departamento. RECUENTO PROPIO: 4 oferentes (el
+acto no declara número); la adjudicada es la menor. Tercera cifra de la oferta
+de Leonarduzzi, ilegible. 'actuacioes', 'escuelaa', 'Lerairo' [sic]. La fecha de
+la licitación: 23 en la capa, 28 en la imagen; no se decide (E.10). Decreto
+14.718/1960 en el informe de 1960.
+
+B.2.2
+FUENTE: 6288 h15 c3 (Salta, lunes 2 de enero de 1961); y 6289 h8, 6290 h14, 6291
+h10, 6292 h10, 6293 h9, 6294 h8, 6295 h8
+FICHA: Edicto N 7.261, posesión treintañal: Juez de 1a. Instancia Civil y
+Comercial 3a. Nominación, juicio de Federico Figueroa sobre tres hectáreas de la
+finca Huerta Vieja, en Los Yacones; linderos Salustiano Jurado (norte y oeste),
+Santos Tolaba (sud), Victorio Tolaba y Cayetana Viveros (este). Clase: DOMINIO.
+MODO DE LECTURA: imagen, 170 ppp: el edicto entero en 6288 h15. Las demás, por
+texto.
+TEXTO:
+  N 7.261 — POSESION TREINTAÑAL: E. señor Juez de 1a. Instancia, Civil y
+  Comercial 3a. Nominación, cita por treinta días a interesados en juicio
+  posesión treintañal solicitado por Federico Figueroa, sobre una fracción de la
+  finca "Huerta Vieja" ubicada en Los Yacones, con una superficie de tres
+  hectáreas y limita: Norte terrenos de Salustiano Jurado, Sud terrenos de
+  Santos Tolaba, Este terrenos de Victorio Tolaba y Cayetana Viveros y Oeste
+  terrenos de Salustiano Jurado.
+  AGUSTIN ESCALADA YRIONDO, Secretario
+  Salta, de Noviembre de 1.960.
+  Habilítase la Feria del mes de Enero.
+  e) 30 — 11 — 60 — al — 12 — 1 — 61
+NOTA DE LECTURA: No nombra el departamento. Ocho apariciones en 1961 hasta el 12
+de enero (fin de la marca). 'de Noviembre' sin día [sic]. RECUENTO: 4 rumbos, 4
+personas (Jurado dos veces). Viene de 1960 (actores en el config).
+
+B.2.3
+FUENTE: 6320 h7 c1 (Salta, martes 21 de febrero de 1961)
+FICHA: Decreto N 16333-A, 1 de febrero de 1961: licencias por enfermedad; ítem
+9, Dardo Angel Frías, Oficial Mayor, médico del Consultorio Externo de Vaqueros
+y San Lorenzo, 90 días desde el 26/12/60. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: cabecera y renglón.
+TEXTO:
+  DECRETO N 16333-A.
+  SALTA, 1 de Febrero de 1961.
+  VISTO los certificados expedidos por el Servicio de Reconocimientos Médicos y
+  Licencias [...] mediante los cuales se concede licencia por enfermedad [...]
+  9) Dardo Angel Frías, L. E. N [omitido], Oficial Mayor, Médico del Consultorio
+  Externo de Vaqueros y San Lorenzo, 90 (noventa días), a partir del 26-12-60;
+  en base al art. 13 del Decreto N 10.113.
+NOTA DE LECTURA: Frías figura como médico regional de Vaqueros y San Lorenzo en
+el 17.219-A (A de 6360). Sus 90 días de licencia (hasta fines de marzo) se
+superponen con los reemplazos de Canónica y Massafra (B.2 de 6394 y 6404).
+
+B.2.4
+FUENTE: 6323 h10 c1-c2 (Salta, viernes 24 de febrero de 1961); sumario 6323 h3
+FICHA: Decreto N 16443-A, 9 de febrero de 1961: prorroga por diez días desde el
+16 de diciembre la comisión de Enrique Díaz, enfermero del Puesto Sanitario de
+Vaqueros en reemplazo de la titular, Eusebia Díaz, de licencia; viáticos del 16
+al 25 de diciembre. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: cabecera y artículos.
+TEXTO:
+  DECRETO N 16443—A.
+  SALTA, Febrero 9 de 1961.
+  VISTO las presentes actuaciones y atento a lo manifestado por Dirección de
+  Administración de ese Departamento de Estado, [...] [Artículo 1 — Prorrógase
+  por el término de 10 (diez) días a partir del 16 de diciembre ppdo., la
+  comisión efectuada por el señor En]rique Díaz, quién se desempeñó como
+  Enfermero del Puesto Sanitario de Vaqueros en reemplazo de la titular señorita
+  Eusebia Díaz, en uso de licencia reglamentaria, de acuerdo a las disposiciones
+  establecidas en el artículo 4 del Decreto N 930 de fecha 30-6-58.
+  Art. 2 — Dirección de Administración del Ministerio del rubro, liquidará a
+  favor del señor Enrique Díaz, el importe correspondiente a viáticos por el
+  término comprendido desde el 16 al 25, inclusive, de diciembre ppdo., tiempo
+  éste en que se prorrogó la Comisión de servicios del mencionado empleado [...]
+NOTA DE LECTURA: El comienzo del art. 1, entre corchetes, en la capa prev (la
+imagen corta en el salto de columna). Titular 'Eusebia Díaz' aquí; enfermera del
+consultorio externo de Vaqueros 'Eusebia Ruiz' en el 17.219-A (E.9).
+
+B.2.5
+FUENTE: 6367 h7 c2 (Salta, miércoles 3 de mayo de 1961)
+FICHA: Decreto N 17.367-G, 21 de abril de 1961, expediente 5797-1961: designa
+personal de policía; ítem c), Ambrosio Colque, ayudante mayor-agente (P. 1425),
+en reemplazo de Segundo Salvador Burgos, 'para desempeñarse en el Departamento
+Policial de los "Yacones"'. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: cabecera e ítems a) a e).
+TEXTO:
+  DECRETO N 17.367 — G.
+  Salta, 21 de Abril de 1961
+  Expediente N 5797 — 1961
+  Visto las notas Nos. 401, 403, 405, 406, 407 y 408 de fechas 6 y 7 de abril
+  del año en curso elevadas por Jefatura de Policía [...]
+  Art. 1 — Desígnase al personal que seguidamente se detalla, en la Policía de
+  Salta, y a partir de la fecha que tome servicio: [...]
+  c) Al señor Ambrosio Colque (M. I. N [omitido] — C. 1922) en el cargo de
+  Ayudante Mayor — Agente (P. 1425), en reemplazo de don Segundo Salvador
+  Burgos, para desempeñarse en el Departamento Policial de los "Yacones";
+NOTA DE LECTURA: No nombra el departamento. Mismo día que la aprobación de la
+Resolución 189, que crea el destacamento (A de 6367 h6). 'Departamento Policial'
+por destacamento [sic].
+
+B.2.6
+FUENTE: 6394 h7 c2 (Salta, martes 13 de junio de 1961); sumario 6394 h2
+FICHA: Decreto N 18.072-A, 6 de junio de 1961, memorándum 217 de la Dirección
+del Interior: reconoce los servicios del Dr. Luis Canónica como médico de
+Vaqueros y San Lorenzo, en reemplazo del Dr. Salvador Marinaro, de licencia, del
+22 de marzo al 17 de abril. Clase: CARGOS.
+MODO DE LECTURA: imagen, 150 ppp: cabecera y art. 1.
+TEXTO:
+  DECRETO N 18.072 — A.
+  SALTA, Junio 6 de 1961.
+  Memorándum N 217 de Dirección del Interior.
+  VISTO el reconocimiento de servicios solicitado a favor del doctor Luis
+  Canónica en reemplazo del doctor Salvador Marinaro en uso de licencia
+  reglamentaria; [...]
+  Art. 1 — Reconócense los servicios prestados por el Dr. Luis Canónica como
+  médico de las localidades de Vaqueros y San Lorenzo, en reemplazo del Dr.
+  Salvador Marinaro en uso de licencia reglamentaria, con la asignación mensual
+  fijada en contrato aprobado mediante decreto N 12.881 del 15 de junio de 1960,
+  a partir del 22 de marzo hasta el 17 de abril inclusive del cte. año.
+NOTA DE LECTURA: Imagen de baja calidad (tinta corrida); el número lo confirma
+el sumario (18072). Marinaro y Canónica, actores de 1960.
+
+B.2.7
+FUENTE: 6404 h6 c1 (Salta, miércoles 28 de junio de 1961); sumario 6404 h2
+FICHA: Decreto N 18180-A, 12 de junio de 1961: reconoce los servicios de
+Bernardino F. Massafra como Médico Regional de Vaqueros y San Lorenzo del 26 de
+marzo al 16 de abril, y da por terminadas las funciones de Juan Carlos
+Martearena en ese cargo. Clase: CARGOS.
+MODO DE LECTURA: imagen, 115 ppp: visto y comienzo del art. 1; el resto en la
+capa.
+TEXTO:
+  DECRETO N 18180 — A.
+  SALTA, Junio 12 de 1961.
+  —VISTO en estas actuaciones el pedido de reconocimiento de servicios para el
+  doctor Bernardino F. Massafra como Auxiliar Principal —Médico Regional de
+  Vaqueros y San Lorenzo, durante el tiempo comprendido desde el 26 de marzo
+  hasta el 16 de abril del año en curso; [...]
+  Art. 1. — Dánsele por terminadas las funciones al doctor Juan Carlos
+  Martearena en [la] categoría de Auxiliar Principal —Médico Regional de
+  Vaqueros y de San [Lorenzo ...]
+NOTA DE LECTURA: CONTRADICCIÓN (E.9): Martearena es médico regional de La
+Caldera en el 17.219-A (A de 6360) y en el 20.691-A (A de 6501); aquí se le
+terminan funciones en Vaqueros y San Lorenzo. Entre el 22/3 y el 17/4 hay dos
+reemplazantes para la misma plaza (Canónica, B.2 de 6394, y Massafra), durante
+la licencia de Frías (B.2 de 6320).
+
+B.2.8
+FUENTE: 6456 h8 c2 a h9 c2 (Salta, martes 12 de septiembre de 1961)
+FICHA: Decreto N 19494-A, 4 de septiembre de 1961, expediente 36.763/61: nómina
+de becarios de Asuntos Sociales; entre ellos, 45 internos del Colegio San
+Cayetano de Vaqueros, a 600 pesos mensuales cada uno por diez meses; liquida en
+total 792.800 pesos. Clase: ESCUELA.
+MODO DE LECTURA: imagen, 120 ppp: cabecera y encabezado del bloque de Vaqueros;
+la lista en la capa.
+TEXTO:
+  DECRETO N 19494-A.
+  Salta 4 de septiembre de 1961.
+  Expediente N 36.763|61.
+  VISTO en este expediente la nómina [...]
+  Colegio "San Cayetano" - Vaqueros -
+  Internos con $ 600.— m|n. mensuales c|u. (10 meses)
+  1.— Apaza Miguel Exequiel
+  2.—Barboza José Eduardo [...]
+  45.— Acuña Fernando
+  Art. 2 — [...] liquídese la suma de $ 792.800.— m|n. (setecientos noventa y
+  dos mil ochocientos pesos moneda nacional) [...]
+NOTA DE LECTURA: No nombra el departamento. RECUENTO PROPIO sobre la capa: 45
+becarios numerados 1 a 45 en el bloque de Vaqueros; 45 x 600 x 10 = 270.000
+pesos; el total de 792.800 abarca otros bloques, que no se recontaron (E.8).
+Nombres de los becarios de Vaqueros, no transcriptos: son menores.
+
+B.2.9
+FUENTE: 6490 h8 c1 (Salta, lunes 6 de noviembre de 1961)
+FICHA: Decreto N 20187-G, 18 de octubre de 1961, expediente 8066/61, nota 1080
+de Jefatura: declara vacante desde el 28 de septiembre el cargo de ayudante
+mayor-agente (F. 3432/P. 2230) por fallecimiento de su titular, Alberto José
+Reyna, del Puesto Caminero Vaqueros. Clase: CARGOS.
+MODO DE LECTURA: imagen, 115 ppp: el decreto entero.
+TEXTO:
+  DECRETO N 20187 — G.
+  SALTA, Octubre 18 de 1961.
+  Expediente N 8066|61.
+  —VISTO lo solicitado por Jefatura de Policía, en nota N 1080, de fecha 11 de
+  octubre del año en curso, [...]
+  Art. 1. — Declárase vacante, a partir del 28 de setiembre del año en curso, el
+  cargo de Ayudante Mayor —Agente (F. 3432|P. 2230) por fallecimiento de su
+  titular don ALBERTO JOSE REYNA, del Puesto Caminero Vaqueros.
+NOTA DE LECTURA: No nombra el departamento. Vacante declarada sin nombrar
+reemplazante: el nombramiento de Reyna no está en el corpus de 1961.
+
+B.2.10
+FUENTE: 6493 h11 c1 (Salta, jueves 9 de noviembre de 1961)
+FICHA: Decreto N 20342-E, 26 de octubre de 1961, expedientes 3245, 3235 y
+3246/61: aprueba y ordena pagar diversos certificados de obra de Walter Lerario
+por la Escuela Primaria Bernabé López de Vaqueros. Clase: ESCUELA+OBRA-PUBLICA.
+MODO DE LECTURA: imagen, 130 ppp: cabecera y visto.
+TEXTO:
+  DECRETO N 20342 —E—
+  SALTA, Octubre 26 de 1961.
+  Expediente N 3245—3235—3246|61
+  VISTO que Dirección de Arquitectura de la Provincia, eleva para su aprobación
+  y pago diversos certificados de obra emitidos a favor del contratista Ing.
+  Walter Lerario, correspondiente a la obra: "Construcción Escuela Primaria
+  Bernabé López" Vaqueros, la que se encuentra comprendida dentro del plan de
+  construcciones escolares del Consejo General de Educación — Ejercicio 1960/61;
+  [...]
+NOTA DE LECTURA: No nombra el departamento en lo leído. Qué certificados paga y
+por cuánto, no se leyó (pendiente menor, no decide atribución; E.8).
+
+B.3 · Términos que ese año son otra cosa
+Términos que ese año son otra cosa (leídos todos sus contextos):
+- «caldera» como aparato: la caldera a vapor del remate de 6290 h21; «equipos de
+refrigeración, aire acondicionado, calderas» del Policlínico y del Centro de
+Salud (licitaciones de 6296 h9, 6404 h7, 6485 h5 y 6523 h5); 50.000 litros de
+diesel para las calderas del Policlínico San Bernardo (6312 h2, h6, h7);
+Prudencio Acuña, «auxiliar de caldera» del Policlínico, en cinco decretos de
+licencias (6351 h7, 6371 h9-h10, 6392 h8, 6417 h9, 6430 h7); Francisco Flores,
+«enc. caldera» de Lucha Antituberculosa (6359 h16); la caldera de la Escuela
+Hogar 17 (Decreto 16.892-E, 6344 h7); el remate de una caldera de ocho
+atmósferas marca Stanford (edictos 7876 y 8406 de Miguel A. Gallo Castellanos,
+6338 h11 a 6340 h14 y 6382 h7 a 6384 h7); la caldera a vapor marca Wolff de la
+ex fábrica de aceite El Metanense (6416 h6 a 6420 h7 y 6496 h23 a 6498 h19).
+- «Caldera La Merced»: sociedad en el remate de las acciones de Alejandro Lami
+(6405 h11 a 6409 h9); la fe de erratas de 6413 h14 dice «donde dice: Caldera La
+Merced, debe decir: Calera La Merced». Se ficha el descarte porque la errata la
+publica el propio Boletín.
+- Roberto Caldera, adjudicatario de un lote (6344 h7): apellido (falso positivo
+del config).
+- «calde» por «calle» (6401 h9, 6402 h8); Ricaldes (sucesorios de Silisque
+Vicente Ricaldes y de Valerio Ricaldes/Ricaldi, 61 hojas); Calderón; Agustín
+Escalada Yriondo.
+- Anillo 2: Mojotoro, el río y sus hijuelas en General Güemes (edictos de aguas
+de 6372 a 6406 y de 6474 a 6482; el proyecto del río Mojotoro, 6476 h10 y 6523
+h2-h4); el Club Social, Cultural y Deportivo de Mojotoro (Decreto 16460-G, 6324
+h6; sumario 6324 h2: 'Club Los Cebiles'), subsidio de 10.000 pesos para su sede:
+el acto no atribuye Mojotoro a ningún departamento (jurisdicción indeterminada,
+v16 §5.1ter). Las Garrapatas: «Puesto Viejo o Corral de las Garrapatas», cateo
+de Lucrecia Argentina Valdez en Guachipas (6438 h13 y siguientes). Potrerillo
+(Cafayate y San Carlos), El Durazno y Vaquería (Guachipas), El Angosto (Rosario
+de Lerma), Finca Sauzal (San Martín), El Recreo (Cafayate), Buen Retiro (Rosario
+de Lerma), Lagunilla (embalse en Capital y Campo Santo), San Cayetano (Molinos
+San Cayetano S.R.L., pasaje San Cayetano de la Capital, la mina San Cayetano),
+Lesser (la Escuela Nacional N 49 «de la localidad de Lesser (Dpto. Capital)»,
+Decreto 16797-G, 6338 h2 y h8; y el apellido de Néstor Lesser), Wierna, Yufra,
+Yugra, Castellanos, Aramayo, Mamani, Apaza, Condori, Chaile y Toconas como
+apellidos.
+
+B.4 · Anillo de actores
+Anillo de actores (v16 §5.1), en tres grupos. Frecuencias de corpus, no del
+departamento.
+
+Grupo 1, sólo en su propio acto: Liborio Gerardo Guerrero; Ramón Antonio Vivas;
+Dora Elina Barroso; Werfil Gallo; María Julia Tudela; Ledys Hetel Royo;
+Dominiciana Cardozo de Colque; Corina A. Bustamante; Eusebia Ruiz; Alcide Cruz;
+Feliciana Barboza; Isabel Suárez de Flores; Rosa Balsano de Grazziano; Pablo
+Acuña; Victorino Tolaba; Desiderio Rocha; Juana Flores; Gregorio Yavi; Santiago
+Arédes; Juan Bautista López; Andrea Viveros; Ambrosio Colque; Alberto José
+Reyna; Francisco Fernández Cornejo y Wenceslao F. Cornejo (sus diez apariciones
+son el mismo edicto); Manuel Araya y Luisa Teresita Oggero de Araya; Fernando
+Payo; Arturo Pegoraro; Rosario del G. Jurado; Vidal V. Jurado Noble fuera de su
+baja; Federico Figueroa, Salustiano Jurado, Santos Tolaba, Victorio Tolaba y
+Cayetana Viveros (el edicto de posesión). Las búsquedas por nombre completo que
+no devuelven su propio acto están en el §2.
+
+Grupo 2, en más de un acto del departamento (la trama del año): Otilia (Aurora)
+Barboza de Vilte, en seis actos (dos licencias por maternidad, una por
+enfermedad, la renuncia, su reemplazo y la nómina del 17.221-A); Esther Gabriela
+Cruz, en tres (dos encargaturas del Registro a la policía y la confirmación);
+Rosa Tránsito Navarro (denuncia y renuncia, y su reemplazo); María Margot Portal
+(cesantía, su reemplazo y la nómina); Marcelina Apaza de Zerpa (su cesantía, que
+sólo consta por el acto que la reemplaza, y la nómina); Nicolasa Mercado de
+Lizondo (designación y renuncia); Celedonio Aquino (servicios de 1960, la nómina
+y el pago); Margarita V. de Salvatierra (licencia y la nómina); Alejandro Damián
+Teyssier (regente del Hogar; el 17491-A habla del regente sin nombrarlo); Juan
+Carlos Martearena (tres actos con dos destinos: E.9); Dardo Angel Frías
+(licencia y confirmación); Walter E. Lerario (siete actos de la escuela de
+Vaqueros); Manufactura de Tabacos Greco (edicto y título de Getsemaní).
+
+Grupo 3, también fuera del departamento: Hermann (Herman) Pfister, cuya sucesión
+se abre en julio (edicto 8703, Juzgado Civil 5a. Nominación, 6416 h4 y 22 hojas
+más); Manuel Maizo, en un reconocimiento de servicios como agente del 19/1 al
+16/2 (6340 h8) y en una nueva designación como agente en septiembre (6449 h9),
+los dos sin destino; Vidal V. Jurado Noble, dado de baja como oficial inspector
+desde el 3 de septiembre (6462 h6, sin destino); Sixto Yufra, en otro reajuste
+de su jubilación (Resolución 1113-J, 6304 h9); Antonio Carlos Araujo, médico de
+guardia de la Asistencia Pública (6301 h9 y 12 hojas más); Luis Canónica, médico
+del Servicio de Reconocimientos Médicos (6322 h7 y otras); Salvador Marinaro (4
+hojas); Juan Carlos Martearena, médico asistente interino de Lucha
+Antituberculosa en enero (6323 h9); Esteban Mogro, un auxiliar 7 en una nómina
+sin destino (6358 h8): la identidad con el juez de paz no se afirma; Santiago
+Fiori, procurador judicial en 21 hojas (en 1960 compraba lotes de Vaqueros):
+ninguna con el departamento; Walter Lerario, otras obras (6466 h5). Descartes
+nombrando la jurisdicción: Francisca Nelda Rosa Moreno Lobo de Martínez
+(jubilación, 6339 h6), homónima del minero; los Wierna de la Capital; Néstor
+Lesser.
+
+§C · LIMITROFES
+---------------
+Limítrofes, una línea cada uno:
+- Rosario de Lerma: los cateos 7.723 y 7.724 y la mina Juanita se describen
+desde el Alto del Volcán y el río Ovejería, compartidos con La Caldera (A de
+6325 y 6431); Campo Quijano es cabecera de la II Zona policial a la que se
+asigna el destacamento de Los Yacones (A de 6367).
+- Capital: la Escuela Nacional N 49 de Lesser, «Dpto. Capital», recibe un
+subsidio de 2.000 pesos (Decreto 16797-G, 6338 h8).
+- General Güemes: el río Mojotoro y sus hijuelas (B.3); feriado del 30 de agosto
+en el departamento (sumario de 6449 h2).
+- Cerrillos, Chicoana, Campo Santo y Rosario de Lerma comparten con La Caldera
+la zona D del suplemento por zona desfavorable (A de 6406).
+
+§P · PLANOS
+-----------
+El corpus no trae ningún plano en las hojas miradas (las 240 tapas, las 18 de
+menos de 0,5 % de tinta y las 110 de fichas, controles y Tesorería); no se
+afirma de las 525 hojas de poca tinta no miradas (E.10). La palabra «plano»
+aparece en 648 hojas; ninguna de esas apariciones tiene un topónimo del
+departamento a ±300 caracteres: planos citados del departamento, 0. El
+presupuesto municipal de La Caldera remite a un «cuadro comparativo» de fojas 13
+a 16 que no se publica (citado y no acompañado; no es un plano). Techo de
+resolución: 300 ppi, con 1.160 hojas a 150 (§1).
+
+§D · INDICE
+-----------
+Una entrada por ficha: número, edición, hoja, clase (v16 §7.1) y materia.
+  A.1     6288  h9   OTRO
+          Dec. 15.835-G, subsidio festejos patronales (senador Jurado)
+  A.2     6315  h4   CARGOS
+          Dec. 16.081-A, licencia O. Barboza de Vilte (Hogar Linares)
+  A.3     6318  h4   REGISTRO-CIVIL
+          Dec. 16282-G, Registro Civil de La Caldera a la policía
+  A.4     6322  h5   JUSTICIA+CARGOS
+          Dec. 16377-G, juez de paz propietario L. G. Guerrero
+  A.5     6323  h8   CARGOS
+          Dec. 16435-A, servicios de C. Aquino, peón del Hogar Linares
+  A.6     6325  h9   MINAS
+          Edicto 7.724, cateo Fernández Cornejo (La Caldera y R. de Lerma)
+  A.7     6325  h9   MINAS
+          Edicto 7.723, cateo Pfister y Cornejo (La Caldera y R. de Lerma)
+  A.8     6326  h4   CARGOS
+          Dec. 16515-G, baja del agente M. Maizo (Subcomisaría)
+  A.9     6334  h8   AGUAS
+          Edicto 7831, transferencia de agua de Getsemaní (Greco)
+  A.10    6337  h9   CARGOS
+          Dec. 16.748-A, licencia O. A. Barboza de Viltes
+  A.11    6339  h9   JUSTICIA+CARGOS
+          Dec. 16.834-G, renuncia del juez de paz suplente R. A. Vivas
+  A.12    6347  h8   REGISTRO-CIVIL+CARGOS
+          Dec. 16.964-G, confirma a E. G. Cruz en el Registro Civil
+  A.13    6348  h8   MINAS
+          Edicto 7970, mina Argentina, plata y plomo (Moreno Lobo)
+  A.14    6349  h5   OTRO
+          Dec. 1698?-A, pensión a la vejez de P. Acuña
+  A.15    6351  h7   CARGOS
+          Dec. 17.069-A, licencia O. A. Barboza de Vilte
+  A.16    6352  h4   CARGOS
+          Dec. 17072-A, cesantía de M. M. Portal (Hogar Linares)
+  A.17    6360  h5   CARGOS
+          Dec. 17.219-A, personal de Salud del interior (5 renglones)
+  A.18    6360  h10  CARGOS
+          Dec. 17.221-A, personal de Patronato (4 renglones)
+  A.19    6367  h6   OTRO
+          Dec. 17.362-G, Res. 189: Destacamento Policial Los Yacones
+  A.20    6371  h8   CARGOS
+          Dec. 17486-A, licencia M. V. de Salvatierra (Hogar)
+  A.21    6371  h11  CARGOS
+          Dec. 17491-A, denuncia y renuncia de R. T. Navarro
+  A.22    6371  h12  OTRO
+          Dec. 174?9-A, licitación de comestibles (Hogar Linares)
+  A.23    6374  h6   REGISTRO-CIVIL+CARGOS
+          Dec. 17573-G, encargada del Registro Civil de Vaqueros
+  A.24    6385  h6   CARGOS
+          Dec. 17757-A, renuncia de O. Barboza de Vilte
+  A.25    6385  h7   OTRO
+          Dec. 17763-A, pensión a la vejez de V. Tolaba (Los Yacones)
+  A.26    6392  h7   OTRO
+          Dec. 17.982-A, pensión a la vejez de D. Rocha (Vaqueros)
+  A.27    6394  h8   OBRA-PUBLICA
+          Dec. 18.079-E, imputación Edificio Policial La Caldera, $300
+  A.28    6397  h8   OTRO
+          Dec. 18105-A, licitación de verduras y otros (Hogar Linares)
+  A.29    6404  h9   ESCUELA+OBRA-PUBLICA
+          Dec. 181?6-E, acopio N 1 Escuela Bernabé López
+  A.30    6404  h16  OTRO
+          Remate 8677, camión con chapa municipal de La Caldera
+  A.31    6406  h5   NORMA
+          Dec. 18243-A, zonas desfavorables: La Caldera en zona D
+  A.32    6411  h8   CARGOS
+          Dec. 18308-G, presidente de la Comisión Municipal W. Gallo
+  A.33    6421  h6   AGUAS
+          Dec. 18570-E, 25 l/s del río La Caldera para Obras Sanitarias
+  A.34    6424  h6   ESCUELA+OBRA-PUBLICA
+          Dec. 18627-E, certificado parcial N 1 Escuela B. López
+  A.35    6428  h6   REGISTRO-CIVIL
+          Dec. 18765-G, Registro Civil a la policía (licencia de E. G. Cruz)
+  A.36    6431  h4   MINAS
+          Edicto 9041, mina Juanita, plomo (Ramos Meliado)
+  A.37    6432  h23  AGUAS
+          Edicto 9050, permiso precario río Chalchanio (Araya)
+  A.38    6434  h5   OTRO
+          Dec. 18818-A, pensión a la invalidez de J. Flores (Vaqueros)
+  A.39    6434  h7   ESCUELA+OBRA-PUBLICA
+          Dec. 18940-E, ajuste provisorio N 1 Escuela de Vaqueros
+  A.40    6437  h6   JUSTICIA+NORMA
+          Ley 3633, distritos judiciales: La Caldera en el Centro
+  A.41    6437  h8   AGUAS+OBRA-PUBLICA
+          Dec. 19053-E, obras electromecánicas Ley 3192 (disminución)
+  A.42    6438  h5   HACIENDA-MUN
+          Dec. 19.077, presupuesto municipal 1961: $812.516,85
+  A.43    6439  h6   CARGOS
+          Dec. 19119-A, personal del Hogar Linares (7 artículos)
+  A.44    6440  h7   AGUAS
+          Dec. 19157-E, título de agua de Getsemaní a Greco S.A.
+  A.45    6449  h5   ESCUELA+OBRA-PUBLICA
+          Dec. 19248-E, certificado parcial N 2 Escuela B. López
+  A.46    6453  h9   OTRO
+          Dec. 19428-G, rehabilita pensión de G. Yavi (Vaqueros)
+  A.47    6457  h6   ESCUELA+OBRA-PUBLICA
+          Dec. 19515-E, acopio N 2 Escuela B. López
+  A.48    6457  h7   OBRA-PUBLICA
+          Dec. 19.524-E, partida Edificio Policial La Caldera, $100.000
+  A.49    6466  h7   OTRO
+          Dec. 19669-G, subsidio al Club Juvenil Gallinato
+  A.50    6478  h9   CARGOS
+          Dec. 19913-G, servicios de V. V. Jurado Noble (Subcomisaría)
+  A.51    6485  h12  ESCUELA+OBRA-PUBLICA
+          Dec. 20114-E, ajuste provisorio N 2 Escuela B. López
+  A.52    6489  h14  OTRO
+          Dec. 20167-A, jubilación de S. Yufra: servicios en la Comisión
+          Municipal 1930-31
+  A.53    6490  h11  JUSTICIA+CARGOS
+          Dec. 20.209-G, juez de paz suplente E. Mogro (terna municipal)
+  A.54    6490  h12  AGUAS+OBRA-PUBLICA
+          Dec. 20216-E, obras electromecánicas Ley 3192, $2.400.000
+  A.55    6491  h9   OTRO
+          Dec. 20250-A, pensiones a la vejez de Arédes y López (Vaqueros)
+  A.56    6491  h10  OTRO
+          Dec. 20251-A, pensión a la invalidez de A. Viveros (Potrero de
+          Castillo)
+  A.57    6496  h8   CARGOS
+          Dec. 20475-A, renuncia de N. Mercado de Lizondo
+  A.58    6501  h12  CARGOS
+          Dec. 20.691-A, médico regional de La Caldera (Araujo por Martearena)
+  A.59    6502  h5   OTRO
+          Dec. 20707-G, premios para el Club Tradición de La Caldera
+  A.60    6507  h8   OBRA-PUBLICA
+          Dec. 20818-E, partida Edificio Policial La Caldera, $1.500
+  A.61    6513  h17  MINAS
+          Edicto 10013, mensura mina Abra de Mayo (Payo y otros)
+  B.2.1   6288  h10  ESCUELA+OBRA-PUBLICA
+          Dec. 15839-G, adjudica la Escuela B. López de Vaqueros
+  B.2.2   6288  h15  DOMINIO
+          Edicto 7.261, posesión treintañal F. Figueroa (Los Yacones)
+  B.2.3   6320  h7   CARGOS
+          Dec. 16333-A, licencia del médico de Vaqueros D. A. Frías
+  B.2.4   6323  h10  CARGOS
+          Dec. 16443-A, enfermero del Puesto Sanitario de Vaqueros
+  B.2.5   6367  h7   CARGOS
+          Dec. 17.367-G, agente A. Colque para Los Yacones
+  B.2.6   6394  h7   CARGOS
+          Dec. 18.072-A, médico de Vaqueros y San Lorenzo (Canónica)
+  B.2.7   6404  h6   CARGOS
+          Dec. 18180-A, médico regional de Vaqueros (Massafra, Martearena)
+  B.2.8   6456  h9   ESCUELA
+          Dec. 19494-A, 45 becas del Colegio San Cayetano de Vaqueros
+  B.2.9   6490  h8   CARGOS
+          Dec. 20187-G, vacante del Puesto Caminero Vaqueros (Reyna)
+  B.2.10  6493  h11  ESCUELA+OBRA-PUBLICA
+          Dec. 20342-E, pago de certificados Escuela B. López
+
+§E · OBSERVACIONES
+------------------
+E.1 · Duplicación, tinta y saldos
+Duplicación. Sin las .jpg del pre-informe, el dhash no se rehízo; el pre-informe
+da 192 pares de dhash <= 16, tapas incluidas, que la sesión no miró (E.10). Por
+texto, ninguna hoja se repite entre archivos. Los avisos del departamento que se
+publican varias veces se reunieron por el texto (solicitante, expediente o
+catastro), no por el número de aviso: nueve (7.261, 7.723, 7.724, 7831, 7970,
+8677, 9041, 9050 y 10013); ocho del §A y uno (7.261) de B.2.
+
+Tinta: §1.
+
+Tesorería General. Trece resúmenes del movimiento de caja, de septiembre de 1960
+a septiembre de 1961, uno por mes, publicados entre marzo y noviembre de 1961 y
+fuera de orden (diciembre de 1960 antes que noviembre en 6350; febrero de 1961
+antes que enero en 6351). Leídos en la imagen los renglones de apertura («Saldo
+en Caja que pasa del mes de...») y de cierre («...que pasa al mes de...»):
+  mes         edición y hojas  apertura            cierre
+  set. 1960   6349 h17-18      19.6?0.787,45       46.057.770,07
+  oct. 1960   6349 h19-20      46.05?.770,07       7.305.533,73
+  nov. 1960   6350 h21-22      7.305.533,73        16.190.637,74
+  dic. 1960   6350 h19-20      16.190.637,74       9.825.171,67
+  ene. 1961   6351 h19-20      9.825.171,67        15.530.904,15
+  feb. 1961   6351 h17-18      15.530.904,15       19.410.775,61
+  mar. 1961   6386 h20-21      19.410.775,61       40.699.593,51
+  abr. 1961   6410 h17-18      40.699.593,?1       22.265.007,5?
+  may. 1961   6420 h13-14      22.265.007,53       21.264.297,72
+  jun. 1961   6437 h25-26      21.264.297,72       13.815.517,29
+  jul. 1961   6474 h17-18      13.815.517,29       10.699.503,67
+  ago. 1961   6492 h25/h24     10.699.503,67       24.409.952,07
+  set. 1961   6507 h27-29      24.409.952,07       16.830.741,27
+Cadena: 12 pares consecutivos; cierran los 12 por la cifra, en un solo tramo,
+sin cortes. En abril las dos cifras borrosas se leen por el vecino: la apertura
+por el cierre de marzo (…,51, claro a 250 ppp) y el cierre por la apertura de
+mayo (…,53). Un signo tapado en septiembre y octubre de 1960 (la raya vertical
+del escaneo cruza la cifra) se lee igual por el vecino. Rótulo «Mayo de 1951»
+[sic] en el cierre de abril. La capa escribe 13.315.517,29 por 13.815.517,29
+(junio).
+Subtotales recalculados, uno por cuadro (el bloque «Cuentas especiales», en la
+imagen), sobre 13 cuadros: cierran 7 (set. 60: 394.979,63; ene. 61: 295.700,30;
+mar. 61: 519.528,50; abr. 61: 846.348,07; jun. 61: 490.868,73; jul. 61:
+1.183.145,68; ago. 61: 681.543,24); cierran con una cifra del catálogo de
+confusiones 3 (oct. 60: la suma da 624.381,47 y la imagen 624.3[3/8]1,47; nov.
+60: 672.439,97 contra 672.4[2/3]9,97, con la raya del escaneo encima; may. 61:
+959.314,42 contra 959.314,45, que cierra si 696.943,06 es ,09); no cierra 1:
+febrero de 1961 (6351 h17), 270.857,47 + 124.928,59 + 3.591,50 = 399.377,56
+contra 399.477,56 impreso, cien pesos de más con las cuatro cifras claras a 250
+ppp; no se concilia. Septiembre de 1961 (6507): ocho subtotales recalculados
+(valores a devolver, valores a regularizar, recursos de reparticiones, cuentas
+especiales, egresos de reparticiones, pagos por presupuesto y dos más), cierran
+los ocho; el de pagos por presupuesto, con Plan de Obras 18.531.028,76 en la
+imagen (la capa da ,16 y no cerraba). Diciembre de 1960: el bloque no se ubicó
+en la hoja (disposición distinta); sin subtotal (pendiente).
+
+E.2 · Cobertura
+Cobertura: las 240 ediciones y las 4.663 hojas, en dos versiones de texto salvo
+164 hojas con una sola (la capa). Las 29 hojas con mención real que el
+pre-informe no trae (§2) muestran que la segunda versión decide: con la capa
+sola, la sesión habría perdido la licitación de verduras del Hogar (6397), la
+Ley 3633 (6437 h6), la presidencia municipal (6411), el decreto de zonas (6406)
+y la terna del juez suplente (6490 h11), entre otros.
+
+E.3 · Sin mención y no mirado
+Citados y no acompañados:
+- El presupuesto de la Municipalidad de La Caldera para 1961 (cuadro de fojas 13
+a 16; A de 6438).
+- La terna de la Municipalidad para el juez de paz suplente (A de 6490).
+- El nombramiento de Ramón Antonio Vivas como suplente (A de 6339), el de
+Alberto José Reyna en el Puesto Caminero de Vaqueros (B.2 de 6490) y el de
+Marcelina Apaza de Zerpa en el Hogar: los tres sólo constan por su fin (v16
+§5.3).
+- La vacante del Juzgado de Paz Titular, declarada sin nombrar al que la dejó (A
+de 6322).
+- La Resolución 936 del Consejo General de Aguas (21/6/1961) sobre Getsemaní (A
+de 6440) y la 1468 sobre la partida de obras electromecánicas (A de 6490 h12).
+Sin mención y no mirado: el suplemento del Presupuesto General 1960/61 (6472 h15
+a h237) no trae el departamento en las dos versiones de texto; 69 de sus hojas
+no tienen capa útil y las cubre sólo el OCR propio, y 163 tienen menos de 5 % de
+tinta; no se miraron enteras. Las 525 hojas de poca tinta y las 764 «a ojos» no
+miradas enteras (pendiente).
+
+E.4 · Firmas y autoridad
+Autoridad. Gobernador Bernardino Biella hasta el 20 de noviembre (tapas de 6288
+a 6500). Ministros que firman los actos del §A: Gobierno, Justicia e Instrucción
+Pública, Julio A. Barbarán Alvarado (enero a octubre), Olber Domenichelli (A de
+6428, julio) y Pedro J. Peretti como Ministro de Gobierno interino (A de 6490,
+octubre); Economía, Finanzas y Obras Públicas, Pedro J. Peretti (A de 6404,
+6421, 6440); Asuntos Sociales y Salud Pública, Belisario Santiago Castro (A de
+6439, 6501), con Santiago S. Torrego, subsecretario, a cargo de la cartera en
+marzo-abril (A de 6371 h11). «Es copia»: René Fernando Soto y M. Mirtha Aranda
+de Urzagasti (Gobierno), Lina Bianchi de López y Nelly del Carmen Méndez,
+interina (Asuntos Sociales), E. Antonio Durán, jefe interino (Obras Públicas).
+Intervención. Los decretos nacionales 10.870 y 10.871 declaran intervenida la
+provincia en sus tres poderes. Decreto N 1-G, Salta, 21 de noviembre de 1961
+(6512 h5, imagen): «Declárase asumido por el suscrito Comisionado Nacional
+Especial, Escribano Público Nacional don Víctor Hugo Fleitas, el Mando
+Gubernativo de la Provincia». En la capa (6512 h2, h5 y h6), del mismo día: otro
+decreto designa ministro de Gobierno de la Intervención a Ramón Cornell y le
+encarga Economía y Asuntos Sociales; el 3-G nombra jefe de policía; el 4-G y el
+5-G declaran caducos los mandatos del poder ejecutivo y del legislativo; el 6-G
+pone en comisión al poder judicial; el 7-G, «a las autoridades municipales de la
+provincia»; el 11-G da asueto el 23 de noviembre para la asunción del
+«Comisionado Federal, Embajador doctor Enrique Escobar Cello». Las tapas:
+Fleitas en 6501-6502, Escobar Cello desde 6503, «Interventor Federal» desde
+6507. Ningún acto del §A es del período intervenido salvo el edicto de minas de
+diciembre (A de 6513); el Decreto-Ley 1-G del 27/11 (B.1) es el único acto de la
+Intervención que toca a una ficha.
+Numeración. La serie del gobierno de 1958 sigue corrida: el primer decreto con
+fecha de 1961 que da la capa es el 15922-G (2 de enero) y el último, el 21282-G
+(20 de noviembre); en el Boletín de enero salen además decretos de diciembre de
+1960 (15.835-G, A de 6288). Desde el 21 de noviembre la Intervención numera
+desde 1 (1-G a 310-E, 19 de diciembre, en la capa). Extremos leídos en la capa
+(E.10).
+Interinatos: Peretti en Gobierno (octubre); Torrego en Asuntos Sociales (abril);
+no se fija el día de los reintegros.
+
+E.5 · Cortes y columnas
+Cortes y columnas. La tabla de presidentes municipales de 18308-G (A de 6411)
+está partida en dos columnas: la atribución de Werfil Gallo a La Caldera sale de
+alinear renglones, que se hizo en la imagen a 120 ppp. En 6323 h10 el art. 1 del
+16443-A cae en el salto de columna. Columna perdida: con dos versiones, el
+control fue el cotejo de las dos en las 129 hojas con aciertos y en las de B.2;
+no se halló columna perdida en la versión prop sobre las 163 ventanas leídas
+(denominador: 163 ventanas de 129 hojas, no el año).
+
+E.6 · Repeticiones
+Repeticiones: nueve avisos del departamento repetidos, reunidos por el texto
+(E.1). La marca de publicación se leyó en siete y cierra en seis (7.261, 7.724,
+7831, 8677, 9041 y 10013); en el edicto de la mina Argentina (A de 6348) falta
+la aparición del 24 de abril y hay dos seguidas el 25 y el 26. Las marcas del
+7.723 y del 9050 no se leyeron enteras (sus apariciones coinciden con las del
+7.724 y con tres días seguidos, respectivamente).
+
+E.7 · Falsos positivos y negativos
+Falsos positivos del anillo 1: 18 formas (ricaldes, ricaldi, calderon, calderas,
+escalda, calde por calle, caldo, caldos, decaldo, decalda, recalda, fiscalde,
+localdad, localdiad, acaldado, tacalda, caldera como aparato, y «Caldera La
+Merced» por Calera). De la difusa: calera, adera, escalerillas, capdevilla,
+escalera, calavera, caderias, calrera, cablera, alera, caera, cadera, carilla,
+caler, caltera, callera, balldera, valedera, caladura, aldea y otras. Falsos
+negativos que la sesión corrigió: el sumario de 6318 h2 («ha cadera» en la
+capa): la difusa de la sesión trajo la forma «cadera» (4 aciertos) y la sesión
+la descartó en bloque como falso positivo sin leer sus contextos; el cotejo con
+el pre-informe la rescató (F.1). Los otros tres «cadera» son el apellido de un
+médico (6360 h12), «superfabricadora» (6418 h16) y ruido de la capa (6450 h7).
+Del lado del pre-informe, las 29 hojas que no trae (§2).
+
+E.8 · Fidelidad numérica
+Fidelidad numérica.
+- Suma propia de los certificados de la Escuela Bernabé López aprobados en 1961:
+326.201,70 + 219.670,70 + 35.979,86 + 145.449,60 + 197.552,55 + 9.488,91 =
+934.343,32 pesos, contra una adjudicación de 1.733.043,51 (B.2 de 6288). Ningún
+acto declara acumulado.
+- Partida H I III 6 D III 7, «Edificio Policial en La Caldera»: 300.—
+(imputación, 6/6), 100.000.— (transferencia, 5/9; columna no mirada), 1.500.—
+(31/10). Partida II-9-E-I-18, obras electromecánicas Ley 3192 (siete
+localidades): disminuye 3.100.000 (3/8) y recibe 2.400.000 (19/10).
+- Cuadros no recalculados enteros, con su criterio (sólo el renglón del
+departamento): los de 18.079-E, 19.524-E, 20818-E, 19053-E y 20216-E; las
+nóminas de 16.964-G, 17.219-A, 17.221-A y 19494-A; las listas de pensiones fuera
+de su renglón.
+- Recuentos propios: 12 destinos en las dos licitaciones del Hogar; 22 renglones
+de zonas; 21 departamentos en la Ley 3633; 10 presidentes municipales; 8
+pensiones a la invalidez de la 493-P, que cierran con 'números 1322 a 1329'; 9
+subsidios de 15.835-G que suman 60.000; 45 becarios de Vaqueros.
+- Aritmética de actos: 2.000 ha del cateo 7.724 (5.000 x 4.000 m); 2.000 - 108 =
+1.892 ha del 7.723; 6 ha de la pertenencia I de Abra de Mayo; 5.420 pesos del
+Club Tradición; 2 + 1 años contra 4 en la jubilación de Yufra (no cierra).
+- Dígitos del catálogo decididos por un control: 17072-A del 28 y no del 23 de
+marzo (serie); 18765-G y no 18766 (sumario); 17757-A y no 17767 (imagen del
+sumario y del cuerpo); 1[7]763-A (serie del día); los saldos de abril por el
+vecino. No decididos: 1698[3/4]-A; 174[3/9]9-A; 181[9/6]6-E; la resolución
+1[5/6]98-J; el día de la licitación de la escuela, 2[3/8] de octubre de 1960
+(E.10).
+
+E.9 · Contradicciones
+Contradicciones (no se concilian):
+- Martearena: médico regional de La Caldera (17.219-A, 10/4, y 20.691-A, 31/10)
+y de Vaqueros y San Lorenzo, con funciones terminadas (18180-A, 12/6).
+- Barboza de Vilte: licencia por maternidad desde el 1/12/60 y otra desde el
+17/2/61; licencia por enfermedad desde el 12/1 dentro de la primera; reemplazada
+desde el 1/4 y renuncia aceptada el 16/5.
+- Maizo: dado de baja desde el 1/2 y con servicios reconocidos hasta el 16/2.
+- Jurado Noble: baja desde el 3/9 y servicios reconocidos del 3 al 21/9.
+- Yufra: 4 años en el visto, 2 + 1 en la resolución; 'Comisión Municipal' y
+'Municipalidad'.
+- 19515-E: 197.522,55 en el visto y 197.552,55 en el artículo.
+- Tesorería de febrero de 1961: subtotal de cuentas especiales cien pesos por
+encima de la suma.
+- Cateos 7.723 y 7.724: la misma poligonal con Este y Oeste trocados.
+- Getsemaní: 'Manufactura de Tabacos Particular V. F. Grego' (edicto) y
+'Particulares V. F. Greco' (decreto).
+- Enfermera de Vaqueros: Eusebia Díaz (16443-A) y Eusebia Ruiz (17.219-A).
+- Grafías: Ester/Esther Gabriela Cruz; Martiarena/Martearena; Balsano de
+Grazziano (1961) y Bálsamo de Grazziani (1960); Rosario del G./del Jesús Jurado;
+'La Cardera' (19248-E); 'Caldera' sin artículo (17.219-A); 'Correjo' por
+Cornejo; 'Alondo Ramos Meliado' (1961) y 'Alonso Ramos Mellado' (1959).
+- Erratas del original declaradas en las notas: 'Quiniento' (19.077);
+'actuacioes', 'escuelaa', 'Lerairo' (15839-G); 'Mayo de 1951' (Tesorería);
+'MARTE' y los días errados de las tapas (§1); 19515-E sin fecha; 19428 con letra
+G en un decreto de pensiones; 'Departamento Policial de los Yacones'.
+
+E.10 · Límites
+Límites:
+1. El inventario del Release no se pudo listar (el proxy rechaza
+expanded_assets): que no haya otros assets no está comprobado.
+2. Dígitos que ni la imagen ni un control deciden: los números 1698[3/4]-A (A de
+6349), 174[3/9]9-A (A de 6371 h12) y 181[9/6]6-E (A de 6404 h9), la Resolución
+1[5/6]98-J (A de 6385 h7), el expediente 35.95?/61, el día 2[3/8] de la
+licitación de la escuela (B.2 de 6288) y la tercera cifra de una oferta
+(1.83?.713,72). Resuelve: el Registro Oficial de 1961.
+3. Datos personales omitidos: números de documento, libreta y matrícula, y los
+nombres de los 45 becarios menores de Vaqueros; causas de licencias.
+4. Los extremos de la serie de decretos y los decretos 2-G a 11-G de la
+Intervención, leídos sólo en la capa.
+5. Sin .jpg ni recortes del pre-informe: los 192 pares de dhash no se miraron.
+6. Hojas de ediciones cortas: no se afirma qué página falta (§1).
+7. Foliatura: el recomienzo en 6295 y el salto de 1.000 en 6470 no se explican.
+8. Resolución: 1.160 hojas a 150 ppi y una a 91; el catálogo de confusiones de
+150 ppi rige en ellas.
+9. 17 días hábiles sin edición sin explicación en el corpus.
+10. Planos: ninguno en lo mirado; no se afirma del año entero.
+11. Totales de cuatro resúmenes de la Tesorería (enero, mayo, junio y agosto de
+1961) no leídos: no hacen falta para la cadena.
+12. El suplemento de 6472 (223 hojas) se cubrió sólo por texto.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 · La forma de la difusa no se descarta en bloque: se leen sus contextos.
+En 1961 la sesión tuvo en la mano la forma «cadera» (4 aciertos) y la descartó
+por forma, como en años anteriores; uno de los cuatro era el sumario de 6318 h2,
+donde la capa lee «ha cadera» por «La Caldera». Lo rescató el cotejo con el
+pre-informe. Propuesta para v18 §5.2: toda forma de la difusa con menos de 20
+aciertos se lee contexto por contexto; sólo las de más aciertos pueden
+descartarse por muestra, y la muestra se declara con su denominador.
+
+F.2 · El pre-informe no ve lo que está sólo en la versión propia.
+29 hojas con mención real del departamento (entre ellas la Ley 3633, la
+licitación del Hogar de julio y la terna del juez suplente) están en la versión
+prop y no en las candidatas del pre-informe. O lee_auto.py corre el anillo 1
+sólo sobre la capa, o descarta los aciertos de prop. Propuesta: que corra las
+cuatro pasadas sobre las dos versiones y marque la versión en cada candidato;
+mientras tanto, la sesión las corre ella misma sobre el zip de textos, como hizo
+aquí.
+
+F.3 · La foliatura corrida puede empezar el año con la del anterior y puede
+saltar.
+Las siete primeras ediciones de 1961 siguen la foliatura de 1960 y 6295
+recomienza en 93; 6470 salta 1.000 folios. El control de pares de v16 §2.5bis
+los da como 'no cierra' y así se ve la falla, pero el control debe admitir un
+cambio de base declarado: se cotejan los pares dentro de cada tramo y el cambio
+se declara con sus dos extremos mirados (v16 §8.21).
+
+F.4 · Las tablas partidas entre dos columnas se atribuyen por alineación, y eso
+se declara.
+La tabla de presidentes municipales de 18308-G pone localidad y cargo en una
+columna y nombre y fecha en la otra. La atribución de un nombre al departamento
+depende de alinear renglones, y en la tabla hay cabeceras departamentales sin
+renglón propio. Regla: la ficha dice 'atribución por alineación de renglones
+entre columnas' y se mira a no menos de 120 ppp.
+
+F.5 · lee_auto.py se quedó sin disco dos veces al guardar recortes.
+El log de 1961 trae dos OSError 28 en la etapa 6 (recortes). Las sesiones no
+usan los recortes: miran los PDF. Propuesta para la máquina: no generar recortes
+(config 'recortes': false) o borrarlos al subir; la corrida de 1961 tardó cuatro
+arranques.
+
+F.6 · Config.
+Se agregan a actores 44 formas de nombre de las fichas de 1961 que el config no
+tenía, con origen 1961 (Guerrero, Vivas, Barroso, Gallo, Mogro, Tudela, Royo,
+Cardozo de Colque, Apaza de Zerpa, Mercado de Lizondo, Aquino, Jurado Noble,
+Yufra, Araujo, Martearena, Frías, Massafra, Teyssier, Balsano de Grazziano,
+Payo, Araya, Oggero de Araya, Fernández Cornejo, Pfister, Colque, Reyna y los
+pensionados del departamento, entre otros); al anillo 2, 24 términos (§2); a
+numeros, 79 números de acto, expediente y aviso del §A y de B.2 (con las dos
+lecturas de los dudosos); a falsos_positivos, cinco contextos inequívocos de
+caldera-aparato ('caldera de ocho atmosferas', 'caldera a vapor sin movimiento',
+'auxiliar de caldera del policlinico', 'aux. de caldera del policlinico',
+'caldera la merced'). Nada se quita.
+
+F.7 · Catálogo de confusiones (v17 §5.6.2): 5 y 6 también en números de
+resolución y de decreto.
+1961 suma: 1598/1698-J (5/6) en el mismo acto; 18765/18766 (5/6), que a 130 ppp
+se leía 18766 y a 300 ppp 18765, lo que confirmó el sumario; 17439/17499 (3/9);
+6358 y 6365 de tapa (3/8); 8384 por 6384 (6/8) y 5?97 por 6497 (6/5) en tapas.
+Regla: antes de declarar una duda de dígito, releer el número a 300 ppp; en 1961
+esa relectura decidió el 18765, y el sumario lo confirmó.
+
+F.8 · Presupuesto de turno (v17 §5.5).
+1961, con 240 ediciones, 4.663 hojas (223 de suplemento) y dos versiones de
+texto, dio 61 fichas del §A y 10 de B.2 en una sesión larga; quedaron como
+pendientes las hojas «a ojos» y las de poca tinta, como en 1960. Con dos
+versiones, la mirada de hojas enteras rinde poco: las 29 hojas que la capa sola
+perdía están en prop. Se propone que, cuando haya dos versiones en más del 90 %
+de las hojas, las hojas «a ojos» se miren sólo si alguna de las dos versiones
+trae un término del anillo 2 o un actor, y que el resto pase a límite declarado.
+
+§R · RECUENTO
+-------------
+anio: 1961
+ediciones_desde: 6288
+ediciones_hasta: 6527
+ediciones_presentes: 240
+ediciones_ausentes: 0
+hojas_presentes: 4663
+hojas_declaradas: 4554
+hojas_ausentes_estimadas: 118
+hojas_excedentes: 3
+hojas_suplemento: 223
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 20
+ediciones_dobles: 0
+techo_ppi: 300
+ppi_por_tramo: 300-en-3502-hojas-150-en-1160-91-en-1
+ocr_en_sesion: no
+capa_previa: nativa-pdf
+versiones: 2
+actos_departamento: 61
+actos_dominio: 0
+actos_hacienda_municipal: 1
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 13
+subtotales_recalculados: 19
+resumenes_tesoreria: 13
+cadena_saldos: un-tramo
+columnas_cotejadas: 129
+hojas_miradas: 368
+avisos_repetidos_departamento: 8
+falsos_positivos_anillo1: 18
+limites_declarados: 12
+cambio_de_autoridad: intervencion-federal-21-11
+nivel_lectura: imagen
+pdf_release: 240
+avisos_release: 0
+estado: CON-PENDIENTES
