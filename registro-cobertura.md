@@ -987,3 +987,36 @@ Observación de prosa, sin restar como error (aspecto 12): A:321 y 16:794 decía
 | Privacidad: personas nombradas en las 74 líneas, cruzadas con contextos sensibles | 74/74 líneas y búsqueda en todo el libro de «gobernanta», «regente», «cuidadora» | La gobernanta intervenida en 1956 y la regente y la cuidadora sancionadas en 1957 no se nombran en ningún lugar del libro; la menor de 1957 tampoco; los deudores de los remates de 1955 a 1957 no se nombran. Sin casos |
 | Largo de los archivos antes y después de la fase 6 | 6/6 archivos tocados por la fase 6 | ninguno cambia de largo |
 | Compilación | libro entero | Compila; 815 páginas (815 la base); 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas de antes |
+
+## Ronda 50 — lecturas de Eduardo, 1959 (29/09/2026)
+
+Tipo: **lecturas sin cambio en el libro** (CORRIGE 3.6), por la palabra clave `LECTURAS` (flujo v2 §5.6). Base: commit `770bdd3` (la fase 6 de la ronda 49, `aaea202`, no toca nada de 1959). No hay parche: 1959 está en `puntual`, sin informe registrado, y ninguna de las formas decididas aparece en el libro. Denominador: 25.032 líneas, sin cambios. La cobertura acumulada sigue en **25.032 de 25.032 (100,0 %)**. Como el informe `BO-Salta-1959_5806-6047_la-caldera_LEE-1959_2026-09-29.txt` todavía no está registrado, las lecturas se aplicaron sobre él y se entrega de nuevo con el mismo nombre: **no queda pendiente de tipo `lee`**.
+
+### Qué se decidió con controles, sin mostrarlo (§5.6.1)
+
+Antes de armar la hoja se decidieron por control, entre otros: el expediente del cateo de Marcelo Diez, 2847-D, por la serie (el 2848-S es del mismo día y hora, A de 5875); la base del remate 3176 por sus dos tercios; el decreto citado 4403/59 de A de 5841 por la cita cruzada con A de 5820, y los tres encabezados que la capa atribuía al acto vecino, por coordenadas y en la imagen.
+
+### Lecturas de Eduardo (hoja `dudas-1959-1959.html`, 9 casos con el renglón marcado)
+
+| # | Edición y hoja | Duda | Sesión | Eduardo | Control | Clase |
+|---|---|---|---|---|---|---|
+| D1 | 5826 h6 | Reproductores del Dto. 4630-E, «los 1? reproductores» | Segundo dígito roto (600 ppp) | 16 | El cuadro trae 16 prestatarios; no lo decide (el acto no dice uno por renglón), pero no lo contradice | **Decidida por Eduardo: 16** |
+| D2 | 5857 h7 | Decreto del 31 de enero citado por el 5305-A, «4?89» | Segundo dígito roto | 4789 | Serie del año (`decretos_1959.csv`): del 4718 al 4831 son del 31 de enero; el 4689 es del 30 y el 4889 del 11 de febrero | **Decidida por control y confirmada: 4789.** No debió ir a la hoja |
+| D3 | 5820 h8 | Ocho retenciones ajenas del cuadro del Dto. 4403-E (carta fianza de Imberti) | Centenas rotas | 6.030,59; 6.892,10; 3.662,96; 4.194,22; 4.749,17; 3.321,42; 3.617,35; 2.866,52 | Aritmética: con 3.645,30, 9.177,83 y 6.320,60 suman 54.478,06, y el total impreso es 55.021,06. Faltan 543,00. 150 combinaciones de 2 o 3 dígitos confundibles cierran la diferencia | **Abierta: el control rechaza la lectura y no elige otra.** Renglones de otras obras; el certificado 2 de La Caldera (6.320,60) lo cierra el art. 2 (55.021,06 − 6.320,60 = 48.700,46) y el art. 3 (10 % de 63.206,05) |
+| D4 | 5867 h1 | Número impreso en la tapa | «5337» o «5367» | 5337 | La serie da 5867; decide sólo la errata impresa | **Decidida por Eduardo: la tapa imprime 5337** |
+| D5 | 6024 h1 | Páginas declaradas | 20 o 26; el archivo trae 19 hojas | 20 | Ninguno la contradice; 19 hojas con 20 declaradas cuadra con una faltante | **Decidida por Eduardo: 20** |
+| D6 | 5928 h8 | Expediente del Dto. 7163-E (convenio A.G.A.S.-Municipalidad) | Imagen «1563», capa «1533» | 1563-59 | Sin cita cruzada en el corpus | **Decidida por Eduardo: 1563-59**, igual que la imagen |
+| D7 | 5837 h5 | «Moría» o «María» Polo de Herrera | «Moría» | Moría, errata del cajista | — | **Decidida por Eduardo: «Moría» [sic]** |
+| D8 | 5964 h13 | Samora o Samara, pensión 1087 | Imagen «Samora», capa «Samara» | Samora | — | **Decidida por Eduardo: Samora** |
+| D9 | 6009 h13 | Saldo en caja que pasa a agosto de 1959 | 19.624.971,70, tercer dígito inseguro | 19.624.971,70 | Sin control: agosto y septiembre no se publicaron | **Decidida por Eduardo: 19.624.971,70** |
+
+Balance: de 9 lecturas, 1 decidida por control y confirmada (D2), 7 decididas por Eduardo (D1, D4 a D9) y 1 abierta porque la aritmética rechaza la lectura (D3). No hubo lecturas corregidas por un control con un valor propio. Se suma al catálogo del §5.6: **un número citado con un dígito roto se corre contra la serie de fechas de todo el año, no sólo contra la de la hoja; y un cuadro con total impreso se devuelve con la suma de la lectura hecha, para que la discrepancia se vea antes de aceptar la lectura.** En D3, la lectura de 4.749,17 donde la capa da «1.719.17» y la de 2.866,52 donde la capa da «2.366.52» son los renglones a mirar primero en un escaneo mejor.
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Menciones en el libro de las formas decididas | 17 formas (4789, 4630, 4403, 55.021, Imberti, 7163, 1563, 1533, Polo de Herrera, Moría, Samora, Samara, 8059, 5337, 6024, 19.624, 1959) en los 38 archivos | Ninguna del informe 1959: 4403 sólo dentro de «4431-E» (1953); 7163 como expediente de 1925 (cap. 4); 1959 en un expediente de 2010 y en un máximo de caudal (cap. 11), ajenas |
+| Serie de decretos para D2 | 10 candidatos 4089 a 4989 contra `decretos_1959.csv` | Sólo el 4789 cae en el 31 de enero |
+| Suma del cuadro de D3 | 11 renglones y el total | Diferencia de 543,00; 150 soluciones de 2 o 3 dígitos; ninguna única |
+| Cita cruzada para D6 | Texto de las dos versiones, 242 ediciones | «1563-59» y «1533-59» sólo en 5928 h8 |
