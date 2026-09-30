@@ -1020,3 +1020,105 @@ Balance: de 9 lecturas, 1 decidida por control y confirmada (D2), 7 decididas po
 | Serie de decretos para D2 | 10 candidatos 4089 a 4989 contra `decretos_1959.csv` | Sólo el 4789 cae en el 31 de enero |
 | Suma del cuadro de D3 | 11 renglones y el total | Diferencia de 543,00; 150 soluciones de 2 o 3 dígitos; ninguna única |
 | Cita cruzada para D6 | Texto de las dos versiones, 242 ediciones | «1563-59» y «1533-59» sólo en 5928 h8 |
+
+## Ronda 51 — auditoría con fase 6 (30/09/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1958–1960. Base: commit `1d33852` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1958–1960), con la fase 6 de esta ronda en `ronda-51.patch` (commit `d301f2a` en la sesión; aplica con `git am` sobre `1d33852`). **Denominador medido: 25.056 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 50 (25.032 de 25.032 en `841d6ce`, el commit de la ronda 49; la 50 no tuvo parche) se trasladaron por diff a `1d33852`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1958–1960 agrega 24 líneas (18 en A, 4 en C y 2 en F) y hace caducar 65 líneas en 20 archivos**, y deja **24.991 vigentes sobre 25.056 (99,7 %)**.
+
+### Lectura sobre el texto (numeración de `1d33852`)
+
+Se leyeron **las 65 líneas caducas, enteras, por la sesión**, sin subagentes, cotejadas contra los informes LEE 1958 (`BO-Salta-1958_5562-5805_la-caldera_LEE-1958_2026-09-29.txt`), 1959 (`BO-Salta-1959_5806-6047_la-caldera_LEE-1959_2026-09-29.txt`) y 1960 (`BO-Salta-1960_6048-6287_la-caldera_LEE-1960_2026-09-30.txt`), bajados de `corrige/lee/`, en todas las fichas que las líneas citan (las 183 del §A y las 34 de B.2 de los tres informes se listaron y se leyeron en su FICHA; en las citadas, también en TEXTO y NOTA). Además se releyeron como contexto 104 líneas con cobertura vigente; no suman cobertura, pero entran en el denominador del aspecto 7.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 330, 332, 336–353 | 20 | sesión |
+| ape/C-normativa.tex | 109–112 | 4 | sesión |
+| ape/D-pedidos.tex | 177, 190–192, 253 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 64–65, 67 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/03-fincas.tex | 389, 391 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599, 4638, 4697 | 5 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332 | 1 | sesión |
+| cap/13-loteo.tex | 725 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 45, 281, 284, 353 | 4 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 216, 223, 545 | 3 | sesión |
+| cap/26-presencia.tex | 69, 98, 235 | 3 | sesión |
+
+Contexto releído (no suma cobertura): D-pedidos:178; 04-siglo:1695–1725, 4203–4225 y 4525–4545 (la serie de la mina del expediente 44-L); 22-prospectiva:138–149; 22-infraestructura:528–533; 26-presencia:4–8 y 208–212.
+
+**Esta ronda: 65 líneas nuevas.** Con el contexto releído son 169 líneas y 87.051 bytes sobre 2.661.710, que en las 831 páginas de la base equivalen a **27,2 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `1d33852` cae dentro de estos tramos.
+
+Acumulado: 24.991 vigentes + 65 = **25.056 de 25.056 (100,0 %)**. La fase 6 toca 8 líneas, 7 dentro de lo leído en esta ronda (A:336, 340, 346, 353; 04:4638; 22:545; 26:235) y una del contexto releído (D:178), y no cambia el largo de ningún archivo: **25.056 de 25.056 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1958, 1959 y 1960 de `boletines-salta`)
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 5826 | 6 | Decreto 4630-E, cuadro de prestatarios | **«Getcemani», sin tilde**; A:346 citaba «Getcemaní» entre comillas (**corrección silenciosa**, corregida; la FICHA del informe LEE 1959, A.5, pone la tilde y su TEXTO no) |
+| 5569 | 8 | Decreto 12064-G, resolución transcripta | «considerando lo manifestado por la Administración General de A. G. A. S.»; 31,10, 29,90 y 48,30 %. Coincide |
+| 5730 | 11 | Plan de obras electromecánicas | «LA CALDERA: Obra Municipal / Usina hidroeléctrica y licitada y adjudicada. Red … 300 300» (miles de pesos). Coincide |
+| 5778 | 5 | Ley 3344, art. 1 | «una vez aprobada la adjudicación de los trabajos para la instalación de la usina de referencia». Coincide |
+| 6003 | 6 | Decreto 8954-A, reglamento, art. 1 | «Niños o niñas que vivan en apartados lugares serranos». Coincide |
+| 5840 | 12 | Remate 3176 | «"Villa Urquiza" (antes Cerro de Buena Vista)», lote 5, plano 21. Coincide |
+| 6028 | 25 | Decreto 9878-E, considerando | «vendrá a complementar el importante puente construído sobre el Río La Caldera». Coincide |
+| 5989 | 5 | Ley 3425, art. 3 | «a partir del puente sobre el río del mismo nombre». Coincide |
+| 5908 | 10 | Decreto 6726-G, visto | «durarán un año en el desempeño de sus funciones, pudiendo los mismos ser designados nuevamente». Coincide |
+| 5667 | 19 | Decreto 391-E | «los señores Intendentes Municipales que a continuación se detallan». Coincide |
+| 6201 | 4 | Ley 3548, arts. 1 y 2 | «aprovechamiento integral del río Mojotoro»; «Dos Diques de toma y derivación en los ríos Wierna y Vaqueros». Coinciden las dos |
+| 6240 | 5 | Ley 3566, art. 1 | «que forma parte del lote 1 del plano número 17»; **el artículo dice «Autorízase al Poder Ejecutivo a expropiar»**, como A:351 y C:111, y no «manda expropiar», como 04:4638 y 26:235 (hallazgo 5) |
+| 5613 | 13 | Decreto 13090-G, art. 2 | «Déjase establecido, que la Municipalidad en cualquier oportunidad que deba realizar una obra municipal, deberá dar cumplimiento previamente con las exigencias legales». Coincide |
+| 6197 | 9 | Decreto 13631-E | «los Intendentes Municipales». Coincide |
+| 5629 | 18 | Decreto 13764-A, art. 4 | «Mucama del Hospital de La Caldera». Coincide |
+| 5642 | 13 | Decreto 14043-A, art. 3 | «Enfermera de la Estación Sanitaria de La Caldera». Coincide |
+| 5654 | 6 | Decreto 126-A, art. 1 | «Ayudante de Enfermera del Consultorio Externo de La Caldera». Coincide |
+| 6231 | 12 | Decreto 14381-A, visto | «Médico Regional de la Estación Sanitaria de La Caldera». Coincide |
+
+Son **19 citas cotejadas sobre 18 hojas de 18 ediciones** (8 de 1958, 6 de 1959 y 4 de 1960), todas en la imagen: **una corrección silenciosa** (la tilde de «Getcemani»); ninguna cita que cambie el sentido. Se cotejaron además en la capa del PDF, sin cita entre comillas, la descripción de la zona del edicto 3359 (5858 h12: el punto de referencia es «la confluencia del Río Ovejería con el Arroyo de las Tinajas o San José», que el informe LEE 1959 no transcribe y A:346 da bien) y las cláusulas del convenio del 7163-E (5928 h8: tres por ciento anual, quince anualidades, intervención de «La Usina», 4 de febrero de 1959). No se cotejaron: 5592 h16 y h22 (mesas de 1958), 6094 h6 y h11 (mesas de 1960), 6240 h8 (Ley 3575), 5734 h12–13 (2263-E) ni 6172 h8 (13171-E).
+
+### Hallazgos (ocho, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:346 | «Getcemaní» entre comillas; el cuadro de 5826 h6 imprime «Getcemani» | 4 | Forma del original |
+| 2 | A:336 | «un decreto nombra a Werfil Gallo como intendente municipal»: el 391-E designa a los intendentes municipales encargados de constituir las comisiones viales, y la fila siguiente (A:337) y 18:470 dicen justamente eso y que a Gallo se lo designa en 1959 y 1960 presidente de la comisión municipal. Contradicción a menos de diez páginas | 7 | «un decreto cuenta a Werfil Gallo entre los intendentes municipales encargados de las comisiones viales» |
+| 3 | A:336 | «en 1958 … la usina hidroeléctrica se adjudica»: la adjudicación la resolvió la Intervención Municipal el 27/11/1957 y la aprobó el 12064-G del 30/12/1957, publicado en enero de 1958 (A:330 y A:338 lo dicen) | 3 | «se publica la adjudicación, aprobada el 30 de diciembre de 1957, y se autoriza a registrar la servidumbre» |
+| 4 | 22:545 | «en 1958 la Provincia aprueba la adjudicación»: mismo caso | 3 | «en enero de 1958 se publica el decreto del 30 de diciembre anterior con que la Provincia aprueba…» |
+| 5 | 04:4638, 26:235 | «la Ley 3566 manda expropiar»: el art. 1 autoriza (6240 h5), y A:351 y C:111 lo dicen | 7 | «autoriza a expropiar» |
+| 6 | D:178 (con A:340) | El pedido del expediente 44-L pregunta «por qué caducó tres veces»; A:340 incorpora en 1958 la Resolución 2465, que declara caduca la mina «Caldera 1-2 y 3», expediente 44-L-1929, por deber el canon de 1951 a 1957 (Nº 5757, h. 12), y el pedido de mensura de 1955 (edicto 1990, Nº 5710, h. 11), sin enlazarlos con la serie. El libro contiene el dato que desmiente la cuenta | 7 | D:178 suma los dos actos de 1958 y dice «cuatro veces»; A:340 remite al pedido. La identidad de Valdés Torres (1954) con Valdez Villagrán (1955) no se afirma |
+| 7 | 22:545 | «Los tres últimos años leídos muestran…» y enumera 1955 y 1957; la frase siguiente pasa a «los tres años siguientes, leídos con pendientes», 1958–1960, que son ahora los últimos leídos | 7 | «Los tres últimos años leídos sobre la imagen» |
+| 8 | A:353 | «en junio Vialidad rebaja \$300.000»: el 12.603-E es del 30 de mayo y lo dicta el Ejecutivo a pedido de Vialidad (publicado el 6 de junio) | 3 | «a fines de mayo, a pedido de Vialidad, se rebajan» |
+
+Restan: tres casos en el aspecto 3 (hallazgos 3, 4 y 8), una corrección silenciosa en el 4 (hallazgo 1) y cuatro errores de consistencia en el 7 (hallazgos 2, 5, 6 y 7).
+
+**Los ocho están en material que la propia auditoría incorporó** (AMPLÍA 1958–1960, `1d33852`); ninguno fue atrapado por un control automático antes de llegar al libro. El hallazgo 1 lo habría atrapado el control de citas de P74 (texto entrecomillado contra el bloque TEXTO, no contra la FICHA): corrido después de la lectura, lo devuelve.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.032/25.032 líneas vigentes en `841d6ce` | 24.991 vigentes, 65 caducas por el AMPLÍA 1958–1960 |
+| Citas con número de acto, edición y hoja de 1958–1960 contra las FUENTE de los informes LEE | 112 citas «número-letra, Nº, h.» y 175 citas «Nº, h.» con edición ≥ 5560 | Todas localizadas; las 6 que el script no resolvió de primera son rangos de hoja («h14 c2 a h23», «h11 c3 y h12 c1») y cierran al mirar la FUENTE. Observación sin restar: 9194-E y 5051-E se citan por la hoja del cuerpo (h12, h11) y no por la del encabezado |
+| Citas entre comillas de las 65 líneas contra el TEXTO de los informes LEE 1958–1960 | 109 citas; 23 de actos de 1958–1960 | 22 literales o con diferencia sólo de mayúscula o corte de renglón («TERREÑO», «Buena Vis ta»); 1 discrepa: «Getcemaní» (hallazgo 1). Las 86 restantes son de años anteriores y no se buscan en estos informes |
+| Superlativos y ausencias sobre los temas de las fichas de 1958–1960 (usina, A.G.A.S., servidumbre, destacamento, comisaría, juez de paz, intendente, comisión municipal, puente, consorcio, Registro Civil, Hogar, reglamento, Bernabé López, Villa Urquiza, Mojotoro, caza, censo, pensiones, cateo, mina, patio, Serrey, plano 17, Wierna, Chalchanio, tomero, subsidio, senador, Los Porongos, Los Peñones, Potrero de Castilla, San Alejo, entre otros), en oraciones que no nombran 1958–1960 (repaso de ventana) | 33.706 oraciones del libro; 237 coincidencias, todas leídas | Ninguna desmentida en su universo declarado. A:280 («el único nombre de un intendente … en los nueve años leídos desde la convocatoria de 1949») y 04:4372 («la primera vez que el archivo nombra una villa») conservan su universo. El repaso llevó a la serie de la mina 44-L (04:4203, D:178), donde la cuenta de caducidades no incorporaba 1958 (hallazgo 6) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 318/318 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| Dotaciones de 1958–1960 recalculadas desde caudal y superficie | 19 actos (7, 6 y 6) | 1958: 0,525; 0,524; 0,525; 0,50; 0,525; 0,524 (el 242-E no da caudal). 1959: 0,528; 0,524; 0,525; 0,525; 0,526; 0,525. 1960: 0,526 (dos veces); 0,525 (cuatro). Cierran A:339, A:345, A:352 y 17:353 («diecisiete de los diecinueve») |
+| Recuentos de 1958–1960 (A, F, 00, 02, 17) | 3 años | Ediciones: 5562–5805 = 244 números, 243 distintas (la 5727 es la edición ausente del lunes 8 de septiembre y su archivo repite la 5728); 5806–6047 = 242; 6048–6287 = 240. Hojas: 4.129 − 15 = 4.114; 3.890 − 1 = 3.889; 3.523. Faltantes por tapa: 4.204 − 4.090 = 114 (57 de ellas por foliatura, en 51 ediciones); 116 en 97; 116 en 112. Fichas: 80 + 54 + 49 = 183 del §A y 10 + 10 + 14 = 34 de B.2. Mesas: 9 + 5 = 14 en 1958 y en 1960. Actos de agua con acequia municipal: 4. Intendentes confirmados en 1960: La Caldera y otros diez. Cierran |
+| Cadenas de saldos (F:64, D:177) | 3 informes, §E.1 | 1958: tres resúmenes, cadena no armada; 1959: cuatro tramos; 1960: dos tramos, subtotales sin recalcular. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 51 | 50 de 227 oraciones con cifra en las 65 líneas | **50/50 con fuente localizable**: 27 con la cita en la oración, 18 en la fila o el párrafo, y 5 declaraciones de cobertura (F, 09, 20) o recapitulaciones (03:391) cuya fuente es el propio apéndice F, los informes LEE o el párrafo anterior |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 65 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| `\pendiente{}`, ítems de D y `\label` de apéndices | 52; 284; 8/8 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra. Ningún pedido de D satisfecho por 1958–1960 sigue en la lista (D:177 pide justamente lo que falta de esos años) |
+| Privacidad: personas nombradas en las 65 líneas, cruzadas con contextos sensibles | 65/65 líneas | Deudores de los remates de 1958–1959 (Getsemaní, Villa Urquiza), pensionados, personal del Hogar, vecinos expropiados por la Ley 3425 y jueces de paz renunciantes: ninguno nombrado. Nombrados sólo funcionarios (Gallo, Muñoz), concesionarios de agua (Ortiz, Palazzolo), el contratista de la usina, los Serrey y Fiori en actos de dominio. Sin casos |
+| Largo de los archivos antes y después de la fase 6 | 5/5 archivos tocados por la fase 6 | ninguno cambia de largo |
+| Compilación | libro entero, base y fase 6 | Compilan las dos; 831 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas |
