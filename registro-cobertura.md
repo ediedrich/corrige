@@ -1220,3 +1220,40 @@ Restan: dos casos en el aspecto 3 (hallazgos 1 y 2), un error de consistencia en
 | Privacidad: personas nombradas en las 46 líneas, cruzadas con contextos sensibles | 46/46 líneas | Pensionados, personal del Hogar, la empleada denunciante, el agente cesante, la titular del Registro Civil en licencia y los deudores de los remates: ninguno nombrado. Nombrados sólo funcionarios (Gallo, Regis, Escobar Cello, Mogro), el contratista de la escuela y el destinatario del préstamo de un toro (Fernández), sin contexto sensible. Sin casos |
 | Largo de los archivos antes y después de la fase 6 | 7/7 archivos tocados por la fase 6 | ninguno cambia de largo |
 | Compilación | libro entero, base y fase 6 | Compilan las dos; 837 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75 y 00:78; 2 cajas desbordadas, las mismas |
+
+## Ronda 53 — incorporación de la respuesta del ENReGE (30/09/2026)
+
+Tipo: **incorporación** (CORRIGE 3.6), a pedido de Eduardo, de un documento aportado: la nota NO-2026-95453797-APN-UDG\#ENREGE del 30/09/2026 (Unidad Distribución de Gas del ENReGE, firmada por Guillermo Lanzillotti), respuesta a la presentación IF-2026-90610845-APN-USDG\#ENREGE, con dos adjuntos embebidos en el PDF: la presentación de Naturgy NOA S.A. IF-2025-131212725-APN-SD\#ENARGAS y el informe intergerencial IF-2026-41299939-APN-GD\#ENARGAS (23/04/2026). Base: commit `74c4226` (fase 6 de la ronda 52, en `ronda-52.patch`); parche `ronda-53.patch` (commit `20bb7d4` en la sesión; aplica con `git am` después de `ronda-52.patch`, y los dos sobre `d126594`). **Denominador: 25.071 líneas** (25.068 + 3: dos filas nuevas en A y un ítem nuevo en F).
+
+### Lectura de la fuente
+
+La sesión leyó la nota entera (2 hojas) y los dos adjuntos por su capa de texto: la presentación de Naturgy entera y, del informe, la apertura, el cierre y los pasajes sobre «Comitente», la oportunidad de la evaluación económica y las propuestas de FESUBGAS (la búsqueda da 40 renglones con «Comitente» y 21 con «NOA» o «Naturgy»; se leyeron en contexto los que tratan la definición del Comitente, la oportunidad de la evaluación económica y la captación de usuarios, y el resto no se leyó). Ni la nota ni los adjuntos nombran La Caldera.
+
+### Qué establece y qué cambia en el libro
+
+| Dato de la fuente | Clase | Dónde | Corrección |
+|---|---|---|---|
+| El marcador azul del mapa interactivo es la función «Mi Ubicación» | CONTRADICE | 16:190, 196, 216 y 219 | La lámina del mapa interactivo deja de contarse como testimonio de la red: epígrafe y ficha lo dicen, y «las tres dicen lo mismo» pasa a «dos permiten responderlo». El libro había leído el marcador como capa de localidades abastecidas, y lo había declarado como lectura propia |
+| El mapa de Salta del «Sistema de Transporte y Distribución de Gas» se actualizó por última vez en 2024 | PRECISA | 16:194 y 206; F:241 | «sin fecha» pasa a «sin fecha impresa; última actualización en 2024, según el Ente» |
+| Nota ENRG/GAL/GDyE/GD/D Nº 2896/99, del 08/07/1999: el ENARGAS autoriza a Gasnor el proyecto «Provisión de gas natural en el Valle de Lerma», cuyas zonas incluyen Vaqueros y Lagunilla y no La Caldera | NUEVO | A:382; 16:261 | Fila nueva en la cronología. 16:261 decía que la consulta al Ente no se había hecho; ahora dice que se hizo y qué contestó, con dos cautelas: la nota no dice que no haya otra autorización, y sólo las obras de magnitud la requieren |
+| Presentación de Naturgy NOA e informe intergerencial | NUEVO; CAE-PEDIDO | 16:257; D:336 | Lo que dicen para el corredor: captación real lejos de la conexión completa a cinco años (La Viña, «un 8\% de la potencialidad total»), objeción al «Comitente», rechazada por el informe, y evaluación económica al pedir la factibilidad. En D:336 salen los dos documentos y la consulta al Ente, y entran, en el mismo ítem, el expediente de la autorización de 1999 y la consulta a Naturgy sobre solicitudes de factibilidad para La Caldera |
+| Fecha del atlas y leyenda del marcador | CAE-PEDIDO | D:355 | Salen del ítem; queda la extensión de la red dentro de Vaqueros |
+| La respuesta misma | NUEVO | A:562; F:242 | Fila del 30/09/2026 y la nota con sus adjuntos entre las fuentes |
+| Régimen de 2026 | PRECISA | 23:183; 00:75 | 23: los terceros pueden ser futuros usuarios o comitentes, y el cálculo se hace al pedir la factibilidad. 00: «tres mapas de la red de gas del ENARGAS» pasa a «tres mapas del ENARGAS» |
+
+Recuento: 2 NUEVO con fila propia, 1 CONTRADICE, 3 PRECISA y 3 pedidos satisfechos que salen de D (dentro de dos ítems, que siguen siendo 284).
+
+### Traslado, lectura y cobertura
+
+La ronda toca 16 líneas: 16:190, 194, 196, 206, 216, 219, 257 y 261; 23:183; 00:75; D:336 y 355; F:241 y 242 (nueva); A:382 y 562 (nuevas). **La sesión releyó enteras las 16 después de escribirlas**, contra la nota y sus adjuntos, como en la ronda 47, y releyó además 16:192–262 como contexto. Siguen vigentes las 25.055 líneas que no se tocaron, y las 16 quedan leídas en esta ronda: **25.071 de 25.071 (100,0 %)**. Un auditor que no las escribió las leerá en la próxima `MEJORA`, que empieza por este parche.
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Citas entre comillas agregadas, contra la nota y los adjuntos | 5 («Mi Ubicación», dos veces; «Provisión de gas natural en el Valle de Lerma», dos veces; «actualmente lleva conectado un 8\% de la potencialidad total») | Las 5 literales. «Comitente» es el término definido, no una cita |
+| Repaso de lo que dependía del marcador o de la consulta no hecha | 7 formas («tres mapas», «las tres dicen», «marcador azul», «consulta al ENARGAS», «consultar al ENARGAS», «nadie pidió», «nadie solicitó») en los 38 archivos | 00:75 y 16:190, 196, 216, 219 y 261 corregidos; 16:259 («nadie solicitó que se calculara el Valor de Negocio», hasta donde alcanza el relevamiento) sigue en pie: la nota no informa ninguna solicitud para La Caldera |
+| Ítems de D | 284 antes y después | Cierra con 22-prospectiva |
+| Remisiones a capítulos posteriores sin «más adelante» | 319/319 | 0 sin marcar (las dos remisiones nuevas, de 23 a 16 y de F a 16, van hacia atrás o desde un apéndice) |
+| Privacidad | 16 líneas | Sólo organismos, la distribuidora y el número de la presentación; ni el nombre ni el correo del presentante. Sin casos |
+| Compilación | libro entero, con las rondas 52 y 53 aplicadas sobre `d126594` | Compila; 839 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75 y 00:78 |
