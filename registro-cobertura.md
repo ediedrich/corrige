@@ -1360,3 +1360,105 @@ Restan: un error de consistencia en el aspecto 7 (hallazgo 1: 1 en 28,0 páginas
 | Privacidad: personas nombradas en las 44 líneas, cruzadas con contextos sensibles | 44/44 líneas | El regente cesante y deudor del fisco, la empleada que renuncia, el empleado de la encuesta, el oficial confirmado, el agente cesante de Vaqueros, el vecino que demanda a la Provincia y los pensionados: ninguno nombrado, y lo que se dice del regente se atribuye a los actos. Nombrados: funcionarios (Regis, Catalán Arellano, García, Mogro) y el propietario del fraccionamiento (Martell), sin contexto sensible. Sin casos |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `32ad712` y fase 6 | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 845 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
+
+## Ronda 55 — auditoría con fase 6 (01/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1964-1965. Base: commit `ff46efc` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1964-1965, sobre `c3a2761`, la ronda 54), con la fase 6 en `ronda-55.patch` (commit `adaf402` en la sesión; aplica con `git am` sobre `ff46efc`, probado en un clon limpio de GitHub: árbol `7e4bafc`). **Denominador medido: 25.096 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 54 (25.080 de 25.080, sobre `c3a2761`) se trasladaron por diff a `ff46efc`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1964-1965 agrega 16 líneas (11 en A, 3 en C y 2 en F) y modifica 39 en 22 archivos: caducan 55**, y quedan **25.041 vigentes sobre 25.096 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `ff46efc`)
+
+Se leyeron **las 55 líneas caducas, enteras, por la sesión**, sin subagentes (una, F:71, es un renglón en blanco), contra los informes LEE 1964 (`BO-Salta-1964_7010-7251_la-caldera_LEE-1964_2026-10-01.txt`) y 1965 (`BO-Salta-1965_7252-7494_la-caldera_LEE-1965_2026-10-01.txt`), bajados de `corrige/lee/`: el §0 y el §1 de los dos, las 38 fichas del §A de 1964 y las 52 de 1965 enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, E.1 a E.3 y §R; y, para las remisiones a 1963, el informe 1963 (A.22, A.31 y A.34: el nombre entero de Martearena y el decreto 365).
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 363, 368–379 | 13 | sesión |
+| ape/C-normativa.tex | 115–117, 145 | 4 | sesión |
+| ape/D-pedidos.tex | 40, 177, 191–192, 253 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 70–71, 73 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/03-fincas.tex | 475 | 1 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/08-vaqueros.tex | 85 | 1 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332 | 1 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470, 531, 704 | 3 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 145, 182 | 3 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 50, 235 | 2 | sesión |
+
+Contexto releído entero (no suma cobertura): 16:283–292 y 314–332 (el Abra de Lesser de 1939 y 1942, por la remisión de 17:281) y la búsqueda de «Concejo» y «Consejo Deliberante» en el libro entero (por 18:470 y A:375).
+
+**Esta ronda: 55 líneas nuevas**, 92.965 bytes sobre 2.742.710, que en las 855 páginas de la base equivalen a **29,0 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `ff46efc` cae dentro de estos tramos.
+
+Acumulado: 25.041 vigentes + 55 = **25.096 de 25.096 (100,0 %)**. La fase 6 toca 7 líneas, todas dentro de lo leído en esta ronda (A:371, 373 y 379; C:117; F:70; 03:475; 22-prospectiva:144), y no cambia el largo de ningún archivo: **25.096 de 25.096 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1963, 1964 y 1965 de `boletines-salta`)
+
+Imágenes de los PDF del Release, a 220–300 ppp, recortadas por la posición de la capa o, donde la hoja no tiene capa, por coordenadas sobre una vista entera a 75–80 ppp.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 7100 | 6 | Decreto 3162, considerando | «se estima que el lugar más apropiado y conveniente sería la localidad de La Caldera, lo que por otra parte contaría con el beneplácito de los vecinos y autoridades de ese lugar». Coincide (A:372) |
+| 7118 | 7 | Decreto 3550, visto | «H. Consejo Deliberante de la Municipalidad de La Caldera», con *s*. Coincide (18:470, A:375) |
+| 7453 | 7 | Decreto 10619, visto | «H. Concejo Deliberante de la Municipalidad», con *c*. Coincide (18:470, A:375) |
+| 7378 | 6 | Decreto 9239, art. 3 | El informe lo leyó en la capa; en la imagen: «Director Zonal del Hospital "Dr Rafael Villagrán"», «debiendo desempeñar funciones en las localidades de La Isla y San Luis», «en base a un pedido formulado por el citado profesional». Coincide (A:373) |
+| 7430 | 6 | Ley 4032, art. 1 y «Por tanto» | «con asiento en la cabecera del mismo»: coincide (A:376, 17:281). El «Por tanto» del 23 de setiembre dice «Encontrándose vencido el plazo establecido por el Artículo 98 de la Constitución Provincial, téngase por Ley»: **no es una promulgación** (hallazgo 3). La 4031, en la columna anterior, igual |
+| 7317 | 10 | Decreto 7968, visto | «"Cristo Monumental"», «a erigirse en los aledaños del pueblo de La Cal-dera». Coincide (A:372) |
+| 7452 | 14 | Decreto 10600, arts. 1 a 3 | «"YEYSEMANI" o "GETSEMANI"», plano 101, 48.002,88 m² y 698,96; el art. 3, que el informe leyó en la capa: «apertura de calles, arbolados y pavimentación de calles». Coincide (A:377, 13:248) |
+| 7407 | 6 | Aviso 21253 | «Finca el Durazno», «herederos de Liborio Guerra», catastro 93, valor fiscal \$420.000, base \$280.000. Coincide (03:475, A:379) |
+| 7099 | 8 | Aviso 17187, linderos | «Norte, propiedad de Martín Borja y Eusebio Palma»; «cumbre del cerro "El Puchete" o "El Pucheta", que lo separa de la finca "Potrero de Valencia"»; oeste, el río. Coincide; **Borja está en este aviso, que la fila de 1964 no nombraba** (hallazgo 8) |
+| 7438 | 5 | Decreto 10353 (capa del PDF, legible) | «Intendencia de Aguas de La Caldera», jornal de los intendentes sin título habilitante, partida de la A.G.A.S. «hasta tanto la mencionada repartición concurse el cargo». Coincide con A:376 y C:117 |
+| 6976 (1963) | 7 | Decreto 365, art. 4 | Designa al Dr. Oscar Hugo Brandan «para que tenga a su cargo la Dirección del Hospital "Dr. Rafael Villagrán" de la localidad de Chicoana», en vacante de Dousset. Coincide con 04:4599 (el informe 1963 no transcribe el art. 4) |
+
+Son **12 citas entre comillas del libro cotejadas en la imagen, sobre 8 hojas de 8 ediciones** (la del 3162; «H. Consejo Deliberante…» y «H. Consejo Deliberante»; «H. Concejo Deliberante de la Municipalidad», dos veces; «debiendo desempeñar funciones…»; «con asiento en la cabecera del mismo», dos veces; «Cristo Monumental»; «en los aledaños del pueblo de La Caldera»; «YEYSEMANI» y «GETSEMANI», dos veces cada una en A y 13 y contadas una vez; «Finca el Durazno»; «herederos de Liborio Guerra»): **ninguna con diferencias**. Más **datos sin comillas en 4 hojas** (7430 h6, el «Por tanto»; 7099 h8; 7438 h5; 6976 h7), de donde salen los hallazgos 3 y 8. No se cotejaron: 7347 h18 (8560, «artículo 178»), 7409 h9 (9774, el art. 3 de Pineda, leído en la capa por el informe: «abrir, abovedar y arbolar» queda sin cotejo), 7285 h6 (cifras y letras del presupuesto), 7457 h7 (mejoras de San Roque), 7224 h7, 7248 h12–15, 7049 h13, 7305 h8 y 7477 h5.
+
+### Hallazgos (ocho, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 22-prospectiva:144 | «y en 1965, cuando **ese presidente** es electo senador, designa a otro»: identifica al presidente que el decreto 32 de 1963 llama Mario García con el Gregorio M. García que renuncia en 1965, y A:375 y 18:470, del mismo AMPLÍA, dicen que eso no consta. Y «el juez de paz del pueblo»: Mogro había renunciado al juzgado una semana antes | 7 | «cuando renuncia el presidente, Gregorio M. García, electo senador ---si es el que el decreto de 1963 llama Mario García, los actos no lo dicen---, designa a otro: el que hasta una semana antes era juez de paz del pueblo» |
+| 2 | A:373, F:70 | 1965: «3.902 hojas de las 3.930 páginas» y «faltan 37 páginas por la cadena»: 3.930 − 3.902 = 28, no 37. El informe (§1) lo explica: de las 3.902 hojas, 9 no son páginas distintas (seis repetidas en la 7319 y tres blancas en la 7348); 3.930 − 3.893 = 37. El libro omitía las nueve | 7 | 3.893 páginas distintas, con la razón, en A y en F |
+| 3 | C:117 | Ley 4032 «Promulgada el 23/09/1965, según el decreto 10353»: el «Por tanto» (7430 h6, imagen) la tiene por ley por vencimiento del plazo del art. 98, como a la 4031; el decreto 10353 la llama promulgada. La ficha A40 del informe la da por promulgada; su propia nota de A39 decía, por el sumario, que toda la tanda 4030–4034 fue tácita | 3 | «Tenida por ley el 23/09/1965 por vencimiento del plazo del artículo 98 de la Constitución, como la 4031 ---el decreto 10353 la da por promulgada en esa fecha---» |
+| 4 | F:70 | «se miraron sobre la imagen … al menos en sus renglones del departamento, los 105 actos … y los 11 de sus núcleos»: en 1965 el informe leyó en la capa los renglones del departamento del 8631 (A26), del 10462 y el 11303 (A42), del 10588 (A45) y la sentencia de B2-05. Declaración de cobertura importada del informe sin rehacer | 3 | «salvo cinco de 1965 cuyos renglones del departamento se leyeron sólo en la capa de texto», con los cinco |
+| 5 | A:371 | El deudor del Banco Provincial en la ejecución de San Antonio o San Roque, nombrado («ejecuta a Ernesto Mesples»): registro de 1964, persona que puede estar viva, en contexto socioeconómico | 15 | «ejecuta al propietario» |
+| 6 | A:379 | El ejecutado del remate de derechos y acciones sobre Potrero de Valencia, nombrado (1965) | 15 | «de un particular» |
+| 7 | 03:475 | El ejecutado del remate de El Durazno, nombrado (1965) | 15 | «contra un particular que el aviso no da como titular» |
+| 8 | A:376 | «un Martín Borja era en 1964 lindero de la finca San Antonio o San Roque (fila de 1964)»: la fila de 1964 no nombraba a Borja; está en el aviso 17187 (7099 h8). La nota de A44 del informe 1965 da otra fuente, equivocada («lindero en el aviso de agua de los Trucco, A34») | 1 (no resta fuera de la muestra) | la fila de 1964 (A:371) pasa a decir que el segundo aviso pone al norte a Martín Borja y Eusebio Palma |
+
+Más una errata sin aspecto propio, corregida: «no veían. en 1964» con minúscula (F:70).
+
+Restan: dos errores de consistencia en el aspecto 7 (hallazgos 1 y 2: 2 en 29,0 páginas = 6,9 por cada 100, escalón ≤ 8 → 40); dos casos en el 3 (−10); tres en el 15 (−60, desde 100: 40, como en la ronda 46 con un deudor nombrado); y la errata, en la escala general del 12 (95).
+
+**Los ocho están en material que la propia auditoría incorporó** (AMPLÍA 1964-1965, `ff46efc`), y **ninguno fue atrapado por un control automático** antes de llegar al libro. Los controles de P74, P86 y P94 corrieron y funcionaron sobre lo que miran (citas, fechas): ninguna de las 12 citas cotejadas tiene diferencias. Lo que se escapó es de otra clase: una identidad afirmada en un capítulo y negada en el apéndice (1), una resta de recuentos (2), el tipo de promulgación (3), una declaración de cobertura copiada del informe (4), tres deudores nombrados (5 a 7), que la sesión de AMPLÍA no buscaba, y una remisión a una fila que no traía el dato (8).
+
+**Descartados (falsos positivos, 5).** «Juan Carlos Martearena» (04:4599, A:363 y 369): el decreto 365 dice «Juan C.», pero el 8271 y el 184 de 1963 lo nombran entero (informe 1963, A.22 y A.31). Que el decreto 365 le dé a Brandan la dirección del hospital de Chicoana (04:4599): es su art. 4 (6976 h7, imagen). «Las mismas que en 1939 y 1942 sigue el capítulo» (17:281): 16:283–332, Dr. Lucio Ortiz y el arroyo del Abra. «Dos veces en veinte meses» (04:4599): noviembre de 1963 a julio de 1965. «Aparece … un cuerpo que la convocatoria no elige» (18:470): el libro no nombra antes de 1964 ningún concejo deliberante de La Caldera (búsqueda en el libro entero).
+
+**Pendientes nuevos.** P101 (lee, 1964-1965): corregir el informe LEE 1965 —A44, Borja es lindero del aviso 17187 de 1964 (A37) y no del de los Trucco; A40, la Ley 4032 se tuvo por ley por vencimiento del plazo (7430 h6, imagen), y A39 lo anticipaba; §R, `nivel_lectura` es `capa` y no `imagen` según flujo §5.3, porque A26, A42 (10462 y 11303), A45 (10588) y B2-05 se leyeron en la capa—. P102 (herramientas): control de privacidad para AMPLÍA (y para la rúbrica AMPLÍA v2): todo nombre propio que una frase nueva pone junto a «ejecuta», «ejecución», «remate», «juicio ejecutivo», «contra», «deudor» o «embargo», en un registro de 1945 o posterior, se reemplaza por su papel antes de entregar (tres casos en esta ronda, uno en la 46).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.080/25.080 líneas vigentes en `c3a2761` | 25.041 vigentes, 55 caducas por el AMPLÍA 1964-1965 |
+| Superlativos, cierres y ausencias sobre los temas de las fichas de 1964 y 1965 (Cristo, juez y juzgado de paz, concejo, intendente de riego, Intendencia de Aguas, defensas, loteo, fraccionamiento, Getsemaní, Pineda, Durazno, receptor, odontólogo, médico regional y zonal, Tolaba, puesto sanitario, Gallinato, Casa Parroquial, El Palenque, rabia, La Silleta, ómnibus, Calderilla, San Roque, Potrero de Valencia, Lucio Ortiz, Abra de Lesser, Trucco, Martell, Mogro, comisión municipal, Brandan, Torrens, escuela nacional, Registro Civil), en oraciones que no nombran 1964 ni un año posterior (repaso de ventana) | 106 coincidencias en el libro entero, todas leídas | Ninguna desmentida por 1964-1965. Conservan su universo: 04:2327 y A:113 (primer acto sobre una escuela nacional «que el relevamiento encuentra», en el tramo que esa fila fecha), 18:505 («no había Concejo», 1982–1983), 09:526 (1953, 1956 y 1957 sin defensas), 08:83 (la ley orgánica) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 323/323 `\ref{cap:…}` de un capítulo a uno posterior (una más que en la ronda 54: la de 01:139 a `cap:aguabaja`) | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Recuentos de 1964 y 1965 (A:369 y 373, F:25 y 70, 00:43, 02:28, D:177) contra el §0, el §1 y el §R de los informes | 2 años | 1964: 242 ediciones (7010–7251), 4.408 hojas, 4.536 páginas, 128 faltantes, 577 a ojos, seis seguidas en la 7118. 1965: 243 ediciones (7252–7494), 3.902 hojas, 3.893 distintas, 3.930 por la cadena, 3.950 por las tapas, 37 y 57 faltantes, 347 a ojos, 118 hojas con dos versiones; 7290 con 24 declaradas y 10 hojas. Tramos: 42 + 1 + 8 = 51; hueco 1966–2012: 47 años; las 262 a 764 hojas sin mirar por año siguen cubriendo 347 y 577. Cierran después de la fase 6 (hallazgo 2 antes) |
+| Aritmética de 1964 y 1965 | 9 cuentas | Bases de San Roque: 99.000 × 3/2 × 2 × 2/3 = 198.000. El Durazno: 420.000 × 2/3 = 280.000. Presupuesto 1964/65: 1.595.148,56 − 1.595.118,56 = 30. Obra 127: 7.039.095 × 0,88 = 6.194.403,60. Obra 283: 3.210.326 × 1,147 = 3.682.244 (el decreto 3.682.245). Obra 280: 1.278.666 × 1,135 = 1.451.286. Obra 290: 3.268.586 × 0,959 = 3.134.574. Convenio del Cristo: 500 + 500 + 500 + 400 + 300 = 2.200 mil. Martearena a Brandan: noviembre de 1963 a julio de 1965, veinte meses. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 55 | 50 de 232 oraciones con cifra en las 54 líneas con texto | **49/50 con fuente localizable**: 35 con la cita en la oración, 10 en la fila o el párrafo, 4 declaraciones de cobertura cuya fuente es el apéndice F; sin fuente, 02:97 («se crea el municipio de Vaqueros, se expropia el Campo Alegre, se dicta el régimen de loteos de 1973…»), texto anterior al AMPLÍA. 98 % → 82 |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 55 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 55 líneas, cruzadas con contextos sensibles | 55/55 líneas y búsqueda en el libro entero de los ejecutados de los remates de 1964 y 1965 | Tres ejecutados nombrados (hallazgos 5 a 7; tras la fase 6, ninguno en el libro). Sin nombre: el subcomisario cesante, el sargento y los agentes que renuncian, la auxiliar de servicio, los pensionados, el jubilado de la Municipalidad, las enfermeras. Nombrados sin contexto sensible: funcionarios (Mogro, García, Brandan, Torrens Santigosa, Villada, Satue, Hernández, Muños, Borja, Mangogña), el párroco, los escultores y la comisión del Cristo, contratistas, el loteador, los solicitantes de agua y de posesión, el presidente del centro gaucho y el transportista del préstamo (como en la ronda 52). Las licencias «por enfermedad» de Torrens Santigosa no pasan al libro |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `ff46efc` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 855 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
