@@ -1,0 +1,1905 @@
+LEE v17 — 1966
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA, 1966 (N 7495 a 7734) Barrido
+documental forense del departamento La Caldera. Informe LEE, rubrica LEE v16 con
+los cambios v17 de flujo-editorial.md (version 2, §5). Fecha: 2026-10-01.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: COMPLETO, con 12 limites declarados (E.10). No queda trabajo que la
+sesion pueda hacer sobre las menciones del departamento; lo que falta es una
+edicion entera que el archivo oficial no tiene (7553), 65 paginas que el Release
+no trae segun la cadena de folios, hojas que nadie leyo enteras y discrepancias
+del original que solo resuelven los expedientes.
+
+Insumos. El listado de assets del Release (expanded_assets/1966) no se puede
+leer desde la sesion: el proxy responde que el acceso a ese repositorio no esta
+habilitado para listar. Las descargas directas por nombre si funcionan, y se
+bajaron por los nombres que estado.json registra en descarga.subidos: el
+pre-informe BO-Salta-1966_la-caldera_PRE-INFORME-LEE_2026-10-01.txt (el unico;
+no hay otro de fecha anterior), resultados_1966.csv, decretos_1966.csv (vacio:
+solo el encabezado), log.txt, lee_config.json, lee_textos_1966.zip y avisos.txt;
+y los 239 PDF, 7495.pdf a 7734.pdf salvo 7553 (7494, 7553 y 7735 dan 404).
+avisos.txt dice que el archivo oficial no tiene la edicion 7553; lee_auto.py la
+proceso como un PDF de una hoja con la leyenda «ESTE BOLETIN NO SE ENCONTRO EN
+NUESTRA BASE DE DATOS», que no se subio al Release. recortes.zip no esta en el
+Release (404) y no se reclama.
+
+lee_auto.py, sha 8a1e775655ae, una corrida el 1-10-2026 de 13:40 a 16:18, sin
+errores en el log. Capa del PDF util en 1134 de 4976 hojas (23 %, cuenta del
+log, que incluye la hoja del aviso de 7553); se ocrizaron 3842 con 4 procesos.
+lee_textos trae 4976 versiones previas (capa), 3842 propias (.txt y .tsv) y un
+EXTRAIDO.json por edicion. Medido sobre esos textos: 1184 hojas tienen capa con
+mas de 200 caracteres, 3792 tienen OCR propio util, solo 50 tienen las dos y 50
+no tienen ninguna (49 sin contar el aviso). Hay confianza por hoja (v17 §5.1);
+la segunda version existe en 50 hojas.
+
+Config. config del Release: version 2026-10-01, hasta 1965, actores 1282,
+anillo2 405. config de corrige: version 2026-10-01, hasta 1965, actores 1282,
+anillo2 405. Se usa: el de corrige - razon: unico valido (flujo §5.2); los dos
+son el mismo archivo, byte a byte. Contenido: identico; lee_auto.py corrio con
+el config vigente. Se entrega un lee_config.json nuevo, hasta 1966 (§F).
+
+Entorno. nproc 2. PyMuPDF 1.28.2 instalado en la sesion. tesseract 5.3.4 solo
+con eng y osd, sin spa: no hubo OCR en sesion. Techo de resolucion, medido con
+get_image_info en las 4975 hojas: tres tramos, 150 ppp (con una segunda imagen
+de 75 ppp superpuesta) en 4401 hojas, 600 ppp bitonal en 542 y 300 ppp en 32;
+los tramos de 600 ppp son 7499 a 7501, 7561 a 7573, 7585 a 7587, 7638, 7657,
+7660 y 7661, 7664 y 7665, 7671 y 7672; los de 300, 7498 y 7502; el resto, 150.
+El tramo de 150 ppp es el que el catalogo de confusiones del flujo §5.6
+describe, y es casi todo el año.
+
+Que verifico la sesion. Hojas por PDF contra EXTRAIDO.json: 4975 contra 4975
+(mas la hoja del aviso). Tapas: las 239, en la imagen (numero, fecha, dia,
+paginas declaradas, año editorial y gobernador). Folios: cadena corrida en todo
+el año, de la pagina 1 a la 5038, leida en la capa o el OCR en 2569 hojas (223
+ediciones con comienzo determinado) y mirada en la imagen donde la cadena y la
+tapa no cierran. Cuatro pasadas propias sobre la union de las dos versiones, mas
+la pasada de la letra perdida que 1964 y 1965 propusieron. Anillo 2 completo,
+anillo de actores sobre los 1282 del config y sobre los nombres de los actos del
+§A de 1966. Recortes mirados: 96 recortes de columna de 59 hojas interiores, mas
+las 239 tapas, 6 cabeceras de folio y 8 miniaturas de hojas de poca tinta.
+
+Desvios de v16 §8.17, declarados: (1) las transcripciones van sin tildes, salvo
+eñe; el original las lleva; (2) los numeros de documento y matricula se
+reemplazan por [omitido]; (3) los fragmentos de actos largos se transcriben con
+«...» y la ficha dice que se omitio; (4) las firmas leidas solo en la capa se
+marcan [capa:]. Nada de lo omitido decide una ficha.
+
+Que agregaria cada insumo que falto: el listado del Release, nada nuevo (los
+nombres salen de estado.json); recortes.zip, nada (la sesion recorto desde los
+PDF); otro ejemplar de la edicion 7553 (29-3-1966 por la cadena de fechas, 18
+paginas por la de folios), la unica posibilidad de afirmar ausencias sobre todo
+el año; las paginas ausentes, lo mismo para sus ediciones (E.10).
+
+§1 · CORPUS REVISADO
+--------------------
+239 ediciones presentes, N 7495 (lunes 3 de enero) a N 7734 (viernes 30 de
+diciembre); falta la 7553, que el archivo oficial no tiene. Sin ediciones
+dobles. 4975 hojas presentes. Paginacion corrida en todo el año: la 7734 cierra
+en la pagina 5038 (abre en la 5023 y declara 16), y la 7495 abre en la 1 por
+inferencia (la 7500 abre en la 45 y las tapas de 7495 a 7499 suman 44). Las
+tapas declaran 5038 paginas en las 239 ediciones presentes; el Release trae
+4975. Paginas ausentes estimadas por la cadena de folios: 65 en 30 ediciones,
+mas las 18 de la 7553 (la 7552 cierra en la 754 y la 7554 abre en la 773); por
+las tapas serian 72, porque la tapa de 7728 declara 18 paginas y la edicion trae
+27 hojas con folios de 4885 a 4910 (E.9).
+
+La cadena de folios tiene dos saltos que no son paginas ausentes, mirados en la
+imagen: la 7518 llega a la pagina 288 (h22, «PAG. 286») y la 7519 abre en la 299
+(h3, «PAG. 301»): diez numeros sin paginas, con las 24 hojas de la 7518
+presentes; y la 7530 abre en la 413 (h2, «PAG 414»; h18, «PAG. 430») cuando la
+7529 ya habia llegado a la 442 (h2, «PAG. 426»): doce numeros repetidos. Se
+declaran y no se explican (v16 §8.21).
+
+Fechas y paginas leidas en la imagen de la tapa; el dia de la semana se calcula
+sobre la fecha. Desde la 7635 (1 de agosto) la tapa cambia de tipografia y deja
+de imprimir el dia de la semana (columna «s/d»); las 7561 a 7564 tampoco lo
+imprimen. La columna «folio» da el comienzo de la edicion cuando la capa o el
+OCR lo devuelven en por lo menos dos hojas; «-» donde no. «dif» es paginas
+impresas segun la cadena (o la tapa, donde la cadena no alcanza) menos hojas del
+Release. Confianza del OCR propio (pre-informe §1): media 87,2; 1729 hojas
+publicables, 1942 a verificar, 171 «a ojos».
+
+  ed.   fecha [tapa]  dia            tapa hojas folio  dif
+  7495  [1966-01-03]  lunes            10    10     1
+  7496  [1966-01-04]  martes            6     6     -
+  7497  [1966-01-05]  miercoles         6     6     -
+  7498  [1966-01-07]  viernes           4     4     -
+  7499  [1966-01-10]  lunes            18    18     -
+  7500  [1966-01-11]  martes            8     8    45
+  7501  [1966-01-12]  miercoles        14    14    53
+  7502  [1966-01-13]  jueves           26    26    67
+  7503  [1966-01-14]  viernes           6     6     -
+  7504  [1966-01-17]  lunes             6     6    99
+  7505  [1966-01-18]  martes           12    12   105
+  7506  [1966-01-19]  miercoles         6     6   117
+  7507  [1966-01-20]  jueves            4     4   123
+  7508  [1966-01-21]  viernes          22    22   127
+  7509  [1966-01-24]  lunes            18    18   149
+  7510  [1966-01-25]  martes           10    10   167
+  7511  [1966-01-26]  miercoles        16    16   177
+  7512  [1966-01-27]  jueves           16    16   193
+  7513  [1966-01-28]  viernes          22    22   209
+  7514  [1966-01-31]  lunes            12    12   231
+  7515  [1966-02-01]  martes            6     6     -
+  7516  [1966-02-02]  miercoles         8     8     -
+  7517  [1966-02-03]  jueves            8     8   257
+  7518  [1966-02-04]  viernes          24    24   265
+  7519  [1966-02-07]  lunes             6     6   299
+  7520  [1966-02-08]  martes           12    12   305
+  7521  [1966-02-09]  miercoles        16    16   317
+  7522  [1966-02-10]  jueves            8     8   333
+  7523  [1966-02-11]  viernes           8     8   341
+  7524  [1966-02-14]  lunes            16    16   349
+  7525  [1966-02-15]  martes            8     8   365
+  7526  [1966-02-16]  miercoles        16    16   373
+  7527  [1966-02-17]  jueves           18    18   389
+  7528  [1966-02-18]  viernes          18    18   407
+  7529  [1966-02-23]  miercoles        18    18   425
+  7530  [1966-02-24]  jueves           20    20   413
+  7531  [1966-02-25]  viernes          16    16   433
+  7532  [1966-02-28]  lunes             8     8   449
+  7533  [1966-03-01]  martes           18    18   457
+  7534  [1966-03-02]  miercoles        10    10   475
+  7535  [1966-03-03]  jueves            8     8   485
+  7536  [1966-03-04]  viernes          16    16   493
+  7537  [1966-03-07]  lunes            20    20   509
+  7538  [1966-03-08]  martes           20    20   529
+  7539  [1966-03-09]  miercoles        16    16   549
+  7540  [1966-03-10]  jueves           10    10   565
+  7541  [1966-03-11]  viernes          12    12     -
+  7542  [1966-03-14]  lunes            12    12   587
+  7543  [1966-03-15]  martes           20    20   599
+  7544  [1966-03-16]  miercoles        24    24   619
+  7545  [1966-03-17]  jueves           18    18   643
+  7546  [1966-03-18]  viernes           8     8   661
+  7547  [1966-03-21]  lunes             8     8   669
+  7548  [1966-03-22]  martes           10    10   677
+  7549  [1966-03-23]  miercoles        12    12   687
+  7550  [1966-03-24]  jueves           22    22   699
+  7551  [1966-03-25]  viernes          18    18   721
+  7552  [1966-03-28]  lunes            16    16   739
+  7554  [1966-03-30]  miercoles        16    16   773
+  7555  [1966-03-31]  jueves           10    10   789
+  7556  [1966-04-01]  viernes          10    10   799
+  7557  [1966-04-04]  lunes            18    18   809
+  7558  [1966-04-05]  martes           22    22     -
+  7559  [1966-04-06]  miercoles        12    12   849
+  7560  [1966-04-11]  lunes            44    44     -
+  7561  [1966-04-12]  martes s/d       22    22   905
+  7562  [1966-04-13]  miercoles s/d    16    16   927
+  7563  [1966-04-14]  jueves s/d       20    20   943
+  7564  [1966-04-15]  viernes s/d      26    26   963
+  7565  [1966-04-18]  lunes            18    18   989
+  7566  [1966-04-19]  martes           18    18     -
+  7567  [1966-04-20]  miercoles        20    20  1025
+  7568  [1966-04-21]  jueves           22    22  1045
+  7569  [1966-04-22]  viernes          22    22     -
+  7570  [1966-04-25]  lunes            18    18  1089
+  7571  [1966-04-26]  martes           24    24  1107
+  7572  [1966-04-27]  miercoles        26    26  1131
+  7573  [1966-04-28]  jueves           32    30  1157    2
+  7574  [1966-04-29]  viernes          28    28  1189
+  7575  [1966-05-02]  lunes            14    14  1217
+  7576  [1966-05-03]  martes           18    18  1231
+  7577  [1966-05-04]  miercoles        12    12  1249
+  7578  [1966-05-05]  jueves           24    24  1261
+  7579  [1966-05-06]  viernes          30    30  1285
+  7580  [1966-05-09]  lunes            32    32  1315
+  7581  [1966-05-10]  martes           28    28  1347
+  7582  [1966-05-11]  miercoles        38    38  1375
+  7583  [1966-05-12]  jueves           26    26  1413
+  7584  [1966-05-13]  viernes          16    16     -
+  7585  [1966-05-16]  lunes            26    26     -
+  7586  [1966-05-17]  martes           24    24  1481
+  7587  [1966-05-18]  miercoles        14    14  1505
+  7588  [1966-05-19]  jueves           14    14     -
+  7589  [1966-05-20]  viernes          22    22     -
+  7590  [1966-05-23]  lunes            30    30  1555
+  7591  [1966-05-24]  martes           22    22  1585
+  7592  [1966-05-26]  jueves           22    22  1607
+  7593  [1966-05-27]  viernes          16    16  1629
+  7594  [1966-05-30]  lunes            12    12  1645
+  7595  [1966-05-31]  martes           24    24  1657
+  7596  [1966-06-01]  miercoles        12    12  1681
+  7597  [1966-06-02]  jueves           14    14  1693
+  7598  [1966-06-03]  viernes          22    22  1707
+  7599  [1966-06-06]  lunes            24    24  1729
+  7600  [1966-06-08]  miercoles        30    30  1753
+  7601  [1966-06-10]  viernes          34    34  1783
+  7602  [1966-06-13]  lunes            32    32  1817
+  7603  [1966-06-14]  martes           32    32  1849
+  7604  [1966-06-15]  miercoles        34    34  1881
+  7605  [1966-06-16]  jueves           34    30  1915    4
+  7606  [1966-06-21]  martes           16    16  1949
+  7607  [1966-06-22]  miercoles        24    24  1965
+  7608  [1966-06-23]  jueves           10    10  1989
+  7609  [1966-06-24]  viernes          10    10  1999
+  7610  [1966-06-27]  lunes            12    12  2009
+  7611  [1966-06-28]  martes           18    18  2021
+  7612  [1966-06-29]  miercoles        10    10  2039
+  7613  [1966-06-30]  jueves            8     8  2049
+  7614  [1966-07-01]  viernes          30    30  2057
+  7615  [1966-07-04]  lunes            20    20  2087
+  7616  [1966-07-05]  martes           30    30  2107
+  7617  [1966-07-06]  miercoles        12    12  2137
+  7618  [1966-07-07]  jueves           32    32  2149
+  7619  [1966-07-08]  viernes          22    22  2181
+  7620  [1966-07-11]  lunes            20    20  2203
+  7621  [1966-07-12]  martes           20    20  2223
+  7622  [1966-07-13]  miercoles        14    14  2243
+  7623  [1966-07-14]  jueves           20    20  2257
+  7624  [1966-07-15]  viernes          18    18  2277
+  7625  [1966-07-18]  lunes            16    16  2295
+  7626  [1966-07-19]  martes           12    12  2311
+  7627  [1966-07-20]  miercoles        24    24  2323
+  7628  [1966-07-21]  jueves           16    16  2347
+  7629  [1966-07-22]  viernes          30    12  2363   18
+  7630  [1966-07-25]  lunes            32    22  2393
+  7631  [1966-07-26]  martes           14    14  2415
+  7632  [1966-07-27]  miercoles        18    18  2429
+  7633  [1966-07-28]  jueves           30    30  2447
+  7634  [1966-07-29]  viernes          40    39  2477    1
+  7635  [1966-08-01]  lunes s/d        28    28  2517
+  7636  [1966-08-02]  martes s/d       28    28  2545
+  7637  [1966-08-03]  miercoles s/d    16    15  2573    1
+  7638  [1966-08-04]  jueves s/d       24    22  2589    2
+  7639  [1966-08-05]  viernes s/d      16    14  2613    2
+  7640  [1966-08-08]  lunes s/d        36    36  2629
+  7641  [1966-08-09]  martes s/d       24    23  2665    1
+  7642  [1966-08-10]  miercoles s/d    20    18  2689    2
+  7643  [1966-08-11]  jueves s/d       28    28  2709
+  7644  [1966-08-12]  viernes s/d      16    16  2737
+  7645  [1966-08-16]  martes s/d       16    16  2753
+  7646  [1966-08-18]  jueves s/d       28    28  2769
+  7647  [1966-08-19]  viernes s/d      24    16  2797    8
+  7648  [1966-08-22]  lunes s/d        24    24  2821
+  7649  [1966-08-23]  martes s/d       28    28  2845
+  7650  [1966-08-24]  miercoles s/d    36    36  2873
+  7651  [1966-08-25]  jueves s/d       28    28  2909
+  7652  [1966-08-26]  viernes s/d      32    32  2937
+  7653  [1966-08-29]  lunes s/d        24    24  2969
+  7654  [1966-08-30]  martes s/d       24    24  2993
+  7655  [1966-08-31]  miercoles s/d    20    20  3017
+  7656  [1966-09-01]  jueves s/d       24    24  3037
+  7657  [1966-09-02]  viernes s/d      32    31  3061    1
+  7658  [1966-09-05]  lunes s/d        32    30  3093    2
+  7659  [1966-09-06]  martes s/d       16    16  3125
+  7660  [1966-09-07]  miercoles s/d    24    23  3141    1
+  7661  [1966-09-08]  jueves s/d       12    11  3165    1
+  7662  [1966-09-09]  viernes s/d      24    24  3177
+  7663  [1966-09-12]  lunes s/d        32    32  3201
+  7664  [1966-09-16]  viernes s/d      20    19  3233    1
+  7665  [1966-09-19]  lunes s/d        12    12  3253
+  7666  [1966-09-20]  martes s/d       32    32  3265
+  7667  [1966-09-21]  miercoles s/d    28    28  3297
+  7668  [1966-09-22]  jueves s/d       16    16  3325
+  7669  [1966-09-23]  viernes s/d      32    32  3341
+  7670  [1966-09-26]  lunes s/d        44    44  3373
+  7671  [1966-09-27]  martes s/d       22    22  3417
+  7672  [1966-09-28]  miercoles s/d    20    20  3439
+  7673  [1966-09-29]  jueves s/d       12    12  3459
+  7674  [1966-09-30]  viernes s/d      32    32  3471
+  7675  [1966-10-03]  lunes s/d        20    20  3503
+  7676  [1966-10-04]  martes s/d       20    20  3523
+  7677  [1966-10-05]  miercoles s/d    12    12  3543
+  7678  [1966-10-06]  jueves s/d       32    32  3555
+  7679  [1966-10-07]  viernes s/d      36    34  3587    2
+  7680  [1966-10-10]  lunes s/d        32    32  3623
+  7681  [1966-10-11]  martes s/d       24    24  3655
+  7682  [1966-10-13]  jueves s/d       16    16  3679
+  7683  [1966-10-14]  viernes s/d      28    28  3695
+  7684  [1966-10-17]  lunes s/d        16    16  3723
+  7685  [1966-10-18]  martes s/d       24    24  3739
+  7686  [1966-10-19]  miercoles s/d    28    28  3763
+  7687  [1966-10-20]  jueves s/d       20    20  3791
+  7688  [1966-10-21]  viernes s/d      16    16  3811
+  7689  [1966-10-24]  lunes s/d        16    16  3827
+  7690  [1966-10-25]  martes s/d       16    16  3843
+  7691  [1966-10-26]  miercoles s/d    40    40  3859
+  7692  [1966-10-27]  jueves s/d       32    32  3899
+  7693  [1966-10-28]  viernes s/d      20    20  3931
+  7694  [1966-10-31]  lunes s/d        40    38  3951    2
+  7695  [1966-11-03]  jueves s/d       20    20  3991
+  7696  [1966-11-04]  viernes s/d      22    22  4011
+  7697  [1966-11-07]  lunes s/d        16    16  4033
+  7698  [1966-11-08]  martes s/d       20    20  4049
+  7699  [1966-11-09]  miercoles s/d    36    36  4069
+  7700  [1966-11-10]  jueves s/d       36    36  4105
+  7701  [1966-11-11]  viernes s/d      30    30  4141    2
+  7702  [1966-11-14]  lunes s/d        16    16  4173
+  7703  [1966-11-15]  martes s/d       24    24  4189
+  7704  [1966-11-16]  miercoles s/d    44    43  4213    1
+  7705  [1966-11-17]  jueves s/d       24    24  4257
+  7706  [1966-11-18]  viernes s/d      24    24  4281
+  7707  [1966-11-21]  lunes s/d        32    32  4305
+  7708  [1966-11-22]  martes s/d       24    24  4337
+  7709  [1966-11-23]  miercoles s/d    28    28  4361
+  7710  [1966-11-24]  jueves s/d       18    18  4389
+  7711  [1966-11-25]  viernes s/d      32    32  4407
+  7712  [1966-11-28]  lunes s/d        24    23  4439    1
+  7713  [1966-11-29]  martes s/d       20    19  4463    1
+  7714  [1966-11-30]  miercoles s/d    20    19  4483    1
+  7715  [1966-12-01]  jueves s/d       32    31  4503    1
+  7716  [1966-12-02]  viernes s/d      48    48  4535
+  7717  [1966-12-05]  lunes s/d        28    28  4583
+  7718  [1966-12-06]  martes s/d       16    16  4611
+  7719  [1966-12-07]  miercoles s/d    16    16  4627
+  7720  [1966-12-09]  viernes s/d      28    28  4643
+  7721  [1966-12-12]  lunes s/d        24    23  4671    1
+  7722  [1966-12-13]  martes s/d       24    23  4695    1
+  7723  [1966-12-14]  miercoles s/d    40    39  4719    1
+  7724  [1966-12-15]  jueves s/d       40    39  4759    1
+  7725  [1966-12-19]  lunes s/d        24    23  4799    1
+  7726  [1966-12-20]  martes s/d       44    44  4823
+  7727  [1966-12-21]  miercoles s/d    18    18  4867
+  7728  [1966-12-22]  jueves s/d       18    27  4885    1
+  7729  [1966-12-23]  viernes s/d      24    24  4913
+  7730  [1966-12-26]  lunes s/d        24    24  4937
+  7731  [1966-12-27]  martes s/d       16    16  4961
+  7732  [1966-12-28]  miercoles s/d    28    27  4977    1
+  7733  [1966-12-29]  jueves s/d       18    18  5005
+  7734  [1966-12-30]  viernes s/d      16    16  5023
+
+Ediciones con dif distinto de cero, todas sin la pagina en el Release: una
+pagina en 19 ediciones; dos en 8 (7573, 7638, 7639, 7642, 7658, 7679, 7694,
+7701); cuatro en 7605; ocho en 7647 (24 paginas declaradas y encadenadas, 16
+presentes); dieciocho en 7629 (30 declaradas, 12 presentes). La 7701 declara 30
+y la cadena da 32. La sesion no miro cual pagina falta en cada una: es parte del
+limite 1 (E.10).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: prev (capa del PDF, 4975 hojas, util en 1184) y prop (OCR de
+lee_auto.py, 3842 hojas, util en 3792). Busqueda sobre las dos, etiqueta por
+version. Union: U+0002, ninguna; U+00AD, 25.972, todas seguidas de salto,
+quitadas junto con el salto; guion de fin de renglon con hasta dos signos a cada
+lado.
+
+Pasadas. Literal «cald» sobre NFD sin diacriticos: 132 hojas en 87 ediciones,
+contados los falsos positivos de B.3. Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: 5
+hojas mas, todas ruido («colderon», «coidenado», «escollera» de una presa en
+7700). Laxa espaciada con [\s-]{0,3} entre cada par de letras: 1 hoja mas (7554
+h9, «montaldi»), ruido. Pasada de la letra perdida,
+c[ao][l1i|]?\W?\s*d[ec]r[ao]: 2 hojas mas, ruido («colderon», «mercaderas»).
+Difusa >= 0,78: 22 formas; una es La Caldera deformada en una hoja que la
+literal no devolvia: «la ciaidera» (7560 h2, renglon del sumario del 11307,
+A03); las otras son «escalera», «madera» partida, «calliera» (una sociedad
+anonima y un juicio) y ruido. Difusa ampliada 0,70-0,78 sobre palabras con c, g
+u o: 91 formas, ninguna real. El pre-informe dio 423 candidatos en 166 hojas;
+los suyos que no devolvio la sesion son todos difusa o laxa espaciada de ruido
+(«cal deno», «escalera», «calliera», «adera»), salvo 7560 h2 y 7560 h6 («la
+ca.ldera», nomina de pensiones, A07), que la sesion tambien hallo por difusa.
+
+Prueba de las pasadas que dan cero o casi cero: «yacon» da tres hojas, y la
+letra perdida da 111 hojas, todas tambien en la literal: las pasadas funcionan.
+Un caso medido de lo que pierden todas: el acto de los Trucco (A01) sale en la
+literal porque nombra «La Caldera» tres veces, pero la busqueda de actores no lo
+devuelve, porque el OCR lee «Trueco» (E.7).
+
+Anillo 2: 405 terminos del config de corrige; 83 con acierto. Se leyeron los
+contextos distintos de todos los terminos, salvo los apellidos, de los que se
+leyo una muestra de diez contextos por termino (B.3). Anillo de actores: los
+1282 del config, por nombre + apellido, primer nombre + apellido, inicial +
+apellido e inversion, sobre el texto sin puntuacion; 372 con acierto. Mas los
+nombres de los actos del §A de 1966 (B.4). Numeros arrastrados: no se usaron
+como pasada independiente; el pre-informe trae su capa NUM (35.173 aciertos),
+casi todos numeros de aviso y de pagina.
+
+Identificadores de las ausencias: numero de decreto, nombre de la persona y
+localidad, de a dos por lo menos.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), contra lo que
+el propio año establece. Faltantes: 9 («acequia del pueblo», «rio La Caldera»,
+«pueblo La Caldera», «confluencia de los rios Nieve y Wierna», «mina Juanita»,
+«consultorio externo de Vaqueros», «Cristo de La Caldera», «Hogar Escuela San
+Cayetano» y «Hogar Agricola San Cayetano»), agregados al config. Apellidos
+dentro de la lista de lugares con acierto en 1966: 19 (isasmendi, castellanos,
+mamani, aramayo, condori, apaza, chaile, murua, severino, toconas, nogales,
+matos, mosquera, quintin, challe, yolanda, teodolinda, helvecia, wierna), que
+suman mas de 1.300 hojas de ruido. A revisar: 3 (el bordo, betania y tabacal,
+siempre de Gral. Guemes y Oran segun los actos).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+25 fichas que cubren 40 actos: las fichas de una obra o de una serie reunen los
+actos que la siguen y nombran todos los numeros, como en 1964 y 1965. Cada aviso
+repetido es una sola ficha con todas sus apariciones, contadas por texto. Los
+renglones de sumario que remiten a un acto fichado se nombran en la FUENTE y no
+se fichan aparte.
+
+A01  7520 h8  [AGUAS]
+    Dec. 12169: concesion de agua a los Trucco, catastro 11, rio La Caldera
+  FUENTE: 7520 (8-2-1966), h8 cols. 1-2.
+  FICHA: Decreto 12169, Economia, F. y Obras Publicas, 26-1-1966, expte.
+  3665|65; Res. 1268 de la A.G.A.S., 4-10-1965.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    DECRETO N 12169. / Ministerio de Economia, F. y Obras Publicas / SALTA,
+    Enero 26 de 1966. / Expediente N 3665|65 / VISTO este expediente por el cual
+    los señores Carlos, Eduardo, Amalia Lucrecia, Jorge Ernesto y Gillermo [sic]
+    Trucco, solicitan otorgamiento de una concesion de agua publica para irrigar
+    su propiedad ubicada en el Dptc [sic] La Caldera, Catastro N 11, Manzana 2,
+    Parcela 15, con una superficie bajo riego de 0,2750 Has.; y / -CONSIDERANDO
+    / Que los recurrentes han dado cumplimiento con todos los recaudos legales,
+    tecnicos y reglamentarios y efectuado la publicacion de edictos, conforme a
+    las disposiciones del Codigo de Aguas (Ley 775), sin que dentro del termino
+    legal se hayan formulado observaciones, por lo que el Consejo General de la
+    Administracion General de Aguas de Salta, opina que debe hacerse lugar a lo
+    solicitado, conforme a la Resolucion N 1268, de fecha 4 de octubre de 1965;
+    / ... / Articulo 1 - Otorgase una concesion de derechos al uso del agua del
+    dominio publico, a los señores Carlos Eduardo, Amalia Lucrecia, Jorge
+    Ernesto y Guillermo Roberto Trucco, para irrigar con caracter
+    temporal-eventual, una superficie de 0,2750 Has. del inmueble de su
+    propiedad denominado Manzana 2, Parcela 15, Catastro 11, ubicado en el
+    Departamento "La Caldera", con una dotacion 0,144 l|seg. a derivar del Rio
+    La Caldera (margen derecha), mediante la acequia "Del Pueblo". / Art. 2 - Lo
+    [sic] concesion otorgada por el articulo anterior lo es con las reservas
+    previstas en los Arts. 17 y 232 del Codigo de Aguas. / Art. 3 - Comuniquese
+    ... / Dr. Ricardo Joaquin Durand / Ing. Florencio Elias / ES COPIA: Pedro
+    Andres Arranz / Jefe de Despacho del M. de Econ. F. y O. Pub.
+  NOTA DE LECTURA: Cierra el tramite cuyo edicto ficho el informe LEE 1964 (los
+  cuatro Trucco). RECUENTO PROPIO: cuatro concesionarios en el art. 1; el VISTO
+  separa con coma «Carlos, Eduardo» y da cinco nombres: errata del original, se
+  cuenta por el articulado (E.9). Erratas del original: «Gillermo» en el VISTO y
+  «Guillermo Roberto» en el art. 1; «Dptc»; «Lo concesion» (E.9). Serie: los
+  actos siguientes de la misma hoja son el 12170 a 12173 (OCR propio; control
+  1). Numero, fecha y expediente mirados en la imagen.
+
+A02  7524 h13  [JUSTICIA]
+    Aviso 22719: remate de un jeep con patente municipal 069 de La Caldera
+  FUENTE: 7524 (14-2-1966) h13 col. 1; 7525 (15-2-1966) h5 col. 2.
+  FICHA: Remate judicial, martillero Adolfo A. Sylvester, juicio 6447 «Jose
+  Rolando Chuchuy vs. Agustin Urquiza», Juzgado de 1a instancia 5a nominacion C.
+  y C.
+  MODO DE LECTURA: Imagen (las dos apariciones; la segunda a 400 ppp).
+  TEXTO:
+    N 22719 - POR ADOLFO A. SYLVESTER / Judicial - "JEEP - WILLYPS" - Sin Base /
+    El dia 17 de Febrero de 1966, a horas 18, en Caseros 374 de esta Ciudad,
+    rematare SIN BASE y al contado, un automovil "Jeep - Willyps", modelo
+    1[9?]42 con motor, Patente Municipal N 069 de La Caldera, en el estado en
+    que se encuentre y en poder del depositario judicial Sr Agustin Urquiza, con
+    domicilio en calle General Guemes 358 de esta Ciudad. Seña 30 % a cuenta
+    compra Comision Ley a cargo comprador Ordena el Sr Juez de 1a instancia 5a
+    Nominacion C y C en juicio N 6447 Ejecutivo - Jose Rolando Chuchuy vs.
+    Agustin Urquiza" / Publicacion 2 dias en Boletin Oficial y El Intransigente
+    / Importe $ 1.500,- e) 14 al 15,2,66
+  NOTA DE LECTURA: Dos apariciones, cotejadas por texto (iguales). La patente
+  069 se lee igual en las dos. El año del modelo queda 1[9?]42: el segundo
+  digito es de la serie que el catalogo del flujo (§5.6) da por confundible y
+  ningun control lo decide; no decide la ficha. Un «Agustin P. Urquiza» esta en
+  el config (1959); la identidad no se afirma (B.4).
+
+A03  7527 h5  [OBRA-PUBLICA]
+    Obra 290, base del Cristo Monumental: Dec. 12275 (contrato), Dec. 11307
+    republicado y Dec. 1597 (prorroga de 150 dias)
+  FUENTE: Dec. 12275: 7527 (17-2-1966) h5 cols. 1-2; sumario en h2. Dec. 11307:
+  7560 (11-4-1966) h4 col. 2; sumario en h2. Dec. 1597: 7705 (17-11-1966) h8
+  col. 2 y h9 col. 1; sumario en h3.
+  FICHA: Decreto 12275, Economia, 1-2-1966, expte. 241|66 (aprueba el contrato
+  con Luis Bressanutti); Decreto 11307, Economia, 26-11-1965, expte. 3094|1965
+  (adjudicacion; ya publicado el 7-12-1965, informe LEE 1965 A45); Decreto 1597,
+  Economia, 11-11-1966, expte. 3346|66 (aprueba la Res. 686 de Viviendas y
+  Arquitectura, 31-10-1966).
+  MODO DE LECTURA: Imagen (12275 entero; 11307 visto, considerandos y art. 1;
+  1597 entero salvo las firmas, capa).
+  TEXTO:
+    [12275] DECRETO N 12275 / Ministerio de Economia, Finanzas y O. Publicas /
+    Salta, 1 de Febrero de 1966. / Expediente N 241|66. / VISTO el contrato de
+    locacion de obra celebrado por Direccion de Viviendas y Arquitectura de la
+    Provincia y la Empresa de Construcciones Luis Bressanutti, para la ejecucion
+    de la obra N 290 "Construccion Base Cristo Monumental de La Caldera - Dpto.
+    La Caldera", en la suma de $ 3.134.574,- m|n. / ... Articulo 1 - Apruebase
+    el contrato de locacion de mano de obra celebrado por DIRECCION DE VIVIENDAS
+    Y ARQUITECTURA DE LA PROVINCIA y la Empresa de Construcciones LUIS
+    BRESSANUTTI, para la ejecucion de la obra N 290 "Construccion Base Cristo
+    Monumental de La Caldera - Dpto. La Caldera", con un presupuesto de $
+    3.134.574,- m|n (TRES MILLONES CIENTO TREINTA Y CUATRO MIL QUINIENTOS
+    SETENTA Y CUATRO PESOS MONEDA NACIONAL) / ... Dr. Ricardo Joaquin Durand /
+    Ing. Florencio Elias / ES COPIA: Pedro Andres Arranz
+    [11307] DECRETO N 11307 / Ministerio de Economia, F. y O. Publicas / SALTA,
+    Noviembre 26 de 1965 / Expediente N 3094|1965 / VISTO la licitacion publica
+    convocada por Direccion de Viviendas y Arquitectura de la Provincia para la
+    adjudicacion de la obra Construccion Base Cristo Monumental en La Caldera -
+    Dpto. de La Caldera", cuya apertura se llevo a cabo el dia 26 de octubre del
+    año en curso, de acuerdo con la autorizacion conferida por Decreto N
+    10588|65. / ... la formulada por la Empresa Luis Bressanutti, con un
+    presupuesto de $ 3.134 574 - m|n. que supone una disminucion del 4,1 % del
+    Presupuesto oficial, / ... Art. 1 - Adjudicase a la Empresa Constructora
+    Luis Bressanutti la realizacion de la obra N 290 ... por el precio de $ 3
+    134 5[7]4 - m|n mediante el sistema de Ajuste Alzado ...
+    [1597] Salta, 11 de noviembre de 196[5?]. / DECRETO N 1597 / Ministerio de
+    Economia, Finanzas y O. Publicas / Expediente N 3346/66. / VISTO que
+    Direccion de Viviendas y Arquitectura de la Provincia, por Resolucion N 686,
+    del 31 de octubre de 1966, amplia en 150 dias calendario el plazo
+    contractual de ejecucion de la Obra: "Construccion Base Cristo Monumental en
+    La Caldera", de la que es adjudicatario contratista el señor Luis
+    Bresanutti; / CONSIDERANDO: / Que la Reparticion actuante funda la prorroga
+    concedida "en la serie de inconvenientes que impidieron el normal
+    cumplimiento del plan de trabajo originario"; "en la falta de pago de
+    certificados de obra; y en que "en oportunidad de haberse entregado el
+    contratista la documentacion de la obra para verificar datos solicitados en
+    la nota de pedido N 2 del 20 de abril del año en curso, este observo que las
+    medidas de la base a cuya construccion se habia obligado eran de menores
+    dimensiones que el pedestal de la estatua; esta circunstancia motivo la
+    intervencion del Dpto. Estudios y Proyectos quien informo que las medidas de
+    la base debian ser de 6,10 x 5,20 m.; estas nuevas medidas originaron el
+    desplazamiento de las bases y columnas y la mayor longitud de las vigas de
+    sosten"; / Que, cabe señalar, segun se registra en la referida Resolucion
+    -que el hecho puntualizado resulta inimputable al contratista, y "ha
+    escapado al control del Director proveyente- por haberse registrado con
+    anterioridad a la fecha en que asumio la Direccion de la Reparticion"; / ...
+    El Gobernador Interino de la Provincia DECRETA: / Articulo 1 - Apruebase la
+    Resolucion N 686 /66, de DIRECCION DE VIVIENDAS Y ARQUITECTURA DE LA
+    PROVINCIA y ampliase en 150 (ciento cincuenta) dias calendario, el plazo
+    contractual de ejecucion de la Obra: "CONSTRUCCION BASE CRISTO MONUMENTAL EN
+    LA CALDERA", a cargo del contratista Sr. Luis Bresanutti. / ... [capa:]
+    CABANILLAS (Int) / Osores Soler (h.) (Int.)
+  NOTA DE LECTURA: El 11307 sale dos veces en el Boletin: el 7-12-1965 (informe
+  LEE 1965, A45) y otra vez en la 7560, una edicion de 44 paginas que publica
+  actos de octubre y noviembre de 1965 (en la misma hoja, el 10794 del
+  29-10-1965). No se explica la segunda publicacion. El precio del art. 1 del
+  11307 queda dañado en la imagen; lo deciden el considerando de la misma hoja y
+  la aritmetica de 1965 (controles 2 y 3). El 12275 cierra cifras contra letras.
+  El año de la fecha del 1597 se imprime con el ultimo digito dudoso; la Res.
+  686 del 31-10-1966 y el 1598 de la misma columna, «11 de noviembre de 1966»,
+  lo deciden: 1966 (control 1). Grafias del original: «Bressanutti» (12275,
+  11307) y «Bresanutti» (1597); el informe de 1965 lee «Bressannutti». No se
+  unifican. El 1597 es el primer acto de la serie que reconoce que la base
+  proyectada era menor que el pedestal de la estatua.
+
+A04  7529 h7  [CARGOS]
+    Dec. 12389: servicios del Dr. Arne Hoygaard como medico zonal de La Caldera,
+    en reemplazo del Dr. Alfredo Satue
+  FUENTE: 7529 (23-2-1966), h7 cols. 1-2; sumario en h3.
+  FICHA: Decreto 12389, Asuntos Sociales y S. Publica, [8]-2-1966, expte. 45
+  703|66.
+  MODO DE LECTURA: Imagen (cuerpo entero y renglon del sumario).
+  TEXTO:
+    DECRETO N 12389 / Ministerio de Asuntos Sociales y S. Publica / Salta, [3/8]
+    de Febrero de 1966. / Expediente N 45 703|66. / Teniendo en cuenta el
+    reconocimiento de servicios solicitado a favor del doctor Arne Hoygaard,
+    como Medico Zonal de La Caldera; / Atento a lo manifestado a fs. 2, de las
+    presentes actuaciones, / El Gobernador de la Provincia DECRETA / Articulo 1
+    - Reconocense los servicios prestados por el doctor ARNE HOYGAARD, en la
+    categoria 9 - Medico Zonal de La Caldera, Personal Asistencial de Direccion
+    del Interior, en el periodo comprendido entre el 20-12-65 y 20-1-66, en
+    reemplazo del doctor Alfredo Satue, en uso de licencia reglamentaria, y con
+    imputacion al Anexo "E" - Inciso 2 - Capitulo 1 - Item 1 - Partida 2 -
+    Principal 8 - del presupuesto en vigencia. / Art. 2 - Comuniquese ... / Dr.
+    Ricardo Joaquin Durand / Dr. Danton Julio Cermesoni / ES COPIA: Maria Elena
+    Cornejo de Rojas / Secretaria de Coordinacion / Ministerio de A. S. y Salud
+    Publica
+  NOTA DE LECTURA: El dia de la fecha se imprime con el primer digito entre 3 y
+  8 (catalogo del flujo §5.6). El sumario de h3 pone el 12389 bajo las mismas
+  comillas de fecha que el 12390, fechado el 8 de febrero en la imagen: decidido
+  8 (control 3). El titular reemplazado, Alfredo Satue, es el del informe LEE
+  1965 (A07, A26). En el decreto siguiente (12390, misma hoja) se contrata al
+  Dr. Victor Hugo Castellani como odontologo en San Antonio de los Cobres: en
+  1965 lo era de La Caldera (informe LEE 1965, A31) (B.4).
+
+A05  7551 h11  [HACIENDA-MUN]
+    Dec. 12871: subsidio de $ 66.750 a la Municipalidad para 150 chapas a
+    damnificados de Vaqueros, Lesser, Los Yacones, Calderilla y «Calde.a»
+  FUENTE: 7551 (25-3-1966), h11 col. 3; sumario en h3.
+  FICHA: Decreto 12871, Economia, F. y O. Publicas, 17-3-1966, expte. 227-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    DECRETO N 12871 / Ministerio de Economia, F. y O. Publicas / Salta, 17 de
+    Marzo de 1966 / Expediente N 227 - 1966 / Visto que la Municipalidad de La
+    Caldera interpone un pedido de colaboracion en favor de pobladores de las
+    zonas de Vaqueros, Lesser, Los Yacones, Calderilla y Calde.a que de
+    condicion humilde y faltos de recursos, se han visto afectados por las
+    tormentas y otras inclemencias del tiempo acaecidas a fines del año pasado,
+    dejando sus viviendas en un estado de seguridad precario que afecta a
+    familias con numerosos hijos; y, / CONSIDERANDO: / Que siendo norma
+    gubernativa concurrir en su ayuda dentro de lo que las posibilidades
+    economicas del Tesoro lo permiten; / Por ello, / El Gobernador de la
+    Provincia DECRETA / Articulo 1 - Concedese a la Municipalidad de La Caldera
+    un subsidio de SESENTA Y SEIS MIL SETECIENTOS CINCUENTA PESOS ($ 66.750.-
+    m|n.) MONEDA NACIONAL para que por intermedio de la Direccion General de
+    Compras y Suministros se adquiera ciento cincuenta (150) chapas "Rural" de
+    1.62 x 1,04 al precio de $ 445 - m|n. cada una, para ser distribuidas entre
+    las familias que han resultado damnificadas por los siniestros acaecidos en
+    el mes de diciembre ultimo. / Articulo 2 - El gasto ... se imputara al Anexo
+    C- Inciso 1- Capitulo 1- Item 2- Partida 2- Principal 4- Parcial 1- Aportes
+    y Subsidios a Sectores Publicos - Municipalidades Provinciales ... Orden de
+    Disposicion de Fondos N 14. / ... Dr. Ricardo Joaquin Durand / Ing.
+    Florencio Elias / ES COPIA. Santiago Felix Alonso Herrero / Jefe de Despacho
+    del M. de E F y O. P.
+  NOTA DE LECTURA: RECUENTO PROPIO: cinco zonas (Vaqueros, Lesser, Los Yacones,
+  Calderilla y «Calde.a»); el acto no declara numero, de modo que no hay nada
+  que cotejar. La quinta queda impresa «Calde.a», con una letra que no marco; la
+  sesion no la completa. Aritmetica (control 2): 150 x 445 = 66.750, igual a las
+  letras y a la cifra. La capa lee «$ 65-750» en el art. 1 y «Liegser»: la
+  imagen da 66.750 y Lesser. El sumario de h3 resume «Concedese a Municipalidad
+  de La Caldera un subsidio de $ 66 750» (capa). Primer acto del año con una
+  nomina de parajes del departamento.
+
+A06  7554 h8  [OBRA-PUBLICA+ESCUELA]
+    Dec. 12978: obra 357, refeccion del Hogar Escuela San Cayetano de Vaqueros,
+    por administracion ($ 2.066.707)
+  FUENTE: 7554 (30-3-1966), h8 cols. 1-2; sumario en h3 («Vaqueros (La Cad.ia)»,
+  capa).
+  FICHA: Decreto 12978, Economia, F. y O. Publicas, 23-3-1966, expte. 159-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    DECRETO N 12978 / Ministerio de Economia, F y O Publicas / Salta, 23 de
+    Marzo de 1966 / Expediente N 159 - 1966 / VISTO el legajo tecnico
+    estructurado por Direccion de Viviendas y Arquitectura de la Provincia para
+    la obra N 357 "Refeccion Hogar Escu[e]la San C[a]yetano - Vaque[r]os -
+    Departamento de La Caldera", cuyo presupuesto ha sido fijado en la suma de $
+    2.066 707 - m|n / CONSIDERANDO / Que el estado precario del inmueble, en sus
+    techos, instalacion sanitaria y electrica, requiere una inmediata reparacion
+    a fin de no ver entorpecida la funcion social educativa que desarrolla, /
+    Que la naturaleza de los trabajos a efectuar exigen ser llevados a cabo por
+    el sistema administrativo, ademas de contar la reparticion con el personal y
+    equipo adecuado para tal fin, / El Gobernador de la Provincia DECRETA /
+    Articulo 1 - Autorizase a DIRECCION DE VIVIENDAS Y ARQUITECTURA DE LA
+    PROVINCIA para realizar por el sistema de administracion, y conforme a las
+    previsiones del decreto ley N 76, la obra N 357 "Refeccion Hogar San
+    Cayetano - Vaque[r]os - Departamento de La Caldera" cuyo presupuesto se
+    estima en la cantidad de $ 2.066 707 - m|n. con imputacion al capitulo I-
+    Titulo 1- Subtitulo D- Rubro Funcional I- Parcial 4- Plan de Creditos
+    Minimos atendido con Recursos Propios de la Administracion Central-
+    Ejercicio 1965 - 1966 / Art. 2 - Comuniquese ... / [capa:] Dr. Ricardo
+    Joaquin Durand / Ing. Florencio Elias / ES COPIA: Pedro Andres Arranz
+  NOTA DE LECTURA: Las letras entre corchetes estan en el original pero quedan
+  sin tinta en el escaneo; la sesion las restituye por la otra aparicion del
+  nombre en el mismo acto (control 3) y lo dice. El acto nombra el lugar de dos
+  maneras, «Hogar Escuela San Cayetano» (VISTO) y «Hogar San Cayetano» (art. 1).
+  El importe se lee igual en las dos menciones. La atribucion al departamento la
+  hace el propio acto.
+
+A07  7557 h6  [OTRO]
+    Decs. 12992, 13056, 13765 y 13993: pensiones a la vejez con beneficiarios en
+    La Caldera
+  FUENTE: 12992: 7557 (4-4-1966) h6 col. 2. 13056: 7560 (11-4-1966) h6 col. 2.
+  13765: 7600 (8-6-1966) h10 col. 1 y h11 col. 1. 13993: 7607 (22-6-1966) h15
+  cols. 1-2 (pag. 1979).
+  FICHA: Decretos de Asuntos Sociales y S. Publica que aprueban resoluciones de
+  la Caja de Jubilaciones y Pensiones: 12992 (25-3-1966, expte. 4483|C|66, Res.
+  1378-J, Acta 101, del 10-3-1966); 13056 (30-3-1966, expte. 4492|66-C, Res.
+  138[2/3]-J, Acta 102, del 17-3-1966); 13765 (24-5-1966, expte. 4.555|66-C,
+  Res. 1483-J, Acta 110, del 12-5-1966); 13993 (10-6-1966, expte. 4583|66-C,
+  Res. 1513-J, Acta 112, del 26-5-1966).
+  MODO DE LECTURA: Imagen (encabezados, articulo 1 y, donde la hay, la nomina
+  del departamento).
+  TEXTO:
+    [12992] Art. 1 - Apruebase en todas sus partes la Resolucion N 1378-J. (Acta
+    N 101) de la Caja de Jubilaciones y Pensiones de la Provincia de fecha 10 de
+    marzo de 1966, que acuerda pensiones a la vejez numeros 8019 al 8022, a
+    beneficiarios con residencia en los Departamentos de Capital, La Caldera,
+    General Guemes y Tartagal, con un haber mensual de $ 2 000 - m|n. (Dos Mil
+    Pesos Moneda Nacional), de conformidad a las disposiciones de la Ley
+    4094|66, ...
+    [13056] Art. 1 - Apruebase en todas sus partes la Resolucion N 138[2/3]-J.
+    (Acta N 102) de fecha 17 de marzo de 1966, ... que acuerda pensiones a la
+    vejez, con un haber mensual de $ 2 000 - m|n. ... a los beneficiarios que
+    seguidamente se detallan: / CAPITAL: / 8023 - CORBELLA, Gregoria / LA
+    CALDERA: / 8024 - LUNA, Pedro / LA POMA: / 8025 - GUZMAN, Vicente / 8026 -
+    MAMANI, Toribio / METAN: / 8027 - SOPLAN, Estanislao - La Poblacion El
+    Galpon / ROSARIO DE LERMA: / 8028 - LOPEZ Nazario - Campo Quijano - Acordar
+    por $ 80[0] - m|n
+    [13765] VISTO la Resolucion N 1483-J. (Acta N 110), ... mediante la cual se
+    acuerdan pensiones a la vejez numeros 8077 al 9007, cuyos beneficiarios
+    residentes en capital y campaña, han extremado los requisitos exigidos por
+    la ley 1204; / ... Articulo 1 - Apruebase en todas sus partes la Resolucion
+    N 1483-J. (Acta N 110) de la Caja de Jubilaciones y Pensiones de la
+    Provincia, de fecha 12 de mayo de 1966, que acuerda pensiones a la vejez
+    numeros 8077 al 9007, a beneficiarios residentes en los departamentos de
+    Capital, Anta, Cachi, Cafayate, La Caldera, La Candelaria, Cerrillos,
+    Chicoana, La Viña, Metan, Molinos, Oran, [capa:] Rivadavia, Santa Victoria y
+    San Martin, con un haber mensual de $ 2.000.- m|n. ...
+    [13993] Articulo 1 - Apruebase en todas sus partes la Resolucion N 1513-J
+    |Acta N 112) de fecha 26 de mayo de 1966 de la Caja de Jubilaciones y
+    Pensiones de la Provincia, que acuerda pensiones a la Vejez, de conformidad
+    a las disposiciones de la ley 1204 y 4094|66, con un haber mensual de $
+    2.000.- m|n. ... a los solicitantes que a continuacion se detallan: /
+    CAPITAL / 9008 - Tapia de Guaymas, Julia Asuncion. / ANTA / 9009 - Montoya,
+    Julian. / LA CALDERA / 9010 - Coria, Domingo. / 9011 - Laxi, Maria Santos. /
+    9012 - Ocampo Vda. de Alarcon, Pascuala B. / RIVADAVIA / 9013 - Palomo,
+    Narciso. / ROSARIO DE LERMA / 9014 - Guantay, Matias Modesto.
+  NOTA DE LECTURA: RECUENTOS PROPIOS: 12992, cuatro pensiones (8019 a 8022) y
+  cuatro departamentos, sin nominas; 13056, seis beneficiarios en cinco
+  departamentos, uno de La Caldera; 13765, quince departamentos (dos ultimos
+  renglones en la capa, h11); 13993, siete beneficiarios (9008 a 9014) en cinco
+  departamentos, tres de La Caldera. Ningun acto declara numero de
+  departamentos. La serie de numeros encadena (8022 a 8023 y 9007 a 9008;
+  control 1). El rango del 13765, «8077 al 9007», daria 931 pensiones: se
+  transcribe sin corregir. La Res. del 13056 queda 138[2/3] en la imagen y la
+  capa no decide. El 12992 nombra un departamento «Tartagal», que no existe como
+  tal (Tartagal es de San Martin): errata del original o forma administrativa;
+  no se concilia (E.9). Los nombres son los que imprime el Boletin; no se
+  buscaron identidades.
+
+A08  7557 h7  [NORMA]
+    Dec. 12996: reglamenta las Cooperadoras Asistenciales (Ley 4126); La Caldera
+    forma sola la zona 23
+  FUENTE: 7557 (4-4-1966), h7 cols. 1-2.
+  FICHA: Decreto 12996, Asuntos Sociales y S. Publica, 28-3-1966, reglamentario
+  de la Ley 4126.
+  MODO DE LECTURA: Imagen (VISTO, arts. 1 a 4 y la nomina del art. 3).
+  TEXTO:
+    DECRETO N 12996 / Ministerio de Asuntos S. y S. Publica / SALTA, Marzo 28 de
+    1966 / VISTO la Ley N 4126, por la que se crea la Cooperadora Asistencial en
+    todos los municipios de la Provincia y siendo necesario dotarla de normas a
+    que ajustaran su cometido, ... / Art. 3. - Para el logro del articulo
+    anterior agrupanse los municipios en la forma que se detalla a continuacion,
+    coincidente con la zona de influencia de los medicos regionales de las
+    respectivas zonas / 1) Apolinario Saravia, Gral Pizarro, El Desmonte, Cnel
+    Mollinedo. / ... / 22) Santa Victoria, Nazareno / 23) La Caldera / 24) El
+    Tala, El Jardin, La Candelaria / ... / 38) San Carlos, Angastaco, Animana /
+    Art 4. - Las Cooperadoras Asistenciales, estaran integradas por: / 1
+    Presidente / 1 Vice-Presidente / 1 Secretario / 1 Tesorero / Vocales /
+    Organo de Fiscalizacion / Vocales en numero de proporcion a la siguiente
+    escala de habitantes / Hasta 5 000 habitantes 2 Vocales ...
+  NOTA DE LECTURA: RECUENTO PROPIO: 38 zonas numeradas (la cuarta con el numero
+  borrado en el escaneo); el acto no declara total. La zona 23 es solo «La
+  Caldera»: Vaqueros, que tiene medico zonal propio en la Ley 4073 (A14), no
+  figura en ninguna zona. Se transcribe y no se explica.
+
+A09  7557 h10  [OBRA-PUBLICA+ESCUELA]
+    Dec. 13006: contratos con Tolaba y Campos para la ampliacion de la escuela
+    160 de Mojotoro (obra 280) y la escuela 250 de San Francisco de los Yacones
+    (obra 283)
+  FUENTE: 7557 (4-4-1966), h10 col. 1.
+  FICHA: Decreto 13006, Economia, F. y O. Publicas, 28-3-1966, exptes. 953, 954,
+  955 y 956|66.
+  MODO DE LECTURA: Imagen (cuerpo entero); los numeros de expediente quedan
+  parcialmente legibles.
+  TEXTO:
+    DECRETO N 13006 / Ministerio de Economia, F y O Publicas / Salta, 28 de
+    Marzo de 1966 / Exptes N s 953-[9]54-955 y 956|66 / VISTO los contratos de
+    locacion de obra suscriptos por la Direccion de Viviendas y Arquitectura de
+    la Provincia con la Empresa de Construcciones Tolaba y Campos, para la
+    realizacion de las Obras Nos 288: "Construccion Escuela San Martin de 4
+    Aulas en General Guemes - Departamento General Guemes", por $ 4 261 734 00
+    m|n, 280 "Ampliacion Escuela Nacional N 160 en Mojotoro - Departamento La
+    Caldera", por $ 1 451 286.00 m|n, 293. "Construccion Puesto Sanitario en
+    Betania - Departamento General Guemes", por $ 2 391 087 00 m|n, y 283:
+    "Construccion Escuela Nacional N 250 - 2 Aulas en San Francisco de los
+    Yacones- Dpto La Ca[l]dera", por $ 3 682 245 - m|n, / ... Articulo 1 -
+    Apruebanse los contratos de locacion de obra suscriptos por la DIRECCION DE
+    VIVIENDAS Y ARQUITECTURA DE LA PROVINCIA con la Empresa de Construcciones
+    TOLABA Y CAMPOS, para la ejecucion de las siguientes obras y por los montos
+    que se indica en cada caso. / N 288: ... $ 4 261 734 - / N 280. "Ampliacion
+    Esc Nacional N 160 en Mojotoro (Departamento La Caldera)" . $ 1 451 286 - /
+    N 293 ... $ 2 391 087 - / N 283 "Construccion Esc Nacional N 250- 2 Aulas en
+    San Francisco de Los Yacones (Departamento La Caldera)" $ 3 682 245 - / ...
+    Dr. Ricardo Joaquin Durand / Ing. Florencio Elias / ES COPIA: Pedro Andres
+    Arranz
+  NOTA DE LECTURA: RECUENTO PROPIO: cuatro obras, dos del departamento; el acto
+  no declara numero ni total. Los importes se leen igual en el VISTO y en el
+  art. 1 (control 3). Las adjudicaciones son de 1965 (informe LEE 1965: A42,
+  obra 283, Dec. 11303, $ 3.682.245; A43, obra 280, Dec. 11412): el importe de
+  la 283 coincide con el contrato (control 4). Tolaba y Campos tiene tambien la
+  obra 127 (A13).
+
+A10  7558 h13  [HACIENDA-MUN+NORMA]
+    Decs. 13049 y 13484: Ordenanza General Impositiva 1966 y presupuesto 1966 de
+    la Municipalidad ($ 2.151.088,12)
+  FUENTE: 13049: 7558 (5-4-1966) h13 col. 3 y h14 col. 1. 13484: 7582
+  (11-5-1966) h13 col. 2; sumario en h3.
+  FICHA: Decreto 13049, Gobierno, 30-3-1966, expte. 5344|66; Decreto 13484,
+  Gobierno, 2-5-1966, expte. 5619|66.
+  MODO DE LECTURA: Imagen (los dos enteros).
+  TEXTO:
+    [13049] DECRETO N 13049 / SALTA, Marzo 30 de 1966 / Minist. de Gob., Just.,
+    I. P. y del Trabajo / Expediente N 5344|66 / Por las presentes actuaciones
+    la Municipalidad de La Caldera, eleva para su aprobacion la Ordenanza
+    General Impositiva correspondiente al año 1966 y atento lo informado por el
+    Tribunal de Cuentas de la Provincia a fs. 56 de estos obrados y a las
+    disposiciones establecidas en el Art 184 de la Constitucion Provincial, / El
+    Gobernador de la Provincia DECRETA / Art. 1 - Apruebase la Ordenanza General
+    Impositiva correspondiente al año 1966 de la Municipalidad de La Caldera,
+    que corre de fs. 1 a fs 18 del presente expediente. / Art. 2 - Comuniquese
+    ... / Dr. Ricardo Joaquin Durand / Dr. Carlos Alberto Garcia Pulo / ES
+    COPIA: Miguel Angel Feixes (h) / Oficial 1 - Minist. de Gob. - I Publica
+    [13484] DECRETO N 13484 / Ministerio de Gobierno, Justicia, Instruccion
+    Publica y del Trabajo / SALTA, 2 de mayo de 1966 / Expediente N 5619|66 /
+    Por las presentes actuaciones la Municipalidad de La Caldera, eleva para su
+    aprobacion el Presupuesto de Gastos y Calculo de Recursos para el año 1966 y
+    atento lo solicitado y lo informado por la Oficina de Coordinacion de
+    Municipalidades a fs. 15 vta.|16 y a las disposiciones establecidas en el
+    Art. 184 de la Constitucion Provincial, / El Gobernador de la Provincia
+    DECRETA: / Articulo 1 - Apruebase el Presupuesto de Gastos y Calculo de
+    Recursos de la Municipalidad de La Caldera, departamento del mismo nombre,
+    correspondiente al año 1966, cuyos totales ascienden a la suma de $
+    2.151.088,12 m|n. (Dos millones ciento cincuenta y un mil ochenta y ocho
+    pesos con doce centavos moneda nacional). / Art. 2 - Comuniquese ... /
+    DURAND / Garcia Pulo / ES COPIA: Miguel Angel Feixes (h.) / Jefe
+    Administrativo Interino
+  NOTA DE LECTURA: Ninguno de los dos publica la ordenanza ni el presupuesto:
+  son actos citados y no acompañados. Cifras y letras del 13484 cierran (control
+  2). El presupuesto de 1965 era de $ 1.595.118,56 en cifras (informe LEE 1965,
+  A10). Los expedientes de 1965 eran 7859|64 y 7861|64; los de 1966, 5344|66 y
+  5619|66. En el sumario de la 7582 el renglon que sigue al presupuesto de La
+  Caldera es la ordenanza de San Jose de Orquera: no hay segunda ordenanza de La
+  Caldera.
+
+A11  7576 h8  [NORMA]
+    Dec. 13341: incluye al departamento La Caldera en la zona de infeccion de
+    rabia paresiante del Dec. 10623|65
+  FUENTE: 7576 (3-5-1966), h8 col. 1; sumario en h3.
+  FICHA: Decreto 13341, Economia, Finanzas y Obras Publicas (Subsecretaria de
+  Asuntos Agrarios), 27-4-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    SALTA, 27 de abril de 1966. / DECRETO N 13341. / Ministerio de Economia,
+    Finanzas y Obras Publicas / VISTO el decreto N 10.623|65 por el que se
+    dispone el resguardo de la sanidad animal mientras se encuentre en vigencia
+    el convenio suscripto entre el Gobierno de la Provincia y las autoridades
+    sanitarias de la Secretaria de Agricultura y Ganaderia de la Nacion y se
+    establecen zonas para el control de la enfermedad; y, / CONSIDERANDO / Que
+    en el Departamento de La Caldera se han presentado diversos casos de Rabia
+    Paresiante, lo que hace necesaria su inclusion dentro de la zona de
+    infeccion, / Por ello, / El Gobernador de la Provincia DECRETA: / Articulo 1
+    - Incluyese como Zona de Infeccion de la Rabia Paresiante establecida por el
+    articulo 2 del decreto N 10 623|65 al Departamento de La Caldera, y
+    facultase a las autoridades policiales y municipales de dicha localidad para
+    adoptar las medidas que se estipulan en el articulado del referido decreto.
+    / Art 2 - Comuniquese ... / DURAND / Elias / ES COPIA / Irma Celia M. de
+    Larran / Jefe de Despacho / Subsecretaria de Asuntos Agrarios y Recursos
+    Naturales
+  NOTA DE LECTURA: Primer acto del corpus leido que afirma casos de rabia
+  paresiante (rabia bovina) en el departamento; el universo de esa afirmacion es
+  este informe. El informe LEE 1965 (A49) registra al departamento en la zona de
+  prevencion antirrabica del mismo regimen. El acto no cuenta los casos ni
+  nombra parajes. «Dicha localidad» por departamento: se transcribe.
+
+A12  7576 h11  [OBRA-PUBLICA]
+    Aviso 23431: Vialidad, licitacion 6, tratamiento bituminoso del camino La
+    Calderilla - Guemes por Gallinato, tramo Campo Santo - Guemes
+  FUENTE: 7576 (3-5-1966), h11 col. 2.
+  FICHA: Aviso 23431, Direccion de Vialidad de Salta, licitacion publica N 6.
+  MODO DE LECTURA: Imagen (aviso entero, 300 ppp).
+  TEXTO:
+    N 23431 - DIRECCION DE VIALIDAD DE SALTA / LICITACION PUBLICA N 6 / OBRA:
+    Tratamiento Superficial Bituminoso Tipo Sellado -Camino: La Calderilla -
+    Guemes Por Gallinato Tramo Campo Santo - Guemes / PRESUPUESTO: $
+    1.605.427,20 m/n / APERTURA: El dia 11 de Mayo de 1966 a hs. 11 / Pliego de
+    condiciones en la Secretaria de la Reparticion -Calle España N 721- Precio
+    del Pliego $ 400,oo m/n LA DIRECCION. / Valor al cobro $ 250 - e) 3|5|66
+  NOTA DE LECTURA: Una sola aparicion («e) 3|5|66»), comprobado por texto en
+  todo el corpus. El camino se nombra por sus puntas en el departamento (La
+  Calderilla, Gallinato), pero el tramo licitado es Campo Santo - Guemes, del
+  departamento General Guemes: el aviso no dice que se trabaje dentro de La
+  Caldera, y la ficha no lo afirma. No se hallo la adjudicacion en el corpus del
+  año.
+
+A13  7579 h12  [OBRA-PUBLICA+ESCUELA]
+    Obra 127, escuelas 61, 160 y 332 de La Calderilla, Mojotoro y El Gallinato
+    (Tolaba y Campos): Decs. 13397, 13544, 13563, 13699, 306, 463 y 1684
+  FUENTE: 13397: 7579 (6-5-1966) h12 col. 1. 13544: 7585 (16-5-1966) h10 col. 1.
+  13563: 7590 (23-5-1966) h15 col. 1. 13699: 7598 (3-6-1966) h7 col. 1 y h8 col.
+  2 (pag. 1713). 306: 7638 (4-8-1966) h14 cols. 1-2. 463: 7649 (23-8-1966) h14
+  col. 1; sumario en h3. 1684: 7708 (22-11-1966) h9 col. 2 y h10 col. 1.
+  FICHA: Decretos de Economia, Finanzas y O. Publicas: 13397 (29-4-1966, exptes.
+  1379/66 y 1378/66, Res. 256 de Viviendas, orden de servicios 1); 13544
+  (10-5-1966, expte. 1479|1966, Res. 271); 13563 (11-5-1966, exptes. 1554 y
+  1555|66, Res. 287 y 281, ordenes de servicio 2 y 1); 13699 (20-5-1966, expte.
+  1618|66, Res. 301); 306 (27-7-1966, expte. 12354/66, acta del 20-7-1966 con
+  Pio Tolaba); 463 (11-8-1966, expte. 2445/66, Res. 512, orden de servicios 3);
+  1684 (16-11-1966, expte. 3427/66, Res. 697, orden de servicio 4).
+  MODO DE LECTURA: Imagen (los siete, encabezado y articulado).
+  TEXTO:
+    [13397] ... Ordenes de Servicios ... N 1 por la suma de $ 263.850,08 m/n
+    para trabajos adicionales en la Obra: "Construccion Escuelas Nacionales N s.
+    61, 160 y 332 de La Calderilla, Mojotoro y El Gallinato - Dpto. La Caldera,
+    a cargo de la Empresa Constructora Tolaba y Campos, dichas Ordenes de
+    Servicio fueron aprobadas por Direccion de Viviendas y Arquitectura de la
+    Provincia mediante Resoluciones N s. 255 y 256 dictadas el dia 20 de abril
+    del año en curso. / DURAND / Elias
+    [13544] El Vicegobernador de la Provincia en Ejercicio del Poder Ejecutivo
+    DECRETA: / Articulo 1 - Apruebase la Resolucion N 271, de fecha 26 de abril
+    de 1966, ... cuya parte resolutiva establece. "Articulo 1 - Fijase
+    "ad-referendum" del Poder Ejecutivo el plazo de "DOSCIENTOS (200) dias
+    calendarios de ejecucion, "contados a partir de la fecha indicada en el Acta
+    "de Recepcion de las obras, para cada uno de "los edificios integrantes de
+    la obra N 127, "CONSTRUCCION ESCUELA NACIONAL 2 AULAS, Nos "61,160 y 332 DE
+    LA CALDERILLA, MOJOTORO Y "EL GALLINATO, DPTO LA CALDERA" a cargo "de la
+    Empresa Constructora TOLABA Y CAMPOS "Articulo 2 - Ampliase en (SETENTA Y
+    CINCO) "dias calendarios el plazo de ejecucion de la Escuela Nacional 332 de
+    El Gallinato, ... / PAZ CHAIN / ELIAS
+    [13563] ... Articulo 1 - Apruebase las Ordenes de Servicio Nros. 2 y 1, ...
+    correspondientes a las obras: "Construccion Escuelas Nacionales Nros. 61,
+    160 y 332 de La Calderilla, Mojotoro y El Gallinato - departamento La
+    Caldera", por la suma de $ 782.545,46 m|n. a cargo de la empresa Tolaba y
+    Campos y N 174 "Construccion Escuela Nacional N 231 -2 Aulas en Apolinario
+    Saravia - Dpto. Anta" ... por la suma de $ 317.217.- m|n. respectivamente. /
+    PAZ CHAIN / ELIAS
+    [13699] ... "Articulo 1 - Ampliar en 90 (noventa) dias calendarios, el plazo
+    de ejecucion de la Escuela Nacional N 160 de Mojotoro, integrante de la obra
+    N 127: "Construccion Escuelas Nacionales Nros. 61, 160 y 332 de La
+    Calderilla, Mojotoro y El Gallinato, Dpto. La Caldera", fijado en doscientos
+    dias calendarios a partir de la fecha indicada en el Acta de Iniciacion de
+    la obra, por Resolucion N 271|66. ... / DURAND / Garcia Pulo
+    [306] VISTO el acta labrada en fecha 20/7/66 por Direccion de Viviendas y
+    Arquitectura de la Provincia con el contratista Pio Tolaba, en
+    representacion de la empresa constructora Tolaba y Campos por la que de
+    comun acuerdo prorrogan en 30 dias calendario la iniciacion de la obra N 127
+    "Construccion Escuela Nacional N 61, en La Calderilla - Dpto de la Caldera,
+    de conformidad a lo dispuesto por el decreto N 69, del 7 de julio de 1966, /
+    El Interventor Federal de la Provincia DECRETA / Articulo 1 - Apruebase el
+    acta ... mediante la cual se conviene prorrogar por 30 dias calendario y a
+    partir del dia 20 de Julio, la iniciacion de la obra N 127 "Construccion
+    Escuela Nacional N 61 en La Calderilla, departamento La Caldera" / ... Cnel
+    CARLOS FABREGAS MOYANO / Interventor Federal / Cnel. (R. E.) Mario E.
+    Cabanillas
+    [463] VISTO que Direccion de Viviendas y Arquitectura de la Provincia eleva
+    para su aprobacion copia de la resolucion N 512, dictada el 1 de agosto en
+    curso, por la que se aprueba la Orden de Servicios N 3, por $ 100.318,07
+    para trabajos adicionales en la Escuela Nacional numero [2]32 de El
+    Gallinato, ... "Articulo 1 - Aprobar la Orden de Servicios N 3 por $
+    100.318,07 m/n. (Cien mil trescientos diez y ocho pesos con 07/100 m/n.)
+    para trabajos adicionales en la obra de la Escuela Nacional N 332 de El
+    Gallinato ...
+    [1684] VISTO la Resolucion N 697, del 9 de noviembre en curso, ... para
+    aprobar la Orden de Servicio N 4, que dispone la realizacion de trabajos
+    adicionales en la Obra "Construccion Escuela Nacional N 332 de El
+    Gallinato", integrante de la Obra N 227: "Construccion Escuelas Nacionales
+    Nos. 61, 160 y 332 en La Calderilla, Mojotoro y El Gallinato (Dpto. La
+    Caldera)", a cargo de la Empresa Tolaba y Campos; / CONSIDERANDO: / Que
+    dichos trabajos comprenden la provision y colocacion de una bomba marca
+    Pluvius, modelo B 2 R.R. para 35 m nivel de bombeo incluido motor a nafta
+    marca Clinton modelo 412, accesorios y construcciones de gabinetes para
+    proteccion de motor y bomba, en reemplazo de la bomba tipo reloj prevista en
+    las bases de la licitacion por cuanto esta resulta insuficiente para un
+    efectivo bombeo ya que la napa freatica en el periodo maximo de crecimiento
+    se encuentra aproximadamente a 25 metros; / ... Que el valor de $ 180.188.-
+    m/n. que importan los trabajos, esta comprendido en el 25% del precio del
+    contrato, autorizado por el Art. 41 inc. e) del Decreto Ley 76, para
+    trabajos imprevistos; / ... Articulo 1 - Apruebase la Resolucion numero
+    697/66, ... aprobatoria de la Orden de Servicio N 4, por la suma de $
+    180.188.- m/n. (Ciento ochenta mil ciento ochenta y ocho pesos m/nacional),
+    correspondiente a trabajos adicionales en la Escuela Nacional N 332 de El
+    Gallinato, integrante de la Obra N 227 ... / DANDREA / Cornejo Isasmendi
+  NOTA DE LECTURA: Una ficha para la obra, como en 1965 (v16 no lo preve; §F del
+  informe de 1965). Erratas del original, cada una contra el resto de la serie
+  (control 4): el 13544 imprime «61,169» en la capa y «61,160» en la imagen; el
+  463 pone «Escuela Nacional numero 232» en el VISTO y «N 332» en la resolucion
+  que transcribe; el 1684 llama dos veces «Obra N 227» a la que todos los demas
+  actos numeran 127 (E.9). El 13544 deja en blanco la cifra entre parentesis de
+  los «(SETENTA Y CINCO)» dias. El 306 aplica a una obra ya en ejecucion desde
+  abril la prorroga de «iniciacion» del decreto 69 del 7-7-1966 (primer mes de
+  la intervencion federal); no se concilia. Ordenes de servicio de la obra en el
+  año: 1 ($ 263.850,08), 2 (dentro de $ 782.545,46, que el 13563 no desglosa
+  entre la 2 y la 1), 3 ($ 100.318,07) y 4 ($ 180.188). La 1 aparece en el 13397
+  y otra vez en el 13563: no se sabe si es la misma; no se suma. Plazo: 200 dias
+  por edificio (Res. 271), mas 75 para la 332 y 90 para la 160. Los firmantes
+  cambian con el gobierno: Durand, Paz Chain en ejercicio, Fabrega Moyano
+  interventor y D Andrea gobernador.
+
+A14  7582 h6  [NORMA+CARGOS]
+    Ley 4073, Presupuesto General: escala de cargos con «Medico Zonal de ... La
+    Caldera» y de «... Vaqueros»
+  FUENTE: 7582 (11-5-1966) h6 col. 2; sumario en h2 («Ley N 4073 - F. D. Sanc.
+  21|12|65: Presupuesto General de la Provincia», capa). Republicada en 7630
+  (25-7-1966) h5 a h6, a continuacion de la Ley 4072 (h3 a h5, estructura del
+  presupuesto), con encabezado «LEY N 4073» en h5; el sumario de h2 nombra solo
+  la 4072 (capa).
+  FICHA: Ley 4073, Presupuesto General de la Provincia, ejercicio 1965|66;
+  escala de asignaciones con equivalencia a la Ley 3958|64.
+  MODO DE LECTURA: Imagen (los renglones del departamento en las dos
+  publicaciones); el resto, capa.
+  TEXTO:
+    [7582 h6] ... Secretario Privado - Secretario Coordinador de Municipalidades
+    - Medico Zonal de: Campo Santo, Tartagal, La Caldera - Director Zonal de:
+    Metan, Oran, Rosario de la Frontera. / ... Ayudante Profesional de 2a -
+    Director de 2a (Medicina Preventiva) - Comisario Inspector - Subdirector
+    Zonal de San Antonio de los Cobres - Jefe Departamento Sueldos Salud Publica
+    - Director Banda de Musica - Medico Zonal de: Rosario de Lerma, Embarcacion,
+    Animana, El Chamical y Vaqueros - Jefe Departamento Pagos del Ministerio ...
+    [7630 h6] ... Medizo [sic] Zonal de Campo Santo, Tartagal y La Caldera -
+    Director Zonal de Metan, Oran y Rosario de la Frontera ... Medico Zonal de
+    Rosario de Lerma, Embarcacion, Animana, El Chamical y Vaqueros ...
+  NOTA DE LECTURA: La escala pone el medico zonal de La Caldera y el de Vaqueros
+  en renglones distintos, es decir en categorias distintas; la sesion no leyo en
+  la imagen a que numero de categoria corresponde cada renglon (la tabla de
+  categorias y la de equivalencias van en columnas que la capa desordena), y no
+  lo afirma. En la 7630 el sumario nombra solo la Ley 4072 y no la 4073 que
+  sigue (E.9). No se cotejo la ley entera entre las dos publicaciones.
+
+A15  7583 h6  [REGISTRO-CIVIL]
+    Dec. 13512: la autoridad policial se encarga del Registro Civil de La
+    Caldera durante la licencia de Esther Gabriela Cruz
+  FUENTE: 7583 (12-5-1966), h6 col. 2 y h7 col. 1; sumario en h2.
+  FICHA: Decreto 13512, Gobierno, 5-5-1966, expte. 6591|66; nota 97-M-20 de la
+  Direccion General del Registro Civil, 29-4-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    SALTA, 5 de mayo de 1966. / DECRETO N 13512 / Ministerio de Gobierno,
+    Justicia, Instruccion Publica y del Trabajo / Expediente N 6591|66. / VISTA
+    la nota N 97-M-20, de fecha 29 de abril del año en curso, elevada por la
+    Direccion General del Registro Civil y atento lo solicitado en la misma, /
+    El Vicegobernador de la Provincia en Ejercicio del Poder Ejecutivo DECRETA:
+    / Articulo 1 - Encargase interinamente de la Oficina de Registro Civil de la
+    localidad de La Caldera (Dpto. del mismo nombre), a la autoridad policial de
+    ese lugar, a partir del dia 18 de mayo del corriente año y mientras dure la
+    licencia reglamentaria concedida a su titular, señorita Esther Gabriela
+    Cruz. / Art. 2 - Comuniquese ... / PAZ CHAIN / Garcia Pulo / ... Miguel
+    Angel Feixes (h.)
+  NOTA DE LECTURA: La titular es la de los informes de 1956 y 1965 (config,
+  «Ester Gabriela Cruz»; la imagen dice «Esther»). No se hallo en el año el acto
+  de reintegro ni otra mencion de la oficina.
+
+A16  7601 h14  [OBRA-PUBLICA]
+    Cristo Monumental: Dec. 13811 (renuncia de la Comision Honoraria y cuenta
+    especial), Dec. 14052 y Dec. 2081 (pagos del taselaje a Juan Carlos Iramain)
+  FUENTE: Dec. 13811: 7601 (10-6-1966) h14 col. 2 y h15 col. 1; sumario en h3.
+  Dec. 14052: 7616 (5-7-1966) h16 col. 2 y h17 col. 1. Dec. 2081: 7732
+  (28-12-1966) h7 col. 2 y h8 col. 1.
+  FICHA: Decreto 13811, Economia, 26-5-1966, expte. 1742|1966; Decreto 14052,
+  Economia, 22-6-1966; Decreto 2081, Economia, 20-12-1966, expte. 1742/66.
+  Remiten al convenio aprobado por el Decreto 7968|65 (informe LEE 1965, A18) y
+  a la comision creada por el 3162|64 o 3164|64.
+  MODO DE LECTURA: Imagen (13811 visto, considerandos y arts. 1 a 4; 14052 y
+  2081, encabezado y articulado); firmas del 13811, capa.
+  TEXTO:
+    [13811] DECRETO N 13811 / SALTA, 26 de mayo de 1966 / Ministerio de
+    Economia, Finanzas y Obras Publicas / EXPEDIENTES N 1742|1966. / VISTO las
+    renuncias presentadas por los señores miembros de la Comision Honoraria
+    designada por Decreto N 3164|64 y la rendicion de cuentas de tesoreria, del
+    periodo de su gestion, y / CONSIDERANDO: / Que conforme a la rendicion de
+    cuentas que se presenta y comprobantes adjuntos, la Comision Decreto
+    3162|64, cuenta a la fecha con un saldo en banco de $ 416.078 m|n., y tres
+    pagares a cobrar de $ 50.000- cada uno suscriptos por el señor Emilio Vila
+    con vencimientos al 6 de Mayo; 6 de Junio y 6 de Julio de 1966, debiendo
+    estos importes aplicarse al pago de los compromisos contraidos por la misma
+    con los Sres. Juan Carlos Iramain y Alfredo Anuncio Iramain, conforme al
+    convenio aprobado por Decreto N 7968, que ascienden a $ 1.050.000 m|n. / Que
+    la Provincia debe absorber, segun lo dispuesto en el articulo 5 del convenio
+    aprobado por Decreto N 7968, la diferencia de $ 483.922 m|n., que surge de
+    los fondos que entrega la comision renunciante y los compromisos a pagar; a
+    mas del flete del taselaje y las obras indicadas en el articulo 6 del
+    aludido convenio. / ... Articulo 1 - Aceptanse las renuncias presentadas por
+    los miembros de la Comision Honoraria Pro-Instalacion del Cristo Monumental
+    en La Caldera (Dto. 3162|64) Sres. Presidente, Coronel (R. E.) Dn. Julian E.
+    Trucco; Secretario Dn. Victor Cornejo Isasmendi; Tesorero Dn. David Serrey;
+    Vocales Ing. Pedro D. Martell y Cecilio Muñoz, dandoseles las gracias por
+    los importantes y patrioticos servicios prestados. / Art. 2 - Apruebase la
+    rendicion de cuentas de tesoreria de la aludida Comision Honoraria, durante
+    su gestion. / Art. 3 - Por Tesoreria General de la Provincia, se ingresara
+    la suma de $ 566.078 m|n, compuesta por 416.078 m|n., en efectivo y tres
+    pagares de $ 50.000,- cada uno, ... procediendose a la apertura de una
+    cuenta especial denominada - "CRISTO DE LA C A L D E R A - DECRETO N
+    7[9?]68|65". / Art. 4 - Con los importes a que se refiere el articulo
+    anterior se atendera el pago del saldo de $ 1.050.000 m|n., a los señores
+    Juan Carlos Iramain y Alfredo Anuncio Iramain, que se adeuda conforme a la
+    rendicion de cuentas que se aprueba, efectuandose los pagos conforme a las
+    disposiciones del articulo 3 del Convenio aprobado por Decreto N 7968|65. /
+    La diferencia entre el importe a pagar a los señores Iramain y los fondos
+    recibidos de la Comision creada por Decreto N 3164|64, seran aportada por la
+    Provincia, segun el articulo 5 del convenio precitado, ... / [capa, h15:]
+    Art. 4 - Comuniquese ... / DURAND / ELIAS
+    [14052] DECRETO N 14052 / Ministerio de Economia, Finanzas y Obras Publicas
+    / VISTO la certificacion expedida por la Direccion de Viviendas y
+    Arquitectura de la Provincia en que da cuenta del cumplimiento por parte del
+    señor Juan Carlos Iram[a]in al convenio celebrado, en lo relativo a la
+    preparacion de la parte del taselaje del Cristo a erigir en la localidad de
+    La Caldera, y siendo necesario proceder al pago de las cuotas
+    correspondientes y contandose a tales fines con fondos que se recibieran de
+    la Comision Honoraria Pro-Instalacion del Cristo Monumental en La Caldera, /
+    ... Articulo 1 - Liquidese a favor de la Habilitacion de Pagos del
+    Ministerio de Economia, Finanzas y Obras Publicas, ... la suma de $
+    350.000.- m|n. (Trescientos cincuenta mil pesos moneda nacional), ... para
+    que proceda a abonar al señor JUAN CARLOS IRAMAIN, una cuota correspondiente
+    a la parte de taselaje del Cristo Monumental a erigirse en La Caldera. /
+    Art. 2 - Esta erogacion se imputara a la cuenta Cuentas Especiales -
+    Comision Honoraria Pro-Instalacion del Cristo Monumental en La Caldera. /
+    ... DURAND / ELIAS
+    [2081] Salta, 20 de diciembre de 1966 / DECRETO N 2081 / Ministerio de
+    Economia, Finanzas y O. Publicas / Expediente N 1742/66. / VISTO que
+    Contaduria General de la Provincia solicita se liquide la cantidad de $
+    400.000 m/n. a favor de Direccion de Viviendas y Arquitectura, para que
+    abone al señor Juan Carlos Iramain la cuota convenida, en cumplimiento del
+    inciso 4) del Art. 3 del convenio aprobado por Decreto N 7968/65 y en
+    cancelacion de la tercera y cuarta seccion del taselaje del Cristo
+    Monumental a instalar en La Caldera, del que es autor, / El Gobernador
+    Interino de la Provincia DECRETA: / Articulo 1 - ... abonese a Direccion de
+    Viviendas y Arquitectura de la Provincia la cantidad de $ 400.000.- m/n. ...
+    al señor Juan Carlos Iramain, en cancelacion de la tercera y cuarta
+    secciones del taselaje del Cristo Monumental a instalar en La Caldera. /
+    Art. 2 - La precedente erogacion se imputara en la siguiente proporcion: /
+    a) $ 216.078.- m/n. ... con cargo a "Cuentas Especiales - Cristo de La
+    Caldera" - Decreto N 7968/65; y / b) $ 183.922.- m/n. ... con cargo al Plan
+    de Obras vigente, en el Anexo J, Inciso 1, Capitulo I, Titulo 6, Subtitulo
+    A, Rubro Funcional III, Parcial 1, "Construccion Cristo Monumental en La
+    Caldera". Orden de Disposicion de Fondos N 75.
+  NOTA DE LECTURA: RECUENTO PROPIO de la comision renunciante: cinco miembros
+  (presidente, secretario, tesorero y dos vocales); el acto no declara numero,
+  de modo que no hay nada que cotejar. Aritmetica (control 2): 416.078 + 3 x
+  50.000 = 566.078, exacto; 1.050.000 - 566.078 = 483.922, exacto; 216.078 +
+  183.922 = 400.000, exacto. Que los 216.078 sean el saldo de la cuenta especial
+  despues de los 350.000 del 14052 (566.078 - 350.000) es una inferencia de la
+  sesion, rotulada: el 2081 no lo dice. El digito de la cuenta especial del art.
+  3 del 13811 se lee 7[9?]68 en la imagen (la capa da «7868»); el mismo acto
+  cita tres veces el 7968 y el 2081 nombra la cuenta con el 7968: decidido 7968
+  (controles 3 y 4). El mismo acto da a la comision dos numeros de origen,
+  3164|64 (VISTO y art. 4) y 3162|64 (considerando y art. 1); el informe de 1965
+  decidio 3162|64 por cita cruzada; aca la discrepancia es del original y no se
+  concilia. El 13811 imprime dos «Art. 4» (capa, h15) (E.9). «Iramcin» por
+  Iramain en el 14052: letra dañada en la impresion. Los miembros salientes son
+  los de 1965 (A18 de ese informe).
+
+A17  7625 h3  [OBRA-PUBLICA]
+    Aviso 24030: Correos y Telecomunicaciones llama a licitacion para el
+    transporte de correspondencia entre Salta y La Caldera
+  FUENTE: 7625 (18-7-1966) h3; 7626 (19-7-1966) h3 col. 1; 7627 (20-7-1966) h19.
+  Sumarios en 7625 h2, 7626 h2 y 7627 h4.
+  FICHA: Aviso 24030, Direccion General de Administracion de Correos y
+  Telecomunicaciones, Distrito 18 (Salta).
+  MODO DE LECTURA: Imagen (7626, aviso entero); las otras dos apariciones,
+  cotejadas por texto en la capa y el OCR propio.
+  TEXTO:
+    N 24030 - AVISO DE LICITACION / Llamase a Licitacion Publica, cuya apertura
+    tendra lugar el dia 25 de julio de 1966, a las 11 en el DISTRITO 18 |SALTA)
+    para contratar la ejecucion del servicio de transporte de correspondencia
+    entre SALTA Y LA CALDERA (Dto 18) / Por el pliego de condiciones y demas
+    datos ocurrir al lugar donde se realizara la apertura, oficinas SALTA,
+    CALDERA y|o a la Direccion General de Administracion (LT), Correo Central,
+    Buenos Aires. / Director General de Administracion / Valor al cobro $ 960 -
+    e) 18 al 20|7|66
+  NOTA DE LECTURA: Tres apariciones, iguales por texto. El OCR propio de 7625
+  lee «Dto. 189»: la imagen de 7626 da «Dto 18». El aviso nombra una oficina de
+  correos «CALDERA» donde se puede retirar el pliego. No se hallo la
+  adjudicacion en el año. Clase OBRA-PUBLICA por falta de una clase de servicios
+  en v16 §7.1.
+
+A18  7666 h7  [CARGOS+HACIENDA-MUN]
+    Dec. 777: cesa Esteban Mogro y se designa a Julio Gonzalez presidente de la
+    Comision Municipal de La Caldera
+  FUENTE: 7666 (20-9-1966), h7 col. 1 y h8 col. 2 (pag. 3271).
+  FICHA: Decreto 777, Gobierno, Justicia, Instruccion Publica y del Trabajo,
+  7-9-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    Salta, 7 de setiembre de 1966. / DECRETO N 777 / Ministerio de Gobierno,
+    Justicia, Instruccion Publica y del Trabajo / El Gobernador de la Provincia
+    DECRETA: / Articulo 1 - Danse por terminadas las funciones de las
+    autoridades municipales que se detallan a continuacion, agradeciendoles los
+    servicios prestados: / EL BORDO (Dpto. Gral. Guemes) señor Javier Olea, como
+    Presidente de la Comision Municipal. / LA CALDERA (Dpto. del mismo nombre)
+    señor Esteban Mogro, como Presidente de la Comision Municipal. / CAMPO SANTO
+    (Dpto. Gral. Guemes), señor Jorge Nicolas Sauma, como Intendente Municipal.
+    / GENERAL GUEMES (Dpto. del mismo nombre) señor Zenon Isaias Garcia, como
+    Intendente Municipal. / EL QUEBRACHAL (Dpto. Anta), señor Carlos Durval
+    Morales, como Intendente Municipal. / JOAQUIN V. GONZALEZ (Dpto. Anta),
+    señor Florencio Mancilla, como Intendente Municipal. / Art. 2 - Designanse a
+    las autoridades municipales que se detallan a continuacion, en las
+    localidades que se especifican y a partir de la fecha que tomen posesion de
+    sus funciones. / EL BORDO ... al señor Jose Fernandez Pulido ... / LA
+    CALDERA (Dpto. del mismo nombre), al señor Julio Gonzalez - M. I. N
+    [omitido], en el cargo de Presidente de la Comision Municipal. / CAMPO SANTO
+    ... al señor Julio Marcelo Cornejo ... / GENERAL GUEMES ... al señor Esteban
+    Rebuffi ... / EL QUEBRACHAL ... al señor Marcelo Saravia Bavio ... / JOAQUIN
+    V. GONZALEZ ... al Dr. Oscar H. Costas ... / Art. 3 - Comuniquese ... / D
+    ANDREA / Cabanillas / ES COPIA: Miguel Santiago Maciel / Oficial 1
+  NOTA DE LECTURA: RECUENTO PROPIO: seis municipios en el art. 1 y los mismos
+  seis en el art. 2; el acto no declara numero. Mogro era presidente de la
+  Comision desde el 14-5-1965 (informe LEE 1965, A24). Es el unico acto del año
+  sobre las autoridades municipales del departamento. Un «Julio Gonzalez» esta
+  en el config (1957); la identidad con el designado no se afirma (B.4).
+
+A19  7672 h9  [CARGOS+JUSTICIA]
+    Dec. 973: renuncia de Salvador del Valle Mangoña, juez de paz titular de La
+    Caldera
+  FUENTE: 7672 (28-9-1966), h9 col. 1; sumario en h3.
+  FICHA: Decreto 973, Gobierno, 22-9-1966, expte. 7914/66.
+  MODO DE LECTURA: Imagen (cuerpo entero salvo firmas; firmas, capa).
+  TEXTO:
+    Salta, 22 de septiembre de 1966 / DECRETO N 973 / Ministerio de Gobierno,
+    Justicia, Instruccion Publica y del Trabajo / Expediente N 7914/66 / VISTA
+    la renuncia presentada por el señor Salvador del Valle Mangora [sic] al
+    cargo de Juez de Paz Titular de La Caldera, departamento del mismo nombre y
+    atento los terminos de la misma, / El Gobernador Interino de la Provincia
+    DECRETA / Articulo 1 - Aceptase la renuncia presentada por el señor SALVADOR
+    DEL VALLE MANGOÑA, al cargo de Juez de Paz Titular de La Caldera,
+    departamento del mismo nombre / Art 2 - Comuniquese ... / [capa:] CABANILLAS
+    (Int) / Osores Soler (h.) (Int.) / ES COPIA / Miguel Santiago Maciel
+  NOTA DE LECTURA: El apellido sale de tres maneras: «Mangora» en el VISTO,
+  «MANGOÑA» en el art. 1 (imagen) y «Mangogña» en el informe LEE 1965 (grupo 1
+  de B.4); no se unifican (E.9). La vacante que deja la renuncia no se cubre en
+  ningun acto hallado del año: es una vacante declarada y no cubierta en el
+  corpus (B.4). Firma el gobernador interino (Cabanillas).
+
+A20  7675 h4  [MINAS]
+    Aviso 24654: cateo de Maclovio Romero (expte. 5441-R), 2.000 ha al oeste del
+    pueblo de La Caldera
+  FUENTE: Cuerpo: 7675 (3-10-1966) h4 col. 1; 7676 h4; 7677 h4; 7678 h20; 7679
+  h20; 7680 h19; 7681 h13; 7682 h4 y h5; 7683 h17; 7684 h6. Sumarios en h2 o h3
+  de cada edicion.
+  FICHA: Edicto de cateo, Juzgado de Minas (Dr. Gustavo Uriburu Sola), expte.
+  5441-R, pedido del 28-6-1966, proveido del 23-9-1966.
+  MODO DE LECTURA: Imagen (7675, aviso entero); las otras nueve apariciones,
+  cotejadas por texto.
+  TEXTO:
+    N 24654 / EDICTO DE CATEO. - El Dr. Gustavo Uriburu Sola, Juez de Minas de
+    la Provincia, hace saber a los efectos del art. 25 del C. de Mineria, que,
+    Maclovio Romero en 28 de junio de 1966 por Expte. N 5441 - R, ha solicitado
+    en el departamento de La Caldera, cateo para explorar la siguiente zona: se
+    parte del extremo SO del pueblo La Caldera y se miden 2500 m. al oeste para
+    llegar al punto de partida, desde este punto se miden 2900 m. al norte, 4000
+    m. al oeste, 5000 m. al sud, 4000 m. al este y finalmente 2100 m. al norte.
+    Inscripta graficamente resulta libre de otros pedimentos mineros. Salta, 23
+    de septiembre de 1966. - ANGELINA TERESA CASTRO, Escribana Secretaria, Juzg.
+    de Minas. / Imp. $ 1.500 e) 3 al 17-10-66
+  NOTA DE LECTURA: Diez apariciones del cuerpo, iguales por texto. Aritmetica
+  (control 2): 2.900 + 2.100 = 5.000 al norte contra 5.000 al sud, y 4.000 al
+  oeste contra 4.000 al este: el poligono cierra y encierra 4.000 x 5.000 m =
+  2.000 ha; el edicto no declara la superficie. El acto no dice que mineral se
+  busca.
+
+A21  7690 h5  [MINAS]
+    Aviso 24835: caducidad de la mina de plomo «Juanita» (Rosario de Lerma y La
+    Caldera), registrada como vacante
+  FUENTE: 7690 (25-10-1966), h5 cols. 1-2 (pag. 3847); sumario en h2.
+  FICHA: Resolucion del Juzgado de Minas, 29-7-1966, expte. 3536-R-60.
+  MODO DE LECTURA: Imagen (entero).
+  TEXTO:
+    N 24835 / Salta, 29 de julio de 1966. / Expte. N 3536 - R. / AUTOS Y VISTOS:
+    Lo informado por Secretaria a fojas 17 y atento lo dispuesto por el art. 14
+    de la Ley 10.273, / Resuelvo: / DECLARAR CADUCOS los derechos del titular de
+    esta mina de plomo, denominada "Juanita", ubicada en el Departamento de
+    Rosario de Lerma y La Caldera, expediente 3536-R-60. / REGISTRAR esta mina
+    como vacante, notificar al señor Fiscal de Gobierno y a la parte, publicar
+    en el BOLETIN OFICIAL y pasar este expediente a conocimiento de Direccion de
+    Minas. Repongase. Fdo.: Dr. Gustavo A. Uriburu Sola, Juez de Minas de la
+    Provincia de Salta. - Es copia: ANGELINA TERESA CASTRO Secretaria. / Sin
+    cargo. e) 25-10-66
+  NOTA DE LECTURA: Una sola aparicion, por texto. Es una de varias caducidades
+  publicadas en la misma hoja (la anterior, la mina «Yolanda» de Rosario de
+  Lerma, 4546-Z). El titular no se nombra. El pedido de 1960 (3536-R-60) no se
+  busco en los informes de esa decada: queda como acto citado (B.4).
+
+A22  7692 h12  [HACIENDA-MUN]
+    Dec. 1309: subsidio de $ 40.000 a la Municipalidad para las fiestas
+    patronales del 23 de octubre
+  FUENTE: 7692 (27-10-1966), h12 col. 2 y h13 col. 1; sumario en h3.
+  FICHA: Decreto 1309, Economia, Finanzas y O. Publicas, 18-10-1966, expte.
+  3041/966.
+  MODO DE LECTURA: Imagen (cuerpo entero salvo la imputacion del art. 2, capa).
+  TEXTO:
+    Salta, 18 de octubre de 1966 / DECRETO N 1309 / Ministerio de Economia,
+    Finanzas y O. Publicas / Expediente N 3041/966 / VISTO este expediente en el
+    que la Municipalidad de La Caldera soliicta [sic] se le conceda un subsidio
+    de $ 40.000 con destino a la atencion de los gastos que demande la
+    realizacion de las fiestas patronales del dicha localidad, a llevarse a cabo
+    el dia 23 de octubre del año en curso, / Por ello, / El Gobernador de la
+    Provincia DECRETA: / Articulo 1 - Acuerdase a la MUNICIPALIDAD DE LA
+    CALDERA, un subsidio por la suma de $ 40.000 m/n. (Cuarenta mil pesos moneda
+    nacional), con destino a la atencion de los gastos que demande la
+    realizacion de las Fiestas Patronales de dicha localidad, a efectuarse el
+    dia 23 de octubre del año en curso. / Art. 2 - El gasto ... se imputara al
+    Anexo C - Inciso 1 - Capitulo 1 - Item 2 - Partida 1 - Principal 2 - Parcial
+    2 "Entidades Culturales" del presupuesto en vigor. / ... DANDREA / Cornejo
+    Isasmendi
+  NOTA DE LECTURA: El acto da la fecha de las fiestas patronales (23 de octubre)
+  y no nombra al santo patrono. Erratas del original: «soliicta», «del dicha
+  localidad» (E.9).
+
+A23  7696 h10  [MINAS]
+    Avisos 24937 y 24921: cateos de Maria Iriarte de Gonzalez Rioja (4782-I) y
+    de Alberto Gonzalez Rioja (4784-G) desde la confluencia de los rios Nieve y
+    Wierna
+  FUENTE: 24937, cuerpo: 7696 (4-11-1966) h10 col. 1; 7697 h4; 7698 h4; 7699
+  h24; 7700 h22; 7701 h12; 7702 h4; 7703 h12; 7704 h21; 7705 h13. 24921, cuerpo:
+  7695 (3-11-1966) h4; 7696 h10 col. 1; 7697 h4; 7698 h4; 7699 h24; 7700 h22;
+  7701 h12; 7702 h4-5; 7703 h12; 7704 h21. Sumarios en h2 o h3.
+  FICHA: Edictos de cateo del Juzgado de Minas: expte. 4782-I (pedido del
+  24-9-1964) y expte. 4784-G (pedido del 30-9-1964), los dos proveidos el
+  23-9-1966.
+  MODO DE LECTURA: Imagen (7696, los dos avisos enteros); las demas apariciones,
+  cotejadas por texto.
+  TEXTO:
+    [24937] El Dr. Gustavo Uriburu Sola, Juez de Minas de la Provincia, hace
+    saber a los efectos del Art. 25 del C. de Mineria que, Maria Iriarte de
+    Gonzalez Rioja en 24 de setiembre de 1964 por Expediente N 4782-I, ha
+    solicitado en el departamento de La Caldera, cateo para explorar la
+    siguiente zona: se toma como punto de referencia que a su vez es el punto de
+    partida, la confluencia del Rio Nieve y Wierna situado en el Departamento La
+    Caldera y se miden 4.000 metros al Oeste; 5.000 metros al Norte; 4.000
+    metros al Este y por ultimo 5.000 metros al Sud, llegando asi al punto de
+    partida y cerrando la superficie de 2.000 hectareas. Inscripta graficamente
+    resulta libre de otros pedimentos mineros. - Salta, 23 de setiembre de 1966.
+    - Angelina Teresa Castro, Secretaria. / Imp. $ 1.500 e) 4 al 17-11-66
+    [24921] EDICTO DE CATEO / El Dr. Gustavo Uriburu Sola, Juez de Minas de la
+    Provincia notifica que, Alberto Gonzalez Rioja en 30 de setiembre de 1964
+    por expte. N 4784-G, ha solicitado en el departamento de La Caldera, cateo
+    para explotar [sic] la siguiente zona: se toma como punto de referencia (P.
+    R.) la confluencia de los rios Nieve y Wierna y se mide 4.000 mts. al Oeste
+    para llegar al punto de partida (P. P.), desde alli se mide 5.000 mts. al
+    Norte, 4.000 mts. al Oeste, 5.000 mts. al Sud y por ultimo 4.000 mts. al
+    Este cerrando asi la superficie solicitada. Inscripta graficamente, dentro
+    de la misma se encuentra ubicado el punto de manifestacion de descubrimiento
+    de la mina "Argentina" expte. 2795-M-58. - Salta, 23 de setiembre de 1966. -
+    Angelina Teresa Castro, Secretaria. / Imp. $ 1.500 e) 3 al 16-11-66
+  NOTA DE LECTURA: Diez apariciones de cada uno, por texto. El OCR propio lee el
+  norte del 24937 como «3.004», «3.006», «5.060» o «3.0090» segun la edicion: la
+  imagen de 7696 da 5.000 y la aritmetica lo confirma (5.000 al norte contra
+  5.000 al sud; control 2). Los dos cateos son rectangulos contiguos de 4.000 x
+  5.000 m: el 24937 al oeste de la confluencia empezando en ella, el 24921 a
+  continuacion, 4.000 m mas al oeste; la contiguidad es inferencia de la sesion
+  sobre las medidas, rotulada. La letra del expediente es I en la imagen (la
+  capa da «4782-1» y «4782-l»). «Explotar» por explorar en el 24921 (E.9). La
+  mina «Argentina» (2795-M-58) esta en el anillo 2 del config («mina
+  argentina»).
+
+A24  7717 h7  [CARGOS]
+    Dec. 1817: cesantia de Anastacia Lopez de Guerrero, con funciones en el
+    Hogar «Dr. Luis Linares» de La Caldera
+  FUENTE: 7717 (5-12-1966), h7 col. 1 (pag. 4589).
+  FICHA: Decreto 1817, Asuntos Sociales y Salud Publica, 24-11-1966.
+  MODO DE LECTURA: Imagen (cuerpo entero).
+  TEXTO:
+    DECRETO N 1817 / Ministerio de Asuntos Sociales y Salud Publica / VISTO que
+    la señora Anastacia Lopez de Guerrero, quien revista en la categoria 28 -
+    Personal Administrativo de la Direccion de Patronato y Asistencia Social de
+    Menores, ha hecho abandono de servicio; / Por ello y atento a lo informado
+    por el Departamento de Personal y Sueldos y a lo manifestado por la
+    Subsecretaria de Asuntos Sociales, / El Gobernador Interino de la Provincia
+    DECRETA: / Articulo 1 - Dejase cesante a partir del dia 9 de octubre del año
+    en curso, a la señora ANASTACIA LOPEZ DE GUERRERO, categoria 28 - Personal
+    Administrativo de la Direccion de Patronato y Asistencia Social de Menores,
+    con funciones en el Hogar "Dr. Luis Linares" de La Caldera; por abandono de
+    servicio sin causa justificada y en concordancia con el inciso c) Articulo
+    27 de la Ley 3957/64. / Art. 2 - Comuniquese ... / [capa:] CABANILLAS (Int.)
+    / Cornejo Isasmendi (Int.)
+  NOTA DE LECTURA: La misma persona figura en enero como «Guerrero Anastasia
+  Lopez de, cat 28 - aux hogar Dr Luis Linares» en una nomina de Patronato de
+  Menores (B2-01). El hogar es el de los informes anteriores (anillo 2: «hogar
+  escuela dr. luis linares»). El decreto anterior de la hoja (1816) deja cesante
+  a otra empleada de Menores sin nombrar el hogar: no se atribuye.
+
+A25  7724 h12  [NORMA]
+    Dec. 1940: vacunacion obligatoria contra la rabia paralitica en ocho
+    departamentos, entre ellos La Caldera
+  FUENTE: 7724 (15-12-1966), h12 col. 2; sumario en h3.
+  FICHA: Decreto 1940, Economia, Finanzas y O. Publicas, 7-12-1966.
+  MODO DE LECTURA: Imagen (VISTO, considerandos y arts. 1 a 4); firmas, capa.
+  TEXTO:
+    Salta, 7 de diciembre de 1966 / DECRETO N 1940 / Ministerio de Economia,
+    Finanzas y O. Publicas / Visto el avance paulatino pero invariable de de
+    [sic] la Rabia Paralitica; y / CONSIDERANDO: / Que el flagelo en cuestion
+    esta diezmando los planteles ganaderos de vastas zonas de la Provincia,
+    afectado su economia y reduciendo las posibilidades de la ganaderia salteña;
+    / Que es necesario establecer normas que tiendan a un mejor control de la
+    enfermedad; / Por ello y teniendo en cuenta lo aconsejado por la comision
+    conjunta de S.E.L.S.A. y la Sociedad Rural de Salta, Sociedad Rural del Sur
+    y Centro Ganadero de Anta; / El Gobernador de la Provincia DECRETA: /
+    Articulo 1 - Declarase obligatoria, a partir de la fecha del presente
+    decreto, la vacunacion contra la Rabia Paralitica en los Departamentos de
+    San Martin, Rivadavia, Oran, Iruya, Santa Victoria, General Guemes, La
+    Caldera y Anta, Primera y Segunda Seccion, a cuyo efecto S.E.L.S.A. aplicara
+    anualmente las dosis que considere necesarias. / Art. 2 - Declarase zona de
+    observacion, las proximas al limite de las consideradas de lucha o de
+    vacunacion obligatoria, en este caso los Departamentos de Metan y Capital. /
+    Art. 3 - En el caso de ser localizados casos de Rabia Paralitica en algun
+    punto de la zona de observacion, esta sera incorporada a la zona de lucha,
+    estableciendose en consecuencia la obligatoriedad de vacunacion. / Art. 4 -
+    ... la Comision Conjunta Asesora de S.E.L.S.A., ... publicara periodicamente
+    las novedades ... / [capa:] DANDREA
+  NOTA DE LECTURA: RECUENTO PROPIO: ocho departamentos en el art. 1 (Anta cuenta
+  una vez con sus dos secciones) y dos en el art. 2; el acto no declara numero.
+  Sigue al 13341 de abril (A11), que ya ponia al departamento en zona de
+  infeccion; «paresiante» y «paralitica» se transcriben como cada acto los
+  imprime. De los departamentos que lindan con La Caldera, el acto pone a
+  General Guemes en la zona de lucha y a Capital en observacion; Rosario de
+  Lerma no figura.
+
+§B · VECINDAD
+-------------
+B.1 · NUCLEOS YA FICHADOS
+
+Juzgado de paz y comision municipal: Esteban Mogro (config 1952), que deja la
+presidencia de la Comision en setiembre (A18); Salvador del Valle Mangoña
+(1965), juez de paz que renuncia (A19). Registro Civil: Esther Gabriela Cruz
+(1956; A15). Salud: Alfredo Satue (1965), medico zonal reemplazado en enero
+(A04). Comision del Cristo: Julian E. Trucco, Victor Cornejo Isasmendi, David
+Serrey, Pedro D. Martell y Cecilio Muñoz (1955, 1963, 1965), que renuncian en
+mayo (A16); Juan Carlos y Alfredo Anuncio Iramain, autores del taselaje (1964,
+1965; A16). Agua: los cuatro Trucco de 1964 (A01). Obra publica: Luis
+Bressanutti (obra 290, A03) y Tolaba y Campos (obras 127, 280 y 283; A09, A13).
+Hogar Dr. Luis Linares y Hogar San Cayetano (A06, A24).
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+B2-01 7518 h16 col. 3 y h17 col. 1 [CARGOS]. Decreto 12150, Asuntos Sociales y
+S. Publica, 26-1-1966: confirma al personal de la Direccion de Patronato y
+Asistencia Social del Menor desde el 1-11-1965. En la nomina: «Abraham Rodolfo,
+Cat. 24- Regente Hogar Dr. Luis Linares» y «Guerrero Anastasia Lopez de, Cat 28-
+Aux Hogar Dr Luis Linares». Imagen (encabezado y los dos renglones). El hogar es
+el de La Caldera segun el 1817 (A24), que cesantea a la misma auxiliar. En la
+misma nomina, «Gonzalez Rioja Maria Iriarte de, Cat. 24- Regente Guarderia de
+Niños» (B.4).
+
+B2-02 7616 h19 col. 1 [CARGOS]. Decreto 14060, Asuntos Sociales y Salud Publica,
+24-6-1966, memorandum 223: «Promuevese ... a la Sra. LUCRECIA FERNANDEZ DE
+LOPEZ, quien revista en la categoria 25 - Personal Asistencial - Enfermera del
+Consultorio Externo de Vaqueros, dependiente de la Direccion del Interior, a la
+categoria 24». Imagen. Es la unica mencion del año del consultorio de Vaqueros.
+
+B2-03 7675 h5 col. 3 [AGUAS]. Edicto citatorio 24647, expte. 6231/U/66 de la
+A.G.A.S.: la Universidad Catolica de Salta pide «agua para abastecimiento de
+poblacion ... calculada para una poblacion maxima de 6.000 personas, con un
+caudal de 10,41 lts/segundo a derivar del rio Vaqueros (margen derecha) por
+medio de la acequia comunera que surte al Campo de la Nacion, Finca Castañares,
+Pereyra Rosas y Destileria Chachapoyas», para un establecimiento en la Fraccion
+Finca Castañares, catastro 61851, partido de Salta, Capital; el caudal es el de
+una concesion dejada sin efecto a Mercurio S. A. (decreto 9877 del 26-XI-59).
+Imagen. Diez apariciones, de 7675 a 7684, por texto. El rio es del departamento;
+el uso, de la Capital.
+
+B2-04 7582 h9 col. 1 y 7630 h8 [OTRO]. Ley 4073, art. 19: subsidios a «entidades
+educacionales», entre ellas el «Hogar San Cayetano». Imagen (7582). Los importes
+van en una columna que la capa desordena y la sesion no los atribuye. Becas del
+Ministerio de Gobierno para seguir estudios en el «Hogar Agricola San Cayetano»:
+Julio Ruben Lopez (7573 h14, renglon impreso dos veces, E.9) y Jose Humberto
+Aramayo (7601 h12). Imagen. Ninguno de los dos actos ubica el hogar; que sea el
+de Vaqueros (A06) no se afirma.
+
+B.3 · TERMINOS QUE ESE AÑO SON OTRA COSA
+
+Anillo 1. «Calderon» como apellido: Evangelista Calderon de Contreras, sucesion
+(7668 a 7677, diez apariciones); Mariano Jesus Calderon, policia (7514, 7543);
+Carmelo Calderon (7550). «Caldera» como maquina: la del Establecimiento Azufrero
+Salta (7524 a 7526, caño para caldera Mannesmann), la de la Escuela Hogar 17
+«Carmen Puch de Guemes» (7539, Dec. 12635), una «caldera marca Meller» (7642),
+«motores y calderas» en una ordenanza impositiva (7730), «encargado de calderas»
+y «calderista» en nominas (7513, 7518), cuatro calderas de una usina (7514).
+«Localdad», «localidad» mal leida (7499, 7502, 7516, 7524, 7552, 7565, 7569,
+7571, 7572, 7585), «alcaldia» (7509, 7512, 7545), «Ricaldo» y «Bicaldo» (7534,
+7546), «certificaldo», «caldo» por «caido» (7544, 7550), «En Caldon S.A.»
+(7506). Ruido, todos en la capa o el OCR; ninguno del departamento.
+
+Anillo 2, por termino (contextos distintos leidos): vaqueros, en B.2 y A14;
+mojotoro, rio y acequias de Gral. Guemes y Campo Santo (7538 a 7543, 7615 a
+7625, 7701 a 7710), salvo la escuela 160 (A13); wierna como apellido (Paulina R.
+Wierna, Nelly E. Wierna, Enrique Wierna y otros) salvo la confluencia de A23;
+lesser como apellido (Narcisa Lesser de Ibarra y otros); el sauce: destacamento
+policial sin departamento en el acto (7526 h9, 7558 h12, 7669 h13), finca de
+Rosario de Lerma, cantera de Gral. Guemes, rio de La Candelaria: la jurisdiccion
+del destacamento queda indeterminada (v16 §5.1ter); san cayetano: paraje de un
+juicio de escrituracion (lote 19, manzana X, plano 10005; 7539 a 7548), sin
+departamento, y «Villa San Cayetano», centro vecinal de la ciudad (7672); los
+sauces, durazno, angostura, vaqueria, betania, el tunal, las viboras, las
+mesadas, candelaria, castañares, villa san lorenzo, tabacal, el bordo, el
+recreo, el paraiso, potrerillo, ceibal, campo alegre, rio blanco, rio
+castellanos, nogalito, ovejeria, finca miraflores, santa gertrudis, penas
+blancas, la sierra, el monte, el angosto, buen retiro, churcal, mesa redonda,
+antilla, helvecia, yufra, yugra, tunel, parroquia, despensa, las nieves, usina
+hidroelectrica: otras jurisdicciones, apellidos o sustantivos comunes, cada uno
+con su acto. Ninguno atribuido al departamento por su acto.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+
+Grupo 1, solo en su propio acto (busqueda por nombre completo, sin puntuacion,
+en las dos versiones): Maclovio Romero (A20, diez apariciones del mismo aviso),
+Domingo Coria, Maria Santos Laxi y Pascuala B. Ocampo vda. de Alarcon (A07), Pio
+Tolaba (A13), Jose Rolando Chuchuy (A02), Emilio Vila (A16), Alfredo Satue
+(A04), Salvador del Valle Mangoña (A19), Lucrecia Fernandez de Lopez (B2-02), y
+Esteban Mogro y Julio Gonzalez (A18), que tienen ademas homonimos fuera (grupo
+3). Ninguno falla en su propio acto, salvo los Trucco. Falla de busqueda
+declarada (v16 §5.1): los Trucco de A01 no se devuelven por nombre en su propio
+acto, porque el OCR lee «Trueco» y «Gillermo»; los que la busqueda devuelve son
+los de A16.
+
+Grupo 2, en mas de un acto del departamento: Luis Bressanutti (A03, tres actos,
+con las grafias «Bressanutti» y «Bresanutti»); Juan Carlos Iramain (A16, tres
+actos); Tolaba y Campos (A09, A13: ocho actos); Anastacia Lopez de Guerrero
+(B2-01, A24). Este grupo arma la trama del año: la base del Cristo, que se
+agranda porque era menor que el pedestal; las escuelas de Tolaba y Campos, que
+acumulan cuatro ordenes de servicio y tres prorrogas; y el relevo de la comision
+municipal bajo el gobierno de facto.
+
+Grupo 3, tambien fuera del departamento (frecuencias de corpus, no del
+departamento): Arne Hoygaard, medico consultor y asistente en nominas de
+hospitales de la Capital (7513 h6, 7514 h4) ademas de A04; Alberto Gonzalez
+Rioja, 29 hojas (A23 y otros pedimentos mineros); Maria Iriarte de Gonzalez
+Rioja (A23 y una regente de guarderia homonima, B2-01; identidad no afirmada);
+Esteban Mogro, un agente de policia homonimo (7545 h9); Esther Gabriela Cruz, en
+una nomina de licencias del Ministerio de Gobierno sin destino (7509 h7); Victor
+Hugo Castellani, odontologo de La Caldera en 1965 y de San Antonio de los Cobres
+en febrero de 1966 (7529 h7); Agustin Urquiza (A02, depositario en otros
+remates, 7521 a 7525); Pedro Luna (A07 y un agente de policia, 7514 h7); Julio
+Gonzalez (un socio gerente homonimo, 7529 h15). Del config, 372 actores con
+acierto: los que caen en hojas del §A son los de B.1 y del grupo 2; los demas
+son homonimos o actores de otras jurisdicciones (Angel Maria Figueroa, juez, 392
+hojas; Efrain Racioppi, martillero, 567).
+
+Nombramientos que solo constan por su revocacion: ninguno. Vacantes declaradas
+sin nombrar a quien las cubre: el juzgado de paz titular desde setiembre (A19).
+Actos citados y no acompañados: la ordenanza impositiva y el presupuesto
+municipal (A10); el Dec. 10623|65 (A11); el convenio del Dec. 7968|65 y los
+decretos 3162|64 y 3164|64 (A16); el decreto 69 del 7-7-1966 (A13); las
+resoluciones 255, 256, 271, 281, 287, 301, 512, 686 y 697 de Viviendas y
+Arquitectura (A03, A13); el expediente de la mina Juanita, 3536-R-60 (A21).
+
+§C · LIMITROFES
+---------------
+Capital: la Universidad Catolica toma agua del rio Vaqueros para la Finca
+Castañares (B2-03); el departamento Capital queda en «zona de observacion» de la
+rabia paralitica (A25). Gral. Guemes: el camino La Calderilla - Guemes por
+Gallinato se licita en su tramo Campo Santo - Guemes (A12); el rio Mojotoro y
+sus acequias (B.3). Rosario de Lerma: la mina Juanita se ubica en ese
+departamento y en La Caldera (A21). Los rios Nieve y Wierna se juntan dentro del
+departamento segun los edictos (A23).
+
+§P · PLANOS
+-----------
+No se identifico ningun plano publicado en 1966. El control fue por texto y por
+tinta, no hoja por hoja: de las 49 hojas sin texto util, 19 son blancas (menos
+de 0,5 % de tinta) y 48 tienen menos de 5 %; se miraron en miniatura 8 de las
+49: contratapas con el pie del taller («Talleres Graficos Carcel Penitenciaria»,
+«Talleres Graficos Impala», «Imprenta de la Legislatura») y una tapa (7498 h1).
+«Plano» aparece en 477 hojas, casi todas como remision catastral de avisos;
+ninguna remision toca al departamento. Techo de resolucion: 150, 300 y 600 ppp
+segun el tramo (§0).
+
+§D · INDICE
+-----------
+  7520  h8   AGUAS                     Dec. 12169: concesion de agua a los
+                                       Trucco, catastro 11, rio La Caldera
+  7524  h13  JUSTICIA                  Aviso 22719: remate de un jeep con
+                                       patente municipal 069 de La Caldera
+  7527  h5   OBRA-PUBLICA              Obra 290, base del Cristo Monumental:
+                                       Dec. 12275 (contrato), Dec. 11307
+                                       republicado y Dec. 1597 (prorroga de 150
+                                       dias)
+  7529  h7   CARGOS                    Dec. 12389: servicios del Dr. Arne
+                                       Hoygaard como medico zonal de La Caldera,
+                                       en reemplazo del Dr. Alfredo Satue
+  7551  h11  HACIENDA-MUN              Dec. 12871: subsidio de $ 66.750 a la
+                                       Municipalidad para 150 chapas a
+                                       damnificados de Vaqueros, Lesser, Los
+                                       Yacones, Calderilla y «Calde.a»
+  7554  h8   OBRA-PUBLICA+ESCUELA      Dec. 12978: obra 357, refeccion del Hogar
+                                       Escuela San Cayetano de Vaqueros, por
+                                       administracion ($ 2.066.707)
+  7557  h6   OTRO                      Decs. 12992, 13056, 13765 y 13993:
+                                       pensiones a la vejez con beneficiarios en
+                                       La Caldera
+  7557  h7   NORMA                     Dec. 12996: reglamenta las Cooperadoras
+                                       Asistenciales (Ley 4126); La Caldera
+                                       forma sola la zona 23
+  7557  h10  OBRA-PUBLICA+ESCUELA      Dec. 13006: contratos con Tolaba y Campos
+                                       para la ampliacion de la escuela 160 de
+                                       Mojotoro (obra 280) y la escuela 250 de
+                                       San Francisco de los Yacones (obra 283)
+  7558  h13  HACIENDA-MUN+NORMA        Decs. 13049 y 13484: Ordenanza General
+                                       Impositiva 1966 y presupuesto 1966 de la
+                                       Municipalidad ($ 2.151.088,12)
+  7576  h8   NORMA                     Dec. 13341: incluye al departamento La
+                                       Caldera en la zona de infeccion de rabia
+                                       paresiante del Dec. 10623|65
+  7576  h11  OBRA-PUBLICA              Aviso 23431: Vialidad, licitacion 6,
+                                       tratamiento bituminoso del camino La
+                                       Calderilla - Guemes por Gallinato, tramo
+                                       Campo Santo - Guemes
+  7579  h12  OBRA-PUBLICA+ESCUELA      Obra 127, escuelas 61, 160 y 332 de La
+                                       Calderilla, Mojotoro y El Gallinato
+                                       (Tolaba y Campos): Decs. 13397, 13544,
+                                       13563, 13699, 306, 463 y 1684
+  7582  h6   NORMA+CARGOS              Ley 4073, Presupuesto General: escala de
+                                       cargos con «Medico Zonal de ... La
+                                       Caldera» y de «... Vaqueros»
+  7583  h6   REGISTRO-CIVIL            Dec. 13512: la autoridad policial se
+                                       encarga del Registro Civil de La Caldera
+                                       durante la licencia de Esther Gabriela
+                                       Cruz
+  7601  h14  OBRA-PUBLICA              Cristo Monumental: Dec. 13811 (renuncia
+                                       de la Comision Honoraria y cuenta
+                                       especial), Dec. 14052 y Dec. 2081 (pagos
+                                       del taselaje a Juan Carlos Iramain)
+  7625  h3   OBRA-PUBLICA              Aviso 24030: Correos y Telecomunicaciones
+                                       llama a licitacion para el transporte de
+                                       correspondencia entre Salta y La Caldera
+  7666  h7   CARGOS+HACIENDA-MUN       Dec. 777: cesa Esteban Mogro y se designa
+                                       a Julio Gonzalez presidente de la
+                                       Comision Municipal de La Caldera
+  7672  h9   CARGOS+JUSTICIA           Dec. 973: renuncia de Salvador del Valle
+                                       Mangoña, juez de paz titular de La
+                                       Caldera
+  7675  h4   MINAS                     Aviso 24654: cateo de Maclovio Romero
+                                       (expte. 5441-R), 2.000 ha al oeste del
+                                       pueblo de La Caldera
+  7690  h5   MINAS                     Aviso 24835: caducidad de la mina de
+                                       plomo «Juanita» (Rosario de Lerma y La
+                                       Caldera), registrada como vacante
+  7692  h12  HACIENDA-MUN              Dec. 1309: subsidio de $ 40.000 a la
+                                       Municipalidad para las fiestas patronales
+                                       del 23 de octubre
+  7696  h10  MINAS                     Avisos 24937 y 24921: cateos de Maria
+                                       Iriarte de Gonzalez Rioja (4782-I) y de
+                                       Alberto Gonzalez Rioja (4784-G) desde la
+                                       confluencia de los rios Nieve y Wierna
+  7717  h7   CARGOS                    Dec. 1817: cesantia de Anastacia Lopez de
+                                       Guerrero, con funciones en el Hogar «Dr.
+                                       Luis Linares» de La Caldera
+  7724  h12  NORMA                     Dec. 1940: vacunacion obligatoria contra
+                                       la rabia paralitica en ocho
+                                       departamentos, entre ellos La Caldera
+
+§E · OBSERVACIONES
+------------------
+E.1 · DUPLICACION Y SALDOS
+
+Avisos repetidos del departamento, comprobados por texto y no por numero: A02 (2
+apariciones), A17 (3), A20 (10), A23 (10 y 10), B2-03 (10). El Dec. 11307 de
+1965 sale otra vez en 1966 (A03) y la Ley 4073 sale dos veces en el año (A14).
+md5 y dhash no se calcularon por la sesion (el pre-informe da 85 pares dhash <=
+16, tapas incluidas, y no se miraron); el control de duplicados fue por texto.
+
+Resumenes de Tesoreria General publicados en 1966: ninguno. Busqueda sobre las
+dos versiones: «movimiento de tesoreria», «resumen del movimiento», «saldo del
+mes», «ingresos ... egresos ... saldo» junto a «tesoreria»; «tesoreria general»
+devuelve 294 hojas, de modo que la busqueda funciona y lo que falta son los
+resumenes. Cadena de saldos: no armable. Balances municipales: ninguno; el
+presupuesto de La Caldera se aprueba (A10) y no se publica. Cuadros con total
+recalculables del departamento: ninguno.
+
+E.2 · COBERTURA
+
+239 de 240 ediciones; 4975 hojas de 5038 paginas impresas segun los folios (5056
+contando la 7553). Las cuatro pasadas, la de letra perdida y el anillo 2
+corrieron sobre las 4975 hojas en las versiones que existen: dos versiones en 50
+hojas, una en 4876, ninguna util en 49 (contratapas, blancas o una tapa, segun
+la tinta).
+
+E.3 · SIN MENCION Y NO MIRADO
+
+Las 171 hojas que el pre-informe clasifica «a ojos» no se miraron enteras; se
+cubrieron con la version que existe y con las pasadas laxa, espaciada, difusa y
+de letra perdida. Es un limite (E.10). Tampoco la edicion 7553 ni las 65 paginas
+ausentes segun la cadena, entre ellas 18 de la 7629 y 8 de la 7647.
+
+E.4 · FIRMAS Y AUTORIDAD
+
+Tres gobiernos en el año, leidos en las 239 tapas. Gobernador Dr. Ricardo J.
+Durand, con el vicegobernador Dr. Eduardo Paz Chain, de la 7495 (3-1) a la 7611
+(28-6). Interventor Federal Cnel. Carlos Hector Fabrega Moyano, de la 7612
+(29-6) a la 7634 (29-7), con el Cnel. (R.E.) Augusto Desiderio Torino ministro
+de Gobierno y, en la primera tapa, tambien de Economia; desde la 7615, Cnel.
+(R.E.) Mario Eliseo Cabanillas en Economia y Cnel. Medico (R.E.) Jose Maria
+Garcia Bes en Asuntos Sociales. Gobernador Gral. (R.E.) Hector D Andrea, de la
+7635 (1-8) a la 7734, con Cabanillas en Gobierno, Cont. Pub. Nac. Lucio E.
+Cornejo Isasmendi en Economia y Dr. Alberto Osores Soler (h.) en Asuntos
+Sociales. Las tapas imprimen el apellido del interventor «FABREGA» de la 7612 a
+la 7625 y «FABREGAS» (o «FABREGA S») de la 7626 a la 7634; el decreto 306 (A13)
+firma «FABREGAS MOYANO». Se registran las dos y no se normaliza.
+
+Ministros bajo Durand: Gobierno, Justicia, Instruccion Publica y del Trabajo,
+Dr. Carlos Alberto Garcia Pulo (en las tapas desde la 7515; Dr. Guillermo
+Villegas en las anteriores); Economia, Finanzas y Obras Publicas, Ing. Florencio
+Elias; Asuntos Sociales y Salud Publica, Dr. Danton Julio Cermesoni.
+Vicegobernador en ejercicio del Poder Ejecutivo, en la imagen: 13512 (5-5),
+13544 (10-5), 13563 (11-5), 13993 (10-6). Bajo D Andrea, gobernador interino
+Cabanillas en la imagen: 973 (22-9), 1597 (11-11), 1817 (24-11), 2081 (20-12);
+con Osores Soler (h.) y Cornejo Isasmendi como ministros interinos. No se fija
+el dia de ningun reintegro.
+
+«Es copia»: Miguel Angel Feixes (h), «Oficial 1» en marzo y «Jefe Administrativo
+Interino» desde mayo (Gobierno); Miguel Santiago Maciel, Oficial 1, desde
+setiembre (Gobierno); Pedro Andres Arranz y Santiago Felix Alonso Herrero
+(Economia); Irma Celia M. de Larran (Asuntos Agrarios); Maria Elena Cornejo de
+Rojas y Lina Bianchi de Lopez (Asuntos Sociales).
+
+Numeracion de decretos: hasta junio, una serie comun a los tres ministerios que
+viene de 1965 (12150 del 26-1 a 14060 del 24-6, mirados) y se sigue publicando
+en julio (14134, capa). Bajo la intervencion y el gobierno de D Andrea la serie
+vuelve a empezar: decretos 69 (7-7, citado), 306 (27-7), 463 (11-8), 777 (7-9),
+973 (22-9), 1309 (18-10), 1597 (11-11), 1684 (16-11), 1817 (24-11), 1940 (7-12)
+y 2081 (20-12), todos mirados y crecientes con la fecha. Pares de la misma hoja,
+el primero mirado y el segundo en la imagen o en la capa: 12169-12170 (A01),
+12389-12390 (A04), 13006-13007 (A09), 13341-13342 (A11), 13484-13485 (A10),
+13563-13564 (A13), 13811-13812 (A16), 1597-1598 (A03), 1939-1940 (A25), 2079 a
+2081 (A16): todos crecen con la fecha. Se declara el reinicio y no se explica
+(v16 §8.21); lo resolveria el Registro Oficial del año.
+
+Año editorial, leido en las 239 tapas: AÑO LVI en todo el año, con una errata de
+forma (7715, «AÑO - LVI -»). En 1965 la serie tampoco cambio a LVII. Se declara
+y no se explica.
+
+Dias de salida: la tapa dice «Aparece los dias habiles», de lunes a viernes.
+Dias habiles sin edicion: 21, de los cuales el 29 de marzo es la fecha de la
+7553 por la cadena de numeros y fechas (28-3 la 7552, 30-3 la 7554), de modo que
+quedan 20 sin edicion. El corpus no explica ninguno: los feriados que decreta en
+el año son locales de otras localidades (La Viña y Las Lajitas el 13-6, Campo
+Quijano el 25-7, Chicoana el 1-8, Joaquin V. Gonzalez el 4-8 y otros), y ninguno
+cae en un dia sin edicion. Sin explicar en el corpus: 6 de enero; 21 y 22 de
+febrero; 7 y 8 de abril; 25 de mayo; 7, 9, 17 y 20 de junio; 15 y 17 de agosto;
+13, 14 y 15 de setiembre; 12 de octubre; 1 y 2 de noviembre; 8 y 16 de
+diciembre. No se busca la causa afuera. Ediciones dobles: ninguna; cada fecha
+tiene una sola edicion. Las fiestas patronales de La Caldera (23-10, A22)
+cayeron en domingo; no hay feriado decretado.
+
+Taller: el pie de las contratapas mirado en la imagen (8 hojas) cambia tres
+veces en el año: «Talleres Graficos Carcel Penitenciaria» (7495), «Talleres
+Graficos Impala» (7564) e «Imprenta de la Legislatura» (desde la 7641). Por
+texto, la formula de la Carcel aparece hasta la 7560 y la de Impala de la 7562 a
+la 7636; la de la Legislatura aparece en 103 ediciones desde la 7528, no todas
+como pie. Coincide con los cambios de tipografia de las tapas (7561 y 7635). Se
+declara con su denominador y no se explica.
+
+E.5 · CORTES Y COLUMNAS
+
+Columna perdida: no se encontro en los 96 recortes de columna, que se cotejaron
+contra la capa o el OCR propio. La division automatica por bloques de tesseract
+corto el borde de la columna en 7520 h8, 7557 h10, 7598 h7, 7616 h16, 7638 h14 y
+7675 h4; se recorto otra vez por proyeccion vertical de la tinta y se completo
+en la imagen. Actos con texto continuado en otra columna u hoja: A03 (1597), A13
+(13699, 306, 1684), A16 (13811, 14052, 2081), A07 (13765), A10 (13049), A15,
+A18, A21, A22.
+
+E.6 · REPETICIONES
+
+Los avisos de E.1. La Ley 4073 sale en la 7582 y otra vez en la 7630 (A14). El
+Dec. 11307 de 1965 se republica en la 7560 (A03). En el Dec. de becas de 7573
+h14 los renglones 22 y 23 se imprimen dos veces (B2-04).
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+
+Falsos negativos: ninguno de la literal rescatado por otra pasada salvo «la
+ciaidera» (difusa, 7560 h2, renglon de sumario de un acto que la literal ya
+devolvia en su cuerpo). A diferencia de 1964 y 1965 (dos actos cada uno), la
+pasada de la letra perdida no rescata nada, lo que va con un año casi entero de
+OCR propio sobre 150 ppp en lugar de capa. Falla del anillo de actores sobre su
+propio acto: los Trucco de A01, leidos «Trueco» por el OCR (v16 §5.1). Falsos
+positivos del anillo 1: ocho grupos (B.3). Difusa ampliada: 91 formas, ninguna
+real.
+
+E.8 · FIDELIDAD NUMERICA
+
+Digitos decididos por control (flujo §5.6): fecha del 12389, 8 y no 3, por el
+sumario (control 3, A04); año del 1597, 1966, por la Res. 686 y el 1598 (control
+1, A03); cuenta especial del 13811, 7968 y no 7868, por las otras citas
+(controles 3 y 4, A16); precio del 11307, por el considerando y la aritmetica de
+1965 (A03); norte del cateo 4782-I, 5.000, por la imagen y la aritmetica (A23);
+subsidio del 12871, 66.750 y no 65.750, por la imagen y la aritmetica (A05);
+escuela 160 y no 169 en el 13544, por la imagen y la serie (A13).
+
+No decididos: Res. 138[2/3]-J (A07); modelo del jeep, 1[9?]42 (A02); el digito
+borrado de la zona 4 de las cooperadoras (A08). Ninguno decide una ficha. No se
+arma hoja de dudas; quedan como candidatos para DUDAS 1966.
+
+Aritmetica de los actos, recalculada: 150 x 445 = 66.750 (A05); 416.078 +
+150.000 = 566.078 y 1.050.000 - 566.078 = 483.922 (A16); 216.078 + 183.922 =
+400.000 (A16); poligonos de los tres cateos, que cierran (A20, A23); cifras
+contra letras en A03, A05, A10, A13 (463, 1684) y A22, que cierran. Cuadros:
+ninguno del departamento (E.1).
+
+E.9 · CONTRADICCIONES Y ERRATAS
+
+Contradicciones: la comision del Cristo creada por el Dec. 3162|64 y por el
+3164|64 en el mismo acto (A16); «Obra N 227» por la 127 en el 1684 y «Escuela
+Nacional numero 232» por la 332 en el 463 (A13); sumario de la 7630 que nombra
+la Ley 4072 y no la 4073 que se publica a continuacion (A14); prorroga de
+«iniciacion» de una obra en ejecucion desde abril (A13); «Tartagal» como
+departamento (A07); rango de pensiones «8077 al 9007» (A07); tapa contra folios
+en 7728 (18 declaradas, 28 por folios) y 7701 (30 y 32) (§1); folios repetidos
+en 7530 y saltados tras 7518 (§1). No se concilia ninguna.
+
+Erratas del original: «Gillermo» y «Dptc» y «Lo concesion» (A01); «Mangora» por
+Mangoña (A19); «soliicta» y «del dicha localidad» (A22); «explotar» por explorar
+(A23); «de de» (A25); dos «Art. 4» en el 13811 (A16); renglones de becas
+impresos dos veces (B2-04); «Medizo Zonal» en la segunda publicacion de la Ley
+4073 (A14). Erratas de tapa, por tandas: 7561, «N 1111» con el numero corregido
+a mano; 7562 y 7563, «N 7662» y «N 7663» tachados a mano; 7588, 7589, 7620,
+7621, 7622, 7625 y 7626, ultimo digito corregido a mano, y desde la 7561 un
+rotulo de digitalizacion con el numero correcto («Edicion N 7.620»); 7600 y 7607
+sin el mes impreso; 7714, «de 1960»; 7715, «AÑO - LVI -»; 7728, «18 PAGINAS»
+(§1); 7637, el numero de paginas sobreimpreso (16 por la cadena).
+
+E.10 · LIMITES
+
+1. La edicion 7553 (29-3-1966, 18 paginas por la cadena de folios) no esta en el
+archivo oficial ni en el Release. Ninguna ausencia del informe vale para ella.
+
+2. 65 paginas impresas no estan en el Release segun la cadena de folios (72
+segun las tapas): una en 19 ediciones, dos en 8 y tramos de 7629, 7647 y 7605.
+Ninguna ausencia del informe vale para ellas.
+
+3. 171 hojas «a ojos» no se miraron enteras; se cubrieron con la version
+disponible y cinco pasadas.
+
+4. Segunda version solo en 50 de 4975 hojas: en el resto, la palabra suelta mal
+leida por la unica version no tiene contraste; la falla de los Trucco (E.7)
+muestra que el riesgo es real.
+
+5. Techo de 150 ppp en 4401 hojas: los digitos 0, 3, 5, 6, 8 y 9 no se dan por
+leidos sin control (flujo §5.6).
+
+6. El listado del Release no se pudo leer desde la sesion; el inventario sale de
+estado.json.
+
+7. Sin spa en tesseract: ningun OCR en sesion.
+
+8. Sin md5 ni dhash propios: la deduplicacion fue por texto.
+
+9. Las transcripciones van sin tildes y con datos personales omitidos (desvio
+del §0).
+
+10. Planos y hojas blancas: el control fue por texto y tinta, no por mirada hoja
+por hoja.
+
+11. Ningun resumen de Tesoreria publicado: no hay cadena de saldos ni cuadros
+que recalcular.
+
+12. La numeracion de los decretos se reinicia bajo la intervencion; lo resuelve
+solo el Registro Oficial del año (E.4).
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. Un año con tres gobiernos y una serie de decretos que se reinicia (E.4)
+muestra que el control de «fecha contra numeracion» (v16 §8.15) no puede suponer
+una serie anual: se propone que v17 pida declarar las series, con el primer y el
+ultimo numero mirados de cada una, y que el §R lleve una clave series_decretos.
+
+2. La pasada de la letra perdida no rescato nada en 1966 despues de dos años de
+rescates. Con OCR propio en el 76 % de las hojas, las deformaciones cambian de
+clase: el OCR de tesseract parte menos la palabra y confunde mas los nombres
+propios («Trueco», «Gillermo»). Se propone que la busqueda de actores corra
+tambien con distancia de edicion 1 sobre los apellidos del §A del año, para que
+el actor no se pierda en su propio acto.
+
+3. La division en columnas por bloques de tesseract corta el borde de columna en
+paginas de 150 ppp con dos columnas anchas (E.5). La proyeccion vertical de la
+tinta sobre la hoja entera da el ancho correcto en una llamada; se propone como
+metodo por defecto para el recorte (v16 §4).
+
+4. La tapa deja de imprimir el dia de la semana desde agosto: el control de
+calendario se hace sobre la fecha y el dia queda calculado; se propone que la
+tabla del §1 lo marque, como hace este informe con «s/d».
+
+5. El pie del taller en la contratapa es un dato de serie (E.4) que el §R no
+recoge; se propone una clave talleres con el numero de pies distintos del año.
+
+6. Config entregado (lee_config.json, version 2026-10-01, hasta 1966): 16
+actores nuevos con origen 1966 y edicion (Hoygaard, Bressanutti y Bresanutti,
+Mangoña y Mangora, Maclovio Romero, los dos Gonzalez Rioja, Emilio Vila, Lopez
+de Guerrero en sus dos grafias, Coria, Laxi, Ocampo, Fernandez de Lopez, Chuchuy
+y Cornejo Isasmendi); otros 13 ya estaban. 25 terminos de anillo 2 (los 9
+faltantes de §2 y deformaciones del OCR que la literal devolvio en hojas del §A:
+«la caluera», «la ciaidera», «la ca.ldera», «la cad ia», «vaquezos», «vayuelos»,
+«liegser», «moje toro», «mojotoio», «calde.a» y otras); 46 numeros de acto y de
+aviso. Totales: 1298 actores, 430 terminos, 1560 numeros. Falsos positivos:
+ninguno agregado (v16 §12).
+
+§R · RECUENTO
+-------------
+anio: 1966
+ediciones_desde: 7495
+ediciones_hasta: 7734
+ediciones_presentes: 239
+ediciones_ausentes: 1
+hojas_presentes: 4975
+hojas_declaradas: 5038
+hojas_ausentes_estimadas: 65
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 20
+ediciones_dobles: 0
+techo_ppi: 600
+ocr_en_sesion: no
+capa_previa: release-pdf
+versiones: 2
+actos_departamento: 40
+actos_dominio: 0
+actos_hacienda_municipal: 5
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 0
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-armable
+columnas_cotejadas: 96
+hojas_miradas: 59
+avisos_repetidos_departamento: 6
+falsos_positivos_anillo1: 8
+limites_declarados: 12
+nivel_lectura: imagen
+pdf_release: 239
+avisos_release: 1
+estado: COMPLETO
