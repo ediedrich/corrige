@@ -1257,3 +1257,106 @@ La ronda toca 16 líneas: 16:190, 194, 196, 206, 216, 219, 257 y 261; 23:183; 00
 | Remisiones a capítulos posteriores sin «más adelante» | 319/319 | 0 sin marcar (las dos remisiones nuevas, de 23 a 16 y de F a 16, van hacia atrás o desde un apéndice) |
 | Privacidad | 16 líneas | Sólo organismos, la distribuidora y el número de la presentación; ni el nombre ni el correo del presentante. Sin casos |
 | Compilación | libro entero, con las rondas 52 y 53 aplicadas sobre `d126594` | Compila; 839 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75 y 00:78 |
+
+## Ronda 54 — auditoría con fase 6 (01/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1963 y, como lo pedía el bloque de la ronda 53, sobre las 16 líneas de esa incorporación, que esta vez lee un auditor que no las escribió. Base: commit `32ad712` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1963, sobre `3304c70`, la ronda 53), con la fase 6 en `ronda-54.patch` (commit `4f39e11` en la sesión; aplica con `git am` sobre `32ad712`, probado en un clon limpio: árbol `18a0989`). **Denominador medido: 25.080 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 53 (25.071 de 25.071, sobre `3304c70`) se trasladaron por diff a `32ad712`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1963 agrega 9 líneas (6 en A, 1 en C y 2 en F) y modifica 35 en 22 archivos: caducan 44**, y quedan **25.036 vigentes sobre 25.080 (99,8 %)**. La ubicación de cada línea se tomó con `git blame` sobre `32ad712` (44 líneas del commit `32ad712` y 16 del `3304c70`).
+
+### Lectura sobre el texto (numeración de `32ad712`)
+
+Se leyeron **las 44 líneas caducas, enteras, por la sesión**, sin subagentes, contra el informe LEE 1963 (`BO-Salta-1963_6769-7009_la-caldera_LEE-1963_2026-10-01.txt`, bajado de `corrige/lee/1963/`): el §0, el §1 con la tabla por edición, las 40 fichas del §A y las 6 de B.2 enteras (FICHA, TEXTO y NOTA), B.1, B.3, B.4, §C y §P; y, para las remisiones a otros años, el informe 1962 (aviso 12441), el 1959 (Ley 3425 y la fracción de Manuel Condori), el 1958 (A.69, «La Milagrosa») y el 1955 (minas San Fernando y Abra de Mayo). Se leyeron además, enteras, **las 16 líneas de la ronda 53**, que su propia sesión había dado por leídas; suman a la cobertura sólo como relectura, porque ya estaban vigentes, pero entran en el denominador del aspecto 7. La nota del ENReGE y sus adjuntos no están en un repositorio que la sesión pueda bajar (P87): esas 16 líneas se leyeron por su consistencia interna y con el resto del libro, no contra la fuente.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 306, 359, 363–368 | 8 | sesión |
+| ape/C-normativa.tex | 114, 142 | 2 | sesión |
+| ape/D-pedidos.tex | 40, 177, 191–192, 253 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 68–69, 71 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/03-fincas.tex | 1010 | 1 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/08-vaqueros.tex | 85 | 1 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332 | 1 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 50, 235 | 2 | sesión |
+
+Relectura de la ronda 53 (ya vigentes, no suman): A:388 y 568; D:336 y 355; F:243–244; 00:75; 16:190, 194, 196, 206, 216, 219, 257 y 261; 23:183. Contexto releído entero (no suma cobertura): 16:186–200 (la ficha de las tres cartografías) y las filas A:320, 340, 344 y 358 (las minas de 1955, 1958 y 1961 y la Ley 3425).
+
+**Esta ronda: 44 líneas nuevas.** Con la relectura de la ronda 53 y el contexto son 76 líneas y 89.814 bytes sobre 2.709.375, que en las 845 páginas de la base equivalen a **28,0 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `32ad712` cae dentro de estos tramos.
+
+Acumulado: 25.036 vigentes + 44 = **25.080 de 25.080 (100,0 %)**. La fase 6 toca 10 líneas, todas dentro de lo leído en esta ronda (A:359, 364, 365, 366 y 368; C:114; D:253; 04:4599; 13:248; 15:185), y no cambia el largo de ningún archivo: **25.080 de 25.080 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Release 1963 de `boletines-salta`)
+
+Imágenes de los PDF del Release, a 200–500 ppp, recortadas por coordenadas o por la posición de la capa.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6917 | 5 | Decreto 8519, vistos y arts. 1 a 3 | «La Caldera» o «Getsemani», Ley 1030\|48: coinciden (A:365, 13:248). El considerando funda en el convenio la apertura, el enripiado y la cañería, y en el art. 174 de la Ley 1030 el arbolado; **el art. 3, que el informe no transcribe, impone las tres cosas** (hallazgo 1) |
+| 6959 | 7 | Decreto-ley 429, vistos, considerando y art. 1 | Art. 1, leído en la imagen y no sólo en la capa: «Ratifícanse con fuerza de **Ordenanza**» (hallazgo 6). El considerando: convenios «de cláusulas similares» a uno aprobado por el «Decreto Ley Nº 309\|63», que el informe daba sin número |
+| 6774 | 5 | Decreto 5127-E | «Salta, 31 de Octubre de 1962» es la fecha del decreto; el certificado no lleva fecha (hallazgo 2). \$162.373: coincide |
+| 7008 | 13 y 14 | Resoluciones de minas 16093 y 16088 | «SALTA, Noviembre 29 de 1963» y «SALTA, Diciembre 3 de 1963», publicadas el 30 de diciembre (hallazgo 3); «ABRA DE MAYO», seis pertenencias; «SAN FERNANDO», cinco: coinciden |
+| 6976 | 7 | Decreto 365, art. 2 | «en vacante por renuncia del Dr. Juan C. Martearena»: coincide. Las localidades son «Las Moras, San Fernando de Escoipe y **Pulares**»: el informe y el libro, por la capa, decían «Fulares» (hallazgo 5) |
+| 6903 | 18 | Decreto 8271, art. 1 | «Consultorio Externo de la localidad de La Caldera»; del 8 de abril al 7 de mayo. Coincide |
+| 6888 | 13 | Decreto 7945, art. 1 | «corre a fojas 15**.** 17, 19 y 21»: a 500 ppp, punto después del 15 y comas después del 17 y del 19 (hallazgo 7); \$909.695,17 coincide |
+| 6823 | 9 | Decreto 6751-G, visto | «La Cal-» al fin del renglón y «lera;» al principio del siguiente: la errata es «Callera», y el guion es el corte de renglón (hallazgo 8). «JULIO CATALAN ARRELLANO»: coincide |
+| 6993 | 9 | Decreto 959, art. 1 | «Sub Comisaría de La Caldera»; seis meses en comisión por el 6542 del 19-II-1963. Coincide |
+| 6850 | 5 | Decreto 150 de la Municipalidad de la Capital, considerando | «en los campos comprendidos entre La Caldera y Los Sauces». Coincide |
+| 6846 | 6 | Decreto 7173-G, vistos | «dirección libre» (entre comillas en el original). Coincide |
+| 6965 | 6 | Decreto 32, art. 2 | «señor Mario García». Coincide |
+| 6969 | 10 | Decreto 184, art. 1 | Manuel José Hernández desde el 11 de septiembre, por treinta días hábiles. Coincide |
+| 6908 | 11 | Decreto 8410, arts. 1 y 2 | Esteban Mogro, juez de paz propietario, y Pastor Lizondo, suplente, por dos años. Coincide |
+
+Son **10 citas entre comillas del libro cotejadas en la imagen, sobre 9 hojas de 9 ediciones** («La Caldera» y «Getsemani», 6917; «con fuerza de ordenanza», 6959, dos veces en el libro; «Consultorio Externo de la localidad de La Caldera», 6903; «en vacante por renuncia», 6976; «corre a fojas 15, 17, 19 y 21», 6888; «La Cal-lera», 6823; «Sub Comisaría de La Caldera», 6993; «en los campos comprendidos entre La Caldera y Los Sauces», 6850; «dirección libre», 6846): **tres con diferencias** —una mayúscula corregida en silencio en dos lugares, un punto cambiado por coma y un guion de fin de renglón transcripto como parte de la palabra—, **ninguna que cambie el sentido**. Más **7 datos sin comillas** (6774 h5, 7008 h13–14, 6976 h7 —las localidades—, 6917 h5 —el art. 3—, 6965 h6, 6969 h10, 6908 h11), de donde salen los hallazgos 1, 2, 3 y 5. En total, 15 hojas de 14 ediciones. No se cotejaron: 6776 (5966-A y 6015-E), 6793 (236-G), 6823 h7 y 6858 (partida de la Ley 3192), 6907 (8394), 6909 (decreto-ley 360), 6975 (traslado de la Escuela 310) ni 7009 h8. Las 16 líneas de la ronda 53 no tienen facsímil en el corpus (P87).
+
+### Hallazgos (ocho, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 13:248 | «por un convenio con la Municipalidad se obliga a abrir y enripiar las calles, prolongar la cañería de agua potable y arbolar calles y plazas»: el decreto funda el arbolado en el art. 174 de la Ley 1030, no en el convenio, como dicen A:365 y 08:85. El error viene de la FICHA A.26 del informe, que atribuye las tres cosas al convenio (el TEXTO lo transcribe bien) | 7 | el convenio para calles y cañería, el art. 174 para el arbolado; y se agrega que el art. 3 del decreto le impone las tres cosas (también en A:365) |
+| 2 | A:359 | «el certificado parcial 6, del 31 de octubre de 1962»: el 31 de octubre es la fecha del decreto 5127-E; el certificado no está fechado (26:235 lo dice bien: «aprobado en octubre de 1962») | 3 | «por \$162.373, aprobado por un decreto del 31 de octubre de 1962» |
+| 3 | A:368 | «el 30 y el 31 de diciembre las resoluciones que declaran caducas…»: son las fechas de publicación; las resoluciones son del 29 de noviembre (16093) y del 3 de diciembre (16088), y la de «La Milagrosa» no da fecha en la parte leída. El control de fechas de P86 compara sólo el año | 3 | «el 30 y el 31 de diciembre se publican las resoluciones ---dos de ellas del 29 de noviembre y del 3 de diciembre--- que…» |
+| 4 | A:368 | La confluencia de los ríos Nieve y Wierna, «el punto de partida del cateo de 1962»: en los dos edictos (14658 y 12441) es el punto de referencia, y el de partida está 4.000 m al oeste | 3 | «que el edicto toma, como el del cateo de 1962, por punto de referencia: el de partida, el mismo en los dos, está cuatro kilómetros más al oeste» |
+| 5 | 04:4599 | «San Fernando de Escoipe y Fulares»: la imagen (6976 h7) dice «Pulares»; «Fulares» es la lectura de la capa que el informe (A.34) dio por buena | 3 | «Pulares» |
+| 6 | A:366, 15:185 | «con fuerza de ordenanza» entre comillas: el original imprime «Ordenanza» con mayúscula. El informe leyó el art. 1 sólo en la capa | 4 (dos casos) | «con fuerza de Ordenanza» en las dos citas; C:114, 01:139 y 22-infraestructura:545 lo dicen sin comillas y no cambian |
+| 7 | 15:185 | «corre a fojas 15, 17, 19 y 21» entre comillas: el original pone punto después del 15 | 4 | la frase pasa a paráfrasis, sin comillas |
+| 8 | A:364 | «La Cal-lera» ---así, en el visto---: el guion es el corte de renglón; la errata del original es «Callera» | 4 | «La Callera» ---así, en el visto, partido al fin del renglón--- |
+
+Restan: un error de consistencia en el aspecto 7 (hallazgo 1: 1 en 28,0 páginas = 3,6 por cada 100, escalón ≤ 4 → 50), cuatro casos en el 3 (hallazgos 2 a 5, −20) y cuatro casos en el 4 (hallazgos 6 a 8, −12).
+
+**Los ocho están en material que la propia auditoría incorporó** (AMPLÍA 1963, `32ad712`), y **ninguno fue atrapado por un control automático** antes de llegar al libro. Cuatro (5 a 8) vienen de renglones que el informe LEE leyó en la capa o transcribió con el corte de renglón, y el control de citas de P74 los dio por literales porque compara contra el TEXTO del informe, no contra la imagen; dos (2 y 3) los habría visto un control de fechas que compare también el mes y que distinga la fecha del acto de la de lo que aprueba (P86 compara sólo el año). Las dieciséis líneas de la ronda 53 no dan hallazgos.
+
+**Mejoras sin hallazgo.** El art. 3 del decreto 8519 (A:365, 13:248) y el considerando del decreto-ley 429, que remite a un convenio de cláusulas similares aprobado por el decreto-ley 309/63 (A:366, C:114, y se pide en D:253, dentro del mismo ítem). C:114 pasa a declarar el art. 1 leído sobre el facsímil.
+
+**Descartados (falsos positivos, 4).** «Diecisiete años de servicios» de 1920 a 1938 (A:368): es literal del 7883, que no explica la diferencia. Que el vecino del juicio ejecutivo sea uno de los dos de la Ley 3425 (A:368): el informe 1959 da a Manuel Condori como titular de una de las dos fracciones. «Con los expedientes de sus manifestaciones o mensuras de 1955, 1958 y 1961» (A:368): cierra con las filas de esos años (manifestaciones de San Fernando y Abra de Mayo en 1955, mensura de San Fernando y manifestación de La Milagrosa en 1958, mensura de Abra de Mayo en 1961). «Los dos primeros» mapas (16:219): son el atlas y el mapa nacional, en el orden de la ficha; el interactivo es el tercero.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff y `git blame` | 25.071/25.071 líneas vigentes en `3304c70` | 25.036 vigentes, 44 caducas por el AMPLÍA 1963 |
+| Superlativos, cierres y ausencias sobre los temas de las fichas de 1963 (comisionado, comisión municipal, convenio, Agua y Energía, fraccionamiento, Catastro, cesiones, donación, peluquero, minas, caducidad, Escuela 310, San Alejo, encuesta, Fomento Ganadero, juez de paz, médico regional, consultorio, Linares, Hogar, cateo, Wierna, Getsemaní, Martell, San Cayetano, presupuesto, pensiones, Ley 3192, electromecánicas, intervención, subcomisaría, destacamento), en oraciones que no nombran 1963 ni un año posterior (repaso de ventana) | 80 coincidencias en el libro entero, todas leídas | Ninguna desmentida por 1963. Conservan su universo: 04:1702, 1718 y 1761 («la única mina registrada del departamento», 1908–1941), 04:4209 (plomo y plata; La Milagrosa es de cloruro de plata, sustancia de plata), 08:83, 15:457, 20:728, 22-infraestructura:545 («la usina ya no aparece por su nombre», 1961–1962) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 322/322 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 (las tres nuevas del AMPLÍA, 01→13, 01→22 y 08→13, llevan la marca) |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra. El decreto-ley 309/63 entra dentro de un ítem existente (D:253) |
+| Recuentos de 1963 (A:363, F:68, 00:43, 02:28, D:177) contra el §0 y el §1 del informe | 1 año | 241 ediciones (6769–7009), 4.359 hojas, 229 del suplemento; 4.306 páginas declaradas, cuatro manchadas; 119 ediciones con 183 hojas de menos; 228 de 240 pares de foliatura; 6893 mil más bajo; cuatro tapas cien más bajas; 734 y 392 hojas sin mirar. Tramos: 42 + 1 + 6 = 49; hueco 1964–2012: 49 años. Cierran |
+| Aritmética de 1963 | 4 cuentas | Certificados: 2.817.254,13 + 162.373 = 2.979.627,13. Superficies del 8519: 163.568,95 m² = 16 ha 3.568,95 m², cinco plazoletas. Ley 3192: 1.400.000 + 450.000 = 1.850.000. Comisionado: 12/10 a 15/10, tres días. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 54 | 50 de 174 oraciones con cifra en las 44 líneas | **50/50 con fuente localizable**: 39 con la cita en la oración, 10 en la fila o el párrafo, y 1 declaración de cobertura (04:3659) cuya fuente es el apéndice F |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 44 líneas; los de las 16 de la ronda 53 son de una nota oficial aportada | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 44 líneas, cruzadas con contextos sensibles | 44/44 líneas | El regente cesante y deudor del fisco, la empleada que renuncia, el empleado de la encuesta, el oficial confirmado, el agente cesante de Vaqueros, el vecino que demanda a la Provincia y los pensionados: ninguno nombrado, y lo que se dice del regente se atribuye a los actos. Nombrados: funcionarios (Regis, Catalán Arellano, García, Mogro) y el propietario del fraccionamiento (Martell), sin contexto sensible. Sin casos |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `32ad712` y fase 6 | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 845 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
