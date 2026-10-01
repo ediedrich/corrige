@@ -1,0 +1,1666 @@
+LEE v17 — 1964
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA, 1964 (N 7010 a 7251)
+Barrido documental forense del departamento La Caldera
+Informe LEE, rubrica LEE v16 con los cambios v17 de flujo-editorial.md
+(version 2, §5). Fecha: 2026-10-01.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: COMPLETO, con 9 limites declarados (E.10). No queda trabajo que la
+sesion pueda hacer sobre las menciones del departamento; lo que falta son
+paginas que el Release no trae y hojas cuya capa no se leyo con los ojos.
+
+Insumos. El listado de assets del Release (expanded_assets/1964) responde 403
+desde la sesion: el proxy no habilita github.com para listar. Las descargas
+directas por nombre si funcionan, y se bajaron por los nombres que estado.json
+registra en descarga.subidos: el pre-informe
+BO-Salta-1964_la-caldera_PRE-INFORME-LEE_2026-10-01.txt (el unico; no hay otro
+de fecha anterior), resultados_1964.csv, decretos_1964.csv (vacio: solo el
+encabezado), log.txt, lee_config.json y lee_textos_1964.zip, y los 242 PDF,
+7010.pdf a 7251.pdf, todos presentes. recortes.zip no esta en el Release (404) y
+no se reclama. Se declara que el inventario sale de estado.json y de las
+descargas por nombre, no del listado del Release.
+
+lee_auto.py, sha 8a1e775655ae, corrida del 30-9 al 1-10-2026. El log muestra dos
+pasadas: la primera ocrizo 328 hojas sin capa util; la segunda ocrizo 4272 de
+las 4408 hojas. Sin errores en el log. lee_textos trae 4408 versiones previas
+(capa del PDF), 4272 propias (.txt y .tsv) y un EXTRAIDO.json por edicion: hay
+dos versiones y confianza por hoja, de modo que no rige el limite de v16 §2.1.
+
+Config. config del Release: version 2026-10-01, hasta 1963, actores 1217,
+anillo2 373. config de corrige: version 2026-10-01, hasta 1963, actores 1217,
+anillo2 373. Se usa: el de corrige - razon: unico valido (flujo §5.2).
+Contenido: los dos archivos son identicos byte a byte. Se entrega un
+lee_config.json nuevo, hasta 1964 (§F).
+
+Entorno. nproc 2. PyMuPDF 1.28.2 instalado en la sesion. tesseract 5.3.4 solo
+con eng y osd, sin spa: no hubo OCR en sesion. Techo de resolucion: 300 ppi
+uniforme en las 4408 hojas (medido con get_image_info); es el doble que el de
+1922-1932 y de 1951-1954.
+
+Que verifico la sesion. Hojas por PDF contra EXTRAIDO.json: 4408 contra 4408.
+Tapas: las 242, en la imagen (numero, fecha, año editorial, gobernador). Folios:
+cadena corrida en todo el año, de la pagina 4291 a la 8826. Cuatro pasadas
+propias sobre la union de las dos versiones, mas una pasada laxa de la letra
+perdida (E.7). Anillo 2 completo, anillo de actores sobre los 1217 del config y
+sobre los 40 nombres del año. Recortes mirados: 111, de 70 hojas interiores, mas
+las 242 tapas.
+
+Desvios de v16 §8.17, declarados: (1) las transcripciones van sin tildes, salvo
+eñe y dieresis; el original las lleva y la sesion no las reprodujo; (2) los
+numeros de documento, matricula y registro profesional se reemplazan por
+[omitido], porque el libro no los usa; (3) los fragmentos de actos largos se
+transcriben con «...» y la ficha dice que se omitio. Nada de lo omitido decide
+una ficha.
+
+Que agregaria cada insumo que falto: el listado del Release, nada nuevo (los
+nombres se tomaron de estado.json); recortes.zip, nada (la sesion recorto desde
+los PDF); las 128 paginas ausentes, la unica posibilidad de afirmar ausencias
+sobre todo el año (E.10).
+
+§1 · CORPUS REVISADO
+--------------------
+242 ediciones, N 7010 (jueves 2 de enero) a N 7251 (jueves 31 de diciembre), sin
+huecos en la numeracion. 4408 hojas presentes. Paginacion corrida en todo el
+año, de 4291 a 8826: 4536 paginas impresas, de modo que faltan 128 (2,8 %). La
+tapa declara «EDICION DE N PAGINAS»; se cotejo contra la cadena de folios en las
+242.
+
+Fechas leidas en la imagen de la tapa. Confianza del OCR propio: media 81,6; 123
+hojas publicables, 3572 a verificar, 577 «a ojos». Techo: 300 ppi. Formato: PDF
+de imagen con capa de texto previa util en 4080 hojas (93 %) segun el log.
+
+  ed.   fecha [tapa]   hojas  folios          faltan
+  7010  [1964-01-02]    15   4291-4305       1
+  7011  [1964-01-03]    13   4307-4319       1
+  7012  [1964-01-07]    13   4321-4333       1
+  7013  [1964-01-08]    11   4335-4345       1
+  7014  [1964-01-09]    16   4347-4362       
+  7015  [1964-01-10]    12   4363-4374       
+  7016  [1964-01-13]    16   4375-4390       
+  7017  [1964-01-14]     8   4391-4398       
+  7018  [1964-01-15]    15   4399-4413       1
+  7019  [1964-01-16]    16   4415-4430       
+  7020  [1964-01-17]    16   4431-4446       
+  7021  [1964-01-20]    13   4447-4459       1
+  7022  [1964-01-21]     7   4461-4467       1
+  7023  [1964-01-22]    14   4469-4482       
+  7024  [1964-01-23]    15   4483-4497       1
+  7025  [1964-01-24]    12   4499-4510       
+  7026  [1964-01-27]    15   4511-4525       1
+  7027  [1964-01-28]    10   4527-4536       
+  7028  [1964-01-29]    13   4537-4549       1
+  7029  [1964-01-30]    14   4551-4564       
+  7030  [1964-01-31]    17   4565-4581       1
+  7031  [1964-02-03]     9   4583-4591       1
+  7032  [1964-02-04]    11   4593-4603       1
+  7033  [1964-02-05]    11   4605-4615       1
+  7034  [1964-02-06]    10   4617-4626       
+  7035  [1964-02-07]    11   4627-4637       1
+  7036  [1964-02-12]    15   4639-4653       1
+  7037  [1964-02-13]     8   4655-4662       
+  7038  [1964-02-14]     9   4663-4671       1
+  7039  [1964-02-17]    15   4673-4687       1
+  7040  [1964-02-18]     8   4689-4696       
+  7041  [1964-02-19]     9   4697-4705       1
+  7042  [1964-02-21]     9   4707-4715       1
+  7043  [1964-02-24]    24   4717-4740       
+  7044  [1964-02-25]     8   4741-4748       
+  7045  [1964-02-26]    12   4749-4760       
+  7046  [1964-02-27]     7   4761-4767       1
+  7047  [1964-02-28]    15   4769-4783       1
+  7048  [1964-03-02]    10   4785-4794       
+  7049  [1964-03-03]    14   4795-4808       
+  7050  [1964-03-04]    17   4809-4825       1
+  7051  [1964-03-05]     9   4827-4835       1
+  7052  [1964-03-06]    15   4837-4851       1
+  7053  [1964-03-09]    19   4853-4871       1
+  7054  [1964-03-10]    14   4873-4886       
+  7055  [1964-03-11]    21   4887-4907       2
+  7056  [1964-03-12]    14   4910-4923       1
+  7057  [1964-03-13]    10   4925-4934       
+  7058  [1964-03-16]    15   4935-4949       1
+  7059  [1964-03-17]    14   4951-4964       
+  7060  [1964-03-18]    16   4965-4980       
+  7061  [1964-03-19]    18   4981-4998       
+  7062  [1964-03-20]    23   4999-5021       1
+  7063  [1964-03-23]    17   5023-5039       1
+  7064  [1964-03-24]    22   5041-5062       
+  7065  [1964-03-25]    17   5063-5079       1
+  7066  [1964-03-30]    19   5081-5099       1
+  7067  [1964-03-31]    22   5101-5122       
+  7068  [1964-04-01]    16   5123-5138       
+  7069  [1964-04-02]    20   5139-5158       
+  7070  [1964-04-03]    13   5159-5171       1
+  7071  [1964-04-06]    17   5173-5189       1
+  7072  [1964-04-07]    23   5191-5213       1
+  7073  [1964-04-08]    17   5215-5231       1
+  7074  [1964-04-09]    13   5233-5245       1
+  7075  [1964-04-10]    19   5247-5265       1
+  7076  [1964-04-13]    14   5267-5280       
+  7077  [1964-04-14]    25   5281-5305       1
+  7078  [1964-04-15]    15   5307-5321       1
+  7079  [1964-04-16]    27   5323-5349       1
+  7080  [1964-04-17]    20   5351-5370       
+  7081  [1964-04-20]    27   5371-5397       1
+  7082  [1964-04-21]    23   5399-5421       1
+  7083  [1964-04-22]    20   5423-5442       
+  7084  [1964-04-23]    13   5443-5455       1
+  7085  [1964-04-24]    18   5457-5474       
+  7086  [1964-04-27]    17   5475-5491       1
+  7087  [1964-04-28]    22   5493-5514       
+  7088  [1964-04-29]    19   5515-5533       1
+  7089  [1964-04-30]    21   5535-5555       1
+  7090  [1964-05-04]    22   5557-5578       
+  7091  [1964-05-05]    18   5579-5596       
+  7092  [1964-05-06]    16   5597-5612       
+  7093  [1964-05-07]    19   5613-5631       1
+  7094  [1964-05-08]    16   5633-5648       
+  7095  [1964-05-11]    19   5649-5667       1
+  7096  [1964-05-12]    21   5669-5689       1
+  7097  [1964-05-13]    16   5691-5706       
+  7098  [1964-05-14]    16   5707-5722       
+  7099  [1964-05-15]    30   5723-5752       
+  7100  [1964-05-18]    23   5753-5775       -1
+  7101  [1964-05-19]    21   5775-5795       1
+  7102  [1964-05-20]    19   5797-5815       1
+  7103  [1964-05-21]    26   5817-5842       
+  7104  [1964-05-22]    34   5843-5876       
+  7105  [1964-05-26]    25   5877-5901       1
+  7106  [1964-05-27]    19   5903-5921       1
+  7107  [1964-05-29]    19   5923-5941       1
+  7108  [1964-06-01]    20   5943-5962       
+  7109  [1964-06-02]    21   5963-5983       1
+  7110  [1964-06-03]    24   5985-6008       
+  7111  [1964-06-04]    18   6009-6026       
+  7112  [1964-06-05]    22   6027-6048       
+  7113  [1964-06-08]    17   6049-6065       1
+  7114  [1964-06-09]    25   6067-6091       1
+  7115  [1964-06-10]    17   6093-6109       1
+  7116  [1964-06-11]    22   6111-6132       
+  7117  [1964-06-12]    13   6133-6145       1
+  7118  [1964-06-15]    23   6147-6169       7
+  7119  [1964-06-16]    28   6177-6204       
+  7120  [1964-06-18]    30   6205-6234       
+  7121  [1964-06-19]    24   6235-6258       
+  7122  [1964-06-22]    23   6259-6281       1
+  7123  [1964-06-23]    19   6283-6301       1
+  7124  [1964-06-24]    13   6303-6315       1
+  7125  [1964-06-25]    14   6317-6330       
+  7126  [1964-06-26]    24   6331-6354       
+  7127  [1964-06-29]    13   6355-6367       1
+  7128  [1964-06-30]    20   6369-6388       
+  7129  [1964-07-01]    23   6389-6411       1
+  7130  [1964-07-02]    13   6413-6425       1
+  7131  [1964-07-03]    26   6427-6452       
+  7132  [1964-07-06]    20   6453-6472       
+  7133  [1964-07-07]    14   6473-6486       
+  7134  [1964-07-08]    23   6487-6509       1
+  7135  [1964-07-10]    19   6511-6529       1
+  7136  [1964-07-13]    16   6531-6546       
+  7137  [1964-07-14]    12   6547-6558       
+  7138  [1964-07-15]    15   6559-6573       1
+  7139  [1964-07-16]    15   6575-6589       1
+  7140  [1964-07-17]    24   6591-6614       
+  7141  [1964-07-20]    17   6615-6631       1
+  7142  [1964-07-21]    21   6633-6653       1
+  7143  [1964-07-22]    29   6655-6683       1
+  7144  [1964-07-23]    16   6685-6700       
+  7145  [1964-07-24]    22   6701-6722       
+  7146  [1964-07-27]    20   6723-6742       
+  7147  [1964-07-28]    21   6743-6763       1
+  7148  [1964-07-29]    16   6765-6780       
+  7149  [1964-07-30]    18   6781-6798       
+  7150  [1964-07-31]    16   6799-6814       
+  7151  [1964-08-03]    12   6815-6826       
+  7152  [1964-08-04]    12   6827-6838       
+  7153  [1964-08-05]    14   6839-6852       
+  7154  [1964-08-06]    14   6853-6866       
+  7155  [1964-08-07]    18   6867-6884       
+  7156  [1964-08-10]    23   6885-6907       1
+  7157  [1964-08-11]    17   6909-6925       1
+  7158  [1964-08-12]    16   6927-6942       
+  7159  [1964-08-13]    15   6943-6957       1
+  7160  [1964-08-14]    18   6959-6976       
+  7161  [1964-08-18]    30   6977-7006       
+  7162  [1964-08-19]    29   7007-7035       1
+  7163  [1964-08-20]    24   7037-7060       
+  7164  [1964-08-21]    30   7061-7090       
+  7165  [1964-08-24]    26   7091-7116       
+  7166  [1964-08-25]    23   7117-7139       1
+  7167  [1964-08-26]    15   7141-7155       1
+  7168  [1964-08-27]    13   7157-7169       1
+  7169  [1964-08-28]    44   7171-7214       
+  7170  [1964-08-31]    13   7215-7227       1
+  7171  [1964-09-01]    13   7229-7241       1
+  7172  [1964-09-02]    27   7243-7269       1
+  7173  [1964-09-03]    15   7271-7285       1
+  7174  [1964-09-04]    21   7287-7307       1
+  7175  [1964-09-07]    25   7309-7333       3
+  7176  [1964-09-08]    14   7337-7350       
+  7177  [1964-09-09]    13   7351-7363       1
+  7178  [1964-09-10]    26   7365-7390       
+  7179  [1964-09-11]    23   7391-7413       1
+  7180  [1964-09-16]    15   7415-7429       1
+  7181  [1964-09-17]    16   7431-7446       
+  7182  [1964-09-18]    11   7447-7457       1
+  7183  [1964-09-21]    29   7459-7487       1
+  7184  [1964-09-22]    12   7489-7500       
+  7185  [1964-09-23]    13   7501-7513       1
+  7186  [1964-09-24]    14   7515-7528       
+  7187  [1964-09-25]    16   7529-7544       
+  7188  [1964-09-28]    17   7545-7561       1
+  7189  [1964-09-29]    28   7563-7590       
+  7190  [1964-09-30]    14   7591-7604       
+  7191  [1964-10-01]    30   7605-7634       
+  7192  [1964-10-02]    25   7635-7659       1
+  7193  [1964-10-05]    43   7661-7703       1
+  7194  [1964-10-06]    18   7705-7722       
+  7195  [1964-10-07]    16   7723-7738       
+  7196  [1964-10-08]    16   7739-7754       
+  7197  [1964-10-09]    24   7755-7778       
+  7198  [1964-10-13]    14   7779-7792       
+  7199  [1964-10-14]    33   7793-7825       1
+  7200  [1964-10-15]    19   7827-7845       1
+  7201  [1964-10-16]    18   7847-7864       
+  7202  [1964-10-19]    20   7865-7884       
+  7203  [1964-10-20]    23   7885-7907       1
+  7204  [1964-10-21]    12   7909-7920       
+  7205  [1964-10-22]    12   7921-7932       
+  7206  [1964-10-23]    26   7933-7958       
+  7207  [1964-10-26]    13   7959-7971       1
+  7208  [1964-10-27]    15   7973-7987       1
+  7209  [1964-10-28]    13   7989-8001       1
+  7210  [1964-10-29]    22   8003-8024       
+  7211  [1964-10-30]    12   8025-8036       
+  7212  [1964-11-03]    16   8037-8052       
+  7213  [1964-11-04]    26   8053-8078       
+  7214  [1964-11-05]    14   8079-8092       
+  7215  [1964-11-06]    16   8093-8108       
+  7216  [1964-11-09]    14   8109-8122       
+  7217  [1964-11-10]    25   8123-8147       1
+  7218  [1964-11-11]    19   8149-8167       1
+  7219  [1964-11-12]    27   8169-8195       1
+  7220  [1964-11-13]    25   8197-8221       1
+  7221  [1964-11-16]    25   8223-8247       1
+  7222  [1964-11-17]    18   8249-8266       
+  7223  [1964-11-18]    15   8267-8281       1
+  7224  [1964-11-19]    27   8283-8309       1
+  7225  [1964-11-20]    15   8311-8325       1
+  7226  [1964-11-23]    18   8327-8344       
+  7227  [1964-11-24]    11   8345-8355       1
+  7228  [1964-11-25]    22   8357-8378       
+  7229  [1964-11-26]    11   8379-8389       1
+  7230  [1964-11-27]    17   8391-8407       1
+  7231  [1964-11-30]    20   8409-8428       
+  7232  [1964-12-01]    12   8429-8440       
+  7233  [1964-12-02]    11   8441-8451       1
+  7234  [1964-12-03]    12   8453-8464       
+  7235  [1964-12-04]    10   8465-8474       
+  7236  [1964-12-07]    13   8475-8487       1
+  7237  [1964-12-09]    22   8489-8510       
+  7238  [1964-12-10]    24   8511-8534       
+  7239  [1964-12-11]    24   8535-8558       
+  7240  [1964-12-14]    24   8559-8582       
+  7241  [1964-12-15]    18   8583-8600       
+  7242  [1964-12-16]    20   8601-8620       
+  7243  [1964-12-17]    25   8621-8645       1
+  7244  [1964-12-21]    15   8647-8661       1
+  7245  [1964-12-22]    32   8663-8694       
+  7246  [1964-12-23]    30   8695-8724       
+  7247  [1964-12-24]    21   8725-8745       1
+  7248  [1964-12-28]    54   8747-8800       
+  7249  [1964-12-29]     8   8801-8808       
+  7250  [1964-12-30]     8   8809-8816       
+  7251  [1964-12-31]    10   8817-8826       
+
+La fecha de 7041 no la devuelve la capa y se leyo en la tapa: miercoles 19 de
+febrero. Donde faltan paginas, salvo cuatro casos, falta la ultima de la
+edicion: el folio de la edicion siguiente arranca una pagina mas adelante. Las
+cuatro excepciones se miraron: 7118 salta de la pagina 6158 (h12) a la 6165
+(h13), seis paginas que el sumario de la propia edicion cita; 7056 salta de 4911
+a 4913 y de 4920 a 4922; 7055 pierde dos y 7175 tres, segun la cadena, sin
+mirarlas. En 7100 la cadena da -1: el folio de una hoja se lee «576» en la capa,
+y no se miro.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: prev (capa del PDF, 4408 hojas) y prop (OCR de lee_auto.py, 4272).
+Busqueda sobre las dos, etiqueta por version. Union: U+0002, ninguna; U+00AD,
+127.003, todas seguidas de salto, quitadas junto con el salto; guion de fin de
+renglon con hasta dos signos a cada lado. Comprobacion: «cal» + salto + «dera»
+sin unir, cero casos.
+
+Pasadas. Literal «cald» sobre NFD sin diacriticos: 199 hojas con acierto en 113
+ediciones, contados los falsos positivos de B.3. Laxa
+[gc][ao][l1i|][dcl][ec][rnm][ao]: agrega «caldcra» (4 hojas). Laxa espaciada con
+[\s-]{0,3} entre cada par de letras: rescata «calde ra» y «calde  ra» (7118 h7),
+ya devueltas por otra forma. Difusa >= 0,78: once formas reales del departamento
+(«caldefa», «caldtfa», «caldora», «caldura», «catdera», «calfiera», «calaerilla»
+y otras); ninguna hoja nueva salvo la de A11 (7129 h7, «caluera»). Difusa
+ampliada 0,70-0,78 sobre palabras con c, g u o: 133 formas, todas falsos
+positivos; las 14 sospechosas se leyeron en contexto (E.7). Pasada nueva de la
+letra perdida, «ca dera» y «c a l dera»: dos actos que ninguna de las cuatro
+pasadas devolvia (A19 y A32). Prueba de las pasadas que dan cero: «yacon» da una
+sola hoja, «jaconomicas» (Metan): la pasada funciona y el anillo no tiene
+Yacones en 1964.
+
+Anillo 2: 373 terminos; 91 con acierto. Se leyeron los contextos distintos de
+los 91 (B.2 y B.3). Anillo de actores: los 1217 del config, por nombre +
+apellido sobre el texto sin puntuacion; 320 con acierto. Mas los 40 nombres de
+los actos del §A de 1964 (B.4). Numeros arrastrados: no se usaron como pasada
+independiente; el pre-informe trae 80.612 aciertos de la capa NUM, que son casi
+todos numeros de aviso y de pagina.
+
+Identificadores de las ausencias: numero de decreto, nombre de la persona y
+localidad, de a dos por lo menos.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis): no hay en la
+sesion una lista de toponimia establecida separada del config, de modo que el
+cotejo se hace contra lo que el propio año establece. Faltantes: 2 («El
+Puchete», que A37 imprime junto a «El Pucheta», y «Sub-Comisaria de La Caldera»,
+que el config tiene como «sub comisaria de la caldera» pero no en la forma con
+letra perdida). Apellidos dentro de la lista de lugares: 10 con acierto en 1964
+(castellanos, aramayo, mamani, condori, apaza, chaile, isasmendi, toconas,
+yugra, murua), que suman 1.872 hojas de ruido. A revisar: 3 (betania, el bordo y
+tabacal, que en 1964 son siempre de Gral. Güemes y Oran segun los actos).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+38 fichas que cubren 40 actos (A21 y A33 reunen dos decretos cada una). Cada
+aviso repetido es una sola ficha con todas sus apariciones. Los renglones de
+sumario que remiten a un acto fichado se nombran en la FUENTE y no se fichan
+aparte.
+
+A01  7020 h5  [CARGOS+JUSTICIA]
+    Dec. 1540: renuncia de Esteban Mogro, juez de paz titular
+  FUENTE: 7020 (17-1-1964), h5 col. 1 (encabezado al pie de h4 col. 3); sumario
+  en h2.
+  FICHA: Decreto 1540, Gobierno, J. e I. Publica, 7-1-1964, expte. 5000|64.
+  MODO DE LECTURA: Imagen: encabezado (h4) y cuerpo (h5). Numero decidido por
+  control.
+  TEXTO:
+    DECRETO N 1540 / Ministerio de Gobierno, J. e I. Publica / SALTA, Enero 7 de
+    1964 / Expediente N 5000|64 / -VISTA la renuncia interpuesta; / El
+    Gobernador de la Provincia de Salta DECRETA: / Art. 1. - Aceptase, a partir
+    del dia 1 de enero de 1964, la renuncia presentada por el señor ESTEBAN
+    MOGRO, al cargo de Juez de Paz Titular de la localidad de LA CALDERA. / Art.
+    2 - Comuniquese... / Dr. Ricardo Joaquin Durand / Dr. Guillermo Villegas /
+    ES COPIA: Miguel Santiago Maciel, Oficial Ppal.
+  NOTA DE LECTURA: La imagen del encabezado deja leer «1640» o «1540» (5 y 6 en
+  negrita). Lo decide la serie de los vecinos: 1538 en la misma hoja y 1541,
+  1542 y 1543 en h5, todos del 7 de enero. Queda 1540, por control (flujo §5.6,
+  control 1). El 3 de junio Mogro vuelve a ser designado (A08).
+
+A09  7024 h5  [OBRA-PUBLICA]
+    Dec. 1584: recepcion definitiva del Hogar del Niño de La Caldera
+  FUENTE: 7024 (23-1-1964), h5 col. 1.
+  FICHA: Decreto 1584, Economia, F. y O. Publicas, 10-1-1964, expte. 3709|63.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 1584 / Ministerio de Economia, F. y O. Publicas / SALTA, Enero 10
+    de 1964 / Expediente N 3709|63 / -VISTO que Direccion de Viviendas y
+    Arquitectura de la Provincia eleva para su aprobacion copia autenticada de
+    la Resolucion N 60, del 26 de diciembre de 1963, aprobatoria del Acta de
+    Recepcion Definitiva de la Obra: «Escuela Miguel Lardiez de Cobos», «Sala
+    Sanitaria de El Chamical», «Sala Sanitaria de San Agustin» y «Hogar del Niño
+    de [sic: «de» con acento grave] La Caldera», librada a favor del Contratista
+    Adhemar Nestor Imberti; / ... Art. 1. - Apruebase la Resolucion N 60 ...
+    «Articulo 1.- Aprobar en todas sus partes el Acta de Recepcion Definitiva de
+    las Obras: ... y "Hogar del Niño en La Caldera", librada por su inspeccion
+    tecnica y contratista Adhemar Nestor Imberti, obrante a fs. 2 de las
+    presentes actuaciones». ... Firmado: Ing. Francisco A. Garcia - Director ...
+    / Durand / Ing. Florencio Elias / ES COPIA: Pedro Andres Arranz.
+  NOTA DE LECTURA: RECUENTO PROPIO: cuatro obras; el acto no declara numero, de
+  modo que no hay nada que cotejar. El nombre de la obra cambia dentro del acto:
+  «Hogar del Niño de La Caldera» en el VISTO, «Hogar del Niño en La Caldera» en
+  la parte resolutiva. Imberti esta en el config desde 1958 y aparece en otras
+  doce ediciones de 1964 (B.4).
+
+A02  7026 h5  [CARGOS+JUSTICIA]
+    Dec. 1636: renuncia de Justo Pastor Lizondo, juez de paz suplente
+  FUENTE: 7026 (27-1-1964), h5 col. 2; sumario en h2.
+  FICHA: Decreto 1636, Gobierno, 15-1-1964, expte. 5098|64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 1636 / Ministerio de Gobierno, J. e I. Publica / SALTA, Enero 15
+    de 1964 / Expediente N 5098|64 / -VISTA la renuncia interpuesta, / ...
+    DECRETA: / Art. 1. - Aceptase la renuncia presentada por el señor JUSTO
+    PASTOR LIZONDO, al cargo de Juez de Paz Suplente de La Caldera. / Durand /
+    Villegas / ES COPIA: Maciel.
+  NOTA DE LECTURA: Serie 1635-1636-1637 del mismo dia: el numero cierra. El
+  sumario de h2 lo resume como «Justo P. Lizondo». Lizondo esta en el config
+  desde 1949.
+
+A10  7045 h6  [OTRO]
+    Dec. 2059: jefes zonales del censo economico; zona VIII
+  FUENTE: 7045 (26-2-1964), h5 col. 3 y h6 col. 1.
+  FICHA: Decreto 2059, Economia, F. y O. Publicas, 14-2-1964.
+  MODO DE LECTURA: Imagen: encabezado, zonas II a IX.
+  TEXTO:
+    DECRETO N 2059. / Ministerio de Economia, F. y O. Publicas / SALTA, Febrero
+    14 de 1964. / VISTO el pedido que formula la Direccion de Estadistica e
+    Investigaciones Economicas, en relacion a los censos economicos ... /
+    Articulo 1 - Designase, con caracter ad-honorem, jefes zonales para los
+    censos economicos a cumplirse en el curso de 1964, a las siguientes
+    personas: ... -Zona VIII (Gral. Güemes y La Caldera): Sr. Daniel Rufino,
+    Inspector Zonal de Escuelas Nacionales. ...
+  NOTA DE LECTURA: RECUENTO PROPIO: nueve zonas y 23 departamentos, que son
+  todos los de la provincia; el acto no declara numero. La zona I (Capital) se
+  leyo en la capa; las demas, en la imagen.
+
+A03  7047 h4  [CARGOS]
+    Dec. 1316 (de 1963): cesa el subcomisario Pedro Ignacio Garcia
+  FUENTE: 7047 (28-2-1964), h4 col. 3; sumario en h2 («1316 del 13|12|63»).
+  FICHA: Decreto 1316, Gobierno, 13-12-1963, expte. 8909-63.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 1316. / Ministerio de Gobierno, Justicia e I. Publica / SALTA,
+    Diciembre 13 de 1963. / Expte. N 8909-63. / VISTO, la Nota N 790 de fecha 29
+    de octubre del año en curso, elevada por Jefatura de Policia ... / Articulo
+    1 - Danse por terminadas las funciones a partir del dia 1 de noviembre del
+    presente año, al Sub-Comisario (L. 756 P. 449) de la Sub-Comisaria de La
+    Caldera, don Pedro Ignacio Garcia, por no reunir las condiciones necesarias
+    para desempeñarse como tal. / Durand / Villegas / ES COPIA: MIGUEL SANTIAGO
+    MACIEL.
+  NOTA DE LECTURA: Acto de 1963 publicado en 1964, dos meses y medio despues. Se
+  ficha en 1964 por la edicion. El reemplazante no aparece en ningun tramo
+  leido: vacante declarada sin sucesor (citado y no acompañado).
+
+A34  7049 h13  [AGUAS]
+    Aviso 16433: concesion de agua del rio de La Caldera (Trucco)
+  FUENTE: 7049 (3-3-1964), h13 col. 2; ocho apariciones mas: 7050 h15, 7051 h9,
+  7053 h17, 7054 h13, 7055 h20, 7056 h13, 7057 h9, 7058 h14.
+  FICHA: Edicto citatorio, Administracion General de Aguas; expte. 3887|T|63; e)
+  3 al 16-3-64.
+  MODO DE LECTURA: Imagen (7049); repeticion comprobada por texto.
+  TEXTO:
+    N 16433 - REF.: Expte. N 3887|T|63. s. o. p. p|15|3 - EDICTO CITATORIO - A
+    los efectos establecidos por el Art. 350 del Codigo de Aguas, se hace saber
+    que CARLOS EDUARDO, AMALIA LUCRECIA, JORGE ERNESTO y GUILLERMO ROBERTO
+    TRUCCO tienen solicitado otorgamiento de concesion de agua publica, para
+    irrigar con una dotacion de 0,144 l|seg. a derivar del Rio de La Caldera,
+    mediante la acequia «Del Pueblo» (margen derecha), con caracter
+    Temporal-Eventual, una superficie de 0,2750 Has. del inmueble catastrado N
+    11, ubicado en el Dpto. de La Caldera. / Salta, Administracion General de
+    Aguas / e) 3 al 16-3-64
+  NOTA DE LECTURA: Nueve apariciones en diez ediciones; la 7052 no lo trae
+  (busqueda por «trucco» y por «3887» en las dos versiones). Aritmetica: 0,144
+  l/s sobre 0,2750 ha son 0,52 l/s por hectarea; el acto no lo declara. RECUENTO
+  PROPIO: cuatro solicitantes.
+
+A35  7054 h11  [DOMINIO]
+    Aviso 16505: remate de fracciones de Castañares (Capital), lindero «camino
+    Nacional a Jujuy por La Caldera»
+  FUENTE: 7054 (10-3-1964), h11 col. 1; trece apariciones mas, 7055 a 7068
+  (falta en 7056).
+  FICHA: Remate judicial, martillero Jose Alberto Cornejo; base $ 2.600.000;
+  6-4-1964.
+  MODO DE LECTURA: Imagen (7054, fraccion a); repeticion comprobada por texto.
+  TEXTO:
+    N 16505 - Por: JOSE ALBERTO CORNEJO - JUDICIAL - VALIOSO INMUEBLE A SOLO 6
+    Kms. DE ESTA CIUDAD SOBRE CAMINO A «VAQUEROS» / BASE $ 2.600.000.- m|n. / EL
+    DIA LUNES 6 DE ABRIL DE 1964 A LAS 17 horas, ... REMATARE ... los inmuebles
+    que son parte integrante de las fincas «CASTAÑARES» y «LA CANDELARIA»,
+    saber: a) El inmueble o fraccion de campo ubicado en el Departamento
+    Capital, ... finca «CASTAÑARES», ... N 4 de la division ... SUPERFICIE DE
+    2.285 Hectareas, 7.954,31 mts.2 y dentro de los siguientes limites: AL NORTE
+    con el Rio Mojotoro; AL SUD, con las fincas «La Lagunilla», «La Candelaria»
+    y «Tres Cerritos»; AL ESTE, finca «La Lagunilla» y AL OESTE, con el camino
+    Nacional a Jujuy por La Caldera, segun TITULO registrado al folio 437,
+    asiento 14 del libro 8 de R. I. Capital. Catastro N 6541. Valor fiscal $
+    2.160.000.- m|n. ...
+  NOTA DE LECTURA: Inmueble del departamento Capital: La Caldera aparece como
+  nombre del camino. La capa propia deforma el nombre en «caldefa» (7064),
+  «caldtfa» (7066) y «cald.ra» (7057). El plano N 775 de la fraccion b se cita y
+  no se acompaña (Capital).
+
+A04  7061 h6  [CARGOS+REGISTRO-CIVIL]
+    Dec. 2357: Registro Civil de La Caldera (Pueblo) a la policia
+  FUENTE: 7061 (19-3-1964), h6 cols. 1-2; sumario en h2.
+  FICHA: Decreto 2357, Gobierno, 11-3-1964, expte. 5580-64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 2357. / Ministerio de Gobierno, J. e I. Publica / SALTA, Marzo 11
+    de 1964 / Expte. N 5580-64. / VISTA la Nota N 75-M-18 de fecha 4 de marzo
+    ..., elevada por la Direccion General del Registro Civil ... / Articulo 1 -
+    Encargase interinamente la Oficina de Registro Civil de la localidad de La
+    Caldera (Pueblo), a la Autoridad Policial del lugar, mientras dure la
+    ausencia de la titular, señorita Ester Gabriela Cruz, quien se encuentra en
+    uso de licencia reglamentaria. / Durand / Villegas / Es copia: Miguel Angel
+    Feixes (h).
+  NOTA DE LECTURA: Ester Gabriela Cruz esta en el config desde 1956: sigue de
+  titular.
+
+A06  7063 h8  [HACIENDA-MUN+NORMA]
+    Dec. 2417: aprueba la Ordenanza General Impositiva 1964
+  FUENTE: 7063 (23-3-1964), h8 col. 2; sumario en h3 (pag. 5030).
+  FICHA: Decreto 2417, Gobierno, 13-3-1964, expte. 92[3/8]7|63.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 2417 / Ministerio de Gobierno, J. e I. Publica / SALTA, Marzo 13
+    de 1964 / Expediente N 92[3/8]7|63 / -VISTO el presente expediente mediante
+    el cual la Municipalidad de La Caldera, eleva para su aprobacion la
+    Ordenanza General Impositiva que ha de regir en dicha Comuna durante el año
+    1964; / Por ello, y atento lo informado por el Tribunal de Cuentas de la
+    Provincia a fs. 29, lo dictaminado por Fiscalia de Gobierno a fs. 30 y a las
+    disposiciones establecidas en el art. 184 de la Constitucion Provincial; /
+    ... Art. 1. - Apruebase la Ordenanza General Impositiva para el año 1964 de
+    la Municipalidad de La Caldera que corre de fs. 2 a fs. 28 del presente
+    expediente. / Durand / Villegas / Es copia: Feixes (h).
+  NOTA DE LECTURA: Expediente: la imagen no decide entre 9237 y 9287 (3 y 8); la
+  capa da 9287. No hay control que lo resuelva: queda con las dos lecturas. El
+  texto de la ordenanza no se publica: citado y no acompañado.
+
+A07  7071 h6  [HACIENDA-MUN]
+    Dec. 2553: presupuesto municipal 1964, $ 1.119.851,31
+  FUENTE: 7071 (6-4-1964), h6 col. 2; sumario en h2.
+  FICHA: Decreto 2553, Gobierno, 19-3-1964, expte. 5051-64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 2553. / Ministerio de Gobierno, J. e I. Publica / SALTA, Marzo 19
+    de 1964 / Expte. N 5051-64. / VISTAS las presentes actuaciones en las que la
+    Municipalidad de La Caldera eleva para su aprobacion el presupuesto de
+    gastos y calculo de recursos para el año 1964; / Por ello y atento lo
+    informado por el Tribunal de Cuentas de la Provincia a fs. 9 de estos
+    obrados, / ... Articulo 1 - Apruebase el presupuesto de gastos y calculo de
+    recursos para el año 1964 de la Municipalidad de La Caldera, cuyos totales
+    ascienden a las sumas de $ 1.119.851.31 m|n. / Durand / Villegas / ES COPIA:
+    Feixes (h).
+  NOTA DE LECTURA: La capa previa imprime «La Caletera» en el VISTO: la palabra
+  se decidio en la imagen. El presupuesto no se publica en detalle: no hay
+  cuadro que recalcular. El OCR propio de esta hoja mezcla columnas y pega al
+  2553 la terna de Chicoana del decreto 2550: no hay terna de La Caldera en la
+  hoja (E.5).
+
+A36  7080 h13  [DOMINIO]
+    Aviso 16890: remate de la mitad de la finca San Antonio o San Roque (La
+    Calderilla)
+  FUENTE: 7080 (17-4-1964), h13 col. 3; 29 hojas por texto, de 7079 h20 a 7109
+  h19 (e) 16-4 al 2-6-64).
+  FICHA: Remate judicial, Arturo Salvatierra; Banco Provincial de Salta contra
+  Ernesto Mesples; base $ 99.000; 5-6-1964.
+  MODO DE LECTURA: Imagen (7080); repeticion comprobada por texto.
+  TEXTO:
+    N 16890. - POR: ARTURO SALVATIERRA - JUDICIAL - INMUEBLE - BASE $ 99.000
+    m|n. / Por orden del Sr. Juez de 1a Instancia en lo Civil y Comercial, 2a
+    Nominacion, en la ejecucion seguida por el Banco Provincial de Salta contra
+    Ernesto Mesples, Ejecutivo, el dia 5 de Junio de 1964 a horas 11 en el hall
+    de la planta alta del citado Banco, España 625 ..., vendere al mejor postor
+    con la base de $ 99.000.- m|n. equivalente a las dos terceras partes de su
+    valuacion fiscal que corresponde proporcionalmente, la mitad indivisa de la
+    finca «San Antonio o San Roque», situada en La Calderilla, departamento La
+    Caldera, Provincia de Salta, con la superficie de sus titulos originarios,
+    comprendida dentro de los limites siguientes: al Norte, con propiedad de
+    Ramona Rosa Tapia; Sud, propiedad de Abraham Fernandez; Este, con el filo de
+    la loma o cumbre del cerro alto; y Oeste, con la citada finca que antes fue
+    de Paulina Reyes de Aleman. Seña en el acto el 30% ... Titulo folio 68,
+    asiento 13, libro 3 R.I. de La Caldera. Nomenclatura catastral: partida N
+    107. Se cita a la acreedora hipotecaria Da. Carmen Mestres de Martorell; y
+    Dardo Coronel Jijena y Marta B. de Carrasco como embargantes, ... Edictos 30
+    dias en B. Oficial y Foro Salteño y 5 publicaciones en El Intransigente.
+  NOTA DE LECTURA: RECUENTO PROPIO: cuatro linderos, tres citados. La capa
+  propia imprime «calaerilla» (7080, 7093) y la previa «ca1 cerilla» (7096).
+  Abraham Fernandez (1909), Paulina Reyes de Aleman y Eusebio Palma (1947) y
+  Dardo Jijena (1955) estan en el config (B.1).
+
+A11  7095 h6  [OBRA-PUBLICA]
+    Dec. 3120: donacion de la Cia. Arg. de Telefonos para el Cristo
+  FUENTE: 7095 (11-5-1964), h6 col. 3.
+  FICHA: Decreto 3120, Economia, F. y O. Publicas, 5-5-1964.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    DECRETO N 3120 / Ministerio de Economia, F. y O. Publicas / SALTA, Mayo 5 de
+    1964 / -VISTO la donacion efectuada por la Compañia Argentina de Telefonos
+    S.A. al Gobierno de la Provincia de Salta por la suma de $ 100.000.- m|n.
+    (Cien Mil Pesos Moneda Nacional) para ser utilizados como este lo estime
+    conveniente; / ... Art. 1. - Aceptase la donacion ... Art. 2. - Por
+    Contaduria General ... Nota de Ingreso ... con credito al Calculo de
+    Recursos Ejercicio 1963|1964 «Recursos no Presupuesto de Obras Publicas
+    -Donacion de la Compañia Argentina de Telefonos S.A.» ... Art. 3. -
+    Apliquese los fondos de la donacion referida a la construccion del basamento
+    para la ereccion en La Caldera del Cristo construido por el artista Juan
+    Carlos Iramain. / Art. 4. - Por la Subsecretaria de Obras Publicas incluyase
+    en el plan de trabajos publicos la obra: «Construccion basamento para la
+    ereccion del Cristo en La Caldera». / Durand / Ing. Florencio Elias / Es
+    Copia: Camila L. de Gastaldi.
+  NOTA DE LECTURA: El acto es del 5 de mayo: tres dias antes del 3162 (A12),
+  cuyo considerando dice que la comision «estima» que La Caldera seria el lugar
+  mas apropiado. Se transcribe el orden de las fechas y no se explica.
+
+A19  7096 h9  [OTRO]
+    Dec. 3153: pensiones a la vejez 6344-6462 (Res. 35-J)
+  FUENTE: 7096 (12-5-1964), h9 col. 1.
+  FICHA: Decreto 3153, Asuntos Sociales y S. P., 6-5-1964, expte. 3383|64-C.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 3153 / Ministerio de Asuntos Sociales y S. Publica / SALTA, 6 de
+    Mayo de 1964. / ... Articulo 1 - Apruebase la Resolucion N 35-J (Acta N 2)
+    de la Caja de Jubilaciones y Pensiones de la Provincia de fecha 16 de abril
+    de 1964, que acuerda las pensiones a la vejez numeros 6344 al 6462 ... y
+    rehabilita las pensiones Nros. 3565 de Isaula Lucero de Cachi y 4773 de
+    Lucinda del Carmen Orquera Vda. de Galvan de Metan, residiendo los
+    beneficiarios de las pensiones acordadas en los Departamentos de: Capital,
+    Anta, Cachi, Cafayate, La Ca'dera, General Güemes, La Candelaria, Cerrillos,
+    Chicoana, Iruya, La Poma, La Viña, Metan, Molinos, Oran, Rivadavia, Rosario
+    de la Frontera, Rosario de Lerma, San Carlos, Santa Victoria, Gral. San
+    Martin.
+  NOTA DE LECTURA: «La Ca'dera»: la l no imprime. Ninguna de las cuatro pasadas
+  lo devolvio; lo rescato el termino «la ca dera» del anillo 2 (E.7). RECUENTO
+  PROPIO: 21 departamentos. Con este acto la serie de numeros de pensiones a la
+  vejez encadena desde 6344 (ver A20).
+
+A37  7099 h8  [DOMINIO]
+    Aviso 17187: el mismo remate, con otros linderos
+  FUENTE: 7099 (15-5-1964), h8 col. 2; 30 hojas por texto, de 7099 h8 a 7128
+  h19.
+  FICHA: Remate judicial, Arturo Salvatierra; Banco Provincial contra Ernesto
+  Mesples, expte. 33.32[8]; base $ 99.000; 30-6-1964.
+  MODO DE LECTURA: Imagen (7099); repeticion comprobada por texto.
+  TEXTO:
+    N 17187 - Por: ARTURO SALVATIERRA / Judicial - Inmueble - Base $ 99.000.-
+    m|n. / Por orden del Sr. Juez de 1ra. Instancia en lo Civil y Comercial, 2a.
+    Nominacion, en la ejecucion seguida por el Banco Provincial de Salta contra
+    Ernesto Mesples, Expte. N 33.328, el dia 30 de Junio de 1964, a horas 11 ...
+    vendere ... con la base de las dos terceras partes de su valuacion fiscal
+    que corresponde proporcionalmente, la mitad indivisa de la finca «San
+    Antonio» o «San Roque», situada en La Calderilla, departamento de La
+    Caldera, ... comprendida dentro de los limites siguientes: Norte, propiedad
+    de Martin Borja y Eusebio Palma; Sud, sucesion de Abraham Fernandez; Este,
+    cumbre del cerro «El Puchete» o «El Pucheta», que lo separa de la finca
+    «Potrero de Valencia»; y Oeste, cauce del rio de La Caldera.- / Seña ...
+    Titulo al folio 68, asiento 13 libro 3 R.I. de La Caldera. Nomenclatura
+    catastral partida N 107. Se cita a la acreedora hipotecaria doña Carmen
+    Mestres de Martorell y Dardo Coronel Jijena y Marta B. Carrasco como
+    embargantes ...
+  NOTA DE LECTURA: CONTRADICCION con A36: mismo juicio, misma finca, mismo
+  titulo, misma partida y mismos citados; cambian el dia del remate (5 y 30 de
+  junio) y los linderos Norte, Este y Oeste. No se concilia; la pieza que lo
+  resolveria es el titulo del folio 68, asiento 13, libro 3 R.I. de La Caldera.
+  La capa propia escribe «caldcra», «caldora» y «caldura».
+
+A12  7100 h6  [OTRO+OBRA-PUBLICA]
+    Dec. 3162: comision honoraria del Cristo Redentor en La Caldera
+  FUENTE: 7100 (18-5-1964), h6 cols. 1-2.
+  FICHA: Decreto 3162, Gobierno, 8-5-1964.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    DECRETO N 3162. / Ministerio de Gobierno, J. e I. Publica / SALTA, Mayo 8 de
+    1964 / -VISTO que es proposito del Poder Ejecutivo de la Provincia dar una
+    ubicacion definitiva al Cristo Redentor, obra del escultor Iramain y que
+    actualmente se encuentra en la ciudad de San Miguel de Tucuman, totalmente
+    terminado; y, -CONSIDERANDO: Que a los efectos del caso se encomendo una
+    comision presidida por Monseñor Carlos M. Cortes, para que tuviera como
+    finalidad la determinacion del lugar de su emplazamiento; Que atendiendo a
+    lo informado por la comision de referencia, se estima que el lugar mas
+    apropiado y conveniente seria la localidad de La Caldera, lo que por otra
+    parte contaria con el beneplacito de los vecinos y autoridades de ese lugar;
+    ... Art. 1. - Disponese la creacion de una comision honoraria ...:
+    Presidente: Coronel (R.E.) Don JULIAN ERNESTO TRUCCO. Secretario: Don VICTOR
+    CORNEJO ISASMENDI. Tesorero: Don DAVID SERREY. Vocales: Don CECILIO MUÑOZ y
+    Don PEDRO DIONICIO MARTELL. Asesor Eclesiastico: Monseñor CARLOS M. CORTES.
+    / Art. 2. - ... facultada para abrir cuentas corrientes, disponer de los
+    fondos ... / Durand / Villegas / Es Copia: Feixes (h).
+  NOTA DE LECTURA: RECUENTO PROPIO: seis integrantes; el acto no declara numero.
+  David Serrey y Cecilio Muñoz estan en el config desde 1955 y Pedro D. Martell
+  desde 1963. El apellido del presidente es el de los solicitantes de agua de
+  A36: no se afirma parentesco.
+
+A08  7118 h7  [CARGOS+JUSTICIA]
+    Dec. 3550: Esteban Mogro y Pedro Luna, jueces de paz
+  FUENTE: 7118 (15-6-1964), h7 col. 3 y h8 col. 1; sumario en h2.
+  FICHA: Decreto 3550, Gobierno, 3-6-1964, expte. 6160-64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 3550. / Ministerio de Gobierno, Justicia e I. Publica / SALTA,
+    Junio 3 de 1964. / Expte. N 6160-64. / VISTA la terna elevada por el H.
+    Consejo Deliberante de la Municipalidad de La Caldera, para la designacion
+    de Juez de Paz Titular y Suplente de la citada localidad; y -CONSIDERANDO:
+    Que los citados cargos se encuentran vacantes y atento las prescripciones
+    establecidas en el Art. 165 de la Constitucion Provincial, / ... Articulo 1
+    - Designase Juez de Paz Titular y Suplente de la localidad de La Caldera, a
+    los señores Esteban Mogro -L. C. N [omitido]- Clase 1921 y Pedro Luna -M. I.
+    N [omitido]- Clase 1894-, respectivamente, por el termino constitucional de
+    dos años y a partir de la fecha que se hagan cargo de sus funciones. /
+    Durand / Villegas / Es Copia: Feixes (h).
+  NOTA DE LECTURA: Los numeros de documento se omiten en la transcripcion
+  (desvio declarado en el §0). Mogro renuncio el 1 de enero (A01) y vuelve el 3
+  de junio por terna del Concejo Deliberante. El suplente renunciante era
+  Lizondo (A02); Luna lo reemplaza sin que el acto lo diga.
+
+A20  7118 h11  [OTRO]
+    Dec. 3567: pensiones 6463-6501; rehabilita la de Vicente Garcia
+  FUENTE: 7118 (15-6-1964), h11 col. 1 y col. 2.
+  FICHA: Decreto 3567, Asuntos Sociales y S. P., 3-6-1964, expte. 3423|64-C.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 3567 / ... SALTA, 3 de Junio de 1964. / Expediente N 3423|64-C (N
+    2146|64 y agregados de la Caja ...). / ... Art. 1. - Apruebase en todas sus
+    partes la Resolucion N 89-J (Acta N 6) de la Caja ... de fecha 14 de mayo de
+    1964, que acuerda las pensiones a la vejez numeros 6463 al 6501 cuyos
+    adjudicatarios han cumplido con las exigencias de la Ley 1204 y rehabilita
+    la pension N 3480 de VICENTE GARCIA de La Caldera; residiendo los
+    beneficiarios de las pensiones acordadas en los Departamentos de: Capital,
+    Anta, Cachi, Cafayate, La Caldera, General Güemes, La Candelaria, Cerrillos,
+    Chicoana, Iruya, Molinos, Oran, Rivadavia Rosario de la Frontera, Rosario de
+    la Lerma [sic]. / Durand / Dr. Danton Julio Cermesoni / ES COPIA: Lina
+    Bianchi de Lopez.
+  NOTA DE LECTURA: El pre-informe atribuia el texto al decreto 3566, que es otro
+  acto (confirmacion de personal del Centro de Higiene Social); el encabezado se
+  identifico en la imagen. RECUENTO PROPIO: 15 departamentos (14 si «Rivadavia
+  Rosario de la Frontera», sin coma, fuese uno). Cadena de pensiones a la vejez
+  del año, por numero: 6344-6462 (35-J), 6463-6501 (89-J), 6502-6606 (170-J),
+  6607-6685 (183-J), 6686-6824 (270-J), 6825-7037 (366-J), 7156-7314 (498-J).
+  Encadena sin huecos hasta 7037; el tramo 7038-7155 no nombra La Caldera y no
+  se busco.
+
+A14  7129 h7  [OBRA-PUBLICA]
+    Dec. 3946: $ 300.000 provinciales para el basamento del Cristo
+  FUENTE: 7129 (1-7-1964), h7 cols. 2-3.
+  FICHA: Decreto 3946, Economia, F. y O. Publicas, 25-6-1964.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    DECRETO N 3946 / Ministerio de Economia, F. y O. Publicas / SALTA, Junio 25
+    de 1964 / -VISTO el Decreto N 3120 del 5 de mayo de 1964 que acepta la
+    donacion de $ 100.000.- m|n. que realizara la Compañia Argentina de
+    Telefonos S.A.; y -CONSIDERANDO: Que la donacion precitada esta destinada a
+    la construccion del basamento para la ereccion en La Caldera del Cristo
+    construido por el escultor Juan Carlos Iramain; Que a tal efecto se hace
+    necesario que el Gobierno tambien concurra con fondos ... / Art. 1. -
+    Transfierese dentro del Anexo H- Plan de Obras Publicas- Inciso I- Capitulo
+    IV- Titulo 4- Subtitulo A- Rubro Funcional I- Parcial 2[3/5]- la suma de $
+    300.000 m|n. (Trescientos Mil Pesos Moneda Nacional), para crear ...
+    Capitulo III- Titulo 10- Subtitulo C- Rubro Funcional I- Parcial 1-
+    «Construccion de basamento y montaje para la ereccion en La Caldera del
+    Cristo esculpido por el escultor Juan Carlos Iramain» ... / Art. 2. - ...
+    liquidese la suma de m$n. 300.000.- ... a favor de la Direccion de Viviendas
+    y Arquitectura ... entrega de los importes que en cada caso requiera la
+    Comision Honoraria designada por el Decreto N 3162 del 8 de mayo de 1964 a
+    fin de afrontar los gastos emergentes del cumplimiento del Decreto N
+    3120|1964. / Durand / Ing. Florencio Elias / ES COPIA: Santiago Felix Alonso
+    Herrero.
+  NOTA DE LECTURA: La capa previa da «$ 190.000» en el VISTO; la imagen da
+  100.000, que es lo que dice el 3120. Monto en cifras y en letras concuerdan
+  (300.000, «Trescientos Mil»). El parcial de origen se lee 23 o 25.
+
+A21  7131 h13  [OTRO]
+    Decs. 4027 y 4028: pensiones a la invalidez y a la vejez
+  FUENTE: 7131 (3-7-1964), h13 cols. 1 y 2; sumario en h3.
+  FICHA: Decretos 4027 y 4028, Asuntos Sociales, 30-6-1964, exptes. 3488|64-C y
+  3487|64-C.
+  MODO DE LECTURA: Imagen: encabezados y renglones de La Caldera.
+  TEXTO:
+    4027: ... Resolucion N 184-J (Acta N 11) ... de fecha 18 de junio de 1964,
+    que acuerda las pensiones a la invalidez numeros 1645 al 1673 ... y
+    rehabilita la pension N 1452 de Juan Bautista Ajaya, de Salta, residiendo
+    los beneficiarios ... en los Departamentos de: Capital, Anta, Cachi, La
+    Caldera, General Güemes, Cerrillos, Chicoana, Guachipas, Metan, Rosario de
+    Lerma, y San Carlos. / 4028: ... Resolucion N 183-J (Acta N 11) ...
+    pensiones a la Vejez numeros 6607 al 6685 ... rehabilita la pension N 3505
+    de Jose Lisandro Palma de Rosario de la Frontera, residiendo los
+    beneficiarios ... en los Departamentos de: Capital, Anta, Cachi, Cafayate,
+    La Caldera, General Güemes, La Candelaria, Cerrillos, Chicoana, La Viña,
+    Metan, Molinos, Oran, Rivadavia, Rosario de la Frontera, Rosario de Lerma
+    San Carlos, Santa Victoria Oeste, y San Martin.
+  NOTA DE LECTURA: RECUENTO PROPIO: 11 departamentos en el 4027; 19 en el 4028
+  (18 si «Rosario de Lerma San Carlos», sin coma, fuese uno). Dos actos en una
+  ficha porque son contiguos, del mismo dia y de la misma forma.
+
+A16  7134 h5  [ELECTORAL+NORMA]
+    Ley 3827: dos grupos de departamentos para renovar las Camaras
+  FUENTE: 7134 (8-7-1964), h5 cols. 1-2.
+  FICHA: Ley 3827, sancionada el 23-6-1964, promulgada el 1-7-1964.
+  MODO DE LECTURA: Imagen, entera.
+  TEXTO:
+    LEY N 3827 / ... Articulo 1 - El ejercicio del mandato de los senadores y
+    diputados electos el 7 de julio de 1963, se considerara iniciado el 29 de
+    julio de 1963. ... Art. 2 - A los fines de la renovacion de ambas Camaras,
+    prevista por los articulos 69 y 70 de la Constitucion ...: 1.- Legisladores:
+    ... de 1 al 23 para los senadores y de 1 a 60 para los diputados; 2.-
+    Departamentos: Se constituyen dos grupos de departamentos en la siguiente
+    forma: Grupo 1: Capital, La Caldera, Guachipas, Cafayate, Chicoana, Cachi,
+    Molinos, La Poma, San Carlos, Los Andes, Rosario de Lerma y General Güemes.
+    Grupo 2: Rosario de la Frontera Metan, Anta, La Candelaria, General San
+    Martin, Oran, Iruya, Santa Victoria, La Viña, Cerrillos y Rivadavia. / Art.
+    3 - Se practicara un sorteo en acto publico por una comision bicameral ...
+    bolilla 1 ... grupo 1 ...; bolilla 2 ... grupo 2 ... b) Se extraera una
+    bolilla. Esta correspondera a mandato por dos años e indicara el grupo
+    departamental cuya representacion legislativa debe renovarse el 1 de mayo de
+    1965. ... Art. 5 - Derogase las leyes 2023 y 3173 ... Dada ... a los
+    veintitres dias del mes de junio del año mil novecientos sesenta y cuatro. /
+    DR. RAUL FIORE MOULES Vicepresidente 1 / EMILIO ESPELTA Presidente / ARMANDO
+    FALCON / RAFAEL ALBERTO PALACIOS / POR TANTO: Ministerio de Gobierno ...
+    SALTA, Julio 1 de 1964 / Durand / Villegas / Es Copia: Feixes (h).
+  NOTA DE LECTURA: RECUENTO PROPIO: grupo 1, doce departamentos; grupo 2, once
+  (diez si «Rosario de la Frontera Metan», sin coma en el original, fuese un
+  solo nombre, que no lo es). Suman 23. La ley no declara numero. El resultado
+  del sorteo no se publica en el corpus; lo cita el 6589 (A18): sorteo del
+  29|7|64.
+
+A22  7134 h11  [OTRO]
+    Dec. 4076: pensiones a la vejez 6502-6606 (Res. 170-J)
+  FUENTE: 7134 (8-7-1964), h11 col. 3.
+  FICHA: Decreto 4076, 1-7-1964, expte. 3489|64-C.
+  MODO DE LECTURA: Imagen: encabezado y renglones finales.
+  TEXTO:
+    DECRETO N 4076 / Ministerio de Gobierno, J. e I. Publica [asi] / SALTA,
+    Julio 1 de 1964. / ... Apruebase la Resolucion N 170-J (Acta N 10) ... de
+    fecha [1]1 de junio de 1964, que acuerda las pensiones a la Vejez numeros
+    6502 al 6606, ... con residencia en los Departamentos de: Capital, Anta,
+    Cachi, Cafayate, General Güemes, La Candelaria, Cerrillos, Chicoana,
+    Guachipas, Iruya, Metan Molinos Oran, Rosario de la Frontera, Rosario de
+    Lerma, San Carlos, San Martin, Joaquin V. Gonzalez, La Caldera, San Jose de
+    Cachi, Santa Victoria.
+  NOTA DE LECTURA: El encabezado dice Ministerio de Gobierno y firman Cermesoni
+  y Lina Bianchi de Lopez, de Asuntos Sociales: se transcribe sin conciliar. La
+  lista mezcla departamentos y localidades (Joaquin V. Gonzalez, San Jose de
+  Cachi). RECUENTO PROPIO: 21 nombres, 20 si «Metan Molinos» fuese uno.
+
+A26  7139 h4  [CARGOS]
+    Dec. 4134: Manuel Jose Hernandez, medico regional interino
+  FUENTE: 7139 (16-7-1964), h4 cols. 1-3 y h5 col. 1; sumario en h2.
+  FICHA: Decreto 4134, Asuntos Sociales, 7-7-1964, expte. 43.197|64. Firma el
+  Vicegobernador en ejercicio.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    DECRETO N 4134 / Ministerio de Asuntos S. y S. Publica / SALTA, Julio 7 de
+    1964 / ... El Vice Gobernador de la Provincia En Ejercicio del Poder
+    Ejecutivo DECRETA: ... Art. 3. - Reconocense los servicios prestados por el
+    Dr. MANUEL JOSE HERNANDEZ, en la categoria de Medico Regional de la
+    localidad de La Caldera, durante el tiempo comprendido entre el 7 de mayo y
+    el 26 de junio del año en curso, inclusive, en reemplazo del Dr. Cesar
+    Torrens Santigosa, que se encuentra en uso de licencia reglamentaria y
+    compensatoria. / Art. 4. - Designase con caracter interino, al Dr. MANUEL
+    JOSE HERNANDEZ, en la categoria de Medico Regional de la localidad de La
+    Caldera, a partir del dia 27 de junio de 1964 y mientras dure la ausencia
+    del Dr. Cesar Tomas Torrens Santigosa, en uso de licencia reglamentaria y
+    compensatoria. / ... Art. 6. - Concedese al Dr. MANUEL JOSE HERNANDEZ una
+    sobreasignacion mensual de $ 3.500.- m|n. (Tres Mil Quinientos Pesos Moneda
+    Nacional), a partir del dia 7 de mayo de 1964, en razon de que el mencionado
+    profesional utilizara el vehiculo de su propiedad para cumplimentar la tarea
+    asignada, ... mientras se desempeñe como Medico Regional en la localidad de
+    La Caldera, en reemplazo del titular, Dr. Cesar Torrens Santigosa. / ... Dr.
+    Eduardo Paz Chain / Dr. Danton Julio Cermesoni / Lina Bianchi de Lopez.
+  NOTA DE LECTURA: Los arts. 1 y 2 tratan de Coronel Moldes (Tilca, Dousset,
+  Akulov). El nombre del titular figura de dos maneras en el mismo acto.
+  Hernandez esta en el config desde 1963; en 1964 aparece en otras quince
+  ediciones como medico de la Asistencia Publica y de Coronel Moldes (B.4).
+
+A32  7149 h7  [CARGOS]
+    Dec. 4348: renuncia en la Sub-Comisaria de La Caldera (Dpto. Capital)
+  FUENTE: 7149 (30-7-1964), h7 col. 1.
+  FICHA: Decreto 4348, Gobierno, 22-7-1964, expte. 6813-64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 4348. / Ministerio de Gobierno, Justicia e I. Publica / SALTA
+    Julio 22 de 1964. / Expte. N 6813-64. / VISTOS las Notas Nos. 487, 488, 489
+    490, 491, 492, 493, ... elevadas por Jefatura de Policia ... Articulo 1 -
+    Aceptase las renuncias ...: c) Del señor Juan Carlos Ba[b/l]on, a cargo de
+    Sargento de Policia (F. 3224- P. 872), de la Sub-Comisaria de La Ca-dera
+    (Dpto. Capital), a partir del dia 16 de julio del año en curso.
+  NOTA DE LECTURA: El acto pone la Sub-Comisaria de La Caldera en el
+  departamento Capital. Se transcribe y no se corrige (v16 §5.1ter); el 1316
+  (A03) nombra la misma Sub-Comisaria sin departamento. El apellido no se
+  decide: la imagen deja «Bal'on» o «Babon»; la capa previa da «Babon» y la
+  propia «balon». Falso negativo de las cuatro pasadas, como A19 (E.7).
+
+A28  7151 h4  [ESCUELA]
+    Dec. 4376: la Escuela 310 San Alejo pasa a Rodeo de Mulas
+  FUENTE: 7151 (3-8-1964), h4 col. 1.
+  FICHA: Decreto 4376, Gobierno, 24-7-1964, expte. 8763-1963.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 4376 / Ministerio de Gobierno, J. e I. Publica / Salta, 24 de
+    Julio de 1964 / Expediente N 8763 - 1963 / VISTO lo solicitado por
+    Inspeccion Tecnica Seccional de Escuelas Nacionales Distrito Salta, en nota
+    N 1284 de fecha 17 de julio ... / Articulo 1 - Rectificase el inciso ch) en
+    el articulo 1 del Decreto N 336 de fecha 29 de octubre de 1963, dejandose
+    establecido que la aquiesciencia [sic] que se concede conforme lo establece
+    la Ley N 1420 de Educacion Comun, al CONSEJO NACIONAL DE EDUCACION para
+    trasladar la Escuela N 310- SAN ALEJO (Dpto. La Caldera), pasara a funcionar
+    en RODEO DE MULAS (Dpto. Rosario de la Frontera). / Durand / Villegas.
+  NOTA DE LECTURA: El decreto 336 de 1963 no esta en el corpus: citado y no
+  acompañado. La escuela sale del departamento.
+
+A23  7162 h11  [OTRO]
+    Dec. 4529: pensiones a la vejez 6686-6824 (Res. 270-J)
+  FUENTE: 7162 (19-8-1964), h11 col. 1.
+  FICHA: Decreto 4529, Asuntos Sociales, 5-8-1964, expte. 3[5/3]59|64-C.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    ... la Resolucion N 270-J., de fecha 23 de julio de 1964 (Acta N 16) ...,
+    que acuerda las Pensiones a la Vejez numeros 6686 al 6824, ... residentes en
+    los Departamentos de: Capital, Anta, Cachi, Cafayate, La Caldera, General
+    Güemes, Cerrillos, Chicoana, Guachipas, Iruya, La Viña, Metan, Molinos,
+    Oran, Rosario de la Frontera, Rosario de Lerma, Los Andes, San Carlos, Santa
+    Victoria y San Martin y rehabilita las pensiones numeros 3675, 839, 3101 y
+    5141 ...
+  NOTA DE LECTURA: La imagen deja leer 6821 o 6824 y la capa da 6821. Lo decide
+  la cita cruzada: la Res. 366-J (A24) abre en 6825. Queda 6824, por control.
+  RECUENTO PROPIO: 20 departamentos.
+
+A29  7169 h9  [CARGOS+HACIENDA-MUN]
+    Dec. 4787: jubilacion de Feliciano Ramos, de la Municipalidad
+  FUENTE: 7169 (28-8-1964), h9 col. 3; sumario en h3.
+  FICHA: Decreto 4787, Asuntos Sociales, 24-8-1964, expte. 357[0/6]-R-64.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    ... Articulo 1 - Apruebase en todas sus partes la Resolucion N 292-J. (Acta
+    N 18), de la Caja de Jubilaciones y Pensiones de la Provincia, de fecha 6 de
+    agosto de 1964, mediante el cual se acuerda al Encargado de Seccion
+    (Maestranza), de la Municipalidad de La Caldera, señor Feliciano Ramos -Mat.
+    Ind. [omitido]-, el beneficio de una jubilacion ordinaria, de conformidad a
+    las disposiciones del Art. 28 del Decreto Ley 77|56, con un haber
+    jubilatorio mensual determinado en base a la Ley 3372 y con mas la
+    bonificacion dispuesta por el Art. 29 del Decreto Ley 77|56, a liquidarse
+    desde la fecha en que deje de prestar servicios. / Durand / Cermesoni / Lina
+    Bianchi de Lopez.
+  NOTA DE LECTURA: La capa previa da «202-J» en el VISTO; la imagen da 292-J en
+  los dos lugares.
+
+A13  7178 h9  [OTRO]
+    Dec. 4963: autoriza la rifa de la comision del Cristo
+  FUENTE: 7178 (10-9-1964), h9 cols. 2-3; sumario en h3.
+  FICHA: Decreto 4963, Gobierno, 4-9-1964.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 4963 / Ministerio de Gobierno, J. e I. Publica / Salta, 4 de
+    Septiembre de 1964 / VISTO el pedido formulado por la Comision Honoraria
+    encargada de las tareas tendientes a la ubicacion definitiva del Cristo
+    Redentor en la localidad de La Caldera, la que fuera creada por decreto N
+    3162 de fecha 8 de mayo del año en curso, en el sentido de que se autorice
+    la rifa que tendra por objeto allegar fondos para concretar la instalacion
+    de la mencionada escultura, obra del artista Iramain; / ... Articulo 1 -
+    Autorizase a la Comision Honoraria creada por decreto N 3162 del 8-V-64, ...
+    a efectuar la rifa de un terreno y una casa desarmable de aluminio instalada
+    en el mismo, la cual debera ajustarse a las disposiciones legales en
+    vigencia. / Durand / Villegas / Es copia: Feixes (h).
+  NOTA DE LECTURA: Serie 4963-4964, mismo dia. La rifa se exime de impuestos por
+  la Ley 3890 (A15).
+
+A24  7178 h12  [OTRO]
+    Dec. 4982: pensiones a la vejez 6825-7037 (Res. 366-J)
+  FUENTE: 7178 (10-9-1964), h12 col. 3; sumario en h3.
+  FICHA: Decreto 4982, Asuntos Sociales, 4-9-1964, expte. 3638-C-64.
+  MODO DE LECTURA: Imagen (encabezado y renglones de La Caldera).
+  TEXTO:
+    Art. 1. - Apruebase en todas sus partes la Resolucion N 366-J (Acta N 21) de
+    la Caja ... de fecha 27 de agosto de 1964, que acuerda las Pensiones a la
+    Vejez numeros 682[5] a 7037 a adjudicatarios de los Departamentos de
+    Capital, Anta, Cachi, Cafayate, La Caldera, Gral. Güemes, Chicoana,
+    Guachipas, Iruya, La Poma, La Viña, Molinos, Rosario de la Frontera, Rosario
+    de Lerma, San Carlos, Santa Victoria, La Candelaria, Metan, Oran, Ri...
+  NOTA DE LECTURA: El ultimo digito de 6825 cae en el borde del recorte; el
+  sumario de h3 trae «6825 a 7037». La capa propia escribe «la (calfiera»; la
+  previa, «Cal-dera». El final de la lista se leyo en la capa.
+
+A15  7203 h8  [NORMA]
+    Ley 3890: exime de impuestos la rifa pro Cristo de La Caldera
+  FUENTE: 7203 (20-10-1964), h8 col. 3; sumario en h2.
+  FICHA: Ley 3890, sancionada el 1-10-1964, promulgada el 15-10-1964.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    LEY N 3890 / POR CUANTO: EL SENADO Y LA CAMARA DE DIPUTADOS DE LA PROVINCIA
+    DE SALTA, SANCIONAN CON FUERZA DE LEY: / ARTICULO 1 - Eximese de todo
+    impuesto y gravamenes en el territorio de la Provincia a la rifa que
+    organizara la Comision pro-Cristo de La Caldera. / ARTICULO 2 - Comuniquese,
+    etc. / Dada en la Sala de Sesiones ... a un dia del mes de octubre del año
+    mil novecientos sesenta y cuatro. / CARLOS GERARDO SERRALTA Presidente /
+    RAUL FIORE MOULES Vicepresidente 1 / RAFAEL ALBERTO PALACIOS Secretario /
+    ARMANDO FALCON Secretario / POR TANTO: MINISTERIO DE ECONOMIA, FINANZAS Y
+    OBRAS PUBLICAS / Salta, Octubre 15 de 1964 / Tengase por ley ... / Durand /
+    Ing. Florencio Elias / ES COPIA: Santiago Felix Alonso Herrero.
+  NOTA DE LECTURA: El cargo de quien firma el «Es copia» se leyo en la capa.
+
+A38  7208 h11  [DOMINIO]
+    Aviso 18725: remate de la finca entera, base $ 198.000
+  FUENTE: 7208 (27-10-1964), h11 col. 3; diez hojas, 7208 a 7217 (e) 27-10 al
+  9-11-64).
+  FICHA: Remate judicial, Efrain Racioppi; Martorell, Carmen Mestres de, contra
+  Ernesto Mesples, ejecucion hipotecaria, expte. 35.330|64; 20-11-1964.
+  MODO DE LECTURA: Imagen (7208); repeticion comprobada por texto.
+  TEXTO:
+    N 18725 - POR: EFRAIN RACIOPPI - Telf. 11.106 - Finca Rural Denominada «San
+    Antonio» o «San Roque», en La Caldera, Salta - Base $ 198.000.- m|n. / El 20
+    Noviembre hs. 18, en Caseros 1856, Ciudad, Rematare Base 2|3 parte
+    avaluacion fiscal inmueble (finca rural), ubicada en el Dpto. La Caldera,
+    Prov. de Salta, denominada «San Antonio» o «San Roque», de prop. de Ernesto
+    Mesples, segun titulo reg. a fol. 68, asiento 13 del Libro 3 R.I. de La
+    Caldera. Catastro N 107. Ordena Juez 2a Nominacion. Juicio: «Martorell,
+    Carmen Mestres de vs. Mesple, Ernesto». Ejecucion Hipotecaria. Expte. N
+    35.330|64. Seña: 30 o|o. Comision cargo del comprador. Edictos 10 dias
+    Boletin Oficial y El Tribuno.
+  NOTA DE LECTURA: ARITMETICA (inferencia rotulada): si $ 99.000 son los dos
+  tercios de la valuacion de la mitad, la mitad vale $ 148.500 y la finca $
+  297.000; sus dos tercios son $ 198.000, que es la base de este aviso. Las tres
+  bases cierran entre si. La acreedora hipotecaria citada en A36 y A37 ejecuta
+  ahora la finca entera.
+
+A25  7220 h11  [OTRO]
+    Dec. 5925: pensiones a la vejez 7156-7314 (Res. 498-J)
+  FUENTE: 7220 (13-11-1964), h11 col. 3.
+  FICHA: Decreto 5925, Asuntos Sociales, 6-11-1964, expte. 3744|64-C.
+  MODO DE LECTURA: Imagen (encabezado y renglones de La Caldera).
+  TEXTO:
+    ... la Resolucion N 498-J. (Acta N 31), de fecha 29 de octubre de 1964, ...
+    que acuerda las pensiones a la Vejez numeros 7156 al 7314, ... residentes en
+    los Departamentos de: Capital, Anta, Cachi, Cafayate, La Caldera, La
+    Candelaria, Cerrillos, Chicoana, Guachipas, Iruya, La Viña, Metan, ...
+  NOTA DE LECTURA: La lista sigue en la columna siguiente; se leyo hasta Metan.
+
+A30  7222 h6  [NORMA]
+    Ley 3913: crea el municipio de La Silleta; limita con La Caldera
+  FUENTE: 7222 (17-11-1964), h6 col. 2.
+  FICHA: Ley 3913, sancionada el 29-10-1964, promulgada el 30-10-1964.
+  MODO DE LECTURA: Imagen (texto de la ley); promulgacion leida en la capa.
+  TEXTO:
+    LEY N 3913 / ... Art. 1. - Creanse el municipio de La Silleta, departamento
+    de Rosario de Lerma, con jurisdiccion dentro de los siguientes limites: al
+    Norte, departamento de La Caldera y Capital; al Sud, limite Norte de la
+    finca Chorrillos, siguiendo por los limites de las fincas Campo Quijano y
+    Las Lomitas, ...; al Este con el departamento de La Caldera, Capital y
+    Cerrillos; al Oeste, el limite Este de las fincas Las Lomitas, Campo
+    Quijano, El Tunal, Candado, Chorrillos, El Golgota o Cebada y Carachipampa.
+    / Art. 2. - Direccion General de Inmuebles efectuara el deslinde y
+    amojonamiento ... Ley 2308 (original 1030). / Art. 3. - ... tercera
+    categoria, segunda clase ... sede en el pueblo de La Silleta. ... / Dada ...
+    a los veintinueve dias del mes de octubre del año mil novecientos sesenta y
+    cuatro. / Dr. RAUL FIORE MOULES Presidente ...
+  NOTA DE LECTURA: La ley pone a La Caldera al Norte y al Este del nuevo
+  municipio. Se transcribe; no se concilia. Fiore Moules firma aqui como
+  «Presidente»; en las Leyes 3827, 3890 y 3930, como Vicepresidente 1 (E.9).
+
+A31  7224 h7  [OBRA-PUBLICA+NORMA]
+    Ley 3930: puesto sanitario en El Gallinato (Dpto. La Caldera)
+  FUENTE: 7224 (19-11-1964), h7 col. 3.
+  FICHA: Ley 3930, sancionada el 29-10-1964, promulgada de hecho; cumplase del
+  13-11-1964.
+  MODO DE LECTURA: Imagen, entera.
+  TEXTO:
+    LEY N 3930 / ... Art. 1 - Creanse un Puesto Sanitario en cada una de las
+    siguientes localidades de la Provincia: POTRERO DE DIAZ (Departamento de
+    Chicoana) / LA QUENA (Manuel Elordi -Dpto. de Oran) / ... / EL GALLINATO
+    (Departamento de La Caldera) / ... / EL DURAZNO (Departamento de Guachipas)
+    / Art. 2. - ... Presupuesto para el Ejercicio 1964|65. ... POR TANTO:
+    Ministerio de Asuntos S. y S. Publica, SALTA, Noviembre 13 de 1964 /
+    Habiendose promulgado de hecho y de conformidad a lo prescripto por el art.
+    96 de la Constitucion, tengase por Ley ... / Durand / Cermesoni / Lina
+    Bianchi de Lopez, Jefa de Despacho.
+  NOTA DE LECTURA: RECUENTO PROPIO: 22 localidades; la ley no declara numero. El
+  Gallinato es la unica del departamento.
+
+A05  7240 h12  [CARGOS+REGISTRO-CIVIL]
+    Dec. 6356: Registro Civil de Vaqueros (Dpto. La Caldera)
+  FUENTE: 7240 (14-12-1964), h12 col. 3.
+  FICHA: Decreto 6356, Gobierno, 30-11-1964, expte. 7845-64.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N 6356. / Ministerio de Gobierno, J. e I. Publica / SALTA, 30 de
+    Noviembre de 1964. / Expediente N 7845-64. / VISTA la nota N 318-M-18 de
+    fecha 24 de noviembre ..., Direccion General del Registro Civil ... /
+    Articulo 1 - Encargase interinamente de la Oficina de Registro Civil de 3ra.
+    Categoria de la localidad de VAQUERQS [sic] (Dpto. La Caldera) a la
+    autoridad policial de ese lugar, a partir del dia 14 de diciembre del
+    corriente año y mientras dure la licencia reglamentaria concedida a su
+    titular, señorita Dora Elina Barroso. / Durand / Villegas / ES COPIA: Feixes
+    (h).
+  NOTA DE LECTURA: «VAQUERQS»: la ultima O imprime con rabillo; se transcribe
+  como esta y va a E.9. El acto atribuye Vaqueros al departamento. Dora Elina
+  Barroso esta en el config desde 1961.
+
+A27  7242 h5  [CARGOS]
+    Dec. 6390: servicios de Hernandez; Carlos Villada interino
+  FUENTE: 7242 (16-12-1964), h5 col. 1.
+  FICHA: Decreto 6390, Asuntos Sociales, 3-12-1964, expte. 44.006|64.
+  MODO DE LECTURA: Imagen, entero (art. 1 con la mitad superior de los tipos sin
+  entintar).
+  TEXTO:
+    DECRETO N 6390 / ... Salta, 3 de Diciembre de 1964 / Expediente N 44.006|64
+    - / Visto el contenido del Memorandum N [3/5]26 ... / Articulo 1 -
+    Reconocense los servicios prestados por el Dr. JOSE MANUEL HERNANDEZ, como
+    Medico Regional de la localidad de La Caldera, en el tiempo comprendido
+    entre el 11 de setiembre y el 31 de octubre del año en curso inclusive, en
+    reemplazo del doctor Torrens Santigosa en uso de licencia por enfermedad;
+    ... «Deuda Publica» del ejercicio en vigencia. / Articulo 2 - Reconocense
+    los servicios ... entre el 1 al 25 de noviembre ... / Articulo 3 - Designase
+    al Dr. CARLOS VILLADA -L. E. [omitido]- Reg. Profesional [omitido]- como
+    Medico Regional interino de la localidad de La Caldera, a partir del 26 de
+    noviembre ppdo., y mientras dure la licencia por enfermedad concedida al
+    titular Dr. Cesar Torrens Santigosa ... / Durand / Cermesoni / Lina Bianchi
+    de Lopez.
+  NOTA DE LECTURA: Aqui «JOSE MANUEL»; en el 4134, «MANUEL JOSE». El 4134
+  declara licencia «reglamentaria y compensatoria»; el 6390, «por enfermedad».
+  No se concilia. El tramo del 27 de junio al 10 de setiembre no se reconoce en
+  ningun acto leido: queda cubierto, si lo esta, por la designacion del 4134, y
+  no se infiere.
+
+A17  7243 h12  [ELECTORAL]
+    Dec. 6454: comicios del 14-3-1965; La Caldera sin diputado
+  FUENTE: 7243 (17-12-1964), h12 cols. 2-3.
+  FICHA: Decreto 6454, Gobierno, 10-12-1964.
+  MODO DE LECTURA: Imagen (arts. 1 a 6).
+  TEXTO:
+    DECRETO N 6454 / Ministerio de Gobierno, J. e I. Publica / SALTA, Diciembre
+    10 de 1964 / -VISTO el Decreto N 5616|64 y su modificatorio N 6397 de fecha
+    3 de diciembre ..., el dia 14 de marzo de 1965 ... Art. 1. - ... a)
+    Senadores y Diputados en los departamentos de: Capital, La Caldera,
+    Gauchipas [sic], Cafayate, Chicoana, Cachi, Molinos, La Poma, San Carlos,
+    Los Andes, Rosario de Lerma y General Güemes. b) Concejales y miembros de
+    comisiones municipales en la totalidad de los municipios ... Art. 2. - ...
+    a) Un (1) Senador titular y un (1) senador suplente, en los departamentos
+    siguientes: Capital, La Caldera, Guachipas, Cafayate, Chicoana, Cachi,
+    Molinos, La Poma, San Carlos, Los Andes, Rosario de Lerma y General Güemes.
+    b) Quince (15) Diputados titulares y quince (15) diputados suplentes, en el
+    Departamento Capital; tres (3) ... General Güemes; dos (2) ... Rosario de
+    Lerma y Chicoana; un (1) diputado titular y un (1) diputado suplente, en
+    cada uno de los departamentos siguientes: Cafayate, Cachi, Guachipas, La
+    Poma, Los Andes, Molinos y San Carlos. ... Art. 4. - ... cuatro (4) miembros
+    de comision municipal titulares y cuatro (4) ... suplentes: Apolinario
+    Saravia, El Piquete o Las Lajitas, San Lorenzo, Cerrillos, La Merced, El
+    Carril, Guachipas, Iruya, La Caldera, La Viña, Coronel Moldes, ...
+  NOTA DE LECTURA: La Caldera esta en el art. 1 a) y en el 2 a) y falta en el 2
+  b): el 6589 (A18) la agrega. RECUENTO PROPIO del art. 4: seis municipios de
+  nueve concejales; 13 o 14 de cinco («Rivadavia, Banda Norte»); 22 a 24 de
+  cuatro miembros (impresos sin comas desde San Lorenzo; «El Piquete o Las
+  Lajitas» y «San Jose de Orquera», cuatro o mas palabras, se cuentan aparte);
+  quince de dos. Vaqueros no figura en ninguna lista. El decreto no declara
+  numeros que cotejar.
+
+A18  7246 h20  [ELECTORAL]
+    Dec. 6589: La Caldera elegira un diputado
+  FUENTE: 7246 (23-12-1964), h20 col. 2.
+  FICHA: Decreto 6589, Gobierno, 17-12-1964.
+  MODO DE LECTURA: Imagen, entero.
+  TEXTO:
+    DECRETO N 6589 / Ministerio de Gobierno, J. e I. Publica / SALTA, Diciembre
+    17 de 1964 / -VISTO el Decreto N 6454|64 que dispone convocar al pueblo de
+    la provincia a elecciones para la renovacion parcial de las HH. CC.
+    Legislativas y eleccion de autoridades municipales; ... Art. 1. - Amplianse
+    los terminos del Decreto N 6454|64 e incluyese en el articulo 2, inciso b),
+    el Departamento de La Caldera; dejandose establecido que en el mismo debera
+    elegirse Un (1) Diputado. / Art. 2. - Dejase establecido que la renovacion
+    ... se la efectua en merito a las disposiciones de los articulos 6[0/9]- y
+    70- de la Constitucion Provincial, como asi tambien al resultado del sorteo
+    de bancas legislativas realizado el 29|7|64, de acuerdo a lo estatuido por
+    la Ley 3827. / Art. 3. - Remitase copia ... al H. Tribunal Electoral
+    Permanente ... y al Ministerio del Interior ... / Durand / Villegas / Es
+    Copia: Feixes (h).
+  NOTA DE LECTURA: La Ley 3827 cita los articulos 69 y 70; la imagen del 6589
+  deja leer 60 o 69. No se decide. Serie 6587-6592 en la misma hoja.
+
+A33  7248 h12  [CARGOS]
+    Decs. 6643 y 6648: planillas de personal de Salud Publica
+  FUENTE: 7248 (28-12-1964), h12, h13 y h37.
+  FICHA: Decretos 6643 (Direccion del Interior) y 6648, Asuntos Sociales,
+  22-12-1964; confirman personal por la Ley 3958 (presupuesto 1964|1965).
+  MODO DE LECTURA: Imagen: encabezado del 6643 y renglones.
+  TEXTO:
+    6643, h12: «SANTIGOSA, Cesar Torrens | Medico Zonal - La Caldera | 1|11|64»;
+    h13: «BUSTAMANTE, Corina Adela | Aux. 2 | Enfermera La Caldera | 1|11|64» y
+    «TORRENS, Palmira Ramis de | Aux. 2 | Partera La Caldera | 1|11|64». / 6648,
+    h37: «ABRAHAM, Noemi Correa de | Aux. 5 | Sub-Reg. La Caldera | 1|11|64».
+  NOTA DE LECTURA: Los renglones vecinos del 6648 son «Reg. Hog. Cuna», «Reg.
+  Hog. Transito», «Reg. Hog. La Merced»: no se expande «Sub-Reg.». Los cuadros
+  no traen total que recalcular. Torrens Santigosa figura confirmado al
+  1-11-1964 mientras el 6390 (A27) lo da con licencia por enfermedad: no se
+  concilia. Corina Bustamante esta en el config desde 1952.
+
+§B · VECINDAD
+-------------
+B.1 · NUCLEOS YA FICHADOS
+
+Finca «San Antonio o San Roque», La Calderilla, titulo al folio 68, asiento 13,
+libro 3 R.I. de La Caldera, partida 107 (A36 a A38): sus linderos son actores de
+años anteriores - Abraham Fernandez (config 1909), Paulina Reyes de Aleman y
+Eusebio Palma (1947) - y uno de los embargantes, Dardo Jijena, esta en el config
+desde 1955. Juzgado de Paz de La Caldera: Esteban Mogro (1952) y Justo Pastor
+Lizondo (1949-1951). Registro Civil: Ester Gabriela Cruz (1956) en La Caldera,
+Dora Elina Barroso (1961) en Vaqueros. Comision del Cristo: David Serrey y
+Cecilio Muñoz (1955), Pedro D. Martell (1963). Salud: Manuel Jose Hernandez
+(1963), Corina Adela Bustamante (1952). Obra publica: Adhemar Nestor Imberti
+(1958). Escuela 310 San Alejo y Hogar del Niño de La Caldera, ya en el anillo 2.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+B2-01  7050 h8 col. 3 a h9 col. 1 [CARGOS]. Decreto 2143, Gobierno, 24-2-1964,
+expte. 5432|64. «Art. 1 - Aceptase, a partir del dia 20 de febrero del corriente
+año, la renuncia presentada por el señor VICTOR HUGO AGUILERA, al cargo de
+Agente Uniformado (F. 3289 - P. 2195) de Policia, con revista en el Destacamento
+"Vaqueros".» Imagen.
+
+B2-02  7102 h8 col. 1 [CARGOS]. Decreto 3255, Asuntos Sociales, 13-5-1964,
+expte. 42656/64 (2). Traslada al director del Hospital «San Jose» de Cachi, «Dr.
+NESTOR POLICARPO RUIZ DE LOS LLANOS, para desempeñarse en el cargo de Jefe de
+Clinica ...; debiendo el citado profesional realizar funciones en el Consultorio
+Externo de la localidad de Vaqueros». Imagen. Sumario en 7102 h3.
+
+B2-03  7140 h13 cols. 2-3 [OTRO]. Decreto 4185, Economia, 10-7-1964, expte.
+1773-1964 (la imagen deja 4135 o 4185; lo decide la serie 4182, 4183, 4184 de la
+misma hoja). Reforestacion de los cerros San Bernardo y 20 de Febrero; «Articulo
+5 - ... la Policia Provincial ... debera prestar la colaboracion necesaria para
+el control de lo fijado por este decreto, en especial los Puestos de "El
+Portezuelo", "San Cayetano", "Barrio Cofico" y "Vaqueros".» Imagen.
+
+B2-04  7164 h14 col. 3 [ESCUELA]. Decreto 4659, Gobierno, 11-8-1964 (indice
+docente, Ley 3848|64). Al pie: «... en refuerzo del credito anual de las
+Unidades Funcionales: 1- Escuela BERNABE LOPEZ- Vaqueros $ 50.000 m|n.
+(Cincuenta Mil Pesos Moneda Nacional) ...». Imagen del encabezado y del renglon;
+el tramo que los une se leyo en la capa.
+
+B2-05  7248 h12 y h15 [CARGOS]. Decreto 6643 (Direccion del Interior),
+22-12-1964: «FRIAS, Dardo | Med. Zonal - Vaqueros | 1|11|64» y «MURUA, Claudio |
+Aux. 5 | Enferm. Vaqueros | 1|11|64». Imagen. Murua es un apellido del anillo 2.
+
+B2-06  7032 h5 col. 3 [OTRO]. Decreto 1842, Asuntos Sociales, 27-1-1964, expte.
+485|64 - Viaticos: aprueba los gastos «ocasionados por el traslado del Dr. Cesar
+Torrens Santigosa, Sra. Palmira R. de Torrens, Dr. Wadi Ruperto Mimessi, Sra.
+Hortensia Velia de Mimessi, Sr. Victor Felipe Subelza y Sra. Martha Ramos de
+Aguirre ... y de la Sra. Lorenza Mogro de Subelza». Imagen. El acto no nombra el
+destino: se ficha aqui por los actores (B.4, grupo 2).
+
+B.3 · TERMINOS QUE ESE AÑO SON OTRA COSA
+
+Anillo 1. «Caldera» como apellido: Roberto Caldera, demandado en el remate 17094
+(Carlos L. Gonzalez Rigau; Geronimo Villar vs. Roberto Caldera, expte.
+27.881|62; «10 Lotes Rurales ubicados en La Silleta Dpto. de Rosario de Lerma»),
+60 hojas entre sumarios y cuerpo, 7092 a 7121; imagen en 7094 h9. RECUENTO
+PROPIO: cuatro lotes (3 a 6) mas seis (1, 2, 7, 8, 9 y 10) = diez, como dice el
+aviso. El sumario escribe «Geronimo Villas»; el cuerpo, «Villar». «Caldera» como
+maquina: 7110 h5 (atencion de la caldera de la Maternidad del Hospital del
+Milagro), 7125 h5 (cuatro calderas de un turbogenerador), 7146 h16 (balance:
+«instalaciones caldera P. N.»), 7172 a 7176 (remate: «una caldera marca "Lincol"
+a vapor»), 7184 a 7186 (remate 18374: «una caldera vertical marca "Global"»),
+7185 a 7189 (remate: «caldera a vapor»), 7247 h7 (dos calderas a vapor), 7248
+h23 y h28 («Enc. Caldera», «calderista»). «Calderon», «Diaz Calderon» (falso
+positivo conocido), «Jorge O. Cardera S.R.L.» (7120). Todos leidos en la capa
+salvo 7094 h9 y 7248 h23.
+
+Anillo 2, por termino (contextos distintos leidos): vaqueros como prenda de
+vestir (7189 h20) y como «camino a Vaqueros, Dpto. Capital» (7038 h5, 7054 h11);
+mojotoro: rio y finca de Gral. Güemes y Campo Santo (69 hojas); wierna,
+castellanos, aramayo, mamani, condori, apaza, chaile, toconas, yugra, yufra,
+isasmendi, murua, challe, lesser, nogales, quintin, severino, matos, mosquera,
+teodolinda, yolanda: apellidos y nombres de pila; candelaria: departamento La
+Candelaria y fincas de Capital y Anta; san jose: hospital de Cachi, finca de La
+Viña, San Jose de Cachi y de Orquera; el bordo, betania, campo alegre, el sauce:
+Gral. Güemes y Metan, por los actos; castanares: finca de la Capital y «Expreso
+Castañares S.R.L.»; tabacal y el tuscal: Oran y San Martin; el tunal: ruta 16 y
+Rosario de Lerma; higueritas: Cerrillos; potrerillo: Anta y La Candelaria; el
+angosto, angosto, el cajon, durazno, la sierra, los sauces, ovejeria, santa
+monica, el paraiso, rio blanco, entre rios, manzano, penales, despensa, el
+recreo, mesa redonda, huaico hondo, antilla, angostura, cedros, helvecia,
+siancas, parroquia, villa san lorenzo, la laguna, el monte, arnaga, pacara,
+penones, tunel, el tunel, san cayetano: otras jurisdicciones o sustantivos
+comunes. Ninguno atribuido al departamento por su acto.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+
+Grupo 1, solo en su propio acto (busqueda por nombre completo, sin puntuacion,
+en las dos versiones): Pedro Ignacio Garcia, Ester Gabriela Cruz, Dora Elina
+Barroso, Daniel Rufino, Julian Ernesto Trucco, Victor Cornejo Isasmendi, Cecilio
+Muñoz, Pedro Dionicio Martell, Carlos M. Cortes, Vicente Garcia, Corina Adela
+Bustamante, Noemi Correa de Abraham, Juan Carlos Ba[b/l]on, los cuatro Trucco de
+A34 (solo en las nueve apariciones del aviso), Ramona Rosa Tapia, Martin Borja y
+Paulina Reyes de Aleman (solo en las apariciones de su aviso). Ninguno falla en
+su propio acto: la busqueda devuelve el acto de cada uno.
+
+Grupo 2, en mas de un acto del departamento: Esteban Mogro (A01, A08; y una
+Lorenza Mogro de Subelza en B2-06, sin parentesco declarado); Justo Pastor
+Lizondo (A02 y su sumario); Cesar Torrens Santigosa (A26, A27, A33, B2-06) y
+Palmira Ramis de Torrens (A33, B2-06); Manuel Jose Hernandez (A26, A27); David
+Serrey (A12; ademas un Manuel David Serrey depositario en un remate de
+7240-7242, sin identidad afirmada); Juan Carlos Iramain (A11, A12, A13, A14);
+Ernesto Mesples, Carmen Mestres de Martorell, Dardo Coronel Jijena, Marta B. de
+Carrasco, Abraham Fernandez y Eusebio Palma (A36 a A38). Este grupo arma la
+trama del año: el Cristo, el juzgado de paz, la medicatura y la ejecucion de San
+Antonio o San Roque.
+
+Grupo 3, tambien fuera del departamento (frecuencias de corpus, no del
+departamento): Ernesto Mesples, 190 hojas en 86 ediciones; ademas de los tres
+remates de La Caldera, es ejecutado por Marco Tulio Fernandez (casa de Zuviria
+965, Capital), por Eduardo Gutierrez y por otros, y un «ERNESTO MESPLES» es
+designado interventor de la Sociedad Española de Socorros Mutuos de General
+Güemes (decreto 4783, 7169 h9): no se afirma que sea la misma persona. Adhemar
+Nestor Imberti, 15 hojas (contratista de otras obras). Manuel Jose Hernandez, 30
+hojas en 17 ediciones (Asistencia Publica, Coronel Moldes). Pedro Luna: un cabo
+de policia homonimo en 7083 h7 y 7246 h18. Carlos Villada: medico concurrente
+del Policlinico San Bernardo (7219 h6). Felipe Tilca y Julio Juan Dousset,
+Coronel Moldes. Del config, 320 actores con acierto: los que caen en hojas
+del §A son los del grupo 2 y los nombrados en B.1; los demas son homonimos o
+actores de otras jurisdicciones (Angel Maria Figueroa, juez, 558 hojas; Juan
+Carlos Martearena, martillero, 296).
+
+Nombramientos que solo constan por su revocacion: ninguno nuevo. Vacantes
+declaradas sin sucesor: la Sub-Comisaria de La Caldera tras el 1316 (A03). Actos
+citados y no acompañados: decreto 336|63 (A28), la ordenanza impositiva y el
+presupuesto municipal (A06, A07), el resultado del sorteo de bancas del 29|7|64
+(A18), los decretos 5616|64 y 6397|64 (A17).
+
+§C · LIMITROFES
+---------------
+La Silleta (Rosario de Lerma) linda al Norte y al Este con La Caldera por la Ley
+3913 (A30). Castañares y La Candelaria (Capital) lindan al Oeste con el camino
+nacional a Jujuy por La Caldera (A35). Cerros San Bernardo y 20 de Febrero,
+Capital, con puesto de control en Vaqueros (B2-03). Gral. Güemes comparte con La
+Caldera la zona VIII del censo (A10).
+
+§P · PLANOS
+-----------
+No se identifico ningun plano publicado en 1964. El control fue por texto y por
+tinta (ninguna hoja con menos de 0,5 % de tinta; ninguna de las de tinta alta es
+una lamina en las cuatro miradas), no hoja por hoja en la imagen. «Plano»
+aparece en 1084 hojas de la capa, casi todas como remision catastral de avisos.
+Remisiones que tocan al departamento: ninguna; los planos citados en actos
+del §A son de la Capital (plano 775, A35) y de Rosario de Lerma (plano 304,
+B.3). Techo de resolucion: 300 ppi.
+
+§D · INDICE
+-----------
+  7020  h5   CARGOS+JUSTICIA        Dec. 1540: renuncia de Esteban Mogro, juez
+                                  de paz titular
+  7024  h5   OBRA-PUBLICA           Dec. 1584: recepcion definitiva del Hogar
+                                  del Niño de La Caldera
+  7026  h5   CARGOS+JUSTICIA        Dec. 1636: renuncia de Justo Pastor Lizondo,
+                                  juez de paz suplente
+  7045  h6   OTRO                   Dec. 2059: jefes zonales del censo
+                                  economico; zona VIII
+  7047  h4   CARGOS                 Dec. 1316 (de 1963): cesa el subcomisario
+                                  Pedro Ignacio Garcia
+  7049  h13  AGUAS                  Aviso 16433: concesion de agua del rio de La
+                                  Caldera (Trucco)
+  7054  h11  DOMINIO                Aviso 16505: remate de fracciones de
+                                  Castañares (Capital), lindero «camino Nacional
+                                  a Jujuy por La Caldera»
+  7061  h6   CARGOS+REGISTRO-CIVIL  Dec. 2357: Registro Civil de La Caldera
+                                  (Pueblo) a la policia
+  7063  h8   HACIENDA-MUN+NORMA     Dec. 2417: aprueba la Ordenanza General
+                                  Impositiva 1964
+  7071  h6   HACIENDA-MUN           Dec. 2553: presupuesto municipal 1964, $
+                                  1.119.851,31
+  7080  h13  DOMINIO                Aviso 16890: remate de la mitad de la finca
+                                  San Antonio o San Roque (La Calderilla)
+  7095  h6   OBRA-PUBLICA           Dec. 3120: donacion de la Cia. Arg. de
+                                  Telefonos para el Cristo
+  7096  h9   OTRO                   Dec. 3153: pensiones a la vejez 6344-6462
+                                  (Res. 35-J)
+  7099  h8   DOMINIO                Aviso 17187: el mismo remate, con otros
+                                  linderos
+  7100  h6   OTRO+OBRA-PUBLICA      Dec. 3162: comision honoraria del Cristo
+                                  Redentor en La Caldera
+  7118  h7   CARGOS+JUSTICIA        Dec. 3550: Esteban Mogro y Pedro Luna,
+                                  jueces de paz
+  7118  h11  OTRO                   Dec. 3567: pensiones 6463-6501; rehabilita
+                                  la de Vicente Garcia
+  7129  h7   OBRA-PUBLICA           Dec. 3946: $ 300.000 provinciales para el
+                                  basamento del Cristo
+  7131  h13  OTRO                   Decs. 4027 y 4028: pensiones a la invalidez
+                                  y a la vejez
+  7134  h5   ELECTORAL+NORMA        Ley 3827: dos grupos de departamentos para
+                                  renovar las Camaras
+  7134  h11  OTRO                   Dec. 4076: pensiones a la vejez 6502-6606
+                                  (Res. 170-J)
+  7139  h4   CARGOS                 Dec. 4134: Manuel Jose Hernandez, medico
+                                  regional interino
+  7149  h7   CARGOS                 Dec. 4348: renuncia en la Sub-Comisaria de
+                                  La Caldera (Dpto. Capital)
+  7151  h4   ESCUELA                Dec. 4376: la Escuela 310 San Alejo pasa a
+                                  Rodeo de Mulas
+  7162  h11  OTRO                   Dec. 4529: pensiones a la vejez 6686-6824
+                                  (Res. 270-J)
+  7169  h9   CARGOS+HACIENDA-MUN    Dec. 4787: jubilacion de Feliciano Ramos, de
+                                  la Municipalidad
+  7178  h9   OTRO                   Dec. 4963: autoriza la rifa de la comision
+                                  del Cristo
+  7178  h12  OTRO                   Dec. 4982: pensiones a la vejez 6825-7037
+                                  (Res. 366-J)
+  7203  h8   NORMA                  Ley 3890: exime de impuestos la rifa pro
+                                  Cristo de La Caldera
+  7208  h11  DOMINIO                Aviso 18725: remate de la finca entera, base
+                                  $ 198.000
+  7220  h11  OTRO                   Dec. 5925: pensiones a la vejez 7156-7314
+                                  (Res. 498-J)
+  7222  h6   NORMA                  Ley 3913: crea el municipio de La Silleta;
+                                  limita con La Caldera
+  7224  h7   OBRA-PUBLICA+NORMA     Ley 3930: puesto sanitario en El Gallinato
+                                  (Dpto. La Caldera)
+  7240  h12  CARGOS+REGISTRO-CIVIL  Dec. 6356: Registro Civil de Vaqueros (Dpto.
+                                  La Caldera)
+  7242  h5   CARGOS                 Dec. 6390: servicios de Hernandez; Carlos
+                                  Villada interino
+  7243  h12  ELECTORAL              Dec. 6454: comicios del 14-3-1965; La
+                                  Caldera sin diputado
+  7246  h20  ELECTORAL              Dec. 6589: La Caldera elegira un diputado
+  7248  h12  CARGOS                 Decs. 6643 y 6648: planillas de personal de
+                                  Salud Publica
+  7032  h5   OTRO                   B2-06 Dec. 1842: viaticos de los Torrens
+  7050  h9   CARGOS                 B2-01 Dec. 2143: destacamento Vaqueros
+  7102  h8   CARGOS                 B2-02 Dec. 3255: consultorio de Vaqueros
+  7140  h13  OTRO                   B2-03 Dec. 4185: puesto de control Vaqueros
+  7164  h14  ESCUELA                B2-04 Dec. 4659: Escuela Bernabe Lopez
+  7248  h12  CARGOS                 B2-05 Dec. 6643: medico y enfermero
+
+§E · OBSERVACIONES
+------------------
+E.1 · DUPLICACION Y SALDOS
+
+Avisos repetidos del departamento, comprobados por texto y no por numero: A34 (9
+apariciones), A35 (14), A36 (29 hojas, mas dos hojas de continuacion, 7086 h13 y
+7095 h16, donde el nombre del departamento queda en la pagina anterior), A37
+(30), A38 (10). El remate de Roberto Caldera (B.3) sale en 30 ediciones. md5 y
+dhash no se calcularon: no hay .jpg en el Release y la sesion no extrajo las
+imagenes; el control fue por texto. Resumenes de Tesoreria publicados en 1964:
+ninguno («movimiento |resumen|estado de tesoreria», cero hojas). No hay cadena
+de saldos que armar. Balances municipales: ninguno; el presupuesto de La Caldera
+se aprueba (A07) y no se publica.
+
+E.2 · COBERTURA
+
+242 de 242 ediciones; 4408 hojas de 4536 paginas impresas. Las cuatro pasadas y
+el anillo 2 corrieron sobre las 4408 hojas en dos versiones (4272 hojas con OCR
+propio; 136 solo con la capa previa).
+
+E.3 · SIN MENCION Y NO MIRADO
+
+Las 577 hojas que el pre-informe clasifica «a ojos» no se miraron enteras: se
+cubrieron con la segunda version (el OCR propio de esas hojas existe) y con las
+pasadas laxa, difusa y de letra perdida. Es un limite (E.10). Las 128 paginas
+ausentes, entre ellas las 6159 a 6164 de la edicion 7118, cuyo sumario cita unos
+veinte actos que no se pueden leer; los renglones de ese sumario que la capa
+devuelve no nombran el departamento.
+
+E.4 · FIRMAS Y AUTORIDAD
+
+Gobernador: Dr. Ricardo Joaquin Durand, en las 242 tapas, leido en la imagen; la
+tapa lista tambien al vicegobernador, Dr. Eduardo Paz Chain. Ministros:
+Gobierno, Justicia e Instruccion Publica, Dr. Guillermo Villegas; Economia,
+Finanzas y Obras Publicas, Ing. Florencio Elias; Asuntos Sociales y Salud
+Publica, Dr. Danton Julio Cermesoni. «Es copia»: Miguel Santiago Maciel (Oficial
+Principal, Gobierno) en los actos de enero y febrero que se leyeron; Miguel
+Angel Feixes (h) en los de marzo en adelante, primero «Oficial 2» y en diciembre
+«Oficial Princ.» (A18); Pedro Andres Arranz, Camila L. de Gastaldi y Santiago
+Felix Alonso Herrero en Economia; Lina Bianchi de Lopez en Asuntos Sociales.
+
+Vicegobernador en ejercicio: firmas de Paz Chain en actos fechados entre el 5 y
+el 7 de febrero, entre el 8 y el 17 de abril, entre el 5 y el 26 de junio, entre
+el 6 y el 17 de julio, entre el 2 y el 14 de octubre, entre el 6 y el 19 de
+noviembre y entre el 10 y el 22 de diciembre (busqueda sobre la capa; mirados en
+la imagen, el 4134 del 7 de julio, A26). El 5951 del 6 de noviembre «pone en
+posesion del mando gubernativo» al vicegobernador porque el titular viaja a la
+Capital Federal; no se fija el dia de ningun reintegro.
+
+Numeracion de decretos: una serie comun a los tres ministerios, que pasa del año
+anterior (1316 del 13-12-1963, 1540 del 7-1-1964) y llega a 6648 el 22 de
+diciembre. Pares mirados: 1538-1540-1541 (A01), 1635-1636-1637 (A02), 3550-3551
+(A08), 4963-4964 (A13), 4182-4185 (B2-03), 6587-6592 (A18): todos crecen con la
+fecha.
+
+Año editorial, leido en las 242 tapas: AÑO LV hasta 7160 (14 de agosto); AÑO LVI
+desde 7161 (18 de agosto), con cinco tapas que vuelven a LV (7162 a 7166) y otra
+en noviembre (7218). Erratas de tapa en E.9.
+
+Dias de salida: la tapa dice «Aparece los dias habiles», de lunes a viernes.
+Dias habiles sin edicion: 19. El corpus explica tres: 2 de noviembre (asueto,
+decreto 5700, 7217 h8), 20 de febrero (un dictamen laboral de 7240 h22-23 lo
+llama «feriado del 20 de febrero») y 26-27 de marzo («feria de semana santa»,
+7093 h11). Quedan sin explicar en el corpus: 6 de enero; 10 y 11 de febrero; 1,
+25 y 28 de mayo; 17 de junio; 9 de julio; 17 de agosto; 14 y 15 de septiembre;
+12 de octubre; 8, 18 y 25 de diciembre. No se busca la causa afuera. Ediciones
+dobles: ninguna; cada fecha tiene una sola edicion.
+
+E.5 · CORTES Y COLUMNAS
+
+Columna perdida: no se encontro en las 111 columnas recortadas, que se cotejaron
+contra la capa. El OCR propio mezcla columnas en 7071 h6 (une la terna de
+Chicoana del decreto 2550 con el presupuesto de La Caldera del 2553): la capa
+previa conserva el orden y la imagen lo confirma. Paginas con el texto
+continuado en otra columna u hoja: A01, A08, A10, A20, A26, A36.
+
+E.6 · REPETICIONES
+
+Los cinco avisos de E.1. Los decretos de pensiones (A19 a A25) son una serie y
+no repeticiones. El 4027 y el 4028 (A21) salen el mismo dia con la misma forma.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+
+Falsos negativos de las cuatro pasadas: tres actos. A19 (7096 h9) y A32 (7149
+h7) imprimen «La Ca'dera» con la l sin entintar; los rescato el termino «la ca
+dera» del anillo 2, que el config ya trae como deformacion. A11 (7129 h7) lo
+devolvio solo la difusa («caluera»). Se corrio una pasada adicional
+«ca[l]?\s+dera» sobre todo el año: devuelve esos tres y copias del remate de
+Roberto Caldera; ninguno mas. Falsos positivos del anillo 1: diez actos (B.3).
+Difusa ampliada: 133 formas, todas ruido («cedera» = procedera, «cadora» =
+panificadora, «gadera» = pagadera, entre otras).
+
+E.8 · FIDELIDAD NUMERICA
+
+Digitos decididos por control (flujo §5.6): decreto 1540, no 1640, por la serie
+(A01); decreto 4185, no 4135, por la serie (B2-03); pension 6824, no 6821, por
+la cita cruzada con la Res. 366-J (A23); donacion de $ 100.000 y no 190.000, por
+la imagen y el 3120 (A14); Res. 292-J y no 202-J, por la imagen (A29). No
+decididos: expediente 92[3/8]7|63 (A06), parcial 2[3/5] (A14), Memorandum
+[3/5]26 (A27), articulo 6[0/9] (A18), expediente 33.32[8] (A37), 3[5/3]59|64
+(A23) y 357[0/6] (A29). Ninguno decide una ficha; no se arma hoja de dudas.
+
+Cuadros: dos planillas de personal (A33), sin totales. Subtotales recalculados:
+ninguno; no hay cuadro con total en los actos del departamento. Aritmetica de
+los remates: cierra (A38).
+
+E.9 · CONTRADICCIONES Y ERRATAS
+
+Contradicciones: A36 y A37, mismos juicio y finca con distintos linderos; A26 y
+A27, «Manuel Jose» y «Jose Manuel» Hernandez, licencia «reglamentaria y
+compensatoria» y «por enfermedad»; A33 y A27, Torrens confirmado en el cargo y
+con licencia; A32, la Sub-Comisaria de La Caldera en el departamento Capital;
+A30, La Caldera al Norte y al Este de La Silleta; A11 y A12, el destino del
+Cristo financiado tres dias antes de que la comision lo proponga; A22,
+encabezado de Gobierno con firmas de Asuntos Sociales; Raul Fiore Moules,
+«Presidente» en la Ley 3913 y Vicepresidente 1 en las 3827, 3890 y 3930. No se
+concilia ninguna.
+
+Erratas del original: «VAQUERQS» (A05); «Hogar del Niño dè» (A09); «Gauchipas»
+(A17); «El Quebarchal» (A17); «Rosario de la Lerma» (A20); «aquiesciencia»
+(A28). Erratas de tapa, por tandas: 7031, «AÑO LIV» y «FEBRERO 3 DE 1963»; 7116,
+la caratula dice «Edicion N 7115», segun la fe de erratas pegada en la tapa de
+7117; 7162 a 7166 y 7218, «AÑO LV» dentro del año LVI; 7243, «AÑO LVI - 7243»,
+sin «N». El registro de propiedad intelectual de la tapa pasa de 778.628 a
+833764 desde 7220.
+
+E.10 · LIMITES
+
+1. 128 paginas impresas no estan en el Release (la ultima de 117 ediciones y
+tramos internos de 7055, 7056, 7118 y 7175). Ninguna ausencia del informe vale
+para ellas.
+
+2. 577 hojas «a ojos» no se miraron enteras; se cubrieron con dos versiones y
+cinco pasadas.
+
+3. El listado del Release no se pudo leer desde la sesion (403); el inventario
+sale de estado.json.
+
+4. Sin spa en tesseract: ningun OCR en sesion.
+
+5. Sin md5 ni dhash: la deduplicacion fue por texto.
+
+6. Las transcripciones van sin tildes (desvio del §0).
+
+7. Los periodos de interinato del vicegobernador se dan por las fechas de los
+actos que firma, buscados en la capa.
+
+8. El cotejo sumario/pagina citada no se cerro por maquina: los numeros del
+sumario se confunden con numeros de aviso y telefonos; se uso la cadena de
+folios, que es un control mas fuerte en un año de paginacion corrida.
+
+9. Planos: el control fue por texto y tinta, no por mirada hoja por hoja.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. La letra perdida es un modo de falla propio, distinto del corte y del
+espaciado: «La Ca'dera», con la l sin entintar, escondio dos actos del año, uno
+de ellos con la atribucion mas rara del año (A32). Propuesta: la laxa agrega la
+clase vacia para la tercera letra, «c[ao][l1i|]?\W?\s*d[ec]r[ao]», y se prueba
+en todos los años de la decada.
+
+2. En años de paginacion corrida, la cadena de folios es el control fuerte de
+completitud y debe ir primero: en 1964 midio 128 paginas ausentes y ubico las
+seis de 7118, que el conteo de hojas contra la tapa no habria ubicado. El cotejo
+sumario/pagina por maquina, en cambio, confunde folios con numeros de aviso.
+
+3. v17 §5.1 da por hecho que el listado del Release se lee sin token. Desde esta
+sesion responde 403 y las descargas por nombre si funcionan. Propuesta:
+estado.json registra tambien la lista de PDF (o su rango) para que la sesion no
+dependa del listado.
+
+4. Presupuesto (v17 §5.5): 242 ediciones y 4408 hojas cupieron en un turno
+largo, con 111 recortes. Lo que no cupo son las 577 hojas «a ojos». Para los
+años de 1944 en adelante, la cifra medida aqui sirve de referencia: unas 40
+fichas por año.
+
+6. Config entregado (lee_config.json, version 2026-10-01, hasta 1964): 30
+actores nuevos con origen 1964 y edicion; 5 terminos de anillo 2 («el puchete»,
+«cerro el puchete», «sub comisaria de la ca dera», «hogar del nino en la
+caldera», «destacamento vaqueros»); 48 numeros de acto y de aviso. Falsos
+positivos: ninguno agregado (v16 §12). Los apellidos del anillo 2 no se movieron
+a actores: se deja la decision al cruce, porque «murua» aparece este año como
+enfermero de Vaqueros (B2-05).
+
+5. Las fichas que reunen dos actos contiguos de igual forma (A21, A33) ahorran
+renglones sin perder identificadores; v16 no lo preve y convendria autorizarlo
+con la condicion de nombrar los dos numeros.
+
+§R · RECUENTO
+-------------
+anio: 1964
+ediciones_desde: 7010
+ediciones_hasta: 7251
+ediciones_presentes: 242
+ediciones_ausentes: 0
+hojas_presentes: 4408
+hojas_declaradas: 4536
+hojas_ausentes_estimadas: 128
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 19
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: release-pdf
+versiones: 2
+actos_departamento: 40
+actos_dominio: 3
+actos_hacienda_municipal: 3
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 2
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 111
+hojas_miradas: 70
+avisos_repetidos_departamento: 5
+falsos_positivos_anillo1: 10
+limites_declarados: 9
+nivel_lectura: imagen
+pdf_release: 242
+avisos_release: 0
+estado: COMPLETO
