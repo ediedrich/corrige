@@ -1122,3 +1122,101 @@ Restan: tres casos en el aspecto 3 (hallazgos 3, 4 y 8), una corrección silenci
 | Privacidad: personas nombradas en las 65 líneas, cruzadas con contextos sensibles | 65/65 líneas | Deudores de los remates de 1958–1959 (Getsemaní, Villa Urquiza), pensionados, personal del Hogar, vecinos expropiados por la Ley 3425 y jueces de paz renunciantes: ninguno nombrado. Nombrados sólo funcionarios (Gallo, Muñoz), concesionarios de agua (Ortiz, Palazzolo), el contratista de la usina, los Serrey y Fiori en actos de dominio. Sin casos |
 | Largo de los archivos antes y después de la fase 6 | 5/5 archivos tocados por la fase 6 | ninguno cambia de largo |
 | Compilación | libro entero, base y fase 6 | Compilan las dos; 831 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:78; 2 cajas desbordadas, las mismas |
+
+## Ronda 52 — auditoría con fase 6 (30/09/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1961–1962. Base: commit `d126594` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1961–1962), con la fase 6 de esta ronda en `ronda-52.patch` (commit `74c4226` en la sesión; aplica con `git am` sobre `d126594`). **Denominador medido: 25.068 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 51 (25.056 de 25.056, registrados sobre `d301f2a`, que entró al repositorio como `11d8d1f`) se trasladaron por diff a `d126594`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1961–1962 agrega 12 líneas (9 en A, 1 en C y 2 en F) y modifica 34 en 19 archivos: caducan 46**, y quedan **25.022 vigentes sobre 25.068 (99,8 %)**.
+
+### Lectura sobre el texto (numeración de `d126594`)
+
+Se leyeron **las 46 líneas caducas, enteras, por la sesión**, sin subagentes, cotejadas contra los informes LEE 1961 (`BO-Salta-1961_6288-6527_la-caldera_LEE-1961_2026-09-30.txt`) y 1962 (`BO-Salta-1962_6528-6768_la-caldera_LEE-1962_2026-09-30.txt`), bajados de `corrige/lee/`: las 123 fichas de los dos informes (61 + 35 del §A y 10 + 17 de B.2) se listaron y se leyeron en su FICHA, y en las que las líneas citan, también en TEXTO y NOTA; además, el §0, el §R, E.1 y E.4 de los dos. Se releyeron como contexto, enteras, 89 líneas con cobertura vigente; no suman cobertura, pero entran en el denominador del aspecto 7.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 354–362 | 9 | sesión |
+| ape/C-normativa.tex | 113 | 1 | sesión |
+| ape/D-pedidos.tex | 40, 177, 191–192, 253 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 66–67, 69 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599, 4638 | 4 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332 | 1 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 45, 281, 284, 353 | 4 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/26-presencia.tex | 69, 98, 235 | 3 | sesión |
+
+Contexto releído entero (no suma cobertura): 22-prospectiva:120–175 (la serie de intervenciones y la tercera condición); 18-politica:529–531 (Esteban Mogro en 1983); 10-expropiacion:325–331; 26-presencia:68 y 206–213; 04-siglo:4207–4212 (la mina de plomo y plata); 20-opacidad:750–756; D:193. Leídas en parte, para el repaso de ventana, y fuera del denominador: A:213, 216, 219, 225, 226, 233 y 320 (la serie de Augusto Regis) y E:30.
+
+**Esta ronda: 46 líneas nuevas.** Con el contexto leído entero son 135 líneas y 76.518 bytes sobre 2.686.983, que en las 837 páginas de la base equivalen a **23,8 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `d126594` cae dentro de estos tramos.
+
+Acumulado: 25.022 vigentes + 46 = **25.068 de 25.068 (100,0 %)**. La fase 6 toca 8 líneas, 6 dentro de lo leído en esta ronda (A:360; D:191; 04:4599; 18:470; 21:87; 26:235) y 2 del contexto releído entero (22-prospectiva:140 y 144), y no cambia el largo de ningún archivo: **25.068 de 25.068 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1961 y 1962 de `boletines-salta`)
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6421 | 6 | Decreto 18570-E, visto y art. 1 | «a fin de reforzar el caudal con que actualmente abastece de agua para bebida a la ciudad de Salta»; «art. 40 de la Ley Nº 755». Coincide (A:355, 17:45) |
+| 6439 | 6 | Decreto 19119-A, visto | «siendo necesario normalizar la situación de dicho personal». Coincide |
+| 6615 | 11 | Decreto 2382-G, visto y art. 2 | «por el que se declara en comisión a las autoridades municipales de la provincia»; Augusto Regis en el cuarto renglón, La Caldera. Coincide. En la misma hoja, el 2381-G lleva el mismo visto y otras siete localidades |
+| 6718 | 10 | Decreto 4511-E, considerando | «disponer la rescisión del contrato, resultaría desfavorable»; «reducido porcentaje de obra faltante»; Resolución 414 del 6 de septiembre de 1962. Coinciden las dos citas |
+| 6581 | 9 | Decreto 1522-A, art. 1 | «fenómenos atmosféricos». Coincide |
+| 6440 | 7 | Decreto 19157-E, visto y art. 1 | «Manufactura de Tabacos Particulares V. F. Greco S. A.»; «la actual propietaria del predio»; «Getsemaní»; setenta y cinco centilitros por hectárea. Coinciden |
+| 6334 | 8 | Edicto 7831 | «Manufactura de Tabacos Particular V. F. Grego Sociedad Anónima»; 216 horas, 19/30 partes, 0.75 l/s. Coincide |
+| 6367 | 6 | Decreto 17.362-G, resolución 189 | «(Departamento La Caldera)»; II Zona con asiento en Campo Quijano, 1 cabo y 2 agentes. Coincide |
+| 6394 | 8 | Decreto 18.079-E, planilla | «Edificio Policial en La Caldera», H I III 6 D III 7, \$300. Coincide |
+| 6438 | 5 | Decreto 19.077, art. 1 | \$812.516,85; «de fs. 13 a fs. 16 de estas actuaciones». Coincide |
+| 6671 | 12 | Decreto 3634-E, art. 1 | Arturo René Fernández; «Campo Alegre», Dpto. La Caldera. Coincide |
+| 6610 | 17 | Decreto 2166-A, nómina | «Médico Regional — La Caldera»; **«Auxiliar 5º — Enf. La Caldera — Señorita Corina Adela Bustamante», sin consultorio externo** (hallazgo 3) |
+| 6360 | 8 | Decreto 17.219-A, nómina | «Médico Reg. La Caldera, Dr. Juan C. Martearena»; «Médico Reg. Vaqueros y San Lorenzo, Dr. Dardo Frías». Coincide |
+| 6552 | 12 | Decreto 941-A, art. 1 | Servicios de Frías «desde el 6 de noviembre al 1º de diciembre de 1961», mientras Martearena es encargado del Hospital de Cafayate (hallazgo 2) |
+| 6288 | 10 | Decreto 15839-G | Decreto del 27/12/1960; Resolución 898 del Consejo General de Educación del 14/12/1960 (hallazgo 1) |
+| 6585 | 5 | Decreto 1565-G, art. 1 | «que corre de fojas 2, a fojas 5, de este expediente»; \$1.002.736,82; firma Escobar Cello. Coincide |
+
+Son **13 citas entre comillas del libro cotejadas en la imagen, sobre 11 hojas de 11 ediciones** (6421, 6439, 6615, 6718, 6581, 6440, 6334, 6367, 6394, 6438, 6671), **ninguna corrección silenciosa y ninguna cita que cambie el sentido**; más la cita que la fase 6 agrega («Enf. La Caldera», 6610 h17) y **5 datos sin comillas** (6610 h17, 6360 h8, 6552 h12, 6288 h10, 6585 h5), de donde salen los hallazgos 1, 2 y 3. En total, 16 hojas de 16 ediciones (9 de 1961 y 7 de 1962). No se cotejaron: 6573 h11–13 (zonas de 1962), 6406 h5–6 (zona D de 1961, sólo localizado), 6512 h5–6 (decretos 1-G y 7-G, que los informes leen en la capa), 6547 h3–5 (896-G) ni los certificados de la escuela.
+
+### Hallazgos (cuatro, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 26:235 | «En 1961 y 1962 … la obra se hace: se adjudica a Walter Lerario»: la adjudicación es la Resolución 898 del Consejo General de Educación del 14/12/1960, aprobada por el 15839-G del 27/12/1960 y publicada en enero de 1961 (Nº 6288, h. 10); A:359 lo dice bien | 3 | «en enero de 1961 se publica la adjudicación a Walter Lerario, resuelta en diciembre de 1960» |
+| 2 | A:360 | En la fila de 1962, «dos médicos reemplazan al regional de La Caldera»: el reemplazo del 941-A es del 6/11 al 1/12/1961 (Nº 6552, h. 12); el del 1047-A, del 16/1 al 12/2/1962 | 3 | «se reconocen los servicios de dos médicos que reemplazaron al regional…, uno en noviembre de 1961…, y otro en enero y febrero de 1962» |
+| 3 | 04:4599, D:191, 21:87 | Los tres atribuyen el consultorio externo también a 1962: el 2166-A dice «Enf. La Caldera» sin consultorio (Nº 6610, h. 17), como trae A:360 y el informe LEE 1962 (A.17); ningún acto de 1962 del informe nombra el consultorio externo | 7 | 04: «a la enfermera ---en 1961, la del consultorio externo; en 1962, sólo «Enf. La Caldera»---»; D y 21: consultorio externo sólo en 1961 |
+| 4 | 22-prospectiva:140–144 | «Y la serie no termina ahí: llega hasta 1946»: cierre de serie desmentido por el propio libro, que registra la intervención de la Municipalidad de octubre de 1955 (247-G, D:193, 18) y, desde este AMPLÍA, la puesta en comisión de noviembre de 1961 y los comisionados interventores de 1962 (A:356, 18:470). Sobrevivió al cierre de las ventanas 1955–1957 y 1961–1962 | 5 | «en el archivo temprano llega hasta 1946»; y una frase que sigue la serie fuera de esa ventana (1955, 1961–1962), con remisión al capítulo de política |
+
+Restan: dos casos en el aspecto 3 (hallazgos 1 y 2), un error de consistencia en el 7 (hallazgo 3) y un superlativo de cierre desmentido por el propio libro en el 5 (hallazgo 4, −10).
+
+**Tres de los cuatro están en material que la propia auditoría incorporó** (AMPLÍA 1961–1962, `d126594`: hallazgos 1, 2 y 3); el cuarto es una frase anterior que el repaso de ventana de las rondas 49 y 51 y el del AMPLÍA no revisaron. Ninguno fue atrapado por un control automático antes de llegar al libro: el control de citas de P74 no los ve (no son citas), y los hallazgos 1 y 2 los vería un control de fechas que compare el año de la fila con las fechas de la FICHA (P86, nuevo).
+
+**Mejora sin hallazgo.** 18:470 suma que el Esteban Mogro de la ordenanza de 1983 renuncia en noviembre de ese año como juez de paz titular (18:529, B.O. Nº 11.868): el cargo de 1961 y el de 1983 son de la misma clase. La identidad sigue sin afirmarse.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.056/25.056 líneas vigentes en `11d8d1f` | 25.022 vigentes, 46 caducas por el AMPLÍA 1961–1962 |
+| Citas con número de acto, edición y hoja de 1961–1962 contra las FUENTE de los informes LEE | 132 citas «número-letra, Nº, h.» y «Nº, h.» con edición ≥ 6288 en las 46 líneas | Todas localizadas; las 10 que el script no resolvió de primera son rangos de hoja («h5 c2 a h10 c1», «h11 c1 a h18»), el «[1]7763» del 17763-A y tres citas de 6512 h5–h6 que los informes dan en E.4 y en B y no en una ficha del §A; cierran al mirar la FUENTE y las notas |
+| Citas entre comillas de las 46 líneas contra el TEXTO de los informes LEE 1961–1962 (P74) | 91 citas | 43 aparecen en el TEXTO de los informes 1961–1962: 40 literales y 3 que difieren sólo por el espacio de TeX («Dr.\ Luis Linares», dos veces, y «fs.\ 13»); ninguna cita de un acto de 1961–1962 discrepa. Las 46 restantes son de actos de años anteriores y no se buscan en estos informes; 2 de menos de cuatro caracteres no se controlan |
+| Superlativos, cierres y ausencias sobre los temas de las fichas de 1961–1962 (Obras Sanitarias, Getsemaní, destacamento, Los Yacones, Registro Civil, juez de paz, comisionado, interventor, Gallo, Regis, presupuesto, Bernabé López, Chalchanio, zona, Hogar, Campo Alegre, mina, cateo, pensión, San Cayetano, senador, Ley 3192, edificio policial, receptor, elección, Mogro, Fernández, médico regional, consultorio, usina, Wierna, entre otros), en oraciones que no nombran 1961 ni 1962 (repaso de ventana) | 263 coincidencias en el libro entero, todas leídas | Una desmentida por el propio libro: 22-prospectiva:140 (hallazgo 4). Conservan su universo: A:280 («nueve años leídos desde la convocatoria de 1949»), 04:4209 («la única sustancia metalífera que el archivo temprano asocia»: las minas de 1955 y 1961 son también de plomo y plata), 26:212 (1923–1945), 20:754 y 22-prospectiva:144 («veintiocho años») |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 319/319 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 (la nueva remisión de 22-prospectiva va a un capítulo anterior) |
+| Sumas de los certificados de la escuela de Vaqueros (A:359, 26:235) | 19 certificados (6 de 1961 y 13 de 1962) | \$934.343,32 + \$1.882.910,81 = \$2.817.254,13. Faltan el parcial 3 y los ajustes provisorios 3 y 5. Cierran |
+| Dotaciones de 1961–1962 recalculadas (A:357, A:361, 17:353) | 4 actos con caudal y superficie | 25,25/50 = 0,505; 1,57/3 = 0,523; 0,79/1,5 = 0,527; Getsemaní, 0,75 como máximo. Cierran |
+| Recuentos de 1961–1962 (A, F, 00, 02) | 2 años | Ediciones: 6288–6527 = 240; 6528–6768 = 241 archivos y 240 de contenido. Hojas: 4.663 (223 de suplemento) y 4.619 (112). Faltantes por tapa: 118 en 76 ediciones y 167 en 127. Fichas: 61 + 35 = 96 del §A y 10 + 17 = 27 de B.2. Actos de agua: 4 y 4. Pensiones de 1961: 5 a la vejez (1 sin lugar, 1 Los Yacones, 3 Vaqueros), 2 a la invalidez, 1 rehabilitación. Tramos: 42 + 1 + 5 = 48. Hueco 1963–2012: 50 años. Cierran |
+| Cadenas de saldos (F:66) | 2 informes, E.1 | 1961: un tramo, febrero con cien pesos de más y diciembre de 1960 sin recalcular; 1962: dos tramos cortados por enero, enlaza con 1961. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 52 | 50 de 172 oraciones con cifra en las 46 líneas | **50/50 con fuente localizable**: 32 con la cita en la oración, 8 en la fila o el párrafo, y 10 declaraciones de cobertura (00, 02, 04, F) cuya fuente es el apéndice F o los informes LEE |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 46 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| `\pendiente{}`, ítems de D y `\label` de apéndices | 52; 284; 8/8 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra. Ningún pedido de D satisfecho por 1961–1962 sigue en la lista (D:191 sigue pidiendo el otorgamiento de 1953, que 1961 no trae) |
+| Privacidad: personas nombradas en las 46 líneas, cruzadas con contextos sensibles | 46/46 líneas | Pensionados, personal del Hogar, la empleada denunciante, el agente cesante, la titular del Registro Civil en licencia y los deudores de los remates: ninguno nombrado. Nombrados sólo funcionarios (Gallo, Regis, Escobar Cello, Mogro), el contratista de la escuela y el destinatario del préstamo de un toro (Fernández), sin contexto sensible. Sin casos |
+| Largo de los archivos antes y después de la fase 6 | 7/7 archivos tocados por la fase 6 | ninguno cambia de largo |
+| Compilación | libro entero, base y fase 6 | Compilan las dos; 837 páginas; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75 y 00:78; 2 cajas desbordadas, las mismas |
