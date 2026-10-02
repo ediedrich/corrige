@@ -1,0 +1,2116 @@
+LEE v17 — 1968
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA, 1968 (N 7973 a 8217). Barrido
+documental forense del departamento La Caldera. Informe LEE, rubrica LEE v16 con
+los cambios v17 de flujo-editorial.md (version 2, §5). Fecha: 2026-10-01.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: COMPLETO, con 12 limites declarados (E.10). No queda trabajo que la
+sesion pueda hacer sobre las menciones del departamento con los insumos que
+llegaron. Lo que falta son 109 paginas que el Release no trae, en 45 ediciones,
+segun la cadena de folios (E.2), y una pagina de la 8149 que el Release trae dos
+veces en lugar de la 4702.
+
+Insumos. El listado de assets del Release (expanded_assets/1968) no se puede
+leer desde la sesion: el proxy responde que el acceso a ese repositorio no esta
+habilitado. Las descargas directas por nombre si funcionan, y se bajaron por los
+nombres que estado.json registra en descarga.subidos: el pre-informe
+BO-Salta-1968_la-caldera_PRE-INFORME-LEE_2026-10-01.txt (el unico registrado; no
+se pudo comprobar si hay otro de fecha anterior), resultados_1968.csv,
+decretos_1968.csv (vacio: solo el encabezado), log.txt, lee_config.json y
+lee_textos_1968.zip; y los 245 PDF, 7973.pdf a 8217.pdf, sin huecos de
+numeracion y todos legibles (6792 hojas, las mismas que EXTRAIDO.json). Se
+probaron tambien avisos.txt y recortes.zip: no existen (404) y no se reclaman.
+
+lee_auto.py, sha 8a1e775655ae, una corrida el 1-10-2026 de 19:21 a 22:12, sin
+errores en el log. Capa del PDF util en 655 de 6792 hojas (cuenta del log): las
+ediciones 8150, 8151 y 8198 a 8217 enteras; se ocrizaron las 6137 restantes con
+4 procesos. lee_textos trae 6792 versiones previas (capa), 6137 propias (.txt y
+.tsv) y 245 EXTRAIDO.json. Medido: 717 hojas con capa de mas de 200 caracteres,
+6049 con OCR propio util, 62 con las dos versiones y 88 sin ninguna, que son
+hojas en blanco (miradas en miniatura, E.1). Hay confianza por hoja (v17 §5.1):
+media 87,0; 2937 hojas publicables, 2942 a verificar, 258 «a ojos».
+
+Config. config del Release: version 2026-10-01, hasta 1966, actores 1298,
+anillo2 430. config de corrige: version 2026-10-01, hasta 1967, actores 1326,
+anillo2 454. Se usa: el de corrige - razon: unico valido (flujo §5.2) y mas
+nuevo. Contenido: el de corrige contiene al del Release; lee_auto.py corrio con
+el del Release, de modo que las pasadas del pre-informe no traen los 28 actores,
+24 terminos y 55 numeros que agrego 1967. La sesion corrio el anillo 2 y el de
+actores con el de corrige. Se pide subir el config vigente a la carpeta de
+lee_auto.py antes de procesar 1969. Se entrega un lee_config.json nuevo, hasta
+1968 (§F).
+
+Entorno. nproc 2. PyMuPDF instalado en la sesion. tesseract 5.3.4 solo con eng y
+osd, sin spa: no hubo OCR en sesion (E.10). Techo de resolucion, medido con
+get_image_info en las 6792 hojas: 150 ppp en 6520 y 300 ppp en 272 (veinte
+ediciones; 8135 y 8154 enteras). Es el tramo de 150 ppp que el catalogo de
+confusiones del flujo §5.6 describe.
+
+Que verifico la sesion. Hojas por PDF contra EXTRAIDO.json: 6792 contra 6792.
+Tapas: las 245, en la imagen (numero, fecha y paginas declaradas), en nueve
+montajes de treinta mas siete recortes sueltos y una ampliacion de ocho numeros.
+Gobernador y ministros, en la imagen de 24 tapas elegidas en los cambios que
+daba la capa (E.4). Folios: cadena corrida en todo el año, de la pagina 1 a la
+6880, cotejada contra el folio que la capa lee en la cabecera (dos o mas hojas
+concordantes en cada una de las 245 ediciones) y con seis cabeceras de 8149
+miradas en la imagen. Cuatro pasadas propias sobre la union de las versiones,
+mas la de la letra perdida y la difusa ampliada. Anillo 2 completo con el config
+de corrige; anillo de actores sobre los 1326 del config y sobre los nombres de
+los actos del §A y del B.2 de 1968. Hojas interiores miradas en la imagen: 80
+(recorte de columna o la hoja entera), mas las 245 tapas y las 88 hojas en
+blanco en miniatura. Tinta medida en las 6792 hojas (E.1).
+
+Desvios de v16 §8.17, declarados: (1) los numeros de documento, matricula y
+cedula se reemplazan por [omitido]; (2) los fragmentos de actos largos se
+transcriben con «...» y la ficha dice que se omitio; (3) las nominas largas
+(pensiones, personal) no se transcriben fuera de los renglones del departamento;
+(4) la serie de vecinos ±3 se mira en la imagen cuando el vecino esta en la
+misma columna, y si no, se toma de la capa y la ficha lo dice; (5) la prosa del
+informe va sin tildes, como en 1967; las transcripciones las llevan. Nada de lo
+omitido decide una ficha.
+
+Que agregaria cada insumo que falto: el listado del Release, nada nuevo (los
+nombres salen de estado.json); las 109 paginas ausentes, la posibilidad de
+afirmar ausencias sobre sus ediciones (entre ellas la decima aparicion del
+edicto de Getsemani, que caeria en la 7994); tesseract spa en la sesion, una
+segunda version propia de las hojas con una sola; recortes.zip, nada que la
+sesion no haya rehecho.
+
+§1 · CORPUS REVISADO
+--------------------
+245 ediciones, N 7973 (martes 2 de enero) a N 8217 (martes 31 de diciembre), sin
+huecos de numeracion. Sin ediciones dobles. 6792 hojas en el Release. Paginacion
+corrida en todo el año: la 8217 abre en la pagina 6841 y su tapa declara 40, de
+modo que el año cierra en la 6880. Las tapas declaran 6872 paginas; la cadena de
+folios da 6880, porque la 8191 declara 20 y ocupa 28 (E.2). Paginas que el
+Release no trae: 109 en 45 ediciones. Hojas que el Release trae duplicadas: 20
+en la 8138 y 1 en la 8149 (E.1). Hojas en blanco: 88.
+
+Fechas, numeros y paginas leidos en la imagen de la tapa; el dia de la semana se
+calcula. Columnas: edicion, fecha, dia, paginas declaradas en la tapa / hojas en
+el Release, primera pagina de la cadena, nota (aus = paginas ausentes; cap =
+capa nativa del PDF; 300 = hojas a 300 ppp).
+
+  7973   2-1  mar  12/12  p.1     300:12
+  7974   3-1  mie  12/12  p.13
+  7975   4-1  jue  16/16  p.25
+  7976   5-1  vie   8/8   p.41
+  7977   8-1  lun   8/8   p.49
+  7978   9-1  mar  16/16  p.57
+  7979  10-1  mie  16/16  p.73
+  7980  11-1  jue  16/16  p.89
+  7981  12-1  vie  20/20  p.105
+  7982  15-1  lun   8/8   p.125
+  7983  16-1  mar  24/24  p.133
+  7984  17-1  mie  32/32  p.157
+  7985  18-1  jue  32/32  p.189
+  7986  19-1  vie  16/16  p.221
+  7987  22-1  lun  20/20  p.237
+  7988  23-1  mar  16/16  p.257
+  7989  24-1  mie  28/28  p.273
+  7990  25-1  jue  32/32  p.301
+  7991  26-1  vie  16/16  p.333
+  7992  29-1  lun  16/16  p.349
+  7993  30-1  mar  16/16  p.365   300:2
+  7994  31-1  mie  12/10  p.381   aus 2
+  7995   1-2  jue   8/8   p.393
+  7996   2-2  vie  16/16  p.401
+  7997   5-2  lun  20/20  p.417
+  7998   6-2  mar  16/16  p.437
+  7999   7-2  mie  36/36  p.453
+  8000   8-2  jue  24/24  p.489
+  8001   9-2  vie  36/36  p.513
+  8002  12-2  lun  32/32  p.549
+  8003  13-2  mar  28/28  p.581
+  8004  14-2  mie  36/36  p.609
+  8005  15-2  jue  32/30  p.645   aus 2
+  8006  16-2  vie  52/52  p.677
+  8007  19-2  lun  36/36  p.729
+  8008  21-2  mie  32/32  p.765
+  8009  22-2  jue  12/12  p.797
+  8010  23-2  vie  16/16  p.809
+  8011  28-2  mie  16/16  p.825
+  8012  29-2  jue  24/24  p.841
+  8013   1-3  vie  24/24  p.865
+  8014   4-3  lun  40/40  p.889
+  8015   5-3  mar  16/16  p.929
+  8016   6-3  mie  36/36  p.945
+  8017   7-3  jue  24/24  p.981
+  8018   8-3  vie  20/20  p.1005
+  8019  11-3  lun  24/24  p.1025
+  8020  12-3  mar  24/24  p.1049
+  8021  13-3  mie  28/28  p.1073
+  8022  14-3  jue  24/24  p.1101
+  8023  15-3  vie  24/24  p.1125
+  8024  18-3  lun  12/12  p.1149
+  8025  19-3  mar  16/16  p.1161
+  8026  20-3  mie  32/32  p.1177
+  8027  21-3  jue  32/32  p.1209
+  8028  22-3  vie  28/28  p.1241
+  8029  25-3  lun  24/24  p.1269
+  8030  26-3  mar  24/24  p.1293
+  8031  27-3  mie  28/28  p.1317
+  8032  28-3  jue  24/24  p.1345
+  8033  29-3  vie  24/24  p.1369
+  8034   1-4  lun  24/24  p.1393
+  8035   2-4  mar  32/28  p.1417  aus 4
+  8036   3-4  mie  32/32  p.1449
+  8037   4-4  jue  32/28  p.1481  aus 4
+  8038   5-4  vie  20/20  p.1513
+  8039   8-4  lun  20/20  p.1533  300:12
+  8040   9-4  mar  24/24  p.1553
+  8041  10-4  mie  36/24  p.1577  aus 12
+  8042  15-4  lun  24/24  p.1613
+  8043  16-4  mar  36/36  p.1637
+  8044  17-4  mie  20/20  p.1673
+  8045  18-4  jue  20/20  p.1693
+  8046  19-4  vie  36/36  p.1713
+  8047  22-4  lun  40/40  p.1749
+  8048  23-4  mar  44/42  p.1789  aus 2
+  8049  24-4  mie  36/36  p.1833
+  8050  25-4  jue  52/45  p.1869  aus 7
+  8051  26-4  vie  40/40  p.1921
+  8052  29-4  lun  36/36  p.1961
+  8053  30-4  mar  36/36  p.1997  300:22
+  8054   2-5  jue  20/20  p.2033
+  8055   3-5  vie  20/20  p.2053
+  8056   6-5  lun  20/16  p.2073  aus 4
+  8057   7-5  mar  28/26  p.2093  aus 2
+  8058   8-5  mie  24/20  p.2121  aus 4
+  8059   9-5  jue  48/48  p.2145
+  8060  10-5  vie  36/36  p.2193
+  8061  13-5  lun  28/28  p.2229
+  8062  14-5  mar  32/32  p.2257  300:2
+  8063  15-5  mie  36/36  p.2289
+  8064  16-5  jue  24/24  p.2325
+  8065  17-5  vie  28/28  p.2349
+  8066  20-5  lun  28/28  p.2377
+  8067  21-5  mar  24/24  p.2405
+  8068  22-5  mie  24/24  p.2429
+  8069  23-5  jue  36/36  p.2453
+  8070  24-5  vie  40/40  p.2489
+  8071  27-5  lun  24/24  p.2529
+  8072  28-5  mar  20/20  p.2553
+  8073  29-5  mie  20/16  p.2573  aus 4
+  8074  30-5  jue  32/32  p.2593
+  8075  31-5  vie  28/28  p.2625
+  8076   3-6  lun  36/36  p.2653
+  8077   4-6  mar  36/36  p.2689
+  8078   5-6  mie  28/26  p.2725  aus 2
+  8079   6-6  jue  16/16  p.2753
+  8080  10-6  lun  24/24  p.2769
+  8081  11-6  mar  32/32  p.2793
+  8082  12-6  mie  20/20  p.2825
+  8083  14-6  vie  28/26  p.2845  aus 2
+  8084  18-6  mar  16/16  p.2873
+  8085  19-6  mie  36/36  p.2889
+  8086  21-6  vie  20/20  p.2925
+  8087  24-6  lun  16/16  p.2945
+  8088  25-6  mar  24/24  p.2961
+  8089  26-6  mie  28/28  p.2985
+  8090  27-6  jue  28/28  p.3013
+  8091  28-6  vie  40/40  p.3041  300:4
+  8092   1-7  lun  32/28  p.3081  aus 4 300:2
+  8093   2-7  mar  12/12  p.3113
+  8094   3-7  mie  12/12  p.3125
+  8095   4-7  jue  16/14  p.3137  aus 2
+  8096   5-7  vie  12/12  p.3153
+  8097   8-7  lun  40/40  p.3165
+  8098  10-7  mie  28/26  p.3205  aus 2
+  8099  11-7  jue  36/36  p.3233  300:2
+  8100  12-7  vie  28/28  p.3269
+  8101  15-7  lun  24/24  p.3297
+  8102  16-7  mar  12/12  p.3321
+  8103  17-7  mie  24/24  p.3333
+  8104  18-7  jue  24/24  p.3357
+  8105  19-7  vie  24/24  p.3381
+  8106  22-7  lun  12/12  p.3405  300:12
+  8107  23-7  mar  12/12  p.3417
+  8108  24-7  mie  20/20  p.3429
+  8109  25-7  jue  32/32  p.3449
+  8110  26-7  vie  44/44  p.3481  300:4
+  8111  29-7  lun  56/56  p.3525  300:8
+  8112  30-7  mar  16/16  p.3581  300:16
+  8113  31-7  mie  28/28  p.3597
+  8114   1-8  jue  32/32  p.3625
+  8115   2-8  vie  40/40  p.3657
+  8116   5-8  lun  20/16  p.3697  aus 4 300:10
+  8117   6-8  mar  28/28  p.3717
+  8118   7-8  mie  32/32  p.3745
+  8119   8-8  jue  16/16  p.3777
+  8120   9-8  vie  36/36  p.3793
+  8121  12-8  lun  16/16  p.3829
+  8122  13-8  mar  16/16  p.3845
+  8123  14-8  mie  24/24  p.3861
+  8124  16-8  vie  28/28  p.3885
+  8125  19-8  lun  16/16  p.3913
+  8126  20-8  mar  32/32  p.3929  300:8
+  8127  21-8  mie  32/32  p.3961
+  8128  22-8  jue  40/40  p.3993
+  8129  23-8  vie  32/32  p.4033
+  8130  26-8  lun  24/20  p.4065  aus 4
+  8131  27-8  mar  24/24  p.4089
+  8132  28-8  mie  28/28  p.4113
+  8133  29-8  jue  28/28  p.4141
+  8134  30-8  vie  36/36  p.4169  300:28
+  8135   2-9  lun  40/40  p.4205  300:40
+  8136   3-9  mar  36/36  p.4245
+  8137   4-9  mie  44/40  p.4281  aus 4
+  8138   5-9  jue  20/40  p.4325  20 dup
+  8139   6-9  vie  28/28  p.4345
+  8140   9-9  lun  56/56  p.4373
+  8141  10-9  mar  16/16  p.4429
+  8142  11-9  mie  28/28  p.4445
+  8143  12-9  jue  24/24  p.4473
+  8144  16-9  lun  40/40  p.4497  300:12
+  8145  17-9  mar  32/32  p.4537
+  8146  18-9  mie  44/44  p.4569
+  8147  19-9  jue  28/28  p.4613
+  8148  20-9  vie  28/28  p.4641
+  8149  23-9  lun  44/44  p.4669  aus 1 1 dup
+  8150  24-9  mar  28/26  p.4713  aus 2 cap
+  8151  25-9  mie  28/28  p.4741  cap
+  8152  26-9  jue  20/20  p.4769
+  8153  27-9  vie  28/28  p.4789
+  8154  30-9  lun  48/48  p.4817  300:48
+  8155   1-10 mar  32/32  p.4865
+  8156   2-10 mie  20/20  p.4897
+  8157   3-10 jue  28/28  p.4917
+  8158   4-10 vie  20/20  p.4945  300:12
+  8159   7-10 lun  32/32  p.4965
+  8160   8-10 mar  32/32  p.4997
+  8161   9-10 mie  36/36  p.5029
+  8162  10-10 jue  32/32  p.5065
+  8163  11-10 vie  28/28  p.5097
+  8164  14-10 lun  36/36  p.5125
+  8165  15-10 mar  44/44  p.5161
+  8166  16-10 mie  32/32  p.5205
+  8167  17-10 jue  36/36  p.5237
+  8168  18-10 vie  32/32  p.5273
+  8169  21-10 lun  20/20  p.5305
+  8170  22-10 mar  36/36  p.5325
+  8171  23-10 mie  40/40  p.5361
+  8172  24-10 jue  16/16  p.5401
+  8173  25-10 vie  32/32  p.5417
+  8174  28-10 lun  24/24  p.5449
+  8175  29-10 mar  32/32  p.5473
+  8176  30-10 mie  32/32  p.5505
+  8177  31-10 jue  20/16  p.5537  aus 4 300:16
+  8178   4-11 lun  32/29  p.5557  aus 3
+  8179   5-11 mar  44/43  p.5589  aus 1
+  8180   6-11 mie  36/33  p.5633  aus 3
+  8181   7-11 jue  24/24  p.5669
+  8182   8-11 vie  40/40  p.5693
+  8183  11-11 lun  32/30  p.5733  aus 2
+  8184  12-11 mar  36/35  p.5765  aus 1
+  8185  13-11 mie  36/35  p.5801  aus 1
+  8186  14-11 jue  60/59  p.5837  aus 1
+  8187  15-11 vie  48/47  p.5897  aus 1
+  8188  18-11 lun  40/39  p.5945  aus 1
+  8189  19-11 mar  20/20  p.5985
+  8190  20-11 mie  32/31  p.6005  aus 1
+  8191  21-11 jue  20/27  p.6037  aus 1 cadena 28
+  8192  22-11 vie  20/20  p.6065
+  8193  25-11 lun  16/16  p.6085
+  8194  26-11 mar  20/18  p.6101  aus 2
+  8195  27-11 mie  20/20  p.6121
+  8196  28-11 jue  32/32  p.6141
+  8197  29-11 vie  32/32  p.6173
+  8198   2-12 lun  40/40  p.6205  cap
+  8199   3-12 mar  40/39  p.6245  aus 1 cap
+  8200   4-12 mie  48/47  p.6285  aus 1 cap
+  8201   5-12 jue  40/40  p.6333  cap
+  8202   6-12 vie  36/36  p.6373  cap
+  8203   9-12 lun  24/23  p.6409  aus 1 cap
+  8204  10-12 mar  32/32  p.6433  cap
+  8205  11-12 mie  36/36  p.6465  cap
+  8206  12-12 jue  24/24  p.6501  cap
+  8207  13-12 vie  40/40  p.6525  cap
+  8208  16-12 lun  32/31  p.6565  aus 1 cap
+  8209  17-12 mar  24/23  p.6597  aus 1 cap
+  8210  18-12 mie  24/23  p.6621  aus 1 cap
+  8211  19-12 jue  40/40  p.6645  cap
+  8212  23-12 lun  56/56  p.6685  cap
+  8213  24-12 mar  36/35  p.6741  aus 1 cap
+  8214  26-12 jue  20/17  p.6777  aus 3 cap
+  8215  27-12 vie  16/15  p.6797  aus 1 cap
+  8216  30-12 lun  28/27  p.6813  aus 1 cap
+  8217  31-12 mar  40/39  p.6841  aus 1 cap
+
+Periodicidad: lunes a viernes; la tapa dice «APARECE LOS DIAS HABILES» en las
+245 ediciones. Dias de lunes a viernes sin edicion: 17 (1-1, 20-2, 26-2, 27-2,
+11-4, 12-4, 1-5, 7-6, 13-6, 17-6, 20-6, 9-7, 15-8, 13-9, 1-11, 20-12 y 25-12).
+Los feriados que el corpus declara por decreto son patronales de otros
+municipios y no explican ninguno de esos dias; se declaran sin explicar y no se
+busca la causa afuera (v16 §2.5bis).
+
+Año editorial, en la tapa: «AÑO LIX» hasta la 8166 (16-10) y «AÑO LX» desde la
+8167 (17-10). Erratas de tapa: «Satla» por Salta (8038); «Nº 8124» y «Nº 8125»
+sin punto de mil; «AÑO LIX — 8.128», «— 8.129» y «— 8.163» sin «Nº»; el ultimo
+digito del numero de la 8031 no se lee y lo decide la serie (8030 y 8032).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: prev (capa del PDF, util en 717 hojas) y prop (OCR de lee_auto.py,
+util en 6049). Busqueda sobre la union, etiqueta por version. Union: U+0002,
+ninguna; U+00AD, ninguno; guion de fin de renglon con hasta dos signos a cada
+lado y saltos de renglon multiples, unido. Comprobado: «Cal- / derilla» de 7989
+h9 queda unido.
+
+Pasadas. Literal «cald» sobre NFD sin diacriticos: 184 hojas, contados los
+falsos positivos de E.7. Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: 167 hojas, una
+sola que la literal no devuelve (8095 h9, «golceran», ruido). Laxa espaciada con
+[\s-]{0,3} entre cada par de letras: 139 hojas, ninguna nueva. Letra perdida
+c[ao][l1i|]?\W?\s*d[ec]r[ao]: 170, cuatro nuevas, todas ruido («secadero»,
+«embarcadero»). Difusa >= 0,78: 17 formas; dos son La Caldera deformada y
+rescatan lo que la literal pierde: «calde» de 8143 h19 (el aviso 31277 cortado
+por la cabecera de la pagina: «la calde- / ... / ra») y «calderz» de 8180 h9 (el
+Cristo Monumental, en una hoja que la literal ya devolvia). El resto es
+«calderon», «calliera» (una sociedad), «escalera», «cader» (una S.R.L.), «adera»
+(un apellido y «m adera»), «calderas» (aparatos), «valedera», «balderra»,
+«aldea», «calrera» (Tomas Cabrera), «caluiera» (una S.A.), «caderias»,
+«capdevilla» y «cuadrilla». Difusa ampliada 0,70-0,78 sobre palabras con c, g u
+o: 46 formas, ninguna real («cabaleria», «cadora», «catedra», «cortadera»...).
+
+Prueba de las pasadas que dan cero o casi cero: la espaciada y la letra perdida
+devuelven 139 y 170 hojas, casi todas tambien en la literal: funcionan, y no
+rescatan nada porque el OCR propio no separa las letras. El pre-informe dio
+candidatos del anillo 1 en 242 hojas: 240 estan entre las de la sesion; las dos
+restantes son «cal deron» (una calle, 7979 h6) y «recaera» (8217 h27), falsos
+positivos.
+
+Anillo 2: 454 terminos del config; 99 con acierto. Se leyeron los contextos
+distintos de todos los terminos (dos por termino en los apellidos y terminos de
+ruido, con deduplicacion por texto) y enteros los de los terminos del
+departamento. Anillo de actores: los 1326 del config, por nombre + apellido,
+primer nombre + apellido, inicial + apellido e inversion, sobre el texto sin
+puntuacion; 429 con acierto. Mas los nombres de los actos del §A y del B.2 de
+1968 (B.4). Numeros arrastrados: no se usaron como pasada independiente; el
+pre-informe trae su capa NUM (21.622 aciertos), casi todos numeros de aviso y de
+pagina.
+
+Identificadores de las ausencias: numero de decreto o de aviso, nombre de la
+persona y localidad, de a dos por lo menos.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), contra lo que
+el propio año establece. Faltantes: 18 («chalcamio», «fincha chalchanio»,
+«yeusemani», «las 2 lagunas», «lapacheta», «finca la calderilla», «puesto
+sanitario de los yacones», «hogar la caldera», «subcomisaria de la caldera»,
+«sub-comisaria la caldera», «centro agrario de la caldera», «puente vaqueros»,
+«cooperadora asistencial de la caldera», «rio wierna», «embalse campo alegre»,
+«defensas sobre rio la caldera», «partido la caldera» y «camino salta los
+yacones»), agregados al config con dos deformaciones del OCR («la calderz», «la
+caldesa»). Apellidos dentro de la lista de lugares con acierto en 1968: 21
+(castellanos, mamani, aramayo, isasmendi, nogales, toconas, apaza, condori,
+chaile, severino, quintin, yolanda, teodolinda, helvecia, wierna, murua,
+mosquera, matos, lesser, yufra, yugra), que suman 1.373 aciertos por hoja de
+ruido. A revisar: 4 (el bordo, betania y tabacal, de Gral. Guemes y Oran segun
+los actos; trancas, dos hojas, ninguna del departamento).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+35 fichas que cubren 53 actos: las fichas de una obra o de una serie reunen los
+actos que la siguen y nombran todos los numeros, como en 1964 a 1967. Cada aviso
+repetido es una sola ficha con todas sus apariciones, contadas por texto. Los
+renglones de sumario que remiten a un acto fichado se nombran en la FUENTE y no
+se fichan aparte.
+
+A01  7980 h11  [AGUAS+OBRA-PUBLICA]
+    Dec. 7448: amplía el plazo del contrato del Ing. Ricardo Hurtado para el
+    proyecto del Dique Campo Alegre
+  FUENTE: 7980 (11-1-1968) h11 col. 1 (pág. 99); sumario en h3.
+  FICHA: Decreto 7448, Economía, F. y O. Públicas, 22-12-1967, expte. 2373/67.
+  Contrato aprobado por el Dec. 5539/67.
+  MODO DE LECTURA: Imagen (el decreto entero, a 150 ppp).
+  TEXTO:
+    VISTO que el Ing. Ricardo Hurtado, 2º Jefe del Departamento de Estudios y
+    Proyecto de la Administración General de Aguas de Salta, solicita se le
+    amplíe hasta fines de diciembre del año en curso, el plazo fijado en el
+    contrato que celebrara oportunamente, con la Repartición mencionada para la
+    ejecución del proyecto del Dique Campo Alegre - Dpto. La Caldera, por cuanto
+    tuvo que atender exclusivamente consultas del llamado a licitación de la
+    obra "Embalse Las Lomitas"; / ... Artículo 1º — Amplíase hasta fines de
+    diciembre, del año en curso, el plazo fijado por el artículo 1º del contrato
+    celebrado entre la Administración General de Aguas de Salta y el Ing.
+    RICARDO HURTADO, aprobado por Decreto Nº 5539/67 para la ejecución del
+    proyecto del "Dique Campo Alegre - Dpto. La Caldera". / Art. 2º — La
+    ampliación de plazo dispuesta por el artículo anterior, lo es sin
+    continuidad de la remuneración mensual que establece el artículo 2º del
+    mencionado contrato. / ... D'ANDREA / San Martín
+  NOTA DE LECTURA: Decreto de diciembre de 1967 publicado en enero de 1968. El
+  Dec. 5539/67 es el que 1967 fichó en A17; no se acompaña aquí. Es la pieza que
+  atribuye a La Caldera el dique de Campo Alegre de B2-03, B2-08 y B2-11 y de
+  A03. Serie: no se tomaron vecinos (el decreto es de un año ya barrido).
+
+A02  7983 h11  [OBRA-PUBLICA+ESCUELA]
+    Dec. 7521: obra 283, Escuela Nacional 250 de San Francisco de los Yacones;
+    el VISTO dice recepción definitiva y el artículo aprueba la provisoria
+  FUENTE: 7983 (16-1-1968) h11 col. 1; sumario en h3 («recepción provisoria de
+  la obra construcción escuela nacional Nº 250 de Los Yacones»).
+  FICHA: Decreto 7521, Economía, F. y O. Públicas, 29-12-1967, expte. 4237/67;
+  Res. 533 de Viviendas y Arquitectura, 18-12-1967.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    VISTO el Acta de Recepción Definitiva de la obra Nº 283 "Construcción
+    Escuela Nacional número 250 de 2 Aulas en San Francisco de los Yacones,
+    Dpto. La Caldera" dispuesta por Dirección de Viviendas y Arquitectura de la
+    Provincia en fecha 17 de octubre del año en curso, / ... Artículo 1º —
+    Apruébase el Acta de Recepción Provisoria de la Obra Nº 283 "Construcción
+    Escuela Nacional Nº 250 de dos aulas en San Francisco de los Yacones, Dpto.
+    La Caldera", suscripta en fecha 17 de octubre del año en curso entre
+    Dirección de Viviendas y Arquitectura de la Provincia y la Empresa
+    Constructora TOLABA y CAMPOS. / ... D'ANDREA / Cardón (Int.)
+  NOTA DE LECTURA: Contradicción del original, no conciliada: el VISTO habla de
+  recepción definitiva y el art. 1 aprueba la provisoria, con la misma fecha
+  (E.9). Serie (imagen): 7522 del 29-12-1967 en la misma columna. La obra 283
+  reaparece en B2-10 (variaciones de costos, 1968) y en A04 (intereses).
+
+A03  7988 h10  [OBRA-PUBLICA+AGUAS]
+    El «Embalse en Campo Alegre, Dpto. La Caldera» en dos transferencias de
+    partidas del Plan de Obras de A.G.A.S.: Dec. 7694 (disminución de 2.000.000)
+    y Dec. 2930 (aumento de 50.000)
+  FUENTE: Dec. 7694: 7988 (23-1-1968) h10, cuadro a todo el ancho, y h11 (cierre
+  del cuadro). Dec. 2930: 8207 (13-12-1968) h14 y h15 (pág. 6538-6539).
+  FICHA: Dec. 7694, Economía, 12-1-1968, expte. 171/1968, ejercicio 1967, total
+  $ 62.500.000. Dec. 2930, Economía, 4-12-1968, expte. 3482/68, ejercicio 1968,
+  total $ 135.840.000.
+  MODO DE LECTURA: Imagen: el encabezado de los dos decretos, el renglón de
+  Campo Alegre y la columna de disminuciones del 7694 entera; capa: la columna
+  de aumentos del 7694 en h11 y el resto del cuadro del 2930.
+  TEXTO:
+    [7694] Artículo 1º — Transfiérense las siguientes partidas dentro del Plan
+    de Obras Públicas de Administracin General de Aguas de Salta, atendido con
+    Recursos Propios de la Administración Central, Ejercicio 1967, por un monto
+    total de $ 62.500.000.— m/n. / DESIGNACION ... Aumento ... Disminución /
+    Cap. II - Tít. 7 - Subt. B - R. Func. I - Parcial 2 Embalse en Campo Alegre,
+    Dpto. La Caldera ... 2.000.000.— [disminución] ... D'ANDREA / Cabanillas
+    [2930] Artículo 1º — Transfiérense las siguientes partidas dentro del Plan
+    de Obras Públicas - Ejercicio 1968, correspondientes a ADMINISTRACION
+    GENERAL DE AGUAS DE SALTA: / RECURSOS PROPIOS DE LA ADMINISTRACION CENTRAL /
+    Aumentos ... Disminución / Cap. II - Tít. 7 - Subt. B - R. F. I - Nº 2
+    Embalse Campo Alegre - Dpto. La Caldera 50.000.—
+  NOTA DE LECTURA: RECALCULO: 7694, disminuciones (siete renglones, imagen) 2 +
+  30 + 12 + 3,5 + 2 + 3 + 10 = 62,5 millones; aumentos 0,5 + 10 + 15 (imagen) +
+  4 + 12 + 6 + 15 (capa de h11) = 62,5 millones: las dos columnas cierran contra
+  el total. 2930: aumentos, doce renglones de h14 (80.100.000) más 51.740.000 y
+  4.000.000 de h15 = 135.840.000; disminuciones, diecinueve renglones =
+  135.840.000: cierran (capa, salvo el renglón de Campo Alegre). «Administracin»
+  es errata del original (E.9). Serie del 7694: 7695 y 7696 del 12-1 (capa).
+
+A04  7989 h9  [OBRA-PUBLICA+ESCUELA]
+    Dec. 7714: intereses por mora a Tolaba y Campos por cuatro obras, tres del
+    departamento
+  FUENTE: 7989 (24-1-1968) h9 col. 2 y h10 col. 1 (pág. 282); sumario en h3
+  («intereses de obras en La Caldera, Gallinato, etc.»).
+  FICHA: Decreto 7714, Economía, F. y O. Públicas, 12-1-1968, expte. 3270/67.
+  Orden de Disposición de Fondos Nº 185.
+  MODO DE LECTURA: Imagen (VISTO, art. 1 y 2 enteros); la firma, capa.
+  TEXTO:
+    VISTO las planillas de intereses devengados por mora en el pago de
+    certificados correspondientes a las obras: "Construcción Escuela Nacional de
+    dos aulas en San Francisco de Los Yacones - Dpto. La Caldera", "Construcción
+    Puesto Sanitario en Betania - Dpto. Gral. Güemes", "Ampliación Escuela
+    Nacional Nº 160 - Mojotoro.- La Caldera" y "Construcción Escuelas Nacionales
+    Nros. 61, 160 y 382 en La Calderilla, Mojotoro y Gallinato, emitidas por
+    Dirección de Viviendas y Arquitectura de la Provincia a favor de la empresa
+    contratista Tolaba y Campos, que ascienden a $ 454.144.— m/n.; / ...
+    Artículo 1º — Apruébanse las planillas ... por $ 26.328.— m/n., $ 64.524.—
+    m/n., $ 60.007.— m/n. y $ 303.285.— m/n. respectivamente, ... las que
+    ascienden a un total de $ 454.144.— m/n. ... Art. 2º — Reconócese un crédito
+    por la suma de $ 454.144.— m/n. ... a favor de la empresa contratista TOLABA
+    y CAMPOS ... D'ANDREA / Cabanillas
+  NOTA DE LECTURA: RECALCULO: 26.328 + 64.524 + 60.007 + 303.285 = 454.144:
+  cierra, y las letras coinciden. La imagen muestra «382» en las dos menciones;
+  las obras 127 de 1966-1967 y el informe de 1967 dan Escuela Nacional 332
+  (control 4, cita cruzada): el número de la escuela es 332, y si el original
+  imprime 382 o es confusión de 2 y 8 a 150 ppp no lo decide ningún control
+  (E.8). Firma «Cabanillas» en un decreto de Economía: refrendo interino (E.4).
+
+A05  7990 h9  [OTRO]
+    Seis decretos de pensiones a la vejez y a la invalidez cuyas nóminas
+    incluyen residentes de La Caldera
+  FUENTE: 7990 (25-1) h9 col. 2 (pág. 309); 8028 (22-3) h6 col. 1; 8046 (19-4)
+  h9 col. 2; 8075 (31-5) h16 (pág. 2640); 8166 (16-10) h10; 8200 (4-12) h8 (pág.
+  6292). Sumarios de cada edición.
+  FICHA: Asuntos Sociales y Salud Pública. Dec. 7745 (15-1-1968; número por la
+  capa), Res. 1584-I de la Caja, 27-12-1967, vejez 8730 a 8810. Dec. 8494
+  (12-3), Res. 225-I (19-2), vejez 8811 a 8865. Dec. 8816 (29-3), Res. 386-I
+  (20-3), invalidez 2407 a 2436. Dec. 509 (22-5; número por la capa), Res. 691-I
+  (10-5), vejez 8956 a 9028. Dec. 2137 (4-10; número por la capa), Res. 1374-I
+  (24-9), vejez 9226 a 9288. Dec. 2777 (21-11; número por la capa), Res. 1583-I
+  (24-10), vejez 9289 a 9336.
+  MODO DE LECTURA: Imagen: las seis resoluciones con sus rangos y las listas de
+  departamentos; los números de cuatro decretos, capa.
+  TEXTO:
+    [8816] Artículo 1º — Apruébase en todas sus partes la Resolución Nº 386-I de
+    la Caja de Jubilaciones y Pensiones de la Provincia, de fecha 20 de marzo
+    del año en curso, mediante la cual se acuerdan pensiones a la invalidez Nros
+    2407 al 2436, a solicitantes con residencia en los Departamentos de:
+    Capital, Anta, Cafayate, Cerrillos, Chicoana, General Güemes, La Caldera, La
+    Candelaria, La Viña, Los Andes, Rosario de la Frontera, Rosario de Lerma y
+    San Martín, de conformidad a las disposiciones contenidas en el Decreto 703
+    refrendado por la Ley 813 y ... [7745] ... CALDERA, LA CANDELARIA, LA POMA,
+    ... con un haber de pensión mensual de $2.000,00 m/n ... D'ANDREA / Novo
+    Hartmann [2777] ... pensiones a la Vejez correspondientes a los números 9289
+    al 9336, con un haber mensual conforme a la Ley 4040/66 de $ 2.000.— m/n.
+  NOTA DE LECTURA: RECUENTO PROPIO de la lista del 8816: trece departamentos; el
+  acto no declara número. Las nóminas no desglosan beneficiarios por
+  departamento: no se puede contar cuántos son de La Caldera (E.10). La serie de
+  pensiones a la vejez encadena de 8730 a 8865 y salta de 8865 a 8956 y de 9028
+  a 9226: los tramos intermedios están en resoluciones que no nombran La Caldera
+  o no se buscaron. «Ley 4040/66» (2137, 2777) y «Leyes 1204 y 4094/66» (7745,
+  8494) conviven sin conciliarse (E.9). El «8811» del 8494 se lee «88l1» en la
+  imagen; lo decide la serie (8810 del decreto anterior, control 1).
+
+A06  7993 h12  [AGUAS]
+    Getsemaní: edicto citatorio 28863 y Dec. 2308, concesión temporal-eventual
+    de 15,75 l/seg del río San Alejo a Pedro Dionisio Martel
+  FUENTE: Edicto: 7993 (30-1) h12 col. 1; otras ocho apariciones por texto en
+  7995 h3, 7996 h4, 7997 h4, 7998 h5, 7999 h21, 8000 h16, 8001 h23, 8002 h23.
+  Dec. 2308: 8178 (4-11-1968) h12 col. 2.
+  FICHA: Edicto Nº 28863, Ref. Expte. Nº 4162/M/67 s.o.p., A.G.A.S., e) 30-I al
+  12-II-68. Dec. 2308, Economía, 18-10-1968, expte. 2397/68; Res. 1307 de
+  A.G.A.S., 13-8-1968.
+  MODO DE LECTURA: Imagen (el edicto en 7993 y el VISTO, considerandos y art. 1
+  del decreto); el art. 2 y la firma, capa.
+  TEXTO:
+    [28863] A los efectos establecidos por el Art. 350 del Código de Aguas, se
+    hace saber que PEDRO DIONISIO MARTEL tiene solicitado Otorgamiento de
+    Concesión de Agua Pública para irrigar con carácter Temporal - Eventual con
+    una dotación de 15,75 ls./segundo a derivar del río San Alejo (margen
+    derecha) por un canal comunero del cual se derivan las acequias Del Alto y
+    Del Bajo, una superficie de 30 Has. de la propiedad denominada Getsemaní,
+    catastro nº 1463, ubicada en el Departamento La Caldera. ... [2308] VISTO
+    que el señor Pedro Dionisio Martel solicita el otorgamiento de una concesión
+    de derechos al uso del agua pública para irrigar el inmueble de su
+    propiedad, denominado "Getsemaní", Catastro número 1463, ubicado en el
+    Departamento La Caldera, con una superficie bajo riego de 30 Has.; ...
+    Artículo 1º — Otórgase a favor del señor PEDRO DIONISIO MARTEL, una
+    concesión de derechos al uso del agua pública, para irrigar con carácter
+    temporal-eventual una superficie de 30 Has. ... con una dotación de 15,75
+    l/seg. (quince litros setenta y cinco centílitros por segundo), a derivar
+    del río San Alejo (margen derecha), por un canal comunero ... / Rovaletti /
+    Cardón (Int.)
+  NOTA DE LECTURA: Avisos: nueve apariciones por texto contra diez días hábiles
+  de la marca e); falta la del 31-1 (7994), edición a la que le faltan las págs.
+  382 y 383 (E.2). ARITMETICA: 15,75 / 30 = 0,525 l/seg por ha, la dotación tipo
+  de los otros dos actos de agua del año (A23, A35). El decreto dice «inmueble
+  de su propiedad» el 18-10-1968, y la escritura de A18 dice que Martell vendió
+  Getsemaní a Isidro Gareca el 13-12-1967 y conserva un contrato de arriendo
+  inscripto: no se concilia (E.9). Martel / Martell: las dos grafías en el mismo
+  año (E.9). Serie del 2308: 2309 del 18-10 (capa).
+
+A07  7999 h14  [OTRO]
+    Dec. 7862: $ 30.000 por la actuación del Teatro Estudio Phersu en La Caldera
+    el 3-XI-1967
+  FUENTE: 7999 (7-2-1968) h14 col. 1; sumario en h3 (pág. 466).
+  FICHA: Decreto 7862, Gobierno, J., I. P. y del T., 15-1-1968, expte. 9397/67;
+  nota 795 de la Dirección de Cultura, 22-12-1967.
+  MODO DE LECTURA: Imagen (VISTO); artículos y firma, capa.
+  TEXTO:
+    La Dirección de Cultura de la Provincia, mediante nota Nº 795, de fecha 22
+    de diciembre de 1967, solicita la liquidación de la suma de $ 30.000 m/n.,
+    importe destinado a retribuir la actuación del conjunto vocacional "Teatro
+    Estudio Phersu", en la localidad de La Caldera, el día 3-XI-67, actuación
+    llevada a cabo con el auspicio de la repartición recurrente; / Por ello; y
+    atento lo informado por Contaduría General de la Provincia a fs. 2, de estos
+    obrados, ...
+  NOTA DE LECTURA: El mismo conjunto actúa en Chicoana el 20 de enero (8069 h5)
+  y viaja en representación de la provincia (8135 h18): frecuencia de corpus, no
+  del departamento.
+
+A08  8000 h14  [CARGOS]
+    Ítalo Alberto Flores, subcomisario de La Caldera: suspensión preventiva
+    (Dec. 7910) y cesantía con prohibición de reingreso (Dec. 8473)
+  FUENTE: Dec. 7910: 8000 (8-2-1968) h14 col. 2. Dec. 8473: 8027 (21-3-1968) h9
+  col. 2 (pág. 1217).
+  FICHA: Dec. 7910, Gobierno, 25-1-1968 (número por la cita del 8473 y por la
+  serie: 7911 del 25-1 en la misma columna); Res. 11 de Jefatura de Policía,
+  16-I-68. Dec. 8473, Gobierno, 8-3-1968, exptes. 5584, 5585 y 5586/68; notas
+  108 a 111 de Jefatura, 28 y 29-2-1968.
+  MODO DE LECTURA: Imagen (art. 2 del 7910; arts. 1 a 5 del 8473 y su fecha).
+  TEXTO:
+    [7910] Art. 2º — Apruébase la suspensión preventiva en el ejercicio de sus
+    funciones, aplicada por Jefatura de Policía de la Provincia a partir del día
+    8 de enero de 1968, al Sub-Comisario (Categoría 12 - Leg. 1054/P. 412),
+    Clase 03 - Personal de Seguridad y Defensa, M. I. Nº [omitido], don ITALO
+    ALBERTO FLORES, con revista en la Sub-Comisaría La Caldera, en mérito a las
+    razones invocadas en la resolución Nº 11 de fecha 16-I-68, ... D'ANDREA /
+    Cabanillas [8473] El Gobernador Interino de la Provincia / DECRETA: /
+    Artículo 1º — Déjase sin efecto a partir del día 8 de enero del año en
+    curso, la suspensión preventiva ... al Sub-Comisario ... don ITALO ALBERTO
+    FLORES, con revista en la Sub-Comisaría de La Caldera, dispuesta mediante
+    decreto Nº 7910 de fecha 25-I-68. / Art. 2º — Déjase cesante con prohibición
+    de reingreso a la repartición, a partir del día 15 de enero del corriente
+    año, al Sub-Comisario ... ITALO ALBERTO FLORES, con revista en la
+    Sub-Comisaría de La Caldera, por infracción al artículo 1162, Inc. 6º del
+    Reglamento General de Policía, en concordancia con el Art. 54 apartado d) y
+    f) punto II del Decreto Ley Nº 203/56, Estatuto de Policía.
+  NOTA DE LECTURA: La causa de la infracción no se dice. La vacante «por
+  cesantía de don Italo Alberto Flores» se cubre por el Dec. 1321 del 31-7-1968
+  (B.4). La fecha del 8473 se leyó en la imagen (la capa lee «$ de marzo»);
+  serie: 8472 y 8474 del 8-3 (capa). Firma del 8473 en la hoja siguiente, no
+  mirada.
+
+A09  8005 h21  [DOMINIO]
+    Aviso 29127: remate judicial de los lotes B y C del plano 77, parte de la
+    finca Vaqueros, de Juan Rodríguez
+  FUENTE: 8005 (15-2-1968) h21 col. 2; nueve apariciones más por texto: 8006
+  h28, 8007 h22-h23, 8008 h21, 8009 h8, 8010 h9, 8011 h8, 8012 h9, 8013 h17,
+  8014 h18.
+  FICHA: Aviso Nº 29127, «Por: ERNESTO V. SOLA», Juez en lo C. y C. 2ª
+  Nominación, Ejecutivo «De Zuani Julio vs. Rodríguez Juan», Expte. Nº 40762/67.
+  Remate el 8-3-1968. Imp. $ 2.300, e) 15-2 al 4-3-68.
+  MODO DE LECTURA: Imagen (el aviso entero en 8005).
+  TEXTO:
+    El día 8 de marzo de 1968 a horas 17.15 en mi escritorio de remates sito en
+    Santiago del Estero Nº 655 ciudad, por Disposición Sr. Juez en lo C. y C.
+    2da. Nominación en autos: Ejecutivo "DE ZUANI JULIO vs. RODRIGUEZ JUAN".
+    Expte. Nº 40762/67, Remataré con BASE DE TRES MIL TRESCIENTOS TREINTA Y TRES
+    PESOS CON TREINTA Y DOS CENTAVOS M/N. ($ 3.333,32 m/n.) correspondiente a
+    las 2/3 partes de la valuación fiscal, los lotes de terreno parte de la
+    finca Vaqueros ubicada en el Dpto. de La Caldera designados como lotes "B" y
+    "C" del plano 77 y que le corresponde a don Juan Rodríguez, según título
+    registrado a folio 203, Asiento 1, del Libro 5 R.I. de la Caldera, Catastros
+    Nros. 1.234 y 1.235: Seña: 30% a cuenta de precio y comisión de arancel en
+    el acto del remate. Saldo: a la aprobación judicial de la subasta. Edictos:
+    10 días en Boletín Oficial y diario El Norte. — ERNESTO V. SOLA, Martillero
+    Público. Tel. 17260.
+  NOTA DE LECTURA: Diez apariciones por texto, diez días hábiles de la marca e).
+  ARITMETICA: 3.333,32 x 3/2 = 4.999,98; los dos tercios de 5.000 son 3.333,33:
+  la base queda un centavo por debajo, sin que el aviso dé la valuación (E.8).
+  El plano 77 se cita y no se acompaña (§P). El resultado del remate no aparece
+  en lo leído.
+
+A10  8021 h8  [REGISTRO-CIVIL+CARGOS]
+    Dec. 8365: Registro Civil de Vaqueros (Dpto. La Caldera): traslado de Dora
+    Elina Barrozo a Tartagal y designación ad honorem de Julio César Ávila,
+    director del Hogar Agrícola San Cayetano
+  FUENTE: 8021 (13-3-1968) h8 col. 2; sumario en h3 (págs. 1080-1083).
+  FICHA: Decreto 8365, Gobierno, J., I. P. y del T., 29-2-1968, expte. 5567/68;
+  nota 27-M-22 de la Dirección General del Registro Civil, 23-2-1968.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Artículo 1º — Trasládase a la Oficina del Registro del Estado Civil y de la
+    Capacidad de las Personas de la ciudad de Tartagal, a la actual Encargada -
+    Categoría 29-03 Personal Administrativo de la Oficina del Registro del
+    Estado Civil y de la Capacidad de las Personas de la localidad de Vaqueros
+    (Dpto. La Caldera), señorita DORA ELINA BARROZO, quien deberá revistar con
+    carácter de auxiliar de la misma y a partir de la fecha de su notificación.
+    / Art. 2º — Desígnase con carácter "ad-honorem", Encargado de la Oficina del
+    Registro del Estado Civil y de la Capacidad de las Personas de la localidad
+    de Vaqueros (Dpto. La Caldera), al Director del Hogar Agrícola San Cayetano,
+    señor JULIO CESAR AVILA, L. E. número [omitido], a partir de la fecha de su
+    notificación. / ... D'ANDREA / Cabanillas
+  NOTA DE LECTURA: Es el acto que dice que el Hogar Agrícola San Cayetano está
+  en Vaqueros, en la medida en que su director pasa a encargarse del registro de
+  esa localidad; la ubicación del hogar sigue siendo inferencia. «Barrozo» aquí
+  y «Barroso» en el informe de 1967 (E.9). Serie: 8366 del 29-2 (imagen).
+
+A11  8036 h8  [JUSTICIA+CARGOS]
+    Dec. 8596: jueces de paz titular y suplente de La Caldera, a propuesta de la
+    Municipalidad: Eloy Aurelio Ruiz y Liborio Gerardo Guerrero
+  FUENTE: 8036 (3-4-1968) h8 col. 1; sumario en h2 (pág. 1455-1456).
+  FICHA: Decreto 8596, Gobierno, J., I. P. y del T., 21-3-1968, expte. 5067/68.
+  MODO DE LECTURA: Imagen (el decreto entero; el borde izquierdo de la columna
+  está cortado en el escaneo y faltan las primeras letras de algunos renglones).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad [d]e La Caldera, departamento
+    del mismo nombre, [el]eva la terna para la designación de Jueces de [P]az
+    Titular y Suplente en la mencionada locali[d]ad; y / CONSIDERANDO: / Que los
+    citados cargos se encuentran vacantes; / Por ello; y atento lo informado por
+    la Direc[ci]ón de Coordinación de Municipalidades a fs. 11 [d]e estos
+    obrados, ... Artículo 1º — Desígnase por un período legal de [do]s años,
+    Juez de Paz Titular de la localidad [d]e Caldera, departamento del mismo
+    nombre, al [se]ñor ELOY AURELIO RUIZ, M. I. número [omitido], C. 1904, a
+    partir de la fecha que [to]me posesión de sus funciones. / Art. 2º —
+    Desígnase por un período legal de [do]s años, Juez de Paz Suplente, de la
+    localidad [d]e Caldera, departamento del mismo nombre, al [se]ñor LIBORIO
+    GERARDO GUERRERO, M. I. [omitido], C. 1911, ... / D'ANDREA / Díaz Villalba
+  NOTA DE LECTURA: Las letras entre corchetes son las que el escaneo corta: no
+  se completan por inferencia de palabra sino donde la palabra es inequívoca, y
+  se marcan. «Los citados cargos se encuentran vacantes» no dice quién los dejó:
+  vacante declarada sin nombre (E.3). Ruiz y Guerrero ya están en el config
+  (1956 y 1946; B.4). Serie: 8597 del 21-3 (imagen).
+
+A12  8040 h6  [CARGOS]
+    Dos bajas por jubilación en la Subcomisaría de La Caldera: el sargento
+    Victorino Molina (Dec. 8637) y el oficial ayudante César Royo (Dec. 2686)
+  FUENTE: Dec. 8637: 8040 (9-4-1968) h6 col. 1 (pág. 1558); encabezado en h5.
+  Dec. 2686: 8197 (29-11-1968) h6.
+  FICHA: Dec. 8637, Gobierno, 21-3-1968, expte. 5788/68, nota 143 de Jefatura,
+  18-3 (número, fecha y expediente por la capa de h5). Dec. 2686, Gobierno,
+  19-11-1968, expte. 8486/68 (capa).
+  MODO DE LECTURA: Imagen: el renglón de Molina y la firma del 8637; el 2686,
+  capa.
+  TEXTO:
+    [8637] Sargento, categoría 21 (F. 991 - P. 914), don VICTORINO MOLINA, M. I.
+    Nº [omitido], con revista en la Subcomisaría de La Caldera; a partir del 1º
+    de abril del corriente año con motivo de acogerse a los beneficios de la
+    jubilación. / ... D'ANDREA / Díaz Villalba [2686, capa] oficial ayudante,
+    categoría 24 (L. 972-P. 710) dn. César Royo, M. I. Nº [omitido], con revista
+    en la Sub-Comisaría de "La Caldera", a partir del día 1º de noviembre del
+    corriente año y con motivo de acogerse a los beneficios de la jubilación
+  NOTA DE LECTURA: La jubilación de Molina la acuerda la Res. 87-I de la Caja
+  (17-1-1968), aprobada por el Dec. 8259 del 14-2-1968 (8013 h12, capa); la de
+  Royo, la Res. 1437-I (2-10-1968), aprobada en 8170 h15 (capa), con un haber de
+  $ 16.072: los dos actos de la Caja no nombran el departamento y van a B.4. El
+  renglón de Royo no se miró en la imagen (E.10).
+
+A13  8040 h8  [CARGOS]
+    Dec. 8642: en la nómina del personal administrativo de Asuntos Sociales,
+    «Regente H. La Caldera», Rodolfo Abraham
+  FUENTE: 8040 (9-4-1968) h8 (pág. 1560), cuadro a todo el ancho; encabezado del
+  decreto en h7.
+  FICHA: Decreto 8642, Asuntos Sociales y Salud Pública, 21-3-1968 (número y
+  fecha por la capa de h7): confirma, promueve y traspasa al personal del
+  ministerio desde el 1-1-1968, por la Ley de Presupuesto 4243/68.
+  MODO DE LECTURA: Imagen (la hoja entera, a 110 ppp).
+  TEXTO:
+    Sr. Rodolfo ABRAHAM | 20 | Dirección Patronato | Regente H. La Caldera [en
+    la misma columna:] Sra. María Iriarte de GONZALEZ RIOJA | 20 | Direc.
+    Patronato | Regente G. Niños
+  NOTA DE LECTURA: «H. La Caldera» es, por la columna, un hogar de la Dirección
+  de Patronato (de Menores, inferencia); el config ya trae «hogar de la caldera»
+  y variantes. Rodolfo Abraham está en el config desde 1963. La cabecera impresa
+  de la hoja parece decir «1963»: a 150 ppp el 8 y el 3 se confunden, y la tapa
+  de la edición dice 9 de abril de 1968; no se registra errata. En la nómina de
+  servicio de 8040 h9, «Obrero Enc. Caldera» del Policlínico San Bernardo es un
+  aparato (E.7).
+
+A14  8053 h14  [CARGOS+HACIENDA-MUN]
+    Intervención municipal: renuncia de José Ismael Jesús Gómez (Dec. 57) y
+    designación de Manuel David Serrey (Dec. 58)
+  FUENTE: 8053 (30-4-1968) h14 col. 2 y h15 col. 1 (pág. 2011); sumario en h3.
+  FICHA: Decretos 57 y 58, Gobierno, 19-4-1968 (cuarto y quinto días de la nueva
+  serie, E.4).
+  MODO DE LECTURA: Imagen (los dos decretos enteros).
+  TEXTO:
+    [57] Visto la renuncia interpuesta, / ... Artículo 1º — Acéptase la renuncia
+    presentada por el señor JOSE ISMAEL JESUS GOMEZ, al cargo de Interventor de
+    la Municipalidad de La Caldera, departamento del mismo nombre y dásele las
+    gracias, por los servicios prestados. / ... ROVALETTI / Díaz Villalba [58]
+    Visto la aceptación de la renuncia presentada por el señor José Ismael Jesús
+    Gómez, como Interventor de la Municipalidad de La Caldera, / ... Artículo 1º
+    — Desígnase Interventor de la Municipalidad de La Caldera, departamento del
+    mismo nombre, al señor MANUEL DAVID SERREY, C. 1892, M. I. Nº [omitido]. /
+    ... ROVALETTI / Díaz Villalba
+  NOTA DE LECTURA: Gómez es el interventor de A23 de 1967. Serrey reaparece en
+  A20 como presidente de la cooperadora asistencial. Serie (imagen): 59 del 19-4
+  en la misma columna.
+
+A15  8062 h16  [HACIENDA-MUN]
+    Dec. 223: presupuesto de gastos y cálculo de recursos de la Municipalidad de
+    La Caldera para 1968, $ 4.683.594
+  FUENTE: 8062 (14-5-1968) h16 col. 1; sumario en h3 (pág. 2272).
+  FICHA: Decreto 223, Gobierno, J., I. P. y del T., 2-5-1968, expte. 6082/68.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación el Presupuesto de Gastos y
+    Cálculo de Recursos, a regir en la citada comuna durante el ejercicio 1968;
+    / Por ello; atento al informe producido por el Departamento de Presupuesto a
+    fs. 17, lo dictaminado por Asesoría Contable de la Dirección de Coordinación
+    de Municipalidades y lo informado por dicho organismo, a fs. 18 de estos
+    obrados, ... Artículo 1º — Apruébase el Presupuesto de Gastos y Cálculo de
+    Recursos, a regir en la Municipalidad de La Caldera, departamento del mismo
+    nombre, durante el ejercicio 1968, cuyos totales ascienden a la suma de: $
+    4.683.594 m/n. (Cuatro millones seiscientos ochenta y tres mil quinientos
+    noventa y cuatro pesos moneda nacional). / Art. 2º — El presente decreto
+    será refrendado por S. S. el señor Ministro de Economía, Finanzas y Obras
+    Públicas. / ... ROVALETTI / Díaz Villalba / Cardón (Int.)
+  NOTA DE LECTURA: Cifra y letras coinciden. El detalle del presupuesto no se
+  publica (E.3). Serie por el sumario: 222 (Colonia Santa Rosa) y 224 (Tolar
+  Grande), capa.
+
+A16  8070 h7  [OTRO]
+    Dec. 393: entre los gastos de agasajo de la gobernación, «Almuerzo ofrecido
+    al Rvdo. Padre Requena de La Caldera», $ 1.950
+  FUENTE: 8070 (24-5-1968) h7, cuadro a todo el ancho; encabezado en h6.
+  FICHA: Decreto 393, Gobierno, 16-5-1968, expte. 1083/68 (número, fecha y
+  expediente por la capa de h6); memorándum «A» 46 de Secretaría General,
+  21-III-68.
+  MODO DE LECTURA: Imagen (el artículo 1 y el cuadro hasta el total).
+  TEXTO:
+    Artículo 1º — Apruébanse los gastos realizados con motivo de la estada,
+    agasajos, ofrendas florales y demostraciones ofrecidas a funcionarios y
+    personalidades que visitaron esta Provincia, según facturas presentadas por
+    las firmas que en planilla adjunta a fs. 2, se detallan, y por los montos
+    que en cada caso se especifican: / 13-II-68 Hotel Salta Cena ofrecida al Sr.
+    SHAM LALL Asesor Delegado Org. de las Naciones Unidas .... 2.680 / 21-II-68
+    Hotel Salta Almuerzo celeb. 155 Aniv. Batalla de Salta 7.725 / 21-II-68
+    Hotel Salta Estadía Sub-Director Dr. Juan Ramón de Estrada ... 13.410 /
+    26-II-68 Hotel Almuerzo ofrecido al Rvdo. Padre Requena de La Caldera ...
+    1.950 25.765 / ... 91.705
+  NOTA DE LECTURA: RECALCULO: 2.680 + 7.725 + 13.410 + 1.950 = 25.765 (subtotal
+  impreso); 25.765 + 41.800 + 20.000 + 4.140 = 91.705 (total impreso y del
+  VISTO): cierran. La capa lee «Riequena»; la imagen, «Requena». El acto no dice
+  el cargo del padre.
+
+A17  8090 h12  [AGUAS+CARGOS]
+    Dec. 800: se confirma a Martín Borja como encargado de la Intendencia de
+    Aguas con asiento en La Caldera, a pedido de los regantes
+  FUENTE: 8090 (27-6-1968) h12 col. 1; sumario en h3.
+  FICHA: Decreto 800, Economía, F. y O. Públicas, 14-6-1968, expte. 1290/1968.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    VISTO el desempeño del señor Martín Borja, en la función de Encargado de la
+    Intendencia de Aguas, con asiento en La Caldera; y atento al pedido de los
+    regantes de la zona, / ... Artículo 1º — Confírmase al señor MARTIN BORJA en
+    el cargo de Encargado de la Intendencia de Aguas, con asiento en La Caldera,
+    dependiente de Administración General de Aguas de Salta. / Art. 2º — Déjase
+    sin efecto la convocatoria para llenar por concurso el cargo cubierto por el
+    artículo anterior. / ... ROVALETTI / Escudero
+  NOTA DE LECTURA: La convocatoria a concurso que se deja sin efecto no aparece
+  en lo leído: citada y no acompañada (E.3). Borja está en el config desde 1964.
+  Serie: 801 del 14-6 (imagen).
+
+A18  8099 h28  [DOMINIO]
+    Escritura 279: Isidro Gareca transfiere la finca «Yeusemani» o «Getsemaní»
+    (2.618 ha, Departamento de La Caldera) a Cuesta del Obispo S.A.; título por
+    compra a Pedro Dionisio Martell en 1967
+  FUENTE: 8099 (11-7-1968) h27 col. 2 (comparecientes) y h28 cols. 1 y 2 (págs.
+  3259-3260).
+  FICHA: Aviso Nº 30625, Sección Comercial, «Modificación de contrato»: primer
+  testimonio de la escritura 279, 26-6-1968, escribano Gustavo Rauch, registro
+  34; transferencia de bienes a «Cuesta del Obispo» Sociedad Anónima y aumento
+  de capital. Comparecen José Javier Cornejo Solá e Isidro Gareca, y por la
+  sociedad Sabina Celia Martell de Beccalli y Alfredo Chiericotti.
+  MODO DE LECTURA: Imagen (h28 col. 1 entera y comienzo de col. 2); los
+  comparecientes de h27, capa.
+  TEXTO:
+    B) El señor Isidro Gareca transfiere libre de gravámen y sin restricción en
+    el dominio una finca rural denominada "YEUSEMANI" ó "GETSEMANI", con todo lo
+    edificado, plantado y cercado ubicado en el Departamento de La Caldera de
+    esta Provincia de Salta, compuesta dicha finca de una superficie de dos mil
+    seiscientos dieciocho hectáreas, cuarenta y nueve áreas, treinta y cuatro
+    centiáreas, cuarenta y dos decímetros cuadrados, comprendida dentro de los
+    siguientes límites: Norte, finca Santa Mónica y parte de la fracción loteada
+    que se reservó al vendedor Ingeniero Martell; al Sud, Río "Wierna"; al Este,
+    Río "La Caldera" y parte de la fracción loteada y al Oeste, finca "San
+    Alejo". El predio de que se trata figura individualizado en la nomenclatura
+    catastral de Dirección General de Inmuebles, como Partida número mil
+    cuatrocientos sesenta y tres. — TITULO: Le corresponde al señor Isidro
+    Gareca, el inmueble descripto por compra que hizo, al señor Pedro Dionisio
+    Martell, según escritura número cuatrocientos ochenta y uno, de fecha trece
+    de diciembre de mil novecientos sesenta y siete, pasada ante el escribano
+    Francisco Cabrera y de lo que se tomó nota al folio setenta y cinco, asiento
+    uno, del libro seis de Registro de Inmuebles de La Caldera. — CERTIFICADOS:
+    ... reconociendo como gravamen contrato de arriendo a favor de Pedro
+    Dionisio Martell, registrado en asiento dos; ... — PRECIO: La presente
+    transferencia se efectúa por el Valor Fiscal actual del inmueble, o sea la
+    suma de DOS MILLONES NOVECIENTOS TREINTA MIL PESOS MONEDA NACIONAL.
+  NOTA DE LECTURA: RECUENTO de linderos: cuatro rumbos, seis linderos (Santa
+  Mónica, la fracción loteada dos veces, río Wierna, río La Caldera, San Alejo);
+  el acto no declara número. La partida 1463 es el catastro 1463 de A06. «Libre
+  de gravamen» y «gravamen contrato de arriendo» en la misma transferencia, y
+  Martel concesionario «de su propiedad» en octubre: se transcriben y no se
+  concilian (E.9). La otra transferencia del mismo acto (Cornejo Solá, inmueble
+  de la Capital, $ 1.500.000) no es del departamento.
+
+A19  8109 h18  [HACIENDA-MUN+NORMA]
+    Dec. 1148: modificaciones a la Ordenanza General Impositiva de la
+    Municipalidad de La Caldera, vigente con ellas en 1968
+  FUENTE: 8109 (25-7-1968) h18 col. 1.
+  FICHA: Decreto 1148, Gobierno, J., I. P. y del T., 17-7-1968, expte. 6981|68.
+  MODO DE LECTURA: Imagen (VISTO y considerandos); el artículo 1 y la firma,
+  capa.
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación texto de modificaciones a
+    introducir a la Ordenanza General Impositiva, ejercicio 1967, la cual tendrá
+    vigencia, incluídas dichas modificaciones, durante el año 1968; / Por ello;
+    atento lo dictaminado por Asesoría Letrada de la Dirección de Coordinación
+    de Municipalidades a fs. 23 y por el señor Fiscal de Gobierno a fs. 24 de
+    estos obrados, ... [capa] Artículo 1º — Apruébanse las modificaciones
+    introducidas en la Ordenanza General Impositiva para el ejercicio 1967 de la
+    Municipalidad de La Caldera, departamento del mismo nombre y cuyo nuevo
+    cuerpo legal de disposiciones regirá para el ejercicio 1968 en la citada
+    comuna, ...
+  NOTA DE LECTURA: El texto de la ordenanza no se publica en lo leído (E.3). El
+  artículo no se miró en la imagen (E.10).
+
+A20  8111 h25  [CARGOS]
+    Cooperadora Asistencial de La Caldera: renuncia de Julio González (Dec.
+    1196) y designación del interventor Manuel David Serrey como presidente
+    (Dec. 1408)
+  FUENTE: Dec. 1196: 8111 (29-7-1968) h25 col. 1 (pág. 3549). Dec. 1408: 8124
+  (16-8-1968) h8 col. 2.
+  FICHA: Dec. 1196, Asuntos Sociales y Salud Pública, 19-7-1968. Dec. 1408,
+  Asuntos Sociales, 2-8-1968, Registro de Notas 1767/68.
+  MODO DE LECTURA: Imagen (VISTO del 1196; el 1408 entero); el artículo 1 del
+  1196, capa.
+  TEXTO:
+    [1196] Visto la renuncia presentada por el señor Julio González, al cargo de
+    Presidente de la Cooperadora Asistencial de La Caldera; / Teniendo en cuenta
+    las razones invocadas por el mismo y lo informado por Dirección del
+    Interior; ... [1408] Visto la renuncia presentada por el señor Julio
+    González, al cargo de Presidente de la Cooperadora Asistencial de la
+    localidad de La Caldera; / Teniendo en cuenta los informes que corren
+    agregados a estos obrados; ... Artículo 1º — Desígnase a partir de la fecha
+    en que se haga cargo de sus funciones, al señor MANUEL DAVID SERREY, actual
+    Interventor de la Municipalidad de La Caldera - Presidente de la Cooperadora
+    Asistencial de la localidad de La Caldera. / ... ROVALETTI / Alvarado
+  NOTA DE LECTURA: Julio González fue intendente y presidente de la comisión
+  municipal en 1967 (A13 y A23 de ese año); que sea la misma persona no lo
+  afirma ningún acto (B.4). Serie: 1195 del 19-7 y 1409 del 2-8 (imagen).
+
+A21  8114 h8  [OBRA-PUBLICA]
+    Cristo Monumental de La Caldera: documentación técnica (Dec. 1229, $
+    1.951.000), contratos con los escultores Iramain y Ávila (Dec. 2362),
+    recepción de la base, obra 293 (Dec. 2714) e insistencia ante el Tribunal de
+    Cuentas (Dec. 2799)
+  FUENTE: Dec. 1229: 8114 (1-8-1968) h8 col. 2; sumario en h2 (pág. 3632). Dec.
+  2362: 8180 (6-11-1968) h9 y h10 (págs. 5641-5642); sumario en h3. Dec. 2714:
+  8198 (2-12-1968) h6 col. 1 (pág. 6210); sumario en h2. Dec. 2799: 8200
+  (4-12-1968) h18 col. 1 y h19.
+  FICHA: Todos de Economía, F. y O. Públicas. 1229: 22-7-1968, expte. 2072/68;
+  Acta 266 del Consejo de Obras Públicas, 18-7. 2362: 21-10-1968; contratos del
+  24-9-1968. 2714: 19-11-1968, expte. 3402/68; Res. 340 de Viviendas, 31-10.
+  2799: 26-11-1968.
+  MODO DE LECTURA: Imagen (1229 hasta el art. 3; 2362, considerandos, comienzo
+  del primer contrato y arts. 2 a 7 del segundo; 2714 entero; 2799 hasta los
+  considerandos); el resto, capa.
+  TEXTO:
+    [1229] Visto que Dirección de Viviendas y Arquitectura de la Provincia,
+    eleva para su aprobación el legajo técnico de la obra "Construcción Cristo
+    Monumental" a erigirse en la localidad de La Caldera, Dpto. La Caldera, cuyo
+    presupuesto se fija en la cantidad de $ 1.951.000 m/n. / CONSIDERANDO: / Que
+    la erección de este monumento constituirá un motivo ponderable de atracción
+    turística y consecuentemente de evolución y progreso de la localidad de la
+    Caldera; ... Art. 2º — Autorízase a Dirección de Viviendas y Arquitectura de
+    la Provincia, para realizar la referida obra por el sistema de
+    administración, ... [2362] "CONTRATO. — Entre el Gobierno de la Provincia de
+    Salta, representado en este acto por el señor Ministro de Economía, Finanzas
+    y Obras Públicas Ingeniero RICARDO ESCUDERO GORRITI; la Comisión Honoraria
+    Pro-Instalación del Cristo Monumental en La Caldera, designada por Decreto
+    Nº 3162/64, representada por el doctor Ricardo J. Durand y los señores Juan
+    Carlos Iramain y Alfredo Anuncio Iramain, representados por el Sr. Leonardo
+    Fermín Iramain, en mérito al Poder Especial otorgado por Escritura Pública
+    Nº 820 de fecha 19 de setiembre de 1968, ... "ARTICULO CUARTO: El Escultor
+    JUAN CARLOS IRAMAIN percibirá como única y total retribución de sus
+    servicios, la suma de $ 800.000 m/n. ... a) Cuota de m$n. 200.000 ... al
+    momento de iniciación de los trabajos y b) cuatro cuotas iguales de $
+    150.000 m/n. ... "ARTICULO QUINTO: El Escultor Taselista Fundidor Sr. JOSE
+    LEON AVILA percibirá como única y total retribución la suma de $ 1.000.000
+    m/n. ... a) Cuota de $ 200.000 m/n. ... y b) cuatro cuotas iguales de $
+    200.000 m/n. ... [2714] Artículo 1º — Apruébase el acta de recepción
+    definitiva de la obra Nº 293: "CONSTRUCCION BASE CRISTO MONUMENTAL DE LA
+    CALDERA - DPTO. LA CALDERA", suscripta el 2 de agosto de 1968, entre la
+    DIRECCION DE VIVIENDAS Y ARQUITECTURA DE LA PROVINCIA y la Empresa
+    Constructora LUIS BRESSANUTTI. / ROVALETTI / Escudero [2799] Visto la
+    observación formulada por el Tribunal de Cuentas de la Provincia al decreto
+    Nro. 2362 del 21 de octubre de 1968, ... Que el monto del saldo pendiente
+    emergente de las certificaciones de trabajos aprobados por decreto Nº
+    7968/65, no justifica tener inmovilizada y postergada una obra de la
+    importancia e interés turístico, como la que motivan las presentes
+    actuaciones, en desmedro del bien común; ... [capa] Artículo 1º — Insístese
+    en el cumplimiento del decreto Nº 2362 del 21 de octubre de 1968, de acuerdo
+    al artículo 84 del Decreto Ley Nro 705/57 de Contabilidad de la Provincia.
+  NOTA DE LECTURA: RECALCULO: 200.000 + 4 x 150.000 = 800.000 y 200.000 + 4 x
+  200.000 = 1.000.000: cierran, con letras coincidentes. Cifra y letras del 1229
+  coinciden. El primer contrato da por cumplido «en forma parcial» el contrato
+  del 25-3-1965 hasta la conclusión del taselaje, «ya depositados en el lugar de
+  emplazamiento», y rescinde la cláusula de dirección técnica del armado; el
+  segundo dice que los taseles pueden estar «rotos y/o torcidos, como
+  consecuencia del tiempo transcurrido desde su traslado de la Ciudad de
+  Tucumán». La capa trae dos «artículo segundo» seguidos en el primer contrato:
+  no se miró en la imagen (E.10). En 1967 la base del Cristo es la obra 290 de
+  Bressanutti (A18 de 1967); aquí la recepción definitiva es de la obra 293 y en
+  1967 la 293 es el puesto sanitario de Betania (E.9). Citados y no acompañados:
+  Dec. 3162/64, contrato del 25-3-1965, Dec. 7968/65, la observación del
+  Tribunal de Cuentas (E.3).
+
+A22  8114 h12  [HACIENDA-MUN]
+    Dec. 1240: saldos de coparticipación adeudados al 31-12-1967 a cuarenta y
+    cinco municipalidades; La Caldera, $ 657.586
+  FUENTE: 8114 (1-8-1968) h12, cols. 1 y 2 (pág. 3636).
+  FICHA: Decreto 1240, Economía, F. y O. Públicas, 22-7-1968, expte. 2772-67;
+  Orden de Disposición de Fondos; planilla de Contaduría a fs. 129|130.
+  MODO DE LECTURA: Imagen (el decreto y la lista entera; la lista a 170 ppp).
+  TEXTO:
+    Artículo 1º — Con intervención de Contaduría General de la Provincia,
+    páguese por su Tesorería General la suma total de $ 38.216.551.—m/n ..., a
+    liquidarse mediante libramientos parciales conforme a las posibilidades del
+    Tesoro, a fin de que con dicho importe cancele los saldos acreedores que por
+    concepto de coparticipación se adeuda al 31|12|67 a cada una de las
+    Municipalidades de la Provincia que se detalla a continuación: / 1 — Salta
+    Capital $ 5.737.138.— / ... 29 — Cnel. Moldes " 115.471.— / 30 — La Caldera
+    " 657.586.— / 31 — Cachi " 272.768.— / ... 55 — Nazareno " 748.754.— / ...
+    ROVALETTI / Escudero
+  NOTA DE LECTURA: RECUENTO PROPIO: 45 municipalidades, numeradas del 1 al 55
+  con huecos (faltan 3, 10, 11, 18, 20, 28, 37, 38, 44 y 48); el acto no declara
+  cuántas. RECALCULO: la suma de los 45 importes da 38.216.551: cierra exacta
+  contra la cifra y las letras. La capa lee «103.143» por «703.143» (El Bordo).
+  Serie: 1241 del 22-7 (imagen).
+
+A23  8119 h7  [AGUAS]
+    Edicto 30871: Juan José Berruezo pide 26,25 l/seg del río Calchanio para 50
+    ha de la Fracción III de la finca Chalchanio, catastro 16; y dos fe de
+    erratas sobre el nombre del río
+  FUENTE: Edicto: 8119 (8-8-1968) h7 col. 2; nueve apariciones más por texto:
+  8120 h18, 8121 h7, 8122 h7, 8123 h16, 8124 h10, 8125 h5, 8126 h17, 8127 h7,
+  8128 h21. Fe de erratas: 8124 (16-8) h27 col. 2 (pág. 3911) y 8129 (23-8) h26
+  col. 2.
+  FICHA: Edicto citatorio Nº 30871, Ref. Expte. Nº 5631-B-64 y agregs. s.o.p.,
+  A.G.A.S., Imp. $ 1.400, e) 8 al 22-8-68. Fe de erratas de la Dirección del
+  Boletín, 14-8-1968 y 22-8-1968.
+  MODO DE LECTURA: Imagen (el edicto en 8119 y las dos fe de erratas; de la
+  primera, sólo la mitad derecha de la columna).
+  TEXTO:
+    [30871] A los efectos establecidos por el Art. 350 del C. de Aguas, se hace
+    saber que JUAN JOSE BERRUEZO tiene solicitado otorgamiento de concesión de
+    agua pública para irrigar con carácter Temporal-Eventual con una dotación de
+    26,25 ls./segundo a derivar del río Calchanio (margen izquierda) por medio
+    de un Canal Propio una superficie de 50 Has. del inmueble denominado
+    Fracción III de la Fincha [sic] Chalchanio, catastro Nº 16, ubicado en el
+    Departamento La Caldera. Los turnos estarán sujetos a la prelación
+    establecida por el Art. 22 del C. de Aguas. [8124 h27] ... [Bo]letín
+    Ofi[cial de fe]cha 8 de agosto de 1968, [se han deslizado l]os siguientes
+    errores, pá[gina ... edi]cto citatorio boleta Nº [30871, donde dice:] Río
+    Calchanio debe de[cir: Río Chalcamio] ... [8129 h26] Déjase establecido que
+    en el Boletín Oficial Nº 8124 de fecha 16 de agosto de 1968, se han
+    deslizado los siguientes errores, ... y en página Nº 3911, Fe de Erratas
+    donde dice: Río Chalcamio, debe decir: Río Chalchanio.
+  NOTA DE LECTURA: Diez apariciones por texto, diez días hábiles de la marca e)
+  (el 15-8 no hubo edición). El numeral de la fracción se leyó «III» en 8119; en
+  las demás apariciones la capa lo destroza («il», «1», «mi») y no se miraron.
+  La primera fe de erratas corrige Calchanio por Chalcamio y la segunda corrige
+  la corrección por Chalchanio; las apariciones de 8126 y 8127, posteriores,
+  siguen diciendo «Calchanio» en la capa (E.9). ARITMETICA: 26,25 / 50 = 0,525
+  l/seg por ha. «Fincha» es errata del original. Las formas «chalcamio» y
+  «fincha chalchanio» no estaban en el anillo 2 (§F).
+
+A24  8120 h15  [MINAS]
+    Caducidad de dos permisos de exploración y cateo en el Departamento La
+    Caldera: Alberto González Rioja (expte. 4.784-G) y María Iriarte de González
+    Rioja (expte. 4.782-I)
+  FUENTE: 30895: 8120 (9-8-1968) h15 col. 2. 30912: 8122 (13-8-1968) h4 col. 2.
+  FICHA: Resoluciones del Juzgado de Minas del 16-5-1968, publicadas como
+  «Resolución de mina» Nº 30895 y Nº 30912, sin cargo.
+  MODO DE LECTURA: Imagen (las dos resoluciones; las firmas, en la hoja
+  siguiente, capa).
+  TEXTO:
+    [30895] Expte. Nº 4.784-G / Salta, 16 de mayo de 1968 / Atento al informe de
+    Secretaría que antecede, téngase por caducado el permiso para exploración y
+    cateo en el Departamento de La Caldera, otorgado a don Alberto González
+    Rioja en autos. Notifíquese, repóngase, publíquese en el Boletín Oficial a
+    los efectos del art. 45 del Decreto Ley 430/57, tómese nota y Archívese,
+    [30912] Salta, 16 de mayo de 1968. / Expte. Nº 4.782-I / Atento al informe
+    de Secretaría, que antecede téngase por caducado el permiso para exploración
+    en el Departamento La Caldera, otorgado a María Iriarte de González Rioja,
+    en autos.
+  NOTA DE LECTURA: Los permisos que caducan no se publican en lo leído: citados
+  y no acompañados (E.3). María Iriarte de González Rioja figura también como
+  regente del Patronato en A13; la identidad no se afirma. Los dos están en el
+  config desde 1962 y 1963. Sin superficie ni ubicación del pedimento.
+
+A25  8142 h21  [DOMINIO]
+    Aviso 31277: posesión treintañal de la sucesión de Eugenio Berejnoi sobre
+    «Las 2 Lagunas», 107 ha, partido La Caldera, lindera con Getsemaní y el río
+    Wierna
+  FUENTE: 8142 (11-9-1968) h21 col. 2; nueve apariciones más por texto: 8143
+  h19-h20, 8144 h25, 8145 h14, 8146 h32, 8147 h17, 8148 h12, 8149 h25, 8150 h19,
+  8151 h26; sumarios 8143 h4, 8150 h4, 8151 h5.
+  FICHA: Aviso Nº 31277, Juez de 1ª Instancia C. y C. 3ª Nominación; Salta,
+  28-8-1968, Ricardo Manuel Figueroa, secretario. Imp. $ 2.700, e) 11 al
+  25-9-68.
+  MODO DE LECTURA: Imagen (el aviso entero en 8142).
+  TEXTO:
+    El señor Juez de Primera Instancia, Civil y Comercial, Tercera Nominación,
+    cita por diez días a interesados en juicio posesión treintañal solicitado
+    por Suc. EUGENIO BEREJNOI, sobre inmueble ubicado en el Dpto. de La Caldera,
+    partido La Caldera, denominado "Las 2 Lagunas", con una superficie total de
+    107 has. 3909,527 a, que limita al Sud con Juan Chuchuy en una longitud del
+    punto A al B, de 2106 mts. al nor-este con la finca Getsemaní en una
+    longitud de 1300,52 mts. entre los puntos B y C; al norte, con la propiedad
+    Vda. de Palermo, en una longitud de 1979,01 mts. entre los puntos C y H', y
+    al Sud-oeste con el Río Wierna en una longitud entre los puntos H' H, de 100
+    mts. y entre los puntos H-A, una longitud de 677 mts, todo conforme al plano
+    de posesión treintañal archivado en la D. Gral. de Inmuebles bajo Nº 91. —
+    Salta, 28 de agosto de 1968. — RICARDO MANUEL FIGUEROA, Secretario. —
+    Corregido "agosto", vale.
+  NOTA DE LECTURA: RECUENTO de linderos: cuatro (Chuchuy, Getsemaní, Vda. de
+  Palermo, río Wierna); el acto no declara número. Suma de los lados: 2106 +
+  1300,52 + 1979,01 + 100 + 677 = 6162,53 m (el acto no da perímetro). En 8143
+  el aviso se corta entre «la calde-» y «ra» con la cabecera de la página en
+  medio: lo encontró sólo la difusa en la capa (E.5). Plano Nº 91: citado y no
+  acompañado (§P). Diez apariciones por texto, diez días hábiles de la marca e)
+  (el 13-9 no hubo edición). Juan Chuchuy está en el config desde 1908.
+
+A26  8147 h5  [REGISTRO-CIVIL]
+    Dec. 1780: el Registro Civil de La Caldera queda a cargo de la autoridad
+    policial mientras dure la licencia de su titular, Ester Gabriela Cruz
+  FUENTE: 8147 (19-9-1968) h5 col. 1.
+  FICHA: Decreto 1780, Gobierno, J., I. P. y del T., 5-9-1968, expte. 7608/68;
+  notas 255, 261 y 257-C-68 del Registro Civil, 26-8-1968.
+  MODO DE LECTURA: Imagen (arts. 1 y 2); la firma, en h6, capa.
+  TEXTO:
+    Art. 2º — Encárgase interinamente la Oficina del Registro del Estado Civil y
+    de la Capacidad de las Personas de la localidad de La Caldera, departamento
+    del mismo nombre, a la AUTORIDAD POLICIAL de ese lugar, a partir del día 10
+    de setiembre del corriente año y mientras dure la licencia reglamentaria de
+    su titular, señorita Ester Gabriela Cruz.
+  NOTA DE LECTURA: El art. 1 encarga la oficina de Iruya por la licencia de su
+  titular, José Salvador Poclava: no es del departamento. Ester Gabriela Cruz es
+  la encargada que los informes de 1956 a 1962 ya traen (B.4).
+
+A27  8150 h16  [OTRO]
+    Aviso 31408: remate de una motocicleta Rumi con «chapa municipal 216/67. -
+    La Caldera»
+  FUENTE: 8150 (24-9-1968) h16 col. 2; dos apariciones más por texto: 8151 h24 y
+  8152 h15.
+  FICHA: Aviso Nº 31408, «Por: ERNESTO V. SOLA», Juez de Paz Letrado Nº 2,
+  Ejecutivo «Moreno Carlos E. vs. Alvarado Martínez David», Expte. Nº 19.739/68;
+  Salta, 11-9-1968; Imp. $ 1.400, e) 24 al 26-9-68.
+  MODO DE LECTURA: Imagen (el aviso entero en 8150).
+  TEXTO:
+    El día 27 de setiembre de 1968 a horas 17.15, en mi escritorio de remates
+    sito en Santiago del Estero Nº 655, ciudad, por disposición señor Juez de
+    Paz Letrado Nº 2, en los autos - Ejecutivo "MORENO CARLOS E. vs. ALVARADO
+    MARTINEZ DAVID" Expte. Nº 19.739/68; remataré Sin Base: Una motocicleta
+    marca "RUMI" motor Nº 1763, modelo 196 c.c. 160 chapa municipal 216/67. - La
+    Caldera. La que puede ser revisada en Pasaje Pablo Latorre Nº 1253 de esta
+    ciudad. ...
+  NOTA DE LECTURA: Tres apariciones por texto, tres días de la marca e). Lo
+  único del departamento es la chapa: la patente la emite la Municipalidad de La
+  Caldera (inferencia del renglón).
+
+A28  8161 h31  [DOMINIO]
+    Aviso 31615: deslinde, mensura y amojonamiento de la finca La Calderilla,
+    promovido por Félix Farfán; catastro 75, oeste el río La Caldera
+  FUENTE: 8161 (9-10-1968) h31 cols. 1 y 2 (pág. 5059); nueve apariciones más
+  por texto: 8162 h27, 8163 h21, 8164 h15, 8165 h29, 8166 h27, 8167 h24, 8168
+  h24-h25, 8169 h15, 8170 h31; sumario en las diez ediciones.
+  FICHA: Edicto Nº 31615, Roberto Frías, Juez Civil y Comercial 6ª Nominación,
+  expediente 2484/68; Salta, 8-10-1968, Esc. Nelly Gladis Museli, secretaria.
+  Imp. $ 1.400, e) 9 al 22-10-68.
+  MODO DE LECTURA: Imagen (el edicto entero en 8161).
+  TEXTO:
+    Roberto Frías, Juez Civil y Comercial 6a. Nominación cita y emplaza diez
+    días, bajo apercibimiento ley, a colindantes e interesados en juicio
+    deslinde, mensura y amojonamiento expediente Nº 2484/68 promovido por don
+    Félix Farfán finca La Calderilla, departamento La Caldera. / Límites: Norte,
+    Lorenzo Romano; Sud, Andrés Rodó hoy Julio González; Este filo cerro
+    Lapacheta o Pucheta; Oeste, río La Caldera. Catastro 75. Títulos folio 394;
+    asiento 13 Libro I R de I. La Caldera. Dichas operaciones serán practicadas
+    por el ingeniero Sergio Arias Figueroa. — Salta, 8 de octubre de 1968. —
+    Esc. NELLY GLADIS MUSELI, Secretaria.
+  NOTA DE LECTURA: RECUENTO de linderos: cuatro; el acto no declara número. Diez
+  apariciones por texto, diez días hábiles de la marca e). «Andrés Rodó hoy
+  Julio González»: el sucesor del lindero sur lleva el nombre del presidente de
+  la cooperadora de A20; la identidad no se afirma (B.4). Lorenzo Romano está en
+  el config desde 1932. El resultado de la mensura no aparece en lo leído.
+
+A29  8166 h14  [CARGOS+OTRO]
+    Dec. 2147: técnico de la Agencia de Cooperación Agraria del Centro Agrario
+    de La Caldera, Ziolah Vojdani Gouri, para los productores tabacaleros
+  FUENTE: 8166 (16-10-1968) h14 col. 1; sumario en h3 (págs. 5217-5218).
+  FICHA: Decreto 2147, Economía, F. y O. Públicas, 4-10-1968; Dec. 7442 del
+  22-12-1967 (creación de las Agencias Técnicas de Cooperación Agraria).
+  MODO DE LECTURA: Imagen (el decreto entero salvo la firma, en h15, capa).
+  TEXTO:
+    VISTO el decreto Nº 7442 dictado en fecha 22 de diciembre de 1967 por el
+    cual se crean las Agencias Técnicas de Cooperación Agraria dependiente de la
+    Subsecretaría de Asuntos Agrarios y Recursos Naturales de la Provincia; y, /
+    CONSIDERANDO: / Que el artículo 3º del citado decreto dispone que los
+    técnicos a cargo de las agencias serán designados por el Poder Ejecutivo a
+    propuesta de los productores de la zona; / Que el Centro Agrario de La
+    Caldera, propone la designación del señor Ziolah Vojdani Gouri quien
+    prestará con carácter obligatorio el asesoramiento técnico a los productores
+    tabacaleros asociados que lo soliciten; / ... El Gobernador Interino de la
+    Provincia / DECRETA: / Artículo 1º — Desígnase al señor ZIOLAH VOJDANI
+    GOURI, C. I. Nº [omitido], con la asignación mensual de $ 50.000 ..., como
+    Técnico en la Agencia de Cooperación Agraria del Centro Agrario de La
+    Caldera y de los productores asociados a la misma, / Art. 2º — La
+    designación ... será por el término de un (1) año ... / Art. 4º — El gasto
+    ... se tomará del "Fondo de Diversificación Azucarera", ...
+  NOTA DE LECTURA: «Centro agrario» aparece en una sola hoja del año, ésta
+  (búsqueda sobre las 6792 hojas). El Dec. 7442/67 no se acompaña (E.3). El
+  gasto sale de un fondo de diversificación azucarera: se transcribe, no se
+  interpreta. Serie: anterior firmado DIAZ VILLALBA (Int.) / Escudero, 4-10
+  (imagen).
+
+A30  8167 h7  [OBRA-PUBLICA+ESCUELA]
+    Ampliación de la Escuela Bernabé López (Vaqueros) y ampliación y refección
+    de la Escuela Juana Moro de López (La Caldera): documentación técnica (Dec.
+    2162) y licitación pública (aviso 31719), $ 9.430.531
+  FUENTE: Dec. 2162: 8167 (17-10-1968) h7 col. 1; sumario en h2 (pág. 5243).
+  Licitación 31719: 8167 h15 col. 2 y seis apariciones más por texto: 8168 h16,
+  8169 h8, 8170 h22, 8171 h6, 8172 h5, 8173 h6; sumarios 8167 h3, 8168 h3, 8169
+  h3, 8170 h3, 8171 h2, 8172 h2, 8173 h2.
+  FICHA: Dec. 2162, Economía, F. y O. Públicas, 4-10-1968, expte. 2927/68.
+  Licitación Pública Nº 31719, Dirección de Viviendas y Arquitectura, apertura
+  7-11-1968; Imp. $ 1.440, e) 17 al 25-10-68.
+  MODO DE LECTURA: Imagen (VISTO y considerando del decreto; la licitación
+  entera); los artículos del decreto, capa.
+  TEXTO:
+    [2162] VISTO que Dirección de Viviendas y Arquitectura de la Provincia eleva
+    para su aprobación, de conformidad con lo preceptuado por la Ley de Obras
+    Públicas vigente, la documentación técnica elaborada para la Obra:
+    "Ampliación Escuela "Bernabé López" y Ampliación y refección Escuela "Juana
+    Moro de López" en Vaqueros y La Caldera (Dpto. La Caldera), comprendida en
+    el Plan de Obras del Consejo General de Educación, cuyo presupuesto se fija
+    en la cantidad de $ 9.430.531.— m/n.; / CONSIDERANDO: / Que con esta obra se
+    permitirá la asistencia de mayor cantidad de niños que en la actualidad no
+    pueden concurrir a dichos establecimientos por falta de asientos; ...
+    [31719] Llámase a Licitación Pública para la contratación y ejecución de la
+    obra: "AMPLIACION ESCUELA BERNABE LOPEZ y AMPLIACION Y REFECCION ESCUELA
+    JUANA MORO DE LOPEZ - VAQUEROS - LA CALDERA - DPTO. LA CALDERA", por el
+    sistema de UNIDAD DE MEDIDA y con un presupuesto oficial de $ 9.430.531 m/n.
+    (Nueve millones cuatrocientos treinta mil quinientos treinta y un pesos
+    moneda nacional). / Esta obra será atendida con recursos propios del Consejo
+    General de Educación. / La apertura de las ofertas se llevará a cabo el día
+    7 de noviembre de 1968, o día subsiguiente si éste fuera feriado, a horas
+    12, en la sede de la repartición - Lavalle 550, Salta, Capital. / Precio del
+    legajo: $ 5.000 m/n.
+  NOTA DE LECTURA: Siete apariciones por texto, siete días hábiles de la marca
+  e). Cifra y letras coinciden. El decreto no dice qué escuela está en cada
+  localidad; el orden de los nombres (Bernabé López ... Juana Moro de López ...
+  en Vaqueros y La Caldera) lo sugiere y no se afirma. La adjudicación no
+  aparece en lo leído.
+
+A31  8175 h5  [NORMA+OBRA-PUBLICA+AGUAS]
+    Ley 4266: obras con Fondos de Integración Territorial; «Defensas sobre Río
+    La Caldera», $ 4.100.000
+  FUENTE: 8175 (29-10-1968) h5, a todo el ancho (pág. 5477), y h6-h7 (págs.
+  5478-5479).
+  FICHA: Ley Nº 4266, Economía, F. y O. Públicas, Salta, 16-10-1968; decreto
+  nacional Nº 5884 del 25-9-1968 y Estatuto de la Revolución Argentina.
+  MODO DE LECTURA: Imagen (encabezado, arts. 1 y 2 y los seis primeros renglones
+  de A.G.A.S.); el resto del detalle, capa.
+  TEXTO:
+    VISTO la autorización conferida por el Gobierno Nacional mediante decreto Nº
+    5884 del 25 de setiembre de 1968 y el Estatuto de la Revolución Argentina, /
+    El Gobernador de la Provincia / Sanciona y Promulga con fuerza de / LEY: /
+    Artículo 1º — Incorpórase al CALCULO DE RECURSOS del Ejercicio 1968, bajo la
+    siguiente cuenta: / RUBRO 3 — Otras Participaciones y Aportes Nacionales.
+    Fondos de Integración Territorial $ 1.171.500.000 / Art. 2º — Amplíase el
+    PRESUPUESTO DE GASTOS EJERCICIO 1968: / Anexo J - Plan de Obras Públicas: /
+    ... Administración General de Aguas de Salta: / II-7-B-II-40 Canal de riego
+    San Antonio-Animaná (S. Carlos) $ 5.000.000 / II-7-B-III-2 Defensas sobre
+    Río La Caldera " 4.100.000 / II-7-B-III-2 Defensas sobre Río San Lucas "
+    6.500.000 / II-7-B-III-2 Defensas sobre Río Mojotoro " 8.000.000
+  NOTA DE LECTURA: RECALCULO (capa, renglón del departamento en la imagen):
+  A.G.A.S., 24 renglones = 347.500.000; Viviendas y Arquitectura, 6 =
+  484.000.000; Vialidad, 7 = 340.000.000; total 1.171.500.000: los tres
+  subtotales y el total cierran. El acto no dice en qué tramo del río La Caldera
+  van las defensas. Ley dictada por el gobernador «con fuerza de ley» (E.4).
+
+A32  8183 h6  [HACIENDA-MUN+NORMA]
+    Dec. 2432: se aprueba la Ordenanza 61 de la Municipalidad de La Caldera, que
+    exime de tasas el traslado de cadáveres o restos humanos de o para el
+    municipio
+  FUENTE: 8183 (11-11-1968) h6 col. 1; sumario en h2.
+  FICHA: Decreto 2432, Gobierno, J., I. P. y del T., 29-10-1968, expte. 8200/68;
+  Ordenanza 61 del 20-9-1968.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación la ordenanza Nº 61, dictada por
+    la citada comuna con fecha 20 de setiembre del año en curso; / Por ello y
+    atento lo informado por la Dirección de Coordinación de Municipalidades a
+    fs. 6 de estos obrados, / ... Artículo 1º — Apruébase la Ordenanza Nº 61 de
+    fecha 20 de setiembre del corriente año, dictada por la Municipalidad de La
+    Caldera, departamento del mismo nombre, que corre a fs. 3 del presente
+    expediente, mediante la cual se exime de toda tasa o gravamen el traslado o
+    introducción de cadáveres o restos humanos de o para el citado municipio de
+    La Caldera. / ... ROVALETTI / Díaz Villalba
+  NOTA DE LECTURA: En la misma columna, el decreto anterior aprueba una
+  ordenanza de San Lorenzo con el mismo texto, y la columna 2 la de Coronel
+  Moldes: tres municipios con la misma exención el mismo mes; la capa mezcla las
+  columnas (E.5). Ordenanza 61 a fs. 3: citada y no publicada. Las ordenanzas 59
+  y 60 de La Caldera no aparecen en lo leído (búsqueda por número y nombre).
+
+A33  8201 h8  [HACIENDA-MUN]
+    Dec. 2814: se aprueba la Ordenanza 58 de la Municipalidad de La Caldera,
+    modificación de partidas de su presupuesto de 1968
+  FUENTE: 8201 (5-12-1968) h8 col. 2; sumario en h2 (pág. 6340).
+  FICHA: Decreto 2814, Gobierno, J., I. P. y del T., 26-11-1968, expte. 7920/68;
+  Ordenanza 58 del 2-9-1968.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación la ordenanza Nº 58 dictada por la
+    citada comuna con fecha 2 de setiembre del año en curso; / Por ello; atento
+    lo dictaminado por Asesoría Contable de la Dirección de Coordinación de
+    Municipalidades a fs. 9 y lo informado por el Departamento de Presupuesto
+    del Ministerio de Economía, Finanzas y Obras Públicas a fs. 9 vta. de estos
+    obrados, / ... Artículo 1º — Apruébase la ordenanza Nº 58 de fecha 2 de
+    setiembre del año en curso, dictada por la Municipalidad de La Caldera,
+    departamento del mismo nombre, relacionada con la modificación de partidas
+    dentro de su presupuesto general de gastos y cálculo de recursos - Ejercicio
+    1968. / ... ROVALETTI / Museli (Int.) / Escudero
+  NOTA DE LECTURA: El detalle de las partidas no se publica (E.3). Refrendo
+  interino de Gobierno (Museli) en noviembre (E.4).
+
+A34  8204 h6  [OTRO]
+    Dec. 2866: servicios del personal de la Delegación Zonal de Paludismo y
+    Fiebre Amarilla en comisiones a General Güemes y La Caldera
+  FUENTE: 8204 (10-12-1968) h6 col. 1.
+  FICHA: Decreto 2866, Asuntos Sociales y Salud Pública, 27-11-1968, Reg. de
+  Notas Nº 2051/68-D.
+  MODO DE LECTURA: Imagen (el decreto entero; la firma, capa).
+  TEXTO:
+    VISTO que la Delegación Zonal de Paludismo y Fiebre Amarilla de la Nación,
+    comunica la finalización de las comisiones a los Departamentos de General
+    Güemes y La Caldera, en donde se realizaron reconocimientos geográficos para
+    la instauración del Plan de Salud, encomendados oportunamente por el
+    Ministerio del rubro; ... Artículo 1º — Reconócense los servicios prestados
+    que a continuación se detallan, a razón de $ 1.500 m/n (Un mil quinientos
+    pesos m/n.) por día, al personal ... de la Delegación Zonal de Paludismo y
+    Fiebre Amarilla de Nación. / Sr. VALDEMAR PRUSIS, doce (12) días del mes de
+    julio/68; ocho (8) días del mes de agosto/68; dieciseis (16) días del mes de
+    setiembre /68 y tres (3) días del mes de octubre/68. / Sr. ERIBERTO DURAN,
+    doce (12) días del mes de julio/68 y ocho (8) días del mes de agosto/68. /
+    Sr. NESTOR DURAN, dieciseis (16) días del mes de setiembre/68 y tres (3)
+    días del mes de octubre/68.
+  NOTA DE LECTURA: La capa lee «Prusas»; la imagen, «PRUSIS». RECUENTO PROPIO:
+  tres personas, 39 + 20 + 19 = 78 días, $ 117.000 a $ 1.500 por día; el acto no
+  declara total. El acto no dice qué días corresponden a cada departamento.
+
+A35  8207 h11  [AGUAS]
+    Dec. 2924: se reconoce a Néstor Lavaque y Dolores Fernández de Lavaque la
+    concesión permanente de 7,35 l/seg del río La Caldera para 14 ha de la finca
+    San Félix, en La Calderilla
+  FUENTE: 8207 (13-12-1968) h10 (VISTO, capa) y h11 col. 1.
+  FICHA: Decreto 2924, Economía, F. y O. Públicas, 4-12-1968, expte. 3351/68
+  (número por la capa de h10 y por la serie: 2925 del 4-12, imagen); Res. 1284
+  de A.G.A.S., 8-8-1968.
+  MODO DE LECTURA: Imagen (considerando final, arts. 1 a 3 y firma).
+  TEXTO:
+    ... por lo que el Administrador General de Aguas de Salta en uso de las
+    facultades que le son propias por encontrarse acéfalo el H. Consejo,
+    aconseja se haga lugar a lo solicitado en la forma propuesta por su
+    Resolución Nº 1284, de fecha 8 de agosto de 1968, / ... Artículo 1º —
+    Reconócese una concesión de derechos al uso del agua pública basado en usos
+    y costumbres para irrigar con carácter PERMANENTE Y A PERPETUIDAD una
+    superficie de 14 (catorce) hectáreas del inmueble denominado Finca San
+    Félix, Catastro Nº 8, ubicado en La Calderilla, Departamento La Caldera,
+    perteneciente a NESTOR LAVAQUE y DOLORES FERNANDEZ DE LAVAQUE, con una
+    dotación de 7,35 (siete litros treinta y cinco centilitros) por segundo a
+    derivar del río La Caldera (margen derecha), por la hijuela denominada La
+    Calderilla. En época de estiaje la dotación será reajustada entre los
+    regantes del sistema a medida que disminuya el caudal del río citado. / Art.
+    2º — La concesión reconocida es con las reservas previstas en los artículos
+    17 y 232 del Código de Aguas. / ... ROVALETTI / Escudero
+  NOTA DE LECTURA: Resuelve el pedido cuyo edicto fichó 1967 (A21 de ese año),
+  que allí quedó citado y no resuelto. ARITMETICA: 7,35 / 14 = 0,525 l/seg por
+  ha. «Acéfalo el H. Consejo» de A.G.A.S. en agosto de 1968: se transcribe.
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS YA FICHADOS
+Siguen en 1968 nucleos que traen los informes anteriores: el dique o embalse de
+Campo Alegre y el Ing. Ricardo Hurtado (A01, A03; 1967 A17); la obra 283 de la
+Escuela Nacional 250 de San Francisco de los Yacones y las escuelas de La
+Calderilla, Mojotoro y Gallinato de Tolaba y Campos (A02, A04, B2-10); el Cristo
+Monumental, su comision honoraria, los Iramain y Bressanutti (A21; 1967 A18); la
+intervencion municipal de Jose Ismael Jesus Gomez (A14; 1967 A23); el Hogar
+Agricola San Cayetano (A10, B2-13); los Lavaque y la finca San Felix (A35; 1967
+A21); Martin Borja (config 1964; A17); Ester Gabriela Cruz (config 1956; A26);
+Lucrecia Fernandez de Lopez, que en 1967 pasa de Vaqueros a Metan y en 1968
+figura como «Partera Metan» en la nomina de B2-04. Las fichas de 1968 no repiten
+lo que esos informes ya transcribieron.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+Trece entradas de actos del departamento sin la palabra Caldera, todas miradas
+en la imagen salvo donde se dice. La jurisdiccion la da el acto, otro acto del
+año que se nombra, o queda indeterminada (v16 §5.1ter). Los actos de la Caja que
+acuerdan las jubilaciones de Molina y Royo y el que cubre la vacante de Flores
+se cuentan en B.4.
+
+B2-01 7988 h5 (23-1); 8000 h12 (8-2) CARGOS. Dec. 7675, Gobierno, 9-1-1968
+(numero por la cita del 7905): aprueba suspensiones preventivas; inc. e),
+«...MALDO ARIAS, con revista en el Destacamento Mojotoro, a partir del dia
+22-XII-67 y en merito a las razones invocadas en la resolucion Nº 862 de fecha
+29-XII-67» (imagen). Dec. 7905, Gobierno, 25-1-1968, expte. 5261/68 (numero por
+la capa): art. 3, deja sin efecto la suspension; art. 4, «Dejase cesante a
+partir del dia 22 de diciembre de 1967, al Cabo, Categoria 23-06 ... Dn. ZENON
+NORMALDO ARIAS ... con revista en el Destacamento Mojotoro, por infraccion al
+articulo 1162, inc. 6º del Reglamento General de Policia» (imagen). La
+jurisdiccion del destacamento no la da el acto.
+
+B2-02 7999 h12 (7-2) CARGOS. Dec. 7857, Economia, 15-1-1968, expte. 2841/67:
+reintegro de $ 15.781 por «el accidente de trabajo que sufriera el Enfermero del
+Puesto Sanitario de Los Yacones ... don Benito E. Fernandez» (imagen). Sumario
+en h3.
+
+B2-03 8006 h22 (16-2) AGUAS+OBRA-PUBLICA. Dec. 8164, Economia, 8-2-1968, expte.
+360/68: intereses por mora de A.G.A.S. a Rodio Argentina S. A. por $ 271.049 por
+las obras «Sondeos de reconocimiento embalse en Campo Alegre», «Dique Itiyuro»,
+«Dique Las Lomitas» y «Sondeos Dique Nº 2 Coronel Moldes» (imagen; el articulo,
+capa). Atribucion: el Dec. 7448 (A01).
+
+B2-04 8047 h20 y h24 (22-4) CARGOS. Dec. [8891], Asuntos Sociales, 5-4-1968 (el
+numero no se leyo; lo da la serie, 8890 en h19 y 8892 en h25, control 1): nomina
+del personal asistencial de la Direccion del Interior. «Sr. Ramon Humberto
+Valdez 23 Direccion Interior Enferm. Los Yacones» (pag. 1768) y «Sr. Claudio
+Murua 25 Direc. Interior Aux. Enf. Vaqueros» (pag. 1772), imagen.
+
+B2-05 8076 h18 (3-6) AGUAS+CARGOS. Decreto de Economia sin numero leido (capa
+ilegible): designa al agrimensor Sergio Federico Arias Odriozola ayudante
+profesional del Departamento de Construcciones de A.G.A.S. porque sus servicios
+«seran necesarios en las diversas obras en ejecucion o a iniciarse, tales como
+el Dique Coronel Moldes, Las Lomitas, Campo Alegre, etc.» (imagen).
+
+B2-06 8096 h5 (5-7) y cuatro apariciones mas OBRA-PUBLICA. Licitacion publica Nº
+5 de Vialidad, aviso 30572: «Tratamiento Bituminoso Tipo Sellado - Camino: Salta
+Los Yacones por San Lorenzo - Tramo: Salta San Lorenzo», $ 4.010.665, apertura
+17-7-1968 (imagen). Apariciones por texto: 8096 h5, 8097 h27, 8098 h15, 8099
+h21, 8100 h20; e) 5 al 12-7-68 (cinco dias habiles; el 9-7 no hubo edicion). El
+tramo licitado no llega al departamento: la mencion es el destino del camino.
+
+B2-07 8118 h9 (7-8); 8144 h7 (16-9) CARGOS. Dec. 1338, Gobierno, 31-7-1968,
+expte. 7203|68 (numero por la capa y por la cita del decreto siguiente):
+«Apruebase la suspension preventiva ... al Oficial Inspector - Categoria 21 - 06
+... don JUAN DE LA CRUZ DIAZ ... con revista en el Destacamento de Vaqueros, a
+partir del dia 12 de julio del corriente año» (Res. 464, 16-VII-68), imagen. En
+8144 h7 un decreto de septiembre (numero no leido) deja sin efecto esa
+suspension y «aplicasele quince (15) dias de suspension con igual fecha, por
+infraccion a los articulos 1160, inc. 10º, y 1162 inc. 6º» (imagen). Firma
+ROVALETTI / Diaz Villalba.
+
+B2-08 8168 h14 (18-10) AGUAS. Decreto de Economia del 4-10-1968, posterior al
+2213 (numero no leido), del Gobernador Interino: reconoce creditos; en el
+cuadro, «5325/R Dev. de poliza de Seguros Colectivos Nº 1652 "Sondeos
+complementarios en dique Campo Alegre"» (imagen), a Rodio Argentina S. A., $
+24.778 (capa).
+
+B2-09 8182 h16 (8-11) y cuatro apariciones mas OBRA-PUBLICA. Licitacion publica
+Nº 16 de Vialidad, aviso 31945: «Camino San Lorenzo - Puente Vaqueros. Tramo:
+San Lorenzo - Castellanos», $ 35.718.412 (Fondos Caminos Vecinales, Ley 15.274),
+apertura 25-11-1968 (imagen). Apariciones por texto: 8182 h16, 8183 h17, 8184
+h18, 8185 h15, 8186 h39; e) 8 al 14-11-68. La jurisdiccion del tramo no la da el
+acto.
+
+B2-10 8187 h13 (15-11) OBRA-PUBLICA+ESCUELA. Dec. 2585, Economia, 6-11-1968,
+expte. 2776/68 (numero por la capa de h12): creditos de ejercicios vencidos por
+certificados de Viviendas y Arquitectura; en el cuadro, «Cert. 2 Defin. V. C. M.
+y M. O. (Const. Esc. Nac. Yacones) 207.691» (imagen), que el texto de h13 (capa)
+atribuye a la obra 283 de Tolaba y Campos. La obra 283 es la de A02.
+
+B2-11 8201 h11 (5-12) AGUAS+CARGOS. Dec. 2823, Economia, 26-11-1968, expte.
+3216/68: sobreasignacion de $ 15.000 mensuales desde el 1-9-1968 al dibujante
+proyectista Oscar H. Carrizo, del Departamento de Estudios y Proyectos de
+A.G.A.S., «fuera del horario habitual, en la confeccion de los planos
+relacionados con el Embalse de Campo Alegre» (Res. 1932, 8-11-1968), imagen. Los
+planos se citan y no se acompañan (§P).
+
+B2-12 8215 h5 (27-12) y dos apariciones mas AGUAS. Concurso de titulos Nº 32589
+de A.G.A.S., Plan Nacional de Agua Potable Rural: estudios, anteproyectos y
+proyectos de provision de agua potable, «Grupo 1. - Limache, El Prado, Vaqueros,
+San Lorenzo», presupuesto de gastos especiales $ 350.000 (imagen). Apariciones:
+8215 h5, 8216 h19, 8217 h20; e) 27 al 31-12-68.
+
+B2-13 8026 h7 (20-3) NORMA. Ley de presupuesto de 1968, publicada en esta
+edicion (numero no leido en lo mirado; el Dec. 8642 de A13 cita la «Ley de
+Presupuesto Nº 4243/68»), art. 13: subsidios a «Comisaria Franciscana, Hogar
+"San Cayetano", Seminario Conciliar, Instituto "La Inmaculada", "Escuela de
+Ciegos Corina Lona", Convento "San Alfonso", Colegio "Maria Auxiliadora", Hogar
+"San Vicente de Paul" y Conferencia de Señoras de "San Vicente de Paul"»
+(imagen). RECUENTO PROPIO: 9; el acto no declara numero (1967 conto 10 en la ley
+de ese año). Que el hogar sea el de Vaqueros es inferencia (A10).
+
+Fuera del departamento por el propio acto, y por eso no van aqui: las
+concesiones sobre el rio Mojotoro de las fincas Cobos y El Recreo (partido de
+Cobos, Gral. Guemes; 7973 h5, 7980 h11-h12) y del Ingenio San Isidro (8196 h19 y
+repeticiones); el puesto sanitario y el pozo de Betania (Gral. Guemes; 7983 h14,
+8076 h19, 8198 h10); el Salta Polo Club «sobre el camino a Vaqueros» (8094 h10,
+8095 h12, 8096 h11, sin atribucion); Campo Alegre de Metan (8151 h8, 8201 h22 y
+repeticiones) y de Chicoana (8194 h15); «pje La Caldera esquina Metan», una
+calle de la Capital (8154 h14).
+
+B.3 · TERMINOS QUE ESE AÑO SON OTRA COSA
+Leidos todos los terminos con acierto. Son otra cosa en 1968: «caldera» como
+aparato (E.7); «wierna», apellido en 107 de 118 hojas (Robles, Emma, Sabina,
+Enrique, Jose Arnaldo Wierna...), y el rio solo en los linderos de A18 y A25;
+«san cayetano», ademas del hogar, una finca de La Merced (Cerrillos, 8060 h10) y
+un pasaje de la Capital; «campo alegre», una finca de Metan y un domicilio de
+Chicoana; «los sauces», Guachipas y San Carlos; «el tunal», «nogalito» y «finca
+el durazno», Metan y Anta; «potrerillo» y «angostura», San Carlos; «la laguna» y
+«cerro nevado», cateos de Los Andes; «el cajon» y «loma bola», un inmueble de La
+Candelaria; «lagunilla», la Capital (ruta 9) y una finca de Rosario de la
+Frontera; «el recreo», una finca de Cobos y una S.A.; «el monte», Seclantas;
+«manzano», una mina de Cachi y un puesto de enfermeria; «villa san lorenzo», la
+Capital; «castañares», un barrio de la Capital; «buen retiro», Rosario de Lerma;
+«antilla», Rosario de la Frontera; «vaqueria», Guachipas; «mesada», «mesa
+redonda» y «despensa», palabras comunes; «penales», la Direccion de Institutos
+Penales; «lesser», «yufra», «yugra», «castellanos», «isasmendi» y los demas
+apellidos del §2, personas. Ninguno se atribuye al departamento.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+Anillo de actores del año: 58 nombres y razones sociales de los actos del §A y
+del B.2, buscados por nombre completo, primer nombre e inicial con apellido e
+inversion, sin puntuacion. Todos devuelven por lo menos su propio acto; dos solo
+con la forma que la capa les da: Valdemar Prusis («prusas», A34) y el padre
+Requena («riequena», A16). No es falla de la busqueda sino de la capa, y la
+ficha lo dice. Pedro Dionisio Martel/Martell aparece con las dos grafias y la
+busqueda las reune.
+
+1. Solo en su propio acto (y sus repeticiones o su sumario): Isidro Gareca,
+Sabina Celia Martell de Beccalli, Jose Javier Cornejo Sola (A18); Juan Jose
+Berruezo (A23); Eugenio Berejnoi, la Vda. de Palermo (A25); Felix Farfan y
+Andres Rodo (A28); Juan Rodriguez y Julio De Zuani (A09; «Juan Rodriguez» tiene
+44 hojas de homonimos); Dora Elina Barrozo y Julio Cesar Avila (A10); Ziolah
+Vojdani Gouri (A29); Valdemar Prusis, Eriberto y Nestor Duran (A34); el padre
+Requena (A16); Ricardo J. Durand, Leonardo Fermin Iramain y Jose Leon Avila
+(A21); Ramon Humberto Valdez (B2-04); Juan de la Cruz Diaz (B2-07, dos actos
+sobre la misma suspension); Oscar H. Carrizo (B2-11); Sergio Federico Arias
+Odriozola (B2-05).
+
+2. En mas de un acto del departamento (la trama del año): Manuel David Serrey
+(interventor municipal, A14, y presidente de la cooperadora asistencial, A20; un
+«Manuel Diez Serrey», secretario general de la gobernacion, es otra persona por
+el nombre); Julio Gonzalez (renuncia a la cooperadora, A20; lindero «Andres Rodo
+hoy Julio Gonzalez» de La Calderilla, A28; intendente en 1967: la identidad no
+se afirma); Pedro Dionisio Martel o Martell (edicto y concesion de Getsemani,
+A06; vendedor y arrendatario de Getsemani y dueño de la «fraccion loteada»
+lindera, A18); Getsemani misma (A06, A18 y lindero de Las 2 Lagunas en A25);
+Italo Alberto Flores (A08 y la vacante «por cesantia de don Italo Alberto
+Flores» del Dec. 1321 del 31-7-1968, 8117 h12, capa); Victorino Molina (A12 y
+Dec. 8259, 14-2-1968, que aprueba la Res. 87-I de la Caja, 8013 h12, capa);
+Cesar Royo (A12 y la Res. 1437-I de la Caja, 2-10-1968, 8170 h15, capa); Tolaba
+y Campos (A02, A04, B2-10); Ricardo Hurtado (A01 y una notificacion del Tribunal
+de Cuentas, expte. 987-P-67, 8143 h3, 8144 h19 y 8145 h2, sin relacion afirmada
+con el dique); Rodio Argentina (B2-03, B2-08).
+
+3. Tambien fuera del departamento, o con antecedentes en otros años: Eloy
+Aurelio Ruiz, juez de paz titular (A11), «C. 1904», con el mismo nombre y la
+misma clase que el nombrado en 1956 en la Subcomisaria de La Caldera (informe de
+1956, config 1956); Liborio Gerardo Guerrero, suplente (A11), juez de paz en los
+informes de 1947, 1961 y 1962; Cesar Royo, en Vaqueros en los informes de 1953 a
+1955 (config 1954); Claudio Murua, auxiliar de enfermeria de Vaqueros (B2-04),
+enfermero de La Caldera en los informes de 1947 a 1950 y trasladado en 1956: la
+identidad no se afirma en ninguno, son nombres; Ester Gabriela Cruz (A26),
+encargada del Registro Civil en los informes de 1956 a 1962; Maria Iriarte de
+Gonzalez Rioja, cateo caducado (A24) y regente del Patronato (A13) y litigante
+en un fallo (8038 h4); Alberto Gonzalez Rioja (A24); Rodolfo Abraham (A13;
+config 1963); Luis Bressanutti (A21; obras de Rosario de Lerma, 8030 h11, 8039
+h8, 8110 h7); los Iramain (A21); Miguel Cristobal Fleming (finca Lesser en
+1967), socio de Fleming y Cia. S.R.L. (8095 h9-h11), sin mencion del
+departamento; Ernesto V. Sola, martillero (A09, A27; 559 hojas); Alfredo
+Chiericotti, de A18, agrimensor en un deslinde de Rosario de la Frontera (8129
+h24 y repeticiones); Sergio Arias Figueroa, el ingeniero del deslinde de A28,
+regulado en honorarios en otro juicio (8067 h24).
+
+Actores del config con acierto en 1968 fuera del §A: 429 de 1326; los que tocan
+el departamento estan arriba. Los demas son homonimos de nombre comun,
+martilleros (Efrain Racioppi, 777 hojas) y funcionarios: frecuencia de corpus,
+no del departamento.
+
+§C · LIMITROFES
+---------------
+General Guemes: el rio Mojotoro (concesiones de Cobos y del Ingenio San Isidro;
+«Defensas sobre Rio Mojotoro», $ 8.000.000, en la Ley 4266 de A31) y Betania
+(puesto sanitario de Tolaba y Campos en A04; pozo P1/68). La comision de
+paludismo de A34 recorre General Guemes y La Caldera. Capital: el camino
+Salta-Los Yacones por San Lorenzo, tramo Salta-San Lorenzo (B2-06), y el camino
+San Lorenzo-Puente Vaqueros, tramo San Lorenzo-Castellanos (B2-09); Villa San
+Lorenzo. Rosario de Lerma: el Embalse Las Lomitas de A01 y A03.
+
+§P · PLANOS
+-----------
+El corpus de 1968 no publica ningun plano: las hojas miradas, las de poca tinta
+y las 88 en blanco son texto o tablas. La palabra «plano» aparece en 439 hojas;
+las remisiones que tocan el departamento son dos: el «plano 77» de los lotes B y
+C de la finca Vaqueros (A09), en diez apariciones, y el «plano de posesion
+treintañal archivado en la D. Gral. de Inmuebles bajo Nº 91» de Las 2 Lagunas
+(A25), en diez apariciones; los dos citados y no acompañados. Ademas, los
+«planos relacionados con el Embalse de Campo Alegre» que dibuja un proyectista
+de A.G.A.S. (B2-11): planos en confeccion, citados. Techo de resolucion: 150 ppp
+(300 en 272 hojas).
+
+§D · INDICE
+-----------
+  7980  h11  AGUAS+OBRA-PUBLICA        Dec. 7448: amplía el plazo del contrato
+                                       del Ing. Ricardo Hurtado para el proyecto
+                                       del Dique Campo Alegre
+  7983  h11  OBRA-PUBLICA+ESCUELA      Dec. 7521: obra 283, Escuela Nacional 250
+                                       de San Francisco de los Yacones; el VISTO
+                                       dice recepción definitiva y el artículo
+                                       aprueba la provisoria
+  7988  h5   CARGOS                    Dec. 7675: Zenon Normaldo Arias,
+                                       Destacamento Mojotoro (B2-01)
+  7988  h10  OBRA-PUBLICA+AGUAS        El «Embalse en Campo Alegre, Dpto. La
+                                       Caldera» en dos transferencias de
+                                       partidas del Plan de Obras de A.G.A.S.:
+                                       Dec. 7694 (disminución de 2.000.000) y
+                                       Dec. 2930 (aumento de 50.000)
+  7989  h9   OBRA-PUBLICA+ESCUELA      Dec. 7714: intereses por mora a Tolaba y
+                                       Campos por cuatro obras, tres del
+                                       departamento
+  7990  h9   OTRO                      Seis decretos de pensiones a la vejez y a
+                                       la invalidez cuyas nóminas incluyen
+                                       residentes de La Caldera
+  7993  h12  AGUAS                     Getsemaní: edicto citatorio 28863 y Dec.
+                                       2308, concesión temporal-eventual de
+                                       15,75 l/seg del río San Alejo a Pedro
+                                       Dionisio Martel
+  7999  h12  CARGOS                    Dec. 7857: enfermero de Los Yacones
+                                       (B2-02)
+  7999  h14  OTRO                      Dec. 7862: $ 30.000 por la actuación del
+                                       Teatro Estudio Phersu en La Caldera el
+                                       3-XI-1967
+  8000  h12  CARGOS                    Dec. 7905: cesantia de Arias (B2-01)
+  8000  h14  CARGOS                    Ítalo Alberto Flores, subcomisario de La
+                                       Caldera: suspensión preventiva (Dec.
+                                       7910) y cesantía con prohibición de
+                                       reingreso (Dec. 8473)
+  8005  h21  DOMINIO                   Aviso 29127: remate judicial de los lotes
+                                       B y C del plano 77, parte de la finca
+                                       Vaqueros, de Juan Rodríguez
+  8006  h22  AGUAS+OBRA-PUBLICA        Dec. 8164: intereses, sondeos del embalse
+                                       de Campo Alegre (B2-03)
+  8013  h12  CARGOS                    Dec. 8259: jubilacion de Victorino Molina
+                                       (B.4)
+  8021  h8   REGISTRO-CIVIL+CARGOS     Dec. 8365: Registro Civil de Vaqueros
+                                       (Dpto. La Caldera): traslado de Dora
+                                       Elina Barrozo a Tartagal y designación ad
+                                       honorem de Julio César Ávila, director
+                                       del Hogar Agrícola San Cayetano
+  8026  h7   NORMA                     Ley de presupuesto: subsidio al Hogar San
+                                       Cayetano (B2-13)
+  8027  h9   CARGOS                    Dec. 8473: cesantia de Italo Alberto
+                                       Flores (A08)
+  8036  h8   JUSTICIA+CARGOS           Dec. 8596: jueces de paz titular y
+                                       suplente de La Caldera, a propuesta de la
+                                       Municipalidad: Eloy Aurelio Ruiz y
+                                       Liborio Gerardo Guerrero
+  8040  h6   CARGOS                    Dos bajas por jubilación en la
+                                       Subcomisaría de La Caldera: el sargento
+                                       Victorino Molina (Dec. 8637) y el oficial
+                                       ayudante César Royo (Dec. 2686)
+  8040  h8   CARGOS                    Dec. 8642: en la nómina del personal
+                                       administrativo de Asuntos Sociales,
+                                       «Regente H. La Caldera», Rodolfo Abraham
+  8047  h20  CARGOS                    Dec. [8891]: enfermeria de Los Yacones y
+                                       Vaqueros (B2-04)
+  8053  h14  CARGOS+HACIENDA-MUN       Intervención municipal: renuncia de José
+                                       Ismael Jesús Gómez (Dec. 57) y
+                                       designación de Manuel David Serrey (Dec.
+                                       58)
+  8062  h16  HACIENDA-MUN              Dec. 223: presupuesto de gastos y cálculo
+                                       de recursos de la Municipalidad de La
+                                       Caldera para 1968, $ 4.683.594
+  8070  h7   OTRO                      Dec. 393: entre los gastos de agasajo de
+                                       la gobernación, «Almuerzo ofrecido al
+                                       Rvdo. Padre Requena de La Caldera», $
+                                       1.950
+  8076  h18  AGUAS+CARGOS              Agrimensor de A.G.A.S. para Campo Alegre
+                                       (B2-05)
+  8090  h12  AGUAS+CARGOS              Dec. 800: se confirma a Martín Borja como
+                                       encargado de la Intendencia de Aguas con
+                                       asiento en La Caldera, a pedido de los
+                                       regantes
+  8096  h5   OBRA-PUBLICA              Licitacion 30572: camino Salta-Los
+                                       Yacones (B2-06)
+  8099  h28  DOMINIO                   Escritura 279: Isidro Gareca transfiere
+                                       la finca «Yeusemani» o «Getsemaní» (2.618
+                                       ha, Departamento de La Caldera) a Cuesta
+                                       del Obispo S.A.; título por compra a
+                                       Pedro Dionisio Martell en 1967
+  8109  h18  HACIENDA-MUN+NORMA        Dec. 1148: modificaciones a la Ordenanza
+                                       General Impositiva de la Municipalidad de
+                                       La Caldera, vigente con ellas en 1968
+  8111  h25  CARGOS                    Cooperadora Asistencial de La Caldera:
+                                       renuncia de Julio González (Dec. 1196) y
+                                       designación del interventor Manuel David
+                                       Serrey como presidente (Dec. 1408)
+  8114  h8   OBRA-PUBLICA              Cristo Monumental de La Caldera:
+                                       documentación técnica (Dec. 1229, $
+                                       1.951.000), contratos con los escultores
+                                       Iramain y Ávila (Dec. 2362), recepción de
+                                       la base, obra 293 (Dec. 2714) e
+                                       insistencia ante el Tribunal de Cuentas
+                                       (Dec. 2799)
+  8114  h12  HACIENDA-MUN              Dec. 1240: saldos de coparticipación
+                                       adeudados al 31-12-1967 a cuarenta y
+                                       cinco municipalidades; La Caldera, $
+                                       657.586
+  8117  h12  CARGOS                    Dec. 1321: vacante por cesantia de Flores
+                                       (B.4)
+  8118  h9   CARGOS                    Dec. 1338: Juan de la Cruz Diaz,
+                                       Destacamento de Vaqueros (B2-07)
+  8119  h7   AGUAS                     Edicto 30871: Juan José Berruezo pide
+                                       26,25 l/seg del río Calchanio para 50 ha
+                                       de la Fracción III de la finca
+                                       Chalchanio, catastro 16; y dos fe de
+                                       erratas sobre el nombre del río
+  8120  h15  MINAS                     Caducidad de dos permisos de exploración
+                                       y cateo en el Departamento La Caldera:
+                                       Alberto González Rioja (expte. 4.784-G) y
+                                       María Iriarte de González Rioja (expte.
+                                       4.782-I)
+  8122  h4   MINAS                     Caducidad del cateo de Maria Iriarte de
+                                       Gonzalez Rioja (A24)
+  8124  h8   CARGOS                    Dec. 1408: Serrey presidente de la
+                                       cooperadora asistencial (A20)
+  8124  h27  AGUAS                     Fe de erratas: rio Calchanio / Chalcamio
+                                       (A23)
+  8129  h26  AGUAS                     Fe de erratas: rio Chalcamio / Chalchanio
+                                       (A23)
+  8142  h21  DOMINIO                   Aviso 31277: posesión treintañal de la
+                                       sucesión de Eugenio Berejnoi sobre «Las 2
+                                       Lagunas», 107 ha, partido La Caldera,
+                                       lindera con Getsemaní y el río Wierna
+  8144  h7   CARGOS                    Sancion a Juan de la Cruz Diaz (B2-07)
+  8147  h5   REGISTRO-CIVIL            Dec. 1780: el Registro Civil de La
+                                       Caldera queda a cargo de la autoridad
+                                       policial mientras dure la licencia de su
+                                       titular, Ester Gabriela Cruz
+  8150  h16  OTRO                      Aviso 31408: remate de una motocicleta
+                                       Rumi con «chapa municipal 216/67. - La
+                                       Caldera»
+  8161  h31  DOMINIO                   Aviso 31615: deslinde, mensura y
+                                       amojonamiento de la finca La Calderilla,
+                                       promovido por Félix Farfán; catastro 75,
+                                       oeste el río La Caldera
+  8166  h14  CARGOS+OTRO               Dec. 2147: técnico de la Agencia de
+                                       Cooperación Agraria del Centro Agrario de
+                                       La Caldera, Ziolah Vojdani Gouri, para
+                                       los productores tabacaleros
+  8167  h7   OBRA-PUBLICA+ESCUELA      Ampliación de la Escuela Bernabé López
+                                       (Vaqueros) y ampliación y refección de la
+                                       Escuela Juana Moro de López (La Caldera):
+                                       documentación técnica (Dec. 2162) y
+                                       licitación pública (aviso 31719), $
+                                       9.430.531
+  8167  h15  OBRA-PUBLICA+ESCUELA      Licitacion 31719: escuelas Bernabe Lopez
+                                       y Juana Moro de Lopez (A30)
+  8168  h14  AGUAS                     Poliza, sondeos del dique Campo Alegre
+                                       (B2-08)
+  8170  h15  CARGOS                    Res. 1437-I: jubilacion de Cesar Royo
+                                       (B.4)
+  8175  h5   NORMA+OBRA-PUBLICA+AGUAS  Ley 4266: obras con Fondos de Integración
+                                       Territorial; «Defensas sobre Río La
+                                       Caldera», $ 4.100.000
+  8178  h12  AGUAS                     Dec. 2308: concesion de Getsemani a Pedro
+                                       Dionisio Martel (A06)
+  8180  h9   OBRA-PUBLICA              Dec. 2362: contratos del Cristo
+                                       Monumental (A21)
+  8182  h16  OBRA-PUBLICA              Licitacion 31945: camino San Lorenzo-
+                                       Puente Vaqueros (B2-09)
+  8183  h6   HACIENDA-MUN+NORMA        Dec. 2432: se aprueba la Ordenanza 61 de
+                                       la Municipalidad de La Caldera, que exime
+                                       de tasas el traslado de cadáveres o
+                                       restos humanos de o para el municipio
+  8187  h13  OBRA-PUBLICA+ESCUELA      Dec. 2585: certificado de la escuela de
+                                       Los Yacones (B2-10)
+  8197  h6   CARGOS                    Dec. 2686: Cesar Royo, jubilacion (A12)
+  8198  h6   OBRA-PUBLICA              Dec. 2714: recepcion de la base del
+                                       Cristo, obra 293 (A21)
+  8200  h18  OBRA-PUBLICA              Dec. 2799: insistencia en el Dec. 2362
+                                       (A21)
+  8201  h8   HACIENDA-MUN              Dec. 2814: se aprueba la Ordenanza 58 de
+                                       la Municipalidad de La Caldera,
+                                       modificación de partidas de su
+                                       presupuesto de 1968
+  8201  h11  AGUAS+CARGOS              Dec. 2823: planos del Embalse de Campo
+                                       Alegre (B2-11)
+  8204  h6   OTRO                      Dec. 2866: servicios del personal de la
+                                       Delegación Zonal de Paludismo y Fiebre
+                                       Amarilla en comisiones a General Güemes y
+                                       La Caldera
+  8207  h11  AGUAS                     Dec. 2924: se reconoce a Néstor Lavaque y
+                                       Dolores Fernández de Lavaque la concesión
+                                       permanente de 7,35 l/seg del río La
+                                       Caldera para 14 ha de la finca San Félix,
+                                       en La Calderilla
+  8207  h14  OBRA-PUBLICA+AGUAS        Dec. 2930: Embalse Campo Alegre, aumento
+                                       de 50.000 (A03)
+  8215  h5   AGUAS                     Concurso 32589: agua potable de Vaqueros
+                                       (B2-12)
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+Sin las .jpg no hay md5 ni dhash de lee_trabajo; el control de duplicados se
+hizo por texto (coeficiente de Jaccard sobre trigramas de palabras, umbral 0,6,
+contra la propia edicion y las vecinas). Hojas duplicadas en el Release: la 8138
+trae 40 hojas para una edicion de 20 paginas (tapa y cadena, 4325 a 4344): las
+hojas 2 a 7 repiten las 8 a 13 y las 27 a 40 repiten las 13 a 26; la 8149 trae
+la pagina 4704 dos veces (h34 y h36, coeficiente 0,97, cabecera de h36 mirada) y
+le falta la 4702. Los demas pares de alta coincidencia entre ediciones vecinas
+son avisos repetidos (E.6).
+
+Tinta medida en las 6792 hojas a 25 ppp (mediana 0,70 % de pixeles oscuros): 143
+hojas bajo el 10 % de la mediana. A esa resolucion el impreso palido de algunas
+ediciones da cero sin ser blanco (8096 h5, la licitacion de B2-06, da 0,006 %),
+de modo que la medicion separa mal y no se usa sola. Las 88 hojas sin texto en
+ninguna version se miraron en miniatura: son hojas en blanco con las
+perforaciones del encuadernado, casi siempre la penultima de la edicion, y
+entran en la cuenta de paginas de la tapa (la 7975 declara 16, trae 16 y su h15
+esta en blanco). No se decide si son paginas sin imprimir del original o
+reversos escaneados.
+
+Saldos: ningun resumen de Tesoreria ni balance municipal del departamento en
+1968; la cadena no aplica. Cuadros que tocan el departamento: cinco,
+recalculados (Dec. 7694 y 2930, A03; Dec. 393, A16; Dec. 1240, A22; Ley 4266,
+A31). Subtotales y totales recalculados: 14 (dos columnas del 7694, dos del
+2930, subtotal y total del 393, el total del 1240, tres subtotales y el total de
+la Ley 4266, la suma del Dec. 7714 en A04 y las dos retribuciones del Dec. 2362
+en A21), todos cierran. Ademas, cinco cuentas de control sin total impreso: la
+base del remate de A09, las tres dotaciones por hectarea (A06, A23, A35) y los
+dias de A34.
+
+E.2 · COBERTURA
+Ediciones: 245 de 245 en el Release, todas legibles. Paginas que el Release no
+trae segun la cadena de folios: 109 en 45 ediciones, de una a cuatro en casi
+todas y 7 en la 8050 y 12 en la 8041; ademas la 4702 de la 8149, reemplazada por
+un duplicado. La edicion 7994 (31-1) pierde asi las paginas 382 y 383, donde
+caeria la aparicion del 31-1 del edicto de Getsemani (A06). Detalle por edicion
+en el §1 (columna «aus»).
+
+Saltos de la cadena que no son paginas ausentes: la 8191 declara 20 paginas en
+la tapa (mirada) y la cadena le da 28 (la 8192 abre en la 6065, folio leido en
+nueve hojas); el Release trae 27 hojas. Se declara y no se explica (v16 §8.21).
+Con 28 para la 8191, la cadena cierra en 6880; la suma de las tapas da 6872.
+
+Nivel de lectura: todas las fichas del §A y del B.2 se miraron en la imagen;
+donde un articulo, una firma, un numero de decreto o una cabecera se tomo de la
+capa, la ficha lo dice. Las apariciones repetidas de un aviso se cotejaron por
+texto. Las ausencias que este informe afirma valen para las 6771 paginas
+distintas leidas y no para las 109 que faltan.
+
+E.3 · SIN MENCION Y NO MIRADO
+Citados y no acompañados: el contrato de Hurtado y el Dec. 5539/67 (A01); el
+plano 77 (A09) y el plano Nº 91 (A25); los permisos de cateo que caducan (A24);
+la convocatoria a concurso de la intendencia de aguas (A17); el Dec. 7442/67 de
+las agencias agrarias (A29); el Dec. 3162/64, el contrato del 25-3-1965, el Dec.
+7968/65 y la observacion del Tribunal de Cuentas (A21); el texto de las
+ordenanzas 58 y 61 y de la ordenanza impositiva (A19, A32, A33) y el detalle del
+presupuesto municipal (A15); los planos del embalse de Campo Alegre (B2-11).
+Vacante sin nombre: los cargos de juez de paz titular y suplente de La Caldera
+«se encuentran vacantes» (A11) sin decir quien los dejo; el juez titular de 1967
+fue Andres Lopez Arrieta (informe de 1967), y en 1968 su nombre aparece solo en
+una lista numerada sin relacion afirmada con el cargo (8052 h9). Nombramiento
+que solo consta por su revocacion: ninguno. Actos que se esperaria y no aparecen
+en lo leido: el resultado del remate de A09, la adjudicacion de A30, la mensura
+de A28 y la resolucion de A25.
+
+No mirado: los cuerpos de los actos del §B que no tocan el departamento, las
+nominas largas de pensiones y personal fuera de los renglones del departamento,
+y las 258 hojas «a ojos» del pre-informe, que no tienen candidato del anillo 1
+ni del anillo 2 del departamento (se leyeron sus textos, no sus imagenes).
+
+E.4 · FIRMAS Y AUTORIDAD
+Gobernador en la tapa, en la imagen: «Gral. (R.E.) HECTOR D'ANDREA» hasta la
+8042 (15-4); «Ing. HUGO ALBERTO ROVALETTI» desde la 8043 (16-4). El traspaso, en
+la imagen de 8052 h16: el 15-4-1968 «El Gobernador Interino» (DIAZ VILLALBA
+(Int.), refrendo «Soto (Int.)») dicta el Dec. 9148, que declara huesped oficial
+al ministro de Salud de Jujuy que viene a «asistir a los actos de asuncion al
+Mando Gubernativo» de Rovaletti, «designado recientemente Gobernador de la
+Provincia de Salta, por el Poder Ejecutivo Nacional», y el Dec. 9149, que visto
+el Decreto Nacional Nº 1895 manda entregar el mando; el mismo dia Rovaletti
+firma el Dec. 1 (capa), que da por asumido el mando, y el 2, que nombra a Diaz
+Villalba ministro de Gobierno.
+
+La serie de decretos se reinicia con el cambio de gobernador: la serie de
+D'Andrea llega al 9149 (15-4-1968) y la de Rovaletti empieza en el 1 (15-4-1968)
+y llega al 3159 del 18-12 en lo leido (capa). Los dos extremos del corte estan
+en la misma hoja y el mismo dia; se declara el hecho y no se explica el regimen
+(v16 §8.21); la pieza que lo resolveria es el Registro Oficial del año.
+
+Ministros, en la imagen de las tapas: Gobierno, Cnel. (R.E.) Mario Eliseo
+Cabanillas hasta la 8018 (8-3; la de la 8018 por la capa, la de la 7973 mirada);
+Cnel. (R.E.) Ing. Militar D. Mario C. San Martin «(Interino)» de la 8019 (11-3)
+a la 8029 (25-3); Dr. Julio Diaz Villalba desde la 8030 (26-3). Economia: San
+Martin hasta la 8042; Cont. Publ. Nac. Ruben A. Cardon «Interino» de la 8043 a
+la 8058 (8-5); Ing. Industrial Ricardo M. Escudero Gorriti desde la 8059 (9-5).
+Asuntos Sociales: Dr. Jose Roberto (Ramon) Novo Hartmann hasta la 8020 (12-3);
+Dr. Roberto Alfredo Cruz de la 8021 (13-3) a la 8042; Diaz Villalba «e interino
+de Asuntos S. y S. Pub.» de la 8043 a la 8054; Dr. Carlos Alberto Alvarado desde
+la 8055 (3-5).
+
+Interinatos por las firmas, en la imagen salvo donde se dice: «CABANILLAS
+(Int.)» como gobernador interino en febrero (8006 h22) y «El Gobernador
+Interino» el 8-3 (A08); «Cabanillas» refrendando decretos de Economia en enero
+(A03, A04, capa); «Cardon (Int.)» en Economia en diciembre de 1967 (A02) y en
+octubre de 1968 (A06, capa); «DIAZ VILLALBA (Int.)» como gobernador interino el
+15-4, en agosto (8120 h15, con «Escudero (Int.)» en Gobierno) y el 4-10 (8166
+h14 y 8167 h7, firmas de los decretos que preceden a A29 y A30); «Museli (Int.)»
+en Gobierno a fines de noviembre (A33, A21). Por la capa, el rotulo «Gobernador
+Interino» aparece en decretos publicados en todos los meses salvo junio. La Ley
+4266 la dicta el gobernador, que «Sanciona y Promulga con fuerza de LEY», con la
+autorizacion del decreto nacional 5884/68 y el Estatuto de la Revolucion
+Argentina (A31). Fechas de los reintegros: no se fijan (v16 §2.5bis).
+
+Serie de decretos alrededor de los actos del §A: sin saltos ni retrocesos en los
+pares mirados; los numeros que la capa leia mal (por ejemplo «27114» por 2714 en
+el sumario de 8198) los corrige la imagen.
+
+E.5 · CORTES Y COLUMNAS
+Columna perdida: no se encontro ninguna. Se cotejaron las columnas de las 80
+hojas miradas contra el OCR propio o la capa (89 columnas, contadas las hojas de
+cuadro a todo el ancho como dos); en todas el texto esta en la version, aunque
+con el orden de bloques alterado en cuadros (7988 h10-h11, 8114 h12, 8070 h7) y
+con las dos columnas entremezcladas en 8183 h6 (A32). Cortes: «Cal- / derilla»
+(7989 h9), unido; el borde izquierdo de la columna de 8036 h8 (A11) cortado en
+el escaneo, sin perdida de la mencion; «la calde- / [cabecera de pagina] / ra»
+del aviso 31277 en 8143 h19, que solo la difusa encontro.
+
+E.6 · REPETICIONES
+Avisos del departamento repetidos, contados por texto: 28863 (nueve; la decima
+caeria en las paginas ausentes de la 7994), 29127 (diez), 30871 (diez), 31277
+(diez), 31408 (tres), 31615 (diez), 31719 (siete). Siete avisos. Salvo el 28863,
+la cuenta por texto coincide con los dias habiles de la marca e). Fuera del
+departamento, en B.2: 30572 (cinco), 31945 (cinco), 32589 (tres). La escritura
+30625 de A18 sale una sola vez.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+Falsos positivos del anillo 1, todos con contexto inequivoco: la licitacion
+publica 12/68 del Establecimiento Azufrero Salta, estacion Caipe, por «una
+caldera» (8178 a 8187, diez hojas); «una caldera para derretir asfalto» y «otra
+caldera similar» de un remate de maquinas (8073 a 8075); «salas de caldera y
+maquinas» de un reglamento (8110 h26); «Obrero Enc. Caldera» del Policlinico San
+Bernardo (8040 h9); «calderas» de una usina de Pichanal (8006 h36); «Calderon»
+(29), «caldo», «Caldiroli», «Caldhaqui S. A.»; «alcalde» (8026 h14-h15); «calde
+España» por calle España (8026 h19); «recalde» (un apellido, 8085 h16); «cal
+deron», una calle (7979 h6). No se agregan al config.
+
+Falsos negativos medidos: «la calde- / ra» de 8143 h19 (solo la difusa);
+«calderz» de 8180 h9 (la difusa; la literal lo devuelve por otro renglon de la
+misma hoja); la capa destruye nombres que deciden fichas sin tocar «Caldera»
+(«Riequena», «Prusas», «103.143» por 703.143). La difusa rescato en 1968 una
+aparicion que ninguna otra pasada daba.
+
+E.8 · FIDELIDAD NUMERICA
+Todos los numeros de decreto, importes, fechas y expedientes de las fichas se
+miraron en la imagen, salvo los que la ficha marca como capa. Cifras con letras:
+coinciden en todos los importes de las fichas que las traen. Recalculos: 14
+sumas, todas cierran (E.1). Dudosos y su control: el «382» de la escuela de A04,
+que la cita cruzada da como 332 sin decidir si el original imprime 382 (pedido
+de lectura: el renglon de 7989 h9-h10); el «88l1» de A05, decidido por la serie;
+el ultimo digito de la tapa 8031, decidido por la serie; la cabecera «1963» de
+8040 h8, decidida por la tapa; el numero del decreto de B2-04 (8891), dado por
+la serie y no leido. Base del remate de A09: 3.333,32 contra 3.333,33 de los dos
+tercios de 5.000, sin valuacion impresa que lo decida.
+
+E.9 · CONTRADICCIONES Y ERRATAS
+Del original, transcritas y no conciliadas: el Dec. 7521 aprueba la recepcion
+provisoria de la obra 283 en un VISTO que dice definitiva (A02); «Administracin»
+(A03); «382» por 332, si es del original (A04); «Ley 4040/66» y «Leyes 1204 y
+4094/66» en la misma serie de pensiones (A05); Martel y Martell, la misma
+persona en el mismo año (A06, A18); Getsemani «de su propiedad» en el decreto de
+octubre (A06) y vendida por Martell en diciembre de 1967, con «libre de
+gravamen» y un arriendo inscripto a favor del vendedor en la misma escritura
+(A18); «Barrozo» en 1968 y «Barroso» en el informe de 1967 (A10); «Fincha»
+(A23); el rio «Calchanio», corregido a «Chalcamio» y recorregido a «Chalchanio»,
+que las apariciones siguientes siguen imprimiendo «Calchanio» (A23); la base del
+Cristo como obra 293 en 1968 y como obra 290 en 1967, cuando la 293 de 1967 es
+el puesto sanitario de Betania (A21); dos «articulo segundo» seguidos en el
+primer contrato del Cristo, por la capa (A21); «Corregido "agosto", vale» en el
+propio aviso 31277 (A25). Tapas: «Satla» (8038); la 8191 declara 20 paginas y
+ocupa 28; numeros sin «Nº» o sin punto (§1).
+
+E.10 · LIMITES
+1. Paginas ausentes del Release segun la cadena: 109 en 45 ediciones, mas la
+4702 de la 8149. Ninguna ausencia del informe vale para ellas.
+
+2. La 8138 trae 20 hojas duplicadas; se leyo por texto que no falta ninguna de
+sus 20 paginas, pero solo con la capa.
+
+3. Una sola version en 6642 hojas: lo que falla con una sola version es la
+palabra suelta (v16 §2.3); se miro en la imagen toda palabra que decide una
+ficha.
+
+4. Techo de 150 ppp en 6520 hojas: los digitos 0, 3, 5, 6, 8 y 9 se dan por
+leidos solo con un control (flujo §5.6); uno queda sin decidir (el 382/332 de
+A04).
+
+5. Sin .jpg de lee_trabajo: sin md5 ni dhash; duplicados por texto.
+
+6. tesseract sin spa en la sesion: no hay segunda version propia.
+
+7. El listado de assets del Release no se puede leer desde la sesion; los
+nombres salen de estado.json.
+
+8. La 8191 no cierra con la cadena de folios (E.2): se declara, no se explica.
+
+9. Diecisiete dias habiles sin edicion sin explicacion en el corpus.
+
+10. Los numeros de nueve decretos de las fichas (7745, 509, 2137, 2777, 7905,
+8637, 2686, 393, 2924), dos de B.2 que no se leyeron, el renglon de Royo (A12),
+los articulos de A19, A20 (1196) y A21 (2799) y las firmas que la ficha marca se
+tomaron de la capa.
+
+11. Las nominas de pensiones de seis decretos no desglosan por departamento: no
+se puede contar cuantos beneficiarios de La Caldera hay (A05).
+
+12. El config con que corrio lee_auto.py estaba un año atrasado (hasta 1966):
+las pasadas del pre-informe no traen lo que agrego 1967. La sesion rehizo el
+anillo 2 y el de actores con el vigente; el pre-informe no se rehace en sesion.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. El config del Release de 1968 es el de 1966 aunque estado.json registra
+«config: 2026-10-01» para la descarga: la fecha de version es la misma en los
+dos archivos (los dos dicen 2026-10-01) y solo «hasta» los distingue. Se propone
+que descargar compare «hasta» y no solo «version» antes de procesar, y que
+estado.json guarde los dos.
+
+2. Un PDF del Release puede traer paginas repetidas en lugar de las que faltan
+(8138, 8149) y el conteo de hojas no lo ve. Se propone que lee_auto.py compare
+los folios leidos en la cabecera de cada hoja y avise de los repetidos, y que el
+recuento final lleve la clave hojas_duplicadas.
+
+3. El cambio de gobernador reinicia la serie de decretos (9149 a 1 el
+15-4-1968). Se propone que el pre-informe corte la serie por gobernador para el
+control de vecinos ±3 y que la rubrica lo prevea como caso de §8.21.
+
+4. Las hojas en blanco (88 en 1968, casi siempre la penultima de la edicion)
+entran en la cuenta de la tapa y lee_auto.py no las distingue de una hoja sin
+capa. Se propone contarlas aparte en el §1 y en el §R.
+
+5. A 25 ppp la medicion de tinta confunde el impreso palido con la hoja en
+blanco (E.1). Se propone medir a 50 ppp con umbral 160.
+
+6. Config entregado (lee_config.json, version 2026-10-01, hasta 1968): actores
+nuevos con origen 1968 y edicion (Martel, Gareca, Martell de Beccalli,
+Chiericotti, Berruezo, Berejnoi, Farfan, Rodo, Arias Figueroa, Rodriguez Juan,
+De Zuani, Barrozo, Avila Julio Cesar, Flores Italo Alberto, Molina, Arias Zenon
+Normaldo, Diaz Juan de la Cruz, Serrey, Vojdani Gouri, Valdez Ramon Humberto,
+Durand, Iramain Leonardo Fermin, Avila Jose Leon, Prusis, Duran Eriberto y
+Nestor, Carrizo, Arias Odriozola, Requena y otros); los demas del año ya
+estaban. 20 terminos de anillo 2 (los 18 faltantes del §2 y dos deformaciones
+del OCR, «la calderz» y «la caldesa»); numeros de acto y de aviso del año.
+Falsos positivos: ninguno agregado (v16 §12).
+§R · RECUENTO
+-------------
+anio: 1968
+ediciones_desde: 7973
+ediciones_hasta: 8217
+ediciones_presentes: 245
+ediciones_ausentes: 0
+hojas_presentes: 6792
+hojas_declaradas: 6872
+hojas_ausentes_estimadas: 109
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 17
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: release-pdf
+versiones: 2
+actos_departamento: 53
+actos_dominio: 4
+actos_hacienda_municipal: 5
+planos_publicados: 0
+planos_citados_departamento: 2
+balances_municipales: 0
+cuadros_publicados: 5
+subtotales_recalculados: 14
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 89
+hojas_miradas: 80
+avisos_repetidos_departamento: 7
+falsos_positivos_anillo1: 13
+limites_declarados: 12
+nivel_lectura: imagen
+pdf_release: 245
+avisos_release: 0
+estado: COMPLETO
