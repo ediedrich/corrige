@@ -1671,3 +1671,35 @@ Restan: tres casos en el aspecto 3 (−15). Ninguno en el 7: **0 errores de cons
 | Privacidad: personas nombradas en las 50 líneas, cruzadas con contextos sensibles (P102) | 50/50 líneas | Ningún particular nombrado junto a remate, ejecución, cesantía, pensión o embargo: los remates de 1967 y 1968 van sin nombres de las partes, el subcomisario cesanteado y los pensionados sin nombre. Nombrados: funcionarios (D'Andrea, Rovaletti, Julio González, Gómez, Serrey, Satué, Álvarez César, Brandan, Borja, Durand), los escultores, la contratista, los concesionarios de agua y los que promueven juicios de dominio (como en las rondas 52, 55 y 56) |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `3b5be9e` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 873 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas; 2 cajas desbordadas, las mismas |
+
+## Ronda 58 — incorporación de dos láminas (02/10/2026)
+
+Tipo: **incorporación** (CORRIGE 3.6), a pedido de Eduardo: series de datos para `mapas_caldera` y láminas para el libro. Base: commit `ea71712` de `ediedrich/dispositivo-caldereno` (la ronda 57 registrada); parche `ronda-58.patch` (commit `359d4a9` en la sesión; aplica con `git am` sobre `ea71712`, probado en un clon limpio de GitHub: árbol `bf0f723`). Acompaña un parche de `mapas_caldera` (`mapas_caldera-cobertura-y-agua.patch`, commit `9e72a33` sobre `876f8fb`), que `registrar` no reconoce y se aplica a mano: **el libro nombra dos scripts que sólo están publicados cuando ese parche se sube**. **Denominador: 25.139 líneas** (25.120 + 19: 16 en 17-aguabaja, 2 en 02-metodo y 1 en F).
+
+### Qué se incorporó
+
+| Lámina | Datos | Script | Dónde |
+|---|---|---|---|
+| `fig:boletin`, rehecha: **1908–2026** en dos paneles | A: `datos/boletin/ediciones_por_anio.csv`, ediciones por año en los *Releases* de `boletines-salta`, copiadas de `estado/estado.json` de `corrige` (actualizado el 02/10/2026 a las 00:10); B: el índice de 1910–1943 de siempre. `estado_lectura.csv` pasa a seguir el apéndice F entero: 1947 y 1949–1957 sobre la imagen, 1948 barrido con lectura parcial, 1958–1968 con hojas sin mirar enteras, 1969–2012 y 2016–2026 puntuales, 2013–2015 por término | `scripts/grafico_boletin.py` | 02-metodo:33–44 (epígrafe nuevo); F:195 |
+| `fig:aguaserie`, **nueva**: los actos sobre derechos de agua del departamento, 1951–1968, y el municipio | `datos/agua/actos_agua_1951_1968.csv`: dieciocho filas, transcriptas de 16-redes:768–794 y 17-aguabaja:281, con la línea de cada una; 134 actos, ninguno con el municipio; 1956 sin desglose | `scripts/grafico_agua_serie.py` (comprueba que decretos más edictos den el total y que la columna del municipio sume cero) | 17-aguabaja:281 (remisión) y 282–297 (figura); F:196 |
+
+No se hicieron mapas: ningún dato nuevo de 1949–1968 se puede ubicar en el catastro vigente sin inferencia (los catastros de los actos son los de la época, y el libro no afirma su correspondencia con las partidas de hoy).
+
+**Recuentos del aparato que cambian**: 41 → 42 láminas (00:75 dos veces, 00:78, F:94 y F:237); 20 → 21 propias, 9 → 10 gráficos y 17 → 18 reproducibles (00:75, F:133, 136–137, 208, 218–221). La lámina de los actos de agua cuenta como reproducible **una vez subido el parche de `mapas_caldera`**.
+
+### Lectura y controles
+
+La sesión escribió y releyó enteras las **43 líneas** que toca la ronda (F:94, 133, 136–137, 195–196, 208, 218–221 y 237; 00:75 y 78; 02-metodo:33–44; 17-aguabaja:281–297), contra las dos tablas y las dos figuras. Siguen vigentes las 25.096 que no se tocaron: **25.139 de 25.139 (100,0 %)**. Un auditor que no las escribió las leerá en la próxima `MEJORA`, que empieza por este parche.
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Filas de `actos_agua_1951_1968.csv` contra el libro | 18/18 | Cada total y cada desglose coinciden con 16-redes y 17-aguabaja; 1956, «tres» sin desglose en los dos capítulos |
+| Hitos de la franja inferior de `fig:aguaserie` | 6 actos | 5230-E (Nº 4438), 4655-E (Nº 4412), 9566-E y 9541-E (Nº 5469), 18570-E (Nº 6421), Ley 4032 (Nº 7430) y 800 (Nº 8090), con la cita que les da el libro |
+| Ediciones por año contra `estado.json` | 119 años | 103 con *Release* y 16 sin él (1989–2001, 2003, 2004, 2006); 2005 con 123 |
+| `control_figuras.py` sobre el libro | 21 láminas propias | 18 con script declarado, 3 sin él (las mismas de siempre, P10) |
+| Remisiones, `\pendiente{}`, ítems de D | — | Sin cambios: 52 y 284 |
+| Compilación | libro entero, base `ea71712` más este parche, en un clon limpio | 875 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas de antes (una tercera, del ítem nuevo de F, se corrigió antes de compilar la versión entregada) |
+
+**Atrapados por control**: 1 (la caja desbordada del ítem de F, detectada por la compilación y corregida antes de entregar). Nota final (rúbrica, tipo incorporación, sin tope de cobertura y sin aspecto 7): **87,5**, igual a la de la ronda 57; ninguna nota por aspecto cambia, y el aspecto 13 sigue en 94 hasta que se suba `mapas_caldera`.
+
+**Pendientes que cierra** (en la parte de `fig:boletin` de cada uno: marcar los años leídos y extender el título): P37, P44, P51, P55, P60, P69, P75, P81, P88, P95, P103 y P109 quedan **resueltos en su punto sobre `fig:boletin`** y siguen abiertos en lo demás (fig:agua, fig:parajesnom, fig:votado). **Pendientes nuevos**: P117 (fuentes): subir el parche de `mapas_caldera` (`git am` y `git push`), o agregar el repositorio a las fuentes de la sesión para que una sesión pueda subirlo; hasta entonces dos láminas citan un script que no está publicado. P118 (herramientas): `estado.json` da a 1950 `libro.nivel: barrido` y a 1947 y 1949 `imagen`, mientras el apéndice F da 1947 y 1949–1957 leídos sobre la imagen; la lámina sigue a F.
