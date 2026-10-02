@@ -1462,3 +1462,104 @@ Restan: dos errores de consistencia en el aspecto 7 (hallazgos 1 y 2: 2 en 29,0 
 | Privacidad: personas nombradas en las 55 líneas, cruzadas con contextos sensibles | 55/55 líneas y búsqueda en el libro entero de los ejecutados de los remates de 1964 y 1965 | Tres ejecutados nombrados (hallazgos 5 a 7; tras la fase 6, ninguno en el libro). Sin nombre: el subcomisario cesante, el sargento y los agentes que renuncian, la auxiliar de servicio, los pensionados, el jubilado de la Municipalidad, las enfermeras. Nombrados sin contexto sensible: funcionarios (Mogro, García, Brandan, Torrens Santigosa, Villada, Satue, Hernández, Muños, Borja, Mangogña), el párroco, los escultores y la comisión del Cristo, contratistas, el loteador, los solicitantes de agua y de posesión, el presidente del centro gaucho y el transportista del préstamo (como en la ronda 52). Las licencias «por enfermedad» de Torrens Santigosa no pasan al libro |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `ff46efc` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 855 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
+
+## Ronda 56 — auditoría con fase 6 (01/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1966. Base: commit `0d141b6` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1966, sobre `21f94c5`, la ronda 55), con la fase 6 en `ronda-56.patch` (commit `2d89b02` en la sesión; aplica con `git am` sobre `0d141b6`, probado en un clon limpio de GitHub: árbol `4916b6a`). **Denominador medido: 25.105 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 55 (25.096 de 25.096, sobre `ff46efc` con la fase 6, que es `21f94c5`) se trasladaron por diff a `0d141b6`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1966 agrega 9 líneas (5 en A, 2 en C y 2 en F) y modifica 29 en 19 archivos: caducan 38**, y quedan **25.067 vigentes sobre 25.105 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `0d141b6`)
+
+Se leyeron **las 38 líneas caducas, enteras, por la sesión**, sin subagentes (una, F:73, es un renglón en blanco), contra el informe LEE 1966 (`BO-Salta-1966_7495-7734_la-caldera_LEE-1966_2026-10-01.txt`), bajado de `corrige/lee/1966/`: el §0, el §1 con su tabla de 239 ediciones, el §2, las 25 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, §P, E.1 a E.10, §F y §R; y el `amplia-1966.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 380–384 | 5 | sesión |
+| ape/C-normativa.tex | 118–119 | 2 | sesión |
+| ape/D-pedidos.tex | 177, 191–192, 253 | 4 | sesión |
+| ape/F-fuentes.tex | 26, 72–73, 75 | 4 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470, 531 | 2 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 50, 235 | 2 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): F:22–27 (la declaración de los tramos), 04:3655–3658, 22-prospectiva:141–143, 26:69, 21:64, 04:2960 y A:385 (fila de 1970); y, por búsqueda, los pasajes de las filas de A que las líneas nuevas citan (358, 362, 368, 371, 373, 375 y 379).
+
+**Esta ronda: 38 líneas nuevas**, 72.774 bytes sobre 2.758.692, que en las 861 páginas de la base equivalen a **22,7 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `0d141b6` cae dentro de estos tramos.
+
+Acumulado: 25.067 vigentes + 38 = **25.105 de 25.105 (100,0 %)**. La fase 6 toca 9 líneas: ocho dentro de lo leído en esta ronda (A:381, 382 y 383; F:72; 04:4599; 17:281; 18:470; 21:182) y F:25, vigente desde rondas anteriores y releída entera en ésta; no cambia el largo de ningún archivo: **25.105 de 25.105 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1965 y 1966 de `boletines-salta`)
+
+Imágenes de los PDF del Release, a 200–400 ppp, recortadas por la posición de la capa o, donde la hoja no tiene capa (casi todo 1966), por coordenadas sobre una vista entera a 60 ppp.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 7708 | 10 | Decreto 1684, considerando | «resulta insuficiente para un efectivo bombeo ya que la napa freática en el período máximo de crecimiento se encuentra aproximadamente a 25 metros». Coincide (A:380, 26:235) |
+| 7705 | 9 | Decreto 1597, considerando | «las medidas de la base a cuya construcción se había obligado eran de menores dimensiones que el pedestal de la estatua»; 6,10 x 5,20 m. Coincide (A:381) |
+| 7705 | 8 | Decreto 1597, visto y primer considerando | La prórroga se funda «en la serie de inconvenientes que impidieron el normal cumplimiento del plan de trabajo originario», «en la falta de pago de certificados» y en las medidas de la base: **tres razones, y A:381 daba una** (hallazgo 6) |
+| 7576 | 8 | Decreto 13341, considerando | «se han presentado diversos casos» de rabia paresiante. Coincide (A:384) |
+| 7529 | 7 | Decreto 12389, art. 1 | «en reemplazo del doctor Alfredo Satué, en uso de licencia reglamentaria»: **«Satué», con tilde**; 04:4599 lo citaba sin ella (hallazgo 3) |
+| 7529, 7530, 7518, 7519 | 2, 17, 2, 18, 22, 3 | Cabeceras de folio | 7529 h2 «PAG. 426» y h17 «PAG. 441» (la edición va de la 425 a la 442); 7530 h2 «PAG 414» y h18 «PAG. 430» (va de la 413 a la 432); 7518 h22 «PAG. 286»; 7519 h3 «PAG. 301». **La 7530 repite treinta números, del 413 al 442, y no doce** (hallazgo 1). Con treinta la cadena cierra: 5.038 − 10 + 30 = 5.058 = 4.975 + 65 + 18 |
+| 7675 | 5 | Edicto 24647 | «tiene solicitado agua para abastecimiento de población», sin fecha del pedido (expediente 6231/U/66); 6.000 personas, 10,41 l/s, Mercurio S. A., decreto 9877 del 26-XI-59. **El edicto no fecha el pedido** (hallazgo 4); lo demás coincide (A:383, 17:281) |
+| 7666 | 7 | Decreto 777 | Empieza al pie de la columna 1 y termina en la 2 de la misma hoja (pág. 3271); la hoja 8 trae los decretos 779 a 782. **No ocupa la hoja 8** (hallazgo 5) |
+| 7601 | 14 | Decreto 13811 | \$416.078, tres pagarés de \$50.000, \$1.050.000, \$483.922, artículos 5 y 6 del convenio, cinco miembros. Coincide (A:381) |
+| 7732 | 8 | Decreto 2081, arts. 1 y 2 | \$400.000 por la tercera y cuarta secciones; \$216.078 de la cuenta especial y \$183.922 del plan de obras. Coincide (A:381) |
+| 7672 | 9 | Decreto 973 | Renuncia del juez de paz titular de La Caldera. Coincide (A:382, 18:470) |
+| 7520 | 8 | Decreto 12169 | Columnas 1 y 2 de la hoja. Coincide (A:383) |
+| 7477 (1965) y 7527 | 5 y 5 | Grafía del contratista de la base (P106, punto 2) | La 7477 imprime «Bressannutti» dos veces (considerando y art. 1 del 11307); la 7527, «BRESSANUTTI» (12275). **La fila de 1964--1965 transcribe bien su fuente**; la grafía cambia entre ediciones del original. Sin cambio en el libro |
+
+Son **4 citas entre comillas del libro cotejadas en la imagen** —las cuatro con texto que agregó el AMPLÍA; la del 1684 está dos veces, en A y en 26, y se cuenta una—, **una con diferencias** (la tilde de «Satué»), y **datos sin comillas en 9 hojas** más las cabeceras de folio de 4 ediciones, de donde salen los hallazgos 1, 4, 5 y 6. Con 4 citas el cotejo es parcial (la rúbrica pide 10). No se cotejaron: 7557 h6, h7 y h10 (pensiones, cooperadoras, contratos de Tolaba y Campos), 7558 h13–14, 7582 h6 y h13, 7551 h11, 7554 h8, 7579 h12, 7585 h10, 7590 h15, 7598 h7–8, 7638 h14, 7649 h14, 7583 h6–7, 7616 h16–17 y h19, 7625 h3, 7690 h5, 7692 h12–13, 7696 h10, 7717 h7, 7724 h12 y 7518 h16–17.
+
+### Hallazgos (seis, todos aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | F:72 | «con un salto de diez números tras la 7518 y doce repetidos en la 7530»: la 7530 vuelve a la página 413 cuando la 7529 había llegado a la 442, y repite treinta números. Con doce la cadena no cierra con lo que el mismo párrafo dice (5.038 − 10 + 12 = 5.040, contra 4.975 hojas + 65 faltantes + 18 de la 7553 = 5.058); con treinta, sí. El dato viene del §1 del informe (425 − 413) | 7 | «treinta repetidos ---la 7530 vuelve a la 413 cuando la 7529 había llegado a la 442---» |
+| 2 | F:25 | «Cincuenta y un tramos se relevaron de otro modo», en la frase anterior a la que suma 42 + 1 + 9 y a la del «tramo quincuagésimo segundo»; 00:43 y 02:28 dicen cincuenta y dos. El índice del AMPLÍA registra las formas «cincuenta y un» de 03, 04, 18 y 22, y no ésta | 7 | «Cincuenta y dos tramos» |
+| 3 | 04:4599 | Cita del 12389 con «Alfredo Satue»: la imagen dice «Satué». El TEXTO del informe va sin tildes (desvío declarado en su §0), y el control de citas del AMPLÍA (P74) no puede verlas | 4 | «Satué» dentro de la cita; la prosa del libro conserva «Satue» |
+| 4 | A:383, 17:281 | «en octubre la Universidad Católica de Salta pide»: octubre es la publicación del edicto, que no fecha el pedido («tiene solicitado», expediente de 1966) | 3 | «en octubre se publica un pedido de la Universidad Católica de Salta, que el edicto no fecha» |
+| 5 | A:382, 18:470 | Decreto 777 citado «h. 7 y 8»: está entero en la hoja 7 (7666, pág. 3271). La FUENTE de la ficha A18 del informe dice «h7 col. 1 y h8 col. 2 (pag. 3271)» | 1 (no resta fuera de la muestra) | «h. 7» en los dos lugares |
+| 6 | A:381 | «amplía en 150 días el plazo de la base, porque al pedir datos el contratista había observado…»: el 1597 da tres razones de Arquitectura y una es la falta de pago de certificados, que la fila callaba | 10 (escala general; no baja el aspecto, que está en 70 por su criterio) | «con tres razones de Arquitectura: los inconvenientes del plan de trabajo, la falta de pago de certificados y que, al pedir datos, el contratista había observado…» |
+
+Más una precisión sin aspecto propio: 21:182 decía que en 1966 la Provincia «paga el taselaje»; paga dos cuotas, \$750.000 de los \$1.050.000 adeudados (14052 y 2081), y pasa a decir «paga dos cuotas del taselaje».
+
+Restan: dos errores de consistencia en el aspecto 7 (hallazgos 1 y 2: 2 en 22,7 páginas = 8,8 por cada 100, escalón > 8 → 30); un caso en el 3 (−5); una corrección silenciosa en el 4 (−3, por debajo del techo de 90 del cotejo parcial).
+
+**Los seis están en material que la propia auditoría incorporó** (AMPLÍA 1966, `0d141b6`; el 2 es una línea que el AMPLÍA debía actualizar y no actualizó), y **ninguno fue atrapado por un control automático** antes de llegar al libro. Los controles de P74 (citas literales en el TEXTO del informe) y P102 (nombres junto a remates y cesantías) corrieron y funcionaron sobre lo que miran: ninguna persona privada nombrada en contexto sensible. Se escaparon un recuento copiado del informe sin rehacer la cadena (1), una mención del total de tramos con mayúscula inicial (2), una tilde que el TEXTO del informe no transcribe (3), una fecha de publicación leída como fecha del pedido (4), una hoja copiada de la FUENTE del informe (5) y una causa elegida entre tres (6).
+
+**Descartados (falsos positivos, 5).** Que el Satue de 1966 sea el interino de 1965 (04:4599, A:380): mismo nombre en la misma plaza a siete meses, y el 12389 lo da como titular en licencia. «Tres cateos de dos mil hectáreas» (A:384): dos edictos no declaran la superficie, pero los tres polígonos cierran en 4.000 × 5.000 m (recalculado). «Cuatro órdenes de servicio» de la obra 127 (A:380, 26:235): el 13563 aprueba las órdenes 2 y 1 de las obras 127 y 174 «respectivamente», y la 1 de la 127 es la del 13397. «Es el único acto hallado del año sobre las autoridades del municipio» (A:382): el 973 es de la justicia de paz y el 13049 y el 13484, del fisco municipal. «El presupuesto … vuelve a ser del año» (15:185): el 13484 dice «correspondiente al año 1966» y el anterior era del ejercicio 1964/65.
+
+**Pendientes nuevos.** P107 (lee, 1966): corregir el informe LEE 1966 —§1, la 7530 repite treinta números (413 a 442) y no doce, con lo que la cadena cierra (7529 h17 «PAG. 441»; 7530 h2 «PAG 414», h18 «PAG. 430»); A18, la FUENTE del 777 es 7666 h7 cols. 1-2 (pág. 3271), no h8; A04, el TEXTO pierde la tilde de «Satué» (imagen), que es parte de la grafía del original; B2-03, el edicto no fecha el pedido («tiene solicitado»); A03, la NOTA debería registrar que el 1597 da tres razones a la prórroga—. P108 (herramientas): tres controles más para AMPLÍA (y para la rúbrica AMPLÍA v2), extensión de P74, P86, P94 y P102: (1) toda cita que lleve una palabra con tilde o un nombre propio se coteja en la imagen, porque el TEXTO del informe va sin tildes; (2) la búsqueda de los recuentos de tramos y ventanas corre sin distinguir mayúsculas («Cincuenta y un»); (3) toda cifra de la cadena de folios que el libro copia se comprueba con la cuenta del año (último folio − saltos + repetidos = hojas + faltantes + ediciones ausentes) y un edicto se fecha por su publicación salvo que el texto fije la del pedido.
+
+**Pendientes revisados sin cerrar.** P106: su punto 2 queda resuelto sin cambio en el libro (7477 h5 imprime «Bressannutti» y 7527 h5 «BRESSANUTTI»: la grafía varía entre ediciones del original, y la fila de 1964--1965 transcribe la suya); siguen abiertos sus puntos 1, 3, 4 y 5. P54 (1966 no nombra el establecimiento de salud del pueblo). P100 (1966 queda en barrido con el criterio de F). P103, P104 y P105 (láminas, H y E, pedidos de D de 1966: fuera del alcance de una ronda de auditoría).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.096/25.096 líneas vigentes en `21f94c5` | 25.067 vigentes, 38 caducas por el AMPLÍA 1966 |
+| Superlativos, cierres y ausencias sobre los temas de las fichas de 1966 (Cristo, taselaje, Iramain, Trucco, rabia, Correos, cooperadora, San Cayetano, Linares, Registro Civil, Mogro, juez y juzgado de paz, comisión municipal, intervención federal, pensiones, cateo, Juanita, «Argentina», Nieve, Hoygaard, Satue, médico zonal, consultorio externo, Vialidad, Gallinato, chapas, fiestas patronales, ordenanza impositiva, presupuesto de la Municipalidad, Universidad Católica, Castañares, Tolaba, obra 127, escuela nacional, Mojotoro, Calderilla, Lesser, Yacones, D'Andrea, Durand), en oraciones que no nombran 1966 ni un año posterior (repaso de ventana) | 66 coincidencias en el libro entero, todas leídas | Ninguna desmentida por 1966. Conservan su universo: A:369 (El Gallinato, la única de las veintidós localidades de la Ley 3930), 04:2327 (escuela nacional, archivo temprano), 18:513 (urna anulada de un año), A:382 y 04:4599 («hallado del año») |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 323/323 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Recuentos de 1966 (A:380, F:26 y 72, 00:43, 02:28, D:177) contra el §0, el §1 y el §R del informe | 1 año y la tabla de 239 ediciones | Tabla del §1: 239 ediciones, tapas 5.038, hojas 4.975, faltantes 65 en 30 ediciones (19 de una, 8 de dos, 7605 de cuatro, 7647 de ocho, 7629 de dieciocho). Cadena: tres discontinuidades (7518→7519, +10; 7529→7530, −30; 7552→7554, la 7553 con 18). Cierra con 30 repetidos y no con 12 (hallazgo 1). Tramos: 42 + 1 + 9 = 52 (hallazgo 2 antes de la fase 6); hueco 1967–2012: 46 años; hojas sin mirar por año en 1958–1966: de 171 a 764. Cierran después de la fase 6 |
+| Aritmética de 1966 | 9 cuentas | Chapas: 150 × 445 = 66.750. Cristo: 416.078 + 3 × 50.000 = 566.078; 1.050.000 − 566.078 = 483.922; 566.078 − 350.000 = 216.078; 216.078 + 183.922 = 400.000; pagado en el año 350.000 + 400.000 = 750.000 de 1.050.000. Cateos: 2.900 + 2.100 = 5.000 al norte contra 5.000 al sur, 4.000 × 5.000 m = 2.000 ha (los tres). Cadena de folios: 5.038 − 10 + 30 = 5.058 = 4.975 + 65 + 18. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 56 | 50 de 169 oraciones con cifra en las 36 líneas con texto que las tienen | **49/50 con fuente localizable**: 31 con la cita en la oración o en el párrafo, 15 declaraciones de cobertura cuya fuente es el apéndice F y 3 de método o de contexto con la fuente en el párrafo; sin fuente, otra vez 02:97 («se crea el municipio de Vaqueros, se expropia el Campo Alegre, se dicta el régimen de loteos de 1973…»), texto anterior al AMPLÍA. 98 % → 82. El hallazgo 5 cae fuera de la muestra |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa en las 38 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 38 líneas, cruzadas con contextos sensibles (P102) | 38/38 líneas | Ningún nombre junto a remate, ejecución, cesantía, pensión o embargo. Sin nombre: la auxiliar cesanteada por abandono de servicio, la regente, los pensionados, la enfermera promovida, el titular del Registro Civil en licencia, el juez de paz que renuncia, el firmante de los pagarés. Nombrados sin contexto sensible: funcionarios (Hoygaard, Satue, Mogro, Julio González, D'Andrea, Durand), los escultores del Cristo, la empresa contratista y los concesionarios de agua (como en las rondas 52 y 55) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `0d141b6` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 861 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
