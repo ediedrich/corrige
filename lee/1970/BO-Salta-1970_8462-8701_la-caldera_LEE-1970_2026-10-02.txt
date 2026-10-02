@@ -1,0 +1,2264 @@
+LEE v17 — 1970
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA, 1970 (N 8462 a 8701). Barrido
+documental forense del departamento La Caldera. Informe LEE, rubrica LEE v16 con
+los cambios v17 de flujo-editorial.md (version 2, §5). Fecha: 2026-10-02.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: COMPLETO, con 10 limites declarados (E.10). No queda trabajo que la
+sesion pueda hacer sobre las menciones del departamento con los insumos que
+llegaron. Lo que falta son 32 paginas que el Release no trae, en 20 ediciones,
+segun la cadena de folios (E.2); ninguna es una edicion entera.
+
+Insumos. El listado de assets del Release (expanded_assets/1970) no se puede
+leer desde la sesion: el proxy responde que el acceso a ese repositorio no esta
+habilitado. Las descargas directas por nombre si funcionan, y se bajaron por los
+nombres que estado.json registra en descarga.subidos: el pre-informe
+BO-Salta-1970_la-caldera_PRE-INFORME-LEE_2026-10-02.txt (el unico registrado; no
+se pudo comprobar si hay otro de fecha anterior), resultados_1970.csv,
+decretos_1970.csv (vacio: solo el encabezado), log.txt, lee_config.json y
+lee_textos_1970.zip; y los 240 PDF, 8462.pdf a 8701.pdf, sin huecos de
+numeracion (8461 y 8702 dan 404) y todos legibles: 6858 hojas, las mismas que
+los EXTRAIDO.json. recortes.zip no existe (404) y no se reclama.
+
+lee_auto.py, sha 50eb5edd5560. El log registra dos arranques: el primero
+(2-10-2026, 06:23) se corta en la extraccion de la edicion 75; el segundo
+(08:05) reusa lo extraido, ocriza las 6858 hojas con 4 procesos (08:32 a 09:43),
+corre las busquedas (09:43 a 10:37) y termina a las 11:12. Ningun error en el
+log. Capa del PDF util en 0 hojas segun el log; medido en la sesion: ninguna
+hoja con mas de 200 caracteres de capa nativa. Hay una sola version, la propia
+(prop): lee_textos trae 6858 .txt y .tsv propios y 240 EXTRAIDO.json; los
+.prev.txt estan vacios. Hay confianza por hoja (v17 §5.1), calculada en la
+sesion sobre los .tsv: media 89,1; 4132 hojas publicables, 2544 a verificar, 132
+«a ojos» y 50 sin palabras.
+
+Config. config del Release: version 2026-10-02, hasta 1969, actores 1383,
+anillo2 487. config de corrige: version 2026-10-02, hasta 1969, actores 1383,
+anillo2 487. Se usa: el de corrige - razon: unico valido (flujo §5.2).
+Contenido: los dos archivos son identicos byte a byte. estado.json registra que
+la corrida uso el config del 2026-10-01 (descarga.config), sin los agregados de
+1969; la sesion repitio todas las pasadas con el del 2026-10-02 (§2). Se entrega
+un lee_config.json nuevo, hasta 1970 (§F).
+
+Entorno. nproc 2. PyMuPDF instalado en la sesion. tesseract 5 solo con eng y
+osd, sin spa: no hubo OCR en sesion (E.10). Techo de resolucion, medido con
+get_image_info en las 6858 hojas: 150 ppp en 6856 y 300 ppp en 2 (8570 h23 y
+h24). Es el tramo de 150 ppp del catalogo de confusiones del flujo §5.6.
+
+Que verifico la sesion. Hojas por PDF contra EXTRAIDO.json: 6858 contra 6858.
+Tapas: las 240, en la imagen (numero, fecha, paginas declaradas, año editorial y
+gobernador), en diez montajes de veinticuatro y una ampliacion. Folios: cadena
+corrida en todo el año, de la pagina 1 a la 6888, cotejada contra el folio que
+el OCR lee en la cabecera (3472 hojas con folio leido, en las 240 ediciones) y
+con cinco cabeceras miradas en la imagen donde la cadena salta (8470, 8471,
+8666, 8667, y la tapa de 8540). Cuatro pasadas propias sobre la union, mas la de
+la letra perdida y la difusa ampliada. Anillo 2 completo con el config de
+corrige; anillo de actores sobre los 1383 del config. Hojas interiores miradas
+en la imagen: 101 (recorte de columna o la hoja entera), mas las 240 tapas.
+Tinta medida en las 6858 hojas (E.1).
+
+Desvios de v16 §8.17, declarados como en 1969: (1) los numeros de documento,
+matricula y cedula y los años de nacimiento se reemplazan por [omitido] o no se
+transcriben; (2) los fragmentos de actos largos se transcriben con «...»; (3)
+las nominas largas (pensiones, personal, presupuestos, planes) no se transcriben
+fuera de los renglones del departamento, pero se recuentan en esos renglones;
+(4) los vecinos ±3 se miran en la imagen cuando estan en la misma columna, y si
+no, se toman de la capa y la ficha lo dice; (5) la prosa va sin tildes, como en
+1967 a 1969; las transcripciones las llevan. Nada de lo omitido decide una
+ficha.
+
+Que agregaria cada insumo que falto: el listado del Release, nada nuevo (los
+nombres salen de estado.json); las 32 paginas ausentes, la posibilidad de
+afirmar ausencias sobre sus ediciones; tesseract spa en la sesion, una segunda
+version de cada hoja; recortes.zip, nada que la sesion no haya rehecho.
+
+§1 · CORPUS REVISADO
+--------------------
+240 ediciones, N 8462 (viernes 2 de enero) a N 8701 (jueves 31 de diciembre),
+sin huecos de numeracion. Sin ediciones dobles. 6858 hojas en el Release.
+Paginacion corrida en todo el año: la 8701 abre en la pagina 6873 y su tapa
+declara 16, de modo que el año cierra en la 6888, igual a la suma de las tapas
+(6888), aunque dos ediciones no cierran con su tapa y se compensan: la 8470
+declara 20 y ocupa 24, la 8666 declara 32 y ocupa 28 (E.2). Paginas que el
+Release no trae: 32 en 20 ediciones. Hojas que el Release trae duplicadas: 2, en
+la 8665. Hojas sin texto en ninguna version: 88.
+
+Fechas, numeros y paginas leidos en la imagen de la tapa; el dia de la semana se
+calcula. Columnas: edicion, fecha, dia, paginas declaradas en la tapa / hojas en
+el Release, primera pagina de la cadena, nota (aus = paginas ausentes; dup =
+hojas repetidas; cad = la cadena le da otro largo; 300 = hojas a 300 ppp).
+
+  8462   2-1  vie  24/22  p.1  aus 2
+  8463   5-1  lun  32/32  p.25
+  8464   7-1  mie  20/20  p.57
+  8465   8-1  jue  16/16  p.77
+  8466   9-1  vie  12/12  p.93
+  8467  12-1  lun   8/8   p.105
+  8468  13-1  mar  12/12  p.113
+  8469  14-1  mie  40/40  p.125
+  8470  15-1  jue  20/24  p.165  cad 24
+  8471  16-1  vie  28/28  p.189
+  8472  19-1  lun  28/26  p.217  aus 2
+  8473  20-1  mar   8/8   p.245
+  8474  21-1  mie   8/8   p.253
+  8475  22-1  jue   8/8   p.261
+  8476  23-1  vie  16/16  p.269
+  8477  26-1  lun  16/16  p.285
+  8478  27-1  mar  20/20  p.301
+  8479  28-1  mie  24/24  p.321
+  8480  29-1  jue   8/8   p.345
+  8481  30-1  vie  16/16  p.353
+  8482   2-2  lun  24/24  p.369
+  8483   3-2  mar  24/24  p.393
+  8484   4-2  mie  16/16  p.417
+  8485   5-2  jue  20/20  p.433
+  8486   6-2  vie  20/20  p.453
+  8487  11-2  mie   8/8   p.473
+  8488  12-2  jue   8/8   p.481
+  8489  13-2  vie  20/20  p.489
+  8490  16-2  lun  16/16  p.509
+  8491  17-2  mar  16/16  p.525
+  8492  18-2  mie  20/20  p.541
+  8493  19-2  jue  20/18  p.561  aus 2
+  8494  23-2  lun  24/24  p.581
+  8495  24-2  mar  44/44  p.605
+  8496  25-2  mie  24/24  p.649
+  8497  26-2  jue  20/20  p.673
+  8498  27-2  vie  32/32  p.693
+  8499   2-3  lun  28/28  p.725
+  8500   3-3  mar  28/28  p.753
+  8501   4-3  mie  32/32  p.781
+  8502   5-3  jue  40/40  p.813
+  8503   6-3  vie  32/32  p.853
+  8504   9-3  lun  20/20  p.885
+  8505  10-3  mar  20/20  p.905
+  8506  11-3  mie  24/24  p.925
+  8507  12-3  jue  20/20  p.949
+  8508  13-3  vie  20/20  p.969
+  8509  16-3  lun  16/16  p.989
+  8510  17-3  mar  16/16  p.1005
+  8511  18-3  mie  16/16  p.1021
+  8512  19-3  jue  20/20  p.1037
+  8513  20-3  vie  40/40  p.1057
+  8514  23-3  lun  24/24  p.1097
+  8515  24-3  mar  16/16  p.1121
+  8516  25-3  mie  16/16  p.1137
+  8517  30-3  lun  32/32  p.1153
+  8518  31-3  mar  28/28  p.1185
+  8519   1-4  mie  36/36  p.1213
+  8520   2-4  jue  24/24  p.1249
+  8521   3-4  vie  32/32  p.1273
+  8522   6-4  lun  20/20  p.1305
+  8523   7-4  mar  24/24  p.1325
+  8524   8-4  mie  28/28  p.1349
+  8525   9-4  jue  32/32  p.1377
+  8526  10-4  vie  24/24  p.1409
+  8527  13-4  lun  24/24  p.1433
+  8528  14-4  mar  20/20  p.1457
+  8529  15-4  mie  20/20  p.1477
+  8530  16-4  jue  16/16  p.1497
+  8531  17-4  vie  24/24  p.1513
+  8532  20-4  lun  36/36  p.1537
+  8533  21-4  mar  28/28  p.1573
+  8534  22-4  mie  44/44  p.1601
+  8535  23-4  jue  36/36  p.1645
+  8536  24-4  vie  24/24  p.1681
+  8537  27-4  lun  36/36  p.1705
+  8538  28-4  mar  40/40  p.1741
+  8539  29-4  mie  28/28  p.1781
+  8540  30-4  jue  28/28  p.1809
+  8541   4-5  lun  36/36  p.1837
+  8542   5-5  mar  32/32  p.1873
+  8543   6-5  mie  24/24  p.1905
+  8544   7-5  jue  24/24  p.1929
+  8545   8-5  vie  28/28  p.1953
+  8546  11-5  lun  28/28  p.1981
+  8547  12-5  mar  32/32  p.2009
+  8548  13-5  mie  28/28  p.2041
+  8549  14-5  jue  28/28  p.2069
+  8550  15-5  vie  32/32  p.2097
+  8551  18-5  lun  28/28  p.2129
+  8552  19-5  mar  24/24  p.2157
+  8553  20-5  mie  28/28  p.2181
+  8554  21-5  jue  32/32  p.2209
+  8555  22-5  vie  24/22  p.2241  aus 2
+  8556  26-5  mar  36/36  p.2265
+  8557  27-5  mie  36/36  p.2301
+  8558  29-5  vie  20/20  p.2337
+  8559   1-6  lun  24/24  p.2357
+  8560   2-6  mar  20/20  p.2381
+  8561   3-6  mie  24/24  p.2401
+  8562   4-6  jue  36/36  p.2425
+  8563   5-6  vie  36/36  p.2461
+  8564   8-6  lun  32/32  p.2497
+  8565   9-6  mar  36/36  p.2529
+  8566  10-6  mie  32/32  p.2565
+  8567  11-6  jue  36/36  p.2597
+  8568  12-6  vie  28/28  p.2633
+  8569  15-6  lun  40/40  p.2661
+  8570  16-6  mar  28/28  p.2701  300:2
+  8571  18-6  jue  36/36  p.2729
+  8572  19-6  vie  40/40  p.2765
+  8573  22-6  lun  32/32  p.2805
+  8574  23-6  mar  20/19  p.2837  aus 1
+  8575  24-6  mie  20/20  p.2857
+  8576  25-6  jue  24/24  p.2877
+  8577  26-6  vie  32/32  p.2901
+  8578  29-6  lun  36/36  p.2933
+  8579  30-6  mar  32/32  p.2969
+  8580   1-7  mie  32/32  p.3001
+  8581   2-7  jue  32/32  p.3033
+  8582   3-7  vie  24/24  p.3065
+  8583   6-7  lun  52/52  p.3089
+  8584   7-7  mar  28/27  p.3141  aus 1
+  8585   8-7  mie  24/24  p.3169
+  8586  10-7  vie  24/24  p.3193
+  8587  13-7  lun  32/32  p.3217
+  8588  14-7  mar  24/24  p.3249
+  8589  15-7  mie  20/20  p.3273
+  8590  16-7  jue  32/32  p.3293
+  8591  17-7  vie  12/12  p.3325
+  8592  20-7  lun  20/20  p.3337
+  8593  21-7  mar  16/16  p.3357
+  8594  22-7  mie  28/26  p.3373  aus 2
+  8595  23-7  jue  36/36  p.3401
+  8596  24-7  vie  28/28  p.3437
+  8597  27-7  lun  52/52  p.3465
+  8598  28-7  mar  28/28  p.3517
+  8599  29-7  mie  40/40  p.3545
+  8600  30-7  jue  28/28  p.3585
+  8601  31-7  vie  32/32  p.3613
+  8602   3-8  lun  32/32  p.3645
+  8603   4-8  mar  28/28  p.3677
+  8604   5-8  mie  20/20  p.3705
+  8605   6-8  jue  32/32  p.3725
+  8606   7-8  vie  36/36  p.3757
+  8607  10-8  lun  44/43  p.3793  aus 1
+  8608  11-8  mar  28/28  p.3837
+  8609  12-8  mie  32/32  p.3865
+  8610  13-8  jue  32/32  p.3897
+  8611  14-8  vie  40/39  p.3929  aus 1
+  8612  18-8  mar  28/28  p.3969
+  8613  19-8  mie  32/32  p.3997
+  8614  20-8  jue  32/32  p.4029
+  8615  21-8  vie  32/32  p.4061
+  8616  24-8  lun  36/36  p.4093
+  8617  25-8  mar  32/32  p.4129
+  8618  26-8  mie  32/32  p.4161
+  8619  27-8  jue  32/32  p.4193
+  8620  28-8  vie  40/40  p.4225
+  8621  31-8  lun  44/44  p.4265
+  8622   1-9  mar  32/32  p.4309
+  8623   2-9  mie  32/32  p.4341
+  8624   3-9  jue  36/36  p.4373
+  8625   4-9  vie  32/32  p.4409
+  8626   7-9  lun  28/28  p.4441
+  8627   8-9  mar  32/32  p.4469
+  8628   9-9  mie  36/36  p.4501
+  8629  10-9  jue  28/28  p.4537
+  8630  11-9  vie  28/28  p.4565
+  8631  16-9  mie  32/32  p.4593
+  8632  17-9  jue  32/32  p.4625
+  8633  18-9  vie  28/28  p.4657
+  8634  21-9  lun  24/24  p.4685
+  8635  22-9  mar  32/32  p.4709
+  8636  23-9  mie  28/28  p.4741
+  8637  24-9  jue  32/32  p.4769
+  8638  25-9  vie  32/32  p.4801
+  8639  28-9  lun  32/32  p.4833
+  8640  29-9  mar  28/28  p.4865
+  8641   1-10 jue  32/32  p.4893
+  8642   2-10 vie  28/28  p.4925
+  8643   5-10 lun  28/28  p.4953
+  8644   6-10 mar  28/28  p.4981
+  8645   7-10 mie  28/28  p.5009
+  8646   8-10 jue  28/28  p.5037
+  8647   9-10 vie  36/36  p.5065
+  8648  13-10 mar  32/32  p.5101
+  8649  14-10 mie  28/28  p.5133
+  8650  15-10 jue  36/36  p.5161
+  8651  16-10 vie  40/40  p.5197
+  8652  19-10 lun  40/40  p.5237
+  8653  20-10 mar  36/36  p.5277
+  8654  21-10 mie  32/32  p.5313
+  8655  22-10 jue  28/28  p.5345
+  8656  23-10 vie  28/28  p.5373
+  8657  26-10 lun  32/32  p.5401
+  8658  27-10 mar  44/44  p.5433
+  8659  28-10 mie  32/32  p.5477
+  8660  29-10 jue  40/40  p.5509
+  8661  30-10 vie  28/28  p.5549
+  8662   3-11 mar  32/30  p.5577  aus 2
+  8663   4-11 mie  32/30  p.5609  aus 2
+  8664   5-11 jue  32/31  p.5641  aus 1
+  8665   6-11 vie  36/38  p.5673  dup 2
+  8666   9-11 lun  32/28  p.5709  cad 28
+  8667  10-11 mar  24/24  p.5737
+  8668  11-11 mie  40/40  p.5761
+  8669  12-11 jue  32/30  p.5801  aus 2
+  8670  13-11 vie  32/31  p.5833  aus 1
+  8671  16-11 lun  24/24  p.5865
+  8672  17-11 mar  24/24  p.5889
+  8673  18-11 mie  24/24  p.5913
+  8674  19-11 jue  28/28  p.5937
+  8675  20-11 vie  40/40  p.5965
+  8676  23-11 lun  44/42  p.6005  aus 2
+  8677  24-11 mar  44/44  p.6049
+  8678  25-11 mie  36/36  p.6093
+  8679  26-11 jue  40/40  p.6129
+  8680  27-11 vie  36/36  p.6169
+  8681  30-11 lun  32/32  p.6205
+  8682   1-12 mar  20/18  p.6237  aus 2
+  8683   2-12 mie  32/32  p.6257
+  8684   3-12 jue  36/36  p.6289
+  8685   4-12 vie  52/52  p.6325
+  8686   7-12 lun  44/44  p.6377
+  8687   9-12 mie  40/40  p.6421
+  8688  10-12 jue  44/44  p.6461
+  8689  11-12 vie  48/48  p.6505
+  8690  14-12 lun  40/40  p.6553
+  8691  15-12 mar  32/32  p.6593
+  8692  16-12 mie  24/24  p.6625
+  8693  17-12 jue  32/32  p.6649
+  8694  21-12 lun  28/28  p.6681
+  8695  22-12 mar  20/20  p.6709
+  8696  23-12 mie  24/24  p.6729
+  8697  24-12 jue  24/24  p.6753
+  8698  28-12 lun  24/23  p.6777  aus 1
+  8699  29-12 mar  24/21  p.6801  aus 3
+  8700  30-12 mie  48/47  p.6825  aus 1
+  8701  31-12 jue  16/15  p.6873  aus 1
+
+Periodicidad: lunes a viernes; la tapa dice «APARECE LOS DIAS HABILES» en las
+240 ediciones. Dias de lunes a viernes sin edicion: 21 (1-1, 6-1, 9-2, 10-2,
+20-2, 26-3, 27-3, 1-5, 25-5, 28-5, 17-6, 9-7, 17-8, 14-9, 15-9, 30-9, 12-10,
+2-11, 8-12, 18-12 y 25-12). Los feriados que el corpus declara por decreto son
+locales (Metan el 16-7 y el 25-8, Oran el 31-8, La Caldera el 7-10, A39) y no
+explican ninguno de esos dias, que se declaran sin explicar; no se busca la
+causa afuera (v16 §2.5bis).
+
+Año editorial, en la tapa: «AÑO LXI» hasta la 8610 (13-8) y «AÑO LXII» desde la
+8611 (14-8). En 1969 el paso de LX a LXI fue en la 8367 (14-8-1969): el año
+editorial dura un año exacto. Erratas de tapa, en la imagen: «AÑO XLI» en la
+8516; «AÑI LXII» en la 8678; «Nº 6.566» en la 8566, «Nº 8.853» en la 8583 y «Nº
+8.854» en la 8584; «N» sin «º» en la 8614, 8626, 8633, 8636, 8642, 8646, 8649 y
+8696; «Sata» en la 8700; el ultimo digito del año, roto o distinto, en la 8540
+(«1972»?) y la 8608 («1978»?), decididos por la serie de fechas.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Version: prop (OCR de lee_auto.py, con texto en 6770 hojas); la capa del PDF no
+trae texto. Busqueda sobre la version propia unida: U+0002, ninguno; U+00AD,
+unido junto con el salto; guion de fin de renglon con hasta dos signos a cada
+lado y saltos multiples, unido. Comprobado: «La Cal- / dera» de 8603 h17 queda
+unido; «La Cal-= / dera» de 8604 h8 (dos signos y guion doble) no, y lo devuelve
+la laxa espaciada.
+
+Pasadas. Literal «cald» sobre NFD sin diacriticos: 211 hojas, contados los
+falsos positivos de E.7. Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: 202 hojas,
+ninguna que la literal no devuelva. Laxa espaciada con [\s-]{0,3} entre cada par
+de letras: 200 hojas, una nueva: 8604 h8 (A24). Letra perdida
+c[ao][l1i|]?\W?\s*d[ec]r[ao]: 205, tres nuevas, todas ruido («descargadores»,
+«educadora», un renglon de puntos guia). Difusa >= 0,78: 19 formas; una es La
+Caldera deformada: «culdera» (8692 h19, en el remate de A42, hoja que la literal
+ya devolvia por otro renglon). «caldra» es la errata del original de A10 (la
+literal la devuelve). El resto es «caleria», «calliera» (una S.A.), «escalera»,
+«haledera» (una heladera), «calavera», «calderon», «calderas», «cuadrillas»,
+«adera» (un apellido), «caera», «cadliera» y «catliera» (un apellido), «calera»
+y «caleras», «valedera», «canadera», «caledra» (catedra). Difusa ampliada
+0,70-0,78 sobre palabras con c, g u o: 60 formas, ninguna real («galeria»,
+«cualquiera», «cabrera», «catedra», «cortadera»...).
+
+Prueba de las pasadas que dan cero o casi cero: la espaciada y la letra perdida
+devuelven 200 y 205 hojas, casi todas tambien en la literal: funcionan, y la
+espaciada rescata una hoja. El pre-informe dio 300 candidatos del anillo 1; las
+211 hojas de la sesion incluyen todas las del departamento que el pre-informe
+trae.
+
+Anillo 2: 487 terminos del config; 96 con acierto. Se leyeron los contextos
+distintos de todos los terminos con acierto fuera de las hojas del anillo 1
+(deduplicados por texto; 455 contextos) y enteros los de los terminos del
+departamento. Anillo de actores: los 1383 del config, por primer nombre (con un
+nombre intermedio opcional) + apellido, inicial + apellido e inversion, sobre el
+texto sin puntuacion y con indice de palabras: 479 con acierto. Numeros
+arrastrados: no se usaron como pasada independiente; el pre-informe trae su capa
+NUM (29.963 aciertos), casi todos numeros de aviso y de pagina.
+
+Identificadores de las ausencias: numero de decreto o de aviso, nombre de la
+persona y localidad, de a dos por lo menos.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis), contra lo que
+el propio año establece. Faltantes: 11 («mombyry», «el mollar», «rodeo grande»,
+«acequia de los propietarios», «escuela dr. vicente sola», «puesto sanitario
+vaqueros», «centro vecinal vaqueros», «municipio de vaqueros», «comision
+municipal de vaqueros», «salon parroquial la caldera», «agencia agraria de la
+caldera»), agregados al config con dos deformaciones del OCR y del original («la
+caldra», «la calderas»). Apellidos dentro de la lista de lugares con acierto en
+1970: 19 (castellanos, isasmendi, mamani, aramayo, apaza, condori, chaile,
+nogales, murua, toconas, yolanda, teodolinda, severino, quintin, helvecia,
+yufra, matos, lesser, wierna), que suman 1.793 aciertos por hoja, casi todos
+ruido. A revisar: 4 («penales», ruido de «institutos penales», 211 hojas; «san
+jose», «candelaria» y «entre rios», que en 1970 son de otros departamentos o del
+texto comun).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+47 fichas que cubren 64 actos: las fichas de una obra, de una serie o de un
+mismo deudor reunen los actos que la siguen y nombran todos los numeros, como en
+1964 a 1969. Cada aviso repetido es una sola ficha con todas sus apariciones,
+contadas por texto. Los renglones de sumario que remiten a un acto fichado se
+nombran en la FUENTE y no se fichan aparte.
+
+A01  8463 h20  [NORMA]
+    Dec. 7627: aprueba la Ordenanza 125 de la Municipalidad de La Caldera
+    (nombres de calles)
+  FUENTE: 8463 (5-1-1970) h19 col. 2 y h20 col. 1 (pag. 43-44); sumario en h3.
+  FICHA: Decreto 7627, Gobierno, J., I. P. y del T., 20-12-1969, expte. 53-530.
+  MODO DE LECTURA: Imagen (el decreto entero, a 150 ppp).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación la ordenanza Nº 125 dictada por
+    la citada comuna con fecha 22 de octubre del año en curso; ... Artículo 1º —
+    Apruébase la ordenanza Nº 125 de fecha 22 de noviembre del año en curso,
+    dictada por la Municipalidad de La Caldera, departamento del mismo nombre,
+    que corre a fs. 2 del presente expediente, mediante la cual se asignan
+    nombres a diversas calles de esa localidad. ... PONCE MARTINEZ / Alias
+    D'Abate / Coraita
+  NOTA DE LECTURA: Contradiccion del original, no conciliada: el VISTO fecha la
+  ordenanza el 22 de octubre y el articulo 1, el 22 de noviembre; el sumario de
+  h3 dice «ordenanza Nº 125-11-69» (E.9). Los nombres de las calles no se
+  publican (citada y no acompañada, E.3). Es la segunda ordenanza de nombres de
+  calles en un año: la 86 de 1968 (1969 A04) los daba para Vaqueros. Serie: 7626
+  (h19) y 7628 (h20), del 20-12-1969 (capa).
+
+A02  8469 h9  [JUSTICIA+CARGOS]
+    Dec. 7675: designa juez de paz titular de La Caldera a Justo Pastor Lizondo
+  FUENTE: 8469 (14-1-1970) h9 col. 1 y 2 (pag. 132-133); sumario en h3, que
+  remite a la pag. 133.
+  FICHA: Decreto 7675, Gobierno, 31-12-1969, expte. 53-538. Terna de la
+  Municipalidad.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Que dicho cargo se encuentra vacante por renuncia de su anterior titular;
+    ... Artículo 1º — Desígnase por un período legal de dos años, Juez de Paz
+    Titular de la localidad de La Caldera, departamento del mismo nombre, al
+    señor JUSTO PASTOR LIZONDO, L. E. [omitido], C. [omitido]. ... PONCE
+    MARTINEZ / Alias D'Abate / Coraita
+  NOTA DE LECTURA: Vacante sin nombre: el decreto no dice quien renuncio; el
+  informe de 1969 ficho la renuncia de Eloy Aurelio Ruiz (A29) y no se infiere
+  que sea la misma (E.3). Lizondo renuncia el 30-4-1970 y el mismo dia es
+  designado presidente de la Comision Municipal (A13). Serie: 7674 y 7676 del
+  31-12-1969 (capa).
+
+A03  8471 h11  [OBRA-PUBLICA+ESCUELA]
+    Dec. 7697: personal para el «Cerco de Alambre Escuela Nacional Nº 250 de Los
+    Yacones - Dpto. La Caldera»
+  FUENTE: 8471 (16-1-1970) h9 col. 2, h10 col. 2 y h11 col. 1.
+  FICHA: Decreto 7697, Bienestar Social, 31-12-1969, expte. 02135, cod. 28.
+  Aprueba las Res. internas 342, 357, 358 y 368 de la Direccion de Viviendas y
+  Arquitectura; el renglon del departamento esta en la Res. 358 del 20-11-1969
+  (art. 3).
+  MODO DE LECTURA: Imagen (encabezado, art. 3 y renglones de la obra).
+  TEXTO:
+    Art. 3º — Apruébase en todas sus partes la Resolución Nº 358, de fecha 20 de
+    noviembre de 1969, de la Dirección de Viviendas y Arquitectura ... "Artículo
+    1º — Designar con carácter transitorio y mientras duren los trabajos
+    respectivos de las obras, al siguiente personal: ... Obra: "Construcción
+    Cerco de Alambre Escuela Nacional Nº 250 de Los Yacones - Dpto. La Caldera"
+    / Humano, Francisco S., Oficial, a partir del 14-11-69. / López, Juan
+    Carlos, ½ Oficial, a partir del 14-11-69. / Calpanchay, Matías, ½ Oficial, a
+    partir del 14-11-69.
+  NOTA DE LECTURA: RECUENTO PROPIO: tres personas bajo la obra; el acto no
+  declara numero. La escuela 250 es la de San Francisco de los Yacones de la
+  obra 283 (1969 A06; aqui A05 y A29).
+
+A04  8478 h9  [HACIENDA-MUN+OBRA-PUBLICA]
+    Dec. 7894: amplia las asignaciones del FITSA de la Municipalidad de La
+    Caldera (canal de desague y cordon cuneta)
+  FUENTE: 8478 (27-1-1970) h9 col. 2 y h10 col. 1 (pag. 309-310).
+  FICHA: Decreto 7894, Economia, 15-1-1970, expte. 53-562/69. Amplia lo
+  dispuesto por los Dec. 5080/69 y 5722/69 (1969 A12).
+  MODO DE LECTURA: Imagen (el decreto entero hasta el art. 2); firmas, capa.
+  TEXTO:
+    VISTO que la Municipalidad de La Caldera solicita se le amplíen las partidas
+    asignadas del Fondo de Integración Territorial de Salta, dispuestas por
+    Decretos números 5080/69 y 5722/69, con destino a la construcción de canal
+    de desagüe y cordón cuneta, respectivamente, en razón de haber incrementado
+    dichas obras los cambios introducidos en los proyectos originales; y
+    CONSIDERANDO: Que el refuerzo solicitado para esos trabajos importa un
+    incremento total de $ 1.783.257.— m/n., ... Artículo 1º — Increméntanse en
+    las cantidades que se detallan a continuación, las asignaciones del
+    F.I.T.S.A. dispuestas a favor de la Municipalidad de La Caldera, ...
+    Ampliación partida para canal desagüe $ 945.270.— m/n. ... Ampliación
+    partida para cordón cuneta $ 837.987.— m/n. ... PONCE MARTINEZ / Coscia /
+    Figueroa
+  NOTA DE LECTURA: RECALCULO: 945.270 + 837.987 = 1.783.257, cierra con el
+  considerando y con las cifras en letras (control 2 del flujo §5.6 para los
+  digitos de 150 ppp). Cruce propio: 1.500.000 (Dec. 5080/69) + 3.500.000 (Dec.
+  5722/69) + 1.783.257 = 6.783.257, que es exactamente el presupuesto oficial de
+  la licitacion publica Nº 1 de la Municipalidad para el cordon cuneta y el
+  canal (A34). Serie: 7896 del 15-1 (capa).
+
+A05  8479 h10  [OBRA-PUBLICA+ESCUELA]
+    Dec. 7843: intereses por mora a Tolaba y Campos por tres obras escolares del
+    departamento y un puesto sanitario de General Guemes
+  FUENTE: 8479 (28-1-1970) h10 col. 1 y 2.
+  FICHA: Decreto 7843, Economia, 15-1-1970, codigo 28-01095/69. Planillas de
+  intereses al 31-12-1968.
+  MODO DE LECTURA: Imagen (VISTO, art. 1 y art. 2).
+  TEXTO:
+    VISTO las planillas de intereses devengados al 31-12-68, por mora en el pago
+    de certificados correspondientes a las Obras: "Ampliación Escuela Nacional
+    Nº 160 en Mojotoro - Dpto. La Caldera", "Construcción Puesto Sanitario en
+    Betania - Dpto. General Güemes", "Construcción Escuelas Nacionales Nros. 61,
+    160 y 332, La Calderilla, Mojotoro y Gallinato - Dpto. La Caldera" y
+    "Construcción Escuela Nacional Nº 250, San Francisco de Los Yacones - Dpto.
+    La Caldera", ... a favor de la Empresa Tolaba y Campos, por las cantidades
+    de $ 27.166.—, $ 338.186.—, $ 471.270.— y $ 602.067.— m/n., respectivamente;
+    ... Artículo 1º — Reconócese a favor de la Empresa Contratista TOLABA Y
+    CAMPOS, un crédito por la suma de $ 1.438.689.— m/n. ...
+  NOTA DE LECTURA: RECALCULO: 27.166 + 338.186 + 471.270 + 602.067 = 1.438.689,
+  cierra con cifras y letras. Tres de los cuatro renglones son del departamento
+  (1.100.503, cuenta propia). El numero se lee 7843 en la imagen; la capa da
+  «78343», y la serie lo confirma: 7841 y 7844 del 15-1 (control 1 del flujo
+  §5.6).
+
+A06  8483 h10  [OTRO]
+    Pensiones a la invalidez y a la vejez de la Caja de Jubilaciones: los
+    renglones de La Caldera en seis nominas del año
+  FUENTE: Dec. 7939: 8483 (3-2-1970) h9 col. 2 y h10 col. 1. Dec. 8240: 8503
+  (6-3-1970) h10 col. 2 y h11. Dec. 8784: 8554 (21-5-1970) h10. Dec. 9211: 8582
+  (3-7-1970) h12-h13. Dec. 600: 8618 (26-8-1970) h12-h13. Dec. 714 (BS,
+  9-11-1970): 8676 (23-11-1970) h5-h6.
+  FICHA: Bienestar Social. Dec. 7939, 21-1-1970, expte. 000027/70, Res. 36-I/70
+  (invalidez). Dec. 8240, 24-2-1970, expte. 000028/70, Res. 37-I (vejez, Nros.
+  9465 al 9535). Dec. 8784, 15-5-1970, expte. 000584/70, Res. 338-I del 6-4-1970
+  (invalidez, 2680 al 2740). Dec. 9211, 12-6-1970, expte. 919/70, Res. 489-I del
+  18-5-1970 (vejez). Dec. 600, 11-8-1970, expte. 1544/70, Res. 771-I del
+  29-7-1970 (vejez). Dec. 714, 9-11-1970, expte. 2180/70, Res. 1070-I del
+  14-10-1970 (invalidez, 2766 al 2808).
+  MODO DE LECTURA: Imagen: encabezado de los cinco primeros decretos y los
+  renglones de La Caldera de los seis; el numero del 714 de noviembre, capa (el
+  715 contiguo, imagen).
+  TEXTO:
+    [7939] LA CALDERA / 2661 Zumbay, José 5 — 1 — 3 [8240] LA CALDERA: / 9513
+    PADILLA, Brígida [8784] LA CALDERA / 2697 HERRERA, José Alberto 5-1-3 / 2698
+    SALVA, Felipe 5-3-4 [9211] La Caldera: / 9.821 — CATACATA, Esteban / 9.822 —
+    PORTAL, Domingo / 9.823 — SARAPURA, Usfaldo / 9.824 — SARAPURA, Simona /
+    9.825 — AGUIRRE, Juan / 9.826 — HUMANO, Tránsito Arsenio [600] LA CALDERA: /
+    10.082 Maidana, Clemente / 10.083 Martínez, Alejandro / 10.084 Acuña, Emilio
+    Modesto [714] LA CALDERA: / 2792 Camino, Julián, 5-3-4.
+  NOTA DE LECTURA: RECUENTO PROPIO: 1 + 1 + 2 + 6 + 3 + 1 = 14 renglones del
+  departamento en seis decretos; ningun acto declara un numero por departamento.
+  Las nominas se recuentan solo en sus renglones de La Caldera; el resto no se
+  transcribe. Inferencia rotulada: el primer numero de la clave de las pensiones
+  a la invalidez es el del departamento (5 en La Caldera, 11 en Iruya, 2 en
+  Anta, 4 en Cafayate, 8 en Cerrillos en las mismas nominas). La capa leia «513»
+  y ponia los renglones de 8554 entreverados; la imagen los ordena. El Dec. 600
+  es de agosto y el 714 de noviembre: la serie de decretos se reinicia dos veces
+  en el año (E.4).
+
+A07  8499 h15  [HACIENDA-MUN]
+    Dec. 8178: aprueba modificaciones a la Ordenanza General Impositiva de La
+    Caldera, a regir desde el 1-1-1970
+  FUENTE: 8499 (2-3-1970) h15 col. 1 (pag. 738).
+  FICHA: Decreto 8178, Gobierno, 23-2-1970, expte. 53-561.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación las modificaciones introducidas
+    en la Ordenanza General Impositiva, por el ejercicio 1969 en la citada
+    Comuna y a regir en el año 1970; Por ello; atento a los dictámenes
+    producidos por Asesoría Letrada del Ministerio de Gobierno a fs. 35; por
+    Fiscalía de Gobierno a fs. 36 y a lo solicitado por la Secretaría de Estado
+    de Municipalidades a fs. 35 de estos obrados, ... Artículo 1º — Apruébanse
+    las modificaciones introducidas en los artículos 3º, 6º, 25, 26, 61, 84, 85,
+    86 y 87, de la Ordenanza General Impositiva correspondiente al ejercicio
+    1969 y que corren a folios 33 y 34 del presente expediente, las que regirán
+    a partir del 1º de enero de 1970 en la Municipalidad de La Caldera, departam
+    to del mismo nombre. ... PONCE MARTINEZ / Alias D'Abate / Coraita
+  NOTA DE LECTURA: RECUENTO PROPIO: nueve articulos modificados; el acto no
+  declara numero. El texto de las modificaciones no se publica (E.3). Del
+  original: dos dictamenes a la misma fs. 35 y «departam to» (E.9). La OGI de
+  1969 se aprobo por el Dec. 4201 (1969 A05). Serie: 8179 del 23-2 (imagen).
+
+A08  8501 h11  [HACIENDA-MUN]
+    Dec. 8205: aprueba la Ordenanza 132 de La Caldera (precios del cargadero,
+    bascula y banadero de hacienda)
+  FUENTE: 8501 (4-3-1970) h11 col. 2 (pag. 790-791).
+  FICHA: Decreto 8205, «Ministerio de Economía», 24-2-1970, expte. 53-711.
+  Ordenanza 132 del 16-2-1970.
+  MODO DE LECTURA: Imagen (el decreto entero hasta la firma del gobernador y el
+  primer refrendo).
+  TEXTO:
+    Por las presentes actuaciones la Municipalidad de La Caldera, departamento
+    del mismo nombre, eleva para su aprobación la ordenanza Nº 132, dictada por
+    la citada comuna con fecha 16 de febrero del año en curso; ... Artículo 1º —
+    Apruébase la Ordenanza Nº 132 de fecha 16 de febrero del año en curso,
+    dictada por la Municipalidad de La Caldera, departamento del mismo nombre,
+    mediante la cual se fijan los nuevos precios por la prestación de servicios
+    en el cargadero, báscula y bañadero de hacienda en dicha Municipalidad. Art.
+    2º — El presente decreto será refrendado por el señor Ministro de Gobierno y
+    firmado por el señor Secretario de Estado de Municipalidades. ... PONCE
+    MARTINEZ / Alias D'Abate
+  NOTA DE LECTURA: Contradiccion del original: el encabezado dice Ministerio de
+  Economia y el refrendo es del ministro de Gobierno (E.9). La ordenanza no se
+  publica (E.3). Antecedente: la Ord. 126 de 1969 fijaba la tasa del cargadero y
+  la bascula (1969 A38); la 132 agrega el banadero. Serie: 8206 del 24-2 (capa,
+  que lo lee «3206»).
+
+A09  8506 h5  [OBRA-PUBLICA]
+    Dec. 7728: aprueba la documentacion tecnica del techo del Salon de la
+    Parroquia de La Caldera ($ 397.261), por via administrativa
+  FUENTE: 8506 (11-3-1970) h5 col. 1 y 2 (pag. 928-929).
+  FICHA: Decreto 7728, Bienestar Social, 31-12-1969, expte. 02203/69, cod. 28.
+  Aprueba la Res. 417 de la Direccion de Viviendas y Arquitectura del
+  31-12-1969.
+  MODO DE LECTURA: Imagen (el decreto entero, con las firmas).
+  TEXTO:
+    VISTO la documentación técnica preparada por el Departamento Construcciones
+    para la construcción del techado del Salón de la Parroquia de La Caldera, en
+    la localidad del mismo nombre, cuyo presupuesto alcanza a $ 397.261.— m/n. y
+    atento la necesidad de subsanar inmediatamente deficiencias comprobadas,
+    estímase conveniente encarar la ejecución de esta obra por el procedimiento
+    de vía administrativa; ... "Art. 1º — Aprobar la documentación técnica
+    preparada para la ejecución de la obra "Construcción techo Salón Parroquia
+    de La Caldera", ... y, en consecuencia, autorízase al Departamento
+    Construcciones a ejecutar la obra por vía administrativa. "Art. 2º — La
+    erogación será imputada al Anexo B, Item 5, Sección 4, Sector 5, Partida
+    Principal 11: Trabajos Públicos, Partida Parcial XIII, Sub-parcial 4,
+    Ejercicio 1969". ... PONCE MARTINEZ / Destéfanis / Herrero
+  NOTA DE LECTURA: Decreto de 1969 publicado en marzo de 1970. La obra reaparece
+  en el Plan de Trabajos Publicos 1970 con 3.970 pesos ley 18.188 (A18),
+  equivalentes a 397.000 m/n (cuenta propia; la ley 18.188 divide por cien).
+
+A10  8529 h5  [AGUAS]
+    Obras Sanitarias de la Nacion: 20 l/s del subalveo de la margen derecha del
+    rio La Caldera para el agua de la ciudad de Salta (edicto y Dec. 22)
+  FUENTE: Edicto O.P. Nº 2881: 8529 (15-4-1970) h5 col. 2, imagen; 8530 h5, 8531
+  h10, 8532 h23, 8533 h13, 8534 h15, 8535 h11, 8536 h9, 8537 h22 y 8538 h19, por
+  texto. Dec. 22: 8628 (9-9-1970) h5 col. 1 y 2 y h6 col. 1 (pag. 4505-4506).
+  FICHA: Edicto citatorio de la Administracion General de Aguas, O.P. 2881, T.
+  2576, Ref. Expte. 8980/O/69, s.o.a., Salta 9-4-1970; e) 15 al 26-4-70. Decreto
+  22, Economia, 26-8-1970, expte. 34-8980/69.
+  MODO DE LECTURA: Imagen: el edicto en 8529 y el decreto entero hasta el art.
+  3; las firmas del decreto (h6), capa; las otras nueve apariciones, por texto.
+  TEXTO:
+    [2881] A los efectos establecidos por el Art. 350 del Código de Aguas se
+    hace saber que Obras Sanitarias de Nación, tiene solicitando otorgamiento de
+    concesión de agua para Abastecimiento de Población en la ciudad de Salta,
+    dada la necesidad de ampliar la red de agua para la zona norte, de 20 l/seg.
+    mediante la captación de caudales provenientes del sub-alveo de manantiales
+    que tienen su origen de la margen derecha del río La Caldra, aproximadamente
+    a unos 150 metros aguas arriba de la desembocadura del río Wierna. [22]
+    Artículo 1º — Otórgase a favor de Obras Sanitarias de la Nación, derechos al
+    uso del agua del dominio público, con una dotación de 20 litros por segundo,
+    para Abastecimiento de Población de la ciudad de Salta, zona Norte, mediante
+    la captación de caudales provenientes del sub-álveo de manantiales que
+    tienen su origen en la margen derecha del Río La Caldera, aproximadamente
+    150 metros agua arriba de la desembocadura del Río Wierna. Art. 2º — La
+    concesión otorgada lo es con las reservas previstas en los artículos 17 y
+    232 del Código de Aguas.
+  NOTA DE LECTURA: «río La Caldra» es errata del original en las cinco primeras
+  apariciones (8529 a 8533; mirada en 8529); desde la 8534 el aviso dice
+  «Caldera» (E.9). La literal la devuelve igual por «cald». Diez apariciones por
+  texto contra una marca e) de ocho dias habiles: el aviso sigue saliendo el 27
+  y el 28-4 (E.6). El decreto lo aconseja la «Dirección de Colonización y Riego»
+  y lo firma el gobernador Aguirre Molina (capa): para agosto la Administracion
+  General de Aguas es «ex-Administración» (A29, A30). Es el primer acto del
+  corpus leido que saca agua del rio La Caldera para la ciudad de Salta; el
+  universo del superlativo es este informe y no se afirma fuera de el. Serie:
+  Dec. 27 de Bienestar Social del 26-8 en h6 (capa).
+
+A11  8538 h12  [DOMINIO]
+    Dec. 8557: aprueba la subdivision de la finca Lesser (fraccion), de Adolfo
+    Saravia Valdez, catastro 171
+  FUENTE: 8538 (28-4-1970) h11 col. 2 y h12 col. 1 y 2.
+  FICHA: Decreto 8557, Economia, 17-4-1970. Expedientes de la Direccion General
+  de Inmuebles; el del departamento: Expte. 518-69 D.T., Cod. 29-7520-70.
+  MODO DE LECTURA: Imagen (la nomina entera y las firmas); el VISTO, capa.
+  TEXTO:
+    VISTO los expedientes citados en la parte dispositiva de este decreto ...
+    CONSIDERANDO: Que por decreto Nº 7460/69 el Poder Ejecutivo dispuso la
+    suspensión de todos los trámites de aprobación de loteos y parcelamientos
+    urbanos o rurales en todo el territorio de la Provincia hasta tanto se
+    promulgue la ley sobre régimen del suelo y ordenación urbana, ... Artículo
+    1º — Apruébanse las subdivisiones y fraccionamientos de terrenos urbanos y
+    rurales que a continuación se especifican: ... Expte. 518-69 D.T., Cód.
+    29-7520-70: Subdivisión finca Lesser (fracción) propiedad de Adolfo Saravia
+    Valdez, Catastro 171, Departamento La Caldera. ... PONCE MARTINEZ / Coscia /
+    Campastro
+  NOTA DE LECTURA: RECUENTO PROPIO: quince renglones (Anta, Capital seis veces,
+  La Caldera, Rosario de la Frontera, La Vina, Cerrillos, Metan, San Martin,
+  Oran, Chicoana); el acto no declara numero. Uno es del departamento. Del
+  original: el mismo «Expte. 422-69 D.T., Cód. 29-7351» encabeza dos renglones
+  distintos (E.9). La superficie de la fraccion no se da. Serie: 8560 del 22-4
+  (capa).
+
+A12  8542 h7  [JUSTICIA+CARGOS]
+    Dec. 8582: designa juez de paz suplente de La Caldera a Porfiria Mercado
+  FUENTE: 8542 (5-5-1970) h7 col. 2; sumario en h2, que remite a la pag. 1879.
+  FICHA: Decreto 8582, Gobierno, 23-4-1970, expte. 53-713. Terna de la
+  Municipalidad.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    ... eleva terna para la designación de Juez de Paz Suplente en esa
+    localidad, en razón de encontrarse el mismo con período vencido; ...
+    Artículo 1º — Desígnase por un período constitucional de dos años, Juez de
+    Paz Suplente de la localidad de La Caldera, departamento del mismo nombre, a
+    la señorita PORFIRIA MERCADO - L. C. [omitido] - C. [omitido]. ... PONCE
+    MARTINEZ / Alias D'Abate / Coraita
+  NOTA DE LECTURA: El suplente de 1968, Liborio Gerardo Guerrero, vuelve al
+  cargo en septiembre (A38). Mercado renuncia el 21-9-1970, ya como «la señora»
+  (A36). Serie: 8583 del 23-4 (imagen).
+
+A13  8546 h12  [CARGOS+JUSTICIA]
+    Dec. 8641, 8642 y 8643: renuncia el interventor Manuel David Serrey; Justo
+    Pastor Lizondo deja el juzgado de paz y es designado presidente de la
+    Comision Municipal
+  FUENTE: 8546 (11-5-1970) h12 col. 1 y 2; sumario en h3, que remite a la pag.
+  1992.
+  FICHA: Decretos 8641, 8642 y 8643, Gobierno, 30-4-1970.
+  MODO DE LECTURA: Imagen (los tres decretos enteros, con firmas).
+  TEXTO:
+    [8641] Artículo 1º — Acéptase la renuncia presentada por el señor MANUEL
+    DAVID SERREY, al cargo de Interventor en la Municipalidad de La Caldera,
+    departamento del mismo nombre, y dánsele las gracias por los importantes
+    servicios prestados. ... PONCE MARTINEZ / Alias D'Abate / Coraita [8642]
+    Artículo 1º — Acéptase la renuncia presentada por el señor JUSTO PASTOR
+    LIZONDO al cargo de Juez de Paz Titular de la localidad de La Caldera,
+    departamento del mismo nombre. ... PONCE MARTINEZ / Alias D'Abate / Nogueira
+    [8643] Artículo 1º — Desígnase Presidente de la Comisión Municipal de la
+    localidad de La Caldera, departamento del mismo nombre, al señor JUSTO
+    PASTOR LIZONDO (C. [omitido] - L. E. [omitido]), a partir de la fecha que se
+    haga cargo de sus funciones. ... PONCE MARTINEZ / Alias D'Abate / Coraita
+  NOTA DE LECTURA: Cambia la forma del gobierno municipal: «Interventor» en la
+  renuncia de Serrey (en 1969 un decreto lo llamaba «Intendente Municipal», 1969
+  A32) y «Comisión Municipal» con presidente en la designacion de Lizondo.
+  Lizondo fue juez de paz cuatro meses (A02). La vacante de juez titular se
+  cubre en junio (A23) y otra vez en septiembre (A38). Serie: 8644 de Economia
+  del 30-4 (imagen).
+
+A14  8550 h14  [OTRO]
+    Res. 1195 de Bienestar Social: los organismos de salud de la Capital y La
+    Caldera elevan sus estructuras ante la Direccion del Plan de Salud de la
+    Capital
+  FUENTE: 8550 (15-5-1970) h14 col. 2.
+  FICHA: Resolucion 1195, Bienestar Social (Secretario de Estado de Salud
+  Publica), 30-4-1970, expte. 2738/70, cod. 66. Ley 4333.
+  MODO DE LECTURA: Imagen (la resolucion entera).
+  TEXTO:
+    1º — Los Directores, Jefes o Encargados de los organismos y establecimientos
+    de Salud Pública deberán elevar a sus respectivas Direcciones Generales sus
+    propuestas de estructura ideal, antes del 10-5-70, según indica la Ley
+    4333/70 ... 2º — Los Hospitales y organismos de la Capital y La Caldera
+    cumplirán lo expresado en el artículo 1º ante la Dirección del Plan de Salud
+    de la Capital. ... Cruz
+  NOTA DE LECTURA: Sigue en 1970 el Plan de Salud de la Capital y La Caldera
+  (1969 A17). La resolucion no nombra establecimientos del departamento.
+
+A15  8552 h14  [AGUAS]
+    Edicto: las hermanas Zambrano piden reconocimiento de concesion para «Dorita
+    o Mombyry», catastro 83, Vaqueros (2,5 ha, rio Wierna)
+  FUENTE: 8552 (19-5-1970) h14 col. 1 y h15, imagen; 8553 h13, 8554 h20, 8555
+  h7, 8556 h17, 8557 h21, 8558 h6, 8559 h7, 8560 h8 y 8561 h8, por texto.
+  FICHA: Edicto citatorio, O.P. 3262, S.C. 0054, Ref. Expte. 13546/Z/48,
+  s.r.a.p., Salta 8-5-1970, Administracion General de Aguas; sin cargo, e) 19-5
+  al 3-6-70.
+  MODO DE LECTURA: Imagen (el edicto en 8552); las demas apariciones, por texto.
+  TEXTO:
+    A los efectos establecidos por el Art. 350 del Código de Aguas, se hace
+    saber que ELISA DEL CARMEN, ELVA NIDIA y ANGELA ALICIA ZAMBRANO, tienen
+    solicitado reconocimiento de concesión de agua pública —basado en USOS Y
+    COSTUMBRES— para el inmueble denominado "DORITA o MOMBYRY", catastro Nº 83,
+    ubicado en Vaqueros —Departamento La Caldera—, para irrigar una superficie
+    de 2,5000 Has. con carácter PERMANENTE Y A PERPETUIDAD, con una dotación de
+    1,31 ls/segundo a derivar del río Wierna margen derecha, por medio de la
+    Acequia "De los Propietarios".
+  NOTA DE LECTURA: Control aritmetico: 2,5 ha x 0,525 l/s por ha = 1,3125, que
+  el edicto redondea a 1,31 (la dotacion por hectarea de los edictos de este
+  año, A16, A24, A33, A40). Diez apariciones por texto, que coinciden con los
+  diez dias habiles de la marca. El expediente es de 1948.
+
+A16  8556 h17  [AGUAS]
+    Edicto: Roberto Mario Clement Toranzos pide reconocimiento de concesion para
+    el Lote 35 del Distrito de Vaqueros (4,7235 ha, rio Wierna)
+  FUENTE: 8556 (26-5-1970) h17 col. 1, imagen; 8557 h21, 8558 h6, 8559 h7, 8560
+  h8, 8561 h8, 8562 h19, 8563 h20, 8564 h18 y 8565 h23, por texto.
+  FICHA: Edicto citatorio, O.P. 3343, S.C. 0056, Ref. Expte. 2557-G-68,
+  c.r.a.p., Salta 13-5-1970; firma Juan G. Sarmiento, Jefe de Division
+  Irrigacion A.G.A.S.; sin cargo, e) 26-5 al 9-6-70.
+  MODO DE LECTURA: Imagen (el edicto en 8556); las demas apariciones, por texto.
+  TEXTO:
+    ... se hace saber que ROBERTO MARIO CLEMENT TORANZOS, tiene solicitado
+    reconocimiento de concesión de agua pública para la propiedad denominada
+    como Lote Nº 35, ubicada en el Distrito de Vaqueros - Departamento La
+    Caldera - para irrigar una superficie de 4,7235 Has. con carácter PERMANENTE
+    y a PERPETUIDAD, basado en usos y costumbres, con una dotación de 2,479
+    ls/segundo a derivar del río Wierna, mediante la acequia comunera Nº 3.
+  NOTA DE LECTURA: Control aritmetico: 4,7235 x 0,525 = 2,4798, cierra con
+  2,479. Diez apariciones por texto; coinciden con la marca.
+
+A17  8557 h32  [OTRO]
+    Agrupacion Tradicionalista Gauchos de Guemes «El Palenque» (La Caldera):
+    asamblea general extraordinaria el 6-6-1970
+  FUENTE: 8557 (27-5-1970) h32 col. 1; sumario en h5.
+  FICHA: Aviso O.P. 3364, T. 3025; e) 27-5-70; una aparicion.
+  MODO DE LECTURA: Imagen (el aviso entero).
+  TEXTO:
+    AGRUPACION TRADICIONALISTA GAUCHOS DE GÜEMES "EL PALENQUE" (La Caldera) La
+    Honorable Comisión Directiva de la Agrupación Tradicionalista Gauchos de
+    Güemes "El Palenque" de la Caldera, invita a sus asociados a la Asamblea
+    General Extraordinaria a realizarse el día 6 de junio de 1970, a las 19
+    horas en la sede de la entidad, ... 3º) Renovación de autoridades, de
+    acuerdo a la listra única presentada por los asociados. ... Arturo R.
+    Fernández / Presidente
+  NOTA DE LECTURA: La entidad es el Centro Gaucho «El Palenque» de 1969 (A36),
+  cuyo aviso firmaban Normando Requena y Arturo Fernandez. RECUENTO: cuatro
+  puntos del orden del dia. «listra» [sic].
+
+A18  8567 h7  [OBRA-PUBLICA+AGUAS+ESCUELA]
+    Dec. 8942: Plan de Trabajos Publicos 1970; seis renglones del departamento
+    (parroquia, escuelas, agua de Vaqueros, defensa del rio La Caldera, ruta a
+    Vaqueros)
+  FUENTE: 8567 (11-6-1970) h5 a h14 (pag. 2601-2610); renglones en h7, h8, h9,
+  h12 y h14.
+  FICHA: Decreto 8942, Economia, 1-6-1970. Aprueba el Plan de Trabajos Publicos
+  1970 (presupuesto por Ley 4348/70). Pesos ley 18.188.
+  MODO DE LECTURA: Imagen de los seis renglones y del subtotal de la Finalidad 1
+  de Viviendas y Arquitectura; encabezado y firmas, capa.
+  TEXTO:
+    [Viviendas y Arquitectura, Finalidad 1] 3 Construcción Techo Salón
+    Parroquial La Caldera " 3.970.— [Finalidad 5] 37 Ampliación Escuela Bernabé
+    López - Vaqueros y J. M. de López - La Caldera " 80.000.— [Vialidad,
+    Finalidad 6] 8 Ruta 28 - Salta - Vaqueros por San Lorenzo y Castellanos. 2º
+    Tramo: San Lorenzo - Castellanos. Obras básicas, de arte y enripiado "
+    170.000.— [ex-Administración General de Aguas, Finalidad 4] 75 Provisión
+    Agua Cte. Vaqueros - Dpto. La Caldera " 68.400.— 76 Estudio Provisión Agua
+    Potable - Vaqueros (Departamento La Caldera) " 6.300.— [ex-A.G.A.S.,
+    Finalidad 6] 19 Defensa s/Río La Caldera (Dpto. La Caldera) " 64.500.—
+  NOTA DE LECTURA: RECALCULO: Finalidad 1 de Viviendas y Arquitectura, 80.000 +
+  625.000 + 3.970 = 708.970, cierra con el total impreso. Suma propia de los
+  cinco renglones que nombran el departamento: 223.170; la ruta 28 se licita
+  hasta Castellanos y no llega al departamento: es el destino del camino. El
+  plan no trae ningun renglon del embalse de Campo Alegre (que estaba en los
+  planes de 1968 y 1969, 1969 A02 y B2-11): ausencia afirmada con dos
+  identificadores, «embalse» y «Campo Alegre», sobre el plan entero (E.3). El
+  renglon 19 es la obra D-3-69 que se adjudica en agosto (A30). Firmas (capa):
+  PONCE MARTINEZ / Coscia / Davalos / Campastro / Herrero.
+
+A19  8570 h9  [CARGOS+OTRO]
+    Res. 1245 de Bienestar Social: sumario al enfermero Claudio Murua, del
+    consultorio externo de Vaqueros, a pedido de los vecinos
+  FUENTE: 8570 (16-6-1970) h9 col. 1; sumario en h3, que remite a la pag. 2708.
+  FICHA: Resolucion 1245, Bienestar Social, 1-6-1970, exptes. 01359/69 (cod.
+  67), 01981/70, 02012/70 y 02628/70 (cod. 66).
+  MODO DE LECTURA: Imagen (la resolucion hasta el art. 2); firmas, capa.
+  TEXTO:
+    VISTO que en las presentes actuaciones vecinos de la localidad de Vaqueros,
+    solicitan traslado del enfermero Sr. Claudio Murúa por incompetencia,
+    violación del secreto profesional y mal carácter; ... 1º — Designar al Dr.
+    ALBANO ALVAREZ CESAR, médico zonal de La Caldera, como sumariante y al Sr.
+    CELEDONIO MORALES como Secretario de Actuación, para que instruyan un
+    sumario administrativo, tendiente a dejar debidamente esclarecido los cargos
+    imputados al enfermero Sr. CLAUDIO MURUA - categ. 25 - personal asistencial
+    del consultorio externo de la localidad de Vaqueros.
+  NOTA DE LECTURA: Alvarez Cesar es medico zonal de La Caldera en junio; desde
+  el 1-9 lo es Juan Carlos Martearena (A43). Murua reaparece en la nomina del
+  Puesto Sanitario Vaqueros (B2-05). El resultado del sumario no se encontro en
+  lo leido (E.3).
+
+A20  8577 h7  [CARGOS+OTRO]
+    Dec. 9093: acepta la renuncia de Ziaollah Vojdani Gouri como asesor tecnico
+    de la Agencia Agraria de La Caldera
+  FUENTE: 8577 (26-6-1970) h7 col. 1; sumario en h2.
+  FICHA: Decreto 9093, Economia, 9-6-1970, expte. 19-00239/70.
+  MODO DE LECTURA: Imagen (el decreto hasta el art. 2); firmas, capa.
+  TEXTO:
+    VISTO la renuncia presentada por el Ingeniero Agr. Dn. Ziaollah Vojdani
+    Gouri como Asesor Técnico de la Agencia Agraria de la localidad de La
+    Caldera; ... Artículo 1º — Con anterioridad al día 8 de abril de 1970,
+    acéptase la renuncia presentada por el Ing. Agr. Dn. ZIAOLLAH VOJDANI GOURI,
+    como Asesor Técnico en la Argencia Agraria de la localidad de La Caldera,
+    para el que fuera designado mediante decreto Nº 2147/68.
+  NOTA DE LECTURA: «Argencia» [sic] (E.9). El nombre se imprime «Ziaollah»; el
+  config lo tiene como «Ziaolah» (1969 A34, que prorrogaba su designacion hasta
+  el 31-12-1969). Firmas (capa): PONCE MARTINEZ / Coscia / Jakulica. Serie: 9092
+  y 9094 del 9-6 (capa).
+
+A21  8580 h9  [OTRO]
+    Res. 1265 de Bienestar Social: caja chica del Hogar «Dr. Luis Linares» de La
+    Caldera durante la licencia del regente Rodolfo Abraham
+  FUENTE: 8580 (1-7-1970) h9 col. 1; sumario en h3, que remite a la pag. 3008.
+  FICHA: Resolucion 1265, Bienestar Social (Secretario de Estado de Promocion y
+  Asistencia de la Comunidad), 8-6-1970, expte. 02947/70, cod. 66.
+  MODO DE LECTURA: Imagen (la resolucion entera).
+  TEXTO:
+    VISTO que el señor Rodolfo Abraham, Regente del Hogar "Dr. Luis Linares" de
+    La Caldera, se encuentra en uso de licencia, se hace necesario designar
+    durante su ausencia al responsable de los fondos asignados a dicho Hogar en
+    concepto de Caja Chica; ... 1º — Designar responsable de los fondos de "Caja
+    Chica" del Hogar "Dr. Luis Linares" de La Caldera al señor Director de
+    Patronato y Asistencia Social de Menores, Cnel. (R) JORGE R. T. ALVARADO,
+    mientras dure la licencia concedida al señor Rodolfo Abraham. ... RIVERO
+  NOTA DE LECTURA: Abraham es el regente de 1969 (A32). Esta resolucion es la
+  que da la jurisdiccion del hogar para las nominas de B2-06.
+
+A22  8583 h13  [CARGOS]
+    Jesus del Valle Molina, personal de servicio del Hogar de Ninos de La
+    Caldera: reconocimiento de servicios de enero a junio (Dec. 9225 y Dec. 254)
+  FUENTE: Dec. 9225: 8583 (6-7-1970) h13 col. 1 y 2. Dec. 254: 8645 (7-10-1970)
+  h5 col. 1 y 2.
+  FICHA: Decreto 9225, Bienestar Social, 12-6-1970, expte. 02270/70 (art. 5).
+  Decreto 254, Bienestar Social, 24-9-1970, expte. 03764/70.
+  MODO DE LECTURA: Imagen (encabezados y renglones de Molina en los dos).
+  TEXTO:
+    [9225] Art. 5º — Reconócense los servicios prestados por la señorita JESUS
+    DEL VALLE MOLINA, L. C. [omitido], categ. 28, personal de servicios del
+    Hogar de Niños de La Caldera, dependiente de la Dirección de Patronato y
+    Asistencia Social de Menores, durante el tiempo comprendido desde el 1º de
+    enero hasta el 31 de mayo del año en curso, con una asignación mensual de
+    pesos 160 "Pesos Ley 18.188". [254] JESUS DEL VALLE MOLINA, Categoría 28 -
+    Personal de Servicios del Hogar de Niños de La Caldera, dependiente de la
+    Dirección de Patronato y Asistencia Social de Menores, con una asignación
+    mensual de $ 160,- Pesos Ley 18.188.
+  NOTA DE LECTURA: El Dec. 254 reconoce el mes de junio («desde el 1º al 30 de
+  junio», capa). Su fecha se lee 24-9-1970 en la imagen; la capa decia «2 de
+  setiembre». Molina fue contratada en 1969 (A21).
+
+A23  8585 h15  [JUSTICIA+CARGOS]
+    Dec. 9372: designa juez de paz titular a Florencio Silvestre Aviles; el Dec.
+    250 lo deja sin efecto porque no se hizo cargo
+  FUENTE: Dec. 9372: 8585 (8-7-1970) h15 col. 1; sumario en h3. Dec. 250: 8602
+  (3-8-1970) h14 col. 1.
+  FICHA: Decreto 9372, Gobierno, 22-6-1970, expte. 53-880, «El Gobernador
+  Interino de la Provincia». Decreto 250, Gobierno, 28-7-1970, expte. 53-1009.
+  MODO DE LECTURA: Imagen (los dos decretos enteros, con firmas).
+  TEXTO:
+    [9372] CONSIDERANDO: Que el citado cargo se encuentra vacante por renuncia
+    de su anterior titular; ... El Gobernador Interino de la Provincia DECRETA:
+    Artículo 1º — Desígnase por un período constitucional de dos años, Juez de
+    Paz Titular de la localidad de La Caldera, departamento del mismo nombre, al
+    señor FLORENCIO SILVESTRE AVILES, L. E. [omitido], C. [omitido]. Art. 2º —
+    Comuníquese, publíquese en el Boletín Oficial y archívese. ALIAS D'ABATE
+    (Int.) / Coraita (Int.) [250] VISTO la renuncia interpuesta y atento a los
+    términos contenidos en la misma, ... Artículo 1º — Déjase sin efecto el
+    decreto Nº 9372 de fecha 22 de junio del corriente año, mediante el cual se
+    disponía la designación del señor FLORENCIO SILVESTER AVILEZ en el cargo de
+    Juez de Paz, Titular de la localidad de La Caldera, en razón de que el mismo
+    no se hizo cargo de sus funciones. ... RISSO PATRON / Wehner / Coraita
+  NOTA DE LECTURA: Del original, no conciliado: el 9372 no tiene articulo de
+  refrendo; el 250 se funda en «la renuncia interpuesta» y resuelve porque el
+  designado «no se hizo cargo»; el nombre cambia de «Silvestre Aviles» a
+  «Silvester Avilez» (E.9). El 9372 es del dia en que Risso Patron asume (E.4).
+  La vacante se cubre el 24-9 (A38). Serie: 9373 del 22-6 (capa); 251 del 28-7
+  (capa).
+
+A24  8598 h19  [AGUAS]
+    Edicto: Francisco Navarro Segura pide reconocimiento de concesion para los
+    lotes 16 y 17 de la finca «Vaqueros», catastros 370 y 379
+  FUENTE: 8598 (28-7-1970) h19 col. 2, imagen; 8599 h17, 8600 h15, 8601 h19,
+  8602 h18, 8603 h17, 8604 h8, 8605 h19, 8606 h25 y 8607 h32, por texto.
+  FICHA: Edicto citatorio, O.P. 3994, T. 3609, Ref. Expte. 34-2139/N/69,
+  s.r.a.p., Salta 24-7-1970, Direccion de Colonizacion y Riego (Carlos A. Lopez,
+  Ing. Agr. Eduardo Fuschini).
+  MODO DE LECTURA: Imagen (el edicto en 8598); las demas apariciones, por texto.
+  TEXTO:
+    ... se hace saber que FRANCISCO NAVARRO SEGURA, tiene solicitado
+    reconocimiento de concesión de agua pública, por usos y costumbres, para
+    irrigar las propiedades identificadas con lotes números 16 y 17 de la Finca
+    "Vaqueros", catastros números 370 y 379, con superficies de 5,3654 has. y
+    4,2679 has. respectivamente, ubicadas en la localidad de Vaqueros,
+    Departamento La Caldera, con una dotación de 5,057 ls/seg. a derivar del río
+    Wierna margen derecha, por medio de la acequia comunera Nº 5 y con carácter
+    Permanente y a Perpetuidad.
+  NOTA DE LECTURA: Control aritmetico: (5,3654 + 4,2679) x 0,525 = 5,0575,
+  cierra. Diez apariciones por texto. En 8604 h8 el original corta «La Cal- /
+  dera» con dos guiones y la union no la pega: solo la devuelve la laxa
+  espaciada (§2 y E.7). Primer edicto del año firmado por la Direccion de
+  Colonizacion y Riego en lugar de la A.G.A.S.
+
+A25  8602 h20  [OTRO]
+    Remate sin base de una camioneta Chevrolet 1936 con chapa patente de la
+    Municipalidad de La Caldera
+  FUENTE: 8602 (3-8-1970) h20 col. 2, imagen; 8603 h20, por texto.
+  FICHA: Aviso O.P. 4081, T. 3682, martillero Jorge Raul Decavi; Juez de Paz
+  Letrado Nº 4; e) 3 y 4-8-70; dos apariciones.
+  MODO DE LECTURA: Imagen (el aviso en 8602).
+  TEXTO:
+    El día 4 de agosto de 1970, a las 17 horas, en Urquiza Nº 325, ciudad,
+    remataré Sin Base, una camioneta marca "CHEVROLET", modelo 1936, motor Nº
+    6372312 chapa patente de la Municipalidad de la Caldera Nº 103, que se
+    encuentra en poder del depositario judicial, calle Córdoba número 471, donde
+    puede verse. ... Ordena: Sr. Juez de Paz Letrado Nº 4, en autos: "Ejecutivo
+    - SINA AUTOMOTORES S.R.L. vs. RUIZ, Hugo A. y COLQUE, Marcelo", expte. Nº
+    9.938/70.
+  NOTA DE LECTURA: La chapa es la patente municipal; el aviso no dice que el
+  vehiculo sea de la Municipalidad y no se afirma. El resultado del remate no se
+  encontro (E.3). En 1969 se remato un camion con chapa de la misma
+  Municipalidad (1969 A24).
+
+A26  8612 h5  [NORMA+HACIENDA-MUN]
+    Ley 4365: crea el municipio de tercera categoria de Vaqueros, departamento
+    de La Caldera, y fija sus limites
+  FUENTE: 8612 (18-8-1970) h5 col. 1 (pag. 3976); sumario en h2.
+  FICHA: Ley 4365, Gobierno, 5-8-1970, expte. 699/67. Dictada «en ejercicio de
+  las facultades legislativas que le otorga el artículo 9º del Estatuto de la
+  Revolución Argentina» y del decreto nacional 2091/69.
+  MODO DE LECTURA: Imagen (la ley entera y el renglon del sumario).
+  TEXTO:
+    El Gobernador de la Provincia sanciona y promulga con Fuerza de LEY:
+    Artículo 1º — Créase el municipio de tercera categoría (2da. clase) de
+    VAQUEROS, con asiento en el pueblo del mismo nombre, departamento de La
+    Caldera. Art. 2º — El municipio que se crea por el artículo anterior,
+    comprende la siguiente delimitación territorial: al Norte, municipio de La
+    Caldera, separado por el río Wierna; al Sud, departamento de la Capital,
+    separado por el río Vaqueros; al Este, municipio de La Caldera, separado por
+    el río La Caldera y al Oeste finca Lesser y Abra de Lesser, del municipio de
+    La Caldera. Art. 3º — Téngase por ley de la Provincia, ... RISSO PATRON /
+    Wehner
+  NOTA DE LECTURA: RECUENTO PROPIO: cuatro rumbos, tres de ellos con el
+  municipio de La Caldera (norte, este y oeste) y uno con el departamento de la
+  Capital. Es la pieza que la pregunta de 1969 pedia: hasta esta ley Vaqueros
+  era jurisdiccion del municipio de La Caldera (1969 A04); desde ella el
+  departamento tiene dos municipios. La designacion del primer presidente de la
+  Comision Municipal de Vaqueros es A35. El expediente es de 1967.
+
+A27  8615 h7  [HACIENDA-MUN]
+    Dec. 511: aprueba la Ordenanza 152 de La Caldera, sobre el cobro por
+    extraccion de materiales de los rios de su jurisdiccion
+  FUENTE: 8615 (21-8-1970) h7 col. 1; sumario en h2.
+  FICHA: Decreto 511, Gobierno, 6-8-1970, expte. 53-991. Ordenanza 152 del
+  24-6-1970.
+  MODO DE LECTURA: Imagen (el decreto entero hasta la firma del gobernador);
+  refrendos, capa.
+  TEXTO:
+    Artículo 1º — Apruébase la ordenanza Nº 152- de fecha 24 de junio del
+    corriente año, dictada por la Municipalidad de La Caldera, departamento del
+    mismo nombre, que corre a fs. 2- del presente expediente, relacionada con el
+    cobro por extracción de materiales de los ríos que corresponden a la
+    jurisdicción de ese municipio. ... RISSO PATRON
+  NOTA DE LECTURA: La ordenanza no se publica (E.3). Es anterior en dos meses a
+  la ley que crea el municipio de Vaqueros (A26): la jurisdiccion de los rios
+  que nombra no se precisa. Refrendos (capa): Wehner / Coraita.
+
+A28  8616 h23  [HACIENDA-MUN]
+    Dec. 563: aprueba el presupuesto de La Caldera para 1970: recursos $
+    44.137,49, gastos $ 81.105,94; el deficit se enjuga con economias
+  FUENTE: 8616 (24-8-1970) h23 col. 1 y 2 (pag. 4114-4115).
+  FICHA: Decreto 563, Gobierno, 7-8-1970. Presupuestos de gastos y calculos de
+  recursos de nueve municipios y comisiones municipales. La Caldera: expte.
+  53-808/70. Pesos ley 18.188.
+  MODO DE LECTURA: Imagen (el decreto entero, con las firmas).
+  TEXTO:
+    Artículo 1º — Apruébanse los Presupuestos de Gastos y Cálculos de Recursos a
+    regir en los Municipios y Comisiones Municipales, que en cada caso se indica
+    y cuyos totales ascienden a las sumas que se expresan: ... La Caldera
+    (Expte. Nº 53-808/70) / Cálculo de Recursos $ 44.137,49 / Presupuesto de
+    Gastos „ 81.105,94 ... Art. 2º — Los déficit que preveen los presupuestos de
+    Apolinario Saravia y La Caldera, en la parte que no sean cubiertos con
+    disponibilidades existentes al 31-12-69, serán enjugados con economías por
+    no inversión en erogaciones corrientes. ... PONCE MARTINEZ / Wehner /
+    Vázquez
+  NOTA DE LECTURA: Cuenta propia, no impresa: deficit de 36.968,45, el 45,6 % de
+  los gastos. RECUENTO PROPIO: nueve presupuestos (Aguaray, Angastaco,
+  Apolinario Saravia, Cafayate, El Tala, Gral. Pizarro, Iruya, La Caldera, San
+  Antonio de los Cobres); el acto no declara numero, y solo dos tienen gastos
+  mayores que recursos, los dos que nombra el art. 2: cierra. En 1969 el
+  presupuesto de La Caldera fue de $ 6.154.228 m/n (1969 A10). El decreto, del
+  7-8, lo firma en la imagen «PONCE MARTINEZ», que dejo el gobierno el 22-6; la
+  Ley 4365 del 5-8 y el Dec. 511 del 6-8 los firma Risso Patron, y los ministros
+  Wehner y Vazquez son los de Risso Patron. No se concilia (E.4, E.9).
+
+A29  8617 h16  [OBRA-PUBLICA+AGUAS+ESCUELA]
+    Dec. 580: creditos de ejercicios vencidos a contratistas; Tolaba y Campos
+    por la escuela 250 de Los Yacones y Carmelo Galindo por la defensa sobre el
+    rio La Caldera
+  FUENTE: 8617 (25-8-1970) h10 col. 2 a h17 (cuadro); renglones en h12 y h16,
+  resumenes por contratista en h16-h17.
+  FICHA: Decreto 580, Economia, 11-8-1970. Deudas de la Direccion de Viviendas y
+  Arquitectura y de la ex-A.G.A.S. con contratistas; art. 3 y 4: incorporacion
+  al presupuesto 1970.
+  MODO DE LECTURA: Imagen (renglones del departamento, el resumen de Viviendas
+  entero y el de ex-A.G.A.S. en su renglon); encabezado y firmas, capa.
+  TEXTO:
+    [Viviendas y Arquitectura] Tolaba y Campos | Const. Esc. Nac. 250 - 2 Aulas
+    - Los Yacones | 1 A.U.F. | 4.560,97 [ex-A.G.A.S.] Carmelo Galindo | Defensa
+    s/Río La Caldera | Unico Reaj. C. | 1.8?2,82 [resumen de Viviendas y
+    Arquitectura] Tolaba y Campos 4.560,97 ... TOTAL 788.304,52
+  NOTA DE LECTURA: El digito central del renglon de Galindo no se lee en la
+  imagen de 150 ppp; el resumen por contratista de la ex-A.G.A.S. da «Carmelo
+  Galindo 1.882,82» (control 3 del flujo §5.6): decidido 1.882,82. RECALCULO del
+  resumen de Viviendas y Arquitectura: veintiun contratistas suman 788.304,52
+  con Caprotta Galindo S.R.L. en 5.081,64, cifra que la imagen deja con un
+  digito ilegible y la suma decide (control 2); cierra con el total impreso.
+  6.270.676,13 (total impreso de la ex-A.G.A.S.) + 788.304,52 = 7.058.980,65,
+  que es lo que el art. 3 incorpora al calculo de recursos (capa). Firmas: RISSO
+  PATRON (capa).
+
+A30  8620 h16  [AGUAS+OBRA-PUBLICA]
+    Obra D-3-69, «Defensa s/Rio La Caldera - Zona La Calderilla»: adjudicacion
+    al Ing. Arturo Moyano en $ 51.507 (Dec. 653) y contrato (Dec. 982)
+  FUENTE: Dec. 653: 8620 (28-8-1970) h16 col. 2; sumario en h3. Dec. 982: 8690
+  (14-12-1970) h14 col. 2 y h15 col. 1.
+  FICHA: Decreto 653, Economia, 12-8-1970, codigo 34-3893/69. Decreto 982,
+  Economia, 27-11-1970, expte. C. 34/3893/69; contrato del 2-9-1970. Pesos ley
+  18.188.
+  MODO DE LECTURA: Imagen (los dos decretos; las firmas del 982, capa).
+  TEXTO:
+    [653] Visto este expediente por el que la ex-Administración General de Aguas
+    de Salta eleva el resultado de la Licitación Pública convocada para la
+    contratación y ejecución de la obra Nº D-3-69: "Defensa s/Río La Caldera -
+    Zona La Calderilla", que cuenta con un presupuesto oficial de Pesos Ley
+    18.188 Setenta y tres mil doscientos ochenta y dos con 41/100 ($ 73.282,41);
+    en virtud a la autorización conferida por decreto Nº 5928 del 25 de julio de
+    1969; ... la formulada por la empresa del Ing. Arturo Moyano, quien concreta
+    su oferta en la suma de Pesos Ley 18.188 Cincuenta y un mil quinientos siete
+    ($ 51.507,00), o sea con una disminución del 29,70% del presupuesto oficial;
+    ... Artículo 1º — Adjudícase a la empresa del Ing. ARTURO MOYANO, ... Art.
+    2º — Este gasto se imputará al Anexo B, Item 10, Finalidad 6, Sección 4,
+    Sector 5, Principal 11, Parcial 19, Plan de Trabajos Públicos, Ejercicio
+    1970. ... RISSO PATRON / Vázquez / Dávalos [982] Artículo 1º — Apruébase en
+    todas sus partes el Contrato de Locación de Obra suscrito entre la
+    ex-ADMINISTRACION GENERAL DE AGUAS DE SALTA y la Empresa Contratista
+    Ingeniero ARTURO MOYANO para la ejecución de la obra Nº D-3-69: "DEFENSAS
+    SOBRE RIO LA CALDERA - ZONA LA CALDERILLA" por el monto de Pesos Ley 18.188
+    Cincuenta y un mil quinientos siete ($ 51.507,00) en un plazo de noventa
+    días calendarios
+  NOTA DE LECTURA: Control: 73.282,41 pesos ley 18.188 son los $ 7.328.241 m/n
+  de 1969 (1969 A22). Cuenta propia: la baja es de 29,71 %; el decreto imprime
+  29,70 % (truncado, no se concilia). La partida es el renglon 19 del Plan 1970
+  (A18), de 64.500. «Defensa» en singular en el 653 y «Defensas» en plural en el
+  982, como en 1969. Serie: 652 del 12-8 (imagen) y 983 del 27-11 (capa).
+
+A31  8622 h8  [OBRA-PUBLICA]
+    Cristo Monumental de La Caldera, iluminacion: legajo tecnico ($ 15.443,06),
+    licitacion publica y adjudicacion a Catulo Abel Marcuzzi ($ 13.898,76)
+  FUENTE: Dec. 714 (BS): 8622 (1-9-1970) h8 col. 2; sumario en h3, que remite a
+  la pag. 4316. Licitacion O.P. 4488: 8628 (9-9-1970) h15 col. 2, imagen; 8629
+  h13, 8630 h13, 8631 h15 y 8632 h15, por texto. Dec. 1138: 8700 (30-12-1970)
+  h12 col. 1 y 2.
+  FICHA: Decreto 714, Bienestar Social, 14-8-1970, expte. 01860/69, cod. 28:
+  aprueba la Res. 331 de Viviendas y Arquitectura del 3-11-1969. Licitacion
+  publica de Viviendas y Arquitectura, O.P. 4488, F. 0529, apertura 19-10-1970;
+  e) 9 al 17-9-70. Decreto 1138, Bienestar Social, 15-12-1970, mismo expediente:
+  aprueba la Res. 622 del 24-11-1970.
+  MODO DE LECTURA: Imagen (los dos decretos y el aviso en 8628); las firmas del
+  1138 y las otras cuatro apariciones del aviso, capa y texto.
+  TEXTO:
+    [714] Artículo 1º — Apruébase en todas sus partes la Resolución Nº 331 de
+    fecha 3 de noviembre de 1969, dictada por la Dirección de Viviendas y
+    Arquitectura de la Provincia, mediante la cual se aprueba el legajo técnico
+    de la obra: "Instalación eléctrica - Línea principal, iluminación Cristo
+    Monumental - La Caldera", ... cuyo presupuesto asciende a "Pesos Ley
+    18.188", $ 15.443,06 ... Art. 2º — Autorízase a la Dirección de Viviendas y
+    Arquitectura de la Provincia, a convocar a Licitación Pública ... RISSO
+    PATRON / Remis / Leiva [4488] Llámase a Licitación Pública, para la
+    contratación y ejecución de la Obra: "Instalación Eléctrica - Línea
+    Principal, Iluminación Cristo Monumental - La Caldera", mediante el sistema
+    de ajuste alzado, con un presupuesto oficial de $ 15.443,06 Ley 18.188. La
+    apertura de las ofertas se llevará a cabo el día 19 de octubre próximo, a
+    las 11 horas, ... [1138] Teniendo en cuenta que en la misma se adjudica a la
+    Empresa Constructora Cátulo Abel Marcuzzi la contratación y ejecución de la
+    obra Nº 94 "INSTALACION ELECTRICA, LINEA PRINCIPAL, ILUMINACION CRISTO
+    MONUMENTAL LA CALDERA"; ... Artículo 1º — ... la Obra Nº 944; "INSTALACION
+    ELECTRICA, LINEA PRINCIPAL, ILUMINACION CRISTO MONUMENTAL LA CALDERA", por
+    el monto de "Pesos Ley 18.188" $ 13.898,76
+  NOTA DE LECTURA: Cuenta propia, no impresa: la adjudicacion es un 10,0 % menor
+  que el presupuesto. Del original: «obra Nº 94» en el VISTO y «Obra Nº 944» en
+  el articulo 1 (E.9). Cinco apariciones del aviso por texto; la marca e) 9 al
+  17-9 abarca siete dias habiles, pero el 14 y el 15 de septiembre no hay
+  edicion (§1). Hay dos decretos 714 de Bienestar Social en 1970, este del 14-8
+  y el de las pensiones del 9-11 (A06): son de series distintas (E.4). La
+  imputacion del 714 y del 1138 es la Parcial 2 de la Finalidad 1 de Viviendas,
+  que en el Plan 1970 es la conservacion de edificios (A18). Contratista de la
+  base del Cristo en 1968-1969 fue Luis Bressanutti, cuyo juicio sucesorio se
+  publica en 1970 (B.4).
+
+A32  8624 h12  [ESCUELA]
+    Res. 104 de Bienestar Social: subsidio para comedores escolares a las
+    escuelas de El Gallinato, Vaqueros y La Caldera (agosto a noviembre)
+  FUENTE: 8624 (3-9-1970) h10 col. 2 a h12 (cuadro); renglones del departamento
+  en h12.
+  FICHA: Resolucion 104, Bienestar Social (ministro), 13-8-1970, expte.
+  03744/70, cod. 66. Fondos de la Secretaria de Estado de Promocion y Asistencia
+  de la Comunidad de la Nacion (Dec. 112/70; Dec. nacional 1247/70; Dec.
+  326/70).
+  MODO DE LECTURA: Imagen (VISTO, considerandos y los renglones del
+  departamento).
+  TEXTO:
+    ... entre los que se encuentra los aprobados para Subsidios de "Comedores
+    Escolares", mediante Decreto Nacional Nº 1247/70; por un monto total de $
+    349.000 Pesos Ley 18.188; ... Departamento: LA CALDERA / Gustavo M. de
+    Zuviría - El Gallinato 250 1.000 / Dr. Bernabé López - Vaqueros 990 3.960 /
+    Juana Moro de López - La Caldera 1.130 4.520
+  NOTA DE LECTURA: Columnas: mensual y total de agosto a noviembre. Control
+  aritmetico: 250 x 4 = 1.000, 990 x 4 = 3.960, 1.130 x 4 = 4.520, cierran.
+  RECUENTO PROPIO: tres escuelas del departamento. El acto pone a la escuela
+  Gustavo Martinez Zuviria de El Gallinato en el Departamento La Caldera: la
+  jurisdiccion que 1969 dejo indeterminada (1969 B2-03) queda dada por un acto
+  (v16 §5.1ter).
+
+A33  8632 h15  [AGUAS]
+    Edicto: Arturo Aurelio Quintana Fascio pide concesion temporal-eventual para
+    10 ha del catastro 93 (rio Los Porongos)
+  FUENTE: 8632 (17-9-1970) h15 col. 2, imagen; 8633 h16, 8634 h12, 8635 h16,
+  8636 h14, 8637 h15, 8638 h16, 8639 h16, 8640 h18 y 8641 h18, por texto.
+  FICHA: Edicto citatorio, O.P. 4071, T. 4129, Ref. Expte. 6867-Q/60, s.o.a.p.;
+  Administracion General de Aguas; e) 17-9 al 1-10-70. La fecha del edicto no se
+  imprime («Salta, /»).
+  MODO DE LECTURA: Imagen (el edicto en 8632).
+  TEXTO:
+    ... se hace saber que Arturo Aurelio Quintana Fascio solicita otorgamiento
+    de concesión de agua pública, para irrigar, con carácter Temporal-Eventual
+    una superficie de 10 Has. de la propiedad Catastro Nº 93, ubicada en el
+    Departamento La Caldera, con una dotación de 5,25 ls/segundo a derivar del
+    río Los Porongos (margen izquierda) por una acequia propia. Los turnos
+    tendrán la prelación que establece el Art. 22 del Código de Aguas.
+  NOTA DE LECTURA: Control: 10 x 0,525 = 5,25. Diez apariciones por texto. El
+  expediente es de 1960. En la misma columna de 8632 h15 la licitacion privada
+  «para la adquisición de una caldera para agua caliente» es de la Municipalidad
+  de San Antonio de los Cobres (E.7).
+
+A34  8635 h14  [OBRA-PUBLICA+HACIENDA-MUN]
+    Municipalidad de La Caldera, licitacion publica Nº 1: cordon cuneta y canal
+    de desagues pluviales en el pueblo ($ 6.783.257)
+  FUENTE: 8635 (22-9-1970) h14 col. 2; sumario en h3.
+  FICHA: Aviso O.P. 4612, T. 4163; P. L. 18.188: 4,-; e) 22-9-70; una aparicion.
+  MODO DE LECTURA: Imagen (el aviso entero).
+  TEXTO:
+    Municipalidad de La Caldera / LICITACION PUBLICA Nº 1 / Llámase a Licitación
+    Pública para la construcción de Cordón Cuneta y Canal de Desagües pluviales
+    en el pueblo de La Caldera. Presupuesto Oficial 6.783.257,-. Apertura: 25 de
+    setiembre de 1970, a las 10 horas en la Municipalidad.
+  NOTA DE LECTURA: El presupuesto no dice moneda; la cifra es la suma, en pesos
+  moneda nacional, de las tres asignaciones del FITSA para estas dos obras:
+  1.500.000 + 3.500.000 + 1.783.257 (A04; cuenta propia). El aviso sale tres
+  dias antes de la apertura. La adjudicacion no se encontro en lo leido (E.3).
+  Primera licitacion publicada por la propia Municipalidad en lo leido de 1970.
+
+A35  8639 h8  [CARGOS+HACIENDA-MUN]
+    Dec. 135: Julio Catalan Arellano, presidente de la Comision Municipal de
+    Vaqueros
+  FUENTE: 8639 (28-9-1970) h8 col. 2; sumario en h3, que remite a la pag. 4840.
+  FICHA: Decreto 135, Gobierno, 18-9-1970.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    VISTO la ley Nº 4365- del 5-VIII-70, mediante la cual se crea el municipio
+    de tercera categoría (2da. clase) de Vaqueros, con asiento en el pueblo del
+    mismo nombre, departamento de La Caldera y siendo necesario proceder a la
+    designación del titular en dicha comuna, ... Artículo 1º — Desígnase al
+    señor JULIO CATALAN ARELLANO, M. I. [omitido], D. M. 63, C. I. [omitido] -
+    Policía de Salta, C. [omitido], en el cargo de Presidente de la Comisión
+    Municipal de Vaqueros, departamento de La Caldera, a partir de la fecha que
+    tome posesión de sus funciones. ... AGUIRRE MOLINA / Cornejo Isasmendi
+  NOTA DE LECTURA: Catalan Arellano integraba en 1969 la cooperadora asistencial
+  de La Caldera (1969 A32; config 1955). Serie: 136 de Economia del 18-9 (capa).
+
+A36  8639 h13  [JUSTICIA+CARGOS]
+    Dec. 144: acepta la renuncia de Porfiria Mercado como juez de paz suplente
+    de La Caldera
+  FUENTE: 8639 (28-9-1970) h13 col. 1.
+  FICHA: Decreto 144, Gobierno, 21-9-1970, expte. 41-2850.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Artículo 1º — Acéptase la renuncia presentada por la señora PORFIRIA
+    MERCADO, al cargo de Juez de Paz Suplente de la localidad de La Caldera,
+    departamento del mismo nombre. ... AGUIRRE MOLINA / Cornejo Isasmendi
+  NOTA DE LECTURA: Designada en abril como «señorita» (A12). Serie: 145 del 21-9
+  (imagen).
+
+A37  8644 h12  [AGUAS+CARGOS]
+    Dec. 248: compensacion mensual a Esteban Mogro, tomero de La Caldera, por
+    atender el agua corriente del pueblo
+  FUENTE: 8644 (6-10-1970) h12 col. 1.
+  FICHA: Decreto 248, Economia, 23-9-1970, expte. C. 34-12027-70.
+  MODO DE LECTURA: Imagen (el decreto entero hasta la firma del gobernador y el
+  primer refrendo).
+  TEXTO:
+    VISTO el pedido formulado por el señor Esteban Mogro, Tomero de la localidad
+    de La Caldera, dependiente de la ex-Administración General de Aguas de
+    Salta, en el sentido de que se le asigne una compensación mensual por
+    atender además de sus funciones habituales, la normal prestación del
+    servicio de agua corriente a los usuarios del aludido pueblo; ... Artículo
+    1º — Asígnase a partir del 1º de febrero de 1970, la suma de Pesos Ley
+    18.188 Cincuenta ( 50,00) mensuales al señor ESTEBAN MOGRO en carácter de
+    compensación por los servicios extraordinarios que presta en atención de los
+    servicios de aguas corrientes de La Caldera al margen de sus funciones
+    habituales de tomero de la misma localidad. ... AGUIRRE MOLINA / Grether
+    (h.)
+  NOTA DE LECTURA: El agua corriente del pueblo la atiende el tomero de la
+  reparticion provincial, no la Municipalidad. Retroactivo a febrero. Esteban
+  Mogro esta en el config desde 1952.
+
+A38  8646 h8  [JUSTICIA+CARGOS]
+    Dec. 290: Teodoro Bartolo Mogro, juez de paz titular, y Liborio Gerardo
+    Guerrero, suplente, de La Caldera
+  FUENTE: 8646 (8-10-1970) h8 col. 1; sumario en h2, que remite a la pag. 5044.
+  FICHA: Decreto 290, Gobierno, 24-9-1970, expte. 53-1076. Terna de la
+  Municipalidad.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    La Municipalidad de La Caldera, departamento del mismo nombre, eleva la
+    terna para la designación de Jueces de Paz titular y suplente en dicha
+    localidad, por encontrarse los nombrados cargos vacantes; ... Artículo 1º —
+    Desígnase al señor TEODORO BARTOLO MOGRO, L. E. [omitido] C. [omitido], en
+    el cargo de Juez de Paz titular de la localidad de La Caldera, ... Art. 2º —
+    Desígnase al señor LIBORIO GERARDO GUERRERO, L. E. [omitido], C. [omitido],
+    en el cargo de Juez de Paz suplente ... AGUIRRE MOLINA / Cornejo Isasmendi
+  NOTA DE LECTURA: Cuarto titular designado para el juzgado en 1970 (Lizondo,
+  A02; Aviles, que no asume, A23; Mogro). Guerrero era el suplente de 1968.
+  Serie: 291 del 24-9 (imagen).
+
+A39  8651 h8  [OTRO+NORMA]
+    Dec. 361: feriado el 7-10-1970 en el departamento de La Caldera por la
+    fiesta de la Virgen del Rosario
+  FUENTE: 8651 (16-10-1970) h8 col. 2; sumario en h2, que remite a la pag. 5204.
+  FICHA: Decreto 361, Gobierno, 6-10-1970, expte. 41-3008.
+  MODO DE LECTURA: Imagen (el decreto entero).
+  TEXTO:
+    Con motivo de celebrarse el día 7 de octubre del año en curso, en la
+    localidad de La Caldera, la festividad en honor de la Santísima Virgen del
+    Rosario; ... Artículo 1º — Declárase feriado el día 7 de octubre del año en
+    curso, en jurisdicción del Departamento de La Caldera, con motivo de la
+    celebración de sus fiestas patronales en honor de la Santísima Virgen del
+    Rosario. ... AGUIRRE MOLINA / Cornejo Isasmendi
+  NOTA DE LECTURA: La fiesta es «en la localidad» y el feriado «en jurisdicción
+  del Departamento». El decreto se publica nueve dias despues del feriado. El
+  7-10 hubo Boletin (8645): el feriado es local. Serie: 362 del 6-10 (imagen).
+
+A40  8652 h19  [AGUAS]
+    Dos edictos de Vaqueros: Edmundo Cesar Lavaque y Maria Teresa Sales de
+    Lavaque («Terreno», catastro 1537, rio Wierna) y Ricardo Nemecio Perera
+    Quintana (Fraccion Cerro Buena Vista, catastro 433, rio Vaqueros)
+  FUENTE: 8652 (19-10-1970) h19 col. 1 y 2, imagen; 8653 a 8661, por texto (diez
+  apariciones de cada uno); sumarios en h3.
+  FICHA: Edictos citatorios de la Direccion de Colonizacion y Riego del
+  13-10-1970, sin cargo, e) 19 al 30-10-70: O.P. 4911 (Ref. Expte. 34-4119/69,
+  s.o.a.p.) y O.P. 4910, S.C. 0136 (Ref. Expte. 34-3189-P-69).
+  MODO DE LECTURA: Imagen (los dos edictos en 8652; el numero de catastro, a 300
+  ppp en 8652, 8655 y 8658).
+  TEXTO:
+    [4911] ... se hace saber que EDMUNDO CESAR LAVAQUE y MARIA TERESA SALES DE
+    LAVAQUE, tienen solicitado otorgamiento de concesión de agua pública, para
+    irrigar con carácter Temporal-Eventual una superficie de 1 Ha. de su
+    propiedad denominada "Terreno", catastro Nº 1537, ubicado en el Partido de
+    Vaqueros, —Departamento La Caldera— con una dotación de 0.525 l/seg. a
+    derivar del río Wierna —margen derecha— por la acequia comunera Nº 5. [4910]
+    ... se hace saber que RICARDO NEMECIO PERERA QUINTANA, tiene solicitado
+    otorgamiento de concesión de agua pública, para irrigar con carácter
+    Temporal-Eventual, una superficie de 5.000 m2. de la propiedad denominada
+    Fracción Cerro Buena Vista, catastro Nro. 433, ubicada en el Partido de
+    Vaqueros —Departamento La Caldera— con una dotación de 0,262 l/seg. a
+    derivar del río Vaqueros —margen izquierda— mediante la acequia Principal Nº
+    2.
+  NOTA DE LECTURA: El catastro de Lavaque se lee 1537 en la imagen de tres
+  apariciones a 300 ppp; la capa da 1587, 1537 y 15837 segun la edicion.
+  Decidido por las otras apariciones (control 3 del flujo §5.6), con la salvedad
+  de que las tres son del mismo molde. Control: 0,5 ha x 0,525 = 0,2625. Un
+  Nestor Lavaque es lindero de «El Mollar» (A44).
+
+A41  8660 h15  [OTRO]
+    Censo de poblacion 1869-1970 por departamento: La Caldera, 1.627 habitantes
+    en 1869 y 3.671 en 1970
+  FUENTE: 8660 (29-10-1970) h15, cuadro a todo el ancho.
+  FICHA: «Censo de Población de la Provincia de Salta / CUADRO DEMOSTRATIVO»,
+  nota del Servicio de Estadistica y Censos; sin numero ni firma.
+  MODO DE LECTURA: Imagen (el cuadro entero).
+  TEXTO:
+    El Servicio de Estadística y Censos dio a conocer un cuadro comparativo de
+    la población de la Provincia de Salta desde 1869 a 1970. ... Departamento
+    1869 1895 1914 1947 1960 1970 / TOTAL 88.933 118.015 142.156 290.826 412.854
+    506.483 / ... La Caldera 1.627 2.086 2.180 2.831 3.096 3.671
+  NOTA DE LECTURA: RECALCULO de las seis columnas: 1869 (21 departamentos)
+  88.933, 1895 118.015, 1914 142.156, 1947 290.826 y 1970 (23 departamentos)
+  506.483, cierran; 1960 suma 412.864 contra 412.854 impreso: no cierra por 10,
+  diferencia que cabe en un digito de 150 ppp de la columna; no se decide, y la
+  cifra de La Caldera de 1960 (3.096) queda sin control. Las otras cinco cifras
+  del departamento estan en columnas que cierran. Cuentas propias: La Caldera es
+  el 0,72 % de la provincia en 1970 y crece un 18,6 % entre 1960 y 1970 si la
+  cifra de 1960 es la impresa. Nota (1) del cuadro: Oran y San Martin en 1948.
+
+A42  8661 h20  [DOMINIO+JUSTICIA]
+    Tres remates de bienes de Hilario Arias: la finca Mojotoro (partida 132) dos
+    veces y el Potrero de Gallinato (catastro 2)
+  FUENTE: (a) O.P. 5065: 8661 (30-10-1970) h20 col. 1 y 2, imagen; 8662 a 8670,
+  por texto. (b) O.P. 5508: 8686 (7-12-1970) h20 col. 2 y h21 col. 1, imagen del
+  titulo; 8687 a 8695, por texto. (c) O.P. 5482: 8685 (4-12-1970) h26 col. 1,
+  imagen; 8686 a 8694, por texto.
+  FICHA: (a) Martillero Justo C. Figueroa Cornejo, T. 4543; Juez de 1a Inst. 5a
+  Nom. C. y C.; «Armanino Julio Argentino vs. Arias Hilario» (Testamentaria),
+  Ejecucion Hipotecaria, Expte. 22.407/70; e) 30-10 al 13-11-70. (b) Martillero
+  Ricardo Gudiño, T. 4974; 5a Nom.; «Taurus S.R.L. vs. Arias, Hilario -
+  Ejecutivo», Expte. 22.548/70; e) 7 al 22-12-70. (c) Martillero Juan Antonio
+  Cornejo, T. 4950; 3a Nom.; «Del Pin, Mario vs. Arias Hilario Oscar», Expte.
+  38286/70; e) 4 al 21-12-70 (la cabeza del aviso dice «e) 4 al 9-12-70»).
+  MODO DE LECTURA: Imagen: (a) entero en 8661; (b) titulo, valor fiscal y juicio
+  en 8686; (c) entero en 8685. Las demas apariciones, por texto.
+  TEXTO:
+    [5065] Importante Finca en el partido de Mojotoro Departamento de la
+    Caldera. Base $ 16.280 (m/n. $ 1.628.000) Valuación Fiscal $ 92.190 (m/n. $
+    9.219.000). El día lunes 15 de noviembre de 1970 a horas 18 ... remataré con
+    la Base de la Hipoteca en primer término ... las fincas para agricultura y
+    ganadería denominada MOJOTORO ... formada en su conjunto por las Fincas
+    "Mojotoro" "Santa Gertrudis" y "Potrero de Gallinato" todas contiguas y
+    unidas entre sí. Límites, Este Finca "El Desmonte", de Julio Cornejo y Cía.
+    hoy sus sucesores y la Finca "Rodeo Grande" o "Punta del agua" del señor
+    Florentín Linares hoy sus sucesores; Sud con el Río Mojotoro; Norte con la
+    finca Punta del Agua del señor Linares y las cumbres del cerro de Pucheta y
+    por el Oeste con las propiedades de José Nogales Camilo Cáceres, Desiderio
+    Saltivañez. Catastro: Mojotoro La Caldera Partida número 132, Títulos Folio
+    105. Asiento 1 del Libro Nº 3 del R. I. de la Caldera. ... Cítase a los
+    señores RAFAEL y JAIME ABRAHAM ABUD JACOBO ... [5508] Título: Le corresponde
+    al señor Hilario Arias, por título inscripto a Folio 105, Asiento 1, del
+    Libro 3 de R. I. de La Caldera, Catastro 132. Valor fiscal: $ Ley 18.188:
+    921.90. [5482] Finca en Departameno La Caldera / Base Pesos Ley 18.188 420.—
+    / El día martes 22 de diciembre de 1970 ... remataré con la Base de Pesos
+    Ley 18.188 Cuatrocientos veinte (420.-), o sea las 2/3 partes de su valor
+    fiscal, la propiedad denominada Potrero de Gallinato, en el Dpto. La
+    Caldera, Catastrado bajo Nº 2; que le corresponde a don HILARIO ARIAS, por
+    títulos inscriptos a folios 225 y 274, asientos 283 y 349 del Libro 8 de
+    Títulos de La Caldera.
+  NOTA DE LECTURA: Contradicciones del original, no conciliadas (E.9): el valor
+  fiscal de la partida 132 es 92.190 en (a) y 921.90 en (b); 9.219.000 m/n son
+  92.190 pesos ley 18.188 (control 2), pero ninguna pieza del corpus dice cual
+  imprime mal. (a) fija la subasta el «lunes 15 de noviembre de 1970», que fue
+  domingo. (a) escribe «Saltivañez» y (b) «Santibáñez»; «Departameno» [sic] en
+  (c). Cuenta propia: la base de (c) es dos tercios de un valor fiscal de 630.
+  La finca Mojotoro de (a) y (b) incluye una fraccion «Potrero de Gallinato»; si
+  es el mismo inmueble que el catastro 2 de (c) no lo dicen los avisos y no se
+  afirma. Diez apariciones de cada aviso por texto; coinciden con las marcas. El
+  resultado de los remates no se encontro (E.3). Los limites nombran a Julio
+  Cornejo y Cia. y a Florentin Linares «hoy sus sucesores».
+
+A43  8664 h13  [CARGOS+OTRO]
+    Dr. Juan Carlos Martearena, medico zonal de La Caldera: contrato de
+    septiembre a diciembre (Dec. 587) y caja chica del Consultorio Externo (Res.
+    149)
+  FUENTE: Dec. 587: 8664 (5-11-1970) h13 col. 2. Res. 149: 8671 (16-11-1970) h11
+  col. 2; sumario en h3, que remite a la pag. 5875.
+  FICHA: Decreto 587, Bienestar Social, 28-10-1970, expte. 03876/70, cod. 66.
+  Resolucion 149, Bienestar Social, 4-11-1970, expte. 10181/70, cod. 67.
+  MODO DE LECTURA: Imagen (los dos actos hasta la firma del gobernador o del
+  ministro).
+  TEXTO:
+    [587] Artículo 1º — Apruébase en todas sus partes el contrato de locación de
+    servicios celebrado entre el Secretario de Estado de Salud Pública Dr. MARIO
+    JOSE BAVA en representación del Gobierno de la Provincia de Salta y el Dr.
+    JUAN CARLOS MARTEARENA L. E. [omitido], quién se desempeñará como Médico
+    Zonal de la localidad de La Caldera, durante el tiempo comprendido entre el
+    1º de setiembre y el 31 de diciembre del año en curso, con una retribución
+    mensual de Pesos Ley 18.188 400,00 (Cuatrocientos pesos). ... AGUIRRE MOLINA
+    / Caro [149] VISTO que el Dr. Juan Carlos Martearena, Médico Zonal interino
+    del Consultorio Externo de la Caldera, solicita la ampliación del monto que
+    percibe en concepto de "Caja Chica", ... 1º — Ampliar en la suma de $ 20,00
+    (Veinte Pesos Ley 18.188) mensual el monto que tiene asignado el Consultorio
+    Externo de La Caldera en concepto de "Caja Chica" a partir del 1º de octubre
+    del año en curso, ... debiendo liquidarse dicho monto a favor de la Srta.
+    CORINA BUSTAMANTE enfermera de dicho Consultorio.
+  NOTA DE LECTURA: En junio el medico zonal era Albano Alvarez Cesar (A19); el
+  traspaso no se encontro en lo leido (E.3). Corina Bustamante esta en el config
+  desde 1952.
+
+A44  8672 h21  [DOMINIO+JUSTICIA]
+    Posesion treintanal del inmueble rural «El Mollar», catastro 1540 de La
+    Caldera, que tramita Carlos Manuel Zapata
+  FUENTE: 8672 (17-11-1970) h21 col. 1, imagen; 8673 h21, 8674 h24, 8675 h32,
+  8676 h29, 8677 h33, 8678 h29, 8679 h29, 8680 h27 y 8681 h27, por texto.
+  FICHA: Aviso O.P. 5221, T. 4691; Juez Civil de 1a Inst. 2a Nom. Vicente
+  Nicolas Arias; expte. 45.666/70; Salta, 9-11-1970; secretario Dr. Milton
+  Echenique Azurduy; e) 17 al 30-11-70.
+  MODO DE LECTURA: Imagen (el aviso en 8672).
+  TEXTO:
+    VICENTE NICOLAS ARIAS, Juez Civil de Primera Instancia, Segunda Nominación,
+    cita por 10 días a quienes se consideren con derecho sobre el inmueble
+    rural, denominado "El Mollar" catastro 1540 de La Caldera, cuya posesión
+    tramita Carlos Manuel Zapata, en expediente 45.666/70, con la prevención de
+    nombrárseles defensor de oficio. Sus límites son: Al Norte propiedad de
+    Mercedes Aldonate de Lozano; Sud, Ricardo Durand, Segundo César Campos,
+    Manuel Condorí, y C. Apaza; Este, J. Lozano y Oeste, Néstor Lávaque.
+  NOTA DE LECTURA: RECUENTO PROPIO: siete linderos nombrados (uno al norte,
+  cuatro al sud, uno al este, uno al oeste); el acto no declara numero. No da
+  superficie. Diez apariciones por texto; coinciden con la marca.
+
+A45  8678 h11  [HACIENDA-MUN+OTRO]
+    Dec. 777: transfiere sin cargo una maquina de escribir de la Contaduria
+    General a la Municipalidad de La Caldera
+  FUENTE: 8678 (25-11-1970) h11 col. 2; sumario en h3, que remite a la pag.
+  6103.
+  FICHA: Decreto 777, Economia, 16-11-1970, expte. cod. 21-1525/70.
+  MODO DE LECTURA: Imagen (VISTO y art. 1); firmas, capa.
+  TEXTO:
+    VISTO el presente expediente en el que la Secretaría de Estado de
+    Municipalidades solicita ante Contaduría General de la Provincia, la
+    transferencia de una máquina de escribir en desuso a favor de la
+    Municipalidad de La Caldera; ... Artículo 1º — Dispónese, a partir de la
+    fecha del presente decreto, la transferencia sin cargo de una máquina de
+    escribir marca Remington Rand, 250 espacios, planillera, 2-4L024 Goehler,
+    Código: 2.04.03.24, perteneciente a Contaduría General de la Provincia, a
+    favor de la MUNICIPALIDAD DE LA CALDERA.
+  NOTA DE LECTURA: Lo pide la Secretaria de Estado de Municipalidades, no la
+  Municipalidad. Un mes antes la Agrupacion Gauchos de Guemes de Vaqueros pide
+  maquinas de escribir en desuso de Fiscalia de Gobierno (B2-08).
+
+A46  8680 h19  [DOMINIO+JUSTICIA]
+    Remate de la Parcela 5 de Tres Cerritos y, si no alcanza, del lote 77 del
+    plano 96 de Vaqueros (1.329,87 m2); acreedores hipotecarios Carlos y Manuel
+    Serrey
+  FUENTE: 8680 (27-11-1970) h18 col. 2 y h19 col. 1, imagen; 8681 h19, 8682 h11,
+  8683 h23, 8684 h28, 8685 h31, 8686 h28, 8687 h31, 8688 h30 y 8689 h33, por
+  texto.
+  FICHA: Aviso O.P. 5398, T. 4869; martillero Miguel A. Gallo Castellanos;
+  16-12-1970; Juez de 1a Inst. C. y C. 5a Nom.; «Cuftoidinho, Angélica Rosa de
+  la Silva de vs. Villafañe, Tito Prisiano», Ejecucion Hipotecaria, Expte.
+  22.120/70; e) 27-11 al 11-12-70.
+  MODO DE LECTURA: Imagen (el aviso en 8680, la parte de Vaqueros entera).
+  TEXTO:
+    ... en el mismo acto remataré con base equivalente al importe que faltare
+    para cubrir dicho crédito con más la suma de Pesos Ley 18188 Trescientos
+    sesenta, valor del crédito hipotecario en 1er. término, el inmueble ubicado
+    en la localidad de Vaqueros, Dpto. de La Caldera, designado en plano Nº 96
+    como lote 77, con extensión de 46 mts. en su lado N.; 46.10 mts. en el
+    Sud-Este; 27.50 mts. en el Sud-Oeste y 30.30 mts. en el Nor-Oeste, lo que
+    hace una superficie de 1.329,87 m2., limitando al N.O. con lote 78; S.O. con
+    propiedad de Carlos y Manuel Serrey; S.E. con lote 87 y N.O. en parte con
+    calle pública y lote 76. Nom. Catastral: Part. Nº 1.048. ... Folio 235, As.
+    7, Libro 6, R. I. La Caldera ... se cita a los acreedores hipotecarios
+    señores CARLOS Y MANUEL SERREY ...
+  NOTA DE LECTURA: Del original: dos linderos al N.O. y ninguno al N.E. (E.9).
+  Los Serrey son a la vez linderos y acreedores hipotecarios en primer termino;
+  su relacion con Manuel David Serrey, el interventor (A13), no la da el aviso y
+  no se afirma. La superficie no se recalcula: el lote no es rectangular y no se
+  dan angulos. Diez apariciones por texto. Es un lote de un plano de loteo de
+  Vaqueros: el plano 96 no se publica (§P).
+
+A47  8697 h12  [CARGOS]
+    Dec. 1082: renuncia para jubilarse el agente Liborio Cabrera Sanaberon, de
+    la Subcomisaria de La Caldera
+  FUENTE: 8697 (24-12-1970) h12 col. 1; sumario en h3.
+  FICHA: Decreto 1082, Gobierno, 10-12-1970, expte. 44-46859. Nota 231 de
+  Jefatura de Policia del 20-11-1970.
+  MODO DE LECTURA: Imagen (VISTO y art. 1).
+  TEXTO:
+    Artículo 1º — Acéptase a partir del día 1º de diciembre del corriente año,
+    la renuncia presentada por el Agente, Categoría 20-06, Personal de Seguridad
+    y Defensa de Policía de la Provincia (L. 2885-P. 1408) don LIBORIO CABRERA
+    SANABERON, C. [omitido], M. I. [omitido]; con revista en la Sub-Comisaría de
+    La Caldera y con motivo de acogerse a los beneficios de la jubilación.
+  NOTA DE LECTURA: Cabrera Sanaberon esta en el config desde 1955 (y «Liborio
+  Cabrera», 1956).
+
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS YA FICHADOS
+Siguen en 1970 nucleos que traen los informes anteriores: el FITSA del cordon
+cuneta y el canal de desague de la Municipalidad (A04, A34; 1969 A12); Tolaba y
+Campos y la escuela 250 de San Francisco de los Yacones (A03, A05, A29; 1969
+A06); la obra D-3-69 de defensas sobre el rio La Caldera (A18, A29, A30; 1969
+A22); el Cristo Monumental (A31; 1969 A14, A18, A26); el Plan de Salud de la
+Capital y La Caldera y el medico zonal Albano Alvarez Cesar (A14, A19; 1969
+A17); Ziaollah Vojdani Gouri (A20; 1969 A34); el Hogar «Dr. Luis Linares» y
+Rodolfo Abraham (A21, B2-06; 1969 A19 a A21, A32); Jesus del Valle Molina (A22;
+1969 A21); Manuel David Serrey (A13; 1969 A32); el juzgado de paz (A02, A12,
+A13, A23, A36, A38; 1969 A29); el Centro Gaucho «El Palenque» y Arturo Fernandez
+(A17; 1969 A36); Julio Catalan Arellano y Porfiria Mercado, de la cooperadora de
+1969 (A12, A35, A36; 1969 A32); el Hogar San Cayetano de Vaqueros (B2-04, B2-07;
+1969 A16, A31, B2-04); la tasa del cargadero y la bascula (A08; 1969 A38). Las
+fichas de 1970 no repiten lo que esos informes ya transcribieron.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+Diez entradas de actos sin la palabra Caldera que tocan localidades o
+instituciones del departamento, todas miradas en la imagen salvo donde se dice.
+La jurisdiccion la da el acto, otro acto del año que se nombra, o queda
+indeterminada (v16 §5.1ter). Vaqueros es del departamento por la Ley 4365 (A26)
+y por los actos de A15, A16, A24 y A40.
+
+B2-01 8483 h8 ESCUELA+CARGOS. Dec. 7936, Bienestar Social, 21-1-1970, exptes.
+1837/69, 2819/68 y 1710/69: aprueba la Res. 67-I de la Caja (15-1-1970) que
+acuerda jubilacion ordinaria «al Maestro de la Escuela "Dr. Vicente Solá" de
+Vaqueros y Director de la Escuela Militar Nº 40», Ruben Angel Blanco (imagen; el
+haber, $ 712,62, capa).
+
+B2-02 8532 h7 CARGOS. Dec. 8456, Gobierno, 8-4-1970, exptes. 44-30816 y 31047,
+«El Gobernador Interino»: acepta la renuncia del agente Ramon Maximo Aybar «con
+revista en el Departamento de Vaqueros» desde el 18-3-1970 (imagen).
+«Departamento» es aqui la unidad policial; no se lee como jurisdiccion.
+
+B2-03 8532 h11 OTRO. Dec. 8467, Gobierno, 8-4-1970, expte. 54-95, «El Gobernador
+Interino»: Agustin Urquiza y Serafina M. de Sarmiento, presidente y secretaria
+del «Centro Vecinal Vaqueros», «con domicilio legal en la localidad de
+Vaqueros»; aprueba su estatuto y le da personeria juridica (imagen; sumario en
+h3).
+
+B2-04 8549 h28 OTRO. Aviso O.P. 3231, T. 2884: «AGRUPACION GAUCHOS DE GÜEMES
+VAQUEROS — Salta» convoca a asamblea general ordinaria «en el Hogar Agrícola San
+Cayetano, el día 24 de mayo», con tres puntos, el tercero «Cesión terreno para
+instalación complejo deportivo»; firman Agustin Urquiza (presidente) y Luis
+Sciangula (secretario) (imagen; sumario en h5). Una aparicion por texto; la
+marca impresa (capa) es «e) 13 y 14-4-70», en una edicion del 14-5 (E.9).
+
+B2-05 8598 h14 OTRO+CARGOS. Dec. 9308, Bienestar Social, 19-6-1970, exptes.
+02701/70 y 02945/70 (adicional de enfermeros del Dec. 7219/69): en la nomina,
+«PUESTO SANITARIO VAQUEROS / VALDEZ, Ramón Humberto 23» (h14) y «PUESTO
+SANITARIO VAQUEROS / MURUA, Claudio 26» (h16) (imagen de los dos renglones con
+su encabezado). Murua es el enfermero de A19; un Ramon Humberto Valdez esta en
+el config desde 1968. La nomina no se recuenta entera.
+
+B2-06 8607 h6 CARGOS. Dec. 330, Bienestar Social, 30-7-1970, expte. 03510/70:
+designaciones en los hogares de la Direccion de Patronato (Ley 4348/70);
+renglones del «H. "Dr. Luis Linares"»: Norma Pereyra, Maria C. Orellana, Maria
+Guillen y Felipa Aguirre (imagen de cuatro renglones en h6; la capa trae otros
+en h7, que no se recontaron). Dec. 367, Bienestar Social, 7-10-1970, expte.
+03729/70 (8653 h6): deja establecido que las designaciones del Dec. 330
+corresponden, entre otros, a Agustin Gaspar, «Hogar "Dr. Luis Linares"»
+(imagen). La jurisdiccion del hogar la da A21.
+
+B2-07 8624 h14 OTRO. Res. 108, Bienestar Social, 13-8-1970: subsidio mensual al
+«Instituto Concepcionista Hogar San Cayetano», del 1-1 al 31-12-70, $ 600
+(renglon, imagen; el monto, capa). Dec. 691, Bienestar Social, 9-11-1970, expte.
+04200/70 (8675 h10): aprueba los planes de trabajo de quince instituciones
+subsidiadas, entre ellas el «Instituto Concepcionista "San Cayetano"» (imagen
+del VISTO). El acto no da localidad; Vaqueros, por 1969 A31.
+
+B2-08 8658 h10 OTRO. Res. 74, Gobierno, 7-10-1970, expte. 01-2340: la
+«Agrupación Gauchos de Güemes Vaqueros, de la localidad de Vaqueros», pide la
+donacion de maquinas de escribir en desuso de Fiscalia de Gobierno para la
+academia de dactilografia de su sede, para «niños o personas mayores residentes
+en dicha localidad y carentes de recursos» (imagen del encabezado; el resto,
+capa; sumario en h3).
+
+B2-09 8683 h8 CARGOS. Dec. 811, Gobierno, 24-11-1970, expte. 44-45478: declara
+vacante desde el 25-10-1970 el cargo de agente por fallecimiento de Felipe
+Santiago Morales, «quien revistaba en el Destacamento de Vaqueros» (imagen).
+
+B2-10 8684 h16 ESCUELA+CARGOS. Dec. 862, Bienestar Social, 24-11-1970 (numero y
+fecha, capa), art. 2: aprueba la Res. 1162-I de la Caja (3-11-1970) que acuerda
+jubilacion ordinaria a Olimpia Cirila Flores de Tapia «en el cargo de Directora
+de la Escuela "Dr. BERNABE LOPEZ" de Vaqueros» (imagen del art. 2; el haber, $
+360,80, capa).
+
+B.3 · TERMINOS QUE ESE AÑO SON OTRA COSA
+Campo Alegre: la «Fraccion Finca Campo Alegre», catastro 6749, en Metan Viejo
+(edicto de agua, 8505 a 8511); un inmueble «en Campo Alegre, Tipal, Chicoana»,
+catastro 202 (8569 a 8575); la «fraccion rural denominada San Cayetano, ubicada
+en el partido de Campo Alegre, catastro Nº 950 de Chicoana» (8668 a 8671): ni el
+embalse ni la finca del departamento aparecen. Mojotoro: el rio, en concesiones
+del partido de Betania, General Guemes (8627 a 8635, acequia El Desmonte) y en
+la defensa «rio Mojotoro» del cuadro de A29; la finca Mojotoro del departamento
+es A42. Castañares: Villa Castañares (Capital) y la Estacion Castañares de La
+Viña. Wierna: apellido (Gustavo Enrique Wierna, Mercedes Wierna de Maizares,
+Lucia Gladys Wierna...) y la calle Emilia Wierna de la ciudad. Lesser: el
+inspector Eugenio Lesser. San Cayetano: un yacimiento de sal de Los Andes y el
+templete de la ciudad. Rio Vaqueros: el nombre de una mina de cloruro de sodio
+de Los Andes (8599, 8606). Los Sauces, El Tunal, El Durazno, Betania, Siancas,
+Tabacal: de otros departamentos. Apellidos: Castellanos, Isasmendi, Mamani,
+Aramayo y los demas del §2. Tambien el apellido «Caldera» de una parcela de la
+Capital (E.7).
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+Actores del config sin acierto en 1970: 904 de 1383. Por nombre completo, los
+que dejaron actos del departamento en 1969 y no vuelven: Eloy Aurelio Ruiz, Dora
+Elina Barroso, Narcisa Lozano, Antonia Candelaria Romano de Borja, Lorenzo
+Rodriguez (que aparece solo en una sucesion ajena, 8543 y 8601), Alfredo Arnedo,
+Victoriano Rinaldi, Eduardo Cazon, Normando Requena (los «Requena» de 1970 son
+Geronimo Juan, policia, y Carmen Luisa Perez de Requena, pensionada), Lerma
+S.A.C.I.F.I.M.A. en relacion con Getsemani (la sociedad aparece en juicios
+prendarios y en su asamblea anual, 8593 h13, sin la finca), Antonio Filaretto
+(como jefe divisional de Y.P.F. en una licitacion, 8494) y Fernando Moncho (en
+licitaciones de la ciudad, 8549, 8583): cero aciertos en actos del departamento,
+por nombre completo y sin puntuacion. Getsemani no aparece en ninguna forma
+(«getsem», «yetsem», «jetsem»).
+
+1. Solo en su propio acto y sin antecedentes en el config: Francisco S. Humano,
+Juan Carlos Lopez y Matias Calpanchay (A03); los catorce pensionados de A06;
+Adolfo Saravia Valdez (A11); las hermanas Zambrano (A15); Roberto Mario Clement
+Toranzos (A16); Celedonio Morales (A19); Jorge R. T. Alvarado (A21); Florencio
+Silvestre Aviles (A23); Francisco Navarro Segura (A24); Arturo Moyano (A30);
+Catulo Abel Marcuzzi (A31); Arturo Aurelio Quintana Fascio (A33); Teodoro
+Bartolo Mogro (A38); Edmundo Cesar Lavaque, Maria Teresa Sales de Lavaque y
+Ricardo Nemecio Perera Quintana (A40); Hilario Arias, Julio Argentino Armanino,
+Taurus S.R.L. y Mario del Pin (A42); Juan Carlos Martearena (A43); Carlos Manuel
+Zapata y los linderos de El Mollar (A44); Tito Prisiano Villafañe (A46); Ruben
+Angel Blanco, Ramon Maximo Aybar, Agustin Gaspar, Felipe Santiago Morales y
+Olimpia Cirila Flores de Tapia (B.2).
+
+2. En mas de un acto del departamento (la trama del año): Justo Pastor Lizondo
+(A02, A13: juez y presidente de la Comision Municipal); Porfiria Mercado (A12,
+A36); Liborio Gerardo Guerrero (A38, y suplente en 1968); Esteban Mogro y
+Teodoro Bartolo Mogro (A37, A38: el tomero y el juez de paz; el parentesco no se
+afirma); Agustin Urquiza (B2-03 y B2-04: preside el Centro Vecinal y la
+Agrupacion Gauchos de Guemes de Vaqueros); Claudio Murua (A19, B2-05); Albano
+Alvarez Cesar y Juan Carlos Martearena (A19, A43: los dos medicos zonales del
+año); Jesus del Valle Molina (A22, dos decretos); Hilario Arias (A42, tres
+juicios); Arturo Moyano (A30, dos decretos); Julio Catalan Arellano (A35 y la
+cooperadora de 1969); los Serrey (A13: Manuel David, interventor; A46: Carlos y
+Manuel, acreedores en Vaqueros): la identidad no se afirma.
+
+3. Tambien fuera del departamento, o con antecedentes en otros años: Luis
+Bressanutti, contratista de la base del Cristo en 1968-1969, cuyos herederos y
+acreedores cita el juez de 1a Inst. 2a Nom. (sucesorio, expte. 45.375/70; 8620 a
+8629); Enrique Antonio Larran Clement, el arquitecto del estudio turistico de La
+Caldera de 1969, en el museo arqueologico de Salta (Dec. 8274, 8508; 8537) y
+cuya renuncia como asesor de desarrollo se acepta (8610 h7); Isidro Gareca,
+secretario del Banco Cooperativo del Norte (Dec. 806, 8676, 8683); Mario E.
+Lacroix, en la comision de una entidad de la ciudad (8588, 8605); Valdemar
+Prusis, reconocimientos de servicios del Plan de Salud sin departamento (8463,
+8485, 8584); Corina Bustamante, enfermera del consultorio de La Caldera (A43) y
+en una nomina del Plan de Salud (8584); Ramon Humberto Valdez (B2-05); Ernesto
+V. Sola y Justo C. Figueroa Cornejo, martilleros. Frecuencia de corpus, no del
+departamento.
+
+Actores del config con acierto en 1970: 479 de 1383; los que tocan el
+departamento estan arriba. Los demas son homonimos de nombre comun, martilleros
+y funcionarios.
+
+§C · LIMITROFES
+---------------
+Capital: el limite sur del municipio de Vaqueros es el departamento de la
+Capital, por el rio Vaqueros (A26); los organismos de salud van con La Caldera
+en el Plan de Salud de la Capital (A14); la ruta 28 Salta-Vaqueros por San
+Lorenzo y Castellanos se presupuesta en su tramo San Lorenzo-Castellanos (A18);
+el lote 77 de Vaqueros se remata con una parcela de Tres Cerritos (A46). General
+Guemes: el puesto sanitario de Betania en el decreto de intereses de A05; el rio
+Mojotoro, limite sur de la finca Mojotoro (A42), y sus concesiones en Betania
+(B.3).
+
+§P · PLANOS
+-----------
+El corpus de 1970 no publica ningun plano: las hojas miradas, las de poca tinta
+y las 88 sin texto son texto o tablas. La palabra «plano» aparece en 722 hojas;
+las remisiones que tocan el departamento son una: el «plano Nº 96» de Vaqueros,
+en el que esta el lote 77 de A46, citado y no acompañado. Ninguna otra pieza del
+departamento remite a plano: ni la Ley 4365, que describe los limites del
+municipio de Vaqueros por rios y fincas (A26), ni los remates de A42. Techo de
+resolucion: 150 ppp (300 en 2 hojas).
+
+§D · INDICE
+-----------
+  8463  h20  NORMA                     Dec. 7627: aprueba la Ordenanza 125 de la
+                                       Municipalidad de La Caldera (nombres de
+                                       calles)
+  8469  h9   JUSTICIA+CARGOS           Dec. 7675: designa juez de paz titular de
+                                       La Caldera a Justo Pastor Lizondo
+  8471  h11  OBRA-PUBLICA+ESCUELA      Dec. 7697: personal para el «Cerco de
+                                       Alambre Escuela Nacional Nº 250 de Los
+                                       Yacones - Dpto. La Caldera»
+  8478  h9   HACIENDA-MUN+OBRA-PUBLICA Dec. 7894: amplia las asignaciones del
+                                       FITSA de la Municipalidad de La Caldera
+                                       (canal de desague y cordon cuneta)
+  8479  h10  OBRA-PUBLICA+ESCUELA      Dec. 7843: intereses por mora a Tolaba y
+                                       Campos por tres obras escolares del
+                                       departamento y un puesto sanitario de
+                                       General Guemes
+  8483  h8   ESCUELA+CARGOS            Dec. 7936: jubilacion de un maestro de la
+                                       escuela Dr. Vicente Sola de Vaqueros
+                                       (B2-01)
+  8483  h10  OTRO                      Pensiones a la invalidez y a la vejez de
+                                       la Caja de Jubilaciones: los renglones de
+                                       La Caldera en seis nominas del año
+  8499  h15  HACIENDA-MUN              Dec. 8178: aprueba modificaciones a la
+                                       Ordenanza General Impositiva de La
+                                       Caldera, a regir desde el 1-1-1970
+  8501  h11  HACIENDA-MUN              Dec. 8205: aprueba la Ordenanza 132 de La
+                                       Caldera (precios del cargadero, bascula y
+                                       banadero de hacienda)
+  8503  h11  OTRO                      Dec. 8240: pension a la vejez, La Caldera
+                                       (A06)
+  8506  h5   OBRA-PUBLICA              Dec. 7728: aprueba la documentacion
+                                       tecnica del techo del Salon de la
+                                       Parroquia de La Caldera ($ 397.261), por
+                                       via administrativa
+  8529  h5   AGUAS                     Obras Sanitarias de la Nacion: 20 l/s del
+                                       subalveo de la margen derecha del rio La
+                                       Caldera para el agua de la ciudad de
+                                       Salta (edicto y Dec. 22)
+  8532  h7   CARGOS                    Dec. 8456: renuncia de un agente del
+                                       Departamento de Vaqueros (B2-02)
+  8532  h11  OTRO                      Dec. 8467: personeria del Centro Vecinal
+                                       Vaqueros (B2-03)
+  8538  h12  DOMINIO                   Dec. 8557: aprueba la subdivision de la
+                                       finca Lesser (fraccion), de Adolfo
+                                       Saravia Valdez, catastro 171
+  8542  h7   JUSTICIA+CARGOS           Dec. 8582: designa juez de paz suplente
+                                       de La Caldera a Porfiria Mercado
+  8546  h12  CARGOS+JUSTICIA           Dec. 8641, 8642 y 8643: renuncia el
+                                       interventor Manuel David Serrey; Justo
+                                       Pastor Lizondo deja el juzgado de paz y
+                                       es designado presidente de la Comision
+                                       Municipal
+  8549  h28  OTRO                      Agrupacion Gauchos de Guemes Vaqueros:
+                                       asamblea en el Hogar San Cayetano (B2-04)
+  8550  h14  OTRO                      Res. 1195 de Bienestar Social: los
+                                       organismos de salud de la Capital y La
+                                       Caldera elevan sus estructuras ante la
+                                       Direccion del Plan de Salud de la Capital
+  8552  h14  AGUAS                     Edicto: las hermanas Zambrano piden
+                                       reconocimiento de concesion para «Dorita
+                                       o Mombyry», catastro 83, Vaqueros (2,5
+                                       ha, rio Wierna)
+  8554  h10  OTRO                      Dec. 8784: pensiones a la invalidez, La
+                                       Caldera (A06)
+  8556  h17  AGUAS                     Edicto: Roberto Mario Clement Toranzos
+                                       pide reconocimiento de concesion para el
+                                       Lote 35 del Distrito de Vaqueros (4,7235
+                                       ha, rio Wierna)
+  8557  h32  OTRO                      Agrupacion Tradicionalista Gauchos de
+                                       Guemes «El Palenque» (La Caldera):
+                                       asamblea general extraordinaria el
+                                       6-6-1970
+  8567  h7   OBRA-PUBLICA+AGUAS+ESCUELA Dec. 8942: Plan de Trabajos Publicos
+                                        1970; seis renglones del departamento
+                                        (parroquia, escuelas, agua de Vaqueros,
+                                        defensa del rio La Caldera, ruta a
+                                        Vaqueros)
+  8570  h9   CARGOS+OTRO               Res. 1245 de Bienestar Social: sumario al
+                                       enfermero Claudio Murua, del consultorio
+                                       externo de Vaqueros, a pedido de los
+                                       vecinos
+  8577  h7   CARGOS+OTRO               Dec. 9093: acepta la renuncia de Ziaollah
+                                       Vojdani Gouri como asesor tecnico de la
+                                       Agencia Agraria de La Caldera
+  8580  h9   OTRO                      Res. 1265 de Bienestar Social: caja chica
+                                       del Hogar «Dr. Luis Linares» de La
+                                       Caldera durante la licencia del regente
+                                       Rodolfo Abraham
+  8582  h13  OTRO                      Dec. 9211: pensiones a la vejez, La
+                                       Caldera (A06)
+  8583  h13  CARGOS                    Jesus del Valle Molina, personal de
+                                       servicio del Hogar de Ninos de La
+                                       Caldera: reconocimiento de servicios de
+                                       enero a junio (Dec. 9225 y Dec. 254)
+  8585  h15  JUSTICIA+CARGOS           Dec. 9372: designa juez de paz titular a
+                                       Florencio Silvestre Aviles; el Dec. 250
+                                       lo deja sin efecto porque no se hizo
+                                       cargo
+  8598  h14  OTRO+CARGOS               Dec. 9308: Puesto Sanitario Vaqueros en
+                                       la nomina de enfermeros (B2-05)
+  8598  h19  AGUAS                     Edicto: Francisco Navarro Segura pide
+                                       reconocimiento de concesion para los
+                                       lotes 16 y 17 de la finca «Vaqueros»,
+                                       catastros 370 y 379
+  8602  h14  JUSTICIA+CARGOS           Dec. 250: deja sin efecto la designacion
+                                       de Aviles (A23)
+  8602  h20  OTRO                      Remate sin base de una camioneta
+                                       Chevrolet 1936 con chapa patente de la
+                                       Municipalidad de La Caldera
+  8607  h6   CARGOS                    Dec. 330: personal del Hogar Dr. Luis
+                                       Linares (B2-06)
+  8612  h5   NORMA+HACIENDA-MUN        Ley 4365: crea el municipio de tercera
+                                       categoria de Vaqueros, departamento de La
+                                       Caldera, y fija sus limites
+  8615  h7   HACIENDA-MUN              Dec. 511: aprueba la Ordenanza 152 de La
+                                       Caldera, sobre el cobro por extraccion de
+                                       materiales de los rios de su jurisdiccion
+  8616  h23  HACIENDA-MUN              Dec. 563: aprueba el presupuesto de La
+                                       Caldera para 1970: recursos $ 44.137,49,
+                                       gastos $ 81.105,94; el deficit se enjuga
+                                       con economias
+  8617  h16  OBRA-PUBLICA+AGUAS+ESCUELA Dec. 580: creditos de ejercicios
+                                        vencidos a contratistas; Tolaba y Campos
+                                        por la escuela 250 de Los Yacones y
+                                        Carmelo Galindo por la defensa sobre el
+                                        rio La Caldera
+  8618  h13  OTRO                      Dec. 600: pensiones a la vejez, La
+                                       Caldera (A06)
+  8620  h16  AGUAS+OBRA-PUBLICA        Obra D-3-69, «Defensa s/Rio La Caldera -
+                                       Zona La Calderilla»: adjudicacion al Ing.
+                                       Arturo Moyano en $ 51.507 (Dec. 653) y
+                                       contrato (Dec. 982)
+  8622  h8   OBRA-PUBLICA              Cristo Monumental de La Caldera,
+                                       iluminacion: legajo tecnico ($
+                                       15.443,06), licitacion publica y
+                                       adjudicacion a Catulo Abel Marcuzzi ($
+                                       13.898,76)
+  8624  h12  ESCUELA                   Res. 104 de Bienestar Social: subsidio
+                                       para comedores escolares a las escuelas
+                                       de El Gallinato, Vaqueros y La Caldera
+                                       (agosto a noviembre)
+  8624  h14  OTRO                      Res. 108: subsidio al Instituto
+                                       Concepcionista Hogar San Cayetano (B2-07)
+  8628  h5   AGUAS                     Dec. 22: concesion a Obras Sanitarias de
+                                       la Nacion, rio La Caldera (A10)
+  8628  h15  OBRA-PUBLICA              Licitacion O.P. 4488: iluminacion del
+                                       Cristo Monumental (A31)
+  8632  h15  AGUAS                     Edicto: Arturo Aurelio Quintana Fascio
+                                       pide concesion temporal-eventual para 10
+                                       ha del catastro 93 (rio Los Porongos)
+  8635  h14  OBRA-PUBLICA+HACIENDA-MUN Municipalidad de La Caldera, licitacion
+                                       publica Nº 1: cordon cuneta y canal de
+                                       desagues pluviales en el pueblo ($
+                                       6.783.257)
+  8639  h8   CARGOS+HACIENDA-MUN       Dec. 135: Julio Catalan Arellano,
+                                       presidente de la Comision Municipal de
+                                       Vaqueros
+  8639  h13  JUSTICIA+CARGOS           Dec. 144: acepta la renuncia de Porfiria
+                                       Mercado como juez de paz suplente de La
+                                       Caldera
+  8644  h12  AGUAS+CARGOS              Dec. 248: compensacion mensual a Esteban
+                                       Mogro, tomero de La Caldera, por atender
+                                       el agua corriente del pueblo
+  8645  h5   CARGOS                    Dec. 254: servicios de Jesus del Valle
+                                       Molina en junio (A22)
+  8646  h8   JUSTICIA+CARGOS           Dec. 290: Teodoro Bartolo Mogro, juez de
+                                       paz titular, y Liborio Gerardo Guerrero,
+                                       suplente, de La Caldera
+  8651  h8   OTRO+NORMA                Dec. 361: feriado el 7-10-1970 en el
+                                       departamento de La Caldera por la fiesta
+                                       de la Virgen del Rosario
+  8652  h19  AGUAS                     Dos edictos de Vaqueros: Edmundo Cesar
+                                       Lavaque y Maria Teresa Sales de Lavaque
+                                       («Terreno», catastro 1537, rio Wierna) y
+                                       Ricardo Nemecio Perera Quintana (Fraccion
+                                       Cerro Buena Vista, catastro 433, rio
+                                       Vaqueros)
+  8653  h6   CARGOS                    Dec. 367: Agustin Gaspar, Hogar Dr. Luis
+                                       Linares (B2-06)
+  8658  h10  OTRO                      Res. 74: maquinas de escribir para la
+                                       Agrupacion Gauchos de Guemes Vaqueros
+                                       (B2-08)
+  8660  h15  OTRO                      Censo de poblacion 1869-1970 por
+                                       departamento: La Caldera, 1.627
+                                       habitantes en 1869 y 3.671 en 1970
+  8661  h20  DOMINIO+JUSTICIA          Tres remates de bienes de Hilario Arias:
+                                       la finca Mojotoro (partida 132) dos veces
+                                       y el Potrero de Gallinato (catastro 2)
+  8664  h13  CARGOS+OTRO               Dr. Juan Carlos Martearena, medico zonal
+                                       de La Caldera: contrato de septiembre a
+                                       diciembre (Dec. 587) y caja chica del
+                                       Consultorio Externo (Res. 149)
+  8671  h11  OTRO                      Res. 149: caja chica del Consultorio
+                                       Externo de La Caldera (A43)
+  8672  h21  DOMINIO+JUSTICIA          Posesion treintanal del inmueble rural
+                                       «El Mollar», catastro 1540 de La Caldera,
+                                       que tramita Carlos Manuel Zapata
+  8675  h10  OTRO                      Dec. 691: plan de trabajo del Instituto
+                                       Concepcionista San Cayetano (B2-07)
+  8676  h6   OTRO                      Dec. 714 (9-11): pension a la invalidez,
+                                       La Caldera (A06)
+  8678  h11  HACIENDA-MUN+OTRO         Dec. 777: transfiere sin cargo una
+                                       maquina de escribir de la Contaduria
+                                       General a la Municipalidad de La Caldera
+  8680  h19  DOMINIO+JUSTICIA          Remate de la Parcela 5 de Tres Cerritos
+                                       y, si no alcanza, del lote 77 del plano
+                                       96 de Vaqueros (1.329,87 m2); acreedores
+                                       hipotecarios Carlos y Manuel Serrey
+  8683  h8   CARGOS                    Dec. 811: vacante por fallecimiento en el
+                                       Destacamento de Vaqueros (B2-09)
+  8684  h16  ESCUELA+CARGOS            Dec. 862: jubilacion de la directora de
+                                       la escuela Dr. Bernabe Lopez de Vaqueros
+                                       (B2-10)
+  8685  h26  DOMINIO+JUSTICIA          Remate del Potrero de Gallinato, catastro
+                                       2 (A42)
+  8686  h20  DOMINIO+JUSTICIA          Remate de la finca Mojotoro, Taurus
+                                       S.R.L. vs. Arias (A42)
+  8690  h14  AGUAS+OBRA-PUBLICA        Dec. 982: contrato de la obra D-3-69 con
+                                       Arturo Moyano (A30)
+  8697  h12  CARGOS                    Dec. 1082: renuncia para jubilarse el
+                                       agente Liborio Cabrera Sanaberon, de la
+                                       Subcomisaria de La Caldera
+  8700  h12  OBRA-PUBLICA              Dec. 1138: adjudica la iluminacion del
+                                       Cristo a Catulo Abel Marcuzzi (A31)
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+Sin las .jpg de lee_trabajo no hay md5 ni dhash; el control de duplicados se
+hizo por el folio de la cabecera (3472 hojas con folio leido) y por texto. Hojas
+duplicadas en el Release: 2, en la 8665, que trae 38 hojas para 36 paginas (5673
+a 5708, y la 8666 abre en la 5709): la cabecera de h33 da la 5705 y las dos
+hojas sobrantes no se identificaron hoja por hoja (folios por la capa; la h4 y
+la h5 llevan las paginas 5677 y 5676, en ese orden). Ninguna edicion trae
+paginas de otra edicion, diferencia con 1969 (8365). Los pares de alta
+coincidencia entre ediciones vecinas son avisos repetidos (E.6).
+
+Tinta medida en las 6858 hojas a 40 ppp (mediana 4,16 % de pixeles bajo 128): 81
+hojas bajo el 10 % de la mediana: 73 sin texto en la version propia y 8 con
+ruido de OCR y nada legible (8474 h7, 8517 h31, 8533 h27, 8537 h35, 8553 h27,
+8609 h31, 8610 h31, 8635 h31, miradas en miniatura): hojas en blanco, casi
+siempre la penultima o la ultima de la edicion. Las otras 15 hojas sin texto en
+la version propia tienen tinta y se miraron en miniatura: perforaciones o el
+marco oscuro del escaneo, sin texto. No se decide si son paginas sin imprimir
+del original o reversos escaneados.
+
+Saldos: ningun resumen de Tesoreria ni balance municipal del departamento en
+1970; el presupuesto municipal se aprueba por sus dos totales (A28). La cadena
+no aplica. Cuadros que tocan el departamento: cuatro (el Plan de Trabajos
+Publicos, A18; el Dec. 580, A29; los comedores escolares, A32; el censo, A41).
+Subtotales y totales recalculados: 15 (el total de la Finalidad 1 de Viviendas
+del plan; el resumen de Viviendas del Dec. 580 y la suma de los dos totales del
+mismo decreto; las seis columnas del censo, de las que cinco cierran y la de
+1960 no; los tres renglones del departamento de los comedores; la suma del FITSA
+de A04; la de los intereses de A05; la baja de A30), todos cierran salvo la
+columna de 1960 del censo. Ademas, ocho cuentas de control sin total impreso:
+las cinco dotaciones por hectarea de los edictos de agua (A15, A16, A24, A33,
+A40), el deficit del presupuesto (A28), la suma de los tres FITSA contra la
+licitacion municipal (A34) y la baja de la iluminacion del Cristo (A31).
+
+E.2 · COBERTURA
+Ediciones: 240 de 240 en el Release, todas legibles. Paginas que el Release no
+trae segun la cadena de folios: 32 en 20 ediciones, de una a tres por edicion,
+casi siempre al final (8462: 23 y 24; 8699: 6821, 6823 y 6824; 8701: 6888).
+Detalle por edicion en el §1 (columna «aus»). Ninguna aparicion de los avisos
+del departamento cae, por la cuenta de las marcas, en paginas ausentes: todos
+tienen tantas apariciones por texto como dias habiles de su marca (E.6).
+
+Saltos de la cadena que no son paginas ausentes: la 8470 declara 20 paginas en
+la tapa (mirada) y ocupa 24: su h24 lleva el folio 188 y la h2 de la 8471 el 190
+(cabeceras miradas); la 8666 declara 32 y ocupa 28: su h27 lleva el 5736 y la h2
+de la 8667 el 5738 (miradas). Con 24 y 28 la cadena cierra en 6888, que es
+tambien la suma de las tapas. Se declara y no se explica (v16 §8.21).
+
+Nivel de lectura: todas las fichas del §A y del B.2 se miraron en la imagen;
+donde un articulo, una firma, un numero de decreto, un renglon de cuadro o una
+aparicion repetida se tomo de la capa o del OCR, la ficha lo dice. Las ausencias
+que este informe afirma valen para las 6856 paginas distintas leidas y no para
+las 32 que faltan.
+
+E.3 · SIN MENCION Y NO MIRADO
+Citados y no acompañados: las ordenanzas 125, 132 y 152 y las modificaciones a
+la Ordenanza General Impositiva (A01, A08, A27, A07), con los nombres de las
+calles de A01; el presupuesto municipal, del que solo se publican los totales
+(A28); el plano 96 de Vaqueros (A46); el Dec. 7460/69 que suspende los loteos
+(A11); la Res. 331/69 y la 622/70 de Viviendas y Arquitectura (A31); el Dec.
+2147/68 de Vojdani Gouri (A20); el contrato del 2-9-1970 de la obra D-3-69
+(A30); el contrato de Martearena (A43). Vacantes sin nombre: el juzgado de paz
+titular «vacante por renuncia de su anterior titular» en enero (A02) y en junio
+(A23, que es la de Lizondo por A13); los dos cargos de juez vacantes en
+septiembre (A38). Nombramiento que solo consta por su revocacion: ninguno; la
+designacion de Aviles consta y su revocacion tambien (A23). Actos que se
+esperaria y no aparecen en lo leido: la adjudicacion de la licitacion municipal
+del cordon cuneta (A34); el resultado del sumario a Murua (A19); el resultado de
+los remates de A25, A42 y A46; el traspaso del medico zonal de Alvarez Cesar a
+Martearena (A43); la designacion del Intendente o la integracion de la Comision
+Municipal de La Caldera despues de Lizondo; la ordenanza que el nuevo municipio
+de Vaqueros dicte; y cualquier renglon del embalse de Campo Alegre, que no esta
+en el Plan de Trabajos Publicos 1970 (A18) ni en el decreto de deudas a
+contratistas (A29). Ausencia de Getsemani: B.4.
+
+No mirado: los cuerpos de los actos del §B que no tocan el departamento, las
+nominas largas de pensiones, personal y subsidios fuera de los renglones del
+departamento, y las 132 hojas «a ojos», que no tienen candidato del anillo 1 ni
+del anillo 2 del departamento (se leyeron sus textos, no sus imagenes).
+
+E.4 · FIRMAS Y AUTORIDAD
+Gobernador en la tapa, en la imagen: «Doctor CARLOS PONCE MARTINEZ» de la 8462
+(2-1) a la 8573 (22-6); «Coronel HERNAN RISSO PATRON» de la 8574 (23-6) a la
+8611 (14-8); «Coronel (R.E.) RAUL P. AGUIRRE MOLINA» desde la 8612 (18-8).
+Ministro de Gobierno en la tapa: Dr. Humberto Alias D'Abate con Ponce Martinez;
+«Teniente Coronel RODOLFO WEHNER» con Risso Patron; «VICTOR J. CORNEJO
+ISASMENDI» con Aguirre Molina (tapas de 8615 y 8617, imagen).
+
+Los traspasos, en la capa y con el primer decreto de cada serie mirado: el
+22-6-1970 Risso Patron firma el Dec. 1 («Queda asumido el Mando Gubernativo de
+la Provincia de Salta, por el suscripto»), con Alias D'Abate, y el Dec. 2 que le
+acepta la renuncia al ministro (8581 h9); el mismo 22-6 el Dec. 9372 lo firma
+«ALIAS D'ABATE (Int.)» como gobernador interino (A23, imagen). El 12-7 el Dec.
+188 «pónese en posesión del Mando Gubernativo Int. al Tte. Cnel. Rodolfo E. L.
+Wehner» (sumario de 8597 h3, capa). El 14-8-1970 Aguirre Molina firma el Dec. 1
+de una nueva serie (8625 h5). La fecha de los reintegros no se fija (v16
+§2.5bis).
+
+Series de decretos: tres en el año. La primera sigue la de 1969 hasta el 9373
+del 22-6-1970; la segunda empieza en el 1 del 22-6 (Risso Patron) y llega al 726
+del 14-8; la tercera empieza en el 1 del 14-8 (Aguirre Molina) y pasa el 1138
+del 15-12. Por eso hay dos decretos 714 de Bienestar Social en el año (A31, del
+14-8, y A06, del 9-11). En 1969 la serie no se reinicio con el cambio de
+gobernador. Se declara y no se explica; la pieza que lo explicaria es el
+Registro Oficial (v16 §8.21).
+
+Firma que no se concilia: el Dec. 563 del 7-8-1970 (A28) lo firma en la imagen
+«PONCE MARTINEZ», con los ministros Wehner y Vazquez, que son los de Risso
+Patron; la Ley 4365 del 5-8 y el Dec. 511 del 6-8 los firma Risso Patron (A26,
+A27). Se transcribe y no se corrige.
+
+Interinatos por las firmas: Alias D'Abate gobernador interino el 8-4 (B2-02,
+B2-03, encabezado «El Gobernador Interino») y el 22-6 (A23). Ministros que
+refrendan los actos del departamento: Gobierno, Alias D'Abate (hasta junio),
+Wehner (julio-agosto), Cornejo Isasmendi (desde agosto); Economia, Coscia,
+Vazquez, Grether (h.); Bienestar Social, Destefanis, Remis, Caro.
+
+Serie de decretos alrededor de los actos del §A: sin saltos ni retrocesos en los
+pares mirados. El numero del Dec. 7843 (A05), que la capa lee «78343», lo da la
+serie (7841 y 7844 del mismo dia; control 1 del flujo §5.6).
+
+E.5 · CORTES Y COLUMNAS
+Columna perdida: no se encontro ninguna. Se cotejaron 119 recortes de columna de
+las 101 hojas miradas contra el OCR propio; en todos el texto esta en la
+version, aunque con el orden de bloques alterado en cuadros (8567, 8617, 8624,
+8660) y con renglones entreverados en la nomina de 8554 h10 (A06). Cortes: «La
+Cal- / dera» en varias fichas, unido; «La Cal-= / dera» de 8604 h8, que la union
+no pega y la laxa espaciada rescata (A24).
+
+E.6 · REPETICIONES
+Avisos del departamento repetidos, contados por texto: 2881 de Obras Sanitarias
+(diez, A10), 3262 de las Zambrano (diez, A15), 3343 de Clement Toranzos (diez,
+A16), 3994 de Navarro Segura (diez, A24), 4081 de la camioneta (dos, A25), 4488
+de la iluminacion del Cristo (cinco, A31), 4071 de Quintana Fascio (diez, A33),
+4911 y 4910 de Lavaque y Perera Quintana (diez cada uno, A40), 5065, 5508 y 5482
+de los bienes de Hilario Arias (diez cada uno, A42), 5221 de El Mollar (diez,
+A44), 5398 del lote 77 (diez, A46): catorce avisos. Coinciden con los dias
+habiles de su marca salvo el 2881, que sale diez veces para una marca de ocho
+dias (e) 15 al 26-4-70): las dos ultimas apariciones son del 27 y el 28-4. Fuera
+del departamento, en B.2: 3231 (una, B2-04). Los avisos 3364 y 4612 (A17, A34)
+salen una sola vez.
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+Falsos positivos del anillo 1, todos con contexto inequivoco: «Calderon» (Celso
+Calderon en una nomina, 8462 h18 y 8464 h16; Gonzalez Calderon, autor citado,
+8469 h34); la «Honorable Alcaldía Municipal» de Tarija (8532 h11); «caldos
+concentrados» y «calderas» en un nomenclador (8562); Roberto Caldera, apellido,
+en una adjudicacion de una parcela de la Capital (8549 h3 y h13); el «Pje. La
+Caldera» de la ciudad (8581 h8, falso positivo ya en el config); «una caldera
+tipo locomóvil» en dos remates de Julio Cesar Herrera (8583, 8584, 8622, 8623);
+«una caldera de vapor» (8596 a 8598); «1 caldera con motor Marshall» (8604,
+8605); la «caldera para agua caliente» de la Municipalidad de San Antonio de los
+Cobres (8632 h15); «calderas de alta presión» (8620 h8); «certificados» leido
+«oertificaldos» (8696 h19); el apellido Ricaldi (8690 h20). Trece. No se agregan
+al config.
+
+Falsos negativos medidos: «La Cal-= / dera» de 8604 h8 (A24), que solo la laxa
+espaciada devuelve; «la culdera» de 8692 h19 (A42) y «La Calderas» de 8478 h10
+(A04), que la difusa y la literal devuelven. La difusa no rescato en 1970
+ninguna hoja entera; la espaciada rescato una.
+
+E.8 · FIDELIDAD NUMERICA
+Todos los numeros de decreto, importes, fechas y expedientes de las fichas se
+miraron en la imagen, salvo los que la ficha marca como capa. Cifras con letras:
+coinciden en todos los importes de las fichas que las traen. Recalculos: 15
+sumas; cierran todas menos la columna de 1960 del censo (A41), que no se decide.
+Dudosos y su control (flujo §5.6): el numero del Dec. 7843 (A05), por la serie;
+el renglon de Galindo, 1.882,82 (A29), por el resumen por contratista; Caprotta
+Galindo, 5.081,64 (A29), por la suma; el catastro 1537 de Lavaque (A40), por
+otras dos apariciones; los digitos de 945.270 y 837.987 (A04), por la suma y las
+letras; el año de las tapas de 8540 y 8608, por la serie de fechas. Sin control
+que lo decida: el valor fiscal de la finca Mojotoro, 92.190 o 921.90 segun el
+aviso (A42), donde la aritmetica de la conversion favorece 92.190 pero nada dice
+cual aviso imprime mal; y la cifra de La Caldera en 1960 del censo (A41). No
+queda duda de lectura que pida el ojo de Eduardo (flujo §5.6.3): las dos que
+quedan son del original, no de la lectura.
+
+E.9 · CONTRADICCIONES Y ERRATAS
+Del original, transcritas y no conciliadas: la Ordenanza 125 del «22 de octubre»
+en el VISTO y del «22 de noviembre» en el articulo (A01); los dos dictamenes «a
+fs. 35» y «departam to» (A07); el encabezado «Ministerio de Economía» y el
+refrendo del ministro de Gobierno (A08); «río La Caldra» en cinco apariciones
+del edicto 2881 (A10); un mismo expediente para dos renglones de subdivision
+(A11); «la señorita» en abril y «la señora» en septiembre para Porfiria Mercado
+(A12, A36); el Dec. 9372 sin articulo de refrendo, y el Dec. 250 que invoca una
+renuncia y resuelve porque el designado no asumio, con «Silvestre Aviles» y
+«Silvester Avilez» (A23); la firma «PONCE MARTINEZ» del Dec. 563 de agosto
+(A28); «Argencia» (A20); «obra Nº 94» y «Obra Nº 944» (A31); el valor fiscal
+92.190 y 921.90, el «lunes 15 de noviembre» que fue domingo, «Saltivañez» y
+«Santibáñez», y «Departameno» (A42); dos linderos al N.O. (A46); «listra» (A17);
+la marca «e) 13 y 14-4-70» de un aviso de mayo (B2-04). Tapas: «AÑO XLI», «AÑI
+LXII», tres numeros de edicion errados, «N» sin «º», «Sata», y la 8470 y la
+8666, que no cierran con la cadena (§1, E.2).
+
+E.10 · LIMITES
+
+1. Paginas ausentes del Release segun la cadena: 32 en 20 ediciones. Ninguna
+ausencia del informe vale para ellas.
+
+2. Una sola version (la propia) en las 6770 hojas con texto: no hay capa nativa
+que cotejar. Lo que falla con una sola version es la palabra suelta (v16 §2.3);
+se miro en la imagen toda palabra que decide una ficha.
+
+3. Techo de 150 ppp en 6856 hojas: los digitos 0, 3, 5, 6, 8 y 9 se dan por
+leidos solo con un control (flujo §5.6); los que ningun control decide estan en
+E.8.
+
+4. Sin .jpg de lee_trabajo: sin md5 ni dhash; duplicados por folio y texto.
+
+5. tesseract sin spa en la sesion: no hay segunda version propia.
+
+6. El listado de assets del Release no se puede leer desde la sesion; los
+nombres salen de estado.json.
+
+7. La 8470 y la 8666 no cierran su tapa con la cadena de folios (E.2): se
+declara, no se explica.
+
+8. Veintiun dias habiles sin edicion sin explicacion en el corpus.
+
+9. Tres series de decretos en el año (E.4): los vecinos ±3 se buscan dentro de
+la serie del acto.
+
+10. Los articulos, firmas o renglones que las fichas marcan como capa (firmas de
+una docena de decretos, los renglones de cuadro fuera del departamento, las
+apariciones repetidas cotejadas por texto).
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+
+1. La serie de decretos puede reiniciarse dos veces en un año con cada cambio de
+gobernador (E.4), y entonces el mismo numero designa dos actos (dos Dec. 714 de
+Bienestar Social en 1970). Se propone que el §D y las fichas den siempre numero
+y fecha juntos, y que el §R lleve la clave series_decretos (1 en 1969, 3 en
+1970).
+
+2. Una tapa puede declarar mas paginas de las que ocupa y otra menos, y
+compensarse dentro del año (8470 y 8666): el total de las tapas cierra con la
+cadena y el error no se ve. Se reitera la propuesta de 1969 de que lee_auto.py
+lea el folio de la cabecera de cada hoja y avise cuando no sigue a la tapa.
+
+3. El parser de tapas del pre-informe no leyo ninguna fecha («¿fecha?» en las
+240) y tomo como numero el de la «CONCESION Nº 1805» de la tarifa, como en 1969.
+La caja de la tapa de 1970 escribe «AÑO LXI — Nº 8.462» y la fecha en el renglon
+«Salta, 2 de enero de 1970». Se reitera la propuesta.
+
+4. estado.json registra que la corrida uso el config del 2026-10-01, y el
+lee_config.json subido al Release es el del 2026-10-02. Se propone que el
+pre-informe escriba la version del config con que corrio, porque el asset subido
+despues no la prueba.
+
+5. La laxa espaciada rescato en 1970 la unica hoja que la union no pegaba (8604
+h8, guion doble y signo). Se sostiene correrla en esta epoca y se propone que la
+union tolere el guion doble.
+
+6. Config entregado (lee_config.json, version 2026-10-02, hasta 1970): 50
+actores nuevos con origen 1970 y edicion (los del §B.4 grupo 1, las variantes
+«Ziaollah», «Silvester Avilez», «Hilario Oscar Arias» y los Serrey de A46); los
+que ya estaban con el mismo nombre y apellido no se duplican. 14 terminos de
+anillo 2 (los 11 faltantes del §2, la forma completa «dorita o mombyry» y dos
+deformaciones, «la caldra» del original y «la calderas» del OCR); 80 numeros de
+acto, de aviso y de expediente del año. Falsos positivos: ninguno agregado (v16
+§12). Las demas claves, sin cambios.
+
+§R · RECUENTO
+-------------
+anio: 1970
+ediciones_desde: 8462
+ediciones_hasta: 8701
+ediciones_presentes: 240
+ediciones_ausentes: 0
+hojas_presentes: 6858
+hojas_declaradas: 6888
+hojas_ausentes_estimadas: 32
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 21
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: release-pdf
+versiones: 1
+actos_departamento: 64
+actos_dominio: 6
+actos_hacienda_municipal: 9
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 4
+subtotales_recalculados: 15
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 119
+hojas_miradas: 101
+avisos_repetidos_departamento: 14
+falsos_positivos_anillo1: 13
+limites_declarados: 10
+nivel_lectura: imagen
+pdf_release: 240
+avisos_release: 0
+estado: COMPLETO
