@@ -1703,3 +1703,112 @@ La sesión escribió y releyó enteras las **43 líneas** que toca la ronda (F:9
 **Atrapados por control**: 1 (la caja desbordada del ítem de F, detectada por la compilación y corregida antes de entregar). Nota final (rúbrica, tipo incorporación, sin tope de cobertura y sin aspecto 7): **87,5**, igual a la de la ronda 57; ninguna nota por aspecto cambia, y el aspecto 13 sigue en 94 hasta que se suba `mapas_caldera`.
 
 **Pendientes que cierra** (en la parte de `fig:boletin` de cada uno: marcar los años leídos y extender el título): P37, P44, P51, P55, P60, P69, P75, P81, P88, P95, P103 y P109 quedan **resueltos en su punto sobre `fig:boletin`** y siguen abiertos en lo demás (fig:agua, fig:parajesnom, fig:votado). **Pendientes nuevos**: P117 (fuentes): subir el parche de `mapas_caldera` (`git am` y `git push`), o agregar el repositorio a las fuentes de la sesión para que una sesión pueda subirlo; hasta entonces dos láminas citan un script que no está publicado. P118 (herramientas): `estado.json` da a 1950 `libro.nivel: barrido` y a 1947 y 1949 `imagen`, mientras el apéndice F da 1947 y 1949–1957 leídos sobre la imagen; la lámina sigue a F.
+
+## Ronda 59 — auditoría con fase 6 (02/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1969. Base: commit `44c7495` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1969, sobre `bb9b63c`, la ronda 58), con la fase 6 en `ronda-59.patch` (commit `684723e` en la sesión; aplica con `git am` sobre `44c7495`, probado en un clon limpio de GitHub: árbol `fd0621d`). **Denominador medido: 25.154 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 58 (25.139 de 25.139, sobre `bb9b63c`) se trasladaron por diff a `44c7495`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1969 agrega 15 líneas netas (5 en A, 4 en C, 2 en F, 2 en 06-pdua y 2 en 07-cot) y deja 49 líneas nuevas o modificadas en 24 archivos: caducan 49**, y quedan **25.105 vigentes sobre 25.154 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `44c7495`)
+
+Se leyeron **las 49 líneas caducas, enteras, por la sesión**, sin subagentes (una, F:77, es un renglón en blanco), contra el informe LEE 1969 (`BO-Salta-1969_8218-8461_la-caldera_LEE-1969_2026-10-02.txt`), bajado de `corrige/lee/1969/`: el §0, las 39 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, §P, E.1 a E.4; y el `amplia-1969.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 390, 395–399 | 6 | sesión |
+| ape/C-normativa.tex | 123–126 | 4 | sesión |
+| ape/D-pedidos.tex | 177, 191–192, 253 | 4 | sesión |
+| ape/F-fuentes.tex | 25–26, 76–77, 79 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/05-tierra.tex | 290 | 1 | sesión |
+| cap/06-pdua.tex | 55–56 | 2 | sesión |
+| cap/07-cot.tex | 249–250 | 2 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 149, 332 | 2 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/17-tierrafiscal.tex | 463 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 07-cot:244–252 (la ficha de las leyes 4365 y 4987), A:364 y A:400 (Catalán Arellano en 1963 y en 1970), y las dos láminas de la ronda 58 con sus epígrafes, 02-metodo:30–45 y 17-aguabaja:283–297, contra `img/fig-agua-serie.png` (las dieciocho barras, los ceros del municipio y los seis hitos coinciden con 16-redes y 17-aguabaja: 134 actos). Las demás líneas de la ronda 58 (F:94, 133, 136–137, 195–196, 208, 218–221 y 237; 00:75 y 78) se leyeron sólo en el diff, sin el contexto entero: siguen contando por la ronda 58.
+
+**Esta ronda: 49 líneas nuevas**, 103.737 bytes sobre 2.822.763, que en las 879 páginas de la base equivalen a **32,3 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `44c7495` cae dentro de estos tramos.
+
+Acumulado: 25.105 vigentes + 49 = **25.154 de 25.154 (100,0 %)**. La fase 6 toca 8 líneas, todas dentro de lo leído en esta ronda (A:395 y 398; 01:139; 04:4599; 09:535; 18:470; 21:182; 26:235), y no cambia el largo de ningún archivo: **25.154 de 25.154 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Release 1969 de `boletines-salta`)
+
+Imágenes de los PDF del Release (150 ppp de origen) renderizadas a 300 ppp con PyMuPDF y recortadas por la posición que da un reconocimiento propio con tesseract `eng` sobre la hoja entera, o por cuartos de hoja donde el reconocimiento no ubicó el renglón (8344 h17); cada recorte se miró.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 8281 | 13 | Decreto 4133, art. 1 y firmas | «son para la localidad de Vaqueros, jurisdicción del citado municipio». Coincide (A:396, C:123, 07:249). Firman Rovaletti, Díaz Villalba **y Museli**, como dice C:123; la FICHA del informe da sólo los dos primeros (pendiente P124) |
+| 8361 | 18 | Decreto 5928, visto y considerando | «Defensas sobre el Río La Caldera - Zona La Calderilla» y «Que la construcción de las dos defensas en que consiste la obra citada, vendría a proteger la zona de cultivos de La Calderilla, la toma principal y acueductos del lugar». Coinciden (A:398, 09:535); el sujeto de «vendría» es la construcción, no las defensas (precisión a) |
+| 8308 | 17 | Decreto 4584, visto | «el volumen de trabajo y el escaso movimiento demográfico que se registra en la misma, no justifica su funcionamiento». Coincide (A:395, C:124, 26:235) |
+| 8308 | 12 | Decreto 4574, art. 1 | «ESCUELA "GUSTAVO MARTINEZ ZUVIRIA", de la localidad de El Gallinato», sin tildes en el original. Coincide (A:395, 17-tierrafiscal:463, 26:235) |
+| 8332 | 10 | Decreto 5283, art. 1 | «por la acequia Municipal», con mayúscula. Coincide (A:398, 01:139, 17-aguabaja:281) |
+| 8424 | 11 | Decreto 6938, art. 1 | «con todo el caudal de la acequia municipal», en minúscula. Coincide (A:398, 17-aguabaja:281) |
+| 8421 | 12 | Decreto 6882, art. 1 | Serrey «Intendente Municipal», Álvarez César «Médico Regional», Catalán Arellano «Agricultor», Mogro «Comerciante», Arturo René Fernández en el órgano de fiscalización. Coinciden (A:396, 04:4599, 18:470, 22-prospectiva:144) |
+| 8387 | 11 | Decreto 6407, cláusula primera | «I - Estudio de La Caldera y su zona de influencia desde el punto de vista turístico. — II - Plan piloto de desarrollo urbano y vinculación con la estructura general de comunicaciones». Coincide (A:399, 06:56, 21:182) |
+| 8387 | 12 | Decreto 6407, planos | «3.1. Zonificación» y «3.4. Delimitación del perímetro urbano». Coinciden (A:399, 06:56) |
+| 8225 | 9 | Resolución 647 en el decreto 3253 | \$7.638.730 y «con una disminución del 19% del», con «presupuesto oficial» en el renglón siguiente, que el recorte no alcanzó. Coincide hasta ahí (A:395) |
+| 8347 | 7 | Decreto 5603, refuerzos | «Construcción Cristo Monumental en La Caldera», \$3.000.000. Coincide (A:397, 21:182) |
+| 8328 | 18 | Licitación privada 3/69 de Vialidad | «En alquiler de un tractor con topadora destinado a la ejecución de trabajos en el camino de acceso al Cristo de La Caldera». Coincide la cita (A:397); se licita el alquiler, no el tractor (precisión b, 21:182) |
+| 8340 | 5 | Decreto 5445, visto | «Director del Plan de Salud del Departamento de La Capital y La Caldera». Coincide (A:395, 04:4599) |
+| 8234 | 5 | Decreto 3500, visto | «los municipios de: San Lorenzo, Cerrillos, Campo Quijano, Vaqueros…» y «leche procesada». Coinciden (A:396, 07:249) |
+| 8344 | 17 | Acta 6 de Lerma S.A.C.I.F.I.M.A. | «Aprobación adquisición "Finca Getsemaní" en La Caldera», «la extensión de la misma, mejoras existentes, agua de riego» y «particularmente por tratarse de zona afectada por la garrapata»; protocolización del 23 de mayo. Coinciden (13:248) |
+
+Son **22 citas entre comillas del libro cotejadas en la imagen** (la de 6407 cuenta tres veces, una por pasaje, y la de 4584 dos, en A y en C), **ninguna con diferencias**, y datos sin comillas en 4 hojas (8281 h13, firmas; 8361 h18, sujeto del considerando; 8328 h18, objeto de la licitación; 8421 h12, oficios), de donde salen el pendiente P124 y las precisiones a y b. No se cotejaron: 8227 h6–7, 8278 h24–25, 8455 h21–22 (Campo Alegre), 8288 h6, 8318 h5 y h15, 8325 h8 y h19–21, 8352 h23–24, 8327 h20, 8338 h9, 8363 h12, 8457 h16 (ordenanzas), 8296 h5–6, 8304 h9–10, 8310 h14 (obra 283), 8308 h11 (distritos), 8317 h14, 8443 h20 (agua), 8351 h8–9, 8353 h7, 8355 h9–10 (hogar), 8320 h15, 8421 h10–11, 8371 h13–14 y h16, 8380 h6, 8392 h6, 8393 h9–10, 8399 h8, 8401 h20–21, 8434 h8, 8444 h17, 8455 h40, 8456 h21, 8460 h4–5, 8346 h8–9, 8364 h24 y 8260 h12.
+
+### Hallazgos (tres, todos aplicados en la fase 6) y cinco precisiones
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:395 | El resumen del año dice que la Provincia «licita una defensa en La Calderilla»; la fila de 1969 de agua y río da la obra D-3/69, «Defensas…», y 01:139, 17-aguabaja:281 y 22-infraestructura:508 dicen «dos defensas», que es lo que dice el considerando del 5928 (8361 h18, imagen) | 7 | «licita una obra de dos defensas en La Calderilla» |
+| 2 | A:398, 01:139 | «En ninguno de esos actos figura el municipio» y «el municipio no figura en ninguno de esos actos», en el mismo pasaje que cita «por la acequia Municipal» (5283) y, en A, «con todo el caudal de la acequia municipal» (6938): el municipio figura como nombre de la acequia y no interviene, que es la fórmula de 17-aguabaja:281 para 1958–1960 y para 1969. Contradicción dentro del mismo pasaje | 7 | A: «En ninguno de esos actos interviene el municipio, que figura sólo como nombre de la acequia por la que riegan dos de ellos»; 01: «el municipio no interviene en ninguno de esos actos» |
+| 3 | A:395 | «el 21 de agosto renuncia Hugo Alberto Rovaletti y deja el mando»: el decreto 6262 del 21 de agosto pone en posesión del mando al ministro «con motivo de la renuncia», cuya fecha no da (E.4 del informe). Es la falla de la ronda 57 (hallazgo 3, P116): la fecha del acto que acepta o ejecuta dada como la del acto aceptado | 3 | «el 21 de agosto, por su renuncia, Hugo Alberto Rovaletti pone en posesión del mando al ministro de Gobierno» |
+
+Precisiones sin aspecto propio (escala general del 4, del 10 y del 12; no bajan la nota): (a) 09:535 ponía «cuyas dos defensas, según el decreto, «vendría a proteger…»», con un plural que concuerda con la cita en singular: en el original el sujeto es «la construcción»; pasa a «cuya construcción, en dos defensas, según el decreto «vendría a proteger…»»; (b) 21:182 decía que la Provincia «licita un tractor con topadora»: Vialidad licita su alquiler (8328 h18); (c) 04:4599 decía que en 1969 Álvarez César es «ya «Médico Regional»», cuando el mismo párrafo cita el 4474 de 1967 que ya lo llama así: «otra vez»; (d) 26:235 decía que el cese de la oficina de Vaqueros rige «a partir del mismo día», sin que el párrafo dé la fecha del 8365: «a partir del día de aquel decreto, el 29 de febrero de 1968»; (e) 18:470: el inciso de 1969 sobre Arturo René Fernández y Arturo Fernández cortaba la oración «Arturo René Fernández, a quien…, coincide con el de su presidente»: va entre rayas.
+
+Restan: un caso en el aspecto 3 (−5) y dos errores de consistencia en el 7: **2 en 32,3 páginas = 6,2 por cada 100** → escalón de ≤ 8 (40), y uno más abajo porque el hallazgo 2 contradice material del mismo pasaje → **30**. Los dos se aplicaron: 100 en la nota final.
+
+**Los tres hallazgos y las cinco precisiones están en material que la propia auditoría incorporó** (AMPLÍA 1969, `44c7495`), y **ninguno fue atrapado por un control automático**. Los controles de P74 (citas literales: las 22 cotejadas coinciden) y P102 (privacidad) funcionaron. Se escaparon un resumen de año que no repite lo que dicen sus filas (hallazgo 1), una fórmula de ausencia que el propio pasaje desmiente (hallazgo 2) y otra fecha de un acto tomada del que lo ejecuta (hallazgo 3, la regla 1 de P116 todavía no corre como control).
+
+**Descartados (falsos positivos, 5).** «Firman Rovaletti, Díaz Villalba y Museli» (C:123): la FICHA del informe no trae a Museli, pero la imagen sí (8281 h13). «Un año antes de la ley, la localidad de Vaqueros era todavía del municipio de La Caldera» (07:249): la Ley 4365 de 1970 la crea, y el 4133 la llama «jurisdicción del citado municipio»; el 3500 que la llama municipio está dicho en la misma oración. «Los expedientes … son de 1955 y de 1948, y las resoluciones … de 1957 y de 1960» (17-aguabaja:281): A15 y A33 dan la Res. 1208 del 7-11-1957 y la 684 del 1-6-1960. «La serie entera, de 1951 a 1968» (17-aguabaja:281): el universo está declarado, y la frase nueva pone 1969 «fuera de la lámina». «Lo firma el gobernador interino» (C:125): el 6407 es del 28 de agosto, con Díaz Villalba interino del 21 al 29 (E.4).
+
+**Pendientes que cierra.** **P117**: el parche de `mapas_caldera` está subido (commit `a027898`, «Lámina de cobertura 1908-2026 y serie de actos de agua 1951-1968»; `scripts/grafico_boletin.py` y `scripts/grafico_agua_serie.py` en el repositorio público).
+
+**Pendientes nuevos.** P123 (herramientas): extensión de P116 para AMPLÍA (y rúbrica AMPLÍA v2): (1) la fórmula «no figura el municipio» no se usa en un pasaje que cita una «acequia municipal» o «del Pueblo»: se escribe «no interviene» y se dice que figura como nombre; (2) la línea de resumen de una fila de año se coteja por script contra las filas de detalle del mismo año (números, cuántas obras, cuántas ordenanzas); (3) un cambio de gobernador se fecha por el decreto de traspaso y la renuncia no se fecha si el decreto no la fecha. P124 (lee, 1969): corregir el informe LEE 1969 A04: el 4133 lo refrendan Rovaletti, Díaz Villalba y Museli (8281 h13, imagen), y el TEXTO da sólo los dos primeros.
+
+**Pendientes revisados sin cerrar.** P54 (1969 tampoco nombra el establecimiento de salud del pueblo). P100 y P118 (1969 queda en barrido con el criterio de F, como dice `amplia-1969.json`). P115 (10:513 sigue sin fuente). P119, P120, P121 y P122 (láminas, H y E, pedidos de D y correcciones del informe LEE 1969: fuera del alcance de una ronda de auditoría).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.139/25.139 líneas vigentes en `bb9b63c` | 25.105 vigentes, 49 caducas por el AMPLÍA 1969 |
+| Superlativos, cierres y ausencias en las líneas agregadas por el AMPLÍA (*el único*, *la única*, *el primero*, *la primera*, *por primera vez*, *el más*, *nunca*, *jamás*, *ningún*, *ninguna*, *no aparece*, *no consta*, *tampoco*) | 93 coincidencias en las 49 líneas (casi todas en texto anterior de las líneas modificadas), todas leídas | Una desmentida por el propio pasaje (hallazgo 2). «El primero» de 05:290, A:395 y 04:4599 es el orden del artículo del 7557 y del 4572; «el primer intendente de Vaqueros» remite a la fila de 1970; las demás conservan su universo («lo hallado del año», «los actos hallados») |
+| Repaso de ventana: afirmaciones que cierran en 1968 (*a 1968*, *--1968*, *hasta 1968*, *1949 a 1968*, *1958 a 1968*, *1961 a 1968*, *1964 a 1968*, *1951 a 1968*) | 7 coincidencias en el libro entero, todas leídas | Ninguna desmentida: 00:75 y 17-aguabaja:281–291 son la lámina, que declara su universo 1951–1968; 04:4599 y F:76 nombran los años |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 326/326 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Recuentos de 1969 (A:395, F:25–26 y 76, 00:43, 02:28 y 99, 01:119, D:177) contra el §0, E.1, E.2 y el §R del informe | 1 año | Tramos: 42 + 1 + 12 = 55. Hojas sin mirar en 1958-1969: 306, 364, 262, 764, 290, 734, 577, 347, 171, 69, 258 y 191 (00:43, «entre sesenta y nueve y setecientas sesenta y cuatro»). Páginas faltantes 1964-1969: 128, 37, 65, 111, 109 y 75. 1969: 6.928 − 47 repetidas + 75 = 6.956 = último folio; 18 + 27 = 45 de las 75 en la 8337 y la 8365. Capa útil: 110 hojas en 5 ediciones; segunda versión en 10; 38 hojas a 300 ppp. Hueco 1970–2012: 43 años. Cierran |
+| Aritmética de 1969 | 7 cuentas | 9.430.531 × 0,81 = 7.638.730,11. 95.764 + 64.045 + 464.910 = 624.719. 1,5 × 0,525 = 0,7875 (0,79); 2 × 0,525 = 1,05; 1 × 0,525 = 0,525; 3 × 0,525 = 1,575. Tres vehículos en la 109 (2 + 1). Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 59 | 50 de 232 oraciones con cifra en las 49 líneas | **50/50 con fuente localizable**: 37 con la cita en la oración o en la anterior del mismo período, 9 declaraciones de cobertura cuya fuente es el apéndice F, 2 recuentos de 17-aguabaja con la lámina y su planilla, y 2 de inferencia con su remisión. 100 % → 90 |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 49 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 49 líneas, cruzadas con contextos sensibles (P102) | 49/49 líneas | Ningún particular nombrado junto a remate, ejecución, cesantía, jubilación o embargo: el remate del catastro 116 va sin las partes, la encargada del Registro Civil sin nombre, la jubilada y el camión de A24 no entran. Nombrados: funcionarios (Rovaletti, Díaz Villalba, Ponce Martínez, Serrey, Álvarez César), los concesionarios y peticionarios de agua (como en las rondas 52 y 55 a 57), el arquitecto contratado y los integrantes de la cooperadora asistencial con el oficio que da el decreto |
+| `mapas_caldera` | 2 scripts que el libro cita desde la ronda 58 | publicados en `a027898` (P117) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `44c7495` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 879 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
