@@ -1563,3 +1563,111 @@ Restan: dos errores de consistencia en el aspecto 7 (hallazgos 1 y 2: 2 en 22,7 
 | Privacidad: personas nombradas en las 38 líneas, cruzadas con contextos sensibles (P102) | 38/38 líneas | Ningún nombre junto a remate, ejecución, cesantía, pensión o embargo. Sin nombre: la auxiliar cesanteada por abandono de servicio, la regente, los pensionados, la enfermera promovida, el titular del Registro Civil en licencia, el juez de paz que renuncia, el firmante de los pagarés. Nombrados sin contexto sensible: funcionarios (Hoygaard, Satue, Mogro, Julio González, D'Andrea, Durand), los escultores del Cristo, la empresa contratista y los concesionarios de agua (como en las rondas 52 y 55) |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `0d141b6` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 861 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas, las cuarenta y una que dice 00:75; 2 cajas desbordadas, las mismas |
+
+## Ronda 57 — auditoría con fase 6 (02/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1967-1968. Base: commit `3b5be9e` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1967-1968, sobre `187bc6d`, la ronda 56), con la fase 6 en `ronda-57.patch` (commit `8cdeb54` en la sesión; aplica con `git am` sobre `3b5be9e`, probado en un clon limpio de GitHub: árbol `7ed9447`). **Denominador medido: 25.120 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 56 (25.105 de 25.105, sobre `0d141b6` con la fase 6, que es `187bc6d`) se trasladaron por diff a `3b5be9e`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1967-1968 agrega 15 líneas netas (10 en A, 3 en C y 2 en F) y deja 50 líneas nuevas o modificadas en 21 archivos: caducan 50**, y quedan **25.070 vigentes sobre 25.120 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `3b5be9e`)
+
+Se leyeron **las 50 líneas caducas, enteras, por la sesión**, sin subagentes (una, F:75, es un renglón en blanco), contra los informes LEE 1967 (`BO-Salta-1967_7735-7972_la-caldera_LEE-1967_2026-10-01.txt`) y 1968 (`BO-Salta-1968_7973-8217_la-caldera_LEE-1968_2026-10-01.txt`), bajados de `corrige/lee/<año>/`: el §0, el §1, las 23 y 35 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, E.2, E.4 y E.7; y el `amplia-1967-1968.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 385–394, 396 | 11 | sesión |
+| ape/C-normativa.tex | 120–122 | 3 | sesión |
+| ape/D-pedidos.tex | 177, 191–192, 253 | 4 | sesión |
+| ape/F-fuentes.tex | 25–26, 74–75, 77 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 97 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 149, 332, 513 | 3 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/17-tierrafiscal.tex | 463 | 1 | sesión |
+| cap/18-politica.tex | 470, 531 | 2 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 15-hacienda:46–50, 09-defensas:546–550, 26-presencia:59–61, 22-prospectiva:140–143 y 10-expropiacion:511–515.
+
+**Esta ronda: 50 líneas nuevas**, 103.237 bytes sobre 2.797.039, que en las 873 páginas de la base equivalen a **32,2 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `3b5be9e` cae dentro de estos tramos.
+
+Acumulado: 25.070 vigentes + 50 = **25.120 de 25.120 (100,0 %)**. La fase 6 toca 9 líneas, todas dentro de lo leído en esta ronda (A:385, 386, 387, 392 y 394; 10:149; 17-aguabaja:281; 18:531; 26:235), y no cambia el largo de ningún archivo: **25.120 de 25.120 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1967 y 1968 de `boletines-salta`)
+
+Imágenes de los PDF del Release (sin capa de texto en 1967) a 300 ppp, recortadas por la posición que da un reconocimiento propio con tesseract `eng` sobre la hoja entera; cada recorte se miró.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 7783 | 20 | Decreto 3240: considerando y art. 2 | «por no existir de energía eléctrica en la zona» y «las condiciones topográficas de los terrenos a donde han de emplazarse las obras, antes de proyectar las mismas». Coinciden (A:385, 26:235) |
+| 7783 | 20 | Decreto 3240: fecha y visto | El decreto es del 9 de marzo de 1967 y aprueba la Resolución 706 de Arquitectura **del 18 de noviembre de 1966**, que es la que aprueba la orden de servicio 5: **la orden no es de marzo** (hallazgo 1) |
+| 7951 | 16 | Decreto 7012, considerando | «por la proximidad de un lecho de río que ofrecía peligro de inundación». Coincide; la lista de trabajos es «cisterna, lechos filtrantes, desarenador y toma» (precisión b) |
+| 7915 | 7 | Decreto 6103, considerando | «dada la proximidad de una ala de la base a la barranca del cerro que podía sufrir desmoronamientos en épocas de lluvias». Coincide; la orden suma cuatro rubros, uno de ellos la pintura y el silitón de los muros de piedra, que A:386 no traía (precisión a) |
+| 7772 | 8 | Decreto 3033, considerandos | Única proponente en anteriores llamados «para realizar trabajos de idéntica naturaleza»; «necesarios para regularizar un normal abastecimiento de agua potable a la ciudad de Salta e incrementar el sistema de riego de la zona de influencia». Coinciden (A:387, 10:149, C:120) |
+| 7909 | 6 | Decreto 6011 | «Defensa s/Río La Caldera», \$4.219.029, «se protegería al pueblo de La Caldera, que se encuentra ubicado en la ribera derecha del río», y el art. 1 autoriza a licitar. Coinciden (A:387, 09:535) |
+| 7969 | 5–6 | Decreto 7314 | Obra D-16, Galindo, \$3.555.418, 15,72 %. Coincide (09:535) |
+| 7961 | 7 | Decreto 7179, considerando | «se habrían realizado patentamientos de automotores en forma irregular». Coincide (A:388, 15:185, 18:470) |
+| 7860 | 7 | Decreto 4850 | «La Caldera-Santa Clara (Límite con la Prov. de Jujuy)», con tilde en el original. Coincide (A:389) |
+| 7859 | 11 | Decreto 4837 | «Abra de Lesser Yacone y Laguna». Coincide (A:387) |
+| 7932 | 8 | Decreto 6569 | «Embalse en Campo Alegre». Coincide (A:387) |
+| 7843 | 12 | Decreto 4474 | «Intendente Municipal» y «Médico Regional», los dos en la hoja 12. Coinciden (18:470, 04:4599) |
+| 8204 | 6 | Decreto 2866 | «reconocimientos geográficos para la instauración del Plan de Salud». Coincide (A:390) |
+| 8167 | 7 | Decreto 2162 | «…no pueden concurrir a dichos establecimientos por falta de asientos». Coincide (A:390, 26:235); el 2163 de la misma hoja dice «dicho establecimiento», y no es el citado |
+| 8114 | 8 | Decreto 1229 | «Construcción Cristo Monumental», «a erigirse en la localidad de La Caldera», «la erección de este monumento constituirá un motivo ponderable de atracción turística». Coinciden (A:391, 21:182) |
+| 8180 | 9 | Decreto 2362, contratos | «ya depositados en el lugar de emplazamiento»; Iramain «ejercerá la supervisión general» y Ávila «la dirección técnica necesaria para el armado del taselaje». Coinciden (A:391) |
+| 8124 | 8 | Decreto 1408 | «actual Interventor de la Municipalidad de La Caldera». Coincide (A:392) |
+| 8178 | 12 | Decreto 2308 | «de su propiedad», «Getsemaní», catastro 1463. Coincide (A:393, 13:248) |
+| 8090 | 12 | Decreto 800 | «atento al pedido de los regantes de la zona». Coincide (A:393, 17:281) |
+| 8175 | 5 | Ley 4266 | «Sanciona y Promulga con fuerza de LEY»; «Defensas sobre Río La Caldera». Coinciden (A:393, C:122, 09:535) |
+| 8161 | 31 | Edicto 31615 | «Andrés Rodó hoy Julio González», con tildes en el original. Coincide (A:394) |
+
+Son **24 citas entre comillas del libro cotejadas en la imagen**, **ninguna con diferencias**, y datos sin comillas en 4 hojas (7783 h20, 7915 h7, 7969 h5–6 y 8180 h9), de donde salen el hallazgo 1 y las precisiones a y b. No se cotejaron: 8070 h7 (393, «Rvdo. Padre Requena de La Caldera»: el reconocimiento no ubicó el renglón), 8099 h27–28 (escritura 279), 7993 h12, 8119 h7, 8124 h27, 8129 h26, 8053 h14–15, 8062 h16, 8109 h18, 8183 h6, 8201 h8 y h11, 8114 h12, 8000 h14, 8027 h9, 8036 h8, 8021 h8, 8147 h5, 7999 h12 y h14, 8047 h20 y h24, 8006 h22, 7988 h10, 7983 h11, 7989 h9 y 8166 h14, ni de 1967 7755 h21–24, 7762 h19–20, 7774 h7 y h12–13, 7803–7806, 7827, 7835, 7876, 7885, 7895, 7908, 7925, 7933, 7964 y los avisos.
+
+### Hallazgos (tres, todos aplicados en la fase 6) y cuatro precisiones
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:385 | «en marzo una orden de servicio de la obra 127 suprime los materiales eléctricos»: la orden de servicio 5 la aprueba la Resolución 706 de Arquitectura del 18 de noviembre de 1966; marzo es el decreto que aprueba la resolución (7783 h20, imagen; la FICHA del informe lo trae bien) | 3 | «una orden de servicio de la obra 127, aprobada por Arquitectura en noviembre de 1966, suprime … y el decreto que en marzo la aprueba manda…» |
+| 2 | A:387, 10:149 | «para llamar a licitación a principios de noviembre» y «con vistas a licitar la obra en noviembre»: el contrato del 5539 fija los primeros días de noviembre para **entregar la documentación** del llamado, y ése es el plazo que el 7448 extiende a fin de diciembre | 3 | «para entregar a principios de noviembre la documentación del llamado a licitación»; «con la documentación para licitar la obra a entregar a principios de noviembre» |
+| 3 | A:385, 18:531, A:392 | «en diciembre renuncia el suplente», «renuncia en diciembre» (7232) y «En julio Julio González renuncia» (1196): los decretos aceptan renuncias cuya fecha no dan; el mes es el de la aceptación | 3 | «en diciembre se acepta la renuncia del suplente»; «en diciembre se le acepta la renuncia»; «En julio se acepta la renuncia de Julio González» |
+
+Precisiones sin aspecto propio (escala general del 10 y del 1; no bajan la nota): (a) A:386 enumeraba como completos los rubros de la orden de servicio 4 de la base del Cristo y omitía la pintura y el silitón de los muros de piedra (6103, 7915 h7): se agrega «por la pintura de los muros de piedra»; (b) A:385 y 26:235 omitían el desarenador entre los trabajos de la escuela 250 (7012, 7951 h16): se agrega; (c) 26:235 decía que en 1967 se reciben «los edificios de la obra 127»: el 2745 recibe los de las escuelas 160 y 332, como dice A:385; (d) A:394 ponía «en octubre y noviembre» la 58 y la 61 en ese orden, cuando la 61 se aprueba en octubre (2432) y la 58 en noviembre (2814): se invierte el orden; y en 17-aguabaja:281 la canalización del 5983 iba «desde la primera toma del Wierna hasta la junta», sin «la última del Mojotoro» que el decreto nombra: se agrega.
+
+Restan: tres casos en el aspecto 3 (−15). Ninguno en el 7: **0 errores de consistencia en 32,2 páginas** → 100.
+
+**Los tres hallazgos y las cuatro precisiones están en material que la propia auditoría incorporó** (AMPLÍA 1967-1968, `3b5be9e`), y **ninguno fue atrapado por un control automático**. Los controles de P74 (citas literales; esta vez las 24 en la imagen) y P102 (privacidad) funcionaron: ninguna cita difiere del original. Se escaparon tres fechas de un acto dadas por el acto que lo aprueba o lo acepta, que es la falla de la ronda 56 (hallazgo 4) en otra forma, y listas de trabajos recortadas.
+
+**Descartados (falsos positivos, 5).** «La búsqueda laxa devolvió un sumario que el reconocimiento lee "La Galdera"» (F:74): la NOTA de A05 del informe 1967 dice «sólo la difusa», pero el §2 y E.7 del mismo informe registran que la laxa lo devuelve; el libro sigue al §2 (pendiente nuevo P114, sobre el informe). «La empresa que en 1967 había estudiado el vaso» (10:513): el 8164 de 1968 paga intereses por mora a Rodio por los «Sondeos de reconocimiento embalse en Campo Alegre», de modo que el trabajo se hizo. «Ese presidente» (22-prospectiva:144) es el designado en septiembre de 1966, Julio González, como dice 18:470. «En diciembre se rematan … dos lotes» y «en marzo se rematan» (A:389 y 394): es la convención de la cronología para los avisos de remate (seis casos anteriores). Julio González nombrado junto a la suspensión del 7179 (A:388, 18:470): funcionario en su función, con la afirmación atribuida al acto en condicional y el resultado del sumario declarado ausente.
+
+**Pendientes nuevos.** P114 (lee, 1967): en el informe LEE 1967, la NOTA de A05 dice que el sumario «La Galdera» de 7808 h3 lo devuelve «sólo la difusa», contra el §2 (línea 367) y E.7, que dan la laxa y la difusa; corregir la nota. P115 (libro): 10:513 da la capacidad, el espejo, la profundidad y la cota del embalse Campo Alegre, el comienzo de la obra en 1972 y la adjudicataria sin fuente localizable en el párrafo (muestra del aspecto 1 de esta ronda); dar la fuente o marcarla como pedido. P116 (herramientas): extensión de P108 para AMPLÍA (y para la rúbrica AMPLÍA v2): (1) una orden de servicio, una resolución o una renuncia se fecha por su propio acto, y si el decreto no da esa fecha se escribe «se aprueba» o «se acepta», no el verbo del acto aprobado; (2) toda enumeración de trabajos, causas o rubros tomada de un considerando va completa o con «entre otros».
+
+**Pendientes revisados sin cerrar.** P54 (1967-1968 no nombran el establecimiento de salud del pueblo). P100 (1967 y 1968 quedan en barrido con el criterio de F). P109, P110, P111 y P113 (láminas, H y E, pedidos de D y la coincidencia de D'Andrea: fuera del alcance de una ronda de auditoría).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.105/25.105 líneas vigentes en `187bc6d` | 25.070 vigentes, 50 caducas por el AMPLÍA 1967-1968 |
+| Superlativos, cierres y ausencias sobre los temas de las fichas de 1967-1968 (Cristo, intervención, Rodio, Campo Alegre, defensas, Borja, cooperadora, Getsemaní, juez y juzgado de paz, Serrey, Lavaque, Chalchanio, Berejnoi, Farfán, Centro Agrario, Bernabé López, Juana Moro, tabaco, coparticipación, Registro Civil, Hurtado, patentamientos, médico zonal, Brandan, Álvarez César, Satué, San Cayetano, Iramain, presupuesto municipal, ordenanza impositiva, escuela 250, Yacones, Gallinato, Lesser), en oraciones que no nombran 1967, 1968 ni un año posterior (repaso de ventana) | 63 coincidencias en el libro entero, todas leídas | Ninguna desmentida por 1967-1968. Conservan su universo: 09:550 (primera defensa de hormigón, 1980), 26:61 (escuela de 1911), 15:50 (renta 1918-1946), 22-prospectiva:142 (archivo temprano), A:369 (Ley 3930) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 326/326 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Recuentos de 1967-1968 (A:385 y 390, F:25–26 y 74, 00:43, 01:119, 02:28 y 97, D:177) contra el §0, el §1, E.2 y el §R de los informes | 2 años | Tramos: 42 + 1 + 11 = 54. Hojas sin mirar en 1958-1968: 306, 364, 262, 764, 290, 734, 577, 347, 171, 69 y 258 (00:43, «entre sesenta y nueve y setecientas sesenta y cuatro»). Páginas faltantes 1964-1968: 128, 37, 65, 111 y 109. 1967: 6.128 + 147 (111 + 36 de la 7780) = 6.275 contra el folio 6.270, con los saltos sin páginas de siete ediciones que E.2 declara (F:74 dice siete). 1968: 6.792 − 21 repetidas + 109 = 6.880 = último folio. Hueco 1969-2012: 44 años. Rovaletti asume el 15 de abril (E.4); los decretos 57 y 58 son del 19: cuatro días. Cierran |
+| Aritmética de 1967-1968 | 8 cuentas | 1 − 3.555.418/4.219.029 = 15,729 % (el acto imprime 15,72). 210.135 + 241.732 = 451.867. Siete integrantes de la cooperadora además del presidente y el vicepresidente (9 − 2). 26,25/50 = 7,35/14 = 15,75/30 = 0,525 l/s por ha. 200.000 + 4 × 150.000 = 800.000; 200.000 + 4 × 200.000 = 1.000.000. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 57 | 50 de 246 oraciones con cifra en las 50 líneas | **48/50 con fuente localizable**: 34 con la cita en la oración, 11 declaraciones de cobertura cuya fuente es el apéndice F y 3 de método o inferencia con su remisión; sin fuente, dos oraciones de 10:513 (datos físicos del embalse; obra de 1972 y adjudicataria), texto anterior al AMPLÍA (P115). 96 % → 74 |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 50 líneas (10:513 no da URL) | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 50 líneas, cruzadas con contextos sensibles (P102) | 50/50 líneas | Ningún particular nombrado junto a remate, ejecución, cesantía, pensión o embargo: los remates de 1967 y 1968 van sin nombres de las partes, el subcomisario cesanteado y los pensionados sin nombre. Nombrados: funcionarios (D'Andrea, Rovaletti, Julio González, Gómez, Serrey, Satué, Álvarez César, Brandan, Borja, Durand), los escultores, la contratista, los concesionarios de agua y los que promueven juicios de dominio (como en las rondas 52, 55 y 56) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `3b5be9e` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 873 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 41 entradas; 2 cajas desbordadas, las mismas |
