@@ -2070,3 +2070,147 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 6 de 6 hallazgos resueltos (100 %); compila sin errores ni referencias indefinidas, 901 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1973-1974 la Provincia adjudica la etapa B del embalse, conviene con Obras Sanitarias de la Nación un acueducto para la capital, fija por ley el canon de riego para la Administración y los consorcios y la coparticipación por planilla, y el municipio no interviene en ningún acto de agua), la tutela provincial sobre el fisco municipal (ayudas mensuales por decreto, la ordenanza de Vaqueros aprobada sin publicarse, índices fijados por ley sin los datos que los producen) y la designación provincial de los presidentes de comisión aun después de la convocatoria a elecciones de 1973.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 66 líneas (0,26 %; 39,7 páginas). Cobertura acumulada: 25.200 de 25.200 (100,0 %), con el registro de arriba. Falsos positivos descartados: 8. Recortes: no se cotejaron las citas sin comillas de las 45 fichas fuera de las 8 hojas nombradas, ni la Ley 4735, el 7775, el 142, el 2938 y el 3996, bajados y no mirados; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **6 de 6**, en el AMPLÍA 1973-1974 (`d99ba07`), **0 atrapados por un control automático**.
+
+## Ronda 62 — auditoría con fase 6 (03/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1975. Base: commit `3b51f00` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1975, sobre `0119431`, la ronda 61), con la fase 6 en `ronda-62.patch` (commit `8afc63d` en la sesión; aplica con `git am` sobre `3b51f00`, probado en un clon limpio de GitHub: árbol `1c1a51f`). **Denominador medido: 25.205 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 61 (25.200 de 25.200, sobre `0119431`) se trasladaron por diff a `3b51f00`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1975 agrega 5 líneas netas (2 en A, 1 en C y 2 en F) y deja 40 líneas nuevas o modificadas en 22 archivos: caducan 35 líneas anteriores**, y quedan **25.165 vigentes sobre 25.205 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `3b51f00`)
+
+Se leyeron **las 40 líneas, enteras, por la sesión**, sin subagentes (una, F:83, es un renglón en blanco): las nuevas de A, C y F completas, y las modificadas del resto en su texto entero, no sólo en el fragmento cambiado. Se cotejaron contra el informe LEE (`BO-Salta-1975_9655-9897_la-caldera_LEE-1975_2026-10-03.txt`, bajado de `corrige/lee/1975/`): §0, §1, §2, las 23 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, §P, E.1 a E.10, §F y §R; y el `amplia-1975.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 425–426 | 2 | sesión |
+| ape/C-normativa.tex | 21 | 1 | sesión |
+| ape/D-pedidos.tex | 177, 191–192, 253, 406 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 82–83, 85 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/03-fincas.tex | 1010 | 1 | sesión |
+| cap/04-siglo.tex | 1625, 3659–3660, 4599 | 4 | sesión |
+| cap/06-pdua.tex | 56 | 1 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 332, 513 | 2 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/19-resistencias.tex | 655 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 04:1615–1624 (Garzón y Pinto en el partido del Potrero de Castillo, de 1908, y la finca «Cerro Nevado» de 1918, que 04:1625 une con el catastro 102), 04:749 («Potrero de Castilla» [sic]), 12-amparo:1133 y 1157 (el barrio Zavaleta, Sabaleta o Zabaleta que cita 21:182), la fila de 1973 de A (A:414: Correa designado en agosto de 1973 y Gallo en Vaqueros en junio) y 18:470 entero (Correa redesignado en julio de 1974 por el 4981). Fuera de las 40 líneas, la fase 6 toca 13 renglones vigentes de rondas anteriores (abajo), releídos enteros en ésta.
+
+**Esta ronda: 40 líneas nuevas**, 116.896 bytes sobre 2.924.813, que en las 905 páginas de la base equivalen a **36,2 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `3b51f00` cae dentro de estos tramos.
+
+Acumulado: 25.165 vigentes + 40 = **25.205 de 25.205 (100,0 %)**. La fase 6 toca 17 líneas: cuatro dentro de lo leído en esta ronda (A:425, A:426, 09:535 y 15:185) y trece vigentes de rondas anteriores (A:409, 04:3755–3756, 04:3932–3933, 04:4166, 04:4529, 10:446–450 y 13:248), y no cambia el largo de ningún archivo: **25.205 de 25.205 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Release 1975 de `boletines-salta`)
+
+Imágenes de los PDF del Release (300 ppp de origen en casi todo el año) renderizadas a 110–250 ppp con PyMuPDF, primero la hoja entera y después el recorte del renglón, ubicado con el reconocimiento `eng` de la sesión; cada recorte se miró. Se bajaron 24 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9877 | 12 | Decreto 3519 y Ordenanza 3/75 enteros | «al régimen establecido por la ley nacional Nº 13.577 (t.o. por ley Nº 20.324)», «por el que se acuerda a los municipios provinciales la facultad de acogerse a la misma», «Que es de vital importancia para el desarrollo y el saneamiento urbano de este municipio, contar con el apoyo de un organismo especializado y de reconocida eficiencia técnica», «para su conocimiento, aprobación y posterior comunicación al organismo correspondiente», «Interventor Municipal de la Caldera». Coinciden (A:426, 01:139, 18:470, 22-infraestructura:545, C:21). La ordenanza no nombra servicio ni organismo. En la misma hoja, el 3546 del 22-11 pone a Pedrini en posesión del mando: A:425 da «las tapas», que lo traen desde la 9874 (24-11), y es exacto |
+| 9667 | 5 | Decretos 2 y 15 | «Aceptase la renuncia del Sr. Eusebio Correa, al cargo de Presidente de la Comisión Municipal de la localidad de La Caldera», y el 15: «al cargo de Presidente de la Comisión Municipal de la localidad de El Bordo». 18:470 dice «la del presidente de la comisión municipal de El Bordo», y es exacto; el informe (§C) daba la renuncia «a la Comisión Municipal» (falso positivo 1) |
+| 9692 | 7 | Decreto 92 | «Interventor de la Municipalidad de La Caldera». Coincide (A:425, 18:470) |
+| 9784 | 6 | Decreto 1383 | «Juez Titular de Vaqueros (La Caldera)». Coincide (A:425, 18:470) |
+| 9808 | 5 | Decreto 1925 | «como enfermera del Consultorio Externo de la localidad de Vaqueros». Coincide (A:425, 04:4599) |
+| 9773 | 5 | Decreto 1171 | «para que se construya un "camping" destinado al uso por los señores turistas». Coincide (A:425, 21:182) |
+| 9820 | 7 | Decreto 2197 | «Construc. Defensas s/ Río La Caldera - Dpto. La Caldera de A.G.A.S. por $ 654.990,00». Coincide (09:535, A:425) |
+| 9826 | 17 | Aviso 22286 | «"Cerro Nevado" o "Potrero de San José" o "de las Nieves" o "Potrero de Castilla", catastro 102 de La Caldera», «Juan Pinto y Lucas Castro Olarte o a sus sucesores». Coinciden (04:1625, 19:655, D:406) |
+| 9870 | 7 | Decreto 3274, nómina | «Vaqueros / Terminación Edificio Municipal $ 22.000» y «La Caldera / Construcción Nichos $ 20.000». Coinciden (03:1010, A:425, 15:185) |
+| 9864 | 18 y 20 | Decreto 3222 | Vaqueros 1.685.603 − 1.348.579 = 337.024 (h18); La Caldera 1.154.137 − 1.177.249 = −23.112 (h20). Coinciden (A:425, 15:185) |
+| 9810 | 5 | Decreto 2026 | «en concepto de anticipo de coparticipación de impuesto, para atender el costo del incremento salarial», La Caldera 30.290 y Vaqueros 25.242. 15:185 y A:425 lo cuentan entre los «pagos» que la Provincia «les da» sin decir que es un anticipo de su coparticipación (precisión a) |
+| 9681 | 5 | Resolución 0534 | El considerando nombra «bailes públicos, bares, confiterías, kioscos, carpas, etc.» y la Capital, Cerrillos, Rosario de Lerma y La Caldera. Coincide con A:425 (falso positivo 2) |
+| 9802 | 6 | Decreto 1764 | «Werfil Gallo», «José Santiago Catalán». Coinciden (A:425, 18:470) |
+| 9853 | 13 | Decreto 3082 | «Centro Vecinal "Dr. Carlos Serrey" - Vaqueros (La Caldera)». Coincide (A:425, 22-infraestructura:545) |
+| 9787 | 7 | Decreto 1615, art. 2 | $5.000 al Centro Vecinal «Dr. Carlos Serrey» de Vaqueros. Coincide |
+
+Son **19 citas entre comillas del libro cotejadas en la imagen** (12 distintas, contadas una vez por pasaje; los nombres propios entre comillas ---escuelas, hogar, centro vecinal--- no se cuentan), **ninguna con diferencias**, y datos sin comillas en 6 hojas (9667 h5, 9864 h18 y h20, 9870 h7, 9810 h5, 9787 h7). Bajadas y no cotejadas: 9794, 9817, 9831, 9670, 9678, 9807, 9848, 9715 y 9744 (las demás cifras del año salen de fichas de MODO imagen).
+
+### Control de comillas rectas sobre el libro entero (nuevo en esta ronda)
+
+P142 dejó escrito que con `babel` en castellano una comilla recta compila mal, y el AMPLÍA 1975 corrigió sus dos casos. **Esta ronda corrió el control sobre todo el manuscrito**: un script lista cada `"` del fuente que no va precedido de `` ` `` ni de `\` y mira el carácter siguiente, saltando espacios; una prueba aislada con el preámbulo del libro (`spanish,es-noquoting,es-lcroman`) mostró que `"` seguido ---aun con espacios en medio--- de *a, e, o, A, E, O* da un ordinal volado, de *c, C* da *ç, Ç*, de *i, I, u, U* da diéresis, de *r, R* y de *-, <, >, =, ~, "* se come la comilla. Sobre las 40 comillas rectas del fuente, 18 caen en esa clase; cada una se buscó en el PDF compilado (`pdftotext`) y se miró en la página (PyMuPDF, 200 ppp). **Siete pasajes, con doce de esas comillas, salen deformados en el libro entregado** (hallazgos 2 a 8); las otras seis ---cierres seguidos de `}`--- compilan bien. Las 22 comillas rectas restantes (seguidas de *S, G, V, D, F, L, p, q*, de coma o de punto) compilan como comilla recta: no son un defecto y quedan.
+
+### Hallazgos (ocho, todos aplicados en la fase 6) y dos precisiones
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:426 | «y el decreto-ley no se publica en 1975»: ausencia afirmada sobre un año del que, según la fila de 1975 dos renglones antes y F:82, «cuentan los hallazgos y no las ausencias» (2.308 hojas sin mirar una por una, unas 137 hojas faltantes). El informe la da en E.3 («citado, no publicado en 1975») y el AMPLÍA la llevó sin el universo | 5 | «y el decreto-ley no aparece en lo hallado de 1975» |
+| 2 | 04:4166 | La resolución de minas de 1948, «denominada "CALDERA No.\ 1, 2 y 3"», compila «denominada ÇALDERA No. 1, 2 y 3"» | 4 | ``` ``CALDERA No.\ 1, 2 y 3'' ``` |
+| 3 | 04:4529 | La misma mina en 1957, «denominada "Caldera 1, 2 y 3"», compila «Çaldera 1, 2 y 3"» | 4 | ``` ``Caldera 1, 2 y 3'' ``` |
+| 4 | 04:3755–3756 | «la finca denominada "La Helvecia" con una superficie» compila «"La Helveciaçon una superficie» | 4 | ``` ``La Helvecia'' con ``` |
+| 5 | 04:3932–3933 | «la obra "Refecciones y ampliaciones … Escuela Provincial de La Caldera"» pierde la comilla de apertura (`"R`) y queda una de cierre suelta | 4 | ``` ``Refecciones … La Caldera'' ``` |
+| 6 | 10:446–450 | Las cinco coordenadas del acueducto tomadas del estudio de ruido (Secretaría de Ambiente): «65°22'32,40"O» compila «65°22'32,40.º», sin el signo de segundos ni la O de oeste, en las cinco filas | 4 | `\textquotedbl{}O` en las cinco |
+| 7 | 13:248 | «la "adquisición "Finca Getsemaní" en La Caldera"» del acta de Lerma compila «"Finca Getsemaní.ᵉⁿ La Caldera»: la comilla de cierre seguida de espacio y *e* da un ordinal volado | 4 | ``` ``Finca Getsemaní'' en ``` |
+| 8 | A:409 | El decreto 939 de 1971, «Etapa "A" - Departamento», compila «Etapa .ᴬ Departamento»: la *A* como ordinal y las dos comillas perdidas | 4 | ``` ``A'' ``` |
+
+Precisiones sin aspecto propio (escala general del 10 y del 7; no bajan la nota): (a) 15:185 y A:425 decían que la Provincia «les da a los dos, como a los demás, cuatro pagos para los aumentos de sueldo de su personal»: el del decreto 2026 se liquida «en concepto de anticipo de coparticipación de impuesto» (9810 h5, imagen), es decir, adelanta a cada municipio lo que ya es suyo; pasa a «cuatro pagos …, uno de ellos como anticipo de su coparticipación», sin agregar renglones; (b) 09:535 decía «\textbf{Y en 1975 vuelve al río La Caldera}» cuando la misma serie, dos oraciones antes, ya estaba en 1974 sobre el río La Caldera (la apertura de cauces del aviso 18315 y del 5770): pasa a «\textbf{Y en 1975 suma otra sobre el río La Caldera}».
+
+Restan: una ausencia falsa en una frase en el aspecto 5 (−5) y siete citas deformadas por la compilación en el 4 (−21 sobre el techo de 90 del cotejo parcial: 69). Ninguna toca a una sección: no hay tope por alcance. El aspecto 7 no tiene hallazgos en las 36,2 páginas auditadas (100). Los ocho se aplicaron: 100 en la nota final del 5 y 90 en la del 4.
+
+**Errores introducidos por la propia auditoría**: el hallazgo 1 está en el AMPLÍA 1975 (`3b51f00`); el 7, en el AMPLÍA 1969 (`44c7495`), y el 8, en el AMPLÍA 1970-1972 (`d628fd6`); los otros cinco (2 a 6) están en el texto del commit inicial del repositorio (`7cd0477`, 23/09/2026), que reúne las rondas 1 a 35, y git no permite atribuirlos a una ronda. **Ninguno fue atrapado por un control automático antes de llegar al libro**: el control de P142 existía como regla para lo que agrega un AMPLÍA, no como script sobre el libro entero, y por eso los cinco casos antiguos sobrevivieron treinta rondas con el texto leído. Los controles de P86 (fechas), P102 (privacidad) y P137 (1) (citas letra por letra) funcionaron en el AMPLÍA 1975.
+
+**Descartados (falsos positivos, 6).** «La del presidente de la comisión municipal de El Bordo» (18:470): el informe (§C) dice «a la Comisión Municipal», pero el decreto 15 dice «al cargo de Presidente» (9667 h5, imagen). «Los bailes, bares y carpas» (A:425): la resolución 0534 nombra los bares en su considerando, y el art. 1 cierra la lista con «etc.» (9681 h5). «Las tapas dan … a Ferdinando Pedrini desde el 24 de noviembre» (A:425): el 3546 lo pone en posesión el 22 (9877 h12), pero la fila atribuye la fecha a las tapas, y la primera que lo nombra es la 9874. «Le acepta la renuncia» a Correa en 22-prospectiva:144: el presidente designado en agosto de 1973 y vuelto a designar en julio de 1974 es Correa (18:470; 819 y 4981), el mismo del decreto 2. «En cada año quedaron sin mirar enteras entre sesenta y nueve y setecientas sesenta y cuatro hojas que el reconocimiento no pudo leer» (00:43): en 1975 son 204, dentro del intervalo; las 2.308 de poca tinta son otra clase, que F:82, D:177 y A:425 declaran. «Uno casi igual al del partido del cateo de 1908» (04:1625): el partido es el «Potrero de Castillo» (04:1617) y el edicto dice «Potrero de Castilla».
+
+**Pendientes que cierra.** Ninguno entero. P142 queda cumplido en su punto (1) sobre el libro entero, pero el control sigue sin script: va en P144.
+
+**Pendientes nuevos.** P143 (lee, 1975): corregir el informe LEE 1975 con lo mirado en esta ronda: §C, el decreto 15 acepta la renuncia de Domingo Osvaldo Juárez «al cargo de Presidente de la Comisión Municipal de la localidad de El Bordo» (9667 h5), no «a la Comisión Municipal»; E.3, «Decreto Ley 8 del 21-12-1974: citado, no publicado en 1975» pasa a «no hallado en 1975», con la reserva de E.10 (L2 y L5); A.23, transcribir el considerando del decreto «por el que se acuerda a los municipios provinciales la facultad de acogerse a la misma» (9877 h12), que el TEXTO corta con «[...]»; A.14, decir en la FICHA que el pago es «en concepto de anticipo de coparticipación de impuesto» (9810 h5). P144 (herramientas): publicar como script (`control_comillas.py` en `corrige` o junto a `control_recuentos.py`) el control de esta ronda y correrlo como último paso de todo AMPLÍA y de toda ronda MEJORA: (1) en el fuente, toda `"` no precedida de `` ` `` ni de `\` cuyo carácter siguiente, saltando espacios, sea *a, e, o, A, E, O, c, C, i, I, u, U, r, R, y* o *-, <, >, =, ~, "* es un error; (2) en el PDF compilado (`pdftotext`), toda *Ç*, *ç*, *ï*, *ü* o ordinal volado que no esté en el fuente; (3) para segundos de coordenadas, `\textquotedbl{}` y no `"`; y sumarlo a la rúbrica AMPLÍA v2 con P142.
+
+**Pendientes revisados sin cerrar.** P54 (1975 nombra sólo el consultorio externo de Vaqueros; ni hospital ni estación). P100 y P118 (1975 en barrido con el criterio de F, como dice `amplia-1975.json`). P115 (10:513 sigue sin fuente para capacidad, espejo, profundidad y cota; ningún acto de 1975 nombra el embalse: por eso el aspecto 1 sigue en 82). P138, P139 y P141 (láminas, H y E, correcciones del informe: fuera del alcance de una auditoría; P141 se completa con P143). P140 (resto de los pedidos de D, y la fuente de la identificación de la ley 13.577 como orgánica de Obras Sanitarias de la Nación, que se usa en A:426, 01:139, 17:281 y 22-infraestructura:545).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.200/25.200 líneas vigentes en `0119431` | 25.165 vigentes, 35 caducas por el AMPLÍA 1975 |
+| Superlativos, cierres y ausencias en el texto agregado por el AMPLÍA (*el único*, *la única*, *único*, *única*, *el primero*, *la primera*, *el primer*, *por primera vez*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *tampoco*, *sólo*, *siempre*, *todos los*, *todas las*, *no se publica*, *no lo dice*), sobre 3.154 palabras agregadas | 26 coincidencias, todas leídas | Una cae (hallazgo 1, «no se publica en 1975»); «el apellido del primer presidente» es ordinal y está en 03:1010; «no fue siempre fiscal» lo prueba el edicto; las demás conservan su universo («en lo hallado del año», «la lectura no halló», «lo que este libro leyó no lo dice»); «no consta» de 19:655 remite al pedido de D y a 04:1625 |
+| Repaso de ventana: afirmaciones que cierran en 1974 (*a 1974*, *hasta 1974*, *--1974*, *1958 a 1974*, *1961 a 1974*, *1964 a 1974*, *1969 a 1974*) y que abren el hueco en 1975 (*1975--2012*, *1975 a 2012*, *1975 en adelante*, *treinta y ocho*, *sesenta tramos*, *diecisiete,*, *dieciocho quedan*, *9.654*) | libro entero | Ninguna queda sin actualizar. Las de *1973 y 1974* de 01:139, 04:4599, 06:56, 15:185, 17:281, 21:87, 26:235 y D:191 son de contenido de esos años; «treinta y ocho de sus cincuenta y siete actos» (00:43) es de 1948 y «treinta y ocho kilómetros cuadrados» (11:223), de una cuenca |
+| Comillas rectas que `babel` deforma (arriba) | 40/40 comillas rectas del fuente; 18 de riesgo, cada una buscada en el PDF y mirada en la página | 7 pasajes deformados (hallazgos 2 a 8); después de la fase 6, 0 *Ç* y 0 *ç* en el PDF, y las siete citas compilan con comillas tipográficas |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente, y 60 antes) | 333/333 `\ref{cap:…}` de un capítulo a uno posterior (329 en la ronda 61, más 01:139, 15:185, 17:281 y 18:470) | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Recuentos de 1975 (F:25–26 y 82, 00:43, 01:119, 02:28 y 99, 04:3659–3660, 20:880–881, 22-infraestructura:545, D:177, A:425) contra el §0, el §1, E.2, E.3, E.10 y el §R del informe | 1 año | Tramos: 42 + 1 + 18 = 61; fuera de las ventanas, 1948 y 1958-1975 = 19. Ediciones: 9655–9897 = 243 − 2 (9696 y 9698) = 241. Hojas: 4.724; a 300 ppp, 4.103. Hojas a ojos: 204 = 164 + 40. Poca tinta: 2.308. Ediciones cortas: 108; hojas faltantes, unas 137, la última en unas 76. Foliatura: 1 a 5.042, tres saltos. Hueco 1976–2012: 37 años. D:177, quince años de 1961 a 1975 y quince cifras; doce de 1964 a 1975 y doce cifras |
+| Aritmética de 1975 | 6 cuentas | 1.685.603 − 1.348.579 = 337.024. 1.154.137 − 1.177.249 = −23.112. 5.000 × 4.000 m = 2.000 ha (cateo). 1.700 + 3.300 = 5.000. 13.400 + 30.290 + 12.000 + 21.692 = 77.382 (los cuatro pagos a La Caldera; el libro no da la suma). 9715 a 9724: diez apariciones del aviso 20835 = la 9715 + nueve. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 62 | 50 de 77 cláusulas con cifra en el texto agregado | **50/50 con fuente localizable**: 36 con la cita en la cláusula o en la siguiente del mismo período, 9 declaraciones de cobertura cuya fuente es el apéndice F o el informe que F cita, 3 con remisión a un capítulo que cita, 2 con la cita en la oración anterior de la misma fila o párrafo. 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115, 10:513, en una línea que este AMPLÍA tocó) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 40 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 40 líneas, cruzadas con contextos sensibles (P102) | 40/40 líneas | Ningún particular nombrado junto a remate, ejecución, sumario, baja, cesantía o embargo: el remate de las matrículas 116 y 117 va sin nombres, la baja policial de Vaqueros (B.2.1) no se incorporó y la enfermera del consultorio va sin nombre. Nombrados: funcionarios (interventores federales, Correa, Xamena, Gallo, Catalán, el juez Guantay), la donante del terreno del camping, como donante y no en contexto socioeconómico, y el apellido de uno de los demandados del catastro 102, que sostiene el argumento de 04 y va con la cautela de que el edicto no dice que sea el de 1918 |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `3b51f00` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 905 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | La ordenanza 3/75 y el decreto-ley 8 van en pasado; ninguna norma de 1975 se da por vigente |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de acto y de publicación separadas (337 y 404 del 31-12-1974; 2773 del 29-9); sin hallazgos |
+| 4 | Fidelidad de transcripción | 7 | 69 | 90 | Siete citas deformadas por la compilación (−21); techo de 90 por cotejo parcial; las 19 citas del AMPLÍA coinciden con la imagen |
+| 5 | Honestidad epistémica | 12 | 95 | 100 | Hallazgo 1 (−5), aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 36,2 páginas; la precisión b no es una contradicción |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin faltas nuevas; 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P138 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | P102 funcionó |
+
+**Nota inicial: 86,3 antes del tope y 86,3 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas ---por ejemplo, el expediente 53-7158 y el decreto-ley 8 de 1974 que D:253 pide ahora, que dirían qué tomó Obras Sanitarias del municipio---: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:513 (P115): +0,9 (el 1, de 82 a 90); (4) cotejar en el facsímil el resto de las citas del libro, con la regla de P137 (1), y dejar corriendo el control de P144: sube el techo del 4 a 100 y vale +0,7; (5) publicar los scripts que faltan y extender las láminas a 1975 (P138): hasta +0,2 en el 13.
+
+**Avance del libro:** 8 de 8 hallazgos resueltos (100 %); compila sin errores ni referencias indefinidas, 905 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1975, con la Municipalidad intervenida, su única ordenanza hallada la adhiere al régimen nacional de Obras Sanitarias para el saneamiento urbano, y la Provincia aprueba sin el municipio el legajo de unas defensas sobre el río), la tutela provincial sobre el fisco municipal (presupuestos aprobados en noviembre, aportes por decreto y un anticipo de la coparticipación propia) y la designación provincial de las autoridades municipales (un interventor en La Caldera y un presidente en Vaqueros, ninguno electo). La pregunta del capítulo 19 sobre el catastro 102 gana un dato: en 1975 era objeto de un juicio de división de condominio entre particulares.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 40 líneas (0,16 %; 36,2 páginas). Cobertura acumulada: 25.205 de 25.205 (100,0 %), con el registro de arriba. Falsos positivos descartados: 6. Recortes: no se cotejaron las cifras de 9794, 9817 y 9831 (pagos de agosto y septiembre), ni el cateo, la caducidad y el remate, bajados y no mirados (fichas de MODO imagen); el control de comillas cubre las comillas rectas dobles y no las simples; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **8 de 8** en material que incorporaron las sesiones ---1 en el AMPLÍA 1975 (`3b51f00`), 1 en el AMPLÍA 1969 (`44c7495`), 1 en el AMPLÍA 1970-1972 (`d628fd6`) y 5 en el commit inicial (`7cd0477`, rondas 1 a 35)---, **0 atrapados por un control automático**.
