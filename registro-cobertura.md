@@ -1812,3 +1812,115 @@ Restan: un caso en el aspecto 3 (−5) y dos errores de consistencia en el 7: **
 | `mapas_caldera` | 2 scripts que el libro cita desde la ronda 58 | publicados en `a027898` (P117) |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `44c7495` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 879 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
+
+## Ronda 60 — auditoría con fase 6 (02/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1970-1972. Base: commit `d628fd6` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1970-1972, sobre `5533413`, la ronda 59), con la fase 6 en `ronda-60.patch` (commit `074fadf` en la sesión; aplica con `git am` sobre `d628fd6`, probado en un clon limpio de GitHub: árbol `55f57fb`). **Denominador medido: 25.176 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 59 (25.154 de 25.154, sobre `5533413`) se trasladaron por diff a `d628fd6`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1970-1972 agrega 22 líneas netas (11 en A, 9 en C y 2 en F) y deja 71 líneas nuevas o modificadas en 26 archivos: caducan 49 líneas anteriores**, y quedan **25.105 vigentes sobre 25.176 (99,7 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `d628fd6`)
+
+Se leyeron **las 71 líneas, enteras, por la sesión**, sin subagentes (una, F:79, es un renglón en blanco): las nuevas de A y C completas en el diff por palabras, y las modificadas del resto en su texto entero, no sólo en el fragmento cambiado. Se cotejaron contra los tres informes LEE (`BO-Salta-1970_8462-8701_la-caldera_LEE-1970_2026-10-02.txt`, `BO-Salta-1971_8702-8942_la-caldera_LEE-1971_2026-10-02.txt` y `BO-Salta-1972_8943-9180_la-caldera_LEE-1972_2026-10-02.txt`, bajados de `corrige/lee/<año>/`): §0, las 143 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, §P, E.1 a E.10 y §R de cada uno; y el `amplia-1970-1972.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 315, 364, 380, 396, 400–413 | 18 | sesión |
+| ape/C-normativa.tex | 98, 103, 127–135 | 11 | sesión |
+| ape/D-pedidos.tex | 177, 191–192, 253 | 4 | sesión |
+| ape/F-fuentes.tex | 25–26, 78–79, 81 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/03-fincas.tex | 1010 | 1 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/05-tierra.tex | 290 | 1 | sesión |
+| cap/06-pdua.tex | 56 | 1 | sesión |
+| cap/07-cot.tex | 249, 251 | 2 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 18, 149, 332, 513 | 4 | sesión |
+| cap/13-loteo.tex | 248 | 1 | sesión |
+| cap/14-poblacion.tex | 517 | 1 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/17-tierrafiscal.tex | 463 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 03:1009 (el comienzo de la oración de 03:1010), 10:14–40 (la ficha de la Ley 4486, contra las superficies dudosas del informe 1972: 167,4139, 1,8036 y 363,0718 son compatibles con 4.13[8?],82, 8.03[?],[?] y 3[6?]3 ha 0717,6[6?], y suman 686,1871), la fila de 1967 de A:387 (Carmelo Galindo, contratista de la defensa del pueblo de 1967, que A:403 nombra por su reajuste de 1970) y las líneas de 14-poblacion con la cifra de 2022 (12.299: 12.299 / 3.671 = 3,35 → «3,4»; 12.299 / 2.831 = 4,34 → «4,3»).
+
+**Esta ronda: 71 líneas nuevas**, 145.082 bytes sobre 2.869.431, que en las 891 páginas de la base equivalen a **45,1 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `d628fd6` cae dentro de estos tramos.
+
+Acumulado: 25.105 vigentes + 71 = **25.176 de 25.176 (100,0 %)**. La fase 6 toca 15 líneas, todas dentro de lo leído en esta ronda (A:400, 402, 405, 409 y 410; C:134; D:177; F:78; 04:4599; 07:251; 10:149 y 513; 17-aguabaja:281; 21:182; 22-infraestructura:508), y no cambia el largo de ningún archivo: **25.176 de 25.176 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1970, 1971 y 1972 de `boletines-salta`)
+
+Imágenes de los PDF del Release (150 ppp de origen en 1970 y 1971; 96 ppp en las hojas de 1972 miradas) renderizadas a 100–300 ppp con PyMuPDF (600 en la 9040 h5), primero la hoja entera y después el recorte del renglón; cada recorte se miró. Se bajaron 33 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 8929 | 25 | Decreto 2486, art. 1 | Tres publicaciones de «Democracia», cada una con su fecha: «Otra Riqueza Salteña…, el día 11 de setiembre/71», «Reactivación de las Obras Públicas Municipales…, el día 31 de agosto de 1971» y «Iniciación de Obras de Construcción del Dique Campo Alegre, el 1º de setiembre de 1971». La cita coincide (A:409, 10:149); **el 1.º de septiembre es el día en que aparece el aviso, no una fecha de comienzo que el aviso anuncie** (hallazgo 1) |
+| 8860 | 11–12 | Ordenanza impositiva 1971 (decreto 370), art. 74 y radio urbano | «de los ríos del Municipio, o sea de los ríos Wierna, La Caldera y Mojotoro» coincide (A:406, 07:251, C:130). En h12, col. 1: «La avenida General Martín Miguel de Güemes desde el comienzo del loteo del Ing. Martell» y «Calle Cristo Redentor… hasta el monumento al Cristo y las lomas de Getsemaní que están al frente»: coinciden (13:248); no están en el TEXTO del informe 1971, cuyo B.4 da a Getsemaní dos apariciones en el año (pendiente P129) |
+| 8842 | 13 | Decreto 939, considerando y art. 1 | «Que a la subasta se presentó como único proponente la Empresa Sollazzo Hnos. S.A.» y «Embalse Campo Alegre - Etapa "A" - Departamento de La Caldera (Salta)». Coinciden (A:409, 10:149); el informe tenía el considerando sólo en la capa |
+| 8714 | 13 | Decreto 1279, considerando y art. 3 | «tiende a solucionar el agudo problema de provisión de agua potable a la Ciudad de Salta, localidades aledañas y del Departamento de General Güemes» y la serie de inversiones hasta 1975. Coinciden (A:409, 10:149, C:127) |
+| 8768 | 5 | Decreto 2051, considerando y art. 1 | «per- / tenecía y estaba atendida por la Municipalidad de La Caldera», «de la jurisdicción que ahora se desmembra», «en forma provisoria», 66,67 y 33,33, 22 de marzo. Coinciden (A:406, 07:249, 15:185, C:128) |
+| 8773 | 13 | Decreto 2161, considerando | «se preve su iniciación en breve plazo» y «debe impedirse el uso discrecional de las mismas y su fraccionamiento arbitrario». Coinciden (A:407, 06:56) |
+| 8928 | 12 | Decreto 2447 y ordenanza 173 | «LA CALDERA, es un pueblo aut nticamente histórico y colonial» (falla de impresión, P128) y «reemplazándose las pantallas comunes con faroles de tipo colonial». Coinciden (06:56, C:132) |
+| 8991 | 14 | Ordenanza 1 de Vaqueros (decreto 3677), art. 81 | «de los ríos del municipio o sea de los ríos Wierna, La Caldera y Mojotoro» y «citados ríos del Municipio de La Caldera». Coinciden (A:411, 07:251, C:133) |
+| 9040 | 5 | Ley 4474, art. 1 | La imagen (96 ppp, recorte a 600) dice «estará circunscripto al actual éj'do del mu- / nic'p'o de la citada localidad»: **«éjido», con tilde, y «municipio», con minúscula**; A:410 y C:134 citaban «ejido del Municipio» (hallazgo 4) |
+| 9152 | 6 | Decreto 6307, art. 1 | «con atención de las localidades de La Caldera, La Calderilla y Vaqueros». Coincide (A:410, 04:4599, C:135) |
+| 8671 | 11 | Resolución 149, art. 1 | «el Consultorio Externo de La Caldera» (el visto dice «de la Caldera»). Coincide (A:400, 04:4599, 21:87) |
+| 8931 | 10 | Decreto 2530, considerando | «el sistema de captación de agua corriente y a la propia localidad de La Caldera», y «margen derecho» en el original. Coincide (09:535) |
+| 8585 | 15 | Decreto 9372, visto | La Municipalidad «eleva terna para la designación de Juez de Paz Titular»: la terna de A:400 vale también para Avilés |
+| 8785 | 12–15 | Decreto 2378, plan de Vialidad 1971 | El acceso al Cristo tiene \$30.000 en «5) Fondos de Administración Central» del plan de contado (h13) y \$170.000 en el mismo fondo del «Plan Financiado» (h15), con la misma estructura que el dique: 21:182 decía «da a Vialidad \$200.000» (precisión e) |
+| 8758 | 15–16 | Aviso 6372, postergación de la licitación del embalse | Lleva la nueva apertura al 5 de mayo de 1971; A:409 y 10:149 citaban sólo el llamado del 31 de marzo (aviso 5836) para la apertura del 5 de mayo (precisión b) |
+| 9178 | 13 | Decreto 6866, considerando | «el reacondicionamiento total de la red distribuidora de agua corriente, con previsión a un crecimiento vegetativo por un período de 20 años, sumada a la zona de influencia del dique Campo Alegre». Coincide (A:410, 22-infraestructura:545; el informe lo tenía en la capa) |
+
+Son **39 citas entre comillas del libro cotejadas en la imagen** (20 distintas, contadas una vez por pasaje), **una con diferencias** (la de la Ley 4474, en dos pasajes), y datos sin comillas en 5 hojas (8929 h25, el sentido de la fecha; 8585 h15, la terna; 8785 h13 y h15, el acceso al Cristo; 8758 h15–16, la postergación; 9178 h13, la red de agua). No se cotejaron: 8546 h12 (8641 a 8643), 8616 h23 (563), 8620 h16 y 8690 h14–15 (D-3-69), 8622 h8 y 8700 h12 (iluminación), 8628 h5–6 (22), 8660 h15 (censo), 8712 h29 y 8750 h16 (Getsemaní en 1971), 8715 h14 (1335), 8743 h5 (1797), 8811 h15, 8815 h9, 8817 h14–16, 8823 h13, 8883 h5, 8887 h8, 8892 h11, 8893 h27, 8899 h22, 8907 h8–9, 8910 h20–23, 8925 h6–9, 8957 h11–12, 9007 h9 y h11–12, 9011 h13–14, 9031 h7, 9055 h8, 9058 h13, 9059 h5–6, 9072 h9, 9077 h9–10, 9087 h5, 9089 h8, 9092 h10–11, 9099 h12, 9119 h9–12, 9122 h15, 9140 h38, 9141 h19, 9143 h11, 9148 h18, 9154 h12, 9155 h16–17, 9158 h15, 9161 h21–22, 9167 h5, 9171 h15 y h17, 9176 h21, 9179 h11–12, 9180 h12.
+
+### Hallazgos (cuatro, todos aplicados en la fase 6) y seis precisiones
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:409, 10:149, 10:513 | «La única fecha de comienzo que publica el Boletín es la de un aviso pagado… el 1.º de septiembre» y «el único comienzo de obra que publica el Boletín es el que anuncia un aviso pagado para el 1.º de septiembre de 1971»: el decreto 2486 paga tres publicaciones de «Democracia» y da de cada una el día en que salió (8929 h25, imagen); el 1.º de septiembre es la fecha del aviso, y qué fecha de comienzo anunciaba no consta. La fecha de una publicación dada como fecha del hecho | 3 | A y 10:149: «el Boletín no publica el acta de inicio: sólo el decreto que paga al diario «Democracia» un aviso, «Iniciación de Obras…», aparecido el 1.º de septiembre, sin decir qué fecha de comienzo anunciaba»; 10:513: «del comienzo de obra el Boletín no da más que un aviso de «Iniciación de Obras» aparecido en un diario el 1.º de septiembre de 1971»; F:78: «la fecha en que apareció el aviso» |
+| 2 | 04:4599 | «Los de 1970 a 1972 lo nombran otra vez, pero sólo como consultorio»: en el mismo párrafo los de 1961 nombran «el consultorio externo» y se dicen «sin nombrar el establecimiento», y D:191 y 21:87, del mismo AMPLÍA, dicen que los de 1970 a 1972 nombran «sólo un consultorio externo» sin nombrar el establecimiento. Contradicción dentro del mismo pasaje | 7 | «Los de 1970 a 1972 vuelven a nombrar sólo el consultorio» |
+| 3 | D:177, F:78 | «seis dígitos de sus superficies» de la Ley 4486 que la imagen no decide: de los seis dígitos entre corchetes del informe 1972 (A19, E.8), cinco son de superficies y uno del número de un plano de expropiación («0013[6?]»). Recuento importado del informe sin rehacerlo sobre la ficha | 3 | «seis dígitos que la imagen no decide, cinco de sus superficies y uno del número de un plano» (D); «seis dígitos de la Ley 4486, cinco de sus superficies y uno del número de un plano» (F) |
+| 4 | A:410, C:134 | Cita de la Ley 4474 con dos correcciones silenciosas: «ejido del Municipio» donde el original dice «éjido del municipio» (9040 h5, imagen); el TEXTO del informe 1972 (A18) trae la misma forma | 4 | «…al actual éjido del municipio de la citada localidad» en los dos pasajes |
+
+Precisiones sin aspecto propio (escala general del 1, del 5, del 12 y del 13; no bajan la nota): (a) A:400 y A:405 daban los traspasos de gobernador de 1970 y 1971 sin fuente, el único dato de las dos filas fuera de la muestra que no la tenía: se agregan los decretos 1 de cada serie (Nº 8581, h.\ 9; Nº 8625, h.\ 5; Nº 8790, h.\ 5, por E.4 de los informes); (b) A:409 y 10:149 citaban para la apertura del 5 de mayo sólo el llamado del 31 de marzo: se agrega el aviso de postergación 6372 (Nº 8758, h.\ 16); (c) 17-aguabaja:281 llamaba «concesión» al edicto 12751, que publica un pedido: «un pedido de concesión temporal-eventual»; (d) A:402 titulaba «El Cristo, iluminado» una fila que sólo trae legajo, licitación y adjudicación: «La iluminación del Cristo»; (e) 21:182 decía que en 1971 la Provincia «da a Vialidad \$200.000 para el acceso»: el plan de Vialidad asigna \$30.000 de contado y \$170.000 financiados (8785 h13 y h15, imagen); (f) 22-infraestructura:508 había perdido la coordinación («adjudicada en 1967 dos en La Calderilla»), A:410 decía «el archivo no tiene» donde F, 00, 02 y D dicen «el repositorio», y 07:251 llamaba «las dos primeras impositivas» a las primeras posteriores a la ley de 1970: se corrigen las tres.
+
+Restan: dos casos en el aspecto 3 (−10), dos correcciones silenciosas en una cita, en dos pasajes, en el 4 (−6; el aspecto ya está en 90 por cotejo parcial) y un error de consistencia en el 7: **1 en 45,1 páginas = 2,2 por cada 100** → escalón de ≤ 4 (50), y uno más abajo porque contradice material del mismo párrafo → **40**. Los cuatro se aplicaron: 100 en la nota final del 3 y del 7.
+
+**Los cuatro hallazgos y las seis precisiones están en material que la propia auditoría incorporó** (AMPLÍA 1970-1972, `d628fd6`), y **ninguno fue atrapado por un control automático**. Los controles de P74 (citas literales) y P108 (1) (citas con tilde cotejadas en la imagen) no se corrieron como script en el AMPLÍA para la Ley 4474: la cita copia el TEXTO del informe, que ya traía la forma corregida. El de P102 (privacidad) funcionó.
+
+**Descartados (falsos positivos, 6).** «Por terna de la Municipalidad» para los tres jueces de 1970 (A:400): la ficha del 9372 no lo decía, pero la imagen sí (8585 h15). «La impositiva … describe una calle «hasta el monumento al Cristo y las lomas de Getsemaní»» (13:248): no está en el informe, pero la imagen la da (8860 h12). «Dos de ellas decretadas a fines de 1971» (A:411): el 2767 es del 10 de noviembre y el 3677 del 31 de diciembre. «De 1970 a 2022 … por 3,4» (14:517): 12.299 / 3.671 = 3,35. «El contratista de la defensa del pueblo de 1967» (A:403): Carmelo Galindo, como en A:387 y 09:535. «Su primer intendente» (03:1009), que el AMPLÍA cambió por «presidente de la comisión municipal» en A y en 18 y no aquí: la oración sigue diciendo en la línea 1010 que el decreto 135 lo designa presidente, y «intendente» es el nombre que los propios actos de 1971 dan al cargo (1797, A16 del informe 1971).
+
+**Pendientes que cierra.** Ninguno.
+
+**Pendientes nuevos.** P129 (lee, 1970-1972): corregir los informes con lo mirado en esta ronda: 1971 A24 (y P128), la fecha del 2486 es la de aparición del aviso, como las otras dos publicaciones del mismo decreto, y la nota «única fecha de iniciación de la obra en lo leído» cae; 1971 A11, la postergación es el aviso 6372 (8758 h15–16); 1971 A26, el acceso al Cristo queda decidido por la imagen (\$30.000 en el plan de contado y \$170.000 en el financiado de Vialidad, 8785 h13 y h15); 1971 A42 y B.4, Getsemaní aparece una tercera vez en el año, en el radio urbano de la ordenanza impositiva (8860 h12: «las lomas de Getsemaní» y «el loteo del Ing. Martell»); 1972 A18, la Ley 4474 dice «éjido del municipio» (9040 h5). P130 (herramientas): controles para AMPLÍA (y rúbrica AMPLÍA v2), extensión de P123 con la ronda 60: (1) la fecha que da un decreto que paga publicaciones es la de aparición del aviso, nunca la del hecho que el aviso nombra; (2) un recuento de dígitos o lecturas dudosas se describe por lo que es cada uno (superficie, plano, expediente), no por la mayoría; (3) una fecha de apertura postergada se cita con el aviso de postergación; (4) el título en negrita de una fila de año no afirma más que sus actos (una obra adjudicada no está hecha).
+
+**Pendientes revisados sin cerrar.** P54 (los actos de 1970 a 1972 tampoco nombran el establecimiento). P100 y P118 (1970 a 1972 en barrido con el criterio de F, como dice `amplia-1970-1972.json`). P115 (10:513 sigue sin fuente para capacidad, espejo, profundidad y cota; ningún acto de 1970-1972 los da). P125 a P128 (láminas, H y E, pedidos de D y correcciones de los informes: fuera del alcance de una ronda de auditoría; P128 queda corregido en su primer punto por P129).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.154/25.154 líneas vigentes en `5533413` | 25.105 vigentes, 49 caducas por el AMPLÍA 1970-1972 |
+| Superlativos, cierres y ausencias en el texto agregado por el AMPLÍA (*el único*, *la única*, *único*, *única*, *el primero*, *la primera*, *el primer*, *por primera vez*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *tampoco*), sobre 8.173 palabras agregadas | 30 coincidencias, todas leídas | Una cae (hallazgo 1, «la única fecha de comienzo» y «el único comienzo de obra»); una lleva universo implícito (07:251, «las dos primeras impositivas», precisión f); «el primer renglón de expropiación del embalse que la lectura halla» (A:407) declara su universo; «única proponente» y «único proponente» son del considerando del 939; las demás conservan su universo («lo hallado», «ningún acto hallado del año») |
+| Repaso de ventana: afirmaciones que cierran en 1969 (*a 1969*, *hasta 1969*, *--1969*, *1958 a 1969*, *1961 a 1969*, *1964 a 1969*, *1949 a 1969*) y que abren el hueco en 1970 (*1970--2012*, *1970 a 2012*, *de 1970 en adelante*, *cuarenta y tres años*, *cincuenta y cinco tramos*, *los trece*, *y doce*) | libro entero | Quedan dos, las dos correctas: 21:87 («hasta 1969», seguido de 1970 y 1972 en la misma oración) y F:78 («como 1958 a 1969»); las demás coincidencias son otros trece y otros cincuenta y cinco (partidos de 1909, localidades de 1919, ediciones de 1946) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente) | 328/328 `\ref{cap:…}` de un capítulo a uno posterior (326 en la ronda 59, más dos del AMPLÍA en 01:139) | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Recuentos de 1970-1972 (F:25–26 y 78, 00:43, 02:28 y 99, 01:119, 04:3659–3660, D:177, A:400, 405 y 410) contra el §0, E.1, E.2 y el §R de los informes | 3 años | Tramos: 42 + 1 + 15 = 58; fuera de las ventanas, 1948 y 1958-1972 = 16. Hojas sin mirar 1961-1972: 764, 290, 734, 577, 347, 171, 69, 258, 191, 132, 211 y 545 (00:43, «entre sesenta y nueve y setecientas sesenta y cuatro»: cierra). Páginas faltantes 1964-1972: 128, 37, 65, 111, 109, 75, 32, 18 y 104. Cadenas: 1970, 6.858 − 2 repetidas + 32 = 6.888; 1971, 8.109 − 3 + 18 = 8.124; 1972, 8.157 + 104 + unas 140 de las cuatro ausentes ≈ 8.404. Ediciones: 8462–8701 = 240; 8702–8942 = 241 − 1 = 240; 8943–9180 = 238 − 4 = 234. Hueco 1973–2012: 40 años. Seis dígitos dudosos de la Ley 4486: cinco de superficie y uno de plano (hallazgo 3) |
+| Aritmética de 1970-1972 | 14 cuentas | 81.105,94 − 44.137,49 = 36.968,45 (45,6 %). 1.500.000 + 3.500.000 + 1.783.257 = 6.783.257. 51.507 / 73.282,41 = 0,7029. 13.898,76 / 15.443,06 = 0,900. 11.148.148,69 / 8.186.398,01 = 1,362. 9.000 + 11.713 = 20.713; 4.000 + 24.258 = 28.258. 117.389,16 / 81.463,68 = 1,441; 149.868,73 / 81.463,68 = 1,840. 4.110.000 / 12.817.000 = 0,32. 66,67 + 33,33 = 100. 30.000 + 170.000 = 200.000. Superficies de la Ley 4486: 686,1871. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 60 | 50 de 354 oraciones con cifra en las 71 líneas | **49/50 con fuente localizable**: 37 con la cita en la oración o en la anterior del mismo período, 9 declaraciones de cobertura cuya fuente es el apéndice F, 3 de texto anterior con su fuente en el párrafo; sin fuente, los traspasos de gobernador de A:405 (precisión a, aplicada). 98 % → 82 en la inicial; 50/50 después de la fase 6 |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 71 líneas (el aviso de «Democracia» llega por el decreto que lo paga) | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 71 líneas, cruzadas con contextos sensibles (P102) | 71/71 líneas | Ningún particular nombrado junto a remate, ejecución, sumario, cesantía, jubilación, rescisión o embargo: los remates de la finca Mojotoro, Potrero de Gallinato, el lote 77, San Antonio o San Roque y Villa Urquiza van sin las partes; el enfermero sumariado, la empleada del hogar, las encargadas del Registro Civil y los interventores de la guardería, sin nombre. Nombrados: funcionarios (gobernadores, Serrey, Lizondo, Catalán Arellano, jueces de paz), contratistas (Moyano, Marcuzzi, Galindo, Sollazzo Hnos., Clitori Hnos.) y sociedades (Lerma S.A., Cuesta del Obispo S.A.) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `d628fd6` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 891 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
