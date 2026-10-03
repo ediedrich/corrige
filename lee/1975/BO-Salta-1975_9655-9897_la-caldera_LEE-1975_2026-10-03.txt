@@ -1,0 +1,1352 @@
+LEE v17 — 1975
+================================================================================
+INFORME LEE v17 · Boletín Oficial de la Provincia de Salta · año 1975 ·
+ediciones N° 9655 a 9897 · departamento La Caldera
+Rúbrica: rubrica-lee-v16.md del repositorio ediedrich/corrige, con los cambios
+de flujo-editorial.md v2 §5 (LEE v17). Fecha: 3-10-2026.
+================================================================================
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES (tres pendientes nombrados abajo, más siete límites
+declarados en E.10). Todas las fichas del §A y del §B se miraron en la imagen;
+lo que queda pendiente no son fichas sino controles de corpus.
+
+P1. Cotejo sumario/cuerpo: de las 227 discrepancias del pre-informe, el parser
+de la sesión levantó 200; 163 quedaron resueltas por texto (161 por el nombre
+del aviso en el cuerpo de la misma edición, 2 por el número) y 37 siguen sin
+resolver y sin mirar en la imagen. 19 de esas 37 caen en ediciones a las que les
+faltan hojas en el Release (E.2). Lista completa: E.8.
+P2. Tablas de hacienda municipal recontadas sólo en parte: la nómina del Decreto
+3274 (A.22) no se recontó; del Decreto 3222 (A.21) se recalcularon los renglones
+de La Caldera y de Vaqueros, no los 61 ni las dos cifras finales; del Decreto
+404 (A.4) se recalculó el subtotal de la Finalidad 5 y no el «Total rebajas».
+P3. Anillo 2: todos los aciertos pasaron por un filtro mecánico de co-ocurrencia
+(marcador del departamento a ±600 caracteres). Se leyeron enteros los contextos
+de 25 términos (los del departamento y los de pocos aciertos: vaqueros, yacones,
+río vaqueros, potrero de castilla, san cayetano, luis linares, pueblo de la
+caldera, wierna, lesser, cerro nevado, las nieves, ovejería, mojotoro, villa san
+lorenzo, churcal, angostura, despensa, mesada, el recreo, durazno, manzano,
+entre otros); de los otros 50, una muestra de hasta cinco contextos distintos
+por término, no todos.
+
+Insumos. El listado del Release por «expanded_assets» respondió 403 desde la
+sesión («GitHub access to this repository is not enabled»); en cambio las
+descargas directas por nombre funcionan. El inventario se armó con los nombres
+que estado.json registra en descarga.subidos y con los números de edición del
+zip de textos: llegaron el pre-informe
+BO-Salta-1975_la-caldera_PRE-INFORME-LEE_2026-10-02.txt (el único; es el
+vigente), decretos_1975.csv (vacío: sólo encabezado), lee_config.json,
+lee_textos_1975.zip (13.463 archivos), log.txt y resultados_1975.csv, y los 241
+PDF. No se pudo comprobar si el Release tiene otros assets (recortes, avisos):
+estado.json dice avisos_pdf 0 y avisos_txt false.
+lee_auto.py: corrida del 2-10-2026 21:17 a 23:46, sha 50eb5edd5560; 241
+archivos, 4.724 hojas; capa previa útil en 475 hojas (10 %) y OCR propio en
+4.249 con 4 procesos. El log no registra errores.
+Config (§5.2 del flujo): config de corrige, version 2026-10-02, hasta 1974,
+1.527 actores, 558 términos de anillo 2, 2.012 números, 86 falsos positivos.
+Foto del Release: version 2026-10-02, hasta 1974, idéntica byte a byte (cmp). Se
+usa el de corrige; contiene al otro. Se entrega config actualizado (version
+2026-10-03, hasta 1975).
+Entorno de la sesión: nproc 2; Tesseract 5.3.4 con eng y osd, sin spa; PyMuPDF
+instalado desde pypi. El OCR en sesión se usó sólo como segunda versión en
+inglés con rotación automática sobre las 40 hojas «a ojos» sin capa nativa
+(E.7).
+Lo que verificó la sesión: hojas por PDF contra EXTRAIDO.json (241 de 241
+coinciden); ppi de la imagen incrustada en las 4.724 hojas; tapas de las 241
+ediciones leídas en la imagen (fecha, número, año editorial, páginas
+declaradas); autoridad en la tapa y en la imagen de los cambios; folios
+impresos; las cuatro pasadas propias; tinta; segunda versión de las hojas a
+ojos; y cada mención del departamento y cada núcleo del §B en la imagen; los 32
+falsos positivos del anillo 1 se juzgaron por su contexto en la capa. Desvíos de
+la regla 8.17 de la rúbrica: ninguno.
+Qué agregaría cada insumo que faltó: el listado del Release, saber si hay
+recortes o avisos subidos; las hojas ausentes (E.2), cerrar las 37 discrepancias
+del sumario; Tesseract con spa en la máquina para las hojas «a ojos», una
+segunda versión en castellano.
+
+§1 · CORPUS REVISADO
+--------------------
+241 ediciones presentes, N° 9655 (2-1-1975) a N° 9897 (30-12-1975); los números
+9696 y 9698 no tienen PDF en el Release ni aviso. 4.724 hojas presentes. Techo
+de resolución: 300 ppi en 4.103 hojas y entre 288 y 299 en 614; 7 hojas a 318.
+Es el doble que 1923-1932 (150 ppi) y es el hecho material más importante del
+año para la lectura de dígitos. Formato: todos PDF de imagen; capa nativa sólo
+en las hojas de sumario (2 a 4). Confianza del OCR propio: media 89,8; 3.058
+hojas publicables, 987 a verificar, 204 a ojos.
+Tabla: edición, fecha leída en la tapa [imagen], día, hojas presentes /
+declaradas en la tapa (o por la cadena de folios cuando la tapa no se resolvió,
+marcada f), confianza media del OCR propio y hojas «a ojos».
+
+  ed.   fecha        d  hojas    conf  ojos
+  9655  [ 2-ene-75] J   12/12     89.6   1
+  9656  [ 3-ene-75] V   15/16 f   90.8   1
+  9657  [ 7-ene-75] M    8/8      92.5   0
+  9658  [ 8-ene-75] X   15/16     90.8   1
+  9659  [ 9-ene-75] J   16/16     90.7   1
+  9660  [10-ene-75] V   12/12     90.8   1
+  9661  [13-ene-75] L    8/8      88.3   1
+  9662  [14-ene-75] M   12/12     89.6   1
+  9663  [15-ene-75] X   12/12 f   89.4   1
+  9664  [16-ene-75] J   11/12     91.6   0
+  9665  [17-ene-75] V    8/8  f   92.1   0
+  9666  [20-ene-75] L   12/12     92.7   0
+  9667  [21-ene-75] M   19/20     91.5   0
+  9668  [22-ene-75] X   12/12 f   92.6   0
+  9669  [23-ene-75] J   11/12     93.2   0
+  9670  [24-ene-75] V    8/8      92.8   0
+  9671  [27-ene-75] L   15/16     93.5   0
+  9672  [28-ene-75] M    8/8      92.5   0
+  9673  [29-ene-75] X   15/16     92.1   0
+  9674  [30-ene-75] J    7/8      93.3   0
+  9675  [31-ene-75] V    8/8      92.3   0
+  9676  [ 3-feb-75] L    8/8      92.9   0
+  9677  [ 4-feb-75] M    8/8      84.4   0
+  9678  [ 5-feb-75] X   12/12     89.5   0
+  9679  [ 6-feb-75] J   12/12     91.9   0
+  9680  [ 7-feb-75] V   12/12     91.6   0
+  9681  [12-feb-75] X   16/16     90.2   0
+  9682  [13-feb-75] J   12/12     92.1   0
+  9683  [14-feb-75] V   16/16     92.4   0
+  9684  [17-feb-75] L   28/28     93.0   0
+  9685  [18-feb-75] M   16/16     90.2   0
+  9686  [19-feb-75] X   20/20     91.4   0
+  9687  [21-feb-75] V   18/20     91.2   0
+  9688  [24-feb-75] L   16/16     90.7   1
+  9689  [25-feb-75] M   18/20     91.1   1
+  9690  [26-feb-75] X   15/16     90.0   0
+  9691  [27-feb-75] J   15/16     90.9   0
+  9692  [28-feb-75] V   28/28     91.5   1
+  9693  [ 3-mar-75] L   16/16     90.3   1
+  9694  [ 4-mar-75] M   20/20     89.3   1
+  9695  [ 5-mar-75] X   16/16     91.0   1
+  9697  [ 6-mar-75] J   20/20     90.9   1
+  9699  [ 7-mar-75] V   27/28     91.7   1
+  9700  [10-mar-75] L   19/20     91.4   1
+  9701  [11-mar-75] M   16/16     90.6   1
+  9702  [12-mar-75] X   16/16     89.6   1
+  9703  [13-mar-75] J   14/16     90.4   1
+  9704  [14-mar-75] V   19/20     89.8   1
+  9705  [17-mar-75] L   19/20     89.6   2
+  9706  [18-mar-75] M   31/32     90.3   3
+  9707  [19-mar-75] X   32/32 f   86.9   2
+  9708  [20-mar-75] J   24/24     91.3   1
+  9709  [21-mar-75] V   20/20     90.7   1
+  9710  [24-mar-75] L   20/20     90.0   1
+  9711  [25-mar-75] M  153/140*   92.5   4
+  9712  [26-mar-75] X   19/20     90.0   1
+  9713  [31-mar-75] L   20/20 f   91.6   0
+  9714  [ 1-abr-75] M   15/16     90.3   1
+  9715  [ 2-abr-75] X   15/16 f   90.5   0
+  9716  [ 3-abr-75] J   26/28     90.3   1
+  9717  [ 4-abr-75] V   20/20     89.8   2
+  9718  [ 7-abr-75] L   20/20     90.5   1
+  9719  [ 8-abr-75] M   46/48     77.2  10
+  9720  [ 9-abr-75] X   23/24     90.7   1
+  9721  [10-abr-75] J   23/24     89.3   1
+  9722  [11-abr-75] V   16/16     89.9   1
+  9723  [14-abr-75] L   16/16     90.2   1
+  9724  [15-abr-75] M   27/28     90.3   1
+  9725  [16-abr-75] X   31/32     88.6   1
+  9726  [17-abr-75] J   20/20     90.8   1
+  9727  [18-abr-75] V   40/40     90.2   0
+  9728  [21-abr-75] L   20/20     91.2   0
+  9729  [22-abr-75] M   19/20     90.1   0
+  9730  [23-abr-75] X   19/20     89.9   1
+  9731  [24-abr-75] J   22/24     91.1   1
+  9732  [25-abr-75] V   20/20     90.5   1
+  9733  [28-abr-75] L   24/24     91.2   1
+  9734  [29-abr-75] M   24/24     90.7   1
+  9735  [30-abr-75] X   36/36     81.8   7
+  9736  [ 2-may-75] V   20/20     91.3   0
+  9737  [ 5-may-75] L   16/16     89.9   1
+  9738  [ 6-may-75] M   19/20     91.1   0
+  9739  [ 7-may-75] X   15/16 f   91.9   0
+  9740  [ 8-may-75] J   12/12 f   89.9   1
+  9741  [ 9-may-75] V   15/16     89.7   1
+  9742  [12-may-75] L   16/16     90.2   1
+  9743  [13-may-75] M   12/12     89.5   0
+  9744  [14-may-75] X   12/12     89.6   1
+  9745  [15-may-75] J   20/20     91.1   0
+  9746  [16-may-75] V   23/24     89.2   0
+  9747  [19-may-75] L   23/24     90.2   0
+  9748  [20-may-75] M   26/28     91.5   0
+  9749  [21-may-75] X   16/16     90.7   0
+  9750  [22-may-75] J   15/16     90.1   0
+  9751  [23-may-75] V   27/28     90.7   0
+  9752  [26-may-75] L   19/20     90.6   0
+  9753  [27-may-75] M   20/20     89.9   1
+  9754  [28-may-75] X   24/24     89.4   0
+  9755  [30-may-75] V   27/28     90.4   1
+  9756  [ 2-jun-75] L   24/24     90.8   0
+  9757  [ 3-jun-75] M   27/28     90.9   1
+  9758  [ 4-jun-75] X   16/16     92.3   0
+  9759  [ 5-jun-75] J   19/20     90.7   1
+  9760  [ 6-jun-75] V   24/24     91.4   1
+  9761  [ 9-jun-75] L   16/16     90.6   1
+  9762  [10-jun-75] M   16/16     90.1   1
+  9763  [11-jun-75] X   19/20     89.8   1
+  9764  [12-jun-75] J   16/16     89.7   1
+  9765  [13-jun-75] V   19/20     90.3   1
+  9766  [16-jun-75] L   20/20     90.4   1
+  9767  [18-jun-75] X   16/16     90.6   1
+  9768  [19-jun-75] J   14/16     90.3   1
+  9769  [23-jun-75] L   15/16     90.0   1
+  9770  [24-jun-75] M   15/16     92.3   0
+  9771  [25-jun-75] X   16/16     90.5   1
+  9772  [26-jun-75] J   15/16     90.7   1
+  9773  [27-jun-75] V   14/16     90.2   1
+  9774  [30-jun-75] L   19/20     92.8   0
+  9775  [ 1-jul-75] M   23/24     90.7   1
+  9776  [ 2-jul-75] X   16/16     90.7   1
+  9777  [ 3-jul-75] J   20/20     90.1   1
+  9778  [ 4-jul-75] V   19/20     90.7   1
+  9779  [10-jul-75] J   23/24     91.4   0
+  9780  [11-jul-75] V   19/20     91.2   1
+  9781  [14-jul-75] L   12/12     89.2   1
+  9782  [15-jul-75] M   16/16     90.6   1
+  9783  [16-jul-75] X   16/16     90.8   0
+  9784  [17-jul-75] J   16/16     90.2   1
+  9785  [18-jul-75] V   16/16     90.8   1
+  9786  [21-jul-75] L   15/16     90.4   1
+  9787  [22-jul-75] M   14/16     90.6   1
+  9788  [23-jul-75] X   12/12     90.5   1
+  9789  [24-jul-75] J   15/16     91.5   0
+  9790  [25-jul-75] V   12/12     90.3   0
+  9791  [28-jul-75] L   20/20     92.6   0
+  9792  [29-jul-75] M   11/12     88.6   1
+  9793  [30-jul-75] X   12/12     91.8   0
+  9794  [31-jul-75] J   19/20     88.4   1
+  9795  [ 1-ago-75] V    8/8      92.5   0
+  9796  [ 4-ago-75] L   12/12 f   90.1   0
+  9797  [ 5-ago-75] M   23/24 f   93.0   0
+  9798  [ 6-ago-75] X   11/12     92.4   0
+  9799  [ 7-ago-75] J   19/20     91.4   1
+  9800  [ 8-ago-75] V   23/24     92.0   0
+  9801  [11-ago-75] L   20/20     93.0   0
+  9802  [12-ago-75] M   19/20     90.6   0
+  9803  [13-ago-75] X   12/12     89.4   0
+  9804  [14-ago-75] J   16/16     91.5   0
+  9805  [18-ago-75] L   24/24     90.4   0
+  9806  [19-ago-75] M   20/20     90.8   1
+  9807  [20-ago-75] X   20/20     90.6   1
+  9808  [21-ago-75] J   16/16     90.4   0
+  9809  [22-ago-75] V   20/20     89.7   1
+  9810  [25-ago-75] L   28/28     90.0   1
+  9811  [26-ago-75] M   15/16     89.6   1
+  9812  [27-ago-75] X   16/16     89.0   1
+  9813  [28-ago-75] J   15/16 f   89.7   1
+  9814  [29-ago-75] V   14/16     89.8   0
+  9815  [ 1-sep-75] L   15/16     90.7   0
+  9816  [ 2-sep-75] M   12/12     88.5   1
+  9817  [ 3-sep-75] X   28/29     90.5   0
+  9818  [ 4-sep-75] J   16/16     89.6   0
+  9819  [ 5-sep-75] V   20/20     91.1   0
+  9820  [ 8-sep-75] L   24/24     91.7   0
+  9821  [ 9-sep-75] M   23/24     90.9   0
+  9822  [10-sep-75] X   22/24 f   90.4   0
+  9823  [11-sep-75] J   19/20     90.3   0
+  9824  [12-sep-75] V   18/20     91.4   0
+  9825  [16-sep-75] M   16/16     90.9   0
+  9826  [17-sep-75] X   24/24     90.2   0
+  9827  [18-sep-75] J   26/28 f   90.5   0
+  9828  [19-sep-75] V   19/20     91.0   0
+  9829  [22-sep-75] L   20/20     90.5   0
+  9830  [23-sep-75] M   19/20     89.3   0
+  9831  [24-sep-75] X   31/32     91.0   1
+  9832  [25-sep-75] J   20/20     89.5   0
+  9833  [26-sep-75] V   26/28     90.2   1
+  9834  [29-sep-75] L   28/28     90.2   1
+  9835  [30-sep-75] M   27/28     90.2   1
+  9836  [ 1-oct-75] X   16/16     88.2   1
+  9837  [ 2-oct-75] J   20/20     90.6   0
+  9838  [ 3-oct-75] V   20/20     90.0   1
+  9839  [ 6-oct-75] L   20/20     91.1   1
+  9840  [ 7-oct-75] M   16/16     90.1   1
+  9841  [ 8-oct-75] X   16/16     89.8   1
+  9842  [ 9-oct-75] J   19/20     90.3   1
+  9843  [10-oct-75] V   20/20     89.6   0
+  9844  [13-oct-75] L   20/20     90.7   1
+  9845  [14-oct-75] M   20/20     90.0   1
+  9846  [15-oct-75] X   27/28     90.7   1
+  9847  [16-oct-75] J   23/24     90.6   1
+  9848  [17-oct-75] V   35/36     89.9   2
+  9849  [20-oct-75] L   19/20     90.4   1
+  9850  [21-oct-75] M   23/24 f   90.9   1
+  9851  [22-oct-75] X   46/48     87.2   2
+  9852  [23-oct-75] J   23/24     91.1   0
+  9853  [24-oct-75] V   26/28     90.5   1
+  9854  [27-oct-75] L   24/24     90.7   1
+  9855  [28-oct-75] M   20/20     90.9   1
+  9856  [29-oct-75] X   23/24     90.3   1
+  9857  [30-oct-75] J   20/20     91.0   0
+  9858  [31-oct-75] V   22/24 f   90.4   1
+  9859  [ 3-nov-75] L   16/16     90.6   0
+  9860  [ 4-nov-75] M   28/28     92.2   1
+  9861  [ 5-nov-75] X   16/16     88.7   1
+  9862  [ 6-nov-75] J   14/16     87.9   1
+  9863  [ 7-nov-75] V   15/16     89.8   1
+  9864  [10-nov-75] L   38/40     86.6   2
+  9865  [11-nov-75] M   14/16     90.2   1
+  9866  [12-nov-75] X   22/24     85.0   3
+  9867  [13-nov-75] J   20/20     84.3   3
+  9868  [14-nov-75] V   24/24     85.7   3
+  9869  [17-nov-75] L   20/20     90.4   1
+  9870  [18-nov-75] M   24/24     87.4   1
+  9871  [19-nov-75] X   23/24     89.4   2
+  9872  [20-nov-75] J   24/24     89.1   2
+  9873  [21-nov-75] V   19/20     88.9   2
+  9874  [24-nov-75] L   16/16     89.1   1
+  9875  [25-nov-75] M   24/24     90.6   1
+  9876  [26-nov-75] X   20/20 f   84.1   3
+  9877  [27-nov-75] J   28/28     89.3   1
+  9878  [28-nov-75] V   16/16     86.9   1
+  9879  [ 1-dic-75] L   20/20     84.5   2
+  9880  [ 2-dic-75] M   16/16     88.1   1
+  9881  [ 3-dic-75] X   15/16     88.1   1
+  9882  [ 4-dic-75] J   30/32     83.7   4
+  9883  [ 5-dic-75] V   16/16     88.8   1
+  9884  [ 9-dic-75] M   22/24     90.8   0
+  9885  [10-dic-75] X   20/20     86.8   2
+  9886  [11-dic-75] J   18/20 f   83.6   3
+  9887  [12-dic-75] V   20/20     88.0   1
+  9888  [15-dic-75] L   23/24 f   77.4   6
+  9889  [16-dic-75] M   24/24     82.1   2
+  9890  [17-dic-75] X   31/32 f   83.1   3
+  9891  [18-dic-75] J   22/24     89.1   1
+  9892  [22-dic-75] L   20/20     87.8   1
+  9893  [23-dic-75] M   14/16     88.9   1
+  9894  [24-dic-75] X   19/20     88.8   0
+  9895  [26-dic-75] V   11/12     88.8   1
+  9896  [29-dic-75] L   20/20     86.1   2
+  9897  [30-dic-75] M   20/20     89.7   1
+
+Notas: * 9711 declara 140 páginas y el PDF trae 153; su cadena de folios (865 a
+1018) da 154: es la única edición con más hojas que las declaradas. ? = ni la
+tapa ni la cadena de folios resolvieron el número y se pone el presente. Fechas:
+todas leídas en la tapa; ninguna cae en sábado ni domingo.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: «prev» (capa nativa, 715 hojas, casi todas sumarios) y «prop» (OCR
+propio de lee_auto, 4.249 hojas). Una sola versión en las hojas interiores; en
+las 40 hojas a ojos sin capa nativa, segunda versión eng de la sesión. Etiqueta
+en cada ficha. Normalización NFD sin diacríticos; U+0002: ninguno; U+00AD
+quitado junto con el salto; cortes de renglón con guion unidos (hasta dos signos
+a cada lado).
+Pasadas propias, sobre las 4.964 hojas-versión:
+  Literal/normalizada «cald»: 141 aciertos en 84 hojas; las mismas 84 hojas que
+  el §A del pre-informe (ninguna sólo en uno de los dos). 109 aciertos en 54
+  hojas son del departamento; 32 en 30 hojas, falsos positivos (E.7).
+  Laxa [gc][ao][l1i|][dcl][ec][rnm][ao]: ningún acierto que no sea ya «cald». Se
+  probó que no está rota: devuelve «galdera» en un texto de prueba. Laxa
+  espaciada, separador [\s\-.,]{0,3} entre cada par de letras: ningún acierto
+  nuevo; probada con «c a l d e r a» y «c-al de\nra».
+  Difusa ≥ 0,78 contra caldera y calderilla: 13 formas, 63 aciertos, todos
+  falsos positivos (caleria 40, calavera, escalera, calera, adera, canadera...).
+  Difusa ampliada 0,70-0,78 con c, g u o inicial: 47 formas, 1.141 aciertos,
+  todos falsos positivos (cualquiera, galería, cabrera, calidad...). La difusa
+  no rescató nada en 1975.
+  Literal sobre el texto sin puntuación (pasada agregada por la sesión): rescató
+  «li ctldera» en 9744 h4, el único acierto nuevo, que es A.8 (§F).
+Anillo 2: 558 términos en una sola expresión alternada; 75 términos con acierto.
+Anillo de actores: 1.527 actores del config (por origen, los más numerosos 1955,
+1958, 1956, 1954), buscados por nombre y apellido sobre el texto sin puntuación:
+146 con acierto. Números arrastrados: 2.012 del config, los del pre-informe.
+Fórmulas de reemplazo: las del config.
+Identificadores de las ausencias: lugar, persona y número de acto. Los actos de
+1975 están numerados (serie común a los ministerios, E.4).
+Cotejo del anillo 2 contra la toponimia establecida (§5.1bis), en tres líneas:
+  Faltantes: de los siete topónimos que v16 nombra entre los 17 que faltaban
+  (candelaria, estacion f.c.c.n.a., mesada, el sauce, canada ancha, la helvecia,
+  getsemani), ninguno falta; los otros diez no están nombrados en la rúbrica y
+  no se pudieron cotejar.
+  Apellidos: los diez apellidos de v16 siguen en el anillo 2; en 1975 se
+  comportan además como nombre o apellido mosquera (el interventor, 507
+  aciertos), mamani, yolanda, matos y severino. No se movieron a actores: el
+  campo actores exige nombre de pila y el config no lo tiene.
+  A revisar: los 44 términos de v16 no se reevaluaron este año.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+23 actos que nombran a La Caldera como departamento, municipio, pueblo, río o
+escuela, por orden de primera aparición. Un aviso repetido es una sola ficha.
+
+A.1
+  FUENTE: N° 9663, 15-1-1975, h7-h8 (folios 107-108). Consejo General de
+  Educación, O.P. N° 20976.
+  FICHA: Concurso de antecedentes y oposición para cargos de Secretario Docente;
+  nómina de vacantes con localidad y departamento.
+  MODO DE LECTURA: Imagen (h7, 44 renglones de la tabla cotejados con la capa
+  propia); el resto de la nómina, capa propia.
+  TEXTO:
+    Art. 1° — Convocar a Concurso de Antecedentes y Oposición para cubrir
+    125 (ciento veinticinco) cargos vacantes de Secretario Docente [...]
+    Art. 4° — Nominar las vacantes haciendo constar localidad y
+    departamento donde están ubicadas las escuelas [...]
+    Nombre de Escuela  |  | Localidad | Departamento | Ubicación
+    Hog. San Cayetano  | 1 | Vaqueros  | La Caldera   | Urbana
+  NOTA DE LECTURA: RECUENTO PROPIO sobre la transcripción de la capa: 84
+  renglones (escuelas) y 134 vacantes; el acto declara 125 cargos «y los que se
+  produjeran posteriormente». No cierra por 9 y no se concilia. El renglón del
+  departamento es el único de La Caldera en la nómina. Ningún elemento de cuatro
+  palabras o más se tomó como nombre pegado.
+
+A.2
+  FUENTE: N° 9667, 21-1-1975, h5. Decretos sintetizados.
+  FICHA: Decreto N° 2, M. de Gobierno, 8-1-75: renuncia del presidente de la
+  Comisión Municipal de La Caldera.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Decreto N° 2 - M. de Gobierno - 8-1-75
+    Acéptase la renuncia del Sr. Eusebio Correa, al cargo de Presidente de
+    la Comisión Municipal de la localidad de La Caldera.
+  NOTA DE LECTURA: Vecinos mirados: 290 Gob. 31-12-74; 14 Gob. 14-1-75; 15 Gob.
+  13-1-75. El 15 lleva fecha anterior al 14: fecha contra numeración, se declara
+  (E.9). La serie de 1975 reinicia en el N° 2 tras el 290 de 1974. En el mismo
+  tramo, la renuncia de Domingo Osvaldo Juárez a la Comisión Municipal de El
+  Bordo (Gral. Güemes): §C. Correa está en el anillo de actores desde 1955.
+  Vacante sin sucesor en este acto; A.6 designa un interventor de la
+  Municipalidad.
+
+A.3
+  FUENTE: N° 9670, 24-1-1975, h4. Decretos sintetizados.
+  FICHA: Decreto N° 337, M. de Economía, 31-12-74: legajo técnico de cerco
+  perimetral en la Escuela Nacional N° 250 de Los Yacones.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Decreto N° 337 - M. de Economía - 31-12-74
+    Apruébase el legajo técnico de la obra: número 1372 Construcción Cerco
+    Perimetral en Escuela Nacional N° 250 Los Yacones Vaqueros (Dpto.
+    La Caldera) confeccionado por Dirección Gral. de Arquitectura de la
+    Provincia, con un presupuesto oficial de $ 136.242,16 (Ciento treinta
+    y seis mil doscientos cuarenta y dos pesos con dieciséis centavos).
+  NOTA DE LECTURA: Cifra y letras concuerdan. Vecinos 329, 330, 331 y 338, todos
+  Economía 31-12-74. «Los Yacones Vaqueros» sin coma entre los dos topónimos: se
+  transcribe así.
+
+A.4
+  FUENTE: N° 9678, 5-2-1975, h4-h5 (folios 272-273). Decreto N° 404, M. de
+  Economía, Salta 31-12-1974, Expte. C. 28-10917/74.
+  FICHA: Ajuste de partidas del Plan de Trabajos Públicos 1974 de la Dirección
+  General de Arquitectura; refuerzo para la escuela de La Caldera.
+  MODO DE LECTURA: Imagen (bloque Finalidad 5 - Función 10 entero); encabezado
+  del decreto, capa propia.
+  TEXTO:
+    Artículo 1° — Autorízase el ajuste de partidas en el Plan de Trabajos
+    Públicos 1974 de la Dirección General de Arquitectura de la Provincia
+    [...] Refuerzos [...] Finalidad 5 - Función 10
+    Parcial 6  Refacción Escuela Bernabé López y Juana Moro de López,
+               La Caldera                                  $  50.000,00
+    [...]                                                 $ 4.680.000,00
+  NOTA DE LECTURA: Subtotal Finalidad 5 - Función 10 recalculado en la imagen:
+  17 parciales suman 4.680.000,00, igual al impreso. «Total rebajas $
+  8.800.000,00» no recalculado entero (E.8). La escuela es la que el CGE nombra
+  «Escuela J. M. de López - La Caldera» en A.16.
+
+A.5
+  FUENTE: N° 9681, 12-2-1975, h5. Resolución N° 0534, Dirección de Comercio,
+  Salta 6-2-1975.
+  FICHA: Control de precios en bailes, bares y carpas de Carnaval en Capital,
+  Cerrillos, Rosario de Lerma y La Caldera.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Que es necesario efectuar un estricto control de precios en los bailes
+    públicos, bares, confiterías, kioscos, carpas, etc., para las próximas
+    fiestas de Carnaval a fin de evitar abusos en los mismos, en los
+    Departamentos Capital, Cerrillos, Rosario de Lerma y La Caldera.
+    1° — Fíjase hasta el día 7 de febrero en curso inclusive, para que los
+    bailes públicos, carpas, etc., presenten las correspondientes listas
+    de precios por duplicado para su aprobación, correspondiente a las
+    localidaeds [sic] mencionadas anteriormente.
+  NOTA DE LECTURA: Se publica el 12-2, después del plazo que fija (7-2). Errata
+  «localidaeds»: E.9.
+
+A.6
+  FUENTE: N° 9692, 28-2-1975, h7. Decretos sintetizados.
+  FICHA: Decreto N° 92, M. de Gobierno, 31-1-75: Luis Xamena, interventor de la
+  Municipalidad de La Caldera.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Decreto N° 92 - M. de Gobierno del 31-1-75
+    Desígnase al señor Luis Xamena en el cargo de Interventor de la
+    Municipalidad de La Caldera a partir de la fecha que tome posesión de
+    sus funciones.
+  NOTA DE LECTURA: Vecinos: 91 Gob., 93 Econ., 94 Econ., 96 Econ., 97 Gob.,
+  todos del 31-1-75; el 95 no está en el tramo. Serie común a los ministerios.
+  A.2 trata de «Comisión Municipal» y este de «Municipalidad»: se transcribe
+  cada uno como lo imprime. El mismo Xamena firma la ordenanza de A.23.
+
+A.7
+  FUENTE: N° 9715, 2-4-1975, h4 (capa nativa) y 9716 a 9724 (10 apariciones).
+  Edicto de minas, O.P. N° 20835, T. N° 8135.
+  FICHA: Cateo de Ubaldo Tomislav Vujovich en el departamento de La Caldera,
+  Expte. N° 8929-V, 2.000 ha desde la confluencia de los ríos Ovejería y Nieves.
+  MODO DE LECTURA: Imagen (9715 h4) y capa nativa; las otras nueve apariciones,
+  por texto.
+  TEXTO:
+    El Dr. Marcelo Sergio O'Connor, Juez de Minas de la provincia de
+    Salta, hace saber a los efectos del Art. 25 del C. de Minería que,
+    Ubaldo Tomislav Vujovich, el 1° de agosto de 1974, por Expte. N°
+    8929-V, ha solicitado en el departamento de La Caldera, permiso para
+    catear y explorar la siguiente zona: Partiendo de la intersección de
+    los ríos Ovejería y Nieves, (PR), se mide 1000 mts. al Sur hasta el
+    punto PP, desde allí 1700 mts. hasta el punto 1; 4000 mts. al Norte
+    hasta el punto 2; 5000 mts. al Este hasta 3; 4000 mts. al Sur hasta
+    4 y por último 3300 mts. al Oeste hasta el punto PP, con lo que se
+    cierra una superficie de 2000 has. libres de otros pedimentos mineros
+    y fuera de la Zona de Reserva Minera Ley 19059/71. — Salta, 5 de
+    marzo de 1975. — Angelina Teresa Castro, Escribana-Secretaria.
+    Imp. $ 80,00                                       e) 2 al 15-4-75
+  NOTA DE LECTURA: Aritmética del acto: 5.000 x 4.000 m = 2.000 ha, cierra;
+  1.700 + 3.300 = 5.000 cierra el lado este-oeste; el tramo de 1.700 m no lleva
+  rumbo. La capa propia de 9716 lee «19 de agosto»; la imagen de 9715 dice «1°
+  de agosto» (catálogo de confusiones, E.8). Diez apariciones cotejadas por
+  texto, 9715 a 9724, que coinciden con «e) 2 al 15-4-75». Vujovich está en el
+  anillo de actores desde 1974 (edición 9612) como «Ubaldo T. Vujovich Villa»;
+  la búsqueda por nombre completo no lo devuelve en 1975: B.4.
+
+A.8
+  FUENTE: N° 9744, 14-5-1975, h4 (capa nativa). Edicto de minas, O.P. N° 21288,
+  S/C N° 846.
+  FICHA: Caducidad de solicitudes de cateo, entre ellas dos del departamento de
+  La Caldera (Exptes. 8.530-D y 8.532).
+  MODO DE LECTURA: Imagen y capa nativa.
+  TEXTO:
+    El doctor Marcelo Sergio O'Connor, Juez de Minas de la provincia de
+    Salta, hace saber a los efectos del art. 45 del Dto. Ley 430/57, que
+    han caducado las siguientes solicitudes y permisos para exploración y
+    cateo de minerales de 1ra. y 2da. categoría: [...] Expte. N° 8.530-D,
+    Dpto. La Caldera; [...] Expte. N° 8.532, Dpto. La Caldera; [...]
+    Angelina Teresa Castro, Escribana, Secretaria.
+    Sin cargo                                              e) 14-5-75
+  NOTA DE LECTURA: RECUENTO PROPIO: 30 expedientes en la nómina; el acto no
+  declara número, de modo que no hay nada que cotejar. La mención del 8.530-D NO
+  la devolvió ninguna de las cuatro pasadas: la capa nativa imprime «L:i
+  C&tld'era». Se vio en la imagen al mirar el renglón del 8.532 y se confirmó
+  con la literal sobre el texto sin puntuación («li ctldera»): §F. El 8.532 no
+  lleva letra de titular.
+
+A.9
+  FUENTE: N° 9773, 27-6-1975, h5. Decretos sintetizados.
+  FICHA: Decreto N° 1171, M. de Economía, 10-6-75: donación de un terreno a la
+  Municipalidad de La Caldera para un «camping».
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 1171
+    Ministerio de Economía - 10-6-75 — Acéptase la donación efectuada por
+    la señora Estela Linares de Zavaleta a la Municipalidad de La Caldera,
+    de una fracción de terreno para que se construya un "camping"
+    destinado al uso por los señores turistas.
+  NOTA DE LECTURA: Sin catastro, superficie ni ubicación. Vecino 1172 Econ.
+  10-6-75. La donante aparece en 9663 h10 como directora presidente de una
+  sociedad: B.4, tercer grupo.
+
+A.10
+  FUENTE: N° 9784, 17-7-1975, h6. Decretos sintetizados.
+  FICHA: Decreto N° 1383, M. de Gobierno, 1-7-75: renuncia de Serapio Guantay,
+  juez titular de Vaqueros.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 1383
+    Ministerio de Gobierno - 1-7-75 — Acéptase renuncia del señor Serapio
+    Guantay, Juez Titular de Vaqueros (La Caldera).
+  NOTA DE LECTURA: El acto no dice «de paz». Vecino 1384 Gob. 1-7-75. No se
+  encontró en el corpus, por texto, la designación de un sucesor (E.3). Guantay
+  está en el anillo desde 1974 (edición 9569).
+
+A.11
+  FUENTE: N° 9784, 17-7-1975, h13 (dos columnas) y 9785 a 9793 (10 apariciones).
+  Remate judicial, O.P. N° 21828, T. N° 8951.
+  FICHA: Remate de dos inmuebles en el Pueblo de La Caldera (matrículas 116 y
+  117) y uno en la Capital, en la división de condominio Rosa.
+  MODO DE LECTURA: Imagen (9784 h13, dos columnas; 9788 h7 para la base).
+  TEXTO:
+    Por: JULIO CESAR HERRERA
+    El 4 de Agosto de 1975, a las 18,30 horas, en calle Gral. Güemes N°
+    327 de esta ciudad, remataré los siguientes bienes: 1) Un inmueble
+    con todo lo adherido al suelo por accesión física o legal, ubicado en
+    el Pueblo de La Caldera, Provincia de Salta. Medidas según títulos:
+    27,07 de frente por 47,63 mts. de fondo. Nomenclatura catastral:
+    Departamento La Caldera 05, sección A, manzana 4, parcela 13,
+    matrícula 116. — Antecedentes de dominio: folio 51, 52, 53 asientos
+    1, 2, 4 y 6 del Libro 1 del R. de I. de La Caldera. Linderos: los que
+    dan sus títulos: Base $ 9.533,32.
+    2) Un inmueble [...] ubicado en el Pueblo de La Caldera, Provincia de
+    Salta. — Medidas según títulos: 1 cuadra de frente por 1 cuadra de
+    fondo, o lo que resulte de la posesión o sea 4.500 mts.2.
+    aproximadamente. Nomenclatura catastral: Departamento La Caldera 05,
+    sección A, manzana 9, parcela 10, matrícula 117. Antecedentes de
+    dominio: folio 55, asientos 1 y 2 del Libro 1 del R. de I. de La
+    Caldera. Linderos: los que dan sus títulos. Base: $ 24.046,66.
+    3) Un inmueble [...] en calle O'Higgins entre Mitre y Zuviría de esta
+    ciudad [...] matrícula 2.050 [...] Base $ 13.226,66.
+    Ordena: El Sr. Juez de 1ra. Inst. en lo C. y C. 6ta. Nom. en autos:
+    "Rosa, Guillermina vs. Rosa, Miguel G.; Rosa, María del Huerto y
+    Bixquert, Doris Elvira - División de condominio". Expte. N° 4.594/70.
+    Seña: el 30 % en el acto. [...] Edictos: 10 días B. Oficial y El
+    Intransigente. Nota: con habilitación de feria [...]
+    Imp. $ 80.-                                        e) 17 al 30-7-75
+  NOTA DE LECTURA: Diez apariciones cotejadas por texto, 9784 a 9793, que
+  coinciden con la marca. La capa propia de 9788 lee «$ 9.533,82»; la imagen,
+  9.533,32. El inmueble 2 se mide a la vez en cuadras y en «4.500 mts.2
+  aproximadamente», «o lo que resulte de la posesión»: se transcribe y no se
+  concilia.
+
+A.12
+  FUENTE: N° 9794, 31-7-1975, h4 (capa nativa). Decreto N° 1754, M. de Economía,
+  Salta 16-7-1975, Expte. N° 11-10602/75.
+  FICHA: Ayuda financiera no reintegrable a las municipalidades por el
+  incremento salarial del 15 % (Decreto Nacional 1324/74); La Caldera y
+  Vaqueros.
+  MODO DE LECTURA: Imagen (la nómina entera, a 110 ppp) y capa nativa.
+  TEXTO:
+    Artículo 1° — Otórgase a las Municipalidades de la Provincia, y por los
+    importes que en cada caso se detalla, una ayuda financiera no
+    reintegrable por un total de $ 14.511.900.-, para atender el mayor
+    gasto resultante del incremento salarial del 15 % dispuesto mediante
+    Decreto Nacional 1324/74:
+    La Caldera                       ,,    13.400.—
+    Vaqueros                         ,,    11.400.—
+    TOTAL:                           $ 14.511.900.—
+  NOTA DE LECTURA: RECUENTO PROPIO: 60 municipios. Suma propia de la imagen:
+  14.511.900, igual al total impreso. La Caldera y Vaqueros figuran como
+  municipios distintos.
+
+A.13
+  FUENTE: N° 9807, 20-8-1975, h8, y 9808, 21-8-1975, h7. Consejo General de
+  Educación, O.P. N° 22041, F. N° 3001.
+  FICHA: Licitación Privada N° 13/75 para estufas y garrafas de la Escuela J. M.
+  de López de La Caldera.
+  MODO DE LECTURA: Imagen (9807 h8); 9808, por texto.
+  TEXTO:
+    LICITACION PRIVADA N° 13/75
+    Expediente N° 61-15451/75.
+    Llámase a Licitación Privada N° 13 para el día 2 de septiembre del
+    corriente año a horas 10.30 para la adquisición de estufas con sus
+    correspondientes garrafas destinadas a Escuela J. M. de López - La
+    Caldera, por un monto aproximado de $ 21.036,- (Veintiún mil treinta
+    y seis pesos). [...] Precio Pliego: $ 22,- (Veintidós pesos).
+    D. V. $ 62,-                                     e) 20 y 21-8-75
+  NOTA DE LECTURA: Dos apariciones, coinciden con la marca. Cifra y letras
+  concuerdan.
+
+A.14
+  FUENTE: N° 9810, 25-8-1975, h5-h6 (folios 2845-2846). Decreto N° 2026, M. de
+  Economía, Salta 5-8-1975, Expte. N° 53-7033/75.
+  FICHA: Anticipo de coparticipación a los municipios por el incremento salarial
+  del Decreto 430/75; La Caldera y Vaqueros.
+  MODO DE LECTURA: Imagen (nómina entera); considerandos, capa propia.
+  TEXTO:
+    Artículo 1° — [...] páguese a favor de la Municipalidad de la Capital
+    y de los Municipios del Interior que se detallan a continuación, la
+    suma total de Diecinueve millones quinientos ochenta y siete mil
+    quinientos veintitrés pesos ($ 19.587.523,-) en concepto de anticipo
+    de coparticipación de impuesto [...]
+    La Caldera               $     30.290,—
+    Vaqueros                 $     25.242,—
+    T O T A L:               $ 19.583.523,—
+  NOTA DE LECTURA: RECUENTO PROPIO: 62 municipios. Suma propia de la imagen:
+  19.587.523, igual al Art. 1° en letras y cifras; la línea de TOTAL imprime
+  19.583.523, 4.000 menos. Se transcriben las dos y no se concilia (E.9). La
+  capa propia leía Payogasta 25.249; la imagen, 25.242. Firman Mosquera, Arias
+  Figueroa, Fombella y Heredia.
+
+A.15
+  FUENTE: N° 9817, 3-9-1975, h9 (folio 2969). Decreto N° 2224, M. de Economía,
+  Salta 25-8-1975.
+  FICHA: Anticipo salarial del 50 % a los municipios (Decreto 2104/75); La
+  Caldera y Vaqueros.
+  MODO DE LECTURA: Imagen (nómina entera, a 120 y 220 ppp).
+  TEXTO:
+    VISTO que mediante Decreto N° 2104 de fecha 18-8-75 se dispone la
+    liquidación de un nuevo anticipo salarial del 50 % [...]
+    Artículo 1° — [...] la suma total de Siete millones ochocientos
+    cuarenta y cinco mil noventa y seis pesos ($ 7.845.096) [...] el
+    anticipo salarial del 50 % a que se refiere el Decreto N° 2104 del
+    13-8-75 [...]
+    La Caldera                ,,    12.000
+    Vaqueros                  ,,    10.000
+    TOTAL                     $ 7.845.096
+  NOTA DE LECTURA: RECUENTO PROPIO: 62 municipios. Suma propia de la imagen:
+  7.862.096; el total impreso, en letras y cifras, es 7.845.096. No cierra por
+  17.000 y no se concilia (E.9). La capa propia leía Tartagal 952.000 y El
+  Carril «0.000»; la imagen dice 552.000 y 40.000. El Decreto 2104 lleva fecha
+  18-8-75 en el Visto y 13-8-75 en el Art. 1° (capa propia; E.9). «Río Pícoras»
+  [sic] por Río Piedras.
+
+A.16
+  FUENTE: N° 9820, 8-9-1975, h7. Decretos sintetizados.
+  FICHA: Decreto N° 2197, M. de Economía, 13-8-75: legajo técnico de defensas
+  sobre el río La Caldera (A.G.A.S.).
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 2197
+    M. de Economía - del 13-8-75 - Apruébase legajo técnico de obra:
+    Construc. Defensas s/ Río La Caldera - Dpto. La Caldera de A.G.A.S.
+    por $ 654.990,00.
+  NOTA DE LECTURA: Vecinos 2195 y 2196, Economía 13-8-75. La capa propia lee
+  «654,990,00».
+
+A.17
+  FUENTE: N° 9826, 17-9-1975, h17, y 9827 a 9836 (11 apariciones). Citación a
+  juicio, O.P. N° 22286, T. N° 9340.
+  FICHA: División de condominio de «Cerro Nevado» o «Potrero de San José» o «de
+  las Nieves» o «Potrero de Castilla», catastro 102 de La Caldera.
+  MODO DE LECTURA: Imagen (9826 h17); las demás, por texto.
+  TEXTO:
+    El doctor Julio A. Robles, Juez en lo Civil y Comercial, Cuarta
+    Nominación del Distrito Centro, cita a los demandados señores Juan
+    Pinto y Lucas Castro Olarte o a sus sucesores, para que, en el término
+    de publicación de estos edictos, comparezcan a estar a derecho y
+    contesten la demanda en el juicio sobre división de condominio de
+    "Cerro Nevado" o "Potrero de San José" o "de las Nieves" o "Potrero
+    de Castilla", catastro 102 de La Caldera, que les ha promovido don
+    Roberto Suárez en expediente N° 47.164/75, bajo apercibimiento de
+    designarse al Defensor Oficial de Ausentes para que los represente.
+    Edictos: diez días en Boletín Oficial y El Intransigente. — Salta,
+    setiembre 1° de 1975. — Dr. Luis Félix Costas, Secretario.
+    Imp. $ 60.                                         e) 17 al 30-9-75
+  NOTA DE LECTURA: Apariciones cotejadas por texto: 11, de 9826 a 9836; la marca
+  cubre diez días hábiles (9826 a 9835) y la de 9836 (1-10-75) es una aparición
+  de más, que se declara. Cuatro nombres para un solo catastro: se transcriben
+  todos y no se elige.
+
+A.18
+  FUENTE: N° 9831, 24-9-1975, h13-h14 (folios 3277-3278). Decreto N° 2551, M. de
+  Economía, Salta 12-9-1975, Expte. N° 11-10915/75.
+  FICHA: Incremento salarial del 100 % para agentes municipales: aporte a los
+  municipios; La Caldera y Vaqueros.
+  MODO DE LECTURA: Imagen (renglones de La Caldera y Vaqueros); nómina, capa
+  propia.
+  TEXTO:
+    Artículo 1° — [...] la suma total de $ 15.427.432,00 (Quince millones
+    cuatrocientos veintisiete mil cuatrocientos treinta y dos pesos)
+    [...]
+    La Caldera              ,,    21.692,00
+    Vaqueros                ,,    16.019,00
+                            $ 15.427.432,00
+  NOTA DE LECTURA: RECUENTO PROPIO: 62 municipios. La suma de la capa propia da
+  exactamente 15.427.432, de modo que la aritmética del acto confirma la lectura
+  (control 2 del flujo §5.6). Firman Mosquera, Bacar, Aranda y Fombella.
+
+A.19
+  FUENTE: N° 9848, 17-10-1975, h17. Decretos sintetizados.
+  FICHA: Decreto N° 2773, M. de Economía, 29-9-75: legajo técnico de refacción
+  del Hogar Dr. Luis Linares de La Caldera.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 2773
+    Ministerio de Economía - 29-9-75 — Se aprueba legajo técnico de la
+    obra: Refacción Hogar Dr. Luis Linares - La Caldera, por la suma de
+    $ 32.805,49.
+  NOTA DE LECTURA: Vecinos 2771, 2772, 2774 y 2775, Economía 29-9-75.
+
+A.20
+  FUENTE: N° 9853, 24-10-1975, h13. Decretos sintetizados.
+  FICHA: Decreto N° 3082, M. de Gobierno, 20-10-75: estatuto del Centro Vecinal
+  «Dr. Carlos Serrey» de Vaqueros.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 3082
+    Ministerio de Gobierno — 20 - 10 - 75 — Apruébase el Estatuto Social
+    del Centro Vecinal "Dr. Carlos Serrey" - Vaqueros (La Caldera).
+  NOTA DE LECTURA: Vecino 3071 Gob. 20-10-75. El mismo centro recibe el subsidio
+  de B.2.2.
+
+A.21
+  FUENTE: N° 9864, 10-11-1975, h17-h20. Decreto N° 3222, M. de Gobierno, Salta
+  3-11-1975.
+  FICHA: Presupuestos 1975 de municipalidades y comisiones municipales del
+  interior: Vaqueros con superávit y La Caldera con déficit.
+  MODO DE LECTURA: Imagen (encabezado y los dos renglones); el resto, capa
+  propia.
+  TEXTO:
+    Artículo 1° — Apruébanse los presupuestos de gastos y cálculos de
+    recursos año 1975, de las Municipalidades y Comisiones Municipales
+    del interior, que se detallan a continuación [...]
+    Municipalidad de Vaqueros
+      Expte. N° 53-6174/75:
+    Total General de Recursos           $ 1.685.603
+    Total General de Erogaciones        $ 1.348.579
+    Superávit                           $   337.024
+    Municipalidad de La Caldera
+      Expte. N° 53-6219/75:
+    Total General de Recursos           $ 1.154.137
+    Total General de Erogaciones        $ 1.177.249
+    Déficit                             $    23.112
+  NOTA DE LECTURA: Recalculados: Vaqueros 1.685.603 - 1.348.579 = 337.024; La
+  Caldera 1.154.137 - 1.177.249 = -23.112; cierran los dos. RECUENTO sobre la
+  capa: 61 resultados. El Art. 3° obliga a reducir el déficit a Metán, El
+  Galpón, Gral. Güemes, Campo Santo, El Quebrachal y Molinos; La Caldera no
+  está. Fórmula, en la capa: «El Interventor Federal Interino de la Provincia».
+
+A.22
+  FUENTE: N° 9870, 18-11-1975, h6-h7 (folio 4157). Decreto N° 3274, M. de
+  Gobierno, Salta 11-11-1975, Expte. N° 53-6982.
+  FICHA: Aportes no reintegrables del F.I.T.S.A. 1975 a municipios: nichos en La
+  Caldera y edificio municipal en Vaqueros.
+  MODO DE LECTURA: Imagen (encabezado y tramo de la nómina).
+  TEXTO:
+    VISTO lo solicitado por las Municipalidades del Interior, de las obras
+    que realizarán con el aporte de F.I.T.S.A. 1975; y [...] Decreto
+    N° 7050/74 [...]
+    Artículo 1° — Acuérdase a las Municipalidades que se indican a
+    continuación, los importes que en cada caso se especifican en el
+    carácter de aportes no reintegrables [...]
+    Vaqueros
+    Terminación Edificio Municipal               $  22.000
+    La Caldera
+    Construcción Nichos                          $  20.000
+  NOTA DE LECTURA: La capa propia pega «Continuación Obra Edificio Municipal»
+  delante de «La Caldera», pero esa obra es de El Quebrachal ($ 32.000): lo dice
+  la imagen. Nómina no recontada entera: pendiente P2 (§0).
+
+A.23
+  FUENTE: N° 9877, 27-11-1975, h12 (sumario en h3). Decreto N° 3519, M. de
+  Gobierno, Salta 21-11-1975, Expte. N° 53-7158.
+  FICHA: Aprobación de la Ordenanza N° 3/75 de la Municipalidad de La Caldera:
+  adhesión al régimen de la Ley nacional 13.577 (t.o. Ley 20.324).
+  MODO DE LECTURA: Imagen (encabezado, firma de la ordenanza); cuerpo, capa
+  propia.
+  TEXTO:
+    VISTO que por nota N° 196 de fecha 3 de octubre del año en curso, la
+    Municipalidad de La Caldera adjunta para su aprobación la Ordenanza N°
+    3/75, dictada por dicha comuna; [...]
+    Artículo 1° — Apruébase la Ordenanza N° 3 dictada por la Municipalidad
+    de La Caldera con fecha 30 de setiembre del año en curso, cuyo texto
+    se transcribe a continuación: "La Caldera (Salta), 30 de setiembre de
+    1975, Ordenanza N° 3/75, Municipalidad de La Caldera, Visto: El
+    decreto ley N° 8 de la Intervención Federal en la provincia de Salta,
+    de fecha 21 de diciembre de 1974, de adhesión de la Provincia al
+    régimen establecido por la ley nacional N° 13.577 (t.o. por ley N°
+    20.324) [...] Artículo 1° — Adhiérese la Municipalidad de La Caldera
+    (Salta) al régimen establecido por la ley nacional N° 13.577 (t.o.
+    por ley N° 20.324). [...] Fdo. Luis Xamena, Interventor Municipal de
+    la Caldera".
+  NOTA DE LECTURA: Expediente: la imagen dice «53 - 7158»; la capa propia,
+  «533-7158». La firma lleva una marca sobre la n que puede ser tilde de eñe
+  («Xameña»); A.6 imprime «Xamena» sin marca: duda de lectura D1, que no se
+  resuelve aquí. El sumario de h3 pone a continuación el Decreto 3546 del
+  22-11-75, que es otro acto (la toma de posesión de Pedrini, E.4). Firman
+  Aranda, Sirolli y Heredia.
+
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS YA FICHADOS
+Hogar «San Cayetano» de Vaqueros (A.1 y B.2.5); Escuela Bernabé López y Juana
+Moro de López, que el CGE llama «Escuela J. M. de López» (A.4 y A.13); Hogar Dr.
+Luis Linares (A.19); Centro Vecinal «Dr. Carlos Serrey» de Vaqueros (A.20 y
+B.2.2); Comisión Municipal de Vaqueros (B.2.3) y Municipalidad de Vaqueros
+(A.12, A.14, A.15, A.18, A.21, A.22). Se remiten a sus fichas.
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+B.2.1
+  FUENTE: N° 9718, 7-4-1975, h6. Decretos sintetizados.
+  FICHA: Decreto N° 368, M. de Gobierno, 14-3-75: baja de un agente del
+  Destacamento de Vaqueros.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Decreto N° 368 - M. de Gobierno — 14-3-75
+    Dispónese la baja del señor Juan Carlos Schtter, en el cargo de
+    Agente, Personal de Seguridad de Policía de la Provincia, quien
+    revistaba en el Destacamento de Vaqueros, a partir del día 6 de
+    noviembre de 1974, y por infracción al artículo 292, inc. b) de la
+    Reglamentación a la Ley Orgánica Policial.
+  NOTA DE LECTURA: «Schtter» así en la imagen. Vecino 370 Gob. 19-3-75.
+
+B.2.2
+  FUENTE: N° 9787, 22-7-1975, h7 (sumario en h2, pág. 2459). Decreto N° 1615, M.
+  de Bienestar Social, Salta 4-7-1975.
+  FICHA: Subsidio de $ 5.000 al Centro Vecinal «Dr. Carlos Serrey» de Vaqueros
+  para su sede social.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    Expedientes Nros. 14448/72, 16265/73 - Cód. 66 y 15396/74 - Cód.
+    01-14448/75 [...]
+    Artículo 1° — Concédese, con carácter de excepción y por esta única
+    vez, un subsidio por la suma de $ 5.000 (cinco mil pesos), a favor
+    del Centro Vecinal "Dr. Carlos Serrey" de la localidad de Vaqueros,
+    para ser destinado a la compra de materiales para la construcción de
+    su sede social. Art. 2° — [...] páguese a la Habilitacin [sic] de
+    Pagos del Ministerio de Bienestar Social [...] Art. 3° — [...]
+    Jurisdicción 4, Unidad de Organización 3, Finalidad 7, Función 90,
+    Sección 0, Sector 3, Principal 9, Parcial 5 [...]
+    MOSQUEAA [sic]  Fernández  Rallé
+  NOTA DE LECTURA: Errata en la firma del interventor y en «Habilitacin»: E.9.
+  Los expedientes remontan a 1972.
+
+B.2.3
+  FUENTE: N° 9802, 12-8-1975, h6. Decretos sintetizados.
+  FICHA: Decreto N° 1764, M. de Gobierno, 16-7-75: renuncia y reemplazo del
+  presidente de la Comisión Municipal de Vaqueros.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 1764
+    Ministerio de Gobierno - 16-7-75 — Acéptase la renuncia presentada por
+    el señor Werfil Gallo al cargo de Presidente de la Comisión Municipal
+    de la localidad de Vaqueros y desígnase al señor José Santiago Catalán
+    en el cargo de Presidente de la Comisión Municipal de la mencionada
+    localidad.
+  NOTA DE LECTURA: La capa propia lee «Callo»: la búsqueda por nombre completo
+  de Werfil Gallo, que está en el anillo desde 1955, no devolvió su propio acto
+  (B.4). Catalán está en el anillo desde 1972. Vecino 1765 Gob. 16-7-75; el 1754
+  de Economía es del mismo día (A.12): serie común.
+
+B.2.4
+  FUENTE: N° 9808, 21-8-1975, h5. Decretos sintetizados.
+  FICHA: Decreto N° 1925, M. de Bienestar Social, 28-7-75: servicios de la
+  enfermera del Consultorio Externo de Vaqueros.
+  MODO DE LECTURA: Imagen.
+  TEXTO:
+    DECRETO N° 1925
+    Ministerio de Bienestar Social - 28-7-75 — Reconócense los servicios
+    prestados por la Sra. Genoveva Teresa Montemayor de Martínez, como
+    enfermera del Consultorio Externo de la localidad de Vaqueros.
+  NOTA DE LECTURA: Vecino 1926 BS 28-7-75. Sin período.
+
+B.2.5
+  FUENTE: N° 9847, 16-10-1975, h5-h6 (sumario en h3, pág. 3603). Decreto N°
+  2758, M. de Economía, Salta 29-9-1975, Expte. N° 22-79.509/75.
+  FICHA: Exención del Impuesto a los Automotores al Instituto Concepcionista
+  Hogar «San Cayetano» de Vaqueros.
+  MODO DE LECTURA: Imagen (encabezado leído a 200 ppp, artículos y firmas).
+  TEXTO:
+    VISTO las presentes actuaciones en las que El Instituto Concepcionista
+    Hogar "San Cayetano" Vaqueros - Salta, con personería jurídica
+    otorgada mediante Decreto Nacional N° 349/38, solicita la exención
+    del pago del Impuesto a los Automotores; [...]
+    Artículo 1° — Acuérdase al INSTITUTO CONCEPCIONISTA HOGAR "SAN
+    CAYETANO" - VAQUEROS, SALTA con personería jurídica otorgada mediante
+    Decreto Nacional n° 349/38, la exención del pago del IMPUESTO A LOS
+    AUTOMOTORES de acuerdo a lo prescripto por el artículo 295 inc. 5°
+    del Código Fiscal (t.o. 1975).
+    MOSQUERA  Bacar  Fombella
+  NOTA DE LECTURA: La capa nativa lee «349138» y «349.138»; la imagen, 349/38.
+  Vecino 2766 Econ. 29-9-75. Es el «Hog. San Cayetano» de la nómina de A.1.
+
+B.2.6
+  FUENTE: N° 9877, 27-11-1975, h16, y 9878 h6-h7 y 9879 h11 (3 apariciones).
+  Dirección de Vialidad de Salta, O.P. N° 23032, F. N° 3177, Expte. N°
+  33-40.529.
+  FICHA: Licitación de líneas interurbanas de pasajeros: la 7 (Salta - San
+  Lorenzo - Lesser - Yacones) y la 9 (San Lorenzo - Lesser y Los Yacones).
+  MODO DE LECTURA: Imagen (9877 h16); 9878 y 9879, por texto.
+  TEXTO:
+    Licitación N° 9. Línea N° 7 Salta - San Lorenzo - Lesser - Yacones.
+    Garantía a la oferta. $ 30.000. Garantía contractual: $ 60.000.
+    [...]
+    Licitación N° 27 Línea N° 9 San Lorenzo - Lesser y Los Yacones.
+    Garantía a la oferta: $ 15.000 Garantía contractual: $ 30.000.
+    [...] Fecha de apertura de estas licitaciones el 7 de enero de 1976
+    a horas 10.
+  NOTA DE LECTURA: Ninguna línea de la nómina nombra a La Caldera ni a Vaqueros.
+  Pliego $ 2.500 por licitación (capa propia).
+
+B.2.7
+  FUENTE: N° 9752, 26-5-1975, h5, y 9753 a 9766: quince apariciones por texto,
+  que coinciden con la marca. Dirección Nacional de Vialidad, O. P. N° 21430, F.
+  N° 2874.
+  FICHA: Licitación pública N° 824/75 para obras en la ruta 9, tramos
+  Cerrillos-Limache y Salta-Río Vaqueros, y en la ruta 51.
+  MODO DE LECTURA: imagen (9752 h5).
+  TEXTO:
+    Licitación pública N° 824/75, para la ejecución de las obras en la
+    ruta 9, tramos: Cerrillos-Limache y Salta-Río Vaqueros y ruta 51-
+    Tramo: Limache-Aeropuerto El Aybal [...] en jurisdicción de la
+    provincia de Salta, $ 29.922.000. Depósito de garantía: $ 299.000.
+    [...] Presentación propuestas: 1° de julio de 1975 a las 15 horas
+    [...] D.V. $ 124.                              e) 26-5 al 16-6-75
+  NOTA DE LECTURA: el tramo llega al río Vaqueros; el acto no atribuye
+  departamento. La capa propia leía «29,922,000».
+
+B.2.8
+  Dirección postal, no acto: la Comisión Nacional de Energía Atómica publica su
+  «División Noroeste» y su «Delegación Noroeste» en «Km. 7, Ruta 9, camino a
+  Vaqueros» (9716 a 9737 y 9867 a 9876, capa propia). El acto no atribuye
+  jurisdicción y no se afirma ninguna (§5.1ter).
+
+B.3 · TERMINOS QUE ESTE AÑO SON OTRA COSA
+Una línea por término con acierto, por número de aciertos; jurisdicción sólo
+cuando el acto la imprime.
+  mosquera 507: el interventor federal José Alejandro Mosquera (tapas y firmas).
+  mamani 386: apellido de varias personas (sucesorios, edictos); ninguna en un
+  acto del departamento.
+  castellanos 261: apellido (martillero Miguel A. Gallo Castellanos y otros);
+  escuela Dr. J. Castellanos.
+  candelaria 169: el departamento La Candelaria y su municipalidad; La
+  Candelaria S.R.L.
+  penales 108: Dirección General de Institutos Penales.
+  yolanda 104: nombre de pila.
+  isasmendi 80: el escribano Ricardo Isasmendi y otros.
+  san jose 77: mina, sociedades, barrio, San José de Orquera; y «Potrero de San
+  José» de A.17.
+  el tunal 66: ruta 16, El Galpón - El Tunal; Paso de las Carretas, El Tunal,
+  Dpto. Metán (9670).
+  el bordo 65: localidad del Dpto. Gral. Güemes (9667, 9769).
+  aramayo 47: apellido (Carlos Adolfo Aramayo y otros).
+  sauces, los sauces 44: barrio Los Sauces (Capital); Los Sauces, Dpto.
+  Guachipas (9821).
+  wierna 36: apellido (René, José, Jorge E., Enrique Wierna; Petrona Wierna de
+  López); mina «Río Wierna» del Dpto. Los Andes (9810, 9817).
+  entre rios 34: calle y comercio de la Capital.
+  castanares 31: barrio y club de la Capital.
+  yugra 27: apellido (Fernando Yugra).
+  ceibal, el ceibal 25: El Ceibal, Dpto. La Candelaria (9848); finca «Cinco
+  Duraznos o Ceibal», Los Sauces.
+  matos 24: apellido.
+  condori 22: apellido.
+  tabacal 21: San Martín del Tabacal, Dpto. Orán.
+  lesser 21: apellido (Marcelo Silvestre, Eugenio Lesser); y la localidad de
+  B.2.6.
+  durazno 21: Paso del Durazno, Dpto. Metán.
+  severino 17: nombre de pila.
+  despensa 14: comercio.
+  apaza 14: apellido; Hipólito Casiano Apaza, juez de paz de Isla de Cañas,
+  Dpto. Iruya (9808).
+  angostura 12: puente «Angostura de Gibraltar»; fincas Angostura y Zotal, San
+  Martín.
+  chaile 11: apellido.
+  el recreo 11: sociedad anónima.
+  ovejeria, las nieves, cerro nevado, potrero de castilla: sólo en A.7 y A.17.
+  nogales 10: apellido y calle.
+  mesada 10: finca «Pizarro Mesada», Dpto. Orán.
+  villa san lorenzo 9: municipio y barrio (A.12, A.15, A.21).
+  luis linares 9: pasaje Luis Linares (Capital); y A.19.
+  betania 8: Betania, Campo Santo, Dpto. Gral. Güemes.
+  parroquia 6: parroquias de la Capital y de Embarcación.
+  el churcal 5: Cooperativa Agropecuaria Campesinos Unidos «El Churcal» (9835,
+  Decreto 2479); el acto no atribuye departamento: jurisdicción indeterminada.
+  manzano 4: apellido; puesto sanitario El Manzano (9727), sin departamento en
+  el acto.
+  mojotoro 3: mina «Río Mojotoro», Dpto. Los Andes (9831).
+  mesa redonda 3: mueble en un remate.
+  campo alegre 2: Campo Alegre, Dpto. Chicoana; puesto Campo Alegre (límites).
+  murua, rio blanco, pacara 2 c/u: apellido; camino Río Blanco-Puyil; madera.
+  challe, los cedros, curuzu, las sierras, el monte, la sierra 1 c/u: calle
+  Gral. Güemes; calle; Curuzú Cuatiá; sierras de Santa Victoria; monte;
+  Antofagasta de la Sierra.
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+Del config: 146 de 1.527 actores tienen algún acierto por nombre completo en
+1975; 1.381 no aparecen. Fuera de los actores de este año, los que aparecen lo
+hacen como homónimos o como nombre de una institución (Carlos Serrey en el
+centro vecinal, Luis Linares en el hogar y el pasaje, Miguel Ortiz en una villa
+de la Capital) y no en actos del departamento.
+Búsquedas fallidas sobre el propio acto, que no se declaran ausencias: Werfil
+Gallo (en el anillo desde 1955), porque la capa de B.2.3 lee «Callo»; y Ubaldo
+T. Vujovich Villa (desde 1974), porque A.7 imprime «Ubaldo Tomislav Vujovich»
+sin el segundo apellido.
+Actores de 1975, en los tres grupos:
+  Sólo en su propio acto: Eusebio Correa (A.2; en el anillo desde 1955); Serapio
+  Guantay (A.10; desde 1974); José Santiago Catalán y Werfil Gallo (B.2.3; desde
+  1972 y 1955); Genoveva Teresa Montemayor de Martínez (B.2.4); Juan Carlos
+  Schtter (B.2.1); Ubaldo Tomislav Vujovich (A.7, diez apariciones de un aviso);
+  Roberto Suárez, Juan Pinto y Lucas Castro Olarte (A.17, once apariciones y los
+  sumarios).
+  En más de un acto del departamento: Luis Xamena, designado interventor de la
+  Municipalidad en febrero (A.6) y firmante de la Ordenanza 3/75 en setiembre
+  (A.23). Instituciones con dos actos: el Centro Vecinal «Dr. Carlos Serrey»
+  (B.2.2 y A.20), el Hogar San Cayetano (A.1 y B.2.5) y la Escuela Juana Moro de
+  López (A.4 y A.13). Es la trama del año: la intervención municipal de La
+  Caldera y la red de instituciones de Vaqueros.
+  También fuera del departamento: Estela Linares de Zavaleta (A.9), directora
+  presidente de una sociedad en 9663 h10; Julio César Herrera, martillero, en
+  333 hojas. El apellido Xamena aparece en otras tres personas (9745, 9864,
+  9883) que no se identifican con el interventor.
+
+§C · LIMITROFES
+---------------
+Sólo los actos que traen al departamento junto a un limítrofe; no es un barrido
+de los limítrofes.
+  Gral. Güemes: renuncia de Domingo Osvaldo Juárez a la Comisión Municipal de El
+  Bordo, Decreto 15 Gob. 13-1-75, en el mismo tramo que A.2 (9667 h5).
+  Capital, Cerrillos y Rosario de Lerma: comparten la Resolución 0534 de
+  Comercio con La Caldera (A.5).
+  Capital: líneas 7 y 9 con cabecera en Salta y San Lorenzo (B.2.6); ruta 9
+  Salta-Río Vaqueros (B.2.7).
+  Jujuy: ninguna mención junto al departamento.
+
+§P · PLANOS
+-----------
+Ningún plano publicado entre lo mirado: las 241 tapas, las 47 hojas miradas por
+ficha y las 66 miniaturas (40 hojas a ojos y 26 de poca tinta); la única figura
+vista es un organigrama (9848 h10). La palabra «plano» aparece en 412 hojas;
+ninguna de esas remisiones toca al departamento. Techo: 300 ppi. Planos citados
+y no acompañados del departamento: ninguno.
+
+§D · INDICE
+-----------
+Edición, hoja, clase fija (§7.1) y materia. Repetidos: primera aparición.
+
+  9663  h7   ESCUELA                    CGE, concurso Secretario Docente; Hog.
+                                      San Cayetano, Vaqueros (A.1)
+  9667  h5   CARGOS                     Dto 2: renuncia de E. Correa, Comisión
+                                      Municipal (A.2)
+  9670  h4   OBRA-PUBLICA+ESCUELA       Dto 337: cerco Esc. Nac. 250 Los Yacones
+                                      (A.3)
+  9678  h5   OBRA-PUBLICA+ESCUELA       Dto 404: refuerzo Esc. B. López y J.
+                                      Moro de López (A.4)
+  9681  h5   NORMA                      Res. 0534 Comercio: precios de Carnaval
+                                      (A.5)
+  9692  h7   CARGOS+HACIENDA-MUN        Dto 92: L. Xamena, interventor municipal
+                                      (A.6)
+  9715  h4   MINAS                      Cateo Vujovich, Expte 8929-V, ríos
+                                      Ovejería y Nieves (A.7)
+  9718  h6   CARGOS                     Dto 368: baja de agente, Destacamento
+                                      Vaqueros (B.2.1)
+  9744  h4   MINAS                      Caducidad de cateos 8.530-D y 8.532
+                                      (A.8)
+  9752  h5   OBRA-PUBLICA               DNV, lic. 824/75, ruta 9 Salta-Río
+                                      Vaqueros (B.2.7)
+  9773  h5   DOMINIO+HACIENDA-MUN       Dto 1171: donación de terreno para
+                                      camping (A.9)
+  9784  h6   JUSTICIA+CARGOS            Dto 1383: renuncia del juez de Vaqueros
+                                      (A.10)
+  9784  h13  DOMINIO+JUSTICIA           Remate Rosa: matrículas 116 y 117 (A.11)
+  9787  h7   OTRO                       Dto 1615: subsidio C.V. Dr. Carlos
+                                      Serrey (B.2.2)
+  9794  h4   HACIENDA-MUN               Dto 1754: ayuda financiera 15 % (A.12)
+  9802  h6   CARGOS+HACIENDA-MUN        Dto 1764: Comisión Municipal de Vaqueros
+                                      (B.2.3)
+  9807  h8   ESCUELA                    CGE lic. privada 13/75, Esc. J. M. de
+                                      López (A.13)
+  9808  h5   CARGOS                     Dto 1925: enfermera, Consultorio Externo
+                                      Vaqueros (B.2.4)
+  9810  h5   HACIENDA-MUN               Dto 2026: anticipo de coparticipación
+                                      (A.14)
+  9817  h9   HACIENDA-MUN               Dto 2224: anticipo salarial 50 % (A.15)
+  9820  h7   AGUAS+OBRA-PUBLICA         Dto 2197: defensas sobre el río La
+                                      Caldera (A.16)
+  9826  h17  DOMINIO+JUSTICIA           Condominio Potrero de Castilla, catastro
+                                      102 (A.17)
+  9831  h13  HACIENDA-MUN               Dto 2551: incremento salarial 100 %
+                                      (A.18)
+  9847  h5   OTRO                       Dto 2758: exención automotores, Hogar
+                                      San Cayetano (B.2.5)
+  9848  h17  OBRA-PUBLICA               Dto 2773: refacción Hogar Dr. Luis
+                                      Linares (A.19)
+  9853  h13  OTRO                       Dto 3082: estatuto C.V. Dr. Carlos
+                                      Serrey (A.20)
+  9864  h18  HACIENDA-MUN               Dto 3222: presupuestos municipales 1975
+                                      (A.21)
+  9870  h7   HACIENDA-MUN+OBRA-PUBLICA  Dto 3274: F.I.T.S.A., nichos (A.22)
+  9877  h12  NORMA+HACIENDA-MUN         Dto 3519: Ordenanza 3/75, Ley 13.577
+                                      (A.23)
+  9877  h16  OTRO                       Vialidad: líneas 7 y 9, Lesser y Yacones
+                                      (B.2.6)
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+md5: no aplicable, no hay .jpg; dhash de 256 bits sobre la hoja rasterizada a 40
+ppp: 1.129 pares a distancia ≤ 16 entre ediciones distintas, dominados por tapas
+y contratapas, que se parecen por diseño: a esta resolución el dhash de hoja
+entera no prueba duplicación y la repetición se juzgó por texto. Avisos del
+departamento repetidos, por texto: A.7 (10), A.11 (10), A.17 (11, una de más),
+A.13 (2), B.2.6 (3), B.2.7 (15).
+Tinta, medida sobre las 4.724 hojas a 100 ppp con umbral 140: ninguna hoja en
+blanco; las 26 hojas de menos de 0,5 % son contratapas con el «Aviso a
+suscriptores» y el pie de imprenta (miradas por miniatura). 2.308 hojas quedan
+bajo 5 %: es la tinta clara del escaneo de 1975 y no se miraron una por una
+(E.10).
+Saldos: el corpus no publica resúmenes de Tesorería: la búsqueda de «movimiento
+de tesorería», «resumen del movimiento» y «saldo del mes» devuelve cero
+(probada: «balance general» devuelve 485 hojas, de asambleas de sociedades).
+Cadena de saldos: no aplicable. Balances municipales: ninguno; los actos de
+hacienda municipal son presupuestos y liquidaciones (A.12, A.14, A.15, A.18,
+A.21, A.22).
+
+E.2 · COBERTURA
+Calendario: la tapa dice «Aparece los días hábiles». 19 días hábiles sin edición
+entre el 2-1 y el 31-12: 6-1, 10-2, 11-2, 20-2, 27-3, 28-3, 1-5, 29-5, 17-6,
+20-6, 7-7, 8-7, 9-7, 15-8, 15-9, 8-12, 19-12, 25-12 y 31-12. El corpus no
+explica ninguno (sólo trae feriados de Metán y de San Martín y asuetos escolares
+que no coinciden): se declaran sin explicar. No hay ediciones dobles: ninguna
+fecha se repite.
+Números sin PDF: 9696 y 9698; las fechas 5-3, 6-3 y 7-3 corresponden a 9695,
+9697 y 9699, de modo que no falta ningún día: o son números salteados o
+ediciones del mismo día que no llegaron. No se resuelve.
+Hojas: 108 ediciones tienen menos hojas en el PDF que las declaradas en su tapa
+(y su cadena de folios lo confirma); faltan unas 137 hojas. Según la cadena de
+folios, en la mayoría (unas 76) falta la última hoja y en las demás una
+interior. 9711 trae 153 hojas para 140 declaradas. Lo que había en esas hojas no
+se sabe: es límite del Release, y puede haber actos del departamento entre
+ellas.
+Paginación: corrida anual, del folio 1 (9655) al 5042 (9897). Se resolvió en la
+cabecera de 2.686 de las 4.724 hojas por la capa. Tres saltos, mirados en la
+imagen: 1616 (9736 h20) seguido de 1518 (9737 h2), cien atrás; 3614 (9846)
+seguido de 3600 (9847 h2), quince atrás; 4666-4668 (9893) seguido de 4971-4973
+(9894), 302 adelante. Se declaran sin explicar (§8.21); los resolvería el
+Registro Oficial del año.
+Año editorial: LXVI hasta 9803 (13-8) y LXVII desde 9804 (14-8), leído en la
+tapa. Desde 9811 (26-8) la tapa ya no imprime el número de edición en el
+recuadro del año; en 9801 a 9803 el número impreso aparece tachado, y en 9802
+hay un número escrito a mano encima.
+
+E.3 · SIN MENCION Y NO MIRADO
+No se miraron enteras las 204 hojas «a ojos»: 164 tienen capa nativa (sumarios)
+y se cubrieron con esa versión; las 40 restantes se cubrieron con una segunda
+versión eng y miniatura (E.7). Tampoco las 2.308 de poca tinta. Actos citados y
+no acompañados: el nombramiento de Eusebio Correa (A.2) y de Werfil Gallo
+(B.2.3) no está en el corpus; tampoco la designación de un sucesor de Serapio
+Guantay (A.10) ni de Correa en la Comisión Municipal, distinto del interventor
+de A.6. Decreto Ley 8 del 21-12-1974 (A.23): citado, no publicado en 1975.
+
+E.4 · FIRMAS Y AUTORIDAD
+Interventor federal, en la tapa (imagen): Dr. José A. Mosquera de 9655 (2-1) a
+9849 (20-10); Sr. Jorge Aranda, «Interventor Federal Interino», de 9850 (21-10)
+a 9873 (21-11); Esc. Ferdinando Pedrini desde 9874 (24-11). El Decreto 3546 Gob.
+del 22-11-75 pone a Pedrini en posesión del mando por el Decreto nacional 3438
+del 18-11 (9877 h12, capa). Gobierno: Dr. Miguel Ángel Arias Figueroa en la tapa
+de enero; Jorge Aranda, ministro interino de Gobierno en octubre; Prof. Amadeo
+R. Sirolli, interino, desde el 21-10; Horacio Bergallo desde el 24-11. Economía:
+C.P.N. Abelardo Bacar en la tapa de 9849 (refrenda los decretos de Economía,
+B.2.5); C.P.N. Edgar I. Fombella, interino, desde 9850.
+Fórmulas: «El Interventor Federal de la Provincia DECRETA», «... DECRETA CON
+FUERZA DE LEY» (9847), «El Interventor Federal Interino de la Provincia», «El
+Interventor Federal (Int.) de la Provincia» (A.23); firma «ARANDA (Int.)».
+Errata de firma «MOSQUEAA» (B.2.2).
+Numeración: serie común a los ministerios, medida con pares contiguos mirados
+(92 Gob./93 y 94 Econ. del 31-1; 1754 Econ. y 1764-1765 Gob. del 16-7; 2758 y
+2766 Econ. del 29-9; 3519 Gob. 21-11 y 3546 Gob. 22-11). Reinicia con el año:
+290 Gob. 31-12-74 y luego 2 Gob. 8-1-75 (9667 h5). Fecha contra numeración: el
+15 Gob. es del 13-1 y el 14 del 14-1.
+
+E.5 · CORTES Y COLUMNAS
+Columna perdida: no se observó en las 36 columnas cotejadas entre la capa y la
+imagen de las fichas. Columna traspuesta en la capa: en A.22 la capa pega una
+obra de El Quebrachal delante de La Caldera. Corte en la capa nativa con signos
+intercalados: «L:i C&tld'era» (A.8), que ninguna pasada unía.
+
+E.6 · REPETICIONES
+Ver E.1. La citación de A.17 sale once veces para una marca de diez días. Los
+tres anticipos a municipios (A.14, A.15, A.18) y la ayuda de A.12 son actos
+distintos con nóminas casi iguales (60 y 62 municipios).
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+Anillo 1, 32 aciertos en 30 hojas: «caldera» como artefacto (Hospital San
+Bernardo, obra 1410 y licitación 23, 9773-9817; Hospital Colonia «Christofredo
+Jakob», 9876-9877; «caldera y cocina», 9770-9772; caño de caldera, 9834;
+equipos, 9685, 9686, 9864); mina «Río Caldera» del Dpto. Los Andes (9810, 9817,
+9824); Calderón (9658, 9764); Calderoni (9805); «caldo 65», dirección postal
+(9757); Simón Calder (9881, 9882); Caldera, Sergio A., apellido en una nómina
+(9699 h8).
+Falso negativo de las cuatro pasadas: A.8 (8.530-D), por puntuación dentro de la
+palabra en la capa nativa; rescatado a ojo y por la literal sin puntuación.
+Segunda versión eng sobre las 40 hojas a ojos sin capa nativa (casi todas tablas
+giradas del presupuesto y padrones): ningún acierto del anillo 1; sólo «Wierna,
+Ambrosio», accionista de Horizontes S.A.F.I.C.I. (9866-9868).
+
+E.8 · FIDELIDAD NUMERICA
+Recalculados en la imagen: A.4 (subtotal F5-F10, cierra), A.12 (60 renglones,
+cierra), A.14 (62 renglones, cierra con el Art. 1° y no con la línea de total),
+A.15 (62 renglones, no cierra por 17.000), A.21 (dos renglones, cierran), A.7
+(aritmética del cateo, cierra). Sobre la capa: A.18 (62 renglones, cierra
+exacto). No recalculados: total de rebajas de A.4; nómina entera de A.21 y A.22
+(P2). Dígitos que la capa leyó mal y la imagen corrigió: 9.533,82 por 9.533,32;
+952.000 por 552.000; 25.249 por 25.242; «0.000» por 40.000; «19 de agosto» por
+«1° de agosto»; 533-7158 por 53-7158; 349138 por 349/38.
+Discrepancias del sumario sin resolver (P1), edición, hoja y número: 9655 h2
+20093; 9677 h2 20337; 9686, 9691, 9694, 9695 h2 20449; 9689 h2 20402; 9737 h3
+21162; 9738, 9740, 9741, 9743 h2 21153; 9743, 9744 h2 21284; 9759 h2 21498; 9761
+h2 21490; 9767, 9769, 9770 h2 21609; 9768 h2 21467; 9769 h2 21638 y 21627; 9815
+h3 29085; 9816 h2 22136; 9818 h2 22169; 9822 h3 23207; 9825 h2 22189; 9828 h4
+22199; 9829 h3 23194; 9849 h2 28652; 9850 h3 22863; 9858 h3 22727; 9862 h2
+22808; 9867 h3 21825; 9870 h3 22828; 9884 h3 23070; 9886 h3 23370.
+
+E.9 · CONTRADICCIONES
+A.14: Art. 1° 19.587.523 (igual a la suma de la nómina) y TOTAL 19.583.523.
+A.15: total impreso 7.845.096 y suma de la nómina 7.862.096; el Decreto 2104
+fechado 18-8 en el Visto y 13-8 en el Art. 1° (capa). A.1: 125 cargos declarados
+y 134 vacantes en la nómina. A.17: once apariciones para una marca de diez días.
+A.2: Decreto 15 del 13-1 después del 14 del 14-1. A.11: inmueble medido en
+cuadras y en m2. Erratas del original: «localidaeds» (A.5), «MOSQUEAA» y
+«Habilitacin» (B.2.2), «Río Pícoras» (A.15), tapa de 9893 fechada «23 de
+diciembre de 1976». Ninguna se concilia.
+
+E.10 · LIMITES
+L1. Listado del Release inaccesible desde la sesión (403): inventario por nombre
+conocido. L2. Hojas ausentes del Release: unas 137 en 108 ediciones, más los
+números 9696 y 9698. L3. Una sola versión de OCR en castellano para las hojas
+interiores; Tesseract sin spa en la sesión. L4. md5 no aplicable (sin .jpg);
+dhash de hoja entera no discrimina. L5. 2.308 hojas de poca tinta no miradas una
+por una. L6. hojas_declaradas del §R suma lo declarado en la tapa o, cuando la
+tapa no se resolvió, la cadena de folios: es una estimación. L7. Los días sin
+edición no se explican con el corpus.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F1. Anillo 1 sobre el texto sin puntuación. En 1975 la capa nativa imprime
+«C&tld'era» y ninguna de las cuatro pasadas lo une: la laxa exige letras
+contiguas y la difusa corta la palabra en el signo. La literal sobre el texto
+con la puntuación suprimida, que v16 ya pide para los actores, lo devuelve.
+Propuesta: que §5.2 la sume como quinta pasada, en todos los años.
+F2. Inventario sin expanded_assets. Desde esta sesión el HTML del Release da 403
+y las descargas por nombre funcionan. Propuesta para el flujo §5.1: si el
+listado falla, inventariar con descarga.subidos de estado.json y los números de
+edición de lee_textos; y que la máquina suba un inventario.txt al Release.
+F3. Cotejo sumario/cuerpo por nombre normalizado. Buscar el nombre del aviso en
+el cuerpo de la misma edición resuelve 163 de 200 discrepancias sin mirar;
+normalizar las tildes antes es condición (sin eso resolvía 56).
+F4. Ediciones cortas. 108 de 241 ediciones tienen menos hojas que las
+declaradas; la cadena de folios lo prueba. Propuesta: que descargar compare
+hojas con la tapa y deje un aviso por edición corta.
+F5. Tinta. Con 40 ppp y umbral 128, 1975 da 0 % en casi todas las hojas; con 100
+ppp y umbral 140 la medida separa las contratapas. El umbral debe fijarse por
+época y declararse.
+F6. Presupuesto de turno (§5.5 del flujo). 241 ediciones y 4.724 hojas en una
+sesión: alcanzó para las fichas y no para el cotejo del sumario y dos tablas. Un
+año de esta época necesita una sesión más, o el cotejo del sumario hecho por la
+máquina con F3.
+F7. Config entregado (version 2026-10-03, hasta 1975): 9 actores nuevos con
+origen 1975 (entre ellos «werfil callo», la deformación de la capa que escondió
+a Werfil Gallo), 11 números, 5 términos de anillo 2 (potrero de san jose,
+escuela j. m. de lopez, centro vecinal dr. carlos serrey, «c&tld'era» y
+«ctldera») y 6 falsos positivos de calderas-artefacto. La mina «Río Caldera» de
+Los Andes no se agregó a falsos positivos: podría esconder una mención real del
+río.
+F8. Duda de lectura D1, para DUDAS 1975: la firma de la Ordenanza 3/75 (9877
+h12), «Xamena» o «Xameña». Control 4 (cita cruzada): el Decreto 92 (A.6) imprime
+«Xamena» sin marca, pero un apellido puede imprimirse de dos maneras, así que el
+control no decide.
+
+§R · RECUENTO
+-------------
+anio: 1975
+ediciones_desde: 9655
+ediciones_hasta: 9897
+ediciones_presentes: 241
+ediciones_ausentes: 2
+hojas_presentes: 4724
+hojas_declaradas: 4861
+hojas_ausentes_estimadas: 137
+periodicidad: diaria-habiles
+dias_salida_sin_edicion: 19
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: parcial-eng
+capa_previa: nativa-sumarios
+versiones: 1
+actos_departamento: 29
+actos_dominio: 3
+actos_hacienda_municipal: 10
+planos_publicados: 0
+planos_citados_departamento: 0
+balances_municipales: 0
+cuadros_publicados: 8
+subtotales_recalculados: 7
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 36
+hojas_miradas: 47
+avisos_repetidos_departamento: 6
+falsos_positivos_anillo1: 32
+limites_declarados: 7
+estado: CON-PENDIENTES
+nivel_lectura: imagen
+pdf_release: 241
+avisos_release: 0
