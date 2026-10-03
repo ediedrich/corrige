@@ -2350,3 +2350,28 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 1 de 1 hallazgo resuelto (100 %); compila sin errores ni referencias indefinidas, 909 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1976 el municipio no interviene en ningún acto de agua hallado; una ley del gobierno militar fija otro canon de riego sin él, y lo más parecido a una competencia sobre el río sigue siendo el cobro de los áridos, que una ordenanza de Vaqueros dice compartir con La Caldera sin acto publicado que lo funde), la tutela provincial sobre el fisco municipal (ordenanzas aprobadas por decreto y sin texto publicado, anticipos de la coparticipación propia y una ley que cambia los índices sin publicar sus datos) y la designación provincial de las autoridades municipales (dos suboficiales retirados, uno de ellos con las funciones del concejo desde mayo de 1976, cuatro años antes de la Ley 5686).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 44 líneas (0,17 %; 39,3 páginas). Cobertura acumulada: 25.214 de 25.214 (100,0 %), con el registro de arriba. Falsos positivos descartados: 5. Recortes: no se cotejaron el renglón del anticipo de marzo (9969 h5) ni los de los decretos 641, 2332, 3164, 1043, 1243, 271, 1766, 2670 y de los dos cateos (fichas de MODO imagen); el control de comillas cubre las comillas rectas dobles y no las simples; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **1 de 1**, en el AMPLÍA 1976 (`1972d59`), **0 atrapados por un control automático**.
+
+## Ronda 64 — lecturas de Eduardo, 1977 (03/10/2026)
+
+Tipo: **lecturas sin cambio en el libro** (CORRIGE 3.6), por la palabra clave `LECTURAS` (flujo v2 §5.6). Base: commit `deca5b6`. No hay parche: 1977 está en `puntual`, sin informe registrado, y ninguna de las formas decididas aparece en el libro. Denominador: 25.214 líneas, sin cambios. La cobertura acumulada sigue en **25.214 de 25.214 (100,0 %)**. Como el informe `BO-Salta-1977_10144-10393_la-caldera_LEE-1977_2026-10-03.txt` todavía no está registrado, las lecturas se aplicaron sobre él y se entrega de nuevo con el mismo nombre: **no queda pendiente de tipo `lee`**.
+
+### Qué se decidió con controles, sin mostrarlo (§5.6.1)
+
+Antes de armar la hoja se decidieron por control o por la imagen a 400 ppp: el ordinal de la Res. 539 (A.21), «1º de octubre» y no «19», por la imagen y la fecha de la resolución (3-10); el número del aviso del Centro Vecinal «Dr. Carlos Serrey» (B.2.10), 28718, por el cuerpo contra la capa nativa del sumario (28728); el expediente 29-85265/77 del Dto. 3596 (B.2.14), por la imagen. La M. I. del juez de paz titular de La Caldera (A.14) no se llevó a la hoja: es un documento que el libro no necesita (§5.6.3).
+
+### Lecturas de Eduardo (hoja `dudas-1977-1977.html`, 2 casos con el renglón marcado)
+
+| # | Edición y hoja | Duda | Sesión | Eduardo | Control | Clase |
+|---|---|---|---|---|---|---|
+| D1 | 10294 h9 | Expediente de los jueces de paz de La Caldera en el Dto. 2426 (A.14), «53-10.40?» | Imagen a 400 ppp «403»; capa «10,408» | 53-10.403 | Serie de expedientes del acto, creciente (10.300, 10.402, 10.4??, 10.413…): admite 403 y 408; sin otra aparición en el año ni en los informes LEE de 1933 a 1976 | **Decidida por Eduardo: 53-10.403**, igual que la imagen |
+| D2 | 10325 h27 | Plano de la Finca Fracción A, en La Calderilla (aviso de La Calderilla S.A., A.18), «Plano 80?» | «80» y un hueco antes de «con»; capa «808» | Plano 80 | Sin control: se cita una sola vez en el año y en ningún informe anterior; hoja de otro escaneo, unos 170 ppi equivalentes | **Decidida por Eduardo: Plano 80**; se descarta «808» |
+
+Balance: de 2 lecturas, 2 decididas por Eduardo, ninguna corregida por un control ni abierta. Las dos coinciden con la imagen mirada por la sesión y desmienten a la capa. Se suma al catálogo del §5.6: **en las hojas de escaneo de formato grande (unos 170 ppi equivalentes), la capa agrega un dígito donde la imagen deja un hueco («808» por 80); un número leído en esas hojas no se da por bueno sin la imagen.**
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Menciones en el libro de las formas decididas | 8 formas (10.403, 10.408, 10403, 53-10, Calderilla S, Plano 80, plano 80, 808) en los 38 archivos `.tex` | Ninguna del informe 1977: «808» aparece 13 veces, ajenas (edicto 808 de 1957, expedientes, montos) |
+| Otras apariciones en el corpus de 1977 | Texto de las dos versiones, 249 ediciones | «53-10.40x» y «plano 808» sólo en su propia hoja |
+| Cita cruzada en informes anteriores | 35 informes LEE (1933–1976) | Ni el expediente ni el plano, ni la matrícula 429, el catastro 1646 o los linderos de La Calderilla |
