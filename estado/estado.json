@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-03T18:29:00",
+ "actualizado": "2026-10-03T19:27:14",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -8105,6 +8105,151 @@
     "P159"
    ],
    "nota_cierre": "Nota final 88,3 sin tope (cobertura acumulada 100,0 %). Los cuatro hallazgos estan en el AMPLIA 1979 y ninguno lo atrapo un control automatico; P164 propone los que faltan."
+  },
+  {
+   "ronda": 67,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 83.0,
+   "nota_inicial_sin_tope": 83.0,
+   "tope_inicial": 90,
+   "motivo_tope_inicial": "Cobertura acumulada inicial 99,8 % (25.204 de 25.264): escalon de 90. No actua: la nota sin tope queda por debajo.",
+   "nota_final": 88.3,
+   "nota_final_sin_tope": 88.3,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_inicial": 99.8,
+   "cobertura_ronda_lineas": 60,
+   "paginas_auditadas": 47.7,
+   "fecha": "2026-10-03",
+   "base": "b0feac9",
+   "commit": "05dc82a",
+   "arbol": "99feb7b",
+   "amplia_auditado": "amplia-1980",
+   "aspectos": {
+    "1": [
+     82,
+     82
+    ],
+    "2": [
+     100,
+     100
+    ],
+    "3": [
+     90,
+     100
+    ],
+    "4": [
+     90,
+     90
+    ],
+    "5": [
+     100,
+     100
+    ],
+    "6": [
+     90,
+     90
+    ],
+    "7": [
+     50,
+     100
+    ],
+    "8": [
+     95,
+     95
+    ],
+    "9": [
+     30,
+     30
+    ],
+    "10": [
+     70,
+     70
+    ],
+    "11": [
+     90,
+     90
+    ],
+    "12": [
+     90,
+     100
+    ],
+    "13": [
+     94,
+     94
+    ],
+    "14": [
+     100,
+     100
+    ],
+    "15": [
+     90,
+     90
+    ]
+   },
+   "hallazgos": 5,
+   "aplicados": 5,
+   "precisiones": 2,
+   "descartados_falsos_positivos": 6,
+   "errores_introducidos_por_la_auditoria": 5,
+   "atrapados_por_control": 0,
+   "cotejo_facsimil": 9,
+   "compilacion": {
+    "paginas_base": 929,
+    "paginas_final": 929,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 42,
+    "cajas_desbordadas": 2,
+    "remisiones_posteriores_sin_mas_adelante": 0,
+    "items_D": 284,
+    "pendiente": 52
+   },
+   "archivos_que_cambian_de_largo": [],
+   "hallazgos_detalle": [
+    "1 (aspecto 3) A:445: 'Camacho renuncia en diciembre': el decreto 1712 del 1-12-1980 acepta la renuncia, cuya fecha no da (11126 h27, imagen). Corregido: 'en diciembre la Provincia le acepta a Camacho la renuncia ...'.",
+    "2 (aspecto 3) A:445: 'la Provincia contrata en noviembre a veintinueve personas': la Res. 1181-D del 7-11-1980 aprueba contratos 'celebrados' sin fecha (11111 h12, imagen). Corregido: 'en noviembre la Provincia aprueba los contratos de locacion de obra de veintinueve personas ..., sin decir cuando se celebraron ni para que'.",
+    "3 (aspecto 12) 10:513: 'En 1980 el plan de marzo le da $4.060.000.000 (mas abajo)': el plan de 1980 esta en 10:360-362, mas arriba. Corregido: '(mas arriba)'.",
+    "4 (aspecto 12) 10:362: 'adjudicado en 1974 a Caminos S. A. (...; mas arriba)': la adjudicacion de 1974 esta en 10:513, mas abajo; remision del AMPLIA 1973-1974 (d99ba07). Corregido: 'mas abajo'.",
+    "5 (aspecto 7) 26:236: 'La lamina fig:votado pone las dos en la misma escala': 'las dos' son las estaciones sanitarias de 1935 y 1947 (26:234), separadas de la lamina por las incorporaciones de 1952 a 1980. Corregido: 'pone las dos estaciones sanitarias, la de 1935 y la de 1947, en la misma escala ...'."
+   ],
+   "precisiones_detalle": [
+    "a) A:445, 17-aguabaja:281 y 22-infraestructura:508: la licitacion 9/80 de Vialidad es en el tramo de la ruta 9 Rio Caldera - Alto de la Sierra (10966 h6, imagen), no 'sobre el rio Caldera'.",
+    "b) A:452: el permiso precario del Club de Regatas es 'por el termino maximo de cinco (5) anios' (11114 h13): 'por cinco anios como maximo'."
+   ],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P170",
+     "tipo": "herramientas",
+     "anios": [
+      1979,
+      1980
+     ],
+     "texto": "Controles para AMPLIA (extension de P164, P169 y de la rubrica AMPLIA v2) y uno de registrar: (1) direccion de las remisiones internas: toda 'mas arriba' o 'mas abajo' de una linea que el AMPLIA agrega o toca se resuelve a la linea del referente y el script compara la posicion (casos 10:513 y 10:362, ronda 67); (2) fecha del acto aceptado o aprobado: 'renuncia', 'contrata', 'celebra', 'firma' o 'sanciona' bajo una fecha se cotejan con la ficha, y si el acto solo da la fecha de la aceptacion o aprobacion se escribe asi (A:445, Camacho y Res. 1181-D, ronda 67; antes P116); (3) tramos de ruta: una licitacion vial por tramo se describe por su tramo y no por el rio que lo limita; revisar con eso las dos de 1979 (2/79 y 3/79) en 09:535, 01:139, 17-aguabaja:281, 22-infraestructura:508 y A:439; (4) estado.json tiene diecisiete pendientes duplicados con el mismo contenido (P58, P59, P80, P87, P123, P124 y P159 a P169): registrar tendria que agregar un pendiente solo si su id no esta.",
+     "abierto": "2026-10-03",
+     "hecho": null
+    }
+   ],
+   "pendientes_revisados_sin_cerrar": [
+    "P166",
+    "P167",
+    "P168",
+    "P169",
+    "P54",
+    "P100",
+    "P118",
+    "P115",
+    "P40",
+    "P102",
+    "P144",
+    "P158",
+    "P159",
+    "P164",
+    "P165"
+   ],
+   "nota_cierre": "Nota final 88,3 sin tope (cobertura acumulada 100,0 %). Tres de los cinco hallazgos estan en el AMPLIA 1980, uno en el AMPLIA 1973-1974 y uno acumulado desde la ronda 38; ninguno lo atrapo un control automatico; P170 propone los que faltan."
   }
  ],
  "pendientes": [
@@ -10010,9 +10155,20 @@
    "texto": "Control para AMPLIA (extension de P164 y de la rubrica AMPLIA v2): todo dato de un anio que el libro ya traia por consulta puntual (filas sin asterisco de la cronologia, cuadros, fechas y recuentos derivados) se coteja con la FICHA y el TEXTO del informe LEE antes de conservarlo, y cada recuento que dependa de una fecha corregida se recalcula (caso: la Res. 943-D es del 18-9-1980 y no del 19, y 'en veintitres dias' de 09 y de A pasa a 'veintidos'). Y el control de anaforas de P159 se extiende a las pronominales: despues de insertar una frase, se lee la siguiente si empieza o se apoya en 'lo', 'lo habian hecho', 'las dos', 'ese regimen' (caso 14:579).",
    "abierto": "2026-10-03",
    "hecho": null
+  },
+  {
+   "id": "P170",
+   "tipo": "herramientas",
+   "anios": [
+    1979,
+    1980
+   ],
+   "texto": "Controles para AMPLIA (extension de P164, P169 y de la rubrica AMPLIA v2) y uno de registrar: (1) direccion de las remisiones internas: toda 'mas arriba' o 'mas abajo' de una linea que el AMPLIA agrega o toca se resuelve a la linea del referente y el script compara la posicion (casos 10:513 y 10:362, ronda 67); (2) fecha del acto aceptado o aprobado: 'renuncia', 'contrata', 'celebra', 'firma' o 'sanciona' bajo una fecha se cotejan con la ficha, y si el acto solo da la fecha de la aceptacion o aprobacion se escribe asi (A:445, Camacho y Res. 1181-D, ronda 67; antes P116); (3) tramos de ruta: una licitacion vial por tramo se describe por su tramo y no por el rio que lo limita; revisar con eso las dos de 1979 (2/79 y 3/79) en 09:535, 01:139, 17-aguabaja:281, 22-infraestructura:508 y A:439; (4) estado.json tiene diecisiete pendientes duplicados con el mismo contenido (P58, P59, P80, P87, P123, P124 y P159 a P169): registrar tendria que agregar un pendiente solo si su id no esta.",
+   "abierto": "2026-10-03",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
