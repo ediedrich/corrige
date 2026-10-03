@@ -1924,3 +1924,149 @@ Restan: dos casos en el aspecto 3 (−10), dos correcciones silenciosas en una c
 | Privacidad: personas nombradas en las 71 líneas, cruzadas con contextos sensibles (P102) | 71/71 líneas | Ningún particular nombrado junto a remate, ejecución, sumario, cesantía, jubilación, rescisión o embargo: los remates de la finca Mojotoro, Potrero de Gallinato, el lote 77, San Antonio o San Roque y Villa Urquiza van sin las partes; el enfermero sumariado, la empleada del hogar, las encargadas del Registro Civil y los interventores de la guardería, sin nombre. Nombrados: funcionarios (gobernadores, Serrey, Lizondo, Catalán Arellano, jueces de paz), contratistas (Moyano, Marcuzzi, Galindo, Sollazzo Hnos., Clitori Hnos.) y sociedades (Lerma S.A., Cuesta del Obispo S.A.) |
 | Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
 | Compilación | libro entero, base `d628fd6` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 891 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
+
+## Ronda 61 — auditoría con fase 6 (03/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1973-1974. Base: commit `d99ba07` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1973-1974, sobre `b21a592`, la ronda 60), con la fase 6 en `ronda-61.patch` (commit `498ee5b` en la sesión; aplica con `git am` sobre `d99ba07`, probado en un clon limpio de GitHub: árbol `5860f5d`). **Denominador medido: 25.200 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 60 (25.176 de 25.176, sobre `b21a592`) se trasladaron por diff a `d99ba07`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1973-1974 agrega 24 líneas netas (9 en A, 11 en C, 2 en F y 2 en 08-vaqueros) y deja 66 líneas nuevas o modificadas en 24 archivos: caducan 42 líneas anteriores**, y quedan **25.134 vigentes sobre 25.200 (99,7 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `d99ba07`)
+
+Se leyeron **las 66 líneas, enteras, por la sesión**, sin subagentes (dos, F:81 y 08:23, son renglones en blanco): las nuevas de A, C, F y 08 completas, y las modificadas del resto en su texto entero, no sólo en el fragmento cambiado. Se cotejaron contra los dos informes LEE (`BO-Salta-1973_9181-9415_la-caldera_LEE-1973_2026-10-02.txt` y `BO-Salta-1974_9416-9654_la-caldera_LEE-1974_2026-10-02.txt`, bajados de `corrige/lee/<año>/`): §0, §1, las 45 fichas del §A enteras (FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 a B.4, §C, §P, E.1 a E.10 y §R de cada uno; y el `amplia-1973-1974.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 414–417, 419–424 | 10 | sesión |
+| ape/C-normativa.tex | 99, 105, 136–146 | 13 | sesión |
+| ape/D-pedidos.tex | 191–192, 253 | 3 | sesión |
+| ape/F-fuentes.tex | 25–26, 80–81, 83 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/03-fincas.tex | 1010 | 1 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/05-tierra.tex | 290 | 1 | sesión |
+| cap/06-pdua.tex | 56 | 1 | sesión |
+| cap/07-cot.tex | 246, 249, 253 | 3 | sesión |
+| cap/08-vaqueros.tex | 22–23 | 2 | sesión |
+| cap/09-defensas.tex | 535 | 1 | sesión |
+| cap/10-expropiacion.tex | 61, 332, 362, 372–373, 513 | 6 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87, 182 | 2 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 03:1009 (el comienzo de la oración de 03:1010), 08:18–21 (la ficha del Código de Vaqueros con las superficies mínimas por zona), 10:355–371 (el plan de 1980 que 10:362 y 10:372 corrigen), D:177 y F:78 (los dos renglones que la fase 6 toca fuera de las 66 líneas), la fila de 1970 de 18-politica sobre la designación de Lizondo (8641 a 8643) y la de 1958 a 1962 sobre Werfil Gallo.
+
+**Esta ronda: 66 líneas nuevas**, 128.100 bytes sobre 2.907.165, que en las 901 páginas de la base equivalen a **39,7 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `d99ba07` cae dentro de estos tramos.
+
+Acumulado: 25.134 vigentes + 66 = **25.200 de 25.200 (100,0 %)**. La fase 6 toca 10 líneas: ocho dentro de lo leído en esta ronda (A:414, C:145, F:80, 03:1010, 04:4599, 06:56, 09:535 y 18:470) y dos vigentes de rondas anteriores, releídas enteras en ésta (D:177 y F:78), y no cambia el largo de ningún archivo: **25.200 de 25.200 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1973 y 1974 de `boletines-salta`)
+
+Imágenes de los PDF del Release (96 a 200 ppp de origen en 1973; 300 en 1974) renderizadas a 40–300 ppp con PyMuPDF (600 y 1.200 en la 9363 h9), primero la hoja entera y después el recorte del renglón, ubicado con el reconocimiento `eng` de la sesión; cada recorte se miró. Se bajaron 27 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9363 | 9 | Decreto 1265, VISTO | «a partir del día 3 de mayo ppdo. y mien- / tras se desempéñe como Legislador (Diputado / Provincial)»: **el original imprime «desempéñe», con tilde en la segunda e** (recorte a 1.200 ppp; la capa nativa del PDF lee lo mismo). A:414, 04:4599 y 18:470 citaban «desempeñe» (hallazgo 1). «Murúa», con tilde, no se nombra en el libro |
+| 9518 | 5–7 | Ley 4834, art. 1 del convenio, sanción y promulgación | La cita de A:422, 17:281 y 10:513 coincide («destinadas a reforzar la provisión de agua potable a la Ciudad de Salta y al eventual suministro a las demás poblacio- / nes comprendidas en el recorrido del acueduc- / to», con el corte de h5 a h6), y «"ACUEDUCTO EMBALSE CAMPO ALEGRE"». La ley sigue en la h7: «Dada en la Sala de Sesiones … a los veinti- / trés días del mes de mayo», y «Salta, 29 de mayo de 1974 … MIGUEL RAGONE»; la edición es del 31 de mayo. **C:145 daba el 29/05/1974, la promulgación, en la columna de la sanción, y la ley en h.\ 5 y 6** (hallazgo 2) |
+| 9346 | 37 | Aviso 15589, Centro Vecinal Vaqueros | «Convocatoria a Asamblea Extraordinaria para el día 17 de setiembre de 1973, a las 18 horas en el local Municipal de Vaqueros», y la cita del punto a). Coinciden (A:416, 22-infraestructura:545); el informe 1973 (B.2.5) daba el local sólo para las dos asambleas ordinarias (falso positivo 1) |
+| 9183 | 10 | Decreto 6986, resolución 238 | «por intermedio del Mu- / nicipio de La Caldera» y «Contralor Municipal». Coinciden (A:414, C:136, 07:253) |
+| 9195 | 8 | Decreto 7348, considerando | «alimentar el Embalse de Campo Alegre, captando / las aguas de los ríos San Alejo y Santa Rufina / en su confluencia». Coincide (A:415) |
+| 9218 | 10 | Decreto 121, arts. 1 y 2 | «Desígnase por un nuevo perío- / do legal de dos años». Coincide (A:414, 18:470) |
+| 9276 | 28 | Decreto 753, VISTO | «estas últimas ya no se fabrican». Coincide (A:415) |
+| 9289 | 7 | Decreto 80, art. 2 | La lista de renuncias termina en «JULIO CATALAN ARELLANO, Vaqueros.» (A:414, 18:470, 03:1010) |
+| 9335 | 10 | Decreto 819, art. 1 | «a partir de la fecha que tome posesión de sus fun- / ciones». Coincide (A:414) |
+| 9344 | 18 | Aviso 15547 | «Bernabé Aráoz - Vaqueros, Dpto. La Caldera.» Coincide (A:414) |
+| 9380 | 6 | Decreto 1563, considerando | «por razones de índole presupuestario». Coincide (A:416, 22-infraestructura:545) |
+| 9384 | 5–6 | Decreto 1599, arts. 2 y 5 del contrato | El art. 2 financia «las obligaciones pen- / dientes … provenientes de las certi- / ficaciones correspondientes a partir del primero / de mayo de 1973, como las obligaciones que / emerjan de futuras certificaciones» en siete tramos, y el 5 dice «la interrupción en la normal entrega de docu- / mentos». Coinciden (A:415, C:141) |
+| 9384 | 22 | Aviso 16232 | «compra de / 16 lotes de terreno en el Departamento de / La Caldera (Salta)». Coincide (A:414) |
+| 9456 | 17 | Ley 4597, arts. 1 y 2 | «Declárase de interés provincial la / protección de las características urbanísticas, pa- / norámicas y turísticas» y «Vaqueros en el departamen- / to de La Caldera». Coinciden (A:417, 06:56). El inciso b) da a San Lorenzo veinticinco metros y 625 metros cuadrados: 06:56 decía que la ley «fija allí», en las cuatro localidades, quince metros y 450 (precisión b) |
+| 9468 | 5 | Decreto 3672, art. 1 | «Construcción del acueducto Campo Ale- / gre y Planta Potabilizadora - Salta». Coincide (A:422) |
+| 9477 | 7 | Decreto 2550, considerandos | «Que, por razones de orden económico-finan- / ciero, la Administración … no pudo efectuar la subasta en su oportu- / nidad», y las modificaciones 1) y 2). Coinciden (A:422, C:143); el informe 1974 tenía el considerando sólo en la capa |
+| 9536 | 9 | Aviso 18315 | «"Apertura de cau- / ces en el río La Caldera"» y \$1.890.000. Coincide (A:421, 09:535) |
+| 9560 | 4 | Ley 4860, arts. 1 y 2 | «el quince por ciento (15%) sobre lo recaudado por el sistema tributario provincial más lo que corresponda por el régimen de coparticipación federal» y el inciso c), «en base al costo por habitante de los servicios públicos prestados por los municipios». Coinciden, sin comillas, con A:423 |
+| 9571 | 8 | Decreto 4981 | «Desígnanse por un nuevo período Constitucio- / nal». Coincide (A:421, C:139, 18:470) |
+| 9587 | 8 | Decreto 5770 | «"Apertura de cauce con / equipo mecánico sobre río La Caldera, provin- / cia de Salta"», fechado «9-9-70». Coincide (A:421, 09:535) |
+| 9613 | 11 | Ley 4987, art. 1 | «y que continúa en dirección Sudeste / para tomar el nombre de río Los Yacones y con- / cluir como río Wierna en su confluencia con el / río La Caldera». Coincide (A:424) |
+| 9629, 9630 | 1 | Tapas | Ragone hasta la 9629 (22-11); «MOSQUERA, Interventor Federal» desde la 9630 (25-11). Coincide (A:421, F:80) |
+
+Son **36 citas entre comillas del libro cotejadas en la imagen** (24 distintas, contadas una vez por pasaje; los nombres propios entre comillas ---escuelas, fincas, el hogar, la mina--- no se cuentan), **una con diferencias** (la del decreto 1265, en tres pasajes), y datos sin comillas en 8 hojas (9346 h37, el local; 9518 h7, sanción y promulgación; 9384 h5, el art. 2; 9289 h7, el último renglón del decreto 80; 9560 h4, arts. 1 y 2 de la Ley 4860; 9456 h17, el inciso b) de la Ley 4597; 9477 h7, las modificaciones del legajo; 9629 y 9630, las tapas). Bajadas y no cotejadas: 9223 h14 (7775), 9230 h8–9 (142), 9420 h16–17 (Ley 4735), 9537 h4–5 (2938), 9555 h6 (3996). No se bajaron: las demás ediciones de las 45 fichas, que el libro cita sin comillas.
+
+### Hallazgos (seis, todos aplicados en la fase 6) y tres precisiones
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:414, 04:4599, 18:470 | Cita del decreto 1265 con una corrección silenciosa: «mientras se desempeñe como Legislador (Diputado Provincial)» donde el original imprime «desempéñe» (9363 h9, imagen a 1.200 ppp). El AMPLÍA miró la hoja (P134: «Murúa» con tilde) y no la errata | 4 | «\textit{mientras se desempéñe como Legislador (Diputado Provincial)}» \textit{[sic]} en los tres pasajes |
+| 2 | C:145 | La Ley 4834 con la fecha de promulgación, 29/05/1974, en la columna que en el resto del apéndice es la de sanción, sin decir que es la promulgación, y en «h.\ 5 y 6», cuando la sanción (23 de mayo) y la promulgación están en la h.\ 7 (9518 h7, imagen) | 3 | «Ley 4834* & 23/05/1974 & Artículo 1 del convenio, sanción y promulgación leídos sobre el facsímil. Promulgada el 29/05/1974 (Ragone); B.O.\ Nº 9518, h.\ 5 a 7, del 31/05/1974», y «destinados a la ciudad de Salta y, eventualmente, a las poblaciones del recorrido», como dice el convenio |
+| 3 | 09:535 | «\textbf{En 1974 la serie suma dos obras}», y la misma oración dice que el decreto de adjudicación de la apertura de cauce «no dice si es la misma licitación»: si no lo es, son tres. Recuento que da por decidido lo que la oración declara abierto | 7 | «\textbf{En 1974 la serie suma dos obras, o tres}» |
+| 4 | D:177 | El pedido de las hojas sin mirar, de las páginas faltantes y de otro ejemplar de los archivos truncados se queda en 1972 (hojas de 1961 a 1972, páginas de 1964 a 1972, la 7780), mientras F:80 declara para 1973 y 1974 344 y 181 hojas sin mirar enteras, 157 y 96 páginas faltantes y la 9333 truncada. El AMPLÍA lo dejó en P133 «para no mover el recuento», pero extender un ítem existente no lo mueve | 8 | «las de 1961 a 1974 ---…, 545, 344 y 181…», «de 1964 a 1974 ---…, 104, 157 y 96…» y «y de la 9333, del 23 de agosto de 1973, también truncada, de cuyas dieciséis páginas se rescataron doce y media»; los ítems de D siguen siendo 284 |
+| 5 | F:80 | «ninguna biblioteca lo abre», de la 9333: el informe 1973 (§0) probó dos lecturas, la de `lee_auto.py` y la de PyMuPDF en la sesión. Negación universal sobre un universo no medido | 5 | «ni la lectura automática ni la de la sesión lo abren» |
+| 6 | 03:1010 | «ejerció entre octubre de ese año y mayo de 1973», texto de la ronda 35 sin fuente, al que el AMPLÍA sumó el decreto 80, que le acepta la renuncia el 4 de junio (9289 h6–7), sin rehacer las fechas: los dos decretos que cita la oración dan el 18 de septiembre de 1970, «a partir de que tome posesión», y el 4 de junio de 1973 | 3 | «ejerció de 1970 a 1973: el decreto 135 del 18 de septiembre lo designa presidente de la comisión municipal a partir de que tome posesión» |
+
+Precisiones sin aspecto propio (escala general del 5 y del 12; no bajan la nota): (a) F:80 decía «En ninguno de los dos años hay un resumen de la Tesorería» de dos años de los que, dos renglones después, «cuentan los hallazgos y no las ausencias»; F:78, del AMPLÍA 1970-1972, lo mismo de tres: los dos pasan a «En lo leído de los … años no hay ningún resumen de la Tesorería», como F:74 y F:76; (b) 06:56 decía que la Ley 4597 «fija allí», en las cuatro localidades, lotes de quince metros y 450 metros cuadrados: San Lorenzo tiene veinticinco y 625 (9456 h17, imagen): «fija en Vaqueros, como en Campo Quijano y en las Termas, … ---en San Lorenzo, veinticinco metros y 625---»; (c) C:145 decía que el acueducto se destina «a la ciudad de Salta y a las poblaciones del recorrido», cuando el convenio dice «eventual suministro»: va en el hallazgo 2.
+
+Restan: dos casos en el aspecto 3 (−10), tres correcciones silenciosas de una cita, en tres pasajes, en el 4 (−9 sobre el techo de 90 del cotejo parcial: 81), un superlativo sin universo en el 5 (−5), un pedido del aparato que no siguió a F en el 8 (−5) y un error de consistencia en el 7: **1 en 39,7 páginas = 2,5 por cada 100** → escalón de ≤ 4 (50), y uno más abajo porque contradice la misma oración → **40**. Los seis se aplicaron: 100 en la nota final del 3, del 5 y del 7, 90 en el 4 y 95 en el 8.
+
+**Los seis hallazgos están en material que la propia auditoría incorporó** (AMPLÍA 1973-1974, `d99ba07`; el 6, en la oración que ese AMPLÍA amplió sobre texto de la ronda 35), y **ninguno fue atrapado por un control automático**. Los controles de P74, P108 (1) y P130 (citas cotejadas en la imagen) se corrieron en el AMPLÍA sobre las citas en mayúsculas y sobre la de la Ley 4834, pero no letra por letra sobre las tildes de una cita en minúsculas; el de P86 (fechas) se corrió sobre las filas de año y no sobre la columna de fecha de C; el de P102 (privacidad) funcionó.
+
+**Descartados (falsos positivos, 8).** «Convoca en el local municipal una asamblea extraordinaria» (A:416): el informe lo da sólo para las ordinarias, pero la imagen lo dice del aviso 15589 (9346 h37). «Las obligaciones pendientes desde el 1.º de mayo se pagan en siete cuotas» (A:415): el art. 2 del contrato habla de las obligaciones pendientes «provenientes de las certificaciones … a partir del primero de mayo de 1973» (9384 h5, imagen). «Le acepta la renuncia a ese presidente» (22-prospectiva:144): el designado en abril de 1970 es Lizondo (18-politica, 8641 a 8643), el mismo al que se le acepta en julio de 1973 (529). «Con quince metros de frente» (08:22): describe la ley de 1973, no la ficha del Código, y la oración siguiente dice que la coincidencia no prueba filiación. «El nombre del que presidió la comisión municipal de La Caldera de 1958 a 1962» (18:470): la misma línea narra el cargo con sus nombres de cada año (intendente, presidente, comisionado interventor). «Casi once hectáreas» (A:422): 3,1368 + 6,3349 + 1,4771 = 10,9489. «En junio la Administración licita» (A:421, 09:535): el aviso está fechado «Salta, junio de 1974» y se publica desde el 1.º de julio; es la fecha del acto. «Ragone hasta el 22 de noviembre y desde el 25 el interventor» (A:421): tapas de la 9629 y la 9630, imagen.
+
+**Pendientes que cierra.** Ninguno entero. P133 queda satisfecho en dos de sus puntos (otro ejemplar de la 9333 y las 157 y 96 páginas faltantes, ahora en D:177).
+
+**Pendientes nuevos.** P136 (lee, 1973-1974): corregir los informes con lo mirado en esta ronda: 1973 B.2.9, el VISTO del 1265 imprime «desempéñe» (9363 h9, imagen a 1.200 ppp; la capa nativa lo lee igual), errata del original para E.9; 1974 B.2.4, la Ley 4834 se sanciona el 23-5-1974 y se promulga el 29-5 (9518 h7: «Dada en la Sala de Sesiones … a los veintitrés días del mes de mayo»; «Salta, 29 de mayo de 1974 … MIGUEL RAGONE, Jesús Pérez»), con la ley en h5 a h7 y no en h5-6; 1973 B.2.5, el aviso 15589 convoca también «en el local Municipal de Vaqueros» (9346 h37). P137 (herramientas): controles para AMPLÍA (y rúbrica AMPLÍA v2), extensión de P135 con esta ronda: (1) toda cita se coteja letra por letra en la imagen, tildes incluidas, aunque esté en minúsculas y aunque la ficha la transcriba corregida (la ficha moderniza: «desempeñe» por «desempéñe»); (2) en el apéndice C la fecha de una ley es la de sanción, que está en el «Dada en la Sala de Sesiones», y la promulgación va aparte; la hoja citada es la de todo el texto, firmas incluidas; (3) un recuento («suma dos obras») no da por decidida una identidad que la misma oración declara abierta; (4) un pedido de D cuyo objeto F extiende a años nuevos se extiende en el mismo ítem, que no mueve el recuento de 22-prospectiva; (5) cuando un AMPLÍA agrega a una oración un acto con fecha, rehace las fechas que la oración ya daba.
+
+**Pendientes revisados sin cerrar.** P54 (1973 y 1974 nombran puestos sanitarios y un médico zonal; ni hospital ni estación). P100 y P118 (1973 y 1974 en barrido con el criterio de F, como dice `amplia-1973-1974.json`). P115 (10:513 sigue sin fuente para capacidad, espejo, profundidad y cota; ningún acto de 1973-1974 los da: por eso el aspecto 1 sigue en 82, como en las rondas 55, 56, 59 y 60). P131, P132 y P134 (láminas, H y E, correcciones de los informes: fuera del alcance de una auditoría; P134 se completa con P136). P133 (resto de los pedidos de D).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.176/25.176 líneas vigentes en `b21a592` | 25.134 vigentes, 42 caducas por el AMPLÍA 1973-1974 |
+| Superlativos, cierres y ausencias en el texto agregado por el AMPLÍA (*el único*, *la única*, *único*, *única*, *el primero*, *la primera*, *el primer*, *por primera vez*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *tampoco*, *sólo*, *siempre*, *todos los*, *todas las*), sobre 6.553 palabras agregadas | 20 coincidencias, todas leídas | Una cae (hallazgo 5, «ninguna biblioteca»); una ausencia sin «lo leído» en un año que no la admite (precisión a, con su gemela de F:78); «el primer año» es ordinal; las demás conservan su universo («ningún acto hallado», «en lo hallado», «ningún dígito que decide un acto del departamento», que el informe 1974 da en E.8) |
+| Repaso de ventana: afirmaciones que cierran en 1972 (*a 1972*, *hasta 1972*, *--1972*, *1958 a 1972*, *1961 a 1972*, *1964 a 1972*) y que abren el hueco en 1973 (*1973--2012*, *1973 a 2012*, *1973 en adelante*, *cuarenta años*, *cincuenta y ocho*, *dieciséis quedan*, *quince,*) | libro entero | Queda una que debía cambiar: D:177 (hallazgo 4). Las de *1970 a 1972* de 04:4599, 06:56, 15:185, 17:281 y D:191 son de contenido de esos años; las de *cincuenta y ocho* son otras (explotaciones, puntos de la línea de ribera, un crecimiento del 58 %) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente, y 60 antes) | 329/329 `\ref{cap:…}` de un capítulo a uno posterior (328 en la ronda 60, más 07:249) | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Recuentos de 1973-1974 (F:25–26 y 80, 00:43, 02:28 y 99, 01:119, 04:3659–3660, 22-infraestructura:545, A:414 y 421) contra el §0, el §1, E.2 y el §R de los informes | 2 años | Tramos: 42 + 1 + 17 = 60; fuera de las ventanas, 1948 y 1958-1974 = 18. Ediciones: 9181–9415 = 235; 9416–9654 = 239 − 1 (9503) = 238. Hojas: 640 + 6.116 = 6.756; 5.516 de edición. Hojas sin mirar: 344 y 181, dentro de «entre sesenta y nueve y setecientas sesenta y cuatro» (00:43). Páginas faltantes: 157 en 109 ediciones y 96 en 78. 9333: 1 + 11 + ½ = 12½ de 16. Resolución 1974: 5.411 de 5.517 hojas a 270–300 ppp = 98,1 %. Hueco 1975–2012: 38 años. Presidentes del 4981: 13 + 1 = 14; renuncias del 80: 31 + 1 = 32; mesas del 137: 9 + 6 = 15 |
+| Aritmética de 1973-1974 | 12 cuentas | 201.592,56 / 121.981,23 = 1,653 (65 %). 7.662.606,58 × 2 = 15.325.213,16. 18.851.203,40 / 15.325.213,16 = 1,230 (23 %). 3.238.200 / 1.890.000 = 1,713. 236.399,74 − 122.960,28 = 113.439,46. 0,1284 + 0,0817 + 0,4447 = 0,6548; 0,0642 + 0,0786 + 0,8554 = 0,9982; 0,1284 / 0,0642 = 2; 0,8554 / 0,4447 = 1,92. 861 × 1,3 = 1.119,30; 399 × 1,3 = 518,70; 378 × 1,3 = 491,40; suma 2.129,40. 3,1368 + 6,3349 + 1,4771 = 10,9489 ha. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 61 | 50 de 137 oraciones con cifra en las 66 líneas, sin las que el AMPLÍA no cambió | **50/50 con fuente localizable**: 33 con la cita en la oración o en la anterior del mismo período, 13 declaraciones de cobertura cuya fuente es el apéndice F, 2 con remisión («fila de 1971», «más arriba») a un pasaje que la cita y 2 encabezados de fila o de párrafo cuya cita está en el mismo párrafo. 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115, 10:513, en una línea que este AMPLÍA tocó) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 66 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 66 líneas, cruzadas con contextos sensibles (P102) | 66/66 líneas | Ningún particular nombrado junto a remate, ejecución, sumario, cesantía, jubilación o embargo: el remate de Villa Urquiza, la posesión veinteañal del catastro 146, el regente cesanteado, el cabo jubilado, el personal del hogar, la encargada del Registro Civil y las auxiliares de enfermería van sin nombre, y el auxiliar de Vaqueros que es diputado, por su cargo y sin nombre. Nombrados: funcionarios (gobernadores, el interventor federal, presidentes de comisión, jueces de paz), contratistas (Sollazzo Hnos., Caminos S.A.), los titulares de las tres fracciones expropiadas por el 2938 (Horizontes S.A., Jaime Durán, Isaac Fernández), como titulares de dominio y no en contexto socioeconómico, y el presidente de El Palenque, como en 1969 |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `d99ba07` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish` y sin `.aux` previos); 901 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las leyes de 1973-1974 van en pasado; ninguna se da por vigente |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 2 y 6 (−10), aplicados |
+| 4 | Fidelidad de transcripción | 7 | 81 | 90 | Tres correcciones silenciosas de una cita (−9); techo de 90 por cotejo parcial |
+| 5 | Honestidad epistémica | 12 | 95 | 100 | Hallazgo 5 (−5); las ausencias de la Tesorería, precisión |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 40 | 100 | 1 error en 39,7 páginas (2,5/100 → 50), un escalón menos por la misma oración |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 4 (−5), aplicado; 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P131 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | P102 funcionó |
+
+**Nota inicial: 80,7 antes del tope y 80,7 después** (tope de 90 por la cobertura acumulada inicial del 99,7 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) dar fuente o pedido a las cifras físicas del embalse de 10:513 (P115): +0,9 (el 1, de 82 a 90); (3) cerrar con documento alguna de las tesis abiertas, por ejemplo el pedido de competencias de D:253 para 1975-2012: hasta +1,8 en el 10; (4) publicar los scripts que faltan y extender las láminas a 1974 (P131): hasta +0,2 en el 13; (5) cotejar en el facsímil el resto de las citas del libro, con la regla de P137 (1): sube el techo del 4 a 100 y vale +0,7.
+
+**Avance del libro:** 6 de 6 hallazgos resueltos (100 %); compila sin errores ni referencias indefinidas, 901 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1973-1974 la Provincia adjudica la etapa B del embalse, conviene con Obras Sanitarias de la Nación un acueducto para la capital, fija por ley el canon de riego para la Administración y los consorcios y la coparticipación por planilla, y el municipio no interviene en ningún acto de agua), la tutela provincial sobre el fisco municipal (ayudas mensuales por decreto, la ordenanza de Vaqueros aprobada sin publicarse, índices fijados por ley sin los datos que los producen) y la designación provincial de los presidentes de comisión aun después de la convocatoria a elecciones de 1973.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 66 líneas (0,26 %; 39,7 páginas). Cobertura acumulada: 25.200 de 25.200 (100,0 %), con el registro de arriba. Falsos positivos descartados: 8. Recortes: no se cotejaron las citas sin comillas de las 45 fichas fuera de las 8 hojas nombradas, ni la Ley 4735, el 7775, el 142, el 2938 y el 3996, bajados y no mirados; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **6 de 6**, en el AMPLÍA 1973-1974 (`d99ba07`), **0 atrapados por un control automático**.
