@@ -2375,3 +2375,145 @@ Balance: de 2 lecturas, 2 decididas por Eduardo, ninguna corregida por un contro
 | Menciones en el libro de las formas decididas | 8 formas (10.403, 10.408, 10403, 53-10, Calderilla S, Plano 80, plano 80, 808) en los 38 archivos `.tex` | Ninguna del informe 1977: «808» aparece 13 veces, ajenas (edicto 808 de 1957, expedientes, montos) |
 | Otras apariciones en el corpus de 1977 | Texto de las dos versiones, 249 ediciones | «53-10.40x» y «plano 808» sólo en su propia hoja |
 | Cita cruzada en informes anteriores | 35 informes LEE (1933–1976) | Ni el expediente ni el plano, ni la matrícula 429, el catastro 1646 o los linderos de La Calderilla |
+
+## Ronda 65 — auditoría con fase 6 (03/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1977-1978. Base: commit `b3b2923` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1977-1978, sobre `deca5b6`, la ronda 64 sin parche), con la fase 6 en `ronda-65.patch` (commit `a43d28a` en la sesión; aplica con `git am` sobre `b3b2923`, probado en un clon limpio de GitHub: árbol `7ed57e1`). **Denominador medido: 25.235 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo**, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 64 (25.214 de 25.214, sobre `deca5b6`) se trasladaron por diff a `b3b2923`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1977-1978 agrega 21 líneas netas (8 en A, 11 en C y 2 en F) y deja 54 líneas nuevas o modificadas en 20 archivos: caducan 33 líneas anteriores**, y quedan **25.181 vigentes sobre 25.235 (99,8 %)**. La ubicación de cada línea se tomó del diff con `--unified=0`.
+
+### Lectura sobre el texto (numeración de `b3b2923`)
+
+Se leyeron **las 54 líneas, enteras, por la sesión**, sin subagentes: las nuevas de A y C completas, y las modificadas del resto en su texto entero, no sólo en el fragmento cambiado. Se cotejaron contra los informes LEE (`BO-Salta-1977_10144-10393_la-caldera_LEE-1977_2026-10-03.txt` y `BO-Salta-1978_10394-10641_la-caldera_LEE-1978_2026-10-03.txt`, bajados de `corrige/lee/`): §0, §A entero (26 fichas de 1977 y 35 de 1978: FICHA, MODO DE LECTURA, TEXTO y NOTA), B.1 y B.2 enteros (14 y 16 entradas), E.2, E.3 y E.4 de los dos, y el §1 de 1978 en lo que hace a la resolución; y el `amplia-1977-1978.json` de `corrige/amplia/`.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 431–438 | 8 | sesión |
+| ape/C-normativa.tex | 22–25, 48–49, 157–161 | 11 | sesión |
+| ape/D-pedidos.tex | 62, 177, 191–192, 253 | 5 | sesión |
+| ape/F-fuentes.tex | 25–26, 86–87, 89 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/04-siglo.tex | 3659–3660, 4599 | 3 | sesión |
+| cap/06-pdua.tex | 56 | 1 | sesión |
+| cap/07-cot.tex | 249, 251 | 2 | sesión |
+| cap/09-defensas.tex | 535, 637 | 2 | sesión |
+| cap/10-expropiacion.tex | 332, 513 | 2 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470 | 1 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/21-ausencias.tex | 87 | 1 | sesión |
+| cap/22-infraestructura.tex | 508, 545 | 2 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): la versión de `deca5b6` de 22-infraestructura:545, frase por frase contra la nueva, para ver dónde entró cada agregado (hallazgos 1 y 2); la serie de 1970 de 17-aguabaja:281 (la concesión a Obras Sanitarias de veinte litros por segundo junto a la desembocadura del Wierna, que usa la corrección del hallazgo 3); y el orden de `\input` de `main.tex` (09-defensas y 17-aguabaja van antes que 22-infraestructura: las dos remisiones nuevas de la fase 6 no llevan «más adelante»).
+
+**Esta ronda: 54 líneas nuevas**, 147.898 bytes sobre 2.983.470, que en las 917 páginas de la base equivalen a **45,5 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `b3b2923` cae dentro de estos tramos.
+
+Acumulado: 25.181 vigentes + 54 = **25.235 de 25.235 (100,0 %)**. La fase 6 toca dos líneas, A:431 y 22-infraestructura:545, dentro de lo leído en esta ronda, y no cambia el largo de ningún archivo: **25.235 de 25.235 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1977 y 1978 de `boletines-salta`)
+
+Imágenes de los PDF del Release renderizadas a 110–250 ppp con PyMuPDF, primero la hoja entera o la columna y después el recorte del renglón, ubicado con el reconocimiento `eng` de la sesión; cada recorte se miró. Se bajaron 43 ediciones (20 de 1977 y 23 de 1978).
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 10206 | 11 y 3 | Decreto 577, visto; sumario | «para el año 1976» en el cuerpo y «para el año 1977» en el sumario. Coincide (A:431, 15:185) |
+| 10251 | 11 y 12 | Decreto 1542, considerandos | «reacondicionamiento total de la red existente que se encuentra obsoleta», veinte años; conexiones domiciliarias a convenir con los frentistas. Coincide (A:432, 22-infraestructura:545) |
+| 10298 | 10 | Decreto 2526, considerando | «las obras paralizadas o con ritmo de trabajo disminuido», «particularmente el "Dique Campo Alegre"». Coincide (A:433, 10:513) |
+| 10307 | 20 y 21 | Decreto 2584, fecha, considerando y art. 1 | 2 de agosto de 1977; «prácticamente ya concluido en su primera etapa»; «actualmente denominado "Campo Alegre", ubicado en el Departamento La Caldera». Coincide (A:433, C:157, 10:513) |
+| 10311 | 5 | Ley 5165, art. 2 | «RURALES» 924; los departamentos a 351. Coincide (A:434, C:158) |
+| 10376 | 31 | Decreto 3596, encabezado y considerando | **Salta, 22 de noviembre de 1977**, expediente 29-85265/77; «relacionados con el Plan de Urbanización de los diques de "Cabra Corral" y "Campo Alegre"». La cita coincide (06:56); la fecha desmiente el «en diciembre» de A:431 (hallazgo 4) |
+| 10345 | 17 | Resolución 594, encabezado, visto, considerando y art. 1 | 17 de octubre de 1977, Ministerio de Economía, «Expediente Cód. 53-10082/77»; «Defensas sobre Río Wierna, Vaqueros, Dpto. La Caldera (Salta)», \$3.345.192; el considerando: «proteger las instalaciones del Matadero Municipal de Vaqueros, servicio de agua corriente de O.S.N., ruta nacional Nº 9 y zonas de cultivos». Coincide (09:535); el considerando desmiente el universo de 22-infraestructura:545 (hallazgo 3) |
+| 10217 | 9 | Decreto 762, cuadro | «Construcción defensas sobre el Río La Caldera - Zona Dique Campo Alegre - Dpto. La Caldera», \$3.289.300. Coincide (09:535) |
+| 10225 | 26 | Decreto 1114, considerando | «no justifica su inclusión en categoría rentada». Coincide (26:235) |
+| 10314 | 16 | Decreto 2736, renglón | «Obs. Pluviométrico Los Yacones», \$9.000. Coincide (09:637) |
+| 10641 | 7 | Decreto 1922, renglón | Los Yacones, \$20.000 por mes, enero a diciembre, \$240.000. Coincide (09:637) |
+| 10341 | 7 | Ley 5183, art. 1 | «Acueducto Embalse Campo Alegre y Planta Potabilizadora». Coincide (22-infraestructura:545) |
+| 10390 | 8 | Decreto 3711, considerando | «Consultorio Externo de La Caldera». Coincide (04:4599) |
+| 10427 | 12 | Res. 66 | «en el puesto sanitario de La Caldera», médico zonal de San Lorenzo, «Alias» [sic]. Coincide (04:4599) |
+| 10421 | 9 | Res. 2060, renglón | «para desempeñarse en la localidad de Vaqueros y La Caldera». Coincide (A:435) |
+| 10422 | 7 | Res. 2059, visto | «anormalidades registradas en el Hogar "Dr. Luis Linares" de La Caldera». Coincide (A:435, 26:235) |
+| 10472 | 8 | Decreto 553, considerandos y arts. 1 a 7 | «en ejercicio pleno del Poder de Policía»; arenas y ripios de los cauces hasta las líneas de ribera; permisos temporales; tasa de servicios no inferior al 10 % del precio del material; «podrá ser delegado a las municipalidades o policía del orden» conforme a la resolución que dicte el administrador general; reglamenta los arts. 239, 240 y 241 de la Ley 775; «muy intensiva e irracional», ríos de Vaqueros y Arenales, inundaciones de la ciudad y de Metán. Coinciden (A:436, C:160, 01:139, 07:251, D:253) |
+| 10533 | 8 | Decreto 1121, visto | «Plaza General José de San Martín», ordenanza 018/78. Coincide (A:435, C:25) |
+| 10588 | 17 | Decreto 1553, considerandos | «paralizada desde enero de 1976»; «asegurar un permanente abastecimiento de aguas para la Ciudad de Salta y riego en zonas aledañas». Coinciden (A:437, 10:513) |
+| 10598 | 16 y 20 | Decreto 1620, considerando y anexo | «Programa Turístico de Campo Alegre - 1ra. Etapa»; «servirá principalmente para satisfacer las necesidades de recreación de la población de Salta»; 3.609, 12.537 y 206.458, «un total de 222.602». Coinciden (A:438, 06:56) |
+| 10618 | 5 | Decreto 1809, inciso 20 | «En Villa San Lorenzo, con jurisdicción además en La Caldera y Vaqueros». Coincide (04:4599) |
+| 10636 | 7 | Decreto 1812, art. 1 | «Establecimiento de Potabilización en el Dique "Ing. José A. Peralta" en Campo Alegre - Departamento La Caldera (Salta)». Coincide (22-infraestructura:545) |
+| 10577 | 7 | Ordenanza 5/77 de Vaqueros | 900 m², 15 por 60 metros. Coincide (C:49, 15:185) |
+
+Son **27 citas entre comillas del libro cotejadas en la imagen** (contadas una vez por pasaje; los nombres propios entre comillas como «El Palenque» no se cuentan, y sí la del considerando de la Res. 594 que la fase 6 introduce), **ninguna con diferencias**, y datos sin comillas en 5 hojas (10376 h31, 10345 h17, 10314 h16, 10641 h7, 10577 h7). Bajadas y no cotejadas: 10182 h7 (el reconocimiento ubicó el considerando y no el punto 3.º; la cita «Interior» sale de una ficha de MODO imagen), 10282, 10316, 10375, 10294, 10334, 10323, 10380, 10405, 10411, 10433, 10434, 10476, 10485, 10499, 10521, 10546, 10554, 10579 y 10635 (fichas de MODO imagen; no se buscó el renglón).
+
+### Hallazgos (cuatro, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 22-infraestructura:545 | El AMPLÍA puso las frases de la red de agua de 1977 entre la obra por administración de 1973 y «Ese mismo año el Centro Vecinal Vaqueros … llama a ratificar o rectificar la resolución … para entregar el servicio» (aviso 15589, Nº 9346, h. 37), que es de 1973: el «mismo año» pasó a ser 1977 | 7 | «En 1973 el Centro Vecinal Vaqueros …» |
+| 2 | 22-infraestructura:545 | El AMPLÍA puso la frase del retiro de la personería del Centro Vecinal Vaqueros, de 1978, delante de «\textbf{Y ese año el municipio de La Caldera se acoge al régimen de la ley nacional 13.577}», que es de 1975 (ordenanza 3/75, 3519, Nº 9877, h. 12): el «ese año» pasó a ser 1978 | 7 | «\textbf{Y en 1975 el municipio de La Caldera se acoge …}» |
+| 3 | 22-infraestructura:545 | «Lo que esos dos años dejan de Obras Sanitarias es el acueducto para la capital»: afirmación de universo que el propio libro desmiente, porque 09:535 da la Res. 594 de 1977, cuyas defensas deben proteger el «servicio de agua corriente de O.S.N.» en Vaqueros (10345 h17, imagen). Además, «esos dos años» no tenía antecedente: la frase anterior hablaba de 1975 a 1978 | 5 | «Lo que 1977 y 1978 dejan de Obras Sanitarias en el departamento es una mención y una obra», con la mención de la Res. 594 y la salvedad de que el acto no dice si es el agua de la localidad ---la que el Centro Vecinal Vaqueros proponía en 1973 entregar a la Dirección de Aguas--- o la toma de veinte litros por segundo otorgada en 1970 junto a la desembocadura del Wierna para la zona norte de la capital (capítulo \ref{cap:aguabaja}); qué acto le dio a Obras Sanitarias un servicio en Vaqueros, si se lo dio, lo hallado no lo dice |
+| 4 | A:431 | «y en diciembre la Provincia le da \$10.000.000 a la Dirección General de Inmuebles» (3596, Nº 10376, h. 31): el decreto es del 22 de noviembre de 1977 y se publica el 6 de diciembre; la fila usa en todo lo demás la fecha del acto (577 en marzo, 3660 en noviembre aunque se publica en diciembre) | 3 | «y ese mismo mes la Provincia le da …», después de los actos de noviembre |
+
+Resta: dos errores de consistencia en el aspecto 7: **2 en 45,5 páginas = 4,4 por cada 100** → escalón de ≤ 8 (**40**); no se resta el escalón adicional, porque ninguno contradice una fecha que el libro dé a menos de diez páginas: la del aviso 15589 y la de la ordenanza 3/75 están en la cronología y en 01:139. Un superlativo de universo que el libro desmiente con su propio dato, en el aspecto 5: **resta 10** (90). Una fecha de publicación dada como fecha del acto, en el aspecto 3: **resta 5** (95). Ninguno sostiene una sección: no hay tope por alcance. Aplicados los cuatro: 100 en la nota final del 3, del 5 y del 7.
+
+**Errores introducidos por la propia auditoría**: los cuatro hallazgos están en el AMPLÍA 1977-1978 (`b3b2923`). **Ninguno lo atrapó un control automático**: ningún control relee, después de insertar una frase en un párrafo, las anáforas temporales que la siguen («ese año», «ese mismo año», «esos dos años», «al año siguiente»); P159 lo propone. Los controles de P144 (comillas rectas), P152 (verbos dispositivos) y P158 (caracteres de control) funcionaron en el AMPLÍA 1977-1978.
+
+**Descartados (falsos positivos, 6).** «En 1978 … el Centro Vecinal "Dr. Carlos Serrey" sigue convocando a sus asambleas» con un aviso de 1977 (10323) y otro de 1978 (10433): «sigue» admite las dos fechas. «El municipio no interviene en ninguno de esos actos» (01:139) aunque la Res. 594 lleva un expediente de código 53 (serie de las actuaciones municipales, P155): el municipio de la frase es La Caldera, y el acto no nombra intervención municipal; el expediente ya está pedido en P155. «La tapa da como gobernador a Ulloa todo el año» (A:435) junto a la firma de Davids como interino el 30 de marzo: lo dice E.4 del informe 1978, y la fila da las dos cosas. «Cinco días antes» (A:433): 2526 es del 28 de julio y 2584 del 2 de agosto; el «tres semanas antes» de la nota de B.2.7 del informe cuenta por la publicación. «La foliatura corre de la página 1 a la 6.024, de modo que faltan 113» (F:86) contra las 6.000 declaradas del §R: E.2 del informe da los folios 1 a 6.024 y el §R usa la tapa, como dice L6. El «en 1978 reconoce los servicios del médico zonal de ese consultorio» (04:4599) con una resolución del 13 de diciembre de 1977: el pasaje cuenta los actos hallados de cada año por su publicación, como en los años anteriores.
+
+**Pendientes que cierra.** Ninguno.
+
+**Pendientes nuevos.** P159 (herramientas): control de **anáforas temporales** para AMPLÍA (extensión de P149, P152 y P158): después de insertar una o más frases en un párrafo, se listan las frases siguientes del mismo párrafo que empiezan o se apoyan en «ese año», «ese mismo año», «ese mes», «esos dos años», «al año siguiente», «un año después» o «entonces», y se comprueba que su antecedente siga siendo el mismo; en 22-infraestructura:545 el AMPLÍA 1977-1978 desplazó dos («Ese mismo año», 1973, y «Y ese año», 1975). P160 (lee, 1978): corregir la NOTA de B.2.2 del informe LEE 1978: el decreto del refuerzo de \$10.000.000 a Inmuebles es el 3596 del 22-11-1977, como imprime su encabezado en la imagen (10376 h31), y no el 3598 de la capa. P161 (libro, 1977): pedido para el apéndice D cuando se reabra el recuento de 22-prospectiva (como P155): el acto, convenio o resolución que haya puesto en Obras Sanitarias de la Nación un «servicio de agua corriente» en Vaqueros, que nombra la Res. 594 de 1977 (10345 h17), y su relación con la propuesta del Centro Vecinal Vaqueros de 1973 y con la concesión de 1970 del subálveo del río La Caldera.
+
+**Pendientes revisados sin cerrar.** P54 (1977 y 1978 nombran el consultorio externo y el puesto sanitario de La Caldera y los consultorios externos de Vaqueros y La Caldera; ni hospital ni estación). P100 y P118 (1977 y 1978 en barrido, con el criterio de F, como dice `amplia-1977-1978.json`). P115 (10:513 sigue sin fuente para capacidad, espejo, profundidad y cota; los actos de 1977 y 1978 que nombran el embalse no dan ninguna: el aspecto 1 sigue en 82). P138, P139, P141, P145, P146, P153 y P154 (láminas, H y E: fuera del alcance de una auditoría). P140, P147 y P155 (pedidos de D que el AMPLÍA no agregó para no mover el recuento de 284). P143, P148, P150, P151, P156 y P157 (correcciones de los informes LEE). P144, P149, P152 y P158 (scripts de control).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.214/25.214 líneas vigentes en `deca5b6` | 25.181 vigentes, 33 caducas por el AMPLÍA 1977-1978 |
+| Superlativos, cierres y ausencias en el texto agregado por el AMPLÍA (*el único*, *la única*, *único*, *única*, *el primero*, *la primera*, *el primer*, *por primera vez*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *tampoco*, *sólo*, *siempre*, *todos los*, *todas las*, *no se publica*, *no lo dice*, *no publica*, *no trae*, *no interviene*, *no figura*, *no nombra*, *sin publicar*), sobre 6.286 palabras agregadas | 30 coincidencias, todas leídas | Ninguna cae: las ausencias llevan su universo («lo hallado de 1978 no trae», «la lectura no halló», «no aparece en lo hallado de los dos años», «en lo leído de los dos años»); «la más baja de cuatro ofertas» es del cuadro del decreto 3941; «la primera» son la primera etapa del programa y la primera de tres ediciones; «casi siempre las últimas» es de la foliatura (E.2). El control no atrapa la exhaustividad sin cuantificador del hallazgo 3 («Lo que esos dos años dejan … es»): se encontró leyendo |
+| Repaso de ventana: afirmaciones que cierran en 1976 (*a 1976*, *hasta 1976*, *1958 a 1976*, *1958--1976*) y que abren el hueco en 1977 (*1977--2012*, *1977 a 2012*, *1977 en adelante*, *treinta y seis años*, *sesenta y dos tramos*, *sesenta y tres tramos*, *10.143*); y los *caption* de las láminas | libro entero | Ninguna queda sin actualizar. «1958 a 1976» queda sólo en F:86, que compara; los «treinta y seis años» de 04:2621, 04:3490, D:220 y H:12 son de otros universos (1909-1945 y edictos); las láminas que piden extensión siguen en P153 |
+| Anáforas temporales en las líneas tocadas por el AMPLÍA (*ese año*, *ese mismo año*, *el mismo año*, *esos años*, *esos dos años*, *ese mes*, *ese mismo mes*, *ese día*, *al año siguiente*, *un año después*), por script después del hallazgo 1, con cada coincidencia leída contra la frase anterior | 54/54 líneas; 24 coincidencias en `b3b2923` | 3 desplazadas, las tres en 22-infraestructura:545 (hallazgos 1, 2 y 3); las demás siguen en su año (entre ellas el «Ese año» de 15:185, que sigue a la Ley 5082 de 1976 porque el bloque de 1977-1978 entró después). Después de la fase 6, 22 coincidencias, con el «ese mismo mes» nuevo de A:431 |
+| Comillas rectas que `babel` deforma (P144) | 25/25 comillas rectas del fuente | 1 en el texto de una línea tocada (26:235, «"GUSTAVO MARTINEZ ZUVIRIA"», anterior al AMPLÍA); en el PDF compilado, 0 *Ç*, 0 *ç* y 0 *ï* |
+| Caracteres de control en el diff (P158) | 54 líneas agregadas | 0 |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente, y 60 antes; orden de `\input` de `main.tex`; sin los apéndices) | 337/337 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Recuentos de 1977 y 1978 (F:25–26 y 86, 00:43, 02:28 y 99, 01:119 y 139, 04:3659–3660, 20:880–881, 22-infraestructura:545, D:177, A:431 y 435) contra §0, §1, E.2, E.3, E.4 y §R de los informes | 2 años | Tramos: 42 + 1 + 21 = 64; fuera de las ventanas, 1948 y 1958-1978 = 22. Ediciones: 10144–10393 = 250 números, 249 sin la 10347; 10394–10641 = 248, sin ausentes. Hojas 1977: 7.090 declaradas − 6.928 presentes = 162, en 105 ediciones; huecos interiores 8 + 3 + 1 = 12 en 10151, 10300 y 10318; capa 774 + OCR 6.154 = 6.928. Hojas 1978: folios 1 a 6.024 − 5.911 = 113; capa 724 + OCR 5.187 = 5.911. A ojos 320 y 221, dentro del intervalo de 00:43 (69 a 764); poca tinta 767 y 504. Discrepancias: 1977, 28 + 176 = 204 de 376; 1978, 35 sin resolver + 67 sin trabajar = 102 de 267. Actos mirados: 26 + 14 = 40 y 35 + 16 = 51, los del §R. Días hábiles sin edición: 10 y 12. Hueco 1979–2012: 34 años. D:177: dieciocho cifras de hojas sin mirar para 1961-1978, cuatro de poca tinta para 1975-1978 y quince de páginas faltantes para 1964-1978 |
+| Aritmética de 1977 y 1978 | 12 cuentas | 8.237.000 − 8.018.571 = 218.429. 7.787.292 − 7.760.000 = 27.292. 44.336.362 − 41.892.977 = 2.443.385. 4.500.000 + 650.000 + 650.000 = 5.800.000. 900 × 2.000 = 1.800.000; 15 × 60 = 900. 3.609 + 12.537 + 206.458 = 222.604, contra los 222.602 impresos. 0,6894 − 0,6892 = 0,6287 − 0,6285 = 0,0002. 20.000 × 12 = 240.000. 9.000 de enero a junio y otro tanto de julio a diciembre. 21 de marzo a 17 de noviembre de 1977: ocho meses. 28 de julio a 2 de agosto: cinco días. 14.708.658 > 8.711.570 (las dos cifras de la red, que el libro no concilia). Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 65 | 50 de 189 cláusulas con cifra en el texto agregado | **50/50 con fuente localizable**: la cita en la cláusula, en la misma oración o en la misma fila, o, en las declaraciones de cobertura, el apéndice F y el informe que F cita. 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115, 10:513, en una línea que este AMPLÍA tocó) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 54 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 54 líneas, cruzadas con contextos sensibles (P102) | 54/54 líneas | Ningún particular nombrado junto a sumario, cesantía, retiro, suspensión, licencia o juicio: los policías, el personal y el sumario del Hogar «Dr. Luis Linares», los médicos y la odontóloga, el encargado del Registro Civil de Vaqueros, el observador pluviométrico, los socios de La Calderilla S. A., las partes de las posesiones veinteañales (salvo la firma demandada, Arancibia Hnos.), los peticionantes de agua y el minero van sin nombre; los herederos de Carlos Serrey, sin sus nombres. Nombrados: funcionarios (gobernadores, Davids, Fernández, Camacho, los jueces de paz Muñoz y los Mangogna), José Alfonso Peralta, por el nombre que el decreto da al dique, y las empresas (Luis Benjamín Chávez, de la línea 23; Jocar S. A.; M.E.I. Obras y Servicios S.R.L.; Caminos S. A.) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo |
+| Compilación | libro entero, base `b3b2923` y fase 6, cada una en un clon limpio | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló, y sin `.aux` previos); 917 páginas la base y 919 con la fase 6; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, las que dicen 00:75 y F; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | La Ley 5165 deroga la 4840 y va en pasado; el Decreto 553, el 798 y la Ley 5248, en pasado |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 4 (fecha de publicación dada como fecha del acto); aplicado. Las demás filas separan acto y publicación (30-12 y enero; 13-11 y diciembre; 13-12-1977 y febrero) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 27 citas cotejadas, ninguna con diferencias; techo de 90 por cotejo parcial |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 3: universo afirmado que el libro desmiente con su propio dato, resta 10; aplicado. Las ausencias de 1977-1978 llevan su universo |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 40 | 100 | 2 errores en 45,5 páginas (4,4 por 100): escalón de ≤ 8; aplicados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin faltas nuevas; 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P153 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | P102 funcionó |
+
+**Nota inicial: 81,4 antes del tope y 81,4 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas ---las resoluciones de delegación del poder de policía sobre los áridos que el art. 5 del decreto 553 prevé (D:253) dirían si en 1978 el municipio recuperó por delegación algo de lo que cobraba por ordenanza---: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:513 (P115): +0,9 (el 1, de 82 a 90); (4) cotejar en el facsímil el resto de las citas del libro y dejar corriendo los controles de P144, P152, P158 y P159: sube el techo del 4 a 100 y vale +0,7; (5) publicar los scripts que faltan y extender las láminas a 1978 (P138, P145, P153): hasta +0,2 en el 13.
+
+**Avance del libro:** 4 de 4 hallazgos resueltos (100 %); compila sin errores ni referencias indefinidas, 919 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1977 y 1978 el municipio no interviene en ningún acto de agua hallado; en 1978 la Provincia pone en la Administración General de Aguas la policía de los áridos que los dos municipios cobraban por ordenanza, con una delegación posible «a las municipalidades o policía del orden» que lo hallado no muestra ejercida), la tutela provincial sobre el fisco municipal (presupuestos aprobados por decreto sin el texto que los mismos decretos mandan publicar) y la presencia de Obras Sanitarias en el departamento (el acueducto y la potabilizadora del embalse para la capital, y un «servicio de agua corriente de O.S.N.» en Vaqueros que ningún acto hallado explica).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 54 líneas (0,21 %; 45,5 páginas). Cobertura acumulada: 25.235 de 25.235 (100,0 %), con el registro de arriba. Falsos positivos descartados: 6. Recortes: no se cotejaron el punto 3.º de la Res. Gral. 4 (10182 h7) ni los renglones de las 20 ediciones bajadas sin buscar (fichas de MODO imagen); el repaso de anáforas temporales se corrió por script en esta ronda, pero después de la lectura que encontró el hallazgo 1, y no forma parte todavía de los controles del AMPLÍA (P159); la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **4 de 4**, en el AMPLÍA 1977-1978 (`b3b2923`), **0 atrapados por un control automático**.
