@@ -3067,3 +3067,136 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos (100 %) y dos precisiones aplicadas; compila sin errores ni referencias indefinidas, 947 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 1984 y 1985 el ejecutivo de las dos comisiones sigue designado por decreto, renovado por un año, mientras el departamento vuelve a votar sólo los miembros de las comisiones; el municipio aparece ante los ríos como parte de dos convenios de defensas que no se publican, y ante el agua de riego no aparece: el único trámite de particulares de los dos años no lo consulta) y la tutela provincial sobre el fisco municipal (catorce anticipos de coparticipación en 1984 para pagar sueldos y dietas, tres planillas que no suman lo que imprimen, y en noviembre de 1985 dos decretos del mismo total que dan a La Caldera mil australes en uno y nada en el otro). Ninguna tesis cambió de estado en esta ronda.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 64 líneas (0,25 %; 51,1 páginas). Cobertura acumulada: 25.337 de 25.337 (100,0 %), con el registro de arriba. Falsos positivos descartados: 6. Recortes: se leyeron enteras las fichas de los dos años en su FUENTE, FICHA y NOTA, y el TEXTO de las que sostienen cifras, fechas o citas, no el TEXTO de todas; no se cotejaron renglón por renglón las 3 ediciones bajadas sin cita entre comillas en el libro; los controles de P164, P170, P174, P175 y P181 se corrieron a mano; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **2 de 2**, uno en el AMPLÍA 1983-1985 (`4807954`) y otro en el 1981-1983 (`58b897f`), **0 atrapados por un control automático**.
+
+## Ronda 70 — auditoría con fase 6 (04/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1986-1988. Base: commit `1bd1c1d` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1986-1988, sobre `83a0b59`, la ronda 69), con la fase 6 en `ronda-70.patch` (commit `8ef9319` en la sesión; aplica con `git am` sobre `1bd1c1d`, probado en un clon limpio de GitHub: árbol `9b3c0f2`). **Denominador medido: 25.366 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo** con la fase 6, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 69 (25.337 de 25.337, sobre `3feef81`, que en GitHub es `83a0b59`, con el mismo árbol `cf0d7dc`) se trasladaron por diff a `1bd1c1d`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1986-1988 agrega 29 líneas netas (8 en A, 16 en C, 2 en F, 1 en 10 y 2 en 18) y deja 80 líneas nuevas o modificadas en 21 archivos: caducan 51 líneas anteriores**, y quedan **25.286 vigentes sobre 25.366 (99,7 %)**. La ubicación de cada línea se tomó del diff con `difflib` sobre las dos versiones de cada archivo.
+
+### Lectura sobre el texto (numeración de `1bd1c1d`)
+
+Se leyeron **las 80 líneas, enteras, por la sesión**, sin subagentes: las nuevas de A y C completas, y las modificadas del resto en su texto entero (201.177 bytes), además de la lista de cada cambio palabra por palabra con su contexto (8.347 palabras agregadas). Se cotejaron contra los tres informes LEE (`BO-Salta-1986_12374-12618_la-caldera_LEE-1986_2026-10-04.txt`, `BO-Salta-1987_12619-12855_la-caldera_LEE-1987_2026-10-04.txt` y `BO-Salta-1988_12856-13101_la-caldera_LEE-1988_2026-10-04.txt`, de `corrige/lee/`): la lista entera de fichas (150: §A y §B.2 de los tres años, FUENTE y FICHA), el §0 de los tres, el §E.9 de 1986 (contradicciones) y el TEXTO y la NOTA de las fichas que sostienen afirmaciones con cifras, fechas, nombres o citas (685, 766, 2786, 1527, 2410, 2444 y 3041 de 1986; Ley 6434 de 1987; 271 de 1988), y el informe LEE 1985 para la superficie de la Ley 6334.
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 477–486 | 10 | sesión |
+| ape/C-normativa.tex | 296–311 | 16 | sesión |
+| ape/D-pedidos.tex | 39, 160, 192, 239, 253, 260 | 6 | sesión |
+| ape/F-fuentes.tex | 25–26, 96–97, 99 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/03-fincas.tex | 865, 1029–1031 | 4 | sesión |
+| cap/04-siglo.tex | 3659–3660, 3818, 4599 | 4 | sesión |
+| cap/05-tierra.tex | 285 | 1 | sesión |
+| cap/09-defensas.tex | 535, 642 | 2 | sesión |
+| cap/10-expropiacion.tex | 101, 108, 113, 115, 133, 137, 139, 146, 335, 516 | 10 | sesión |
+| cap/15-hacienda.tex | 185 | 1 | sesión |
+| cap/16-redes.tex | 789 | 1 | sesión |
+| cap/17-aguabaja.tex | 281 | 1 | sesión |
+| cap/18-politica.tex | 470, 668–670, 726 | 5 | sesión |
+| cap/20-opacidad.tex | 880–881, 1036, 1038 | 4 | sesión |
+| cap/21-conclusion.tex | 28, 120 | 2 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/22-prospectiva.tex | 144 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): A:476 (Ley 6334, 1.736,80 m²); C:122 (Ley 6354); E:82 (Carlos Serrey, con la Ley 6354, la 6334 y la 6464); 10:100–110 (la ficha de la Ley 6354); 03:862–866; 04:3812–3819; 18:660–672 (la ficha de intendencias), 18:497 y 531–533 (Esteban Mogro, para el «más abajo» de 18:470); 22-prospectiva:140–150; D:177 (pedido de hojas sin mirar y páginas faltantes), y 26:235 hasta la Ley 1402.
+
+**Esta ronda: 80 líneas nuevas**, 201.177 bytes sobre 3.157.101, que en las 961 páginas de la base equivalen a **61,2 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `1bd1c1d` cae dentro de estos tramos.
+
+Acumulado: 25.286 vigentes + 80 = **25.366 de 25.366 (100,0 %)**. La fase 6 toca diez líneas: A:477 y 478, 03:1031, 10:113 y 137 y 15:185, dentro de lo leído en esta ronda, y C:122, D:177 y E:82, que estaban vigentes y se releyeron como contexto; no cambia el largo de ningún archivo: **25.366 de 25.366 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 1985 a 1988 de `boletines-salta`)
+
+Imágenes de los PDF del Release renderizadas a 200 ppp con PyMuPDF; el renglón se ubicó con el reconocimiento `eng` de la sesión, se recortó a 300 ppp con su contexto y cada recorte se miró. Se bajaron 12 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 12682 | 85 | Ley 6434, plan del I.P.D.U.V., renglón 75 | «30 VIV. LA CALDERA». Coincide (10:146, D:39, C:304) |
+| 12589 | 7 | Decreto 3041, art. 1 | «"Provincia de Salta vs. Manuel F. Serrey y otros"». Coincide (10:113) |
+| 12589 | 8 | Decreto 3042 | «con destino a Obras Públicas». Coincide (15:185) |
+| 12594 | 14 | Licitación 11/86 | «Ampliación y Remodelación Hogar de Niños Luis Linares - La Caldera». Coincide (26:235, A:477) |
+| 12595 | 26 | Ley 6416, Hidráulica, obra 5 (hoja girada) | «Toma y Canal Campo Alegre - Etapa 3», 300.000 + 249.537,38 + 69.000 = 618.537,38. Coincide (10:516, C:301) |
+| 12551 | 6 | Decreto 2444, arts. 1 y 2 | Los cinco propietarios y «(-A- 515,48)» a Fiscalía de Gobierno. Coincide (10:108) |
+| 12416 | 7 | Decreto 685, art. 1 | «2 Has. 1.735,80 m2». Hallazgo 3 |
+| 12311 | 5 | Ley 6334, art. 1 (LEE 1985) | «2 Has. 1.736,80». Hallazgo 3 |
+
+Bajadas y no cotejadas renglón por renglón: 12544, 12710, 12721, 12790 y 12920 (decretos 2410, 907 y 908, 1080, 1928 y 271; sus datos se cotejaron contra el TEXTO de las fichas).
+
+Son **5 citas entre comillas del libro cotejadas en la imagen** («30 VIV. LA CALDERA», «Manuel F. Serrey y otros», «con destino a Obras Públicas», «Hogar de Niños», «Toma y Canal Campo Alegre - Etapa 3»; los nombres propios entre comillas, como «Dr. Luis Linares» o «La Reconquista», no se cuentan): **ninguna con diferencias**, sobre 5 citas nuevas del AMPLÍA (5/5), y datos sin comillas en 3 hojas más (12551 h6, 12416 h7, 12311 h5).
+
+### Hallazgos (cuatro, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:478, C:122, E:82, 03:1031 | El CONTRADICE del AMPLÍA ---el decreto 2444/86 no nombra a Elena Serrey de González Bonorino entre los cinco propietarios de la matrícula 1303--- se aplicó en 03:865 y 1029–1031 y en el capítulo 10, pero no en el resto: la fila del 4 de marzo de 1986 dice que la Ley 6354 «expropia 8.158,71 m² de Elena Serrey de González Bonorino» y, en la misma fila, que no está entre los propietarios; C:122 («Expropia … de Elena Serrey»), E:82 («en 1986 se expropió a Elena Serrey de González Bonorino un inmueble») y el cierre de 03:1031 («el mismo apellido cede tierra al Estado por expropiación») siguen diciendo lo que el AMPLÍA corrigió. La ley dice «Elena Serrey de González Bonorino y otros» y declara la utilidad pública | 7 (contradicción en la misma fila) | A:478 y C:122: «declara de utilidad pública y sujetos a expropiación 8.158,71 m² de Elena Serrey de González Bonorino y otros»; C:122 suma que el 2444 no la nombra; E:82: «la Ley 6354 declaró expropiable un inmueble de La Caldera de Elena Serrey de González Bonorino y otros … y el decreto que manda promover el juicio no la nombra entre sus cinco propietarios»; 03:1031: «el mismo apellido está en una expropiación para vivienda social cuyo juicio la Provincia manda promover en 1986» |
+| 2 | 10:137, 03:1031 | «En 1985 y 1986 dos fracciones de la misma Finca Vaqueros pasaron al Estado por expropiación», y en 03:1031 el linaje «cede … por dos expropiaciones de 1985 y 1986, tierra». Veinticuatro líneas más arriba (10:113 y 115) el texto del AMPLÍA da para las dos sólo el decreto que faculta a promover el juicio y, para una, la posesión al Instituto «hasta que se resuelva el juicio» (3041, Nº 12589, h. 7, imagen); y la frase siguiente de 10:137, en el mismo estado procesal, dice de La Caldera «fueron declarados expropiables … y la Provincia promovió el juicio» | 7 (contradicción a menos de diez páginas) | 10:137: «fueron declaradas expropiables, y la Provincia promovió sus juicios y le dio al Instituto de vivienda la posesión de una de ellas»; 03:1031: «tiene además dos fracciones declaradas expropiables en 1985 y 1986» |
+| 3 | 10:113 | El texto agregado cita el decreto 685/86, que faculta a promover el juicio de la Ley 6334 por «2 Has. 1.735,80 m2» (Nº 12416, h. 7, imagen), en la misma oración que da la superficie de la ley, 2 ha 1.736,80 m² (Nº 12311, h. 5, imagen), sin señalar que difieren en un metro cuadrado | 6 (discrepancia entre fuentes no señalada) | «faculta a Fiscalía de Gobierno a promover el juicio ---por un inmueble de 2 ha 1.735,80 m², un metro cuadrado menos que el de la ley, sin decir por qué--- y le paga A~90,51» |
+| 4 | D:177 | El pedido de lectura sobre la imagen de las hojas sin mirar y de las páginas faltantes llega a 1985 («153 de poca tinta de 1975 a 1985», «escaneos de 1964 a 1985»), y no suma los límites que el propio AMPLÍA declara en 00:43 y F:96: las 290 hojas de poca tinta de 1986 sin mirar una por una, las dos páginas faltantes de la 12567 (una, la recaudación que cita su sumario) y las diecisiete que declaran las tapas de la 12567, la 12575 y la 12596. El AMPLÍA 1983-1985 sí había sumado las suyas en ese ítem | 8 (límite declarado sin su pedido) | «y 153 de poca tinta de 1975 a 1985 y las 290 de 1986»; «escaneos de 1964 a 1986 --- … 24, 19 y 2», con la 12567; y las diecisiete páginas declaradas por las tres tapas. El ítem no cambia el recuento: 284 |
+
+**Precisiones aplicadas sin restar.** (a) 15:185: «las otras dos no cierran por A~182 y por A~914, sin dígito dudoso que lo explique»: el LEE 1986 (A.24, E.9) explica exactamente los 182 ---Payogasta se imprime 424 donde el decreto 1196, del mismo concepto y del mes anterior, imprime 242---; pasa a decirlo. (b) A:477 y C:296: los convenios de La Caldera de 1985-1986 iban todos «para defensas en la margen derecha del río»; el 766 dice «Zona Cabral y frente al Pueblo», sin margen: A:477, «dos de ellos en su margen derecha»; C:296, «unas en la Zona Cabral y frente al pueblo y otras en su margen derecha». (c) 15:185: la cita de los «otros quince decretos de anticipos» que no publican planilla daba sólo los diez del 12954; suma 1668 a 1670 (Nº 13040), 1772 (Nº 13044) y 2112 (Nº 13071), del LEE 1988 B.2.5.
+
+Resta: dos errores de consistencia en 61,2 páginas (3,3 por cada cien: escalón de ≤ 4, 50), uno de ellos con material a menos de diez páginas y otro dentro de la misma fila: un escalón más, **40** en el aspecto 7. Una discrepancia entre fuentes no señalada, en el aspecto 6: **resta 5** (85, desde el 90 de la ronda 69). Un límite sin pedido, en el aspecto 8: **resta 5** (90). Ninguno sostiene una sección: no hay tope por alcance. Aplicados los cuatro: 100 en el 7, 90 en el 6 y 95 en el 8 en la nota final.
+
+**Errores introducidos por la propia auditoría**: los cuatro, en el AMPLÍA 1986-1988 (`1bd1c1d`): el 1 y el 2 aplicaron el CONTRADICE sólo donde el índice del AMPLÍA buscaba la matrícula 1303 y el nombre en capítulos, no en A, C y E ni en la frase vecina sobre Vaqueros; el 3 incorporó una cifra del decreto sin cruzarla con la de la ley, que el libro ya tenía; el 4 actualizó 00:43 y F:96 y no el ítem de D que pide lo mismo. **Ninguno lo atrapó un control automático.** P186 los propone. Los controles de P144 (comillas rectas: 0 nuevas), P158 (caracteres de control: 0), P164 (fecha de acto y de publicación: el 2876 de octubre publicado en noviembre, el 3041 de octubre publicado en noviembre, bien dichos), P170 (remisiones), P174 (anáforas) y P102 (privacidad) se corrieron a mano y no dieron caídas.
+
+**Descartados (falsos positivos, 7).** «Fiscalía de Gobierno» (2444 y 685) y «Fiscalía de Estado» (3367) en la misma página: son los organismos que nombra cada decreto (fichas A.10, A.39 y A.59). «El decreto se había publicado en noviembre de 1986» (10:115) contra «en octubre el 3041» (10:113): el 2876 es del 14 de octubre y sale en la 12579 del 3 de noviembre; el 3041 es del 29 de octubre. «Se prorroga dos veces en el año» (A:481) contra «cinco veces» (10:516): dos en 1987 y tres en 1988 (B.2.8 de 1987 y B.2.4 de 1988). «La más baja de cinco, rebajada un nueve por ciento» (A:479): 599.314,24 es la menor de las cinco y 545.375,96 / 599.314,24 = 0,910. «Más de cuatro veces y media su presupuesto» (A:485): 3.003.122,13 / 654.123 = 4,59. Las dos listas del anexo del artículo 29 (A:481: hospital, colegio, gas; 22:545: energía, gas, alumbrado): son ocho obras y cada pasaje nombra las que sirven a su tema. «Mogro … (más abajo)» en 18:470: Esteban Mogro está en 18:497 y 531–533.
+
+**Pendientes que cierra.** Ninguno.
+
+**Pendientes nuevos.** P186 (herramientas): dos controles más para AMPLÍA (extensión de P175 y P181). (1) **Propagación de un CONTRADICE**: cuando el AMPLÍA clasifica una ficha como CONTRADICE, el script busca en todo el libro, apéndices incluidos, el nombre, la matrícula, el catastro y el número de la norma de la ficha, y lista cada línea que conserva el verbo o la afirmación desmentida («expropia», «se expropió», «cede tierra»), para corregirla o justificarla (caso: A:478, C:122, E:82 y 03:1031, ronda 70). (2) **Límites declarados y su pedido**: cada cifra de hojas sin mirar o de páginas faltantes que el AMPLÍA agrega a 00 o a F se busca en D:177; si no está, el ítem se actualiza (caso: las 290 de 1986, ronda 70). Y una regla de lectura: al citar un acto que da una superficie o un importe que el libro ya trae de otro acto, se comparan (caso: 1.735,80 contra 1.736,80, ronda 70).
+
+**Pendientes revisados sin cerrar.** P182 (láminas de 1986-1988: sin cambio). P183 (H y E de 1986-1988: la corrección de E:82 toca la entrada de Carlos Serrey, no las personas que P183 agrega; sigue abierto). P184 (pedidos de 1986-1988 fuera de D: siguen fuera; la fase 6 actualiza un ítem existente y no mueve el recuento: 22-prospectiva cierra con 284). P185 (dudas 1986-1988: ninguna toca la fase 6). P115 (10:516 sigue sin fuente para las cifras físicas del embalse). P40 (trazabilidad).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.337/25.337 líneas vigentes en `83a0b59` | 25.286 vigentes, 51 caducas por el AMPLÍA 1986-1988 |
+| Citas de edición y hoja del texto agregado contra los bloques FUENTE de los tres informes | 146 pares (edición, hoja) de 1986-1988 | 146 localizados |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *nunca*, *jamás*, *ningún*, *ninguna*, *no aparece*, *no consta*, *tampoco*, *sólo*, *siempre*, *todos*, *todas*, *no lo dice*, *no se publica*, *no publica*, *no nombra*, *no dice*, *sin que*, *mayor*, *doble*, *otra vez*, *vuelve*, *de siempre*), sobre 8.347 palabras agregadas | 40 coincidencias, todas leídas | Ninguna cae: las ausencias llevan su universo («lo hallado de 1987 ni el de 1988», «en lo hallado del año», «la lectura halló seis trámites … y en ninguno»); «la más baja de cinco» y «sólo uno se publica» cierran contra las fichas |
+| Repaso de ventana: afirmaciones que cierran en 1985 (*1958 a 1985*, *hasta 1985*, *a 1985*, *1958--1985*, *12.373*, *lo hallado de 1985*) y que abren el hueco en 1986 (*1986--2012*, *1986 a 2012*, *veintisiete años*, *setenta y un*, *veintiocho*, *veintinueve*, *desde 1986*, *de 1986 en adelante*) | libro entero | Una sin actualizar: D:177, «de 1975 a 1985» y «de 1964 a 1985» (hallazgo 4). Las demás: «1964 a 1985» y «1975 a 1985» de 22:545 son universos cerrados de una afirmación que el párrafo nuevo extiende; F:96 «quedan como 1958 a 1985» compara; «no se afora el río desde 1986» (23:13) es otra serie; «veintisiete años» de 03 y E, «veintiocho» de 10:44 y 22-prospectiva:144 son otras cuentas. Recuentos: 42 + 1 + 31 = 74 tramos; 74 − 42 = 32 fuera de las ventanas; 1989 a 2012 = 24 años |
+| Propagación del CONTRADICE de la Ley 6354 (*Elena Serrey*, *1.303*, *6354*, *expropi*) | libro entero, 10 líneas con el nombre y 03:1031, que lo sigue | 4 sin corregir: A:478, C:122, E:82 y 03:1031 (hallazgo 1) |
+| Anáforas en las líneas tocadas por el AMPLÍA (P159, P169 y P174) y texto que sigue a cada inserción | 80/80 líneas y las 27 inserciones de más de 300 caracteres | 0 caídas: «El dique tiene» sigue a la inserción de 10:516, con sujeto; «La lámina» de 22-prospectiva y 26 remite a la lámina, no al texto nuevo |
+| Comillas rectas que `babel` deforma (P144) | 0 en lo agregado por el AMPLÍA y por la fase 6 | en el PDF compilado, 0 *Ç* y 0 *ç* |
+| Caracteres de control (P158) | 38 archivos | 0 |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente, y 60 antes; orden de `\input` de `main.tex`) | 351/351 `\ref{cap:…}` de un capítulo a uno posterior | 0 sin marcar, antes y después de la fase 6 |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Aritmética de 1986-1988 | 10 cuentas | 545.375,96 / 445.158,23 = 1,2251; 545.375,96 / 599.314,24 = 0,910; 3.003.122,13 / 654.123 = 4,59; 1.244.891,44 + 731.423,86 + 1.019.069,38 = 2.995.384,68; 300.000 + 249.537,38 + 69.000 = 618.537,38; 259.725,75 + 86.575,25 + 43.287,62 = 389.588,62 (la ley imprime 389.588); 15 planillas de 1986 (fichas A.1 a A.57); 4 de 1987; 6 de 1988; 10 + 5 = 15 decretos sin planilla. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 70 | 50 de 462 oraciones con cifra en las 80 líneas | **50/50 con fuente localizable**: 42 con la cita en la oración o en la fila (por script); las otras 8 son declaraciones de cobertura de 00, 02 y F, que remiten al apéndice F, y oraciones de síntesis seguidas de su cita o con remisión de capítulo. 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 80 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 80 líneas, cruzadas con contextos sensibles (P102: *remate*, *ejecución*, *juicio*, *deudor*, *embargo*, *cesante*, *renuncia*, *jubila*, *D.N.I.*, *clase*) | 80/80 líneas | 0 caídas. Sin nombre: la médica cesante, el ejecutado de la esquina de Güemes y Los Sauces, los deudores de las ejecuciones fiscales de Vaqueros, el titular de los derechos rematados en la avenida Güemes, los deudores del Banco Provincial, la becaria, el odontólogo. La clase de Mogro y el D.N.I. del juez de paz no están en el libro. Nombrados: autoridades comunales, candidatos y propietarios de expropiaciones por ley (actos públicos de utilidad pública, sin imputación) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `1bd1c1d` y fase 6, cada una en una copia limpia | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló, y sin `.aux` previos, tres pasadas de `pdflatex`); 961 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin normas nuevas citadas en presente; las de 1986-1988 van en pasado |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de acto y de publicación bien distinguidas (2876, 3041, 2786/85, 3653 y 3659/86) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 5 citas cotejadas, ninguna con diferencias; techo de 90 por cotejo parcial del libro |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Las ausencias de 1986-1988 llevan su universo; ninguna salvedad borrada |
+| 6 | Tipo y jerarquía de fuente | 5 | 85 | 90 | Hallazgo 3 (−5); aplicado |
+| 7 | Consistencia interna | 9 | 40 | 100 | Hallazgos 1 y 2: 2 errores en 61,2 páginas (50), con material a menos de diez páginas (un escalón más); aplicados |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 4 (−5); aplicado. 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P182 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 80 líneas; 90 como en la ronda 69 |
+
+**Nota inicial: 82,3 antes del tope y 82,3 después** (tope de 90 por la cobertura acumulada inicial del 99,7 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas ---el escrutinio del 6 de septiembre de 1987 en La Caldera y Vaqueros, que D:160 pide y que diría quién fue el primer intendente votado desde 1983, o la resolución judicial de la tierra del embalse---: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9 (el 1, de 82 a 90); (4) dejar corriendo los controles de P164, P170, P174, P175, P181 y P186 como paso automático del AMPLÍA, que habrían atrapado los cuatro hallazgos de esta ronda: protege el 7, el 6 y el 8 en la nota inicial de la ronda siguiente (aquí, 6 puntos de la inicial); (5) hacer las láminas de P182 y las entradas de P183: hasta +0,2 en el 13 y el 15.
+
+**Avance del libro:** 4 de 4 hallazgos resueltos (100 %) y tres precisiones aplicadas; compila sin errores ni referencias indefinidas, 961 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (de 1986 a 1988 la Provincia sigue designando por decreto a los presidentes de las dos comisiones hasta mayo de 1987, y el municipio aparece ante el agua como parte de convenios de defensas y, en Vaqueros, desplazado por un centro de usuarios; la convocatoria de 1987 le devuelve un ejecutivo votado, no una competencia) y la de la expropiación como mecanismo opuesto al mercado sucesorio, que con la fase 6 queda dicha en su estado documentado: tres declaraciones de utilidad pública, tres juicios promovidos y una posesión, sin sentencia hallada.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 80 líneas (0,32 %; 61,2 páginas). Cobertura acumulada: 25.366 de 25.366 (100,0 %), con el registro de arriba. Falsos positivos descartados: 7. Recortes: se leyeron enteras las fichas de los tres años en su FUENTE y FICHA, y el TEXTO y la NOTA de las que sostienen cifras, fechas, nombres o citas, no el TEXTO de todas; no se cotejaron renglón por renglón 5 de las 12 ediciones bajadas; los controles de P164, P170, P174, P175, P181 y P186 se corrieron a mano; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **4 de 4**, todos en el AMPLÍA 1986-1988 (`1bd1c1d`); **0 atrapados por un control automático**.
