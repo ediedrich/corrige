@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-04T14:30:01",
+ "actualizado": "2026-10-04T14:30:24",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -11070,6 +11070,17 @@
     1985
    ],
    "texto": "registrar: a las 13:32 del 4-10 (corrige 79579f4) volvio a registrar el informe LEE 1983 ya registrado (mismo nombre y contenido) con la foto de su config (version 2026-10-04, hasta 1983). Efectos: libro.incorporado de 1983 paso de 58b897f a null, y corrige/config/lee_config.json volvio a 'hasta 1983' y perdio lo que agregaron los informes 1984 y 1985 (51 actores, 24 terminos de anillo 2, 107 numeros y 15 falsos positivos). registrar no lo rechazo porque la version es la misma fecha. Correcciones: (1) ignorar un informe identico al que ya esta en corrige/lee/<anio>/ y no tocar libro ni lee del anio; (2) rechazar un lee_config.json con la misma version y un 'hasta' menor que el del repositorio (o comparar version y hasta como par); (3) no volver a null el incorporado de un anio cuyo informe no cambio. El config se repone solo cuando registrar instale el lee_config.json que entrego el informe LEE 1986 (en entregas, sin registrar al cerrar este AMPLIA: version 2026-10-04, hasta 1986, 1.831 actores, 686 terminos, 2.616 numeros, 144 falsos positivos; su §0 dice que corrio con el config de corrige hasta 1985, de modo que no lo afecto la regresion). Este AMPLIA no entrega config, para no pisar ese; pone 1983 en anios para reponer su incorporado.",
+   "abierto": "2026-10-04",
+   "hecho": null
+  },
+  {
+   "id": "P181",
+   "tipo": "herramientas",
+   "anios": [
+    1984,
+    1985
+   ],
+   "texto": "Controles para AMPLIA (extension de P170 y P175): (1) tramo dado por ediciones: cuando un informe LEE da un hecho repetido por un rango de ediciones (firmas de un interino, apariciones de un aviso), el script convierte las ediciones extremas a fechas con el §1 del informe y compara con el mes o tramo que escribe el libro (caso: De los Rios 'en febrero', A:469, ronda 69; firma de febrero a junio); (2) rangos de anios fuera de D: el repaso de ventana busca en todo el libro los rangos '19xx--19yy' y '19xx a 19yy' que contienen un anio recien incorporado en oraciones de falta o de pedido ('falta', 'faltan', 'se buscan', 'hay que buscar', 'se pide'), ademas de las formulas de cobertura (caso: 21-conclusion:120, 'para 1983--1987', ronda 69).",
    "abierto": "2026-10-04",
    "hecho": null
   },
