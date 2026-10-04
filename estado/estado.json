@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-04T05:02:24",
+ "actualizado": "2026-10-04T07:11:43",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -8483,6 +8483,153 @@
     "P165"
    ],
    "nota_cierre": "Nota final 88,3 sin tope (cobertura acumulada 100,0 %). Tres de los cinco hallazgos estan en el AMPLIA 1980, uno en el AMPLIA 1973-1974 y uno acumulado desde la ronda 38; ninguno lo atrapo un control automatico; P170 propone los que faltan."
+  },
+  {
+   "ronda": 68,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 87.8,
+   "nota_inicial_sin_tope": 87.8,
+   "tope_inicial": 90,
+   "motivo_tope_inicial": "Cobertura acumulada inicial 99,6 % (25.211 de 25.306): escalon de 90. No actua: la nota sin tope queda por debajo.",
+   "nota_final": 88.3,
+   "nota_final_sin_tope": 88.3,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_inicial": 99.6,
+   "cobertura_ronda_lineas": 95,
+   "paginas_auditadas": 59.1,
+   "fecha": "2026-10-04",
+   "base": "58b897f",
+   "commit": "810d4a5",
+   "arbol": "ec3867c",
+   "amplia_auditado": "amplia-1981-1983",
+   "aspectos": {
+    "1": [
+     82,
+     82
+    ],
+    "2": [
+     100,
+     100
+    ],
+    "3": [
+     95,
+     100
+    ],
+    "4": [
+     90,
+     90
+    ],
+    "5": [
+     100,
+     100
+    ],
+    "6": [
+     85,
+     90
+    ],
+    "7": [
+     100,
+     100
+    ],
+    "8": [
+     95,
+     95
+    ],
+    "9": [
+     30,
+     30
+    ],
+    "10": [
+     70,
+     70
+    ],
+    "11": [
+     90,
+     90
+    ],
+    "12": [
+     100,
+     100
+    ],
+    "13": [
+     94,
+     94
+    ],
+    "14": [
+     100,
+     100
+    ],
+    "15": [
+     90,
+     90
+    ]
+   },
+   "hallazgos": 2,
+   "aplicados": 2,
+   "precisiones": 5,
+   "descartados_falsos_positivos": 7,
+   "errores_introducidos_por_la_auditoria": 2,
+   "atrapados_por_control": 0,
+   "cotejo_facsimil": 7,
+   "compilacion": {
+    "paginas_base": 943,
+    "paginas_final": 943,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 42,
+    "cajas_desbordadas": 2,
+    "remisiones_posteriores_sin_mas_adelante": 0,
+    "items_D": 284,
+    "pendiente": 52
+   },
+   "archivos_que_cambian_de_largo": [],
+   "hallazgos_detalle": [
+    "1 (aspecto 6) 15:185: la Res. 323 de 1980 da a Vaqueros $40.000.000 (10998 h6, imagen) y la Res. 5 de 1981 dice que le habia acordado $35.000.000 (11166 h6, imagen); el libro daba las dos cifras sin senalar la discrepancia. Corregido: 'a pagar con la partida de su complejo ... ---$35.000.000, dice la resolucion, aunque la planilla de la 323 le daba $40.000.000---'.",
+    "2 (aspecto 3) 17-tierrafiscal:381: 'en noviembre esa Direccion toma como personal temporario a dos agentes': la Res. 1071-D es del Ministerio de Bienestar Social, del 22-11-1982, con vigencia desde el 1-10 (11612 h11, imagen). Corregido: 'en noviembre el Ministerio de Bienestar Social designa como personal temporario de esa Direccion, desde el 1 de octubre, ...'."
+   ],
+   "precisiones_detalle": [
+    "a) 10:64: 'La tierra se pago a valuacion fiscal mas treinta por ciento en 1972' pasa a 'se tomo depositando la valuacion fiscal mas treinta por ciento, por una ley de 1972', porque 10:67 muestra que para los catastros 1575, 1577 y 1578 el pago termino por convenio en 1982.",
+    "b) 10:67: 'y no del seis' pasa a 'y no del seis de los convenios de mayo'.",
+    "c) 26:235: 'seguiran funcionando como hasta entonces' pasa a 'bajo la modalidad que el decreto indica para cada una' (11683 h13: 'bajo la modalidad que se menciona').",
+    "d) 18:470: se agrega que los decretos de 1983 escriben Rene (el 877 escribe Renee).",
+    "e) C:31: 'los menores de diez anios' pasa a 'hasta diez anios' (Ord. 035/80: 'hasta diez (10) anios')."
+   ],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P175",
+     "tipo": "herramientas",
+     "anios": [
+      1980,
+      1981,
+      1982
+     ],
+     "texto": "Controles para AMPLIA (extension de P164, P170 y P174): (1) cifra de un acto citada por otro: cuando un acto nuevo dice cuanto dio, fijo o acordo un acto anterior que el libro ya cita con su cifra, el script compara las dos y, si difieren, la frase lo dice (caso: Res. 5/81 dice $35.000.000 de la Res. 323/80, que da $40.000.000 a Vaqueros, 15:185, ronda 68); (2) autor y vigencia de una designacion: 'toma', 'designa', 'nombra' o 'contrata' bajo un mes se cotejan con la ficha, quien dicta el acto y desde cuando rige, y si la vigencia es anterior a la fecha del acto se escribe asi (caso: Res. 1071-D de 1982, 17-tierrafiscal:381, ronda 68; antes P116 y P170).",
+     "abierto": "2026-10-04",
+     "hecho": null
+    }
+   ],
+   "pendientes_revisados_sin_cerrar": [
+    "P171",
+    "P172",
+    "P173",
+    "P174",
+    "P168",
+    "P170",
+    "P115",
+    "P40",
+    "P100",
+    "P102",
+    "P144",
+    "P158",
+    "P159",
+    "P164",
+    "P165",
+    "P169"
+   ],
+   "nota_cierre": "Nota inicial 87,8 y final 88,3 sin tope (cobertura acumulada 100,0 %). Los dos hallazgos estan en el AMPLIA 1981-1983; ninguno lo atrapo un control automatico; P175 propone los que faltan. Cruce que el libro no hace todavia: Juana Mercado de Sanchez dona en 1980 al municipio 400 m2 del catastro 1578 y en 1982 cierra por convenio la expropiacion de 3 ha de ese catastro."
   }
  ],
  "pendientes": [
@@ -10509,9 +10656,21 @@
    "texto": "Control de anaforas para AMPLIA (extension de P159 y P169): ademas de las temporales y pronominales, el parrafo que sigue a una insercion se lee si empieza con un demostrativo de cierre o de resumen ('Eso', 'Esto', 'Ese disenio', 'Esa cifra', 'Lo que', 'De modo que'): este AMPLIA movio dos inserciones antes de entregar (10, 'Ese disenio explica'; 18, 'Eso confirma'). Y cuando una ficha nueva desmiente una frase de resumen de otro parrafo ('La tierra se pago a valuacion fiscal mas treinta por ciento en 1972'), la insercion va inmediatamente despues de esa frase y la nombra.",
    "abierto": "2026-10-04",
    "hecho": null
+  },
+  {
+   "id": "P175",
+   "tipo": "herramientas",
+   "anios": [
+    1980,
+    1981,
+    1982
+   ],
+   "texto": "Controles para AMPLIA (extension de P164, P170 y P174): (1) cifra de un acto citada por otro: cuando un acto nuevo dice cuanto dio, fijo o acordo un acto anterior que el libro ya cita con su cifra, el script compara las dos y, si difieren, la frase lo dice (caso: Res. 5/81 dice $35.000.000 de la Res. 323/80, que da $40.000.000 a Vaqueros, 15:185, ronda 68); (2) autor y vigencia de una designacion: 'toma', 'designa', 'nombra' o 'contrata' bajo un mes se cotejan con la ficha, quien dicta el acto y desde cuando rige, y si la vigencia es anterior a la fecha del acto se escribe asi (caso: Res. 1071-D de 1982, 17-tierrafiscal:381, ronda 68; antes P116 y P170).",
+   "abierto": "2026-10-04",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
