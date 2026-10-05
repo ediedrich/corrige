@@ -1,0 +1,1797 @@
+LEE v17 — 2002
+BO-Salta-2002_16302-16548_la-caldera_LEE-2002_2026-10-04
+Boletín Oficial de la Provincia de Salta, año 2002, ediciones N° 16.302 a
+16.548. Barrido documental del departamento La Caldera.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: CON PENDIENTES (seis pendientes nombrados en E.10; once límites
+declarados). Todas las fichas del §A y del §B se miraron en la imagen; lo que
+falta no son fichas sino controles de año (tapas en la imagen, hojas a ojos,
+columna perdida, anexo de un decreto, paginación).
+
+Rúbrica: rubrica-lee-v16.md del repositorio corrige, más el §5 de
+flujo-editorial.md v2 (LEE v17). Las dos se bajaron al empezar.
+
+Insumos. El Release 2002 de boletines-salta no se pudo listar desde la sesión
+(el proxy responde 403: acceso a ese repositorio no habilitado para la
+sesión). Se listó y se bajó desde la máquina de Eduardo, que sí llega a
+GitHub: 253 assets, de ellos 247 PDF (16302.pdf a 16548.pdf), ningún aviso de
+«no se encontró», y seis salidas: pre-informe, resultados_2002.csv,
+decretos_2002.csv (vacío: sólo encabezado), log.txt, lee_config.json y
+lee_textos_2002.zip. El pre-informe, el log, los CSV y los textos llegaron. De
+los 247 PDF se bajaron 79 (las ediciones con candidatos y las de §B y §C), en
+la máquina, y se pasaron a la sesión.
+
+Pre-informe usado: BO-Salta-2002_la-caldera_PRE-INFORME-LEE_2026-10-04.txt
+(único; generado por lee_auto.py el 04/10/2026 14:59; estado.json registra
+lee_auto 50eb5edd5560). El log no registra errores: extracción de 247
+archivos, capa previa útil en 160 de 6914 hojas (2 %), OCR propio de 6754
+hojas con 4 procesos, búsquedas y controles.
+
+Config. Release: version 2026-10-04, hasta 1986, actores 1831, anillo2 686,
+números 2616, falsos positivos 144. Corrige (config/lee_config.json): version
+2026-10-04, hasta 1988, actores 1887, anillo2 729, números 2718, falsos
+positivos 168. Se usa el de corrige (es el único válido, flujo §5.2).
+Contenido: el de corrige contiene al del Release (0 actores, 0 términos y 0
+números sólo en el Release; 56 actores, 43 términos y 102 números sólo en
+corrige). La foto del Release está atrasada dos años de config: la sesión
+corrió por su cuenta el anillo 2, los actores y los números del config de
+corrige sobre los textos del año (§2).
+
+Entorno de la sesión: 2 núcleos; Tesseract sólo con eng y osd (sin spa): no
+hubo OCR en sesión. PyMuPDF instalado desde pypi. Las imágenes se leyeron
+rasterizando los PDF a 90-300 ppp.
+
+Qué verificó la sesión: rehízo la búsqueda del anillo 1 sobre las dos
+versiones de las 6914 hojas (literal normalizada con unión de guion y de
+U+00AD + salto, laxa, laxa espaciada con separador entre cada par de letras,
+difusa ≥ 0,78 y ampliada 0,70-0,78); corrió el anillo 2, los actores y los
+números del config de corrige; miró en la imagen 87 hojas de 51 ediciones;
+recalculó las tablas y polígonos que tocan al departamento; armó calendario y
+autoridad por la capa.
+
+Desvíos de v16 §8.17: ninguno conocido. Se omiten documentos de identidad de
+personas salvo cuando son el único identificador que une un acto con el config
+(A.7, A.10).
+
+Qué agregaría cada insumo que faltó: la lista de toponimia establecida como
+archivo permitiría el cotejo de §5.1bis en sus tres líneas; el Registro
+Oficial 2002 decidiría el ejercicio fiscal tapado por el sello (A.41) y los
+dígitos dudosos; un escaneo sin sello, lo mismo.
+
+
+§1 · CORPUS REVISADO
+--------------------
+247 ediciones, N° 16.302 (miércoles 02/01/2002) a N° 16.548 (lunes
+30/12/2002), consecutivas, sin faltantes ni dobles; 6914 hojas. Todas son PDF
+de imagen escaneada a 300 ppi (medido sobre 16423 h5: 2140 x 3188 px en 513,6
+x 765,1 pt). Techo de resolución: 300 ppi, el doble que la época 1922-1932.
+Capa nativa útil en 160 hojas (2 %), el resto con OCR propio de lee_auto
+(Tesseract spa, psm 3).
+
+Confianza del OCR propio (pre-informe §1): media 86,1; publicables 4489, a
+verificar 1402, a ojos 863 hojas.
+
+Periodicidad: diaria de lunes a viernes (247 ediciones: lunes 48, martes 50,
+miércoles 49, jueves 51, viernes 49). Días hábiles sin edición: 14 (01/01,
+20/02, 28/03, 29/03, 01/04, 01/05, 17/06, 09/07, 19/08, 13/09, 14/10, 20/12,
+25/12 y 31/12). El corpus explica uno: el Decreto S.G.G. N° 2.349 del 23/12/02
+(16545 h3 sumario y h5, capa) declara asueto total el 31/12/2002. Los otros
+trece quedan sin explicar por el corpus y no se busca la causa afuera.
+
+Fechas: leídas en la cabecera de las hojas por la capa (247 de 247 resueltas,
+monótonas, sin repetición). Las tapas no se leyeron en la imagen (pendiente 1,
+E.10); las fechas de las 51 ediciones miradas coinciden en la imagen con la
+capa.
+
+Paginación corrida en el año: de 1 (16302) a 5676 aproximadamente (16548). La
+hoja interior lleva «PAG. N° n» y la numeración pasa de edición en edición;
+los anexos («VER ANEXO») no llevan folio de Boletín. El encadenamiento por la
+capa cierra en 111 de 246 pasos; en los 135 restantes la diferencia es de 1 a
+4 páginas que la capa no resuelve en las últimas hojas de la edición; no se
+miró en la imagen (pendiente 5).
+
+
+  Tabla por edición (fecha por la capa; hojas presentes; las ediciones con
+  ficha llevan * y la fecha se leyó también en la imagen):
+  16302  02/01  31h  16303  03/01  36h  16304  04/01  16h  16305  07/01  12h
+  16306* 08/01 108h  16307  09/01  16h  16308* 10/01  77h  16309  11/01  15h
+  16310  14/01  35h  16311  15/01  26h  16312  16/01  23h  16313  17/01  23h
+  16314* 18/01  24h  16315  21/01  74h  16316  22/01  19h  16317  23/01  28h
+  16318* 24/01  16h  16319  25/01  19h  16320  28/01  15h  16321  29/01  18h
+  16322* 30/01   8h  16323* 31/01  20h  16324* 01/02  14h  16325  04/02  12h
+  16326  05/02  10h  16327  06/02  30h  16328  07/02  12h  16329  08/02  12h
+  16330  11/02  15h  16331  12/02  12h  16332  13/02  20h  16333  14/02  20h
+  16334  15/02  28h  16335  18/02  14h  16336  19/02  20h  16337  21/02  24h
+  16338* 22/02  22h  16339  25/02  18h  16340  26/02  12h  16341  27/02  23h
+  16342  28/02  18h  16343  01/03  18h  16344  04/03  34h  16345  05/03  12h
+  16346  06/03  36h  16347  07/03  10h  16348  08/03  15h  16349  11/03  27h
+  16350  12/03  24h  16351  13/03  28h  16352* 14/03  23h  16353  15/03  23h
+  16354* 18/03  18h  16355  19/03  16h  16356* 20/03  28h  16357* 21/03  22h
+  16358* 22/03  19h  16359* 25/03  39h  16360* 26/03  28h  16361* 27/03  22h
+  16362  02/04  26h  16363  03/04  27h  16364* 04/04  20h  16365  05/04  36h
+  16366  08/04  20h  16367  09/04  22h  16368* 10/04  26h  16369  11/04  24h
+  16370* 12/04  19h  16371  15/04  19h  16372* 16/04  19h  16373* 17/04  27h
+  16374  18/04  12h  16375  19/04  16h  16376* 22/04  22h  16377  23/04   8h
+  16378* 24/04  20h  16379  25/04  20h  16380  26/04  20h  16381  29/04  36h
+  16382  30/04  24h  16383  02/05  24h  16384  03/05  20h  16385  06/05  11h
+  16386  07/05  12h  16387  08/05  11h  16388  09/05  15h  16389  10/05  43h
+  16390  13/05  24h  16391  14/05  34h  16392  15/05  18h  16393  16/05  20h
+  16394  17/05  23h  16395  20/05  20h  16396  21/05  18h  16397  22/05  16h
+  16398* 23/05  16h  16399* 24/05  20h  16400* 27/05  18h  16401  28/05  16h
+  16402  29/05  22h  16403  30/05  12h  16404  31/05  12h  16405  03/06  14h
+  16406* 04/06  20h  16407* 05/06  18h  16408* 06/06  23h  16409* 07/06  23h
+  16410  10/06  40h  16411  11/06  19h  16412* 12/06  24h  16413  13/06  18h
+  16414  14/06  14h  16415  18/06  14h  16416* 19/06  27h  16417  20/06  23h
+  16418* 21/06  43h  16419  24/06  20h  16420  25/06  20h  16421* 26/06  24h
+  16422* 27/06  23h  16423* 28/06  28h  16424  01/07  15h  16425  02/07  24h
+  16426  03/07  24h  16427  04/07  36h  16428  05/07  35h  16429  08/07  18h
+  16430  10/07  19h  16431  11/07  22h  16432  12/07  14h  16433  15/07  12h
+  16434* 16/07  14h  16435  17/07  15h  16436  18/07  16h  16437  19/07  10h
+  16438  22/07  12h  16439  23/07  12h  16440* 24/07  36h  16441  25/07  27h
+  16442  26/07  46h  16443  29/07  24h  16444  30/07  20h  16445  31/07  24h
+  16446  01/08  24h  16447  02/08  28h  16448  05/08  16h  16449  06/08  22h
+  16450* 07/08  48h  16451  08/08  16h  16452  09/08  14h  16453  12/08  19h
+  16454  13/08  16h  16455* 14/08  30h  16456  15/08  23h  16457  16/08  20h
+  16458* 20/08  22h  16459  21/08  20h  16460  22/08  18h  16461* 23/08  26h
+  16462  26/08  20h  16463* 27/08  16h  16464  28/08  39h  16465  29/08  34h
+  16466  30/08  31h  16467  02/09  28h  16468  03/09  19h  16469* 04/09  20h
+  16470* 05/09  20h  16471  06/09  35h  16472* 09/09  56h  16473  10/09  27h
+  16474  11/09  23h  16475  12/09  27h  16476  16/09  18h  16477* 17/09  20h
+  16478  18/09  23h  16479  19/09  16h  16480* 20/09  28h  16481  23/09  22h
+  16482  24/09  20h  16483  25/09  32h  16484  26/09  20h  16485  27/09  26h
+  16486  30/09  24h  16487  01/10  26h  16488* 02/10  51h  16489  03/10  51h
+  16490  04/10  27h  16491  07/10  24h  16492  08/10  23h  16493  09/10  37h
+  16494  10/10  12h  16495  11/10  22h  16496  15/10  40h  16497* 16/10  27h
+  16498  17/10  34h  16499  18/10  35h  16500  21/10  35h  16501  22/10  23h
+  16502  23/10  30h  16503  24/10  36h  16504* 25/10  32h  16505  28/10  30h
+  16506  29/10  30h  16507  30/10  30h  16508  31/10  31h  16509  01/11  26h
+  16510* 04/11  32h  16511  05/11  30h  16512  06/11  40h  16513  07/11  31h
+  16514  08/11  26h  16515  11/11  33h  16516  12/11  30h  16517  13/11  32h
+  16518* 14/11  32h  16519  15/11  36h  16520  18/11  27h  16521* 19/11  20h
+  16522  20/11  38h  16523  21/11  45h  16524  22/11  79h  16525  25/11  28h
+  16526  26/11  24h  16527  27/11  40h  16528  28/11  35h  16529  29/11  24h
+  16530  02/12  19h  16531  03/12  27h  16532  04/12  22h  16533  05/12  24h
+  16534  06/12  18h  16535  09/12  27h  16536  10/12  36h  16537  11/12  24h
+  16538  12/12  28h  16539  13/12  49h  16540  16/12  39h  16541  17/12  27h
+  16542  18/12  28h  16543  19/12  34h  16544* 23/12 169h  16545* 24/12 174h
+  16546* 26/12 181h  16547* 27/12 176h  16548* 30/12 177h
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: prev (capa del PDF) y prop (OCR de lee_auto); se buscó sobre la
+unión de las dos, etiquetada. La marca U+0002 no aparece. El guion blando se
+quitó junto con el salto; el guion de fin de renglón se unió cuando lo seguían
+letras. La unión se probó con «Cal-/dera» y con «de-/partamento»: pega.
+
+Pasadas del anillo 1, propias de la sesión, sobre 6914 hojas: literal «cald»,
+347 aciertos en 123 hojas, de ellas 103 con «caldera» o «calderilla» y 20 sólo
+con Calderón y afines; laxa, 343 aciertos, ninguno nuevo frente a la literal
+salvo «caidera» (3) y «oaldemo» (1, ruido de tabla); laxa espaciada (separador
+[\s\-.,]{0,3} entre cada par de letras), 313 aciertos, ninguno que la literal
+no tuviera: la pasada no está rota, porque devuelve todas las formas
+contiguas, y este año no hay «C A L D E R A»; difusa ≥ 0,78, formas calliera,
+caladora, caidera y caliera: «caidera» rescata el sumario de A.34 (16470 h5,
+capa previa); las otras son apellido (Calliera, Lorenzo) y herramienta
+(caladora); difusa ampliada 0,70-0,78 restringida a c, g, o: 63 formas, todas
+falsos positivos (cadena, cuadra, cantera, calidad, cabrera, casilla,
+cartelera...). El pre-informe trae 155 hojas no-FP en el anillo 1; las 103 de
+la sesión las contienen salvo 8 que son sumarios o ruido (16356 h3, 16359
+h35-36, 16470 h5, 16472 h36, 16488 h13, 16496 h1, 16534 h8) y agregan 2 (16359
+h9 y h26) que el pre-informe no listó como candidatos.
+
+Anillo 2: los 729 términos del config de corrige, normalizados (723 distintos
+de 4 letras o más); 102 términos con acierto. Se leyeron los contextos de los
+102, y para los 30 de más aciertos se filtraron además los que tienen a 250
+caracteres un ancla del departamento (caldera, vaqueros, lesser, mojotoro,
+yacones, gallinato, calderilla, campo alegre, san alejo, chaile, castellanos,
+wierna, getsemaní, helvecia, cristo monumental, mesada): no apareció ningún
+acto del departamento fuera de los ya fichados salvo los del §B.2.
+
+Cotejo del anillo 2 contra la toponimia establecida (v16 §5.1bis): la sesión
+no tiene la lista de toponimia establecida como archivo, así que las tres
+líneas no se pueden escribir como cifras. Lo medido al revés, sobre los
+aciertos de 2002: (1) términos establecidos faltantes: no aplicable sin la
+lista; se proponen siete agregados (F y config); (2) apellidos dentro de la
+lista de lugares con acierto este año: mamani, aramayo, apaza, condori,
+chaile, castellanos, isasmendi, murua, toconas, nogales, castanares, matos,
+mosquera, pucheta, quintin, yugra, teodolinda, yolanda, helvecia y wierna (20;
+todos sus aciertos de 2002 son personas o nombres de calle e institución); (3)
+a revisar: los términos de otros departamentos con acierto (el bordo,
+candelaria, tabacal, betania, los sauces, el tunal, finca san jorge, san jose,
+villa san lorenzo, antilla, higueritas, lagunilla...) quedan como están, con
+su jurisdicción anotada en B.3.
+
+Actores: los 1887 del config, buscados por «nombre apellido» y «apellido
+nombre» sobre el texto sin puntuación (3292 patrones); y los 92 actores de los
+actos de 2002, buscados por apellido solo o por apellido y nombre en todo el
+corpus (B.4). Fallas de la búsqueda (v16 §5.1, prohibido declararlos
+ausentes): «María Victoria D'Apice», «Héctor Miguel Calabró», «Sergio M.
+Sarmiento», «César Roberto Saravia Toledo», «Nilda Manuela Ruiz de Choque» no
+se devuelven por «nombre apellido» porque tienen segundo nombre intercalado;
+«Calabresi» y «Padilla Martín» no se devuelven porque la capa destroza la
+tabla (A.35). Los siete se buscaron por apellido solo o por otro identificador
+y se encontraron en su acto.
+
+Números arrastrados: los 2718 del config, buscados detrás de «n», «expte»,
+«matrícula», «catastro», «decreto», «ley» o «resolución» y con un ancla del
+departamento a 300 caracteres: 34 coincidencias. Las que son el mismo acto o
+la misma pieza: 1782 (matrícula del comodato, A.25), 457 (plano, A.25) y 1034
+(Decreto N° 1.034/96, planta del Centro de Salud N° 21, A.36 y A.42); las
+demás son números de página, de O.P. o de otros expedientes (coincidencia). El
+config no dice el origen de cada número, así que la sesión no puede afirmar en
+qué acto anterior estaban: B.1.
+
+Identificadores de las ausencias: número de acto, expediente, matrícula o
+catastro, nombre de la persona y lugar; al menos dos por ausencia.
+
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+43 fichas, 42 actos del departamento más uno (A.12) que nombra el término en
+otro departamento. Avisos repetidos: una sola entrada con todas sus
+apariciones.
+
+
+A.1
+  FUENTE: 16306 (08/01/2002) h18, pág. 102; 2a aparición 16314 h13 (texto)
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp (16306 h18); 16314 por la capa prop, cotejo
+  de texto
+  TEXTO:
+  EDICTOS DE MINAS / O.P. N° 585 F. N° 132.086
+  El Dr. Daniel Enrique Marchetti, Juez de Minas de la provincia de Salta,
+  hace saber a los efectos del Art. 73 del C.P.M. Ley N° 7.141/01 que Carlos
+  Eduardo Fernández Pérez, ha solicitado la reducción de superficie de
+  solicitud de cantera de áridos, denominada Felisa, que tramita mediante
+  Expte. N° 17.034, ubicada en el departamento La Caldera, descripta de la
+  siguiente manera: / Coordenadas Gauss Krugger: Sistema Posgar-94 y Campo
+  Inchauspe-69: / 1  7.267.600.34  3.564.751.96 / 2  7.267.449.43
+  3.565.546.15 / 3  7.267.206.38  3.565.499.96 / 4  7.267.357.29
+  3.564.705.77 / Superficie libre 20 Has. Los terrenos afectados son de
+  propiedad fiscal. Secretaría, 12 de diciembre de 2001. Esc. Humberto
+  Ramírez, Secretario. / Imp. $ 60,00   e) 27/12/2001, 08 y 18/01/2002
+  NOTA DE LECTURA: RECALCULO: el polígono de los cuatro puntos da 199.998 m2,
+  es decir las 20 Has. declaradas. La primera publicación (27/12/2001) cae en
+  el año anterior; en 2002 hay dos apariciones, reunidas por texto. Felisa
+  vuelve en A.31 (liberación de la zona y archivo, agosto). Las coordenadas se
+  leyeron en la imagen; los decimales no tienen segunda versión que los
+  contradiga.
+
+A.2
+  FUENTE: 16308 (10/01/2002) h36-h38 [anexo de la Ley N° 7170, sin folio de
+  Boletín en la hoja]
+  FICHA: HACIENDA-MUN+NORMA
+  MODO DE LECTURA: imagen 110, 150 y 220 ppp; renglones de 5.7.6.1 (01-65) y
+  5.7.6.2 (01-58) transcriptos de la imagen para recalcular
+  TEXTO:
+  PROVINCIA DE SALTA / PRESUPUESTO 2.002 - GASTOS POR OBJETO / LEY N° 7170
+  [sello: ES COPIA - RINA R. DE TORRES - Numeración Gral. Leyes y Decretos -
+  Secretaría Gral. de la Gobernación; fs. 18 y 19]
+  5.7.6     Transferencias a gobiernos municipales  78,485,667  0  78,485,667
+  5.7.6.1   Coparticipación Impuestos a Municipios  73,485,667  0  73,485,667
+  5.7.6.1.28  - La Caldera                420,036   0    420,036
+  5.7.6.1.29  - Vaqueros                  383,042   0    383,042
+  5.7.6.2   . Aportes a Gobiernos Municipales      5,000,000   0   5,000,000
+  5.7.6.2.28  - La Caldera                 58,703   0     58,703
+  5.7.6.2.29  - Vaqueros                   55,789   0     55,789
+  NOTA DE LECTURA: RECALCULO: los 58 renglones de 5.7.6.2 suman 5,000,000
+  exactos; el control aritmético decide que Vaqueros es 55,789 (la capa prop
+  leyó 55,769 en la primera columna; con esa lectura faltarían 20). Los 67
+  renglones de 5.7.6.1 (01 a 65, .98 y .99 en cero) suman 73,485,664 contra
+  73,485,667 impresos: NO CIERRA por 3. Se releyeron a 220 ppp las columnas de
+  h36 (01 a 21) y de h37 (22 a 51) sin cambio; no se concilia ni se atribuye.
+  5.7.6 = 5.7.6.1 + 5.7.6.2 cierra. La Caldera recibe 0,57 % de la
+  coparticipación municipal (inferencia aritmética, rotulada). Es el único
+  renglón presupuestario del año que nombra al municipio; la Ley 7170 en sí
+  (articulado) no se miró: E.3.
+
+A.3
+  FUENTE: 16318 (24/01/2002) h8, pág. 360
+  FICHA: OBRA-PUBLICA+AGUAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Secretaría de Obras Públicas - Resolución SOP N° 516 - 05/11/2001 - Expte.
+  N° 34-2.218/01. / Artículo 1° - Aprobar la documentación técnica preparada
+  por la Unidad de Infraestructura de Desarrollo dependiente de esta
+  Secretaría, para la ejecución de la obra "Encauzamiento Arroyo Urquiza,
+  Vaqueros, departamento La Caldera, provincia de Salta", con un presupuesto
+  oficial de $ 7.360,00. / Art. 2° - Con encuadre en el Artículo 12, de la
+  Ley N° 6.838, adjudicar a la Empresa Irac S.R.L., la ejecución de los
+  trabajos citados en el artículo anterior, en la suma de Pesos siete mil
+  trescientos cincuenta y seis con ochenta centavos ($ 7.356,80) IVA
+  incluido, en un plazo de ejecución de diez (10) días corridos ...
+  / Art. 3° - ... Finalidad 4, Función 5, Subfunción 1, Financ. 11, U. Geog.
+  099, Proyecto 379, Ejercicio vigente.
+  NOTA DE LECTURA: Resolución de 2001 publicada en 2002 (bloque de
+  resoluciones sintetizadas de la SOP). Número en letras y en cifras coinciden
+  (7.356,80).
+
+A.4
+  FUENTE: 16322 (30/01/2002) h4 capa + h5 imagen, pág. 430; apariciones 16323
+  h16 y 16324 h9 (texto)
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h5); encabezado de h4 por la capa prop
+  TEXTO:
+  LICITACION PUBLICA NACIONAL / O.P. N° 775  F. v/c. N° 9.894 /
+  Ministerio de Infraestructura / Secretaría de Transporte y Servicios
+  Públicos / Licitación Pública Nacional N° 01/02 / Concesión del Corredor
+  Metropolitano de Transporte Regular de Pasajeros. [capa h4]
+  Objeto: Licitación Pública para la concesión del corredor metropolitano
+  de transporte regular de pasajeros que comprende la prestación del
+  servicio público entre las localidades ubicadas en los departamentos
+  Capital, La Caldera y Cerrillos de la provincia de Salta. / Venta de
+  Pliego: A partir del día 06/02/02, hasta el día 22/02/02 inclusive. /
+  Precio del Pliego: $ 6.000 (Pesos seis mil). ... Presentación Apertura:
+  Día 28 de febrero de 2002, a Hs. 10:00 ... / Imp. $ 75,00  e) 30/01 al
+  01/02/2002
+  NOTA DE LECTURA: Tres apariciones = las tres fechas de la marca. Se cruza
+  con A.37 (caducidad de la empresa que corría la línea 23 Salta-La Caldera).
+
+A.5
+  FUENTE: 16323 (31/01/2002) h19, pág. 451; sumario h4
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  ASAMBLEAS / O.P. N° 780  F. N° 132.362 / LIGA MUNICIPAL DE FUTBOL SAN
+  LORENZO - LA CALDERA / Asamblea General Ordinaria / De acuerdo a lo
+  dispuesto por Art. 21, del Estatuto Social, se convoca a los Sres.
+  delegados a Asamblea General Ordinaria de la Liga Municipal de Fútbol San
+  Lorenzo - La Caldera, que se llevará a cabo el día 21 de febrero de 2002,
+  a Hs. 20,00, en sede de la Liga Municipal de la localidad de Vaqueros,
+  para considerar el siguiente: ORDEN DEL DIA / 1°) Designación de poderes
+  ... 3°) Consideración de la Memoria y Balance, Ejercicio 2001. / 4°)
+  Elección de Sr. Presidente de Liga San Lorenzo - La Caldera. / Sergio M.
+  Sarmiento, Tesorero - Felipe López, Prosecretario / Imp. $ 8,00  e)
+  31/01/2002
+  NOTA DE LECTURA: La sede de la liga está en Vaqueros.
+
+A.6
+  FUENTE: 16338 (22/02/2002) h20 capa + h21 imagen, págs. 720-721
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h21); socios y constitución por la capa
+  (h20)
+  TEXTO:
+  CONSTITUCION DE SOCIEDAD / O.P. N° 937  F. N° 132.603 / "SAN ROQUE
+  S.R.L." [capa] ... 2. Constitución: Mediante instrumento privado de fecha
+  07 de diciembre de 2000, con firma certificada por la escribana María
+  Luisa Giménez. [capa] / 3. Denominación: "San Roque S.R.L.". / 4.
+  Domicilio: Con domicilio legal en la localidad de La Calderilla, Ruta
+  Nacional N° 9, Km. 17, departamento La Caldera, provincia de Salta. / 5.
+  Duración: 20 (veinte) años ... / 6. Objeto: La sociedad tendrá por objeto
+  la producción tabacalera y/o la agrícola-ganadera. / 7. Capital Social:
+  ... $ 30.000,00 ... trescientas cuotas de $ 100,00 ... La Srta. Sonia
+  Elisa Golpe Pavichevich, 270 (doscientas setenta) cuotas ... y el Sr.
+  Adolfo Jorge Golpe Frías, 30 (treinta) cuotas ... Se integra en un 100%,
+  en especies. / 8. ... a cargo del Sr. Adolfo Jorge Golpe Frías. /
+  CERTIFICO ... Salta, 21/02/2002. Dra. Claudia Ibáñez de Alemán ... / Imp.
+  $ 31,00  e) 22/02/2002
+  NOTA DE LECTURA: RECALCULO: 270 + 30 = 300 cuotas; 300 x 100 = 30.000,
+  cierra. Es la única mención del año de La Calderilla como localidad. Cinco
+  días después (B.2.1) un contrato rectificatorio fechado el 07/01/2002 pasa
+  la gerencia a Sonia Elisa Golpe Pavichevich: el rectificatorio es anterior a
+  la publicación de la constitución y no se concilia.
+
+A.7
+  FUENTE: 16352 (14/03/2002) h21 imagen parcial + h22 imagen, págs. 1017-1018
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  AVISO COMERCIAL / O.P. N° 113  F. N° 132.872 / "PROINT S.A." / Inscripción
+  de Directorio / Se comunica que por Resolución de Asamblea General de
+  Accionistas, de fecha 20 de noviembre de [2001, capa] y Acta de Directorio
+  N° 46, de fecha 25 de enero de 2002, se designaron los siguientes
+  directores: Presidente: López, Felipe ... El Carril ... Directores
+  Suplentes: Tejerina, Benito ...; Saiquita, José Félix ...; Hoyos, Julio
+  Héctor ...; Fabián, Germán Pastor ...; Diego Pedraza s/N°, San Carlos;
+  Mogro, Teodoro Bartolo, D.N.I. N° 7.263.689, Martín de Güemes s/N°, La
+  Caldera. Firmado: Dra. Mirta del C. Avellaneda, Juez de 1ra. Inst. en lo
+  Comercial de Registro. / CERTIFICO ... Salta, 11/03/2002. Dra. Claudia
+  Ibáñez de Alemán, Secretaria. / Imp. $ 25,00  e) 14/03/2002
+  NOTA DE LECTURA: Se transcribe el D.N.I. porque es el identificador que une
+  a este Mogro con el «Teodoro Bartolo Mogro» del config (origen 1965, edición
+  7263) y con el «Teodoro Bartolome Mogro» (origen 1973): el número 7.263.689
+  y la edición 7263 coinciden en los cuatro primeros dígitos, y eso puede ser
+  casualidad. INFERENCIA no adoptada. Ver B.1.
+
+A.8
+  FUENTE: 16354 (18/03/2002) h6, pág. 1050
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  O.P. N° 140  R. s/c. N° 9.470 / El Dr. Daniel E. Marchetti, Juez de Minas
+  ... hace conocer a los efectos del Art. 29, 2° y 3er. supuestos del Código
+  de Procedimientos Mineros, Ley N° 7.141/01, que se ha ordenado la
+  liberación de la zona y el archivo de los Exptes. que a continuación se
+  detallan: / Expte. N° | Mina/Cantera | Mineral | Dpto. / 15.963 Río
+  Mojotoro Aridos Capital / 16.395 Oscar Aridos La Caldera / 16.419 San
+  Carlos Aridos R° de Lerma / 16.912 Pedro Aridos Chicoana / 17.017 El
+  Algarrobal Aridos San Martín / 17.195 Socompa ... Los Andes / 17.205
+  Virgen ... Los Andes / 17.256 El Arenal Aridos R° de la Frontera / 17.367
+  El Angosto Aridos Capital / Esc. Humberto Ramírez, Secretario. / Sin
+  cargo  e) 18/03/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 9 expedientes; el acto no declara número.
+  Uno de La Caldera (Oscar). El aviso vecino (O.P. N° 141, vacancia) trae 17
+  minas y ninguna del departamento (recuento propio, imagen).
+
+A.9
+  FUENTE: 16356 (20/03/2002) h3 sumario y h5 por la capa; anexo h27 y h28
+  imagen, págs. 1083-1108
+  FICHA: REGISTRO-CIVIL
+  MODO DE LECTURA: imagen 110 y 130 ppp (anexo); articulado por la capa prop
+  TEXTO:
+  RESOLUCIONES DELEGADAS / Salta, 14 de marzo de 2002 / RESOLUCION N° 78 D /
+  Ministerio de Gobierno y Justicia / ... Artículo 1° - Aprobar el texto de
+  la Carta de Servicios de la Dirección General del Registro del Estado
+  Civil y Capacidad de las Personas ... revocando en consecuencia la
+  Resolución N° 377-D/99 ... Dr. Raúl Romeo Medina, Ministro de Gobierno y
+  Justicia - Dr. Osvaldo Rubén Salum, Secretario de Estado de Gobierno [capa]
+  RESOLUCION N° 78 D / LISTADO DE OFICINAS SECCIONALES DE LA PROVINCIA DE
+  SALTA [sello ES COPIA, fs. 7 y 8] / OF. N° | | LOCALIDAD | C.P. |
+  DEPARTAMENTO / 1095 | 48 | LA CALDERA | 4401 | LA CALDERA / ... / 2081 |
+  88 | VAQUEROS | 4401 | LA CALDERA
+  NOTA DE LECTURA: RECUENTO PROPIO: el listado numera 1 a 91 (el renglón 91,
+  «VOLANTE», repite 2410 en la columna C.P. y deja vacío el departamento:
+  errata del original, E.9). Dos oficinas del departamento. San Lorenzo
+  (oficina 1165, renglón 79) figura con departamento CAPITAL.
+
+A.10
+  FUENTE: 16357 (21/03/2002) h17, pág. 1121; apariciones 16358 h14, 16359 h22,
+  16360 h21, 16361 h17 (texto)
+  FICHA: JUSTICIA
+  MODO DE LECTURA: imagen 110 ppp (16357); las otras cuatro por cotejo de
+  texto
+  TEXTO:
+  [...] Secretaría de la Dra. Inés de la Zerda de Díez, en autos: "Zapana,
+  Gabriel Armando s/Concurso Preventivo (pequeño)", Expte. N° 033.580/01,
+  comunica a los acreedores de la Concursada: 1) Que el 11 de enero de 2002,
+  ha declarado la apertura del Concurso Preventivo del Sr. Gabriel Armando
+  Zapana, D.N.I. N° 12.553.796, con domicilio real en calle Los Tulipanes,
+  Medidor 275, de la localidad de Vaqueros, departamento La Caldera,
+  provincia de Salta y con domicilio procesal en calle Necochea N° 619, de
+  la ciudad de Salta. 2) Que ha sido designado Síndico Titular el CPN Dante
+  Italo Andriano ... 3) ... 01 de abril de 2002 ... 4) ... 23 de mayo de
+  2002 ... 05 de julio de 2002 ... 5) ... 07 de agosto de 2002 ...
+  Publíquese por cinco días ... Salta, 13 de marzo de 2001. Dra. Inés de la
+  Zerda de Díez, Secretaria. / Imp. $ 50,00  e) 21 al 27/03/2002
+  NOTA DE LECTURA: «Salta, 13 de marzo de 2001» [sic]: el acto cuenta hechos
+  del 11/01/2002; errata del original, E.9. Cinco apariciones = «cinco días».
+  El D.N.I. se transcribe como identificador del actor (la búsqueda por nombre
+  lo devuelve en ocho hojas, cinco de ellas sumarios).
+
+A.11
+  FUENTE: 16359 (25/03/2002) h7-h8 capa, h9 imagen, h10 capa, págs. 1155-1158
+  FICHA: ESCUELA
+  MODO DE LECTURA: imagen 110 ppp (h9); encabezado y firmas por la capa
+  TEXTO:
+  Salta, 18 de marzo de 2002 / DECRETO N° 376 / Ministerio de Educación /
+  Expte. N° 158-7.191/01. [capa] / ... Artículo 1° - Autorízase, a partir del
+  01/03/2002, las creaciones que correspondan a los Niveles E.G.B. 1, E.G.B.
+  2 y E.G.B. 3; y a partir del 11/03/02 las del Nivel Inicial ... [capa]
+  Departamento La Caldera: / Escuela N° 4.077 "Juana Moro de López", de la
+  localidad La Caldera. / 5° año, división "B", turno mañana. / 3er. año,
+  división "B", turno tarde. / Escuela N° 4.078 "Dr. Bernabé López", de la
+  localidad Vaqueros. / Jardín de Infantes, Nivel Inicial división "D",
+  turno tarde. / Escuela N° 4.517 "San Cayetano" Anexo B° San Nicolás,
+  localidad Vaqueros. / Jardín de Infantes, Nivel Inicial división "C",
+  turno mañana. / Jardín de Infantes, Nivel Inicial división "D", turno
+  tarde. / [col. 2] Jardín de Infantes, Nivel Inicial división "E", turno
+  mañana. / ... ROMERO - Fernández - David. [capa h10]
+  NOTA DE LECTURA: RECUENTO PROPIO: 3 escuelas; 6 o 7 creaciones según se
+  atribuya a la 4.517 el renglón «división E» que abre la columna 2 antes de
+  «Departamento La Poma» (atribución por continuidad de columna: rango, no
+  número). El acto no declara número.
+
+A.12
+  FUENTE: 16364 (04/04/2002) h10, pág. 1298; apariciones 16370 h11 y 16378 h10
+  (texto)
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  EDICTOS DE MINA / O.P. N° 300  F. N° 133.190 / El Dr. Daniel Enrique
+  Marchetti, Juez de Minas ... Art. 73, del C.P.M., Ley N° 7.141/01, que
+  Cooperativa La Mesa Redonda, ha solicitado la concesión de la cantera de
+  áridos denominada El Triunfo II, que tramita mediante Expte N° 17.422,
+  ubicada en el departamento Capital, río Caldera, descripta de la siguiente
+  manera: / Coordenadas Gauss Krugger - Posgar / Esquinero N° 1 7267727.2600
+  3561469.3900 / ... N° 6 7267571.3100 3561375.6900 / Superficie libre: 16
+  Has., 7.465 m2. Los terrenos afectados son de propiedad fiscal.
+  Secretaría, 22 de marzo de 2002. Esc. Humberto Ramírez, Secretario. /
+  Imp. $ 60,00  e) 04, 12 y 24/04/2002
+  NOTA DE LECTURA: JURISDICCION: el acto la atribuye a Capital; «río Caldera»
+  es hidrónimo y no decide departamento (5.1ter). Se ficha porque nombra el
+  término. RECALCULO: el polígono de 6 esquineros da 167.469 m2 contra 16 Has.
+  7.465 m2 (diferencia 4 m2). Mismo solicitante que Triunfo III (A.43, La
+  Caldera) y La Ferroviaria (C.2, Capital).
+
+A.13
+  FUENTE: 16368 (10/04/2002) h18, pág. 1398
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  O.P. N° 362  R. s/c. N° 9.501 / El Dr. Daniel Enrique Marchetti ... Art.
+  29, 2° y 3er. supuestos del Código de Procedimientos Mineros, Ley 7.141/01,
+  que se ha ordenado la liberación de la zona y el archivo de los
+  expedientes que a continuación se detallan: ... 17.038 Gimena Aridos La
+  Caldera ... / Esc. Humberto Ramírez, Secretario. / Sin cargo  e)
+  10/04/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 10 expedientes, uno de La Caldera.
+
+A.14
+  FUENTE: 16372 (16/04/2002) h18, pág. 1490; sumario h5 (capa)
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  ASAMBLEA / O.P. N° 424  F. N° 133.395 / CENTRO DE JUBILADOS Y PENSIONADOS
+  CASA DE LA COMUNIDAD / Asamblea General Ordinaria / Convoca a los socios a
+  la Asamblea General Ordinaria, que se llevará a cabo el día 15/05/02, a Hs.
+  16:00, en sede social, calle Los Crespones s/N°, localidad de Vaqueros,
+  Dpto. La Caldera ... 3°) ... Ejercicios cerrados al 31/12/2000 y al
+  31/12/2001. / 4°) Renovación total de autoridades ... / Asamblea General
+  Extraordinaria / ... 15/05/2002, a Hs. 19:00, en la sede social, calle
+  Los Crespones s/N°, localidad de Vaqueros, Dpto. La Caldera ... 1°)
+  Reforma de los Arts. 2°, 5° y 7°. / 2°) Inclusión nuevo Art. 12. ... /
+  La Comisión / Imp. $ 8,00  e) 16/04/2002
+
+A.15
+  FUENTE: 16373 (17/04/2002) h12 capa, h13 imagen, h15 capa, págs. 1504-1508
+  FICHA: NORMA+AGUAS
+  MODO DE LECTURA: imagen 110 ppp (h13)
+  TEXTO:
+  RESOLUCION MINISTERIAL / Salta, 12 de abril de 2002 / RESOLUCION N° 34 /
+  Secretaría de Medio Ambiente y Desarrollo Sustentable [capa] / ... Que
+  durante los años 1984 y 1985 la ex Dirección de Recursos Naturales
+  Renovables realizó siembras sistemáticas de truchas arco iris, en los ríos
+  y arroyos de los departamentos provinciales de Cachi, La Poma, La Viña,
+  Santa Victoria, Iruya, La Caldera y Los Andes. ... / Dr. Francisco Javier
+  López Sastre, Secretario de Medio Ambiente y Desarrollo Sustentable [capa]
+  NOTA DE LECTURA: RECUENTO PROPIO: 7 departamentos. El Art. 10 de la misma
+  resolución reglamenta la pesca en el embalse de Campo Alegre sin nombrar
+  departamento (B.2.5).
+
+A.16
+  FUENTE: 16373 (17/04/2002) h25 capa, h26 imagen, págs. 1517-1518
+  FICHA: ELECTORAL
+  MODO DE LECTURA: imagen 110 ppp (h26)
+  TEXTO:
+  CONVOCATORIA A ELECCIONES / O.P. N° 433  R. s/c. N° 9.511 / Salta, 15 de
+  abril de 2002 / RESOLUCION N° 1/02 / ... El Comité del Partido Renovador de
+  Salta RESUELVE: Artículo 1° - Convocar a elecciones internas partidarias
+  para el día 30 de junio de 2002 ... 1) 83 delegados titulares y 83
+  suplentes para la Convención Provincial; 2) 15 miembros titulares y 12
+  suplentes para el Comité Central; [capa] / 3) 23 Comités Departamentales
+  de Anta, Cachi, Cafayate, Capital, Cerrillos, Chicoana, General Güemes,
+  Guachipas, Iruya, La Caldera, La Candelaria, La Poma, La Viña, Los Andes,
+  Metán, Molinos, Orán, Rivadavia, Rosario de Lerma, Rosario de la Frontera,
+  San Carlos, San Martín y Santa Victoria. / 4) 58 Comités Circuitales de
+  ... San Lorenzo, ... Vaqueros, La Caldera, ... / Ricardo Gómez Diez,
+  Presidente; Héctor A. Gardey, Vicepresidente 1°; Raúl Tríboli, Secretario
+  de Finanzas; Benjamín Leonardo Tinte, Secretario; Ramón Oliver - Partido
+  Renovador de Salta. / Sin cargo  e) 17/04/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 23 departamentos contra 23 declarados
+  (cierra); 58 circuitos contra 58 declarados (cierra). Vaqueros y La Caldera
+  son circuitos distintos. Sigue en A.29.
+
+A.17
+  FUENTE: 16376 (22/04/2002) h11, pág. 1559; sumario h3
+  FICHA: DOMINIO
+  MODO DE LECTURA: imagen 110 ppp; cifras releídas en la imagen y recalculadas
+  TEXTO:
+  RESOLUCIONES DELEGADAS SINTETIZADAS / Ministerio de Hacienda - Secretaría
+  de Ingresos Públicos - Resolución N° 96 D - 11/04/02 - Expte. N°
+  18-12.840/01. / Artículo 1° - Aprobar el Plano de Mensura y Loteo del
+  inmueble identificado con la Matrícula N° 2.583, Sección "A", Parcela
+  "26c", de la localidad de Vaqueros, Dpto. La Caldera, propiedad de María
+  Victoria D'Apice, el cual arroja el siguiente balance de superficies: /
+  Sup. Lotes 1 Ha. 6.824,18 m2 d/o / Sup. Ochavas 35,60 m2 / Sup. Calles y
+  Pasaje 6.410,61 m2 / Sup. Total S/M 2 Has. 3.270,39 m2 / Sup. S/T 2 Has.
+  3.374,74 m2 / Diferencia en Menos (-) 104,35 m2 / ... Resolución N° 97 D
+  - 11/04/02 - Expte. N° 18-11.244/00. / Artículo 1° - Aprobar el Plano de
+  Mensura, Unificación y Loteo de los inmuebles identificados con las
+  Matrículas N° s. 2.486 y 2.487, Sección "A", Fracciones "35a y 35b", de la
+  localidad de Vaqueros, Dpto. La Caldera, de propiedad de Jorge Ernesto
+  Biazutti y María Victoria D'Apice ... Sup. Total Lotes 31.708,94 m2 d/o /
+  Sup. Total Ochavas 35,70 m2 / Sup. Total Pasajes 5.971,92 m2 / Sup. Total
+  s/mensura 37.716/56 m2 / Sup. Total s/título 36.939,64 m2 / Diferencia
+  (+) 776,92 m2 / Art. 2° - Queda establecido que las matrículas
+  correspondientes serán asignadas trás la presentación de los Certificados
+  de efectiva Provisión de los Servicios y del Certificado de No
+  Inundabilidad Definitivo expedidos por los entes respectivos.
+  NOTA DE LECTURA: RECALCULO: 96 D, 16.824,18 + 35,60 + 6.410,61 = 23.270,39 y
+  23.374,74 - 23.270,39 = 104,35, cierra; 97 D, 31.708,94 + 35,70 + 5.971,92 =
+  37.716,56 y la diferencia 776,92 cierra. «37.716/56» lleva barra por coma
+  [sic]. El sumario llama a la 97 D «Plano de Mensura y Loteo» y el cuerpo
+  «Mensura, Unificación y Loteo» (E.9). Dos actos de dominio. Planos citados y
+  no acompañados (§P).
+
+A.18
+  FUENTE: 16398 (23/05/2002) h14, pág. 1994; apariciones 16399 h16 y 16400 h14
+  (texto)
+  FICHA: DOMINIO+JUSTICIA
+  MODO DE LECTURA: imagen 110 ppp (16398)
+  TEXTO:
+  POSESION VEINTEÑAL / O.P. N° 741  F. N° 133.920 / La Dra. María Cristina
+  M. de Marinaro, Juez de Primera Instancia en lo Civil y Comercial, 1ra.
+  Nominación, Secretaría N° 2, a cargo de la Dra. Sara del C. Ramallo, en
+  los autos caratulados: "Saravia Toledo, César Roberto y otros c/Carrillo,
+  Luis y/o sus sucesores s/Adquisición del Dominio por Prescripción", Expte.
+  N° 013.814/01, cita al Sr. Carrillo, Luis y/o sus sucesores y/o quienes se
+  consideren con derecho sobre el inmueble, Dpto. (05), La Caldera,
+  Vaqueros, Catastro 23, Secc. B, Fracción A, a comparecer a juicio por
+  edictos que se publicarán por tres días ... / Imp. $ 75,00  e) 23 al
+  27/05/2002
+  NOTA DE LECTURA: Tres apariciones = «tres días». «Dpto. (05)» es el código
+  del departamento en el catastro, el mismo de A.41.
+
+A.19
+  FUENTE: 16406 (04/06/2002) h18, pág. 2134; apariciones 16407 h16 y 16408 h16
+  (texto)
+  FICHA: DOMINIO+JUSTICIA
+  MODO DE LECTURA: imagen 110 ppp (16406)
+  TEXTO:
+  O.P. N° 830  F. N° 134.075 / La Dra. Beatriz Del Olmo de Perdiguero, Juez
+  del Juzgado de Primera Instancia en lo Civil y Comercial de 7a
+  Nominación, Secretaría de la Dra. Verónica Gómez Naar, en los autos
+  caratulados: "Cataldi Solá, Luis Alberto vs. Solá, Ernesto s/Sucesores
+  y/o quien corresponda - Adquisición de Dominio por Prescripción"; Expte.
+  N° 033.548/01, cita a Ernesto Solá y/o sus sucesores y a las personas que
+  se consideren con derecho sobre el inmueble Catastro N° 2.827 del
+  departameto La Caldera, para que se presenten a hacerlo valer ... Salta,
+  17 de mayo de 2002 ... / Imp. $ 75,00  e) 04 al 06/06/2002
+  NOTA DE LECTURA: «departameto» [sic], errata del original (E.9). «Ernesto
+  Solá» es actor del config con origen 1931 (B.1); la identidad con el
+  demandado no se prueba.
+
+A.20
+  FUENTE: 16409 (07/06/2002) h20-h21 imagen, h22 capa, págs. 2200-2202
+  FICHA: ELECTORAL
+  MODO DE LECTURA: imagen 110 ppp (h20-h21); firmas por la capa
+  TEXTO:
+  AVISO GENERAL / O.P. 873  R. s/c. N° 9.584 / Salta, 15 de mayo de 2002 /
+  Consejo Provincial del Partido Justicialista - Distrito Salta / ...
+  Artículo 1° - Convocar al cuerpo de afiliados a Elecciones Internas para
+  el día domingo 25 de agosto de 2002 ... II. Congreso Provincial: ... 2.
+  Departamento La Caldera: Tres (3) Congresales Titulares e igual número de
+  Suplentes. ... IV. Consejos Municipales: Diez (10) miembros Titulares y dos
+  (2) Suplentes para los Municipios de Capital; San Lorenzo; La Caldera;
+  Vaqueros; ... V. Juventud Peronista / 1. Delegados Departamentales ... 2.
+  Departamento La Caldera: (2) Congresales Titulares e igual número de
+  Suplentes. ... Juan Carlos Romero, Presidente; Walter R. Wayar,
+  Vicepresidente; Osvaldo Salum, Secretario General; ... - Consejo
+  Provincial del Partido Justicialista, Distrito Salta. [capa]
+  NOTA DE LECTURA: RECUENTO PROPIO: II, 23 departamentos numerados 1-23; IV,
+  54 municipios (el acto no declara número). En V.1.2 falta el número en
+  letras «(2)» [sic]. Junta Electoral (Art. 2°, capa): José Ernesto Sily,
+  Ramón Rosa Corregidor, Carlos Martín Ramos, Javier David.
+
+A.21
+  FUENTE: 16412 (12/06/2002) h24, pág. 2276
+  FICHA: ELECTORAL
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  AVISO GENERAL / O.P. N° 944  R. s/c. N° 9.588 / LLAMADO A ELECCIONES
+  INTERNAS DE CARGOS PARTIDARIOS - PARTIDO DEL FRENTE (FRENTE GRANDE) - 2002
+  / ... Areas Locales: Delegados a la Asamblea Provincial y Miembros de
+  Juntas de Area. Las áreas incluyen los Dptos.: a) Capital, La Caldera y
+  Güemes; b) Iruya, Santa Victoria y Orán; c) Metán, Rosario de la Frontera
+  y La Candelaria; d) San Martín; e) Cafayate, San Carlos, Molinos, Cachi,
+  La Poma y Los Andes; f) Anta y Rivadavia; g) Cerrillos, Chicoana,
+  Guachipas, La Viña y Rosario de Lerma. ... Juan Paredes Gomes, Presidente
+  Junta Electoral - Diego Saravia, Presidente Partido del Frente / Sin
+  cargo  e) 12/06/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 7 áreas que suman 23 departamentos (cierra
+  con los 23 de A.16 y A.20).
+
+A.22
+  FUENTE: 16416 (19/06/2002) h12 capa, h13 imagen, págs. 2340-2341
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp (h13)
+  TEXTO:
+  O.P. N° 999  R. s/c. N° 9.603 / El Dr. Daniel E. Marchetti ... liberación
+  de la zona y el archivo de los expedientes ... [capa h12] ... / 17.048
+  María Belén Aridos La Caldera / ... Esc. Humberto Ramírez, Secretario. /
+  Sin cargo  e) 19/06/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 12 expedientes (7 en h12, 5 en h13), uno
+  de La Caldera.
+
+A.23
+  FUENTE: 16418 (21/06/2002) h39 imagen, h40 capa, pág. 2411
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  CONSTITUCION DE SOCIEDADES / O.P. N° 045  F. N° 134.356 / QUEBRADA DE RIO
+  BLANCO S.A. / 1) Socios: Sergio Federico Biazutti, ... argentino,
+  divorciado, con domicilio en Finca Vaqueros, departamento La Caldera de
+  esta Provincia, ... de profesión Agricultor. / Carlos Alberto Vera, ...
+  Santa Victoria N° 35 de esta Ciudad, ... Topógrafo. / 2) Constitución:
+  Escritura 87 de fecha 02/05/2002, ante el Escribano Juan Enrique Saravia.
+  / 3) Denominación: Quebrada de Río Blanco Sociedad Anónima. / 4)
+  Domicilio: En Río Blanco, Catastro N° 484, departamento Rosario de Lerma
+  ... / 5) Objeto Social: ... compra, venta, arrendamiento y administración
+  de inmuebles urbanos y rurales en general, la subdivisión de tierras y su
+  urbanización ...
+  NOTA DE LECTURA: Primer directorio (h40, capa): presidente Sergio Federico
+  Biazutti, suplente Carlos Alberto Vera. Biazutti: también Jorge Ernesto
+  Biazutti en A.17 (B.4, segundo grupo).
+
+A.24
+  FUENTE: 16421 (26/06/2002) h10, pág. 2466; 2a aparición 16422 h15 (texto)
+  FICHA: OBRA-PUBLICA
+  MODO DE LECTURA: imagen 110 ppp (16421)
+  TEXTO:
+  AVISO ADMINISTRATIVO / O.P. N° 085  F. v/c. N° 9.941 / GOBIERNO DE LA
+  PROVINCIA DE SALTA / Ministerio de Hacienda y Obras Públicas / Secretaría
+  de Financiamiento Internacional / Secretaría de Obras Públicas /
+  Subunidad Provincial de Coordinación para la Emergencia (S.U.P.C.E.) /
+  Instituto Provincial de Desarrollo Urbano y Vivienda / Municipalidad de
+  La Caldera / Proyecto de Emergencia de Inundaciones "El Niño" / Invitación
+  a Proveedores / PRESIDENCIA DE LA NACION / Secretaría de Obras Públicas /
+  Subunidad Central de Coordinación para la Emergencia (S.U.C.C.E.) /
+  Préstamo BIRF 4273 AR / Provisión de materiales para la construcción "50
+  Viviendas en La Caldera" / Ubicación: La Caldera, Dpto. La Caldera,
+  provincia de Salta. / Objeto: Invitación a proveedores de materiales de
+  construcción para adherir al Subprograma de Viviendas de la S.U.P.C.E. /
+  ... Días y Horarios de Consultas: Entre el 26 de junio y el 03 de julio
+  de 2002, desde horas 09:00 a 12:00. / Imp. $ 50,00  e) 26 y 27/06/2002
+  NOTA DE LECTURA: Dos apariciones = dos fechas. Único acto del año en que la
+  Municipalidad de La Caldera figura como parte.
+
+A.25
+  FUENTE: 16423 (28/06/2002) h3 sumario, h5-h8, págs. 2507-2512
+  FICHA: DOMINIO+NORMA
+  MODO DE LECTURA: imagen 110 ppp (h3, h5, h6, h7, h8 parcial)
+  TEXTO:
+  LEY N° 7.192 / Ref. Expte. N° 90-14.611/00. / ... Artículo 1° - Otórguese
+  en comodato por el término de noventa y nueve (99) años a favor del Club
+  de Regatas Güemes, Personería Jurídica otorgada por Resolución N° 55/82,
+  del Ministerio de Gobierno, una fracción de 3 hectáreas, 5.092,76 m2, del
+  inmueble identificado con la Matrícula N° 1.782, del departamento La
+  Caldera, con cargo a la promoción de actividades sociales, culturales y
+  deportivas. / La fracción a otorgar en comodato tiene forma y ubicación
+  descripta en el plano registrado en la Dirección General de Inmuebles,
+  bajo el N° 475 del departamento La Caldera. / Art. 2° - Fíjase el término
+  de cinco (5) años a partir de la sanción de la presente, para que el
+  comodatario inicie la construcción de las instalaciones ... / Art. 4° -
+  El inmueble adjudicado será destinado exclusivamente al uso de la entidad
+  beneficiaria ... / Art. 5° - Los gastos ... se imputarán a las partidas
+  ... del Presupuesto General de la Provincia ... / Dada en la sala de
+  sesiones ... a los treinta días del mes de mayo del año dos mil dos. /
+  Alberto Froilán Pedroza, Presidente Cámara de Diputados - Mashur Lapad,
+  Vicepresidente Primero en ejercicio de la Presidencia Cámara de Senadores
+  - Ramón R. Corregidor - Dr. Guillermo Alberto Catalano, Secretarios
+  Legislativos / Salta, 18 de junio de 2002 / DECRETO N° 996 / Secretaría
+  General de la Gobernación / Expte. N° 90-14.611/02 Referente. / ... Que
+  en efecto el N° 475 corresponde a un plano diferente dentro del
+  departamento La Caldera, en tanto que el correcto es el N° 457 ... /
+  ... corresponde observar parcialmente el Proyecto de Ley de Presupuesto
+  sancionado ... / Artículo 1° - ... obsérvase el Proyecto de Ley de
+  otorgamiento a favor del Club de Regatas Güemes ... a) En el Artículo 1°:
+  Vétase parcialmente el final del segundo párrafo, eliminándose en
+  consecuencia lo siguiente: "...bajo el N° 475, del departamento La
+  Caldera". b) En el Artículo 2°: Vétase parcialmente ... "...que el
+  comodatario inicie...". c) En el Artículo 5°: Vétase íntegramente su
+  texto ... / Art. 2° - ... promúlgase el resto del articulado como Ley de
+  la Provincia N° 7.192. / Art. 3° - ... propónese al Poder Legislativo la
+  sanción de las modificaciones ...: a) ... "...en el plano registrado en
+  la Dirección General de Inmuebles bajo el N° 457 del departamento La
+  Caldera". b) ... planos de obras debidamente aprobados ... c) "Todas las
+  mejoras introducidas en el inmueble objeto del comodato, quedarán a
+  beneficio del Estado Provincial, sin derecho a resarcimiento alguno a
+  favor del comodatario". d) ... "Art. 5° - ... la Provincia podrá en
+  cualquier tiempo exigir la restitución anticipada del inmueble objeto del
+  comodato, en el caso previsto por el Artículo 2.284 del Código Civil". /
+  Art. 4° - Remítase a la Legislatura ... / Art. 5° - El presente decreto
+  será refrendado por los señores Ministro de Hacienda y Secretario General
+  de la Gobernación. ... ROMERO - Yarade - David.
+  NOTA DE LECTURA: Dos erratas del original (E.9): el considerando del Decreto
+  996 habla de «Proyecto de Ley de Presupuesto» en un decreto que veta una ley
+  de comodato; y el expediente es 90-14.611/00 en la ley y 90-14.611/02 en el
+  decreto. El decreto se ampara en el Art. 13 de la Ley N° 6.811 (h7), y el
+  Decreto N° 1.105 del 08/07/2002 (16434 h7) dice que la 6.811 «fue derogada
+  por Ley N° 7.190»: no se concilia. La matrícula 1.782 y el plano 457 están
+  entre los números arrastrados del config (B.1). Catastro 1782 a nombre de
+  PROVINCIA DE SALTA en A.41 (inferencia, rotulada: matrícula y catastro con
+  el mismo número). Sumario h3: «N° 7.192 - Promulgada y vetada parcialmente
+  por Decreto N° 996 del 18/06/02 - Comodato de inmueble en Dpto. La Caldera a
+  favor del Club de Regatas Güemes ... 2509», cierra con la página del cuerpo.
+
+A.26
+  FUENTE: 16434 (16/07/2002) h7-h8, págs. 2747-2748
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Salta, 08 de julio de 2002 / DECRETO N° 1.106 / Secretaría General de la
+  Gobernación / Expte. N° 01-82.009/02. / VISTO que el próximo 9 de Julio
+  del año en curso se conmemora el "186 Aniversario de la Declaración de la
+  Independencia Nacional"; ... Artículo 1° - Conmemórase el día 9 de Julio
+  de 2002, el "186 Aniversario de la Declaración de la Independencia
+  Nacional". / Art. 2° - Déjase establecido que en la fecha patria aludida
+  se trasladará simbólicamente la Capital Salteña a la localidad de La
+  Caldera, en la cual se desarrollarán los actos que se consignan en el
+  Artículo 3°. / Art. 3° - Dispónese que el día 9 de Julio de 2002, se
+  llevarán a cabo los actos que a continuación se detallan: ... - Entrega
+  del decreto declarando Huésped de Honor al señor Gobernador de la
+  Provincia, Dr. Juan Carlos Romero, a cargo del señor Intendente de La
+  Caldera, Dr. Héctor Miguel Calabró. / - Desfile Cívico-Militar. ... -
+  Inauguración de obras en el Hospital Corina Bustamante. ... Hs. 18:00 -
+  Acto de arrío de las Emblemas Nacional y Provincial a cargo de
+  autoridades del Concejo Deliberante. / ... ROMERO - David.
+  NOTA DE LECTURA: Único acto del año que nombra al intendente de La Caldera.
+  «Hospital Corina Bustamante» y «Centro de Salud N° 21 Enfermera Corina Adela
+  Bustamante» (A.36, A.42) se dejan como dos denominaciones, sin conciliar.
+  «las Emblemas» [sic].
+
+A.27
+  FUENTE: 16440 (24/07/2002) h19, pág. 2843
+  FICHA: OBRA-PUBLICA+ESCUELA
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Ministerio de Hacienda y Obras Públicas - Resolución N° 194 D -
+  12/07/2002 - Expte. N° 136-8.067/99 (Fotocopia). / Artículo 1° - Con
+  encuadre en los Artículos 46, Inciso a) de la Ley N° 6.838, Artículo
+  51.A, Inciso d) del Decreto N° 1.448/96 y Artículos 93 y 94 del Pliego de
+  Condiciones Generales, rescindir el Contrato de Locación de Obra Pública
+  celebrado el 09 de diciembre de 1999 entre el Ministerio de la Producción
+  y el Empleo y la Empresa Conciel S.A., para la ejecución de la obra
+  "Construcción 2a Etapa Colegio Secundario N° 5.050 (Ex 49), Vaqueros,
+  departamento La Caldera", en la suma de $ 599.257,88 IVA incluido y en
+  plazo de 360 días corridos, adjudicada mediante Resolución Ministerial N°
+  564/99, por los motivos expuestos en los considerandos de la presente
+  resolución. / Art. 2° - ... el Programa Infraestructura Edificios de
+  Educación ... deberá realizar la recepción provisoria de los trabajos y la
+  emisión del certificado final de obra, practicando además la
+  determinación de las multas que correspondieren a la Empresa Conciel S.A.
+  por tal incumplimiento. / Art. 3° - Remitir copia ... al Registro de
+  Contratista de la Provincia ...
+  NOTA DE LECTURA: Resoluciones vecinas del mismo día: 193 D (Gigón S.R.L.,
+  Metán) y 195 D (Conciel S.A., Embarcación); los números 193-194-195
+  encadenan en la misma hoja.
+
+A.28
+  FUENTE: 16450 (07/08/2002) h19 imagen, h20 capa, págs. 3115-3116; sumario h4
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h19)
+  TEXTO:
+  Sección COMERCIAL / CONSTITUCION DE SOCIEDAD / O.P. N° 455  F. N° 134.988
+  / LA CALDERA S.A. / 1) Datos Personales de los Socios: Santiago Daniel Gil
+  ... Contador Público Nacional, domiciliado en calle Necochea N° 1176, de
+  esta Ciudad y la señora Elda Virginia Lávaque Carrón ... Contador Público
+  Nacional ... / 2) Fecha del Instrumento de Constitución: Escritura N° 99
+  del 20 de junio de 2002, autorizada por el Escribano Marcelo Roberto
+  Perotti. / 3) Denominación de la Sociedad: "La Caldera S.A.". / 4)
+  Domicilio Social: Avenida Entre Ríos N° 857, planta alta, de esta ciudad
+  de Salta. / 5) Objeto Social: ... 1) Inmobiliarias: La intermediación
+  inmobiliaria de todo tipo de adquisición, venta, permuta, explotación,
+  arrendamiento, locación, leasing, loteos y urbanizaciones ...
+  NOTA DE LECTURA: El acto usa el nombre del departamento como razón social y
+  no nombra ningún inmueble del departamento (h20, capa: estaciones de
+  servicio, turismo, hotelería; capital $ 50.000 en 50 acciones, «ciencuenta»
+  [sic]).
+
+A.29
+  FUENTE: 16450 (07/08/2002) h22 capa, h23 imagen, h47-h48 imagen, págs.
+  3118-3119 y anexo
+  FICHA: ELECTORAL
+  MODO DE LECTURA: imagen 110 ppp (h23, h47, h48)
+  TEXTO:
+  AVISO GENERAL / O.P. N° 476  R. s/c. N° 9.676 / Salta, 05 de agosto de
+  2002 / RESOLUCION N° 23/02 / E. Junta Electoral Partido Renovador de Salta
+  [capa] / ... Artículo 1° - Proclamar como autoridades del Partido
+  Renovador de Salta, para el período 2002 - 2004 de los órganos partidarios
+  de: Comité Central; Convencionales Provinciales, Comités Departamentales y
+  respectivos Circuitos Municipales de: Metán, Cafayate, Cachi, Rosario de
+  la Frontera, Chicoana, General Güemes, La Viña, Cerrillos, Capital,
+  Rosario de Lerma, La Caldera, Molinos y Juventud Capital; a las personas
+  que se detallan en el Anexo I ... / Dra. Silvia Ibarguren, Secretaria -
+  Dr. Oscar Rocha Alfaro, Presidente - Dr. Martín Gallo, Secretario - Dra.
+  Cristina Fiore Viñuales, Secretaria / Sin cargo  e) 07/08/2002
+  [ANEXO, h47, sello Junta Electoral 23] 12°) CONVENCIONALES DEPARTAMENTO
+  LA CALDERA / TITULARES 1°) CASTILLO JAIME EMILIO  2°) LOPEZ GIMENEZ
+  MERCEDES / SUPLENTES 1°) CRUZ BLANCA TERESA  2°) GONZALEZ JORGE ALEJANDRO
+  / COMITÉ DEPARTAMENTAL LA CALDERA / PRESIDENTE LOPEZ GIMENEZ MERCEDES /
+  VICEPRESIDENTE CRUZ BLANCA TERESA / SECRETARIOS TITULARES 1°) LAMAS ARIEL
+  2°) VERA LINO 3°) FLORES MARGARITA / SECRETARIOS SUPLENTES 1°) LOPEZ
+  GIMENEZ ELIZABET LUJAN 2°) TORRES CASIMIRO 3°) SUMBAY MARIA
+  [h48, sello Junta Electoral 24] COMITÉ CIRCUITO VAQUEROS / PRESIDENTE
+  GONZALEZ JORGE ALEJANDRO / VICEPRESIDENTE FIORI SANTIAGO FEDERICO /
+  SECRETARIOS TITULARES 1°) VILLANUEVA VERA LINO 2°) FARIAS GRACIELA
+  CRISTINA 3°) ZARAPURA TEODORA / SECRETARIOS SUPLENTES 1°) CRUZ RAMON
+  EDUARDO 2°) GUZMÁN SILVIA CAROLINA 3°) FLORES ARGENTINO / COMITÉ CIRCUITO
+  LA CALDERA / PRESIDENTE LAMAS ARIEL / VICEPRESIDENTE SUMBAY CESAR MILAGRO
+  / SECRETARIOS TITULARES 1°) SARAPURA ROSENDO 2°) VILTE ELINA FERNANDA 3°)
+  PEREZ TELEFORA CONSTANCIA / SECRETARIOS SUPLENTES 1°) LAMAS VIRGILIO 2°)
+  VILTE CARMEN 3°) VILTE SOLEDAD ZULMA
+  NOTA DE LECTURA: Se omiten los números de matrícula individual (MI), que el
+  libro no necesita; se usaron como identificadores. RECUENTO PROPIO: 4
+  convencionales, 8 en el comité departamental, 8 en el circuito Vaqueros y 8
+  en el circuito La Caldera: 28 renglones. Repiten: López Giménez Mercedes,
+  Cruz Blanca Teresa, Lamas Ariel (dos cargos cada uno); González Jorge
+  Alejandro, con MI 22856893 como convencional y 22656693 como presidente de
+  circuito (8/6, catálogo de confusiones: no se decide); «Vera Lino» y
+  «Villanueva Vera Lino» con la misma MI. Personas distintas: 23 o 24.
+  RECUENTO de la lista de departamentos del Art. 1°: 12 más Juventud Capital;
+  La Caldera es la undécima y el anexo la numera «12°)»: no se infiere por
+  qué.
+
+A.30
+  FUENTE: 16455 (14/08/2002) h15, pág. 3203; apariciones 16461 h14 y 16469 h9
+  (texto)
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp (16455)
+  TEXTO:
+  O.P. N° 534  F. N° 135.082 / El Dr. Daniel Enrique Marchetti, Juez de
+  Minas y en lo Comercial de Registro ... Art. 73 del C.P.M., Ley N°
+  7.141/01 que Carlos Eduardo Fernández Pérez, ha solicitado la concesión
+  de la cantera de áridos, denominada Ana María, que tramita mediante Expte.
+  N° 17.033, ubicada en el departamento La Caldera ... / Coordenadas Gauss
+  Krugger - Sistema Posgar/94 y Campo Inchauspe/69 / Esquinero N° 1
+  7267917.6800 3563081.8300 / Esquinero N° 2 7267600.3300 3564751.9500 /
+  Esquinero N° 3 7267357.2800 3564705.7700 / Esquinero N° 4 7267674.6300
+  3563035.6500 / Superficie libre 42 Has., 0658 m2. Los terrenos afectados
+  son de propiedad fiscal. Secretaría, 08 de agosto de 2002. Esc. Humberto
+  Ramírez, Secretario. / Imp. $ 60,00  e) 14, 23/08 y 04/09/2002
+  NOTA DE LECTURA: RECALCULO: el polígono da 420.578 m2 contra 42 Has. 0658 m2
+  declaradas: diferencia de 80 m2, no se concilia. INFERENCIA ROTULADA: los
+  esquineros 2 y 3 coinciden a un centímetro con los puntos 1 y 4 de Felisa
+  (A.1), del mismo solicitante; y los esquineros 1 y 4 coinciden con los
+  esquineros 2 y 3 de La Ferroviaria (C.2), que su acto atribuye a Capital.
+
+A.31
+  FUENTE: 16458 (20/08/2002) h13, pág. 3269
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  O.P. N° 588  R. s/c. N° 9.691 / ... liberación de la zona y el archivo de
+  los expedientes que a continuación se detallan: ... 17.034 Felisa Aridos
+  La Caldera ... / Sin cargo  e) 20/08/2002
+  NOTA DE LECTURA: RECUENTO PROPIO: 10 expedientes, uno de La Caldera. Cierra
+  la serie de Felisa (A.1).
+
+A.32
+  FUENTE: 16463 (27/08/2002) h10, pág. 3378; apariciones 16469 h8 y 16477 h10
+  (texto)
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp (16463)
+  TEXTO:
+  EDICTOS DE MINAS / O.P. N° 678  F. N° 135.307 / El Dr. Daniel Enrique
+  Marchetti ... Art. 73 del C.P.M., Ley N° 7.141/01 que Luis Eduardo
+  Tactagi, ha solicitado la concesión de la cantera de áridos, denominada
+  Tereza, que tramita mediante Expte. N° 17.508, ubicada en el departamento
+  La Caldera ... / Esquinero N° 1 7269482.8700 3561318.1000 / Esquinero N° 2
+  7269482.8700 3561518.1000 / Esquinero N° 3 7268982.8700 3561518.1000 /
+  Esquinero N° 4 7268982.8700 3561318.1000 / Superficie libre 10 Has. ...
+  Secretaría, 06 de agosto de 2002 ... / Imp. $ 60,00  e) 27/08, 04 y
+  17/09/2002
+  NOTA DE LECTURA: RECALCULO: rectángulo de 500 m por 200 m = 10 Has., cierra.
+  Los esquineros 3 y 4 son los puntos 2 y 1 de Triunfo III (A.43).
+
+A.33
+  FUENTE: 16470 (05/09/2002) h7, pág. 3539; sumario h3
+  FICHA: DOMINIO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Ministerio de Hacienda y Obras Públicas - Resolución N° 234 D -
+  28/08/2002 - Expte. N° 18-13.477/01. / Artículo 1° - Aprobar el Plano de
+  "Mensura, Subdivisión y Loteo" inmueble identificado con la Matrícula N°
+  2.972 del departamento La Caldera, localidad: Vaqueros, loteo La Zanja,
+  de propiedad de los señores Flavio Merluzzi, Félix Rubén Salomón, Jorge
+  René Zarif, Carlos Francisco Gómez y Carlos Eduardo Noman, el que arroja
+  el siguiente Balance de Superficies: / Sup. Lotes 7 Has. 9.363,24 m2 /
+  Sup. Lotes Uso Institucional 1.381,88 m2 / Sup. Ochavas 98,53 m2 / Sup.
+  Calles 1 Ha. 5.878,06 m2 / Sup. Total s/M. 9 Has. 6.721,71 m2 / Sup. s/T.
+  9 Has. 8.065,30 m2 / Diferencia en menos (-) 1.343,59 m2 / Art. 2° - ...
+  Certificados de Provisión Efectiva de los Servicios y del Certificado de
+  No Inundabilidad Definitivo ...
+  NOTA DE LECTURA: RECALCULO: 79.363,24 + 1.381,88 + 98,53 + 15.878,06 =
+  96.721,71 y 98.065,30 - 96.721,71 = 1.343,59; cierra. Sumario h3: «M. Ha. y
+  O.P. N° 234 D del 28/08/02 - Plano de Mensura y Loteo de inmueble ubicado en
+  el departamento La Caldera ... 3539».
+
+A.34
+  FUENTE: 16470 (05/09/2002) h18, pág. 3550; sumario h5
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h18) y 200 ppp (renglón del sumario)
+  TEXTO:
+  O.P. N° 788  F. N° 135.493 / CENTRO DE JUBILADOS Y PENSIONADOS "CRISTO
+  MONUMENTAL DE LA CALDERA" / Asamblea General Ordinaria / La Comisión
+  Directiva del Centro de Jubilados y Pensionados "Cristo Monumental de La
+  Caldera", de acuerdo a las disposiciones legales y estatutarias vigentes,
+  convoca a sus afiliados a la Asamblea General Ordinaria, que se realizará
+  el 28 de setiembre de 2002, a Hs. 10.00, en Pje. Las Madreselvas s/N°, de
+  la localidad de La Caldera, conforme al siguiente: / ORDEN DEL DIA / ...
+  01/01/00 al 31/12/00 y 01/01/01 al 31/12/01. / 3°) Renovación total de la
+  Comisión Directiva y Organo de Fiscalización. ... / Rosa Evarista Portal,
+  Secretaria - Francisco Guantay, Presidente / Imp. $ 8,00  e) 05/09/2002
+  NOTA DE LECTURA: La capa previa del sumario leyó «Caidera»: lo rescató la
+  difusa; la imagen dice «Caldera».
+
+A.35
+  FUENTE: 16472 (09/09/2002) h3 sumario capa, h53 imagen 110 y 300 ppp; anexo
+  sin folio de Boletín ("-26-", fs. 26)
+  FICHA: CARGOS
+  MODO DE LECTURA: imagen; un apellido con lectura dudosa
+  TEXTO:
+  1508 / ..//DECRETO N° / Expte. n° 7.631/02-código 127 / PRORROGA
+  DESIGNACIONES TEMPORARIAS AÑO 2.002 - ZONA OESTE / DEPENDENCIA | CAR |
+  APELLIDO Y NOMBRES | DOCUMENT | FUNCION | INST. LEGAL DECRETO | DESDE |
+  HASTA / C. DE SALUD LA CALDERA / 25 | CALABRESI CLAUDIA BEATRIZ | MEDICO
+  | 820/01 | 01/01/02 | 31/12/02 / 15 | DANTUR ANDRES LEONARDO | PROF.
+  ASISTENTE | 820/01 | ... / 42 | LOPEZ OMAR ALFREDO | CHOFER | 820/01 | ...
+  / 33 | PADILLA MARTIN ERNESTO | AUX. DE ENFERM. | 820/01 | 01/01/02 |
+  31/12/02
+  NOTA DE LECTURA: Sumario (capa): «M.S.P. N° 1.508 del 28/08/02 - Prórroga de
+  designaciones de personal temporario ... 3593». RECUENTO: 4. «CALABRESI»: la
+  quinta letra (B o P) no se decide a 300 ppp; va a la hoja de dudas si se
+  arma. Documentos omitidos. Las hojas h30-h52 del mismo anexo no se miraron
+  en busca del Centro de Salud de Vaqueros: pendiente (E.3).
+
+A.36
+  FUENTE: 16480 (20/09/2002) h13, pág. 3785
+  FICHA: CARGOS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Ministerio de Salud Pública - Decreto N° 1.594 - 11/09/2002 - Expte. N°
+  89.258/02 - código 121. / Artículo 1° - Exclúyase del cargo 32 de
+  ubicación escalafonaria: Enfermería, denominación: Auxiliar de enfermería
+  del Centro de Salud N° 21 "Enfermera Corina Adela Bustamante" del Area
+  Operativa XXXIX, La Caldera, Decreto N° 1.034/96, a la señora Laura
+  Mirabal, D.N.I. N° 18.019.244, quien fue incluida en el Decreto N° 106/96.
+  / Art. 2° - A partir de la fecha de toma de posesión del traslado al
+  Centro de Salud N° 21 ... déjase sin efecto la afectación dispuesta por
+  Resolución Ministerial N° 0290/02, de la señora Balvina Delia Serapio de
+  Lamdivisnay ... mucama del Hospital de Nazareno. / Art. 3° - Modifícanse
+  la ubicación escalafonaria y la denominación del cargo ... cargo 32 ...
+  Enfermería, denominación: Auxiliar de enfermería por la ubicación
+  escalafonaria: Mantenimiento, denominación: Personal de servicio. / Art.
+  4° - ... trasládase a su pedido, al Centro de Salud N° 21 ... cargo 32
+  ... a la señora Balvina Delia Serapio de Lamdivisnay ... liberando el
+  cargo 27 del Hospital de Nazareno.
+  NOTA DE LECTURA: Laura Mirabal sale del cargo 32 sin que el acto diga adónde
+  va (B.4).
+
+A.37
+  FUENTE: 16488 (02/10/2002) h8 capa, h9-h11 imagen, págs. 3980-3983
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h9, h10, h11)
+  TEXTO:
+  Salta, 24 de setiembre de 2002 / DECRETO N° 1.686 / Ministerio de la
+  Producción y el Empleo / Ministerio de Hacienda / VISTO la situación que
+  presenta la Empresa Sucesión Luis Benjamín Chávez (Empresa Luis B.
+  Chávez) [capa h8] / CONSIDERANDO: Que la firma antes citada con domicilio
+  legal en Avda. Belgrano N° 1668 ... es prestadora del servicio público de
+  transporte interurbano de pasajeros, conforme Decreto N° 4/89 y
+  Resolución N° 23/92 ... a cargo de las líneas N°s. 7 (Salta, Chicoana); 7
+  "A" ...; 14 (Salta, San Agustín por La Merced); 23 (Salta, La Caldera);
+  23 "A" (Salta, San Lorenzo); 23 "B" (Salta, Lesser, Los Yacones); 28 ...;
+  50 ...; 50 "A" ...; 50 "B" (Salta, La Maroma). ... [h10] Expte. N°
+  284-3.152/01 (Intendente de La Caldera eleva reclamo de vecinos de La
+  Caldera, Calderilla y Campo Alegre); ... Expte. N° 20-501/02 (reclamo
+  Intendente de La Caldera); ... [h11] Art. 2° - La medida dispuesta en el
+  artículo precedente, implica para la empresa la prohibición de operar los
+  servicios en cuestión a partir de las Cero (00:00) horas del día 25 de
+  setiembre de 2002 ... / Art. 3° - Comuníquese a las Autoridades
+  Municipales de la ciudad de Salta, Cerrillos, La Merced, El Carril,
+  Chicoana, Coronel Moldes, La Caldera, San Lorenzo y Vaqueros. ... /
+  ROMERO - Gambetta - Yarade - David.
+  NOTA DE LECTURA: RECUENTO PROPIO: 13 trazas, iguales en el considerando y en
+  el Art. 1°; 9 municipios en el Art. 3°; 19 expedientes de reclamo en h10,
+  con el 284-2.435/01 y el 20-114/02 (escrito también 20.114/02) repetidos: 17
+  expedientes distintos si son los mismos (E.9). El acto no declara números.
+  Es el único del año que nombra Calderilla y Campo Alegre como parajes del
+  departamento.
+
+A.38
+  FUENTE: 16497 (16/10/2002) h9, pág. 4213
+  FICHA: CARGOS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Ministerio de Salud Pública - Decreto N° 1.754 - 02/10/2002 - Exptes.
+  N°s. 2.296/02 y 2.307/02 - código 147. / Artículo 1° - A partir del 20 de
+  agosto de 2002, trasládase al Centro de Salud de Vaqueros, dependiente
+  del Area Operativa XXXIX, La Caldera, a la señora Nilda Manuela Ruiz de
+  Choque, D.N.I. N° 12.959.124, legajo N° 55991, auxiliar administrativa,
+  con un régimen horario de treinta (30) horas semanales, del Area Operativa
+  XLV, Primer Nivel de Atención Area Capital (Decreto N° 1.423/02, cargo
+  51).
+
+A.39
+  FUENTE: 16504 (25/10/2002) h15, pág. 4443; apariciones 16510 h14 y 16518 h9
+  (texto)
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 y 250 ppp (16504)
+  TEXTO:
+  EDICTOS DE MINAS / O.P. N° 437  F. N° 136.445 / El Dr. Daniel E.
+  Marchetti, Juez de Minas y en lo Comercial de Registro ... Art. 73 del
+  C.P.M. Ley N° 7.141/01, que Héctor Enrique Medina ha solicitado la
+  concesión de la cantera de áridos, denominada Tomasito, que tramita
+  mediante Expte. N° 17.049, ubicada en el departamento La Caldera ... /
+  Coordenadas Gauss Krugger - Sistema Posgar/94 y Campo Inchauspe/69 /
+  Esquinero N° 1 268248.04787 3561225.3926 / Esquinero N° 2 7268746.2442
+  3561182.9522 / Esquinero N° 3 7268763.2204 3561382.2305 / Esquinero N° 4
+  7268265.0248 3561424.6704 / Superficie libre 10 Has. ... Secretaría, 17
+  de octubre de 2002 ... / Imp. $ 60,00  e) 25/10, 04 y 14/11/2002
+  NOTA DE LECTURA: «268248.04787» [sic]: seis cifras enteras y cinco
+  decimales, errata del original que se repite en 16518 h9. CONTROL
+  ARITMETICO: con «7» antepuesto el polígono da 100.000 m2, las 10 Has.
+  declaradas; la lectura la decide el control (flujo §5.6.1.2) y se transcribe
+  como está impresa. Los esquineros 2 y 3 son los puntos 4 y 3 de Triunfo III
+  (A.43).
+
+A.40
+  FUENTE: 16521 (19/11/2002) h7, pág. 4953
+  FICHA: OBRA-PUBLICA
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Secretaría de Obras Públicas - Resolución SOP N° 205 - 07/10/2002 -
+  Expediente N° 241 - 468/02 / Artículo 1° - Aprobar la documentación
+  técnica preparada por la Dirección General Plan Comunitario Mis Barrios
+  para el "Accesos, Desmonte, Cercado y Asadores Camping de UPCN - La
+  Caldera - Salta", con un presupuesto oficial de $ 62.563,96 y el proceso
+  selectivo llevado a cabo el 29 de julio del 2002. / Art. 2° - ...
+  adjudicar a la Empresa Servi-Narv, con domicilio en Manzana 248 B, casa
+  12, barrio 2 de Abril Salta Capital, la ejecución de los trabajos ... en
+  la suma de Pesos Sesenta y dos mil ciento veintiuno con cinco centavos
+  ($ 62.129,05) IVA incluido, en un plazo de sesenta días ...
+  NOTA DE LECTURA: En letras «sesenta y dos mil ciento veintiuno» y en cifras
+  «62.129,05» [sic]: no coinciden (8 pesos); no se concilia (E.9). Servi-Narv
+  aparece en otra obra de Mis Barrios (16319 h10, Capital).
+
+A.41
+  FUENTE: 16544 (23/12/2002) h24 y h114 (avisos), h39-h40 y h120 (anexos),
+  imagen 100-250 ppp; repetido en 16545, 16546, 16547 y 16548 (texto); sumario
+  16547 h14 imagen
+  FICHA: DOMINIO+OTRO
+  MODO DE LECTURA: imagen
+  TEXTO:
+  O.P. N° 698  F. v/c. N° 10.047 / [O.P. N° 699  F. v/c. N° 10.048] /
+  MINISTERIO DE HACIENDA / SECRETARIA DE INGRESOS PUBLICOS / DIRECCION
+  GENERAL DE RENTAS / Salta / Registrando deuda en concepto de Impuesto
+  Inmobiliario Rural los catastros que se mencionan a continuación, se
+  intima por este medio a los contribuyentes obligados al pago, a
+  regularizar las obligaciones fiscales, por el gravamen, con más los
+  intereses resultantes del Art. 36° del Código Fiscal, en el plazo
+  perentorio de cinco (5) días a partir de la presente publicación ...
+  bajo legal apercibimiento de gestionar su cobro compulsivo mediante
+  ejecución fiscal ... / Dr. Sebastián Saravia Tamayo, Director General,
+  Dirección General de Rentas, Salta
+  [anexo] DIRECCION GENERAL DE RENTAS - IMPUESTO INMOBILIARIO RURAL /
+  LISTADO DE CATASTROS RURALES QUE REGISTRAN DEUDA AL DIA DE LA FECHA POR EL
+  EJERCICIO FISCAL [698: "1992", el "1" bajo el sello; 699: "199" y el
+  último dígito bajo el sello] / Fecha: 18-12-2002 / DEPTO. | N° CATASTRO |
+  D. V. | APELLIDO Y NOMBRE | DOMICILIO | PERIODOS | MONTO
+  698, departamento 05 (páginas 15 y 16 de 88):
+  05 14 9 MAIDANA HIPOLITO CARLOS | La Caldera | 3 | 201.28
+  05 28 10 COLQUE JUAN | La Caldera (4401) | 3 4 | 387.04
+  05 57 9 MEDINA HECTOR ENRIQUE | DEAN FUNES 2401 Capital (4400) | 1 2 3 4
+    | 10,549.16
+  05 77 6 MARISCAL ZENON | La Caldera | 3 4 | 387.04
+  05 78 8 VALENCIA ESMERALDA | La Caldera | 1 2 3 4 | 859.19
+  05 88 1 FINANCIERA RADESTAR SA | La Caldera (4401) | 1 2 3 4 | 33,393.47
+  05 90 0 MORAIRA SOCIEDAD ANONIMA | SARMIENTO 424 ... La Caldera (4603) |
+    1 2 3 4 | 21,214.53
+  05 91 2 FINANCIERA RADESTAR SA | La Caldera (4401) | 1 2 3 4 | 7,699.27
+  05 93 6 BARTOLETTI EDGAR OLVER | ... JUJUY ESQ GORRITI S/N La Caldera
+    (4608) | 1 2 3 4 | 9,061.72
+  05 102 9 PROVINCIA DE SALTA | Piso 1 Depto. 14 TERMINAL DE TRANSP. La
+    Caldera (9011) | 1 2 3 | 108,126.07
+  05 119 5 FERNANDEZ ABRAHAM | TAMAYO JUAN ESTEBAN 586 ... La Caldera (4400)
+    | 1 | 173.24
+  05 125 1 GUTIERREZ DOROTEA | La Caldera (4401) | 1 3 4 | 638.27
+  05 133 1 ABDO ERNESTO MANUEL | Cachi (4417) | 1 | 327.33
+  05 140 10 RUIZ FIGUEROA FELIX | CORNEJO MARCELINO CAP 246 La Caldera
+    (4400) | 2 | 229.39
+  05 167 10 ABDO ERNESTO MANUEL | Cachi (4417) | 1 | 432.36
+  05 168 1 ABDO ERNESTO MANUEL | Cachi (4417) | 1 | 318.63
+  05 337 3 RODRIGUEZ VICTOR CESAR | La Caldera | 1 2 3 4 | 865.69
+  05 387 1 GIMENEZ DIONISIO | VAQUEROS La Caldera (4401) | 1 | 216.68
+  05 390 2 CASTILLA GASTON CECILIO | SAN MARTIN S/N° Vaqueros (4401) |
+    1 2 3 4 | 608.93
+  05 394 10 TORRES VICENTA AGRIPINA | BELGRANO S.N. La Caldera (4401) | 1 |
+    165.52
+  05 402 0 BRAVO JULIO RODOLFO | O'HIGGINS 575 Capital (4400) | 3 | 201.28
+  05 432 1 SUAREZ DAVID EDUARDO | Vaqueros | 1 2 3 4 | 859.19
+  05 1497 7 MENDEZ EDUARDO LISARDO | PACHECO ANGEL GRAL. 1213 La Caldera
+    (4400) | 2 3 4 | 685.95
+  05 1510 2 RAPETTI SERGIO ALEJANDRO | BOLIVAR SIMON 379 Capital (4400) | 3
+    | 64.41
+  05 1535 9 MENDEZ EDUARDO LISARDO | PACHECO ANGEL GRAL. 1213 La Caldera
+    (4400) | 2 3 4 | 685.95
+  05 1580 8 CAÑADA ANCHA SRL | SARMIENTO 775 La Caldera | 2 3 4 | 685.95
+  05 1674 9 NOREIKO FRANCISCO | La Caldera (4401) | 1 2 3 4 | 859.19
+  05 1676 2 SARMIENTO JOSE RICARDO | La Caldera (4401) | 4 | 297.42
+  05 1702 7 CARIDE MARIA DE LUJAN | 817 GUEMES MARTIN M.GRAL. La Caldera
+    (4400) | 1 2 3 4 | 859.19
+  05 1718 1 ORTIZ CARMEN CANDELARIA | ZUVIRIA FACUNDO DE 321 La Caldera
+    (4400) | 4 | 163.53
+  05 1782 6 PROVINCIA DE SALTA | La Caldera | 1 2 3 4 | 983.37
+  05 1866 3 DIRECCION DE VIALIDAD DE SALTA | La Caldera (4401) | 1 2 3 4 |
+    868.26
+  05 1878 0 PROVINCIA DE SALTA | La Caldera (4401) | 1 2 3 4 | 868.26
+  05 1883 5 VERA AGUSTINA | FINCA LAGUNA La Caldera (1035) | 1 4 | 206.93
+  05 1902 1 LOPEZ MORILLO MARIA MATILDE | LIBERTAD PJE. 40 Capital (4400) |
+    3 | 223.18
+  05 2006 8 FERNANDEZ JUSTINA | La Caldera (4401) | 4 | 0.10
+  05 2021 6 CICARELLI JUANA ANTONIA | URQUIZA JUSTO JOSE 980 La Caldera
+    (4400) | 3 4 | 15,985.39
+  699, departamento 05 (página 8 de 29):
+  05 2 1 ARIAS HILARIO | 54 CALLE 10 B.SANTA LUCIA La Caldera (4400) | 3 4 |
+    462.94
+  05 47 5 MAMANI GREGORIA MODESTA | La Caldera (4401) | 1 2 | 127.98
+  05 133 1 ABDO ERNESTO MANUEL | Cachi (4417) | 1 | 54.15
+  05 151 5 MORA ANA MERCEDES | 20 DE FEBRERO 1532 ... La Caldera (4400) | 4
+    | 240.73
+  05 159 10 BARTOLETTI WALTER OSVALDO | ... JUJUY Y GORRITI La Caldera
+    (4608) | 3 4 | 1,828.20
+  05 168 1 ABDO ERNESTO MANUEL | Cachi (4417) | 1 | 19.61
+  05 337 3 RODRIGUEZ VICTOR CESAR | La Caldera | 1 | 101.06
+  05 1268 3 VERA HECTOR RODOLFO | La Caldera | 1 | 100.74
+  05 1672 5 GERACARIS JUAN | GUEMES MARTIN M.GRAL 2385 Capital (4400) | 1 |
+    79.77
+  05 1676 2 SARMIENTO JOSE RICARDO | La Caldera (4401) | 1 2 | 152.16
+  05 1737 7 TITULARIDAD EN TRAMITE | La Caldera | 3 4 | 167.99
+  05 1751 3 GERACARIS JUAN | GUEMES MARTIN M.GRAL 2385 Capital (4400) |
+    1 2 3 4 | 364.47
+  05 1782 6 PROVINCIA DE SALTA | La Caldera | 1 | 118.86
+  05 2006 8 FERNANDEZ JUSTINA | La Caldera (4401) | 1 | 584.13
+  NOTA DE LECTURA: Sumario 16547 h14 (imagen): O.P. N° 698 Imp. $ 35.125,00,
+  O.P. N° 699 Imp. $ 10.425,00, los dos e) 23 al 30/12/2002. RECUENTO PROPIO:
+  37 renglones del departamento en el 698 (13 + 24) y 14 en el 699; 51 en
+  total; seis catastros figuran en los dos listados (133, 168, 337, 1676,
+  1782, 2006). SUMA PROPIA (el listado no imprime total que cotejar): 698, $
+  220.352,36, de los cuales el catastro 102 de la Provincia de Salta es
+  108.126,07; 699, $ 4.402,79. El código «05» del departamento es el mismo de
+  A.18. Los domicilios con C.P. 4400 y calles de la capital («PACHECO ANGEL
+  GRAL. 1213 La Caldera (4400)») se transcriben como están. El ejercicio
+  fiscal del 699 no lo decide nadie: el sello tapa el último dígito en las
+  cinco ediciones (mismo escaneo). Los otros avisos de Rentas del bloque (700
+  y 701, planes de pago caducos; 712, inmobiliario rural) no traen el
+  departamento 05 en 16544 (búsqueda por texto, sin mirar las 25 hojas). Las
+  cinco ediciones dan el mismo listado (cotejo de los números de catastro por
+  texto).
+
+A.42
+  FUENTE: 16547 (27/12/2002) h7, pág. 5627
+  FICHA: CARGOS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Ministerio de Salud Pública - Decreto N° 2.247 - 10/12/2002 - Expte. N°
+  90.973/02-código 121 / Artículo 1° - Desígnase en carácter de personal
+  temporario, al señor Sergio Daniel Colque, D.N.I. N° 20.301.100, para
+  desempeñarse como chofer en el Centro de Salud N° 21 Enfermera Corina
+  Adela Bustamante, dependiente del Area Operativa XXXIX- La Caldera, a
+  partir de la fecha de notificación del presente decreto y hasta el 31 de
+  diciembre de 2002, en la secuencia 11, cargo 10, ubicación
+  escalafonaria: mantenimiento, denominación: chofer, decreto N° 1.034/96
+  ... en cargo vacante por fallecimiento del señor Ramón Cayo.
+  NOTA DE LECTURA: La vacante nombra a quien la dejó (Ramón Cayo); su
+  nombramiento no aparece en el año (B.4). Firma del bloque en la misma hoja:
+  «WAYAR (I.) - David» (E.4).
+
+A.43
+  FUENTE: 16547 (27/12/2002) h13 capa, h14 imagen, pág. 5634
+  FICHA: MINAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  [...] 7.141/01, Cooperativa Mesa Redonda, ha solicitado la Cantera de
+  Aridos, denominada: Triunfo III que tramita mediante Expte. N° 17.532,
+  ubicada en el Departamento La Caldera descripta de la siguiente manera: /
+  Coordenadas Gauss Kruger: Sistema Possgar-94 Campo Inchauspe-69 / Puntos
+  X Y / 1 7.268.982.87 3.561.318.10 / 2 7.268.982.87 3.561.518.10 / 3
+  7.268.763.22 3.561.382.23 / 4 7.268.746.24 3.561.182.95 / Superficie
+  libre: 4 has 4.395 m2. Los terrenos afectados son de propiedad fiscal.
+  Secretaría, 17 de diciembre de 2002. Esc. Humberto Ramírez, Secretario. /
+  Imp. $ 60,00  e) 27/12/2002, 08 y 20/01/2003
+  NOTA DE LECTURA: RECALCULO: 44.395 m2, cierra. «Possgar» [sic]. La capa leyó
+  «triunfo ti»; la imagen dice «Triunfo III». INFERENCIA ROTULADA: los puntos
+  1-2 son los esquineros 4-3 de Tereza (A.32) y los puntos 3-4 son los
+  esquineros 3-2 de Tomasito (A.39): Triunfo III es la franja entre las dos.
+  Mismo solicitante que El Triunfo II (A.12, Capital, río Caldera).
+
+§B · VECINDAD
+-------------
+
+B.1 · NUCLEOS YA FICHADOS
+Lo que 2002 trae y el config ya tenía (origen = año del config; la sesión no
+leyó los actos de origen):
+
+  Lugares e instituciones del anillo 2 presentes en el §A: vaqueros, la
+  calderilla, arroyo urquiza, finca vaqueros, la zanja, juana moro de lopez,
+  bernabe lopez, san cayetano, cristo monumental, area operativa xxxix,
+  municipalidad de la caldera, liga municipal de futbol san lorenzo, rio
+  caldera, canada ancha, los yacones, campo alegre, lesser.
+  Actores del config que reaparecen en actos del departamento: Teodoro Bartolo
+  Mogro (config 1965 y 1973; A.7; la familia Mogro tiene entradas de 1952 a
+  1959); Sumbay (Jenaro 1965, Antonio 1978, Oscar 1986, César Dionisio y
+  Bernardo 1987; en 2002 Sumbay César Milagro y Sumbay María, A.29); Sarapura
+  (1910 a 1985; en 2002 Sarapura Rosendo y Zarapura Teodora, A.29); Vilte y
+  Lamas de Vilte (1954, 1961, 1985; en 2002 tres Vilte y dos Lamas, A.29);
+  Portal (1954 a 1987; Rosa Evarista Portal, A.34); Guantay (1958, 1974;
+  Francisco Guantay, A.34); Colque (1953 a 1988; Colque Juan, catastro 28,
+  A.41); Santiago Fiori (1960; Fiori Santiago Federico, A.29); Juan Geracaris
+  (1985; catastros 1672 y 1751, A.41); Hilario Arias (1958; catastro 2, A.41);
+  Abraham Fernández (1909; catastro 119, A.41); Ernesto Solá (1931; demandado
+  en A.19); Corina Adela Bustamante (1952, 1955, 1956, 1961; nombre del Centro
+  de Salud N° 21 y del hospital, A.26, A.36, A.42). Que sean las mismas
+  personas o sus familias es INFERENCIA, no adoptada: el config da nombre y
+  año, no el acto.
+  Números: 1782, 457 y 1034 (§2).
+
+B.2 · NUCLEOS DEL DEPARTAMENTO EN ACTOS QUE NO NOMBRAN EL TERMINO
+
+B.2.1
+  FUENTE: 16341 (27/02/2002) h21, pág. 777
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  AVISOS COMERCIALES / O.P. N° 974  F. N° 132.655 / "SAN ROQUE S.R.L." /
+  Contrato Rectificatorio / En la ciudad de Salta, a, los siete (7) días
+  del mes de enero, del año 2002, se reúnen la Srta. Sonia Elisa Golpe
+  Pavichevich ... de 19 años de edad ... y el señor Adolfo Jorge Golpe
+  Frías ... de 50 años de edad ... resuelven modificar en el Contrato
+  Social de "San Roque S.R.L.", la cláusula Sexta de Administración ... /
+  Sexta: La administración, representación y uso de la firma social estará
+  a cargo del Socio-Gerente, la Srta. Sonia Elisa Golpe Pavichevich, siendo
+  la duración en su cargo por el término de un (1) año. ... Secretaría:
+  Salta, 26/02/2002. Dra. Claudia Ibáñez de Alemán ... / Imp. $ 25,00  e)
+  27/02/2002
+  NOTA DE LECTURA: Es la sociedad con domicilio legal en La Calderilla (A.6).
+  El rectificatorio está fechado el 07/01/2002 y la constitución, publicada el
+  22/02, todavía nombra gerente a Adolfo Jorge Golpe Frías: no se concilia. La
+  constitución llama a Sonia «menor de edad emancipada» y el rectificatorio le
+  da 19 años.
+
+B.2.2
+  FUENTE: 16364 (04/04/2002) h18 capa, h19 imagen, pág. 1307
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp (h19); nombre de la entidad por la capa
+  (h18)
+  TEXTO:
+  ASAMBLEAS / O.P. N° 299  F. N° 133.188 / UNION BAUTISTA DEL N.O.A. [capa]
+  / ... que se realizará el 26 y 28 de abril de 2002. La apertura de la
+  asamblea se realizará el día 26, a Hs. 17:00, en el Campamento Elim,
+  ubicado en calle Gauchos de Güemes N° 3, de la localidad de Vaqueros,
+  provincia de Salta. ... 6°) Consideración de solicitudes para escriturar
+  propiedades. ... 9°) Situación de propiedades de iglesias que no se
+  afiliaron. ... / Jorge C. Guardatti, Presidente / Imp. $ 8,00  e)
+  04/04/2002
+  NOTA DE LECTURA: Vaqueros sin departamento: la pertenencia la dan los otros
+  actos del año (A.5, A.14, A.29). «Gauchos de Güemes» es aquí nombre de
+  calle.
+
+B.2.3
+  FUENTE: 16373 (17/04/2002) h14, pág. 1506
+  FICHA: NORMA+AGUAS
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  Art. 10. - Las Lomitas y Campo Alegre. La pesca del pejerrey en los
+  Embalse de Las Lomitas y Campo Alegre sólo se podrá ejercitar los meses
+  de enero, febrero, mayo, junio, julio, noviembre y diciembre,
+  permitiéndose un cupo máximo de extracción de 20 ejemplares. Para estos
+  ambientes rige un período de veda reproductiva durante los meses de
+  marzo, abril, agosto, setiembre y octubre.
+  NOTA DE LECTURA: Resolución N° 34 de A.15. El acto no atribuye departamento
+  al embalse; «dique campo alegre» y «embalse de campo alegre» están en el
+  anillo 2 del config. Jurisdicción: la del config, no la del acto (5.1ter).
+  «los Embalse» [sic].
+
+B.2.4
+  FUENTE: 16511 (05/11/2002) h25, pág. 4665; repetido 16512 h35, 16513 h26,
+  16514 h21 (texto); el aviso, 16506 h23 (capa)
+  FICHA: ESCUELA+ELECTORAL
+  MODO DE LECTURA: imagen 110 ppp (16511 h25); aviso por la capa
+  TEXTO:
+  AVISO GENERAL / O.P. N° 482  R. s/c. N° 9.813 / Ministerio de Educación /
+  Nómina de Autoridades de Mesa para la Elección de Miembros de Junta
+  Calificadora de Méritos y Disciplina / Resolución N° 1.551/02 / VER
+  ANEXO / Sin cargo  e) 29/10/2002 [capa, 16506 h23]
+  23 | 4078 Vaqueros | Viñuales José | [doc.] | Presid | 7131
+  23 | | Nayar Raúl Ernest[o] | [doc.] | 1er Supl | 5050
+  23 | | Tolaba Rogelio | [doc.] | 2° Supl | 4356
+  NOTA DE LECTURA: Mesa 23 en la Escuela N° 4.078 (Dr. Bernabé López, A.11).
+  La nómina aparece en 16506 (anexo, h23-h29) y otra vez del 16511 al 16514:
+  repetición o reimpresión no determinada. La última columna (7131, 5050,
+  4356) no tiene rótulo en la hoja mirada; 5050 coincide con el Colegio
+  Secundario N° 5.050 de Vaqueros (A.27): coincidencia no adoptada. En la
+  misma nómina, mesa 67, Escuela 4012 Roca: «Caldera Royo Claudio» (apellido,
+  B.3).
+
+B.2.5
+  FUENTE: 16522 (20/11/2002) h37, pág. 5003; sumario h5
+  FICHA: OTRO
+  MODO DE LECTURA: imagen 110 ppp
+  TEXTO:
+  O.P. N° 207  F. N° 137.035 / Asociación Comunitaria "El Molino" de
+  Vaqueros / ASAMBLEA GENERAL ORDINARIA / La Comisión Directiva de la
+  Asociación Comunitaria "El Molino." Convoca a sus asociados a la Asamblea
+  General Ordinaria a llevarse a cabo en la sede de la asociación sita en
+  la localidad de Vaqueros, de la Provincia de Salta, el día 14 de
+  Diciembre de 2002 a horas 19 ... 2°) ... ejercicio finalizado el 31 de
+  Octubre de 2002. 3°) Renovación de los miembros titulares y suplentes de
+  la Comisión Directiva ...
+  NOTA DE LECTURA: Sin firmas en la hoja mirada. Recaudación O.P. N° 237 en la
+  misma hoja: 109.188,10 + 1.046,40 = 110.234,50, cierra.
+
+B.3 · TERMINOS QUE ESTE AÑO SON OTRA COSA
+Con «caldera»: «Caldera Royo Claudio», apellido, mesa 67 de la nómina de B.2.4
+(16506 h29 imagen; 16511 h27, 16512 h37, 16513 h28 capa); «Pje. La Caldera N°
+662, Barrio San Ignacio» (16325 h5 imagen) y «pasaje La Caldera N° 623, de
+esta Ciudad» (16359 h26 imagen), calle de la ciudad de Salta; «una caldera» de
+remate minero en Olacapato (16527 h30 imagen; 16528 h29, 16529 h18 texto) y
+«Caldera Horizontal» de lavadero (16538 h14 imagen; 16539 h13 texto),
+máquinas; «Mariana Calderari» (16514 h16 imagen), apellido; Calderón,
+apellido, en 20 hojas (fp conocido).
+
+Anillo 2, con su jurisdicción o naturaleza: wierna (Esc. Mirta Susana Garay de
+Wierna, 122 hojas; río Wierna en C.4); san alejo (San Alejo S.A., Salta);
+finca san jorge (Rosario de Lerma, Orán, Metán); helvecia y teodolinda
+(nombres de pila); mesa redonda (Cooperativa de Provisión de Áridos Mesa
+Redonda Ltda., sede Zuviría 2370, Salta, 16384 h19: solicitante de A.12 y
+A.43); gauchos de guemes (agrupaciones tradicionalistas; calle de Vaqueros en
+B.2.2); despensa, mesada, penales (palabras comunes); higueritas y finca el
+milagro (La Merced); antilla (Rosario de la Frontera); ovejeria (Rosario de la
+Frontera); pucheta, yugra, mosquera, toconas, murua, matos, quintin,
+isasmendi, castanares (apellidos, barrio, instituto); lagunilla (cantera en
+Capital, C.5); alto de la sierra (Santa Victoria Este); finca campo alegre
+(Chicoana); rio blanco (Orán, Rosario de Lerma; Quebrada de Río Blanco S.A. en
+A.23); san cayetano (barrios, asociación de Coronel Moldes); juana moro de
+lopez (calle de la capital, salvo A.11); el bordo, candelaria, tabacal,
+betania, los sauces (Guachipas), el tunal, durazno, el monte, nogales,
+vaqueria (Guachipas), el sauce (La Poma), manzano, los perales (Cerrillos),
+las nieves (cantera, C.4), villa san lorenzo, san jose (de Metán), entre rios
+(avenida), rodeo grande, el recreo, el mollar, penas blancas, punta del agua,
+trancas, siancas, cedros, angostura, el desmonte, el borde, la sierra, la
+laguna, tunel, villa del valle, el churcal (Molinos), el angosto (Capital):
+todos fuera del departamento o sin lugar. Mamani, aramayo, apaza, condori,
+chaile, castellanos: apellidos y Hospital Joaquín Castellanos.
+
+
+B.4 · AUSENCIAS DEL ANILLO DE ACTORES
+Grupo 1, sólo en su propio acto (una aparición o las repeticiones del mismo
+aviso): Carlos Eduardo Fernández Pérez fuera de sus canteras de La Caldera
+(ver grupo 3), Luis Eduardo Tactagi, Héctor Enrique Medina (cantera), Gabriel
+Armando Zapana, Flavio Merluzzi, Carlos Francisco Gómez, María Victoria
+D'Apice, Teodoro Bartolo Mogro, Mercedes López Giménez, Jaime Emilio Castillo,
+Cruz Blanca Teresa, Sumbay César Milagro y María, Telefora Constancia Pérez,
+Zarapura Teodora, Lamas Virgilio, Vilte Elina Fernanda, Carmen y Soledad
+Zulma, Gonzalez Jorge Alejandro, Fiori Santiago Federico, Rosa Evarista Portal
+y Francisco Guantay (como tales), Laura Mirabal, Balvina Delia Serapio de
+Lamdivisnay, Nilda Manuela Ruiz de Choque, Sergio Daniel Colque, Ramón Cayo,
+Héctor Miguel Calabró (intendente), Irac S.R.L., Conciel S.A. en La Caldera,
+la Cooperativa La Mesa Redonda fuera de sus canteras, los 37 titulares del
+listado de Rentas fuera del listado (salvo los del grupo 3), Calabresi,
+Dantur, López Omar Alfredo y Padilla Martín Ernesto. Identificadores usados:
+nombre y apellido laxos, número de expediente o catastro y lugar. Ramón Cayo:
+la vacante consta por su fallecimiento (A.42) y su nombramiento no aparece en
+el año; Laura Mirabal sale del cargo 32 (A.36) y su destino no aparece.
+
+Grupo 2, en más de un acto del departamento (la trama del año): Carlos Eduardo
+Fernández Pérez (Felisa A.1 y A.31, Ana María A.30); la Cooperativa La Mesa
+Redonda (El Triunfo II A.12, Triunfo III A.43); los Biazutti (Jorge Ernesto en
+A.17, Sergio Federico con domicilio en Finca Vaqueros en A.23: parentesco no
+afirmado); el Centro de Salud N° 21 y su personal (A.26, A.35, A.36, A.42);
+Ernesto Solá (A.19) y el actor de 1931; Lamas Ariel (secretario del comité
+departamental y presidente del circuito La Caldera, A.29); la Municipalidad de
+La Caldera y su intendente (A.24, A.26, A.37); la Provincia de Salta como
+titular de los catastros 102, 1782 y 1878 (A.41) y comodante de la matrícula
+1.782 (A.25); el código 05 del departamento (A.18 y A.41).
+
+Grupo 3, también fuera del departamento: Carlos Eduardo Fernández Pérez con la
+cantera Timón 1, Expte. N° 17.458, departamento Capital, lugar El Prado (16413
+h9 imagen; 16419 h12, 16427 h24 texto); Cooperativa Mesa Redonda con La
+Ferroviaria (Capital, C.2); Servi-Narv con otra obra de Mis Barrios en Capital
+(16319 h10); Conciel S.A. con la planta potabilizadora de Embarcación (Res.
+195 D, 16440 h19); Félix Rubén Salomón, Carlos Eduardo Noman y Carlos Humberto
+Zarif en otras sociedades de la capital (16465 h27, 16459 h17); Juan Geracaris
+y el Ing. Demetrio Constantino Geracaris, cargo político (16310 h23); Héctor
+Raymundo Medina (Rosario de la Frontera) y Héctor Enrique Medina: homónimos
+parciales, descartados; «Pje. Ernesto Solá» (barrio Hernando de Lerma,
+16501-16503) y «Solá Ernesto» deudor en Rosario de Lerma (16544 h88),
+homónimos sin acto que los una al demandado de A.19.
+
+
+§C · LIMITROFES
+---------------
+Canteras de áridos del departamento Capital sobre los ríos que bajan de La
+Caldera, con su vecindad medida por coordenadas (INFERENCIA, rotulada: las
+coordenadas de los actos, no un plano):
+
+  C.1 · El Triunfo II, Expte. N° 17.422, «departamento Capital, río Caldera»
+  (A.12).
+  C.2 · La Ferroviaria, Expte. N° 17.394, Cooperativa Mesa Redonda,
+  «departamento Capital» (16363 h16, imagen; O.P. N° 278, e) 03, 11 y
+  23/04/2002): esquineros 7267628.4700/3562590.5900,
+  7267917.6800/3563081.8400, 7267674.6300/3563035.6600,
+  7267448.7400/3562867.3500; superficie libre 10 Has. (recalculo: 99.405 m2).
+  Sus esquineros 2 y 3 son los esquineros 1 y 4 de Ana María (A.30), que su
+  acto pone en La Caldera: el lado común es un tramo del límite Capital-La
+  Caldera según los dos actos.
+  C.3 · Alic, Expte. N° 17.374, Felipe Antonio Marinaro, «departamento
+  Capital, lugar río Mojotoro» (16353 h13, capa; e) 15, 25/03 y 09/04/2002);
+  su punto 2 (7.267.287.72/3.564.639.04) queda a unos 100 m del punto 4 de
+  Felisa (A.1).
+  C.4 · Don Roque, Expte. N° 17.470, «departamento Capital, lugar Río
+  Vaqueros» (16525 h13, capa; 16531 h11, 16539 h9); De las Nieves, Expte. N°
+  17.340, «departamento Capital, lugar: Río Wierna» (16333 h14, capa; 16339
+  h11).
+  C.5 · Lagunilla, Expte. N° 17.528, Mocoví S.R.L., «Departamento de Capital -
+  Lugar: Lagunilla» (16518 h8, capa); Timón 1, Expte. N° 17.458, «departamento
+  Capital, lugar El Prado» (16413 h9, imagen).
+  C.6 · Consorcio de Riego Río Mojotoro, asamblea constitutiva del 19/09/2002
+  en la Delegación Zonal Campo Santo de la Cámara del Tabaco, General Güemes
+  (16467 h27, imagen; O.P. N° 736). El río no se atribuye a departamento.
+  C.7 · San Lorenzo: municipio y oficina del Registro Civil con departamento
+  CAPITAL (A.9); comparte la Liga Municipal de Fútbol con La Caldera (A.5) y
+  es circuito propio en A.16 y A.20.
+
+§P · PLANOS
+-----------
+El corpus de 2002 no publica ningún plano. Techo de resolución 300 ppi. La
+palabra «plano» aparece en 159 hojas; 7 tocan al departamento y remiten a 5
+planos citados y no acompañados: Plano de Mensura y Loteo de la Matrícula N°
+2.583 (Res. 96 D) y de Mensura, Unificación y Loteo de las Matrículas N° 2.486
+y 2.487 (Res. 97 D), en Vaqueros (A.17); Plano de Mensura, Subdivisión y Loteo
+de la Matrícula N° 2.972, loteo La Zanja (Res. 234 D, A.33); y el plano de la
+Dirección General de Inmuebles N° 475 / N° 457 del comodato (A.25), que el
+acto corrige de uno a otro sin publicar ninguno. Las coordenadas de las siete
+canteras del §A y del §C son lo más parecido a un plano que trae el año.
+
+
+§D · INDICE
+-----------
+  16306  h18  MINAS                Felisa 17.034, reducción de superficie
+  16308  h37  HACIENDA-MUN         Ley 7170, presupuesto 2002, renglones
+  16318  h8   OBRA-PUBLICA+AGUAS   Res. SOP 516, arroyo Urquiza
+  16322  h5   OTRO                 LPN 01/02, corredor metropolitano
+  16323  h19  OTRO                 Liga Municipal Fútbol San Lorenzo-La Caldera
+  16338  h21  OTRO                 San Roque S.R.L., La Calderilla
+  16341  h21  OTRO                 San Roque S.R.L., rectificatorio (B.2.1)
+  16352  h22  OTRO                 PROINT S.A., directorio, Mogro
+  16354  h6   MINAS                liberación Oscar 16.395
+  16356  h27  REGISTRO-CIVIL       Res. 78 D, oficinas seccionales
+  16357  h17  JUSTICIA             concurso Zapana, Vaqueros
+  16359  h9   ESCUELA              Decreto 376, creaciones de divisiones
+  16364  h10  MINAS                El Triunfo II 17.422, Capital, río Caldera
+  16364  h19  OTRO                 Unión Bautista, Campamento Elim (B.2.2)
+  16368  h18  MINAS                liberación Gimena 17.038
+  16372  h18  OTRO                 Centro de Jubilados Casa de la Comunidad
+  16373  h13  NORMA+AGUAS          Res. 34, pesca, truchas
+  16373  h14  NORMA+AGUAS          Res. 34, embalse Campo Alegre (B.2.3)
+  16373  h26  ELECTORAL            Res. 1/02 Partido Renovador
+  16376  h11  DOMINIO              Res. 96 D y 97 D, planos en Vaqueros
+  16398  h14  DOMINIO+JUSTICIA     posesión veinteñal catastro 23
+  16406  h18  DOMINIO+JUSTICIA     prescripción catastro 2.827
+  16409  h20  ELECTORAL            convocatoria interna PJ
+  16412  h24  ELECTORAL            internas Frente Grande, áreas
+  16416  h13  MINAS                liberación María Belén 17.048
+  16418  h39  OTRO                 Quebrada de Río Blanco S.A., Biazutti
+  16421  h10  OBRA-PUBLICA         50 viviendas, BIRF 4273
+  16423  h5   DOMINIO+NORMA        Ley 7.192 y Decreto 996, comodato
+  16434  h7   OTRO                 Decreto 1.106, capital simbólica
+  16440  h19  OBRA-PUBLICA+ESCUELA Res. 194 D, Colegio 5.050
+  16450  h19  OTRO                 La Caldera S.A.
+  16450  h47  ELECTORAL            Res. 23/02, autoridades Renovador
+  16455  h15  MINAS                Ana María 17.033
+  16458  h13  MINAS                liberación Felisa 17.034
+  16463  h10  MINAS                Tereza 17.508
+  16470  h7   DOMINIO              Res. 234 D, loteo La Zanja
+  16470  h18  OTRO                 Centro de Jubilados Cristo Monumental
+  16472  h53  CARGOS               Decreto 1.508, C. de Salud La Caldera
+  16480  h13  CARGOS               Decreto 1.594, Centro de Salud N° 21
+  16488  h9   OTRO                 Decreto 1.686, caducidad línea 23
+  16497  h9   CARGOS               Decreto 1.754, C. de Salud Vaqueros
+  16504  h15  MINAS                Tomasito 17.049
+  16511  h25  ESCUELA+ELECTORAL    Res. 1.551/02, mesa 23 (B.2.4)
+  16521  h7   OBRA-PUBLICA         Res. SOP 205, camping UPCN
+  16522  h37  OTRO                 Asoc. Comunitaria El Molino (B.2.5)
+  16544  h39  DOMINIO+OTRO         Rentas, deudores inmobiliario rural
+  16547  h7   CARGOS               Decreto 2.247, chofer CS 21
+  16547  h14  MINAS                Triunfo III 17.532
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · DUPLICACION Y SALDOS
+Avisos del departamento repetidos, reunidos por texto (no por número): 11
+(A.1, A.4, A.10, A.12, A.18, A.19, A.24, A.30, A.32, A.39, A.41); en todos el
+número de apariciones coincide con la marca de publicación dentro del año.
+
+md5 y dhash: el pre-informe trae 7588 pares dhash ≤ 16, casi todos tapas y
+contratapas de formato fijo; la sesión no los revisó (pendiente 6). Tinta
+(pre-informe): 833 hojas bajo 5 %; bajo 0,5 %, tres: 16365 h27 (0,00 %), 16365
+h28 (0,33 %) y 16547 h119 (0,31 %); no se miraron.
+
+Saldos: el año no publica resúmenes de Tesorería: no hay cadena de saldos de
+la clase de v16 §6. El Boletín publica cada día su propia «RECAUDACION» (saldo
+anterior + recaudación del día = total). La capa resuelve 27 recuadros (de
+16355 a 16548), 25 cierran la suma y 17 de 26 pasos encadenan; las roturas son
+días cuyo recuadro la capa no lee. Mirados en la imagen y cerrados: 16338 h21,
+16352 h22, 16372 h18, 16373 h26, 16412 h24, 16450 h23, 16522 h37 (7 de 7). Es
+la serie de la imprenta, no del departamento, y no se completa.
+
+
+E.2 · COBERTURA
+Hojas miradas en la imagen: 87, de 51 ediciones, sobre 6914 hojas y 247
+ediciones. Ediciones citadas en las fichas del §A: 59. Las 103 hojas del
+anillo 1 con «caldera» o «calderilla» se juzgaron todas: 64 miradas en la
+imagen y 39 reunidas por texto como repeticiones de un aviso mirado (30),
+sumarios o considerandos de un acto mirado (3) o falsos positivos de una forma
+ya mirada en otra hoja (6).
+
+
+E.3 · SIN MENCION Y NO MIRADO
+No mirado y con posible mención: las hojas h30 a h52 del anexo del Decreto
+1.508 (16472), donde podría estar el Centro de Salud de Vaqueros (la capa no
+devuelve «vaqueros» ni «caldera», pero esas tablas son «a ojos»); el
+articulado de la Ley 7170 de presupuesto (16308); las 863 hojas «a ojos» del
+pre-informe salvo 8 que tienen ficha; las 25 hojas de los anexos de Rentas
+700, 701 y 712 (búsqueda por texto sin departamento 05).
+
+
+E.4 · FIRMAS Y AUTORIDAD
+Gobernador: Juan Carlos Romero (nombrado en A.26 y como presidente del PJ en
+A.20). Fórmulas contadas por la capa al pie de decretos (unas 1.000): «ROMERO
+- David.» 316 veces; «ROMERO - Yarade - David.» 85; «ROMERO - Fernández -
+David.» 55; «ROMERO - Salum - David.» 38; «ROMERO - Saravia Toledo - David.»
+31; «ROMERO - Gambetta - David.» 29; «ROMERO - Gambetta - Yarade - David.» 10;
+también Ubeira, Asti de Pasarell y Restom (I). Interino: «WAYAR (I.) - David.»
+y variantes («(1)», «(L)» son lecturas de la capa de «(I.)»), unas 230 veces,
+con todos los ministros. Mirados en la imagen: «ROMERO - Yarade - David.»
+(16423 h8), «ROMERO - David.» (16434 h6-h8), «ROMERO - Fernández - David.»
+(capa, 16359 h10), «ROMERO - Gambetta - Yarade - David.» (16488 h11), «WAYAR
+(I.) - David» (16547 h7). Interinatos: el Decreto 1.067 (26/06) y el 1.102
+(04/07) registran que Romero reasume el mando (16434 h6, imagen). La última
+firma «ROMERO» que da la capa es de 16522 (20/11); de ahí al 16545 firman
+«WAYAR (I.)»: no se fija fecha de reintegro. Refrendo: Yarade, Ministro de
+Hacienda (C.P.N. Fernando Yarade, también Infraestructura interino, 16376
+h11); David, Secretario General de la Gobernación; Dr. Raúl Romeo Medina,
+Ministro de Gobierno y Justicia; Dr. Federico Abel Saravia Toledo, Ministro de
+Salud Pública; Dr. José Luis N. Gambetta, Producción y Empleo; Dr. Francisco
+Javier López Sastre, Medio Ambiente. Juez de Minas: Dr. Daniel Enrique
+Marchetti, y en marzo la Dra. Mirta del C. Avellaneda (16353 h13).
+
+
+E.5 · CORTES Y COLUMNAS
+Columna perdida: no se confirmó ni se descartó con un renglón en repr sobre la
+imagen (pendiente 3). En las 87 hojas miradas, el texto de la capa prop y la
+imagen coinciden en el orden de columnas; las tablas a dos columnas
+(presupuesto, listados de Rentas, nóminas) la capa las lee renglón por renglón
+con errores de dígito, no de columna. Cortes: ningún «Cal-/dera» partido en el
+año.
+
+
+E.6 · REPETICIONES
+Las de E.1. Además, el anexo de Rentas (A.41) se publica cinco días con el
+mismo escaneo (mismo sello en el mismo lugar), y la nómina de B.2.4 dos veces
+con distinto número de hoja.
+
+
+E.7 · FALSOS POSITIVOS Y NEGATIVOS
+Falsos positivos del anillo 1: 32 hojas (20 de Calderón; 12 de B.3: Caldera
+Royo, pasaje La Caldera, caldera máquina, Calderari). Falsos negativos de la
+capa rescatados: «Caidera» por «Caldera» (16470 h5, sumario de A.34) y
+«triunfo ti» por «Triunfo III» (A.43); la capa leyó «55,769» por «55,789»
+(A.2, decidido por el control). La difusa rescató una forma real («caidera») y
+dio 63 formas falsas en la franja ampliada.
+
+
+E.8 · FIDELIDAD NUMERICA
+Tablas recalculadas completas: 5.7.6.2 del presupuesto (cierra) y 5.7.6.1 (no
+cierra por 3, A.2); balances de superficie de 96 D, 97 D y 234 D (cierran);
+polígonos de Felisa, Ana María (80 m2 de diferencia), Tereza, Tomasito (con la
+errata), Triunfo III, El Triunfo II y La Ferroviaria; capital de San Roque
+S.R.L. Listados sin total impreso: Rentas 698 y 699 (sumas propias en A.41).
+No recalculadas: el resto de la Ley 7170 (gastos por objeto fuera de 5.7.6),
+por no tocar al departamento.
+
+Dígitos dudosos: «CALABRESI» (A.35), B o P; el ejercicio fiscal del listado
+699 (A.41), dígito bajo el sello: no lo decide nadie. El MI de González Jorge
+Alejandro (A.29), 22856893 o 22656693, son dos lecturas impresas, no dudas de
+lectura.
+
+
+E.9 · CONTRADICCIONES
+Erratas y contradicciones del original, transcriptas y no conciliadas:
+«Proyecto de Ley de Presupuesto» en el Decreto 996 y expediente /00 en la ley
+contra /02 en el decreto (A.25); Ley 6.811 citada el 18/06 y dada por derogada
+el 08/07 (A.25); «13 de marzo de 2001» en un edicto de 2002 (A.10);
+«departameto» (A.19); «37.716/56» (A.17); sumario «Mensura y Loteo» contra
+cuerpo «Mensura, Unificación y Loteo» (A.17); renglón 91 sin departamento
+(A.9); «(2)» sin letras (A.20); «268248.04787» (A.39); «Possgar» (A.43);
+letras y cifras de la Res. SOP 205 (A.40); expedientes repetidos en la lista
+de reclamos (A.37); «las Emblemas» (A.26); «los Embalse» (B.2.3); «ciencuenta»
+(A.28); rectificatorio anterior a la constitución publicada (A.6, B.2.1);
+5.7.6.1 que no cierra (A.2).
+
+
+E.10 · LIMITES Y PENDIENTES
+Pendientes (trabajo que una sesión puede hacer):
+
+  1. Tapas: año editorial y fecha leídos en la imagen de las 247 tapas; hoy,
+  por la capa y en la imagen sólo en las 51 ediciones miradas.
+  2. Hojas «a ojos»: 863 según el pre-informe; de las 795 que su lista nombra
+  legibles, miradas 8.
+  3. Columna perdida: un renglón confirmado en repr sobre la imagen.
+  4. Anexo del Decreto 1.508, hojas h30-h52 de 16472.
+  5. Paginación: los 135 pasos que la capa no encadena.
+  6. md5 y dhash de los 7588 pares; las tres hojas de tinta < 0,5 %.
+Límites (lo que el corpus o los insumos no permiten):
+
+  1. Release no listable desde la sesión (403 del proxy); se bajó por la
+  máquina de Eduardo. 2. Sin Tesseract spa en la sesión. 3. Lista de toponimia
+  establecida no disponible como archivo (§5.1bis). 4. El config no da el acto
+  de origen de actores y números (B.1). 5. Ejercicio fiscal del listado 699
+  tapado por el sello en los cinco escaneos. 6. Primer dígito del ejercicio
+  del 698 bajo el sello (se lee «992»). 7. Planos citados y no acompañados
+  (5). 8. Ningún balance municipal. 9. Ninguna cadena de Tesorería. 10. Trece
+  días hábiles sin edición que el corpus no explica. 11. Apellido «CALABRESI»
+  indecidible a 300 ppp.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+1. Presupuesto de turno para la época de 150-280 ediciones (flujo §5.5): con
+247 ediciones y 6914 hojas, una sesión alcanza para el §A y el §B enteros en
+la imagen (43 + 5 fichas, 87 hojas miradas) pero no para los controles de año
+(tapas, hojas a ojos, columna, paginación). Propuesta: separar en dos
+entregas, «LEE <año>» (§A, §B, §C, §P, §D) y «LEE <año> controles» (tapas, a
+ojos, columna, paginación, dhash), y que el año suba a imagen sólo con las
+dos.
+
+2. Release no alcanzable desde la sesión: el flujo §5.1 supone que la sesión
+baja el Release; si el proxy lo bloquea, la vía que funcionó fue bajar por la
+máquina conectada y pasar los archivos. Conviene escribirlo en §5.1 como plan
+B.
+
+3. Anillo 1 y homónimos: 12 de los 32 falsos positivos del año con «cald» son
+apellido, calle o máquina y no Calderón. La sesión agrega al config tres
+contextos inequívocos («caldera royo», «caldera horizontal», «calderari») y NO
+agrega «pasaje la caldera», porque marcaría fp_conocido cualquier mención real
+a menos de una ventana de distancia.
+
+4. Coordenadas de canteras: siete actos del año dan vértices que se tocan
+entre sí y con canteras de Capital. Propuesta: que el §C pueda llevar una
+tabla de vértices compartidos, porque es la única pieza del corpus moderno que
+fija un tramo del límite departamental.
+
+5. Agregados al anillo 2 que entrega la sesión: «campamento elim», «el molino
+de vaqueros», «casa de la comunidad», «los crespones», «las madreselvas»,
+«centro de salud n 21», «corina adela bustamante». Actores 2002 y números de
+expediente minero al config.
+
+
+§R · RECUENTO
+-------------
+anio: 2002
+ediciones_desde: 16302
+ediciones_hasta: 16548
+ediciones_presentes: 247
+ediciones_ausentes: 0
+hojas_presentes: 6914
+hojas_declaradas: no-aplicable
+hojas_ausentes_estimadas: no-aplicable
+periodicidad: diaria-lunes-a-viernes
+dias_salida_sin_edicion: 14
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: no
+capa_previa: release-prev-y-prop
+versiones: 2
+actos_departamento: 42
+actos_dominio: 6
+actos_hacienda_municipal: 1
+planos_publicados: 0
+planos_citados_departamento: 5
+balances_municipales: 0
+cuadros_publicados: 6
+subtotales_recalculados: 13
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 0
+hojas_miradas: 87
+avisos_repetidos_departamento: 11
+falsos_positivos_anillo1: 32
+limites_declarados: 11
+estado: CON-PENDIENTES
+nivel_lectura: imagen
+pdf_release: 247
+avisos_release: 0
