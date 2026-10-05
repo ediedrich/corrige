@@ -3200,3 +3200,138 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 4 de 4 hallazgos resueltos (100 %) y tres precisiones aplicadas; compila sin errores ni referencias indefinidas, 961 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (de 1986 a 1988 la Provincia sigue designando por decreto a los presidentes de las dos comisiones hasta mayo de 1987, y el municipio aparece ante el agua como parte de convenios de defensas y, en Vaqueros, desplazado por un centro de usuarios; la convocatoria de 1987 le devuelve un ejecutivo votado, no una competencia) y la de la expropiación como mecanismo opuesto al mercado sucesorio, que con la fase 6 queda dicha en su estado documentado: tres declaraciones de utilidad pública, tres juicios promovidos y una posesión, sin sentencia hallada.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 80 líneas (0,32 %; 61,2 páginas). Cobertura acumulada: 25.366 de 25.366 (100,0 %), con el registro de arriba. Falsos positivos descartados: 7. Recortes: se leyeron enteras las fichas de los tres años en su FUENTE y FICHA, y el TEXTO y la NOTA de las que sostienen cifras, fechas, nombres o citas, no el TEXTO de todas; no se cotejaron renglón por renglón 5 de las 12 ediciones bajadas; los controles de P164, P170, P174, P175, P181 y P186 se corrieron a mano; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **4 de 4**, todos en el AMPLÍA 1986-1988 (`1bd1c1d`); **0 atrapados por un control automático**.
+
+## Ronda 71 — auditoría con fase 6 (04/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2002, 2005. Base: commit `dbec62a` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2002, 2005, sobre `e8aae23`, la ronda 70), con la fase 6 en `ronda-71.patch` (commit `be14ccc` en la sesión; aplica con `git am` sobre `dbec62a`, probado en un clon limpio de GitHub: árbol `6d9ea02`). **Denominador medido: 25.394 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo** con la fase 6, y la numeración de abajo vale para las dos versiones.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 70 (25.366 de 25.366, sobre `8ef9319`, que en GitHub es `e8aae23`, con el mismo árbol `9b3c0f2`) se trasladaron por diff a `dbec62a`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2002, 2005 agrega 28 líneas netas (6 en A, 9 en C, 1 en F, 1 en 05, 2 en 15, 3 en 16, 4 en 17 y 2 en 19) y deja 70 líneas nuevas o modificadas en 21 archivos: caducan 42 líneas anteriores**, y quedan **25.324 vigentes sobre 25.394 (99,7 %)**. La ubicación de cada línea se tomó del diff con `difflib` sobre las dos versiones de cada archivo.
+
+### Lectura sobre el texto (numeración de `dbec62a`)
+
+Se leyeron **las 70 líneas, enteras, por la sesión**, sin subagentes: las nuevas de A, C y F completas, y las modificadas del resto en su texto entero (177.558 bytes), además de la lista de cada cambio palabra por palabra con su contexto (5.885 palabras agregadas). Se cotejaron contra los dos informes LEE (`BO-Salta-2002_16302-16548_la-caldera_LEE-2002_2026-10-04.txt` y `BO-Salta-2005_17039-17166_la-caldera_LEE-2005_2026-10-04.txt`, de `corrige/lee/`), **leídos enteros**: §0, §1, §2, las 72 fichas del §A (43 de 2002 y 29 de 2005) y las 9 del §B.2 con su TEXTO y su NOTA, §B.3, §B.4, §C, §P, §D, §E y §F; y contra `amplia-2002-2005.json` (índice de 139 coincidencias y clasificación de fichas).
+
+| Archivo | Líneas | Nuevas | Quién |
+|---|---|---|---|
+| ape/A-cronologia.tex | 4, 490–494, 496–498 | 9 | sesión |
+| ape/C-normativa.tex | 312–320 | 9 | sesión |
+| ape/D-pedidos.tex | 177, 253, 256, 324 | 4 | sesión |
+| ape/E-personas.tex | 101 | 1 | sesión |
+| ape/F-fuentes.tex | 25–26, 57, 97, 100 | 5 | sesión |
+| cap/00-advertencia.tex | 43 | 1 | sesión |
+| cap/01-planteo.tex | 119, 139 | 2 | sesión |
+| cap/02-metodo.tex | 28, 99 | 2 | sesión |
+| cap/04-siglo.tex | 3659 | 1 | sesión |
+| cap/05-tierra.tex | 58, 372 | 2 | sesión |
+| cap/09-defensas.tex | 690 | 1 | sesión |
+| cap/13-loteo.tex | 325 | 1 | sesión |
+| cap/14-poblacion.tex | 843, 847 | 2 | sesión |
+| cap/15-hacienda.tex | 185, 473–474 | 3 | sesión |
+| cap/16-redes.tex | 655–657, 664, 668–669 | 6 | sesión |
+| cap/17-tierrafiscal.tex | 376–377, 379, 383, 401–402, 404, 434 | 8 | sesión |
+| cap/18-politica.tex | 656, 672 | 2 | sesión |
+| cap/19-resistencias.tex | 185–187, 201, 203, 206, 871 | 7 | sesión |
+| cap/20-opacidad.tex | 880–881 | 2 | sesión |
+| cap/22-infraestructura.tex | 545 | 1 | sesión |
+| cap/26-presencia.tex | 235 | 1 | sesión |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 09:535–642 (la serie de defensas de 1956 a 1988) y 09:684–692; 10:533–541 (la concesión de Skru S.A. en el catastro 1782) y 11:1080–1100 (el cuadro de catastros); 16:650–684; 17:355–436 (la comparación 1980-2015, la ficha del Decreto 2949 y sus dos cautelas); 19:105–177 (los cuadros de informes de impacto de 2021, 2020 y 2018) y 19:854–858 (la liga de fútbol); 21:70–80 y 136–150; 14:841–848; 15:468–476; 18:652–658; A:441 y 486–490; C:177; D:391.
+
+**Esta ronda: 70 líneas nuevas**, 177.558 bytes sobre 3.191.804, que en las 967 páginas de la base equivalen a **53,8 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `dbec62a` cae dentro de estos tramos.
+
+Acumulado: 25.324 vigentes + 70 = **25.394 de 25.394 (100,0 %)**. La fase 6 toca once líneas: A:491 y 496, D:177, 253 y 256, F:97, 17:376 y 26:235, dentro de lo leído en esta ronda, y 09:687, 10:539 y 19:858, que estaban vigentes y se releyeron como contexto; no cambia el largo de ningún archivo: **25.394 de 25.394 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 2002 y 2005 de `boletines-salta`)
+
+Esta vez el Release se alcanzó desde la sesión (los informes LEE lo bajaron por la máquina del autor). Imágenes de los PDF renderizadas a 200 ppp con PyMuPDF; el renglón se ubicó con el reconocimiento `eng` de la sesión o con la capa del PDF (2005), se recortó a 230–300 ppp con su contexto y cada recorte se miró. Se bajaron 21 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 16423 | 5 | Ley 7192, art. 1 | «con cargo a la promoción de actividades sociales, culturales y deportivas», 3 hectáreas 5.092,76 m², matrícula 1.782, plano 475. Coincide (A:493, 17:376, 19:871) |
+| 16488 | 11 | Decreto 1686, arts. 2 y 3 | «la prohibición de operar los servicios en cuestión» desde el 25 de septiembre; nueve municipios. Coincide (16:669, C:315) |
+| 16434 | 7 | Decreto 1106, art. 3 | «Intendente de La Caldera, Dr. Héctor Miguel Calabró» e «Inauguración de obras en el Hospital Corina Bustamante». Coincide (18:656, E:101, 26:235) |
+| 16322 | 5 | Licitación 01/02, objeto y lugar de venta | «comprende la prestación del servicio público entre las localidades ubicadas en los departamentos Capital, La Caldera y Cerrillos»; pliego de \$6.000 vendido en el Centro Cívico Grand Bourg y en la Casa de Salta. Coincide (16:655–658: el dato del pliego que P193 daba sin cotejo queda cotejado) |
+| 16450 | 19 | La Caldera S.A., objeto | «loteos y urbanizaciones». Coincide (14:843) |
+| 16421 | 10 | Aviso 085 | «50 Viviendas en La Caldera», préstamo BIRF 4273. Coincide (22:545) |
+| 16308 | 37 y 38 | Ley 7170, renglones 5.7.6.1.28–29 y 5.7.6.2.28–29 | 420,036, 383,042, 58,703 y 55,789. Coincide (15:185, C:312) |
+| 16363 | 16 | La Ferroviaria | «departamento Capital», expediente 17.394. Coincide (19:185) |
+| 16544 | 39 | Rentas, aviso 698 | «PROVINCIA DE SALTA», catastro 102, \$108,126.07. Coincide (05:58) |
+| 17078 | 32 | Remate en quiebra | «el monte ha borrado» varios de los trazados de las calles. Coincide (A:496) |
+| 17045 | 9 | Res. SOP 1087 | «Refacción de Techos, Baños y Pintura» Escuela Nº 4534, \$48.210,61. Coincide (15:474) |
+| 17123 | 10 | Decreto 768 | «Rehabilitación de la Toma Dique Campo Alegre», UTE Campo Alegre, \$33.741,26 al mes de agosto de 2003. Coincide (22:545) |
+| 17087 | 11 | Puente Ferroviario | «lugar Río Mojotoro», expediente 16.386. Coincide (19:187) |
+| 17044 | 12 | La Mesa Redonda, 2005 | «Abasto, José; Díaz, José y Otros», expediente 14.971. Coincide (19:201) |
+| 17097 | 7 | Decreto 534, art. 1 | «Proyecto I S.A.», \$108.000, condición resolutoria. Coincide (17:401) |
+| 17062 | 15 | Decreto 138, art. 1 | «Proyecto 1 S.A.», 3 lts./seg. del espejo del dique. Coincide (17:401, A:497) |
+
+Bajadas y no cotejadas renglón por renglón: 16455, 16480, 17104 y 17158 (Ana María, Decreto 1594, Centauro y Decreto 1195; sus datos se cotejaron contra el TEXTO de las fichas).
+
+Son **16 citas entre comillas del libro cotejadas en la imagen** («con cargo a la promoción…», «la prohibición de operar…», «Intendente de La Caldera, Dr. Héctor Miguel Calabró», «Inauguración de obras…», «comprende la prestación…», «loteos y urbanizaciones», «50 Viviendas en La Caldera», «departamento Capital», «PROVINCIA DE SALTA», «el monte ha borrado», «Refacción de Techos, Baños y Pintura», «Rehabilitación de la Toma Dique Campo Alegre», «lugar Río Mojotoro», «y Otros», «Proyecto I S.A.» y «Proyecto 1 S.A.»; los nombres propios entre comillas, como «Ana María» o «El Palenque», no se cuentan): **ninguna con diferencias**, sobre 18 citas nuevas del AMPLÍA (16/18; quedan sin cotejar «la prohibición…» de C, que repite la de 16, y «de propiedad fiscal» de 19:187, cotejada en dos de sus tres edictos), y datos sin comillas en 3 hojas más (16308 h37 y h38, 16322 h5).
+
+### Hallazgos (dos, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 09:687 | «Después de 1980, el siguiente eslabón documentado de esta serie es de noviembre de 2001». El mismo capítulo, cuarenta y cinco líneas antes (09:640–642), da los convenios de defensas de 1985 a 1987 de la Provincia con las dos municipalidades (2786, 766, 1358, 603, 2447, 3206, 2436, 2437 y 2494) y las licitaciones de Vialidad Nacional de 1986 y 1987 en la ruta 9. La primacía se volvió falsa con el AMPLÍA 1983-1985 y sobrevivió a las rondas 69 y 70; el AMPLÍA 2002, 2005 tocó la ficha de dos renglones más abajo (09:690) y dejó la frase anotada como P191 | 5 (primacía sobre un universo que el libro desmiente con su propio dato) | «Después de los convenios y las licitaciones de 1985 a 1987, el siguiente eslabón documentado de esta serie ---en lo que este libro leyó de corrido, que de 1988 pasa a 2002--- es de noviembre de 2001» |
+| 2 | D:177 | El pedido de las páginas que faltan en los escaneos suma de 2005 las cinco ediciones ausentes y las 22 páginas de la 17166, pero no las otras **454 páginas** que las tapas de cuarenta y siete ediciones de 2005 declaran y el archivo no trae ---sesenta y cuatro en la 17076: «EDICION DE 92 PAGINAS» con 28 hojas---, que F:97 declara («476 páginas más de las que hay», con las 22 de la 17166) y que el informe LEE 2005 da como límite 11. Para 1986 el mismo ítem sí pide «las diecisiete páginas que las tapas … declaran y el archivo no trae». Además fechaba «de marzo de 2005» las ediciones 17098 a 17101, que caen del 29 de marzo al 1 de abril | 8 (límite declarado sin su pedido) | «las otras cuatrocientas cincuenta y cuatro páginas que las tapas de cuarenta y siete ediciones de 2005 declaran y el archivo no trae ---sesenta y cuatro de ellas en la 17076, del 23 de febrero---»; «del 21 de marzo y del 29 de marzo al 1 de abril de 2005». El ítem no cambia el recuento: 284 |
+
+**Precisiones aplicadas sin restar.** (a) A:491 y F:97: «se miraron sobre la imagen las tapas de 51 ediciones»; el informe LEE 2002 dice en su §1 «Las tapas no se leyeron en la imagen» y que lo cotejado en las 51 ediciones con ficha es la fecha (su E.10 lo deja ambiguo): «se cotejaron sobre la imagen las fechas de 51 ediciones» y, en F, «las tapas no se miraron». (b) A:496 y 26:235: la Res. 407-D/04 no deja sin efecto «la función de gerente general» sino «la asignación interina de función y el adicional por función jerárquica como Gerente General» de un médico (A.3/2005): «la asignación interina de la gerencia general». (c) A:496: después del Decreto 3073 la fila seguía con «; declara en emergencia…», de modo que el sujeto era el decreto de Las Mesadas; la emergencia es del 212: «otro, de febrero, declara…». (d) D:253: los convenios que coordina el Consejo Profesional de Ciencias Económicas son de colaboración de la Provincia con los municipios, y el del Consejo con la Provincia es de 2004 (Decreto 2079/04), prorrogado en 2005 (677, A.21/2005); el pedido decía «los convenios de 2005 con el Consejo». (e) D:256: «si la La Caldera S.A.» → «si La Caldera S.A.». (f) 17:376: el Decreto 996 veta también parte del artículo 2 de la Ley 7192 («…que el comodatario inicie…», el plazo de cinco años para construir), no sólo el plano y el artículo 5. (g) 19:858: «la liga de fútbol lo resolvió sola en 2015» (repaso de ventana): el libro tiene su estatuto aprobado en 1985 (A:472) y su sede en Vaqueros en 2002 (A:491): «con estatuto aprobado en 1985 y sede en Vaqueros al menos desde 2002». (h) 10:539: la cautela de la concesión de Skru S.A. en el catastro 1782 dice que el edicto no da la relación del catastro con el inmueble expropiado, y el libro no cruzaba que con ese número hay una matrícula fiscal ---la de la escuela náutica del dique en 1979 (A:441, C:177) y la del comodato al Club de Regatas Güemes en 2002 (17:376)--- y que Rentas lista en 2002 el catastro 1782 a nombre de la Provincia (A.41/2002, que el informe da como inferencia por la igualdad de número): se agrega, con remisión y sin afirmar que sea parte de lo expropiado.
+
+Resta: una primacía desmentida por el propio libro, en el aspecto 5: **resta 10** (90), por su alcance de frase y el agravante de la rúbrica. Un límite sin pedido, en el aspecto 8: **resta 5** (90). Ninguno sostiene una sección: no hay tope por alcance. Sin errores de consistencia en las 53,8 páginas: **100** en el aspecto 7. Aplicados los dos: 100 en el 5 y 95 en el 8 en la nota final.
+
+**Errores introducidos por la propia auditoría**: los dos. El 1, en material del AMPLÍA 1983-1985 (`4807954`) y 1986-1988 (`1bd1c1d`), que agregaron a 09:640–642 los convenios que desmienten la frase sin repasarla; el AMPLÍA 2002, 2005 la vio y la dejó como pendiente (P191) en lugar de corregirla. El 2, en el AMPLÍA 2002, 2005 (`dbec62a`), que agregó la cifra a F:97 y no al ítem de D que pide lo mismo: es el control (2) de P186, que no corre solo. **Ninguno lo atrapó un control automático.** Los controles de P144 (comillas rectas: 0 nuevas), P158 (caracteres de control: 0), P164 (fecha de acto y de publicación: Res. SOP 516 de 2001 publicada en enero de 2002, Res. SOP 1087 y 407-D y Decreto 3073 de fines de 2004 publicados en enero de 2005, el 534 de marzo publicado el 28: bien dichos), P170 (remisiones), P174 (anáforas) y P102 (privacidad) se corrieron a mano y no dieron caídas.
+
+**Descartados (falsos positivos, 10).** «Tierra fiscal junto al dique» (A:491, 01:139) contra «Que la fracción esté sobre el perilago no lo dice la ley» (17:376): lo primero describe la matrícula 1.782, la de la escuela náutica del dique de 1979; lo segundo, la fracción dentro de ella. «Casi cinco veces el plazo de 2015, sobre una doceava parte de su superficie» (17:376): 99 / 20 = 4,95 y 3,509 / 41,83 = 0,084. «El agua se concedió dos meses antes» (17:401): del 17 de enero al 9 de marzo, cincuenta y un días; redondeo admisible y el texto no da la cifra exacta como tal. «Tres cosas conviene retener» (16:662): la base tenía dos y el AMPLÍA agrega la tercera. «Tomasito, del mismo titular que en el cuadro» (19:187): Héctor Enrique Medina en el edicto y en el cuadro. «Unas setenta y dos hectáreas» (19:203): 42,0658 + 4,4395 + 22,7773 + 2,9412 = 72,22. «Once años antes» (19:201): de 2005 a 2016. «Proyecto I S.A.» y «Proyecto 1 S.A.»: las dos grafías están en la imagen. «El archivo de cuatro, entre ellas Felisa» (A:491): Oscar, Gimena, María Belén y Felisa (A.8, A.13, A.22 y A.31 de 2002). «La deuda más alta del departamento en ese listado» (05:58): la siguiente del aviso 698 es de \$33.393,47.
+
+**Pendientes que cierra.** P191 (09:687, hallazgo 1).
+
+**Pendientes nuevos.** P195 (herramientas): dos controles más para AMPLÍA (extensión de P186). (1) **Páginas declaradas por las tapas**: toda cifra de páginas que las tapas declaran y el archivo no trae, que el AMPLÍA agregue a 00 o a F, se busca en D:177, igual que las hojas sin mirar (caso: las 454 de 2005, ronda 71). (2) **Primacías relativas en el capítulo que recibe material**: además de las oraciones con un rango que incluya los años nuevos, el repaso de ventana busca en los capítulos que el AMPLÍA toca las fórmulas «el siguiente», «después de», «recién en», «hasta» seguidas de un año, y las juzga contra lo que el mismo capítulo ya trae (caso: 09:687, ronda 71). Y una regla de lectura: un pendiente que el AMPLÍA abre sobre una frase que ya sabe falsa se corrige en el mismo AMPLÍA; dejarlo como pendiente no lo saca del libro.
+
+**Pendientes revisados sin cerrar.** P186 (sus controles siguen corriendo a mano). P187 (láminas de 2002 y 2005: sin cambio). P188 (H y E de 2002 y 2005: la precisión de 10:539 cruza la matrícula 1782 en el texto, no en H). P189 (pedidos de 2002 y 2005 fuera de D: siguen fuera; la fase 6 amplía un ítem existente y no mueve el recuento: 22-prospectiva cierra con 284). P190 (separata del Decreto 1.989/02: no se miró el 16515). P192 (dudas 2002-2005: ninguna toca la fase 6). P193 (su punto 2, el pliego del corredor que «se vende en dos lugares», queda cotejado en la imagen: 16322 h5; los puntos 1 y 3 siguen). P194 (sin cambio). P115 y P40.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.366/25.366 líneas vigentes en `e8aae23` | 25.324 vigentes, 42 caducas por el AMPLÍA 2002, 2005 |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *tampoco*, *sólo*, *siempre*, *todos*, *todas*, *mayor*, *menor*, *más alta*, *ya*), sobre 5.305 palabras agregadas | 37 coincidencias, todas leídas | Ninguna cae: las ausencias llevan su universo («en lo hallado», «leídos también con pendientes», «en ese listado», «en lo leído de los dos años»); «el primer año posterior a 1988 que este libro lee de corrido» y «los primeros posteriores a 1988» cierran contra la serie; «mayor que La Mesa Redonda» cierra (42,07 contra 32,52 ha) |
+| Repaso de ventana: afirmaciones con un año de 1989 a 2012 precedido de *no*, *ningún*, *único*, *primer*, *sólo*, *recién*, *hasta*, *desde*, *todavía*, *tampoco*, *falta*, fuera de las líneas del AMPLÍA | libro entero (base `dbec62a`), 78 coincidencias en 75 líneas, todas leídas | Ninguna cae por lo de 2002 y 2005: «la serie de trámites … al menos, en 2004» (11:1609), «los más antiguos que la serie registra son de 2004 y 2005» (D:57), «se usa desde 2005» (17-aguabaja:393) y «el único acto … como una unidad de planificación es el convenio … de 2009» (19:484) no tienen dato contrario en los dos informes. Por la lectura del capítulo de contexto, no por el script: 09:687 (hallazgo 1, P191) y 19:858 (precisión g) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, con el renglón siguiente, y 60 antes; orden de `\input` de `main.tex`) | 356/356 `\ref{cap:…}` de un capítulo a uno posterior antes de la fase 6; 357/357 después | 0 sin marcar, antes y después |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Aritmética de 2002 y 2005 | 9 cuentas | 420.036 / 73.485.667 = 0,57 %; 42.848,85 / 33.741,26 = 1,270; 99 / 20 = 4,95; 3,509 / 41,83 = 0,084; suma de las cuatro canteras = 72,22 ha; 62.129,05 − 62.121,05 = 8; 476 − 22 = 454 páginas; 92 − 28 = 64 en la 17076; 108.126,07 de 220.352,36. Cierran |
+| Citas de edición y hoja del texto agregado contra el texto de los dos informes (FUENTE, §B, §C y §D) | 58 pares (edición, primera hoja) de 2002 y 2005 | 58 localizados |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 71 | 50 de 350 oraciones con cifra en las 70 líneas | **50/50 con fuente localizable**: 32 con la cita en la oración o en la fila (por script); las otras 18 son declaraciones de cobertura de F (13, la mayoría de la línea F:57, que el AMPLÍA tocó por una palabra) y de 02, que remiten al apéndice F y a los informes, y oraciones de síntesis seguidas de su cita o de su ficha (17:434, 19:187, 15:185). 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 70 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 70 líneas, cruzadas con contextos sensibles (P102: *remate*, *quiebra*, *prescripción*, *deudor*, *concurso*, *cesante*, *renuncia*, *D.N.I.*) | 70/70 líneas | 0 caídas. Sin nombre: los titulares de los catastros de las dos prescripciones, los treinta y siete deudores del listado de Rentas salvo la Provincia y Vialidad, el fallido del remate, los propietarios de los tres loteos de Vaqueros, el médico de la gerencia, la odontóloga, la jefa del Registro Civil, los dos contadores de La Caldera S.A. Nombrados: autoridades (Calabró), presidentes de asociaciones con asamblea publicada (Teodoro B.\ Mogro), sociedades y concesionarios mineros que el libro ya nombraba en el cuadro de 2021 |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `dbec62a` y fase 6, cada una en una copia limpia | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló, y sin `.aux` previos, tres pasadas de `pdflatex`); 967 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2002 y 2005 van en pasado; la Ley 7192 se cita como lo que dispuso |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de acto y de publicación distinguidas (Res. SOP 516, 1087, 407-D, Decreto 3073, Ley 7192 y Decreto 996) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 16 citas cotejadas, ninguna con diferencias; techo de 90 por cotejo parcial del libro |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 1 (−10); aplicado. Las ausencias de 2002 y 2005 llevan su universo |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias de los originales (expediente /00 y /02, planos 475 y 457, Proyecto 1 e I, 768 y 1195, letras y cifras del camping) están señaladas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores de consistencia en 53,8 páginas |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 2 (−5); aplicado. 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P187 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 70 líneas; 90 como en la ronda 70 |
+
+**Nota inicial: 86,7 antes del tope y 86,7 después** (tope de 90 por la cobertura acumulada inicial del 99,7 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas ---el escrutinio de 1987, la resolución judicial de la tierra del embalse o, ahora, si el catastro 1782 de la turbina de 2019 es parte de lo expropiado en 1972---: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9 (el 1, de 82 a 90); (4) dejar corriendo los controles de P186 y P195 como paso automático del AMPLÍA, que habrían atrapado los dos hallazgos de esta ronda: protege el 5 y el 8 en la nota inicial de la ronda siguiente (aquí, 1,6 puntos de la inicial); (5) hacer las láminas de P187 y las entradas de P188: hasta +0,2 en el 13 y el 15.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos (100 %) y ocho precisiones aplicadas; compila sin errores ni referencias indefinidas, 967 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 2002 y 2005 el municipio aparece ante el suelo como el que dio factibilidad al hotel por la Ordenanza 339/01, citada por la Provincia en la venta de la tierra, y como contratista por convenio de una escuela; la Provincia da en comodato, vende y concede agua del embalse) y la de la intensidad regulatoria inversa, que suma la venta de 2005 de la matrícula 3337, con la escritura exenta de todo tributo, al comodato de 2015 de la misma firma.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 70 líneas (0,28 %; 53,8 páginas). Cobertura acumulada: 25.394 de 25.394 (100,0 %), con el registro de arriba. Falsos positivos descartados: 10. Recortes: no se cotejaron renglón por renglón 4 de las 21 ediciones bajadas ni 2 de las 18 citas nuevas; los controles de P164, P170, P174, P186 y P195 se corrieron a mano; la muestra de trazabilidad no se rehízo; no se miró el 16515 (P190). Errores introducidos por la propia auditoría: **2 de 2**, uno en los AMPLÍA 1983-1985 y 1986-1988 (`4807954`, `1bd1c1d`) y otro en el AMPLÍA 2002, 2005 (`dbec62a`); **0 atrapados por un control automático**.
