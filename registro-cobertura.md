@@ -3335,3 +3335,41 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos (100 %) y ocho precisiones aplicadas; compila sin errores ni referencias indefinidas, 967 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (en 2002 y 2005 el municipio aparece ante el suelo como el que dio factibilidad al hotel por la Ordenanza 339/01, citada por la Provincia en la venta de la tierra, y como contratista por convenio de una escuela; la Provincia da en comodato, vende y concede agua del embalse) y la de la intensidad regulatoria inversa, que suma la venta de 2005 de la matrícula 3337, con la escritura exenta de todo tributo, al comodato de 2015 de la misma firma.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 70 líneas (0,28 %; 53,8 páginas). Cobertura acumulada: 25.394 de 25.394 (100,0 %), con el registro de arriba. Falsos positivos descartados: 10. Recortes: no se cotejaron renglón por renglón 4 de las 21 ediciones bajadas ni 2 de las 18 citas nuevas; los controles de P164, P170, P174, P186 y P195 se corrieron a mano; la muestra de trazabilidad no se rehízo; no se miró el 16515 (P190). Errores introducidos por la propia auditoría: **2 de 2**, uno en los AMPLÍA 1983-1985 y 1986-1988 (`4807954`, `1bd1c1d`) y otro en el AMPLÍA 2002, 2005 (`dbec62a`); **0 atrapados por un control automático**.
+
+## Ronda 72 — incorporación (05/10/2026)
+
+Tipo: **incorporación** (CORRIGE 3.6): integra al libro la cuarta tesis, «la desidia es selectiva», a pedido del autor. No es una auditoría: se informa sólo la nota final, sin tope de cobertura, y el aspecto 7 no se calcula. Base: commit `e1e33ce` de `ediedrich/dispositivo-caldereno` (la ronda 71). La incorporación está en `ronda-72.patch` (commit `9b362d4` en un clon limpio de GitHub, árbol `c5e21e3`). **Denominador: 25.394 líneas antes y 25.419 después** (38 archivos `.tex` con `main.tex`, `wc -l`).
+
+### Qué entra
+
+- **Capítulo 1** (pasa a llamarse «Las cuatro tesis»): sección nueva, «Cuarta tesis: la desidia es selectiva», con su evidencia, su formulación, su diferencia con la primera tesis y su límite («que el Boletín Oficial no publique el cierre de una obra no prueba que la obra no se haya hecho»). En «Cómo se relacionan», la cuarta como tesis de resultado; en «Qué refutaría cada tesis», su refutador.
+- **Advertencia**: la cuarta tesis en un párrafo, y «Ninguna de las cuatro».
+- **Conclusión**: «Las cuatro tesis, al cabo», con un párrafo de balance; «Las cuatro tesis tienen sus propios refutadores».
+- **Capítulo de infraestructura** y **`main.tex`**: de tres a cuatro tesis.
+- **Apéndice D**: un pedido nuevo, en «Obra pública, prestadoras y programas de financiamiento», de los certificados finales y las actas de recepción de las obras de defensa y de cauce de 1967 a 1977. **22-prospectiva**: «doscientos ochenta y cinco pedidos».
+
+Toda frase nueva remite a material que el libro ya tenía, con su capítulo: 09:535 (serie de defensas, con las citas de edición y hoja que el pedido nuevo repite), 01:155 y capítulo 10 (expropiación del embalse), 17:376 y 17:401 (comodato de 2002 y venta de 2005), la ficha del Decreto 2949 (comodato de 2015), 16:669 (línea 23) y capítulo 10 (expropiaciones de 1985 y 1986 sin sentencia). Las diez citas de decreto, edición y hoja del pedido nuevo se cotejaron contra 09:535: coinciden.
+
+### Cobertura
+
+Esta ronda no audita. **Caducan 13 líneas** anteriores y quedan **38 líneas nuevas o modificadas** sin auditar: D:331; 00:15–17; 01:1, 123–140, 143, 151, 159–161; 21:22, 29–30, 91; 22-infraestructura:20, 23, 25–26; 22-prospectiva:290; main:310. Las audita la ronda MEJORA siguiente. Acumulado: **25.381 de 25.419 (99,9 %)**.
+
+### Controles por script
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Menciones de «tres tesis» y sus variantes («las tres se», «tres condiciones», «las tres son», «pero las tres», «ninguna de las tres» referidas a las tesis) | libro entero | 11 actualizadas, en 00, 01, 21, 22-infraestructura y `main.tex`; las demás coincidencias son de otras cosas |
+| Remisiones a capítulos posteriores sin «más adelante» | 367/367 `\ref{cap:…}` | 0 sin marcar |
+| `\pendiente{}`, ítems de D | 52; 285 | 22-prospectiva dice «doscientos ochenta y cinco pedidos»: cierra |
+| Superlativos y ausencias en el texto agregado | «ninguna sentencia hallada», «lo hallado hasta 1988», «sin cierre conocido» | llevan su universo |
+| Compilación | libro entero, en un clon limpio con el parche aplicado | compila con tres pasadas de `pdflatex`; 969 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas de la ronda 71 |
+
+### Nota final
+
+La misma de la ronda 71 en catorce aspectos. **Aspecto 10 (argumentación): 70.** La cuarta tesis tiene evidencia primaria y declara qué la refutaría, pero no pasó todavía por la verificación (dos sí: 70), y el promedio entre tesis no cambia. **Nota final: 88,3** (incorporación: sin tope).
+
+**Avance de la investigación.** Se suma una tesis abierta: la cuarta, «la desidia es selectiva», con 0 (abierta). La serie que la mediría ---obras y trámites del departamento clasificados por a quién sirven, con la proporción y el tiempo de sus actos de cierre publicados--- queda como pendiente P196.
+
+**Pendientes nuevos.** P196 (libro): serie de la cuarta tesis, a construir con las fichas LEE de todos los años leídos.
+
+**Calidad de la ronda.** Errores introducidos: no se sabe todavía; los mide la auditoría siguiente sobre las 38 líneas.
