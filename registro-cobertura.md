@@ -3373,3 +3373,146 @@ La misma de la ronda 71 en catorce aspectos. **Aspecto 10 (argumentación): 70.*
 **Pendientes nuevos.** P196 (libro): serie de la cuarta tesis, a construir con las fichas LEE de todos los años leídos.
 
 **Calidad de la ronda.** Errores introducidos: no se sabe todavía; los mide la auditoría siguiente sobre las 38 líneas.
+
+## Ronda 73 — auditoría con fase 6 (06/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2007-2009 y sobre las 38 líneas que la ronda 72 dejó sin auditar. Base: commit `82b47fb` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2007-2009, sobre `573f289`, la ronda 72), con la fase 6 en `ronda-73.patch` (un commit; aplica con `git am` sobre `82b47fb`, probado en un clon limpio de GitHub: árbol `2971e38`). **Denominador medido: 25.440 líneas** (38 archivos `.tex` con `main.tex`, `wc -l`) antes y después de la fase 6: **ningún archivo cambia de largo** con la fase 6, y la numeración de abajo vale para las dos versiones. Sesión del ciclo automático (tarea programada), con el turno tomado en `auto/sesion.json`.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 72 (25.381 de 25.419, sobre `9b362d4`, que en GitHub es `573f289`, con el mismo árbol `c5e21e3`) se trasladaron por diff a `82b47fb`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2007-2009 agrega 21 líneas netas (9 en A, 9 en C, 1 en F y 2 en 09) y deja 68 líneas nuevas o modificadas en 24 archivos: reemplaza o borra 47 líneas anteriores**, dos de las cuales (01:127 y 01:129 de `573f289`) estaban entre las 38 sin auditar de la ronda 72: **caducan 45 líneas vigentes**, y quedan **25.336 vigentes sobre 25.440 (99,6 %)**. Las otras 36 líneas de la ronda 72 siguen en su lugar o se corren sin cambiar (00:15–17; 01:1, 123–126, 128, 130–140, 143, 151, 159–161; 21-conclusion:22, 29–30, 91; 22-infraestructura:20, 23, 25–26; 22-prospectiva:290; D:331; main:310). La ubicación de cada línea se tomó del diff con `difflib` sobre las dos versiones de cada archivo.
+
+### Lectura sobre el texto (numeración de `82b47fb`)
+
+Se leyeron **las 104 líneas, enteras, por la sesión**, sin subagentes: las 68 del AMPLÍA (las nuevas de A y C completas y las modificadas del resto en su texto entero) y las 36 de la ronda 72 (161.624 bytes). Se cotejaron contra los tres informes LEE (`BO-Salta-2007_17532-17776_la-caldera_LEE-2007_2026-10-06.txt`, `BO-Salta-2008_17777-18019_la-caldera_LEE-2008_2026-10-06.txt` y `BO-Salta-2009_18020-18258_la-caldera_LEE-2009_2026-10-06.txt`, de `corrige/lee/`): §0, §1 y §2 de los tres, **las 149 fichas del §A enteras** (50 de 2007, 45 de 2008 y 54 de 2009) con su TEXTO y su NOTA, el B.2 de 2007 y los renglones del B.2 de 2008 y 2009 que el libro cita, y §E y §R de 2007 y E.2 y E.4 de 2008 y 2009; y contra `amplia-2007-2009.json` (índice de 213 coincidencias, clasificación de fichas, controles y citas que pedía cotejar).
+
+| Archivo | Líneas | Nuevas | De dónde |
+|---|---|---|---|
+| ape/A-cronologia.tex | 4, 478, 499–501, 503–504, 506–509 | 11 | AMPLÍA |
+| ape/C-normativa.tex | 4, 122, 321–329 | 11 | AMPLÍA |
+| ape/D-pedidos.tex | 39, 177, 239, 253, 256, 331 | 6 | AMPLÍA 5, ronda 72 1 |
+| ape/F-fuentes.tex | 25–26, 98, 101 | 4 | AMPLÍA |
+| cap/00-advertencia.tex | 15–17, 45 | 4 | AMPLÍA 1, ronda 72 3 |
+| cap/01-planteo.tex | 1, 119, 123–140, 143, 151, 157, 159–161 | 26 | AMPLÍA 4, ronda 72 22 |
+| cap/02-metodo.tex | 28, 99 | 2 | AMPLÍA |
+| cap/03-fincas.tex | 1031 | 1 | AMPLÍA |
+| cap/04-siglo.tex | 3659 | 1 | AMPLÍA |
+| cap/05-tierra.tex | 372 | 1 | AMPLÍA |
+| cap/09-defensas.tex | 723–724, 824 | 3 | AMPLÍA |
+| cap/10-expropiacion.tex | 139, 146 | 2 | AMPLÍA |
+| cap/11-ribera.tex | 1619 | 1 | AMPLÍA |
+| cap/13-loteo.tex | 264 | 1 | AMPLÍA |
+| cap/14-poblacion.tex | 847 | 1 | AMPLÍA |
+| cap/15-hacienda.tex | 185, 474 | 2 | AMPLÍA |
+| cap/16-redes.tex | 580 | 1 | AMPLÍA |
+| cap/17-aguabaja.tex | 319, 325 | 2 | AMPLÍA |
+| cap/17-tierrafiscal.tex | 142, 401, 434 | 3 | AMPLÍA |
+| cap/19-resistencias.tex | 187, 201, 203, 484, 918, 926 | 6 | AMPLÍA |
+| cap/20-opacidad.tex | 880–881 | 2 | AMPLÍA |
+| cap/21-ausencias.tex | 76 | 1 | AMPLÍA |
+| cap/21-conclusion.tex | 22, 29–30, 91 | 4 | ronda 72 |
+| cap/22-infraestructura.tex | 20, 23, 25–26, 545 | 5 | AMPLÍA 1, ronda 72 4 |
+| cap/22-prospectiva.tex | 290 | 1 | ronda 72 |
+| cap/26-presencia.tex | 235 | 1 | AMPLÍA |
+| main.tex | 310 | 1 | ronda 72 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 09:535 (la serie de defensas de 1956 a 1988, con las adjudicaciones de 1967, 1970 y 1974); 16:650–672 (el corredor de 2002 y el Decreto 1686); 19:100–160 (los cuadros de informes de impacto de 2021 y 2020) y 19:895–926 (Macarena, El Vaquero y Los Yacones); D:255–260 (los pedidos del hotel y de las emergencias agropecuarias); 21-ausencias:182 (la Ley 4708); las entradas de C que nombran las normas de C:4.
+
+**Esta ronda: 104 líneas nuevas**, 161.624 bytes sobre 3.242.292, que en las 983 páginas de la base equivalen a **49,0 páginas**: ése es el denominador del aspecto 7. El diff entero del AMPLÍA `82b47fb` y las 36 líneas restantes de la ronda 72 caen dentro de estos tramos.
+
+Acumulado: 25.336 vigentes + 104 = **25.440 de 25.440 (100,0 %)**. La fase 6 toca ocho líneas: 01:129, 01:139, 14:847, 19:187, A:499, C:4 y D:331, dentro de lo leído en esta ronda, y D:260, que estaba vigente y se releyó como contexto; no cambia el largo de ningún archivo: **25.440 de 25.440 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 2007 a 2009 de `boletines-salta`)
+
+Esta vez las descargas directas del Release llegaron desde la sesión. Imágenes de los PDF renderizadas a 220–250 ppp en gris con PyMuPDF; el renglón se ubicó con la capa del PDF y cada recorte se miró. Se bajaron 18 ediciones.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 17771 | 21 | La Generosa, solicitante | «Ing.\ Medina, ha solicitado la renovación», Expte. 16.893. Coincide (16:580, 19:187, A:499) |
+| 17612 | 7 | Decreto 1231, considerando | «pendientes de resolución, numerosos pedidos de adjudicación en venta», sección «B», Barrio El Jardín. Coincide (17-tierrafiscal:142) |
+| 17710 | 18 | Res. 753, art. 2 | «\$ 64.000,00 ... como crédito legal y suscribir el Convenio». Coincide (15:474, A:499) |
+| 17630 | 16 | Res. Conj. 128-125, art. 1 | «Optimización Sistema de Agua Potable a La Caldera - Nueva Captación Río La Caldera ...». Coincide (A:501, 22:545, C:322) |
+| 17568 | 6 | Decreto 391, considerando | «único y universal heredero de Manuel Serrey, titular registral de 6/10 partes». Coincide (A:500, 10:146, C:321, D:239) |
+| 17810 | 14 | Res. SOP 16, art. 1 | «Encauzamiento en el Arroyo Urquiza - Chaile y Río Vaqueros», \$50.398,00. Coincide (09:723, A:503) |
+| 17909 | 16 | Decreto 2838, art. 1 | «Hospital "Enfermera Adela Corina Bustamante"». Coincide (26:235) |
+| 18189 | 12 | Decreto 3979, art. 1 | «Hospital "Enfermera Adela Corina Bustamante"». Coincide (26:235) |
+| 17898 | 18 | La Serena, superficie | «s/fs.\ 9:05 has.\ 1.599 m2». Coincide (19:187) |
+| 17916 | 6 | Decreto 2959, considerando | «el pertinente proceso se encuentra en trámite», Juzgado Civil y Comercial de 12ª Nominación; la carátula empieza por «Serrey de González Bonorino, Elena». Coincide (A:504, 10:146, C:324, D:39) |
+| 17802 | 12 | La Vaquera, lugar | «Lugar: Río Vaquero», Expte. 18.770. Coincide (19:187) |
+| 18033 | 7 | Decreto 5859, art. 1 | «a edificarse en un inmueble de 6 Has.\ de extensión, ubicado en el Dique Campo Alegre», Matrícula 3.337. Coincide (17-tierrafiscal:401, A:506) |
+| 18135 | 29 | La Mesa Redonda, 2009 | «Juan Domingo Lozano por Cooperativa La Mesa Redonda, ha solicitado publicación de la renovación», Expte. 14.971. Coincide (19:201) |
+| 18236 | 39 | Remate de las matrículas 1120 y 1121 | «Sur: Prop.\ de Francisco Urquiza». Coincide (09:723, A:507) |
+| 17646 | 10 | Firma del Decreto 847 | «Sr.\ Mashur Lapad, Vice-Presidente 1º Cámara de Senadores a Cargo Poder Ejecutivo»; el número y la fecha (7 de marzo de 2007), por la capa. Hallazgo 3 |
+| 17756 | 8 | Firma del Decreto 3044 | La misma firma; número y fecha (7 de noviembre de 2007), por la capa. Hallazgo 3 |
+
+Bajadas y no cotejadas renglón por renglón: 17626 (Res. SOP 220, cotejada contra el TEXTO de la ficha A.15/2007).
+
+Son **12 citas entre comillas del libro cotejadas en la imagen** («Ing.\ Medina», «pendientes de resolución, numerosos pedidos de adjudicación en venta», «como crédito legal», «Optimización Sistema de Agua Potable a La Caldera», «Arroyo Urquiza - Chaile», «Enfermera Adela Corina Bustamante», en sus dos actos, «9:05 has.», «se encuentra en trámite», «Río Vaquero», «en un inmueble de 6 Has.\ de extensión», «por Cooperativa La Mesa Redonda» y «Prop.\ de Francisco Urquiza»): **ninguna con diferencias**. Son las once que `amplia-2007-2009.json` pedía cotejar, más la del nombre de la obra de agua; las demás citas nuevas (75 en total, según el AMPLÍA, literales en el TEXTO de los informes) quedan cotejadas sólo contra el informe: 12/75 en la imagen, y datos sin comillas en 3 hojas más (17568 h6, 17646 h10, 17756 h8).
+
+### Hallazgos (cuatro, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 01:139 | La medida de la cuarta tesis contaba entre los actos de cierre la **adjudicación** («su acto de cierre ---adjudicación, certificado final, recepción, sentencia---»). Con esa medida la evidencia de la tesis se da vuelta: las obras de defensa y de cauce de 1967 (D-16), 1970 (D-3/69) y 1974 (Caminos S.\ A.) tienen la adjudicación publicada (09:535; D:331, de la misma ronda 72, dice «la D-3/69, adjudicada en 1970»), y la obra de agua potable del pueblo de 2007 llega a la adjudicación dos meses después de su llamado (A:501, 22:545), de modo que lo que «queda abierto» (01:129) tendría cierre y lo que sirve al pueblo cerraría rápido. El refutador de la misma sección (01:159) mide con certificados finales y actas de recepción, no con adjudicaciones. Y la oración siguiente decía que la serie «queda pendiente para los años que falta leer», como si estuviera armada para los leídos (P196 la da por armar entera) | 7 (contradicción entre la medida de una tesis y su evidencia, a menos de diez líneas) | «acto de cierre ---certificado final, recepción, sentencia, escritura---. La adjudicación no es un cierre: la tienen publicada las obras de defensa y de cauce de 1967, 1970 y 1974 (capítulo defensas, más adelante), y la tiene, dos meses después de su llamado, la obra de agua potable del pueblo de 2007, de la que lo leído no dice si se terminó (capítulo infraestructura, más adelante); es el dato del libro que más se acerca a contradecir la tesis, y se deja a la vista. La serie queda por armar, con lo ya leído y con los años que falta leer»; en el título, «todavía no la midió» |
+| 2 | 19:187 | «Los de 2007 a 2009 ... dan el origen de otras tres filas, **renuevan dos que ya lo tenían** y traen tres canteras que el cuadro no trae»: renuevan tres. Además de «Tomasito» y «Ana María», cuyo origen dan los edictos de 2002, en 2009 se pide la renovación de «La Mesa Redonda» (Nº 18135, h.\ 29; LEE 2009, A.24), cuyo origen da el edicto de 2005, y el propio capítulo lo cuenta catorce líneas más abajo (19:201) | 7 (recuento del contenido que no cierra con material a menos de diez páginas) | «renuevan tres que ya lo tenían ---la tercera, «La Mesa Redonda», más abajo---» |
+| 3 | A:499 | La fila de 2007 daba como firmantes a cargo del Ejecutivo «el vicegobernador y, **en febrero**, el vicepresidente primero del Senado». El informe LEE 2007 (E.4) da a Mashur Lapad en el decreto 391 del 5 de febrero y en decretos de las ediciones 17646, 17653, 17661 y 17756; en la imagen, su firma cierra el Decreto 847 del 7 de marzo (Nº 17646, h.\ 10) y el 3044 del 7 de noviembre (Nº 17756, h.\ 8). Es la falla de la ronda 69 (De los Ríos «en febrero»), que el control (1) de P181 debía atrapar | 3 (tramo de una firma dado por el primer acto, de segunda mano y sin recalcular) | «y, en decretos sueltos de febrero a noviembre, el vicepresidente primero del Senado» |
+| 4 | C:4 | «Trece de sus entradas ---... las Leyes 3292/58, **4708**, 4829/74, ...--- no se citan en ningún capítulo»: la Ley 4708 la cita el capítulo de ausencias (21-ausencias:182, «Ley 4708, Nº 9421, h.\ 8»), desde el AMPLÍA 1973-1974 (`d99ba07`). El AMPLÍA 2007-2009 rehízo esta frase (de catorce a trece, por la Ley 7460) sin buscar las demás. Las otras doce, buscadas en los 26 archivos de `cap/`: ninguna aparece | 8 (recuento del aparato que no coincide con la estructura que lo produce) | «Doce de sus entradas ---los Decretos 1.045/96, 1498, 3774/09 y 4.913/98 y las Leyes 3292/58, 4829/74, 5061, 5114, 5814, 6133, 6895 y 27.424--- ... Once se consignan ...; la duodécima, el Decreto 1.045/96» |
+
+**Precisiones aplicadas sin restar.** (a) 01:129: el reclamo del intendente por la línea 23, puesto entre «lo que queda abierto», sólo «tiene respuesta en septiembre de 2002», que se lee como un cierre; el capítulo de redes (16:669) dice que la respuesta es quitarle las líneas a la empresa y que lo hallado no dice quién las tomó: se agrega «cuando la Provincia le quita las líneas a esa empresa, sin que lo hallado diga quién las tomó». (b) D:331: el pedido de los certificados de las defensas de 1967 a 1977 enumeraba «los legajos de 1974 a 1977» sin el de las defensas del río Las Nieves de 1974 (6489, Nº 9618, h.\ 11) ni el del Wierna de 1977 (Res.\ 594, Nº 10345, h.\ 17), que el capítulo de defensas da en la misma serie, y el primero de la lista (5770) es una adjudicación: «la adjudicación y los legajos de 1974 a 1977», con los dos agregados. (c) D:260: el pedido de la serie de declaraciones de emergencia agropecuaria de 1980 a 2018 enumera lo hallado de 1980, 1984 y 1987 y no el Decreto 212 de 2005 ni los 2247 de 2008 y 1197 de 2009, que el capítulo de tierra ya da (05:372; LEE 2008 A.13 y LEE 2009 A.7): se agregan, con los expedientes de los dos últimos (090-0017.418/07 y 31.566/09), dentro del mismo ítem. (d) 14:847: «y para construir el hotel en el que la firma ya había obtenido ... otro contrato» → «y en el que, para construir el hotel, la firma ya había obtenido ... otro contrato».
+
+Resta: dos errores de consistencia en 49,0 páginas, 4,08 por cada 100: **40** por el escalón; el primero sostiene una tesis y limita el aspecto a 50, y los dos contradicen material a menos de diez páginas: un escalón más, **30** en el aspecto 7. Un tramo de segunda mano sin recalcular, en el aspecto 3: **resta 5** (95). Un recuento del aparato, en el aspecto 8: **resta 5** (90). Ninguno es una ausencia falsa ni un error de vigencia: no hay tope por alcance. Aplicados los cuatro: 100 en el 3 y en el 7 y 95 en el 8 en la nota final.
+
+**Errores introducidos por la propia auditoría**: los cuatro. El 1, en la incorporación de la ronda 72 (`9b362d4`, `573f289` en GitHub), que definió la medida. El 2 y el 3, en el AMPLÍA 2007-2009 (`82b47fb`). El 4, en el AMPLÍA 1973-1974 (`d99ba07`), que citó la Ley 4708 en un capítulo, y el AMPLÍA 2007-2009 lo arrastró al rehacer la frase. **Ninguno lo atrapó un control automático**: el 3 es el control (1) de P181, que no corre solo; el 2 y el 4 son controles que no existían (P202). Los controles de P102 (privacidad: 0 caídas), P144 (comillas rectas: 0), P158 (caracteres de control: 0), P164 (fecha de acto y de publicación: el 5859 de diciembre de 2008 publicado en enero de 2009, la Res.\ Conj.\ 128-125 de febrero publicada en mayo, el 391 de febrero, la Ley 7581 del 1 de septiembre tenida por ley el 23: bien dichos), P170 (remisiones) y P195 (primacías relativas: «el siguiente», «después de», «recién», «hasta» en las 104 líneas, sin caídas) se corrieron en la sesión, a mano o por script, y no dieron otras caídas.
+
+**Descartados (falsos positivos, 10).** «El único acto ... como una unidad de planificación propia es el convenio del Corredor Intermunicipal de 2009» (19:484) contra la macro-cuenca del Decreto 2785 y la Región Metropolitana de la Ley 7322: la primera es de planificación ambiental y la segunda, de transporte, y las dos agrupan a otros municipios; «propia» las deja afuera. «El acto de mayor monto entre los del departamento hallados en 2007» (22:545): universo de las 50 fichas del informe; la cisterna de Vaqueros, del B.2, es de \$1.547.149,05. «Una mayor que las dos» (19:203): 49,36 ha contra 42,06 y 32,5. «La Provincia las vendió a \$18.000 la hectárea» (17-tierrafiscal:401): 108.000 / 6, condicionado («si esas seis hectáreas son las que se vendieron»). «Menos de un tercio de eso» (17-aguabaja:325): 0,165 < 0,175. «En 2014 y 2015 es su cuarta aparición» (19:926): la ventana va dicha, y 2007 y 2008 se dan después. «Tres caen sobre los tramos de aquellos convenios» (09:723): Cabral en 2007 y en 2008 y Urquiza--Chaile en 2008. «Juntos no llegan al uno por ciento» (15:185): 0,37 + 0,41 = 0,78. «El llamado ... se publica en mayo, después de dictados la adjudicación y el contrato» (A:501): la adjudicación se publica el 28 de mayo, cinco días después del llamado, pero se dictó en febrero; «dictados» es exacto. La remisión de 01:157 que el script marca (siete capítulos posteriores en una sola enumeración, con «más adelante» al final, a más de 140 caracteres del primero): está marcada.
+
+**Pendientes que cierra.** Ninguno.
+
+**Pendientes nuevos.** P202 (herramientas): tres controles para AMPLÍA (extensión de P181 y P195). (1) **La lista de C:4 se rehace entera en cada AMPLÍA**: cada norma de «no se citan en ningún capítulo» se busca por script en `cap/*.tex`, y la lista y sus cifras se corrigen aunque el AMPLÍA no la haya tocado (caso: Ley 4708, citada en 21-ausencias:182 desde el AMPLÍA 1973-1974, ronda 73). (2) **Recuentos de clases en las frases de síntesis** («dan el origen de N filas», «renuevan N», «traen N»): el script cuenta las fichas del informe que caen en cada clase, incluidas las que el capítulo trata en otro párrafo (caso: 19:187 y La Mesa Redonda de 2009, ronda 73). (3) **El control (1) de P181 sigue sin correr**: las firmas de interinos que una fila da por mes se cotejan con la lista de ediciones del E.4 del informe (caso: A:499, «en febrero», ronda 73; el mismo de la ronda 69). Y una regla de lectura para P196: la serie de la cuarta tesis no cuenta la adjudicación como acto de cierre (01:139, ronda 73), y anota a la vista los casos que van contra la tesis, como la obra de agua de 2007.
+
+**Pendientes revisados sin cerrar.** P196 (la medida cambia con el hallazgo 1; la serie sigue sin armar). P197 (láminas de 2007 a 2009: sin cambio). P198 y P199 (H, E y opacidad de 2007 a 2009: sin cambio). P200 (Res.\ 25.810 o 25.819: la imagen de la 18255 no se miró en esta ronda). P201 (nivel de 2008: sin cambio). P181 (su control 1 falló otra vez: hallazgo 3). P186 y P195 (sus controles se corrieron a mano: la propagación del CONTRADICE de la matrícula 3.337 está completa en 14:847, 17-tierrafiscal:401 y 434 y D:256). P193 (las citas que el AMPLÍA pidió cotejar quedan cotejadas en la imagen). P102 y P164 (sin caídas). P115, P40 y P12.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.381/25.419 líneas vigentes en `573f289` y las 38 sin auditar de la ronda 72 | 25.336 vigentes; 45 caducas por el AMPLÍA 2007-2009 y 2 de las 38 reemplazadas por él |
+| Superlativos, cierres y ausencias en las 104 líneas (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *mayor*, *más alta*, *recién*, *el siguiente*), sin *primera mitad*, *primer semestre* ni *mayor parte* | 92 coincidencias, todas leídas | Ninguna cae: las ausencias llevan su universo («en lo leído de los tres años», «en lo hallado», «leídos con pendientes»); los superlativos de 19:203, 19:484 y 22:545, en los descartados |
+| Repaso de ventana: oraciones fuera de las líneas del AMPLÍA con un rango de años que cubre 2007-2009 y *no*, *ningún*, *único*, *primer*, *sólo*, *recién*, *hasta*, *desde*, *todavía*, *tampoco*, *falta*, *se pide* | libro entero (base `82b47fb`), 10 coincidencias, todas leídas | Ninguna cae por lo de 2007 a 2009: D:160 (actas de proclamación hasta 2007), D:260 (emergencias de 1980 a 2018: precisión c), 01:159, 05:164, 174 y 384, 11:620, 18-trabajo:42, 19:885 y 21-conclusion:106 |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, y 60 antes; orden de `\input` de `main.tex`; sólo de `cap/` a `cap/`) | 377/377 `\ref{cap:…}` antes de la fase 6; 379/379 después | 1 marcada por la ventana del script, la misma antes y después (01:157, enumeración de siete capítulos con «más adelante» al final): 0 sin marcar |
+| Normas de C:4 citadas en algún capítulo | 13 normas antes de la fase 6; 12 después; 26 archivos de `cap/` | Antes: 1 (Ley 4708, 21-ausencias:182: hallazgo 4). Después: 0 |
+| `\pendiente{}`, ítems de D | 52; 285 | 22-prospectiva dice «doscientos ochenta y cinco pedidos»: cierra, antes y después de la fase 6 (las precisiones b y c amplían ítems existentes) |
+| Aritmética de 2007 a 2009 | 10 cuentas | 108.000 / 6 = 18.000; 7,875 / 15 = 0,525; 0,525 / 3 = 0,175 > 0,165; 3.453.835,37 / 3.800.000 = 90,9 %; 1.547.149,05 / 1.300.000 = 1,190; 0,37 + 0,41 = 0,78; 47,66 / 86,51 > la mitad; 79 − 42 = 37 tramos fuera de las ventanas (00:45, F:26) y 1 + 31 + 2 + 3 = 37; de 2001 a 2015, catorce años; 25.336 + 104 = 25.440. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 73 | 50 de 346 oraciones con cifra en las 104 líneas | **50/50 con fuente localizable**: 33 con la cita en la oración (por script); las otras 17 son declaraciones de cobertura de 00, 02, 20 y F, que remiten al apéndice F y a los informes, y oraciones de síntesis seguidas de su cita o de su ficha (19:187, 19:201, 19:203, 22:545, 15:474, 17-tierrafiscal:434). 100 % → 90 por el criterio; el aspecto queda en 82 por la escala general (P115) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 104 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 104 líneas, cruzadas con contextos sensibles (P102: *remate*, *quiebra*, *concurso*, *deudor*, *sentencia*, *cesante*, *renuncia*, *D.N.I.*) | 104/104 líneas | 0 caídas. Sin nombre: el heredero de Manuel Serrey, los adjudicatarios y desadjudicados de El Jardín, los ejecutados de los remates de 2008 y 2009, los condenados, el concursado, los agentes del hospital. Nombrados: autoridades (Calabró, Lapad por su cargo), concesionarios de canteras que el cuadro de 2021 ya nombra o que firman un pedido público (Héctor Enrique Medina, César Domingo Dal Borgo, Alejandrina Morales, Juan Domingo Lozano por la cooperativa), Elena Serrey de González Bonorino como demandada de 1987 |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `82b47fb` y fase 6 aplicada con `git am` en un clon limpio de GitHub | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló, y sin `.aux` previos, tres pasadas de `pdflatex`); 983 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2007 a 2009 van en pasado; la Ley 7322 se cita como lo que establece la región |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 3 (−5); aplicado. Fechas de acto y de publicación distinguidas (P164) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 12 citas cotejadas, ninguna con diferencias; techo de 90 por cotejo parcial del libro |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Las ausencias de 2007 a 2009 llevan su universo y ninguna se afirma sobre años en barrido; superlativos con universo declarado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias de los originales (La Generosa, La Mesa Redonda, «9:05», «Adela Corina», «Clarisa» y «María del Carmen», Da Souza) están señaladas |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 1 y 2: 4,08 por cada 100 de las 49,0 páginas (40), uno sostiene una tesis (tope 50) y los dos contradicen material cercano (un escalón más); aplicados |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 4 (−5); aplicado. 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (abajo); la cuarta tesis tiene ahora una medida coherente con su evidencia y declara el dato que más se le opone |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; las láminas que piden extensión, en P197 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 104 líneas; 90 como en la ronda 71 |
+
+**Nota inicial: 81,3 antes del tope y 81,3 después** (tope de 90 por la cobertura acumulada inicial del 99,6 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas ---el escrutinio de 1987, la resolución judicial de la tierra del embalse, la sentencia del juicio de la matrícula 1.303 o, para la cuarta, los certificados finales de las defensas de 1967 a 1977---: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9 (el 1, de 82 a 90); (4) dejar corriendo los controles de P181, P195 y P202 como paso automático del AMPLÍA, que habrían atrapado tres de los cuatro hallazgos de esta ronda: protege el 3, el 7 y el 8 en la nota inicial de la ronda siguiente (aquí, 7,0 puntos de la inicial); (5) hacer las láminas de P197 y las entradas de P198: hasta +0,2 en el 13 y el 15.
+
+**Avance del libro:** 4 de 4 hallazgos resueltos (100 %) y cuatro precisiones aplicadas; compila sin errores ni referencias indefinidas, 983 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la cuarta tesis (en 2007 y 2008 las expropiaciones para vivienda de 1985 y 1986 siguen sin cierre: la de La Caldera en juicio, la de Vaqueros sin escritura; los encauzamientos de 2007 y 2008 vuelven a los tramos de 1985 a 1987; y en contra, a la vista, la obra de agua del pueblo de 2007, adjudicada en dos meses y sin cierre conocido) y la tercera (2007 a 2009 tampoco traen un acto que devuelva al municipio competencia sobre el agua o el suelo).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 104 líneas (0,41 %; 49,0 páginas). Cobertura acumulada: 25.440 de 25.440 (100,0 %), con el registro de arriba. Falsos positivos descartados: 10. Recortes: 63 de las 75 citas nuevas quedan cotejadas sólo contra el TEXTO de los informes; una de las 18 ediciones bajadas no se cotejó renglón por renglón; del B.2 de 2008 y 2009 se leyeron los renglones que el libro cita, no el apartado entero; los controles de P164, P170, P186 y P195 se corrieron en la sesión, no como paso automático; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **4 de 4**, uno en la incorporación de la ronda 72 (`573f289`), dos en el AMPLÍA 2007-2009 (`82b47fb`) y uno en el AMPLÍA 1973-1974 (`d99ba07`), arrastrado por el de 2007-2009; **0 atrapados por un control automático**.
