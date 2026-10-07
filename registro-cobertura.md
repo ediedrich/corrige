@@ -3781,3 +3781,122 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 3 de 3 hallazgos resueltos (100 %) y una precisión aplicada; compila sin errores ni referencias indefinidas, 995 páginas. **Avance de la investigación:** sin cambios de estado. La **segunda tesis** (la opacidad de criterio) pierde parte de un indicio y gana amplitud: las determinaciones sin coordenadas publicadas de noviembre de 2013 a diciembre de 2014 son cuatro de trece y no dos de once, y sólo dos recaen sobre suelo que el libro sabe en loteo, de modo que la coincidencia entre omisión y loteo se debilita (P208); a la vez, la omisión aparece un año antes de El Durazno, con la misma fórmula. La **cuarta tesis** (la desidia es selectiva) gana evidencia sin cambiar de estado: en 2013 la Provincia aprueba y adjudica en dos meses una red de agua «para Loteos en la Caldera» y la protección de la captación del acueducto que lleva el agua del río a la capital, mientras las determinaciones sobre el suelo de quienes viven en el departamento siguen sin coordenadas publicadas. La **tercera** (la pérdida de competencia municipal) gana un recuento: treinta y siete actos de línea de ribera publicados de 2013 a 2015, ninguno con intervención municipal salvo la 023/14.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 89 líneas (0,35 %; 25,1 páginas). Cobertura acumulada: 25.472 de 25.472 (100,0 %), con el registro de arriba. Falsos positivos descartados: 5. Recortes: de las citas nuevas, once quedan cotejadas sólo contra el TEXTO de las fichas; de los actos que las filas de 2013 a 2015 citan sin comillas, se miraron en la imagen los de la tabla de cotejo y los seis del AMPLÍA, y los demás quedan contra el TEXTO de los informes; la muestra de trazabilidad no se rehízo; los controles de P181, P195 y P202 se corrieron en la sesión, no como paso automático. Errores introducidos por la propia auditoría: 3, los tres en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
+
+## Ronda 76 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2016-2018. Base: commit `bab001f` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2016-2018, sobre `4cc3e36`, la ronda 75; registrado por `3-registrar` a las 05:04 del 07/10, con el mismo árbol, `6f94cb8`, que el parche entregado), con la fase 6 en `ronda-76.patch` (un commit, `2d06895`, árbol `2d17ce7`; aplica con `git am` sobre `bab001f` en un clon limpio de GitHub y deja el mismo árbol). La sesión que hace esta ronda es la misma que escribió el AMPLÍA: se audita trabajo propio, y por eso cada cita nueva se volvió a buscar en el PDF de la edición y no en las fichas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 75 (25.472 de 25.472, sobre `4cc3e36`) se trasladaron por diff a `bab001f`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2016-2018 caduca 27 líneas y deja 44 nuevas o modificadas** (17 netas: 2 en A, 2 en F, 3 en 11 y 10 en 15), en 13 archivos. Vigentes después del traslado: 25.445 de 25.489.
+
+### Lectura sobre el texto (numeración de `bab001f`)
+
+Se leyeron **las 44 líneas, enteras, por la sesión**, sin subagentes (56.453 bytes), y se cotejaron contra los tres informes LEE (`BO-Salta-2016_19691-19931_la-caldera_LEE-2016_2026-10-07.txt`, `BO-Salta-2017_19932-20173_la-caldera_LEE-2017_2026-10-07.txt` y `BO-Salta-2018_20174-20413_la-caldera_LEE-2018_2026-10-07.txt`), contra la capa de las ediciones (`Vd.json` de las sesiones LEE) y, en las citas y cifras, contra el PDF de la edición.
+
+| Archivo | Líneas | Nuevas |
+|---|---|---|
+| ape/A-cronologia.tex | 568, 571, 573, 575, 581–584, 587–588, 590, 593 | 12 |
+| ape/C-normativa.tex | 352 | 1 |
+| ape/D-pedidos.tex | 78, 341 | 2 |
+| ape/E-personas.tex | 123 | 1 |
+| ape/F-fuentes.tex | 25–26, 104–105 | 4 |
+| cap/00-advertencia.tex | 45 | 1 |
+| cap/02-metodo.tex | 28, 99 | 2 |
+| cap/11-ribera.tex | 571, 903, 921, 932–933, 961 | 6 |
+| cap/12-amparo.tex | 604 | 1 |
+| cap/15-hacienda.tex | 490, 498, 500, 503, 505–507, 511, 531 | 9 |
+| cap/19-resistencias.tex | 203 | 1 |
+| cap/20-opacidad.tex | 995, 1016, 1018 | 3 |
+| cap/22-infraestructura.tex | 545 | 1 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 11:900–962 (la tabla de 2016 y 2017 y sus cautelas: hallazgo 2), 11:565–575, 15:486–535 (Vialidad: hallazgos 3 y 5), 19:185–205 (canteras), 20:985–1020, 22:540–546 y A:553–600.
+
+**Esta ronda: 44 líneas nuevas**, 56.453 bytes sobre 3.301.162, que en las 1.001 páginas de la base equivalen a **17,1 páginas**: ése es el denominador del aspecto 7.
+
+Acumulado: 25.445 vigentes + 44 = **25.489 de 25.489 (100,0 %)**. La fase 6 toca diez líneas: A:581, A:588, F:104, 11:903, 11:940, 15:494, 15:499–500, 15:512 y 22:545; A:581, A:588, F:104, 11:903 y 22:545 están dentro de lo leído en esta ronda, y las otras cinco estaban vigentes y se releyeron como contexto; no cambia el largo de ningún archivo: **25.489 de 25.489 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (`pdftotext` sobre los PDF de los Releases 2016 a 2018 de `boletines-salta`)
+
+Desde 2016 el Boletín es un PDF nacido digital: el texto es vectorial y la imagen se compone de él, de modo que el cotejo se hizo sobre el texto del PDF de la edición (no sobre la capa de `lee_auto`), en la hoja que cita el libro, y tres renglones se miraron además rasterizados a 200 ppp (20121 h60, 19907 h36, 19763 h31).
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 20170 | 14–15 | Decreto 1.817 | «Colectora Máxima y Colectores Principales Cloacales para la localidad de Vaqueros»; «Localidad de la Caldera, Departamento Vaqueros». Coinciden (A:584) |
+| 19763 | 31 | Res. SRH 62/16 | «La Caderilla»; «Ing. Hidráulico Víctor Sacarías Pérez» (mirado). Coinciden (11:921, 11:903: precisión) |
+| 19984 | 30 | Audiencia pública | «La Misión Urbanización Abierta Etapa II». Coincide (A:583) |
+| 20277 | 8–9 | Decreto 625 | «Nueva Planta Potabilizadora Campo Alegre». Coincide (A:590) |
+| 20382 | 15–17 | Decreto 1266 | «Optimización del Sistema de Agua de la Localidad de San Lorenzo». Coincide (A:593) |
+| 20067 | 9 | Decreto 965 | «Provisión de agua en el barrio Santiago Apóstol». Coincide (A:583) |
+| 19828 | 33 | La Serena | nombre y «Los terrenos afectados son de propiedad Fiscal». Coinciden (19:203) |
+| 19907 | 36 | Tereza | nombre y la misma fórmula (mirado). Coinciden (19:203) |
+| 19776 | 21 | Tierra Gaucha | nombre, 10 ha y ningún renglón sobre la propiedad del terreno: la fórmula fiscal que sigue en 19810 h47 es del aviso de la cantera «Norma», de Los Andes. Coincide con 19:203 |
+| 20121 | 59–60 | Vialidad | \$606.078,00 y \$606.025,00 (mirado), «Centro de Convenciones», «acceso Salta y camión para tareas varias», cuatro meses los dos. Hallazgo 3 |
+| 19934 | 27 | Res. SRH 427/16 | «Río La Caldera», con mayúscula. Hallazgo 4 |
+
+Son **las 11 cadenas entre comillas del texto nuevo, todas cotejadas en el PDF**, y siete cifras o renglones más (18 cotejos).
+
+### Hallazgos (cinco, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | A:581 | La fila de 2017 da entre lo hallado ese año «cuatro determinaciones sobre el arroyo Chaile en una sola manzana de Vaqueros»; las determinaciones (205, 210, 211 y 212/17) llevan número de 2017 pero se publicaron en abril y mayo de 2018 (20249 h36–37; 20253 h27). En el Boletín de 2017 salen las cuatro comisiones (19934 h25–27) | 3 | La fila de 2017 dice lo que se publicó ese año (las comisiones y la 279/17, 20106 h33), y la de 2018 agrega las determinaciones, «con número de 2017» |
+| 2 | 11:940 | «Todas las comisiones de 2016 invocan el método «geológico-geomorfológico»»: la Res. 62/16, que el mismo AMPLÍA agregó a la tabla de arriba, no nombra método (19763 h31). Repaso de ventana no hecho sobre la frase | 5 | «Todas las comisiones de 2016 que nombran un método...», con la 62/16 dicha |
+| 3 | 15:499–500 | La ficha de las contrataciones de octubre de 2017 decía «mantenimiento vial en cinco rutas provinciales, caminos vecinales de la zona y el acceso al Centro de Convenciones», mezcla de los dos avisos que el AMPLÍA conservó de la consulta puntual sin cotejarla (P169): el de rutas nombra las cinco rutas, el Centro de Convenciones y los caminos vecinales; el otro, el acceso Salta; los dos, camión | 3 | Se separan los dos avisos, sin cambiar el largo |
+| 4 | F:104 | «río La Caldera» por «Río La Caldera» en una cita del aviso de la Res. 427/16 | 4 | Se repone la mayúscula |
+| 5 | 15:494 | La apertura de la sección dice «Hay un tercer punto en la serie» (2017), y diez renglones después el AMPLÍA cierra «La serie queda así: 1933 y, sin un año vacío en lo leído, de 2014 a 2018» | 7 | «Y la serie no se corta ahí.» |
+
+**Precisiones aplicadas sin restar.** 11:903: «con los mismos tres nombres» pasa a «con los mismos tres técnicos», porque el aviso de la 62/16 escribe «Sacarías» y el de la 147/16, según el libro, «Zacarías». 15:512: «tres años después» quedaba a continuación de dos años (2017 y 2018); pasa a «en 2020». 22:545: «también:» pasa a «lo hallado sigue siendo provincial:».
+
+Resta: un error de consistencia en 17,1 páginas, 5,8 por cada 100: **40** por el escalón, y **30** porque contradice material a diez renglones. Dos datos de fecha u origen en el aspecto 3: **−10** (90). Un superlativo que el propio libro desmiente, en el aspecto 5: **−10** (90). Una corrección silenciosa en el aspecto 4: −3, que no mueve el 90 del techo por cotejo parcial.
+
+**Errores introducidos por la propia auditoría**: los cinco, en el AMPLÍA 2016-2018 (`bab001f`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 2 y el 5 son el caso de P159 y P174 (anáforas y frases de anuncio de una serie que crece), que la sesión no corrió como script.
+
+**Descartados (falsos positivos, 4).** «sólo dos ---la del río La Caldera de marzo de 2016 (Res. 62/16) y la del río Vaqueros de mayo...--- incluyen un ingeniero hidráulico» (11:571): sobre las comisiones leídas de 2011 a 2019, y la de 2013 trae un ingeniero en recursos hídricos, como la frase dice. «La más grande de las nueve» (19:203): La Mesa Redonda, 32,5 ha, contra 21,6 de Los Yacones. «Y no fueron las únicas» (15:505): presencia, no unicidad. «En lo leído de los tres años no hay ningún plano publicado ... ningún balance municipal» (F:104): con su universo, como en los tramos anteriores.
+
+**Pendientes revisados sin cerrar.** P211: la ficha del cap. 15 queda corregida (hallazgo 3); sigue abierta la cotización de la contratación de mayo de 2017 (20042 h41, renglón cortado). P212 (Release 2017 y 2018), P213 (Res. 338/16), P214 (Tierra Gaucha: el cotejo confirma que su edicto de 2016 no da el régimen del terreno) y P215 (fichas NUEVO sin incorporar): sin cambios. P13: el informe de 2016 no halló ediciones de otro año en la carpeta 2016; la de 2017 trae 19858.pdf, copia de la 19958 (P212).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.472/25.472 líneas vigentes en `4cc3e36` | 25.445 vigentes; 27 caducas por el AMPLÍA 2016-2018 |
+| Citas entre comillas nuevas contra la capa de los tres años y contra el PDF | 11 cadenas | 11/11 literales en la capa; 10/11 en el PDF, con la mayúscula del hallazgo 4 |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *no aparece*, *mayor*, *todas*) | 56.453 bytes agregados; 9 coincidencias nuevas, todas leídas | Una cae (hallazgo 2, que el script no veía porque «Todas» estaba en un renglón no tocado); las demás, descartadas arriba |
+| Repaso de ventana: líneas del índice del AMPLÍA con un año 2016 a 2018 o una edición del rango | 368 de 445 líneas del índice (1.037 coincidencias) | Las que caían las corrigió el AMPLÍA (C:352, E:123, 11:571, 20:995, 20:1016); el hallazgo 2 se le escapó |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` de `cap/` a `cap/` agregados por el AMPLÍA y la fase 6 | 0 nuevas entre capítulos (las nuevas van de capítulos a apéndices o de apéndices a capítulos) |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra |
+| Aritmética de 2016 a 2018 | 8 cuentas | 100,8 + 3,8967 + 8,6732 = 113,4 ha; 606.078 + 606.025 = 1.212.103; 650.424 + 650.756 + 606.025 + 606.078 + 606.078 + 606.025 = 3.725.386; 606.078 + 606.025 + 709.034 + 708.969 + 901.484 + 901.396 = 4.432.986; 3.267,26 + 216,36 = 3.483,62 m²; 4.083,34 + 665,23 + 169,75 = 4.918,32 m²; 42 + 1 + 45 = 88 tramos; 242 + 240 = 482 números. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 76 | 50 de 149 fragmentos con cifra en las 44 líneas (95 de los 149 llevan la cita en el fragmento) | **50/50 con fuente localizable**: 35 con la cita en el fragmento (por script); las otras 15 son declaraciones de cobertura que remiten a F, filas cuya edición está en la misma fila, una remisión a otra fila de la cronología y oraciones anteriores al AMPLÍA dentro de renglones modificados, con la fuente en el pasaje |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 44 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 44 líneas | 44/44 líneas | 0 caídas. Sin nombre: los donantes de las matrículas 5.832 y de la 4.063 (Barrio La Misión 3), el propietario de Valle Alegre, los titulares de Cerros de Buena Vista, los jubilados. Nombrados: funcionarios y técnicos por su función en actos públicos, la peticionante de La Serena (ya nombrada en 19:187) y sociedades |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `bab001f` y fase 6 | Compilan las dos; 1.001 páginas cada una (995 antes del AMPLÍA); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, como dice la Advertencia; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2016 a 2018 van en pasado o como lo que dispusieron |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 1 y 3 (−5 cada uno), aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgo 4 (−3, bajo el techo de 90 por cotejo parcial del libro); 11 citas nuevas cotejadas |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 2: superlativo que el propio libro desmiente (−10), aplicado; ninguna ausencia afirmada sobre 2016 a 2018, que quedan en barrido |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias de los originales (fecha de la 414/16, río y arroyo en la 2344, Valle Alegre, Cerros de Buena Vista) están señaladas en F |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgo 5: 5,8 por cada 100 de las 17,1 páginas (40), y un escalón más por estar a diez renglones (30); aplicado |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Los pedidos de D que el AMPLÍA satisfizo se actualizaron (D:78, D:341); 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (ver avance) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series reproducibles: la de Vialidad de 2014 a 2018, la de ribera |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas tocadas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 44 líneas |
+
+**Nota inicial: 80,2 antes del tope y 80,2 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna de las tesis abiertas: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9; (4) correr como script, al final de cada AMPLÍA, el control de frases que anuncian o resumen una serie cuando la serie crece (P159, P174) y el de fecha de acto contra fecha de publicación en las filas de año de la cronología (P164): evitan los −7,2 de los hallazgos 1 y 5 en la nota inicial; (5) LEE complemento de las catorce ediciones de 2017 y 2018 que el Release no trae o trae truncas (P212): no mueve la nota, completa el tramo.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos (100 %) y tres precisiones aplicadas; compila sin errores ni referencias indefinidas, 1.001 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: de 2016 a 2018 la Municipalidad de La Caldera aparece en el Boletín como contratista de Vialidad seis veces por año, con la cotización igual al presupuesto oficial en los avisos que la dejan leer, y como destinataria de fondos que una ley y una comisión departamental reasignan; las determinaciones de ribera del departamento siguen sin intervención municipal. La **cuarta tesis** (la desidia es selectiva) gana un dato: en 2018 la Provincia recibe en donación, en La Caldera, el terreno de la nueva planta potabilizadora que abastecerá a la capital, y constituye en el departamento la servidumbre de la cisterna del acueducto de San Lorenzo, mientras los fondos destinados al agua del barrio Santiago Apóstol pasan a una retroexcavadora.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 44 líneas (0,17 %; 17,1 páginas). Cobertura acumulada: 25.489 de 25.489 (100,0 %), con el registro de arriba. Falsos positivos descartados: 4. Recortes: los actos que las filas de 2016 a 2018 citan sin comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo los de la tabla contra el PDF; la muestra de trazabilidad no se rehízo; los controles de P159, P164 y P174 se corrieron a mano y no como paso automático, y por eso no atraparon los hallazgos 1, 2 y 5. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
