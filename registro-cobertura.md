@@ -3652,3 +3652,132 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 3 de 3 hallazgos resueltos (100 %) y cuatro precisiones aplicadas; compila sin errores ni referencias indefinidas, 985 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (de 2010 a 2012 el municipio aparece como ejecutor de obras de la Provincia por convenio y la competencia más cercana a una suya sobre el suelo es el control de un camino de una urbanización privada, impuesto por un certificado ambiental provincial) y la cuarta (la expropiación de vivienda de Vaqueros de 2009 avanza en 2010 al juicio y en 2011 se achica por ley, sin cierre conocido; la red de agua de Santa Mónica y el tendido eléctrico del paraje, adjudicados al municipio, no tienen cierre publicado en lo leído).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,19 %; 26,8 páginas). Cobertura acumulada: 25.452 de 25.452 (100,0 %), con el registro de arriba. Falsos positivos descartados: 6. Recortes: de las citas nuevas, once quedan cotejadas sólo contra el TEXTO de las fichas; de los actos que las filas de 2010 a 2012 citan sin comillas, se miraron en la imagen once (las cifras y los nombres de la tabla de cotejo) y los demás quedan contra el TEXTO de los informes; la muestra de trazabilidad no se rehízo; los controles de P181, P195 y P202 se corrieron en la sesión, no como paso automático. Errores introducidos por la propia auditoría: 3, dos de ellos en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
+
+## Ronda 75 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2013-2015. Base: commit `23a7ab4` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2013-2015, sobre `429f17a`, la ronda 74; registrado por `3-registrar` a las 03:04 del 07/10, con el mismo árbol, `51ed4d2`, que el parche entregado), con la fase 6 en `ronda-75.patch` (un commit, `dca23b8`, árbol `2c36c2b`; aplica con `git am` sobre `23a7ab4` en un clon limpio de GitHub y deja el mismo árbol). La sesión que hace esta ronda es la misma que escribió el AMPLÍA: se audita trabajo propio, y por eso cada cita nueva se volvió a mirar en la imagen y no en las fichas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 74 (25.452 de 25.452, sobre `429f17a`) se trasladaron por diff a `23a7ab4`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2013-2015 caduca 69 líneas y deja 89 nuevas o modificadas** (20 netas: 9 en A, 3 en C, 2 en F y 6 en 11), en 18 archivos. Vigentes después del traslado: 25.383 de 25.472.
+
+### Lectura sobre el texto (numeración de `23a7ab4`)
+
+Se leyeron **las 89 líneas, enteras, por la sesión**, sin subagentes (82.901 bytes), y se cotejaron contra los tres informes LEE (`BO-Salta-2013_18979-19216_la-caldera_LEE-2013_2026-10-07.txt`, `BO-Salta-2014_19217-19453_la-caldera_LEE-2014_2026-10-07.txt` y `BO-Salta-2015_19454-19690_la-caldera_LEE-2015_2026-10-07.txt`), contra el bloque de la ronda 74 de este registro y, en las citas, contra la imagen.
+
+| Archivo | Líneas | Nuevas |
+|---|---|---|
+| ape/A-cronologia.tex | 4, 526, 530–532, 535, 538, 553, 558, 560 | 10 |
+| ape/C-normativa.tex | 351, 353–354, 363 | 4 |
+| ape/D-pedidos.tex | 71, 73, 176 | 3 |
+| ape/F-fuentes.tex | 25–26, 102–103, 105 | 5 |
+| ape/G-propuestas.tex | 278 | 1 |
+| cap/00-advertencia.tex | 45 | 1 |
+| cap/01-planteo.tex | 85 | 1 |
+| cap/02-metodo.tex | 28, 99 | 2 |
+| cap/04-siglo.tex | 1764 | 1 |
+| cap/10-expropiacion.tex | 313–314 | 2 |
+| cap/11-ribera.tex | 312, 348, 386–387, 511, 513, 515–517, 529, 532–533, 550, 556, 571, 573, 584, 594–595, 614, 618, 620, 624, 628, 630, 634, 669, 681, 719, 793, 1028, 1233, 1507, 1519, 1619, 1722 | 36 |
+| cap/15-hacienda.tex | 470, 486 | 2 |
+| cap/17-aguabaja.tex | 8 | 1 |
+| cap/19-resistencias.tex | 87, 203, 422, 455, 924 | 5 |
+| cap/20-opacidad.tex | 116, 806, 989, 995, 1016 | 5 |
+| cap/21-ausencias.tex | 76 | 1 |
+| cap/22-infraestructura.tex | 46–47, 426, 545 | 4 |
+| cap/23-plan.tex | 43, 110–111, 216, 261 | 5 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 11:370–400 (la cautela del procedimiento: hallazgo 1), 11:476–510 (la sección de 2012 y 2013), 11:520–640 (la serie y sus dos tablas), 11:700–725, 11:1440–1530 (la secuencia del Guaranguay en la matrícula 4082), 19:180–212 y 19:905–930 (canteras), 20:985–996, 15:460–490 y 21:70–80.
+
+**Esta ronda: 89 líneas nuevas**, 82.901 bytes sobre 3.287.179, que en las 995 páginas de la base equivalen a **25,1 páginas**: ése es el denominador del aspecto 7.
+
+Acumulado: 25.383 vigentes + 89 = **25.472 de 25.472 (100,0 %)**. La fase 6 toca cinco líneas: A:560, F:105, 00:45 y 11:382–383; las cuatro primeras están dentro de lo leído en esta ronda, y 11:382–383 estaba vigente y se releyó como contexto; no cambia el largo de ningún archivo: **25.472 de 25.472 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 2013 a 2015 de `boletines-salta`)
+
+Se bajaron de los Releases quince ediciones (18980, 19027, 19041, 19085, 19101, 19129, 19173, 19198, 19232, 19360, 19457, 19532, 19573, 19574, 19596), y antes, durante el AMPLÍA, otras seis (19299, 19394, 19607, 19613, 19644, 19651). Recortes a 170–220 ppp con pdfplumber; el renglón se ubicó con la capa y cada recorte se miró.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 19173 | 20 | Res. SOP 878 | «Red de Agua para Loteos en la Caldera - Dpto. La Caldera». Coincide (A:530, C:351, 22:545) |
+| 18980 | 23 | Decreto municipal de Vaqueros | «notable crecimiento poblacional». Coincide (A:526) |
+| 19101 | 18 | Decreto 1990 | «Mil200 1era Edición de Carrera Pedestre La Caldera Trail». Coincide (A:526) |
+| 19027 | 22 | Res. SRH 51/13 | «Catastro N° S/N°, Sección B, de la localidad de Vaqueros». Coincide (11:511) |
+| 19041 | 23 | Res. SRH 60 | «por Resolución N° 60 del día 15/03/12». Coincide (11:511) |
+| 19574 | 21 | Res. SRH 199/15 | «Ing. Civil Marcelo R. Toigo y Lic. en Geologia Enrique Salvador Chalabe», «Catastro N° 2020, Finca Wiera, Localidad de La Caldera», «matemático y fotográfico». Coincide (11:550) |
+| 19198 | 24 | Res. SRH 336/13 | «(Dcto. N° 1898/...». Coincide (11:533) |
+| 19232 | 26 | Res. SRH 395/13 | «Catastro N° 1366, Finca La Caldera o Getsemaní». Coincide (F:105) |
+| 19457 | 16 | Res. 771D | «Escuela N° 4274 "Monseñor Pedro Reginaldo Lira" de la localidad La Calderilla». Coincide (21:76) |
+| 19360 | 20 | LP 23/14 | «Jardín Maternal N° 2525 - Dr. Luis Linares», Localidad La Caldera. Coincide (21:76, A:535) |
+| 19129 | 26 | Archivo de expedientes mineros | «21.189 Doña Rufina Plomo - plata.- La Caldera». Coincide (A:526) |
+| 19085 | 29 | Mina | «Chañy I». Coincide (A:526) |
+| 19532 | 17 | Aguas del Norte, LP 29/2015 | «Planta Depuradora Cloacal - Vaqueros». Coincide (A:560; hallazgo 3) |
+| 19596 | 6 | Ley 7881 | «Matrícula N° 899, de la localidad La Caldera», «destinado exclusivamente a la radicación de un». Coincide (A:560) |
+| 19573 | 11 | Decreto 2226 | «se trasladará, simbólicamente y por ese único día, la Capital de la Provincia de Salta». Coincide (A:560) |
+
+Son **15 de las 26 cadenas entre comillas del texto nuevo cotejadas en la imagen**; las otras once son nombres de canteras, sociedades, loteos y fincas, cotejados contra el TEXTO de las fichas. Además, durante el AMPLÍA se miraron en la imagen la superficie y la condición fiscal de Terranostra, Los Yacones y Don Roque I (19607 h22, 19644 h27 y h28), el nombre de la geóloga de la Res. 96/14 («Marcia», 19299 h23, como el libro y no «Maida», como el informe) y el capital de Jardín Celestial (19394 h37: el aumento es de \$365.000 y el capital queda en \$545.000, como el libro).
+
+### Hallazgos (tres, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 11:382–383 | La cautela del procedimiento dice que el libro no puede afirmar que «las tres resoluciones que remitieron sus coordenadas a la sede» incumplieran el decreto; dos renglones después (11:386–387) el mismo AMPLÍA lleva a cinco las determinaciones de la serie que no publicaron sus coordenadas (347/13, 336/13, 142/14, 383/14 y 467/15). El AMPLÍA corrigió el recuento y no la frase que lo anuncia | 7 | «las cinco determinaciones de la serie que no publicaron sus coordenadas», sin cambiar el largo |
+| 2 | F:105 | Entre las contradicciones del original de 2013 a 2015, el apéndice F dice que el expediente 20.604 de la cantera Los Yacones «es de INCOVI en 2015 y de Noroeste Construcciones en 2012». Es la lectura del informe LEE de 2015 (A.55, E.9), importada sin comprobar: el edicto de 2012 (18948 h23, mirado en la ronda 74) dice que la cantera de Noroeste «colinda con Cantera "Los Yacones", Expte. N° 20.604/2010», y el capítulo de canteras (19:187) ya la daba como «lindera de otra llamada «Los Yacones»». No hay contradicción en el original | 3 | Se reemplaza por una contradicción que sí está en el original y en la tabla del capítulo 11: el expediente de la comisión del río Vaqueros de la Res. 198/15 termina en «/15» en su aviso y en «/14» en el de su determinación |
+| 3 | A:560 | La fila de 2015 de la cronología dice que Aguas del Norte «licita las cloacas de Vaqueros» y no cita la edición de la licitación (Nº 19532, h. 17): las dos que cita son las de las máquinas sobre el río | 1 | Se agrega «Nº 19532, h.\ 17» |
+
+**Precisión aplicada sin restar.** 00:45: la frase nueva de 2013 a 2015 terminaba en «leídas por la capa» y no decía la consecuencia que las frases de los tramos anteriores dicen; se agrega «también de ellos cuentan los hallazgos y no las ausencias».
+
+Resta: un error de consistencia en 25,1 páginas, 4,0 por cada 100: **50** por el escalón, y **40** porque contradice material a menos de diez páginas (dos renglones). Un dato importado de un informe sin comprobar, en el aspecto 3: **resta 5** (95). Una fuente sin edición, en el aspecto 1: no mueve la nota, que está en 82 por P115.
+
+**Errores introducidos por la propia auditoría**: los tres, en el AMPLÍA 2013-2015 (`23a7ab4`), escrito por esta misma sesión. El 2 lo vio la misma sesión al releer el bloque de la ronda 74 de este registro, después de entregar el AMPLÍA y antes de que se registrara; no se tocó la entrega para no cruzarse con `3-registrar` y se corrige aquí. **Ninguno lo atrapó un control automático**.
+
+**Descartados (falsos positivos, 5).** «por primera vez desde 2006» (F:105): universo declarado, y el informe de 2015 lo da contra 2007 a 2014. «La 383/14 no fue la única de la serie sin coordenadas publicadas» (11:618): sigue cierta y ahora dice cuáles. «Entre todas las comisiones ... sólo una ---la del río Vaqueros de 2016--- incluye un ingeniero hidráulico» (11:571): la de 2013 trae un ingeniero en recursos hídricos, y la frase ya lo dice. «La más grande de las siete es la que tiene el informe de impacto expresamente no aprobado» (19:203): La Mesa Redonda, 32,5 ha, contra 21,6 de Los Yacones, la mayor de las seis restantes. «Ninguna publica las coordenadas» (A:531): las dos resoluciones de la fila, por sus avisos (19196 h19, 19198 h24).
+
+**Pendientes que cierra.** P209: su supuesto es el hallazgo 2; la cantera de Noroeste de 2012 colinda con la de INCOVI y no comparten expediente (18948 h23, ronda 74).
+
+**Pendientes revisados sin cerrar.** P207 (lámina de ribera: la 46/13 y la 105/13 siguen sin dibujar; el libro lo declara en 11:719). P208 (matrículas 3841 y 1499: la capa catastral del capítulo 11 da la 1499 como rural, finca San Jorge, en 2026, lo que no dice si estaba en loteo en 2013). P210 (los dos errores del informe LEE 2014, confirmados en la imagen; el libro no los tenía). P39: su ítem «11:1497 (rectificación de marzo de 2013)» queda resuelto por el AMPLÍA (Res. SRH 46/13, Nº 19026, h. 20, y Nº 19027, h. 29, en 11:1507); los demás ítems siguen abiertos. P196 (la serie de la cuarta tesis: los años 2013 a 2015 suman una red de agua «para Loteos» hecha por la Provincia y adjudicada a una empresa, y la protección de la captación del acueducto que abastece a la capital, adjudicada en cuatro meses).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.452/25.452 líneas vigentes en `429f17a` | 25.383 vigentes; 69 caducas por el AMPLÍA 2013-2015 |
+| Filas de las dos tablas de la serie (11) | 30 filas de la primera; 14 de la segunda | 13 comisiones y 17 determinaciones con la 023/14; 13 determinaciones y una rectificación, 9 con «Publicadas»: cierran con 11:515, 11:584 y 11:594 |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *mayor*, *recién*, *tampoco*, *sólo*, *todavía*) | 20.669 bytes de palabras agregadas, 16 coincidencias, todas leídas, más las cinco que el script no ve porque la palabra ya estaba en el renglón (11:571, 11:573, 11:618, 15:486 y 19:203) | Ninguna cae: las cinco descartadas de arriba, «ningún plano publicado ... ningún balance municipal» de F:105 con su universo, como en 2010 a 2012, y las demás sin universo en juego («su primera edición», «por ese único día», «la primera ... la segunda») |
+| Repaso de ventana: frases con 2013, 2014 o 2015, o con un rango que los cubre, y una forma de ausencia o superlativo, fuera del capítulo 11 | libro entero (base `429f17a`), 25 frases, todas leídas | Las que caían las corrigió el AMPLÍA; ninguna nueva |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, 60 antes; orden de `\input` de `main.tex`; de `cap/` a `cap/`) | 937/937 `\ref{cap:…}` después de la fase 6 | 1 marcada por la ventana del script, la misma de las rondas 73 y 74 (01:157): 0 sin marcar |
+| Normas de C:4 citadas en algún capítulo (P202, control 1) | 12 normas; 26 archivos de `cap/`; y las 3 filas nuevas de C | Las 12: 0 citas. Las 3 nuevas se citan en 11 y 22: la lista no cambia |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Aritmética de 2013 a 2015 | 7 cuentas | 1.946.089,99 / 2.240.271,97 = 0,8687 (13,13 %); 10 + 9,0347 + 21,6375 + 10,8772 + 6,1060 + 10,6630 + 32,5 = 100,8 ha; 104,2382 + 18,1116 + 2,4217 + 18,0351 = 142,8066 ha (Las Vertientes); 14 + 13 + 10 = 37 actos publicados de 2013 a 2015 con el departamento, sin la 023/14 = 9 anteriores a la serie + 26 de la serie + 2 rectificaciones; 42 + 1 + 42 = 85 tramos; 25.383 + 89 = 25.472; 562 hojas de la 19321 a la 19335. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 75 | 50 de 267 oraciones con cifra en las 89 líneas | **50/50 con fuente localizable**: 35 con la cita en la oración o en la fila (por script); las otras 15 son recuentos de la serie con la fuente en las tablas del mismo capítulo, declaraciones de cobertura que remiten a F y a los informes, y oraciones anteriores al AMPLÍA dentro de renglones modificados, con la fuente en el pasaje. El hallazgo 3, fuera de la muestra, salió de la lectura |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 89 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 89 líneas, cruzadas con contextos sensibles (P102: *remate*, *quiebra*, *concurso*, *deudor*, *sentencia*, *cesante*, *renuncia*, *D.N.I.*) | 89/89 líneas | 0 caídas. Sin nombre: el copropietario de la matrícula 3721, los jubilados de las escuelas y del hospital, las partes de los remates, los socios de las sociedades. Nombrados: funcionarios y técnicos por su función en actos públicos, el intendente, y los peticionantes de canteras por sus actos públicos |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `23a7ab4` y fase 6, cada una en un árbol limpio, sin `.aux` previos | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló); 995 páginas cada una (985 antes del AMPLÍA); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115; hallazgo 3 aplicado |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2013 a 2015 van en pasado o como lo que dispusieron |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2 (−5), aplicado; las demás cifras de los informes se recalcularon |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 15 citas nuevas cotejadas, sin diferencias; techo de 90 por cotejo parcial |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Ninguna ausencia afirmada sobre 2013 a 2015, que quedan en barrido; los superlativos que la ventana desmentía los corrigió el AMPLÍA |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias de los originales (1366 y 4366, los vértices de 6/14 y 7/14, el balance de Las Vertientes) están señaladas |
+| 7 | Consistencia interna | 9 | 40 | 100 | Hallazgo 1: 4,0 por cada 100 de las 25,1 páginas (50), y un escalón más por estar a dos renglones (40); aplicado |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos satisfechos en la lista; 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; la segunda tesis pierde parte de su indicio (ver avance) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; el libro declara las dos resoluciones con coordenadas que la lámina no dibuja (P207) |
+| 14 | Utilidad pública | 4 | 100 | 100 | La propuesta de 23:43 se actualizó con la serie |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 89 líneas; 90 como en la ronda 74 |
+
+**Nota inicial: 82,6 antes del tope y 82,6 después** (tope de 90 por la cobertura acumulada inicial del 99,7 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas: hasta +1,8 en el 10; P208 decide si la segunda conserva el indicio que el AMPLÍA le recortó; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9; (4) un control de recuentos encadenados como paso automático de cada AMPLÍA: cuando cambia el número de una serie («veinticinco actos», «trece determinaciones», «seis concesiones»), buscar todas sus menciones y las frases que anuncian el número ---el hallazgo 1 es eso---: evita los −5,4 del aspecto 7 en la nota inicial; (5) dibujar en la lámina de ribera las coordenadas de las Res. 46/13 y 105/13 (P207): no mueve la nota, completa la serie que el libro reconstruye.
+
+**Avance del libro:** 3 de 3 hallazgos resueltos (100 %) y una precisión aplicada; compila sin errores ni referencias indefinidas, 995 páginas. **Avance de la investigación:** sin cambios de estado. La **segunda tesis** (la opacidad de criterio) pierde parte de un indicio y gana amplitud: las determinaciones sin coordenadas publicadas de noviembre de 2013 a diciembre de 2014 son cuatro de trece y no dos de once, y sólo dos recaen sobre suelo que el libro sabe en loteo, de modo que la coincidencia entre omisión y loteo se debilita (P208); a la vez, la omisión aparece un año antes de El Durazno, con la misma fórmula. La **cuarta tesis** (la desidia es selectiva) gana evidencia sin cambiar de estado: en 2013 la Provincia aprueba y adjudica en dos meses una red de agua «para Loteos en la Caldera» y la protección de la captación del acueducto que lleva el agua del río a la capital, mientras las determinaciones sobre el suelo de quienes viven en el departamento siguen sin coordenadas publicadas. La **tercera** (la pérdida de competencia municipal) gana un recuento: treinta y siete actos de línea de ribera publicados de 2013 a 2015, ninguno con intervención municipal salvo la 023/14.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 89 líneas (0,35 %; 25,1 páginas). Cobertura acumulada: 25.472 de 25.472 (100,0 %), con el registro de arriba. Falsos positivos descartados: 5. Recortes: de las citas nuevas, once quedan cotejadas sólo contra el TEXTO de las fichas; de los actos que las filas de 2013 a 2015 citan sin comillas, se miraron en la imagen los de la tabla de cotejo y los seis del AMPLÍA, y los demás quedan contra el TEXTO de los informes; la muestra de trazabilidad no se rehízo; los controles de P181, P195 y P202 se corrieron en la sesión, no como paso automático. Errores introducidos por la propia auditoría: 3, los tres en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
