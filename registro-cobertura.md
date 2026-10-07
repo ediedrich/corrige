@@ -4370,3 +4370,101 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos y una precisión; compila sin errores, 1.017 páginas. **Avance de la investigación:** la **tercera tesis** gana un dato: el único resumen de caja del municipio publicado entre 1922 y 1945 (Decreto 2155/1938) da ingresos propios de \$2.835,10 contra \$2.957,14 de egresos, y el saldo de traspaso que el mismo acto declara no cierra con sus cifras. La **opacidad** (cap. 20) se matiza sin caer: la práctica de no publicar cifras tuvo una excepción en 1938.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,19 %; 3,5 páginas). Cobertura acumulada: 25.524 de 25.524 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 81 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1941-1943. Base: commit `942f865` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1941-1943, sobre `306a6eb`, la ronda 80 registrada; aplicado por `3-registrar` a las 12:49 del 07/10), con la fase 6 en `ronda-81.patch` (un commit sobre `942f865`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los informes LEE 1941, 1942 y 1943: se audita trabajo propio, y cada cita y cifra nueva se volvió a buscar en la capa de la edición y, en las citas, en la imagen.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 80 (25.524 de 25.524, sobre `306a6eb`) se trasladaron por diff a `942f865`. **El AMPLÍA 1941-1943 caduca 32 líneas y deja 38 nuevas o modificadas** (6 netas: 1 en A, −1 en F, 6 en 04), en 6 archivos. Vigentes después del traslado: 25.492 de 25.530.
+
+### Lectura sobre el texto (numeración de `942f865`)
+
+Se leyeron **las 38 líneas, enteras, por la sesión** (23.918 bytes), contra los informes `BO-Salta-1941_1878-1929_la-caldera_LEE-1941_2026-10-07.txt`, `BO-Salta-1942_1930-1982_la-caldera_LEE-1942_2026-10-07.txt` y `BO-Salta-1943_1983-2035_la-caldera_LEE-1943_2026-10-07.txt` y, en las citas, contra la imagen.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 5 |
+| ape/D-pedidos.tex | 2 |
+| ape/F-fuentes.tex | 5 |
+| cap/00-advertencia.tex | 1 |
+| cap/02-metodo.tex | 1 |
+| cap/04-siglo.tex | 24 |
+
+Contexto releído entero (no suma cobertura): 04:3278–3420 (1941 a 1943), 04:3536–3556 (las escuelas de 1945), 04:1716–1760 (la mina), 04:4436–4446, A:205–235, F:36–60, D:200–210, 00:45.
+
+**Esta ronda: 38 líneas nuevas**, 23.918 bytes sobre 3.354.900, que en las 1.021 páginas de la base equivalen a **7,3 páginas**.
+
+Acumulado: 25.492 vigentes + 38 = **25.530 de 25.530 (100,0 %)**. La fase 6 toca una línea de 04 (3553) y una de A (214), las dos nuevas de esta ronda; no cambia el largo de ningún archivo: **25.530 de 25.530 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1880 | 8 | Decreto 4368 | «donación o venta de los terrenos necesarios para la ejecución de las mejoras del camino Calderilla a Río de las Pavas, tramo Desmonte-Campo Santo»; 634,64 m²; «imprescindible». Literal |
+| 1889 | 18 | Acta 391, prórroga | «aún en trámite». Literal |
+| 1964 | 22 | Decreto 6262-H | «a partir del año 1749 hasta la fecha se ha hecho en forma continua y sin interrupción». Literal |
+| 1974 | 7 | Decreto 4673-G | «ha sufrido una sensible despoblación». Literal; el decreto concede aquiescencia al Consejo Nacional para trasladar la escuela. Hallazgo 1 |
+| 1958 | 20 | Decreto 4091-G | «destacado en comisión para atender la vigilancia de «La Calderilla»». El libro citaba sin las comillas interiores. Hallazgo 2 |
+| 2020 / 2021 / 2034 | 6-7 / 13-14 / 11 | Decretos 526-G, 581-G y 1469-G | Fechas, números y orden: renuncia aceptada el 10/09, sucesor el 21/09, reconocimiento de nueve días el 13/12. Coinciden con la corrección del AMPLÍA |
+| 1940 / 2026 | 27 / 36 | Precios de La Caldera | Carne común \$0,55 (1942) y \$0,60 (1943). Coinciden |
+| 1932 | 1 | Aviso del Release | «ESTE NÚMERO DE BOLETÍN NO FUE PUBLICADO». Coincide |
+| 2030 | todas | Edición 2.030 | 31 hojas, leída en el informe de 1943; no trae el acto de la intervención. Coincide |
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04:3553, A:214 | El decreto 4673-G de 1942 «la trasladó» de San Alejo a Wierna / la escuela «pasa» de San Alejo a Wierna: el decreto concede la aquiescencia al Consejo Nacional de Educación para el traslado, que no se publica (la llegada a Wierna la prueba el acto de 1945) | 5 | «dio la aquiescencia para llevarla de San Alejo a Wierna»; «la Provincia da la aquiescencia para que la escuela nacional Nº 250 pase de San Alejo a Wierna» |
+| 2 | A:214 | La cita de la vigilancia de 1942 omitía las comillas del original alrededor de «La Calderilla» | 4 | «destacado en comisión para atender la vigilancia de “La Calderilla”» |
+
+Resta: un hecho afirmado más allá del acto en el aspecto 5 (hallazgo 1): escala general, **90**. Una grafía en el aspecto 4: −3, bajo el techo de 90 por cotejo parcial. Ningún error de consistencia en las 7,3 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los dos, en el AMPLÍA 1941-1943 (`942f865`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró la relectura del verbo de cada acto contra el informe; el 2, el cotejo de las citas contra la imagen.
+
+**Descartados (falsos positivos, 3).** «Y por primera vez el Estado expropia tierra en el departamento para hacer un camino» (04:3317) y sus ecos en A y D: el universo está dado en la frase siguiente («Hasta 1940 los caminos del departamento aparecen como jornales, ripio y certificados de obra»), con los años 1908-1940 leídos por imagen. «tres años después» (04:3553): 1942 a 1945. «1.492 leídos, de 1.502 ediciones publicadas» (F): 1.503 números del 962 al 2.464, uno no publicado, diez sin leer.
+
+**Pendientes revisados.** P19, cerrado por el AMPLÍA (la 2.030 se leyó). P230, P231 y P232, abiertos por el AMPLÍA, siguen abiertos; P230 (la identidad del presidente municipal y el comisario de 1942-1943, que el capítulo 4 afirma y los actos no dicen) queda para una ronda que lo resuelva con documento o lo baje a homónimo declarado.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.524/25.524 vigentes en `306a6eb` | 25.492 vigentes; 32 caducas |
+| Citas entre comillas en las líneas nuevas contra la imagen | 9 cadenas | 8/9 literales; 1 sin las comillas interiores (hallazgo 2) |
+| Superlativos, cierres y ausencias en el texto agregado | 38 líneas; 5 coincidencias, todas leídas | Las tres «primera vez» del camino de 1941 con su universo; ninguna sin universo |
+| Repaso de ventana: líneas del índice del AMPLÍA con 1941, 1942 o 1943 | 162 de 162 | Las que caían las corrigió el AMPLÍA; P230 queda abierto |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos | 0 |
+| Aritmética | 4 cuentas | 1.503 − 1 − 10 = 1.492; 1942 a 1945, tres años; 10/09 a 21/09; cuatro cambios de titular en Vaqueros (marzo de 1942 a diciembre de 1943). Cierran |
+| Privacidad: personas nombradas en las 38 líneas | 38/38 | 0 caídas. Nombrados: funcionarios (comisarios, jueces de paz, presidente municipal); sin nombre: el propietario expropiado, las encargadas del Registro Civil, la receptora y la expendedora, la causante del sucesorio |
+| Largo de los archivos antes y después de la fase 6 | 38/38 | ninguno cambia |
+| Compilación | base `942f865` y fase 6 | Compilan; 1.021 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas y números de decreto cotejados; el AMPLÍA corrigió la fecha del decreto 520-H y el orden de la renuncia de 1943 |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgo 2 (−3, bajo el techo de 90), aplicado |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 1, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | La compra de 1941 pasa a expropiación según el acto |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 7,3 páginas; el AMPLÍA alineó la cobertura (2.030 y 1.932) en la advertencia, el método y los apéndices D y F |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin `\pendiente{}` nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; P230 abierto |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | La escuela Nº 250 entre San Alejo y Wierna, de 1942 a 1945 |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; el epígrafe del método describe la cruz de la 2.030 como estado de la lámina |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 87,1 antes del tope y 87,1 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 80.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) en el AMPLÍA, releer el verbo de cada acto contra el informe (aquiescencia, autorización, pedido) antes de escribir que algo se hizo: habría atrapado el hallazgo 1 (+1,2 en la nota inicial); (5) resolver P230.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.021 páginas. **Avance de la investigación:** el departamento gana un dato de población: la escuela Nº 250 se lleva de San Alejo a Wierna en 1942 por la despoblación de San Alejo, y de Wierna a Yacones en 1945 por la de Wierna, cuando San Alejo ya tiene cincuenta y un chicos en edad escolar. Y la relación entre camino y dominio se precisa: la tierra del camino de 1941 no se compró sino que se expropió, después de fracasar la donación o venta.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 38 líneas (0,15 %; 7,3 páginas). Cobertura acumulada: 25.530 de 25.530 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
