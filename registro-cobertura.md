@@ -3900,3 +3900,130 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos (100 %) y tres precisiones aplicadas; compila sin errores ni referencias indefinidas, 1.001 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: de 2016 a 2018 la Municipalidad de La Caldera aparece en el Boletín como contratista de Vialidad seis veces por año, con la cotización igual al presupuesto oficial en los avisos que la dejan leer, y como destinataria de fondos que una ley y una comisión departamental reasignan; las determinaciones de ribera del departamento siguen sin intervención municipal. La **cuarta tesis** (la desidia es selectiva) gana un dato: en 2018 la Provincia recibe en donación, en La Caldera, el terreno de la nueva planta potabilizadora que abastecerá a la capital, y constituye en el departamento la servidumbre de la cisterna del acueducto de San Lorenzo, mientras los fondos destinados al agua del barrio Santiago Apóstol pasan a una retroexcavadora.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 44 líneas (0,17 %; 17,1 páginas). Cobertura acumulada: 25.489 de 25.489 (100,0 %), con el registro de arriba. Falsos positivos descartados: 4. Recortes: los actos que las filas de 2016 a 2018 citan sin comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo los de la tabla contra el PDF; la muestra de trazabilidad no se rehízo; los controles de P159, P164 y P174 se corrieron a mano y no como paso automático, y por eso no atraparon los hallazgos 1, 2 y 5. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
+
+## Ronda 77 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2019-2021. Base: commit `4627cfa` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2019-2021, sobre `bcd2b73`, la ronda 76 registrada; aplicado por `3-registrar` a las 06:34 del 07/10, con el mismo árbol, `c0d3109`, que el parche entregado), con la fase 6 en `ronda-77.patch` (un commit, `38acbf0`, árbol `3ee5a58`; aplica con `git am` sobre `4627cfa` en un clon limpio de GitHub y deja el mismo árbol). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los tres informes LEE que lo alimentan: se audita trabajo propio, y por eso cada cita nueva se volvió a buscar en el PDF de la edición y no en las fichas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 76 (25.489 de 25.489, sobre `2d06895`, el mismo árbol, `2d17ce7`, que `bcd2b73`) se trasladaron por diff a `4627cfa`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2019-2021 caduca 30 líneas y deja 46 nuevas o modificadas** (16 netas: 11 en A, 2 en F, 1 en 11 y 2 en 15), en 16 archivos. Vigentes después del traslado: 25.459 de 25.505.
+
+### Lectura sobre el texto (numeración de `4627cfa`)
+
+Se leyeron **las 46 líneas, enteras, por la sesión**, sin subagentes (69.208 bytes), y se cotejaron contra los tres informes LEE (`BO-Salta-2019_20414-20654_la-caldera_LEE-2019_2026-10-07.txt`, `BO-Salta-2020_20655-20896_la-caldera_LEE-2020_2026-10-07.txt` y `BO-Salta-2021_20973-21141_la-caldera_LEE-2021_2026-10-07.txt`), contra la capa de las ediciones (`Vd.json` de las sesiones LEE) y, en las citas y cifras, contra el PDF de la edición.
+
+| Archivo | Líneas | Nuevas |
+|---|---|---|
+| ape/A-cronologia.tex | 595, 601, 603, 606–607, 610, 613, 616, 621, 623, 625–626 | 12 |
+| ape/D-pedidos.tex | 78, 341, 391 | 3 |
+| ape/F-fuentes.tex | 25–26, 106–107 | 4 |
+| cap/00-advertencia.tex | 45 | 1 |
+| cap/02-metodo.tex | 28, 99 | 2 |
+| cap/08-vaqueros.tex | 207 | 1 |
+| cap/10-expropiacion.tex | 539 | 1 |
+| cap/11-ribera.tex | 951, 978, 995, 1029, 1046, 1060, 1095, 1124 | 8 |
+| cap/12-amparo.tex | 604 | 1 |
+| cap/13-loteo.tex | 264 | 1 |
+| cap/15-hacienda.tex | 507–509, 513, 531, 533 | 6 |
+| cap/16-redes.tex | 148 | 1 |
+| cap/17-aguabaja.tex | 66 | 1 |
+| cap/19-resistencias.tex | 187 | 1 |
+| cap/20-opacidad.tex | 1016, 1018 | 2 |
+| cap/22-infraestructura.tex | 545 | 1 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 11:925–1110 (las tablas del Chaile, del Wierna y del Vaqueros, sus cautelas y la tabla catastral: hallazgo 1 y la cita del hallazgo 6), 11:1560–1650 (los avisos de 2009 a 2011 del Lesser), 10:530–545 (Skru), 15:486–535 (Vialidad), 19:100–215 (canteras), 13:258–268, 08:183–215, 22:540–546, 17:60–68, 20:1010–1020 y A:585–630.
+
+**Esta ronda: 46 líneas nuevas**, 69.208 bytes sobre 3.320.610, que en las 1.007 páginas de la base equivalen a **21,0 páginas**: ése es el denominador del aspecto 7.
+
+Acumulado: 25.459 vigentes + 46 = **25.505 de 25.505 (100,0 %)**. La fase 6 toca nueve líneas: A:603, A:606, A:616, F:106, 10:539, 11:980, 11:1060, 15:507 y 22:545; todas salvo 11:980 están dentro de lo leído en esta ronda, y la 11:980, vigente, se releyó como contexto; no cambia el largo de ningún archivo: **25.505 de 25.505 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (`pdftotext` sobre los PDF de los Releases 2019 a 2021 de `boletines-salta`)
+
+Como en 2016 a 2018, el Boletín de estos años es un PDF nacido digital: el cotejo se hizo sobre el texto del PDF de la edición, en la hoja que cita el libro, y los renglones decisivos se habían mirado ya rasterizados en las sesiones LEE (130 ppp).
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 20690 | 39 | Audiencia de Almería | «Almería - Urbanización Abierta». Coincide (A:606–607, 11:995) |
+| 21067 | 50 | Res. 43/21 de Minería | «sin tener concesión de la cantera». Coincide (A:621, 19:187) |
+| 21111 | 15 | Decreto 977 | «Rotonda Av. Bolivia - Puente Río Wierna» (el libro compone el guion como raya corta, como en la ficha de 2023). Coincide (A:623, 08:207) |
+| 21010 | 12 | Decreto 469 | «Matricula Nº 316», sin tilde. Coincide (F:106, 13:264) |
+| 20495 | 47 | Res. 83/19 | «arroyo Seco». Coincide (11:1046, 11:1060, 11:1124) |
+| 20608 | 34 | Res. 306/19 | «en la zona». Coincide (11:951) |
+| 20776 | 45 | Res. 75/2020 | «Arroyos Vaqueros y Chaile», con mayúscula; el libro escribe «arroyos» en 11:980 (vigente, de consulta puntual) y lo repite en 11:1060. Hallazgo 6 |
+| 20829 | 21 | Vialidad, Res. 767/2020 | «parcialmente» y «sujeto a disponibilidad presupuestaria y financiera de la Provincia». Coinciden (15:507) |
+| 20479 | 38 | Mojotoro Norte | «paraje Finca Mojotoro», «de propiedad privada». Coinciden (19:187) |
+| 20616 | 65 | La Ferroviaria | «lugar río Mojotoro». Coincide (19:187) |
+| 20692 | 46–48 | Res. IPV 0073 | «MEJOR VIVIR», en mayúsculas: el libro lo da como nombre del programa, sin cita literal. Coincide (A:606) |
+| 20994 | 7 | Res. COE 13 | «Alto Riesgo», con mayúsculas; el libro escribe «alto riesgo» (A:616). Hallazgo 5 |
+| 21122 | 16 | Res. MI 118 | «OPTIMIZACIÓN DEL SERVICIO DE LA CALDERILLA - NUEVA RED DISTRIBUIDORA», que el libro da en minúsculas, como ya lo hacía en 07 y 16. Coincide (A:625, 16:148) |
+| 20514 | 8 | Decreto 716 | Considerando: «la razón social SKRU S.A. (hoy KALKSTEN S.A.)»; artículo 1º: «a favor de la razón social KALKSTEN S.A. (controlada por SKRU S.A.)». Hallazgo 3 |
+| 20560 | 21–24 | Rescisiones de Vialidad | Res. 1112, 1122 a 1127/2019, sin fecha de dictado en el aviso. Hallazgo 4 |
+
+Son **las 15 cadenas entre comillas del texto nuevo que citan un acto, todas cotejadas en el PDF**, y seis cifras o renglones más (21 cotejos).
+
+### Hallazgos (seis, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 11:1060 | El AMPLÍA insertó la oración sobre la Res. 83/19 entre «veintisiete meses entre la resolución y su publicación» y «Durante ese lapso rigió la prohibición...»: «ese lapso» pasaba a ser los tres meses entre el edicto de la comisión y su determinación | 7 | La oración nueva va después de la de «ese lapso» |
+| 2 | 22:545 | «La Provincia ... contrata con Aguas del Norte el reparto de agua en camión cisterna»: el aviso es la Licitación Pública 04/2020 de la propia Aguas del Norte, que contrata el reparto con terceros (20673 h20). Lectura apresurada de la nota de la ficha | 3 | «Aguas del Norte licita el reparto ...», con la L.P. citada |
+| 3 | 10:539, A:603 | El Decreto 716/19 llama a la peticionante «SKRU S.A. (hoy KALKSTEN S.A.)» en el considerando y otorga la concesión a «KALKSTEN S.A. (controlada por SKRU S.A.)» en el artículo 1º; el libro daba sólo la segunda forma, sin señalar la discrepancia (la nota del informe LEE 2019, A.27, tampoco: P220) | 6 | Las dos formas, entre comillas, en el capítulo, y la discrepancia dicha en la cronología |
+| 4 | 15:507 | «que Vialidad rescinde de común acuerdo en agosto, el mismo día que los de otros municipios»: los avisos no dan la fecha de dictado de las resoluciones (20560 h21–24) | 3 | «en la misma serie de resoluciones que los de otros municipios» |
+| 5 | A:616 | «alto riesgo» por «Alto Riesgo» en una cita de la Res. COE 13 | 4 | Se reponen las mayúsculas |
+| 6 | 11:1060 y 11:980 | «arroyos Vaqueros y Chaile» por «Arroyos Vaqueros y Chaile» en la cita de la Res. 75/2020: la 980 venía de la consulta puntual y el AMPLÍA la copió | 4 | Se repone la mayúscula en las dos |
+
+**Precisiones aplicadas sin restar.** 10:539: el Decreto 209 es del 7 de febrero y la concesión del 29 de mayo: «tres meses antes» pasa a «casi cuatro meses antes». A:606: «La Provincia expropia tierra» pasa a «declara sujeta a expropiación» (la Ley 8.202 declara la utilidad pública; A:610 ya lo decía bien). A:616: la obra de la Ruta 9 se conviene con Vialidad Nacional y el convenio la llama «Proyecto y Ejecución», no «pavimentación». F:106: «una frase ... no se sostuvo» pasa a «una duda ... quedó resuelta», porque la frase del capítulo 15 era de ignorancia declarada. 22:545: «El municipio de La Caldera no aparece en esas obras» se acota a «En ninguno de esos actos interviene la Municipalidad de La Caldera», para que no se lea como ausencia sobre años que quedan en barrido.
+
+Resta: un error de consistencia en 21,0 páginas, 4,8 por cada 100: **40** por el escalón, y **30** porque contradice material a un renglón. Dos datos de segunda mano o mal atribuidos en el aspecto 3: **−10** (90); con la precisión del intervalo, que se informa y no resta, la nota inicial del aspecto queda en **90**. Una discrepancia entre fuentes no señalada en el aspecto 6: −5 sobre 100, que no baja del 90 de la escala general. Dos correcciones silenciosas en el aspecto 4: −6, que no mueven el 90 del techo por cotejo parcial. Una afirmación que va más allá del acto (A:606, «expropia») en el aspecto 5: **90** por la escala general.
+
+**Errores introducidos por la propia auditoría**: los cinco nuevos, en el AMPLÍA 2019-2021 (`4627cfa`), escrito por esta misma sesión; el sexto, en la parte que venía de 11:980, es anterior. **Ninguno lo atrapó un control automático**: el 1 es el caso de P159 y P174 (una anáfora que se rompe cuando se intercala texto), y el 3 lo encontró el cotejo en el PDF, no la ficha.
+
+**Descartados (falsos positivos, 4).** «una fórmula que ninguna otra de las leídas usa» (11:1029): las comisiones de 2020 y 2021 leídas no traen esa fórmula, y la de 2019 del Lesser la usa y quedó sumada. «la demora más larga de toda la serie» (11:1060): veintisiete meses contra veintidós de la 251/16 y los de las comisiones de 2019, de semanas. «En lo leído de los tres años no hay ningún plano publicado ... ningún balance municipal» (F:106): con su universo, como en los tramos anteriores. «todas con los puntos en la sede» (A:595): las cuatro determinaciones de 2019 remiten los puntos de vinculación a la sede; la 306/19 publica además las coordenadas de los extremos del tramo, que son las de la comisión de 2017.
+
+**Pendientes revisados sin cerrar.** P216 (Release 2021 sin enero a abril): el AMPLÍA lo declara en 00, 02, F, D y en la fila de 2021; sigue abierto. P217 (lámina del catastro): sin cambios. P218 (fichas NUEVO sin llevar al cuerpo): sin cambios. P219 (tramo cubierto en el estado): sin cambios. P214 (Tierra Gaucha): el capítulo 19 suma la multa de 2021 a Supercemento; el expediente y la superficie siguen sin aclarar. P211 y P212: sin cambios.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.489/25.489 líneas vigentes en `bcd2b73` | 25.459 vigentes; 30 caducas por el AMPLÍA 2019-2021 |
+| Citas entre comillas nuevas contra el PDF | 15 cadenas que citan un acto | 13/15 literales; 2 con mayúsculas cambiadas (hallazgos 5 y 6) |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *mayor*, *todas*, *todos*, *sólo*) | 20.019 bytes de palabras agregadas; 14 coincidencias, todas leídas | Una se acota (22:545, precisión); las demás son descriptivas («todos con archivo», «el primer tramo», «sólo desde el 26 de abril») o se descartan arriba |
+| Repaso de ventana: líneas del índice del AMPLÍA con un año 2019 a 2021 o una edición del rango | 394 de 394 líneas del índice (529 coincidencias) | Las que caían las corrigió el AMPLÍA (11:951, 11:1029, 15:531, 10:539, 20:1016, D:391); el hallazgo 6 estaba en una línea del índice que el AMPLÍA leyó y no cotejó |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` de `cap/` a `cap/` agregados por el AMPLÍA y la fase 6 | 0 (la única nueva dentro de un capítulo, 11:1029, dice «más adelante») |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra; D:391 se actualizó con el Decreto 716/19 ya leído |
+| Aritmética de 2019 a 2021 | 9 cuentas | 42 + 1 + 48 = 91 tramos; 1 + 31 + 1 + 1 + 15 = 49 fuera de las ventanas; 241 + 242 + 169 ediciones con 76 ausentes; 2.127.369 / 3 = 709.123 y 2.340.069 / 3 = 780.023; 1.950.948 + 1.951.346 + 1.170.682,50 + 1.170.602,50 + 2.341.365 + 2.341.205 = 10.926.149 («casi once millones»); 4.841.127,29 + 18.365.610,42 + 614.370,68 + 2.879.638,07 + 14.874.995,11 = 41.575.741,57 («más de cuarenta y un millones y medio»); 114.372.450,98 / 95.899.772,97 = 1,193 («un 19 por ciento»); 3,7702 y 3,8781 ha («unas tres hectáreas y tres cuartos»); 1933 a 2021 = 88 años. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 77 | 50 de 235 fragmentos con cifra en las 46 líneas | **50/50 con fuente localizable**: 32 con la cita en el fragmento (por script); las otras 18 son declaraciones de cobertura que remiten a F o son F, filas que remiten a otra fila, sumas de contratos citados en el mismo párrafo y oraciones anteriores al AMPLÍA dentro de renglones modificados, con la fuente en el pasaje |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 46 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 46 líneas | 46/46 líneas | 0 caídas. Sin nombre: el titular de la concesión de riego de 2021, el particular de El Durazno, la fallida de 2021, los socios de las sociedades. Nombrados: los intendentes Escalera y Moreno por su función, los técnicos de las comisiones de ribera, sociedades y fideicomisos |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `4627cfa` y fase 6 | Compilan las dos; 1.007 páginas cada una (1.001 antes del AMPLÍA); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, como dice la Advertencia; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2019 a 2021 van en pasado o como lo que dispusieron |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 2 y 4 (−5 cada uno), aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgos 5 y 6 (−3 cada uno, bajo el techo de 90 por cotejo parcial del libro); 15 citas nuevas cotejadas |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | «Expropia» por una declaración de utilidad pública (escala general, 90), corregido; ninguna ausencia afirmada sobre 2019 a 2021, que quedan en barrido, y la de 22:545 se acotó a los actos citados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Hallazgo 3 (−5 sobre 100; la escala lo deja en 90); las discrepancias de los originales de 2019 a 2021 (Matrícula 316, arroyo Seco, la paginación de la 21096, el Decreto 716) quedan señaladas |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgo 1: 4,8 por cada 100 de las 21,0 páginas (40), y un escalón más por estar a un renglón (30); aplicado |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido de D satisfecho por el AMPLÍA se actualizó (D:391) y los de cobertura (D:78, D:341); 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (ver avance) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series reproducibles: Vialidad de 2014 a 2021, ribera por curso |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas (P217 pide sumar dos actos a la lámina del catastro) |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas tocadas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 46 líneas |
+
+**Nota inicial: 80,2 antes del tope y 80,2 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna de las tesis abiertas: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9; (4) correr como script, al final de cada AMPLÍA, el control de anáforas de frase siguiente («ese lapso», «esa cifra», «la segunda») sobre cada párrafo donde se intercala texto (P159, P174), y el cotejo de las citas nuevas contra el PDF antes de entregar: evitan los −6,3 del hallazgo 1 en la nota inicial y los hallazgos 5 y 6, que no restan bajo el techo de 90; (5) LEE complemento de las 76 ediciones de enero a abril de 2021 (P216): no mueve la nota, completa el tramo y puede traer las determinaciones de ribera que el capítulo 11 tiene de consulta puntual.
+
+**Avance del libro:** 6 de 6 hallazgos resueltos (100 %) y cinco precisiones aplicadas; compila sin errores ni referencias indefinidas, 1.007 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: de 2019 a 2021 la Municipalidad de La Caldera aparece en el Boletín como contratista de Vialidad, con contratos aprobados mes a mes «sujeto a disponibilidad presupuestaria» en 2020, y no interviene en ninguno de los actos de agua del período, ni en la nueva red de La Calderilla; la de Vaqueros, en cambio, recibe por convenio cinco obras en 2021. La **cuarta tesis** (la desidia es selectiva) gana dos datos: en 2019 la Provincia concede a una sociedad privada el agua del dique para generar energía al pie de la presa y da en comodato a dos asociaciones profesionales tierra fiscal de la misma matrícula, y en 2021 adjudica por más de ciento catorce millones la red de La Calderilla, derivada del acueducto que lleva el agua del departamento a la capital.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 46 líneas (0,18 %; 21,0 páginas). Cobertura acumulada: 25.505 de 25.505 (100,0 %), con el registro de arriba. Falsos positivos descartados: 4. Recortes: los actos que las filas de 2019 a 2021 citan sin comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo los de la tabla contra el PDF; la muestra de trazabilidad no se rehízo; los controles de P159 y P174 se corrieron a mano y no como paso automático, y por eso no atraparon el hallazgo 1. Errores introducidos por la propia auditoría: 5, en el AMPLÍA que la misma sesión escribió, y uno heredado de la consulta puntual; atrapados por un control automático: 0.
