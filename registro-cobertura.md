@@ -4155,3 +4155,115 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos (100 %) y dos precisiones aplicadas; compila sin errores ni referencias indefinidas, 1.013 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: de 2022 a 2024 la Municipalidad de La Caldera sólo publica en el Boletín un acto propio, la licitación de un camión que firma su intendente; todo lo demás llega como convenio que la Provincia le adjudica y rescinde ---dos de 2023 rescindidos en 2024 por el desfase de precios, y la defensa del río rehecha a valores nuevos---, mientras la red de La Calderilla, rescindida a su contratista, sigue por contratación de emergencia de Aguas del Norte sin montos publicados. La **cuarta tesis** (la desidia es selectiva) gana un contraste: en el mismo diciembre de 2024 la Provincia licita por novecientos cincuenta y cinco millones el centro de salud de Vaqueros y conviene con la Municipalidad de La Caldera, por ciento sesenta y siete, la primera etapa de la refacción de su hospital.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 40 líneas (0,16 %; 20,9 páginas). Cobertura acumulada: 25.519 de 25.519 (100,0 %), con el registro de arriba. Falsos positivos descartados: 3. Recortes: los actos que las filas de 2022 a 2024 citan sin comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo los de la tabla contra el renglón del PDF; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: 7, en el AMPLÍA que la misma sesión escribió; atrapados por un control automático antes de llegar al libro: 0 (los controles que los encontraron corrieron en esta ronda, después de la entrega del AMPLÍA).
+
+## Ronda 79 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1937,2025-2026. Base: commit `2f3f54c` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1937,2025-2026, sobre `29739eb`, la ronda 78 registrada; aplicado por `3-registrar` a las 10:04 del 07/10), con la fase 6 en `ronda-79.patch` (un commit sobre `2f3f54c`; aplica con `git am` en un clon limpio de GitHub). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los tres informes LEE que lo alimentan (1937, 2025 y 2026): se audita trabajo propio, y por eso cada cita y cada cifra nueva se volvió a buscar en la capa de la edición (`Vd.json` de las sesiones LEE, texto del PDF) y no en las fichas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 78 (25.519 de 25.519, sobre `29739eb`) se trasladaron por diff a `2f3f54c`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 1937,2025-2026 caduca 19 líneas y deja 23 nuevas o modificadas** (4 netas: 2 en A y 2 en F), en 13 archivos. Vigentes después del traslado: 25.500 de 25.523.
+
+### Lectura sobre el texto (numeración de `2f3f54c`)
+
+Se leyeron **las 23 líneas, enteras, por la sesión**, sin subagentes (38.296 bytes), y se cotejaron contra los tres informes LEE (`BO-Salta-1937_1669-1721_la-caldera_LEE-1937_2026-10-07.txt`, `BO-Salta-2025_21864-22100_la-caldera_LEE-2025_2026-10-07.txt` y `BO-Salta-2026_22101-22271_la-caldera_LEE-2026_2026-10-07.txt`) y, en las citas y cifras, contra la capa de la edición.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 2 (filas de 2025 y de 2026) |
+| ape/C-normativa.tex | 2 |
+| ape/D-pedidos.tex | 2 |
+| ape/F-fuentes.tex | 4 |
+| cap/00-advertencia.tex | 1 |
+| cap/02-metodo.tex | 2 |
+| cap/04-siglo.tex | 1 |
+| cap/09-defensas.tex | 1 |
+| cap/11-ribera.tex | 2 |
+| cap/16-redes.tex | 1 |
+| cap/18-trabajo.tex | 2 |
+| cap/20-opacidad.tex | 2 |
+| cap/22-infraestructura.tex | 1 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 09:775–830 (la serie de las defensas y la ficha de la Res. 479), 11:986–997 y 11:1240–1300 (la serie de ribera y los edictos de 2025 y 2026), 16:121, 18-trabajo:215–300 (las tres sociedades y su cautela), 22:370–382, 12:1197, 04:3009–3260 (1937 y 1938), 26-presencia:159–200, D:60–80 y D:140–150, A:185–196 y A:670–723.
+
+**Esta ronda: 23 líneas nuevas**, 38.296 bytes sobre 3.345.697, que en las 1.015 páginas de la base equivalen a **11,6 páginas**: ése es el denominador del aspecto 7.
+
+Acumulado: 25.500 vigentes + 23 = **25.523 de 25.523 (100,0 %)**. La fase 6 toca dos líneas, A (fila de 2025 y fila de 2026, una sola línea física cada una) y 11:1275, todas dentro de lo leído en esta ronda; no cambia el largo de ningún archivo: **25.523 de 25.523 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (capa de los PDF de los Releases 1937, 2025 y 2026 de `boletines-salta`)
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1670 | 24 | Licencia del comisario Ramón Juárez (04:3257) | «Salta, Febrero 10 de 1936», mirado a 170 ppp: el decreto es de 1936 y se publica el 08/01/1937. Coincide con la corrección del AMPLÍA |
+| 1707 | 8 | Decreto sobre Potrero de Castilla (A:189, 22:721, 26:39) | «1421—Salta, Setiembre 10 de 1937», mirado a 250 ppp; el 1420 en la h. 7 y el 1422 a continuación. El libro dice 1421: coincide. El informe LEE 1937 decía 1419 (P225) |
+| 1707 | 26 | Sentencia de la Corte, río Wierna (D:63) | «Salta, Abril 28 de 1936», mirado: la Corte rechazó en 1936, como dice D. Coincide |
+| 21994 | 61 | Sede de Campo Alegre Constructora (18-trabajo) | «RN 9 - km 1931». Literal |
+| 22148 | 78 | Sede de Cantera El Rescoldo (18-trabajo) | «Ruta Provincial 9, Km 1627». Literal (la misma fórmula en los domicilios especiales de la h. 80) |
+| 22000 | 31 | Res. SOP 367/25 (16:121) | «obra que impidió el inicio de los trabajos». Coincide con la paráfrasis |
+| 22037 | 25 | Res. SOP 482/25 (16:121) | «oportunamente rescindida de común acuerdo por un cambio de proyecto por parte de la empresa Aguas del Norte». Coincide con la paráfrasis |
+| 22205 | 21–22 | Res. SOP 300/26 (09:815) | «tramos de mayor riesgo», \$42.725.963,14 a valores de «Enero de 2.026», «20 (veinte) días corridos», adjudicada a la Municipalidad de La Caldera. Coincide |
+| 21865 | 1 | Fecha de la primera edición de 2025 sin repetir (A, F, 00) | «Salta, viernes 3 de enero de 2025». Coincide |
+| 21998 | 19–20 | Res. SOP 351/25 | La refacción del Colegio Nº 5045 está adjudicada a una firma (Res. 1045/24), no por convenio con la Municipalidad. Hallazgo 1 |
+| 21869 | 12 | Res. 69 SSPC | Del 26/12/2024, publicada el 09/01/2025. Hallazgo 2 |
+
+Son **las 2 cadenas entre comillas del texto nuevo, las dos literales en la capa**; las demás comillas de las líneas tocadas ya estaban en la base.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A (filas de 2025 y 2026) | Ponía la redeterminación (Res. 351/25) y el adicional (Res. 357/26) de la refacción del Colegio Nº 5045 entre lo que la Secretaría «conviene con la Municipalidad de La Caldera»: la obra está adjudicada a una empresa desde 2024 | 3 | Se separan: «La refacción del Colegio Nº 5045, adjudicada a una empresa, tiene su primera redeterminación» y «aprueba además el adicional Nº 1 de la refacción del Colegio Nº 5045, adjudicada a una empresa en 2024» |
+| 2 | A (fila de 2025) | «Se aprueban los pliegos del Centro de Salud de Vaqueros»: la Res. 69 es del 26/12/2024; en 2025 sólo se publica (control de fechas de P86 y P164) | 3 | «En enero se publican los pliegos ..., aprobados el 26 de diciembre de 2024» |
+
+**Precisión aplicada sin restar.** 11:1275: «la encuentra en todas sus determinaciones» enumera también dos rectificaciones (108/2025 y 130/2025): pasa a «determinaciones y rectificaciones».
+
+Resta: dos datos mal caracterizados en el aspecto 3: **−10** (90). Ningún error de consistencia en las 11,6 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los dos, en el AMPLÍA 1937,2025-2026 (`2f3f54c`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró la relectura de la ficha LEE contra la fila; el 2, el control de fechas de P86 y P164, corrido a mano en esta ronda.
+
+**Descartados (falsos positivos, 2).** «los dos que consignan el kilometraje lo dan con un error» (18-trabajo): la cantera da la kilometría correcta de la ruta, pero la llama provincial; la frase dice «con la jurisdicción de la ruta cambiada». «traen cuatro más que el buscador no devolvía» (22:378): la de la finca Antilla es de 2025 y en La Caldera, de modo que la consulta que el capítulo cita (2023-2026, La Caldera) no la devolvió.
+
+**Pendientes revisados.** P222 lo cerró el AMPLÍA (el informe LEE 2025 declara la 21864 ya leída). Quedan abiertos los tres que el AMPLÍA abrió: P225 (el informe LEE 1937 dice 1419 donde la imagen y la serie dan 1421; el libro dice 1421), P226 (fichas NUEVO sin llevar al cuerpo) y P227 (complemento de 2026 desde la 22272).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.519/25.519 líneas vigentes en `29739eb` | 25.500 vigentes; 19 caducas por el AMPLÍA |
+| Citas entre comillas nuevas contra la capa | 2 cadenas | 2/2 literales |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *mayor*, *todas*, *todos*, *sólo*) | 9.157 bytes de palabras agregadas; 7 coincidencias, todas leídas | Con su universo («En lo leído no hay ningún plano...», «todas con los puntos en la sede», «sólo hasta el 21 de septiembre») o citas («tramos de mayor riesgo») |
+| Repaso de ventana: líneas del índice del AMPLÍA con 1937, 2025 o 2026 | 231 de 614 líneas del índice (842 coincidencias), las que citan Boletín, resolución o decreto | Las que caían las corrigió el AMPLÍA (04:3257, 18-trabajo, 20:1016–1018, 22:378, D:78, D:147); las 383 restantes del cap. 12 y de prensa no las toca ningún informe LEE |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` de `cap/` a `cap/` agregados por el AMPLÍA y la fase 6 | 0 |
+| `\pendiente{}` | Agregados por el AMPLÍA: 0 | Sin cambios en D |
+| Aritmética | 7 cuentas | 42 + 1 + 53 = 96 tramos; 1 + 31 + 1 + 1 + 20 = 54 fuera de las ventanas; 31 + 1 + 1 + 20 = 53 (02); 236 + 171 ediciones; 16 + 11 = 27 sociedades, 13 + 7 = 20 en Vaqueros y 3 + 4 = 7 en La Caldera; 182.540.096,21 + 57.669.522,87 = 240.209.619,08; 14/2025, 56, 57, 108, 130 y 142 = seis. Cierran |
+| Privacidad: personas nombradas en las 23 líneas | 23/23 líneas | 0 caídas. Sin nombre: los socios de las sociedades, los titulares de la finca Antilla, el donante de las motocicletas y la empresa del Colegio Nº 5045. Nombrados: Ramón Juárez, como comisario (ya en la base) |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `2f3f54c` y fase 6 | Compilan las dos; 1.015 páginas cada una (1.013 antes del AMPLÍA); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, como dice la Advertencia |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Todas las frases nuevas con edición y hoja o con remisión a la fila o al capítulo que las tiene; la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2025 y 2026 van como lo que dispusieron |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 1 y 2 (−5 cada uno), aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 2 citas nuevas, literales; techo de 90 por cotejo parcial del libro |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | 2025 y 2026 quedan en barrido y el texto lo dice; 2026, sólo hasta el 21 de septiembre |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias del original (kilometrajes, causas de la rescisión de la red de Vaqueros) quedan señaladas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores de consistencia en 11,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin `\pendiente{}` nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado (ver avance) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series reproducibles: defensas, ribera y redes hasta septiembre de 2026 |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas tocadas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 23 líneas |
+
+**Nota inicial: 87,7 antes del tope y 87,7 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna de las tesis abiertas: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9; (4) correr en el AMPLÍA, antes de entregar, el control de fechas de P86 y P164 y el cotejo de cada «conviene con la Municipalidad» contra el adjudicatario de la ficha: habrían atrapado los dos hallazgos (+0,6 en la nota inicial); (5) llevar al cuerpo las fichas NUEVO de P226: no mueven la nota, completan los capítulos.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos (100 %) y una precisión aplicada; compila sin errores ni referencias indefinidas, 1.015 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: en 2025 y 2026 la Provincia sigue conviniendo con las dos municipalidades obra por obra ---el hospital, el azud de Campo Alegre y el encauzamiento con La Caldera; la red de la zona alta, calles y una plaza con Vaqueros---, rescinde tres convenios con Vaqueros y uno con La Caldera, y los dos actos sobre la red de Vaqueros no dan la misma causa de la rescisión. La **cuarta tesis** (la desidia es selectiva) suma un contraste: el nexo de agua de Villa Sara, en Vaqueros, se licita a empresas por seiscientos setenta y siete millones, y el encauzamiento del río en La Caldera se conviene con su Municipalidad por cuarenta y dos millones y veinte días.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 23 líneas (0,09 %; 11,6 páginas). Cobertura acumulada: 25.523 de 25.523 (100,0 %), con el registro de arriba. Falsos positivos descartados: 2. Recortes: las cifras de las filas de 2025 y 2026 que no van entre comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo las de la tabla contra el renglón del PDF; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: 2, en el AMPLÍA que la misma sesión escribió; atrapados por un control automático antes de llegar al libro: 0.
