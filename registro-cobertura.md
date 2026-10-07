@@ -4468,3 +4468,114 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.021 páginas. **Avance de la investigación:** el departamento gana un dato de población: la escuela Nº 250 se lleva de San Alejo a Wierna en 1942 por la despoblación de San Alejo, y de Wierna a Yacones en 1945 por la de Wierna, cuando San Alejo ya tiene cincuenta y un chicos en edad escolar. Y la relación entre camino y dominio se precisa: la tierra del camino de 1941 no se compró sino que se expropió, después de fracasar la donación o venta.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 38 líneas (0,15 %; 7,3 páginas). Cobertura acumulada: 25.530 de 25.530 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 82 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1944-1945. Base: commit `046c890` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1944-1945, sobre `cac3842`, la ronda 81 registrada; aplicado por `3-registrar` a las 14:34 del 07/10), con la fase 6 en `ronda-82.patch` (un commit sobre `046c890`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los informes LEE 1944 y 1945: se audita trabajo propio, y cada cita y cifra nueva se volvió a buscar en la capa de la edición y, en las citas y las cifras del revalúo, en la imagen.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 81 (25.530 de 25.530, sobre `cac3842`) se trasladaron por diff a `046c890`. **El AMPLÍA 1944-1945 caduca 59 líneas y deja 74 nuevas o modificadas** (15 netas: 1 en A, 5 en 03, 6 en 04, 1 en 09, 1 en 20, 1 en 26), en 13 archivos. Vigentes después del traslado: 25.471 de 25.545.
+
+### Lectura sobre el texto (numeración de `046c890`)
+
+Se leyeron **las 74 líneas, enteras, por la sesión** (67.028 bytes; varias son párrafos de una sola línea en los apéndices A, D, E, F y H), contra los informes `BO-Salta-1944_2036-2183_la-caldera_LEE-1944_2026-10-07.txt` y `BO-Salta-1945_2184-2464_la-caldera_LEE-1945_2026-10-07.txt` y, en las citas y las cifras, contra la imagen.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 7 |
+| ape/D-pedidos.tex | 3 |
+| ape/E-personas.tex | 2 |
+| ape/F-fuentes.tex | 4 |
+| ape/H-dominio.tex | 1 |
+| cap/03-fincas.tex | 21 |
+| cap/04-siglo.tex | 22 |
+| cap/09-defensas.tex | 2 |
+| cap/10-expropiacion.tex | 1 |
+| cap/14-poblacion.tex | 2 |
+| cap/20-opacidad.tex | 3 |
+| cap/22-prospectiva.tex | 1 |
+| cap/26-presencia.tex | 5 |
+
+Contexto releído entero (no suma cobertura): 03:870–1000 (el padrón de 1944), 03:645–760 (Chalchanio y Las Lagunas), 04:3380–3400, 04:3430–3560 y 04:3596–3620, 09:359–460, 20:745–766, 26:40–80, A:236–254, D:200–205.
+
+**Esta ronda: 74 líneas nuevas**, 67.028 bytes sobre 3.360.475, que en las 1.021 páginas de la base equivalen a **20,4 páginas**.
+
+Acumulado: 25.471 vigentes + 74 = **25.545 de 25.545 (100,0 %)**. La fase 6 toca seis líneas nuevas de esta ronda (03:928–929, 04:3516, A:244, A:252, F:56) y no cambia el largo de ningún archivo: **25.545 de 25.545 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 2166 | 6–7 | Sección «Departamento de LA CALDERA» del revalúo | 72 partidas, de la 1 a la 184; tres sin valuación (36, 44, 45). Suma de la columna izquierda de la h6, a 170 ppp: \$322.600; la de las otras 47, \$353.100, la misma que el libro daba: total \$675.700. Control aritmético cerrado |
+| 2166 | 34 | «Caldera, Dominga M. de» | En la sección que abre «Departamento de CERRILLOS» en la h27; no en la del departamento |
+| 2313 | 13 | Remate de «Chalchanio» | «el día 27 de Julio de 1945 a horas 16». Literal |
+| 2202 | 6 | Límites de «Las Lagunas» | «serranías de La Caldera hasta dar con el Río de Los Yacones, enfrentando con el arroyo de "Las Carretas"». Literal |
+| 2402 | 5 | Decreto 9053 G | Art. 2°: renuncia de Augusto Regis al cargo de Interventor de la Comuna de La Caldera; designa a Francisco Mercado. Literal |
+| 2043 | 37 | Decreto 2097-G | «ocho (8) días del mes de setiembre de 1943». Literal |
+| 2411 | 4 | Decretos 9155 y 9156 G | 42 niños en San Francisco (Yacones), 51 en San Alejo; aquiescencia a pedido del Inspector Técnico Seccional. Literal |
+| 2418 | 3 | Decreto 9264-H | Encabezado y «a la misma no se ha presentado ningún proponente». Literal; la frase «para ejecutar por vía administrativa las obras de defensa en el río de La Caldera» es del 9401-H (2429 h5). Hallazgo 1 |
+| 2237 | 8 | Decreto 6428-H | \$557,38: el 10 % de \$5.573,80 (5.018,02 + 555,78). Control aritmético cerrado |
+| 2101 | 4 | Decreto 4576 G | «EDUARDO JOSE PORCEL»; los actos de 1945 dicen «JOSE EDUARDO». Hallazgo 5 |
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04:3516 | Al agregarle la edición del 9264-H (Nº 2418, h. 3), la cita «para ejecutar por vía administrativa…» quedaba atribuida a ese decreto, y es del 9401-H, que lo resume | 4 | «el 9264-H (Nº 2418, h. 3) autoriza a la Dirección, en palabras del 9401-H, «para ejecutar…»» |
+| 2 | 03:928–929 | Urquiza, ahora segundo del padrón: «su posición patrimonial no se movió», que suponía que antes era el primero | 5 | «conserva la segunda valuación del padrón» |
+| 3 | F:56 | «casi todas con el pie de imprenta en la página anterior», dicho de las 44 ediciones de 1944 y las 90 de 1945; el pie se cotejó sólo en 1945 | 5 | «en 82 de éstas la página anterior cierra con el pie de imprenta» |
+| 4 | A:244 | «y para una escuela de la Ley 4874» | 12 | «y para crear una escuela de la Ley 4874» |
+| 5 | A:252 | «José Eduardo Porcel» para el nombramiento de 1944, que dice «Eduardo José» | 4 | «Eduardo José Porcel ---«José Eduardo» en los actos de 1945---» |
+
+Resta: dos afirmaciones más allá del dato en el aspecto 5 (hallazgos 2 y 3): escala general, **90**. Dos en el aspecto 4, bajo el techo de 90 por cotejo parcial. Una en el aspecto 12: 95. Ningún error de consistencia en las 20,4 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los cinco, en el AMPLÍA 1944-1945 (`046c890`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró el cotejo de la cita contra la hoja del decreto recién ubicado; el 2, la relectura del párrafo entero después de cambiar su primera frase; el 3, la comparación con lo que el informe LEE de 1944 declaró; el 4, la lectura; el 5, el cotejo de la imagen de 1944.
+
+**Corrección de fondo que hizo el AMPLÍA y esta ronda confirma.** El padrón de 1944 del capítulo 3 tenía 47 partidas y \$353.100 porque la lectura anterior no tomó la columna izquierda de la h6 (partidas 1 a 55): son 72 y \$675.700, y la mayor no es la de Urquiza sino la 10, de un titular particular que el libro no nombra, con \$237.400. Caen con eso el superlativo de Urquiza («el mayor propietario»), sus porcentajes y los de los apellidos de la elite (de casi el diez al cinco por ciento), el rango de la partida 80 en el capítulo 10 (de tercera a cuarta) y la frase de 22-prospectiva. La ronda volvió a sumar las dos columnas sobre la imagen: cierran con el total.
+
+**Descartados (falsos positivos, 3).** «Las dieciocho de \$6.400 o más» (03:887): son exactamente dieciocho (la siguiente es de \$6.300). «Son los primeros datos de población de parajes del departamento que el archivo temprano publica» (04:3553): el universo es el archivo temprano leído, 1908-1945, y el antecedente de 1942 dice «sensible despoblación» sin cifra. «En dos años seguidos» (20:766): la refacción es de 1944 y su último acto de marzo de 1945; la defensa, de 1945.
+
+**Pendientes revisados.** P50, cerrado por el AMPLÍA (el 9264-H está en el Nº 2418, h. 3). P233 (desfase de páginas de 1944 en el informe LEE), P234 (saldo de enero y febrero de 1945, dígito 3/8) y P235 (el Regis interventor de 1945 se suma al pendiente P230) siguen abiertos. P230 sigue abierto: el capítulo 4 y el apéndice E identifican al presidente municipal y al comisario de 1942-1943; esta ronda no agrega identidad y el interventor de 1945 se escribió sin unirlo.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.530/25.530 vigentes en `cac3842` | 25.471 vigentes; 59 caducas |
+| Citas entre comillas en las líneas nuevas contra la imagen | 11 cadenas | 10/11 literales; 1 atribuida al decreto equivocado (hallazgo 1) |
+| Superlativos, cierres y ausencias en el texto agregado | 74 líneas; 9 coincidencias nuevas, todas leídas | Todas con universo; las tres del padrón, recalculadas |
+| Repaso de ventana: líneas del índice del AMPLÍA con 1944 o 1945 | 209 de 209 | Las que caían las corrigió el AMPLÍA; «el mismo año» de 20:766, corregido por el AMPLÍA |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos | 0 |
+| Aritmética | 7 cuentas | 322.600 + 353.100 = 675.700; 237.400/675.700 = 35,1 %; 52.400/675.700 = 7,8 %; 26.400/675.700 = 3,9 %; 33.700/675.700 = 5,0 %; (5.018,02 + 555,78) × 0,10 = 557,38; 207,30 + 24,80 = 232,10. Cierran |
+| Privacidad: personas nombradas en las 74 líneas | 74/74 | 0 caídas. Las tres partidas nuevas de particulares del cuadro van sin nombre; nombrados sólo funcionarios (interventores, comisarios, subcomisarios, jueces de paz) y los titulares que el libro ya nombraba |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | ninguno cambia |
+| Compilación | base `046c890` y fase 6 | Compilan; 1.021 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | El AMPLÍA corrigió la fecha del remate de Chalchanio (27, no 30 de julio) y el recuento de Las Lagunas (31 ediciones, no 23) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgos 1 y 5, bajo el techo de 90, aplicados; el AMPLÍA corrigió la cita de Las Lagunas («Las Carretas», no «las carreras») |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgos 2 y 3, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 20,4 páginas; el padrón de 1944 queda igual en los caps. 3, 4, 10, 14 y 22-prospectiva y en los apéndices A, D y E |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin `\pendiente{}` nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La quinta lectura del padrón (concentración) se sostiene con más fuerza: una partida tiene más de un tercio del valor |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | El interventor de la comuna de 1944-1945 con nombre |
+| 12 | Estructura y prosa | 2 | 95 | 100 | Hallazgo 4, aplicado |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 87,0 antes del tope y 87,0 después** (tope de 90 por la cobertura acumulada inicial del 99,7 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 81.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) en el AMPLÍA, al agregar la edición de un acto a una cita, verificar que la cita sea de ese acto y no del que lo resume: habría atrapado el hallazgo 1; (5) resolver P230, que ahora tiene un tercer cargo.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.021 páginas. **Avance de la investigación:** la **tercera tesis** se refuerza: el padrón de 1944 no reparte el departamento entre «menos de cincuenta titulares», sino en setenta y dos partidas de las que una sola vale más de un tercio. La **segunda** gana un dato de población: cuarenta y dos chicos en San Francisco de los Yacones en 1945, junto a los cincuenta y uno de San Alejo. Y la intervención municipal de 1943-1946 tiene ahora su interventor hasta octubre de 1945.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 74 líneas (0,29 %; 20,4 páginas). Cobertura acumulada: 25.545 de 25.545 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 5, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
