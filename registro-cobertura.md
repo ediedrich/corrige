@@ -3516,3 +3516,139 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 4 de 4 hallazgos resueltos (100 %) y cuatro precisiones aplicadas; compila sin errores ni referencias indefinidas, 983 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la cuarta tesis (en 2007 y 2008 las expropiaciones para vivienda de 1985 y 1986 siguen sin cierre: la de La Caldera en juicio, la de Vaqueros sin escritura; los encauzamientos de 2007 y 2008 vuelven a los tramos de 1985 a 1987; y en contra, a la vista, la obra de agua del pueblo de 2007, adjudicada en dos meses y sin cierre conocido) y la tercera (2007 a 2009 tampoco traen un acto que devuelva al municipio competencia sobre el agua o el suelo).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 104 líneas (0,41 %; 49,0 páginas). Cobertura acumulada: 25.440 de 25.440 (100,0 %), con el registro de arriba. Falsos positivos descartados: 10. Recortes: 63 de las 75 citas nuevas quedan cotejadas sólo contra el TEXTO de los informes; una de las 18 ediciones bajadas no se cotejó renglón por renglón; del B.2 de 2008 y 2009 se leyeron los renglones que el libro cita, no el apartado entero; los controles de P164, P170, P186 y P195 se corrieron en la sesión, no como paso automático; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: **4 de 4**, uno en la incorporación de la ronda 72 (`573f289`), dos en el AMPLÍA 2007-2009 (`82b47fb`) y uno en el AMPLÍA 1973-1974 (`d99ba07`), arrastrado por el de 2007-2009; **0 atrapados por un control automático**.
+
+## Ronda 74 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 2010-2012. Base: commit `a8e72e9` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2010-2012, sobre `e2c9ae2`, la ronda 73), con la fase 6 en `ronda-74.patch` (un commit, `0dbe681`, árbol `40bf20d`; aplica con `git apply --check` sobre `a8e72e9` en un clon limpio de GitHub). La sesión que hace esta ronda es la misma que escribió el AMPLÍA: se audita trabajo propio, y por eso cada cita nueva se volvió a mirar en la imagen y no en las fichas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 73 (25.440 de 25.440, sobre `e2c9ae2`) se trasladaron por diff a `a8e72e9`, con el criterio de siempre: en un commit de incorporación una línea modificada o nueva caduca. **El AMPLÍA 2010-2012 caduca 36 líneas y deja 48 nuevas o modificadas** (12 netas: 6 en A, 3 en C, 2 en F y 2 en 11, menos 1 en D), en 19 archivos. Vigentes después del traslado: 25.404 de 25.452.
+
+### Lectura sobre el texto (numeración de `a8e72e9`)
+
+Se leyeron **las 48 líneas, enteras, por la sesión**, sin subagentes (88.621 bytes), y se cotejaron contra los tres informes LEE (`BO-Salta-2010_18259-18499_la-caldera_LEE-2010_2026-10-07.txt`, `BO-Salta-2011_18500-18740_la-caldera_LEE-2011_2026-10-07.txt` y `BO-Salta-2012_18741-18978_la-caldera_LEE-2012_2026-10-07.txt`) y, en las citas, contra la imagen.
+
+| Archivo | Líneas | Nuevas |
+|---|---|---|
+| ape/A-cronologia.tex | 4, 511, 515, 517–520, 522, 672 | 9 |
+| ape/C-normativa.tex | 330–332, 352–353 | 5 |
+| ape/D-pedidos.tex | 55, 176, 252 | 3 |
+| ape/F-fuentes.tex | 25–26, 100–101, 103 | 5 |
+| cap/00-advertencia.tex | 45 | 1 |
+| cap/01-planteo.tex | 119, 157 | 2 |
+| cap/02-metodo.tex | 28, 99 | 2 |
+| cap/04-siglo.tex | 3659–3660 | 2 |
+| cap/10-expropiacion.tex | 146 | 1 |
+| cap/11-ribera.tex | 491–492, 1032, 1048, 1375, 1383, 1676 | 7 |
+| cap/12-amparo.tex | 1175 | 1 |
+| cap/13-loteo.tex | 694, 709 | 2 |
+| cap/17-aguabaja.tex | 330 | 1 |
+| cap/17-tierrafiscal.tex | 401 | 1 |
+| cap/19-resistencias.tex | 187 | 1 |
+| cap/20-opacidad.tex | 880–881 | 2 |
+| cap/21-ausencias.tex | 76 | 1 |
+| cap/22-infraestructura.tex | 545 | 1 |
+| cap/22-prospectiva.tex | 290 | 1 |
+
+Contexto releído entero (no suma cobertura, porque ya estaba vigente): 11:476–503 (la sección de 2012 y 2013), 11:1026–1047 (la tabla del río Vaqueros y su cautela), 11:1365–1420 (el aviso de inicio de 2012 y su cautela), 11:1664–1677, 13:690–713, 17-aguabaja:300–345, 11:560–566 (composición de las comisiones), D:392 y 11:1112.
+
+**Esta ronda: 48 líneas nuevas**, 88.621 bytes sobre 3.267.948, que en las 987 páginas de la base equivalen a **26,8 páginas**: ése es el denominador del aspecto 7.
+
+Acumulado: 25.404 vigentes + 48 = **25.452 de 25.452 (100,0 %)**. La fase 6 toca once líneas: A:511, A:517, A:518, C:331, 01:157, 11:1383, 17-tierrafiscal:401 y 22:545, dentro de lo leído en esta ronda, y D:392, 11:1112 y 11:1384, que estaban vigentes y se releyeron como contexto; no cambia el largo de ningún archivo: **25.452 de 25.452 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil (Releases 2010 a 2012 de `boletines-salta`)
+
+Las ediciones de 2011 y 2012 estaban en la sesión desde sus lecturas LEE; de 2010 se bajaron siete (18327, 18339, 18370, 18433, 18437, 18458, 18488). Recortes a 200 ppp en gris con PyMuPDF; el renglón se ubicó con la capa y cada recorte se miró.
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 18728 | 18 | Ley 7699, art. 1 | «con el cargo de ser destinado exclusivamente al desarrollo integral de la zona». Coincide (A:520, 12:1175, 01:157) |
+| 18837 | 25 | Cateo, titulares | «1576, 1846 y 1891 de Prov. de Salta» y «Matrícula 2065 de Amigos Club de la Montaña». Coincide (A:518, A:520, A:522) |
+| 18574 | 14 y 15 | Decreto 1684 | «Matrícula N° 05-2565»; «Finca Campo Arrieta – Loma Bola y Cañada Ancha», con raya. Precisión (A:518, C:331, 17-tierrafiscal:401) |
+| 18370 | 15 | Decreto 2410 | «Dentritas de Manganeso – La Caldera», con raya. Precisión (A:511) |
+| 18370 | 19 | Res. SOP 354 | \$586.353,44. Coincide (A:511) |
+| 18763 | 19 | Res. 066 | «Proyecto de Urbanización en Lesser», matrícula 1869, Vaqueros. Coincide (13:694) |
+| 18827 | 16 | Res. 290, art. 4 | «sobre el Ante Proyecto del Camino que deberá ser presentado y controlado por la Municipalidad de Vaqueros». Coincide (13:694); hallazgo 1 |
+| 18846 | 34 | Res. SRH 9/12 | «la Ing. Civil Mariela Adriana Nieva y el Dr. en Geología Omar Viera», «matrículas N° 87.337 del Dpto. Capital». Coincide (11:1032, 11:1676, D:55, C:353) |
+| 18970 | 25 | Res. SRH 322/12 | «M.P. N° 155 y el Topógrafo N° Félix Márquez, DNI ...». Confirma la corrección M.F. → M.P. del AMPLÍA (P205); hallazgo 3 |
+| 18974 | 14 | La Vaquera | «ubicada en las márgenes del Río Vaqueros», sin departamento. Coincide (19:187) |
+| 18559 | 23 | Concesión, catastro 3989 | «Club de Campo Las Vertientes – Ecopueblo», con raya. Precisión (A:517) |
+| 18948 | 23 | Noroeste Construcciones | 19 Has. 1.593 m2, «colinda con Cantera "Los Yacones", Expte. N° 20.604/2010». Coincide (19:187) |
+| 18433 | 8 | Decreto 3639, art. 2 | \$15.353,91, «Valor Fiscal incrementado en un 30%». Coincide (A:515, C:330, 10:146) |
+| 18327 | 19 | Res. SOP 213 | \$677.680,71. Coincide (A:511, 22:545) |
+| 18660 | 8 | Ley 7674 y Decreto 3766 | calle Antonio Magnonia al sur, Andrés Anderson al oeste, calles sin nombre al norte y al este; Decreto N° 3766. Coincide (A:519, C:332) |
+| 18677 | 11 | Decreto 4137 | 4,1412 hectáreas, 2,174 lts/seg, Río Wierna, margen izquierda, permanente. Coincide (17-aguabaja:330) |
+| 18458 | 14 | Decreto 4393 | «La Caldera: Un (1) diputado titular y uno (1) suplente». Coincide (A:511) |
+| 18884 | 21 | Tierra Gaucha | «Superficie registrada total 22 Has. 9.330 m2», fiscal. Coincide (19:187, F:100) |
+| 18507 | 11 | Res. SOP 890 | \$597.346,30. Coincide (A:517) |
+| 18339 | 14 | Decreto 1614 | «Ing. Miguel Angel Aleman», Vaqueros, sin tilde. Coincide (A:511, F:100, D:176) |
+
+Son **10 de las 21 cadenas entre comillas del texto nuevo cotejadas en la imagen**; las otras once son nombres de canteras, minas, obras y asociaciones (diez) y «Campo Arrieta», cotejados contra el TEXTO de las fichas. Tres llevan raya en el original y guion en el libro: se corrigen como precisión tipográfica, sin restar.
+
+### Hallazgos (tres, aplicados en la fase 6)
+
+| # | Dónde | Hallazgo | Aspecto | Corrección |
+|---|---|---|---|---|
+| 1 | 01:157 | El refutador de la tercera tesis dice que de 2010 a 2012 «tampoco» aparece un acto que devuelva al municipio competencia efectiva sobre el agua o el suelo, y enumera sólo actos de la Provincia. El mismo AMPLÍA trae en el capítulo de loteos (13:694) la Res. 290/12, cuyo art. 4 deja «presentado y controlado por la Municipalidad de Vaqueros» el anteproyecto del camino de la urbanización de Lesser (Nº 18827, h. 16, imagen). El párrafo de 2007 a 2009 da siempre «lo más parecido a una competencia suya»; el de 2010 a 2012 lo omitía, y era justo el dato que más se acerca a refutar | 7 | Se agrega «lo más parecido a una competencia suya sobre el suelo es que el certificado de aptitud ambiental de una urbanización de Lesser deja a cargo de la Municipalidad de Vaqueros el control del anteproyecto de su camino», con la remisión al capítulo de loteos |
+| 2 | D:392 | El pedido de las resoluciones de otorgamiento o rechazo de las concesiones de agua de 2004 a 2025 seguía incluyendo la de la matrícula 388 (expediente 34-2.253/56), que el AMPLÍA incorpora otorgada por el Decreto 4137 de 2011 (17-aguabaja:330) y cuyo pedido propio retiró de D | 8 | Se agrega que esa ya no se pide |
+| 3 | 11:1383–1384 | La ficha de la Res. 322/12 transcribe «M.P.\ Nº 155, y el Topógrafo N.\ Félix Márquez. Estableciéndose»: la imagen dice «M.P. N° 155 y el Topógrafo N° Félix Márquez, DNI ... Estableciéndose». Dos correcciones silenciosas (la coma y «N.») y una omisión sin marca | 4 | «M.P.\ Nº 155 y el Topógrafo Nº Félix Márquez [\ldots]. Estableciéndose» |
+
+**Precisiones aplicadas sin restar.** (a) A:511, A:517, A:518, C:331 y 17-tierrafiscal:401: raya del original en «Dentritas de Manganeso -- La Caldera», «Club de Campo Las Vertientes -- Ecopueblo» y «Finca Campo Arrieta -- Loma Bola y Cañada Ancha». (b) 11:1112: «cuyo propietario fue advertido» pasa a «cuyos propietarios fueron advertidos»: las resoluciones 91/12 y 92/12, que el AMPLÍA incorpora, advierten a otros tres propietarios de la misma matrícula 4027. (c) 17-tierrafiscal:401: «Otra fracción junto al dique había salido antes por ley» decía más que el acto, que recuerda una autorización de venta y no la venta: «Antes aún, una ley había autorizado a vender otra fracción junto al dique». (d) 22:545: las obras de agua de Vaqueros de 2011 y 2012 «las contrata la Provincia» decía más que la Res. SOP 523, que aprueba un legajo: «son de la Provincia, que aprueba el legajo del primero y adjudica los segundos».
+
+Resta: un error de consistencia en 26,8 páginas, 3,7 por cada 100: **50** por el escalón; no contradice material a menos de diez páginas (el capítulo de loteos está a más de seiscientas). Un pedido satisfecho en parte que seguía en la lista, en el aspecto 8: **resta 5** (90). Dos correcciones silenciosas en una cita, en el aspecto 4: **resta 6**, que el techo de 90 por cotejo parcial absorbe.
+
+**Errores introducidos por la propia auditoría**: los tres. El 1 y el 2, en el AMPLÍA 2010-2012 (`a8e72e9`), escrito por esta misma sesión. El 3, en la incorporación de la ficha de la Res. 322/12, anterior a la ventana del clon (presente en `8182f9d`, AMPLÍA 1953); el AMPLÍA 2010-2012 corrigió en el mismo renglón la matrícula del geólogo y no cotejó el resto. **Ninguno lo atrapó un control automático**.
+
+**Descartados (falsos positivos, 6).** «Entre todas las comisiones que este capítulo leyó después, de 2011 a 2019, sólo una ---la del río Vaqueros de 2016--- incluye un ingeniero hidráulico» (11:565): las comisiones de 2011 y 2012 de los informes LEE no traen ninguno (búsqueda de «hidráulic» en los dos informes: 0). «En ninguna de las ocho comisiones cuya integración consta aparece un agrimensor» (11:564): la 322/12 trae un topógrafo, no un agrimensor. «La primera es la que más pesa. En mayo de 2012 la Secretaría ... advirtió por escrito al propietario» (11:504): sigue cierta con las 91/12 y 92/12, que advierten del mismo modo. «El de La Caldera es el más bajo» (A:522): universo declarado, los ocho municipios de la Res. 67/12. «La 94/12 no fue la única de ese día» (11:491): universo, el día y la matrícula. «En lo leído de los tres años no hay ningún plano publicado» (F:100): ausencia con su universo, sobre años en barrido, en la fórmula de 2007 a 2009.
+
+**Pendientes que cierra.** P205: la matrícula del geólogo Olañeta es «M.P. N° 155» en la imagen (18970 h25); la corrección del AMPLÍA queda confirmada.
+
+**Pendientes nuevos.** P206 (libro): el Decreto 1684/11 declara reserva la Fracción A-2 «Finca Campo Arrieta -- Loma Bola y Cañada Ancha», y la tabla de expropiaciones del dique (10:26–28) tiene «Fracciones de Loma Bola, Campo de Arrieta y Cañada Ancha» de los Mercado; establecer si la tierra que la Ley 6627 autorizó a vender al club sale de esas fracciones expropiadas, con la ley y el plano de desmembramiento.
+
+**Pendientes revisados sin cerrar.** P203 (Res. 9/12: el edicto de 2012 da la matrícula 87.337 de la Capital, mirado en la imagen; la relación con la 216 sigue abierta). P204 (hojas «a ojos» de 2010 a 2012: sin cambio). P196 (la serie de la cuarta tesis: los años 2010 a 2012 suman una obra de agua del pueblo adjudicada al municipio sobre su propio legajo, sin cierre conocido). P202 (su control 1, la lista de C:4, se corrió y no hubo cambio).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.440/25.440 líneas vigentes en `e2c9ae2` | 25.404 vigentes; 36 caducas por el AMPLÍA 2010-2012 |
+| Superlativos, cierres y ausencias en el texto agregado (*único*, *primer*, *el más*, *la más*, *nunca*, *jamás*, *ningún*, *ninguna*, *ninguno*, *no aparece*, *no consta*, *mayor*, *más bajo*, *recién*, *el siguiente*, *tampoco*, *sólo*, *todavía*) | 25.494 bytes de palabras agregadas, 6 coincidencias, todas leídas, más las cuatro que el script no ve por salto de renglón (11:491, 01:157, 13:694, 13:709) | Ninguna cae; la de 01:157 es el hallazgo 1 por lo que omite, no por lo que afirma |
+| Repaso de ventana: oraciones fuera de las 48 líneas con 2010, 2011 o 2012, o con un rango que los cubre, y *no*, *ningún*, *único*, *primer*, *sólo*, *recién*, *todavía*, *tampoco*, *falta*, *nunca*, *el más* | libro entero (base `a8e72e9`), 76 coincidencias, todas leídas | Ninguna cae por lo de 2010 a 2012; una precisión (11:1112) y un pedido (D:392, hallazgo 2) |
+| Remisiones a capítulos posteriores sin «más adelante» (140 caracteres después del `\ref`, 60 antes; orden de `\input` de `main.tex`; de `cap/` a `cap/`) | 936/936 `\ref{cap:…}` después de la fase 6 | 1 marcada por la ventana del script, la misma de la ronda 73 (01:157, enumeración con «más adelante» al final): 0 sin marcar |
+| Normas de C:4 citadas en algún capítulo (P202, control 1) | 12 normas; 26 archivos de `cap/`; y las 3 normas nuevas de C | Las 12: 0 citas (dos coincidencias de «1045» son «10456», número de boletín). Las 3 nuevas (Decretos 3639/10 y 1684/11, Ley 7674) se citan en 10 y 17-tierrafiscal: la lista no cambia |
+| `\pendiente{}`, ítems de D | 52; 284 | 22-prospectiva dice «doscientos ochenta y cuatro pedidos»: cierra, antes y después de la fase 6 |
+| Aritmética de 2010 a 2012 | 6 cuentas | 15.353,91 / 1,30 = 11.810,70; 240.800 / 4.749.780 = 5,07 %; Tierra Gaucha, polígono de seis vértices por la fórmula del área: 18,7353 ha contra 22,9330; 82 − 42 = 40 = 1 + 31 + 2 + 6 tramos fuera de las ventanas; 39 = 31 + 1 + 1 + 6; 25.404 + 48 = 25.452. Cierran |
+| Muestra de 50 afirmaciones (aspecto 1), semilla 74 | 50 de 256 oraciones con cifra en las 48 líneas | **50/50 con fuente localizable**: 39 con la cita en la oración (por script); las otras 11 son declaraciones de cobertura de 00, 01, 02 y F, que remiten al apéndice F y a los informes, la fila de 2026 de la cronología (asterisco, capítulo del amparo), la oración de 12:1175 (fuente en el pasaje) y la fila de la tabla de 11:1032 (fuente en la misma fila) |
+| Muestra de 20 datos web o de prensa (aspecto 9) | 0 datos web o de prensa nuevos en las 48 líneas | no se rehízo; vale la de la ronda 42 (5/12) |
+| Privacidad: personas nombradas en las 48 líneas, cruzadas con contextos sensibles (P102: *remate*, *quiebra*, *concurso*, *deudor*, *sentencia*, *cesante*, *renuncia*, *D.N.I.*) | 48/48 líneas | 0 caídas. Sin nombre: las agentes del hospital que renuncian, las técnicas contratadas por Minería, las mediadoras, el contador afectado al municipio, los socios de las sociedades; el DNI del topógrafo, omitido con marca. Nombrados: funcionarios por su función, los concesionarios de la matrícula 388 y los peticionantes de canteras, por sus actos públicos |
+| Largo de los archivos antes y después de la fase 6 | 38/38 archivos | ninguno cambia de largo con la fase 6 |
+| Compilación | libro entero, base `a8e72e9` y fase 6, cada una en un clon limpio, sin `.aux` previos | Compilan las dos (con `texlive-lang-spanish`, que la sesión instaló); 987 páginas la base y 985 la fase 6 (reacomodo de flotantes a partir del capítulo 1: la sección «Las hipótesis heredadas y su saldo» pasa de la página 10 a la 12 y el capítulo 27, de la 615 a la 613); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas; 2 cajas desbordadas, las mismas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | 50/50 en la muestra (90 por el criterio); la escala general lo deja en 82 por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Las normas de 2010 a 2012 van en pasado o como lo que dispusieron |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de acto, de sanción, de promulgación y de publicación distinguidas (Ley 7699 y Decreto 5079; Ley 7674 y Decreto 3766); las cifras tomadas de los informes se recalcularon |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgo 3 (−6, absorbido por el techo); 10 citas nuevas cotejadas, tres con raya; techo de 90 por cotejo parcial |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Ninguna ausencia afirmada sobre 2010 a 2012, que quedan en barrido; superlativos con universo |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias de los originales (la matrícula de la Res. 9/12, Viera y Nieva, la matrícula 05-2565 contra la 2065, la 1.846 «de Prov. de Salta», la superficie de Tierra Gaucha) están señaladas |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 1: 3,7 por cada 100 de las 26,8 páginas (50); aplicado |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 2 (−5); aplicado. 95 como en las rondas anteriores |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; la tercera tesis tiene a la vista, de 2010 a 2012, el dato que más se le acerca a oponerse |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Series y cruces reproducibles |
+| 12 | Estructura y prosa | 2 | 100 | 100 | 0 remisiones a capítulos posteriores sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin propuestas nuevas |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas en las 48 líneas; 90 como en la ronda 73 |
+
+**Nota inicial: 83,4 antes del tope y 83,4 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %: sin tope). De la distancia a 100 de la nota final, **3,8 puntos son estructurales** (los aspectos 1, 4, 9, 10 y 11, que no pasan de 90 mientras el cotejo y las muestras sean parciales) y **7,9 son corregibles** (P115 en el 1, P40 en el 9, las tesis abiertas en el 10, el 6, el 8, el 13 y el 15).
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6 (del 30 al 90 en el 9); (2) cerrar con documento alguna de las tesis abiertas: hasta +1,8 en el 10; (3) dar fuente o pedido a las cifras físicas del embalse de 10:516 (P115): +0,9; (4) dejar corriendo como paso automático de cada AMPLÍA los controles de P181, P195 y P202, más uno nuevo: que todo refutador de tesis que el AMPLÍA extienda nombre «lo más parecido» que el mismo AMPLÍA incorpore (caso: hallazgo 1): evita los −4,5 del aspecto 7 de esta ronda en la nota inicial de la siguiente; (5) mirar las hojas «a ojos» de 2010 a 2012 (P204) para subirlos a nivel imagen: no mueve la nota, sí lo que el libro puede afirmar.
+
+**Avance del libro:** 3 de 3 hallazgos resueltos (100 %) y cuatro precisiones aplicadas; compila sin errores ni referencias indefinidas, 985 páginas. **Avance de la investigación:** sin cambios de estado. Ganan evidencia sin cambiarlo la tercera tesis (de 2010 a 2012 el municipio aparece como ejecutor de obras de la Provincia por convenio y la competencia más cercana a una suya sobre el suelo es el control de un camino de una urbanización privada, impuesto por un certificado ambiental provincial) y la cuarta (la expropiación de vivienda de Vaqueros de 2009 avanza en 2010 al juicio y en 2011 se achica por ley, sin cierre conocido; la red de agua de Santa Mónica y el tendido eléctrico del paraje, adjudicados al municipio, no tienen cierre publicado en lo leído).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,19 %; 26,8 páginas). Cobertura acumulada: 25.452 de 25.452 (100,0 %), con el registro de arriba. Falsos positivos descartados: 6. Recortes: de las citas nuevas, once quedan cotejadas sólo contra el TEXTO de las fichas; de los actos que las filas de 2010 a 2012 citan sin comillas, se miraron en la imagen once (las cifras y los nombres de la tabla de cotejo) y los demás quedan contra el TEXTO de los informes; la muestra de trazabilidad no se rehízo; los controles de P181, P195 y P202 se corrieron en la sesión, no como paso automático. Errores introducidos por la propia auditoría: 3, dos de ellos en el AMPLÍA que la misma sesión escribió; atrapados por un control automático: 0.
