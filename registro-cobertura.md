@@ -4579,3 +4579,24 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.021 páginas. **Avance de la investigación:** la **tercera tesis** se refuerza: el padrón de 1944 no reparte el departamento entre «menos de cincuenta titulares», sino en setenta y dos partidas de las que una sola vale más de un tercio. La **segunda** gana un dato de población: cuarenta y dos chicos en San Francisco de los Yacones en 1945, junto a los cincuenta y uno de San Alejo. Y la intervención municipal de 1943-1946 tiene ahora su interventor hasta octubre de 1945.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 74 líneas (0,29 %; 20,4 páginas). Cobertura acumulada: 25.545 de 25.545 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 5, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 83 — lecturas de Eduardo, dudas 1944-1945 (07/10/2026)
+
+Tipo: **lecturas** (flujo v2 §5.6, palabra clave `LECTURAS`), sobre la hoja `dudas-1944-1945.html` (cuatro casos, recortes a 250 ppp de la imagen del Release con el renglón marcado; nombres de particulares tapados). Base del libro: `e75765f` (ronda 82). No hay fase 6: ninguna lectura cambia una frase del libro.
+
+### Lecturas y su clasificación
+
+| Caso | Edición y hoja | Pregunta | Lectura de la sesión | Lectura de Eduardo | Control | Clasificación |
+|---|---|---|---|---|---|---|
+| 1 | 2227 h16 | Saldo final de enero de 1945 | 19.393,06 | 19.393,06 | Ninguno decide (la serie da 19.398,06 en el caso 2) | **Decidida por Eduardo** |
+| 2 | 2253 h12 | Saldo inicial de febrero de 1945 | 19.398,06 | 19.398,06 | Ninguno decide | **Decidida por Eduardo** |
+| 3 | 2166 h6 | Valuación de la partida 10 del revalúo de 1944 | 237.400 | 237.400 | Parcial: la columna suma 322.600 y cierra con el total de 675.700 | **Decidida por control y confirmada** |
+| 4 | 2166 h6 | Partidas 42, 43 y 47 | 14.200 / 11.200 / 9.300 | 14.200 / 11.200 / 9.300 | Parcial: la misma suma | **Decidida por control y confirmada** |
+
+**Consecuencia de los casos 1 y 2.** Las dos lecturas coinciden con las de la sesión, y son distintas entre sí: la diferencia de \$ 5 entre el saldo final de enero y el inicial de febrero de 1945 **está en el original**, no en la lectura. La cadena de Tesorería de los informes LEE corre de enero de 1937 a noviembre de 1945 con ese único desfase, que se registra como contradicción del original (informe LEE 1945, E.9). Cierra P234.
+
+**Consecuencia de los casos 3 y 4.** Las cifras que el AMPLÍA 1944-1945 llevó al capítulo 3 y al apéndice A (partida 10, \$237.400; Fisco \$14.200; Gobierno de la Provincia \$11.200; partida 47, \$9.300) quedan confirmadas sobre la imagen por un segundo lector. El libro no cambia.
+
+### Notas
+
+Sin cambios respecto de la ronda 82: **nota 88,3**, cobertura acumulada **25.545 de 25.545 (100,0 %)**. Lecturas: 4; decididas por control y confirmadas: 2; decididas por Eduardo: 2; corregidas por el control: 0; abiertas: 0.
