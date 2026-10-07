@@ -4267,3 +4267,106 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos (100 %) y una precisión aplicada; compila sin errores ni referencias indefinidas, 1.015 páginas. **Avance de la investigación:** sin cambios de estado. La **tercera tesis** (la pérdida de competencia municipal) gana evidencia sin cambiar de estado: en 2025 y 2026 la Provincia sigue conviniendo con las dos municipalidades obra por obra ---el hospital, el azud de Campo Alegre y el encauzamiento con La Caldera; la red de la zona alta, calles y una plaza con Vaqueros---, rescinde tres convenios con Vaqueros y uno con La Caldera, y los dos actos sobre la red de Vaqueros no dan la misma causa de la rescisión. La **cuarta tesis** (la desidia es selectiva) suma un contraste: el nexo de agua de Villa Sara, en Vaqueros, se licita a empresas por seiscientos setenta y siete millones, y el encauzamiento del río en La Caldera se conviene con su Municipalidad por cuarenta y dos millones y veinte días.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 23 líneas (0,09 %; 11,6 páginas). Cobertura acumulada: 25.523 de 25.523 (100,0 %), con el registro de arriba. Falsos positivos descartados: 2. Recortes: las cifras de las filas de 2025 y 2026 que no van entre comillas se cotejaron contra el TEXTO de los informes y la capa, y sólo las de la tabla contra el renglón del PDF; la muestra de trazabilidad no se rehízo. Errores introducidos por la propia auditoría: 2, en el AMPLÍA que la misma sesión escribió; atrapados por un control automático antes de llegar al libro: 0.
+
+## Ronda 80 — auditoría con fase 6 (07/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1938-1940. Base: commit `3c57fb1` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1938-1940, sobre `144f844`, la ronda 79 registrada; aplicado por `3-registrar` a las 11:19 del 07/10), con la fase 6 en `ronda-80.patch` (un commit sobre `3c57fb1`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los informes LEE 1938, 1939 y 1940: se audita trabajo propio, y cada cita y cifra nueva se volvió a buscar en la capa de la edición y, en las citas, en la imagen.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 79 (25.523 de 25.523, sobre `144f844`) se trasladaron por diff a `3c57fb1`. **El AMPLÍA 1938-1940 caduca 47 líneas y deja 48 nuevas o modificadas** (1 neta, en A), en 10 archivos. Vigentes después del traslado: 25.476 de 25.524.
+
+### Lectura sobre el texto (numeración de `3c57fb1`)
+
+Se leyeron **las 48 líneas, enteras, por la sesión** (11.477 bytes), contra los informes `BO-Salta-1938_1722-1773_la-caldera_LEE-1938_2026-10-07.txt`, `BO-Salta-1939_1774-1825_la-caldera_LEE-1939_2026-10-07.txt` y `BO-Salta-1940_1826-1877_la-caldera_LEE-1940_2026-10-07.txt` y, en las citas, contra la imagen.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 5 |
+| ape/F-fuentes.tex | 1 |
+| ape/H-dominio.tex | 1 |
+| cap/04-siglo.tex | 25 |
+| cap/15-hacienda.tex | 6 |
+| cap/16-redes.tex | 1 |
+| cap/17-tierrafiscal.tex | 1 |
+| cap/20-opacidad.tex | 2 |
+| cap/22-infraestructura.tex | 2 |
+| cap/26-presencia.tex | 4 |
+
+Contexto releído entero (no suma cobertura): 04:3009–3330 (1937 a 1940), 04:3590–3606, 04:460–470 y 04:715–720 (el decreto 1.660 de 1918), 15:15–60, 15:198–246, 20:720–730, 26:25–50, 22:555–562, A:185–210.
+
+**Esta ronda: 48 líneas nuevas**, 11.477 bytes sobre 3.349.684, que en las 1.017 páginas de la base equivalen a **3,5 páginas**.
+
+Acumulado: 25.476 vigentes + 48 = **25.524 de 25.524 (100,0 %)**. La fase 6 toca cinco líneas de 04 (3020, 3021, 3099, 3186, 3187) y una de 15 (244); las de 04:3020, 3021 y 3187 estaban vigentes y se releyeron al modificarlas; no cambia el largo de ningún archivo: **25.524 de 25.524 (100,0 %)** después de ella.
+
+### Cotejo sobre el facsímil
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1724 | 19 | Decreto 1502, defensa de La Calderilla | «márgen izquierda del Rio Caldera», «las aguas del Río Caldera amenazan las propiedades con eminente peligro», mirado a 150 ppp. El libro escribía «margen», «río» y, en la base, «inminente»: el AMPLÍA corrigió «eminente» y la fase 6 las otras tres grafías. Hallazgo 2 |
+| 1750 | 12 | Decreto 2155, balance de 1937 | 510,42; 2.835,10; 2.957,14; 372,38. Coinciden |
+| 1763 | 6 | Decreto 3161 | 283,51. Coincide |
+| 1875 | 21 | Acta de Vialidad, transferencia de caminos | «De La Calderilla a Río Saladillo por Gallinato y Campo Santo»; «por El Jardín». El libro escribía «de la Calderilla a río» y «por el Jardín». Hallazgo 2 |
+| 1808 | 8 | Decreto 3918 | «por así reclamarlo los intereses de su población». Literal |
+| 1780 | 8 / 1850 | 2 | Decretos 3456 y 90 | San Alejo (08/02/1939) y «GALLINATO» (17/05/1940). Coinciden con la corrección del AMPLÍA |
+| 1828 | 21 | Decreto 3351 | Confirma el 2805. Coincide |
+| 1810 | 19 | Boletas incineradas | Once cifras y el total 11.108,80. Coinciden |
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04:3099 | Los decretos de 1938 sobre el balance de 1937 eran «los primeros que dejan ver su número»: el decreto 1.660 de 1918 ya calcula la renta real del municipio (04:468, 15:40) | 5 | «los primeros desde 1922 que dejan ver su número» |
+| 2 | 04:3020-3021, 04:3186-3187 | Cuatro grafías del original normalizadas dentro de citas: «margen», «río», «de la Calderilla a río», «por el Jardín» | 4 | «márgen», «Rio», «Río», «De La Calderilla a Río», «por El Jardín» |
+
+**Precisión aplicada sin restar.** 15:244: «sólo dos con cifras» contaba decretos dentro de una serie que cuenta actos; pasa a «sólo uno con cifras: la rendición de 1937, que el Decreto 2155/1938 devuelve ... y el 3161/1938 aprueba».
+
+Resta: un superlativo sin universo en el aspecto 5 (hallazgo 1): escala general, **90**. Cuatro grafías en el aspecto 4: −3 cada una, bajo el techo de 90 por cotejo parcial. Ningún error de consistencia en las 3,5 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los dos, en el AMPLÍA 1938-1940 (`3c57fb1`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró la búsqueda de superlativos sobre el texto agregado; el 2, el cotejo de las citas contra la imagen.
+
+**Descartados (falsos positivos, 2).** «la única mina del departamento» (F): con su universo, el padrón minero de 1939 y 1940. «Y resolvió a su favor» (04:3172): el Decreto 2805 funda la denegatoria en la ordenanza de 1914.
+
+**Pendientes revisados.** P228 y P229, abiertos por el AMPLÍA, siguen abiertos. P225 sin cambios.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.523/25.523 vigentes en `144f844` | 25.476 vigentes; 47 caducas |
+| Citas entre comillas en las líneas nuevas contra la imagen | 6 cadenas | 2/6 literales; 4 con grafía normalizada (hallazgo 2) |
+| Superlativos, cierres y ausencias en el texto agregado | 48 líneas; 6 coincidencias, todas leídas | Una sin universo (hallazgo 1); «única mina» y «único balance con sus renglones» con su universo |
+| Repaso de ventana: líneas del índice del AMPLÍA con 1938, 1939 o 1940 | 217 de 217 | Las que caían las corrigió el AMPLÍA |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos | 0 |
+| Aritmética | 4 cuentas | 510,42 + 2.835,10 − 2.957,14 = 388,38 (el decreto da 372,38); 10 % de 2.835,10 = 283,51; boletas: 11.078,80 contra 11.108,80; 11/07 a 10/10 = tres meses. Cierran |
+| Privacidad: personas nombradas en las 48 líneas | 48/48 | 0 caídas. Nombrados: candidatos, funcionarios y el presidente de un partido que nombra un acto; sin nombre: encargadas del Registro Civil |
+| Largo de los archivos antes y después de la fase 6 | 38/38 | ninguno cambia |
+| Compilación | base `3c57fb1` y fase 6 | Compilan; 1.017 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas y números de decreto cotejados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Hallazgo 2 (−3 cada grafía, bajo el techo de 90), aplicado |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 1, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las discrepancias del original (saldo de 1937, boletas) quedan señaladas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 3,5 páginas; el AMPLÍA corrigió una inconsistencia previa (Mamani, A:204 contra 04:3242) |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin `\pendiente{}` nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | La serie de saldos de Tesorería 1937-1940 sin corte queda en F |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 87,1 antes del tope y 87,1 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 79.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) correr en el AMPLÍA, antes de entregar, el cotejo letra por letra de las citas contra la imagen, también en las líneas vecinas de una cita que se toca, y la búsqueda de superlativos contra las series del propio capítulo: habrían atrapado los dos hallazgos (+1,2 en la nota inicial); (5) llevar al cuerpo las fichas de P228.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos y una precisión; compila sin errores, 1.017 páginas. **Avance de la investigación:** la **tercera tesis** gana un dato: el único resumen de caja del municipio publicado entre 1922 y 1945 (Decreto 2155/1938) da ingresos propios de \$2.835,10 contra \$2.957,14 de egresos, y el saldo de traspaso que el mismo acto declara no cierra con sus cifras. La **opacidad** (cap. 20) se matiza sin caer: la práctica de no publicar cifras tuvo una excepción en 1938.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,19 %; 3,5 páginas). Cobertura acumulada: 25.524 de 25.524 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
