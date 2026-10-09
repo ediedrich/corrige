@@ -1,0 +1,778 @@
+LEE v17 — 1908
+================================================================================
+INFORME LEE 1908 · Boletín Oficial de Salta · término: La Caldera
+Ediciones N° 1 a 22, Año I (15 de octubre a 30 de diciembre de 1908)
+Rúbrica LEE v16 con los cambios de LEE v17 (flujo editorial v2, §5)
+Sesión automática del 08/10/2026 · reemplaza al informe del 20/09/2026
+================================================================================
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+Estado: COMPLETO, con 3 límites declarados (E.10). Nivel de lectura: imagen.
+Todas las fichas de la sección A se transcribieron desde la imagen del PDF del
+Release; la sección B no tiene fichas de vecindad.
+
+Por qué se rehace el año. El informe del 20/09/2026 se escribió con la rúbrica
+v12, sin los PDF (sólo con las JPG de lee_trabajo), con marcadores de sección
+que no cortan por script y sin recuento legible por máquina; en estado.json
+figura «sin-R». Este informe lo reemplaza entero. Se usó como referencia de
+actores y de lo ya mirado, no como fuente: cada ficha se volvió a mirar en la
+imagen, y tres cosas del informe anterior se corrigen aquí (A.3, A.5 y la hoja
+duplicada de la N° 21, E.1).
+
+Insumos (Release 1908 de ediedrich/boletines-salta, listado por
+expanded_assets): 22 PDF (1.pdf a 22.pdf), sin avisos de «no se encontró»;
+pre-informe BO-Salta-1908_la-caldera_PRE-INFORME-LEE_2026-09-22.txt (único en el
+Release, es el vigente); resultados_1908.csv (14.202 filas: A1 30, A2 77, ACT
+279, ACTAP 13.692, NUM 122, REEMP 2); decretos_1908.csv (0 filas); log.txt;
+lee_config.json; lee_textos_1908.zip (103 .prev.txt, 103 .prop.txt, 103
+.prop.tsv y 22 EXTRAIDO.json). El Release no se alcanza desde la nube de la
+sesión: los archivos se bajaron en la máquina de Eduardo y se pasaron a la
+sesión. No hay recortes.zip en el Release; no hizo falta.
+
+Corrida de lee_auto.py (log.txt): OCR del 20/09/2026, 09:45 a 09:47, 103 hojas
+con 6 procesos, sin errores; nueva búsqueda sin OCR el 22/09/2026, 18:01 a
+18:02. El log no da la versión del script; estado.json registra la corrida de
+descarga del 08/10/2026 con lee_auto 50eb5edd5560 y config 2026-10-07.
+
+Configs (§15.4 de v16 y §5.2 de v17). config del Release: version 2026-10-07,
+hasta 2026, actores 2.526, anillo2 1.165. config del proyecto (corrige/config):
+version 2026-10-07, hasta 2026, actores 2.526, anillo2 1.165. Se usa: el de
+corrige, que es el único válido. Contenido: idénticos en actores, anillo 2,
+números (3.629) y falsos positivos (228); diferencia 0.
+
+Entorno de la sesión: nproc 2; tesseract con eng y osd, sin spa (no se hizo OCR
+en sesión, ni hizo falta); PyMuPDF instalado desde pypi. Lo que la sesión
+verificó por su cuenta: unión de los textos con el guion blando quitado junto
+con el salto; cuatro pasadas propias sobre prev y prop; anillo 2 y anillo de
+actores con el config entero; las 22 tapas en la imagen; los folios de las 81
+hojas interiores en la imagen; tinta y ppi de las 103 hojas rasterizando los
+PDF; dhash propio de las 103 hojas.
+
+Qué agregaría cada insumo que faltó: ninguno faltó. El Registro Oficial de 1908
+resolvería si las páginas 28, 36, 46 y 58 existieron en blanco (E.3).
+
+§1 · CORPUS REVISADO
+--------------------
+Tapas miradas en la imagen (franja de cabecera de la hoja 1 de las 22
+ediciones): «Boletin Oficial», «AÑO I» (la tilde no siempre se ve en la franja),
+«SALTA, <fecha>», «NÚM. n». Dirección y Administración: Imprenta y Librería El
+Comercio de Ramón R. Sanmillán y Cía., Caseros 629 y 631. «Aparece Miércoles y
+Sábados» en la tapa (mirado en la N° 5; en el texto de las N° 2 a 22; no está en
+el texto de la N° 1). La tapa no declara número de páginas: el control es la
+paginación corrida. El año editorial y las fechas se leyeron en la imagen y
+coinciden con el nombre de cada archivo.
+
+  N°  fecha [imagen]   día  hojas  folios            ausentes  ppi
+   1  [15/10/1908]   jue    4    1-4                         150/300
+   2  [21/10/1908]   mié    4    5-8                         150
+   3  [24/10/1908]   sáb    4    9-12                        300
+   4  [28/10/1908]   mié    4    13-16                       300
+   5  [30/10/1908]   vie    6    17-22                       150
+   6  [ 4/11/1908]   mié    5    23-27             28        300
+   7  [ 7/11/1908]   sáb    7    29-35             36        300
+   8  [11/11/1908]   mié    9    37-45             46        300
+   9  [14/11/1908]   sáb    4    47-50                       300
+  10  [18/11/1908]   mié    7    51-57             58        300
+  11  [21/11/1908]   sáb    4    59-62                       300
+  12  [25/11/1908]   mié    4    63-66                       300
+  13  [28/11/1908]   sáb    4    67-70                       300
+  14  [ 2/12/1908]   mié    4    71-74                       300
+  15  [ 5/12/1908]   sáb    4    75-78                       300
+  16  [ 9/12/1908]   mié    4    79-82                       300
+  17  [12/12/1908]   sáb    4    83-86                       300
+  18  [16/12/1908]   mié    4    87-90                       300
+  19  [19/12/1908]   sáb    4    91-94                       300
+  20  [23/12/1908]   mié    4    95-98                       300
+  21  [26/12/1908]   sáb    5    99-102 (101 x2)             300
+  22  [30/12/1908]   mié    4    103-106                     300
+
+Paginación corrida (1908 corre dentro del año): el folio impreso se leyó en la
+imagen en las 81 hojas interiores de las 81 (franjas de cabecera a 55 ppp); las
+hojas 1 llevan la tapa y no imprimen folio. Faltan las páginas 28, 36, 46 y 58:
+son la última página par de las ediciones 6, 7, 8 y 10, que tienen 5, 7, 9 y 7
+hojas. Que estuvieran en blanco es INFERENCIA y no se afirma. El folio 101
+aparece dos veces en la N° 21 porque la misma página está escaneada dos veces
+(E.1): la edición tiene cuatro páginas, 99 a 102.
+
+Calendario: las 22 fechas se cotejaron con el día de la semana. Todas caen en
+miércoles o sábado salvo la N° 1 (jueves 15/10) y la N° 5 (viernes 30/10).
+Miércoles y sábados sin edición entre el 15/10 y el 30/12: el sábado 17/10 y el
+sábado 31/10. «feriado» y «asueto» no aparecen en ninguna versión de las 103
+hojas: el hueco no se explica. La numeración 1 a 22 es continua; ninguna edición
+doble (cada fecha tiene una sola edición).
+
+Techo de resolución: imagen incrustada medida en las 103 hojas. 92 hojas a 300
+ppi y 11 a 150 ppi (la hoja 1 de la N° 1, las cuatro de la N° 2 y las seis de la
+N° 5). Ninguna cifra de las fichas cae en hojas de 150 ppi.
+
+Confianza del OCR propio (pre-informe): media 77,4; pub 0, ver 82, ojos 21. Los
+umbrales no sirven para 1908 (§F). Tinta medida por la sesión a 150 ppp: una
+sola hoja bajo 5 %, la 1 h4 (4,16 %), que es una página corta y se miró entera;
+ninguna bajo 0,5 %.
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: prev (capa previa, del zip de textos) y prop (OCR propio de
+lee_auto.py, psm 3). Etiquetas prev, prop o prev+prop. Marca U+0002: 0 en las
+103 hojas. Guion blando U+00AD: 3.869 apariciones, todas seguidas de salto de
+renglón; se quitaron junto con el salto, y la unión pega también el guion común
+con hasta dos signos a cada lado. Prueba de la unión: «Calderhjá» de 22 h3 y
+«Calder a» de 10 h4 prop aparecen enteros en la búsqueda.
+
+Pasadas propias sobre la unión normalizada (NFD sin diacríticos), por versión:
+literal «cald»: 15 aciertos (7 en prev, 8 en prop) en 7 hojas (10 h4, 18 h4, 20
+h4, 21 h5, 22 h2, 22 h3, 22 h4). Laxa [gco][ao][l1i|][dcl][ec][rnm][ao]: nada
+fuera de las formas con «cald»; la pasada se probó con «galdera», «oalcera» y
+«caldero», que devuelve, de modo que el cero es «no hay nada». Laxa espaciada
+(separador [\s\-.,]{0,3} entre cada par de letras de «caldera»): una sola forma,
+«calder a» (10 h4 prop), que es A.1; probada con «c a l d\ne r a». Difusa a
+0,78: «calder» (10 h4 prop, A.1), «calderhja» (22 h3 prev, A.4) y «escalera» (21
+h1, apellido). Difusa ampliada 0,70-0,78 sobre palabras con c, g u o: 19 formas,
+todas palabras comunes (cabrera, cada, cadena, calidad, cámara, cardena,
+cortadera, cuadra, cualquiera, etc.): no rescató nada.
+
+Anillo 2 (1.165 términos del config): 30 términos con acierto en las dos
+versiones; los contextos de los 30 se leyeron uno por uno (E.7).
+
+Cotejo del anillo 2 contra la toponimia establecida (§5.1bis de v16), en tres
+líneas: faltan 0 de los términos nombrados por la rúbrica como faltantes
+(candelaria, estación f.c.c.n.a., mesada, el sauce, cañada ancha, la helvecia y
+getsemaní ya están); siguen en el anillo 2 los 10 apellidos (apaza, aramayo,
+condori, chaile, isasmendi, murúa, nogales, toconas, castellanos, burgos de
+yugra), que también están en actores; a revisar, los hidrónimos y topónimos de
+otros departamentos, que se conservan. La sesión no tuvo la lista completa de la
+toponimia establecida: el cotejo se hizo contra los nombres que trae la rúbrica,
+y así se declara.
+
+Anillo de actores: los 2.526 actores del config (todos los informes anteriores),
+buscados sobre el texto sin puntuación por nombre completo, por primer nombre y
+apellido, y por primer nombre, inicial y apellido: 71 combinaciones con acierto,
+todas leídas en contexto (sección B y E.7). Los actores de 1908 se buscaron
+además por apellido suelto. Dos búsquedas por nombre completo no devuelven su
+propio acto y se declaran como falla de la búsqueda, no como ausencia:
+«Escolástico Aparicio» en A.4 (la capa lee «escdlastico» y el OCR propio
+«escolastito»; lo devuelve el apellido) y «Nerberto Tarifa» en A.3 (las capas
+leen «nerbeito» y «erberto»; lo devuelve «tarifa» junto a «chuchuy»).
+
+Números arrastrados: no aplica; los decretos de 1908 no llevan número y
+decretos_1908.csv está vacío con razón. Las ausencias se afirman con dos
+identificadores: nombre y apellido, y apellido con el cargo o el lugar. Fórmulas
+de reemplazo: 2 aciertos del script (18 h4, nombramiento de Modesto Moreno en la
+Receptoría en reemplazo de Félix A. Saravia; 21 h1, «en reemplazo del rancho»);
+ninguna toca al departamento.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+Cinco apariciones en cinco actos: dos decretos de Hacienda del 12/11 (N° 10),
+una resolución judicial, un decreto de Gobierno y un edicto de minas (N° 22).
+Ningún acto se repite. Todas transcritas desde la imagen del PDF.
+
+A.1
+
+  FUENTE: N° 10 (miércoles 18/11/1908), hoja 4 (página 54), columna 1; el acto
+  empieza en la hoja 3 (página 53), columna 3. Versiones: prev y prop (prop
+  intercala renglones de la columna 2).
+  FICHA: Decreto del Ministerio de Hacienda, «Salta, Noviembre 12 de 1908», sin
+  número, que designa los «Jurados de Reclamos sobre parentes [sic] generales
+  para 1909» por departamento. Firmas al pie de la columna 2 de la hoja 4:
+  «LINARES / JOSÉ SARAVIA / Es copia:— Delfín Liquitay. / Of. 1º». Clase:
+  CARGOS.
+  MODO DE LECTURA: Imagen del PDF del Release a 250 ppp, recorte por el ancho de
+  la columna; encabezado del acto mirado en la columna 3 de la página 53 a 110
+  ppp. La capa sólo se usó para ubicar.
+
+  TEXTO
+    (encabezado, página 53, columna 3)
+    MINISTERIO
+    de
+    HACIENDA
+    Salta, Noviembre 12 de 1908
+    Habiéndose designado por decreto de
+    la fecha las comisiones clasificadoras de
+    patentes para 1909 en la capital y de-
+    partamentos de la campaña y, siendo
+    necesario constituir los jurados que de-
+    ben entender en los reclamos que se pre-
+    senten, de acuerdo con las disposiciones
+    pertinentes de la ley de la materia.
+    El Gobernador de la Provincia
+    DECRETA:
+    Quedan designados los Jurados de Re-
+    clamos sobre parentes generales para
+    1909 en la siguiente forma:
+    [...]
+    (página 54, columna 1, entre «Cerrillos» y «Campo Santo 1ª SECCION»)
+    Caldera
+    Titulares—Sres Adolfo - Vidal, Abe-
+    lardo Figueroa, Cárlos Murúa.
+    Suplente—Sr. Augusto Rejis.
+
+  NOTA DE LECTURA: «parentes» por «patentes» [sic], en el encabezado. La marca
+  tras «Adolfo» es un guion corto y se transcribe. El acto remite a «decreto de
+  la fecha» de las comisiones clasificadoras: es A.2, comprobado. Por el Art. 2º
+  (página 54, columna 2) los jurados de campaña terminan su cometido «el 31 de
+  Enero de 1909». RECUENTO PROPIO de la nómina: 25 jurisdicciones con rótulo
+  (Capital, Cafayate, San Carlos, Cachi, Guachipas, La Viña 1ª y 2ª Coronel
+  Moldes, Chicoana, Rosario de Lerma, Cerrillos, Caldera, Campo Santo 1ª y 2ª
+  Gral. Güemes, Rosario de la Frontera 1ª y 2ª, Metán 1ª y 2ª, Candelaria, Anta,
+  Orán, Rivadavia, Molinos, La Poma, Iruya, Santa Victoria). El acto no declara
+  número, de modo que no hay nada que cotejar. Para Caldera: tres titulares y un
+  suplente.
+
+A.2
+
+  FUENTE: N° 10 (18/11/1908), hoja 4 (página 54), columna 3; sigue en la hoja 5
+  (página 55). Versiones: prev y prop.
+  FICHA: Decreto del Ministerio de Hacienda, «Salta, Noviembre 12 de 1908», sin
+  número, que nombra los clasificadores de patentes generales para 1909. Firman
+  en la hoja 5 «LINARES / JOSÉ SARAVIA / Es copia— Delfín Liquitay / Oficial 1º»
+  (texto prev; la firma no se miró en esta sesión). Clase: CARGOS.
+  MODO DE LECTURA: Imagen del PDF a 250 ppp, recorte de la columna 3 entera
+  desde el encabezado hasta Campo Santo.
+
+  TEXTO
+    Ministerio de
+    Hacienda
+    Salta, Noviembre 12 de 1908.
+    Siendo oportuno proceder á la orga-
+    nización de las comisiones clasificadoras
+    de patentes generales para el año 1909
+    y, de acuerdo con lo dispuesto por el
+    art; 4º de la ley de la materia.
+    El Gobernador de la Provincia
+    DECRETA:
+    Art. 1.º Nómbranse los siguientes cla-
+    sificadores de patentes generales para
+    1909:
+    [...]
+    Rosario de Lerma—Sr. Amadeo de la
+    Cuesta.
+    Cerrillos—Sr. Serafin Mesones.
+    Caldera—Sr. Escolástico M. Aparicio.
+    Campo Santo—1ª sección—Sr. Electo
+    Mendilaharzu.
+
+  NOTA DE LECTURA: Los nombres de departamento van en cursiva. «art;» con punto
+  y coma, como en el original. RECUENTO PROPIO de la nómina del Art. 1º: 25
+  jurisdicciones (Capital, Cafayate, San Carlos, Molinos, Cachi, La Poma,
+  Guachipas, Viña 1ª, Viña 2ª-Coronel Moldes, Chicoana, Rosario de Lerma,
+  Cerrillos, Caldera, Campo Santo 1ª y 2ª, Metán 1ª y 2ª-Galpón, Rosario de la
+  Frontera 1ª y 2ª, Anta, Candelaria, Orán, Rivadavia, Iruya, Santa Victoria);
+  el acto no declara número. La misma persona es comisario de Caldera para 1909
+  en A.4.
+
+A.3
+
+  FUENTE: N° 22 (miércoles 30/12/1908), hoja 1 (página 103), columna 3, pie, y
+  hoja 2 (página 104), columna 1. Versiones: prev y prop.
+  FICHA: Resolución del «JUZGADO DEL DR BASSANI», «Salta, Diciembre 16 de 1908»,
+  en el juicio por cobro de pesos de don Juan Chuchuy contra don Nerberto Tarifa
+  y esposa: rechaza la excepción de incompetencia de jurisdicción. Firma «A.
+  BASSANI»; «Es copia» Zenon Arias, Secretario. Clase: JUSTICIA.
+  MODO DE LECTURA: Imagen del PDF a 200 ppp, columnas recortadas; el renglón
+  «dado el del lugar» releído a 400 ppp.
+
+  TEXTO
+    JUZGADO DEL DR BASSANI.
+    Salta, Diciembre 16 de 1908.
+    Y Vistos:—En este juicio por co-
+    bro de pesos seguido por don Juan
+    Chuchuy contra don Nerberto Tarifa
+    y esposa la escepción de incompeten-
+    cia de jurisdicción opuesta como ar-
+    tículo previo á fs. 12 y
+    CONSIDERANDO:
+    Que el artículo 4 del Codigo de Pro-
+    cedimientos en lo Civil y Comercial es-
+    tablece claramente que: El Juez com-
+    [hoja 2, columna 1]
+    petente cuando se ejercitan acciones
+    personales, es el del lugar convenido
+    para el cumplimiento de la obligación;
+    y á falta de esto á elección del de-
+    mandante, el del domicilio del deman-
+    dado el del lugar del contrato con tal
+    que el demandado se halle en él aun-
+    que sea accidentalmente. Ahora bien,
+    el documento de fs. 3 no tiene lugar
+    designado para su cumplimiento y es-
+    tá plenamente comprobado en autos,
+    que los demandados tienen su domi-
+    cilio fuera del Departamento de la ca-
+    pital de la Provincia, ver fs. 6 y 10,
+    consta igualmente que el actor está
+    domiciliado en el Departamento de la
+    Caldera, ver fs. 1 y 10.
+    En consecuencia siendo la cantidad
+    reclamada mayor de doscientos pesos,
+    de acuerdo con el artículo citado y lo
+    dispuesto en el artículo 22 Inciso 1º
+    de la Ley sobre organización y juris-
+    dicción de los tribunales, esta causa
+    es de competencia de este Juzgado y
+    nó, como lo sostiene el demandado de
+    el Juez de Paz Letrado, puesto que
+    este, segun el artículo 1º de la Ley
+    de su creación solo entiende en asun-
+    tos que se susciten entre vecinos de
+    la Capital.
+    Por todo lo expuesto y de acuerdo
+    con lo dispuesto en el artículo 1º del
+    Código de Procedimientos citado, re-
+    suelvo: Rechazar la mencionada es-
+    cepción declarando que esta causa es
+    de competencia de este Juzgado Sin
+    costas por no haber sido pedidas—Re-
+    póngase.—A. BASSANI.—Es copia—Ze-
+    non Arias, Secretario.
+
+  NOTA DE LECTURA: Corrige al informe del 20/09/2026: la imagen dice «del
+  domicilio del deman- / dado el del lugar del contrato», sin la «ó» que aquél
+  intercalaba. «Nerberto», «escepción» y «nó» como en el original. El domicilio
+  en Caldera es del actor; de los demandados sólo se dice que viven fuera del
+  departamento de la Capital.
+
+A.4
+
+  FUENTE: N° 22 (30/12/1908), hoja 3 (página 105), columna 3. Versiones: prev
+  («Calderhjá», roto) y prop («caldera»).
+  FICHA: Decreto del P. E., «Salta, Diciembre 23 de 1908» (fecha al pie), sin
+  número, que nombra los comisarios de policía de los departamentos y distritos
+  de campaña para 1909. Firman «LINARES: / SANTIAGO M. LÓPEZ.»; «Es ócpia— /
+  José M. Outes. / S. S.». Clase: CARGOS.
+  MODO DE LECTURA: Imagen del PDF a 200 ppp, columna recortada en tres tramos.
+  Los renglones 3 y 4 del preámbulo están desvaídos.
+
+  TEXTO
+    Siendo necesario proceder á la desig-
+    nación de las personas que deben de-
+    sempeñ[a]r las comis[a]rias de policía de los
+    depart[a]mentos y distritos de campaña en
+    el año próximo de 1909—
+    El P. E. de la Provincia
+    DECRETA:
+    Art. 1º Nómbrase comisarios de po-
+    licía de los departamentos y distritos de
+    campaña á los ciudadanos siguientes:
+    Caldera, á don Escolástico Aparicio;
+    Cerrillos, á don Serafin Messones; Mer-
+    ced, á don Emeterio Royo; Rosario de
+    Lerma, á don Adolfo Diez; Silleta, á
+    don Delfin Casas; Chicoana, á D. Daniel
+    Moreno; Chicoana departamental con re-
+    sidencia en el Carril á don Emilio Fi-
+    gueroa; Viña, á don Belisario Correa;
+    Coronel Moldes, á don Adam Villa; Gua-
+    chipas, á don Delfin Nuñez; Cachi, á don
+    Jacinto F. Córdoba; Poma, á don Gual-
+    berto Díaz; Molinos, á don Salustiano
+    Rodriguez; San Carlos, á don Estevan
+    Bácerque; Cafayate, á don Julio López;
+    Campo Santo, á don Manuel Garay; Güe-
+    mes, á don Horacio Apatié; Metán, á don
+    J. Adolfo Cajal; Galpón, á don Victor
+    Saravia; Anta, á don Rodolfo Matorras;
+    Rosario de la Frontera, á don Ricardo
+    J. Pérez; Candelaria, Guillermo W. Gar-
+    cía; Orán, á don Saturnino Saravia. Ri-
+    vadavia, á don Gabriel Puló; Iruya, á
+    don Tomás Vargas; Santa Victoria, á
+    don Carlos Echenique; Noques y Monta-
+    ña (capital) á don Rafael San-Millán.
+    Art. 2º Los comisarios nombrados to-
+    marán posesión de sus cargos recibiendo
+    de sus antecesores el archivo y demás
+    enseres de la comisaria, bajo de inven-
+    tario y propondrán por intermedio del
+    señor jefe de policía las personas que
+    deben desempeñar las comisarias de par-
+    tido en sus respectivos departamentos
+    y distritos durante el mismo año.
+    Art. 3º Dénsele las gracias á los comi-
+    sarios cesantes por los servicios que han
+    prestado á la Administración durante el
+    tiempo que han desempeñado dichos
+    puestos.
+    Art. 4º Comuníqueee, publíquese é in-
+    sértese en el Registro Oficial.
+    Salta, Diciembre 23 de 1908.
+    LINARES:
+    SANTIAGO M. LÓPEZ.
+    Es ócpia—
+    José M. Outes.
+    S. S.
+
+  NOTA DE LECTURA: Las letras entre corchetes del preámbulo están desvaídas en
+  la imagen y se leen con duda; el informe anterior las daba por ilegibles.
+  «Comuníqueee» y «ócpia» [sic]. «Candelaria, Guillermo W. García» sin «á don»,
+  como en el original. RECUENTO PROPIO del Art. 1º: 27 jurisdicciones (Caldera,
+  Cerrillos, Merced, Rosario de Lerma, Silleta, Chicoana, Chicoana departamental
+  con residencia en El Carril, Viña, Coronel Moldes, Guachipas, Cachi, Poma,
+  Molinos, San Carlos, Cafayate, Campo Santo, Güemes, Metán, Galpón, Anta,
+  Rosario de la Frontera, Candelaria, Orán, Rivadavia, Iruya, Santa Victoria,
+  Noques y Montaña). Ningún elemento de cuatro palabras o más es nombre pegado:
+  «Chicoana departamental con residencia en el Carril» y «Noques y Montaña
+  (capital)» son un solo destino cada uno por la puntuación del original. El
+  acto no declara número. Caldera abre la lista; sin «M.» en el nombre del
+  comisario, que en A.2 la lleva.
+
+A.5
+
+  FUENTE: N° 22 (30/12/1908), hoja 4 (página 106, última de la edición), columna
+  3. Versiones: prev y prop.
+  FICHA: Edicto de minas. Petición de cateo de Odorico Diaz, vecino de la
+  capital, por sí y por Emilio Fressart, vecino de la Silleta: cobre en «el
+  departamento de la Caldera, partido del Potrero de Castillo», cuatro unidades
+  de 500 ha. A despacho el 7/12; proveído del Ministerio de Hacienda «Salta,
+  Diciembre 1o de 19o8», firmado «Saravia»; edicto «Salta, Diciembre 14 de
+  19o8.—WALDINO RIARTE.—Escribano.»; aviso «315 v Dbre. 3o.» Clase: MINAS.
+  MODO DE LECTURA: Imagen del PDF a 200 ppp, columna recortada en dos tramos;
+  las cifras se miraron en el recorte.
+
+  TEXTO
+    A S. S el Señor Ministro de Hacienda
+    de la Provincia S. D.—El suscrito Odorico
+    Diaz, vecino de la capital en su nombre
+    y en el del señor Emilio. Fressart, vecino
+    de la Silleta, ante S. S., con el debido res-
+    peto expone: Que en el departamento de
+    la Caldera, partido del Potrero de Casti-
+    llo á encontrado señas evidentes de la
+    existencias de minerales de cobre, en el
+    punto A del croquis que acompaña, por lo
+    que solicita un permiso de cateo en la for-
+    ma indicada en los articulos 25 y siguien-
+    tes del Código de Minas.—Como los terre-
+    nos á que se refiere, no son labrados ni
+    cercados; solicito cuatro unidades de 5oo
+    hectareas cada una, las que situarán co-
+    mo sigue: Estando colocado sobre la sen
+    da de las Animas, á los 1oo metros al
+    Sud del paralelo del cerro Nevado puuto
+    to C del cropuis, medirán 5oo metros en
+    línea recta al Sud, hasta el punto D, en
+    seguida se medirán 4ooo metros al Este,
+    hasta el punto F, y formando rectágulo
+    sobre estas dos lineas, se tendrá una su-
+    perficie de 2ooo hectáreas, ó sean las cua-
+    tro unidades indicadas. Los dueños del
+    terreno son los señores Garzon y Pinto,
+    vecinos de Buenos Aires.—No hay ningun
+    otro cateo solicitado en la región.—Será
+    usticia ect.—Odorico Diaz.—Otro, si digo:
+    que señalo domicilio, á objeto de las noti-
+    ficasciones, la casa ubicada en la calle
+    Sarmiento núm 66, entre Caseros y Es-
+    paña.—Odorico Diaz.—A despacho el siete
+    de Diciembre de 19o8: conste Riarte.—Mi-
+    nisterio de Hacienda. Salta, Diciembre 1o
+    de 19o8.—Por presentada sin perjuicio de
+    anteriores solicitantes, anótese, publí-
+    quese y notifiquesé á los propietarios del
+    terreno, debiendo denunciarse el domici-
+    lio de los mismos, conforme lo dispone el
+    artículo 25 del Código de Minería.—Sara-
+    via.—Por el presente se notifica á los que
+    se crean con derecho á este pedimento,
+    para que se presenten á deducirlo durante
+    del término de ley.—Salta, Diciembre 14
+    de 19o8.—WALDINO RIARTE.—Escribano.
+    315 v Dbre. 3o.
+
+  NOTA DE LECTURA: Los ceros de la tipografía de cifras de este edicto tienen
+  forma de «o» y se transcriben así. Ortografía del original sin corregir («á
+  encontrado», «existencias», «puuto / to», «cropuis», «rectágulo», «usticia
+  ect.», «notifiquesé», «durante del término»). Corrige al informe del
+  20/09/2026: la imagen dice «noti- / ficasciones», no «ficacasiones». La cuenta
+  de la superficie no cierra (E.8). El croquis no se publica (§P). El edicto
+  vence «Dbre. 3o» y sólo aparece en la N° 22 (búsqueda de «odorico»,
+  «fressart», «garzon», «cobre», «cateo» y «315 v» en las dos versiones de las
+  103 hojas). Que la Silleta sea de Rosario de Lerma lo dicen 5 h4 y 11 h4; del
+  Potrero de Castillo sólo se sabe lo que dice este acto.
+
+§B · VECINDAD
+-------------
+B.1 · Núcleos ya fichados
+
+Ninguno de los núcleos fichados por los informes de otros años (Vaqueros,
+Mojotoro, Yacones, Lesser, San Alejo, Wierna como río, El Ceibal, Gallinato,
+Castellanos) aparece en 1908 como lugar del departamento.
+
+B.2 · Núcleos del departamento en actos que no nombran el término
+
+Ninguno. El único topónimo del departamento fuera de un acto con «Caldera» sería
+el Potrero de Castillo, y sólo aparece en A.5.
+
+B.3 · Términos que ese año son otra cosa
+
+Wierna (N° 5 h1, mirada entera): «don Bautista Wierna» en la sentencia del
+Superior Tribunal en el juicio reivindicatorio de Isauro Ruiz contra Jenoveva
+Arancibia, y un callejón que «conduce al Molino de Wierna y después al Rosario
+de Lerma». La sentencia no dice en qué departamento está el terreno: la
+pertenencia queda indeterminada (§5.1ter de v16). «Bautista Wierna» está en el
+config como actor de 1929 y 1932; no se afirma que sea la misma persona. Los
+demás términos con acierto son de otros departamentos o son apellidos: E.7.
+
+B.4 · Ausencias del anillo de actores
+
+Grupo 1, sólo en su propio acto: Adolfo Vidal, Abelardo Figueroa, Cárlos Murúa y
+Augusto Rejis (A.1); Juan Chuchuy y Nerberto Tarifa (A.3); Odorico Diaz, Emilio
+Fressart y «los señores Garzon y Pinto» (A.5). Homónimos de apellido o de nombre
+leídos en contexto y descartados: «Betbedert y Vidal», almacén (14 h2); Abelardo
+Quiroga, procesado (14 h2), y un procesado de nombre Abelardo (19 h4); Cesario
+Rejis, procesado por desacato (20 h3, mirado); Matías Chuchuy, propietario en
+Rosario de Lerma (7 h5, 8 h7); Odorico Medrano (5 h3). No se afirma relación con
+los actores de la sección A.
+
+Grupo 2, en más de un acto del departamento: Escolástico M. Aparicio,
+clasificador de patentes (A.2) y comisario de policía para 1909 (A.4). Otros
+Aparicio del año: Samuel y Julio C. Aparicio, jurados de Santa Victoria (10 h4);
+un Aparicio propietario en 20 h4. Es la única trama del año: el mismo vecino
+concentra la clasificación de patentes y la comisaría.
+
+Grupo 3, también fuera del departamento: ninguno.
+
+Actores de otros años con acierto en 1908 (71 combinaciones): son funcionarios y
+profesionales de la Capital (Zenón Arias, Julio Figueroa S., Juan Martín
+Leguizamón, M. Sanmillán, Augusto P. Matienzo, David Gudiño, Luis Linares,
+Abraham Cornejo, Carlos Serrey, Emilio Soliverez, Vicente Arquati, Juan
+Piatelli, Manuel Núñez de la Rosa), personas de otros departamentos (Gabriel
+Puló, Rivadavia; Victor M. Saravia, Galpón; Julio Cornejo, Campo Santo; José
+Manuel Fernández, Anta) y deudores de la Receptoría sin departamento (Juan
+Choque y Desiderio Ruiz, 19 h4 y 21 h5). Ninguno en un acto que toque a La
+Caldera.
+
+§C · LIMITROFES
+---------------
+Sólo junto a Caldera, en las mismas listas y sin ficha propia: Cerrillos (A.1,
+A.2, A.4), Campo Santo (A.1, A.2, A.4), Rosario de Lerma (A.1, A.2, A.4) y
+Silleta (A.4, como distrito con comisario propio; y como vecindad de Emilio
+Fressart en A.5). La Silleta figura en 5 h4 y 11 h4 como parte del departamento
+de Rosario de Lerma. El config no tiene anillo 3.
+
+§P · PLANOS
+-----------
+Ninguno publicado en las 103 hojas (las hojas son texto a tres columnas). Hojas
+que nombran «plano» o «croquis»: 21; de esas remisiones, una toca al
+departamento: el croquis del cateo de A.5, citado y no acompañado. Techo: 150 a
+300 ppi según la hoja (sección 1).
+
+§D · INDICE
+-----------
+  10  h4  CARGOS       A.1 Jurados de Reclamos de patentes 1909, Caldera,
+                       12/11/1908
+  10  h4  CARGOS       A.2 Clasificador de patentes 1909, Escolástico M.
+                       Aparicio, 12/11/1908
+  22  h1  JUSTICIA     A.3 Juzgado Dr. Bassani, actor Juan Chuchuy
+                       domiciliado en Caldera, 16/12/1908 (sigue en h2)
+  22  h3  CARGOS       A.4 Comisario de policía 1909, Escolástico Aparicio,
+                       23/12/1908
+  22  h4  MINAS        A.5 Cateo de cobre, Odorico Diaz y Emilio Fressart,
+                       Potrero de Castillo, 14/12/1908
+
+§E · OBSERVACIONES
+------------------
+E.1 · Duplicación y saldos
+
+Hoja duplicada: la N° 21 h3 y la N° 21 h4 son la misma página 101 escaneada dos
+veces. Miradas lado a lado en la imagen: mismo texto, mismas columnas, mismos
+cortes. md5 de las imágenes incrustadas distintos (son dos escaneos), dhash de
+256 bits a distancia 19, contra 51 del par siguiente más cercano del año.
+Corrige al informe del 20/09/2026, que comparó las dos capas previas (similitud
+0,03, porque la capa ordena distinto las columnas) y concluyó «contenido
+distinto»; y explica por qué el script dio 0 pares: su umbral es 16. Hojas
+distintas del año: 102.
+
+Saldos: el corpus de 1908 no publica balances de Tesorería ni municipales;
+«balance», «saldo» y «tesorería» aparecen sólo en sentencias y mensajes (11 h3,
+21 h2, 3 h4). No hay cadena que armar.
+
+E.2 · Cobertura
+
+Miradas en la imagen en esta sesión: hojas enteras o columnas enteras de 1 h4, 5
+h1, 10 h3 (columna 3), 10 h4, 20 h3, 21 h3, 21 h4, 22 h1 (columna 3), 22 h2
+(columna 1), 22 h3 (columna 3) y 22 h4 (columna 3): 11 hojas. Franjas: las 22
+cabeceras de tapa y los folios de las 81 hojas interiores. Las demás hojas se
+cubrieron por las cuatro pasadas sobre dos versiones; el informe del 20/09/2026
+había mirado a escala reducida las 21 hojas «ojos».
+
+Avisos cotejados por texto: el edicto de A.5 se buscó en las 103 hojas y sólo
+está en la N° 22; los actos de la sección A no se repiten.
+
+Citados y no acompañados: la «ley de la materia» de patentes, arts. 4º y 9º
+(A.1, A.2); la Ley sobre organización y jurisdicción de los tribunales y la ley
+de creación de la Justicia de Paz Letrada (A.3); el Código de Minería, art. 25
+(A.5); el croquis de A.5. Ninguno se publica en el corpus. Comisarios cesantes a
+los que A.4 da las gracias: el de Caldera no se nombra, y es un nombramiento que
+no consta en el corpus (el Boletín empieza el 15/10/1908).
+
+E.3 · Sin mención y no mirado
+
+Páginas ausentes: 28, 36, 46 y 58 (sección 1). La 20 h3, cuyas columnas 1 y 2
+tienen la impresión corrida y que el informe anterior dejaba como posible falso
+negativo, se miró entera a 120 y 140 ppp: se lee, son sentencias del Juzgado de
+Paz Letrado y de primera instancia, y no nombra a Caldera. Ese límite del
+informe anterior queda cerrado.
+
+E.4 · Firmas y autoridad
+
+La tapa no nombra al gobernador. Autoridad por firmantes, leída en la imagen:
+«LINARES» con «JOSÉ SARAVIA» (Hacienda) en 10 h4, y «LINARES:» con «SANTIAGO M.
+LÓPEZ.» (Gobierno) en 22 h3; el nombre entero, Luis Linares, en los mensajes a
+la Legislatura (9 h3, 11 h4, texto). Fórmulas de encabezado: «El Gobernador de
+la Provincia» (A.1, A.2) y «El P. E. de la Provincia» (A.4). «Es copia»: Delfín
+Liquitay, Of. 1º (Hacienda, imagen 10 h4); José M. Outes, S. S. (Gobierno,
+imagen 22 h3); Juan Martín Leguizamón, S. S. (imagen 22 h3, pie del acto
+anterior). Escribanía de Minas: Waldino Riarte (imagen 22 h4). Sin interinatos
+del gobernador ni de los ministros en lo leído.
+
+E.5 · Cortes y columnas
+
+A.3 pasa de la hoja 1 a la 2 («El Juez com- / petente») y se marca en la
+transcripción. Columna perdida: la capa previa corta donde corta el renglón
+impreso en las 7 columnas cotejadas con la imagen (10 h3 c3, 10 h4 c1 y c3, 22
+h1 c3, 22 h2 c1, 22 h3 c3, 22 h4 c3) más las columnas 1 y 2 de 20 h3: 9
+columnas. El OCR propio a psm 3 intercala columnas (10 h4: pone «Calder a» junto
+a los jurados de Molinos; 20 h4: fabrica «acald»). La unión es necesaria: en 22
+h3 la capa rompe la palabra y el OCR propio la lee.
+
+E.6 · Repeticiones
+
+Ley de creación del Boletín: en la hoja 1 de varias ediciones (mirada en la N°
+5). Dos avisos de la Receptoría General a deudores morosos de contribución
+territorial: el de la nómina que incluye a «Josefa S. de Alcalde», en N° 18 h4 y
+N° 21 h5; y el de la nómina que incluye a Juan Choque y Desiderio Ruiz («Dbre 16
+de 1908», aviso 370), en N° 19 h4 y N° 21 h5. Remate de la finca Cerro Negro del
+Tirao, Rosario de Lerma: N° 18 h4 y N° 22 h4. Edictos de minas de Patrón Costas
+y socios: N° 8 h3 a h6. Deslinde de la finca Las Juntas, Rosario de la Frontera:
+N° 5 h6, 6 h4, 7 h4 y 8 h8. Los actos de la sección A no se repiten. Las
+repeticiones se comprobaron por el texto, no por el número de aviso.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1, descartados tras leer el contexto en las dos versiones: «Josefa S. de
+Alcalde», apellido, aviso de la Receptoría (18 h4 y 21 h5; fp_conocido); «acald»
+de 20 h4 prop, basura del OCR propio entre columnas (la capa previa y el informe
+anterior, que miró la imagen, leen «estancia denominada "Santa Ana" en Anta»);
+«escalera» de 21 h1, difusa: Sinforoso Escalera, apellido.
+
+Anillo 2, los 30 términos con acierto, uno por uno: candelaria (departamento de
+La Candelaria en todas sus seis hojas); la silleta (Rosario de Lerma, 5 h4, 11
+h4; vecindad de Fressart en A.5); potrero de castillo y cerro nevado (A.5);
+wierna (B.3); manzano, lagunilla, san roque, los porongos, huaytiquina (cateos
+de Rosario de Lerma, 7 h5, 8 h7; y el Manzano de Escoipe, Chicoana, 17 h4);
+arroyo seco (del Palomar, finca Tres Cruces, Rosario de Lerma, 7 h4, 8 h7); el
+borde (lagunas del Toro, minas de Patrón Costas, 8 h3 a h5); isasmendi (Ricardo
+J. Isasmendi, socio de esas minas); betania (Partido de La Viña, Campo Santo, 13
+h1, 14 h2); la misión (Orán, 5 h5, 7 h7); ovejería (Metán, distrito Galpón, 12
+h4); la laguna y la sierra (Escoipe, Chicoana, 17 h4); la zanja (zanjas de dos
+litigios: el de B.3, 5 h1, y uno urbano, 5 h3); finca miraflores (17 h1, obreros
+del ferrocarril); avenida belgrano y parroquia (ciudad); aramayo, murúa, matos,
+los matos, luis linares (apellidos; «los matos» es «los autos» mal leído en 15
+h3; Murúa es el de A.1; Luis Linares es el gobernador, y «doctor Luis Linares»
+declara como testigo en sentencias de 3 h2, 5 h3 y 7 h3); el bordo (Orán, 19
+h4); angosto y dis con (ruido del OCR propio, 20 h3 y 6 h2). Ninguno es vecindad
+del departamento.
+
+Actores, números y reemplazos: sección B.4 y sección 2. Los 122 aciertos NUM del
+script son cifras sin acto (bases de remate, superficies) porque 1908 no numera
+decretos.
+
+Falsos negativos posibles: ninguno conocido. El único tramo que el informe
+anterior dejaba abierto (20 h3) se miró (E.3).
+
+E.8 · Fidelidad numérica
+
+A.5: 500 metros al Sud por 4.000 metros al Este dan 2.000.000 m², es decir 200
+ha; el edicto imprime «2ooo hectáreas, ó sean las cuatro unidades» (4 x 500 ha =
+2.000 ha). Cifras miradas en el recorte: la cuenta del rectángulo no cierra con
+la superficie declarada. No se corrige y no se elige.
+
+Remate de la finca Cerro Negro: «el dia 23 de Enero de 19o9» en el texto de 18
+h4 y 22 h4 (la capa lee «19og» y «19 g»); no se miró la cifra en la imagen y no
+se usa. Tablas: ninguna en el corpus; tablas recalculadas 0, no recalculadas 0.
+Cuentas recalculadas: 1 (A.5, no cierra).
+
+E.9 · Contradicciones
+
+«Serafin Mesones» (A.2) y «Serafin Messones» (A.4), Cerrillos; y «Escolástico M.
+Aparicio» (A.2) frente a «Escolástico Aparicio» (A.4). No se concilian.
+Numeración (regla 15): no aplicable, los decretos de 1908 no llevan número; el
+orden por fecha de los actos de la sección A es coherente con la paginación (A.1
+y A.2 en la página 54, de noviembre; A.3 a A.5 en las 103 a 106, de diciembre).
+Erratas del original, declaradas también en las notas: «parentes» (A.1),
+«Comuníqueee» y «ócpia» (A.4), «usticia ect.» y «ficasciones» (A.5).
+
+E.10 · Límites
+
+1. Las páginas 28, 36, 46 y 58 no están en el corpus; si existieron en blanco no
+se puede saber sin el Registro Oficial o la colección impresa.
+
+2. Fuera de las 11 hojas miradas y de las franjas, las ausencias se afirman
+sobre dos lecturas de texto de todas las hojas, no sobre la imagen.
+
+3. El cotejo del anillo 2 contra la toponimia establecida se hizo con los
+nombres que trae la rúbrica, no con una lista completa, que la sesión no tuvo.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 · dhash. La página duplicada de la N° 21 dio distancia 19 y el umbral de 16
+la dejó pasar; el par siguiente del año está a 51. Propuesta: umbral 24 para
+1908-1912, o declarar además el par más cercano de cada año con su distancia,
+que es lo que hizo visible el caso.
+
+F.2 · Similitud de texto entre hojas. Comparar capas previas para decidir si dos
+hojas son la misma engaña: la capa ordena las columnas de distinta manera en dos
+escaneos de la misma página. El control es la imagen, o el OCR propio, que en
+este caso sí dio los mismos primeros renglones.
+
+F.3 · Actor que no se devuelve en su propio acto. «Nerberto Tarifa» (capa
+«nerbeito») no está en el config. Se propone agregar ["nerberto","tarifa",1908]
+en la próxima entrega de config; este informe no entrega config para no mover
+version ni hasta por un solo actor.
+
+F.4 · Tapa de 1908. Formato «AÑO I / SALTA, <fecha> / NÚM. n» sin «EDICIÓN DE N
+PÁGINAS»; el pre-informe no lee ninguna tapa. Sigue pendiente en lee_auto.py
+leer este formato y el folio de cabecera de cada hoja.
+
+F.5 · Feriados. El pre-informe cuenta «feriado» en las N° 1, 15 y 18; la palabra
+no está en ninguna versión de las 103 hojas. El patrón del script debe
+revisarse.
+
+§R · RECUENTO
+-------------
+anio: 1908
+ediciones_desde: 1
+ediciones_hasta: 22
+ediciones_presentes: 22
+ediciones_ausentes: 0
+hojas_presentes: 103
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 4
+periodicidad: miercoles-sabado
+dias_salida_sin_edicion: 2
+ediciones_dobles: 0
+techo_ppi: 150
+ocr_en_sesion: no
+capa_previa: textos-del-release
+versiones: 2
+actos_departamento: 5
+actos_dominio: 0
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 0
+subtotales_recalculados: 0
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 9
+hojas_miradas: 11
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 3
+limites_declarados: 3
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 22
+avisos_release: 0
