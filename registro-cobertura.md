@@ -4600,3 +4600,130 @@ Tipo: **lecturas** (flujo v2 §5.6, palabra clave `LECTURAS`), sobre la hoja `du
 ### Notas
 
 Sin cambios respecto de la ronda 82: **nota 88,3**, cobertura acumulada **25.545 de 25.545 (100,0 %)**. Lecturas: 4; decididas por control y confirmadas: 2; decididas por Eduardo: 2; corregidas por el control: 0; abiertas: 0.
+
+## Ronda 84 — auditoría con fase 6 (09/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1908, 1990, 1992 y con los tres insumos de `auto/insumos-mejora/` del 9/10/2026 tratados como pendientes ya conocidos (§7.3). Base: commit `510c9dd` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1908, 1990, 1992, sobre `d87fbdc`; aplicado por `3-registrar` a las 19:05 del 09/10), con la fase 6 en `ronda-84.patch` (un commit sobre `510c9dd`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA: se audita trabajo propio, y las citas y cifras nuevas se volvieron a mirar en la imagen de las ediciones del Release.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 83 (25.545 de 25.545, sobre `d87fbdc`) se trasladaron por diff a `510c9dd`. **El AMPLÍA caduca 29 líneas y deja 38 nuevas o modificadas** (9 netas: 7 en A, 2 en F), en 15 archivos. Vigentes después del traslado: 25.516 de 25.554.
+
+### Lectura sobre el texto (numeración de `510c9dd`)
+
+Se leyeron **las 38 líneas, enteras** (137.595 bytes; casi todas son párrafos de una sola línea), contra los informes `BO-Salta-1908_1-22_la-caldera_LEE-1908_2026-10-08.txt`, `BO-Salta-1990_13346-13590_la-caldera_LEE-1990_2026-10-09.txt` y `BO-Salta-1992_13839-14084_la-caldera_LEE-1992_2026-10-09.txt` y, en las citas y las cifras, contra la imagen.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 9 |
+| ape/D-pedidos.tex | 1 |
+| ape/E-personas.tex | 2 |
+| ape/F-fuentes.tex | 10 |
+| cap/00-advertencia.tex | 1 |
+| cap/01-planteo.tex | 2 |
+| cap/02-metodo.tex | 3 |
+| cap/04-siglo.tex | 2 |
+| cap/05-tierra.tex | 1 |
+| cap/15-hacienda.tex | 1 |
+| cap/17-aguabaja.tex | 1 |
+| cap/17-tierrafiscal.tex | 1 |
+| cap/18-politica.tex | 1 |
+| cap/20-opacidad.tex | 2 |
+| cap/22-infraestructura.tex | 1 |
+
+Contexto releído entero (no suma cobertura): 22:545 (la serie del agua del pueblo, de 1914 a 2021), 17-aguabaja:281, 18:650–680 (la ficha de intendencias), 16:255–262, 23:160–186, D:333–340, A:327, A:733–736.
+
+**Esta ronda: 38 líneas nuevas**, 137.595 bytes sobre 3.378.526, que en las 1.029 páginas de la base equivalen a **41,9 páginas**.
+
+Acumulado: 25.516 vigentes + 38 = **25.554 de 25.554 (100,0 %)**. La fase 6 escribe 22 líneas y quita 16 (A +5, F +2, 23-plan −1, por unión de dos renglones): **25.560 de 25.560 (100,0 %)** después de ella; las 22 se leyeron enteras al escribirlas y al compilar.
+
+### Cotejo sobre el facsímil
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 22 (1908) | 4 | «en el departamento de la Caldera, partido del Potrero de Castillo» | Literal; el libro decía «de La Caldera»: hallazgo 1 del AMPLÍA, ya corregido en `510c9dd` |
+| 22 (1908) | 4 | «no son labrados ni cercados»; «Los dueños del terreno son los señores Garzon y Pinto, vecinos de Buenos Aires»; «2ooo hectáreas» | Literales |
+| 22 (1908) | 2 (p. 104) | «domiciliado en el Departamento de la Caldera» | Literal |
+| 13427 | 8 | Res. 101 D: A 304.722.722 «al mes de agosto de 1989», 270 días, «Licitación Pública Internacional» | Coincide |
+| 13460 | 10 | Res. 179-D del 4-6-90: presupuesto actualizado a enero de 1990 | Coincide |
+| 13415 | 6 | Aviso: A 799.409.589; apertura 9/5/90 | Coincide |
+| 13432 | 8 | Prórroga al 5 de junio de 1990 | Coincide |
+| 13554 | 5 | Decreto 2161: 9,40 l/s del 1109/58; desborde de 1978; 1,57 l/s; desde 1986; 15 ha | Coincide |
+| 13554 | 8 y 21 | Decreto 2172: contado o 10 % y hasta 24 cuotas; matrícula 1894, A 2.361.077 | Coincide |
+| 13558 | 69 y 132 | Concejal de la Municipalidad de La Caldera; «QUIPILDOR HORACIO MARTIN — MUNICIP. LA CALDERA — SEC. CONC. DELIBERANTE» | Coincide |
+| 14029 | 10 | Decreto 1342, «Salta, 7 de setiembre de 1992»; Res. 3729/91 y 3668/91 | Coincide |
+| 14065 | 7–8 | Decreto 1745: 70 %, CO.F.A.P. y S., cólera; rescisión (cl. 3.ª y 6.ª), contratación directa del 30 % (7.ª), seis meses desde el 3 de agosto (9.ª) | Coincide; el plazo, hallazgo 1 |
+| 14046 | 4 | Res. 234-D: \$258.188,20; concurso desierto del 1/7/1992; vía administrativa | Coincide |
+| 13839 | 8 | Catastro 2.037, 1,18 l/s; catastros 1.824 a 1.826, 0,63 l/s | Coincide |
+| 13572 | 10 | Decreto 2292: La Caldera A 37.817.589, Vaqueros A 45.476.660 | Coincide |
+| 5225 (1956) | 5 | Decreto de la obra 343: «DECRETO Nº 387[?]-E, SALTA, Agosto 3 de 1956»; el siguiente de la columna, «DECRETO Nº 3872-E», es de Villa Estela; edición del 16 de agosto; «Servicios de Aguas Corrientes en la Caldera» | El número lo decide la serie (§5.6): **3871-E**, como dice la escritura 7 de 1957. Hallazgo 3. La cita, literal |
+
+19 cotejos; 18 literales o coincidentes y 1 que corrige al libro.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 22:545 | «para terminarlo en seis meses», del convenio de noviembre de 1992 | 3 | «en seis meses contados desde el 3 de agosto, tres meses antes del acta» |
+| 2 | 15:185 | Las tres planillas de 1990 que no cierran, como si a todas las cerrara una lectura; lista de conceptos incompleta | 5 | Una sin el renglón de La Merced y dos con un renglón dudoso o sin explicar; «haberes, dietas, aguinaldos, diferencias y adicionales» |
+| 3 | A:327 | «8 ago. 1956* & Decreto 3872-E» | 3 | «3 ago. 1956* & Decreto 3871-E», con la edición (16/08/1956) y el control que decide el dígito |
+| 4 | 22:545 | La usina de 1957, «pagada con un subsidio y un préstamo provinciales» | 5 | «financiada con un subsidio y un préstamo provinciales que no alcanzaban»: el contrato de 1958 suma \$609.595,08 y pone el mayor costo a cargo de la Municipalidad (insumo del Archivo Histórico) |
+| 5 | 16:259 | «nadie solicitó que se calculara el Valor de Negocio del proyecto» | 5 | Acotada al 9/10/2026, con la declaración de que el pedido es del autor (insumo Naturgy) |
+| 6 | 16:261 | «La segunda consulta, a la distribuidora, sigue pendiente» | 5 | Presentada el 9/10/2026, trámite 45337, sin respuesta al cierre |
+| 7 | D:336 | Pedido a Naturgy formulado como pendiente de hacerse | 5 | Lo pendiente es la respuesta al trámite 45337; red cloacal y cobertura, pedidas a Aguas del Norte y al ENRESP |
+| 8 | 23:183 | «Pedir el cálculo que nadie pidió para el gas» | 5 | «Que el municipio pida el cálculo del gas», con el pedido individual del autor citado |
+
+Resta: en el aspecto 3, dos casos (1 y 3), 90. En el aspecto 5, una ausencia que caducó (5, frase, −5), dos textos desactualizados (6 y 7, −3 cada uno) y dos afirmaciones más allá del dato (2 y 4): **89**. El 8 es la misma ausencia en la propuesta y no resta aparte. Ningún error de consistencia en las 41,9 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los hallazgos 1 y 2, en el AMPLÍA 1908, 1990, 1992 (`510c9dd`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró el cotejo de la cláusula novena del acta en la imagen; el 2, la relectura de la nota del informe LEE 1990. Los hallazgos 3 a 8 son anteriores a esta sesión: el 3 y el 4 los señaló el insumo del Archivo Histórico y los decidió el cotejo; el 5 al 8 son caducidades por las gestiones del 9/10/2026.
+
+**Incorporaciones de la fase 6 (insumos del 9/10/2026).**
+- *Archivo Histórico de Salta* (`2026-10-09_archivo-historico-salta.md`, con su informe de lectura): la elección del 19/9/1915 y la denuncia de policías jujeños (fila nueva de la cronología, sin los nombres de los comisarios); el servicio de agua corriente de 1979, el convenio de enero de 1991, el sistema anunciado para mayo de 1993 y la planta de fluoración de abril de 1994 (22:545 y tres filas nuevas sin asterisco, porque son partes de prensa); plazo y material del convenio de defensas de 1985 (09:642); Mogro intendente en enero de 1991 y Quipildor en abril de 1994 (18 y su ficha); la fecha del 10.241-E (A:264); el contrato de la obra 343 (A:327) y el de la usina (22:545). El apéndice F suma la pieza con sus documentos y aclara que los partes anuncian y no prueban. **No se incorporaron**: la apertura del 20/12/1971 de la licitación D-5/71 (falta cotejar el aviso del Boletín de diciembre de 1971; P245), el pedido de 1975 de la Cámara Regional de la Producción, el acto de posesión de Lizondo de 1970, los demás datos de las escrituras de 1948 y 1949 y las láminas de 1972 (la respuesta del Archivo da la cita y los números de inventario, pero no dice «autorizamos» con todas las letras; P246).
+- *Naturgy, trámite 45337* (`2026-10-09_naturgy-tramite-45337.md`): 16:259 y 261, 23:183, D:336, fila del 9/10/2026 y apéndice F.
+- *Aguas del Norte y ENRESP* (`2026-10-09_pedidos-agua-cloacas.md`): 23:167, D:333, 336 y 340, la misma fila y el mismo ítem de F. No se citan la Ley 8173 ni el Decreto 35/26: su texto no se verificó. El testimonio del autor sobre su domicilio sin servicio no se usa.
+
+**Descartados (falsos positivos, 2).** «Es el primer año posterior a 1988 que este libro lee de corrido» (fila de 1990): el universo está declarado y es cierto. «Las entradas sin asterisco … posteriores … provienen de cobertura periodística o de partes oficiales» (A:4): las filas nuevas de 1991, 1993 y 1994 son partes oficiales y van sin asterisco, como pide el encabezado.
+
+**Pendientes revisados.** P18 avanza con el AMPLÍA (Figueroa y Chuchuy, 1908) y sigue abierto. P236 a P240, abiertos por el AMPLÍA, siguen abiertos; P238 (obra de agua potable 1990-1992) gana del Archivo el convenio de 1991 y el anuncio de 1993, y sigue abierto porque falta el acto de adjudicación y la recepción. Nuevos: P241 a P246.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.545/25.545 vigentes en `d87fbdc` | 25.516 vigentes; 29 caducas |
+| Citas entre comillas en las líneas nuevas del AMPLÍA contra la imagen | 6 cadenas | 6/6 literales |
+| Cifras de las líneas nuevas contra la imagen | 31 cifras en 15 ediciones | 31/31 |
+| Superlativos y ausencias en el texto agregado por el AMPLÍA y la fase 6 | 60 líneas; 7 coincidencias | Todas con universo; «ningún documento lo dice» se acotó a «ninguno de estos documentos» antes de compilar |
+| Menciones de cobertura (1989--2012, «noventa y seis», «cincuenta y cuatro») | 25.560/25.560 | Todas actualizadas por el AMPLÍA; el control encontró dos más (01:157 y 20:881) que el AMPLÍA ya había corregido |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos | 0 en capítulos; los del apéndice A remiten hacia atrás |
+| Privacidad: personas nombradas en las líneas nuevas | 60/60 | 0 caídas. Nombrados: funcionarios (gobernadores, intendentes, secretario del Concejo, ministros), una empresa contratista y personas de 1915. Sin nombre: el concejal de 1990, los adjudicatarios de 1990, los particulares de los avisos de agua y del remate de 1992, los comisarios jujeños de 1915 |
+| Compilación | base `510c9dd` y fase 6 | Compilan; 1.029 y 1.031 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+| `git am` del parche sobre un clon limpio de `510c9dd` | 1 parche | Aplica |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con edición y hoja, o con pieza y página del Archivo; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 1 y 3, aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 19 cotejos sobre 15 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 89 | 100 | Hallazgos 2 y 4 a 8, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Los partes van marcados como prensa oficial; la discrepancia «S.R.L.»/«S.A.» de Lucardi, señalada |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 41,9 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedidos actualizados; ninguno satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La serie del agua del pueblo gana tres puntos con fecha en el tramo 1989-2012, todos provinciales |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | La obra de agua potable de 1990-1993 reconstruida con dos fuentes |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | La propuesta del gas queda con su destinatario |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 86,4 antes del tope y 86,4 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 82.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) en el AMPLÍA, copiar los plazos con su fecha de inicio y describir los cuadros que no cierran por su causa: habría evitado los hallazgos 1 y 2; (5) cotejar el aviso de diciembre de 1971 (P245) y obtener la autorización expresa de las láminas de 1972 (P246).
+
+**Avance del libro:** 8 de 8 hallazgos resueltos; compila sin errores, 1.031 páginas. **Avance de la investigación:** la **segunda tesis** gana el tramo 1989-1994 de la serie del agua del pueblo: licitación de 1990, convenio de 1991 con un diez por ciento a cargo de la comunidad, litigio y rescisión de 1992 y sistema anunciado para 1993, todo de la Provincia, sin el municipio como parte en los actos. La **tercera** gana un hueco cubierto en parte: dos intendentes con fecha oficial en el tramo 1987-1999. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 38 líneas (0,15 %; 41,9 páginas). Cobertura acumulada: 25.560 de 25.560 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0 (y 1 superlativo atrapado por el control antes de compilar, en el texto de la fase 6).
