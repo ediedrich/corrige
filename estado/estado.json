@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-10T19:19:11",
+ "actualizado": "2026-10-10T19:34:15",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -6921,8 +6921,8 @@
     "complemento": null
    },
    "libro": {
-    "nivel": "puntual",
-    "incorporado": null,
+    "nivel": "barrido",
+    "incorporado": "3ea0009",
     "nota": "consulta puntual; sin PDF en el Release"
    }
   },
@@ -17056,9 +17056,39 @@
    "texto": "Llevar al lee_config.json la propuesta F.3 del informe LEE 1998 (anillo 2: getsemani, el cristo, estacion sanitaria la caldera, juana moro de lopez, villa delia lesser, colegio 5.045, colegio 5.050, escuela 4.078, fortin san cayetano, casa de la comunidad, finca severino, cabana la angostura, zona cabral, camping municipal, minas estrella del oeste, la milagrosa, la reconquista, juanita; falsos positivos y actores de origen 1998) y la F.2 (tabla de numeros viejos y nuevos de las escuelas del departamento). F.1: que el pre-informe liste las separatas anunciadas y si estan en el Release (falta la de la Ley 6968).",
    "abierto": "2026-10-10",
    "hecho": null
+  },
+  {
+   "id": "P259",
+   "tipo": "lee",
+   "anios": [
+    1999
+   ],
+   "texto": "1999 queda en barrido porque su informe LEE esta CON PENDIENTES (P1 1187 hojas a ojos; P2 listas de candidatos de 15633 y proclamacion de 15686 leidas por el OCR; P5 numero de la resolucion que adjudica el Colegio 5.050, fecha del Decreto 761, planillas de obras de las leyes 7.018 y 7.063 en la imagen pagina por pagina, cuyos 21 y 11 renglones son un minimo; P6 diferencias de los cuadros de ATN de los decretos 79 y 1.340; P8 104 hojas sin texto). Cerrarlo con LEE complemento para subirlo a imagen; hasta entonces el libro no afirma ausencias de 1999.",
+   "abierto": "2026-10-10",
+   "hecho": null
+  },
+  {
+   "id": "P260",
+   "tipo": "libro",
+   "anios": [
+    1999
+   ],
+   "texto": "Decidir si entran en sus capitulos (no solo en la cronologia): las quince manifestaciones de descubrimiento de cobre y oro de la serie Castellanos (B.O. 15607 h16-h22) y la cantera Mesa Redonda del rio Mojotoro (Expte. 14.971, 15667 h18), que el cap. 19 trata desde 2007 como renovacion; el remate de los inmuebles de La Calderilla S.A. por el Banco Provincial en liquidacion (15725 h18-h19), que cierra la serie de la constitucion de la sociedad; y los renglones de las planillas de obras de 1999 y 2000 (Leyes 7018 y 7063) para la serie de defensas del cap. 9. Para P257: en lo leido de 1999 no aparecen ni la ejecucion ni la recepcion de las obras de las Res. 373/98 y 586/98; aparece la emergencia de la zona Cabral adjudicada a DESA (Res. 263/99), y 1999 esta en barrido.",
+   "abierto": "2026-10-10",
+   "hecho": null
+  },
+  {
+   "id": "P261",
+   "tipo": "herramientas",
+   "anios": [
+    1999
+   ],
+   "texto": "Llevar a lee_auto.py y al config las propuestas del informe LEE 1999: F.1 detectar la orientacion (tesseract --psm 0) y rotar antes de ocrizar las hojas giradas de las planillas de presupuesto, y listarlas en el pre-informe; F.3 leer numero y fecha de tapa con la franja conmemorativa; F.4 reintentar las hojas que fallan por memoria y listar las que sigan sin texto; F.5 agregados al anillo 2, falsos positivos y actores de origen 1999.",
+   "abierto": "2026-10-10",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": false
+  "mejora_pendiente": true
  }
 }
