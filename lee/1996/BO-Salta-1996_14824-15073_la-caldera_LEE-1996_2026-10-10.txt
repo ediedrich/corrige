@@ -1,0 +1,1224 @@
+LEE v17 — 1996
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - 1996 - EDICIONES 14824 A 15073
+Barrido documental del departamento La Caldera
+Informe LEE del ano 1996 - rubrica LEE v16 con los cambios v17 del flujo
+editorial (corrige/flujo-editorial.md, version 2, 5) - 2026-10-10
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES. Siete pendientes nombrados (E.10, primera parte) y ocho
+limites declarados (E.10, segunda parte). Las 40 fichas del §A se miraron en la
+imagen en sus renglones decisivos (numero, fecha, cifra y el nombre del
+departamento); de algunas, el encabezado o el resto del texto se leyo por el OCR
+y se dice en cada ficha. El §B citado con numero se miro en la imagen. Queda
+pendiente control de corpus: el recorrido entero, renglon por renglon, de la
+columna de codigos de la planilla de obras de la Ley 6.826 (A.2), las 1192 hojas
+a ojos, la cadena de folios, los interinatos y el cotejo sumario/cuerpo; y una
+falta del insumo que la sesion suplio solo en parte: 821 hojas sin texto en el
+zip (§2).
+Sesion automatica (tarea programada del ciclo, sin nadie mirando). La sesion
+tomo el turno a las 11:38 (hora de la computadora) despues de que la maquina
+registrara el LEE 1995 sin rechazos (ultimo-registrar.txt, 11:34) y pidiera "LEE
+1996" en siguiente.json.
+Fuentes de la sesion, bajadas al tomar el turno: flujo-editorial.md,
+estado/estado.json, rubrica-lee-v16.md y config/lee_config.json del repositorio
+ediedrich/corrige (rama main; los tres primeros, identicos a los que uso el LEE
+1995 de esta misma sesion), y los informes LEE de 1994 y 1995 como referencia.
+Release 1996 de ediedrich/boletines-salta: inventario expanded_assets tomado
+desde la computadora de Eduardo: 256 assets, 250 PDF de edicion contiguos
+(14824.pdf a 15073.pdf) y seis insumos; ningun aviso de "no se encontro".
+Descargas directas desde la nube: los 250 PDF (520 MB, 7167 hojas, todos abren)
+y BO-Salta-1996_la-caldera_PRE-INFORME-LEE_2026-10-10.txt, decretos_1996.csv,
+lee_config.json, lee_textos_1996.zip, log.txt y resultados_1996.csv.zip.
+Llegaron todos.
+Pre-informe usado: el unico del Release, fechado 2026-10-10 (lee_auto.py,
+10/10/2026 02:24). decretos_1996.csv llego solo con el encabezado. Como en 1994
+y 1995, el pre-informe no da la fecha de ninguna tapa: las tapas se leyeron en
+la imagen (§1).
+lee_auto.py: el log trae dos corridas. La primera (9-10, 19:08) fallo en la
+extraccion por falta de espacio en disco ("No space left on device", seis
+errores desde 14868.pdf). La segunda (23:34) extrajo 250/250, declaro "capa
+previa util en 157/7167 hojas; se ocrizan 7010", pero "OCR de 6145 hojas": 865
+hojas no se ocrizaron en esa corrida. El zip de textos trae prop para 6145
+hojas; 821 hojas (las primeras 46 ediciones, 14824 a 14869, casi enteras)
+llegaron sin ningun texto. La sesion las ocrizo con tesseract eng (psm 3,
+200-250 ppp) y les corrio las cuatro pasadas y los toponimos (§2): de ahi salen
+A.1 a A.4.
+Config (5.2): config de corrige: version 2026-10-07, hasta 2026, 2526 actores,
+1165 terminos de anillo 2, 3629 numeros, 228 falsos positivos. Foto del Release:
+el mismo contenido (otro formato de archivo). Se usa el de corrige. La sesion no
+cambia el config: no se entrega lee_config.json.
+Entorno: 2 nucleos; PyMuPDF; tesseract solo con eng y osd.
+Imagenes: los 250 PDF del Release, rasterizados en la sesion. Las cifras se
+leyeron a 75-300 ppp sobre la imagen.
+Que verifico la sesion: las 250 tapas en la imagen (nueve mosaicos a 62 ppp
+sobre la franja de ano, fecha, paginas, gobernador y tirada); los renglones
+decisivos de las 40 fichas y los citados del §B; un reparto de Aportes del
+Tesoro recalculado entero (A.11) y otros dos cuadros recalculados (A.24, A.40);
+los renglones LCalde de la planilla de la Ley 6.826 hallados por la version
+propia; las cuatro pasadas sobre los textos del zip y sobre la version propia de
+las 821 hojas; el anillo 2 entero (135 terminos con acierto); el anillo de
+actores.
+Desvio de 8.17: transcripciones sin tildes ni enes (archivo ASCII, salvo los
+marcadores de seccion); [sic] en el texto; documentos, edades y nombres de
+particulares en avisos que el libro no necesita, omitidos.
+Que agregaria cada insumo que falto: el texto de las 821 hojas en el zip (o una
+corrida de lee_auto.py con disco suficiente) daria una version en castellano de
+las primeras 46 ediciones; decretos_1996.csv lleno daria la serie de decretos.
+
+§1 · CORPUS REVISADO
+--------------------
+250 ediciones, N 14824 (martes 2 de enero de 1996) a N 15073 (martes 31 de
+diciembre de 1996), numeracion consecutiva sin huecos; 7167 hojas en los PDF
+contra 7233 paginas declaradas en las tapas. Ano editorial leido en la imagen de
+las 250 tapas: "Ano LXXXVIII" de 14824 a 14977 (2-1 al 13-8) y "Ano LXXXIX"
+desde 14978 (14-8). "APARECE LOS DIAS HABILES" en todas. Gobernador: Dr. JUAN
+CARLOS ROMERO en las 250; Ministro de Gobierno (desde mediados de ano "de
+Gobierno y Justicia"): Dr. Miguel Angel Torino. Tirada declarada: 350 ejemplares
+en la mayoria de las tapas hasta octubre y 370 desde 15034 (4-11); cifras
+mayores en ediciones grandes o con leyes (400, 450, 600, 700); no se transcribe
+edicion por edicion.
+Techo de resolucion: el de las imagenes del Release (no se midio hoja por hoja
+este ano; las miradas, 300 ppi).
+Tabla: edicion, [fecha leida en la tapa], dia, hojas presentes/paginas
+declaradas, hojas "a ojos" del pre-informe (o), hojas con capa nativa de mas de
+200 caracteres (n) y hojas ocrizadas por la sesion porque el zip no traia texto
+(s).
+  14824 [02-01]  M   18/18  o0 n2 s16
+  14825 [03-01]  X   14/14  o0 n2 s12
+  14826 [04-01]  J   19/20  o0 n1 s18
+  14827 [05-01]  V   42/42  o0 n1 s41
+  14828 [08-01]  L    9/10  o0 n2 s7
+  14829 [09-01]  M    6/6   o0 n1 s5
+  14830 [10-01]  X   11/12  o0 n1 s10
+  14831 [11-01]  J   13/14  o0 n2 s11
+  14832 [12-01]  V   10/10  o0 n1 s9
+  14833 [15-01]  L   24/24  o0 n2 s22
+  14834 [16-01]  M   15/16  o0 n2 s13
+  14835 [17-01]  X    9/10  o0 n1 s8
+  14836 [18-01]  J   20/22  o0 n1 s19
+  14837 [19-01]  V   14/14  o0 n2 s12
+  14838 [22-01]  L   11/12  o0 n1 s10
+  14839 [23-01]  M   10/10  o0 n1 s9
+  14840 [24-01]  X    6/6   o0 n1 s5
+  14841 [25-01]  J   74/75  o0 n1 s73
+  14842 [26-01]  V   43/44  o0 n1 s42
+  14843 [29-01]  L   24/24  o0 n1 s23
+  14844 [30-01]  M    6/6   o0 n1 s5
+  14845 [31-01]  X   66/66  o0 n3 s63
+  14846 [01-02]  J    5/6   o0 n1 s4
+  14847 [02-02]  V   45/46  o0 n1 s44
+  14848 [05-02]  L   12/12  o0 n2 s10
+  14849 [06-02]  M   16/16  o0 n2 s14
+  14850 [07-02]  X   15/16  o0 n2 s13
+  14851 [08-02]  J   14/14  o0 n2 s12
+  14852 [09-02]  V   23/24  o0 n2 s21
+  14853 [12-02]  L   17/18  o0 n2 s15
+  14854 [13-02]  M   18/20  o0 n2 s16
+  14855 [14-02]  X   17/18  o0 n2 s15
+  14856 [15-02]  J   20/20  o0 n2 s18
+  14857 [16-02]  V   19/20  o0 n2 s17
+  14858 [19-02]  L   22/22  o0 n2 s20
+  14859 [21-02]  X   19/20  o0 n2 s17
+  14860 [22-02]  J   14/14  o0 n2 s12
+  14861 [23-02]  V   28/28  o0 n2 s26
+  14862 [26-02]  L   29/30  o0 n2 s27
+  14863 [27-02]  M   34/34  o0 n2 s32
+  14864 [28-02]  X   12/12  o0 n2 s10
+  14865 [29-02]  J   18/18  o0 n2 s16
+  14866 [01-03]  V   16/16  o0 n2 s14
+  14867 [04-03]  L   15/16  o0 n2 s13
+  14868 [05-03]  M   12/12  o0 n2
+  14869 [06-03]  X   88/90  o3 n2
+  14870 [07-03]  J   19/20  o0 n2
+  14871 [08-03]  V   24/24  o1 n3
+  14872 [11-03]  L   20/20  o1 n2
+  14873 [12-03]  M   18/18  o0 n2
+  14874 [13-03]  X   17/18  o0 n2
+  14875 [14-03]  J   29/30  o0 n2
+  14876 [15-03]  V   27/28  o0 n2
+  14877 [18-03]  L   22/22  o0 n2
+  14878 [19-03]  M   20/20  o0 n2
+  14879 [20-03]  X   35/36  o0 n2
+  14880 [21-03]  J   27/28  o0 n3
+  14881 [22-03]  V   28/28  o1 n3
+  14882 [25-03]  L   10/10  o1 n2
+  14883 [26-03]  M   10/10  o0 n2
+  14884 [27-03]  X   20/20  o0 n2
+  14885 [28-03]  J   24/24  o2 n2
+  14886 [29-03]  V   20/20  o0 n2
+  14887 [01-04]  L   19/20  o1 n2
+  14888 [02-04]  M   13/14  o1 n2
+  14889 [03-04]  X   32/32  o1 n3
+  14890 [08-04]  L   76/76  o0 n2
+  14891 [09-04]  M   68/68  o1 n3
+  14892 [10-04]  X   32/32  o3 n3
+  14893 [11-04]  J   18/18  o1 n2
+  14894 [12-04]  V   26/26  o0 n3
+  14895 [15-04]  L   12/12  o0 n2
+  14896 [16-04]  M   19/20  o0 n2
+  14897 [17-04]  X   18/18  o2 n2
+  14898 [18-04]  J   32/32  o1 n3
+  14899 [19-04]  V   23/24  o1 n3
+  14900 [22-04]  L   24/24  o1 n3
+  14901 [23-04]  M   25/26  o1 n2
+  14902 [24-04]  X   26/26  o1 n3
+  14903 [25-04]  J   34/34  o1 n2
+  14904 [26-04]  V   25/26  o2 n2
+  14905 [29-04]  L   30/30  o2 n2
+  14906 [30-04]  M   19/20  o2 n2
+  14907 [02-05]  J   38/38  o2 n4
+  14908 [03-05]  V   24/24  o0 n3
+  14909 [06-05]  L   26/26  o2 n3
+  14910 [07-05]  M   23/24  o2 n2
+  14911 [08-05]  X   23/24  o2 n3
+  14912 [09-05]  J   18/18  o1 n2
+  14913 [10-05]  V   35/36  o1 n2
+  14914 [13-05]  L   28/28  o2 n3
+  14915 [14-05]  M   67/68  o1 n2
+  14916 [15-05]  X   67/68  o33 n2
+  14917 [16-05]  J   27/28  o3 n2
+  14918 [17-05]  V   20/20  o1 n2
+  14919 [20-05]  L   48/48  o5 n2
+  14920 [21-05]  M   15/16  o1 n2
+  14921 [22-05]  X   21/22  o1 n2
+  14922 [23-05]  J   22/22  o2 n2
+  14923 [24-05]  V   23/24  o2 n2
+  14924 [27-05]  L   14/14  o1 n2
+  14925 [28-05]  M   22/22  o1 n2
+  14926 [29-05]  X   24/24  o2 n3
+  14927 [30-05]  J   18/18  o2 n2
+  14928 [31-05]  V   15/16  o1 n2
+  14929 [03-06]  L  641/644 o371 n2
+  14930 [04-06]  M   25/26  o1 n2
+  14931 [05-06]  X   24/24  o1 n2
+  14932 [06-06]  J   18/18  o2 n2
+  14933 [07-06]  V   15/16  o1 n2
+  14934 [11-06]  M    9/10  o1 n2
+  14935 [12-06]  X   21/22  o2 n2
+  14936 [13-06]  J   30/30  o1 n3
+  14937 [14-06]  V   24/24  o1 n3
+  14938 [18-06]  M   13/14  o0 n2
+  14939 [19-06]  X   16/16  o1 n2
+  14940 [20-06]  J   15/16  o1 n2
+  14941 [21-06]  V   16/16  o1 n2
+  14942 [24-06]  L   11/12  o1 n2
+  14943 [25-06]  M   21/22  o2 n1
+  14944 [26-06]  X   51/52  o22 n3
+  14945 [27-06]  J   60/60  o40 n2
+  14946 [28-06]  V   53/54  o34 n2
+  14947 [01-07]  L   32/32  o1 n2
+  14948 [02-07]  M   25/26  o4 n2
+  14949 [03-07]  X   22/22  o1 n2
+  14950 [04-07]  J   18/18  o1 n2
+  14951 [05-07]  V   25/26  o2 n2
+  14952 [08-07]  L   26/26  o0 n2
+  14953 [10-07]  X   42/44  o20 n2
+  14954 [11-07]  J   30/30  o1 n3
+  14955 [12-07]  V   14/14  o1 n2
+  14956 [15-07]  L    7/8   o1 n1
+  14957 [16-07]  M   10/10  o0 n2
+  14958 [17-07]  X    9/10  o1 n1
+  14959 [18-07]  J   17/18  o0 n2
+  14960 [19-07]  V   14/14  o0 n2
+  14961 [22-07]  L   50/50  o38 n1
+  14962 [23-07]  M   11/12  o1 n1
+  14963 [24-07]  X   18/18  o0 n2
+  14964 [25-07]  J   15/16  o0 n2
+  14965 [26-07]  V   26/26  o0 n1
+  14966 [29-07]  L   23/24  o1 n2
+  14967 [30-07]  M   12/12  o0 n2
+  14968 [31-07]  X   50/50  o41 n2
+  14969 [01-08]  J   14/14  o2 n2
+  14970 [02-08]  V   65/66  o55 n1
+  14971 [05-08]  L   20/20  o1 n2
+  14972 [06-08]  M   21/22  o0 n2
+  14973 [07-08]  X   57/58  o8 n2
+  14974 [08-08]  J   79/28  o6 n3
+  14975 [09-08]  V   53/54  o19 n2
+  14976 [12-08]  L   12/12  o0 n2
+  14977 [13-08]  M   19/20  o1 n2
+  14978 [14-08]  X   84/84  o50 n2 s1
+  14979 [15-08]  J   28/28  o1 n2
+  14980 [16-08]  V   57/58  o9 n3 s1
+  14981 [20-08]  M   51/52  o1 n3
+  14982 [21-08]  X   37/38  o0 n3
+  14983 [22-08]  J   33/34  o1 n3
+  14984 [23-08]  V   38/38  o0 n3
+  14985 [26-08]  L   34/34  o7 n3
+  14986 [27-08]  M   20/20  o0 n2
+  14987 [28-08]  X   16/16  o1 n2
+  14988 [29-08]  J   28/28  o5 n2
+  14989 [30-08]  V   25/26  o2 n2
+  14990 [02-09]  L   10/10  o1 n2
+  14991 [03-09]  M   16/16  o0 n2
+  14992 [04-09]  X   24/24  o2 n3
+  14993 [05-09]  J   17/18  o1 n2
+  14994 [06-09]  V   22/22  o2 n3
+  14995 [09-09]  L   21/22  o2 n2
+  14996 [10-09]  M   16/16  o1 n2
+  14997 [11-09]  X   27/28  o0 n3
+  14998 [12-09]  J   21/22  o2 n2
+  14999 [16-09]  L   10/10  o1 n2
+  15000 [17-09]  M   17/18  o2 n2
+  15001 [18-09]  X   24/24  o1 n2
+  15002 [19-09]  J   35/36  o2 n3
+  15003 [20-09]  V   37/38  o1 n3
+  15004 [23-09]  L   14/14  o1 n2
+  15005 [24-09]  M   15/16  o1 n2
+  15006 [25-09]  X   28/28  o2 n2
+  15007 [26-09]  J   13/14  o1 n2
+  15008 [27-09]  V   27/28  o5 n2
+  15009 [30-09]  L   28/28  o2 n2
+  15010 [01-10]  M   24/24  o1 n3
+  15011 [02-10]  X   60/60  o42 n2
+  15012 [03-10]  J   30/30  o1 n3
+  15013 [04-10]  V   13/14  o1 n2
+  15014 [07-10]  L   20/20  o2 n3
+  15015 [08-10]  M   15/16  o1 n2
+  15016 [09-10]  X   32/32  o6 n3
+  15017 [10-10]  J   28/28  o2 n3
+  15018 [11-10]  V   21/22  o2 n2
+  15019 [14-10]  L   30/28  o1 n3
+  15020 [15-10]  M   21/22  o1 n3
+  15021 [16-10]  X   35/36  o1 n3
+  15022 [17-10]  J   17/18  o2 n2
+  15023 [18-10]  V   16/16  o2 n2
+  15024 [21-10]  L   16/16  o1 n2
+  15025 [22-10]  M   17/18  o1 n2
+  15026 [23-10]  X   20/20  o1 n3
+  15027 [24-10]  J   29/30  o2 n3
+  15028 [25-10]  V   29/28  o1 n3
+  15029 [28-10]  L   32/32  o1 n3
+  15030 [29-10]  M   21/22  o2 n3
+  15031 [30-10]  X   35/36  o3 n4
+  15032 [31-10]  J   23/24  o1 n3
+  15033 [01-11]  V   26/26  o1 n3
+  15034 [04-11]  L   20/20  o2 n2
+  15035 [05-11]  M   20/20  o1 n3
+  15036 [06-11]  X   32/34  o11 n3
+  15037 [07-11]  J   32/32  o2 n3
+  15038 [08-11]  V   22/22  o2 n3
+  15039 [11-11]  L   15/16  o1 n2
+  15040 [12-11]  M   14/14  o1 n2
+  15041 [13-11]  X   29/30  o2 n3
+  15042 [14-11]  J   18/18  o2 n2
+  15043 [15-11]  V   36/38  o2 n3
+  15044 [18-11]  L   46/46  o3 n3
+  15045 [19-11]  M   34/34  o1 n3
+  15046 [20-11]  X   32/32  o1 n3
+  15047 [21-11]  J   26/26  o1 n3
+  15048 [22-11]  V   34/34  o6 n3
+  15049 [25-11]  L   34/34  o2 n3
+  15050 [26-11]  M   37/38  o9 n3
+  15051 [27-11]  X   50/50  o5 n3
+  15052 [28-11]  J   34/34  o1 n3
+  15053 [29-11]  V   31/32  o4 n3
+  15054 [02-12]  L   29/30  o4 n2
+  15055 [03-12]  M   25/26  o5 n2
+  15056 [04-12]  X   12/12  o1 n2
+  15057 [05-12]  J   30/30  o6 n3
+  15058 [06-12]  V   31/32  o7 n3
+  15059 [09-12]  L   26/26  o2 n2
+  15060 [10-12]  M   37/36  o13 n3
+  15061 [11-12]  X   16/16  o1 n2
+  15062 [12-12]  J   27/28  o1 n3
+  15063 [13-12]  V   33/34  o4 n3
+  15064 [16-12]  L   12/12  o1 n2
+  15065 [17-12]  M   27/28  o1 n2
+  15066 [18-12]  X   37/38  o1 n3
+  15067 [19-12]  J   25/26  o2 n2
+  15068 [23-12]  L   55/56  o21 n3
+  15069 [24-12]  M   44/44  o20 n3
+  15070 [26-12]  J   38/38  o17 n2
+  15071 [27-12]  V   55/56  o24 n2
+  15072 [30-12]  L   58/58  o26 n2
+  15073 [31-12]  M   21/22  o2 n2
+Diferencias hojas/paginas declaradas: 117 de 250 ediciones. En 113 la tapa
+declara mas paginas que las hojas presentes, 121 hojas en total, casi siempre
+una (la ultima); las mayores, con dos o tres de menos: 14929 (641/644), 14854,
+14869, 14953, 15036, 15043. En cuatro hay mas hojas que paginas: 14974 (79/28:
+h29-h79, separata con la reglamentacion del sistema de contrataciones, Ley
+6.838, Decreto 1.448/96 ordenado), 15019 (30/28), 15028 (29/28) y 15060 (37/36).
+Ediciones con mas de 50 hojas: 22; la mayor, 14929 (641 hojas: el Decreto 1.034
+de plantas del Ministerio de Salud, A.17).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa previa util en 157 hojas segun el log (552 con mas de 200
+caracteres) y OCR de lee_auto.py en 6145. Para las 821 hojas sin texto en el
+zip, version propia (tesseract eng). Union: U+00AD con el salto, guion de corte,
+U+0002 (0).
+Pasadas sobre los textos del zip: literal/normalizada "cald": 125 aciertos en 96
+hojas. Laxa [gc][ao][l1i|][dcl][ec][rnm][ao] sin "cald": 2 aciertos, ruido
+("argollera", 14946 h10; puntos guia de un sumario, 14981 h3). Espaciada: cero.
+Las dos probadas contra "la galdera", "c a l d e r a" y "c\nald era"
+(devuelven). Difusa >= 0,78: 8 formas, ninguna del departamento ("calera",
+"escalera", "cader", "calliera", "caera", "balderas", "cimaderilla",
+"valedera"). Difusa ampliada 0,70-0,78: 49 formas, ninguna del departamento.
+Pasadas sobre la version propia de las 821 hojas: literal 15 aciertos en 12
+hojas (de ahi A.1 a A.4 y los renglones de la planilla de A.2); laxa y
+espaciada: cero; difusa: "calera", "escalera", "alder", "caderias" (ninguna del
+departamento). Toponimos (Vaqueros, Lesser, Gallinato, Campo Alegre, Wierna,
+Yacones, San Cayetano, Luis Linares): 18 aciertos en 13 hojas, revisados.
+Pasada por codigo: la planilla de obras de la Ley 6.826 (14847 h30-h44, matriz
+de puntos) usa la clave "LCalde" (La Caldera). Ni la capa ni el OCR de
+lee_auto.py la leen (esas hojas estaban entre las 821 sin texto); la version
+propia la devuelve deformada ("iLlaldes", "sUtal", "iUCaldeso?"). Se volvieron a
+ocrizar en la sesion las hojas h33, h35, h37 y h38 a 300 ppp con coordenadas, y
+se miraron en la imagen los renglones hallados: doce renglones LCalde (A.2). La
+columna de codigos de las quince hojas no se recorrio renglon por renglon: P1.
+Anillo 2: 1165 terminos; 135 con aciertos; contextos leidos (B.3). Cotejo
+(5.1bis): (1) faltantes: "lcalde" (clave de la planilla 1996), "los sauces" con
+matricula 57, "chaguadero", "las moreras" (Vaqueros), "los nardos" (La Caldera),
+"complejo municipal de vaqueros", "colegio secundario n 44", "escuela de
+educacion tecnica n 49", "area operativa xxxix"; se proponen en F.3. (2)
+Apellidos del anillo: Mamani, Aramayo, Apaza, Chaile, Condori, Toconas, Yugra,
+Quipildor, Wierna, Lesser: en 1996 sus aciertos son personas, salvo Lesser en
+A.17 (Centro de Salud 23) y en los convenios de escuelas (A.24, B.2), y "R.
+Wierna" en A.2. (3) A revisar: "candelaria", "yolanda", "mesada", "san
+cayetano".
+Actores: los 2526 del config: 192 con algun acierto; los que caen en hojas con
+un termino del departamento, revisados (B.4).
+Numeros arrastrados y de los actos: matriculas, catastros, expedientes y O.P. de
+las fichas buscados en todo el corpus para reunir repeticiones.
+§A · MENCIONES EXPLICITAS
+-------------------------
+40 entradas. Avisos repetidos: A.13 (tres), A.14 (tres), A.18 (dos avisos del
+mismo remate), A.19 (tres), A.28 (dos), A.30 (tres), A.31 (dos), A.35 (tres).
+Total de actos que nombran el departamento: 40. Ordenadas por la primera edicion
+de cada acto. Fuera de cuenta: el camino a La Calera de Cordoba (difusa) y los
+apellidos (E.7).
+
+A.1 · Juez de Minas: vacancia de minas, entre ellas "La Milagrosa"...
+
+  FUENTE: 14824 h10-h11 [imagen del renglon de h11; encabezado por la version
+  propia]; e) 02/01/9[6]
+  FICHA: O.P. 3.725, el Juez de Minas (Dr. Daniel E. Marchetti) declara la
+  vacancia de minas (art. 274 del Codigo de Mineria, art. 10 Ley 24.498); una es
+  "La Milagrosa, cloruro de plata, La Caldera", Expte. 2.906.
+  MODO DE LECTURA: Imagen de h11 a 120 ppp (las tres columnas); el expediente
+  por el orden de la columna de la version propia.
+  TEXTO:
+  2.906   La Milagrosa   cloruro de plata   La Caldera
+  NOTA DE LECTURA: Hoja sin texto en el zip (§2). El pie del aviso dice "e)
+  02/01/95" en la version propia: no se corrige. Mina distinta de la de A.6.
+
+A.2 · Ley 6.826, Presupuesto 1996: planilla de obras (clave LCalde...
+
+  FUENTE: 14847 h25-h45; planilla de obras h30-h44 [imagen de los renglones
+  hallados, h33, h35, h37, h38]; Anexo II, fondo compensador, h45 [imagen]; ed.
+  del 2-2-96
+  FICHA: Ley 6.826, Presupuesto General 1996, en matriz de puntos: la planilla
+  "Presupuesto Obras Publicas Ejercicio 1996" trae renglones con la clave de
+  departamento "LCalde"; el Anexo II (ref. art. 29), "Fondo Compensador", trae
+  "30 LA CALDERA 0,012384646" y a Vaqueros (renglon 56).
+  MODO DE LECTURA: Version propia de las 821 hojas sin texto como guia; h33,
+  h35, h37 y h38 reocrizadas a 300 ppp con coordenadas y los renglones
+  recortados en la imagen al 55 %; h45 a 80 y 220 ppp.
+  TEXTO:
+  79 / 45 Tinglado y Arreglo Escuela la Caldera / LCalde / E / 54.0 ... 54.0
+  87 / 48 CARFM Puesto Salud N 22, Vaqueros / LCalde / S / 27.0 ... 27.0
+  157 / 11 Def. y encaus. R. La Caldera / LCalde 5 / A / 70
+  157 / 11 Def. y encaus. AO Chaile / LCalde 6 / A / 40
+  157 / 11 Def. y encaus. R. Las Nieves / LCalde 7 / A / 20
+  157 / 11 Def. y encaus. R. Wierna / LCalde 8 / A / 20
+  157 / 11 Def. y encaus. AO Urquiza / LCalde 9 / A / 20
+  157 / 11 Def. y encaus. AO Los Nogales / LCalde 10 / A / 70
+  209 / 45 Perf. Equi. pozo agua pot. en El Gallinato / LCalde / A / 18.0 ...
+  18.0
+  254 / 39 58 Viviendas Vaqueros / LCalde / V / VIVIE / 126.0 + 11.0 = 137.0
+  255 / 40 Nuevo Hogar, 15 Viviendas La Caldera / LCalde / V / VIVIE / 67.5 +
+  14.0 = 81.5
+  NOTA DE LECTURA: Miles de pesos. Controles aritmeticos: 126 + 11 = 137 y 67,5
+  + 14 = 81,5 cierran. El cero de esta impresora se confunde con el 8 (como en
+  1995): "70", "40", "20" y "58 Viviendas" no tienen control (hoja de dudas); el
+  58 de este renglon y el "60/80 Viviendas Vaqueros" de A.27 son la misma obra
+  con lectura distinta. El tinglado de la Escuela de La Caldera ya estaba en el
+  presupuesto 1995 (A.36 de 1995, 70 miles). Los renglones de defensas (157/11)
+  son subrenglones de un mismo item. La columna de codigos de las quince hojas
+  no se recorrio entera (P1). Fondo compensador: el 3 y el 8 de "0,012384646" no
+  se deciden. Promulgacion y fecha de la ley: no se leyeron (anexos sin
+  articulado en h25-h45).
+
+A.3 · Asociacion de Jubilados y Pensionados de Salta: elecciones; ...
+
+  FUENTE: 14851 h13 [imagen del renglon]; ed. del 8-2-96
+  FICHA: O.P. 3.913 F. 83.403, Asociacion de Jubilados y Pensionados de la
+  Provincia de Salta (delegados normalizadores, Res. 04/96 de Inspeccion de
+  Personas Juridicas): elecciones el 2-3-96; "SALTA (Capital) - Escuela Justo J.
+  de Urquiza: incluye electores de las localidades de Cerrillos, Vaqueros, San
+  Lorenzo, La Caldera, La Merced y zonas aledanas".
+  MODO DE LECTURA: Imagen del renglon a 120 ppp; el resto por la version propia.
+  NOTA DE LECTURA: Hoja sin texto en el zip.
+
+A.4 · Resolucion 26 (calendario escolar 1996): feriado municipal de...
+
+  FUENTE: 14852 h4-h11 [imagen del renglon de h11]; ed. del 9-2-96
+  FICHA: Resolucion N 26 (Educacion), calendario escolar y academico 1996; en
+  octubre: "22 Virgen del Rosario. Feriado Munic. La Caldera (Res. N 60/91)".
+  MODO DE LECTURA: Imagen del renglon a 120 ppp; encabezado por la version
+  propia.
+  NOTA DE LECTURA: Hoja sin texto en el zip. La cabecera de h11 lee "N 14.851,
+  pag. 405" en la version propia: no se resolvio si la hoja es de 14851 o de
+  14852 (P5). La Resolucion 60/91 que crea el feriado no esta en el corpus.
+
+A.5 · Liga Municipal de Futbol San Lorenzo - La Caldera: asamblea en...
+
+  FUENTE: 14871 h23 (sumario en h5) [imagen]; e) 08/03/96
+  FICHA: O.P. 4.258 F. 84.025: asamblea general ordinaria de la Liga Municipal
+  de Futbol San Lorenzo - La Caldera el 29-3-1996, 21 hs, "en local de Complejo
+  Municipal de Vaqueros".
+  MODO DE LECTURA: Imagen de h23 a 120 ppp.
+  NOTA DE LECTURA: En 1995 (A.8 de 1995) la asamblea fue en la Municipalidad de
+  Villa San Lorenzo.
+
+A.6 · Juez de Minas: vacancia de la mina "San Fernando", plomo, La C...
+
+  FUENTE: 14871 h11 [imagen]; ed. del 8-3-96
+  FICHA: Edicto de minas: vacancia (art. 274 Cod. Mineria, art. 10 Ley 24.498):
+  "100.711 San Fernando Plomo La Caldera" (las demas, Los Andes).
+  MODO DE LECTURA: Imagen a 120 ppp.
+  NOTA DE LECTURA: Distinta de "La Milagrosa" de A.1.
+
+A.7 · Del Plata S.R.L.: sede social en Vaqueros, departamento La Cal...
+
+  FUENTE: 14874 h13 [imagen]; ed. del 13-3-96
+  FICHA: Constitucion de Del Plata S.R.L. (instrumento del 2-10-95): sede social
+  "en calle Las Moreras sin numero de la localidad de Vaqueros, departamento La
+  Caldera de esta provincia de Salta"; duracion 50 anos.
+  MODO DE LECTURA: Imagen a 120 ppp. Socios particulares, no se transcriben.
+
+A.8 · Farmared S.R.L.: socio con domicilio en La Caldera
+
+  FUENTE: 14874 h15 [imagen]; ed. del 13-3-96
+  FICHA: O.P. 4.314, Farmared S.R.L.: un socio, contador publico, "con domicilio
+  en la calle Gral. Guemes s/N de La Caldera, Pcia. de Salta".
+  MODO DE LECTURA: Imagen a 120 ppp. Nombres no se transcriben.
+
+A.9 · Decreto (numero no leido), Educacion: ratifica las Resolucion...
+
+  FUENTE: 14889 h6-h10 [imagen de los renglones]; ed. del 3-4-96
+  FICHA: Decreto que ratifica las Resoluciones Ministeriales 53 y 111/96
+  (designaciones de personal docente de las Direcciones Generales de Educacion
+  Polimodal y Superior); anexo: "COLEGIO SECUNDARIO N 44 - LA CALDERA"
+  (secretaria), "ESCUELA DE EDUCACION TECNICA N 49 - VAQUEROS" (director),
+  "CENTRO N 3 - CASTANARES Y SUB-SEDE DE VAQUEROS" (preceptores).
+  MODO DE LECTURA: Imagen de los tres renglones a 120 ppp; el articulado por el
+  OCR (h6). Numero y fecha del decreto no leidos (P5).
+  NOTA DE LECTURA: Nombres no se transcriben.
+
+A.10 · Decreto 556 (20-3-96): tiene por Ley 6.828 el Decreto 57/95 (P...
+
+  FUENTE: 14890 h10-h12 [OCR del decreto; imagen del art. 4 del anexo en h12];
+  ed. del 8-4-96
+  FICHA: Decreto 556 (20-3-96), Secretaria General: el Decreto de Necesidad y
+  Urgencia 57/95, "Plan Regulador de la Ciudad de Salta", aprobado por el Senado
+  el 25-1-96 sin tramite en Diputados, se tiene por Ley de la Provincia N 6.828;
+  se republica el Decreto 57 con su anexo, cuyo art. 4 nombra los departamentos
+  de La Caldera, Cerrillos, Rosario de Lerma y General Guemes.
+  MODO DE LECTURA: Articulado por el OCR; el art. 4 del anexo, en la imagen de
+  h12.
+  NOTA DE LECTURA: Es la ficha A.37 de 1995, convertida en ley. ROMERO - Torino
+  - Catalano.
+
+A.11 · Decreto 715 (11-4-96), Aportes del Tesoro Nacional: La Calder...
+
+  FUENTE: 14898 h7-h8 [imagen, 80 y 140 ppp]; ed. del 18-4-96
+  FICHA: Decreto 715 (11-4-96): incorpora $ 750.000 de Aportes del Tesoro
+  Nacional (Res. 313/96 del Ministerio del Interior; art. 20 Ley 6.826 y art. 2
+  Ley 6.824) y los distribuye; "La Caldera $ 10.491" y "Vaqueros $ 12.912".
+  MODO DE LECTURA: Imagen de h7: la columna de municipios a 80 ppp y la de
+  importes a 140 ppp.
+  NOTA DE LECTURA: RECALCULO PROPIO: 58 renglones (57 municipios y "A Asignar $
+  40.000"); suma 750.000 = total impreso. Cierra. Primero de cuatro repartos con
+  la misma forma (A.11, A.12, A.26, A.33). ROMERO - Tanoni - Torino - Catalano.
+
+A.12 · Decreto 814 (24-4-96), Aportes del Tesoro Nacional: La Calder...
+
+  FUENTE: 14907 h10-h11 [imagen de los renglones]; ed. del 2-5-96
+  FICHA: Decreto 814 (24-4-96): $ 750.000 de Aportes del Tesoro Nacional (Res.
+  720/96); "La Caldera $ 10.491" y "Vaqueros $ 12.912".
+  MODO DE LECTURA: Imagen de los dos renglones a 120 ppp.
+  NOTA DE LECTURA: Suma no rehecha (F.2 de 1994): se miraron los renglones del
+  departamento y el total impreso.
+
+A.13 · Partido Frente Grande, Junta Electoral: internas; La Caldera...
+
+  FUENTE: 14908 h23-h24, 14909 h26, 14910 h23 [imagen de 14908 h24]; e) 03/05/96
+  FICHA: O.P. 4.673, Partido Frente Grande - Distrito Salta, Junta Electoral
+  (30-4-96), elecciones internas: los municipios de los departamentos de
+  Capital, Gral. Guemes, La Caldera, Chicoana, La Vina, Guachipas y Cerrillos
+  votan en las mesas de la ciudad de Salta.
+  MODO DE LECTURA: Imagen de 14908 h24 a 120 ppp; las otras dos apariciones por
+  el OCR.
+
+A.14 · AGAS, Licitacion Publica N 1: reacondicionamiento del azud de...
+
+  FUENTE: 14914 h21, 14915 h58, 14916 h21 [imagen de 14914 h21]; e) 13 y
+  14/05/96
+  FICHA: O.P. 4.840, AGAS, Licitacion Publica N 1: "Reacondicionamiento Azud de
+  toma Embalse Campo Alegre, Dpto. La Caldera - Pcia. de Salta", presupuesto
+  oficial $ 565.671,03, 180 dias, pliego $ 566, apertura 27-5-96.
+  MODO DE LECTURA: Imagen de 14914 h21 a 120 ppp.
+  NOTA DE LECTURA: El llamado sale el 13 y 14 de mayo, antes de que se publique
+  la Resolucion 82 D que aprueba la documentacion (A.16, edicion del 17-5; la
+  resolucion es del 14-5): E.9.
+
+A.15 · Decreto 923 (13-5-96), Hacienda: reestructura el Plan de Traba...
+
+  FUENTE: 14917 h14-h16 [imagen de h16]; ed. del 16-5-96
+  FICHA: Decreto 923 (13-5-96), Expte. 21-20.456/96: reestructura el Plan de
+  Trabajos Publicos 1996 (Ley 6.826); en AGAS rebaja "Desagues Pluviales B
+  Limache 1.383.000,00" e incorpora "Reacond. Azud de Toma Embalse Campo Alegre
+  - La Caldera 600.000,00", con el canal del rio Tartagal (600.000) y el rio
+  Bermejo (183.000).
+  MODO DE LECTURA: Imagen del cuadro de h16 a 120 ppp; articulado por el OCR.
+  NOTA DE LECTURA: 600.000 + 600.000 + 183.000 = 1.383.000. Cierra.
+
+A.16 · Resolucion 82 D (14-5-96), Obras y Servicios Publicos: aprueba...
+
+  FUENTE: 14918 h13 [imagen]; ed. del 17-5-96
+  FICHA: Resolucion 82 D (14-5-96), Expte. 34-179.958/96: aprueba la
+  documentacion de AGAS para "Reacondicionamiento Azud de Toma Embalse Campo
+  Alegre - Departamento La Caldera - provincia de Salta", $ 565.671,03, 180
+  dias, y autoriza la licitacion.
+  MODO DE LECTURA: Imagen a 120 ppp.
+
+A.17 · Decreto 1.034 (23-5-96), Salud Publica: estructuras y plantas...
+
+  FUENTE: 14929 h3 (sumario), h6, h90-h95, h641 [imagen de los renglones]; ed.
+  del 3-6-96
+  FICHA: Decreto 1.034 (23-5-96): estructuras organico-funcionales, plantas de
+  cargos y coberturas del Ministerio de Salud Publica; "Area Operativa XXXIX -
+  La Caldera": en el resumen de la Zona Sanitaria Centro, "XXXIX La Caldera 3
+  [funciones jerarquicas] 45 [cargos]"; anexos del Centro de Salud La Caldera
+  (organigrama con el Centro de Salud de Vaqueros), del Centro de Salud N 21 La
+  Caldera, del N 22 Vaqueros y del N 23 Lesser (un cargo, auxiliar de
+  enfermeria); cuadro por localidad de h641: "39 La Caldera 3".
+  MODO DE LECTURA: Imagen de los renglones a 100-120 ppp.
+  NOTA DE LECTURA: Las plantas de los centros 21 y 22 no se recontaron (P6). La
+  edicion entera tiene 641 hojas. Base de A.22 y A.29.
+
+A.18 · Remates (Edgardo N. Simkin): terreno en Vaqueros, Catastro 1020
+
+  FUENTE: O.P. 5.337: 14939 h10 [OCR]; O.P. 5.639: 14953 h13 [imagen]; e)
+  19/06/96 y 10/07/96
+  FICHA: "Un amplio terreno en la mejor zona de Vaqueros": Catastro N 1020,
+  Manz. 145, Secc. A, Parc. 8, Dpto. La Caldera Vaqueros, Plano 88 (D.G.I.),
+  calle Virgen del Valle s/N; primer remate 20-6-96 base U$S 29.640; segundo
+  10-7-96 base U$S 22.230 con reducciones hasta el valor fiscal, $ 1.960,80.
+  MODO DE LECTURA: Imagen de 14953 h13 a 120 ppp; el primer aviso por el OCR.
+  NOTA DE LECTURA: Juicio de ejecucion hipotecaria, Expte. B-76.185/95, Juzgado
+  C. y C. 5a.; demandados particulares.
+
+A.19 · Posesion veintenal: usucapion de un inmueble en Vaqueros (Mat...
+
+  FUENTE: 14943 h18, 14944 h28, 14946 h20 [imagen de 14943 h18]; e) 24 al
+  26/06/96
+  FICHA: O.P. 5.430 F. 86.863, Juzgado C. y C. 3a. (Dr. Luis Enrique Gutierrez):
+  "Castillo, Lidia; Castillo, Concepcion; Castillo, Inocencio y Castillo, Manuel
+  vs. Serrey, Manuel; Serrey de Gonzalez Bonorino, Elena; [...] Maria Celia
+  Serrey de Drable y Carlos Alejandro Serrey": usucapion de un inmueble "en el
+  pueblo de Vaqueros, departamento La Caldera", matriculas 397 - 1.252 - 1.253,
+  lotes 39 - XXI y XXII, 7 Has. 2.489,27 m2.
+  MODO DE LECTURA: Imagen del encabezado y de las matriculas a 110 ppp.
+  NOTA DE LECTURA: Los Serrey son actores del config (1991, 1994).
+
+A.20 · Remate (Gustavo A. Yapura Bellini): bienes que se exhiben en...
+
+  FUENTE: 14946 h10 [imagen del renglon]; ed. del 28-6-96
+  FICHA: O.P. 5.492 F. 86.959, judicial sin base del 28-6-96: entre otros,
+  bienes "que se exhiben en Avda. Gral. Guemes s/N de La Caldera" (cintas
+  transportadoras y otros).
+  MODO DE LECTURA: Imagen del renglon a 120 ppp.
+
+A.21 · Resolucion 130 D (15-7-96): adjudica el azud de Campo Alegre...
+
+  FUENTE: 14969 h6-h7 [imagen de h7]; ed. del 1-8-96
+  FICHA: Resolucion 130 D (15-7-96), Exptes. 34-179.958/95, 34-182.549/96 y
+  34-182.442/96: aprueba la licitacion del 3-6-96 de AGAS (Res. 82-D/96) para el
+  "Reacondicionamiento Azud de Toma Embalse Campo Alegre - Departamento La
+  Caldera - provincia de Salta" y adjudica a Ing. Alonso Crespo S.A. por $
+  450.436,45, 20,37 % menos que el oficial, 180 dias.
+  MODO DE LECTURA: Imagen de h7 a 120 ppp; adjudicacion y monto por el OCR.
+  NOTA DE LECTURA: Control: 565.671,03 x (1 - 0,2037) = 450.443, cerca de los
+  450.436,45 impresos (el porcentaje esta redondeado). Serie: 128 D y 129 D del
+  mismo dia.
+
+A.22 · Decreto 1.475 (24-7-96), Salud Publica: un cargo de chofer del...
+
+  FUENTE: 14975 h10-h11 [imagen del renglon de h11]; ed. del 9-8-96
+  FICHA: Decreto 1.475 (24-7-96): reinserta a dos agentes del Programa de
+  Reconversion (Ley 6.820) y asigna a uno el cargo vacante de chofer (secuencia
+  45, cargo 42) del "Area Operativa XXXIX - La Caldera" (Decreto 1.034/96).
+  MODO DE LECTURA: Imagen a 120 ppp; articulado por el OCR.
+
+A.23 · Decreto 1.487 (24-7-96): funciones de auditoria en la Zona Sa...
+
+  FUENTE: 14977 h5 [imagen del renglon]; ed. del 13-8-96
+  FICHA: Decreto 1.487 (24-7-96): entre las areas operativas de la Zona
+  Sanitaria Centro a auditar, "Area Operativa XXXIX - La Caldera".
+  MODO DE LECTURA: Imagen a 120 ppp.
+
+A.24 · Decreto 1.780 (1996): convenios de refaccion de escuelas con e...
+
+  FUENTE: 14988 h26 [imagen, 110 y 200 ppp]; ed. del 29-8-96
+  FICHA: Decreto 1.780, Anexo I hoja 4/4, "Reestructuracion Plan Trabajos
+  Publicos Ejercicio 1.996 - Ministerio de la Produccion y el Empleo - Programa
+  Refaccion y Mantenimiento Escuela Publica por Administracion Delegada - Obras
+  a ejecutar mediante convenios con municipios - Incorporar a: Departamento de
+  La Caldera - Municipio de Vaqueros".
+  MODO DE LECTURA: Imagen de la hoja a 110 ppp y del cuadro a 200 ppp.
+  TEXTO:
+  ESCUELA N 750 - Los Yacones                 Vaqueros  Vaqueros  Los Yacones  1
+  045.00
+  ESCUELA N 549 - Lesser                      Vaqueros  Vaqueros  Vaqueros     1
+  408.00
+  ESCUELA N 885 - Vaqueros                    Vaqueros  Vaqueros  Vaqueros     1
+  630.00
+  Colegio N 260 "San Cayetano" - Vaqueros     Vaqueros  Vaqueros  Vaqueros     1
+  188.00
+  ESCUELA N 137 " Baernabe Lopez" - Vaqueros  Vaqueros  Vaqueros  Vaqueros     1
+  346.00
+  TOTAL                                                                        6
+  617.00
+  NOTA DE LECTURA: RECALCULO PROPIO: 5 renglones, 6.617,00 = total. Cierra. La
+  columna "Dpto." dice Vaqueros [sic] bajo el titulo "Departamento de La
+  Caldera"; "Baernabe" [sic]. Los Yacones va con el municipio de Vaqueros (en
+  1995 su escuela votaba en el distrito de La Caldera): E.9. Los convenios los
+  aprueba el Decreto 1.917 (B.2).
+
+A.25 · D.E.S.A. Defensa y Encauzamiento S.A.: socio con domicilio en...
+
+  FUENTE: 14992 h20 [imagen del renglon]; ed. del 4-9-96
+  FICHA: O.P. 6.255 F. 88.282, constitucion de D.E.S.A. Defensa y Encauzamiento
+  S.A.: un socio, capataz de defensa, con domicilio en "Finca Gallinato, La
+  Caldera - Salta".
+  MODO DE LECTURA: Imagen a 110 ppp. Particulares.
+
+A.26 · Decreto 1.927 (11-9-96), Aportes del Tesoro Nacional: La Calde...
+
+  FUENTE: 15003 h11-h12 [imagen de los renglones]; ed. del 20-9-96
+  FICHA: Decreto 1.927 (11-9-96), Hacienda, Expte. 23-003/96: $ 750.000 de
+  Aportes del Tesoro Nacional (Res. 1.385/96); "La Caldera 10.491,00" y
+  "Vaqueros 12.912,00".
+  MODO DE LECTURA: Imagen de los renglones a 110 ppp.
+  NOTA DE LECTURA: Suma no rehecha.
+
+A.27 · Decreto 2.033 (30-9-96), Hacienda: modifica el Plan de Obras d...
+
+  FUENTE: 15012 h10 (decreto), h27-h30 (anexo) [imagen de los renglones]; ed.
+  del 3-10-96
+  FICHA: Decreto 2.033 (30-9-96), Expte. 136-1.085/96: modifica el Plan de Obras
+  Publicas del IPDUV; anexo hoja 1/4, "Rebajar de": "Nuevo Hogar, 15 Viviendas
+  La Caldera" (renglon 248); otras hojas: "60 Viviendas Vaqueros" (renglon 264)
+  y "Nuevo Hogar - Vaqueros" (30).
+  MODO DE LECTURA: Imagen de los tres renglones a 110 ppp; montos por el OCR.
+  NOTA DE LECTURA: "60" en la imagen, "80" en el OCR (6 y 8 confundibles); con
+  161.600 FONAVI segun el OCR; el renglon de "Nuevo Hogar - Vaqueros", 24.000 y
+  20 segun el OCR. La seccion (rebajar o incorporar) de los renglones de
+  Vaqueros no se leyo. Son las obras de los renglones 254 y 255 de A.2.
+
+A.28 · Banco de la Nacion Argentina, remate: inmueble rural de 1.986...
+
+  FUENTE: 15022 h10 [imagen], 15025 h17 (fe de erratas: debio publicarse tambien
+  el 21-10); e) 17 y 18/10/96
+  FICHA: O.P. 7.002 F. 89.350, Banco de la Nacion Argentina, judicial con base
+  (martillero Marcos M. Lopez): "Importante inmueble rural en el Dpto. La
+  Caldera, cercano a la ciudad de Salta, 1.986 Has.": remate 24-10-96; Juzgado
+  Federal N 1 (Dr. Abel Cornejo), "Banco de la Nacion Argentina vs. Rivas, Felix
+  - Ejecucion Hipotecaria - Expte. N 171/95"; Catastro 1685, remanente de lote
+  de la Finca "Chaguadero", Plano 178, Matricula de origen 82, 1.986 Has.
+  7.371,97 m2; base $ 70.293,00.
+  MODO DE LECTURA: Imagen de 15022 h10 a 110 ppp; base y caracteristicas por el
+  OCR.
+  NOTA DE LECTURA: Acceso por una huella al oeste del puente del rio Mojotoro;
+  el camino desde la RN 9 junto al puente del rio Wierna, destruido; unas 200
+  has. planas desmontadas (OCR).
+
+A.29 · Resolucion 231 D (14-10-96)?, Salud Publica: traslada a un pro...
+
+  FUENTE: 15023 h6-h7 [imagen del renglon]; ed. del 18-10-96
+  FICHA: Resolucion (231 D del 14-10-96, segun el encabezado mas cercano en el
+  OCR): traslada al Centro de Salud 51 de Barrio Limache al Dr. Fernando Antonio
+  Bosi, "profesional asistente del Area Operativa XXXIX, La Caldera", dedicacion
+  exclusiva.
+  MODO DE LECTURA: Imagen del renglon a 110 ppp; numero del acto por el OCR (no
+  confirmado: P5).
+
+A.30 · Remate (Federico W. Zelarayan): finca "Los Sauces", 2.939 has.
+
+  FUENTE: 15026 h11-h12 [imagen de h12], 15027 h22, 15028 h21; e) 21 al 25/10/96
+  FICHA: O.P. 7.100 F. 89.480: "Una Finca en Dpto. "La Caldera" 2.939 Has. c/40
+  Has. aprox. forestadas", remate 25-10-96, Juzgado C. y C. 6a., "Banco de
+  Credito Argentino vs. Kuhl, Claudio Alberto - Emb. Prev. - Ejecutivo -
+  B-37.879/93", base $ 58.523,98 (2/3 V.F.): Matricula 57 - Dpto. La Caldera
+  (05), Finca "Los Sauces", 2.939 Has. 8 a 54 ca. 3.550 m2.
+  MODO DE LECTURA: Imagen de 15026 h12 a 110 ppp; resto por el OCR.
+  TEXTO:
+  57 - Dpto. La Caldera (05) - Medidas: Finca "Los Sauces" Sup. 2.939 Has. 8 a
+  54 ca. 3.550 m2. Limites: N. Finca "Ru Blanca" situada en la provincia de
+  Jujuy - S. Finca San Alejo y Sta. Rufina y La Angostura - E. Finca Perico de
+  San Juan, separativa de la provincia de Jujuy [...]
+  NOTA DE LECTURA: A 43 km por el antiguo camino de tierra a Jujuy (RN 9); casa
+  de adobe con tejas; parte arrendada para pastaje (OCR). Tres apariciones; en
+  dos el titulo agrega "(50% indiviso)". Sigue en A.35.
+
+A.31 · Direccion General de Obras Sanitarias, Concurso de Precios 83...
+
+  FUENTE: 15034 h13 [imagen], 15035 h12; e) 04 y 05/11/96
+  FICHA: O.P. 7.306: DGOS, Concurso de Precios N 83: "Contratacion de 170 horas
+  maquina topadora D-7 para rio la Caldera y rio Las Nieves - Salta",
+  presupuesto $ 15.300,00, apertura 8-11-96.
+  MODO DE LECTURA: Imagen de 15034 h13 a 110 ppp.
+
+A.32 · Resolucion SO y SP 640 (29-10-96): proyecto de red colectora y...
+
+  FUENTE: 15037 h7 [imagen]; ed. del 7-11-96
+  FICHA: Resolucion SO y SP 640 (29-10-96), Expte. 37-125.234/96: aprueba la
+  documentacion de la DGOS para contratar consultoras o expertos para el
+  proyecto "Red Colectora Maxima y Planta Depuradora en La Caldera -
+  departamento La Caldera - provincia de Salta", $ 35.000,00, 120 dias.
+  MODO DE LECTURA: Imagen a 110 ppp; plazo por el OCR.
+  NOTA DE LECTURA: Serie de la hoja: 637 (28-10), 638 y 639 (29-10, la de El
+  Carril), 640.
+
+A.33 · Decreto 2.207 (6-11-96), Aportes del Tesoro Nacional: La Calde...
+
+  FUENTE: 15041 h11-h13 [imagen de los renglones]; ed. del 13-11-96
+  FICHA: Decreto 2.207 (6-11-96): $ 750.000 de Aportes del Tesoro Nacional (Res.
+  1.970/96); "La Caldera 10.491,00", "Vaqueros 12.912,00", "A distribuir por el
+  Sr. Gobernador 50.000,00".
+  MODO DE LECTURA: Imagen de los renglones a 110 ppp.
+  NOTA DE LECTURA: Suma no rehecha. En la misma hoja, el Decreto 2.205 da ATN a
+  la Fundacion Eva Peron (Res. 907/96, sin municipios).
+
+A.34 · Decreto 2.249 (6-11-96): control medico de ausentismo en el ra...
+
+  FUENTE: 15044 h8-h9 [imagen del renglon]; ed. del 18-11-96
+  FICHA: Decreto 2.249 (6-11-96), Secretaria General: privatizacion del servicio
+  de medicina laboral para el control de ausentismo de la Administracion
+  Central; ambito: organismos "dentro del radio comprendido por los Municipios
+  de Capital, San Lorenzo, Cerrillos, vaqueros y La Caldera".
+  MODO DE LECTURA: Imagen del renglon a 110 ppp. ROMERO - Paesani - Catalano.
+
+A.35 · Remate (Alberto O. Lopez): 50 % indiviso de la finca "Los Sau...
+
+  FUENTE: 15049 h26 [imagen del encabezado], 15050 h25, 15051 h37; e) 25 al
+  27/11/96
+  FICHA: O.P. 7.685 F. 90.352: "Judicial con base - 50% indiviso - Hermosa finca
+  en Dpto. La Caldera - 2.939 Has. con plantaciones de pinos (100 Has. aprox.)":
+  remate 27-11-96, Juzgado del Trabajo N 5, juicios contra Papelera Salta S.R.L.
+  y/o Kuhl, Claudio Alberto (A-08.291/94 y A-11.827/96); base $ 29.261,99 (50 %
+  de las 2/3 del valor fiscal); Matricula 57, Dpto. La Caldera (05), Fca. "Los
+  Sauces", 2.939 Has. 8 A. 54 Ca. 3.550 m2.
+  MODO DE LECTURA: Imagen del encabezado a 110 ppp; resto por el OCR.
+  NOTA DE LECTURA: Control: 58.523,98 / 2 = 29.261,99: cierra con la base de
+  A.30. La forestacion: "c/40 Has. aprox. forestadas" en A.30 y "plantaciones de
+  pinos (100 Has. aprox.)" aqui (E.9). Empleados que residen en la sala,
+  nombrados, no se transcriben.
+
+A.36 · Decreto 2.552 (1996), Salud Publica: distribucion de equipami...
+
+  FUENTE: 15057 h28-h30 [imagen de la columna de h30, 170 ppp]; ed. del 5-12-96
+  FICHA: Decreto 2.552, anexo de distribucion de equipamiento por hospital y
+  centro de salud (montaje, capacitacion, preinstalacion, deposito): columna "LA
+  CALDERA - CENTRO DE SALUD", total 1.
+  MODO DE LECTURA: Cuadro girado; la columna del departamento a 170 ppp.
+  NOTA DE LECTURA: Fecha del decreto y renglones por item no leidos (P5).
+
+A.37 · Resolucion SO y SP (numero no leido): adjudica una obra a una...
+
+  FUENTE: 15062 h13-h14 [imagen del renglon]; ed. del 12-12-96
+  FICHA: Resolucion de la Secretaria de Obras y Servicios Publicos: concurso
+  para la "Construccion Centro de Salud N 53 - Villa Cristina - Salta - Capital"
+  ($ 4.612,81, Res. 819/96); adjudica a la Empresa Juan Carlos Orosco, "con
+  domicilio en calle Los Nardos s/N - La Caldera - Salta", por $ 4.382,17 (5 %
+  menos).
+  MODO DE LECTURA: Imagen del renglon a 110 ppp; resto por el OCR.
+  NOTA DE LECTURA: Control: 4.612,81 x 0,95 = 4.382,17. Cierra.
+
+A.38 · Resolucion SO y SP 998 (6-12-96): refaccion y ampliacion de la...
+
+  FUENTE: 15063 h11 [imagen]; ed. del 13-12-96
+  FICHA: Resolucion SO y SP 998 (6-12-96), Expte. C. 140 - N 00394/96: aprueba
+  el legajo "confeccionado por la Municipalidad de La Caldera" con el Programa
+  de Educacion y de Salud para "Refaccion y Ampliacion Escuela N 136 J. M. Lopez
+  - La Caldera", $ 60.004,29, y la adjudica en forma directa a la Municipalidad
+  de La Caldera, 150 dias.
+  MODO DE LECTURA: Imagen del encabezado y del articulo 1 a 110 ppp; articulo 2
+  por el OCR.
+  NOTA DE LECTURA: Es la escuela del tinglado de A.2 (y de 1995).
+
+A.39 · Remate (Juana Rosa C. de Molina): lote de terreno en La Caldera
+
+  FUENTE: 15065 h22 [imagen del encabezado]; e) 17/12/96
+  FICHA: O.P. 8.047 F. 90.950, judicial base $ 117,14 (2/3 V.F.): "Lote de
+  terreno en La Caldera", remate 18-12-96, Juzgado C. y C. 3a.; Mat. 875, Secc.
+  B, Manz. 64, Parc. 9 del Dpto. La Caldera, Plano 92, 450 m2, baldio en esquina
+  "a siete cuadras de la plaza princip. hacia el sur de la loc. de La Caldera".
+  MODO DE LECTURA: Imagen del encabezado y las primeras lineas a 110 ppp;
+  matricula y ubicacion por el OCR.
+  NOTA DE LECTURA: Juana Rosa C. de Molina remato tambien en La Caldera en 1994
+  (A.23 y A.27 de 1994).
+
+A.40 · Decreto 2.693 (16-12-96), Hacienda: Fondo Compensador de la Le...
+
+  FUENTE: 15071 h25-h27 [imagen de h26 a 80 ppp y de h27, girada, a 90 ppp]; ed.
+  del 27-12-96
+  FICHA: Decreto 2.693 (16-12-96): distribuye el Fondo Compensador de la Ley
+  6.438 (regalias) entre municipios de departamentos no productores de
+  hidrocarburos; "23 La Caldera $ 10.000.- 0,0200" y "39 Vaqueros $ 12.000.-
+  0,0240"; Remanente $ 109.000 (0,218); TOTAL $ 500.000 (1,00).
+  MODO DE LECTURA: Imagen de las dos hojas del anexo.
+  NOTA DE LECTURA: RECALCULO PROPIO: 39 renglones = 391.000; + 109.000 =
+  500.000. Cierra; cada porcentaje es el monto sobre 500.000. El OCR lee
+  "0,0204" en La Caldera.
+§B · VECINDAD
+-------------
+
+B.1 · Nucleos ya fichados
+
+Vaqueros, municipio separado de La Caldera en los cuatro repartos de Aportes del
+Tesoro Nacional (A.11, A.12, A.26, A.33), en el Fondo Compensador de la Ley
+6.826 (A.2) y en el de la Ley 6.438 (A.40), en el radio del control de
+ausentismo (A.34) y en los convenios de escuelas (A.24). Pueblo de Vaqueros: Del
+Plata S.R.L. (A.7), terreno del Catastro 1020 (A.18), usucapion de las
+matriculas 397, 1.252 y 1.253 (A.19), Liga de Futbol (A.5), EET 49 y sub-sede
+del Centro 3 (A.9), Centro de Salud 22 (A.2, A.17), viviendas IPDUV (A.2, A.27).
+La Caldera, localidad: Colegio Secundario 44 (A.9), Escuela 136 (A.2, A.38),
+Centro de Salud 21 y Area Operativa XXXIX (A.17, A.22, A.23, A.29, A.36), red
+colectora y planta depuradora (A.32), feriado de la Virgen del Rosario (A.4),
+domicilios de A.8, A.20 y A.37, lote de A.39, municipalidad como contratista de
+su escuela (A.38). Lesser: Centro de Salud 23 (A.17) y Escuela 549 (A.24). El
+Gallinato: pozo de agua (A.2) y domicilio de A.25. Dique y embalse Campo Alegre:
+azud (A.14, A.15, A.16, A.21). Rio La Caldera: defensas (A.2) y topadora (A.31);
+rio Wierna, arroyos Chaile, Urquiza y Los Nogales y rio Las Nieves con clave
+LCalde (A.2). Fincas Los Sauces (A.30, A.35) y Chaguadero (A.28). Minas San
+Fernando y La Milagrosa (A.1, A.6).
+
+B.2 · Nucleos del departamento en actos que no nombran el termino
+
+Mirados en la imagen.
+  14955 h14 (sumario en h4; e) 12/07/96): O.P. 5.675 F. 87.258, "Centro de
+  Usuarios del Servicio de Agua Potable y otros Servicios Publicos de la Loc. de
+  Vaqueros - Salta": asamblea general ordinaria el 14-8-96 en Avda. San Martin
+  s/N.
+  14983 h32: O.P. 6.086, Pacara S.R.L. (contrato del 6-5-96): un socio
+  comerciante domiciliado en "calle Gauchos S/N Vaqueros". Particulares.
+  15003 h3, h7-h8 (ed. del 20-9-96): Decreto 1.917 (11-9-96), Educacion: aprueba
+  los convenios de obra publica por administracion delegada con la Municipalidad
+  de Vaqueros: Anexo I Escuela 750 Los Yacones, II Escuela 549 Lesser, III
+  Escuela 885 Vaqueros, IV Colegio 260 "San Cayetano" Vaqueros, V Escuela 137
+  "Bernabe Lopez" Vaqueros (art. 6, imagen); la erogacion, segun el Decreto
+  1.780/96 (A.24).
+  15034 h15 (e) 31/10 al 04/11/96): remate del 4-11-96 con las 2/3 del V.F. $
+  1.225,50 de "un terreno en Vaqueros, Catastro N 1.202, manzana 85, seccion A,
+  parcela 14", baldio de 50 x 50 m (OCR); Juzgado C. y C. 3a.
+  15037 h31 (sumario en h5): O.P. 7.358 F. 89.910, Club Social y Deportivo
+  Vaqueros: asamblea general ordinaria en su sede de Avda. Costanera s/N,
+  Vaqueros.
+  15043 h11: Decreto 2.234 (noviembre de 1996), Secretaria General, Expte.
+  91-6.841/96: declara de interes provincial el "1er. Festival Folclorico -
+  Vaqueros a Lonja y Guitarra", 15 al 17 de noviembre, a pedido de la Camara de
+  Diputados.
+  15045 h18: decreto en acuerdo general de ministros: designa desde el 1-8-96 a
+  la jefa de la "Division Guarderia "San Cayetano" - Vaqueros" (Subsecretaria de
+  Desarrollo Familiar), cargo de orden 255. Nombre no se transcribe.
+  15057 h18 y 15058 h19 (e) 05 y 06/12/96): O.P. 7.877, remate del 6-12-96,
+  "Inmejorable terreno en vaqueros sobre ruta", base 2/3 V.F. $ 2.118,74,
+  Seccion B, Manzana 25, Parcela 10 (OCR).
+
+B.3 · Terminos que en 1996 son otra cosa
+
+Revisados los contextos de los 135 terminos del anillo 2 con aciertos y los 18
+toponimos de la version propia. Son otra cosa:
+  Apellidos: Calderon (listas de docentes, de personal y de contribuyentes,
+  quiebras, juicios: 14841, 14858, 14869, 14879, 14931, 14939-14940, 14947,
+  14953-14955, 14981, 14989, 15002, 15030, 15036, 15045), Caldera (Juan Yango
+  Caldera, demandado, 14879 h15; Maria Cristina Caldera, Las Tres Marias S.R.L.,
+  14943 h19-h20), Recalde, Ricalde, Calisaya, Mamani, Aramayo, Wierna (Garay de
+  Wierna, escribana de Tartagal; Wierna de Choque, sucesorio), Lesser (Marcelo
+  Osvaldo Lesser, recurso del Decreto 1.188, 14946 h7, y listas de 14841 y
+  14845; Beatriz Lesser de N., 14869 h25; Eugenio Lesser S.R.L., contratista en
+  Metan y en la Capital, 14897, 14926, 15035, 15052), Serrey fuera de A.19.
+  Lugares de otros departamentos: Ley 6.895 de expropiacion en la "margen
+  derecha del Rio Vaqueros", Departamento Capital (15006 h3-h6); el camino
+  provincial 28 de San Lorenzo a Lesser, Mat. 105.468 del Dpto. Capital - San
+  Lorenzo (15012 h17); Vaquerias (escuela de otro departamento, 14847 h43);
+  Juana Moro de Lopez, calle de la Capital.
+  Minas homonimas: "Rio Wierna" de sulfato y cloruro de sodio (Los Andes, 14927
+  h6).
+  Comunes: "calderas" de maquinas (14937, 14944), "caldos", "calderistas" (14929
+  h110), Los Yacones S.R.L. (sociedad con domicilio en la Capital, 15002 h30).
+
+B.4 · Ausencias del anillo de actores
+
+  (1) Solo en su propio acto: los socios de A.7, A.8 y A.25; Juan Carlos Orosco
+  (A.37); los Kuhl y Papelera Salta S.R.L. (A.30, A.35, el mismo inmueble);
+  Felix Rivas (A.28).
+  (2) En mas de un acto del departamento, en este ano o en otros: Federico W.
+  Zelarayan (A.30; en 1995, A.16), Juana Rosa C. de Molina (A.39; 1994), los
+  Serrey (A.19; 1991, 1994), Claudio Alberto Kuhl (A.30 y A.35).
+  (3) Los 192 actores del config con acierto se revisaron solo en las hojas que
+  tienen un termino del departamento; su recorrido fuera de ellas no se hizo
+  este ano (P6).
+Falla de la busqueda: ninguna en el texto del zip; en las 821 hojas sin texto la
+busqueda de actores no se corrio (P2).
+Citados y no acompanados: Res. 60/91 del feriado (A.4); Res. Ministeriales 53 y
+111/96 (A.9); Res. 313/96, 720/96, 1.385/96 y 1.970/96 del Ministerio del
+Interior; Res. 82-D/96 (A.21); Decreto 1.034/96 en A.22 y A.29; plano 88 (A.18),
+Plano 178 (A.28), Plano 92 (A.39).
+
+§C · LIMITROFES
+---------------
+14871 h23 (A.5): la Liga San Lorenzo - La Caldera sesiona en Vaqueros. 15044 h9
+(A.34): Capital, San Lorenzo, Cerrillos, Vaqueros y La Caldera como un solo
+radio. 14851 h13 (A.3): electores de Cerrillos, Vaqueros, San Lorenzo, La
+Caldera y La Merced votan juntos en la Capital. 15026 h12 (A.30): la finca Los
+Sauces linda al norte y al este con la provincia de Jujuy ("los filos de los
+cerros que lo separan de la provincia de Jujuy"). 15006 h5 (B.3): el rio
+Vaqueros como lindero en el Departamento Capital. 14890 h12 (A.10): La Caldera
+entre los departamentos de expansion del Plan Regulador. Ninguno es un acto de
+limites.
+
+§P · PLANOS
+-----------
+Ningun plano del departamento hallado por el texto. Remisiones a planos citados
+y no acompanados: plano 88 (A.18), Plano 178 (A.28), Plano 92 (A.39). Busqueda
+de laminas por la tinta: no se hizo este ano (P7); los planos publicados del ano
+no se contaron.
+§D · INDICE
+-----------
+Edicion, hoja, clase fija (7.1), materia.
+  14824 h11  OTRO           A.1 Minas, vacancia, La Milagrosa
+  14847 h35  OBRA-PUBLICA+AGUAS A.2 Ley 6.826, planilla, LCalde
+  14847 h45  HACIENDA-MUN   A.2 Ley 6.826, fondo compensador
+  14851 h13  ELECTORAL      A.3 Jubilados, mesa de electores
+  14852 h11  NORMA          A.4 Calendario escolar, feriado
+  14871 h23  OTRO           A.5 Liga de Futbol, asamblea en Vaqueros
+  14871 h11  OTRO           A.6 Minas, vacancia, San Fernando
+  14874 h13  OTRO           A.7 Del Plata S.R.L., sede Vaqueros
+  14874 h15  OTRO           A.8 Farmared S.R.L., socio en La Caldera
+  14889 h7   CARGOS+ESCUELA A.9 Colegio 44, EET 49, Centro 3
+  14890 h12  NORMA          A.10 Dcto. 556, Ley 6.828, Plan Regulador
+  14898 h7   HACIENDA-MUN   A.11 Dcto. 715, ATN, La Caldera 10.491
+  14907 h11  HACIENDA-MUN   A.12 Dcto. 814, ATN, La Caldera 10.491
+  14908 h24  ELECTORAL      A.13 Frente Grande, internas
+  14914 h21  OBRA-PUBLICA+AGUAS A.14 AGAS Lic. 1, azud Campo Alegre
+  14917 h16  OBRA-PUBLICA+AGUAS A.15 Dcto. 923, azud 600.000
+  14918 h13  OBRA-PUBLICA+AGUAS A.16 Res. 82 D, azud Campo Alegre
+  14929 h6   CARGOS         A.17 Dcto. 1034, Area Operativa XXXIX
+  14953 h13  DOMINIO+JUSTICIA A.18 Remate terreno Vaqueros, Cat. 1020
+  14943 h18  DOMINIO+JUSTICIA A.19 Usucapion, Mat. 397, Vaqueros
+  14946 h10  JUSTICIA       A.20 Remate, bienes en La Caldera
+  14955 h14  AGUAS          B.2 Centro de Usuarios de Vaqueros
+  14969 h7   OBRA-PUBLICA+AGUAS A.21 Res. 130 D, adjudica azud
+  14975 h11  CARGOS         A.22 Dcto. 1475, chofer Area XXXIX
+  14977 h5   NORMA          A.23 Dcto. 1487, auditoria Area XXXIX
+  14983 h32  OTRO           B.2 Pacara S.R.L., socio en Vaqueros
+  14988 h26  OBRA-PUBLICA+ESCUELA A.24 Dcto. 1780, escuelas Vaqueros
+  14992 h20  OTRO           A.25 DESA S.A., socio en Finca Gallinato
+  15003 h8   OBRA-PUBLICA+ESCUELA B.2 Dcto. 1917, convenios Vaqueros
+  15003 h12  HACIENDA-MUN   A.26 Dcto. 1927, ATN, La Caldera 10.491
+  15012 h27  OBRA-PUBLICA   A.27 Dcto. 2033, IPDUV, viviendas
+  15022 h10  DOMINIO+JUSTICIA A.28 Remate BNA, Fca. Chaguadero
+  15023 h7   CARGOS         A.29 Traslado, Area Operativa XXXIX
+  15026 h12  DOMINIO+JUSTICIA A.30 Remate Fca. Los Sauces, Mat. 57
+  15034 h13  OBRA-PUBLICA+AGUAS A.31 DGOS, topadora rio La Caldera
+  15034 h15  DOMINIO+JUSTICIA B.2 Remate terreno Vaqueros, Cat. 1.202
+  15037 h7   OBRA-PUBLICA+AGUAS A.32 Res. 640, red colectora
+  15037 h31  OTRO           B.2 Club Social y Deportivo Vaqueros
+  15041 h12  HACIENDA-MUN   A.33 Dcto. 2207, ATN, La Caldera 10.491
+  15043 h11  OTRO           B.2 Dcto. 2234, festival en Vaqueros
+  15044 h9   NORMA          A.34 Dcto. 2249, ausentismo, radio
+  15045 h18  CARGOS         B.2 Guarderia San Cayetano Vaqueros
+  15049 h26  DOMINIO+JUSTICIA A.35 Remate 50 % Fca. Los Sauces
+  15057 h30  OTRO           A.36 Dcto. 2552, equipamiento C.S.
+  15057 h18  DOMINIO+JUSTICIA B.2 Remate terreno Vaqueros
+  15062 h14  OBRA-PUBLICA   A.37 Adjudicacion a contratista de LC
+  15063 h11  OBRA-PUBLICA+ESCUELA A.38 Res. 998, Escuela 136
+  15065 h22  DOMINIO+JUSTICIA A.39 Remate lote, Mat. 875
+  15071 h26  HACIENDA-MUN   A.40 Dcto. 2693, fondo compensador
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicacion y saldos
+
+md5 y dhash: no calculados (imagenes dentro de los PDF): limite. Repeticiones
+controladas por el texto: A.13 (3), A.14 (3), A.18 (dos avisos del mismo
+inmueble con bases distintas), A.19 (3), A.28 (2, con fe de erratas), A.30 (3),
+A.31 (2), A.35 (3); cuerpo y sumario en A.5 y en los avisos del §B con sumario.
+Saldos: ningun balance de Tesoreria ni municipal del departamento; cadena no
+aplicable.
+
+E.2 · Cobertura
+
+250 de 250 ediciones; 7167 hojas. Tapas: 250 de 250 miradas en la imagen (nueve
+mosaicos a 62 ppp). Hojas de interior miradas en la imagen, enteras o por
+tramos: unas 75 (las de las fichas, las del §B y las cuatro de la planilla de
+A.2). Tinta: no medida este ano (P7). Version propia: 821 hojas.
+
+E.3 · Sin mencion y no mirado
+
+Las hojas sin mencion no se miraron en la imagen, salvo las tapas. Su cobertura
+es la de las cuatro pasadas sobre una version (la del zip, o la propia en eng
+para las 821 sin texto). Las 1192 hojas a ojos del pre-informe no se miraron
+enteras (P3). El caso mas grave es la planilla de obras de la Ley 6.826: estaba
+entre las hojas sin texto, y solo se miraron los renglones que la version propia
+devolvio con la clave deformada (P1).
+
+E.4 · Firmas y autoridad
+
+Gobernador: Juan Carlos Romero en las 250 tapas y en las firmas de las fichas
+con firma leida (A.10, A.11, A.34). Ministros en las firmas: Tanoni, Torino,
+Catalano (Secretario General), Paesani. Interinatos: no se revisaron (P4).
+Numeracion: Decretos 809 a 814 del 24-4 (14907 h9); 2.203, 2.205, 2.207 y 2.210
+de noviembre (15041); 2.692 a 2.698 del 16-12 (sumario de 15071); Resoluciones D
+128 a 130 del 15-7 (14969); SO y SP 637 a 640 (15037). Monotona donde se miro.
+
+E.5 · Cortes y columnas
+
+U+0002: 0. Columna perdida: no se observo en los unos 35 tramos mirados. La capa
+y el OCR separan columnas en los repartos (A.11: la columna de importes se lee
+aparte) y no leen la matriz de puntos de A.2.
+
+E.6 · Repeticiones
+
+Las de E.1. Los cuatro repartos de Aportes del Tesoro y los dos fondos
+compensadores (A.2, A.40) son actos distintos. A.30 y A.35 son dos remates
+distintos (dos juicios) del mismo inmueble.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1, falsos positivos (hojas con "cald" que no son el departamento):
+Calderon, Caldera y Recalde/Ricalde como apellidos, "calderas" y "calderistas",
+"caldos" y "caldas" en listas y en hojas giradas, ruido de una hoja de 14898
+(B.3): 37 de las 96 hojas del zip con "cald" y 4 de las 12 de la version propia:
+41. Difusa: ninguna forma del departamento. Falsos negativos que la sesion
+corrige: el zip no trae texto para 821 hojas (entre ellas A.1 a A.4 y la
+planilla de A.2); el OCR lee "0,0204" por 0,0200 (A.40), y "80 Viviendas" donde
+la imagen da 60 (A.27, sin decidir).
+
+E.8 · Fidelidad numerica
+
+Cuadros recalculados en la imagen:
+  A.11 Dcto. 715: 58 renglones, 750.000 = 750.000. Cierra.
+  A.24 Dcto. 1780: 5 renglones, 6.617,00 = 6.617,00. Cierra.
+  A.40 Dcto. 2693: 39 renglones + remanente, 500.000 = 500.000. Cierra.
+  A.15 Dcto. 923: 3 renglones, 1.383.000 = 1.383.000. Cierra.
+  A.2 Ley 6.826: renglones 254 (126 + 11 = 137) y 255 (67,5 + 14 = 81,5).
+  Cierran.
+Subtotales recalculados: 6; cierran 6. No recalculados: A.12, A.26 y A.33 (sumas
+de 57-58 renglones, solo el renglon del departamento), el fondo compensador de
+A.2 y la planta de A.17.
+Otras cifras con control: A.21 (565.671,03 menos 20,37 % = 450.443, contra
+450.436,45: el porcentaje esta redondeado), A.35 (58.523,98 / 2 = 29.261,99),
+A.37 (4.612,81 x 0,95 = 4.382,17). Sin control: las bases de A.18, A.28, A.30 y
+A.39; los montos con cero tachado de A.2.
+
+E.9 · Contradicciones y erratas del original
+
+A.14 y A.16: el llamado a licitacion se publica antes que la resolucion que
+aprueba la documentacion. A.24: columna "Dpto." Vaqueros bajo el titulo
+Departamento de La Caldera, "Baernabe", y Los Yacones con el municipio de
+Vaqueros. A.30 y A.35: 40 has. forestadas en un aviso y 100 has. de pinos en el
+otro, para la misma finca; A.30 sale con y sin "(50% indiviso)" en el titulo.
+A.2 y A.27: "58" y "60/80" viviendas de Vaqueros (lecturas). A.1: "e) 02/01/95"
+en un aviso de 1996 (version propia). Tapas: "Ano LXXXIX" desde el 14-8 (en
+1995, desde el 14-8 tambien).
+
+E.10 · Pendientes y limites
+
+PENDIENTES:
+  P1. La columna de codigos de la planilla de obras de la Ley 6.826 (14847
+  h30-h44) no se recorrio renglon por renglon: los doce renglones LCalde de A.2
+  son los hallados por la version propia y mirados en la imagen, no
+  necesariamente todos. Tampoco se leyeron los demas anexos de la ley (h25-h29).
+  P2. Las 821 hojas sin texto en el zip (14824 a 14869) solo tienen la version
+  propia en eng; sobre ella se corrieron las cuatro pasadas y los toponimos, no
+  el anillo 2 entero ni el de actores.
+  P3. Las 1192 hojas a ojos del pre-informe no se miraron enteras.
+  P4. Interinatos y autoridad: no revisados.
+  P5. Numeros y fechas no leidos: el decreto de A.9, el acto de A.29 (231 D por
+  el encabezado mas cercano), la resolucion de A.37, la fecha del Decreto 2.552
+  (A.36), la promulgacion de la Ley 6.826 (A.2); la cabecera de 14852 h11 (A.4).
+  P6. Cotejo sumario/cuerpo y recuentos de plantas (A.17) no hechos; recorrido
+  de los actores fuera de las hojas del departamento, no hecho.
+  P7. Tinta y laminas: no medidas este ano; planos publicados sin contar.
+LIMITES:
+  L1. md5 y dhash no aplicables.
+  L2. Matriz de puntos con cero tachado (A.2): el 0 y el 8 se confunden; montos
+  sin decidir.
+  L3. Tesseract sin spa: la version propia de las 821 hojas es en ingles.
+  L4. decretos_1996.csv vacio.
+  L5. Dias de salida sin edicion: 11 dias habiles (20-2; 4-4 y 5-4, Semana
+  Santa; 1-5; 10-6; 17-6; 9-7; 19-8; 13-9; 20-12; 25-12). Sin explicar en el
+  corpus; ninguna edicion en sabado o domingo.
+  L6. Paginacion: 7233 paginas declaradas contra 7167 hojas; cadena de folios no
+  armada.
+  L7. Hojas ausentes: 121 estimadas en 113 ediciones, casi todas la ultima.
+  L8. El insumo: la primera corrida de lee_auto.py fallo por disco y la segunda
+  no ocrizo 865 hojas (log); el zip no las trae.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 (insumo incompleto). El log de 1996 declara "se ocrizan 7010" y despues "OCR
+de 6145 hojas"; el zip llega sin texto para 821 hojas y el pre-informe no lo
+advierte. Propuesta para lee_auto.py: que el log y el pre-informe cuenten las
+hojas sin ninguna version y que registrar no marque el ano como procesado si
+pasan de cero; y para v17 (5.1): la sesion cuenta en el §0 las hojas sin texto
+antes de empezar.
+F.2 (planillas en matriz de puntos, tercera vez). 1994, 1995 y 1996 traen el
+presupuesto con la planilla de obras en matriz de puntos; la clave cambia
+("LCAL" en 1994-1995, "LCalde" en 1996). Reocrizar en la sesion las hojas de la
+planilla con coordenadas (tesseract tsv a 300 ppp) y recortar los renglones con
+la clave es rapido; propuesta: hacerlo con todas las hojas de la planilla y
+buscar las dos grafias de la clave.
+F.3 (config). Agregar al anillo 2: "lcalde", "lcal", "los sauces" (con
+"matricula 57"), "chaguadero", "las moreras", "los nardos", "complejo municipal
+de vaqueros", "colegio secundario n 44", "escuela de educacion tecnica n 49",
+"area operativa xxxix", "la milagrosa" (mina), "san fernando" (mina); a
+falsos_positivos: "rio wierna" (mina de Los Andes), "margen derecha del rio
+vaqueros" (Capital); a actores (origen 1996): Claudio Alberto Kuhl, Felix Rivas,
+Juan Carlos Orosco, Ing. Alonso Crespo S.A. No se entrega lee_config.json.
+
+§R · RECUENTO
+-------------
+anio: 1996
+ediciones_desde: 14824
+ediciones_hasta: 15073
+ediciones_presentes: 250
+ediciones_ausentes: 0
+hojas_presentes: 7167
+hojas_declaradas: 7233
+hojas_ausentes_estimadas: 121
+periodicidad: diaria-dias-habiles
+dias_salida_sin_edicion: 11
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: si
+capa_previa: textos-del-release
+versiones: 2
+actos_departamento: 40
+actos_dominio: 7
+actos_hacienda_municipal: 6
+planos_publicados: 0
+planos_citados_departamento: 3
+balances_municipales: 0
+cuadros_publicados: 10
+subtotales_recalculados: 6
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 35
+hojas_miradas: 325
+avisos_repetidos_departamento: 8
+falsos_positivos_anillo1: 41
+limites_declarados: 8
+estado: CON PENDIENTES
+nivel_lectura: imagen
+pdf_release: 250
+avisos_release: 0
