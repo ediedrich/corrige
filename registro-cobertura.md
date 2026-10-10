@@ -5091,3 +5091,124 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 1 de 1 hallazgo resuelto; compila sin errores, 1.049 páginas. **Avance de la investigación:** la **tercera tesis** gana su primer caso de 1989 en adelante en que la Provincia le adjudica a la Municipalidad de La Caldera obras del agua y del río ---como ejecutora, sobre legajos propios---, que el libro presenta como ejecución y no como competencia y deja abierto en P257; la **segunda**, la operación del riego provincial puesta en manos de una empresa privada en 1998. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 23 líneas (0,09 %; 23,6 páginas). Cobertura acumulada: 25.589 de 25.589 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 1, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0; y una falla de la ronda 86 (un recuento de años que su control no buscaba), corregida por el AMPLÍA 1998.
+
+## Ronda 88 — auditoría con fase 6 (10/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1999. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `3ea0009` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1999, sobre `e996018`; aplicado por `3-registrar` a las 19:34 del 10/10), con la fase 6 en `ronda-88.patch` (un commit sobre `3ea0009`). La sesión que hace esta ronda es la misma que escribió el informe LEE 1999 y el AMPLÍA: se audita trabajo propio, y las cifras y citas nuevas se volvieron a mirar en el acto, en la imagen del Release cuando el informe las había leído sólo en el texto reconocido. El Release de 1999 no se alcanza desde el entorno de lectura (403): los recortes se hicieron en la máquina del autor.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 87 (25.589 de 25.589, sobre `e996018`) se trasladaron por diff a `3ea0009`. **El AMPLÍA caduca 21 líneas y deja 27 nuevas o modificadas** (6 netas: 4 en A, 2 en F), en 12 archivos. Vigentes después del traslado: 25.568 de 25.595.
+
+### Lectura sobre el texto (numeración de `3ea0009`)
+
+Se leyeron **las 27 líneas, enteras** (107.035 bytes), contra el informe `BO-Salta-1999_15564-15808_la-caldera_LEE-1999_2026-10-10.txt` y, en las cifras y las citas, contra el acto.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 5 (4, 526–528, 530) |
+| ape/E-personas.tex | 1 (101) |
+| ape/F-fuentes.tex | 7 (25, 26, 96, 111, 119, 120, 122) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/04-siglo.tex | 1 (3671) |
+| cap/13-loteo.tex | 1 (325) |
+| cap/18-politica.tex | 2 (656, 672) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): A:521–525 (las filas de 1998), F:118 (el párrafo de 1998), 18:660–675 (la ficha de intendencias), 01:157 entero (la falsación de la tercera tesis).
+
+**Esta ronda: 27 líneas nuevas**, 107.035 bytes sobre 3.452.618, que en las 1.051 páginas de la base equivalen a **32,6 páginas**.
+
+Acumulado: 25.568 vigentes + 27 = **25.595 de 25.595 (100,0 %)**. La fase 6 toca cinco líneas de esta ronda (A:528, A:530, F:120, 22:545, 26:236) y no cambia el largo de ningún archivo: **25.595 de 25.595 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 15589 | 13 | Decreto 79: «5.7.6.2.28 La Caldera $ 10.176», «5.7.6.2.29 Vaqueros $ 12.525»; encabezado de $ 750.000 (imagen) | Coincide |
+| 15641 | 15–16 | Decreto 1.340 (13/04/99), Ley 7.018, $ 666.301; «La Caldera $ 10.176,00», «Vaqueros $ 12.525,00» (imagen) | Coincide |
+| 15712 | 6 | Decreto 3.262 (22/07/99); «La Caldera $ 10.000», «Vaqueros $ 12.000» (imagen) | Coincide |
+| 15567 | 57, 58, 61, 62 | Ley 7.018, gastos por objeto: La Caldera 466.442 y 58.703; Vaqueros 425.361 y 55.789 (imagen girada a 300 ppp, dos planillas) | Coincide; el 466.442, dudoso en un ejemplar (6 o 5, catálogo de 5.6), se decide por las otras apariciones (control 3): las cuatro columnas de las dos planillas dan 466.442, y el de El Bordo, en el renglón de arriba, es 465.629 |
+| 15808 | 53 | Ley 7.063: «5.7.6.1.28 - La Caldera» 441.903, «Vaqueros» 402.983 (imagen) | Coincide |
+| 15567 | 91, 94, 100, 103, 107, 115, 117 | Planilla de obras de 1999: los 21 renglones con departamento La Caldera (imagen girada) | Coinciden; 21 es un mínimo: hallazgo 1 |
+| 15613 | 10 | Res. 42: «Construcción de Defensas del Arroyo Chaile o Teodolinda, Vaqueros, departamento La Caldera», $ 50.198,36; art. 2, inciso a) del art. 13 de la Ley 6.838, adjudicación directa a la Municipalidad de Vaqueros (imagen) | Coincide |
+| 15675 | 12 | Res. 263: art. 13 inciso h); «Trabajos de Emergencia Río La Caldera, Zonas Cabral y Barrio Zavaleta, La Caldera, departamento La Caldera», $ 136.626,00 (imagen) | Coincide; el acto escribe «DESA» y el libro «D.E.S.A.» fuera de las comillas, como en 1998 |
+| 15792 | 7, 8, 11 | Decreto 4.362: «Convenio de Transferencia del Instituto "Dr. Luis Linares" de la localidad de La Caldera» … «al Municipio de La Caldera» (imagen); Decreto 4.353, guardería «San Cayetano» de Vaqueros (imagen); serie de transferencias del 22/11/99 (texto reconocido de h7 a h11) | Coincide; la serie leída tiene nueve transferencias y no doce: hallazgo 3 |
+| 15686 | 94, 106 | Actas 3.008 a 3.011: diputado Mendaña (F.J.); intendente de La Caldera Calabró y sus tres concejales (imagen); Vaqueros, Alemán y concejales (texto reconocido) | Coincide |
+| 15631 | 39, 77 | Decreto 1.328: mesas 1476 a 1486 y 3523 a 3531 (imagen de los cuatro tramos) | Coincide: 11 y 9 |
+| 15633 | 93, 219 | Oficialización: encabezado del sublema 719 y página del sublema 586, Fre.Pa.So., con la lista de Vaqueros (imagen de la hoja entera) | Coincide; la lista de h219 es del sublema del encabezado de la hoja |
+| 15640, 15802 | 7; 12–13 | Res. 122, Diámetro S.R.L., $ 61.288,62 (texto reconocido); adjudicación a Conciel S.A., $ 599.257,88 (imagen) | Coincide |
+| 15725 | 18–19 | Remate «Dos importantes inmuebles rurales en La Calderilla», autos del Banco Provincial en liquidación contra La Calderilla S.A., matrículas 1.646 y 429, base $ 43.750 (imagen del título y de la matrícula 1.646; bases por el texto reconocido) | El remate es del martillero en el juicio del banco: hallazgo 2 |
+| 15774 | 36 | Res. 444 D: «Centro de Salud "Enf. Corina Adela Bustamante" de La Caldera» (imagen) | El libro desplegaba «Enf.» dentro de las comillas: hallazgo 4 |
+| 15786, 15789 | 6; 17 | Decreto 4.259 (recurso de Ing. Alonso Crespo S.A., órdenes de servicio 12, 15 y 16); licitación 01/99, BIRF 4273 (imagen) | Coincide |
+| 15792 | 17, 19 | Res. 168/99 del Ente Regulador: reformulación del Plan de Obras e Inversiones de Aguas de Salta S.A., captaciones del Wierna y del río La Caldera (imagen del anexo; considerandos por el texto reconocido) | El acto no dice el destino del agua: hallazgo 7 |
+
+17 cotejos sobre 33 hojas de 20 ediciones (14 sobre la imagen; la Res. 122, las bases de La Calderilla y la serie de transferencias, sobre el texto reconocido).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:528 | La planilla de obras de 1999 «trae veintiún renglones del departamento», como si fuera un recuento cerrado: el informe LEE lo da como mínimo, porque el reconocimiento de las hojas giradas pierde renglones (el 45 y el 558 no salieron con el departamento) | 5 | «por lo menos veintiún renglones», como ya decía F:120 |
+| 2 | A:528 | «el Banco Provincial en liquidación remata los dos inmuebles rurales de La Calderilla S. A.»: remata un martillero por orden judicial, en el juicio del banco | 5 | «en el juicio del Banco Provincial en liquidación contra La Calderilla S. A. salen a remate sus dos inmuebles rurales» |
+| 3 | A:530; 26:236 | «uno de doce decretos del mismo día que transfieren guarderías e institutos»: el número viene del informe (4.351 a 4.362) y no se recontó; en el texto de h7 a h11 se leen nueve convenios de transferencia (4.351, 4.352, 4.353, 4.355, 4.358 a 4.362), y tres números de la serie no se leyeron | 3 | «por lo menos nueve decretos del mismo día que transfieren a los municipios guarderías, hogares e institutos»; se agrega el número del de la guardería San Cayetano, 4353, mirado en la imagen |
+| 4 | A:528 | «Enfermera Corina Adela Bustamante» entre comillas, donde la Res. 444 D dice «Enf.» | 4 | «Enf.\ Corina Adela Bustamante» |
+| 5 | F:120 | «trece ediciones traen separatas o anexos sin paginar» y «en 120 faltan una o dos páginas»: cuatro de las trece tienen una o dos hojas de más, sin separata identificada, y la mayor de las incompletas, la 15757, tiene 20 de 36 | 5 | «trece ediciones traen más hojas que páginas ---las mayores, por separatas sin paginar…---» y «en 120 faltan páginas, casi siempre una o dos, al final» |
+| 6 | 22:545 | «entre Vaqueros y el barrio San Nicolás» y «sobre el río Las Nieves en Los Yacones»: interpreta los guiones del renglón («Río La Caldera-Vaqueros-Bº S.Nicolás», «Río Las Nieves - S.Francisco-Los Yacones») | 5 | «en Vaqueros y en el barrio San Nicolás» y «en San Francisco y Los Yacones» |
+| 7 | 22:545 | La captación del Wierna y del río La Caldera, «para el agua de la ciudad»: el acto no dice el destino | 5 | Se quita la frase |
+
+Resta: en el aspecto 5, cinco afirmaciones de una frase cada una: observaciones repetidas, escala general, **70**; en el aspecto 3, un recuento importado del informe sin rehacer, **95**; en el aspecto 4, una corrección silenciosa dentro de comillas, **87**. Ningún error de consistencia en las 32,6 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: siete, todos en el AMPLÍA 1999 (`3ea0009`), escrito por esta misma sesión; los encontró el cotejo y la relectura contra el informe, no un control automático. **Además, una falla de las rondas 86 y 87**: «Ciento un tramos se relevaron de otro modo» (F:25) estaba desactualizado desde antes del AMPLÍA 1998 ---la suma de los tramos daba 105--- y los controles de menciones de cobertura de esas rondas, que buscaban «ciento un» en minúscula, no lo encontraron; lo corrigió el AMPLÍA 1999 (pasa a «Ciento seis»). El libro entregado ya no lo contiene.
+
+**Descartados (falsos positivos, 3).** «D.E.S.A.» por «DESA» en las filas del 2 de junio y de 1999: está fuera de las comillas y es la sigla con que el libro nombra a la empresa desde 1998. El 466.442 de la Ley 7.018: decidido por control (ver el cotejo). «Por lo menos ocho sublemas»: la lista de Vaqueros de h219 es del sublema 586, que encabeza la hoja; los ocho se sostienen.
+
+**Pendientes revisados.** P259 a P261, abiertos por el AMPLÍA, siguen abiertos. P257 (ejecución de las obras de 1998 adjudicadas a la Municipalidad): lo leído de 1999, con pendientes, no da la ejecución ni la recepción; da la emergencia de la zona Cabral contratada con D.E.S.A., y queda abierto. Pendiente nuevo: P262, que el control de menciones de cobertura busque sin distinguir mayúsculas.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.589/25.589 vigentes en `e996018` | 25.568 vigentes; 21 caducas |
+| Citas entre comillas de material de 1999 en las líneas nuevas contra el acto | 12 cadenas (las tres de las filas del 25/2, 2/6 y 22/11, «Dr. Luis Linares», «Unidos por Lesser», «Renovemos Vaqueros», «Enfermera Corina Adela Bustamante», «Castellanos», «Mesa Redonda», «San Cayetano», «Intendente de La Caldera» y «la descentralización de los servicios») | 11/12 literales; la de la Res. 444 D, hallazgo 4; «Unidos por Lesser», «Renovemos Vaqueros» y «la descentralización de los servicios», sobre el texto reconocido |
+| Cifras de las líneas nuevas contra el acto | 18 en 12 ediciones (ATN de 1999, transferencias de las leyes 7.018 y 7.063, Res. 42, 122 y 263, adjudicación del Colegio 5.050, bases de La Calderilla, mesas de votación, renglones de la planilla) | 18/18; tres sobre el texto reconocido (Res. 122 y las dos bases) |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 27 líneas; coincidencias en el texto nuevo: «El único plano publicado que se halló» y «no hay resumen de la Tesorería ni balance municipal» (F:120) | Las 2, con universo («que se halló», «de 1999 cuentan los hallazgos y no las ausencias») |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo cuyo intervalo incluye 1999, o que nombran 1999 | 15/15 | Las que caían las corrigió el AMPLÍA (F:96, 02:99, 18:656) |
+| Menciones de cobertura («1994 a 1998», «ciento cinco», «Ciento un», «sesenta y dos», «sesenta y tres», «nueve últimos», «diecisiete de ellos»), **sin distinguir mayúsculas** | 25.595/25.595 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 (los nuevos están en el apéndice A) |
+| Privacidad: personas nombradas en las líneas nuevas | 27/27 | 0 caídas. Nombrados: electos (diputado, intendentes y concejales de 1999, ya nombrados en el capítulo de política), empresas (Diámetro S.R.L., Conciel S.A., D.E.S.A., La Calderilla S. A.). Sin nombre: los titulares de las minas y de la cantera, los demandados de los remates, los docentes |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | no cambia |
+| Compilación | base `3ea0009` y fase 6 | Compilan; 1.051 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+| `git am` del parche sobre un clon limpio de `3ea0009` | 1 parche | Aplica |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 3, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | Hallazgo 4, aplicado; 17 cotejos sobre 20 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 70 | 100 | Hallazgos 1, 2, 5, 6 y 7, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | La elección de 1999 pasa de la prensa al acta; sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 32,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Ningún pedido satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis se rejuzga con 1999: la defensa del arroyo Chaile es ejecución municipal de una obra provincial, y el Instituto «Dr. Luis Linares» es un servicio social transferido, no agua ni suelo |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | La planilla de obras de 1999, girada, entra a la serie del agua y de las defensas |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 84,2 antes del tope y 84,2 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 87.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P259: LEE complemento de 1999 sobre las planillas giradas, página por página, para cerrar el recuento de sus renglones; (5) P262: control de menciones de cobertura sin distinguir mayúsculas.
+
+**Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.051 páginas. **Avance de la investigación:** la **tercera tesis** gana un segundo caso de 1989 en adelante en que la Provincia le adjudica a un municipio del departamento, ahora el de Vaqueros, una obra del agua ---como ejecutora, sobre un legajo de la Administración General de Aguas---, y un acto que le transfiere al Municipio de La Caldera un servicio social, el Instituto «Dr. Luis Linares», que no es competencia sobre el agua ni sobre el suelo; la elección de 1999, que el capítulo de política apoyaba en la prensa, pasa a constar en acta. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 27 líneas (0,11 %; 32,6 páginas). Cobertura acumulada: 25.595 de 25.595 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 7, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0; y una falla de las rondas 86 y 87 (un recuento de tramos con mayúscula inicial que sus controles no encontraban), corregida por el AMPLÍA 1999.

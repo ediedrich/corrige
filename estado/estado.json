@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-10T19:34:15",
+ "actualizado": "2026-10-10T19:49:12",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -14336,6 +14336,32 @@
    "pendientes_cerrados": [],
    "pendientes_nuevos": [],
    "nota": "Auditoria del AMPLIA 1998: 23 lineas nuevas leidas enteras (23,6 paginas), 12 cotejos sobre 13 ediciones del Release (11 sobre la imagen). Hallazgo: la fila de 1998 juntaba la frase del decreto 1764 sobre la cobertura previsional, donde La Caldera esta entre los peores departamentos, con el cuadro de NBI, donde no lo esta. Se registra ademas una falla de la ronda 86: el recuento de anos de 1989-2012 leidos de corrido (cap. 2) quedo desactualizado con el AMPLIA 1995-1997 y lo corrigio el AMPLIA 1998. Sin insumos nuevos en auto/insumos-mejora."
+  },
+  {
+   "ronda": 88,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 84.2,
+   "nota_final": 88.3,
+   "tope": 90,
+   "cobertura": 100.0,
+   "fecha": "2026-10-10",
+   "base": "3ea0009",
+   "hallazgos": 7,
+   "aplicados": 7,
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P262",
+     "tipo": "herramientas",
+     "anios": [],
+     "texto": "El control de menciones de cobertura de las rondas MEJORA debe buscar sin distinguir mayusculas: 'Ciento un tramos' (F:25) quedo desactualizado desde antes del AMPLIA 1998 y los controles de las rondas 86 y 87, que buscaban 'ciento un' en minuscula, no lo vieron; lo corrigio el AMPLIA 1999. Agregar tambien los recuentos de tramos fuera de las ventanas ('sesenta y N') y de anos leidos de 1989-2012 en letras.",
+     "abierto": "2026-10-10",
+     "hecho": null
+    }
+   ],
+   "nota": "Auditoria del AMPLIA 1999: 27 lineas nuevas leidas enteras (32,6 paginas), 17 cotejos sobre 20 ediciones del Release (14 sobre la imagen). Siete hallazgos, todos en el AMPLIA de la misma sesion: el recuento de la planilla de obras de 1999 dado como cerrado (es un minimo), el remate de La Calderilla atribuido al banco, la serie de doce decretos de transferencia (se leen nueve), 'Enf.' desplegado dentro de comillas, las separatas y paginas faltantes de 1999 generalizadas, la ubicacion de dos defensas interpretando guiones y un destino del agua que el acto no dice. Se registra una falla de las rondas 86 y 87: 'Ciento un tramos' (F:25) no lo encontraba su control de cobertura. Sin insumos nuevos en auto/insumos-mejora."
   }
  ],
  "pendientes": [
@@ -17086,9 +17112,17 @@
    "texto": "Llevar a lee_auto.py y al config las propuestas del informe LEE 1999: F.1 detectar la orientacion (tesseract --psm 0) y rotar antes de ocrizar las hojas giradas de las planillas de presupuesto, y listarlas en el pre-informe; F.3 leer numero y fecha de tapa con la franja conmemorativa; F.4 reintentar las hojas que fallan por memoria y listar las que sigan sin texto; F.5 agregados al anillo 2, falsos positivos y actores de origen 1999.",
    "abierto": "2026-10-10",
    "hecho": null
+  },
+  {
+   "id": "P262",
+   "tipo": "herramientas",
+   "anios": [],
+   "texto": "El control de menciones de cobertura de las rondas MEJORA debe buscar sin distinguir mayusculas: 'Ciento un tramos' (F:25) quedo desactualizado desde antes del AMPLIA 1998 y los controles de las rondas 86 y 87, que buscaban 'ciento un' en minuscula, no lo vieron; lo corrigio el AMPLIA 1999. Agregar tambien los recuentos de tramos fuera de las ventanas ('sesenta y N') y de anos leidos de 1989-2012 en letras.",
+   "abierto": "2026-10-10",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
