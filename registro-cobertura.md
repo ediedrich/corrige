@@ -4727,3 +4727,134 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 8 de 8 hallazgos resueltos; compila sin errores, 1.031 páginas. **Avance de la investigación:** la **segunda tesis** gana el tramo 1989-1994 de la serie del agua del pueblo: licitación de 1990, convenio de 1991 con un diez por ciento a cargo de la comunidad, litigio y rescisión de 1992 y sistema anunciado para 1993, todo de la Provincia, sin el municipio como parte en los actos. La **tercera** gana un hueco cubierto en parte: dos intendentes con fecha oficial en el tramo 1987-1999. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 38 líneas (0,15 %; 41,9 páginas). Cobertura acumulada: 25.560 de 25.560 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 2, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0 (y 1 superlativo atrapado por el control antes de compilar, en el texto de la fase 6).
+
+## Ronda 85 — auditoría con fase 6 (10/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1989, 1991, 1994. En `auto/insumos-mejora/` no hay insumos nuevos (los del 9/10/2026 ya están en `usados/`). Base: commit `67d4668` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1989, 1991, 1994, sobre `d0f1dcf`; aplicado por `3-registrar` a las 09:20 del 10/10), con la fase 6 en `ronda-85.patch` (un commit sobre `67d4668`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA: se audita trabajo propio, y las citas y cifras nuevas se volvieron a mirar en la imagen de las ediciones del Release, que esta vez se alcanzó desde la nube por descarga directa.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 84 (25.560 de 25.560, sobre `d0f1dcf`) se trasladaron por diff a `67d4668`. **El AMPLÍA caduca 31 líneas y deja 42 nuevas o modificadas** (11 netas: 9 en A, 2 en F), en 17 archivos. Vigentes después del traslado: 25.529 de 25.571.
+
+### Lectura sobre el texto (numeración de `67d4668`)
+
+Se leyeron **las 42 líneas, enteras** (216.710 bytes; casi todas son párrafos de una sola línea), contra los informes `BO-Salta-1989_13102-13345_la-caldera_LEE-1989_2026-10-10.txt`, `BO-Salta-1991_13591-13838_la-caldera_LEE-1991_2026-10-10.txt` y `BO-Salta-1994_14331-14577_la-caldera_LEE-1994_2026-10-10.txt` y, en las citas y las cifras, contra la imagen.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 13 (4, 491–493, 497, 498, 500–502, 506, 507, 509, 514) |
+| ape/D-pedidos.tex | 2 (176, 252) |
+| ape/F-fuentes.tex | 7 (25, 26, 96, 111–113, 116) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/04-siglo.tex | 1 (3671) |
+| cap/05-tierra.tex | 1 (285) |
+| cap/09-defensas.tex | 1 (643) |
+| cap/10-expropiacion.tex | 1 (146) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/17-aguabaja.tex | 2 (281, 369) |
+| cap/17-tierrafiscal.tex | 1 (401) |
+| cap/18-politica.tex | 2 (470, 670) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): 17-aguabaja:345–371 (los edictos de 0,525 y la subdivisión del catastro 169 en 2022), 18:650–672 (la ficha de intendencias), 10:112–146 (la ficha de la Ley 6334 y el decreto de 2007), A:486–490 y A:514–515, D:159.
+
+**Esta ronda: 42 líneas nuevas**, 216.710 bytes sobre 3.414.801, que en las 1.037 páginas de la base equivalen a **65,8 páginas**.
+
+Acumulado: 25.529 vigentes + 42 = **25.571 de 25.571 (100,0 %)**. La fase 6 toca ocho líneas de esta ronda (A:491, 501, 506, 509; 05:285; 17-tierrafiscal:401; 22:545; 26:236) y no cambia el largo de ningún archivo: **25.571 de 25.571 (100,0 %)** después de ella; las ocho se releyeron enteras al escribirlas y al compilar.
+
+### Cotejo sobre el facsímil
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 13595 | 11–12 | Decreto 2648, «Salta, 18 de diciembre de 1990»: «licitación pública internacional», once ofertas, Lucardi A 595.098.688,91 (25,5577 %), alternativa A 457.365.057,68 con 42,790897 %, 270 días; edición del 8/1/1991 | Coincide; el porcentaje de la alternativa no corresponde a su monto, como dice la fila del 18/12/1990 |
+| 14382 | 10 | Decreto 240 del 10/2/1994: Res. 414/93 del 14/12/1993; acta del 30/11/1993 en La Caldera; expte. 37-50.361/90 | Coincide. El acta la firman el inspector y el representante técnico de la empresa, que no describen la obra ni su estado: se agrega en la fase 6 |
+| 13217 | 4 | Decreto 820, «Salta, 29 de mayo de 1989»; convenio del 30/12/1988 con el Centro de Usuarios (capa nativa) | Coincide |
+| 13244 | 9 | Decreto 1.333: A 61.834,88, cifra y letras; Caminos S.A. «por ser la adjudicataria de la obra principal» | Coincide |
+| 13130 | 7 | Decreto 187: «Balvín Miguel Gallo», nacido en Vaqueros, «Senador Provincial por el departamento La Caldera en 1973, siendo reelecto en 1985» | Coincide |
+| 13241 | 5 | Decreto 1.225: licencia política a Teodoro Bartolo Ruiz «con vigencia al 15 de mayo de 1987 y mientras dure su mandato como Intendente Municipal de la localidad de Vaqueros» | Coincide |
+| 13139 | 5 | Decreto 259, «18-2-88»: convenio del 30/7/1987, cien metros de piedra y malla, ciento cincuenta de rama y piedra, margen derecha, Zona Cabral | Coincide |
+| 13238 | 16 | Decreto 1285: 1/5/1989 a 30/4/1990, siete departamentos; plantaciones de tabaco «afectadas por granizo, vientos, vientos huracanados y lluvias torrenciales» | Fechas y departamentos coinciden; las causas, incompletas en el libro: hallazgo 2 |
+| 13812 | 8–9 | Decreto 1648: deroga el 422/90 «con efecto retroactivo»; siete departamentos en el visto y seis en el art. 2 | Coincide |
+| 14453 | 10 | Decreto 1163: lluvias torrenciales y granizo; Valle de Lerma (siete departamentos) y General Güemes; 1/3/1994 a 28/2/1995 | Coincide |
+| 13653 | 7–8 | Decreto 250: 2 Has. 1.738,80 en el visto y 1.736,80 en el art. 1, a 300 ppp; A 191.896.280,25 − 95.374.824,53 y A 96.521.155,72; 36 renglones del anexo, 33 con prefijo 05 | Coincide; las dos superficies están así en el original |
+| 13767 | 6 | Ley 6627, sancionada el 6/8/1991: fracción I, plano 148, matrícula 1575, «cota de coronamiento (1.100)»; art. 2: «el derecho a requerir en su oportunidad el espacio necesario para la construcción de un camino de perilago»; art. 6: vuelve a la Provincia como reserva natural si la entidad se disuelve | La cota coincide; «servidumbre» no es lo que dice la ley: hallazgo 3 |
+| 14514 | 13 | Decreto 1975, «Salta, 08 de setiembre de 1994»: fracción A2, plano 326, matrícula 2.065, 100 ha 8.145,98 m², \$5.259,70; el visto da la cota de coronamiento «de 1.110 msnm» | Coincide; la cota del decreto no es la de la ley: hallazgo 4 |
+| 14393 | 11–12 | Decreto 460 del 8/3/1994: reserva forestal y de fauna; «Matrícula Nº 05-2.065» | Coincide |
+| 13838 | 10 | O.P. 86.800, Carlos Alberto Manzur, edición del 31/12/1991 | Coincide |
+| 13268 | 10 | Res. 339-D del 24/8/1989: licitación del 11/12/1986, Res. 1082-D/86, A 27.850, «por los motivos expuestos en los considerandos» | Coincide |
+| 13606 | 7 | Res. 24-D: Centro de Salud Nº 22, Vaqueros, «dependiente de la Dirección Primer Nivel de Atención Area Capital» | Coincide (el informe LEE la había leído sólo en la capa) |
+| 14505 | 41 | Decreto 1838, «En miles de \$», «U. de O. 34 Hospital La Caldera»: 0,0, 10,0, 5,0, total 15,0 | Coincide |
+| 13604 | 8 | Decreto 7, Jurisdicción 06: «Hospital La Caldera.» | Coincide |
+| 13181 | 5 | Res. D.G.T. 192/88 transcripta en el Decreto 589: «Calvimonte, La Caldera, S. Agustín P/ La Merced, Mollar» | Literal |
+| 14489 | 6 | Decreto 1666: la oficina del Registro Civil «se encuentra actualmente sin personal a cargo» | Literal |
+| 13250 | 6 | Decreto 1385: autoriza «al Banco de Préstamos y Asistencia Social a otorgar un apoyo financiero» de A 5.000 «a favor del Colegio Secundario Nº 44 "Senado Provincial" de La Caldera» | Cifra y nombre coinciden; quien da el apoyo es el Banco, no el Ministerio: hallazgo 5 |
+
+22 cotejos sobre 26 hojas de 22 ediciones; 18 coincidentes o literales y 4 que corrigen o completan al libro (hallazgos 2 a 5).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:491 | El plan de mesas de 1989 «pone diecinueve en ocho escuelas»: el recuento del informe LEE suma las dos mesas de extranjeros, que están en las municipalidades | 3 | «diecisiete en ocho escuelas de los dos distritos municipales y dos de extranjeros en las municipalidades» |
+| 2 | 05:285 y A:491 | La emergencia agropecuaria de 1989, «por el granizo en las plantaciones de tabaco» | 5 | El granizo, los vientos huracanados y las lluvias torrenciales que afectaron las plantaciones de tabaco |
+| 3 | 17-tierrafiscal:401 y A:501 | La Ley 6627, «con servidumbre para un camino de perilago y reversión a reserva natural» | 5 | El derecho de la Administración General de Aguas a requerir sin indemnización el espacio para el camino, y la vuelta del inmueble a la Provincia, como reserva natural, si el club se disuelve |
+| 4 | 17-tierrafiscal:401 y A:509 | «descontado el espejo de agua hasta la cota 1.100», sin decir que el decreto de 1994 la da como 1.110 | 6 | Las dos cotas, cada una con su acto |
+| 5 | 26:236 y A:491 | «el Bienestar Social le da A~5.000» al Colegio Secundario Nº 44 | 5 | Un decreto del Bienestar Social autoriza al Banco de Préstamos y Asistencia Social a darle A~5.000 |
+
+Además, una **precaución de privacidad** sin hallazgo (A:506): la lista de contribuyentes de Rentas de 1994 (RG 10/94) no dice su carácter; la fila nombraba a una titular que puede estar viva y pasa a decir «a nombre de los Serrey, seis de ellos de Manuel Serrey», cuyo heredero ya consta en el libro por el decreto de 2007. Y una **incorporación del cotejo** (22:545): el acta de recepción definitiva de 1993 no describe la obra ni su estado.
+
+Resta: en el aspecto 3, un recuento importado del informe y no recalculado (1), −5: **95**. En el aspecto 5, tres afirmaciones que no son las del acto (2, 3 y 5): escala general, **90**. En el aspecto 6, una discrepancia entre fuentes no señalada (4), −5: **85**. Ningún error de consistencia en las 65,8 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los cinco, en el AMPLÍA 1989, 1991, 1994 (`67d4668`), escrito por esta misma sesión. **Ninguno lo atrapó un control automático**: el 1 lo encontró la relectura de la ficha A.13 del informe 1989 contra la fila; el 2 al 5, el cotejo de la imagen.
+
+**Descartados (falsos positivos, 3).** «Es lo único de lo hallado que da su intendencia» (fila de 1989, Ruiz): el universo está declarado y en lo hallado de 1986 a 1994 no hay otro acto que lo nombre intendente. «Es el primer año posterior a 1994 que este libro lee de corrido» (fila de 2002): 1995 a 2001 no se leyeron. Las superficies 1.738,80 y 1.736,80 del Decreto 250 (10:146), que el catálogo de confusiones 6/8 pone en duda: a 300 ppp, la resolución nativa del escaneo, el visto dice 8 y el artículo 1 dice 6, y la Ley 6334 da 1.736,80; la discrepancia es del original.
+
+**Pendientes revisados.** P238 y P244, cerrados por el AMPLÍA (adjudicación y recepción definitiva del agua potable); lo que quedaba de ellos pasó a P247, que sigue abierto. P248 (1989, 1991 y 1994 en barrido), P249 (config) y P250 (intendencias de Vaqueros), abiertos por el AMPLÍA, siguen abiertos. P236 sigue abierto. No hay pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.560/25.560 vigentes en `d0f1dcf` | 25.529 vigentes; 31 caducas |
+| Citas entre comillas en las líneas nuevas contra la imagen | 5 cadenas («Calvimonte, La Caldera, S. Agustín P/ La Merced, Mollar», «actualmente sin personal a cargo», «Hospital La Caldera», «Provincia de Salta vs. Serrey», «Senado Provincial») | 5/5 literales |
+| Cifras y fechas de las líneas nuevas contra la imagen | 49 en 19 ediciones | 49/49; la cota del espejo de agua difiere entre la ley y el decreto (hallazgo 4), y cada acto dice lo que el libro le atribuye |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 42 líneas (párrafos enteros); 111 coincidencias, 6 de ellas en el texto nuevo | Las 6, con universo; las demás son del texto anterior, ya auditado |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 1988–1996 | 21/21 | Las que caían las corrigió el AMPLÍA (filas de 1990 y 2002, F:96, 22:545 «ese año») |
+| Menciones de cobertura («noventa y ocho», «cincuenta y seis», «salvo diez», «1990, 1992,») | 25.571/25.571 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 |
+| Privacidad: personas nombradas en las líneas nuevas | 42/42 | 0 caídas y 1 precaución (A:506). Nombrados: funcionarios (gobernadores, Gallo, Ruiz), empresas y los Serrey, ya nombrados por el libro. Sin nombre: los peticionantes de agua, los rematados, la empleada del Registro Civil, los herederos de El Acheral |
+| Largo de los archivos antes y después de la fase 6 | 5 archivos | ninguno cambia |
+| Compilación | base `67d4668` y fase 6 | Compilan; 1.037 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+| `git am` del parche sobre un clon limpio de `67d4668` | 1 parche | Aplica |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con decreto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 22 cotejos sobre 22 ediciones, bajo el techo de 90; 5/5 citas literales |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgos 2, 3 y 5, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 85 | 90 | Hallazgo 4, aplicado |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 65,8 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedidos nuevos en D (edición 13.314, páginas de la 13.744, anexos de la Ley 6738, convenio de 1988, ordenanzas de Vaqueros); ninguno satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La segunda tesis gana la adjudicación y la recepción del agua del pueblo, y en Vaqueros la entrega de la planta al centro de usuarios: todo provincial o de usuarios |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | La obra de agua potable de 1990-1993 queda con sus dos actos de cierre del Boletín |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas; una precaución aplicada |
+
+**Nota inicial: 86,6 antes del tope y 86,6 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 84.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) en el AMPLÍA, copiar del acto, y no del informe, las causas, los derechos y los recuentos, y anotar cada discrepancia entre la ley y su decreto: habría evitado los hallazgos 1 a 5; (5) cerrar con un LEE complemento los pendientes de 1989, 1991 y 1994 (P248) para poder afirmar ausencias de esos años.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.037 páginas. **Avance de la investigación:** la **segunda tesis** gana los dos actos de cierre del agua del pueblo que faltaban ---la adjudicación de diciembre de 1990 y la recepción definitiva de noviembre de 1993, con un acta que no describe la obra---, y en Vaqueros la entrega de la planta nueva al centro de usuarios en 1989: ninguno tiene al municipio como parte. La **tercera** gana un senador por el departamento en 1973 y en 1985 y un intendente de Vaqueros desde 1987, cada uno por un solo acto. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 42 líneas (0,16 %; 65,8 páginas). Cobertura acumulada: 25.571 de 25.571 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 5, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
