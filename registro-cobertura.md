@@ -4858,3 +4858,129 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.037 páginas. **Avance de la investigación:** la **segunda tesis** gana los dos actos de cierre del agua del pueblo que faltaban ---la adjudicación de diciembre de 1990 y la recepción definitiva de noviembre de 1993, con un acta que no describe la obra---, y en Vaqueros la entrega de la planta nueva al centro de usuarios en 1989: ninguno tiene al municipio como parte. La **tercera** gana un senador por el departamento en 1973 y en 1985 y un intendente de Vaqueros desde 1987, cada uno por un solo acto. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 42 líneas (0,16 %; 65,8 páginas). Cobertura acumulada: 25.571 de 25.571 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 5, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 86 — auditoría con fase 6 (10/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1995, 1996, 1997. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `07ccd23` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1995, 1996, 1997, sobre `173362b`; aplicado por `3-registrar` a las 13:04 del 10/10), con la fase 6 en `ronda-86.patch` (un commit sobre `07ccd23`). La sesión que hace esta ronda es la misma que escribió el AMPLÍA y los tres informes LEE: se audita trabajo propio, y las citas y cifras nuevas se volvieron a mirar en el texto reconocido y, en los renglones decisivos, en la imagen de las ediciones del Release, bajadas a la nube por descarga directa.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 85 (25.571 de 25.571, sobre `173362b`) se trasladaron por diff a `07ccd23`. **El AMPLÍA caduca 24 líneas y deja 35 nuevas o modificadas** (11 netas: 9 en A, 2 en F), en 13 archivos. Vigentes después del traslado: 25.547 de 25.582.
+
+### Lectura sobre el texto (numeración de `07ccd23`)
+
+Se leyeron **las 35 líneas, enteras** (91.219 bytes; casi todas son párrafos de una sola línea), contra los informes `BO-Salta-1995_14578-14823_la-caldera_LEE-1995_2026-10-10.txt`, `BO-Salta-1996_14824-15073_la-caldera_LEE-1996_2026-10-10.txt` y `BO-Salta-1997_15074-15320_la-caldera_LEE-1997_2026-10-10.txt` y, en las citas y las cifras, contra el acto.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 11 (4, 509–512, 514, 515, 517–520) |
+| ape/D-pedidos.tex | 2 (159, 406) |
+| ape/E-personas.tex | 1 (139) |
+| ape/F-fuentes.tex | 6 (26, 96, 111, 115, 116, 118) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/04-siglo.tex | 2 (1625, 3671) |
+| cap/17-tierrafiscal.tex | 1 (401) |
+| cap/18-politica.tex | 2 (656, 671) |
+| cap/19-resistencias.tex | 1 (657) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+
+Contexto releído entero (no suma cobertura): A:505–508 y A:513 (las filas de 1994 y de los años 90), 18:650–672 (la ficha de intendencias), 19:650–660, 04:1615–1626, D:150–160.
+
+**Esta ronda: 35 líneas nuevas**, 91.219 bytes sobre 3.434.434, que en las 1.043 páginas de la base equivalen a **27,7 páginas**.
+
+Acumulado: 25.547 vigentes + 35 = **25.582 de 25.582 (100,0 %)**. La fase 6 toca ocho líneas de esta ronda (A:510, 515, 518, 519, 520; D:406; 04:1625; 22:545) y no cambia el largo de ningún archivo: **25.582 de 25.582 (100,0 %)** después de ella; las ocho se releyeron enteras al escribirlas y al compilar.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 14784 | 20, 22 | Actas 1705 y 1706 del Tribunal Electoral, «a los 27 días del mes de octubre» de 1995 (imagen del encabezado de la 1706) | Coincide |
+| 14784 | 21 | «Departamento: La Caldera / Diputado / Mendaña, Luis Gerardo», lema F.J. (imagen) | Coincide |
+| 14784 | 24 | Municipios La Caldera (Quipildor; Colque, Fernández, Blanco) y Vaqueros (Junco; Pelo, Vera, Miranda, Salvatierra) | Coincide (texto reconocido) |
+| 15296 | 17, 20, 31, 33 | Actas 2224 a 2227: «a los 19 días del mes de noviembre de mil novecientos noventa y siete» (imagen de la 2227) | **La fila decía 12 de noviembre**, fecha de un aviso vecino de la misma hoja que el informe LEE tomó por la del acta: hallazgo 4 |
+| 15296 | 24, 34 | Concejales de La Caldera (Fernández, Conde, Lozano) y senador (Pérez, Luis Humberto) | Coincide (imagen) |
+| 14754 | 7 | Decreto 1733: «menciona una superficie en mts2. que no corresponde a la matrícula adjudicada»; 100 hectáreas 1.848,16 m² (imagen) | Coincide |
+| 14794 | 27–29 | Decreto 2673 (30/10/1995): régimen de compensación de créditos y deudas «hasta el 31/12/91»; cuadro I, La Caldera, crédito 89.471,53; cuadro V, La Caldera, deuda 1.457.354,61 (imagen de las dos hojas) | Cifras coinciden; «a valores de 1991» no es lo que dice el decreto: hallazgo 1 |
+| 14608 | 6, 8 | Res. 8 D: defensas en el río La Caldera, tramos I, II y III, \$171.312,03, por vía administrativa; Res. 14 D: El Gallinato, \$67.585,21 | Coincide |
+| 14703 | 10 | Res. 149 D: dique Campo Alegre, \$62.065,37, tres meses, por vía administrativa | Coincide |
+| 14917 | 14, 16 | Decreto 923 (13/5/1996): incorpora «Reacond. Azud de Toma Embalse Campo Alegre - La Caldera 600.000,00» (imagen del renglón) | Coincide |
+| 14969 | 6–7 | Res. 130 D (15/7/1996): aprueba la «Licitación Pública realizada el día 3 de junio de 1996»; Ing. Alonso Crespo S.A., \$450.436,45, 20,37 % (imagen) | Monto y porcentaje coinciden; la licitación es del 3 de junio y no de mayo: hallazgo 2 |
+| 15063 | 11 | Res. SO y SP 998: legajo «confeccionado por la Municipalidad de La Caldera, complementado por el Programa de Educación y de Salud»; \$60.004,29; adjudicación directa (imagen) | La cita coincide; el capítulo omitía el complemento del programa: hallazgo 8 |
+| 15003 | 8 | Decreto 1917: convenios «firmados entre el Poder Ejecutivo Provincial y la Municipalidad de Vaqueros», cinco anexos (imagen) | Coincide |
+| 15100 | 8 | Decreto 2885 (31/12/1996): bajo «Reforzar a», «Unidad de Organización 34-Hospital de La Caldera - Personal \$ 331.500,00» (imagen) | Cifra coincide; es un refuerzo de partidas de 1996, no la asignación del hospital: hallazgo 5 |
+| 15146 | 12 | Decreto 1781: incorpora al presupuesto de Aguas de Salta S.A. «Aportes Reintegrables / ENOHSA»; «Depuradora La Caldera \$ 35.000» (imagen) | Cifra coincide; son aportes reintegrables incorporados al presupuesto de la empresa: hallazgo 6 |
+| 15203 | 14 | Res. SO y SP 1500: «Acueducto en sistema de Vertientes - Río Wierna - localidad Vaqueros»; Reynaldo Lucardi, \$102.925,87 (imagen) | Coincide |
+| 15206 | 9 | Decreto 2937, «Salta, 11 de julio de 1997»: «ubicado en el sector Noroeste del departamento La Caldera», catastro 102, 24.364 ha (imagen) | Coincide |
+| 15200 | 25 | Remate «Estancia Las Nieves», «El día viernes 11 de julio de 1997 ... con la base de \$ 56.414,00» (imagen) | Coincide; es un anuncio, y la fila y el cap. 4 lo daban por hecho: hallazgo 3 |
+| 15168 | 19 | Remate de 2.600 hectáreas en La Caldera, «JUDICIAL CON BASE - POR QUIEBRA», juicio de concurso preventivo «hoy Quiebra» (imagen) | La fila decía «en un concurso preventivo»: hallazgo 7 |
+| 15282 | 5 | Ley 6964: exime del canon de riego el catastro 2.067, del «Hogar San Cayetano» de Vaqueros (capa nativa) | Coincide |
+
+20 cotejos sobre 31 hojas de 17 ediciones (16 sobre la imagen, 4 sobre el texto reconocido o la capa nativa); 12 coincidentes y 8 que corrigen o completan al libro (hallazgos 1 a 8).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:510 | La compensación de deudas deja a La Caldera, «a valores de 1991», un crédito y una deuda; «del que Vaqueros no figura» | 3 | «por los saldos al 31 de diciembre de 1991», y «en el que Vaqueros no figura» |
+| 2 | A:515 | El azud «que la Administración General de Aguas licitó en mayo; ese mes un decreto…» | 3 | Llamó a licitación en mayo y licitó el 3 de junio; en mayo un decreto le había pasado los \$600.000 |
+| 3 | A:519 y 04:1625 (y D:406) | El remate del catastro 102 «se hace el 11 de julio»; «se subasta en junio y en julio» | 5 | Se anuncia otra vez para el 11 de julio, y sale a subasta en junio y otra vez en julio; si hubo venta, lo leído no lo dice. El pedido de D habla de la subasta anunciada para el 11 de julio |
+| 4 | A:518 y A:520 | Actas 2224 a 2227 del «12 nov. 1997» | 3 | 19 de noviembre de 1997, en la fila y en la remisión de la fila del año |
+| 5 | A:518 | «el Hospital de La Caldera es una unidad de organización del presupuesto, con \$331.500 de personal» | 5 | Un decreto del 31/12/1996, publicado en febrero, refuerza sus partidas con \$331.500 para personal |
+| 6 | A:518 y 22:545 | «Aguas de Salta recibe \$35.000 del ENOHSA»; la Provincia «le pasa» ese dinero | 5 | Un decreto incorpora al presupuesto de Aguas de Salta S.A. \$35.000 de aportes reintegrables del ENOHSA |
+| 7 | A:518 | Las fincas Severino se rematan «en un concurso preventivo» | 5 | En una quiebra que había empezado como concurso preventivo |
+| 8 | 22:545 | La Escuela 136, «sobre un legajo que hizo la propia Municipalidad» | 5 | Un legajo de la Municipalidad que completó el Programa de Educación y de Salud de la Secretaría de Obras y Servicios Públicos |
+
+Resta: en el aspecto 3, tres fechas o intervalos tomados de segunda mano y no rehechos sobre el acto (1, 2 y 4), −15: **85**. En el aspecto 5, cinco afirmaciones que no son las del acto, cada una en una frase (3, 5, 6, 7 y 8): escala general, observaciones repetidas, **80**. Ningún error de consistencia en las 27,7 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los ocho, en el AMPLÍA 1995, 1996, 1997 (`07ccd23`), escrito por esta misma sesión; el 4 viene del informe LEE 1997 (ficha A.34), que tomó la fecha de un aviso vecino. **Ninguno lo atrapó un control automático**: los ocho los encontró el cotejo con el acto.
+
+**Descartados (falsos positivos, 4).** «Se rematan» en las filas de 1995, 1996 y 1997 para remates anunciados: es la fórmula que la cronología usa en todas sus filas para el anuncio de un remate (trece filas), y sólo el catastro 102, cuyo resultado el libro pide, se corrige. «Cinco ediciones traen separatas o anexos sin paginar» (F:115): el informe 1995 cuenta seis ediciones con hojas de más, pero la sexta (14646) trae un plano y no una separata. «Lo que en lo hallado la Provincia les confía a los municipios son escuelas» (22:545): el universo está declarado, y los demás actos municipales hallados (la camioneta y el PRODISM de Vaqueros) son de la propia municipalidad. «La empresa del agua del pueblo» para Lucardi: el libro ya da la adjudicación de 1990 y la recepción de 1994.
+
+**Pendientes revisados.** P251 a P254, abiertos por el AMPLÍA, siguen abiertos. Se abre **P255** (lee): la ficha A.34 del informe LEE 1997 da a las actas 2226 y 2227 la fecha 12-11-97, que es la de un aviso vecino de la hoja 17; las cuatro actas (2224 a 2227) son del 19-11-97.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.571/25.571 vigentes en `173362b` | 25.547 vigentes; 24 caducas |
+| Citas entre comillas en las líneas nuevas contra el acto | 4 cadenas («que no corresponde a la matrícula adjudicada», «Reacondicionamiento Azud de Toma Embalse Campo Alegre», «confeccionado por la Municipalidad de La Caldera», «Cerro Nevado o Potrero de San José o de Castilla o de la Nieves» con «ubicado en el sector Noroeste del departamento»; más «aportes poblacionales», no cotejada) | 4/4 literales, sobre 5 |
+| Cifras y fechas de las líneas nuevas contra el acto | 23 en 14 ediciones | 22/23; la fecha de las actas de 1997 no coincide (hallazgo 4), y dos cifras coincidentes llevaban mal su contexto (hallazgos 2 y 5) |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 35 líneas (párrafos enteros); 65 coincidencias, 4 de ellas en el texto nuevo | Las 4: una no es superlativo («a la primera», de dos municipalidades) y tres llevan su universo («en lo leído de los tres años»); las demás son del texto anterior, ya auditado |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 1994–1998 o «posterior a 1994» | Las del índice del AMPLÍA (57) | Las que caían las corrigió el AMPLÍA (F:96 y el catastro 102 en 04, 19 y D) |
+| Menciones de cobertura («ciento un», «cincuenta y nueve», «cincuenta y ocho», «1994,») | 25.582/25.582 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 |
+| Privacidad: personas nombradas en las líneas nuevas | 35/35 | 0 caídas. Nombrados: funcionarios electos (diputado, senador, intendentes, concejales, convencional), empresas, los Serrey y Urquiza ya nombrados por el libro. Sin nombre: los demandados de los remates y de la quiebra, los peticionantes de agua, el profesional del estudio topográfico |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | ninguno cambia |
+| Compilación | base `07ccd23` y fase 6 | Compilan; 1.043 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+| `git am` del parche sobre un clon limpio de `07ccd23` | 1 parche | Aplica |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 85 | 100 | Hallazgos 1, 2 y 4, aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 20 cotejos sobre 17 ediciones, bajo el techo de 90; 4/4 citas literales |
+| 5 | Honestidad epistémica | 12 | 80 | 100 | Hallazgos 3, 5, 6, 7 y 8, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 27,7 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedidos de D actualizados (actas de 1995 y 1997 publicadas; resultado de la subasta de 1997); ninguno satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La segunda tesis gana 1995-1997: obras de agua y defensas de la Provincia; lo que pasa al municipio es una escuela, con un legajo que completa la Provincia |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Las proclamaciones de 1995 y 1997 completan el cuadro de intendencias con acta del Boletín |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 85,0 antes del tope y 85,0 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 85.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) en el AMPLÍA, rehacer cada fecha y cada cifra sobre el acto y no sobre la ficha, y leer el encabezado del cuadro antes de dar una cifra («Reforzar a», «Aportes reintegrables»): habría evitado los hallazgos 1 a 8, como en la ronda 85; (5) cerrar con un LEE complemento los pendientes de 1995 a 1997 (P251) para poder afirmar ausencias de esos años.
+
+**Avance del libro:** 8 de 8 hallazgos resueltos; compila sin errores, 1.043 páginas. **Avance de la investigación:** la **segunda tesis** gana 1995-1997 sin cambiar de estado: las defensas, el dique, el azud, la red colectora y el acueducto de Vaqueros son de la Provincia o de su empresa de agua, y lo que pasa a los municipios son escuelas, con un legajo municipal que completa un programa provincial. La **tercera** gana las actas de proclamación de 1995 y 1997 del Boletín (diputado, senador, intendentes y concejales de los dos municipios). El catastro 102 gana la autorización de compra de 1997, sin resultado. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 35 líneas (0,14 %; 27,7 páginas). Cobertura acumulada: 25.582 de 25.582 (100,0 %). Falsos positivos descartados: 4. Errores introducidos por la propia auditoría: 8, en el AMPLÍA de la misma sesión (uno heredado del informe LEE 1997); atrapados por un control automático: 0.
