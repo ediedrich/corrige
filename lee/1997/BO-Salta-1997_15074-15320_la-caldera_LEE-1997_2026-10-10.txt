@@ -1,0 +1,1092 @@
+LEE v17 — 1997
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - 1997 - EDICIONES 15074 A 15320
+Barrido documental del departamento La Caldera
+Informe LEE del ano 1997 - rubrica LEE v16 con los cambios v17 del flujo
+editorial (corrige/flujo-editorial.md, version 2, 5) - 2026-10-10
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES. Siete pendientes nombrados y siete limites declarados
+(E.10). Las 38 fichas del §A se miraron en la imagen en sus renglones decisivos
+(numero o encabezado, nombre del departamento y cifra principal); salvo donde la
+ficha dice otra cosa, el resto del texto se leyo por el OCR. El §B se miro en la
+imagen en el renglon citado. Queda pendiente control de corpus: las 835 hojas a
+ojos, la lista de catastros sin domicilio de Rentas (A.38) en la imagen, el
+nombre de la mina de A.14, las plantas y padrones de personal, la cadena de
+folios, los interinatos y el cotejo sumario/cuerpo.
+Sesion automatica (tarea programada del ciclo, sin nadie mirando). La sesion
+tomo el turno a las 12:20 (hora de la computadora) despues de que la maquina
+registrara el LEE 1996 sin rechazos (ultimo-registrar.txt, 12:19) y pidiera "LEE
+1997" en siguiente.json.
+Fuentes de la sesion, bajadas al tomar el turno: flujo-editorial.md,
+estado/estado.json, rubrica-lee-v16.md y config/lee_config.json del repositorio
+ediedrich/corrige (rama main; identicos a los de los informes de 1995 y 1996 de
+esta misma sesion), y los informes de 1995 y 1996 como referencia. Release 1997
+de ediedrich/boletines-salta: inventario expanded_assets tomado desde la
+computadora de Eduardo: 253 assets, 247 PDF de edicion contiguos (15074.pdf a
+15320.pdf) y seis insumos; ningun aviso de "no se encontro". Descargas directas
+desde la nube: los 247 PDF (7045 hojas, todos abren; 15213.pdf fallo en la
+primera tanda y llego al reintento) y
+BO-Salta-1997_la-caldera_PRE-INFORME-LEE_2026-10-10.txt, decretos_1997.csv,
+lee_config.json, lee_textos_1997.zip, log.txt y resultados_1997.csv.zip.
+Llegaron todos.
+Pre-informe usado: el unico del Release, fechado 2026-10-10 (lee_auto.py,
+10/10/2026 05:36). decretos_1997.csv llego solo con el encabezado. El
+pre-informe no da la fecha de las tapas: se leyeron en la imagen (§1).
+lee_auto.py: log: extraccion 247/247; capa previa util en 145/7045 hojas; se
+ocrizan 6900; "OCR de 6900 hojas con 4 procesos"; sin errores. El zip trae texto
+para todas las hojas menos cinco (sin texto ni capa).
+Config (5.2): el de corrige (version 2026-10-07, hasta 2026, 2526 actores, 1165
+terminos de anillo 2, 3629 numeros, 228 falsos positivos); la foto del Release
+tiene el mismo contenido. No se cambia: no se entrega lee_config.json.
+Entorno: 2 nucleos; PyMuPDF; tesseract solo con eng y osd (usado para la franja
+de las tapas).
+Que verifico la sesion: las 247 tapas en la imagen (nueve mosaicos a 62 ppp);
+los renglones decisivos de las 38 fichas y los del §B; un balance de superficie
+(A.6) y la nomina de mesas (A.28) recontados; las cuatro pasadas probadas; el
+anillo 2 (159 terminos con acierto); el anillo de actores.
+Desvio de 8.17: ASCII sin tildes ni enes (salvo marcadores); [sic] en el texto;
+documentos y datos de particulares, omitidos.
+Que agregaria cada insumo que falto: decretos_1997.csv lleno daria la serie de
+decretos; tesseract spa, una segunda version de las hojas a ojos.
+
+§1 · CORPUS REVISADO
+--------------------
+247 ediciones, N 15074 (jueves 2 de enero de 1997) a N 15320 (miercoles 31 de
+diciembre de 1997), numeracion consecutiva sin huecos; 7045 hojas en los PDF
+contra 7000 paginas declaradas en las tapas. Ano editorial leido en la imagen de
+las 247 tapas: "Ano LXXXIX" en todas, del 2-1 al 31-12 (en 1996 el LXXXIX empezo
+el 14-8: E.9). "APARECE LOS DIAS HABILES" en todas. Gobernador: Dr. JUAN CARLOS
+ROMERO en las 247; Ministro de Gobierno y Justicia: Dr. Miguel Angel Torino.
+Tirada: 370 ejemplares en casi todas (400, 500 y 375 en algunas). El Registro
+Nacional de Propiedad Intelectual de la tapa pasa de 438977 a 706826 en abril
+(15149, 22-4).
+Techo de resolucion: el de las imagenes del Release (300 ppi en las miradas).
+Tabla: edicion, [fecha leida en la tapa], dia, hojas presentes/paginas
+declaradas, hojas "a ojos" del pre-informe (o) y hojas con capa nativa de mas de
+200 caracteres (n).
+  15074 [02-01]  J   14/14  o0 n2
+  15075 [03-01]  V   89/90  o58 n2
+  15076 [06-01]  L   27/28  o5 n2
+  15077 [07-01]  M   17/18  o2 n2
+  15078 [08-01]  X   27/28  o1 n2
+  15079 [09-01]  J   31/32  o0 n2
+  15080 [10-01]  V   16/16  o0 n2
+  15081 [13-01]  L    8/8   o0 n1
+  15082 [14-01]  M    6/6   o0 n1
+  15083 [15-01]  X   26/26  o0 n2
+  15084 [16-01]  J   10/10  o0 n2
+  15085 [17-01]  V   10/10  o1 n1
+  15086 [20-01]  L    5/6   o0 n1
+  15087 [21-01]  M    6/6   o1 n1
+  15088 [22-01]  X    8/8   o1 n1
+  15089 [23-01]  J   26/26  o0 n2
+  15090 [24-01]  V   14/14  o0 n2
+  15091 [27-01]  L   11/12  o1 n2
+  15092 [28-01]  M   12/12  o1 n1
+  15093 [29-01]  X    6/6   o0 n1
+  15094 [30-01]  J    7/8   o1 n1
+  15095 [31-01]  V    6/6   o0 n1
+  15096 [03-02]  L   36/36  o5 n1
+  15097 [04-02]  M   13/14  o0 n3
+  15098 [05-02]  X   17/18  o1 n3
+  15099 [06-02]  J   18/18  o1 n3
+  15100 [07-02]  V   24/24  o2 n3
+  15101 [10-02]  L   51/52  o32 n4
+  15102 [11-02]  M   27/28  o1 n3
+  15103 [12-02]  X   23/24  o3 n3
+  15104 [13-02]  J   30/30  o2 n3
+  15105 [14-02]  V   41/42  o1 n3
+  15106 [17-02]  L   30/30  o0 n3
+  15107 [18-02]  M   32/32  o1 n3
+  15108 [19-02]  X   41/42  o1 n3
+  15109 [21-02]  V   44/44  o3 n3
+  15110 [24-02]  L   36/36  o5 n3
+  15111 [25-02]  M   28/28  o2 n2
+  15112 [26-02]  X   34/34  o1 n3
+  15113 [27-02]  J   37/38  o2 n4
+  15114 [28-02]  V   37/38  o1 n3
+  15115 [03-03]  L   44/44  o3 n2
+  15116 [04-03]  M   32/32  o3 n3
+  15117 [05-03]  X   32/32  o1 n3
+  15118 [06-03]  J   34/34  o1 n3
+  15119 [07-03]  V   34/34  o2 n3
+  15120 [10-03]  L   46/46  o21 n3
+  15121 [11-03]  M   25/26  o1 n3
+  15122 [12-03]  X   34/34  o1 n2
+  15123 [13-03]  J   22/22  o2 n2
+  15124 [14-03]  V   21/22  o1 n2
+  15125 [17-03]  L   16/16  o0 n2
+  15126 [18-03]  M   18/18  o2 n2
+  15127 [19-03]  X   21/22  o2 n2
+  15128 [20-03]  J   20/20  o1 n2
+  15129 [21-03]  V   24/24  o1 n3
+  15130 [24-03]  L   21/22  o2 n2
+  15131 [25-03]  M   19/20  o1 n2
+  15132 [26-03]  X   31/32  o1 n3
+  15133 [31-03]  L   35/36  o2 n3
+  15134 [01-04]  M   24/24  o1 n3
+  15135 [02-04]  X   26/26  o3 n3
+  15136 [03-04]  J   24/24  o1 n3
+  15137 [04-04]  V   32/32  o2 n2
+  15138 [07-04]  L   22/22  o1 n2
+  15139 [08-04]  M   26/26  o1 n3
+  15140 [09-04]  X   28/28  o2 n3
+  15141 [10-04]  J   26/26  o2 n3
+  15142 [11-04]  V   26/26  o2 n3
+  15143 [14-04]  L   24/24  o1 n3
+  15144 [15-04]  M   25/26  o1 n3
+  15145 [16-04]  X   46/46  o1 n3
+  15146 [17-04]  J   32/32  o2 n4
+  15147 [18-04]  V   22/22  o1 n3
+  15148 [21-04]  L   24/24  o1 n3
+  15149 [22-04]  M   19/20  o1 n2
+  15150 [23-04]  X   28/28  o2 n3
+  15151 [24-04]  J   36/36  o6 n3
+  15152 [25-04]  V   44/44  o11 n4
+  15153 [28-04]  L   31/32  o1 n3
+  15154 [29-04]  M   54/54  o1 n2
+  15155 [30-04]  X   39/40  o1 n3
+  15156 [02-05]  V   40/40  o1 n3
+  15157 [05-05]  L   28/28  o1 n3
+  15158 [06-05]  M   34/34  o1 n3
+  15159 [07-05]  X   32/32  o2 n3
+  15160 [08-05]  J   32/32  o1 n3
+  15161 [09-05]  V   34/34  o3 n4
+  15162 [12-05]  L   45/46  o1 n2
+  15163 [13-05]  M   21/22  o1 n3
+  15164 [14-05]  X   32/32  o2 n3
+  15165 [15-05]  J   30/30  o1 n3
+  15166 [16-05]  V   23/24  o0 n3
+  15167 [19-05]  L   48/48  o1 n2
+  15168 [20-05]  M   23/24  o0 n3
+  15169 [21-05]  X   27/28  o1 n3
+  15170 [22-05]  J   22/22  o2 n2
+  15171 [23-05]  V   24/24  o1 n3
+  15172 [26-05]  L   15/16  o1 n2
+  15173 [27-05]  M   24/24  o1 n3
+  15174 [28-05]  X   32/32  o2 n2
+  15175 [29-05]  J   24/24  o2 n3
+  15176 [30-05]  V   28/28  o1 n3
+  15177 [02-06]  L   47/16  o2 n2
+  15178 [03-06]  M   18/18  o1 n2
+  15179 [04-06]  X   34/34  o0 n3
+  15180 [05-06]  J   43/44  o1 n3
+  15181 [06-06]  V   15/16  o1 n2
+  15182 [10-06]  M   19/20  o2 n2
+  15183 [11-06]  X   22/22  o1 n2
+  15184 [12-06]  J   24/24  o1 n2
+  15185 [13-06]  V   29/30  o2 n3
+  15186 [18-06]  X   22/22  o1 n3
+  15187 [19-06]  J   16/16  o2 n2
+  15188 [20-06]  V   22/22  o1 n3
+  15189 [23-06]  L   21/22  o1 n3
+  15190 [24-06]  M   25/26  o2 n3
+  15191 [25-06]  X   44/44  o2 n4
+  15192 [26-06]  J   35/36  o2 n3
+  15193 [27-06]  V   35/36  o2 n3
+  15194 [30-06]  L   34/34  o1 n3
+  15195 [01-07]  M   20/20  o1 n3
+  15196 [02-07]  X   27/28  o2 n3
+  15197 [03-07]  J   36/36  o4 n3
+  15198 [04-07]  V   34/34  o2 n3
+  15199 [07-07]  L   22/22  o1 n2
+  15200 [08-07]  M   35/36  o1 n3
+  15201 [10-07]  J   36/36  o1 n3
+  15202 [11-07]  V   48/48  o5 n3
+  15203 [14-07]  L   24/24  o1 n3
+  15204 [15-07]  M   20/20  o1 n2
+  15205 [16-07]  X   40/36  o7 n2
+  15206 [17-07]  J   22/18  o0 n2
+  15207 [18-07]  V   22/18  o0 n2
+  15208 [21-07]  L   25/22  o1 n2
+  15209 [22-07]  M   24/20  o0 n2
+  15210 [23-07]  X   26/22  o2 n3
+  15211 [24-07]  J   20/16  o1 n2
+  15212 [25-07]  V   22/18  o1 n2
+  15213 [28-07]  L   19/16  o1 n2
+  15214 [29-07]  M   22/18  o0 n2
+  15215 [30-07]  X   22/18  o0 n2
+  15216 [31-07]  J   22/22  o2 n3
+  15217 [01-08]  V   22/22  o1 n3
+  15218 [04-08]  L   22/22  o1 n2
+  15219 [05-08]  M   16/16  o2 n2
+  15220 [06-08]  X   18/18  o1 n3
+  15221 [07-08]  J   24/24  o0 n3
+  15222 [08-08]  V   28/28  o1 n3
+  15223 [11-08]  L   46/46  o5 n2
+  15224 [12-08]  M   20/20  o2 n3
+  15225 [13-08]  X   26/26  o1 n3
+  15226 [14-08]  J   38/38  o8 n3
+  15227 [15-08]  V   50/50  o35 n2
+  15228 [19-08]  M   37/38  o5 n2
+  15229 [20-08]  X   24/24  o0 n3
+  15230 [21-08]  J   24/24  o1 n2
+  15231 [22-08]  V   20/20  o2 n2
+  15232 [25-08]  L   20/20  o1 n2
+  15233 [26-08]  M   16/16  o1 n2
+  15234 [27-08]  X   20/20  o2 n2
+  15235 [28-08]  J   12/12  o1 n2
+  15236 [29-08]  V   14/14  o2 n2
+  15237 [01-09]  L   46/44  o19 n3
+  15238 [02-09]  M   18/18  o1 n2
+  15239 [03-09]  X   16/16  o1 n2
+  15240 [04-09]  J   20/20  o2 n2
+  15241 [05-09]  V   26/26  o3 n3
+  15242 [08-09]  L   24/24  o1 n2
+  15243 [09-09]  M   24/24  o1 n2
+  15244 [10-09]  X   39/40  o15 n3
+  15245 [11-09]  J   26/26  o2 n3
+  15246 [12-09]  V   17/18  o1 n2
+  15247 [16-09]  M   22/22  o2 n3
+  15248 [17-09]  X   22/22  o2 n2
+  15249 [18-09]  J   32/32  o2 n3
+  15250 [19-09]  V   40/40  o10 n2
+  15251 [22-09]  L   40/40  o4 n3
+  15252 [23-09]  M   21/22  o1 n3
+  15253 [24-09]  X   40/40  o1 n3
+  15254 [25-09]  J   27/28  o2 n3
+  15255 [26-09]  V   27/28  o1 n3
+  15256 [29-09]  L   27/28  o1 n3
+  15257 [30-09]  M   16/16  o0 n2
+  15258 [01-10]  X   18/18  o2 n3
+  15259 [02-10]  J   22/22  o1 n2
+  15260 [03-10]  V  118/118 o19 n2
+  15261 [06-10]  L   40/40  o13 n3
+  15262 [07-10]  M   28/28  o3 n3
+  15263 [08-10]  X   22/22  o1 n3
+  15264 [09-10]  J   24/24  o2 n3
+  15265 [10-10]  V   18/18  o2 n2
+  15266 [13-10]  L   24/24  o2 n3
+  15267 [14-10]  M   20/20  o2 n2
+  15268 [15-10]  X   24/24  o2 n2
+  15269 [16-10]  J   22/22  o2 n2
+  15270 [17-10]  V   30/30  o2 n3
+  15271 [20-10]  L   34/34  o8 n2
+  15272 [21-10]  M   14/14  o1 n2
+  15273 [22-10]  X   26/26  o1 n2
+  15274 [23-10]  J   32/32  o5 n3
+  15275 [24-10]  V   20/20  o3 n2
+  15276 [27-10]  L   18/18  o2 n2
+  15277 [28-10]  M   28/28  o11 n2
+  15278 [29-10]  X   18/18  o2 n2
+  15279 [30-10]  J   14/14  o1 n2
+  15280 [31-10]  V   16/16  o0 n2
+  15281 [03-11]  L   14/14  o1 n2
+  15282 [04-11]  M   28/28  o1 n3
+  15283 [05-11]  X   22/22  o1 n2
+  15284 [06-11]  J   26/26  o1 n3
+  15285 [07-11]  V   18/18  o2 n2
+  15286 [10-11]  L   14/14  o1 n2
+  15287 [11-11]  M   28/28  o1 n3
+  15288 [12-11]  X   26/26  o2 n3
+  15289 [13-11]  J   26/26  o2 n3
+  15290 [14-11]  V   30/30  o1 n3
+  15291 [17-11]  L   24/24  o2 n3
+  15292 [18-11]  M   28/28  o5 n3
+  15293 [19-11]  X   28/28  o2 n3
+  15294 [20-11]  J   24/24  o2 n3
+  15295 [21-11]  V   23/24  o1 n2
+  15296 [24-11]  L   84/84  o2 n2
+  15297 [25-11]  M   29/30  o4 n3
+  15298 [26-11]  X   49/28  o2 n3
+  15299 [27-11]  J   18/18  o1 n2
+  15300 [28-11]  V   12/12  o0 n2
+  15301 [01-12]  L   30/30  o2 n2
+  15302 [02-12]  M   28/28  o1 n3
+  15303 [03-12]  X   30/30  o2 n3
+  15304 [04-12]  J   24/24  o1 n3
+  15305 [05-12]  V   30/30  o1 n3
+  15306 [09-12]  M   32/32  o1 n3
+  15307 [10-12]  X   34/34  o1 n3
+  15308 [11-12]  J   30/30  o4 n3
+  15309 [12-12]  V   32/32  o1 n3
+  15310 [15-12]  L   50/50  o1 n3
+  15311 [16-12]  M   64/64  o7 n3
+  15312 [17-12]  X   72/70  o5 n3
+  15313 [18-12]  J   58/58  o4 n3
+  15314 [22-12]  L   44/44  o3 n2
+  15315 [23-12]  M   73/74  o45 n2
+  15316 [24-12]  X   78/78  o42 n3
+  15317 [26-12]  V   60/60  o43 n2
+  15318 [29-12]  L   67/66  o46 n2
+  15319 [30-12]  M   66/66  o45 n2
+  15320 [31-12]  X   16/16  o1 n2
+Diferencias hojas/paginas declaradas: 70 de 247 ediciones. En 54 la tapa declara
+mas paginas que las hojas presentes (54 hojas, una por edicion, la ultima). En
+16 hay mas hojas que paginas: 15177 (47/16: separata con la Carta Organica
+Municipal de General Mosconi, Ley 6.943), 15205 a 15215 (de 2 a 4 hojas de mas
+cada una: la separata de la Ley 6.955 y del Decreto 2.998/97, que convoca a
+convencionales constituyentes, republicada en diez ediciones, A.22), 15237,
+15298 (49/28: separata del regimen de licencias, Decreto 4.118/97), 15312 y
+15318. Ediciones con mas de 50 hojas: 13; la mayor, 15260 (118: el Decreto 3.780
+de mesas electorales, A.28).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa previa util en 145 hojas segun el log (623 con mas de 200
+caracteres) y OCR de lee_auto.py en 6900. Union: U+00AD con el salto, guion de
+corte, U+0002 (0).
+Pasadas propias sobre los textos del zip: literal/normalizada "cald": 234
+aciertos en 142 hojas; 91 son de las fichas, sus repeticiones y sus sumarios, 51
+falsos positivos (E.7). Laxa sin "cald": 4 aciertos, ruido (puntos guia de
+sumarios, una lista y la planilla del embalse Itiyuro, 15076 h21). Espaciada:
+cero. Las dos probadas contra "la galdera", "c a l d e r a" y "c\nald era"
+(devuelven). Difusa >= 0,78: 17 formas; del departamento, "lalcaldera" (15319
+h49, la lista de Rentas de A.38); las demas, palabras comunes y apellidos
+("escalera", "calera", "calliera", "capdevilla", "cadera", "cuadrilla",
+"balderas" y otras). Difusa ampliada: 51 formas, ninguna del departamento.
+Pasada por codigo: el prefijo de departamento "(05)" de las listas de Rentas
+devuelve la lista de catastros sin domicilio de A.38; no hay planilla de
+presupuesto en matriz de puntos con clave de departamento hallada este ano.
+Anillo 2: 1165 terminos; 159 con aciertos; contextos leidos (B.3). Cotejo
+(5.1bis): (1) faltantes: "severino chico", "severino grande", "cerro nevado",
+"potrero de san jose", "estancia las nieves", "barrio el jardin" (La Caldera),
+"pasaje las rosas", "foro de intendentes", "fundayar", "same la caldera", "hogar
+san cayetano"; (2) apellidos del anillo con aciertos que son personas: Lesser
+(Martin Napoleon, sucesorio; Moises Gerardo, lista de planes; Beatriz Lesser de
+Novelletto; Marcelo Osvaldo; Eugenio Lesser S.R.L. y el Ing. Nestor E. Lesser),
+Wierna (calle "Rio Wierna" de la Capital y la planta potabilizadora "Rio Wierna"
+de Aguas de Salta), Quipildor, Mamani, Apaza; (3) a revisar: "camino a Vaqueros"
+(la Universidad, el Polo Club y el Aeroclub, Capital), "rio Vaqueros" (defensas
+en el Departamento Capital).
+Actores: los 2526 del config: 228 con algun acierto; revisados los que caen en
+hojas con un termino del departamento (B.4).
+Numeros de los actos (catastros, matriculas, O.P., expedientes) buscados en todo
+el corpus para reunir repeticiones.
+§A · MENCIONES EXPLICITAS
+-------------------------
+38 entradas. Avisos repetidos: A.4 (dos), A.15 (tres), A.16 (seis, en dos
+avisos), A.18 (seis, en dos avisos), A.22 (once), A.29 (siete, en tres avisos),
+A.38 (cinco). Total de actos que nombran el departamento: 38. Ordenadas por la
+primera edicion de cada acto. Fuera de cuenta: la calle "Rio Wierna" de la
+Capital, las defensas del rio Vaqueros en el Departamento Capital y la mina "Rio
+Caldera" de Los Andes (E.7).
+
+A.1 · Decreto 2.885 (31-12-96), Hacienda: refuerza partidas de Salud;...
+
+  FUENTE: 15100 h6-h8 [imagen del renglon de h8]; ed. del 7-2-97
+  FICHA: Decreto 2.885 (31-12-96), Expte. 63.810/96 cod. 121: refuerza partidas
+  del Ministerio de Salud Publica; "Unidad de Organizacion 34 - Hospital de La
+  Caldera - Personal $ 331.500,00 - Bienes de Consumo $ 13.950,00 - Servicios $
+  10.720,00".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp; el resto por el OCR.
+  NOTA DE LECTURA: El "Hospital de La Caldera" como unidad de organizacion
+  presupuestaria (en las plantas, Area Operativa XXXIX: A.8, A.12, A.13, A.36).
+
+A.2 · Decreto 774 (7-1-97), Educacion: docentes del Colegio Secundari...
+
+  FUENTE: 15105 h21 (sumario en h3) [imagen]; ed. del 14-2-97
+  FICHA: Decreto 774 (7-1-97): aprueba las Constancias de Designacion 03/96 y
+  04/96 de personal docente "en el Colegio Secundario N 44 "Senado Provincial"
+  de La Caldera".
+  MODO DE LECTURA: Imagen del articulo 1 a 100 ppp. Nombres no se transcriben.
+
+A.3 · Foro de Intendentes Justicialistas: asamblea en La Caldera
+
+  FUENTE: 15108 h39 [imagen]; ed. del 19-2-97
+  FICHA: O.P. 8.746 F. 91.946, Foro de Intendentes Justicialistas de la
+  Provincia de Salta: asamblea general ordinaria el viernes 14-3-97, 11 hs, "en
+  la localidad de La Caldera".
+  MODO DE LECTURA: Imagen a 100-130 ppp (el OCR lee "3.746").
+
+A.4 · Liga Municipal de Futbol San Lorenzo La Caldera: asamblea en V...
+
+  FUENTE: O.P. 8.761: 15109 h43 (sumario h5) [imagen]; O.P. 8.848: 15112 h30
+  (sumario h5); e) 21/02/97 y 26/02/97
+  FICHA: Asamblea general ordinaria de la Liga Municipal de Futbol San Lorenzo
+  La Caldera el 7-3-97, 21 hs, "en sede de la Liga Municipal de la localidad de
+  Vaqueros".
+  MODO DE LECTURA: Imagen de 15109 h43 a 100 ppp; el segundo aviso por el OCR.
+  NOTA DE LECTURA: Dos avisos con O.P. distinto para la misma asamblea. La sede
+  en Vaqueros sigue la de 1996 (A.5 de 1996).
+
+A.5 · Decreto 1.015 (22-1-97), Aportes del Tesoro Nacional: La Calde...
+
+  FUENTE: 15110 h24-h25 [imagen del renglon]; ed. del 24-2-97
+  FICHA: Decreto 1.015 (22-1-97): $ 750.000 de Aportes del Tesoro Nacional (Res.
+  2.914/96); "La Caldera 10.176,00" y "Vaqueros 12.525,00".
+  MODO DE LECTURA: Imagen del renglon de La Caldera a 100 ppp; Vaqueros y total
+  por el OCR.
+  NOTA DE LECTURA: Primero de cuatro repartos (A.5, A.25, A.30 y el fondo
+  compensador A.21, este de otra forma). La escala baja de 10.491/12.912 (1996)
+  a 10.176/12.525. Suma no rehecha.
+
+A.6 · Resolucion 86 D (19-3-97), Ingresos Publicos: plano de mensura...
+
+  FUENTE: 15136 h5-h6 (sumario en h3) [imagen del balance]; ed. del 3-4-97,
+  folio 1416
+  FICHA: Resolucion 86 D (19-3-97), Hacienda - Secretaria de Ingresos Publicos:
+  aprueba el plano de mensura y loteo de la Matricula 2.241, Seccion "B",
+  Fraccion C1, de la localidad de Vaqueros, departamento La Caldera, propiedad
+  de Serrey de Drable, Maria Celia; Serrey, Carlos Alejandro; Serrey de Figueroa
+  Campero, Clarisa del Carmen y Gonzalez Bonorino, Ernesto.
+  MODO DE LECTURA: Imagen del balance a 130 ppp; el resto por el OCR.
+  TEXTO:
+  Sup. Lotes d/ochavas .......................... 1 Ha. 7.663,98 m2
+  Sup. Ochavas ........................................... 49,67 m2
+  Sup. Calles ........................................ 1.753,68 m2
+  Sup. Total s/Mensura .......................... 1 Ha. 9.467,33 m2
+  Sup. s/Titulo ................................. 1 Ha. 8.504,70 m2
+  Diferencia en mas ..................................... 962,63 m2
+  NOTA DE LECTURA: RECALCULO PROPIO: 17.663,98 + 49,67 + 1.753,68 = 19.467,33 =
+  total; 19.467,33 - 18.504,70 = 962,63. Cierra. La asignacion de matriculas
+  queda condicionada a los certificados de servicios (art. 2). Los Serrey:
+  actores de 1991, 1994 y 1996 (A.19 de 1996, usucapion).
+
+A.7 · Resolucion 87 D (19-3-97): plano de mensura y subdivision en Va...
+
+  FUENTE: 15136 h6 (sumario en h3) [imagen del encabezado]; ed. del 3-4-97
+  FICHA: Resolucion 87 D (19-3-97), Expte. 18-4.916/92: aprueba el plano de
+  mensura y subdivision de la Matricula 1.865, Seccion A, Fraccion 3e, en la
+  localidad de Vaqueros, departamento La Caldera, propiedad de Agustin Pascual
+  Urquiza.
+  MODO DE LECTURA: Imagen del encabezado a 100 ppp; balance por el OCR (parcelas
+  de 1.831,65 y 1.623,60 m2, no recalculado).
+  NOTA DE LECTURA: Urquiza es actor del config (1994, A.1 de 1994).
+
+A.8 · Resolucion 135 D (2-4-97), Salud: cesa una jefatura del Area O...
+
+  FUENTE: 15145 h6 [imagen]; ed. del 18-4-97
+  FICHA: Resolucion 135 D (2-4-97): desde el 9-12-96 deja sin efecto la
+  asignacion interina de funciones de "Jefe Sector Clinicas Basicas y
+  Emergencias del Area Operativa XXXIX - La Caldera" (Decreto 1.034/96).
+  MODO DE LECTURA: Imagen a 100 ppp. El agente no se transcribe.
+
+A.9 · Decreto 1.781 (7-4-97): fondos del ENOHSA para la red colectora...
+
+  FUENTE: 15146 h12 [imagen del renglon]; ed. del 21-4-97
+  FICHA: Decreto 1.781 (7-4-97), Expte. 37-125.321/96: incorpora $ 855.000
+  (ENOHSA, art. 20 Ley 6.923) al presupuesto de Aguas de Salta S.A.; entre las
+  obras, "Red Colectora Maxima y Planta Depuradora La Caldera $ 35.000".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp.
+  NOTA DE LECTURA: Es la obra cuyo proyecto se licito en 1996 (A.32 de 1996, $
+  35.000).
+
+A.10 · Aguas de Salta S.A., Concurso de Precios 182: acueducto en ve...
+
+  FUENTE: 15146 h17 [imagen]; ed. del 21-4-97
+  FICHA: Aguas de Salta S.A., Concurso de Precios N 182, "Contratacion y
+  ejecucion obra: Acueducto en Sistema de Vertientes rio Wierna - Vaqueros -
+  Dpto. La Caldera", presupuesto oficial $ 169.394,25, 30 dias, ajuste alzado.
+  MODO DE LECTURA: Imagen a 100 ppp; cifras por el OCR.
+
+A.11 · Resolucion SO y SP 1.500 (18-6-97): adjudica el acueducto del...
+
+  FUENTE: 15203 h14 [imagen]; ed. del 14-7-97
+  FICHA: Resolucion SO y SP 1.500 (18-6-97): aprueba el concurso de precios de
+  Aguas de Salta S.A. (Res. 955/97) para el "Acueducto en sistema de Vertientes
+  - Rio Wierna - localidad Vaqueros - departamento La Caldera", presupuesto $
+  169.394,24, y adjudica a la Empresa Reynaldo Lucardi por $ 102.925,87 (IVA
+  incluido, oferta variante), 60 dias.
+  MODO DE LECTURA: Imagen del objeto a 100 ppp; adjudicacion por el OCR.
+  NOTA DE LECTURA: 169.394,25 en el llamado y 169.394,24 aqui (E.9). Fecha del
+  concurso, "02 de marzo de 1997" segun el OCR, anterior al llamado publicado en
+  abril: no decidida (P5). Reynaldo Lucardi es actor del config (1990, 1992,
+  1994).
+
+A.12 · Resolucion (195-197 D, 30-4-97), Salud: traslado al Area Oper...
+
+  FUENTE: 15161 h15 [imagen del renglon]; ed. del 9-5-97
+  FICHA: Resolucion del 30-4-97 (una de las 195 D a 197 D de la hoja): con
+  vigencia al 9-12-96 traslada a un profesional asistente del Hospital de
+  Coronel Moldes "al Area Operativa XXXIX - La Caldera", cargo 15.
+  MODO DE LECTURA: Imagen a 100 ppp. Numero exacto no leido (P5).
+
+A.13 · Resolucion 215 D (30-4-97), Salud: cesa la jefatura de Progra...
+
+  FUENTE: 15161 h18 [imagen]; ed. del 9-5-97
+  FICHA: Resolucion 215 D (30-4-97), Expte. 00149/96 cod. 147: desde el 9-12-96
+  deja sin efecto la asignacion de funciones de "Jefa Programa del Area
+  Operativa XXXIX - La Caldera" de la Dra. Maria del Rosario Ruiz (Decreto
+  "1.043/96" [sic, por 1.034]), que vuelve al cargo 14.
+  MODO DE LECTURA: Imagen a 100 ppp; resto por el OCR.
+  NOTA DE LECTURA: Por el numero de documento del OCR es la medica trasladada al
+  Centro de Salud 21 en 1995 (A.13 de 1995), donde la imagen decia "Ruin de
+  Gargnelutti": la lectura "Ruiz" de 1997 resuelve aquella duda en favor de Ruiz
+  (control 4, cita cruzada), salvo que el original de 1995 tenga errata.
+
+A.14 · Juzgado de Minas: minas vacantes; una en el Departamento La C...
+
+  FUENTE: 15162 h31-h33 [imagen del renglon de h32]; ed. del 12-5-97
+  FICHA: Lista de minas vacantes (deuda de canon minero y otros motivos): un
+  renglon con "Departamento La Caldera".
+  MODO DE LECTURA: Imagen del renglon de la columna "Departamento" a 100 ppp; la
+  tabla esta partida y el nombre de la mina de ese renglon no se emparejo (P5).
+  NOTA DE LECTURA: La lista trae ademas la mina "Rio Caldera" (Expte. 7.328,
+  sulfato de sodio, Los Andes): falso positivo.
+
+A.15 · Remate (Alfredo J. Gudino): dos inmuebles en el pueblo de La...
+
+  FUENTE: 15163 h16 [imagen], 15164 h25, 15165 h26; e) 13 al 15/05/97
+  FICHA: O.P. 122 F. 94.101: "Dos inmuebles en el pueblo de La Caldera (Barrio
+  El Jardin)", remate 15-5-97: Cat. 827, Sec. "B", Mza. 53, Parc. 9, 443,75 m2,
+  base $ 117,15; Cat. 828, Parc. 10, 450 m2, base $ 108,90; "atras de la cancha
+  B El Jardin", a unos 20 m de la calle Los Nardos; baldios.
+  MODO DE LECTURA: Imagen del encabezado a 100 ppp; datos por el OCR.
+
+A.16 · Remates (Gudino): propiedad rural de 2.600 has. en el Dpto. La...
+
+  FUENTE: O.P. 241: 15168 h19 [imagen], 15169 h22; segundo aviso: 15224 h13,
+  15225 h19-h20, 15226 h20, 15227 h10; e) mayo y agosto de 1997
+  FICHA: Remates por quiebra (Juzgado C. y C. 2a., concurso preventivo de
+  Flores, Victor y Cadar, Nayah): un inmueble de la calle Corrientes (Capital) y
+  "Prop. rural de 2.600 Has. en Dpto. La Caldera": "Cats. Ns. 88 y 91 - Dpto. La
+  Caldera", Fincas Severino Chico y Severino Grande, acceso por la RN 9 a La
+  Caldera por senda precaria o por General Guemes; unas 20 has. desmontadas,
+  monte de quina, cebil, nogal y cedro, una vertiente, tres piezas de adobe.
+  Primer remate 23-5-97 (sobre cerrado); segundo, sin base, 14-8-97.
+  MODO DE LECTURA: Imagen del encabezado de 15168 h19 a 100 ppp; datos de la
+  finca por el OCR (15225 h20).
+
+A.17 · Decreto 2.363 (20-5-97), Gobierno y Justicia: convoca a elecc...
+
+  FUENTE: 15170 h7-h8 [imagen del renglon de h8]; ed. del 22-5-97
+  FICHA: Decreto 2.363 (20-5-97): convoca a elecciones provinciales y
+  municipales para el 26-10-97 (coincidentes con las nacionales del Decreto
+  181/97 del PEN); "Departamento La Caldera: Un (1) Senador titular y un (1)
+  suplente".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp; considerandos por el OCR.
+  NOTA DE LECTURA: Concejales e intendentes: los renglones del departamento no
+  se leyeron (P5). Resultado: A.34 y A.35.
+
+A.18 · Remates (Julio Cesar Tejada): finca "Cerro Nevado" o "Estanci...
+
+  FUENTE: O.P. 509/541: 15179 h16 [imagen], 15180 h23, 15181 h8; O.P. 1.079:
+  15200 h25 [imagen], 15201 h25, 15202 h20; e) 04 al 06/06/97 y 07 al 11/07/97
+  FICHA: Finca "Cerro Nevado" o "Potrero de San Jose" o "De las Nieves", 24.364
+  has., Dpto. La Caldera, "Catastro N 102 - Rural - Dpto. La Caldera 05": primer
+  remate 6-6-97 con base $ 200.000, reducida a $ 150.000 y luego a $ 141.036
+  (2/3 del valor fiscal); segundo remate ("Estancia Las Nieves"), 11-7-97, base
+  $ 56.414,00. Lindera al norte con la provincia de Jujuy.
+  MODO DE LECTURA: Imagen de los encabezados a 100 ppp; bases por el OCR.
+  NOTA DE LECTURA: Control: 141.036 son 2/3 de un valor fiscal de 211.554;
+  150.000 = 200.000 - 25 %. El acto de A.19 da el juicio (Petrovial S.A.). La
+  primera aparicion lleva O.P. 509 y las otras dos 541 (OCR).
+
+A.19 · Decreto 2.937 (11-7-97), Secretaria General: autoriza a compr...
+
+  FUENTE: 15206 h9 [imagen]; ed. del 17-7-97
+  FICHA: Decreto 2.937 (11-7-97): autoriza al Escribano de Gobierno a adquirir
+  en la subasta judicial del juicio contra Petrovial S.A. (Juzgado C. y C. 8a.,
+  Expte. B-74.888/95) el inmueble rural "Cerro Nevado o Potrero de San Jose o de
+  Castilla o de la Nieves", "ubicado en el sector Noroeste del departamento La
+  Caldera", Catastro 102, 24.364 ha, ofreciendo hasta $ 100.000, para el Plan de
+  Colonizacion y Desarrollo y la radicacion de emprendimientos.
+  MODO DE LECTURA: Imagen del considerando a 100 ppp; tope y articulado por el
+  OCR.
+  NOTA DE LECTURA: El resultado de la subasta del 11-7 no esta en el corpus del
+  ano (P5).
+
+A.20 · Resolucion SO y SP 1.344 (2-6-97): fracasa la compulsa del tec...
+
+  FUENTE: 15194 h10 [imagen]; ed. del 25-6-97
+  FICHA: Resolucion SO y SP 1.344 (2-6-97), Expte. 136-2.494/97: declara
+  fracasada la compulsa del 23-4-97 para el "Techado Cancha de Basquet -
+  localidad La Caldera - departamento La Caldera", presupuesto $ 34.000,00, por
+  ofertas inconvenientes.
+  MODO DE LECTURA: Imagen a 100 ppp.
+
+A.21 · Decreto 2.930 (8-7-97), Hacienda: Fondo Compensador de la Ley...
+
+  FUENTE: 15205 h10-h11 [imagen del renglon]; ed. del 16-7-97
+  FICHA: Decreto 2.930 (8-7-97): distribucion del Fondo Compensador de la Ley
+  6.438 a municipios de departamentos no productores de hidrocarburos; "23 La
+  Caldera $ 5.750" y "Vaqueros $ 7.000".
+  MODO DE LECTURA: Imagen del renglon de La Caldera a 100 ppp; Vaqueros por el
+  OCR.
+  NOTA DE LECTURA: Cuadro no recalculado (P6). En 1996 fueron 10.000 y 12.000
+  (A.40 de 1996).
+
+A.22 · Decreto 2.998 (16-7-97): convoca a elecciones de convenciona...
+
+  FUENTE: 15206 h10 y h19-h21 (separata), y el mismo texto en 15207 a 15215 y
+  15229 h23 [imagen de 15206 h10]; ed. del 17-7-97 y siguientes
+  FICHA: Decreto 2.998 (16-7-97): convoca a elegir sesenta convencionales
+  constituyentes (Ley 6.955, reforma parcial de la Constitucion) por
+  departamento; "Departamento La Caldera: Un (1) Convencional Constituyente
+  Titular y un (1) suplente".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp.
+  NOTA DE LECTURA: El propio decreto se manda publicar en las ediciones 15206 a
+  15215; aparece once veces (y en la separata). Resultado: A.34.
+
+A.23 · Resolucion 291 D (10-7-97), Desarrollo Social: enfermero del...
+
+  FUENTE: 15207 h13 [imagen del renglon]; ed. del 18-7-97
+  FICHA: Resolucion 291 D (10-7-97): prorroga hasta el 31-12-97 la afectacion a
+  la Camara de Diputados de un enfermero "del Instituto "Dr. Luis Linares" de La
+  Caldera" (Subsecretaria de Desarrollo Familiar).
+  MODO DE LECTURA: Imagen a 100 ppp.
+
+A.24 · UEP de Educacion, Licitacion Publica Nacional 11/97: sala de...
+
+  FUENTE: 15212 h12-h13 [imagen del renglon de h13]; e) julio de 1997
+  FICHA: O.P. 1.260, Programa de Reformas e Inversiones Sector Educacion (BID):
+  Licitacion Publica Nacional 11/97 (Res. Ministerial 1992/97), construccion de
+  salas de nivel inicial en escuelas, entre ellas la "N 137 "Bernabe Lopez"
+  Vaqueros - Dpto. La Caldera"; presupuesto oficial $ 305.950,76 (del conjunto),
+  150 dias, apertura 22-8-97.
+  MODO DE LECTURA: Imagen del renglon a 100 ppp.
+
+A.25 · Decreto 3.326 (12-8-97), Aportes del Tesoro Nacional: La Calde...
+
+  FUENTE: 15230 h14-h15 [imagen del renglon]; ed. del 21-8-97
+  FICHA: Decreto 3.326 (12-8-97): $ 750.000 de Aportes del Tesoro Nacional (Res.
+  564/97); "La Caldera $ 10.176,00", "Vaqueros $ 12.525,00"; incluye a la
+  Fundacion Mosconi ($ 20.000).
+  MODO DE LECTURA: Imagen del renglon a 100 ppp.
+
+A.26 · Decreto 3.359 (22-8-97): subsidios; "Fundayar - La Caldera"
+
+  FUENTE: 15237 h8-h9 [imagen del renglon]; ed. del 1-9-97
+  FICHA: Decreto 3.359 (22-8-97), Secretaria General: da por autorizados
+  subsidios y su pago a comercios; un renglon: "Fundayar - La Caldera ...
+  Agencia Dip $ 380,00".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp.
+
+A.27 · Decreto 3.430 (1997), Salud: personal contratado; "SAME La Ca...
+
+  FUENTE: 15244 h38-h39 [imagen del renglon]; ed. de septiembre de 1997
+  FICHA: Decreto 3.430, Expte. 06255/97 cod. 127: nomina de personal (01-01 al
+  31-12-97) por dependencia; una dependencia "SAME LA CALDERA".
+  MODO DE LECTURA: Imagen del renglon a 100 ppp; la nomina no se transcribe ni
+  se recuenta (P6).
+
+A.28 · Decreto 3.780 (26-9-97), Gobierno: mesas receptoras de votos...
+
+  FUENTE: 15260 h4 (decreto), h30-h31 (masculino) y h83 (femenino) [imagen a
+  80-100 ppp]; ed. del 3-10-97
+  FICHA: Decreto 3.780, mesas para las elecciones del 26-10-97. Seccion
+  Electoral La Caldera, masculino: Distrito Municipal de La Caldera, Circuito 8,
+  mesas 1448-1450 (Esc. 136 J. M. Lopez, La Caldera), 1451 (795 Potrero de
+  Castilla), 1452 (750 Los Yacones), 1453 (561 Campo Alegre); Distrito Municipal
+  de Vaqueros, Circuito 9, mesas 1454-1456 (Esc. 137 Bernabe Lopez), 1457
+  (Escuela Agricola San Cayetano), 1458 (Esc. 549 Lesser). Femenino: La Caldera
+  3501-3502 (Esc. 136), 3503 (795), 3504 (750), 3505 (561); Vaqueros 3506-3508
+  (Esc. 137), 3509 (Esc. 549 Lesser).
+  MODO DE LECTURA: Imagen de las tres hojas.
+  NOTA DE LECTURA: RECUENTO PROPIO: masculino 6 + 5, femenino 5 + 4: 20 mesas
+  (17 en 1995). La mesa masculina de Lesser va ya bajo Vaqueros (la correccion
+  del Decreto 2.300 de 1995) y Lesser tiene ahora mesa femenina. La Escuela 136
+  pasa de dos mesas masculinas (1 A y 1 B en 1995) a tres (1448-1450). La
+  numeracion es corrida en toda la provincia.
+
+A.29 · Remates: terrenos Catastros 514 y 515 de La Caldera (dos marti...
+
+  FUENTE: O.P. 456 (Maria G. Yanez): 15263 h16 [imagen], 15264 h17, 15265 h12;
+  O.P. 551 (Yanez): 15267 h10, 15268 h15, 15269 h15; O.P. 440 (Gabriel Pulo):
+  15263 h17 [imagen], 15264 h18, 15265 h13; e) octubre de 1997
+  FICHA: "Hermosos terrenos en La Caldera" (Yanez, remate 10-10-97 y nuevo aviso
+  para el 16-10-97): Cat. 515 y Cat. 514, 450 m2 cada uno, base $ 95,04 (2/3
+  V.F.) cada uno. "Dos terrenos en La Caldera" (Pulo, remate 10-10-97 a las
+  19:30): Catastros 514 y 515, Seccion B, Manzana 5, Parcelas 14 y 15, Dpto. La
+  Caldera, Plano 92, 450 m2 c/u, base $ 142,56 (valor fiscal), sobre Pasaje Las
+  Rosas entre 20 de Febrero y Pje. Las Dalias.
+  MODO DE LECTURA: Imagen de los dos encabezados a 100 ppp; datos por el OCR.
+  NOTA DE LECTURA: Dos martilleros rematan los mismos catastros el mismo dia con
+  bases distintas: E.9. Control: 95,04 = 2/3 de 142,56. Cierra.
+
+A.30 · Decreto 3.861 (13-10-97), Aportes del Tesoro Nacional: La Cald...
+
+  FUENTE: 15271 h5-h7 [imagen del encabezado y del renglon]; ed. del 20-10-97
+  FICHA: Decreto 3.861 (13-10-97), Expte. 23-050/97: $ 750.000 de Aportes del
+  Tesoro Nacional (Res. 1.481/97); "La Caldera $ 10.176,00", "Vaqueros $
+  12.525,00", "A distribuir por el Sr. Gobernador $ 60.998,00".
+  MODO DE LECTURA: Imagen del encabezado y del renglon de La Caldera a 100 ppp.
+
+A.31 · Resolucion SO y SP 2.332 (3-10-97): estudio topografico del a...
+
+  FUENTE: 15276 h8 [imagen]; ed. del 27-10-97
+  FICHA: Resolucion SO y SP 2.332 (3-10-97): contratacion directa de los
+  trabajos de "Estudio Topografico Aduccion, Planta Potabilizadora, Acueducto
+  Campo Alegre, Salta - Ramales y Cisternas de Distribucion en la ciudad de
+  Salta - Etapa La Caldera - Vaqueros", presupuesto $ 68.000; adjudica al Ing.
+  Juan Pablo Guinez por $ 67.100, veinte dias habiles.
+  MODO DE LECTURA: Imagen del objeto a 100 ppp; adjudicacion por el OCR.
+
+A.32 · Aguas de Salta S.A., Concurso de Precios 313: maquinas para La...
+
+  FUENTE: 15277 h7 [imagen]; e) 28/10/97
+  FICHA: Concurso de Precios N 313: "Horas camion volquete, pala cargadora y
+  maquina topadora para La Caldera", presupuesto $ 28.080,00, apertura 3-11-97.
+  MODO DE LECTURA: Imagen a 100 ppp.
+
+A.33 · Ley 6.964: exceptua del canon de riego al Hogar San Cayetano d...
+
+  FUENTE: 15282 h5 (sumario en h3) [imagen]; ed. del 4-11-97
+  FICHA: Ley 6.964, promulgada por Decreto 3.926 (27-10-97): exceptua del pago
+  del canon de riego al inmueble Catastro N 2.067, departamento La Caldera, del
+  Instituto Concepcionista "Hogar San Cayetano de Vaqueros", mientras conserve
+  el dominio.
+  MODO DE LECTURA: Imagen del articulo 1 a 100 ppp.
+
+A.34 · Tribunal Electoral, Actas 2.226 y 2.227 (noviembre de 1997):...
+
+  FUENTE: 15296 h17-h24 [imagen de los renglones de h19 y h24]; ed. del 24-11-97
+  FICHA: Proclamacion de los electos el 26-10-97: convencional constituyente por
+  el Departamento La Caldera, Quipildor, Horacio Martin (PJ) (Acta 2.227,
+  12-11-97); concejales del Municipio La Caldera: Fernandez, Rosario Liliana;
+  Conde, Ramon Antonio; Lozano, Lucio Alberto; del Municipio Vaqueros: Pelo,
+  Julia Florentina; Garcia, Gregorio; Vilte, Miguel Gabriel; Bizgarra, Julio
+  Hipolito.
+  MODO DE LECTURA: Imagen de los renglones a 110-160 ppp; lemas y numero de acta
+  de los concejales (2.226) por el OCR.
+  NOTA DE LECTURA: RECUENTO PROPIO: 3 concejales en La Caldera y 4 en Vaqueros.
+  Rosario Liliana Fernandez y Julia Florentina Pelo repiten de 1995; Quipildor,
+  intendente electo en 1995 (A.30 de 1995). Documentos omitidos. Las listas de
+  candidatos por sublema de h37-h65 no se transcriben.
+
+A.35 · Tribunal Electoral, Acta 2.224: senador por el Departamento La...
+
+  FUENTE: 15296 h33-h34 [imagen del renglon de h34]; ed. del 24-11-97
+  FICHA: Proclamacion del senador por el Departamento La Caldera: Perez, Luis
+  Humberto.
+  MODO DE LECTURA: Imagen del renglon a 160 ppp; lema por el OCR.
+
+A.36 · Resolucion 536 D (5-12-97), Salud: traslado de una odontologa...
+
+  FUENTE: 15313 h9 [imagen]; ed. de diciembre de 1997
+  FICHA: Resolucion 536 D (5-12-97), Expte. 000497/97 cod. 147: desde el 1-7-97
+  traslada a una odontologa "del Area Operativa XXXIX - La Caldera" a la
+  Direccion Primer Nivel de Atencion Area Capital.
+  MODO DE LECTURA: Imagen a 100 ppp.
+
+A.37 · Remate (Susana J. T. de Muinos): dos terrenos contiguos en La...
+
+  FUENTE: 15313 h20 [imagen del encabezado]; ed. de diciembre de 1997
+  FICHA: O.P. 799 F. 99.443: "Dos terrenos contiguos en La Caldera", remate
+  19-12-97, base $ 117,14 (2/3 V.F.) cada uno: Mat. 943, Sec. "B", Manz. 69,
+  Parc. 12, 444 m2, y Mat. 942, Parc. 11, 450 m2, Dpto. La Caldera; baldios, sin
+  servicios.
+  MODO DE LECTURA: Imagen del encabezado a 100 ppp; datos por el OCR.
+
+A.38 · Direccion General de Rentas: catastros sin domicilio del Depa...
+
+  FUENTE: 15315 h54, 15316 h59, 15317 h41, 15318 h48, 15319 h49 [imagen del
+  encabezado de 15315 h54]; ed. del 23 al 30-12-97
+  FICHA: Impuesto inmobiliario, "Catastros sin domicilio", por departamento, en
+  matriz de puntos: "DEPARTAMENTO LA CALDERA (05)" con cinco catastros.
+  MODO DE LECTURA: Imagen del encabezado a 200 ppp. Los numeros, por el OCR de
+  las cinco apariciones: 70, 407, 1674, 1702 y 1804 en la mayoria (variantes
+  "20", "A07", "1874", "31874"); no se leyeron en la imagen (P2).
+§B · VECINDAD
+-------------
+
+B.1 · Nucleos ya fichados
+
+Vaqueros, municipio separado de La Caldera en los tres repartos de Aportes del
+Tesoro (A.5, A.25, A.30), en el Fondo Compensador (A.21), en las mesas (A.28) y
+en la proclamacion (A.34). Pueblo de Vaqueros: planos de las matriculas 2.241
+(Serrey) y 1.865 (Urquiza) (A.6, A.7), acueducto de vertientes del rio Wierna
+(A.10, A.11), Escuela 137 (A.24, A.28), Hogar San Cayetano (A.33), Liga de
+Futbol (A.4). La Caldera, localidad: Hospital y Area Operativa XXXIX (A.1, A.8,
+A.12, A.13, A.36), SAME (A.27), Colegio 44 (A.2), Instituto Luis Linares (A.23),
+red colectora (A.9), techado de la cancha (A.20), maquinas para La Caldera
+(A.32), Barrio El Jardin y calle Los Nardos (A.15), Pasaje Las Rosas (A.29),
+Foro de Intendentes (A.3). Fincas: Severino Chico y Severino Grande (A.16),
+Cerro Nevado o Las Nieves (A.18, A.19). Campo Alegre: acueducto y estudio
+topografico (A.31), escuela con mesa (A.28). Lesser: escuela y mesa (A.28).
+
+B.2 · Nucleos del departamento en actos que no nombran el termino
+
+Mirados en la imagen en el renglon citado.
+  15079 h8: Decreto 2.818 (26-12-96): personal policial con destino en el
+  "Destacamento Vaqueros (UR 1)".
+  15094 h4 (sumario en h3): O.P. 8.507, Municipalidad de Vaqueros, Licitacion
+  Publica 1/97, compra de una camioneta diesel para uso municipal.
+  15099 h15 (sumario en h5): O.P. 8.556, Municipalidad de Vaqueros, concurso de
+  precios del Programa de Desarrollo Institucional e Inversiones Sociales
+  Municipales (PRODISM, SDS - BID).
+  15107 h9 y 15115 h18: designaciones de docentes en el "Centro N 3 Subsede
+  Vaqueros" (Decreto 891 y otro).
+  15116 h31: Club de Regatas Guemes, asamblea en su sede de Campo Alegre,
+  23-3-97.
+  15118 h9 (sumario en h3): Decreto 1.343 (14-2-97), Produccion y Empleo, Expte.
+  37-111.465/95: denuncia el convenio del 14-1-1986 entre la Provincia (AGAS) y
+  el Centro de Usuarios de Servicios Publicos de Vaqueros para la obra
+  "Acueducto, Cisterna, Tanque Elevado y Trabajos Complementarios de la Red de
+  Distribucion de Agua Potable" (iniciada el 18-2-87, terminada el 30-11-88; 40
+  % BID).
+  15124 h16, 15125 h12, 15126 h15: O.P. 9.101, Banco Rio de la Plata, Roberto
+  Fleming: remate del "50% indiviso de un inmueble con casa en la localidad de
+  Vaqueros", 19-3-97.
+  15130 h5, 15131 h6, 15169 h13: reparaciones del Centro de Salud 23 - Lesser ($
+  7.683,00; adjudicada a Juan Carlos Orosco, el contratista de La Caldera de
+  1996; adicional de $ 2.032,14).
+  15140 h26 (sumario h5): Centro de Jubilados y Pensionados de Vaqueros,
+  asamblea 30-4-97; 15198 h33: el mismo centro ("San Cayetano de Vaqueros"),
+  asamblea extraordinaria 25-7-97.
+  15156 h31 (sumario h5): Centro de Usuarios del Servicio de Agua Potable de la
+  localidad de Vaqueros, asamblea 29-5-97.
+  15162 h42: Del Solar S.R.L., un socio domiciliado en Avda. San Martin s/N,
+  Vaqueros.
+  15174 h10-h11: Decreto 2.384 (23-5-97): actos del 25 de Mayo con desfile en la
+  localidad de Vaqueros; se pide a la Municipalidad de Vaqueros la
+  ornamentacion.
+  15175 h23: O.P. 411, El Fortin Gauchos "San Cayetano de Vaqueros", asamblea en
+  el Salon Municipal de Vaqueros, 14-6-97.
+  15198 h15 y 15201 h9: retiro voluntario de ex empleados de los Municipios de
+  Vaqueros y otros (Programa de Reconversion).
+  15219 h6: decreto sintetizado del 28-7-97 (3.133 o 3.137): jefa de sector de
+  la Guarderia San Cayetano, Vaqueros.
+  15273 h5: Decreto 3.875 (13-10-97): mesa de electores extranjeros "Vaqueros
+  5007 Municipalidad".
+  15287 h7-h8: Decreto 3.980 (3-11-97): convenio Rentas - Gendarmeria; puesto de
+  control "Vaqueros".
+  15309 h8-h9: rendiciones de subsidios: traslado de ninos de Vaqueros a San
+  Carlos y a Los Sauces.
+
+B.3 · Terminos que en 1997 son otra cosa
+
+Revisados los contextos de los 159 terminos del anillo 2 con aciertos. Otra
+cosa:
+  Apellidos: Calderon (Jose A., quiebra; Luis Alberto; Horacio Oscar; Elsa
+  Arancibia Gutierrez de Calderon; La Torre Calderon; Calderon Solis; Oscar
+  Horacio), Caldera (Graciela Sandra, candidata a concejal de otro municipio,
+  15296 h22 y h37), Yapura Caldez, Recalde, Lesser (§2), Quipildor fuera de A.34
+  (Maria Socorro, candidata en Vaqueros, lista de sublema de h44).
+  Lugares de otros departamentos: el rio Vaqueros en el Departamento Capital
+  (defensas y botadores aguas abajo del puente de la RN 9, AGAS, $ 128.359,88:
+  15145 h12-h13, 15168 h15, 15169 h17, 15170 h12); "Camino a Vaqueros" en la
+  Capital (Universidad, Polo Club, Aeroclub, mesas electorales: 15243-15250,
+  15260 h25 y h77); "Turismo de Estancia Arnaga", San Lorenzo, camino a Lesser
+  (15144 h10); calle "Rio Wierna" y camino viejo a La Isla (Capital,
+  15271-15273); planta potabilizadora "Rio Wierna" de Aguas de Salta (15287
+  h17); embalse Itiyuro (San Martin).
+  Minas: "Rio Caldera" y "Rio Wierna" (Los Andes, 15162 h33); "Rio Vaqueros"
+  (Los Andes, 15162 h21).
+  Comunes: "calderas", "escaldado", "pant. vaqueros", "caldera Gonella" (remate,
+  15239-15240).
+
+B.4 · Ausencias del anillo de actores
+
+  (1) Solo en su propio acto: Flores, Victor y Cadar, Nayah (A.16); Petrovial
+  S.A. (A.19); Ing. Juan Pablo Guinez (A.31); los concejales nuevos de A.34;
+  Luis Humberto Perez (A.35).
+  (2) En mas de un acto del departamento, este ano o en otros: los Serrey (A.6;
+  1991, 1994, 1996), Agustin Pascual Urquiza (A.7; 1994), Reynaldo Lucardi
+  (A.11; 1990-1994), Juan Carlos Orosco (B.2; 1996), Horacio Martin Quipildor
+  (A.34; 1995), Rosario Liliana Fernandez y Julia Florentina Pelo (A.34; 1995),
+  Maria del Rosario Ruiz (A.13; 1995), Federico W. Zelarayan (martillero de
+  otros avisos del ano).
+  (3) Los 228 actores con acierto, revisados solo en las hojas con un termino
+  del departamento.
+Falla de la busqueda: ninguna.
+Citados y no acompanados: Res. 2.914/96, 564/97 y 1.481/97 del Ministerio del
+Interior; Res. 955/97 (A.11); Decreto 1.034/96 (A.8, A.13); Plano 92 (A.29). El
+resultado de la subasta de A.18 no se publica en el ano.
+
+§C · LIMITROFES
+---------------
+15179 h16 y 15200 h25 (A.18): la finca Cerro Nevado linda al norte con la
+provincia de Jujuy. 15109 h43 (A.4): la Liga San Lorenzo - La Caldera sesiona en
+Vaqueros. 15225 h20 (A.16): las fincas Severino tienen acceso por General
+Guemes. 15276 h8 (A.31): el acueducto de Campo Alegre a la ciudad de Salta, con
+una etapa La Caldera - Vaqueros. Ninguno es un acto de limites.
+
+§P · PLANOS
+-----------
+Ningun plano del departamento hallado. Planos citados y no acompanados: los de
+mensura de A.6 y A.7 y el Plano 92 de A.29. Laminas por la tinta: no buscadas
+este ano (P7).
+§D · INDICE
+-----------
+Edicion, hoja, clase fija (7.1), materia.
+  15079 h8   CARGOS         B.2 Destacamento policial Vaqueros
+  15094 h4   HACIENDA-MUN   B.2 Mun. Vaqueros, Lic. 1/97 camioneta
+  15099 h15  HACIENDA-MUN   B.2 Mun. Vaqueros, PRODISM
+  15100 h8   HACIENDA-MUN   A.1 Dcto. 2885, Hospital de La Caldera
+  15105 h21  CARGOS+ESCUELA A.2 Dcto. 774, Colegio 44
+  15108 h39  OTRO           A.3 Foro de Intendentes, asamblea en LC
+  15109 h43  OTRO           A.4 Liga de Futbol, asamblea en Vaqueros
+  15110 h25  HACIENDA-MUN   A.5 Dcto. 1015, ATN, La Caldera 10.176
+  15118 h9   AGUAS          B.2 Dcto. 1343, convenio agua Vaqueros
+  15124 h16  DOMINIO+JUSTICIA B.2 Remate 50 % inmueble Vaqueros
+  15130 h5   OBRA-PUBLICA   B.2 Centro de Salud 23 Lesser
+  15136 h6   DOMINIO        A.6 Res. 86 D, loteo Mat. 2.241, Vaqueros
+  15136 h6   DOMINIO        A.7 Res. 87 D, Mat. 1.865, Vaqueros
+  15145 h6   CARGOS         A.8 Res. 135 D, Area Operativa XXXIX
+  15146 h12  OBRA-PUBLICA+AGUAS A.9 Dcto. 1781, red colectora LC
+  15146 h17  OBRA-PUBLICA+AGUAS A.10 Aguas de Salta, acueducto Wierna
+  15161 h15  CARGOS         A.12 Traslado al Area XXXIX
+  15161 h18  CARGOS         A.13 Res. 215 D, Area XXXIX
+  15162 h32  OTRO           A.14 Minas vacantes, La Caldera
+  15163 h16  DOMINIO+JUSTICIA A.15 Remate 2 lotes Barrio El Jardin
+  15168 h19  DOMINIO+JUSTICIA A.16 Remate Fincas Severino, 2.600 has
+  15170 h8   ELECTORAL      A.17 Dcto. 2363, convocatoria, senador
+  15179 h16  DOMINIO+JUSTICIA A.18 Remate Fca. Cerro Nevado, Cat. 102
+  15194 h10  OBRA-PUBLICA   A.20 Res. 1344, techado cancha LC
+  15203 h14  OBRA-PUBLICA+AGUAS A.11 Res. 1500, adjudica acueducto
+  15205 h11  HACIENDA-MUN   A.21 Dcto. 2930, fondo compensador
+  15206 h9   DOMINIO        A.19 Dcto. 2937, compra Cerro Nevado
+  15206 h10  ELECTORAL      A.22 Dcto. 2998, convencional
+  15207 h13  CARGOS         A.23 Res. 291 D, Instituto Luis Linares
+  15212 h13  OBRA-PUBLICA+ESCUELA A.24 Lic. 11/97, Escuela 137
+  15230 h15  HACIENDA-MUN   A.25 Dcto. 3326, ATN, La Caldera 10.176
+  15237 h9   OTRO           A.26 Dcto. 3359, subsidio Fundayar
+  15244 h39  CARGOS         A.27 Dcto. 3430, SAME La Caldera
+  15260 h30  ELECTORAL      A.28 Dcto. 3780, mesas
+  15263 h16  DOMINIO+JUSTICIA A.29 Remates Cat. 514 y 515
+  15271 h6   HACIENDA-MUN   A.30 Dcto. 3861, ATN, La Caldera 10.176
+  15276 h8   OBRA-PUBLICA+AGUAS A.31 Res. 2332, acueducto Campo Alegre
+  15277 h7   OBRA-PUBLICA   A.32 Concurso 313, maquinas para LC
+  15282 h5   AGUAS          A.33 Ley 6.964, canon de riego
+  15296 h24  ELECTORAL      A.34 Actas 2226-2227, proclamacion
+  15296 h34  ELECTORAL      A.35 Acta 2224, senador
+  15313 h9   CARGOS         A.36 Res. 536 D, Area XXXIX
+  15313 h20  DOMINIO+JUSTICIA A.37 Remate Mat. 943 y 942
+  15315 h54  HACIENDA-MUN   A.38 Rentas, catastros sin domicilio
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicacion y saldos
+
+md5 y dhash: no calculados: limite. Repeticiones controladas por el texto: A.4
+(dos avisos), A.15 (3), A.16 (6 en dos avisos), A.18 (6 en dos avisos), A.22 (11
+y la separata), A.29 (9 en tres avisos), A.38 (5). Saldos: ningun balance del
+departamento; cadena no aplicable.
+
+E.2 · Cobertura
+
+247 de 247 ediciones; 7045 hojas. Tapas: 247 de 247 en la imagen. Hojas de
+interior miradas en la imagen, enteras o por tramos: unas 70. Tinta: no medida
+este ano (P7). Segunda version: solo la franja de las tapas.
+
+E.3 · Sin mencion y no mirado
+
+Las hojas sin mencion no se miraron en la imagen, salvo las tapas: su cobertura
+es la de las cuatro pasadas sobre una version y la del anillo de actores. Las
+835 hojas a ojos no se miraron enteras (P1).
+
+E.4 · Firmas y autoridad
+
+Gobernador: Juan Carlos Romero en las 247 tapas y en los decretos con firma
+leida (ROMERO - Martinez - Escudero en el 3.861, A.30; ROMERO - Torino -
+Escudero en el 3.875, B.2). Interinatos: no revisados (P4). Numeracion: Decretos
+2.356, 2.359 y 2.363 de mayo (15170); 2.930 (8-7) y 2.937 (11-7) y 2.998 (16-7);
+3.860 y 3.861 (13-10), 3.874 y 3.875 (13-10); Resoluciones D 82 a 87 de marzo
+(15136), 195 a 197 y 213 a 215 del 30-4 (15161), 535 y 536 del 5-12 (15313); SO
+y SP 1.343 a 1.345 (2-6), 1.486 y 1.500 (junio). Monotona donde se miro.
+
+E.5 · Cortes y columnas
+
+U+0002: 0. Columna perdida: no observada en los unos 35 tramos mirados. La tabla
+de minas de A.14 sale partida en columnas sueltas en la capa y en el OCR.
+
+E.6 · Repeticiones
+
+Las de E.1. A.22 se republica por mandato del propio decreto. A.29 son dos
+remates distintos (dos martilleros, tres avisos) de los mismos catastros.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1, falsos positivos: 51 de las 142 hojas con "cald": Calderon y Caldera
+(apellidos), Yapura Caldez, Recalde, "calderas" de maquinas y la caldera
+Gonella, "escaldado", la mina "Rio Caldera". Difusa: ninguna del departamento
+salvo "lalcaldera" (A.38). Falsos negativos que la sesion corrige: el OCR lee
+"3.746" por 8.746 (A.3) y "Circuito N 3" por 8 (A.28); la lista de A.38 sale
+deformada en las cinco apariciones.
+
+E.8 · Fidelidad numerica
+
+Recalculados en la imagen: A.6 (balance, cierra), A.29 (95,04 = 2/3 de 142,56,
+cierra), A.18 (150.000 = 200.000 menos 25 %, cierra). Recuentos propios: A.28
+(20 mesas), A.34 (3 y 4 concejales). No recalculados: los tres repartos de
+Aportes del Tesoro (A.5, A.25, A.30), el fondo compensador (A.21), el refuerzo
+de A.1. Cuadros publicados que nombran el termino: 7; subtotales recalculados:
+2.
+
+E.9 · Contradicciones y erratas del original
+
+A.11: presupuesto de 169.394,24 contra 169.394,25 del llamado (A.10), y una
+fecha de concurso anterior al llamado (OCR). A.13: "Decreto N 1.043/96" por
+1.034. A.29: dos remates de los mismos catastros el mismo dia, con bases
+distintas, por martilleros distintos. A.13 contra 1995: "Ruiz" y "Ruin" para la
+misma profesional. Tapas: "Ano LXXXIX" todo el ano (el LXXXIX habia empezado el
+14-8-96): o el ano editorial no cambio en agosto de 1997 o la tapa no se
+actualizo; se transcribe.
+
+E.10 · Pendientes y limites
+
+PENDIENTES:
+  P1. Las 835 hojas a ojos del pre-informe no se miraron enteras.
+  P2. La lista de catastros sin domicilio de A.38 no se leyo en la imagen.
+  P3. Cadena de folios no armada.
+  P4. Interinatos: no revisados.
+  P5. No leidos: el nombre de la mina de A.14; el numero exacto de A.12; la
+  fecha del concurso de A.11; los renglones de intendentes y concejales del
+  Decreto 2.363 (A.17); el resultado de la subasta de A.18; la ley de
+  presupuesto 1997 y su planilla de obras (F.1).
+  P6. Cuadros no recalculados (E.8) y nominas no recontadas (A.27).
+  P7. Tinta y laminas: no medidas este ano.
+LIMITES:
+  L1. md5 y dhash no aplicables.
+  L2. Matriz de puntos de A.38: digitos dudosos en el OCR.
+  L3. Tesseract sin spa.
+  L4. decretos_1997.csv vacio.
+  L5. Dias de salida sin edicion: 13 dias habiles (20-2; 27-3 y 28-3, Semana
+  Santa; 1-5; 9-6; 16-6 y 17-6; 9-7; 18-8; 15-9; 8-12; 19-12; 25-12). Sin
+  explicar en el corpus; ninguna edicion en sabado o domingo.
+  L6. Paginacion: 7000 paginas declaradas contra 7045 hojas.
+  L7. Hojas ausentes: 54 estimadas, una por edicion, la ultima.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 (planilla de obras). Las pasadas de texto no devolvieron este ano ninguna
+planilla de presupuesto con clave de departamento, y la sesion no busco a mano
+la ley de presupuesto 1997 ni su planilla de obras (P5). Como en 1994-1996 la
+clave de esas planillas no la lee ningun OCR, la ausencia de aciertos no prueba
+que no exista: propuesta: que el informe de cada ano diga donde esta la ley de
+presupuesto y si se recorrio su planilla.
+F.2 (cruces de lectura entre anos). La profesional de A.13 permite decidir una
+duda de 1995 por cita cruzada (control 4 de 5.6): propuesta: que el AMPLIA que
+incorpore 1995 y 1997 tome "Ruiz" y anote la variante.
+F.3 (config). Agregar al anillo 2: "severino chico", "severino grande", "cerro
+nevado", "potrero de san jose", "estancia las nieves", "catastro 102", "barrio
+el jardin", "pasaje las rosas", "foro de intendentes", "fundayar", "same la
+caldera", "hogar san cayetano", "hospital de la caldera"; a falsos_positivos:
+"camino a vaqueros" (Capital), "rio vaqueros - margen derecha" (Capital), "calle
+rio wierna", "planta potabilizadora rio wierna", "mina rio caldera"; a actores
+(origen 1997): Victor Flores y Nayah Cadar, Petrovial S.A., Juan Pablo Guinez,
+Ramon Antonio Conde, Lucio Alberto Lozano, Gregorio Garcia, Miguel Gabriel
+Vilte, Julio Hipolito Bizgarra, Luis Humberto Perez. No se entrega
+lee_config.json.
+
+§R · RECUENTO
+-------------
+anio: 1997
+ediciones_desde: 15074
+ediciones_hasta: 15320
+ediciones_presentes: 247
+ediciones_ausentes: 0
+hojas_presentes: 7045
+hojas_declaradas: 7000
+hojas_ausentes_estimadas: 54
+periodicidad: diaria-dias-habiles
+dias_salida_sin_edicion: 13
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: si
+capa_previa: textos-del-release
+versiones: 1
+actos_departamento: 38
+actos_dominio: 9
+actos_hacienda_municipal: 6
+planos_publicados: 0
+planos_citados_departamento: 3
+balances_municipales: 0
+cuadros_publicados: 7
+subtotales_recalculados: 2
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 35
+hojas_miradas: 317
+avisos_repetidos_departamento: 7
+falsos_positivos_anillo1: 51
+limites_declarados: 7
+estado: CON PENDIENTES
+nivel_lectura: imagen
+pdf_release: 247
+avisos_release: 0
