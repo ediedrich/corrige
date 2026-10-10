@@ -4984,3 +4984,110 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 8 de 8 hallazgos resueltos; compila sin errores, 1.043 páginas. **Avance de la investigación:** la **segunda tesis** gana 1995-1997 sin cambiar de estado: las defensas, el dique, el azud, la red colectora y el acueducto de Vaqueros son de la Provincia o de su empresa de agua, y lo que pasa a los municipios son escuelas, con un legajo municipal que completa un programa provincial. La **tercera** gana las actas de proclamación de 1995 y 1997 del Boletín (diputado, senador, intendentes y concejales de los dos municipios). El catastro 102 gana la autorización de compra de 1997, sin resultado. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 35 líneas (0,14 %; 27,7 páginas). Cobertura acumulada: 25.582 de 25.582 (100,0 %). Falsos positivos descartados: 4. Errores introducidos por la propia auditoría: 8, en el AMPLÍA de la misma sesión (uno heredado del informe LEE 1997); atrapados por un control automático: 0.
+
+## Ronda 87 — auditoría con fase 6 (10/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v2 §7), sobre el material del AMPLÍA 1998. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `f85a0e5` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1998, sobre `c5f3157`; aplicado por `3-registrar` a las 14:19 del 10/10), con la fase 6 en `ronda-87.patch` (un commit sobre `f85a0e5`). La sesión que hace esta ronda es la misma que escribió el informe LEE 1998 y el AMPLÍA: se audita trabajo propio, y las cifras y citas nuevas se volvieron a mirar en el acto, en la imagen del Release cuando el informe las había leído sólo en el texto reconocido.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 86 (25.582 de 25.582, sobre `c5f3157`) se trasladaron por diff a `f85a0e5`. **El AMPLÍA caduca 16 líneas y deja 23 nuevas o modificadas** (7 netas: 5 en A, 2 en F), en 9 archivos. Vigentes después del traslado: 25.566 de 25.589.
+
+### Lectura sobre el texto (numeración de `f85a0e5`)
+
+Se leyeron **las 23 líneas, enteras** (77.504 bytes), contra el informe `BO-Salta-1998_15321-15563_la-caldera_LEE-1998_2026-10-10.txt` y, en las cifras y las citas, contra el acto.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 6 (4, 521–525) |
+| ape/D-pedidos.tex | 1 (176) |
+| ape/F-fuentes.tex | 6 (26, 96, 111, 117, 118, 120) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/04-siglo.tex | 1 (3671) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+
+Contexto releído entero (no suma cobertura): A:518–520 (las filas de 1997), F:115 (el párrafo de 1995 a 1997), 01:157 entero (la falsación de la tercera tesis).
+
+**Esta ronda: 23 líneas nuevas**, 77.504 bytes sobre 3.442.844, que en las 1.049 páginas de la base equivalen a **23,6 páginas**.
+
+Acumulado: 25.566 vigentes + 23 = **25.589 de 25.589 (100,0 %)**. La fase 6 toca una línea de esta ronda (A:521) y no cambia el largo de ningún archivo: **25.589 de 25.589 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 15382 | 15–16 | Decretos 773 y 774: «La Caldera 10.176,00», «Vaqueros 12.525,00»; «5.7.6.2.28 La Caldera 8.344,32», «Vaqueros 10.270,50» (imagen) | Coincide |
+| 15474 | 11 | Decreto 1855: «La Caldera $ 10.176.-», «Vaqueros $ 12.525.-» (imagen) | Coincide |
+| 15535 | 14 | Decreto 3287: «La Caldera $ 10.176» (imagen) | Coincide; la fila no da el de Vaqueros |
+| 15417 | 8 | Res. SO y SP 279: «Artículo 1º - Con encuadre en el Artículo 13 - Inc. h) de la Ley Nº 6.838», D.E.S.A., «Emergencia río La Caldera - Margen derecha - Puente carretero - Acceso a La Caldera» (imagen) | Coincide |
+| 15424 | 4–6 | Decreto 1148: tareas de operación «de todos los sistemas de riego de la provincia de Salta, comprendidos en las obras enunciadas en el Anexo I a la Empresa Proint S.A.»; anexo I, toma derivadora y dique de Campo Alegre, «La Caldera» (imagen) | Coincide; la cita del libro termina en «provincia» |
+| 15503 | 5 | Res. 373: legajo «confeccionado por la Municipalidad de La Caldera», «Defensas y Encauzamiento sobre río La Caldera, zonas Cabral, Camping Municipal, Barrio Jardín, La Caldera», $203.780,94 (imagen) | Coincide |
+| 15542 | 9 | Res. 586: legajo de la Municipalidad, «Abastecimiento de Agua Potable Tramo El Cristo, Getsemaní y Red de Distribución en Getsemaní», $55.219,18 (imagen); adjudicación directa en sesenta días (texto reconocido); Res. 585, El Carril (imagen) | Coincide |
+| 15529 | 11 | Res. 745: legajo de la Municipalidad de Vaqueros, «Construcción de Dos Baños y Galería en el Colegio San Cayetano» (imagen) | Coincide |
+| 15467 | 9 y 12 | Decreto 1764: la falta de cobertura previsional «es más grave en el interior de la provincia en los departamentos de Rivadavia, Orán, Gral. San Martín, Santa Victoria, Anta, La Caldera»; las peores condiciones de NBI, en «Rivadavia, Guachipas, Molinos»; cuadro, «La Caldera 46,9» y total 24,3 (imagen) | **La fila juntaba las dos frases**: hallazgo 1 |
+| 15548 | 6 | Decreto 3491: «Departamento La Caldera: Un (1) Diputado» (imagen) | Coincide |
+| 15323 | 3–4 | Ley 6968: «El texto de la Ley Nº 6.968 se publicará como Anexo en Separata» (imagen) | Coincide |
+| 15469, 15558 | 14; 24 | Colegio Nº 5.045 (Ex 44), proyecto de $1.200 y concurso 136/98 de $81.913 (imagen) | Coincide |
+
+12 cotejos sobre 17 hojas de 13 ediciones (11 sobre la imagen; el plazo de la Res. 586, sobre el texto reconocido); 11 coincidentes y 1 que corrige al libro.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:521 | El decreto de los mayores de sesenta «pone a La Caldera entre los departamentos en peores condiciones, con el 46,9 % de ellos con necesidades básicas insatisfechas»: junta la frase de la cobertura previsional, donde el departamento está entre los peores, con el cuadro de NBI, donde no lo está | 5 | Entre los departamentos donde la falta de jubilación y pensión es más grave, y el 46,9 % con NBI contra el 24,3 % de la provincia (h. 9 y 12) |
+
+Resta: en el aspecto 5, una afirmación que no es la del acto, en una frase: escala general, **90**. Ningún error de consistencia en las 23,6 páginas: el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: uno, en el AMPLÍA 1998 (`f85a0e5`), escrito por esta misma sesión; lo encontró el cotejo de la imagen, no un control automático. **Además, una falla de la ronda 86**: el recuento «los veinticuatro años que van de 1989 a 2012 son, salvo trece de ellos» (02:99) quedó desactualizado con el AMPLÍA 1995-1997 (debió pasar a dieciséis) y la ronda 86 no lo vio, porque su control de menciones de cobertura buscó «ciento un», «cincuenta y nueve», «cincuenta y ocho» y «1994,», y no los recuentos de años en letras; lo corrigió el AMPLÍA 1998 (pasa a diecisiete). El libro entregado ya no lo contiene, y no resta en esta ronda; queda dicho como falla de la auditoría anterior.
+
+**Descartados (falsos positivos, 2).** La cita del decreto 1148 termina en «provincia» y el original sigue con «de Salta»: el corte no cambia el sentido. «Las tapas imprimen el año editorial "LXL"» (F:117): es la errata del original, y el informe LEE la transcribe [sic].
+
+**Pendientes revisados.** P256 a P258, abiertos por el AMPLÍA, siguen abiertos. P252 (catastro 102): lo leído de 1998, con pendientes, tampoco da el resultado de la subasta de 1997; sigue abierto. No hay pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.582/25.582 vigentes en `c5f3157` | 25.566 vigentes; 16 caducas |
+| Citas entre comillas en las líneas nuevas contra el acto | 6 cadenas (las de las filas del 20/4, 21/5, 13/8 y 9/10, y «Enfermera Corina Adela Bustamante» y «Juana Moro de López») | 6/6 literales |
+| Cifras y fechas de las líneas nuevas contra el acto | 19 en 13 ediciones (los importes de los decretos 773, 774, 1855 y 3287, de las Res. 279, 286, 373, 582 y 586 y del concurso 136/98, los porcentajes del decreto 1764 y las fechas de las cuatro filas nuevas y del decreto 3491) | 19/19; cuatro sobre el texto reconocido y no sobre la imagen (el importe de la Res. 279 y las fechas de los decretos 1148 y 3491 y de la Res. 586) |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 23 líneas; coincidencias en el texto nuevo: «ningún plano», «ningún resumen», «ningún balance» (F:117) | Las 3, con universo («en lo leído del año») |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 1996-1999, «años 90» o «posterior a 1997» | 16/16 | Las que caían las corrigió el AMPLÍA (F:96 y 02:99) |
+| Menciones de cobertura («1994 a 1997», «ciento cuatro», «sesenta y uno», «sesenta y dos», «ocho últimos», **y los recuentos de años en letras de 02:99**) | 25.589/25.589 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 (las nuevas están en el apéndice A y en el cap. 22 hacia sí mismo) |
+| Privacidad: personas nombradas en las líneas nuevas | 23/23 | 0 caídas. Nombrados: empresas (D.E.S.A., Proint S.A., Yazlle en el informe y no en el libro), el nombre de un centro de salud. Sin nombre: los demandados de los remates, los docentes, los partidarios |
+| Largo de los archivos antes y después de la fase 6 | 1 archivo | no cambia |
+| Compilación | base `f85a0e5` y fase 6 | Compilan; 1.049 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas |
+| `git am` del parche sobre un clon limpio de `f85a0e5` | 1 parche | Aplica |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Sin hallazgos |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 12 cotejos sobre 13 ediciones, bajo el techo de 90; 6/6 citas literales |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 1, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 23,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedido nuevo en D (separata de la Ley 6968); ninguno satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis se rejuzga con 1998: las adjudicaciones directas a la Municipalidad son ejecución de obras provinciales; el libro lo dice como inferencia sobre lo hallado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Las dos adjudicaciones directas de 1998 entran a la serie del agua y de las defensas |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 87,1 antes del tope y 87,1 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 86.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P257: seguir en 1999 la ejecución de las dos obras adjudicadas a la Municipalidad, que decide si 1998 es una oscilación de la tercera tesis o sólo ejecución delegada; (5) agregar al control de menciones de cobertura los recuentos de años en letras (falla de la ronda 86).
+
+**Avance del libro:** 1 de 1 hallazgo resuelto; compila sin errores, 1.049 páginas. **Avance de la investigación:** la **tercera tesis** gana su primer caso de 1989 en adelante en que la Provincia le adjudica a la Municipalidad de La Caldera obras del agua y del río ---como ejecutora, sobre legajos propios---, que el libro presenta como ejecución y no como competencia y deja abierto en P257; la **segunda**, la operación del riego provincial puesta en manos de una empresa privada en 1998. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 23 líneas (0,09 %; 23,6 páginas). Cobertura acumulada: 25.589 de 25.589 (100,0 %). Falsos positivos descartados: 2. Errores introducidos por la propia auditoría: 1, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0; y una falla de la ronda 86 (un recuento de años que su control no buscaba), corregida por el AMPLÍA 1998.
