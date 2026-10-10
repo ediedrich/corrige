@@ -1,0 +1,2013 @@
+LEE v17 — 1989
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - 1989 - EDICIONES 13102 A 13345
+Barrido documental del departamento La Caldera
+Informe LEE del ano 1989 - rubrica LEE v16 con los cambios v17 del flujo
+editorial (corrige/flujo-editorial.md, version 2, 5) - 2026-10-10
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: CON PENDIENTES. Cinco pendientes nombrados (E.10, primera parte) y siete
+limites declarados (E.10, segunda parte). El §A esta cerrado: las 31 fichas se
+miraron en la imagen, y del §B se miro todo lo que se cita con numero. Lo que
+queda pendiente es control de corpus que la sesion puede hacer y no hizo entero
+(hojas a ojos, cotejo sumario/cuerpo fuera de las fichas, interinatos, dos
+repeticiones de avisos no halladas y los decretos vecinos mirados solo en la
+capa), no lectura de fichas.
+
+Sesion automatica (tarea programada del ciclo, sin nadie mirando). La sesion
+tomo el turno a las 00:27 del 10-10-2026 (reloj de la maquina de Eduardo) con
+"LEE 1989" en siguiente.json. El ultimo registro (ultimo-registrar.txt, 09-10
+19:50) no rechazo nada; despues la maquina descargo y proceso 1989, 1991 y 1994.
+
+Fuentes de la sesion, bajadas al empezar: flujo-editorial.md,
+estado/estado.json, rubrica-lee-v16.md y config/lee_config.json del repositorio
+ediedrich/corrige (rama main), y el informe LEE de 1992 como referencia de
+formato y de actores. Release 1989 de ediedrich/boletines-salta: desde la nube
+responde con el aviso del proxy ("GitHub access to this repository is not
+enabled for this session"), como en 1990 y 1992; se bajo en la computadora de
+Eduardo con curl, a auto/tmp/1989, y se trajo a la sesion en seis paquetes tar.
+Inventario (expanded_assets): 249 assets = 243 PDF de edicion (13102.pdf a
+13345.pdf, sin 13314.pdf) + 6 insumos:
+BO-Salta-1989_la-caldera_PRE-INFORME-LEE_2026-10-08.txt, decretos_1989.csv,
+lee_config.json, lee_textos_1989.zip, log.txt y resultados_1989.csv.zip. Ningun
+aviso de "no se encontro". Tres PDF (13121, 13122 y 13124) llegaron truncados en
+la primera bajada (0 hojas) y se volvieron a bajar enteros; los 243 abren.
+
+Pre-informe usado: el unico del Release, fechado 2026-10-08 (lee_auto.py,
+08/10/2026 08:37). decretos_1989.csv llego vacio (solo la cabecera): la
+numeracion se controlo por la capa (E.4). resultados_1989.csv.zip (234 MB
+descomprimido) quedo en la computadora; la sesion rehizo las pasadas sobre los
+textos del zip.
+
+lee_auto.py: corrida registrada en estado.json con lee_auto 50eb5edd5560 y
+config 2026-10-07. Log: extraccion 241/243: "ERROR extrayendo 13294.pdf" y
+"13295.pdf" ("malloc (7135232 bytes) failed"); "capa previa util en 536/4631
+hojas (12 %); se ocrizan 4095"; OCR con 4 procesos, 4099/4099, con 66 errores de
+memoria ("std::bad_alloc", "The paging file is too small"), casi todos en
+13102-13112. Resultado: 67 hojas sin ningun texto y 36 hojas de 13294-13295 sin
+extraer. La sesion les hizo OCR propio (tesseract eng, psm 3, 300 ppp) a las
+103: version "ses" (E.5). Parametros de la corrida: tesseract spa, psm 3, 300
+dpi.
+
+Config (5.2): config de corrige: version 2026-10-07, hasta 2026, 2526 actores,
+1165 terminos de anillo 2, 3629 numeros, 228 falsos positivos. Foto del Release:
+version 2026-10-07, hasta 2026, los mismos cuatro recuentos. Se usa el de
+corrige; contenido: identicos (cotejados los cuatro conjuntos termino por
+termino; difieren solo en el formato del archivo). La sesion no cambia el
+config: no se entrega lee_config.json (F.3 dice que agregaria).
+
+Entorno: 2 nucleos; PyMuPDF instalado desde pypi; tesseract solo con eng y osd,
+sin spa. La computadora de Eduardo no tiene PyMuPDF; se uso solo para bajar.
+
+Imagenes: los 243 PDF del Release (451 MB), rasterizados en la sesion.
+Resolucion de las imagenes incrustadas: 293 a 300 ppi en casi todo el corpus
+(300 en 4083 de 4680 hojas); 373 a 396 en 54 hojas (13249, 13250, 13316) y unos
+192-200 en las 18 hojas de 13256 y una de 13303. Las cifras de este informe se
+leyeron a 130-300 ppp sobre esa imagen.
+
+Que verifico la sesion: las 243 tapas en la imagen (numero, fecha, paginas
+declaradas, ano editorial y gobernador; 18 mosaicos a 85 ppp y 11 tapas a 200
+ppp); las 31 fichas del §A en la imagen y las del §B que se citan con numero;
+tres cuadros (uno recalculado completo, de 58 renglones; dos recontados); las
+cuatro pasadas propias sobre los textos del zip mas las 103 hojas de OCR propio;
+el anillo 2 entero (117 terminos con acierto); el anillo de actores del config;
+segunda version propia de las 102 hojas a ojos; tinta de las 4680 hojas; cadena
+de folios por la capa; serie de decretos vecinos por la capa.
+
+Desvio de 8.17: las transcripciones van sin tildes ni enes (archivo ASCII, salvo
+los marcadores de seccion y la raya de la primera linea); la ortografia original
+se respeta en todo lo demas y los [sic] van en el texto. Los numeros de
+documento de particulares se omiten con [...] (5.6.3 del flujo).
+
+Que agregaria cada insumo que falto: decretos_1989.csv lleno daria la serie de
+decretos para los vecinos +-3 sin pasar por la capa; un OCR completo en la
+maquina (sin los errores de memoria) daria la version spa de 13102-13112 y
+13294-13295; tesseract spa en la sesion daria una segunda version en castellano
+de las hojas a ojos; el PDF de la edicion 13314 cerraria el hueco de 20 folios
+de noviembre.
+
+§1 · CORPUS REVISADO
+--------------------
+243 ediciones presentes, N 13102 (lunes 2 de enero de 1989) a N 13345 (viernes
+29 de diciembre de 1989); falta una, la 13314 (ver abajo). 4680 hojas en los PDF
+contra 4641 paginas declaradas en las tapas presentes. Ano editorial leido en la
+imagen de las 243 tapas: "Ano LXXIX" de 13102 a 13234 (2-1 al 17-7) y "Ano
+LXXXI" desde la 13235 (18-7, mirada a 200 ppp): ninguna tapa dice LXXX (E.9).
+"APARECE LOS DIAS HABILES" en todas. Gobernador en las 243 tapas: C.P.N. HERNAN
+HIPOLITO CORNEJO. Tirada declarada (en las tapas en que el recorte la alcanza):
+450 ejemplares hasta la 13208 (8-6; la 13187 dice 500), 400 desde la 13209, 350
+desde la 13224, 250 desde la 13226, 280 desde la 13258 y 300 desde la 13271.
+
+Techo de resolucion: 293 a 300 ppi en casi todo el corpus; 373-396 en 13249,
+13250 y 13316; 192-200 en 13256. Es el doble que 1922-1932, como 1990 y 1992.
+
+Tabla: edicion, [fecha leida en la tapa], dia, hojas presentes/paginas
+declaradas, hojas "a ojos" del pre-informe (o) y hojas de capa nativa (n).
+  13102 [02-01]  L  11/11  o0 n2
+  13103 [03-01]  M  18/18  o0 n3
+  13104 [04-01]  X  15/15  o0 n3
+  13105 [05-01]  J  18/18  o0 n3
+  13106 [10-01]  M  18/18  o0 n3
+  13107 [11-01]  X  13/13  o0 n2
+  13108 [12-01]  J  15/15  o0 n4
+  13109 [13-01]  V  13/13  o0 n3
+  13110 [16-01]  L  14/14  o3 n2
+  13111 [17-01]  M  11/11  o0 n3
+  13112 [18-01]  X  13/13  o0 n3
+  13113 [19-01]  J  22/22  o3 n2
+  13114 [20-01]  V  14/14  o0 n3
+  13115 [23-01]  L  18/18  o0 n3
+  13116 [24-01]  M  16/16  o0 n3
+  13117 [25-01]  X  20/20  o0 n3
+  13118 [26-01]  J  19/19  o0 n2
+  13119 [27-01]  V   9/9   o0 n2
+  13120 [30-01]  L  12/12  o0 n1
+  13121 [31-01]  M  10/10  o0 n2
+  13122 [01-02]  X  10/10  o0 n1
+  13123 [02-02]  J   9/9   o0 n1
+  13124 [03-02]  V  11/11  o0 n1
+  13125 [06-02]  L  14/14  o0 n2
+  13126 [07-02]  M  15/15  o0 n3
+  13127 [08-02]  X  16/16  o0 n3
+  13128 [09-02]  J  15/15  o0 n3
+  13129 [10-02]  V  11/11  o0 n3
+  13130 [13-02]  L  13/13  o0 n2
+  13131 [14-02]  M  10/10  o0 n2
+  13132 [15-02]  X  13/13  o0 n2
+  13133 [16-02]  J  19/19  o0 n3
+  13134 [17-02]  V  15/15  o0 n3
+  13135 [21-02]  M  20/20  o0 n2
+  13136 [22-02]  X  20/20  o0 n3
+  13137 [23-02]  J  16/16  o0 n3
+  13138 [24-02]  V  19/19  o0 n3
+  13139 [27-02]  L  16/16  o0 n3
+  13140 [28-02]  M  22/22  o0 n2
+  13141 [01-03]  X  37/37  o18 n2
+  13142 [02-03]  J  14/14  o0 n3
+  13143 [03-03]  V  16/16  o0 n4
+  13144 [06-03]  L  18/18  o0 n2
+  13145 [07-03]  M  17/17  o0 n2
+  13146 [08-03]  X  14/14  o0 n2
+  13147 [09-03]  J  32/32  o0 n2
+  13148 [10-03]  V  17/17  o1 n2
+  13149 [13-03]  L  18/18  o0 n2
+  13150 [14-03]  M  16/16  o0 n2
+  13151 [15-03]  X  23/23  o0 n3
+  13152 [16-03]  J  21/21  o0 n3
+  13153 [17-03]  V  13/13  o0 n2
+  13154 [20-03]  L  20/20  o0 n2
+  13155 [21-03]  M  23/23  o0 n3
+  13156 [22-03]  X  14/14  o0 n3
+  13157 [27-03]  L  15/15  o0 n3
+  13158 [28-03]  M  22/22  o1 n2
+  13159 [29-03]  X  18/18  o0 n3
+  13160 [30-03]  J  23/23  o0 n3
+  13161 [31-03]  V  21/21  o0 n3
+  13162 [03-04]  L  24/24  o0 n3
+  13163 [04-04]  M  23/23  o0 n3
+  13164 [05-04]  X  18/18  o0 n2
+  13165 [06-04]  J  16/16  o0 n2
+  13166 [07-04]  V  23/23  o0 n1
+  13167 [10-04]  L  17/17  o0 n2
+  13168 [11-04]  M  17/17  o0 n2
+  13169 [12-04]  X  24/24  o0 n3
+  13170 [13-04]  J  23/23  o0 n3
+  13171 [14-04]  V  20/20  o0 n2
+  13172 [17-04]  L  32/26  o6 n3
+  13173 [18-04]  M  18/18  o0 n2
+  13174 [19-04]  X  16/16  o0 n2
+  13175 [20-04]  J  23/23  o1 n4
+  13176 [21-04]  V  27/27  o0 n2
+  13177 [24-04]  L  59/59  o0 n2
+  13178 [25-04]  M  16/16  o0 n2
+  13179 [26-04]  X  15/15  o0 n3
+  13180 [27-04]  J  40/40  o11 n2
+  13181 [28-04]  V  20/20  o0 n2
+  13182 [02-05]  M  23/23  o0 n2
+  13183 [03-05]  X  19/19  o0 n2
+  13184 [04-05]  J  16/16  o0 n2
+  13185 [05-05]  V  17/17  o0 n2
+  13186 [08-05]  L  20/20  o1 n2
+  13187 [09-05]  M  30/30  o0 n3
+  13188 [10-05]  X  17/17  o0 n3
+  13189 [11-05]  J  14/14  o0 n3
+  13190 [12-05]  V  12/12  o0 n2
+  13191 [15-05]  L  10/10  o0 n2
+  13192 [16-05]  M  11/11  o0 n1
+  13193 [17-05]  X  17/17  o0 n3
+  13194 [18-05]  J  19/19  o0 n3
+  13195 [19-05]  V  16/16  o0 n3
+  13196 [22-05]  L  12/12  o0 n2
+  13197 [23-05]  M  15/15  o1 n2
+  13198 [24-05]  X  12/12  o0 n2
+  13199 [26-05]  V  12/12  o0 n2
+  13200 [29-05]  L   9/9   o0 n1
+  13201 [30-05]  M  11/11  o0 n2
+  13202 [31-05]  X  12/12  o0 n2
+  13203 [01-06]  J  12/12  o0 n2
+  13204 [02-06]  V  14/14  o0 n2
+  13205 [05-06]  L  11/11  o0 n1
+  13206 [06-06]  M  22/22  o0 n2
+  13207 [07-06]  X  16/16  o0 n2
+  13208 [08-06]  J  15/15  o0 n2
+  13209 [09-06]  V  15/15  o0 n2
+  13210 [12-06]  L  20/20  o0 n2
+  13211 [13-06]  M  21/21  o0 n2
+  13212 [14-06]  X  10/10  o0 n1
+  13213 [15-06]  J  14/14  o0 n2
+  13214 [16-06]  V  22/22  o0 n2
+  13215 [20-06]  M  20/20  o0 n2
+  13216 [21-06]  X  22/22  o2 n3
+  13217 [22-06]  J  16/16  o0 n3
+  13218 [23-06]  V  19/19  o0 n2
+  13219 [26-06]  L  16/16  o10 n2
+  13220 [27-06]  M  15/15  o0 n3
+  13221 [28-06]  X  22/22  o0 n3
+  13222 [29-06]  J  16/16  o0 n2
+  13223 [30-06]  V  21/21  o1 n3
+  13224 [03-07]  L  25/25  o0 n3
+  13225 [04-07]  M  20/20  o0 n3
+  13226 [05-07]  X  22/22  o0 n2
+  13227 [06-07]  J  20/20  o0 n3
+  13228 [07-07]  V  16/16  o0 n3
+  13229 [10-07]  L  12/12  o0 n3
+  13230 [11-07]  M  11/11  o0 n1
+  13231 [12-07]  X  15/15  o0 n2
+  13232 [13-07]  J  15/15  o0 n2
+  13233 [14-07]  V  19/19  o0 n3
+  13234 [17-07]  L   7/7   o0 n2
+  13235 [18-07]  M  18/18  o0 n3
+  13236 [19-07]  X  23/22  o4 n3
+  13237 [20-07]  J  18/18  o0 n3
+  13238 [21-07]  V  23/23  o2 n3
+  13239 [24-07]  L  22/22  o0 n3
+  13240 [25-07]  M  19/19  o0 n3
+  13241 [26-07]  X  15/15  o0 n3
+  13242 [27-07]  J  14/14  o0 n3
+  13243 [28-07]  V  20/20  o3 n3
+  13244 [31-07]  L  14/14  o0 n3
+  13245 [01-08]  M  15/15  o0 n3
+  13246 [02-08]  X  15/15  o0 n2
+  13247 [03-08]  J  16/16  o0 n2
+  13248 [04-08]  V  16/16  o0 n2
+  13249 [07-08]  L  19/20  o2 n1
+  13250 [08-08]  M  18/18  o2 n1
+  13251 [09-08]  X  19/19  o1 n2
+  13252 [10-08]  J  21/21  o1 n2
+  13253 [11-08]  V  20/20  o0 n2
+  13254 [14-08]  L  19/20  o0 n1
+  13255 [15-08]  M  20/20  o1 n1
+  13256 [16-08]  X  18/50  o2 n15
+  13257 [17-08]  J  29/29  o0 n1
+  13258 [18-08]  V  20/20  o0 n4
+  13259 [22-08]  M  26/26  o0 n2
+  13260 [23-08]  X  16/16  o0 n2
+  13261 [24-08]  J  19/19  o0 n2
+  13262 [25-08]  V  19/19  o0 n1
+  13263 [28-08]  L  15/15  o0 n2
+  13264 [29-08]  M  15/19  o0 n2
+  13265 [30-08]  X  15/15  o0 n2
+  13266 [31-08]  J  20/20  o0 n3
+  13267 [01-09]  V  23/23  o0 n1
+  13268 [04-09]  L  21/21  o1 n1
+  13269 [05-09]  M  19/19  o0 n1
+  13270 [06-09]  X  18/18  o0 n1
+  13271 [07-09]  J  24/24  o0 n1
+  13272 [08-09]  V  16/16  o0 n2
+  13273 [11-09]  L  18/18  o0 n2
+  13274 [12-09]  M  24/24  o0 n2
+  13275 [18-09]  L  23/23  o0 n1
+  13276 [19-09]  M  29/29  o0 n2
+  13277 [20-09]  X  24/24  o0 n2
+  13278 [21-09]  J  15/15  o0 n2
+  13279 [22-09]  V  16/16  o0 n2
+  13280 [25-09]  L  19/19  o0 n2
+  13281 [26-09]  M  19/19  o0 n1
+  13282 [27-09]  X  23/23  o0 n2
+  13283 [28-09]  J  20/20  o0 n2
+  13284 [29-09]  V  14/14  o0 n2
+  13285 [02-10]  L  28/28  o0 n2
+  13286 [03-10]  M  22/22  o0 n2
+  13287 [04-10]  X  25/25  o0 n1
+  13288 [05-10]  J  18/18  o0 n2
+  13289 [06-10]  V  20/20  o0 n2
+  13290 [09-10]  L  24/24  o0 n1
+  13291 [10-10]  M  25/25  o3 n1
+  13292 [11-10]  X  21/21  o0 n2
+  13293 [12-10]  J  22/22  o0 n2
+  13294 [13-10]  V  24/24  o0 n?
+  13295 [17-10]  M  25/25  o0 n?
+  13296 [18-10]  X  26/26  o0 n1
+  13297 [19-10]  J  18/18  o0 n2
+  13298 [20-10]  V  14/14  o0 n2
+  13299 [23-10]  L  18/18  o0 n2
+  13300 [24-10]  M  18/18  o0 n2
+  13301 [25-10]  X  22/22  o0 n2
+  13302 [26-10]  J  28/28  o0 n3
+  13303 [27-10]  V  57/20  o0 n2
+  13304 [30-10]  L  20/20  o0 n2
+  13305 [31-10]  M  26/26  o0 n1
+  13306 [01-11]  X  20/20  o0 n3
+  13307 [02-11]  J  28/28  o0 n4
+  13308 [03-11]  V  28/28  o0 n3
+  13309 [06-11]  L  23/23  o0 n2
+  13310 [07-11]  M  18/18  o0 n2
+  13311 [08-11]  X  23/23  o0 n2
+  13312 [09-11]  J  24/24  o1 n2
+  13313 [10-11]  V  24/24  o0 n2
+  13314  13-11?   L  --/--  ausente del Release (inferida, ver abajo)
+  13315 [14-11]  M  18/18  o0 n1
+  13316 [15-11]  X  27/27  o0 n2
+  13317 [16-11]  J  23/23  o0 n2
+  13318 [17-11]  V  21/21  o0 n1
+  13319 [20-11]  L  59/25  o0 n1
+  13320 [21-11]  M  21/21  o0 n1
+  13321 [22-11]  X  21/21  o0 n1
+  13322 [23-11]  J  17/17  o0 n2
+  13323 [24-11]  V  22/22  o0 n3
+  13324 [27-11]  L  18/18  o0 n2
+  13325 [28-11]  M  14/14  o0 n2
+  13326 [29-11]  X  23/23  o0 n2
+  13327 [30-11]  J  16/16  o0 n2
+  13328 [01-12]  V  18/18  o0 n2
+  13329 [04-12]  L  19/19  o0 n2
+  13330 [05-12]  M  20/20  o0 n2
+  13331 [06-12]  X  17/17  o0 n2
+  13332 [07-12]  J  20/20  o0 n2
+  13333 [11-12]  L  14/14  o0 n2
+  13334 [12-12]  M  14/14  o1 n2
+  13335 [13-12]  X  23/23  o0 n1
+  13336 [14-12]  J  19/19  o1 n1
+  13337 [18-12]  L  14/14  o0 n2
+  13338 [19-12]  M  15/15  o0 n2
+  13339 [20-12]  X  17/17  o0 n2
+  13340 [21-12]  J  36/36  o17 n2
+  13341 [22-12]  V  20/20  o0 n1
+  13342 [26-12]  M  18/18  o0 n1
+  13343 [27-12]  X  15/15  o0 n2
+  13344 [28-12]  J  47/47  o1 n1
+  13345 [29-12]  V  53/54  o0 n2
+Edicion 13314: no hay PDF en el Release. La tapa de la 13315 (14-11, lunes 13-11
+sin edicion) imprime "N. 13.314" tachado y sellado "13.315" (imagen a 200 ppp),
+y la cadena de folios salta 20 de la 13313 (ultimo folio 3998) a la 13315
+(primer folio 4019). Las dos cosas juntas indican una edicion de unas 20 paginas
+entre ellas, probablemente del lunes 13-11 (inferencia rotulada; el corpus no la
+trae). Se cuenta como ausente. Otras tapas con el numero tachado y corregido a
+mano o con sello: 13102, 13103, 13266 y 13267 (imagen a 200 ppp); en las cuatro
+la correccion coincide con la serie.
+
+Diferencias hojas/paginas declaradas (9 de 243, leidas en la tapa): 13172 32/26,
+13236 23/22, 13303 57/20 y 13319 59/25 (anexos sin folio: en las cuatro el folio
+de la edicion siguiente arranca donde termina la parte foliada); 13249 19/20,
+13254 19/20 y 13345 53/54 (una pagina menos; el folio no lo decide, porque 102
+de los 242 empalmes saltan un folio, E.10 L6); 13264 15/19 (el folio salta 5
+hasta la 13265: 4 hojas ausentes estimadas); 13256 18/50 (la tapa dice "EDICION
+DE 50 PAGINAS", imagen a 200 ppp, y los folios de las 18 hojas encadenan sin
+hueco con la 13257: se transcribe y no se explica, E.9). Ediciones con mas de 30
+hojas: 13141 (37), 13147 (32), 13172 (32), 13177 (59), 13180 (40), 13303 (57),
+13319 (59), 13340 (36), 13344 (47), 13345 (53).
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: una por hoja, salvo las 103 de OCR propio. 536 hojas con capa previa
+util ("prev", texto del PDF), 4032 con OCR propio de lee_auto.py ("prop",
+tesseract spa) y 103 con OCR de la sesion ("ses", tesseract eng, psm 3, 300 ppp:
+67 que el OCR de la maquina perdio por falta de memoria y 36 de 13294-13295, que
+no se extrajeron). Ademas, segunda version de la sesion ("ses2", eng, psm 4, 200
+ppp) sobre las 102 hojas a ojos. Union: U+00AD quitado junto con el salto (v16
+2.3.2), guion de corte con hasta dos signos intercalados, U+0002 (no aparece: 0
+en todo el corpus).
+
+Pasadas propias, sobre los textos del zip mas las versiones ses (no sobre el
+pre-informe): literal/normalizada "cald": 176 aciertos en 136 hojas; 81 de esas
+hojas son de las fichas A.1 a A.31 (con sus repeticiones y sumarios) y 55 son
+falsos positivos (E.7). Laxa [gc][ao][l1i|][dcl][ec][rnm][ao] sin "cald": 40
+aciertos; 38 son "Gallerano"/"Callerano" (apellido de la juez de Oran y de otra
+persona), uno "caileras" (galletas) y uno "camino a la callera km. 9 1/2,
+Cordoba" (E.7): ninguno del departamento. Probada contra "la galdera"
+(devuelve). Laxa espaciada con separador entre cada par de letras ([\s\-]{0,3}):
+sin formas espaciadas; probada contra "c a l d e r a" y "c\nald era" (devuelve
+las dos), de modo que el cero es del corpus. Difusa >= 0,78: 16 formas, todas
+falsos positivos (escalera, calera de Cordoba, calidera y calldera de
+licitaciones de calderas, heladera, cadera, valderas, canadera...). Difusa
+ampliada 0,70-0,78 (c, g, o): 68 formas, ninguna del departamento (cabrera,
+calidad, casilla, caballeria...). Las mismas pasadas sobre la segunda version de
+las 102 hojas a ojos: literal, solo "Calderon de Encina" (13249 h4, 13250 h4) y
+ruido (13340 h34); laxa, espaciada y difusa, nada del departamento.
+
+Anillo 2: 1165 terminos (1164 distintos normalizados); 117 con aciertos. Se
+leyeron los contextos de los 117 (B.3). Cotejo del anillo 2 contra la toponimia
+establecida (5.1bis), en tres lineas: (1) faltantes: no se detecto ninguno ya
+establecido; 1989 trae toponimos que no estan: "Abra Asperal" y "Alto del
+Volcan" (A.14, A.20), "Zona Cabral" (A.6), "Finca San Alejo" y "calle 20 de
+Febrero" (A.28), "Loma Pelada y Antilla" (A.18) (F.3). (2) Apellidos dentro del
+anillo 2: siguen mamani, aramayo, isasmendi, condori, apaza, chaile, nogales,
+yufra, yugra, toconas, murua, castellanos, wierna, lesser; en 1989 todos sus
+aciertos son personas, salvo "Rio Wierna" (A.28) y Lesser como lugar (A.1,
+A.13). (3) A revisar: "2 de junio" acierta dentro de "12 de junio" (146 hojas),
+"candelaria" es nombre de pila o el departamento La Candelaria, "durazno",
+"mesada", "despensa", "mesa redonda", "las tipas", "los jazmines", "los
+crisantemos" son frutas, muebles o calles de la Capital; "vaqueria" es ropa de
+trabajo en licitaciones; "Rio Las Pavas" tambien riega el partido de Saladillo,
+General Guemes (13315-13323).
+
+Actores: los 2526 del config, por nombre y apellido (y por inicial y apellido)
+sobre el texto sin puntuacion: 331 personas con algun acierto; las que caen en
+hojas con un termino del departamento (209 hojas) se revisaron una por una
+(B.4). Entidades del config sin nombre de pila (197), por su nombre completo: 12
+con acierto, solo dos del departamento (Municipalidad de La Caldera, A.6; Liga
+Municipal de Futbol San Lorenzo - La Caldera, A.10). Actores de las fichas de
+1989 buscados en todo el corpus: B.4.
+
+Numeros arrastrados: 3629 del config; el pre-informe trae su recorrido (unos
+150.000 renglones, casi todo ruido de cifras). La sesion no lo releyo: se
+buscaron los numeros de los actos del §A (catastros, expedientes, O.P.,
+decretos) en todo el corpus, y asi se reunieron las repeticiones.
+
+Identificadores de las ausencias: nombre y apellido del actor, numero de
+catastro, de matricula, de expediente y de O.P.
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+31 entradas. Son avisos repetidos A.9 (diez apariciones), A.10 (dos), A.11
+(tres), A.12 (diez), A.14 (dos), A.18 (diez), A.19 (tres), A.20 (dos), A.22
+(tres), A.28 (tres) y A.31 (dos). Total de actos que nombran el departamento:
+31. Ordenadas por la primera edicion de cada acto. Fuera de cuenta: las
+licitaciones del Ejercito con "Cno. a La Calera, Km. 9 1/2 (Cordoba)" y "camino
+a la: callera" (E.7), el "Pje. La Caldera N 839 de esta ciudad" (Capital, E.7) y
+el comerciante Hector Manuel Caldera (E.7).
+
+A.1 · Resolucion 805-D (19-12-88), O. Publicas: pinturas de la Escuela 549
+
+  FUENTE: 13109 h8 [imagen]; sumario en 13109 h3 [imagen]
+
+  FICHA: Resolucion 805-D (19-12-88) del Ministerio de Economia, Sec. de Estado
+  de O. Publicas: aprueba el presupuesto de la Adm. Gral. de Arquitectura para
+  pintar el edificio de la Escuela N 549 de Villa Delia, Lesser, departamento La
+  Caldera.
+
+  MODO DE LECTURA: Imagen de 13109 h8 a 150 ppp (columna izquierda entera); la
+  cabecera a 250 ppp; el renglon del sumario (13109 h3) a 200 ppp.
+  TEXTO:
+  M. de Economia - Secretaria de Estado de O.
+  Publicas - Resolucion N 805-D - 19-12-88 -
+  Expte. N 28-54.856/88.
+  Articulo 1 - Aprobar el presupuesto con-
+  feccionado por la Administracion General de
+  Arquitectura de la Provincia para la ejecucion
+  de trabajos de "Pinturas Edificio Escuela N
+  549 Villa Delia, Lesser, departamento La Cal-
+  dera, que asciende a la suma de australes ocho
+  mil doscientos trece con setenta y dos centavos
+  (A 8.213,72) por provision de mano de obra
+  unicamente y autorizar al citado organismo a
+  ejecutar los trabajos por via administrativa en
+  un plazo de quince (15) dias calendarios y la
+  afectacion de dos (2) operarios.
+  Art. 2 - La inversion que demande el cum-
+  plimiento de la presente resolucion se impu-
+  tara a: Plan de Trabajos Publicos, Jurisdiccion
+  02, [...] Proyecto 278, U. Geog. 24,
+  Fondos: Tesoro Provincial, Ejercicio vigente.
+  NOTA DE LECTURA: Sumario (13109 h3): "M.E. N 805-D 19-12-88 - Presupuesto
+  p/ejec. trabajos de 'pinturas edificio escuela N 549 Villa Delia - Lesser -
+  Dpto. La Caldera' ...... 120"; el folio de h8 es 120 (cadena de folios): el
+  cotejo sumario/cuerpo cierra. El pre-informe pegaba este renglon al 806-D, que
+  es el siguiente del sumario (Guarderia de Oran). Cifra y letras coinciden. El
+  comillado de la obra no cierra en el original. La resolucion es de diciembre
+  de 1988 y se publica el 13-1-89.
+
+A.2 · Decreto 2466 (21-12-88): anticipo de coparticipacion a los municipios
+
+  FUENTE: 13112 h4 (cuerpo y anexo, primera parte) y h5 (anexo, segunda parte)
+  [imagen]; sumario 13112 h2 (capa)
+
+  FICHA: Decreto 2466 (21-12-88), M. de Gobierno, S. de Est. de Municipalidades:
+  anticipo de coparticipacion de A 13.288.758,19 a los municipios del interior;
+  el anexo asigna A 86.539 a La Caldera y A 98.356 a Vaqueros.
+
+  MODO DE LECTURA: Cuerpo del decreto por la capa nativa de h4; las dos partes
+  del anexo en la imagen (h4 a 150 ppp; h5, que no tenia capa ni OCR, a 130 ppp
+  con las cifras dudosas a 220).
+  TEXTO:
+  Decreto N 2466 - 21-12-88 - Expte. N 53 -
+  48.865/88.
+  Articulo 1 - Otorgase a favor de los Muni-
+  cipios del interior de la Provincia que se deta-
+  llan en planilla anexa, [...] un Anticipo de
+  Coparticipacion por la suma de A 13.288.758,19
+  [...] para hacer frente al pago de haberes, die-
+  tas, asignaciones familiares y presentismo co-
+  rrespondiente al mes de setiembre del corriente
+  ano el que sera descontado en dos (2) cuotas
+  iguales mensuales y consecutivas a partir del
+  mes de noviembre de 1988.
+  [Anexo I, h5:]
+  La Caldera              A       86.539.-
+  [...]
+  Vaqueros                A       98.356.-
+  Villa San Lorenzo       A      232.793.-
+  TOTAL ......  A 13.288.758,19
+  NOTA DE LECTURA: RECUENTO PROPIO: 58 municipios (12 en h4, de Aguaray a
+  Chicoana; 46 en h5, de El Bordo a Villa San Lorenzo). Suma recalculada de los
+  58 importes: 13.288.758,19, igual al total impreso y al del articulo 1 (en
+  cifras y en letras). Cierra. El unico importe con centavos es Pichanal
+  (530.124,19). La Caldera y Vaqueros figuran como municipios distintos. Capa de
+  h4: "184.6291" por 184.629 (Campo Santo); la imagen decide.
+
+A.3 · Decreto 2469 (21-12-88): plano de loteo de la Finca Vaqueros o Entre...
+
+  FUENTE: 13112 h5 [imagen]; sumario 13112 h2 (capa)
+
+  FICHA: Decreto 2469 (21-12-88), M.E., S. de Est. de Hacienda y Finanzas:
+  aprueba el plano de desmembramiento y loteo de la Finca Vaqueros o Entre Rios,
+  matricula 131 del departamento La Caldera, de Camacho de Mangogna y Mangogna.
+
+  MODO DE LECTURA: Imagen de 13112 h5 a 130 ppp (columna derecha) y el bloque a
+  220 ppp.
+  TEXTO:
+  M. de Economia - S. de Est. de Hacienda y
+  Finanzas - Decreto N 2469 - 21-12-88 - Ex-
+  pediente N 18-2106/87.
+  Articulo 1 - Apruebase el Plano de Des-
+  membramiento y Loteo del inmueble denomi-
+  nado "Finca Vaqueros" o "Entre Rios", Ma-
+  tricula N 131 del Departamento La Caldera,
+  de propiedad de los senores Camacho de Man-
+  gogna, Martha Beatriz y Mangogna, Benito An-
+  tonio, el que arroja el siguiente Balance de Su-
+  perficie:
+  Superficie lotes 9.710,86 m2. Superficie ocha-
+  vas 39,86 m2. Superficie afectada p/pasaje -
+  1.731,53 m2. Superficie total a desmembrar
+  11.482,25 m2.
+  Superficie s/Plano N 25 - Matricula 131 -
+  7 Has. 6.044 m2. Superficie que se desmem-
+  bra 11.482,25 m2.
+  Superficie remanente 6 Has. 4.561,75 m2.
+  Art. 2 - Dejase establecido que previo a la
+  venta de los lotes debera acreditarse la provi-
+  sion de servicios de suministro de energia elec-
+  trica.
+  Art. 3 - Tomen razon del presente decreto
+  la Direccion General de Inmuebles a efectos de
+  los registros pertinentes.
+  NOTA DE LECTURA: Control propio: 9.710,86 + 39,86 + 1.731,53 = 11.482,25
+  (cierra); 76.044 - 11.482,25 = 64.561,75 m2 = 6 Has. 4.561,75 m2 (cierra). La
+  capa del sumario lee "finca +tiqueros"; el cuerpo, en la imagen, dice Finca
+  Vaqueros. El Plano N 25 se cita y no se publica (§P). "Mangogna" se transcribe
+  sin ene por el desvio de 8.17 (§0).
+
+A.4 · Decreto 27 (18-1-89): convocatoria a elecciones del 14 de mayo
+
+  FUENTE: 13128 h4 (cabecera) y h5 (articulos 2 y 3) [imagen]
+
+  FICHA: Decreto 27 (18-1-89), M. de Gobierno: convoca a las elecciones del
+  14-5-89; el departamento La Caldera elige un senador titular y un suplente, y
+  los municipios de La Caldera y Vaqueros, tres concejales titulares y tres
+  suplentes cada uno.
+
+  MODO DE LECTURA: Imagen de 13128 h4 a 160 ppp (cabecera y visto) y de h5 a 140
+  ppp (columna izquierda) y 160 ppp (comienzo de la derecha).
+  TEXTO:
+  DECRETO N 27
+  Ministerio de Gobierno
+  VISTO que por Decreto N 1447 de fecha
+  12 de octubre del ano 1988 del Gobierno de la
+  Nacion, se dispone fijar el dia 14 de mayo de
+  1989, como fecha para elegir autoridades na-
+  cionales; y, [...]
+  [Art. 2, h5:]
+  Departamento La Caldera:
+  Un (1) Senador Titular y un (1) Suplente.
+  Art. 3 - Convocase al Cuerpo Electoral de
+  los Municipios que a continuacion se enume-
+  ran a fin de elegir por dos (2) anos, Conceja-
+  les Municipales en las condiciones previstas en
+  los Arts. 165 y 166 de la Conntitucion Pro-
+  vincial, Art. 18 y 19 de la Ley Electoral 6444,
+  en la siguiente proporcion:
+  a) General Pizarro, Payogasta, General Balli-
+  vian, Isla de Canas, La Caldera, Vaque-
+  ros, El Jardin, El Tala, La Candelaria, La
+  Poma, Rio Piedras, Animana, Los Toldos
+  y Nazareno; tres (3) Concejales Titulares
+  y tres (3) Suplentes para cada uno de los
+  Municipios mencionados.
+  NOTA DE LECTURA: RECUENTO PROPIO del inciso a): 14 municipios; el acto no
+  declara numero, de modo que no hay nada que cotejar. "Conntitucion" [sic]
+  (E.9). El decreto lleva fecha 18-1-89 y sale en la edicion del 9-2-89. La
+  Caldera no elige diputado: solo senador. El articulo 4 convoca a San Lorenzo a
+  elegir intendente por la renuncia del elegido en 1987 (capa).
+
+A.5 · Decreto 187 (1-2-89): duelo por el Dr. Balvin Miguel Gallo
+
+  FUENTE: 13130 h7 [imagen]; sumario 13130 h3 (capa)
+
+  FICHA: Decreto 187 (1-2-89), Secretaria General de la Gobernacion: el gobierno
+  adhiere al duelo por el Dr. Balvin Miguel Gallo, nacido en Vaqueros, senador
+  provincial por La Caldera en 1973 y reelecto en 1985.
+
+  MODO DE LECTURA: Imagen de 13130 h7 a 140 ppp, columna izquierda entera.
+  TEXTO:
+  Salta, 1 febrero de 1989
+  DECRETO N 187
+  Secretaria General de la Gobernacion
+  VISTO el fallecimiento del Dr. Balvin Mi-
+  guel Gallo, acaecido el dia 1 de febrero del
+  ano en curso en la Capital Federal; y
+  CONSIDERANDO:
+  Que el Dr. Gallo fue destacado abogado y
+  hombre publico, como lo demuestra su amplio
+  curriculum. Durante el gobierno del Dr. Mi-
+  guel Ragone se desempeno como Juez de Ins-
+  truccion Penal y Presidente del Colegio de Ma-
+  gistrados;
+  Nacido en Vaqueros el 21 de diciembre de
+  1942, desde su mas temprana juventud parti-
+  cipo del Movimiento Nacional Justicialista. En
+  su amplia trayectoria politica se desempeno co-
+  mo Senador Provincial por el departamento La
+  Caldera en 1973, siendo reelecto en 1985; fue
+  Presidente del Bloque Justicialista de la Ca-
+  mara de Senadores, Ministro de Gobierno, Edu-
+  cacion y Justicia, miembro del Directorio del
+  Banco Provincial de Salta y actualmente se
+  desempenaba como Presidente del Tribunal de
+  Cuentas de la Provincia; [...]
+  Articulo 1 - Adhierese, el Gobierno de la
+  Provincia, al duelo provocado por el falleci-
+  miento del Dr. Balvin Miguel Gallo, acaecido
+  el dia 1 de febrero de 1989.
+  NOTA DE LECTURA: El sumario (13130 h3) escribe "Balbin" y el cuerpo "Balvin"
+  (E.9). La capa del cuerpo lee "bagone" por Ragone. Gallo esta en el config
+  (origen 1985). La fecha de nacimiento se transcribe porque es la de un hombre
+  publico y la imprime el decreto. Las firmas del 187 no se miraron (siguen en
+  la otra columna). En la misma hoja, el Decreto 178 (S.G.G., 28-1-89) pone a
+  cargo del Poder Ejecutivo al Vicepresidente 1 del Senado, Hector Manuel Canto
+  (E.4).
+
+A.6 · Decreto 259 (fechado 18-2-88): convenio AGAS - Municipalidad de La Ca...
+
+  FUENTE: 13139 h5 [imagen]; sumario 13139 h2 (capa)
+
+  FICHA: Decreto 259 (18-2-88, publicado el 27-2-89), M.E., Sec. de Est. de O.
+  Publicas: aprueba el convenio del 30-7-1987 entre la AGAS y la Municipalidad
+  de La Caldera para defensas sobre la margen derecha del rio La Caldera, Zona
+  Cabral.
+
+  MODO DE LECTURA: Imagen de 13139 h5 a 150 ppp; el expediente a 250 ppp.
+  TEXTO:
+  M. de Economia - Secretaria de Estado de O.
+  Publicas - Decreto N 259 - 18-2-88 - Expte.
+  N 34-146.843/87.
+  Articulo 1 - Apruebase el convenio cele-
+  brado el 30 de julio de 1987, entre la Admi-
+  nistracion General de Aguas de Salta y la Muni-
+  cipalidad de La Caldera, para la ejecucion en
+  colaboracion mutua de cien (100) metros linea-
+  les de defensa de piedra y malla alambre tejido
+  y la construccion de ciento cincuenta (150) me-
+  tros lineales de defensas de rama y piedra, so-
+  bre la margen derecha del rio La Caldera, Zona
+  Cabral, Dpto. La Caldera, cuyo texto original
+  forma parte integrante de este decreto.
+  Art. 2 - El gasto que demande el cumpli-
+  miento del presente decreto se imputara a: Ju-
+  risdiccion 7, U. de Organizacion 7, Finalidad 6,
+  Funcion 01, Seccion 5, Sector 1, Partida Prin-
+  cipal 2, Parcial 2, Subparcial 37, Defensas y
+  Encauzamientos en toda la Provincia - Plan de
+  Obras 1987.
+  NOTA DE LECTURA: Fecha: el decreto y el sumario dicen 18-2-88, en una edicion
+  de 1989. Control por la serie (5.6.1 del flujo): en 1989 los numeros 257, 258,
+  260, 261, 262 y 263 ya existen como decretos del 2 y 3 de marzo de 1989
+  (13144, 13149, 13151, 13240, capa), de modo que un 259 del 18-2-89 no puede
+  compartir serie con ellos; el 259 a 262 "18-2-88" son decretos de 1988
+  publicados un ano despues. Decidido por la serie. Expediente: la capa lee
+  34-146.848/87; la imagen a 250 ppp da 843. El texto del convenio no se publica
+  (citado y no acompanado). Folio de h5: 571, el que da el sumario.
+
+A.7 · Decreto 202 (3-2-89), Salud: director interino del Area Operativa XXXIX
+
+  FUENTE: 13139 h7 [imagen]; sumario 13139 h3 (capa)
+
+  FICHA: Decreto 202 (3-2-89), M. de Salud Publica: asigna con vigencia del 1 al
+  31 de marzo de 1987 al Dr. Alberto Luis Manuel Piquin la funcion de Director
+  del Area Operativa XXXIX, La Caldera, con sobreasignacion.
+
+  MODO DE LECTURA: Imagen de 13139 h7 a 150 ppp, desde la cabecera hasta el
+  articulo 2.
+  TEXTO:
+  M. de Salud Publica - Decreto N 202 - 3-2-89 -
+  Articulo 1 - Con vigencia al 1 y hasta el
+  31 de marzo de 1987, asignase interinamente al
+  doctor Alberto Luis Manuel Piquin, legajo N
+  82.160, clase 14, categoria 17, profesional asis-
+  tente (medico), la funcion de Director del Area
+  Operativa XXXIX, La Caldera, de conformidad
+  con lo establecido en el Art. 10 del Anexo I
+  de la Ley N 6021 (t.o.) y otorgasele la sobre-
+  asignacion por funcion jerarquica, [...]
+  Art. 2 - A efectos de posibilitar lo dispues-
+  to precedentemente, descongelase del presupues-
+  to de la Jurisdiccion 6, Unidad de Organizacion
+  4, la cobertura del cargo de estructura vacante
+  en el marco del Decreto N 920/85.
+  NOTA DE LECTURA: Un decreto de 1989 asigna una funcion de marzo de 1987 (8.20:
+  se transcribe y no se explica). Piquin esta en el config (origen 1986).
+  Sumario: "M.S.P. N 202 del 3-2-89 - asignacion de funciones y sobreasignacion
+  a favor de profesional del area operativa XXXIX. La Caldera ... 573"; folio de
+  h7: 573. Vecinos: 199 a 205, todos del 3-2-89 (capa). El titular del cargo en
+  1987 no se nombra: vacante sin nombre (B.4).
+
+A.8 · Resolucion 69-D (28-2-89), Bienestar Social: Instituto Dr. Luis Linares
+
+  FUENTE: 13143 h9 [imagen]; sumario 13143 h3 (capa)
+
+  FICHA: Resolucion 69-D (28-2-89), M. de Bienestar Social: acepta la renuncia
+  de Ledys Hetel Royo de Alvarado, Jefa de Regimen de Vida del Instituto Dr.
+  Luis Linares de La Caldera, para jubilarse.
+
+  MODO DE LECTURA: Imagen de 13143 h9 a 150 ppp.
+  TEXTO:
+  M. de Bienestar Social - Resolucion N 69-D -
+  28-2-89 - Expte. N 7.000/89 - codigo 77.
+  Articulo 1 - Con vigencia al 1 de febrero
+  de 1989, aceptar la renuncia presentada por la
+  senora Ledys Hetel Royo de Alvarado, [...]
+  legajo N 7.074, al cargo de agrupa-
+  miento A, subgrupo 1, categoria 1, Jefa de Re-
+  gimen de Vida del Instituto "Dr. Luis Linares"
+  de La Caldera, dependiente de la Direccion Ge-
+  neral de Familia y Minoridad, con un regimen
+  horario de cuarenta y cuatro (44) horas sema-
+  nales - mayor jornada de trabajo, para acogerse
+  a los beneficios de la jubilacion ordinaria espe-
+  cial.
+  NOTA DE LECTURA: Se omite el documento. Royo de Alvarado esta en el config
+  (origenes 1961 y 1978). El sumario (h3) la resume como "beneficio jubilatorio
+  a favor de personal del instituto Dr. Luis Linares de La Caldera".
+
+A.9 · AGAS: Agricola Jujena S.R.L. pide agua del rio Las Pavas para Chalchanio
+
+  FUENTE: 13146 h8 [imagen]; repetido en 13147 h13, 13148 h12, 13149 h13, 13150
+  h10, 13151 h17, 13152 h13, 13153 h7, 13154 h15 y 13155 h21 (capa)
+
+  FICHA: Aviso de la AGAS: Agricola Jujena S.R.L. solicita concesion temporal
+  eventual para 130 Has. del inmueble Chalchanio, Catastro 35 del departamento
+  La Caldera, 68,25 lts./seg. del rio Las Pavas por la acequia comunera de
+  Chalchanio.
+
+  MODO DE LECTURA: Imagen de 13146 h8 a 140 ppp. Las otras nueve apariciones se
+  reunieron por el texto (expediente 152.041/88).
+  TEXTO:
+  O. P. N 71308                    F. N 45116
+  Ref.: Expte. N 34-152.041/88
+  A los efectos establecidos en el Art. 350 Inc.
+  b) del Codigo de Aguas se hace saber que la ra-
+  zon social Agricola Jujena S.R.L., tiene solici-
+  tado otorgamiento de concesion de agua publica,
+  para irrigar con caracter temporal eventual una
+  superficie de 130 Has. del inmueble denominado
+  Chalchanio, Catastro N 35 del Departamento
+  La Caldera, con una dotacion de 68,25 lts./seg.
+  a derivar del Rio Las Pavas, margen derecha,
+  por medio de una acequia comunera de Chal-
+  chanio. Los caudales de esta concesion se en-
+  tregaran con el sistema de turnos, sujetos estos
+  a las disposiciones del Art. 228 del Codigo de
+  Aguas.
+  Se hace constar expresamente en esta publi-
+  cacion, de acuerdo a lo dispuesto por el Art. 350
+  Inc. d) de la ley 775, que el dia del vencimien-
+  to para las oposiciones es el siguiente a los trein-
+  ta (30) dias habiles [...]
+  NOTA DE LECTURA: Control (aritmetica del acto): 130 x 0,525 = 68,25 lts./seg.,
+  la misma dotacion por hectarea que en A.12, A.15 y A.18. Diez apariciones, de
+  13146 a 13155. La capa de 13149 escribe "Chalhanio". Firma el Ing. Oscar Jorge
+  Dean, Jefe Dpto. Explotacion Riego (capa; actor del config, origen 1981).
+
+A.10 · Liga Municipal de Futbol San Lorenzo - La Caldera: asamblea del 14-4-89
+
+  FUENTE: 13160 h22 [imagen]; repetido en 13161 h20 (capa); sumarios 13160 h4 y
+  13161 h4
+
+  FICHA: Convocatoria de la Liga Municipal de Futbol San Lorenzo - La Caldera a
+  asamblea general ordinaria el 14-4-89 en el Club Social y Deportivo La
+  Esperanza de Villa San Lorenzo.
+
+  MODO DE LECTURA: Imagen de 13160 h22 a 140 ppp.
+  TEXTO:
+  O.P. N 71.753                    F. N 45.321
+  LIGA MUNICIPAL DE FUTBOL
+  SAN LORENZO - LA CALDERA
+  VILLA SAN LORENZO
+  SALTA
+  CONVOCATORIA A
+  ASAMBLEA ORDINARIA
+  De acuerdo a lo dispuesto por el Art. 21 del
+  Estatuto Social, se convoca a los senores Dele-
+  gados a la Asamblea General Ordinaria de la
+  Liga Municipal de Futbol San Lorenzo - La
+  Caldera, que se llevara a cabo el dia 14 de abril
+  de 1989 a horas 20,30 en el local del Club So-
+  cial y Deportivo La Esperanza, sito en calle
+  Juan Carlos Davalos y Mariano Coll de Villa
+  San Lorenzo, para considerar el siguiente: [...]
+  NOTA DE LECTURA: La sede esta en Villa San Lorenzo; el nombre de la liga reune
+  San Lorenzo y La Caldera. La entidad esta en el config con origen 2010 y 2015:
+  1989 es una aparicion anterior a ese origen (F.3). El orden del dia no se
+  transcribio entero.
+
+A.11 · Posesion veintenal sobre el lote 34, matricula 396, de Vaqueros
+
+  FUENTE: 13166 h20 [imagen]; 13167 h16 [imagen]; 13168 h14 (capa)
+
+  FICHA: Edicto de posesion veintenal: en los autos de Rafael Pacheco contra
+  Serafina E. Arias, la familia Serrey y otros, se cita a quienes se consideren
+  con derecho sobre el lote 34, matricula 396, de Vaqueros, Dpto. La Caldera.
+
+  MODO DE LECTURA: Imagen de 13166 h20 a 140 y 220 ppp y de 13167 h16 a 250 ppp
+  (la lista de demandados).
+  TEXTO:
+  POSESION VEINTENAL
+  O.P. N 71971                          N 45454
+  El Sr. Juez de 1ra. Instancia en lo Civil y
+  Comercial 8a Nominacion, en los autos: "Pa-
+  checo, Rafael vs. Arias Serafina E. Serrey, Ele-
+  na T. de; Clement, Juana T. de; Toranzos, Ri-
+  cardo; Maria, Toranzos, Elisa; Toranzos, Ber-
+  nabe; Serrey, Manuel - Posesion veintenal",
+  Expte. N A-95.328/88, cita a los demandados
+  y/o sus herederos y a todos aquellos que se
+  consideren con derecho respecto del inmueble
+  objeto de autos: Lote N 34, matricula 396,
+  de la localidad de Vaqueros, Dpto. La Calde-
+  ra, a fin de que en el termino de seis dias de
+  su notificacion, comparezcan a estar a derecho,
+  bajo apercibimiento de designarse Defensor Ofi-
+  cial. Publiquese por tres dias. Secretaria, 16
+  de marzo de 1989.
+  NOTA DE LECTURA: La lista de demandados se transcribe de 13167; 13166 la
+  imprime distinta ("Elena T de Cl?ment, Juana T. de"). RECUENTO PROPIO de
+  demandados: entre 7 y 9 segun como se lea la puntuacion ("Maria, Toranzos,
+  Elisa" puede ser una o dos personas); el acto no declara numero. Manuel Serrey
+  (config, 1949-1951) y Rafael Pacheco (config, 1957) son actores conocidos
+  (B.4). e) 7 al 11-4-89.
+
+A.12 · AGAS: Dominga Berardi de Giacoppo pide agua para Loma Pelada
+
+  FUENTE: 13167 h13-h14 [imagen]; repetido en 13168 h11, 13169 h20, 13170 h17,
+  13171 h13, 13172 h22, 13173 h14, 13174 h14, 13175 h15 y 13176 h22 (capa)
+
+  FICHA: Aviso de la AGAS: Dominga Berardi de Giacoppo solicita concesion
+  temporal-eventual para 120 Has. del inmueble Loma Pelada, catastro 169 del
+  departamento La Caldera, 63 lts./seg. del rio Las Pavas por la acequia
+  comunera de Chalchanio.
+
+  MODO DE LECTURA: Imagen de 13167 h13 y h14 a 140 ppp (el aviso salta de
+  pagina).
+  TEXTO:
+  CONCESION DE AGUA PUBLICA
+  O. P. N 72035                    F. N 45486
+  REF.: Expte. N 34-151.915/88.
+  A los efectos establecidos en el Art. 350 inc.
+  b) del Codigo de Aguas se hace saber que la
+  senora Dominga Berardi de Giacoppo, tiene so-
+  licitado otorgamiento de concesion de agua pu-
+  blica, para irrigar con caracter Temporal-Even-
+  tual una superficie de 120 Has. del inmueble
+  [h14:] denominado "Loma Pelada" catastro N 169 del
+  Departamento La Caldera, con una dotacion de
+  63 lts./seg. a derivar del rio Las Pavas, margen
+  derecha, mediante una acequia comunera de
+  Chalchanio. Los caudales de esta concesion se
+  entregaran con el sistema de turnos, sujetos es-
+  tos a las disposiciones del Art. 228 del Codigo
+  de Aguas. [...]
+  NOTA DE LECTURA: Control: 120 x 0,525 = 63. Diez apariciones (13167 a 13176),
+  reunidas por el texto "Loma Pelada catastro 169". Berardi vuelve en A.18
+  (Marino Berardi su sucesion, Loma Pelada y Antilla, catastro 37): B.4, grupo
+  2.
+
+A.13 · Decreto 565 (19-4-89): mesas de votacion del departamento
+
+  FUENTE: 13177 h5 (decreto), h11 y h12 (masculino), h33 (femenino), h47
+  (extranjeros) [imagen las cinco]
+
+  FICHA: Decreto 565 (19-4-89), M. de Gobierno, firmado por el gobernador
+  interino: plan de ubicacion de mesas para el 14-5-89; seccion electoral La
+  Caldera, distritos municipales de La Caldera y de Vaqueros, circuitos 8 y 9.
+
+  MODO DE LECTURA: Imagen a 140 ppp de las cuatro tablas (ancho entero) y a 160
+  ppp del cierre del decreto en h5.
+  TEXTO:
+  SECCION ELECTORAL: LA CALDERA
+  (MASCULINO)
+  DISTRITO MUNICIPAL DE LA CALDERA
+  CIRCUITO N 8
+  Mesa N  1 - Escuela N 136 "J. M. de Lopez" La Caldera
+   "  "   2 - Escuela N 136 "J. M. de Lopez" La Caldera
+   "  "   3 - Escuela N 795 Potrero de Castilla
+   "  "   4 - Escuela N 750 Los Yacones
+   "  "   5 - Escuela N 561 Campo Alegre
+  CIRCUITO N 9
+  Mesa N  3 - Escuela N 549 Lesser
+   "  "   4 - Escuela N 660 Mojotoro
+  [h12:] DISTRITO MUNICIPAL DE VAQUEROS
+  CIRCUITO N 9
+  Mesa N  1 - Escuela N 137 "Bernabe Lopez" - Vaqueros
+   "  "   2 - Escuela Agricola "San Cayetano" - Vaqueros
+  [h33:] SECCION ELECTORAL: LA CALDERA (FEMENINO)
+  DISTRITO MUNICIPAL DE LA CALDERA
+  CIRCUITO N 8
+  Mesa N  1 - Escuela N 136 Juana M. de Lopez - La Caldera
+   "  "   2 - Escuela N 561 - Campo Alegre
+   "  "   3 - Escuela N 136 Juana M. de Lopez - La Caldera
+   "  "   4 - Escuela N 750 - Los Yacones
+   "  "   5 - Escuela N 795 - Potrero de Castilla
+  CIRCUITO N 9
+  Mesa N  2 - Escuela N 660 - Mojotoro
+  DISTRITO MUNICIPAL DE VAQUEROS
+  CIRCUITO N 9
+  Mesa N  1 - Escuela N 137 Bernabe Lopez - Vaqueros
+   "  "   3 - Escuela N 137 Bernabe Lopez - Vaqueros
+  [h47, Anexo mesas de electores extranjeros:]
+  La Caldera - 3506 - Mixta - Municipalidad.
+  Vaqueros - 3507 - Mixta - Municipalidad.
+  [h5:] DE LOS RIOS (I) - Almiron - Sola Figueroa
+  NOTA DE LECTURA: RECUENTO PROPIO: masculino, 9 mesas (La Caldera 7: cinco del
+  circuito 8 y dos del 9; Vaqueros 2); femenino, 8 (La Caldera 6, Vaqueros 2);
+  extranjeros, 2. Total: 19 mesas del departamento, en 8 escuelas distintas
+  (136, 795, 750, 561, 549, 660, 137 y la Agricola San Cayetano). El acto no
+  declara totales. Lesser (Escuela 549) tiene mesa masculina y no femenina. La
+  numeracion del circuito 9 es comun a los dos distritos (masculino: 1 y 2
+  Vaqueros, 3 y 4 La Caldera; femenino: 1 y 3 Vaqueros, 2 La Caldera). Decreto:
+  "Salta, 19 de abril de 1989", aprueba el plan del juez federal con competencia
+  electoral; "Gobenacion" [sic].
+
+A.14 · Cateo de Armando Daniel Palavecino en La Caldera y Rosario de Lerma
+
+  FUENTE: 13180 h12 [imagen]; repetido en 13189 h5 (capa)
+
+  FICHA: Edicto del Juzgado de Minas: Armando Daniel Palavecino (expte. 13.413,
+  24-8-88) solicita permiso para explorar y catear unas 5.000 has. en los
+  departamentos La Caldera y Rosario de Lerma, desde el lugar Abra Asperal.
+
+  MODO DE LECTURA: Imagen de 13180 h12 a 140 ppp.
+  TEXTO:
+  La Dra. Silvia del Valle Bustos Ralle, Juez de
+  Minas de la provincia de Salta, hace saber a los
+  efectos del art. 25 del Cod. de Mineria que Ar-
+  mando Daniel Palavecino, el 24 de agosto de
+  1988, Expte. N 13.413, ha solicitado en el de-
+  partamento La Caldera y Rosario de Lerma, per-
+  miso para explorar y catear la siguiente zona:
+  Tomando como punto de referencia (P.R.) y co-
+  mo punto de partida (P.P.) el lugar denominado
+  Abra Asperal se miden 2.500 m. az. 255 hasta
+  el punto 1, luego 10.000 m az. 345 hasta el
+  punto 2, luego 5.000 m az. 75 hasta el punto
+  3, luego 10.000 m az. 165 hasta el punto 4, y
+  finalmente 2.500 m. az. 255 hasta el punto de
+  partida (P.P.) cerrando de esta manera la super-
+  ficie libre de aproximadamente 5.000 has. Los
+  terrenos afectados son de propiedad de diversos
+  superficiarios. Salta, 13 de diciembre de 1988.
+  NOTA DE LECTURA: Control propio (inferencia rotulada): el poligono es un
+  rectangulo de 5 x 10 km = 5.000 ha y cierra en el punto de partida; coincide
+  con la superficie impresa. "Abra Asperal" no esta en el anillo 2 (F.3).
+  Palavecino aparece en otros veinte renglones del corpus, en otros expedientes
+  mineros (B.4, grupo 3).
+
+A.15 · AGAS: Berruezo pide agua del rio Las Pavas para la Fraccion III de C...
+
+  FUENTE: 13180 h16-h17 [imagen]; sumario 13180 h3 (capa)
+
+  FICHA: Aviso de la AGAS: Ernesto Julio Berruezo y Lucia Marta Berruezo de
+  Abraham solicitan concesion temporal-eventual para 120 has. de la Fraccion
+  III, Fraccion Chalchanio, Catastro 16 del departamento La Caldera, 63
+  lts./seg. del rio Las Pavas.
+
+  MODO DE LECTURA: Imagen de 13180 h16 y h17 a 140 ppp.
+  TEXTO:
+  CONCESION DE AGUA PUBLICA
+  O.P. N 72.513                    F. N 45.750
+  Ref.: Expte. N 34-152.777/88.-
+  A los efectos establecidos en el art. 350 inc.
+  b) del Codigo de Aguas se hace saber que los
+  senores Ernesto Julio Berruezo y Lucia Marta
+  Berruezo de Abraham, tienen solicitado otorga-
+  miento de concesion de agua publica, para irri-
+  gar con caracter temporal - eventual una super-
+  ficie de 120 has. del inmueble identificado como
+  Fraccion III, Fraccion Chalchanio, Catastro N
+  16 del departamento La Caldera, con una dota-
+  [h17:] cion de 63 lts./seg. a derivar del rio Las Pavas,
+  margen derecha, mediante una acequia comune-
+  ra. Los caudales de esta concesion se entregaran
+  con el sistema de turnos, sujetos estos a las dis-
+  posiciones del art. 228 del Codigo de Aguas. [...]
+  NOTA DE LECTURA: Control: 120 x 0,525 = 63. La marca de la capa es "e) 27/4 al
+  2/5/89", pero el texto (expediente 152.777, Berruezo, "Fraccion Chalchanio")
+  no se encontro en 13181 ni en 13182: una sola aparicion hallada (P4). A
+  diferencia de A.9, A.12 y A.18, la acequia comunera no lleva nombre.
+
+A.16 · Decreto 589 (19-4-89): plataformas de la Terminal de Omnibus
+
+  FUENTE: 13181 h4 (decreto) y h5 (resolucion transcripta) [imagen]
+
+  FICHA: Decreto 589 (19-4-89), M.E., S. de Est. de Obras Publicas: aprueba la
+  Res. D.G.T. 192/88, que asigna plataformas de la Terminal de Omnibus; uno de
+  los servicios es Calvimonte, La Caldera, S. Agustin p/ La Merced, Mollar.
+
+  MODO DE LECTURA: Imagen de 13181 h4 a 110 ppp (cabecera y parte resolutiva) y
+  de h5 a 100 y 120 ppp (las dos listas).
+  TEXTO:
+  DECRETO N 589
+  Ministerio de Economia
+  Secretaria de Estado de Obras Publicas
+  Expediente N 11.569/88 Cod. 20.
+  VISTO los terminos de la Resolucion
+  DGT. N 192 del 14 de noviembre del
+  ano 1988, dictada por el Director Gene-
+  ral de Transporte de la Provincia; y, [...]
+  [h5, en la resolucion transcripta:]
+  Servicios hacia y desde
+  [...]
+  C. Moldes, Yacones
+  Calvimonte, La Caldera, S. Agustin P/
+  La Merced, Mollar
+  Local a Cerrillos
+  [...]
+  NOTA DE LECTURA: RECUENTO PROPIO: 30 renglones de servicios y 30 de Empresa /
+  Plataforma N. La tabla se imprime como dos listas separadas; por posicion
+  (inferencia rotulada) el renglon 20, "Calvimonte, La Caldera...", corresponde
+  a "Luis B. Chavez - 13". El acto no imprime esa correspondencia. "Yacones" del
+  renglon 19 no lleva departamento. Luis B. Chavez esta en el config (1965).
+
+A.17 · Resolucion 109 D (17-3-89), Salud: renuncia en el Area Operativa XXXIX
+
+  FUENTE: 13183 h6 [imagen]
+
+  FICHA: Resolucion 109 D (17-3-89), M. de Salud Publica: acepta la renuncia de
+  Margarita Gladys Lizondo, personal de servicio del Area Operativa XXXIX - La
+  Caldera, para jubilarse.
+
+  MODO DE LECTURA: Imagen de 13183 h6 a 150 ppp.
+  TEXTO:
+  M. de Salud Publica - Resolucion N
+  109 D - 17-3-89.
+  Articulo 1. - Con vigencia al 1 de
+  febrero de 1989, aceptar la renuncia pre-
+  sentada por la agente Margarita Gladys
+  Lizondo, [...] legajo N
+  5445, al cargo de agrupamiento MSG,
+  subgrupo 1, categoria L, personal de
+  servicio del Area Operativa XXXIX -La
+  Caldera, con regimen horario de treinta
+  (30) horas semanales, para acogerse a los
+  beneficios de la jubilacion ordinaria es-
+  pecial.
+  NOTA DE LECTURA: Se omite el documento. Lizondo esta en el config (origen
+  1954).
+
+A.18 · AGAS: Marino Berardi su sucesion pide agua para Loma Pelada y Antilla
+
+  FUENTE: 13183 h15 [imagen]; repetido en 13184 h12, 13185 h10, 13186 h18, 13187
+  h27, 13188 h12, 13189 h9, 13190 h7, 13191 h6 y 13192 h8 (capa)
+
+  FICHA: Aviso de la AGAS: Marino Berardi su Sucesion solicita concesion
+  temporal-eventual para 250 Has. del inmueble Loma Pelada y Antilla, catastro
+  37 del departamento La Caldera, 131,25 lts./seg. del rio Las Pavas por la
+  acequia comunera de Chalchanio.
+
+  MODO DE LECTURA: Imagen de 13183 h15 a 140 ppp.
+  TEXTO:
+  CONCESION DE AGUA PUBLICA
+  O. P. N 72612                    F. N 45800
+  REF.: Expte. N 34-152.778/88.
+  A los efectos establecidos en el Art. 350 inc.
+  b) del Codigo de Aguas se hace saber que el se-
+  nor Marino Berardi su Sucesion, tiene solicitado
+  otorgamiento de concesion de agua publica, para
+  irigar con caracter Temporal-Eventual una su-
+  perficie de 250 Has. del inmueble denominado
+  "Loma Pelada y Antilla" catastro N 37 del De-
+  partamento La Caldera, con una dotacion de
+  131,25 lts./seg. a derivar del rio Las Pavas,
+  margen derecha, mediante una acequia comune-
+  ra de Chalchanio. Los caudales de esta conce-
+  sion se entregaran con el sistema de turnos, su-
+  jetos estos a las disposiciones del Art. 228 del
+  Codigo de Aguas. [...]
+  NOTA DE LECTURA: Control: 250 x 0,525 = 131,25. "irigar" [sic] (E.9). Diez
+  apariciones (13183 a 13192), reunidas por el expediente 152.778. La "Antilla"
+  de 13152 h12 y 13156-13157 (catastro 402, departamento General Guemes) es otro
+  inmueble (B.3).
+
+A.19 · Remate de derechos y acciones sobre la finca El Acheral
+
+  FUENTE: 13195 h13 [imagen]; 13196 h11 [imagen del catastro]; 13197 h11 (capa)
+
+  FICHA: Remate judicial sin base (Julio Cesar Herrera) de los derechos y
+  acciones de Maria C. Mercado de Cisneros en la finca El Acheral, departamento
+  La Caldera, catastro 81, del sucesorio de Enrique Mercado.
+
+  MODO DE LECTURA: Imagen de 13195 h13 a 140 ppp; el renglon del catastro a 300
+  ppp en 13195 y en 13196.
+  TEXTO:
+  Por: JULIO CESAR HERRERA
+  Judicial - Derechos y acciones sobre la finca
+  "El Acheral", Dpto. La Caldera - Sin base.-
+  El 23 de mayo de 1989, a las 18.30 horas,
+  en calle General Guemes N 327 de esta ciudad,
+  rematare sin base, dinero de contado, los dere-
+  chos y acciones que le corresponden a la senora
+  Maria C. Mercado de Cisneros o Cisnero, en la
+  finca denominada El Acheral, situada en el de-
+  partamento La Caldera, Pcia. de Salta, Catastro
+  N 81 (lo que consta en el sucesorio de Enrique
+  Mercado Expte. N A-17.273/81, que se trami-
+  ta por ante el Juzgado de 1ra. Inst. en lo C. y
+  C. 4ta. Nom.). Estado de ocupacion: reside el
+  Sr. Marcelo Mercado, en su condicion de here-
+  dero. Mejoras: una casa precaria. Tierras aptas
+  para la cria de ganado. Ordena la Sra. Juez de
+  1ra. Inst. en lo C. y C. 7ma. Nom., secretaria a
+  cargo de la Dra. Bibiana Acuna de Salim en el
+  juicio seguido contra Maria C. Mercado de Cis-
+  nero - P.V.E. - Emb. Prev. hoy ejecutivo, Expte.
+  N A-65.615/85. Comision 10% a cargo del com-
+  prador. Edictos tres dias en B. Oficial y El Tri-
+  buno.
+  Imp. A 720                       e) 19 al 23/5/89
+  NOTA DE LECTURA: Catastro: la capa lee 51 en 13195 y "$81" en 13196; la imagen
+  a 300 ppp da 81 en las dos apariciones (catalogo 5/8 del flujo): decidido por
+  la imagen en dos apariciones. Tres apariciones (13195 a 13197). Maria C.
+  Mercado de Cisneros (config, 1987) y Enrique Mercado (config, 1927 y 1929) son
+  actores conocidos (B.4, grupo 2).
+
+A.20 · Cateo de Mario Alfredo Oller en La Caldera y Rosario de Lerma
+
+  FUENTE: 13209 h8 [imagen]; repetido en 13214 h13 (capa)
+
+  FICHA: Edicto del Juzgado de Minas: Mario Alfredo Oller solicita en los
+  departamentos La Caldera y Rosario de Lerma permiso para explotar y catear
+  unas 3.936 has. desde el lugar Alto del Volcan.
+
+  MODO DE LECTURA: Imagen de 13209 h8 a 140 ppp.
+  TEXTO:
+  O.P. N 73270                    F. N 46295
+  El doctor Daniel Enrique Marchetti, Juez
+  de Minas de la provincia de Salta, hace saber
+  a los efectos del Art. 25 del Cod. de Mineria
+  que Mario Alfredo Oller, el 20 de setiembre
+  de 19..., ha solicitado en el departamento La
+  Caldera, Rosario de Lerma, permiso para explo-
+  tar y catear la siguiente zona: Tomando como
+  punto de referencia el lugar denominado Alto
+  del Volcan, se miden 5.000 m. az. 90, hasta
+  el punto 1, luego 5.000 m. az 180 hasta el
+  punto 2 luego 3.800 m. az. 270, hasta el pun-
+  to 3, luego 2.200 m. az. 360 hasta el punto
+  4, luego 200 m. az. 270 hasta el punto 5 y
+  finalmente 2.800 m. az. 360, hasta el punto
+  de partida, cerrando de esta manera la superfi-
+  cie libre a catear de aproximadamente 3.936
+  Has. [...]
+  NOTA DE LECTURA: "19..." esta asi en el original (ano en blanco). "explotar y
+  catear" [sic] por explorar (E.9). Control propio (inferencia rotulada): con
+  esos rumbos el poligono termina a 1.000 m al este del punto de partida y
+  encierra unas 1.956 ha, no 3.936; no se concilia y no se elige lectura. Marca
+  "Sin cargo e) 9, 16 y 23-6-89" (capa): la tercera aparicion no se hallo por
+  texto (P4).
+
+A.21 · Decreto 820 (29-5-89): la AGAS entrega la planta de agua de Vaqueros
+
+  FUENTE: 13217 h4-h5 [imagen]
+
+  FICHA: Decreto 820 (29-5-89), M.E., Sec. de Est. de Obras Publicas: aprueba el
+  convenio por el que la AGAS entrega al Centro de Usuarios del Servicio de Agua
+  Potable de Vaqueros la Planta Potabilizadora y Red de Distribucion de
+  Vaqueros, departamento La Caldera.
+
+  MODO DE LECTURA: Imagen de 13217 h4 (visto y considerando) y h5 (parte
+  resolutiva) a 130 ppp.
+  TEXTO:
+  Salta, 29 de mayo de 1989
+  DECRETO N 820
+  Ministerio de Economia
+  Secretaria de Estado de Obras Publicas
+  Expte. N C. 37-40.861/89.
+  VISTO el convenio celebrado el dia 30 de
+  diciembre de 1988 entre la Administracion Ge-
+  neral de Aguas de Salta y el Presidente del
+  Centro de Usuarios del Servicio de Agua Pota-
+  ble y Otros Servicios Publicos en Vaqueros; y,
+  CONSIDERANDO:
+  Que por el citado convenio la Administracion
+  General de Aguas de Salta entrega al Centro de
+  Usuarios del Servicio de Agua Potable y Otros
+  Servicios Publicos de Vaqueros las instalaciones
+  del sistema de agua potable denominado "Plan-
+  ta Potabilizadora y Red de Distribucion en la
+  localidad de Vaqueros, Vaqueros, Departamen-
+  [...]
+  [h5:] Articulo 1 - Con encuadre en el decreto
+  N 7.491/67, apruebase el convenio celebrado
+  nistracion General de Aguas de Salta y el Senor
+  presidente del Centro de Usuarios del Servicio
+  de Agua Potable y Otros Servicios Publicos en
+  Vaqueros, mediante el cual se entrega a dicho
+  centro las instalaciones del Sistema de Agua Po-
+  table denominado "Planta Potabilizadora y Red
+  de Distribucion en la localidad de Vaqueros,
+  Departamento La Caldera, Salta", cuyo origi-
+  nal forma parte integrante del presente decreto.
+  NOTA DE LECTURA: "celebrado nistracion General": falta un renglon en el
+  original (E.9). Por la capa, el considerando dice que la obra se hizo en la
+  cuarta etapa del Plan Nacional de Agua Potable y Saneamiento y beneficia a
+  "mas de 1.800 habitantes actuales" (no mirado en la imagen). Firmas (capa):
+  Cornejo - Van Cauwlaert - Sola Figueroa - Quevedo - Lovaglio. El convenio no
+  se publica (citado y no acompanado). Folio de h5: 2043. La obra sigue en A.24
+  y el Centro en B.2.
+
+A.22 · Partido Democrata Cristiano: internas del 30-7-89
+
+  FUENTE: 13222 h16 [imagen]; repetido en 13223 h21 y 13224 h25 (capa)
+
+  FICHA: Aviso del Partido Democrata Cristiano: la Junta Provincial convoca a
+  internas el 30-7-89 para convencionales y para todos los miembros de siete
+  juntas departamentales, entre ellas la de La Caldera.
+
+  MODO DE LECTURA: Imagen de 13222 h16 a 130 ppp.
+  TEXTO:
+  PARTIDO DEMOCRATA CRISTIANO
+  La Junta Provincial del Partido Democrata
+  Cristiano - Distrito Salta convoca a elecciones
+  internas para el dia 30 de julio de 1989 para
+  elegir los siguientes cargos: Cinco (5) Conven-
+  cionales Nacionales y cinco suplentes. Nueve
+  (9) Convencionales provinciales y nueve suplen-
+  tes. Todos los miembros de las juntas departa-
+  mentales de: Capital, Cerrillos, Rosario de Ler-
+  ma, General Guemes, Metan, Anta y La Calde-
+  ra y los respectivos convencionales provinciales,
+  titulares y suplentes, conforme lo establece la
+  Carta Organica partidaria.
+  NOTA DE LECTURA: RECUENTO PROPIO: 7 juntas departamentales; el acto no declara
+  numero. Firman (capa) el Dr. Hugo Sarmiento Villa, presidente, y el Dr.
+  Fernando D. Magedon, apoderado; e) 29-6 al 3-7-89. Tres apariciones.
+
+A.23 · Decreto 1285 (17-7-89): emergencia agropecuaria por granizo en el ta...
+
+  FUENTE: 13238 h16 [imagen]
+
+  FICHA: Decreto 1285 (17-7-89), M.E., Sec. de Est. de Asuntos Agrarios: declara
+  zona de emergencia agropecuaria, del 1-5-89 al 30-4-90, a siete departamentos,
+  entre ellos La Caldera, por danos en las plantaciones de tabaco.
+
+  MODO DE LECTURA: Imagen de 13238 h16 a 160 y 200 ppp (visto, articulo 1 y
+  articulo 2).
+  TEXTO:
+  Secretaria de Estado de Asuntos Agrarios
+  Expediente N C/24-04286/89.
+  VISTO la situacion de emergencia por la que
+  atraviesan numerosos productores agropecuarios
+  de los departamentos Rosario de Lerma, Cerri-
+  llos, General Guemes, La Candelaria, Chicoana,
+  Guachipas y La Caldera; [...]
+  Articulo 1 - Declarase zona de emergencia
+  agropecuaria, a partir del 1 de mayo de 1989
+  y hasta el 30 de abril de 1990, a los departa-
+  mentos Rosario de Lerma, Cerrillos, General
+  Guemes, La Candelaria, Chicoana, Guachipas y
+  La Caldera, cuyas plantaciones de tabaco fue-
+  ron afectadas por granizo, vientos, vientos hu-
+  racanados y lluvias torrenciales.
+  Art. 2 - Los damnificados cuyas produccio-
+  nes fueron afectadas con mas del cincuenta por
+  ciento (50%) de danos y deseen acogerse a los
+  beneficios de la Ley N 6241/84, deberan efec-
+  [...]
+  NOTA DE LECTURA: RECUENTO PROPIO: 7 departamentos, la misma lista en el visto
+  y en el articulo 1; el acto no declara numero. La capa lee "(30%)"; la imagen
+  da 50 % (cifra = letras). Base: Ley 6241/84, acta del 30-05-89 de la Comision
+  Provincial de Emergencia Agropecuaria, Ley nacional 22.913/83 y Decreto
+  1143/85 (capa). Vecinos 1282 a 1288, todos del 17-7-89 (capa).
+
+A.24 · Decreto 1.333 (18-7-89): trabajos adicionales en la planta de agua d...
+
+  FUENTE: 13244 h9 [imagen]; sumario 13244 h3 (capa)
+
+  FICHA: Decreto 1.333 (18-7-89), M.E., S. de Est. de Obras Publicas: autoriza y
+  adjudica en forma directa a Caminos S.A. trabajos adicionales por A 61.834,88
+  en la obra Planta Potabilizadora y Red de Distribucion en Vaqueros,
+  departamento La Caldera.
+
+  MODO DE LECTURA: Imagen de 13244 h9 a 130 ppp; la cabecera a 200 ppp.
+  TEXTO:
+  M. de Economia - S. de Estado de Obras
+  Publicas - Decreto N 1.333 - 18-7-89 -
+  Expediente N 37-31.882/87.-
+  Articulo 1 - Autorizase la ejecucion
+  de los trabajos adicionales imprevistos
+  denominados "Provision, transporte y co-
+  locacion de Enlame en 30 cms. sobre la
+  generatriz superior del tubo" correspon-
+  diente al Rubro II e Item s/n de la obra
+  "Planta potabilizadora y red de distri-
+  bucion en Vaqueros - Departamento La
+  Caldera", a cargo de la empresa Cami-
+  nos S.A., cuyo importe asciende a la
+  suma de A 61.834,88, por los motivos ex-
+  puestos en los considerandos de este de-
+  creto.
+  Art. 2 - Con encuadre en el articulo
+  [...]
+  NOTA DE LECTURA: El articulo 2 (capa) adjudica en forma directa (art. 79, cap.
+  X, Ley 6.494) por "australes sesenta y un mil ochocientos treinta y cuatro con
+  ochenta y ocho centavos": cifra = letras. Sumario (h3): "M.E. N 1333 del
+  18-7-89 - 'Planta potable en Vaqueros': autorizase ejecucion de trabajo". El
+  decreto es posterior al 820 (A.21), que ya entrega la planta al Centro de
+  Usuarios: se transcriben los dos y no se explica.
+
+A.25 · Resolucion 291-D (18-7-89): drenaje de la Escuela 198 de El Gallinato
+
+  FUENTE: 13246 h7 [imagen]
+
+  FICHA: Resolucion 291-D (18-7-89), M.E., S. de Est. de Obras Publicas: aprueba
+  el legajo tecnico de la obra Construccion Drenaje en la Escuela 198 Gustavo M.
+  Zuviria - El Gallinato - departamento La Caldera (A 22.807,60) y el convenio
+  con el intendente de La Caldera.
+
+  MODO DE LECTURA: Imagen de 13246 h7 a 130 ppp; la cabecera a 200 ppp.
+  TEXTO:
+  M. de Economia - S. de Estado de Obras
+  Publicas - Resolucion N 291-D - 18-7-89
+  - Expte. N 28-54.519/88.
+  Articulo 1 - Aprobar el legajo tecni-
+  co confeccionado por la Administracion
+  General de Arquitectura para la ejecu-
+  cion de la obra "Construccion drenaje en
+  Escuela N 198 Gustavo M. Zuviria - El
+  Gallinato - departamento La Caldera",
+  con un presupuesto oficial de Australes
+  Veintidos mil ochocientos siete con sesen-
+  ta centavos (A 22.807,60), por provision
+  de materiales y mano de obra, en un pla-
+  zo de sesenta (60) dias calendarios y por el
+  sistema de Ajuste Alzado.
+  Art. 2 - Aprobar el Convenio cele-
+  brado el dia 15 de junio de 1989 entre el
+  senor Director de la Administracion Ge-
+  neral de Arquitectura y el senor Intenden-
+  te Municipal de La Caldera, para la eje-
+  cucion de la obra citada en el articulo an-
+  terior y en la forma consignada en el mis-
+  mo, cuyo texto en original forma parte
+  integrante de la presente resolucion.
+  NOTA DE LECTURA: Cifra = letras. El intendente no se nombra (vacante o titular
+  sin nombre: no se infiere quien era). El convenio no se publica (citado y no
+  acompanado).
+
+A.26 · Decreto 1385 (28-7-89): apoyo al Colegio Secundario 44 de La Caldera
+
+  FUENTE: 13250 h6 [imagen]
+
+  FICHA: Decreto 1385 (28-7-89), M. de Bienestar Social: autoriza al Banco de
+  Prestamos y Asistencia Social un apoyo financiero de A 5.000 al Colegio
+  Secundario N 44 Senado Provincial de La Caldera.
+
+  MODO DE LECTURA: Imagen de 13250 h6 a 150 ppp; la cabecera a 200 ppp.
+  TEXTO:
+  M. de Bienestar Social - Decreto N 1385
+  28-7-89.
+  Articulo 1 - Autorizase al Banco de
+  Prestamos y Asistencia Social a otorgar
+  un apoyo financiero por la suma de Cin-
+  co mil Australes (A 5.000,00), a favor del
+  Colegio Secundario N 44 <<Senado Pro-
+  vincial>> de La Caldera, por el motivo ex-
+  puesto precedentemente.
+  NOTA DE LECTURA: Cifra = letras. Vecinos 1384 y 1386, del mismo dia y del
+  mismo tipo (capa). "por el motivo expuesto precedentemente" remite a un
+  considerando que el decreto sintetizado no publica.
+
+A.27 · Decreto 1461 (10-8-89): albergues estudiantiles de nivel medio
+
+  FUENTE: 13257 h16 [imagen]
+
+  FICHA: Decreto 1461 (10-8-89), M. de Bienestar Social: amplia el Decreto
+  1160/88, que crea albergues estudiantiles de nivel medio en once localidades,
+  entre ellas La Caldera.
+
+  MODO DE LECTURA: Imagen de 13257 h16 a 130 ppp (visto y considerando).
+  TEXTO:
+  Expte. N 12.976/89 - cod. 66.
+  VISTO que por decreto N 1160/88 se
+  crean los albergues estudiantiles para
+  alumnos de nivel medio con asiento en
+  las localidades de Santa Victoria Oeste,
+  Iruya, Santa Victoria Este, Morillo, Ri-
+  vadavia Banda Sud, La Poma, Molinos,
+  San Carlos, Guachipas, La Caldera y San
+  Antonio de los Cobres, como asi tambien
+  se aprueba la reglamentacion general pa-
+  ra el funcionamiento de los mismos, y,
+  CONSIDERANDO:
+  Que a fs. 3 se solicita la ampliacion de
+  los terminos del articulo 2 del precita-
+  do decreto, en el sentido de dejar estable-
+  cido que se incorpora el albergue estu-
+  diantil para alumnos de nivel medio del
+  Colegio Secundario N 52, con asiento [...]
+  NOTA DE LECTURA: RECUENTO PROPIO: 11 localidades; el acto no declara numero.
+  El Decreto 1160/88 se cita y no se busco en 1989 (es de 1988). La localidad
+  del Colegio 52 y la parte resolutiva se leyeron solo en la capa.
+
+A.28 · Remate de la mitad indivisa de un inmueble rural de 2.618 ha en Vaqu...
+
+  FUENTE: 13267 h19 [imagen]; repetido en 13268 h18-h19 y 13269 h17 (capa)
+
+  FICHA: Remate judicial (Ernesto V. Sola), base A 317.484.025,76: mitad
+  indivisa de D'Andrea sobre el inmueble de La Caldera (05), Vaqueros, matricula
+  1.463, 2.618 Has., entre la Finca Santa Monica, el rio Wierna, el rio La
+  Caldera y la Finca San Alejo.
+
+  MODO DE LECTURA: Imagen de 13267 h19 a 140 ppp, las dos columnas (el aviso
+  sigue en la derecha).
+  TEXTO:
+  O. P. N 74824                    F. N 47344
+  Por: ERNESTO V. SOLA
+  JUDICIAL:
+  Mitad indivisa de valioso inmueble rural
+  en La Caldera
+  El dia 6 de setiembre de 1.989 a Hs. 18,00,
+  en 25 de Mayo 322, ciudad, por disposicion Sr.
+  Juez de 1ra. Inst. C. y Com., 2da. Nom., Se-
+  cretaria N 2 en autos: "Banco Regional del
+  Norte Argentino S.A. (en liquidacion) vs. D'An-
+  drea, Humberto - Ejec. Sent.", Expte. N A-
+  98.487/88, rematare con la base de A
+  317.484.025,76 (australes trescientos diecisiete
+  millones cuatrocientos ochenta y cuatro mil vein-
+  ticinco con setenta y seis Ctvs.), la mitad indi-
+  visa que le corresponde al demandado sobre el
+  inmueble ubicado en La Caldera (05), Vaque-
+  ros, Matricula 1.463, Remanente, Cat. de Orig.
+  N 964, Pl. N 101; Superficie total del inmue-
+  ble: 2.618 Has., 49a, 34 ca. 42 dm2.; Limites:
+  N.: Finca Santa Monica y parte Fracc. loteada
+  por Martell; S.: Rio Wierna; E.: Rio La Cal-
+  dera y parte Fraccion loteada; O.: Finca "San
+  Alejo"; Ant. Dominial: L.6, F.82, A.9. Estado
+  de ocupacion y mejoras: Posee una casa princi-
+  pal, 2 salones, 4 dormitorios, 3 banos, cocina y
+  gran galeria, viviendas para peones, cuyos mo-
+  radores lo hacen en calidad de empleados con
+  relacion de dependencia con los duenos de la
+  finca; 2 represas, banadero de animales; 2 gal-
+  [col. der.:] pones (uno de ellos cerrado); 8 estufas para ta-
+  baco; posee aprox. 150 Has. cultivables; 8 a 10
+  potreros de distintas dimensiones. NOTA: El de-
+  talle completo de las mejoras de la finca, efec-
+  tuada por el Juez de Paz de La Caldera, obra
+  en poder del suscripto a disposicion de los in-
+  teresados. Ubicacion: El inmueble se encuentra
+  ubicado dentro del radio urbano del pueblo de
+  La Caldera, al oeste y de su entrada principal
+  nace la calle 20 de Febrero. [...]
+  NOTA DE LECTURA: Cifra = letras en la base. "(05)" despues de La Caldera es el
+  codigo del departamento (como el prefijo de catastro que el informe de 1992
+  midio en las listas de Rentas). RECUENTO PROPIO de limites: 4 rumbos, 6
+  colindantes. El Plano N 101 se cita y no se publica (§P). El aviso ubica a la
+  vez el inmueble "en La Caldera (05), Vaqueros" y "dentro del radio urbano del
+  pueblo de La Caldera": se transcriben las dos y no se concilian (E.9). Tres
+  apariciones (13267 a 13269).
+
+A.29 · Resolucion 339-D (24-8-89): queda sin efecto la licitacion del Hogar...
+
+  FUENTE: 13268 h10 [imagen]; sumario 13268 h2 (capa)
+
+  FICHA: Resolucion 339-D (24-8-89), M.E., S. de Est. de O. Publicas: deja sin
+  efecto la licitacion de diciembre de 1986 para la Ampliacion y Remodelacion
+  del Hogar de Ninos Luis Linares, Dpto. La Caldera (presupuesto A 27.850).
+
+  MODO DE LECTURA: Imagen de 13268 h10 a 150 ppp.
+  TEXTO:
+  [M. de Economia - Secretaria de Estado de O.]
+  Publicas - Resol. N 339-D - 24-8-89 - Expte.
+  N 28-49.211/86.
+  Articulo 1 - Dejar sin efecto la licitacion
+  publica realizada el dia 11 de diciembre de 1986
+  por la Administracion General de Arquitectura,
+  en virtud a la autorizacion conferida por Reso-
+  lucion Ministerial N 1082-D/86, para la adju-
+  dicacion de la obra "Ampliacion y Remodelacion
+  Hogar de Ninos "Luis Linares" - Dpto. La Cal-
+  dera", con un presupuesto oficial de A 27.850,
+  por los motivos expuestos en los considerandos
+  de la presente resolucion.
+  NOTA DE LECTURA: Los considerandos no se publican (resolucion sintetizada). La
+  Res. 1082-D/86 se cita y no se busco (es de 1986). El Hogar de A.29 y el
+  Instituto de A.8 y A.30 llevan el mismo nombre; el corpus no dice si son la
+  misma casa (no se infiere).
+
+A.30 · Resolucion 381-D (28-9-89), Bienestar Social: renuncia en el Institu...
+
+  FUENTE: 13290 h5 [imagen]
+
+  FICHA: Resolucion 381-D (28-9-89), M. de Bienestar Social: acepta la renuncia
+  de Mercedes Simona Villalobos, personal de servicios generales (nocturno) del
+  Instituto Dr. Luis Linares de La Caldera, para jubilarse por invalidez.
+
+  MODO DE LECTURA: Imagen de 13290 h5 a 150 ppp; la cabecera a 200 ppp.
+  TEXTO:
+  M. de Bienestar Social - Resolucion N
+  381-D - 28-9-89.
+  Articulo 1 - Con vigencia al 1 de
+  agosto de 1989, aceptar la renuncia pre-
+  sentada por la senora Mercedes Simona
+  Villalobos, [...] legajo N
+  16.099, al cargo de agrupamiento MSG,
+  subgrupo 1, categoria J, personal de ser-
+  vicios generales (nocturno) del Instituto
+  "Dr. Luis Linares" de La Caldera, de-
+  pendiente de la Direccion General de
+  Familia y Minoridad, con un regimen ho-
+  rario de treinta (30) horas semanales, pa-
+  ra acogerse a los beneficios de la jubi-
+  lacion por invalidez.
+  NOTA DE LECTURA: Se omite el documento.
+
+A.31 · Remate de una estanciera que se revisa en el Juzgado de Paz de La Ca...
+
+  FUENTE: 13298 h13 [imagen]; repetido en 13297 h13 (capa)
+
+  FICHA: Remate judicial sin base (Osvaldo R. Celiz) de una estanciera IKA
+  modelo 57, secuestrada, que puede revisarse en el Juzgado de Paz de La
+  Caldera.
+
+  MODO DE LECTURA: Imagen de 13298 h13 a 140 ppp (la parte del aviso que esta en
+  esa hoja).
+  TEXTO:
+  [...] en lo C. y C. de 7a Nom. en el juicio c/Mora-
+  les, Rodolfo s/Ejec., Expte. N A-92.854/88, re-
+  matare sin base y dinero de contado: Una Es-
+  tanciera IKA, Mod. 57, Dominio A-030.973. Se
+  encuentra secuestrada y puede ser revisada en el
+  Juzgado de Paz de La Caldera. Comision: 10%.
+  Entrega inmediata. Informes al Telef. 224288.
+  Osvaldo R. Celiz, Mart. Pub.
+  Imp. A 2.000.-                      e) 19 y 20-10-89
+  NOTA DE LECTURA: El comienzo del aviso esta en la hoja anterior y se leyo en
+  la capa. Dos apariciones. Celiz esta en el config (1981; 70 renglones del
+  corpus como martillero).
+
+§B · VECINDAD
+-------------
+
+B.1 · Nucleos ya fichados
+
+Vaqueros (A.2, A.3, A.4, A.5, A.11, A.13, A.21, A.24, A.28); Lesser y Villa
+Delia (A.1, A.13); Chalchanio, Loma Pelada, Antilla y el rio Las Pavas (A.9,
+A.12, A.15, A.18: cuatro pedidos de concesion temporal-eventual de 1989 sobre la
+misma margen derecha, con la misma dotacion de 0,525 lts./seg. por hectarea);
+rio La Caldera, Zona Cabral (A.6); rio Wierna (A.28); El Acheral (A.19); El
+Gallinato y la Escuela 198 (A.25); Potrero de Castilla, Los Yacones, Campo
+Alegre, Mojotoro (A.13); Instituto u Hogar Dr. Luis Linares (A.8, A.29, A.30);
+Area Operativa XXXIX (A.7, A.17); Colegio Secundario 44 (A.26); Juzgado de Paz
+de La Caldera (A.28, A.31); obra de agua potable de Vaqueros (A.21, A.24);
+Municipalidad e intendente de La Caldera (A.6, A.25).
+
+B.2 · Nucleos del departamento en actos que no nombran el termino
+
+Mirados en la imagen salvo donde se dice.
+  13133 h13 (capa; repetido en 13134-13143 y 13215, doce hojas): Direccion
+  Nacional de Vialidad, Lic. Publica 11/89 del 5 Distrito, "Ruta N 9, Provincia
+  de Salta, tramo: Rio Vaqueros-Limite con Jujuy (bacheo con premezclado
+  bituminoso...)", presupuesto A 5.265.279. El acto no da departamento: el tramo
+  arranca en el rio Vaqueros; jurisdiccion indeterminada (5.1ter).
+  13241 h5 [imagen]: Decreto 1.225 (12-7-89), M.E., S. de Est. de Obras
+  Publicas, Expte 34-145.877/87: ratifica las Res. 2.243/89 y 2.330/89 de la
+  AGAS y "concedese licencia politica al senor Teodoro Bartolo Ruiz, [...]
+  personal jornalizado transitorio de la Direccion General de Hidraulica de la
+  Administracion General de Aguas de Salta, con vigencia al 15 de mayo de 1987 y
+  mientras dure su mandato como Intendente Municipal de la localidad de
+  Vaqueros." Un decreto de 1989 con vigencia desde 1987 (8.20).
+  13273 h18 [imagen]: O.P. N 75.053 F. N 47.464, "CENTRO DE USUARIOS DEL
+  SERVICIO DE AGUA POTABLE Y OTROS SERVICIOS PUBLICOS DE VAQUEROS - SALTA",
+  asamblea general ordinaria el 30 de setiembre de 1989 "en el domicilio de la
+  Municipalidad de la localidad de Vaqueros"; acta anterior del 4 de junio de
+  1988; ejercicio N 3 cerrado el 31-12-88; firman Miguel A. Ramallo y Agustin
+  P. Urquiza (capa). Es el Centro al que el Decreto 820 (A.21) entrega la
+  planta de agua.
+  13177 h12 y h33: las mesas del distrito municipal de Vaqueros van en la
+  ficha A.13.
+
+B.3 · Terminos que en 1989 son otra cosa
+
+Revisados los contextos de los 117 terminos del anillo 2 con aciertos. Son otra
+cosa, con su jurisdiccion cuando el acto la da:
+  Apellidos: Mamani (116 hojas), Castellanos (51; tambien el hospital "Dr.
+  Joaquin Castellanos" de General Guemes), Aramayo (37), Isasmendi (36),
+  Condori (30), Apaza (21), Wierna (19: Norberto Enrique Wierna, director
+  general de administracion, y otros), Chaile, Nogales, Yufra, Yugra, Toconas,
+  Murua; Lesser fuera de A.1 y A.13 es la demandada "C. Lesser" (13152 h16) y
+  Maria Cristina Lesser (13225 h8); Entre Rios (47: apellido, calle y finca;
+  la "Finca Vaqueros o Entre Rios" de A.3 es la unica del departamento).
+  Lugares de otros departamentos o provincias: El Bordo y Betania (General
+  Guemes), La Silleta (Rosario de Lerma), El Tunal (presa, Metan y Anta), Rio
+  Blanco (tramo de ruta y finca de Payogasta, Cachi), Nogalito (Metan, fraccion
+  de la estancia Yatasto), Antilla catastro 402 (General Guemes), Rio Las
+  Pavas y vertientes Higueritas del partido de Saladillo (General Guemes,
+  13315-13323), Rio Mojotoro (Destileria Rio Mojotoro S.A., Campo Santo, y
+  calle de Villa Lavalle), Rio Trancas (acequias del sur), Las Tipas (finca de
+  Osma, La Vina, y calle de la Capital), Lagunilla (gasoducto Cobos-Lagunilla),
+  Tabacal (Oran), Castanares, Villa San Lorenzo, Huaico Hondo y Valle Hermoso
+  (Capital), Pastos Grandes (Los Andes), "camino a Vaqueros" (Complejo
+  Universitario, Consejo de Investigacion de la U.N.Sa., km. 7 de la ruta 9, y
+  Aero Club Salta, km. 4: Capital), Santa Cruz de la Sierra (Bolivia).
+  Nombres comerciales y comunes: San Cayetano (Construcciones San Cayetano
+  S.A.; la Escuela Agricola San Cayetano de Vaqueros es A.13), El Sauce S.R.L.,
+  Canada Ancha S.R.L., Gauchos de Guemes (agrupaciones de la Capital y de Campo
+  Quijano), "vaqueros" y "vaqueria" (pantalones y ropa en licitaciones de
+  Y.P.F., 13175, 13254, 13320), Candelaria (nombre de pila), durazno, mesada,
+  despensa, mesa redonda, "2 de junio" dentro de "12 de junio", Club 20 de
+  Febrero (Paseo Guemes 54, Capital).
+
+B.4 · Ausencias del anillo de actores
+
+Actores de las fichas de 1989, buscados en las 4680 hojas por nombre y apellido
+sin puntuacion; grupos de 5.1:
+  (1) Solo en su propio acto (con sus repeticiones): Ledys Hetel Royo de
+  Alvarado (A.8; config 1961 y 1978); Margarita Gladys Lizondo (A.17; config
+  1954); Mercedes Simona Villalobos (A.30); Alberto Luis Manuel Piquin (A.7;
+  config 1986); Balvin Miguel Gallo (A.5; config 1985); Agricola Jujena S.R.L.
+  (A.9); Dominga Berardi de Giacoppo (A.12); Ernesto Julio Berruezo y Lucia
+  Marta Berruezo de Abraham (A.15); Camacho de Mangogna y Benito Antonio
+  Mangogna (A.3); Humberto D'Andrea (A.28); Rodolfo Morales (A.31); Teodoro
+  Bartolo Ruiz (B.2).
+  (2) En mas de un acto del departamento: los Berardi (A.12, Dominga Berardi
+  de Giacoppo, Loma Pelada catastro 169; A.18, Marino Berardi su sucesion,
+  Loma Pelada y Antilla catastro 37): es la trama del ano, cuatro pedidos de
+  agua del rio Las Pavas para Chalchanio, Loma Pelada y Antilla en marzo-mayo
+  de 1989, todos firmados por el Ing. Oscar Jorge Dean (config 1981); los
+  Mercado (A.19: Maria C. Mercado de Cisneros, config 1987, y Enrique Mercado,
+  config 1927 y 1929); los Serrey y Rafael Pacheco (A.11; config 1949-1951 y
+  1957); el Juzgado de Paz de La Caldera (A.28 y A.31); el Instituto Luis
+  Linares (A.8, A.29, A.30); la obra de agua de Vaqueros (A.21, A.24, B.2).
+  (3) Tambien fuera del departamento: Armando Daniel Palavecino (A.14: otros
+  20 renglones del corpus, en otros expedientes mineros); Mario Alfredo Oller
+  (A.20; 32 hojas con el apellido, la mayoria otras personas); Daniel Enrique
+  Marchetti (juez de minas, 136 hojas); Ernesto V. Sola (A.28, martillero, 116
+  hojas); Osvaldo R. Celiz (A.31, 70 hojas); Julio Cesar Herrera (A.19, 67
+  hojas); Luis B. Chavez (A.16, transporte, 2 hojas); Miguel A. Ramallo y
+  Agustin P. Urquiza (B.2; config 1986, 1959 y 1967).
+Falla de la busqueda: ninguna. Todos los actores del §A se devuelven al menos en
+su propio acto.
+Citados y no acompanados: el convenio del 30-7-1987 AGAS - Municipalidad de La
+Caldera (A.6); el convenio del 30-12-1988 de la planta de agua de Vaqueros
+(A.21); el convenio del 15-6-1989 con el intendente de La Caldera (A.25); el
+Plano N 25 (A.3) y el Pl. N 101 (A.28); el Decreto 1160/88 de los albergues
+(A.27); la Res. 1082-D/86 (A.29); el Decreto nacional 1447/88 (A.4, A.13).
+Vacantes sin nombre: el director titular del Area Operativa XXXIX en marzo de
+1987 (A.7) y el intendente municipal de La Caldera (A.25), que actua sin ser
+nombrado. Nombramiento que solo consta por otro acto: el mandato de Teodoro
+Bartolo Ruiz como intendente de Vaqueros desde 1987 consta solo por su licencia
+(B.2).
+
+§C · LIMITROFES
+---------------
+Una linea por caso, capa. 13113 h18 a 13128 h13 (doce hojas): finca Las Tipas,
+catastro 2693, partido de Osma (La Vina): homonimo de la calle de Vaqueros.
+13102-13110: Nogalito, fraccion de la estancia Yatasto, catastro 2302 (Metan).
+13315 h12 a 13323 h18: Antonio Macina, lote "b" del partido de Saladillo
+(General Guemes), riego del rio Las Pavas desde las vertientes Higueritas: el
+mismo rio de A.9, A.12, A.15 y A.18, del otro lado del limite. 13152 h12, 13156
+h13, 13157 h14: inmueble "Antilla", catastro 402, General Guemes. 13319 h19 a
+13328 h14: riego del rio Mojotoro, partido Betania (General Guemes). Ninguno
+nombra La Caldera.
+
+§P · PLANOS
+-----------
+Ningun plano publicado del departamento. La palabra "plano(s)" esta en 168
+hojas; once de ellas tienen ademas un termino del departamento, y solo dos
+remisiones tocan a La Caldera: el Plano N 25 de la matricula 131 (A.3, 13112 h5,
+y su sumario en h2) y el Pl. N 101 del inmueble de Vaqueros (A.28, 13267 h19,
+abreviado "Pl."): los dos citados y no acompanados. Las demas son planos de
+Embarcacion, de la Capital, de Jujuy (repuestos para bombas) y una maquina
+copiadora de planos. Busqueda de laminas por la tinta: 71 hojas con menos de 5 %
+de pixeles oscuros, todas miradas en miniatura (16 ppp, un mosaico): son finales
+de edicion, cuadros, tapas de anexos (Leyes 6563 y 6566, cartas municipales) y
+facsimiles; dos parecian graficos y se miraron a 55 ppp (13141 h21, balance
+facsimil del Banco del Noroeste; 13180 h32, grafico de torta del presupuesto,
+Ley 6543): ningun plano. Techo: 300 ppi.
+
+§D · INDICE
+-----------
+Edicion, hoja, clase fija (7.1), materia.
+  13109 h8   OBRA-PUBLICA+ESCUELA  A.1 Res. 805-D, Escuela 549 Villa Delia
+  13112 h5   HACIENDA-MUN   A.2 Dcto. 2466, coparticipacion (La Caldera,
+                            Vaqueros)
+  13112 h5   DOMINIO        A.3 Dcto. 2469, loteo Finca Vaqueros, mat. 131
+  13128 h5   ELECTORAL      A.4 Dcto. 27, senador y concejales
+  13130 h7   OTRO           A.5 Dcto. 187, duelo por Balvin M. Gallo
+  13133 h13  OBRA-PUBLICA   B.2 Vialidad, ruta 9 tramo Rio Vaqueros-Jujuy
+  13139 h5   OBRA-PUBLICA+AGUAS  A.6 Dcto. 259 (18-2-88), defensas rio La
+                            Caldera
+  13139 h7   CARGOS         A.7 Dcto. 202, director Area Operativa XXXIX
+  13143 h9   CARGOS         A.8 Res. 69-D, Instituto Luis Linares
+  13146 h8   AGUAS          A.9 Agricola Jujena, Chalchanio cat. 35
+  13160 h22  OTRO           A.10 Liga Mun. de Futbol San Lorenzo-La Caldera
+  13166 h20  DOMINIO+JUSTICIA  A.11 Posesion veintenal, Vaqueros mat. 396
+  13167 h13  AGUAS          A.12 Berardi de Giacoppo, Loma Pelada cat. 169
+  13177 h11  ELECTORAL      A.13 Dcto. 565, mesas de votacion
+  13180 h12  MINAS          A.14 Cateo Palavecino, Abra Asperal
+  13180 h16  AGUAS          A.15 Berruezo, Fraccion Chalchanio cat. 16
+  13181 h5   OTRO           A.16 Dcto. 589, plataformas de la Terminal
+  13183 h6   CARGOS         A.17 Res. 109 D, Area Operativa XXXIX
+  13183 h15  AGUAS          A.18 Berardi sucesion, Loma Pelada y Antilla
+  13195 h13  DOMINIO        A.19 Remate derechos finca El Acheral cat. 81
+  13209 h8   MINAS          A.20 Cateo Oller, Alto del Volcan
+  13217 h5   AGUAS+OBRA-PUBLICA  A.21 Dcto. 820, planta de agua de Vaqueros
+  13222 h16  ELECTORAL      A.22 Internas del P.D.C., junta departamental
+  13238 h16  NORMA          A.23 Dcto. 1285, emergencia agropecuaria
+  13241 h5   CARGOS         B.2 Dcto. 1.225, licencia del intendente de
+                            Vaqueros
+  13244 h9   OBRA-PUBLICA+AGUAS  A.24 Dcto. 1.333, adicionales planta Vaqueros
+  13246 h7   OBRA-PUBLICA+ESCUELA  A.25 Res. 291-D, drenaje Escuela 198
+  13250 h6   ESCUELA        A.26 Dcto. 1385, Colegio Secundario 44
+  13257 h16  ESCUELA+NORMA  A.27 Dcto. 1461, albergues estudiantiles
+  13267 h19  DOMINIO        A.28 Remate mitad indivisa, Vaqueros mat. 1.463
+  13268 h10  OBRA-PUBLICA   A.29 Res. 339-D, Hogar de Ninos Luis Linares
+  13273 h18  AGUAS          B.2 Centro de Usuarios de agua de Vaqueros
+  13290 h5   CARGOS         A.30 Res. 381-D, Instituto Luis Linares
+  13298 h13  JUSTICIA       A.31 Remate, Juzgado de Paz de La Caldera
+
+§E · OBSERVACIONES
+------------------
+
+E.1 · Duplicacion y saldos
+
+md5 y dhash: no se calcularon (las imagenes estan dentro de los PDF y no hay jpg
+sueltas): limite. Repeticiones controladas por el texto, nunca por el numero de
+aviso: A.9, A.12 y A.18 (diez apariciones cada uno, por el numero de
+expediente), A.11, A.19, A.22 y A.28 (tres), A.10, A.14, A.20 y A.31 (dos);
+A.15 sale una sola vez aunque la marca diga "e) 27/4 al 2/5/89" (P4). Sumarios y
+cuerpos: A.1, A.2, A.3, A.5, A.6, A.7, A.8, A.10, A.24, A.29.
+Saldos: el corpus no publica ningun balance de Tesoreria General ni ningun
+balance municipal del departamento: cero resumenes, cadena no aplicable. El
+Boletin publica su recaudacion diaria (como en 1990 y 1992); no es un balance de
+la rubrica y no se armo su cadena.
+
+E.2 · Cobertura
+
+243 de 244 ediciones (falta la 13314); 4680 hojas. Tapas: 243 de 243 miradas en
+la imagen (18 mosaicos a 85 ppp; 11 tapas a 200 ppp). Hojas de interior miradas
+en la imagen, enteras o por tramos: 58 (las de las fichas, las del §B citadas
+con numero, las de los falsos positivos dudosos y dos graficos), mas 71 en
+miniatura (tinta baja). Hojas con segunda version propia: las 102 a ojos. Hojas
+sin texto en la corrida de la maquina, con OCR de la sesion: 103 de 103. Tinta
+medida en 4680 de 4680 (40 ppp, pixeles por debajo de 200 sobre 255): una sola
+hoja por debajo de 0,5 % (13236 h14, final de edicion con poca tinta; no esta en
+blanco) y 71 por debajo de 5 %, todas miradas en miniatura (§P).
+
+E.3 · Sin mencion y no mirado
+
+Las hojas sin mencion del departamento no se miraron en la imagen, salvo las
+tapas, las miniaturas de tinta baja y las de las fichas: su cobertura es la de
+las cuatro pasadas sobre una version (dos en las 102 hojas a ojos) y la del
+anillo de actores. Las 102 hojas "a ojos" no se miraron enteras: pendiente P1.
+Las 103 hojas que solo tienen OCR en ingles de la sesion (13102-13112, 13236
+h14, 13294-13295) tienen una sola version de calidad menor (L7).
+
+E.4 · Firmas y autoridad
+
+Gobernador: C.P.N. Hernan Hipolito Cornejo, en las 243 tapas (imagen); firma
+"CORNEJO" el Decreto 178 (A.5) y, por la capa, el 820 (A.21). Vicegobernador:
+Dn. Pedro Maximo de los Rios, a cargo del mando gubernativo durante los viajes
+del titular; firma "DE LOS RIOS (I)" el Decreto 565 (A.13, imagen). En enero
+(2 al 7, 10 al 12, desde el 25 y desde el 28) el interino es el Vicepresidente
+1 de la Camara de Senadores en ejercicio de la Presidencia, Prof./Dn. Hector
+Manuel Canto (Decreto 178, 28-1-89, mirado en la imagen en 13130 h7; los otros,
+capa). La capa devuelve 191 renglones con "interinamente a cargo del mando
+gubernativo", "queda asumido", "asume su titular" o "a cargo del Poder
+Ejecutivo" (decretos y sumarios, de diciembre de 1988 a diciembre de 1989): no
+se miraron uno por uno (P3). Interinato sin cierre: no se fija ningun reintegro
+que el corpus no imprima.
+Ministros en las tapas (imagen): Gobierno, Dr. Edmundo Pieve hasta la 13161
+(31-3), Dr. Laureano Almiron desde la 13162 (3-4) y Sr. Orlando Jose Porrati
+desde la 13212 (14-6); Bienestar Social, Dr. Julio A. San Millan todo el ano;
+Salud Publica, Dr. Roberto Lovaglio hasta la 13162, Dr. Guillermo R. Duran
+desde la 13163 (4-4) y Dr. Alfredo Elio Querio desde la 13263 (28-8);
+Economia, Lic. Leopoldo Van Cauwlaert y, en agosto, Cont. Oscar Salvatierra;
+Educacion, Ing. Alfredo Eduardo Vorano; Secretario de Estado de Gobierno, Dr.
+Antonio Casabella Espelta desde la 13235 (18-7). No se normalizan las grafias.
+Numeracion de decretos (8.15), por la capa (decretos_1989.csv vacio): vecinos
++-3 de los catorce decretos de las fichas y del §B. 24 a 28 del 18-1 y 29-30
+del 20-1 (A.4); 175-176 del 27-1, 178 del 28-1, 179-181 del 31-1 (Dto 178); 185
+del 31-1, 187 a 190 del 1-2 (A.5); 199 a 205 del 3-2 (A.7); 562 a 564 del
+18-4, 565 a 568 del 19-4 (A.13); 586 a 592 del 19-4 (A.16); 817 a 823 del 29-5
+(A.21); 1222 a 1228 del 12-7 (B.2); 1282 a 1288 del 17-7 (A.23); 1330 a 1335
+del 18-7 (A.24); 1384 a 1388 del 28-7 (A.26); 1458 del 8-8, 1460 del 9-8,
+1461 a 1464 del 10-8 (A.27); 2463 a 2472 del 21-12-88 (A.2, A.3). Monotona en
+todos. Excepcion: el 259 (A.6) y sus vecinos 258, 260, 261 y 262 se imprimen
+"18-2-88" (13136 y 13139), mientras la serie de 1989 tiene sus propios 257,
+258, 260, 261, 262 y 263 del 2 y 3 de marzo de 1989 (13144, 13149, 13151,
+13240): son decretos de 1988 publicados en 1989 (decidido por la serie, A.6).
+
+E.5 · Cortes y columnas
+
+U+0002: 0. U+00AD: quitado con el salto. Columna perdida: no se observo en
+ninguno de los unos 45 tramos de columna mirados en la imagen (recuento
+aproximado de los recortes de la sesion). La capa parte palabras de las fichas
+("Cal-dera", 13109 h8, que la literal sobre el texto crudo no veia y la union
+si) y lee mal cifras que la imagen decide (E.7). Segunda version propia
+(tesseract eng, psm 4, 200 ppp) sobre 102 de las 102 hojas a ojos; OCR propio
+(eng, psm 3, 300 ppp) sobre las 103 hojas sin texto.
+
+E.6 · Repeticiones
+
+A.9 (10), A.12 (10), A.18 (10), A.11 (3), A.19 (3), A.22 (3), A.28 (3), A.10
+(2), A.14 (2), A.20 (2), A.31 (2); en el §B, la licitacion de Vialidad del tramo
+Rio Vaqueros (12 hojas). El mismo texto en todas; numeros de O.P. iguales dentro
+de cada aviso; la lista de demandados de A.11 cambia de puntuacion entre 13166 y
+13167.
+
+E.7 · Falsos positivos y negativos
+
+Anillo 1, falsos positivos (55 hojas de las 136 con "cald"): "calderas" y
+"caldera" de centrales termicas, policlinicos, casas y repuestos (Mellor
+Goodwin, Steam-Matic, GAV-101 de la Central Guemes, "una caldera para agua
+caliente"; 29 hojas) y las "Calderas de Aguaray (dpto. San Martin)" (13156 h6);
+"caldo(s)" de licitaciones de comestibles (7); Calderon, apellido (10: Oscar
+H. Calderon, Petrona Catalina Calderon de Encina, Carmelo Calderon); Macaldi y
+Ricaldi, apellidos, y Textil Calden (4); "Distribuidora R. C. G. (de Hector
+Manuel Caldera)" (13158 h9, imagen): apellido; "Pje. La Caldera N 839 de esta
+ciudad" (13192 h10, imagen): calle de la Capital; ruido de OCR ("ubicaldia",
+"aplbcaldtaisi", 2).
+Aparte, por jurisdiccion: las licitaciones del Comando del Ejercito con "Cno. a
+La Calera, km. 9" y "camino a la: callera km. 9 1/2 - Cordoba" (13266, 13267,
+13298, 13299): es La Calera de Cordoba.
+Difusa: todas sus formas son falsos positivos. Falsos negativos que la sesion
+corrige: la capa leia "51" por 81 (A.19), "(30%)"
+por 50 % (A.23), "34-146.848/87" por 843 (A.6), "bagone" por Ragone (A.5),
+"+tiqueros" por Vaqueros (sumario de A.3), "184.6291" por 184.629 (A.2) y
+"Chalhanio" (A.9, 13149). La palabra partida "Cal-dera" de 13109 h8 la recupera
+la union de cortes (2.3.2).
+
+E.8 · Fidelidad numerica
+
+Cuadros que nombran el termino:
+  A.2 anexo I del Decreto 2466, 58 renglones: suma 13.288.758,19 = total
+       impreso y = articulo 1. Cierra.
+  A.13 anexo del Decreto 565 (mesas): recuento propio, 19 mesas del
+       departamento; sin total impreso.
+  A.16 tabla de la Res. D.G.T. 192/88: recuento propio, 30 servicios y 30
+       renglones de empresa y plataforma; sin total impreso.
+Subtotales recalculados: 2 (A.2, el total; A.3, el balance de superficie en sus
+dos partes). Otras cifras con control: A.3 (9.710,86 + 39,86 + 1.731,53 =
+11.482,25; 76.044 - 11.482,25 = 64.561,75), A.9, A.12, A.15, A.18 (dotacion =
+superficie x 0,525), A.14 (rectangulo de 5.000 ha, cierra), A.20 (no cierra:
+inferencia rotulada en la ficha), A.1, A.23, A.24, A.25, A.26, A.28 (cifra =
+letras). Cifra no controlable: la base de A.28 (no se imprime la valuacion
+fiscal).
+
+E.9 · Contradicciones y erratas del original
+
+Ano editorial: "Ano LXXIX" hasta la 13234 (17-7) y "Ano LXXXI" desde la 13235
+(18-7): ninguna tapa dice LXXX. Se transcribe y no se corrige.
+Tapas fechadas en otro ano (imagen a 200 ppp): 13125 "6 de Febrero de 1988",
+13127 "8 de Febrero de 1988", 13205 "5 de Junio de 1987"; la cadena de fechas
+y de folios las situa en 1989. 13119: "27 deEnerode1989". 13256: "EDICION DE 50
+PAGINAS" con 18 hojas y folios continuos.
+Numeros de edicion tachados y corregidos en la tapa: 13102, 13103, 13266, 13267
+y 13315 (impreso 13.314, sellado 13.315; §1).
+Decreto 259 y vecinos fechados 18-2-88 en ediciones de febrero de 1989 (A.6,
+decidido por la serie). A.5: "Balbin" en el sumario, "Balvin" en el cuerpo.
+A.4: "Conntitucion". A.13: "Gobenacion". A.18: "irigar". A.20: "de 19...," y
+"permiso para explotar y catear". A.21: falta un renglon ("celebrado
+nistracion General"). A.28: el inmueble esta "en La Caldera (05), Vaqueros" y
+"dentro del radio urbano del pueblo de La Caldera". A.24 posterior a A.21: la
+obra sigue con adicionales despues de entregada. A.7 y B.2: decretos de 1989
+con vigencia en 1987 (8.20).
+
+E.10 · Pendientes y limites
+
+PENDIENTES (trabajo que la sesion puede hacer y no hizo entero):
+  P1. Las 102 hojas "a ojos" del pre-informe no se miraron enteras. Se cubrieron
+  con la segunda version propia (eng) en 102 de 102 y con las cuatro pasadas
+  sobre ella: ningun renglon nuevo del departamento. Son cuadros y anexos de
+  13141, 13172, 13180, 13219, 13236, 13340 y finales de edicion.
+  P2. Cotejo sumario/cuerpo: se hizo solo para los actos de las fichas que
+  tienen sumario (diez); el pre-informe lista 1388 discrepancias, casi todas
+  ruido de digitos, que no se miraron. El control de completitud es la cadena
+  de folios por la capa (L6).
+  P3. Interinatos: la serie de "ponese interinamente a cargo" / "queda asumido"
+  (191 renglones en la capa) no se miro en la imagen; solo el Decreto 178.
+  P4. Repeticiones no halladas por el texto: A.15 (marca e) 27/4 al 2/5/89, una
+  sola aparicion) y la tercera de A.20 (23-6-89). Hay que mirarlas en la imagen
+  de 13181-13182 y de 13219.
+  P5. Vecinos +-3 de los decretos: leidos solo en la capa (L4); los catorce
+  numeros de las fichas se miraron en la imagen, sus vecinos no.
+LIMITES:
+  L1. md5 y dhash: no aplicables sin jpg sueltas; deduplicacion por texto.
+  L2. Edicion 13314: no esta en el Release (20 folios, probablemente del 13-11;
+  §1). Tampoco 4 hojas de la 13264.
+  L3. Tesseract sin spa en la sesion: las versiones propias son en ingles.
+  L4. decretos_1989.csv vacio: la numeracion se controlo por la capa.
+  L5. Dias de salida sin edicion: 16 dias habiles (6-1, 9-1, 20-2, 23-3, 24-3,
+  1-5, 25-5, 19-6, 21-8, 13-9, 14-9, 15-9, 16-10, 8-12, 15-12, 25-12), mas el
+  13-11 de la edicion ausente. El corpus explica 6-1 y 9-1 (asueto
+  administrativo por la emergencia de abastecimiento, decreto en 13118 h5); los
+  demas se declaran sin explicar en el corpus. Ninguna edicion en sabado o
+  domingo.
+  L6. Paginacion: folio corrido en todo el ano. Folios leidos en la capa: 2573
+  de 4680 hojas, concordantes con su hoja; empalmes entre ediciones medibles en
+  la capa: 242 de 242, de ellos 129 continuos, 102 con un folio salteado, 2 con
+  dos, 1 con cinco (13264-13265), 1 con veinte (13313-13315) y 7 con anexos sin
+  folio en la edicion anterior (13141, 13172, 13180, 13236, 13303, 13319,
+  13340). Ultimo folio de la 13345: 4681 (por calculo; el ultimo leido, 4646).
+  L7. OCR de la maquina fallido en 103 hojas (66 errores de memoria en el log y
+  dos PDF sin extraer): tienen solo la version de la sesion, en ingles.
+Al cerrar: con decretos_1989.csv lleno y tesseract spa en la sesion, P2, P3 y P5
+se harian sin pasar por la capa; P1 y P4 necesitan tiempo de lectura, no
+insumos.
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 (presupuesto, 5.5 del flujo). 1989 tiene 243 ediciones y 4680 hojas. Un
+turno de sesion automatica cerro las 31 fichas, las tapas y los cuadros; no
+alcanzo para mirar enteras las 102 hojas a ojos ni la serie de interinatos. Se
+repite la propuesta de 1990 y 1992: la segunda version propia y las cuatro
+pasadas sobre ella cubren las hojas a ojos, y la lectura entera queda para las
+que tengan un termino del anillo 1 o 2.
+F.2 (insumos). La corrida de la maquina de 1989 tuvo errores de memoria (66
+hojas sin OCR, dos PDF sin extraer) que el log registra y el pre-informe no
+dice: el §0 del pre-informe da "capa previa util en 536/4631 hojas" sin avisar
+que 103 hojas quedaron sin texto. Propuesta para lee_auto.py: contar al final
+las hojas sin ninguna version y escribirlas en el §0 del pre-informe, y
+reintentar el OCR de las que fallaron. Para la sesion: medir siempre cuantas
+hojas no tienen ningun texto antes de barrer (aqui 103 de 4680).
+F.3 (config, para la proxima sesion que lo entregue). Agregar al anillo 2:
+"chalchanio" (ya esta) con "chalhanio" (deformacion de la capa), "loma pelada",
+"fraccion chalchanio", "zona cabral", "abra asperal", "alto del volcan", "finca
+san alejo", "calle 20 de febrero", "instituto dr. luis linares", "hogar de ninos
+luis linares", "colegio secundario n 44", "escuela n 198", "escuela n 549", "rio
+vaqueros"; a falsos_positivos: "cno. a la calera", "camino a la callera", "pje.
+la caldera", "hector manuel caldera", "textil calden"; a actores (origen 1989):
+Dominga Berardi de Giacoppo, Marino Berardi, Ernesto Julio Berruezo, Lucia Marta
+Berruezo de Abraham, Agricola Jujena S.R.L., Armando Daniel Palavecino, Mario
+Alfredo Oller, Humberto D'Andrea, Martha Beatriz Camacho de Mangogna, Benito
+Antonio Mangogna, Teodoro Bartolo Ruiz, Mercedes Simona Villalobos, Pedro Maximo
+de los Rios, Hector Manuel Canto. Y anotar que la Liga Municipal de Futbol San
+Lorenzo - La Caldera ya existe en 1989 (el config le da origen 2010 y 2015). No
+se entrega lee_config.json en esta sesion: queda como propuesta.
+F.4 (tapas). La tapa puede fecharse en otro ano (1987, 1988) y el numero de
+edicion puede venir tachado y corregido a mano o con sello. Propuesta para
+2.5bis: el numero y el ano de la tapa se cotejan con la serie y con la cadena de
+folios; un numero corregido en la tapa se registra con las dos lecturas, y si la
+correccion deja un hueco en la serie (13314), el folio decide si falta una
+edicion.
+
+§R · RECUENTO
+-------------
+anio: 1989
+ediciones_desde: 13102
+ediciones_hasta: 13345
+ediciones_presentes: 243
+ediciones_ausentes: 1
+hojas_presentes: 4680
+hojas_declaradas: 4641
+hojas_ausentes_estimadas: 24
+periodicidad: diaria-dias-habiles
+dias_salida_sin_edicion: 16
+ediciones_dobles: 0
+techo_ppi: 300
+ocr_en_sesion: si
+capa_previa: textos-del-release
+versiones: 1
+actos_departamento: 31
+actos_dominio: 4
+actos_hacienda_municipal: 1
+planos_publicados: 0
+planos_citados_departamento: 2
+balances_municipales: 0
+cuadros_publicados: 3
+subtotales_recalculados: 2
+resumenes_tesoreria: 0
+cadena_saldos: no-aplicable
+columnas_cotejadas: 45
+hojas_miradas: 372
+avisos_repetidos_departamento: 11
+falsos_positivos_anillo1: 55
+limites_declarados: 7
+estado: CON PENDIENTES
+nivel_lectura: imagen
+pdf_release: 243
+avisos_release: 0
