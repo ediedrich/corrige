@@ -1,4 +1,4 @@
-# Flujo editorial de *El dispositivo caldereño* — versión 2
+# Flujo editorial de *El dispositivo caldereño* — versión 3
 
 Fijada el 26/09/2026; la versión 2 (28/09/2026) agrega el §5.6, sobre las dudas de lectura, y las palabras clave `DUDAS` y `LECTURAS`. Unifica los proyectos «BOLETINES CALDERA» y «EL DISPOSITIVO CALDEREÑO» en uno solo, con un único estado y un único punto de entrada.
 
@@ -58,7 +58,7 @@ clave del mensaje, se bajan estos archivos (primera acción de la respuesta):
             curl -fsSL $B/registro-cobertura.md  -o /home/claude/registro-cobertura.md
             git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
 
-Palabras clave: ESTADO · LEE <año> · LEE <año> complemento <ediciones> ·
+Palabras clave: ESTADO · LEE <año> · LEE <año> complemento <ediciones> · LEE <año> cierre ·
 LEE lote <a>-<b> · LEE cruce <a>-<b> · AMPLÍA <años> · MEJORA (= CORRIGE) ·
 DUDAS <años> · LECTURAS.
 Lo que cada una hace está en flujo.md (§2 y siguientes); se lee entero.
@@ -91,6 +91,7 @@ Reglas:
 | `ESTADO` | Lee `estado.json` y responde: cuántos años en cada nivel, qué sigue y qué pendientes están abiertos. No trabaja sobre el libro. | Nada, sólo la respuesta |
 | `LEE <año>` | Informe LEE completo del año (§5) | Informe LEE y, si cambió, `lee_config.json` |
 | `LEE <año> complemento <ediciones>` | Informe sólo de las ediciones nuevas de un año ya leído | Informe LEE del complemento |
+| `LEE <año> cierre` | Resuelve los pendientes nombrados en el informe vigente de un año leído CON PENDIENTES (§5.7) | Informe LEE completo del año, que reemplaza al anterior |
 | `LEE lote <a>-<b>` | Varios años de pocos candidatos en una sesión, con un informe por año | Un informe por año |
 | `LEE cruce <a>-<b>` | Cruce de informes ya entregados (v16 §17) | Archivo `LEE-cruce-…` |
 | `AMPLÍA <años>` | Incorpora al libro lo leído en esos años (§6) | `amplia-….patch` y `amplia-….json` |
@@ -127,6 +128,8 @@ Reglas:
 4. **AMPLÍA** en cuanto hay 3 años leídos sin incorporar, o antes si no queda nada para leer.
 5. **LEE** del primer año procesado sin informe. Se usa `LEE lote` si hay 3 o más años seguidos con 3 candidatos o menos cada uno.
 6. **Descargar** los años siguientes.
+7. **Regularización.** Años leídos sin §R (1909–1932 y 1946): primero se procesan en la máquina; después, `LEE <año>` con la rúbrica vigente.
+8. **Cierre.** Años leídos CON PENDIENTES: `LEE <año> cierre` (§5.7), en el orden de `orden_anios`. Es lo último del ciclo; cuando no queda ninguno, `siguiente` responde `ESTADO`.
 
 **Orden de los años** (`orden_anios` en `proyecto.json`, se puede cambiar):
 
@@ -238,6 +241,16 @@ Lo que un control decide va al informe como decidido, con el control nombrado. *
 - **abierta**, con las lecturas en disputa.
 
 Si una lectura toca una frase del libro, la corrección entra como fase 6 de una ronda MEJORA, con parche y registro. Si toca sólo un informe LEE, queda como pendiente de tipo `lee`, con la lista de las fichas y la lectura que corresponde. Las lecturas y su clasificación se agregan al final del registro de cobertura, en el bloque de la ronda, **sin tocar los bloques anteriores**.
+
+### 5.7 · `LEE <año> cierre`: llevar un año CON PENDIENTES a COMPLETO
+
+Es para los años cuyo informe vigente terminó **CON PENDIENTES** (v17 §5.5): el pendiente quedó nombrado y ahora se resuelve.
+
+- **Corpus.** Los pendientes nombrados en el §0 del informe vigente del año (los P1, P2… y lo que el §R declara en `limites_declarados` y que se pueda levantar), más lo que haga falta mirar para resolverlos. No se rehace lo que el informe ya dejó resuelto: se cita.
+- **Insumos.** Los de §5.1, más el informe vigente del año (`corrige/lee/<año>/`). Rigen todas las reglas de la rúbrica y de v17.
+- **Entrega.** Un **informe LEE completo del año** con el nombre fijo de siempre: conserva todo lo resuelto del anterior, dice en el §0 qué pendientes cerró y cómo, y qué afirmaciones del informe anterior cambian. `registrar` lo instala en lugar del anterior.
+- **§R.** `estado: COMPLETO` si se cerraron todos los pendientes. Si alguno no se puede cerrar por una causa que no depende de la sesión (falta el PDF en el Release, la hoja está ilegible, el organismo no publicó), queda como **límite declarado** con su causa y el estado es `COMPLETO` con ese límite. Si no cupo en la sesión, `CON PENDIENTES` con lo que quede.
+- **Tope.** La máquina pide a lo sumo dos cierres por año (`cierre_max_intentos` en `proyecto.json`). Si después del segundo sigue con pendientes, `caldera.py avance` lo cuenta como completo con límites y el ciclo sigue con otro año.
 
 ---
 
@@ -437,4 +450,4 @@ Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro 
 
 ---
 
-*Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
+*Versión 3, 11/10/2026: palabra clave `LEE <año> cierre` (§2, §3 y §5.7). Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
