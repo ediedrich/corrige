@@ -49,6 +49,8 @@ clave del mensaje, se bajan estos archivos (primera acción de la respuesta):
   LEE:      curl -fsSL $B/rubrica-lee-v16.md    -o /home/claude/lee-v16.md
             curl -fsSL $B/config/lee_config.json -o /home/claude/lee_config.json
   AMPLÍA:   git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
+  LEE <año> cierre: lo de LEE, más
+            curl -fsSL $B/lee/<año>/<informe LEE del año> (nombre en estado.json)
   DUDAS/LECTURAS:
             curl -fsSL $B/lee/<año>/<informe LEE del año> (nombre en estado.json)
             git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
