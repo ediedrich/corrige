@@ -445,7 +445,7 @@ Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro 
 4. **Si es un comando de la máquina**, `2-descargar.bat` procesa los años que te indica. Para dejarlo corriendo de noche, usá `noche.bat`, que hace los próximos 10 años, o programalo:
 
    ```
-   schtasks /create /tn CalderaNoche /tr "\"C:\Users\edudi\OneDrive\Documentos\Autismo\00  - LA CALDERA\caldera\noche.bat\"" /sc daily /st 23:30
+   schtasks /create /tn CalderaNoche /tr "\"C:\Users\edudi\OneDrive\Documentos\Autismo\10_Libros_y_escritura\00  - LA CALDERA\caldera\noche.bat\"" /sc daily /st 23:30
    ```
 
 **Espacio en disco.** `descargar` baja un año, lo procesa, sube las salidas y **borra los PDF y las imágenes de ese año** antes de pasar al siguiente. Sólo quedan los textos, que son livianos. Nunca hay más de un año pesado en el disco.
