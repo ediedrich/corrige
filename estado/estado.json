@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-11T07:09:57",
+ "actualizado": "2026-10-11T10:53:58",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -7125,12 +7125,34 @@
     "pdf": 245,
     "avisos_pdf": 0,
     "avisos_txt": false,
-    "preinforme": false,
-    "textos": false,
+    "preinforme": true,
+    "textos": true,
     "informes_lee": [],
-    "revisado": "2026-10-09T02:53:04"
+    "revisado": "2026-10-11T10:53:56"
    },
-   "descarga": null,
+   "descarga": {
+    "fecha": "2026-10-11T10:53:58",
+    "lee_auto": "2b74e952bd1b",
+    "config": "2026-10-07",
+    "pdf_bajados": 245,
+    "candidatos": 174,
+    "capas": {
+     "A1": 951,
+     "A2": 5136,
+     "ACTAP": 2275662,
+     "ACT": 1878,
+     "NUM": 88136,
+     "REEMP": 263
+    },
+    "subidos": [
+     "BO-Salta-2003_la-caldera_PRE-INFORME-LEE_2026-10-11.txt",
+     "decretos_2003.csv",
+     "lee_config.json",
+     "lee_textos_2003.zip",
+     "log.txt",
+     "resultados_2003.csv.zip"
+    ]
+   },
    "lee": null,
    "libro": {
     "nivel": "puntual",
@@ -17239,6 +17261,82 @@
     2013
    ],
    "texto": "Apendice D, seccion 'Boletin Oficial y archivo provincial', con la verificacion del 11/10/2026 contra el sitio oficial (caldera/_verificacion/verificacion-faltantes-2026-10-11.csv). SACAR, porque ya estan en el Release: ediciones 9034 a 9037 (1972), 11651 (1983), 17094 y 17098 a 17101 (2005), el anio 1993 (246 ediciones, 14085-14330) y la segunda mitad de 2005; y el pedido de la 7780 entera (P263). DECLARAR como faltantes en la fuente, no en nuestra descarga: 737, 787, 793, 822, 859, 872, 876, 878, 884, 885 y 7553 (el sitio sirve el aviso 'ESTE BOLETIN NO SE ENCONTRO EN NUESTRA BASE DE DATOS', el mismo marcador de 114.184 bytes del Release); 9696, 9698, 10347, 12340, 13314 y 18800 (el sitio no responde PDF); 6737, 19199 y 8365 (el sitio sirve el mismo archivo repetido); 9333 truncada en el sitio, y las paginas faltantes de 852, 7118, 7629, 7968, 8041, 8337, 9104, 10151, 10648, 10997, 11631, 12567, 12575, 12596, 13744, 15323, 17076, 17891, 18216 y 18475 (archivo oficial identico al nuestro). Ajustar F (fuentes) y 00 donde den esos anios o ediciones por faltantes. La nota al Boletin Oficial (gestiones/nota-boletin-oficial-faltantes) ya usa la lista corregida.",
+   "abierto": "2026-10-11",
+   "hecho": null
+  },
+  {
+   "id": "P266",
+   "tipo": "fuentes",
+   "anios": [
+    1989,
+    1993,
+    1994,
+    1998,
+    2001,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "texto": "ANEXOS del sitio oficial: el sitio guarda aparte, en /anexodigital/<anio>/<edicion>.pdf, los anexos y separatas de cada edicion, y ni bajar-anio.ps1 (antes de 2016) ni caldera.py los tomaron: el Release no tiene ninguno. buscar_anexos.py (11/10/2026) encontro 3.717 anexos, unos 17 GB: 7 sueltos de 1989-2003 (1989, 1993 x2, 1994, 1998 -la separata de la Ley 6968 de la 15323-, 2001, 2003), 1.519 de 2004-2015 y 2.191 de 2016-2026. Lista: caldera/_verificacion/anexos-2026-10-11.csv. Subirlos al Release de cada anio como <edicion>_anexo.pdf con caldera/subir_anexos.py (reanudable, verifica tamanos). Ensenar a caldera.py y a lee_auto.py a tratar <edicion>_anexo.pdf como parte de la edicion.",
+   "abierto": "2026-10-11",
+   "hecho": null
+  },
+  {
+   "id": "P267",
+   "tipo": "lee",
+   "anios": [
+    1989,
+    1993,
+    1994,
+    1998,
+    2001,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "texto": "LEE complemento de ANEXOS por anio, cuando esten en el Release (pendiente anterior). Muestra de 2005: 67 anexos, 1.948 paginas, todos con texto digital; 18 nombran La Caldera o Vaqueros (17186 con 45 menciones; tambien 17040, 17076, 17082, 17107, 17129, 17143, 17207, 17238, 17243, 17255, 17277 a 17284). El anexo de la 17076 tiene 63 paginas (el libro le daba 64 faltantes) y el de la 17166, 6 (le daba 8). Con eso: actualizar los informes LEE, incorporar al libro lo del departamento, y corregir D y F, que dan por faltantes las paginas declaradas en las tapas de 2005 y 2007-2015 (454 en 2005; 9.249 a 12.612 por anio en 2007-2015) y la separata de 1998.",
    "abierto": "2026-10-11",
    "hecho": null
   }
