@@ -6126,3 +6126,97 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 1 de 1 hallazgo resuelto; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1914 Escolástico M. Aparicio es a la vez miembro de la comisión municipal, juez de paz del departamento y comisionado de la clasificación de patentes, y el comisionado propone, el juez firma y la comisión designa desde el mismo pueblo. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 8 líneas (0,03 %; 16,9 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 1. Recortes: ninguno. Errores introducidos por la propia auditoría: 1 en el AMPLÍA 1914, escrito por la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 97 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1916. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `3015157` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1916, sobre `995a496`, aplicado por `3-registrar` el 13/10 a las 15:16), con la fase 6 en `ronda-97.patch` (un commit sobre `3015157`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1916 y el AMPLÍA 1916**, en la misma tarea programada: el cotejo descansa en las hojas y recortes que esa sesión miró, del Release 1916.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 96 (25.656 de 25.656, sobre `4194a11` con la fase 6, que es `995a496`) se trasladaron por diff a `3015157`. **El AMPLÍA caduca 10 líneas y deja 27 nuevas o modificadas**; cambia el largo de un archivo, el capítulo 4 (+17 líneas: de 8 a 25 en sus tramos); A y F cambian una línea cada uno sin cambiar de largo. Vigentes después del traslado: 25.646 de 25.673.
+
+### Lectura sobre el texto (numeración de `3015157`)
+
+Se leyeron **las 27 líneas, enteras** (50.756 bytes), contra el informe `BO-Salta-1916_587-635_la-caldera_LEE-1916_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres, las cifras y las fechas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (35) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 25 (267, 269, 295–301, 317–324, 830, 834–835, 1000, 1793–1796) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:263–316 (la sección de 1916), 04-siglo:168–182 (la subcomisaría de la estación en 1914), 04-siglo:395–441 (1917, con la renuncia de Fressart), 04-siglo:812–822 y 955–1000 (la plaza de Mojotoro en 1919 y 1920), 04-siglo:1700–1715 y 1769–1800 (la fundición), 03-fincas:58–62 y A:37 (la fundición en 1917).
+
+**Esta ronda: 27 líneas**, 50.756 bytes sobre 3.541.955, que en las 1.069 páginas de la base equivalen a **15,3 páginas**.
+
+Acumulado: 25.646 vigentes + 27 = **25.673 de 25.673 (100,0 %)**. La fase 6 toca cuatro líneas de esta ronda (04-siglo:298–300 y 323) y no cambia el largo de ningún archivo: **25.673 de 25.673 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 596 | 1–2 | Decreto del 11 de marzo: «cada treinta días los que tengan su asiento en los departamentos de Candelaria, [...] Campo Santo, Cal-dera, [...]»; doce jurisdicciones en el plazo de treinta días (imagen) | Coincide: «otras once jurisdicciones» |
+| 603 | 1 | Decreto del 25 de abril, en acuerdo de ministros: «Quedan suprimidas del presupuesto sancionado y promulgado para 1916 las partidas [...]»; ítem 29: «un subcomisario para Mojotoro, $ 960» (imagen) | Coincide |
+| 634 | 1 | Decreto del 15 de diciembre: subcomisaría en la Estación Mojotoro, «donde se instalará en breve una fundición metalúrgica, con cuyo motivo su población obrera aumentará considerablemente»; *ad honorem*, Emilio Fressart (imagen) | Coincide; cita literal |
+| 608 | 2 | Comisarios departamentales y de distrito del 6 de junio: veintidós nombres, sin La Caldera; Molinos, «Balvin Díaz» (imagen) | Coincide en el recuento; ver hallazgo 2 |
+| 616 | 2 | Receptores del impuesto al consumo del 5 de agosto; Molinos, «D. [trazo]albín Díaz», la inicial tapada por un trazo de tinta (imagen a 300 ppp) | Hallazgo 2 |
+| 589, 605 | 4; 1–2 | Los dos movimientos de caja que F incorpora (imagen) | Coincide con F |
+| 469 (1914) | 2 | Atribución de la estación Mojotoro a «jurisdicción del Departamento de la Caldera»: el libro la cita en 04-siglo:176 para el decreto de febrero; el de julio (Nº 504) no la repite en lo que el libro transcribe | Hallazgo 1 (por el texto del libro, 04-siglo:176–179) |
+
+7 cotejos sobre 10 hojas de 7 ediciones de 1916, todos sobre la imagen; el de 1914, por el texto del libro.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:323 | «la estación es de Caldera en los decretos de 1914 que la atribuyen»: sólo el de febrero la atribuye | 5 | «en el decreto de febrero de 1914 que la atribuye (Nº 469, h.\ 2)» |
+| 2 | 04-siglo:298–300 | «nueve de sus veintidós nombrados son en agosto receptores»: el noveno depende de leer como Balvín Díaz un nombre cuya inicial tapa la tinta en 616 h2 | 3 | «ocho de sus veintidós nombrados ---nueve, si el «[...]albín Díaz» de Molinos, de inicial tapada por la tinta, es su Balvín Díaz---» |
+
+Resta: en el aspecto 3, un recuento dado sin su condición, **95**; en el aspecto 5, una atribución extendida a más actos de los que la dan, **95**. Ningún error de consistencia en 15,3 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: dos, en el AMPLÍA 1916 (`3015157`), escrito por la misma sesión. Ninguno lo atrapó un control automático. El segundo viene del informe LEE 1916, B.2.3, que da «nueve» sin la condición.
+
+**Descartados (falsos positivos, 2).** (a) «Una plaza rentada de policía en un partido» (04-siglo:830), corregida por el AMPLÍA desde «La primera plaza rentada»: el superlativo cae con la partida de 1916 y la corrección no afirma identidad con ella. (b) «En las ediciones leídas, el primer rastro es anterior a la sociedad» (04-siglo:1793): universo declarado; ningún otro pasaje del libro registra la fundición antes de 1917.
+
+**Pendientes revisados.** P290, abierto por el AMPLÍA (el informe LEE 1916 da la partida de Mojotoro de 603 h1 como presupuestada en marzo, cuando el decreto del 25 de abril la suprime), sigue abierto: el libro ya la da como suprimida; corresponde al informe. **Nuevo: P291** (tipo `lee`), el «nueve» de B.2.3 del mismo informe, que necesita la condición del hallazgo 2.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `995a496` | 25.646 vigentes; 10 caducas; 27 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1916 | 9 referencias nuevas en 27 líneas | 9/9 |
+| Citas entre comillas nuevas | 3 («un subcomisario para Mojotoro, \$ 960», «donde se instalará en breve una fundición metalúrgica[...]», «se instalará en breve una fundición metalúrgica») | 3/3 literales |
+| Superlativos y ausencias en el texto agregado | 27 líneas | 2 («el primer rastro», «no trae a La Caldera»), con universo; 1 superlativo anterior caído y corregido por el AMPLÍA |
+| Fechas de los hechos contra la fecha impresa de cada acto | 9 referencias | 9/9 |
+| Largo de los archivos antes y después de la fase 6 | 1 archivo | no cambia |
+| Compilación | fase 6 sobre `3015157` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `3015157` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 9 referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 7 cotejos sobre 7 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 100 | Hallazgo 1, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 15,3 páginas; el AMPLÍA corrige «doce actos» y «nueve sobre los cargos» de 1916, que no cerraban contra su propia enumeración |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1916 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | La remisión a 1917 va marcada («más adelante») |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1916, presumiblemente fallecidas |
+
+**Nota inicial: 87,4 antes del tope y 87,4 después** (tope de 90 por la cobertura acumulada inicial del 99,89 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 96.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908; (5) P288, P290 y las ediciones de junio de 1914: completar los huecos del Release y corregir los informes.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1916 el par de comisario y receptor que Murúa reúne en La Caldera se repite en otras ocho jurisdicciones de la provincia, de modo que la acumulación de cargos en un vecino es práctica del gobierno provincial y no del departamento; y Mojotoro pierde en abril la partida de su subcomisario y la recupera en diciembre *ad honorem*, por la fundición que se anuncia. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 27 líneas (0,11 %; 15,3 páginas). Cobertura acumulada: 25.673 de 25.673 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1916, escrito por la misma sesión; atrapados por un control automático: 0.
