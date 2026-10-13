@@ -5830,3 +5830,99 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 4 de 4 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1910 las mesas de la sección Caldera, la comisión del río, la comisión municipal, el juzgado de paz, la comisaría y los jurados de patentes salen del mismo grupo de vecinos. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 17 líneas (0,07 %; 5,7 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 4 en el AMPLÍA 1910, escrito por la misma sesión (uno, el título de la ficha, con origen anterior); atrapados por un control automático: 0.
+
+## Ronda 94 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1911. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `97338ab` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1911, sobre `4e8717c`, aplicado por `3-registrar` el 13/10 a las 11:45), con la fase 6 en `ronda-94.patch` (un commit sobre `97338ab`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1911 y el AMPLÍA 1911**, en la misma tarea programada: el cotejo descansa en los recortes de la imagen que esa misma sesión miró para el informe, del Release 1911.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 93 (25.656 de 25.656, sobre `7d1b67a` con la fase 6, que es `4e8717c`) se trasladaron por diff a `97338ab`. **El AMPLÍA caduca 14 líneas y deja 14 modificadas**, sin cambiar el largo de ningún archivo (1 en A, 10 en E, 1 en F y 2 en el capítulo 4). Vigentes después del traslado: 25.642 de 25.656.
+
+### Lectura sobre el texto (numeración de `97338ab`)
+
+Se leyeron **las 14 líneas, enteras** (57.397 bytes: la entrada de Escolástico Aparicio, sola, pasa de 5.000), contra el informe `BO-Salta-1911_220-306_la-caldera_LEE-1911_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres y las fechas, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (26) |
+| ape/E-personas.tex | 10 (30, 32, 34, 40, 48, 50, 52, 54, 58, 64) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 2 (377, 381) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:360–395 (la tabla de comisarios de partido por año y su criterio), E:1–29 (advertencia del apéndice), A:20–30 (filas de 1909 a 1912), F:50–58 (los tramos del barrido) y 03-fincas, el pasaje de San Alejo y Santa Rufina (la división de condominio de la familia Fernández).
+
+**Esta ronda: 14 líneas modificadas**, 57.397 bytes sobre 3.535.134, que en las 1.069 páginas de la base equivalen a **17,4 páginas**.
+
+Acumulado: 25.642 vigentes + 14 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca dos líneas de esta ronda (E:34 y E:58) y no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 243 | 2–3 | Decreto de comisarios de partido de 1911: Fernández (San Alejo y Santa Rufina), Jesús Ramírez (Vaqueros), Liborio Guerrero (Los Peñones), Campo Alegre y Angosto de Arrieta; Jacinto Guerrero comisario suplente del departamento (imagen) | Coincide con E y con las dos filas de la tabla del capítulo 4 |
+| 232 | 4 | Jacinto Guerrero, juez de paz suplente para 1911 (imagen) | Coincide |
+| 235 | 4 | Mesa receptora de la sección Caldera de 1911: Ángel Fernández propietario (imagen) | Coincide |
+| 252 | 3 | Rendición de cuentas de las defensas del río: Daniel Linares, el sobrecosto de \$958,65 sin autorización legislativa previa (imagen) | Coincide con A:26 y E:30 |
+| 251 | 4 | Edicto con vecinos del departamento citados en E (imagen) | Coincide |
+| 291 | 3 | Decreto de 1911 citado en E (imagen) | Coincide |
+| 295 | 2–3 | 9 de noviembre: Aparicio comisionado del empadronamiento y de la clasificación de patentes para 1912 (h.\ 2); jurados de patentes para 1912, Linares titular (h.\ 3) (imagen) | Coincide |
+| 306 | 4 | Remate de diciembre de 1911 de la finca de los herederos Fernández, en el juicio de división de condominio (imagen) | El edicto no nombra causante: hallazgo 1 |
+
+8 cotejos sobre 11 hojas de 8 ediciones, todos sobre la imagen, en recortes mirados por la misma sesión para el informe LEE 1911.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | E:34 | Ángel Fernández: «en diciembre de ese año se remata la finca de sus herederos (Nº 306, h.\ 4)», que lo hace causante y lo da por muerto en 1911; el edicto habla de los herederos Fernández en la división de condominio de la familia, sin nombrarlo | 5 | «en diciembre se remata la finca de los herederos Fernández, en la división de condominio de su familia (Nº 306, h.\ 4)» |
+| 2 | E:58 | Jacinto Guerrero: la frase de 1910, 1911 y 1912 suma, en la misma enumeración, la suplencia de la mesa de la sección Caldera (Nº 128) y la comisión de defensas del río (Nº 130), que son sólo de 1910 | 5 | «; en 1910, además, suplente de la mesa de la sección Caldera (Nº 128, h.\ 2) e integrante de la comisión de defensas del río (Nº 130, h.\ 4)» |
+
+Resta: en el aspecto 5, dos afirmaciones de una frase más allá del acto, **85**. Ningún error de consistencia en 17,4 páginas: el hallazgo 2 se puntúa en el aspecto 5, el más específico, porque extiende a dos años lo que el acto da para uno; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los dos en el AMPLÍA 1911 (`97338ab`), escrito por la misma sesión; el 2 nace de agregar la referencia de 1911 al final de una frase que ya mezclaba años. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 1).** «Jesús Ramírez» en la columna de 1911 de Vaqueros y en la de 1912 (04-siglo:377): no es una fila duplicada; el decreto de 1911 (Nº 243) y el de 1912 lo nombran a él los dos años, como «Liborio Guerrero» en Los Peñones en 1909 y 1911.
+
+**Pendientes revisados.** P18 avanza en 1911 (las entradas de E con hechos de 1911 llevan Boletín y hoja) y sigue abierto por 1908 y 1912. P287, abierto por el AMPLÍA (el resumen de caja de mayo de 1911), sigue abierto: el libro no cita las finanzas provinciales de 1911. Sin pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `4e8717c` | 25.642 vigentes; 14 caducas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1911 | 18 referencias nuevas a ediciones 220–306 en 14 líneas | 18/18 |
+| Citas entre comillas en las líneas modificadas | 0 nuevas | --- |
+| Superlativos y ausencias en las líneas modificadas | 14 líneas; 1 coincidencia en texto nuevo (F:56, «ninguna hoja ausente») | Con su universo: la cadena de folios del informe LEE 1911 |
+| Años de los hechos en las entradas de E tocadas (cada referencia contra el año de su edición) | 10 líneas | 1 referencia de 1910 dentro de una enumeración de 1911–1912: hallazgo 2 |
+| Largo de los archivos antes y después de la fase 6 | 1 archivo | no cambia |
+| Compilación | fase 6 sobre `97338ab` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `97338ab` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 18 referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Sin fechas erradas en las 14 líneas |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 8 cotejos sobre 8 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 100 | Hallazgos 1 y 2, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 17,4 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos; P287 queda como pendiente de fuentes |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1911 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin cambios |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1911, presumiblemente fallecidas |
+
+**Nota inicial: 86,5 antes del tope y 86,5 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 93.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908 y 1912, con los informes LEE de esos años; (5) P286: el Registro Oficial de 1910 para fijar el día del decreto del río.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1911 la comisaría de partido, la mesa de la sección Caldera, el juzgado de paz, el empadronamiento y los jurados de patentes vuelven a salir de los mismos vecinos de 1909 y 1910 (Fernández, Guerrero, Linares, Aparicio). Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 14 líneas (0,05 %; 17,4 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 1. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1911, escrito por la misma sesión; atrapados por un control automático: 0.
