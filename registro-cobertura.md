@@ -5343,3 +5343,143 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.059 páginas. **Avance de la investigación:** la **tercera tesis** suma un convenio de 1992 en que la Municipalidad de Vaqueros pone materiales y personal en una obra de defensa que supervisa la Administración General de Aguas, dos encauzamientos de 2000 que la Provincia le adjudica en forma directa a la de La Caldera ---uno por encima de su presupuesto--- y la licitación municipal de su camping, un acto sobre un bien propio; en junio de 2001 la obra del río vuelve a una empresa. La serie del agua de El Angosto gana un dato acotado: la Provincia tenía en 1993 un aforador en planta y un estudio de estiaje de 1992, sin series publicadas. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 44 líneas (0,17 %; 54,6 páginas). Cobertura acumulada: 25.605 de 25.605 (100,0 %). Falsos positivos descartados: 4. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1993-2001 (dos heredados del informe LEE 1993), más una corrección incompleta del AMPLÍA sobre una falla del AMPLÍA 1995-1997; atrapados por un control automático: 0. Y uno de una ronda anterior (el revalúo de 1944 en el capítulo 9), que el cotejo de contexto encontró.
+
+## Ronda 90 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 2003 y 2004. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `6ab09c0` de `ediedrich/dispositivo-caldereno` (AMPLÍA 2003 y 2004, sobre `c70882d`, aplicado por `3-registrar` el 13/10 a la 01:00), con la fase 6 en `ronda-90.patch` (un commit sobre `6ab09c0`). **La sesión que hace esta ronda es la misma que escribió los informes LEE 2003 y 2004 y el AMPLÍA** (tarea programada en bucle): la auditoría relee su propio material, y por eso el cotejo se hizo sobre la imagen y no sobre los informes. El Release de los dos años no se alcanza desde el entorno de lectura; los PDF se rasterizaron en la máquina del autor, de la copia que guarda en `auto/tmp/r2003` y `auto/tmp/r2004`.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 89 (25.605 de 25.605, sobre `52e46b7` con la fase 6, que es `c70882d`) se trasladaron por diff a `6ab09c0`. **El AMPLÍA caduca 33 líneas y deja 53 nuevas o modificadas** (20 netas: 8 en A, 6 en C, 2 en F, 2 en el capítulo 17 de agua baja y 2 en el de tierra fiscal), en 21 archivos. Vigentes después del traslado: 25.572 de 25.625.
+
+### Lectura sobre el texto (numeración de `6ab09c0`)
+
+Se leyeron **las 53 líneas, enteras** (170.428 bytes), contra los informes `BO-Salta-2003_16549-16793_la-caldera_LEE-2003_2026-10-12.txt` y `BO-Salta-2004_16794-17038_la-caldera_LEE-2004_2026-10-13.txt` y, en las cifras, las fechas y las citas, contra el acto.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 9 (4, 545 a 552) |
+| ape/C-normativa.tex | 7 (316 a 321, 324) |
+| ape/D-pedidos.tex | 3 (56, 99, 255) |
+| ape/F-fuentes.tex | 5 (25, 26, 123, 124 ---en blanco---, 126) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 3 (119, 127, 157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/03-fincas.tex | 1 (73) |
+| cap/04-siglo.tex | 1 (3671) |
+| cap/09-defensas.tex | 1 (759) |
+| cap/11-ribera.tex | 2 (1613, 1625) |
+| cap/13-loteo.tex | 1 (325) |
+| cap/14-poblacion.tex | 1 (843) |
+| cap/15-hacienda.tex | 2 (185, 474) |
+| cap/17-aguabaja.tex | 2 (315, 316 ---en blanco---) |
+| cap/17-tierrafiscal.tex | 3 (378, 379 ---en blanco---, 403) |
+| cap/18-politica.tex | 2 (656, 672) |
+| cap/19-resistencias.tex | 3 (185, 187, 203) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): 17-tierrafiscal:370–405 (el comodato de 2002, la ficha del golf y la venta de 2005), 19-resistencias:120–205 (el cuadro minero y los edictos de 2002 a 2016), 11-ribera:1609–1625 (la ficha del listado de avisos y su cautela), 14-poblacion:820–855 (los contratos de promoción turística), 18-politica:656–680 (la serie de intendentes) y A:540–556 (las filas de 2002 a 2005).
+
+**Esta ronda: 53 líneas nuevas**, 170.428 bytes sobre 3.510.146, que en las 1.063 páginas de la base equivalen a **51,6 páginas**.
+
+Acumulado: 25.572 vigentes + 53 = **25.625 de 25.625 (100,0 %)**. La fase 6 toca dieciséis líneas, todas de esta ronda (A:545, 546, 549, 550 y 552; C:319; F:123; 01:127; 09:759; 13:325; 17-tierrafiscal:378 y 403; 19:185, 187 y 203, y 26:236), y no cambia el largo de ningún archivo: **25.625 de 25.625 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 16803 | 10 | Ley 7268: art. 1, seis hectáreas de la matrícula 3.005 a «Proyecto I S.A.»; art. 2, destino y resolución; art. 3, «La presente venta estará condicionada a la concesión para uso recreativo por parte de la Agencia de Recursos Hídricos»; «Dada en la sala de sesiones ... a los diecinueve días del mes de diciembre del año dos mil tres» (imagen); promulgación por el Decreto 69 del 08/01/04 (sumario, h. 3) | La ley es de diciembre de 2003 y el libro la daba como sancionada el 8 de enero: hallazgo 1. El art. 3, que el libro no traía, se agrega |
+| 16803 | 11 | Memoria: «Su superficie total es de 1440 km2»; «La cabecera es La Caldera con 1.200 km2 y 2.937 habitantes y Vaqueros con 240 km2 y 3.100 habitantes» (imagen); los 5.001 y 2.000 habitantes de h. 12, por el texto | Coincide |
+| 16624 | 9, 10 | Decreto 567 (04/04/03): «la fracción correspondientes a las instalaciones para prácticas deportivas, ocupadas antiguamente por el ex – Liceo Naval Francisco de Gurruchaga», Catastro 1782 – Plano 144; proyecto «Optimización y Ampliación Complejo Turístico Dique Campo Alegre»; el convenio «cuyo original forma parte integrante del presente Decreto»; firma WAYAR (I.) (imagen a 90 ppp de las dos páginas) | Coincide; el convenio no se publica: hallazgo 11 |
+| 16775 | 40, 50 | Actas 4.408 a 4.410: diputado Mendaña (h. 40); intendente Calabró y concejales Gómez, Sánchez y Sastre, FREJUVI, y Vaqueros (h. 50) (imagen) | Coincide; el capítulo 13 citaba sólo la h. 30: hallazgo 10 |
+| 16639 | 10 | Res. SOP 137: «Sistema de Abastecimiento Norte - Salta - Capital - Acueducto desde Drenes La Caldera hasta Cisterna Huaico de Salta», presupuesto oficial base $ 13.995.572,42, «financiación compartida» (imagen) | Coincide |
+| 16648 | 10 | Decreto 804: «a partir de una nueva fuente de provisión en el Río Vaqueros» (imagen) | Coincide |
+| 16798 | 7 | Decreto 158, art. 2: incorpora al presupuesto 2003 «$ 8.270.361.- ... otorgados por el Fondo» (imagen) | Coincide; el sesenta por ciento lo da el Decreto 83 para el convenio, no para esa cifra: hallazgo 6 |
+| 16553 | 53 | Ley 7225: La Caldera 452 271 y Vaqueros 412 438 (imagen) | Coincide |
+| 16733 | 7 | Proyecto 1 S.A.: «uso recreativo», «espejo de agua del dique Campo Alegre», «3,00 lts/seg», «Hotel La Caldera», expediente 34-03.963/03 (imagen) | Coincide |
+| 16717 | 24 | Matrícula 2675, fracción «A», finca «Vaqueros», 8,40 l/s del Wierna, 16 ha de ejercicio eventual, expediente 34-03.173/02 (imagen) | Coincide |
+| 16673 | 13 | «La Cornisa», renovación, expediente 17.088, «lugar: Río La Caldera», el titular del cuadro (imagen) | Coincide |
+| 16682 | 23 | Decreto 1175, anexo: Escuela 2517, La Caldera, Vaqueros, «Nivel Inicial F», turno M (imagen) | Es un cargo; el libro decía «una sala»: hallazgo 5 |
+| 16586 | 36 | Decreto 147, anexo: seis renglones «34 LA CALDERA» (imagen) | La cita «unidad 34 La Caldera» no es literal: hallazgo 7 |
+| 17004 | 24 | «La Ferroviaria», expediente 17.394: «ha solicitado la Concesión de la Cantera de Aridos» (imagen); 10 ha y terrenos fiscales, por el texto de 17010 h. 17 | Es un pedido de concesión, no una renovación: hallazgo 2 |
+| 17000 | 11 | «El Triunfo II», renovación, expediente 17.422, «Superficie libre: 16 Has., 7.465 m2» (imagen); terrenos fiscales, por el texto | Coincide (el edicto repite el quinto esquinero como sexto) |
+| 17037 | 8 | Ley 7332, art. 2: «Fíjase el término de un (1) año a partir de la toma de posesión, para que la entidad beneficiaria inicie las construcciones» (imagen) | El libro decía «construir en un año»: hallazgo 3 |
+| 17023 | 9 | Decreto 2702: contrato del 26/10/2004 con La Caldera S.A., «forma parte del presente decreto como Anexo», exenciones impositivas, 1926 m², 16 habitaciones, 7 cabañas (imagen) | Coincide; el anexo no está en la edición ni entre los anexos del Release |
+| 16901 | 6 | Ley 7285: 210 m² de la matrícula 1.488, plano 000486, Vaqueros (imagen); el destino «a la zona norte de Salta Capital», por el texto | Coincide |
+| 16988 | 6 | Ley 7316: 2 ha 1.468,77 m² de la matrícula 3.146, plano 463 (imagen) | Coincide |
+| 16996 | 9 | Res. SOP 568: $ 107.595,65; la Secretaría aporta $ 77.868,68; el resto, la Municipalidad en mano de obra (imagen) | Coincide |
+| 16962 | 8 | Decreto 1975: títulos SALT2 «Treinta Mil.» a la Municipalidad de La Caldera (imagen) | Coincide |
+| 17038 | 22 | «La Mesa Redonda»: «Superficie 32 Has. 7134 m2» (imagen) | Coincide |
+
+22 cotejos sobre 23 hojas de 22 ediciones (19 sobre la imagen en esta ronda; además, las hojas 16857 h. 21, 16805 h. 13 y 31, 16992 h. 13, 17015 h. 9 y 11, 16809 h. 8, 17032 h. 18, 16972 anexo h. 30, 16859 h. 10, 16977 h. 7 y 17033 anexo h. 18, miradas por la misma sesión para el informe LEE 2004, se volvieron a leer en sus recortes).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 17-tierrafiscal:403; C:319; A:550 | «la Ley 7268, sancionada el 8 de enero de 2004»: es la fecha de la promulgación (Decreto 69); la ley se sancionó el 19 de diciembre de 2003 | 3 | Sanción y promulgación por separado; se agrega el art. 3, que condiciona la venta a la concesión de uso recreativo del agua, y con él la frase sobre el orden de 2005 («en el orden que la ley imponía») |
+| 2 | 19:185, 187, 203; A:549 | «los edictos de renovación de las dos» y «renovaciones de "El Triunfo II" y "La Ferroviaria"»: en 2004 «La Ferroviaria» es un pedido de concesión | 5 | Renovación de la primera y pedido de concesión de la segunda; y las dos, unas veintisiete hectáreas fiscales según los edictos de 2004, se suman a la cuenta de canteras sobre terreno fiscal de 2002 a 2005, que las omitía |
+| 3 | 17-tierrafiscal:378; A:552 | «con el cargo de construir en un año»: la ley da un año desde la toma de posesión para que la entidad «inicie las construcciones» | 5 | «iniciar las construcciones dentro del año de la toma de posesión» |
+| 4 | 01:127 | «en comodato por noventa y nueve años a un club náutico en 2002 y al año siguiente a un sindicato»: la frase extendía el plazo al comodato de 2003, que no lo publica | 5 | El plazo queda con el club y el del sindicato, «sin plazo publicado» |
+| 5 | A:545 | «una sala de nivel inicial en la 2517»: el anexo crea un cargo | 5 | «un cargo» |
+| 6 | 09:759; A:546 | «un crédito ... por $ 8.270.361, que el Decreto 83 da como el sesenta por ciento de la obra, y el resto a cargo de la concesionaria»: el 83 da el sesenta por ciento como financiamiento del convenio, sin igualarlo a esa cifra (que es lo que el Fondo otorga y la Provincia incorpora), y la Res. SOP 137 dice «financiación compartida», no «el resto» | 5 | Financiación compartida; el Fondo, para el sesenta por ciento según el Decreto 83, otorga $ 8.270.361 |
+| 7 | 26:236 | «"unidad 34 La Caldera"» entre comillas: el anexo imprime «34 LA CALDERA» | 4 | la unidad 34 «LA CALDERA» |
+| 8 | F:123 | «en 150 ediciones faltan unas 265 páginas, casi siempre la última o las dos últimas» (2003): el informe no miró cuáles; y en 2004, «casi siempre una»: es una sola en 106 de 153 | 5 | «sin mirar cuáles»; «una sola en 106 de ellas» |
+| 9 | A:549 | La Liga «convoca dos veces, la segunda para incorporar a un club de Los Yacones»: el orden del día trata la solicitud | 5 | «con el pedido de incorporación» |
+| 10 | 13:325 | La reelección de Calabró, «B.O. Nº 16775, h. 30»: el nombre está en el anexo, h. 50 | 1 | «h. 30 y 50» |
+| 11 | 17-tierrafiscal:378 | «el plazo y la superficie no se leyeron», lenguaje de proceso en el cuerpo: el convenio no se publica | 12 | «el convenio, que el decreto dice integrar, no se publica, y con él faltan el plazo y la superficie» |
+
+Resta: en el aspecto 5, siete afirmaciones de una frase más allá del acto o del informe (2, 3, 4, 5, 6, 8 y 9): observaciones repetidas, escala general, **70**; en el aspecto 3, una fecha de promulgación dada como de sanción, **95**; en el aspecto 4, una cita no literal que no cambia el sentido, **87**; en el aspecto 12, una frase de proceso, **90**. El hallazgo 10 no mueve el aspecto 1, que sigue en la escala general por P115. Ningún error de consistencia en las 51,6 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los once, en el AMPLÍA 2003 y 2004 (`6ab09c0`), escrito por la misma sesión; el 8 viene en parte del informe LEE 2003, que dice «casi siempre la ultima o las dos ultimas ... no se miro cuales», y el 2, de un título del informe LEE 2004 (A.31) que no dice que sea un pedido de concesión. Ninguno lo atrapó un control automático: los encontró el cotejo sobre la imagen.
+
+**Descartados (falsos positivos, 3).** La identidad entre la memoria de la Ley 7268 y los «fundamentos de un proyecto de ley de 2003» que el capítulo 3 citaba para los 1.440 km²: la ley es de diciembre de 2003 y la memoria da las mismas tres cifras; se sostiene. El «mismo caudal» del pedido de 2003 y la concesión de 2005: tres litros por segundo en los dos. Los «treinta mil» títulos SALT2: el decreto no da unidad («Treinta Mil.»), y el libro tampoco.
+
+**Pendientes revisados.** P274 a P277, abiertos por el AMPLÍA, siguen abiertos; P275 gana el art. 3 de la ley (la venta condicionada al agua) y sigue pidiendo el croquis y la identidad de la 3337 con la 3.005. Pendiente nuevo: P278 (informes LEE 2003 y 2004).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.605/25.605 vigentes en `c70882d` | 25.572 vigentes; 33 caducas |
+| Citas entre comillas de material de 2003 y 2004 en las líneas nuevas contra el acto | 15 cadenas (Decreto 567, Res. SOP 137, Decreto 804, Decreto 83 «las obras de captación ...», Proyecto 1 S.A., Ley 7268 «a valor de mercado» y «en forma exclusiva», Ley 7332 «a fin de evitar la contaminación del espejo de agua», Ley 7285 «con destino al abastecimiento ...», «Departamento La Caldera» de 2004, «de propiedad Fiscal», Decreto 2702 «en un inmueble ubicado en la localidad de La Caldera», «Hospital de La Caldera», «unidad 34 La Caldera», «Enfermera Corina Adela Bustamante») | 14/15 literales; la de la unidad 34, hallazgo 7. Cinco, sobre el texto reconocido |
+| Cifras de las líneas nuevas contra el acto | 31 en 21 ediciones | 31/31 |
+| Recálculos | 856.162,92 / 595.302,75 = 1,438; 2.937 + 3.100 = 6.037 ≠ 5.001; 1.200 + 240 = 1.440; 107.595,65 − 77.868,68 = 29.726,97; 16,7465 + 10 = 26,75 ha; 72 + 12 = 84 ha; tramos: 42 + 1 + 68 = 111, y 31 + 16 + 1 + 20 = 68; 1990 a 2004, quince años sin ediciones ausentes | Todos cierran |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 53 líneas; 70 coincidencias, de las que 9 están en texto nuevo («no hay ningún plano publicado», «algo que ningún acto leído dice», «la segunda no consta en actas obtenidas», «el agua del pueblo no aparece en lo hallado» en 2003 y 2004, «tampoco aparece ninguno», «los quince últimos sin ninguna ausente», «no se publica» ×3) | Todas llevan su universo; 0 caídas |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 2003 o 2004 o cuyo intervalo los incluye | las 14 del índice del AMPLÍA (55 coincidencias del índice en total) | Las que caían las corrigió el AMPLÍA; 0 nuevas |
+| Menciones de cobertura («1958 a 2002», «1989 a 2002», «1949 a 2002», «ciento nueve», «sesenta y seis», «sesenta y siete», «trece últimos», «2003, 2004, 2006», «salvo 1989 a 2002», «2002, 2005 y 2007»), **sin distinguir mayúsculas** | 25.625/25.625 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 sin marcar (las nuevas van desde el capítulo 1, con «más adelante») |
+| Privacidad: personas nombradas en las líneas nuevas | 53/53 | 0 caídas. Nombrados: electos de 2003 (diputado, intendentes, concejales, convencional), gobernadores; empresas y entidades (Proyecto I S.A., La Caldera S.A., Aguas de Salta, Cooperativa Mesa Redonda, Asociación Guías Argentinas, Sindicato de Empleados de Comercio, UTE Banchik--Lucardi, Dal Borgo Construcciones). Sin nombre: los copropietarios de la 2675, los representantes de Proyecto 1 S.A., los solicitantes de «Tereza» y de «La Mesa Redonda», los demandados de los remates y el personal de salud |
+| Largo de los archivos antes y después de la fase 6 | 9 archivos | no cambia |
+| Compilación | fase 6 sobre `6ab09c0` | Compila; 1.063 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `6ab09c0` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | Hallazgo 7, aplicado; 22 cotejos sobre 22 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 70 | 100 | Hallazgos 2, 3, 4, 5, 6, 8 y 9, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | La reelección de 2003 pasa de la prensa al acta; sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 51,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El AMPLÍA sacó de los pedidos el texto de la Ley 7268 y el aviso 34-3.998/03, que se obtuvieron, y sumó el anexo del Decreto 2702/04; ningún pedido satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La segunda y la tercera tesis se rejuzgan con 2003 y 2004 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | El origen del Acueducto Norte y el texto de la Ley 7268 entran a las series de agua y de tierra fiscal |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 11, aplicado |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 84,0 antes del tope y 84,0 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 y 89.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) `LEE 2003 cierre` y `LEE 2004 cierre`, que corregirían de paso los dos títulos y la frase de las páginas faltantes que heredó el AMPLÍA (P278); (5) P262: llevar a la herramienta el control de menciones de cobertura sin distinguir mayúsculas, que esta ronda corrió a mano.
+
+**Avance del libro:** 11 de 11 hallazgos resueltos; compila sin errores, 1.063 páginas. **Avance de la investigación:** la **segunda tesis** (cabecera hídrica de la capital, por expropiación) gana evidencia sin cambiar de estado: el Acueducto Norte nace en 2003 y 2004 como obra de financiación federal y de la concesionaria para la zona norte de la ciudad, y en 2004 dos leyes expropian en el departamento ---una cisterna en Vaqueros y la planta «Wierna»--- para el agua de la capital. La **tercera tesis** (el municipio sin voz sobre el agua y el suelo) suma 2003 y 2004 sin el acto que la refutaría: el municipio firma convenios tributarios y de deuda y recibe obras chicas por adjudicación directa, y la tierra junto al dique sale por comodato, venta y permuta decididos por la Provincia y la Legislatura, con la venta del hotel condicionada por ley a la concesión del agua. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 53 líneas (0,21 %; 51,6 páginas). Cobertura acumulada: 25.625 de 25.625 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 11 en el AMPLÍA 2003 y 2004, escrito por la misma sesión (dos con origen en los informes LEE); atrapados por un control automático: 0.
