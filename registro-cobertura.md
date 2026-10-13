@@ -6220,3 +6220,100 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1916 el par de comisario y receptor que Murúa reúne en La Caldera se repite en otras ocho jurisdicciones de la provincia, de modo que la acumulación de cargos en un vecino es práctica del gobierno provincial y no del departamento; y Mojotoro pierde en abril la partida de su subcomisario y la recupera en diciembre *ad honorem*, por la fundición que se anuncia. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 27 líneas (0,11 %; 15,3 páginas). Cobertura acumulada: 25.673 de 25.673 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1916, escrito por la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 98 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1918. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `e4cf368` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1918, sobre `9a79012`, aplicado por `3-registrar` el 13/10 a las 17:41), con la fase 6 en `ronda-98.patch` (un commit sobre `e4cf368`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1918**, en la misma tarea programada; el informe LEE 1918 lo escribió otra sesión. Para el cotejo se bajaron del Release 1918 las ediciones 689, 704, 709, 715, 733 y 736.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 97 (25.673 de 25.673, sobre `3015157` con la fase 6, que es `9a79012`) se trasladaron por diff a `e4cf368`. **El AMPLÍA caduca 9 líneas y deja 16 nuevas o modificadas**; cambian de largo el capítulo 4 (+5 líneas) y el apéndice A (+2); D y F cambian dos líneas cada uno sin cambiar de largo. Vigentes después del traslado: 25.664 de 25.680.
+
+### Lectura sobre el texto (numeración de `e4cf368`)
+
+Se leyeron **las 16 líneas, enteras** (49.954 bytes), contra el informe `BO-Salta-1918_684-736_la-caldera_LEE-1918_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres, las cifras y las fechas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 3 (38, 39, 47) |
+| ape/D-pedidos.tex | 2 (236, 266) |
+| ape/F-fuentes.tex | 2 (56, 58) |
+| cap/04-siglo.tex | 9 (460, 545–547, 580, 1486–1489) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:457–720 (la sección de 1918), 04-siglo:276–300 y 360–432 (Murúa en 1915–1917 y la tabla de partidos), 04-siglo:1222–1236 (Aparicio), 04-siglo:1478–1500 (los cateos del Cerro Nevado de 1916), E:42 (Eustaquio Murúa).
+
+**Esta ronda: 16 líneas**, 49.954 bytes sobre 3.543.726, que en las 1.069 páginas de la base equivalen a **15,1 páginas**.
+
+Acumulado: 25.664 vigentes + 16 = **25.680 de 25.680 (100,0 %)**. La fase 6 toca siete líneas (04-siglo:1486–1489, D:266, E:42 y F:56), todas leídas en esta ronda, y no cambia el largo de ningún archivo: **25.680 de 25.680 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 689 | 2 | Decreto 1498: «Dpto. de Caldera, a D. Eustaquio Murua» en la nómina de comisarios (imagen) | Coincide |
+| 704 | 2 | Decreto 25 del 16 de mayo: renuncia de Murúa al cargo de comisario del departamento (capa, contra la ficha A.7) | Coincide |
+| 709 | 4 | Decreto 151: «sin perjuicio del cargo que actualmente desempeñan, al Mayor Julio R. de la Vega, de los Departamentos de Campo Santo y Caldera» (capa) | Coincide; cita literal |
+| 733 | 14 | Decreto 252 del 6 de diciembre: el capitán Miguel S. Gallardo en La Caldera, en lugar de Ornstein (capa) | Coincide |
+| 715 | 3–5 | Nómina de cateos abandonados (imagen, 110–130 ppp) | Hallazgos 1 a 3 |
+| 736 | 5 | Cuadro demostrativo de la renta: diferencias en menos recalculadas sobre la imagen, nueve renglones, 260.623,10 contra 260.633,10 impreso; menos − más = 135.993,01 = calculado − recaudado | Coincide con F:58 |
+
+6 cotejos sobre 8 hojas de 6 ediciones de 1918; tres sobre la imagen y tres sobre la capa contra la ficha.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:1486–1489; D:266 | «que el Ministerio de Hacienda da por abandonados en agosto de 1918» y «el de Espeche y Díaz, del 22 de mayo de 1916»: agosto es la publicación (Nº 715, 9 de agosto); el trámite es de junio (providencias del 1, 12 y 18 de junio), y la fecha de la columna es aquella «desde» la cual el expediente queda comprendido en el abandono («los expedientes [...] que a continuación se enumeran, desde las fechas que se expresan»), no la del pedimento | 3 | «la nómina [...] que éste devuelve el 18 de junio [...] pone el de Espeche y Díaz en Iruya, «desde» el 22 de mayo de 1916»; en D, «publicada en agosto de 1918» |
+| 2 | 04-siglo:1489 | «ninguno de los veintidós de esa hoja»: la hoja 4 trae 24 expedientes y la nómina sigue en la hoja 5 con nueve más; el recuento venía del informe LEE (B.2.4) y no se rehízo | 3 | «ninguno de los treinta y tres de la nómina en La Caldera (h. 4 y 5)» |
+| 3 | 04-siglo:1487 | «que el Ministerio de Hacienda da por abandonados»: la nómina es una nota del Escribano de Gobierno y Minas al Ministro de Hacienda, que el ministro devuelve para que se proceda conforme al art. 22 del decreto 1181 de 1917 | 6 | «que el Escribano de Gobierno y Minas eleva al Ministro de Hacienda» |
+| 4 | F:56 | «salvo en tres hojas sin capa que la máquina pasó por OCR»: una de las tres es la hoja del aviso de la 703, que no es del Boletín (informe LEE, §0 y §1) | 3 | «salvo en dos hojas sin capa útil ---y la del aviso de la 703---» |
+| 5 | E:42 | Eustaquio Murúa: el apéndice de personas da la comisaría en 1916 y 1917 y salta a 1922; el AMPLÍA agregó 1918 al capítulo y a la cronología y no al apéndice | 8 | «y en 1918 (decreto 1498, Nº 689, h. 2), hasta su renuncia del 16 de mayo ante el Interventor Nacional (decreto 25, Nº 704, h. 2)» |
+
+Resta: en el aspecto 3, dos fechas mal atribuidas, un recuento importado sin rehacer y una cifra de segunda mano mal leída, **80**; en el aspecto 6, un acto atribuido a otro autor, **85**; en el aspecto 8, una entrada del apéndice de personas que no recoge lo que el cuerpo afirma, **90**. Ningún error de consistencia en 15,1 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: cinco, en el AMPLÍA 1918 (`e4cf368`), escrito por la misma sesión. Ninguno lo atrapó un control automático. Los hallazgos 1 a 3 vienen en parte del informe LEE 1918, B.2.4, que da 22 expedientes y lee la columna de fechas como fechas de los pedimentos; el 4, de una lectura del AMPLÍA sobre el §0 del informe.
+
+**Descartados (falsos positivos, 2).** (a) «comisario de policía del departamento por tercer año» (A:39; 04-siglo:546): 1916 (Nº 596), 1917 (decreto 1101) y 1918 (decreto 1498); el apéndice E no registra otra comisaría de Murúa antes de 1916. (b) «sin OCR propio» en A:38 y 04-siglo:460, contra F:56, que da dos hojas pasadas por OCR: el OCR es de la máquina y no de la lectura; F lo dice.
+
+**Pendientes revisados.** P265 sigue abierto (no toca 1918: la 703 no está en su lista). **Nuevo: P292** (tipo `lee`), las correcciones de los hallazgos 1 a 3 al informe LEE 1918, B.2.4.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.673/25.673 vigentes en `9a79012` | 25.664 vigentes; 9 caducas; 16 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1918 | 8 referencias nuevas en 16 líneas | 8/8 |
+| Citas entre comillas nuevas | 1 («sin perjuicio del cargo que actualmente desempeñan») | 1/1 literal |
+| Superlativos y ausencias en el texto agregado | 16 líneas | 1 («ninguno de los [...] de la nómina»), con universo; ningún superlativo |
+| Suma de las diferencias en menos del cuadro de la 736 | 9 renglones | 260.623,10; impreso 260.633,10 |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | no cambia |
+| Compilación | fase 6 sobre `e4cf368` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `e4cf368` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 8 referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 80 | 100 | Hallazgos 1, 2 y 4, aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 6 cotejos sobre 6 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Sin ausencias ni superlativos nuevos sin universo |
+| 6 | Tipo y jerarquía de fuente | 5 | 85 | 90 | Hallazgo 3, aplicado |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 15,1 páginas |
+| 8 | Integridad del aparato | 8 | 90 | 95 | Hallazgo 5, aplicado; sin pedidos nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1918 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1916 y 1918, presumiblemente fallecidas |
+
+**Nota inicial: 86,5 antes del tope y 86,5 después** (tope de 90 por la cobertura acumulada inicial del 99,94 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 97.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908; (5) P288, P290, P291 y P292: corregir los informes LEE y completar los huecos del Release.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1918 Murúa es comisario del departamento por tercer año seguido y la Intervención lo reemplaza por oficiales de línea y por un comisario inspector que comparte con Campo Santo, de modo que la acumulación de cargos en un vecino termina por decisión federal y no del departamento. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 16 líneas (0,06 %; 15,1 páginas). Cobertura acumulada: 25.680 de 25.680 (100,0 %). Falsos positivos descartados: 2. Recortes: los cotejos de 704, 709 y 733 se hicieron sobre la capa y no sobre la imagen. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1918, escrito por la misma sesión; atrapados por un control automático: 0.
