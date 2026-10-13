@@ -5624,3 +5624,104 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 13 de 13 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** (el municipio sin voz sobre el agua y el suelo) suma 2006 sin el acto que la refutaría y con un matiz: el municipio recibe por adjudicación directa y con convenio tres encauzamientos de su río y las dos aulas de su colegio, que es la forma de los convenios de 1985 a 1987 un año antes de lo que el libro decía, y la obra del agua del pueblo la licita el Ente Regulador. La pregunta del origen del topónimo gana evidencia sin cambiar de estado: el valle ya se llamaba «de la Caldera» en 1658 y era invernada jesuita desde 1591; el documento no dice de dónde viene el nombre. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 62 líneas (0,24 %; 48,4 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 4. Recortes: las seis citas del Internet Archive, sin cotejo, porque `archive.org` no se alcanza desde el entorno de lectura. Errores introducidos por la propia auditoría: 9 en el AMPLÍA 2006, escrito por la misma cadena de sesiones (tres con origen en el informe LEE 2006), 3 en el commit del Internet Archive y 1 compartido; atrapados por un control automático: 0.
+
+## Ronda 92 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1909. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `1e8936e` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1909, sobre `c641945`, aplicado por `3-registrar` el 13/10 a las 09:00), con la fase 6 en `ronda-92.patch` (un commit sobre `1e8936e`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1909 (regularización del 13/10) y el AMPLÍA**, en la misma tarea programada: el cotejo descansa en los recortes de la imagen que esa misma sesión miró para el informe, del Release 1909 bajado a la nube por URL directa.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 91 (25.656 de 25.656, sobre `4286b39` con la fase 6, que es `c641945`) se trasladaron por diff a `1e8936e`. **El AMPLÍA caduca 14 líneas y deja 14 modificadas**, sin cambiar el largo de ningún archivo (1 en A, 11 en E, 1 en F y 1 en el capítulo 4). Vigentes después del traslado: 25.642 de 25.656.
+
+### Lectura sobre el texto (numeración de `1e8936e`)
+
+Se leyeron **las 14 líneas, enteras** (15.316 bytes), contra el informe `BO-Salta-1909_23-120_la-caldera_LEE-1909_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres y las fechas, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (20) |
+| ape/E-personas.tex | 11 (30, 34, 36, 40, 48, 52, 54, 58, 62, 64, 88) |
+| ape/F-fuentes.tex | 1 (28) |
+| cap/04-siglo.tex | 1 (107) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:72–130 (el año institucional de 1909), F:27 (la primera ventana) y los informes LEE 1908 y 1910 en estado.json (fechas de las relecturas).
+
+**Esta ronda: 14 líneas modificadas**, 15.316 bytes sobre 3.531.225, que en las 1.069 páginas de la base equivalen a **4,6 páginas**.
+
+Acumulado: 25.642 vigentes + 14 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca tres líneas, todas de esta ronda (F:28, 04-siglo:107 y E:52), y no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 28 | 2, 3, 4 | Acta del 5-1-09: presidida por Félix Usandivaras «por ausencia del señor Presidente de la H. L. don Angel Zerda»; «SECCIÓN CALDERA / PRIMERA SERIE», propietarios Abelardo Figueroa, Justo Robles, Camilo Cáceres (hijo), Fernando Robles, José Manuel Alfaro; suplentes Manuel Herrera, Julio Mercado, Silverio Cáceres, Juan Chucbui [?], Genaro Molina; «los señores miembros de la Junta»; decreto del 7-1 (imagen) | Coincide; la serie tiene cinco propietarios: hallazgo 2 |
+| 84 | 2 | «Caldera / 1a SERIE»: propietarios Abelardo Figueroa, Camilo Cáceres, Carlos Murúa, Juan Chuichui, Genaro Molina; suplentes Lucas Molina, Adolfo Vidal, Silvano Murùa, Angel Fernández, José Manuel Alfaro (imagen) | Coincide |
+| 35 | 3 | Comisarios auxiliares de San Alejo y Santa Rufina (Angel Fernández), la Calderilla (Genaro Molina), los Sauces y Angostos de Arias (Julio Mercado), Peñones y Chalchanio (Liborio Gerrero), Potrero de Gallinato (Silverio Cáceres); suplente Jacinto Guerrero (imagen) | Coincide |
+| 36 | 3 | Renuncia de Silvano J. Murúa y nombramiento de Abelardo Figueroa; jueces de paz Carlos Matienzo y Augusto Regis (imagen) | Coincide |
+| 37 | 3 | Renuncia de Regis como juez suplente; Jacinto Guerrero (imagen) | Coincide |
+| 51 | 2, 3 | Acta de veedores presidida por Matienzo, con Guerrero; renuncia de Guerrero y nombramiento de Adolfo Vidal; «comisario de policía del partido de la estación Mojotoro, comprensión del departamento de la Caldera, al señor Benjamín López» (imagen) | Coincide: comisario, no subcomisario, como corrigió el AMPLÍA |
+| 58 | 4 | Reemplazo de Usandivaras por Regis, sin fecha impresa (imagen) | Coincide |
+| 59 | 4 | Deslinde de San Alejo y Santa Rufina, «contra la familia Fernàndez»; lindero Abelardo Figueroa (imagen) | Coincide |
+| 92 | 4 | Remate del Angosto de Arrieta: lindero «Augusto Rejis» (imagen) | Coincide |
+| 105 | 2, 3 | «Salta, Noviembre 4 de 1909»; jurados de Caldera Adolfo Vidal, Abelardo Figueroa y Augusto Regis (imagen) | Coincide; la fecha, antes sólo por el OCR, está cotejada |
+| 114 | 2 | «el demandado reconoce haber sido administrador de las referidas fincas» (imagen) | Coincide |
+
+11 cotejos sobre 14 hojas de 11 ediciones, todos sobre la imagen, en recortes mirados por la misma sesión para el informe LEE 1909.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | F:28 | «En octubre de 2026 un informe de lectura sobre los PDF del Release de 1908 [...]. En el mismo mes se releyó 1909 con ese procedimiento»: la segunda lectura de 1909 es del 20 de septiembre de 2026 y se hizo con OCR propio, no sobre el Release; el AMPLÍA, al agregar la tercera lectura «de octubre», dejó el error a la vista | 3 | «En septiembre se había releído 1909, con OCR propio y transcripción sobre la imagen» |
+| 2 | 04-siglo:107 | La serie de enero «tiene de propietario a Abelardo Figueroa»: tiene cinco propietarios | 5 | «tiene entre sus cinco propietarios a Abelardo Figueroa» |
+| 3 | E:52 | El «Juan Chuichui» de agosto y el «Juan Chucbui» de enero se dan como Juan Chuchuy sin reserva; el informe LEE 1909 no afirma la identidad | 5 | «Que los dos sean él es probable y no está acreditado.» |
+
+Resta: en el aspecto 3, una fecha de origen errada, **95**; en el aspecto 5, dos afirmaciones de una frase más allá del acto, **85**. Ningún error de consistencia en 4,6 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los tres en el AMPLÍA 1909 (`1e8936e`), escrito por la misma sesión; el 1 es en origen anterior (la frase del «mismo mes» venía de la ronda que incorporó la segunda lectura), y el AMPLÍA lo reafirmó al fechar la tercera. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 2).** «Treinta y seis años de presencia documentada» de Augusto Regis (E:30): de 1908 a 1944, último acto de identidad segura, son treinta y seis. «La única mesa receptora de la sección Caldera» (E:40, A:20): cada serie es una mesa (A.16 del informe: «Para la primera série el atrio»), y en enero hay una sola serie.
+
+**Pendientes revisados.** P18 avanza en 1909 (las entradas de E de 1909 llevan Boletín y hoja) y sigue abierto por 1908 y 1910 a 1912. P283 y P284, abiertos por el AMPLÍA, siguen abiertos. Sin pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `c641945` | 25.642 vigentes; 14 caducas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1909 | 39 referencias en 14 líneas (34 en E, 2 en A, 2 en el capítulo 4 y 1 en F) | 39/39 |
+| Citas entre comillas en las líneas modificadas | 3 nuevas («Juan Chuichui», «Juan Chucbui», «comprensión del departamento de la Caldera») | 3/3 literales |
+| Recálculos | 1944 − 1908 = 36; cinco propietarios y cinco suplentes por serie | Cierran |
+| Superlativos y ausencias en las líneas modificadas | 14 líneas; 3 coincidencias en texto nuevo («la única serie» ×2, «la única mesa») | Todas con su universo |
+| Menciones de cobertura de la primera ventana («veintidós actos», «cuatro páginas impresas de 1908», «los dos huecos de escaneo») | 25.656/25.656 | 0 sin actualizar |
+| Largo de los archivos antes y después de la fase 6 | 3 archivos | no cambia |
+| Compilación | fase 6 sobre `1e8936e` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `1e8936e` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 34 referencias de Boletín y hoja en el apéndice E; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 11 cotejos sobre 11 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 100 | Hallazgos 2 y 3, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 4,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos; P284 queda como pendiente de fuentes |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1909 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin cambios |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1909, presumiblemente fallecidas |
+
+**Nota inicial: 86,2 antes del tope y 86,2 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 91.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908 y 1910 a 1912, con los informes LEE de esos años; (5) P283: mirar a 300 ppp el apellido del suplente de enero y cerrar con P67 la lectura de las vacas de 1909.
+
+**Avance del libro:** 3 de 3 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1909 las mesas receptoras de la sección Caldera salen del mismo grupo que ocupa la comisión municipal, el juzgado de paz y la policía. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 14 líneas (0,05 %; 4,6 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 3 en el AMPLÍA 1909, escrito por la misma sesión (uno con origen en una ronda anterior); atrapados por un control automático: 0.
