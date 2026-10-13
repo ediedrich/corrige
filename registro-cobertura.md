@@ -5483,3 +5483,144 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 11 de 11 hallazgos resueltos; compila sin errores, 1.063 páginas. **Avance de la investigación:** la **segunda tesis** (cabecera hídrica de la capital, por expropiación) gana evidencia sin cambiar de estado: el Acueducto Norte nace en 2003 y 2004 como obra de financiación federal y de la concesionaria para la zona norte de la ciudad, y en 2004 dos leyes expropian en el departamento ---una cisterna en Vaqueros y la planta «Wierna»--- para el agua de la capital. La **tercera tesis** (el municipio sin voz sobre el agua y el suelo) suma 2003 y 2004 sin el acto que la refutaría: el municipio firma convenios tributarios y de deuda y recibe obras chicas por adjudicación directa, y la tierra junto al dique sale por comodato, venta y permuta decididos por la Provincia y la Legislatura, con la venta del hotel condicionada por ley a la concesión del agua. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 53 líneas (0,21 %; 51,6 páginas). Cobertura acumulada: 25.625 de 25.625 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 11 en el AMPLÍA 2003 y 2004, escrito por la misma sesión (dos con origen en los informes LEE); atrapados por un control automático: 0.
+
+## Ronda 91 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 2006 y sobre un commit posterior del autor con fuentes del Internet Archive. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `4286b39` de `ediedrich/dispositivo-caldereno`, que suma a `96aa93a` (ronda 90 con su fase 6) el AMPLÍA 2006 (`55be0ad`, registrado a mano por el autor a las 06:45 después del rechazo de `3-registrar` por un `.git/logs/HEAD` ilegible en OneDrive) y el commit «Fuentes del Internet Archive: 3 entradas, 3 precisiones» (`4286b39`, del autor, hecho con otra sesión), con la fase 6 en `ronda-91.patch` (un commit sobre `4286b39`). La sesión es la tarea programada del ciclo, la misma cadena que escribió el informe LEE 2006 y el AMPLÍA: por eso el cotejo se hizo sobre la imagen y no sobre el informe. El Release de 2006 no se alcanza desde el entorno de lectura; los PDF se recortaron en la máquina del autor, de la copia que guarda en `auto/tmp/r2006`. El Internet Archive tampoco se alcanza desde el entorno de lectura (el proxy rechaza `archive.org` por política): las citas de la *Revista del Archivo General de Buenos Aires* y de *Crónica* no se cotejaron (recorte).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 90 (25.625 de 25.625, sobre `6ab09c0` con la fase 6, que es `96aa93a`) se trasladaron por diff a `4286b39`. **Los dos commits caducan 31 líneas y dejan 62 nuevas o modificadas** (31 netas: 23 del commit del Internet Archive ---15 en el capítulo 3, 3 en A, 1 en D y 4 en F--- y 8 del AMPLÍA 2006: 5 en A, 1 en D y 2 en F), en 15 archivos. Vigentes después del traslado: 25.594 de 25.656.
+
+### Lectura sobre el texto (numeración de `4286b39`)
+
+Se leyeron **las 62 líneas, enteras** (159.807 bytes), contra el informe `BO-Salta-2006_17287-17531_la-caldera_LEE-2006_2026-10-13.txt` y, en las cifras, las fechas y las citas, contra el acto; las del commit del Internet Archive, contra los informes LEE 1980 y 1996 y contra el propio libro.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 12 (1, 4, 11, 12, 384, 461, 559 a 563, 566) |
+| ape/D-pedidos.tex | 4 (176, 197, 254, 255) |
+| ape/F-fuentes.tex | 9 (25, 26, 125, 126 ---en blanco---, 128, 395, 396 ---en blanco---, 397, 398 ---en blanco---) |
+| cap/00-advertencia.tex | 2 (45, 58) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/03-fincas.tex | 16 (42 a 57) |
+| cap/04-siglo.tex | 2 (3671, 3672) |
+| cap/09-defensas.tex | 1 (724) |
+| cap/15-hacienda.tex | 2 (185, 474) |
+| cap/19-resistencias.tex | 2 (160, 187) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/21-ausencias.tex | 2 (76, 87) |
+| cap/22-infraestructura.tex | 2 (545, 605) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): 03-fincas:20–60 (los dos topónimos y la fila de Francisco Vaquero de 1690), 03-fincas:265 (los partidos de policía de 1910), 16-redes:86–100 y 664 (la ficha y la historia de la Ley 7322), 19-resistencias:115–160 (el cuadro minero y su nota), 22-prospectiva:290 (el recuento de pedidos), F:97–101 (los tramos de 2007 a 2015) y A:13 y 520 (las filas de 1690 y de 1996).
+
+**Esta ronda: 62 líneas nuevas**, 159.807 bytes sobre 3.528.393, que en las 1.069 páginas de la base equivalen a **48,4 páginas**.
+
+Acumulado: 25.594 vigentes + 62 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca dieciséis líneas: catorce de esta ronda (A:559, 560, 562 y 563; D:255; F:397; 03:42 y 51; 09:724; 19:160 y 187; 21:76; 22-infraestructura:545, y 26:236) y dos de rondas anteriores, en una cláusula (F:101) y en una palabra (22-prospectiva:290), que conservan su cobertura; no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 17518 | 14 | Res. SOP 738 (16/11/2006): legajo del «Encauzamiento en el Río Vaqueros tramo puente carretero R.N. Nº 9», $ 25.257,60, quince días corridos; art. 2: «Con encuadre en el artículo 13, Inc. a) de la Ley Nº 6.838 ..., adjudicar a la Municipalidad Vaqueros ... y aprobar el Convenio»; Res. 740: Cabral I, Cabral II, Camping Quitilipi y Bº El Jardín, $ 25.257,60, quince días (imagen); su art. 2, «adjudicar a la Municipalidad La Caldera ... y aprobar el Convenio», por la capa | Las dos adjudican con convenio; el libro decía «aprueba los legajos ... a cargo de los municipios» y daba el monto sólo a la 740: hallazgo 1 |
+| 17357 | 19 | Res. SOP 220 (27/03/2006, por la capa): $ 66.477,29, «adjudicar en forma directa a la Municipalidad de La Caldera», ajuste alzado, sesenta días, «y aprobar el Convenio» (imagen) | Coincide; el convenio y el plazo se agregan (hallazgo 1) |
+| 17293 | 20 | Res. SOP 1122 (13/12/2005): «Construcción Dos Aulas Colegio Nº 5045 Senado Provincial La Caldera», $ 73.111,96, inciso a) del art. 13 de la Ley 6838, ciento veinte días, con convenio (imagen) | Coincide |
+| 17526 | 24 | LP 23-06: «Optimización Sistema de Agua Potable La Caldera - Nueva Captación Río La Caldera - Acueducto Desde Nueva Captación a Tanque Elevado 150 mts.3 ...», «$ 3.800.00 (Pesos tres millones ochocientos mil)», apertura el 12/01/2007 (imagen y capa) | Coincide |
+| 17526, 17527 | 23 | LP 27-06, cisterna y bombeo para la zona alta de Vaqueros, $ 1.300.000, «Apertura de las Ofertas: El día 18 de enero de 2007» (capa de las dos ediciones) | El libro le daba la apertura del 12: hallazgo 2 |
+| 17377 | 7, 8 | Decreto 842 (28/04/2006): «la desanexación del BSPA Nº 7064 Sub-Sede Vaqueros del BSPA Nº 7063 Sede Castañares y las creaciones del BSPA de Vaqueros y Sub-Sede La Caldera»; más de doscientos alumnos, muchos de La Caldera; art. 1, desanexa desde el 27-02-06; art. 2, «Créase ... el BSPA Nº 7064 Sede de Vaqueros»; art. 3, «Créase ... el BSPA Nº 7064 Sub-Sede La Caldera», un preceptor y una división de EGB3 de turno noche (imagen) | El libro traía la desanexión y no la subsede de La Caldera: hallazgo 3 |
+| 17334 | 17 | Cooperativa La Mesa Redonda: «Cantera de áridos, denominada: Mesa Redonda I», expediente 18.134, río La Caldera (imagen) | El libro decía «Mesa Redonda 1», como el reconocimiento: hallazgo 4 |
+| 17338 | 16 | «Transporte Hermanos Mendoza S.R.L.», concesión de «Macarena», expediente 18219, río Wierna, «Superficie libre 10 Has. Los terrenos afectados son de propiedad Fiscal» (imagen) | El libro decía «Transporte Hnos. Mendoza», como el informe: hallazgo 5 |
+| 17420 | 12 | LPr 15/2006: «Refacciones Generales en la Escuela Nº 4078 "Bernabé López"», Vaqueros, $ 254.489,00 (imagen) | Sin «Dr.»: hallazgo 6 |
+| 17368 | 13 | Decreto 739, art. 5: «Programa Centro de Salud de Vaqueros, dependiente del Area Operativa XXXIX - La Caldera»; ROMERO (imagen) | «Area», sin tilde: hallazgo 7 |
+| 17322 | 9 | Res. A.M.T. 006/06: «mediante Ley Provincial Nº 7.322 ... se creó la Región Metropolitana de Salta, integrada por los Municipios de Salta, San Lorenzo, Vaqueros, Cerrillos, Rosario de Lerma, Campo Quijano, La Merced y La Caldera» (imagen) | La resolución atribuye la composición a la ley; el pedido decía que la daba «sin citarlo»: hallazgo 8 |
+| 17416 | 8 | Decreto 1403: Fondo Provincial de Inversiones, $ 150.000 reintegrables, «una Pala Cargadora Frontal»; «Ordenanza Municipal Nº 454/06, del 3 de mayo de 2006» (imagen) | Coincide |
+| 17527 anexo | 17 | Padrón de deudores del canon de riego: «05 002029 0317 MUNIC. LA CALDERA 1 - 2 44,27» (imagen) | Coincide |
+| 17342 | 7 | Decreto 449: fallecimiento del padre Normando Joaquín Requena el 7 de marzo de 2006 (imagen); «fue párroco de la Iglesia de La Caldera», por la capa | Coincide |
+| 17444 | 22 | LPriv. 002/2006: sala de informática y galería de vinculación, Escuela Nº 5045 «Senado Provincial Nº 44», $ 92.469,07, noventa días (imagen) | Coincide |
+| 17370 anexo | 4 | Programa Federal Plurianual: LP 035/06, proyecto 062, 40 viviendas, «La Caldera - La Caldera», $ 2.702.700,00 (imagen) | Coincide |
+| 17445 | 46, 47 | PJ: Congreso Provincial, «Dpto. La Caldera: tres (3) Congresales titulares» (capa de h. 46); la h. 47 da dos delegados de la Juventud (imagen) | Coincide |
+| 17291 | 1 | Tapa: «EDICION DE 40 PAGINAS CON SEPARATA DE 396 PAGINAS», «Año XCVII» (imagen) | Coincide |
+| 17501 | 9 | Decreto de noviembre: suprime un cargo del Nuevo Hospital El Milagro y crea «en su reemplazo en el Hospital "Enfermera Corina Adela Bustamante" de La Caldera, el orden 20.1», profesional asistente (imagen) | Coincide |
+| 17389 | 10 | Decreto 967: encuentro regional de pastoral penitenciaria, 25 al 28 de mayo de 2006, casa de los Padres Redentoristas (imagen) | Coincide |
+| 17468 | 6 | Decreto 2155: Campeonato Argentino de la Clase Nacional Pampero, dique Campo Alegre, 12 al 15 de octubre (imagen) | Coincide |
+| 17399 | 10 | «2da. Vuelta Ciclística a los Diques»: auspicio de las municipalidades de Vaqueros y La Caldera (imagen) | Coincide |
+| 17441 | 33 | Res. 34/06 del Partido Renovador: «idéntica situación» ---una sola lista--- en los circuitos de La Caldera y Vaqueros (imagen) | Coincide |
+| 17464 | 28 | Liga Municipal: cancelar la afiliación de seis clubes, Deportivo Lesser entre ellos (imagen) | Coincide |
+| 17392 | 13 | Decreto 1032: cargo de maestro del Núcleo 7003 como aula satélite en el Centro de Jubilados de Vaqueros (imagen) | Coincide |
+| 17362 | 9 | Decreto 676: Núcleo Nº 28 de La Caldera, bienes en desuso (imagen) | Coincide |
+
+25 cotejos sobre 29 hojas de 25 ediciones (25 hojas sobre la imagen en esta ronda; cuatro por la capa). Para el commit del Internet Archive: las dos citas de la ordenanza 34/80 («fue realizada por Misioneros Jesuitas en el año 1615», «en el lugar denominado Los Sauces», el 28 de abril de 1817 y la tercera invasión realista) coinciden con la transcripción sobre la imagen del informe LEE 1980 (A.30, Nº 11133, h. 5); el lindero sur de la finca Los Sauces en 1996, «Finca San Alejo y Sta. Rufina y La Angostura», con el informe LEE 1996 (A.30, Nº 15026, h. 12, mirada sobre la imagen por esa sesión). Las seis citas de la *Revista* de 1871 y de *Crónica* de 1965 no se cotejaron.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 09:724; A:560, 562 | La Res. SOP 220/06 adjudica «por $ 66.477,29»; las 738 y 740 «aprueban los legajos ... a cargo de los municipios», con el monto sólo para la segunda, y de las ocho obras de 2006 a 2008 sólo «las de 2007 y 2008» van «con convenios»: las tres de 2006 adjudican y aprueban un convenio, y la 738 tiene el mismo monto y plazo que la 740 | 5 | Las tres con convenio, la 220 con sus sesenta días, las dos de noviembre adjudicadas «con el mismo encuadre y con convenio», «cada uno por $ 25.257,60»; «Las ocho van a los municipios, todas con convenio» |
+| 2 | A:563; 22-infraestructura:545 | La apertura «el 12 de enero de 2007» quedaba para las dos licitaciones: la de la cisterna de Vaqueros (LP 27-06) abre el 18 | 5 | Cada una con su fecha |
+| 3 | A:559; 21:76; 26:236 | El bachillerato 7064 sólo «se desanexa en Vaqueros»: el decreto lo crea como sede en Vaqueros y crea una subsede en La Caldera, con un preceptor y una división de turno noche | 5 | Se agrega la subsede de La Caldera |
+| 4 | A:559; 19:187 | «Mesa Redonda 1»: el edicto imprime «Mesa Redonda I» | 4 | «Mesa Redonda I» |
+| 5 | A:559; 19:160, 187 | «Transporte Hnos. Mendoza S.R.L.» para el edicto de 2006, y la nota del cuadro decía que los edictos de 2006 y de 2014 dan esa forma: el de 2006 dice «Transporte Hermanos Mendoza S.R.L.» | 4 | El nombre de cada edicto en su forma |
+| 6 | 26:236 | «la «Dr. Bernabé López»» en 2006: el acto dice «Bernabé López» | 4 | Sin «Dr.» |
+| 7 | 26:236 | «dependiente del Área Operativa XXXIX»: el original dice «Area» | 4 | «Area» |
+| 8 | D:255 | El pedido del «acto por el cual se incorporó a La Caldera y a Vaqueros a la Región Metropolitana», con la Res. 006/06 que la daría por integrada «sin citarlo»: la resolución cita la Ley 7.322 como la que la creó con esos municipios, y el capítulo 16 y el apéndice C ya dicen que la ley los integra | 8 | Queda el pedido del texto original de las dos leyes y de su reglamentación, con la composición atribuida a la ley |
+| 9 | F:101 | En 2015 «ninguna edición repite la serie de folios, por primera vez desde 2006»: 2006 no se cotejó por folios (informe LEE 2006, P8) | 5 | «cosa que no pasa en ninguno de los años de 2007 a 2014 (en 2006 los folios no se cotejaron)» |
+| 10 | 03:42 | «Lo que sí está documentado es que el nombre es anterior a las dos»: el documento de 1658 prueba que el nombre existía entonces, no que preceda a un misionero o a una fundición de fecha desconocida | 5 | «que el nombre ya existía en 1658» |
+| 11 | 03:51 | La posesión de 1591, «más de un siglo antes del Vaquero» que el mismo capítulo, diez renglones antes, pone hacia 1690: son noventa y nueve años | 7 | «casi un siglo antes del Vaquero que hacia 1690 da nombre al otro municipio» |
+| 12 | 22-prospectiva:290 | «doscientos ochenta y cuatro pedidos»: el apéndice D tiene 286 `\item` después de los dos que suman el AMPLÍA 2006 y el commit del Internet Archive | 8 | «doscientos ochenta y seis» |
+| 13 | F:397 | Los dos ejemplares del Internet Archive, con su identificador y sin dirección | 9 | Se agrega la URL de cada uno |
+
+Resta: en el aspecto 5, cinco afirmaciones de una frase que van contra el acto o más allá de él (1, 2, 3, 9 y 10; el 9, un superlativo sobre un universo no medido): observaciones repetidas, escala general, **70**; en el aspecto 4, cuatro correcciones silenciosas que no cambian el sentido, **88**; en el aspecto 8, un pedido satisfecho y un recuento desfasado, **85**; en el aspecto 7, una cifra que no cierra con un dato del mismo capítulo a menos de diez páginas: un error en 48,4 páginas (2,1 por cada cien, escalón de ≤ 4, **50**, ya contado el escalón adicional por la cercanía; sin él sería 70). El hallazgo 13 no mueve el aspecto 9, que sigue en la muestra de la ronda 42 (P40).
+
+**Errores introducidos por la propia auditoría**: nueve en el AMPLÍA 2006 (`55be0ad`), escrito por la misma cadena de sesiones (1 a 9; el 3, el 4 y el 5 vienen del informe LEE 2006, que lee «Mesa Redonda 1» y «Transporte Hnos.» en el reconocimiento y titula la desanexión sin la subsede, y el 9 es un texto anterior que el AMPLÍA no repasó al cerrar la ventana de 2006); tres en el commit del Internet Archive (10, 11 y 13), hecho con otra sesión; y uno de los dos (12), porque ninguno actualizó el recuento. **Atrapados por un control automático: 0**; el 12 lo habría atrapado `control_recuentos.py`, que no corrió en ninguno de los dos commits.
+
+**Descartados (falsos positivos, 4).** «Sin ninguna ausente» al final de la serie de 2006 a 2009 en la Advertencia: la frase pone las ausentes de 2006 entre rayas antes de las otras tres series y se lee bien. Los «tres congresales» del Partido Justicialista: la h. 47 da dos, pero son delegados de la Juventud; los tres del Congreso Provincial están en la h. 46. El padre Requena «párroco de La Caldera»: el decreto lo dice en sus considerandos, aunque su parroquia de treinta años fuera la de San Lorenzo. Los «catorce meses» entre la Res. 740 (16/11/2006) y las 15 y 16 de enero de 2008: cierran.
+
+**Pendientes revisados.** P279 (las dos ediciones y la separata de 2006) sigue abierto. P280 gana la Res. 738, mirada sobre la imagen con su monto, y sigue abierto por lo demás. Pendientes nuevos: P281 (informe LEE 2006) y P282 (cotejo de las fuentes del Internet Archive).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.625/25.625 vigentes en `96aa93a` | 25.594 vigentes; 31 caducas |
+| Citas entre comillas de las líneas nuevas contra el acto o su transcripción | 21 cadenas (13 de 2006, 2 de la ordenanza de 1980, 6 de 1658 y 1965) | 9 de 13 literales en las de 2006 (hallazgos 4 a 7); 2 de 2 en las de 1980, contra el informe LEE 1980; 6 sin cotejar (Internet Archive inalcanzable) |
+| Cifras y fechas de las líneas nuevas contra el acto o el informe | 52 en 25 ediciones y tres informes | 50/52 (la apertura de la LP 27-06 y «más de un siglo») |
+| Recálculos | 8.922 − 8.314 = 608 = 662 − 54 (17414: 49 hojas de más; 17453: 5); 397 + 265 = 662; 6.958 + 1.356 = 8.314; 7.173 + 1.141 = 8.314; 17410 y 17495, lunes 3 de julio y lunes 6 de noviembre de 2006, y 17291, viernes 6 de enero (calendario); 16/11/2006 a enero de 2008, catorce meses; 1690 − 1591 = 99; 2014 − 2006 = 8; 1.547.149,05 / 1.300.000 = 1,19; tramos: 42 + 1 + 69 = 112, y 31 + 16 + 1 + 21 = 69; encauzamientos: 3 + 1 + 4 = 8, y 3 + 1 = 4 sobre los tramos de 1985--1987 | Cierran todos menos 1690 − 1591 (hallazgo 11) |
+| Superlativos y ausencias en las líneas agregadas por los dos commits y la fase 6 | 62 líneas; 15 frases con fórmula de ausencia o superlativo que nombran 2006 o cuyo intervalo lo incluye, más «la mención más antigua del topónimo que este libro encontró» | Todas llevan su universo salvo F:101 (hallazgo 9) |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 2006 o cuyo intervalo lo incluye, en todo el manuscrito | 15 frases en 11 archivos | 1 caída (F:101, hallazgo 9) |
+| Menciones de cobertura («2007 a», «1989 a 2005», «ciento once», «sesenta y ocho», «sesenta y nueve», «245» de 2006, «1690»), **sin distinguir mayúsculas** | 25.656/25.656 | 0 sin actualizar; «1690» queda sólo en la fila y la frase de Francisco Vaquero |
+| Recuento de pedidos: `\item` del apéndice D contra la cifra del capítulo prospectivo | 286 `\item` en 12 secciones | Desfase de 2 (hallazgo 12), corregido |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 sin marcar |
+| Privacidad: personas nombradas en las líneas nuevas | 62/62 | 0 caídas. Nombrados: el gobernador, el padre Requena (fallecido, por el decreto de duelo), el rector y el regidor de 1658, el intendente y los consejeros de 1980 (ya en el libro); empresas, cooperativas, clubes y la Liga. Sin nombre: los dos muertos de La Calderilla de 1965, la odontóloga y el profesional de 2006, los deudores del padrón de riego y los demandados del remate |
+| Largo de los archivos antes y después de la fase 6 | 10 archivos | no cambia |
+| Compilación | fase 6 sobre `4286b39` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `4286b39` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Sin fechas de sanción dadas por publicación; la de la Res. 220 y las de 738 y 740 son las del acto |
+| 4 | Fidelidad de transcripción | 7 | 88 | 90 | Hallazgos 4 a 7, aplicados; 25 cotejos sobre 25 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 70 | 100 | Hallazgos 1, 2, 3, 9 y 10, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | *Crónica* marcada como prensa y la *Revista* como transcripción; sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 11 (un error en 48,4 páginas, a diez renglones del dato que lo desmiente), aplicado |
+| 8 | Integridad del aparato | 8 | 85 | 95 | Hallazgos 8 y 12, aplicados; el AMPLÍA y el commit del Internet Archive suman dos pedidos con su capítulo |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis se rejuzga con 2006 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | El pleito de 1658 lleva la cronología a 1591 y documenta el topónimo |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin frases de proceso nuevas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas |
+
+**Nota inicial: 79,3 antes del tope y 79,3 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 90.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) correr `control_recuentos.py` como último paso de todo commit que toque el apéndice D, también los del autor, para que el hallazgo 12 no llegue al libro; (5) `LEE 2006 cierre`, que corregiría en el informe lo que heredó el AMPLÍA (P281), y cotejar las dos fuentes del Internet Archive sobre la página escaneada (P282).
+
+**Avance del libro:** 13 de 13 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** (el municipio sin voz sobre el agua y el suelo) suma 2006 sin el acto que la refutaría y con un matiz: el municipio recibe por adjudicación directa y con convenio tres encauzamientos de su río y las dos aulas de su colegio, que es la forma de los convenios de 1985 a 1987 un año antes de lo que el libro decía, y la obra del agua del pueblo la licita el Ente Regulador. La pregunta del origen del topónimo gana evidencia sin cambiar de estado: el valle ya se llamaba «de la Caldera» en 1658 y era invernada jesuita desde 1591; el documento no dice de dónde viene el nombre. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 62 líneas (0,24 %; 48,4 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 4. Recortes: las seis citas del Internet Archive, sin cotejo, porque `archive.org` no se alcanza desde el entorno de lectura. Errores introducidos por la propia auditoría: 9 en el AMPLÍA 2006, escrito por la misma cadena de sesiones (tres con origen en el informe LEE 2006), 3 en el commit del Internet Archive y 1 compartido; atrapados por un control automático: 0.
