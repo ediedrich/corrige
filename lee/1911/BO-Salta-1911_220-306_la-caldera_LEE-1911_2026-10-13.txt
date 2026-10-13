@@ -1,0 +1,861 @@
+LEE v17 — 1911
+
+BOLETIN OFICIAL DE LA PROVINCIA DE SALTA - 1911 - EDICIONES 220 A 306
+Barrido documental del departamento La Caldera
+Informe LEE del año 1911 - rúbrica LEE v16 con los cambios v17 del flujo
+editorial (corrige/flujo-editorial.md, versión 3, §5) - 2026-10-13. Regulariza
+el informe de 1911 del 20/09/2026 (rúbrica v13, sin §R, hecho sin las salidas de
+lee_auto.py), que queda reemplazado.
+
+§0 · ADVERTENCIA PRELIMINAR
+---------------------------
+ESTADO: COMPLETO, con siete límites declarados (E.10). Las 87 tapas se miraron
+en la imagen; las 15 fichas del §A y las del §B se miraron en la imagen en su
+renglón decisivo; las 39 hojas «a ojos» del pre-informe se miraron enteras.
+nivel_lectura: imagen.
+El informe anterior se hizo sin las salidas de lee_auto.py (una sola versión de
+texto, sin confianza por hoja, sin tinta, md5 ni dhash): esta regularización
+trabaja con las dos versiones del zip de textos y cierra esos tres límites.
+Hallazgos: (a) no falta ninguna hoja: la cadena de folios, mirada en la imagen,
+muestra que la N° 242 es una edición de una sola hoja y la N° 243 de tres, y que
+la N° 269, doble, trae siete; el informe anterior las daba como ediciones
+incompletas con hojas ausentes (§1); (b) la fecha del decreto del sobrecosto de
+los reparos (A.7) es «Mayo 16 de 1911», no «1941»: cotejada a 1000 ppp con otro
+«1911» de la misma columna; (c) el «Balance de Tesorería de 1910» de 232 h3, que
+el informe anterior dejó «sin atribuir», es de General Güemes (lo firma su
+tesorero en General Güemes, mirado) y no del departamento; (d) el reintegro del
+ministro de Gobierno Patrón Costas sí se publica (22-5-11, 253 h4), y el informe
+anterior lo daba por no hallado; (e) el único resumen de caja del año (mayo, 256
+h3) no cierra: los ingresos suman diez pesos más que el total impreso y los
+egresos 1.815,58 menos (E.8); (f) el folio impreso cae de 1198 a 1100 en la N°
+294 y sigue desde ahí hasta 1150 (§1); (g) la segunda instancia de la causa
+contra Pascual Copa, de Los Porongos (informe LEE 1910, A.9), está en la N° 226
+h1 y no estaba fichada (B.2); (h) A.3 y A.4 son actos distintos (mesas
+receptoras y juntas inscriptoras), con sus decretos del 12-2 y del 22-3.
+Sesión automática (tarea programada del ciclo, sin nadie mirando), cuarto
+trabajo de la misma sesión. Tomó el turno a las 11:00 del 13-10-2026 (hora de
+Salta) con sesion.json libre y siguiente.json pidiendo «LEE 1911» (11:00),
+después de que el registro de las 11:00 instalara sin rechazos la ronda 93 de
+MEJORA de esta misma sesión. No hay parche rechazado que rehacer.
+Fuentes de la sesión, bajadas al tomar el turno: flujo-editorial.md (versión 3),
+estado/estado.json, rubrica-lee-v16.md y config/lee_config.json del repositorio
+ediedrich/corrige (rama main), y el informe vigente de 1911
+(corrige/lee/1911/BO-Salta-1911_220-306_la-caldera_LEE-1911_2026-09-20.txt),
+usado como referencia de actores y de lo ya mirado, no como fuente: lo que este
+informe afirma se volvió a mirar o se dice que no. Release 1911 de
+ediedrich/boletines-salta: inventario (expanded_assets) desde la computadora de
+Eduardo, porque desde la nube devuelve un aviso de acceso; archivos por URL
+directa desde la nube. Inventario: 87 PDF de edición (220.pdf a 306.pdf, sin
+huecos), ningún aviso de «no se encontró», y seis insumos:
+BO-Salta-1911_la-caldera_PRE-INFORME-LEE_2026-09-22.txt, decretos_1911.csv,
+lee_config.json, lee_textos_1911.zip, log.txt y resultados_1911.csv. No hay
+recortes.zip.
+Pre-informe usado: el único del Release (lee_auto.py, 22/09/2026 18:13; dice
+«rúbrica v11»). El log muestra la corrida completa del 20/09 (87 archivos, 347
+hojas, OCR con 6 procesos, búsquedas, dhash, tinta y recortes) y dos repasos del
+22/09 sólo de búsquedas, sin errores. decretos_1911.csv llegó sólo con el
+encabezado (los decretos de 1911 no llevan número). Los 87 PDF coinciden en
+bytes y en hojas con el EXTRAIDO.json de su edición.
+Config (5.2): config del Release: version 2026-09-22, hasta 1932, actores 554,
+anillo2 160. Config del proyecto (corrige): version 2026-10-07, hasta 2026,
+actores 2526, anillo2 1165. Se usa: el de corrige - razón: único válido (5.2) y
+más nuevo; contenido: el usado contiene al otro. El pre-informe se generó con el
+config anterior: las búsquedas se corrieron de nuevo con el vigente. No se
+cambia el config: no se entrega lee_config.json (agregados propuestos en F.4).
+La foto del Release es de 1932: conviene subir el vigente.
+Entorno: PyMuPDF en la nube; tesseract sólo con eng y osd (sin spa): sin OCR en
+sesión. Imágenes de los PDF: una a tres por hoja, de 329 a 370 ppi (moda
+340-345). Para mirar: tapas en franjas a 100 ppp, hojas enteras a 92 ppp,
+recortes de columna a 110-115 ppp y cifras a 300-1000 ppp.
+Qué verificó la sesión: las 87 tapas en la imagen (fecha, número, año
+editorial); la serie de folios, leída en la capa en 196 de 260 hojas interiores
+y en la imagen en 29 cabeceras; las cuatro pasadas propias sobre la unión de las
+dos versiones, con el guion blando quitado junto con el salto; el anillo 2 (98
+términos con acierto, todos leídos en contexto) y el anillo de actores con el
+config vigente; los recortes de las 15 fichas del §A y de las del §B; las 39
+hojas «a ojos», enteras; tinta, md5 y dhash de las 347 hojas; los tres cuadros
+del año que se recalculan (E.8).
+Desvío de 8.17: transcripciones en texto corrido (con «/» donde cambia el
+bloque); cortes de fin de renglón reconstruidos sin marca; lo que no hace al
+departamento, omitido con [...]; los nombres de particulares de causas
+criminales del §B se dan porque el actor ya está en el config.
+Qué agregaría cada insumo que faltó: un decretos_1911.csv lleno no agregaría
+nada (los decretos no llevan número); el Registro Oficial de 1911 explicaría los
+once días de salida sin edición y las tres ediciones cortas.
+
+§1 · CORPUS REVISADO
+--------------------
+87 ediciones presentes, N° 220 (miércoles 4 de enero) a N° 306 (sábado 30 de
+diciembre), leídas en la imagen de las 87 tapas; ningún número ausente. 347
+hojas en los 87 PDF, contadas una a una, iguales a EXTRAIDO.json: 4 en 84
+ediciones, 1 en la N° 242, 3 en la N° 243 y 7 en la N° 269. Las tapas no
+declaran número de páginas (hojas_declaradas: 0).
+Periodicidad, en la tapa: «Aparece Miércoles y Sábados». Año editorial, en la
+imagen: «AÑO III» de la N° 220 a la N° 286 (14-10) y «AÑO IV» desde la N° 287
+(18-10). Ediciones dobles, en la imagen: N° 269 («Agosto 2 y 5»), 272 («Agosto
+16 y 19»), 277 («Setiembre 6 y 9»), 279 («Setiembre 16 y 20»), 291 («1° y 4 de
+Noviembre») y 301 («9 y 13 de Diciembre»). Ninguna edición fuera de miércoles y
+sábado. Errata de tapa: «Juio 1°» en la N° 261. Desde la N° 292 la tapa invierte
+el orden («Salta, 8 de Noviembre 1911»). La tapa no lleva el nombre del
+gobernador.
+Miércoles o sábados sin edición, contando los cubiertos por las dobles (once):
+miércoles 11-1, miércoles 1-3, sábado 18-3, sábado 1-4, sábado 15-4, miércoles
+3-5, sábado 13-5, miércoles 31-5, miércoles 7-6, sábado 24-6 y miércoles 12-7.
+Se buscaron «feriado», «asueto», «festivo», «semana santa», «carnaval», «Día del
+Pueblo» y «adhesión» en las dos versiones: ningún decreto de feriado; los
+aciertos son de otra cosa (días festivos de un reglamento de mesas, 239 h3; una
+riña en carnaval, 289 h3; un turno de agua, 295 h1). Los once quedan sin
+explicar; no se buscó la causa afuera.
+Paginación corrida: el folio va en la cabecera de las hojas interiores, par a la
+izquierda e impar a la derecha, y la tapa consume uno. La serie va de 906 (220
+h2; la tapa de la 220 consume el 905) a la última hoja; la capa lo resuelve en
+196 de las 260 hojas interiores y se miraron en la imagen 29 cabeceras (las de
+los saltos, las de las ediciones cortas y las dudosas). Resultados, sobre 260:
+(1) no falta ninguna hoja: 241 h4 es 992, la tapa de la N° 242 consume el 993,
+la de la N° 243 el 994, y 243 h2 y h3 son 995 y 996; la tapa de la N° 244
+consume el 997 y 244 h2 es 998, de modo que la N° 242 es una edición de una hoja
+y la N° 243 de tres, completas; la N° 269, doble, trae siete hojas (1097 a
+1103), también completa; (2) entre 269 h7 (1103) y 270 h2 (1104) la serie avanza
+de a uno con la tapa de la 270 de por medio; (3) en la N° 248 las hojas 3 y 4
+llevan 1016 y 1015, en ese orden; (4) la N° 294 imprime 1100 en h2 donde la
+serie pide 1200 (293 h4 es 1198): el folio retrocede cien y sigue desde ahí, de
+modo que 306 h4 imprime 1150; se declaran con su magnitud y no se explican
+(8.21). La cuenta cierra: 346 posiciones de folio (905 a 1250, contando las cien
+como si no hubieran retrocedido) son las 347 hojas presentes menos el avance de
+a uno de la N° 270. Hojas ausentes estimadas: 0.
+Techo de resolución: imágenes incrustadas de 329 a 370 ppi (moda 340-345), una
+sola imagen en 309 hojas y de dos a tres en 38.
+Confianza del OCR propio (umbrales del pre-informe): publicables 1, a verificar
+307, a ojos 39, media 79,3. Las 39 se miraron enteras en la imagen a 92 ppp: 225
+h2, 225 h3, 227 h4, 229 h4, 231 h4, 232 h4, 234 h4, 235 h1, 238 h2, 253 h4, 264
+h2, 264 h3, 271 h2, 272 h2, 276 h2, 276 h3, 276 h4, 279 h4, 281 h2, 281 h3, 284
+h3, 285 h2, 287 h1, 287 h4, 288 h4, 291 h4, 294 h1, 294 h4, 296 h2, 297 h1, 297
+h4, 301 h1, 301 h2, 301 h3, 301 h4, 302 h2, 304 h2, 304 h3 y 306 h1. Dos traen
+el departamento (232 h4, A.2; 276 h4, A.10) y una el río Mojotoro en Campo Santo
+(279 h4, §C); ninguna de las otras lo nombra ni nombra un partido.
+Tabla: edición, [fecha leída en la tapa], día (X miércoles, S sábado), hojas
+presentes. «d»: edición doble.
+  220 [04-01] X 4                       264 [15-07] S 4
+  221 [07-01] S 4                       265 [19-07] X 4
+  222 [14-01] S 4                       266 [22-07] S 4
+  223 [18-01] X 4                       267 [26-07] X 4
+  224 [21-01] S 4                       268 [29-07] S 4
+  225 [25-01] X 4                       269 [02-08 y 05-08] X/S 7 d
+  226 [28-01] S 4                       270 [09-08] X 4
+  227 [01-02] X 4                       271 [12-08] S 4
+  228 [04-02] S 4                       272 [16-08 y 19-08] X/S 4 d
+  229 [08-02] X 4                       273 [23-08] X 4
+  230 [11-02] S 4                       274 [26-08] S 4
+  231 [15-02] X 4                       275 [30-08] X 4
+  232 [18-02] S 4                       276 [02-09] S 4
+  233 [22-02] X 4                       277 [06-09 y 09-09] X/S 4 d
+  234 [25-02] S 4                       278 [13-09] X 4
+  235 [04-03] S 4                       279 [16-09 y 20-09] S/X 4 d
+  236 [08-03] X 4                       280 [23-09] S 4
+  237 [11-03] S 4                       281 [27-09] X 4
+  238 [15-03] X 4                       282 [30-09] S 4
+  239 [22-03] X 4                       283 [04-10] X 4
+  240 [25-03] S 4                       284 [07-10] S 4
+  241 [29-03] X 4                       285 [11-10] X 4
+  242 [05-04] X 1                       286 [14-10] S 4
+  243 [08-04] S 3                       287 [18-10] X 4
+  244 [12-04] X 4                       288 [21-10] S 4
+  245 [19-04] X 4                       289 [25-10] X 4
+  246 [22-04] S 4                       290 [28-10] S 4
+  247 [26-04] X 4                       291 [01-11 y 04-11] X/S 4 d
+  248 [29-04] S 4                       292 [08-11] X 4
+  249 [06-05] S 4                       293 [11-11] S 4
+  250 [10-05] X 4                       294 [15-11] X 4
+  251 [17-05] X 4                       295 [18-11] S 4
+  252 [20-05] S 4                       296 [22-11] X 4
+  253 [24-05] X 4                       297 [25-11] S 4
+  254 [27-05] S 4                       298 [29-11] X 4
+  255 [03-06] S 4                       299 [02-12] S 4
+  256 [10-06] S 4                       300 [06-12] X 4
+  257 [14-06] X 4                       301 [09-12 y 13-12] S/X 4 d
+  258 [17-06] S 4                       302 [16-12] S 4
+  259 [21-06] X 4                       303 [20-12] X 4
+  260 [28-06] X 4                       304 [23-12] S 4
+  261 [01-07] S 4                       305 [27-12] X 4
+  262 [05-07] X 4                       306 [30-12] S 4
+  263 [08-07] S 4
+
+§2 · CRITERIO DE BUSQUEDA
+-------------------------
+Versiones: capa previa del PDF (prev, 347 hojas) y OCR propio de lee_auto.py
+(prop, 347 hojas, del zip de textos), unidas y etiquetadas; el desempate es la
+imagen. Unión de cortes: U+0002, 0 en el año; guion blando U+00AD, 12.290 en la
+capa y 0 en el OCR propio, quitados junto con el salto; guion común de fin de
+renglón (3.934 en la capa, 13.885 en el OCR propio) con hasta dos signos de
+puntuación a cada lado. Se probó que la unión pega las dos mitades
+(«depar-/tamento de la Caldera» de 243 h2). Además, una versión «pegada» para la
+literal.
+Pasadas propias: literal/normalizada «cald»: 21 hojas en la unión; de ellas 15
+traen el departamento (las del §A salvo 251 h4) y 6 son falsos positivos (E.7);
+la pegada agrega 13 hojas, todas de «fiscal de», «local de», «vocal del» o «cal
+da». Laxa sin «cald» y variante espaciada con [\s\-]{0,3} entre cada par de
+letras: 0 aciertos; no están rotas: devuelven «galdera», «c a l d e r a» y «c
+ald/era» en una cadena de prueba. Difusa >= 0,78: ocho formas (calavera,
+calderon, calderoh, cajdera, alderats, criadera, cadera, escalera); del
+departamento, «cajdera» (251 h4, A.6, en la capa). Ampliada 0,70-0,78 (c, g, o):
+49 formas, ninguna del departamento.
+Anillo 2, con el config vigente (1158 términos distintos de tres letras o más):
+98 términos con acierto; se leyeron los contextos de los 98, hoja por hoja. Del
+departamento, fuera de las hojas del §A: ninguno; los partidos del año salen
+todos en A.5, y Vaqueros, la estación Mojotoro, San Alejo y Santa Rufina en A.8,
+A.11, A.14 y A.15. Mojotoro, además, como río de Campo Santo (279 h4, 294 h3;
+§C). El resto son apellidos, lugares de otros departamentos o palabras comunes
+(B.3).
+Cotejo del anillo 2 contra la toponimia establecida (5.1bis): de los 18
+topónimos del departamento que trae 1911, faltan en el anillo 2 «chalchamo» y
+«angosto de arrieta» con esa forma («angosto de arrieta» sí devuelve, como
+n-grama, en 243 h3; «chalchamo» no está); 19 términos con acierto son apellidos
+o personas (castellanos, isasmendi, mamani, wierna, apaza, quintin, aramayo,
+matos, chaile, condori, murua, lesser, «luis linares», «dr luis linares», «don
+roque», «hermano francisco», «teodolinda», «la cadera», «2 de junio»); los de
+otros departamentos no se recontaron uno por uno. Se proponen en F.4.
+Actores: se buscaron por nombre completo y con inicial, sin puntuación, los de
+origen 1908 a 1912 (129) y los de las fichas; los demás del config por el
+apellido del anillo 2. Con las dos versiones, todos los actores de 1911
+devuelven su propio acto (el informe anterior, con una sola, no devolvía a
+seis). Números arrastrados: los actos de 1911 no llevan número. Fórmulas de
+reemplazo: devuelven A.6 (renuncia de Matienzo) y actos de otros departamentos.
+Identificadores de las ausencias: lugar (partidos), persona (actores) y
+organismo (comisión municipal, juzgado de paz, comisaría, registro civil,
+escuela).
+
+§A · MENCIONES EXPLICITAS
+-------------------------
+15 fichas y 15 actos con mención del departamento, en 16 hojas, ordenados por
+edición; 20 menciones del anillo 1, una de ellas «la Calderilla» (A.5). Ningún
+aviso del departamento se publica dos veces (E.6). Todas las fichas se miraron
+en la imagen en su renglón decisivo; lo leído por la capa se dice en cada ficha.
+Fuera de cuenta: los Calderón y los demás falsos positivos de E.7.
+
+A.1 · Decreto de convocatoria a elecciones legislativas para el domingo 5 de
+marzo; Caldera elige un senador y un diputado
+
+  FUENTE: N° 229, h3, col. 3; ed. del 8-2-11.
+  FICHA: Convoca a diecisiete departamentos. El departamento aparece tres veces
+  en el mismo artículo. La fecha y la firma del decreto no se miraron.
+  MODO DE LECTURA: imagen (recorte de columna a 115 ppp).
+  TEXTO:
+    Art. 1° Convócase al pueblo de los departamentos de la Capital, Rivadavia,
+    Metán, Rosario de Lerma, Guachipas, Molinos, Poma, Caldera, Orán,
+    Candelaria, Anta, Iruya, Cerrillos Campo Santo, La Viña, San Carlos y
+    Rosario de la Frontera á elegir sus representantes á las HH. Cámaras
+    Legislativas de la Provincia en la forma siguiente: Un senador por cada uno
+    de los departamentos, de Rivadavia, Metán, Rosario de Lerma, Guachipas,
+    Molinos, Poma, Caldera, Orán, Candelaria, Anta é Iruya; cinco diputados por
+    la capital, dos por Molinos, y uno por cada uno de los departamentos de
+    Cerrillos, Rosario de Lerma, Caldera, Campo Santo, La Viña, San Carlos,
+    Rosario de la Frontera, Metán, Rivadavia y Candelaria. Art. 2° Desígnase el
+    día domingo 5 del próximo mes de Marzo para que tenga lugar dicha elección
+    [...]
+  NOTA DE LECTURA: RECUENTO PROPIO: diecisiete departamentos convocados, si
+  «Cerrillos Campo Santo» son dos (el original no pone coma: nombre pegado,
+  rango 16 a 17); once con senador; diecisiete diputados en doce jurisdicciones.
+  El acto no declara números. El informe anterior transcribió sólo la primera
+  mitad.
+
+A.2 · Decreto (11-2-11): jueces de paz del departamento, sobre ternas de la
+Comisión Municipal
+
+  FUENTE: N° 232, h4, col. 1; ed. del 18-2-11. Hoja «a ojos», mirada entera.
+  FICHA: Carlos Matienzo, propietario, y Jacinto Guerrero, suplente. FIGUEROA /
+  R. PATRÓN COSTAS; Es cópia— José M. Outes, S. S.
+  MODO DE LECTURA: imagen (hoja entera a 92 ppp y recorte a 115 ppp); el día de
+  la fecha, a 600 ppp en el informe anterior.
+  TEXTO:
+    Atentas las ternas presentadas por la Comisión Municipal del departamento de
+    La Caldera— El P. Ejecutivo de la Provincia DECRETA: Art. 1° Nómbrase Jueces
+    de Paz propietario y suplente respectivamente del referido departamento para
+    el ejercicio del corriente año á los señores Carlos Matienzo y Jacinto
+    Guerrero. Art. 2° Los nombrados tomarán posesión prévios los requisitos de
+    ley. Art. 3°.—Comuníquese, publíquese y dése al R. Oficial. Salta, Febrero
+    11 de 1911. FIGUEROA R. PATRÓN COSTAS Es cópia:— José M. Outes. S. S.
+  NOTA DE LECTURA: tercer año seguido de Matienzo en el juzgado (1909, 1910 y
+  1911); renuncia en mayo (A.6).
+
+A.3 · Acta de insaculación (decreto del 12-2-11) de las mesas receptoras para
+las elecciones provinciales de 1911; Caldera, primera serie
+
+  FUENTE: N° 235, h3 (encabezado) y h4, col. 1; ed. del 4-3-11.
+  FICHA: La Junta (Angel Zerda, Delfín G. Leguizamón, Abraham Cornejo, Santos 2°
+  Mendoza, secretario) sortea las mesas; decreto «Salta, Febrero 12 de 1911»,
+  FIGUEROA / R. PATRÓN COSTAS, por la capa.
+  MODO DE LECTURA: imagen (recorte a 115 ppp de la sección); el encabezado y el
+  decreto, por la capa.
+  TEXTO:
+    Caldera—1ª Serie—Propietarios—Angel Fernández, Adolfo Vidal, Gervasio
+    Chalan, Pedro Arroyo, Camilo Cáseres. Suplentes—Dionisio Herrera, Rufino
+    Lozano, Genaro Molina, Augusto Regis, José A. Molina.
+  NOTA DE LECTURA: RECUENTO PROPIO: cinco propietarios y cinco suplentes; una
+  sola serie, como en 1909 y 1910 (en la misma columna Cafayate trae dos); el
+  acto no declara número.
+
+A.4 · Sorteo (decreto del 22-3-11) de las Juntas Inscriptoras para la renovación
+del Registro Cívico; Caldera
+
+  FUENTE: N° 241, h3 (encabezado) y h4, col. 1; ed. del 29-3-11.
+  FICHA: Verifican el sorteo Angel Zerda, Abraham Cornejo, Delfín G. Leguizamón
+  y el secretario del Superior Tribunal, «de acuerdo con lo prescripto por la
+  Ley Electoral de la Provincia»; decreto «Salta, Marzo 22 de 1911», FIGUEROA /
+  R. PATRÓN COSTAS (por la capa).
+  MODO DE LECTURA: imagen (recorte a 115 ppp de la sección); el encabezado y el
+  decreto, por la capa.
+  TEXTO:
+    Caldera—Propietarios: Fernando Robles, Abraham Fernández; suplentes:
+    Dionicio Herrera, Rufino Lozano.
+  NOTA DE LECTURA: RECUENTO PROPIO: dos y dos. Es un acto distinto del de A.3
+  (juntas inscriptoras, no mesas receptoras). «Dionicio» aquí y «Dionisio» en
+  A.3: no se unifica.
+
+A.5 · Decreto (23-3-11): comisario suplente y comisarios auxiliares de catorce
+partidos, y subcomisario de la estación Mojotoro
+
+  FUENTE: N° 243, h2 col. 3 y h3 col. 1 (folio 996); ed. del 8-4-11. La edición
+  trae tres hojas (§1).
+  FICHA: A propuesta del comisario del departamento. FIGUEROA / R. PATRÓN
+  COSTAS; Es copia— José M. Outes.
+  MODO DE LECTURA: imagen (recortes a 110-115 ppp de las dos hojas).
+  TEXTO:
+    De acuerdo con las propuestas presentadas por el comisario de policía del
+    departamento de la Caldera para nombramiento de comisarios suplentes del
+    mismo y de comisarios auxiliares de partido para el ejercicio del corriente
+    año— El P. Ejecutivo de la Provincia DECRETA: Art. 1° Nómbrase comisario
+    suplente de policía del referido departamento al señor Jacinto Guerrero,
+    para el partido de Vaqueros á Jesús Ramírez, para el de la Calderilla á don
+    Genaro Molina, para el de San Alejo y Santa Rufina á don Angel Fernández,
+    para el de la Despensa á don Guillermo Wotton, para el de los Porongos á don
+    Teodoro Reyes, para el de los Sauces y Angosto de Arias á don Virgilio
+    Arévalo, para el de Yacones á don Juan Chuchuy, para el de Potrero de
+    Castillo á don Manuel García, para el de Gallinato á don Silverio Cáceres,
+    para el de Potrero de Valencia á don Abrahan [sic] Fernández, para el de
+    Lesser á don Marcelo Lamas, para el de Campo Alegre y Angosto de Arrieta á
+    don Francisco Sosaya y para el de Peñones y Chalchamo á don Liborio
+    Guerrero. Art. 2° Nómbrase igualmente sub-comisario para el partido de la
+    estación Mojotoro, comprensión del mismo departamento á don Benjamín López,
+    con el sueldo que le asigna la Ley de Presupuesto vigente y con antigüedad
+    al 1° de Enero del corriente año. Art. 2° [sic] Comuníquese, publíquese y
+    dése al R. Oficial. Salta, Marzo 23 de 1911. FIGUEROA R. PATRÓN COSTAS Es
+    copia— José M. Outes
+  NOTA DE LECTURA: RECUENTO PROPIO: catorce partidos con comisario auxiliar, más
+  el suplente y el subcomisario de la estación (quince jurisdicciones de
+  policía); el acto no declara número. Frente a 1910: Lesser y La Despensa
+  entran en el mismo decreto; «Bandera Angosta y estación Mojotoro» pasa a
+  subcomisaría de la estación; «Angostura de Arias de los Sauces» se imprime
+  «los Sauces y Angosto de Arias». «Silverio Cáceres» aquí, «Cáseres» en 1910.
+  Dos «Art. 2°» [sic]. La capa lee «Tacones» por Yacones.
+
+A.6 · Decreto (8-5-11): Rafael Fernández, juez de paz propietario, por renuncia
+de Carlos Matienzo
+
+  FUENTE: N° 251, h4, col. 2; ed. del 17-5-11.
+  FICHA: Sobre terna de la comisión municipal. FIGUEROA / R. PATRÓN COSTAS.
+  MODO DE LECTURA: imagen (recorte a 115 ppp). La capa lee «Cajdera»: la mención
+  la devuelve la difusa (0,86), no la literal.
+  TEXTO:
+    Encontrándose vacante el cargo de Juez de Paz propietario del departamento
+    de Caldera por renuncia del señor Carlos Matienzo y de acuerdo con la terna
+    pasada por la comisión municipal del mismo— El P. Ejecutivo de la Provincia
+    DECRETA: Art. 1° Nómbrase para ocupar dicho cargo durante el corriente año
+    al señor Rafael Fernández. Art. 2° El nombrado se posesionará prévios los
+    requisitos de ley recibiendo de su antecesor el archivo y demás enseres del
+    juzgado bajo de inventario. Art. 3° Comuníquese, publíquese y dése al R.
+    Oficial. Salta, Mayo 8 de 1911. FIGUEROA R. PATRÓN COSTAS.
+  NOTA DE LECTURA: la renuncia de Matienzo no se publica (citada y no
+  acompañada, E.2).
+
+A.7 · Decreto (16-5-11): $ 958,65 más para los reparos del pueblo de la Caldera,
+por las cuentas de la comisión que presidió Daniel Linares
+
+  FUENTE: N° 252, h3, col. 1; ed. del 20-5-11.
+  FICHA: Cubre el déficit de los reparos ordenados «por decreto de 20 de Enero
+  del año ppdo.», pide a la Legislatura la aprobación de los dos decretos.
+  FIGUEROA / R. PATRÓN COSTAS; Es cópia— José M. Outes, S. S.
+  MODO DE LECTURA: imagen (recorte a 115 ppp y la fecha a 600 y 1000 ppp, junto
+  al «1911» de otro decreto de la misma columna).
+  TEXTO:
+    Habiendo resultado insuficiente los dos mil pesos que el gobierno destinó
+    por decreto de 20 de Enero del año ppdo. para la construcción de los reparos
+    con que debían defenderse el pueblo de la Caldera y el camino nacional que
+    une ese departamento con esta capital, amenazado por la creciente del río
+    del mismo nombre según las cuentas presentadas por el señor presidente de
+    dichos trabajos— El P. Ejecutivo de la Provincia DECRETA: Art. 1° Asígnase á
+    más de los dos mil pesos votados por el referido decreto, la suma de
+    novecientos cincuenta y ocho pesos con sesenta y cinco centavos m/n c/l.
+    para cubrir el déficit que aparece en las cuentas presentadas á favor del
+    señor Daniel Linares presidente de la comisión encargada de la ejecución de
+    dicha obra. Art. 2° Pídase oportunamente á la H. Legislatura de la Provincia
+    la aprobación conveniente para este decreto, lo mismo para el de 20 de Enero
+    del año 1910 ya citado. Art. 3° Comuníquese, publíquese y dése al R.
+    Oficial. Salta, Mayo 16 de 1911. FIGUEROA R. PATRÓN COSTAS. Es cópia:— José
+    M. Outes, S. S.
+  NOTA DE LECTURA: la fecha es «1911»: cotejada a 1000 ppp con el «1911» del
+  decreto de Mayo 16 que la misma columna trae más arriba, el tercer dígito es
+  un 1 con la tinta corrida, no un 4. El informe anterior la leyó «1941» [sic];
+  se corrige la lectura (E.9). El decreto de 1910 que se cita está impreso
+  «Enero 21 de 1919» en su edición (informe LEE 1910, A.3): el día no se
+  concilia.
+
+A.8 · Sentencia del Superior Tribunal: aprueba en $ 5.000 el honorario del
+agrimensor Walter Hesling en el deslinde y división de San Alejo y Santa Rufina
+
+  FUENTE: N° 258, h1, col. 3; ed. del 17-6-11.
+  FICHA: Firman Flavio Arias, Delfín G. Leguizamón, R. P. Figueroa, A. M.
+  Ovejero y Abraham Cornejo; «Es cópia: Santos 2° Mendoza, E. S.». Sigue la
+  resolución del juez Vicente Arias.
+  MODO DE LECTURA: imagen (recortes a 110-115 ppp).
+  TEXTO:
+    RESUELVE: Aprobar en la suma cobrada de cinco mil pesos moneda nacional ($
+    5,000) el honorario del agrimensor don Walter Hesling, en el jucio [sic] de
+    deslinde y división de condominio de las fincas San Alejo y Santa Rufina,
+    ubicadas en el departamento de la Caldera; sin costas por no encontrar
+    mérito para imponerlos. Repónganse los sellos inscríbase en el libro
+    respectivo y publíquese en el Boletín Oficial. VICENTE ARIAS Es cópia fiel:—
+    M. San Millán E. S.
+  NOTA DE LECTURA: lo que precede en la columna (la sentencia del Superior
+  Tribunal que manda la «determinación de límites solicitada en el escrito de
+  fs. 57 y 58») no se transcribió. «Hesling» aquí y «Hessling» en A.15.
+
+A.9 · Decreto de Hacienda (21-7-11): jubilación de la directora de la Escuela
+Elemental de la parroquia de la Caldera
+
+  FUENTE: N° 268, h3, col. 1-2; ed. del 29-7-11.
+  FICHA: Doña Jacoba Luquez de Gómez; setenta y ocho pesos con setenta y cuatro
+  centavos mensuales desde el 1° de agosto. «El Gobernador de la Provincia»;
+  FIGUEROA / RICARDO ARÁOZ; Es copia— Juan Martín Leguizamón, S. S.
+  MODO DE LECTURA: imagen (recortes a 110 ppp).
+  TEXTO:
+    Salta, Julio 21 de 1911.— Vista la precedente solicitud de la directora de
+    la Escuela elemental de la parroquia de la Caldera, doña Jacoba Luquez de
+    Gómez, en la que solicita su jubilación ordinaria; y constando de las
+    actuaciones de este expediente que se han llenado debidamente los extremos
+    prescriptos por la ley de la materia [...] Art. 1° Acuérdase á la directora
+    de la Escuela Elemental de la parroquia de la Caldera, doña Jacoba Luquez de
+    Gómez, la jubilación ordinaria que solicita, la que deberá liquidársele
+    desde el 1° de Agosto próximo, sobre el promedio de los últimos cinco años,
+    ó sean por la cantidad de setenta y ocho pesos, setenta y cuatro centavos
+    moneda nacional mensuales. Art. 2° Comuníquese, insértese en el Registro
+    Oficial y pase á la Junta Administradora del fondo de pensiones y
+    jubilaciones, para su archivo, prévia reposición de los sellos actuados.
+  NOTA DE LECTURA: el importe va en letras: no hay cifra que recalcular. El
+  considerando dice «comisión administradora» y el artículo 2° «Junta
+  Administradora» (E.9).
+
+A.10 · Remate judicial (18-9-11) de la finca «Acheral», en el departamento, base
+$ 4.000
+
+  FUENTE: N° 276, h4, col. 2; ed. del 2-9-11. Hoja «a ojos», mirada entera.
+  FICHA: Martillero M. R. Alvarado, por orden del juez Alejandro Bassani.
+  MODO DE LECTURA: imagen (hoja entera a 92 ppp y recorte a 110 ppp). La capa
+  lee «Achejal».
+  TEXTO:
+    Por orden del señor juez de primera instancia, doctor Alejandro Bassani
+    vendere en remate el día 18 de Setiembre del corriente año, á horas 4 p. m.,
+    en mi escritorio Alsina núm. 2, donde estará la bandera: la finca denominada
+    «Acheral» situada en el departamento de la Caldera, bajo la base de $ 4.000
+    al contado. M. R. ALVARADO.
+  NOTA DE LECTURA: no dice de quién es la finca ni en qué juicio. «vendere» sin
+  tilde, como se ve. Clase DOMINIO. El remate no vuelve a publicarse (E.6).
+
+A.11 · Decreto (24-10-11): oficina del Registro Civil en la estación Mojotoro,
+por la distancia al pueblo de La Caldera
+
+  FUENTE: N° 291, h3, col. 3; ed. del 1 y 4-11-11.
+  FICHA: Encargado ad honorem, Benjamín López, «al solo efecto del
+  enrolamiento». «El Poder Ejecutivo de la Provincia»; FIGUEROA / R. PATRÓN
+  COSTAS; Es cópia— José M. Outes.
+  MODO DE LECTURA: imagen (recortes a 110 ppp).
+  TEXTO:
+    Siendo necesario establecer en la Estación Mojotoro del Ferro C. C. Norte
+    una oficina del Registro Civil con el objeto de facilitar á los ciudadanos
+    de ese lugar el cumplimiento de la Ley de Enrolamiento General atendiendo la
+    larga distancia que lo separa del pueblo de La Caldera donde tiene su
+    asiento la oficina del Registro Civil y las dificultades con que tropieza la
+    gente para trasladarse á aquel pueblo por la falta de medios de movilidad y
+    de transporte. El Poder Ejecutivo de la Provincia DECRETA: Art. 1° Nómbrase
+    ad-honorem Encargado de la oficina del Registro Civil que debe establecerse
+    en la Estación Mojotoro y al solo efecto del enrolamiento al señor Benjamín
+    López. Art. 2° Dirijase nota al señor jefe del Distrito Militar Nro. 63 de
+    esta capital, para que provea á la oficina de los elementos necesarios para
+    el enrolamiento. Art. 3° Comuníquese, publíquese y dése al R. Oficial.
+    Salta, Octubre 24 de 1911.
+  NOTA DE LECTURA: el mismo nombre que A.5 hace subcomisario de la estación; la
+  identidad no se afirma más allá del nombre y el lugar.
+
+A.12 · Decreto de Hacienda (9-11-11): comisionados para el empadronamiento y la
+clasificación de patentes para 1912; Caldera, Escolástico M. Aparicio
+
+  FUENTE: N° 295, h2, col. 3; ed. del 18-11-11.
+  FICHA: «El Gobernador de la Provincia». Encabezado y fecha por la capa.
+  MODO DE LECTURA: imagen (recorte a 115 ppp de la entrada).
+  TEXTO:
+    [...] Candelaria—Juan Serra. Iruya—Tomás J. Vargas. Caldera—Escolástico M.
+    Aparicio. Art. 2° Los comisionados, al practi[car] [...]
+  NOTA DE LECTURA: cuarto año seguido de Aparicio en la clasificación del
+  impuesto del departamento.
+
+A.13 · Decreto de Hacienda (9-11-11): jurados de reclamos de patentes para 1912;
+Caldera
+
+  FUENTE: N° 295, h3, col. 2; ed. del 18-11-11.
+  FICHA: Titulares Daniel Linares y Abelardo Figueroa; suplentes Augusto Regis y
+  José D. Soliverez. FIGUEROA / RICARDO ARÁOZ; Conforme— Delfín Liquitay, Ofl.
+  1° (por la capa).
+  MODO DE LECTURA: imagen (recorte a 115 ppp).
+  TEXTO:
+    Caldera—Titulares, Daniel Linares y Abelardo Figueroa. Suplentes—Augusto
+    Regis y José D. Soliverez.
+  NOTA DE LECTURA: RECUENTO PROPIO: dos y dos. Los mismos cuatro nombres que el
+  jurado para 1911 (informe LEE 1910, A.21), con Regis en lugar de José M.
+  Ceballos.
+
+A.14 · Decreto (12-12-11): plaza de agente para la comisaría del partido de
+Vaqueros, por la obra del puente y las canteras del Mojotoro
+
+  FUENTE: N° 305, h4, col. 2; ed. del 27-12-11.
+  FICHA: A pedido del comisario del departamento, por intermedio del Jefe de
+  Policía; cuarenta pesos mensuales de eventuales. FIGUEROA / R. PATRÓN COSTAS.
+  MODO DE LECTURA: imagen (recortes a 110 ppp).
+  TEXTO:
+    Habiendo el señor Comisario de Policía del Departamento de la Caldera,
+    manifestado por intermedio del señor Jefe de Policía la necesidad de dotar á
+    la comisaría del partido de Vaqueros de un agente para la conservación del
+    orden público, con motivo de la concurrencia de trabajadores en la obra del
+    puente que se construye sobre el río del mismo nombre, y en la explotación
+    de las canteras en las proximidades del puente sobre el río de Mojotoro— El
+    P. Ejecutivo de la Provincia. DECRETA: Art. 1° Créase la plaza de un agente,
+    para el servicio de la comisaría del partido de Vaqueros, jurisdicción del
+    departamento de la Caldera con el sueldo de cuarenta pesos mensuales que se
+    imputarán en la partida de eventuales del presupuesto en vigencia. Art.
+    2°.—Comuníquese, publíquese y dése al R. Oficial. Salta, Diciembre 12 de
+    1911. FIGUEROA R. PATRÓN COSTAS
+  NOTA DE LECTURA: «el río del mismo nombre» es el de Vaqueros, por el nombre
+  que lo precede; se transcribe y no se interpreta.
+
+A.15 · Remate (30-12-11) de la finca San Alejo y Santa Rufina, de los herederos
+Fernández, en la división de condominio
+
+  FUENTE: N° 306, h4, col. 3; ed. del 30-12-11.
+  FICHA: Por orden del juez Vicente Arias y de común acuerdo de partes;
+  rematador Víctor M. Saravia; 17.874 hectáreas 27 áreas y 79 «cuadrados» según
+  la mensura de Walter Hessling; base de ciento ochenta mil pesos al contado; el
+  plano general, en el escritorio del rematador.
+  MODO DE LECTURA: imagen (recorte a 110 ppp del encabezado y los límites); la
+  base y el plano, por el informe anterior (400 ppp) y la capa.
+  TEXTO:
+    IMPORTANTE REMATE DE LA FINCA= San Alejo y Santa Rufina Por orden del señor
+    juez de primera instancia en lo civil y comercial doctor Vicente Arias y de
+    común acuerdo de partes en el juicio sobre división de condominio de la
+    finca denominada San Alejo y Santa Rufina perteneciente á los herederos
+    Fernández, ubicada en el departamento de La Caldera, compuesta en conjunto
+    de 17.874 hectáreas 27 áreas y 79 cuadrados según mensura practicada por el
+    agrimensor señor Walter Hessling y aprobado por el Departamento Topográfico,
+    tiene por límites: al Norte la provincia de Jujuy, Cabaña del señor Marcos
+    Zorrilla, Uracatao ó Pueblo Viejo del señor Domingo Royo y propiedad del
+    señor Gavino Sánchez; al Este la finca Angos[tura] [...]
+  NOTA DE LECTURA: el día del remate es el de la edición: el aviso «259vD30»
+  sale una sola vez en 1911 (E.6). «Hessling» aquí, «Hesling» en A.8. Los
+  linderos este, sud y oeste (Daniel Linares, Eusebio Herrera, Francisco Sajama,
+  Arturo Escudero, Abelardo Figueroa, herederos de Desiderio Ruiz, Garzón y
+  Pintos, Silverio Bejarano, José Bruzzo) están en el informe anterior y en la
+  capa; no se miraron en esta sesión. RECUENTO PROPIO de linderos del norte:
+  cuatro.
+
+§B · VECINDAD
+-------------
+B.1 · Nucleos ya fichados
+Comisión municipal y juzgado de paz (A.2, A.6); comisaría del departamento y sus
+catorce partidos, con la subcomisaría de la estación Mojotoro (A.5, A.14); mesas
+receptoras y juntas inscriptoras (A.3, A.4) y elecciones (A.1); registro civil
+de la estación (A.11); escuela de la parroquia (A.9); patentes (A.12, A.13);
+reparos del río (A.7); San Alejo y Santa Rufina (A.8, A.15); la finca Acheral
+(A.10).
+B.2 · Nucleos del departamento en actos que no nombran el termino
+Mirados en la imagen en su renglón decisivo.
+  - 226 h1 (Superior Tribunal, 30-7-1910, publicado en 1911): «Y VISTOS:—En
+    mérito de los fundamentos expuestos en la votación que precede, refórmase la
+    sentencia recurrida de fs. 24 á 27, rebajándose la pena impuesta al
+    procesado Pascual Copa á cuatro años de penitenciaría». POR QUÉ: actor de
+    1910, domiciliado en Los Porongos (informe LEE 1910, A.9); es la segunda
+    instancia de esa causa (inferencia por el nombre y la pena: el fallo no
+    nombra el lugar).
+  - 262 h4 (edicto, 1-6-11): «Cítese por el presente y por el término de treinta
+    días á todos los que se consideren con derecho á la sucesión de don CARLOS
+    MURÚA, se presenten en cualquier carácter ante el juzgado á cargo del doctor
+    Vicente Arias». POR QUÉ: homónimo del propietario de mesa de 1909; el edicto
+    no nombra lugar y la identidad no se afirma.
+B.3 · Terminos que en 1911 son otra cosa
+Castellanos (el doctor Juan José Castellanos, el río y el arroyo de Anta),
+Isasmendi, Mamani, Wierna (familia de La Silleta), Apaza, Quintín, Aramayo,
+Matos, Chaile, Condori y Murúa: apellidos. Candelaria: departamento y nombre de
+pila (23 hojas). Luis Linares: senador, presidente del Senado en 1911 (261 h3,
+265 h3, 269 h2, 270 h1) y propietario en Campo Santo (§C). La Silleta, San José
+(Metán, Cachi, Orquera), El Bordo de San Agustín, Río Blanco (Cachi, Zenta),
+Betania (Campo Santo, La Viña), El Tunal y Ovejería (Metán), Nogalito (Metán,
+Candelaria), Potrerillo, Castañares (la batalla, un domicilio de la capital y
+una finca), Acheral (Guachipas, 302 h4), Campo Alegre (223 h3 de Chicoana; 248
+h4 de Orán; 288 h2 sin determinar), Lagunilla y la Quesera (partidos de la
+capital, 244 h3, «sub-comisario de policía de los partidos de la Montaña y
+Noques, jurisdicción de esta capital»), Lagunilla del partido del Toro (306 h3),
+Mesada y Las Mesadas (Orán), Entre Ríos (fincas y un pedimento), Las Tipas,
+Vaquería, Sauces, Cedros, Arroyo Seco, Antilla, Pucheta, Las Garrapatas, Buen
+Retiro, Las Matas, Las Lagunas, Punta del Agua, Santa Gertrudis, Tabacal (295
+h4, de Delfín Leguizamón): lugares de otros departamentos. «el cajón», «el
+monte», «el molino», «la misión», «la zanja», «parroquia», «penales», «durazno»
+(dulce): palabras comunes.
+B.4 · Ausencias del anillo de actores
+Grupo 1, sólo en su propio acto: Gervasio Chalan, Pedro Arroyo, José A. Molina
+(A.3); Fernando Robles (A.4); Guillermo Wotton, Teodoro Reyes, Virgilio Arévalo,
+Juan Chuchuy, Manuel García, Silverio Cáceres, Marcelo Lamas, Francisco Sosaya,
+Liborio Guerrero (A.5); Rafael Fernández (A.6); Jacoba Luquez de Gómez (A.9);
+José D. Soliverez (A.13); Marcos Zorrilla, Domingo Royo, Gavino Sánchez (A.15).
+Grupo 2, en más de un acto del departamento: Jacinto Guerrero, juez de paz
+suplente y comisario suplente (A.2, A.5); Carlos Matienzo, juez de paz que
+renuncia (A.2, A.6); Angel Fernández, propietario de mesa y comisario de San
+Alejo y Santa Rufina, cuya familia vende la finca en diciembre (A.3, A.5, A.15);
+Genaro Molina, suplente de mesa y comisario de la Calderilla (A.3, A.5); Rufino
+Lozano y Dionisio o Dionicio Herrera, de mesa y de junta inscriptora (A.3, A.4);
+Abraham o Abrahan Fernández, de junta inscriptora y comisario de Potrero de
+Valencia (A.4, A.5); Augusto Regis (A.3, A.13); Daniel Linares, presidente de
+los reparos, jurado y lindero de San Alejo (A.7, A.13, A.15); Abelardo Figueroa
+(A.13, A.15); Benjamín López (A.5, A.11); Walter Hesling o Hessling (A.8, A.15);
+Adolfo Vidal y Camilo Cáseres (A.3, y en 1909-1910).
+Grupo 3, también fuera del departamento: Walter Hesling o Hessling, agrimensor
+en otras mensuras (238 h4, 239 h1 y h4, 279 h1, 285 h2, 303 h4); Víctor M.
+Saravia, rematador en nueve avisos ajenos; Manuel Núñez de la Rosa y M. R.
+Alvarado, martilleros; Francisco Alemán, procurador en catorce hojas;
+Escolástico M. Aparicio, sin otro acto del departamento en 1911 más que A.12; y
+homónimos sin relación afirmada: Adolfo Vidal, que pide la mensura de tres
+manzanas en la capital con Waldino Iriarte (264 h4); Roque Miranda, procesado en
+la capital (235 h2); Eusebio Herrera, cuya sucesión se abre en diciembre (300
+h4); Segundo D. Bedoya, en un pleito civil (275 h2).
+Búsquedas que no devuelven su propio acto: ninguna entre los actores de 1911 con
+las dos versiones unidas.
+
+§C · LIMITROFES
+---------------
+C.1 · Campo Santo, por el río Mojotoro: la solicitud de concesión de agua del
+río para la finca «Totoral» del doctor Luis Linares, en Campo Santo, «que pasa
+por su límite Norte»; «las aguas que se desean aprovechar son las que nacen en
+el lecho del río en las inmediaciones del puente del F. C. C. Norte, después de
+haberse levantado más arriba todo su caudal» para la irrigación de Campo Santo y
+Cobos (279 h4, imagen), y el decreto del 4-11-11 que le acuerda cien litros por
+segundo (294 h3, imagen). El informe anterior lo daba como vecindad (B.1); la
+finca la sitúa el acto en Campo Santo.
+C.2 · Jujuy: límite norte de San Alejo y Santa Rufina (A.15).
+C.3 · La capital: los partidos de la Montaña, Noques, Lagunilla y la Quesera son
+de su jurisdicción (244 h3), y el camino nacional de A.7 une el pueblo de la
+Caldera con ella.
+
+§P · PLANOS
+-----------
+Publicados: ninguno en las 347 hojas. La palabra «plano» o «planos» aparece en
+51 hojas; una sola remisión toca al departamento: el «plano general de la finca»
+San Alejo y Santa Rufina, en el escritorio del rematador (A.15), citado y no
+acompañado. Techo de resolución: 329 a 370 ppi.
+
+§D · INDICE
+-----------
+Edición, hoja, clase fija (7.1), materia.
+  226   h1   JUSTICIA          B.2 Superior Tribunal, causa Pascual Copa
+  229   h3   ELECTORAL         A.1 Convocatoria: un senador y un diputado
+  232   h4   JUSTICIA+CARGOS   A.2 Jueces de paz
+  235   h4   ELECTORAL         A.3 Mesas receptoras, una serie
+  241   h4   ELECTORAL         A.4 Juntas inscriptoras
+  243   h2   CARGOS            A.5 Comisarios de catorce partidos
+  243   h3   CARGOS            A.5 (sigue): estación Mojotoro
+  251   h4   JUSTICIA+CARGOS   A.6 Juez de paz por renuncia de Matienzo
+  252   h3   OBRA-PUBLICA      A.7 Reparos del río, $ 958,65
+  256   h3   OTRO              E.1 Resumen de caja, mayo
+  258   h1   DOMINIO+JUSTICIA  A.8 Honorario de la mensura de San Alejo
+  262   h4   JUSTICIA          B.2 Sucesión de Carlos Murúa
+  268   h3   ESCUELA           A.9 Jubilación de la directora
+  276   h4   DOMINIO           A.10 Remate de la finca Acheral
+  279   h4   AGUAS             C.1 Río Mojotoro, Campo Santo
+  291   h3   REGISTRO-CIVIL    A.11 Oficina en la estación Mojotoro
+  294   h3   AGUAS             C.1 Concesión del Mojotoro
+  295   h2   OTRO              A.12 Comisionado de patentes
+  295   h3   OTRO              A.13 Jurados de patentes
+  305   h4   CARGOS            A.14 Agente para la comisaría de Vaqueros
+  306   h4   DOMINIO           A.15 Remate de San Alejo y Santa Rufina
+Meses sin mención del término: enero (N° 220 a 226), agosto (N° 269 a 275) y
+octubre (N° 283 a 290). La ausencia se afirma con lugar y organismo: ningún
+partido del departamento ni su comisión municipal, juzgado de paz o comisaría
+aparece en un acto propio en esas ediciones.
+
+§E · OBSERVACIONES
+------------------
+E.1 · Duplicacion y saldos
+md5 de la imagen mayor de cada hoja: 347 distintos. dhash propio de 256 bits:
+ningún par a distancia 16 o menos. Tinta a 72 ppp (píxel menor de 160): ninguna
+hoja por debajo del 5 %; la más baja, 267 h4 (7,07 %). Repeticiones por el
+texto: E.6.
+Resúmenes de Tesorería: se buscaron «resumen de caja», «movimiento de caja»,
+«movimiento de tesorería», «balance de tesorería», «saldo en caja», «Tesorería
+General» y «nota demostrativa» en las dos versiones; el año publica uno solo, el
+de mayo (256 h3, firma Juan E. Velarde, Salta, Junio 5 de 1911), mirado en la
+imagen con las cifras a 300-700 ppp: abre «Saldo de Abril de 1911 $ 26200.50» y
+cierra «Saldo en Caja para Junio 20894.59», con el total «$ 219182.80» en las
+dos columnas. Cierran la Receptoría (57.914,40), las obligaciones (64.100) y la
+deuda liquidada (185.867,63); no cierran los dos totales (E.8). La cadena anual
+no se puede armar: un solo resumen; con 1910 (cierre de octubre, 90.858,48) no
+hay puente.
+Balances municipales: dos, de otros municipios. 228 h3, «Movimiento de Tesorería
+municipal durante el año de 1910», de Chicoana (no recalculado, por no ser del
+departamento). 232 h3, «Balance de Tesorería de 1910», firmado «General Güemes,
+Enero 17 de 1911. José M. Belmont, Tesorero» (mirado): el informe anterior lo
+dejaba sin atribuir; es de General Güemes. Recalculado entero: ingresos y
+egresos, 8.562,50 los dos; deudas a cobrar, 288,50; deudas a pagar, 4.229,29:
+cierran. Ninguno del departamento.
+E.2 · Cobertura
+87 de 87 ediciones y 347 de 347 hojas en la búsqueda, con las dos versiones.
+Tapas: 87 de 87 en la imagen. Hojas interiores miradas en la imagen: las 39 «a
+ojos» enteras (tres de ellas tapas), las de las fichas, las de los cuadros y 29
+cabeceras de folio: 157 hojas miradas con las tapas. Recortes de columna: 30.
+Cotejo sumario/cuerpo: no aplicable, las ediciones no traen sumario.
+Citados y no acompañados, buscados antes de listarlos: el decreto de 20 de enero
+de 1910 (A.7, en el corpus de 1910 como «Enero 21 de 1919»); la renuncia de
+Carlos Matienzo (A.6); las propuestas del comisario del departamento (A.5,
+A.14); la Ley de Enrolamiento General (A.11); el plano general de San Alejo y
+Santa Rufina (A.15); la terna de la comisión municipal (A.6). Nombramientos que
+sólo constan por su revocación: ninguno.
+E.3 · Sin mencion y no mirado
+Las hojas sin mención no se miraron en la imagen salvo las tapas, las «a ojos»,
+las de los cuadros y las cabeceras: su cobertura es la de las cuatro pasadas
+sobre las dos versiones, el anillo 2 y el anillo de actores. En 1911 ninguna
+hoja «a ojos» trajo una mención nueva, y la difusa rescató la única que la
+literal perdía (A.6); con todo, en las 190 hojas no miradas enteras no se
+excluye un renglón perdido en las dos versiones (L7).
+E.4 · Firmas y autoridad
+Gobernador Avelino Figueroa todo el año, por los firmantes. Gobierno: R. Patrón
+Costas, con licencia para ausentarse de la capital (252 h3, mayo, por la capa) y
+reintegrado el 22 de mayo: «Encontrándose en esta capital el señor ministro de
+gobierno doctor Robustiano Patrón Costas— El Poder Ejecutivo de la Provincia
+DECRETA: Art. 1° Queda en posesión de su cargo el expresado señor» (253 h4,
+mirado); en el intervalo firma Ricardo Aráoz los actos de Gobierno (decreto del
+20 de mayo, 253 h4, mirado). Hacienda: Ricardo Aráoz; «Es copia» de Juan Martín
+Leguizamón, S. S., y «Conforme» de Delfín Liquitay, Ofl. 1° (A.9, A.13). «Es
+copia» de Gobierno: José M. Outes, S. S. Presidente del Senado: Luis Linares
+(B.3). No hay interinato del gobernador. Fórmulas de encabezado: «El P.
+Ejecutivo de la Provincia» (la habitual), «El Poder Ejecutivo de la Provincia»
+(A.11, 253 h4) y «El Gobernador de la Provincia» (A.9, A.12, A.13: actos de
+Hacienda). La firma «LINARES / SANTIAGO M. LÓPEZ» es la de la Ley de creación
+del Boletín de 1908, reimpresa (E.6). Numeración: los decretos no llevan número
+(L2).
+E.5 · Cortes y columnas
+La capa marca los cortes con U+00AD (12.290) y el OCR propio no. Columna
+perdida: no se halló en los 30 recortes de las fichas, cotejados columna por
+columna. Errores de palabra de la capa, en la imagen: «Tacones» por Yacones
+(A.5), «Cajdera» (A.6), «Achejal» (A.10).
+E.6 · Repeticiones
+Se buscó por el texto cada aviso del departamento en el resto del corpus: el
+remate de Acheral (A.10) y el de San Alejo y Santa Rufina (A.15) salen una vez
+cada uno. avisos_repetidos_departamento: 0. Fuera del departamento, la Ley de
+creación del Boletín (1908) se reimprime en muchas ediciones.
+E.7 · Falsos positivos y negativos
+Falso negativo de la literal: 251 h4 («Cajdera» en la capa, A.6), rescatado por
+la difusa. Falsos positivos del anillo 1: 6 hojas: «caldo» (228 h2), Calderón
+(Cecilio y Celso, 235 h3; Cruz, 234 h4; Sebastiana M. de, 249 h4; Isidoro B.,
+270 h1), «Angel M. Caldas», inspector (299 h4); difusa: calavera (camino de La
+Calavera, 228 h3), cadera, criadera, escalera, «alderats». La pegada: «fiscal
+de», «local de», «vocal del».
+E.8 · Fidelidad numerica
+Recalculados nueve totales y subtotales en tres cuadros; cierran siete. No
+cierran, en el resumen de mayo (256 h3): los ingresos suman 219.192,80 contra
+219.182,80 impreso (diez pesos; «4183.81» por «4193.81» en «Caja de J. y
+Pensiones» cerraría, y la imagen a 700 ppp dice 4193.81: se escriben las dos
+lecturas, 8.7); los egresos suman 217.367,22 contra 219.182,80 (1.815,58 menos,
+que ningún dígito explica: falta una partida o sobra en el total). Cifras del
+§A, en la imagen: A.7, $ 958,65 en letras; A.8, $ 5,000; A.9, en letras; A.10, $
+4.000; A.14, cuarenta pesos; A.15, 17.874 ha 27 a 79 (la base, por el informe
+anterior). RECUENTOS PROPIOS: A.1 (16 a 17, 11, 17), A.3 (5 y 5), A.4 (2 y 2),
+A.5 (14 partidos), A.13 (2 y 2), A.15 (4 linderos norte). No recalculados: 228
+h3 (Chicoana) y los balances de comercio citados en decretos (227 h3, 247 h4,
+251 h4, 256 h4).
+E.9 · Contradicciones y erratas del original
+A.5: dos «Art. 2°»; «Abrahan»; «Chalchamo» (Chalchañio en 1910); «Cáceres»
+(«Cáseres» en 1910 y en A.3). A.8 y A.15: «Hesling» y «Hessling». A.3 y A.4:
+«Dionisio» y «Dionicio». A.9: «comisión administradora» y «Junta
+Administradora». A.10: «vendere». A.8: «jucio». A.7 cita el decreto de los
+reparos como «de 20 de Enero», y su edición de 1910 lo imprime «Enero 21 de
+1919». Tapa: «Juio» (N° 261). Folios: 1016 y 1015 en la N° 248; avance de a uno
+en la N° 270; retroceso de cien en la N° 294. El informe anterior traía tres
+lecturas que esta sesión corrige: «1941» en A.7, las hojas «ausentes» de las N°
+242, 243 y 269, y el balance «sin atribuir» de 232 h3.
+E.10 · Pendientes y limites
+PENDIENTES: ninguno.
+  L1. Tesseract sin spa en la sesión: sin OCR en sesión; las dos versiones son
+    la capa del PDF y el OCR de lee_auto.py.
+  L2. Los decretos de 1911 no llevan número: la regla de fecha contra numeración
+    (8.15) no se puede aplicar.
+  L3. Las ediciones no traen sumario: cotejo sumario/cuerpo no aplicable.
+  L4. Las tapas no declaran páginas: el control de completitud es la cadena de
+    folios.
+  L5. Once días de salida sin edición que el corpus no explica (§1).
+  L6. El resumen de caja de mayo no cierra en ninguna de sus dos columnas y es
+    el único del año: la cadena de saldos no se puede armar.
+  L7. Las 190 hojas que no se miraron enteras dependen de la búsqueda sobre las
+    dos versiones (E.3).
+
+§F · CORRECCION A LA RUBRICA
+----------------------------
+F.1 (ediciones cortas). El informe anterior contó las hojas por archivo y
+  declaró hojas ausentes en las N° 242, 243 y 269; la cadena de folios, mirada
+  en la imagen, muestra que son ediciones de una, tres y siete hojas, completas.
+  Es lo que 2.5bis dice («el folio distingue la edición corta de la
+  incompleta»), y conviene que el §R lo separe: una clave «ediciones_cortas»
+  junto a hojas_ausentes_estimadas.
+F.2 (folio que retrocede). En la N° 294 el folio vuelve de 1198 a 1100 y sigue:
+  un control automático que encadena por diferencia lo da como cien hojas
+  ausentes. Propuesta: el pre-informe marca todo salto mayor de diez y pide
+  mirar las dos cabeceras.
+F.3 (cuadro sin jurisdicción). El balance de 232 h3 no nombra la comuna en el
+  encabezado y sí al pie (el lugar de la firma del tesorero). Propuesta: antes
+  de declarar un cuadro «sin atribuir», mirar el pie de firma, que en esta época
+  da el lugar.
+F.4 (config). Agregar al anillo 2: «chalchamo» y «los sauces y angosto de arias»
+  (A.5). Agregar a actores (origen 1911): Jacoba Luquez de Gómez, Rafael
+  Fernández, Gervasio Chalan, Pedro Arroyo, José A. Molina, Manuel García,
+  Fernando Robles, Guillermo Wotton, Dionicio Herrera, Delfín Liquitay; mover a
+  actores los apellidos del anillo 2 (B.3). A falsos_positivos, nada: «caldas» y
+  «calderon» pueden ocultar menciones (§12).
+
+§R · RECUENTO
+-------------
+anio: 1911
+ediciones_desde: 220
+ediciones_hasta: 306
+ediciones_presentes: 87
+ediciones_ausentes: 0
+hojas_presentes: 347
+hojas_declaradas: 0
+hojas_ausentes_estimadas: 0
+periodicidad: miercoles-y-sabados
+dias_salida_sin_edicion: 11
+ediciones_dobles: 6
+techo_ppi: 370
+ocr_en_sesion: no
+capa_previa: pdf-y-textos-del-release
+versiones: 2
+actos_departamento: 15
+actos_dominio: 3
+actos_hacienda_municipal: 0
+planos_publicados: 0
+planos_citados_departamento: 1
+balances_municipales: 0
+cuadros_publicados: 3
+subtotales_recalculados: 9
+resumenes_tesoreria: 1
+cadena_saldos: no-armable
+columnas_cotejadas: 30
+hojas_miradas: 157
+avisos_repetidos_departamento: 0
+falsos_positivos_anillo1: 6
+limites_declarados: 7
+estado: COMPLETO
+nivel_lectura: imagen
+pdf_release: 87
+avisos_release: 0
