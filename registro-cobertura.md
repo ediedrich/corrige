@@ -5926,3 +5926,105 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1911 la comisaría de partido, la mesa de la sección Caldera, el juzgado de paz, el empadronamiento y los jurados de patentes vuelven a salir de los mismos vecinos de 1909 y 1910 (Fernández, Guerrero, Linares, Aparicio). Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 14 líneas (0,05 %; 17,4 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 1. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1911, escrito por la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 95 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1912. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `f629cac` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1912, sobre `31ba55a`, aplicado por `3-registrar` el 13/10 a las 12:46), con la fase 6 en `ronda-95.patch` (un commit sobre `f629cac`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1912 y el AMPLÍA 1912**, en la misma tarea programada: el cotejo descansa en los recortes de la imagen que esa misma sesión miró para el informe, del Release 1912.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 94 (25.656 de 25.656, sobre `97338ab` con la fase 6, que es `31ba55a`) se trasladaron por diff a `f629cac`. **El AMPLÍA caduca 25 líneas y deja 25 modificadas**, sin cambiar el largo de ningún archivo (2 en A, 10 en E, 1 en F, 5 en el capítulo 3, 3 en el 4, 2 en el 22 de prospectiva y 2 en el 26). Vigentes después del traslado: 25.631 de 25.656.
+
+### Lectura sobre el texto (numeración de `f629cac`)
+
+Se leyeron **las 25 líneas, enteras** (62.054 bytes: la línea 56 del apéndice F y la entrada de Escolástico Aparicio pasan cada una de 5.000), contra el informe `BO-Salta-1912_307-383_la-caldera_LEE-1912_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres y las fechas, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 2 (29, 30) |
+| ape/E-personas.tex | 10 (32, 34, 36, 42, 46, 48, 50, 52, 56, 58) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/03-fincas.tex | 5 (227, 232, 250–252) |
+| cap/04-siglo.tex | 3 (134, 136, 377) |
+| cap/22-prospectiva.tex | 2 (252, 253) |
+| cap/26-presencia.tex | 2 (125, 126) |
+
+Contexto releído entero (no suma cobertura): A:26–31 (filas de 1911 y 1912), 03-fincas:220–256 (los comisarios de 1909 a 1913 y el pleito de Mojotoro), 04-siglo:119–140 y 360–385 (el año institucional de 1912 y la tabla de comisarios de partido), 26-presencia:105–130 y 22-prospectiva:245–255 (la estación Mojotoro y Benjamín López), y en F:56 los pasajes de 1913 y 1922–1923 que comparan con 1912.
+
+**Esta ronda: 25 líneas modificadas**, 62.054 bytes sobre 3.537.594, que en las 1.067 páginas de la base equivalen a **18,7 páginas**.
+
+Acumulado: 25.631 vigentes + 25 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca tres líneas de esta ronda (A:29, E:36 y E:48) y no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 310 | 4 | Bruzzo nombrado comisario de la estación Mojotoro por renuncia de López: «Salta, Enero 12 de 1911», entre decretos del 11 y del 12 de enero de 1912 (imagen; los vecinos, por la capa) | El año impreso es 1911; la serie de la hoja lo sitúa en 1912 (flujo §5.6, control 1). El libro fechaba en enero de 1912 sin decir lo impreso: hallazgo 1 |
+| 360 | 2–3 | «Lista de los electores de Gobernador proclamados por la Convención del partido "Unión Provincial"»; «Caldera—Dr Luis Linares, Sr. Silvano Murúa»; Mascietti y Benítez por la U. C. R. (imagen) | Son listas de candidatos que se votan el 22 de septiembre, no electores: hallazgo 2 |
+| 344 | 1–2 | Los actores: «en la finca Mojotoro (departamento de Campo Santo)»; el demandado: «jurisdicción del Departamento de La Caldera (no Campo Santo)» (imagen) | Coincide con la corrección del AMPLÍA |
+| 330 | 2 | Once partidos; «Chalcha-/nio», sin tilde, a 300 ppp; Ángel Fernández en San Alejo (imagen) | Coincide |
+| 320, 335, 338 | 3 | Aparicio comisario; jueces de paz Fernández y Guerrero; Linares por Rejis (imagen) | Coincide |
+| 356 | 2 | Villanueva en Vaqueros y Flores en Potrero de Castillo, 14 de agosto (imagen) | Coincide |
+| 361, 362 | 3 | Dos mesas, 1 a 200 y 201 a 524; Eustaquio Murúa titular de la mesa 2ª (imagen) | Coincide |
+| 364 | 2–4 | Las dos causas (seis y tres meses de arresto); el deslinde de Los Porongos sin mención del río (imagen) | Coincide |
+| 372 | 3–4 | Santa Mónica y Quitilipe sobre el río de la Caldera; Rafael Fernández, juez de paz (imagen) | Coincide |
+| 379, 381 | 3 | López comisario del partido de Mojotoro por renuncia de «Luis Brusso»; López expendedor de guías de Mojotoro (379, imagen del decreto vecino; 381, por la capa) | Coincide |
+| 328 | 4 | Remate de abril; linderos Linares (Angostura) y herederos Fernández (imagen) | Coincide |
+
+11 cotejos sobre 17 hojas de 15 ediciones, todos sobre la imagen salvo la fecha de los decretos vecinos de 310 h4 y el decreto de 381 h3, en recortes mirados por la misma sesión para el informe LEE 1912.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | E:48 | «1912, en enero renuncia a la comisaría de la estación y lo reemplaza Luis Bruzzo (Nº 310, h.\ 4)»: el decreto se imprime «Enero 12 de 1911» y el libro daba el año que decide el control sin decir el impreso | 3 | «por un decreto que se imprime "Enero 12 de 1911" entre otros del 11 y del 12 de enero de 1912 (Nº 310, h.\ 4)». A:29, 22-prospectiva:252 y 26-presencia:125 conservan «enero de 1912», que es el año decidido |
+| 2 | A:29 y E:36 | «los electores de gobernador por Caldera son Luis Linares y Silvano Murúa [...] y Ambrosio I.\ Mascietti y Fernando Benítez» y «un "Silvano Murúa" [...] es elector de gobernador»: las listas son de candidatos proclamados por cada partido | 5 | «los candidatos a electores de gobernador por Caldera son [...]»; «es candidato a elector de gobernador», como dice E:42 para 1915 |
+
+Resta: en el aspecto 3, una fecha impresa omitida, **95**; en el aspecto 5, una afirmación más allá del acto en dos líneas, **90**. Ningún error de consistencia en 18,7 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los dos en el AMPLÍA 1912 (`f629cac`), escrito por la misma sesión; el 1 viene de pasar al libro, como fecha cierta, un año que el informe LEE dejaba «sin conciliar». Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 2).** La caída de 1.069 a 1.067 páginas al compilar el AMPLÍA: el texto de las 1.067 contiene todo el de las 1.069 (cotejo palabra por palabra de los dos PDF: sólo cambian números de página); la diferencia es un salto de página que la tabla de comisarios ya no fuerza en el capítulo 4. «Chalchanio» (03-fincas:232) frente a «Chalchañio» (1910): son las grafías de cada decreto, mirada la de 1912 a 300 ppp.
+
+**Pendientes revisados.** P18 avanza en 1912 (las entradas de E con hechos de 1912 llevan Boletín y hoja) y sigue abierto por 1908. P288, abierto por el AMPLÍA (las hojas 374 h4 y 375 h4 y el decreto del 13 de noviembre de 1912), sigue abierto. Sin pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `31ba55a` | 25.631 vigentes; 25 caducas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1912 | 40 referencias nuevas en 25 líneas | 40/40 |
+| Citas entre comillas nuevas en las líneas modificadas | 5 («departamento de Campo Santo», «en la finca Mojotoro (departamento de Campo Santo)», «Brusso», «Chalchañio», «Silvano Murúa») | 5/5 literales |
+| Superlativos y ausencias en el texto agregado | 25 líneas | 0 nuevos |
+| Años de los hechos contra el año impreso de cada acto citado | 40 referencias | 1 año impreso distinto del decidido, sin declarar: hallazgo 1 |
+| Largo de los archivos antes y después de la fase 6 | 2 archivos | no cambia |
+| Compilación | fase 6 sobre `f629cac` | Compila; 1.067 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `f629cac` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 40 referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 11 cotejos sobre 15 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgo 2, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 18,7 páginas; el AMPLÍA corrige tres afirmaciones de F sobre 1912 (folios y planos) que el informe LEE 1912 desmiente |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos; P288 queda como pendiente de fuentes |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1912 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin cambios |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1912, presumiblemente fallecidas; las dos causas criminales de la cronología se dan por lugar, sin nombres |
+
+**Nota inicial: 86,8 antes del tope y 86,8 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 94.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908, con un informe LEE de 1908 regularizado; (5) P288: las dos hojas que faltan de 1912 o el Registro Oficial del año.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.067 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1912 el comisario de la Despensa preside la mesa donde vota su partido, el juez de paz suplente es el comisario suplente, la comisión municipal se integra con el vecino que linda con la finca en remate, y en Mojotoro un mismo hombre deja y retoma la comisaría y suma la expedición de guías en el mismo año. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 25 líneas (0,10 %; 18,7 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1912, escrito por la misma sesión; atrapados por un control automático: 0.
