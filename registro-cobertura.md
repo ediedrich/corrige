@@ -5725,3 +5725,108 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 3 de 3 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1909 las mesas receptoras de la sección Caldera salen del mismo grupo que ocupa la comisión municipal, el juzgado de paz y la policía. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 14 líneas (0,05 %; 4,6 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 3 en el AMPLÍA 1909, escrito por la misma sesión (uno con origen en una ronda anterior); atrapados por un control automático: 0.
+
+## Ronda 93 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1910. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `7d1b67a` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1910, sobre `df67380`, aplicado por `3-registrar` el 13/10 a las 10:46), con la fase 6 en `ronda-93.patch` (un commit sobre `7d1b67a`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1910 (regularización del 13/10) y el AMPLÍA**, en la misma tarea programada: el cotejo descansa en los recortes de la imagen que esa misma sesión miró para el informe, del Release 1910 bajado a la nube por URL directa.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 92 (25.656 de 25.656, sobre `1e8936e` con la fase 6, que es `df67380`) se trasladaron por diff a `7d1b67a`. **El AMPLÍA caduca 17 líneas y deja 17 modificadas**, sin cambiar el largo de ningún archivo (1 en A, 8 en E, 1 en F, 1 en H, 1 en el capítulo 3 y 5 en el capítulo 9). Vigentes después del traslado: 25.639 de 25.656.
+
+### Lectura sobre el texto (numeración de `7d1b67a`)
+
+Se leyeron **las 17 líneas, enteras** (18.717 bytes), contra el informe `BO-Salta-1910_121-219_la-caldera_LEE-1910_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres y las fechas, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (23) |
+| ape/E-personas.tex | 8 (30, 32, 34, 40, 54, 56, 58, 88) |
+| ape/F-fuentes.tex | 1 (28) |
+| ape/H-dominio.tex | 1 (45) |
+| cap/03-fincas.tex | 1 (264) |
+| cap/09-defensas.tex | 5 (66–70) |
+
+Contexto releído entero (no suma cobertura): 09-defensas:12–90 (la ficha del decreto del río y la obra de 1911), 03-fincas:255–280 y 345–400 (los partidos de 1910 y la cadena de Los Porongos), 04-siglo:100–125 y 310–352 (el año institucional de 1910 y la serie de Aparicio), H:1–48 (criterio y filas de 1909–1910), A:1–27, F:26–30 y 16-redes:330–350 (el fallo del río Mojotoro).
+
+**Esta ronda: 17 líneas modificadas**, 18.717 bytes sobre 3.533.635, que en las 1.069 páginas de la base equivalen a **5,7 páginas**.
+
+Acumulado: 25.639 vigentes + 17 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca siete líneas ---seis de esta ronda (09-defensas:68–70, A:23, E:40 y E:54) y la 16 del capítulo 9, ya vigente--- y no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 130 | 4 | Decreto del río: «Salta, Enero 21 de 1919», cotejado a 600 ppp con el «1910» de la cabecera de la misma hoja; LINARES / DAVID ZAMBRANO, HIJO / JUAN MARTIN LEGUIZAMON (imagen) | Coincide con el AMPLÍA; la ficha del capítulo 9 seguía fechándolo el 21: hallazgo 1 |
+| 140 | 4 | Edictos de Los Porongos (Mónica Diez de Costas) y de Loma Bola (Angel M. Costas, «Salta, Marzo 14 de 1910», perito Rafael Zuviria, «el día 25 y siguientes hábiles del mes de Abril») (imagen; la fecha del proveído de Los Porongos, por la capa) | Coincide |
+| 189 | 4 | Loma Bola, nuevo día: Angel Costáz, Rafael M. Zuviría, 1º de noviembre, «M. Sanmillán» (imagen) | Coincide |
+| 128 | 2 | «Caldera / 1ª SERIE»: Vidal, Fernández, Figueroa, Cáseres, Burgos; suplentes Mur[u]a, Alfaro, Molina, Guerrero, Lozano (imagen) | Coincide |
+| 146 | 3 | «por renuncia del señor Abelardo Figueroa», decreto del 31 de marzo (imagen) | La renuncia consta en el decreto, sin fecha propia: hallazgo 3 |
+| 148, 214, 219 | 3 | Aparicio comisario (abril), comisionado de patentes (9 de diciembre), comisario y comisionado municipal (27 y 31 de diciembre); comisión municipal Fernández, Regis, Vidal, Benitez y Aparicio (imagen) | Coincide |
+| 161 | 4 | Comisarios de partido: Fernández (San Alejo y Santa Rufina), «Silverio Cáseres» (Gallinato), «Peñones y Chalcha-/ñio»; Guerrero suplente (imagen) | Coincide |
+| 171 | 3 | Juez de paz Carlos Matienzo, suplente Jacinto Guerrero, «Salta Junio 6 de 1910» (imagen) | Coincide |
+| 217 | 4 | Jurados de Caldera: Daniel Linares y Abelardo Figueroa (imagen) | Coincide |
+| 140 | 2 | Causa Miranda y Herrera: «el 20 de Julio del año ppdo., sabedora la autoridad del lugar [...] acompañado de los vecinos Carlos Matienzo y Rafael Peralta»; sentencia del 26-2-1910 (imagen) | El hecho es de julio de 1909, no de febrero de 1910: hallazgo 4 |
+| 127, 145, 150, 200, 215 | 2, 2, 1, 1, 2 | Las cinco causas criminales de primera instancia con domicilio o hecho en el departamento (imagen) | Coinciden; la cronología no les daba Boletín y hoja: hallazgo 2 |
+| 148 | 1 | Superior Tribunal, 14-3-1910: reforma la sentencia del 19-11-1909 (imagen) | Coincide |
+
+12 cotejos sobre 20 hojas de 17 ediciones, todos sobre la imagen salvo la fecha del proveído de Los Porongos, en recortes mirados por la misma sesión para el informe LEE 1910.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 09-defensas:16 y 68–70 | La ficha se titula «Decreto del 21 de enero de 1910» y, cincuenta líneas más abajo, el AMPLÍA deja el día sin decidir entre el 21 que imprime el Boletín (con el año «1919») y el 20 del decreto de 1911; además, la frase final quedó trunca («la misma clase de error que este libro documenta un siglo después») | 5 | Ficha «Decreto de enero de 1910 (B.O. Nº 130, 5 de febrero de 1910)»; «cuál de los dos días es el del acto lo dice el Registro Oficial, no el Boletín, que también yerra en esa línea», y la comparación restituida |
+| 2 | A:23 | «seis causas criminales» con Boletín y hoja sólo para la de los Yacones, en una fila que la advertencia de la cronología promete desarrollada con número y hoja | 1 | Cada causa con su número y hoja (Nº 127, 140, 215, 145, 150 y 200) |
+| 3 | E:40 | Abelardo Figueroa «renuncia a la Comisión Municipal en marzo»: el Boletín no publica la renuncia; consta en el decreto del 31 de marzo que nombra a Aparicio | 5 | «su renuncia a la Comisión Municipal consta en el decreto del 31 de marzo que nombra a Escolástico Aparicio en su lugar» |
+| 4 | E:54 | Carlos Matienzo, «Febrero de 1910, uno de los dos vecinos que acompañan a la autoridad»: la sentencia es de febrero de 1910 y el hecho, del 20 de julio de 1909 | 3 | «Según la sentencia del 26 de febrero de 1910, en julio de 1909 es uno de los dos vecinos que acompañan a la autoridad del lugar al sitio de un crimen, en la causa contra un vecino del pueblo» |
+
+Resta: en el aspecto 3, una fecha errada, **95**; en el aspecto 5, dos afirmaciones de una frase más allá del acto (1 y 3), **85**; el hallazgo 2 entra en la escala general del aspecto 1, que sigue en **82** por P115. Ningún error de consistencia en 5,7 páginas: el hallazgo 1 se puntúa en el aspecto 5, el más específico, porque el título afirma lo que el texto declara no decidido; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: los cuatro en el AMPLÍA 1910 (`7d1b67a`), escrito por la misma sesión; el título del 1 viene de antes y el AMPLÍA lo dejó en contradicción con su propia corrección. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 2).** «Silverio Cáseres» (03-fincas:264) frente a «Silverio Cáceres» de 1909 (04-siglo:107): son las grafías de cada decreto, y el libro transcribe la de cada uno. «Del 497 al 904» (F:28): el 497 no está impreso, lo consume la tapa de la Nº 121, igual que el 107 de 1909 en la misma frase.
+
+**Pendientes revisados.** P18 avanza en 1910 (las entradas de E de 1910 llevan Boletín y hoja) y sigue abierto por 1908, 1911 y 1912. P24 sigue abierto: el informe LEE 1910 clasifica OTRO el remate Catacata y el apéndice H no se tocó. P285 y P286, abiertos por el AMPLÍA, siguen abiertos; P286 gana un argumento: el capítulo 9 ya no fecha el decreto. Sin pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `df67380` | 25.639 vigentes; 17 caducas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1910 | 32 referencias nuevas en 17 líneas | 32/32 |
+| Citas entre comillas en las líneas modificadas | 2 nuevas («Salta, Enero 21 de 1919», «Silverio Cáseres») | 2/2 literales |
+| Recálculos | 1 + 4 + 2 + 10 = 17 posiciones de folio entre 497 y 904 sobre 391 hojas | Cierran (408) |
+| Superlativos y ausencias en las líneas modificadas | 17 líneas; 2 coincidencias en texto nuevo («el primer edicto», «ninguna hoja ausente») | Las dos con su universo |
+| Menciones de la fecha del decreto del río («21 de enero», «20 de enero» de 1910) | 25.656/25.656 | 1 sin actualizar (la ficha): hallazgo 1 |
+| Largo de los archivos antes y después de la fase 6 | 3 archivos | no cambia |
+| Compilación | fase 6 sobre `7d1b67a` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `7d1b67a` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 32 referencias de Boletín y hoja; hallazgo 2 en la escala general; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 4, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 12 cotejos sobre 17 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 100 | Hallazgos 1 y 3, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 5,7 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos; P286 queda como pendiente de fuentes |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1910 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin cambios |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1909 y 1910, presumiblemente fallecidas; las causas criminales de la cronología se dan por lugar, sin nombres |
+
+**Nota inicial: 86,2 antes del tope y 86,2 después** (tope de 90 por la cobertura acumulada inicial del 99,9 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 92.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908, 1911 y 1912, con los informes LEE de esos años; (5) P286: el Registro Oficial de 1910 para fijar el día del decreto del río.
+
+**Avance del libro:** 4 de 4 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1910 las mesas de la sección Caldera, la comisión del río, la comisión municipal, el juzgado de paz, la comisaría y los jurados de patentes salen del mismo grupo de vecinos. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 17 líneas (0,07 %; 5,7 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 4 en el AMPLÍA 1910, escrito por la misma sesión (uno, el título de la ficha, con origen anterior); atrapados por un control automático: 0.
