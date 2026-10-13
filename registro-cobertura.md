@@ -6028,3 +6028,101 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.067 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1912 el comisario de la Despensa preside la mesa donde vota su partido, el juez de paz suplente es el comisario suplente, la comisión municipal se integra con el vecino que linda con la finca en remate, y en Mojotoro un mismo hombre deja y retoma la comisaría y suma la expedición de guías en el mismo año. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 25 líneas (0,10 %; 18,7 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 2. Recortes: ninguno. Errores introducidos por la propia auditoría: 2 en el AMPLÍA 1912, escrito por la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 96 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1914. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `4194a11` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1914, sobre `6a2bcfd`, aplicado por `3-registrar` el 13/10 a las 13:59), con la fase 6 en `ronda-96.patch` (un commit sobre `4194a11`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1914 y el AMPLÍA 1914**, en la misma tarea programada: el cotejo descansa en las hojas y recortes que esa sesión miró para el informe, del Release 1914.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 95 (25.656 de 25.656, sobre `f629cac` con la fase 6, que es `6a2bcfd`) se trasladaron por diff a `4194a11`. **El AMPLÍA caduca 8 líneas y deja 8 modificadas**, sin cambiar el largo de ningún archivo (1 en A, 5 en E, 1 en F y 1 en el capítulo 4). Vigentes después del traslado: 25.648 de 25.656.
+
+### Lectura sobre el texto (numeración de `4194a11`)
+
+Se leyeron **las 8 líneas, enteras** (55.880 bytes), contra el informe `BO-Salta-1914_459-536_la-caldera_LEE-1914_2026-10-13.txt` y, en los números de Boletín, las hojas, los nombres y las fechas, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (32) |
+| ape/E-personas.tex | 5 (32, 38, 48, 56, 70) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 1 (1093) |
+
+Contexto releído entero (no suma cobertura): A:28–34 (filas de 1912 a 1915), 04-siglo:1085–1100 (la serie de resúmenes de Tesorería) y, en F:56, el pasaje de 1914 y el de 1920 que cuenta resúmenes por año.
+
+**Esta ronda: 8 líneas modificadas**, 55.880 bytes sobre 3.539.183, que en las 1.069 páginas de la base equivalen a **16,9 páginas**.
+
+Acumulado: 25.648 vigentes + 8 = **25.656 de 25.656 (100,0 %)**. La fase 6 toca dos líneas de esta ronda (A:32 y E:56) y no cambia el largo de ningún archivo: **25.656 de 25.656 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 527 | 2 | Comisionados de patentes para 1915: «Caldera. — Escolástico M. Aparicio»; el decreto empieza en la col. 1 y su fecha no queda a la vista en la hoja mirada (imagen) | El libro lo fechaba «en noviembre» por la edición: hallazgo 1 |
+| 527 | 2 | Jurados: Linares y Austerlitz, Videl y Murúa (imagen) | Coincide |
+| 510 | 4 | «Caldera septiembre 3 de 1914.—E. N. Aparicio, juez de paz» (imagen) | Coincide |
+| 485 | 1 | Aparicio en la comisión municipal, 9 de mayo (imagen) | Coincide |
+| 523 | 2 | «Queda delegado el mando gubernativo [...] en la persona del señor presidente del H. Senado don Delfín Leguizamón», 2 de noviembre (imagen) | Coincide |
+| 501 | 3–4 | Los dos remates del 4 de agosto: acción negatoria (Villegas, en La Caldera) y embargo preventivo de Cobach contra Linares (imagen) | Coincide; el libro no da el número de animales del segundo |
+| 504 | 2–3 | Subcomisaría de la estación Mojotoro; Benjamín López; «subcomisario cesante» sin nombre (imagen) | Coincide |
+| 463, 476, 509 | 3, 4, 3 | Los tres remates de San Alejo y sus bases (imagen) | Coincide |
+| 464 | 1 | Dos mesas receptoras de Caldera (imagen) | Coincide |
+| 466, 467 | 2 | Folios 1784 y 1788: faltan las hojas 3 y 4 de la Nº 466 (imagen) | Coincide con F |
+| 477, 479, 495, 504, 505, 524 | 2–3 | Los seis resúmenes de caja (imagen) | Coincide con F y con 04-siglo:1093 |
+
+11 cotejos sobre 20 hojas de 18 ediciones, todos sobre la imagen; los sucesorios de 1913 que E:56 cita como antecedente, por la capa (429 h3 de 1913).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:32 y E:56 | «en noviembre es comisionado de la clasificación de patentes [...] para 1915 (Nº 527, h.\ 2)»: el mes es el de la edición; la fecha del decreto no se lee | 3 | «un decreto publicado en noviembre, cuya fecha no se lee, lo hace comisionado [...]» |
+
+Resta: en el aspecto 3, una fecha inferida de la edición, **95**. Ningún error de consistencia en 16,9 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: uno, en el AMPLÍA 1914 (`4194a11`), escrito por la misma sesión. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 1).** «Setenta ediciones de 1914 [...] leídas todas una por una» (A:32), sobre la ordenanza de octubre: el informe LEE 1914 confirma setenta ediciones presentes; la ausencia de junio y de la Nº 470 no toca octubre.
+
+**Pendientes revisados.** P289, abierto por el AMPLÍA (el recuento de vacunos de 501 h3 en el informe LEE 1914), sigue abierto: el libro no da el número. Sin pendientes nuevos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.656/25.656 vigentes en `6a2bcfd` | 25.648 vigentes; 8 caducas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1914 | 22 referencias nuevas en 8 líneas | 22/22 |
+| Citas entre comillas nuevas | 2 («subcomisario cesante», «pertenecientes al citado señor Cobach») | 2/2 literales |
+| Superlativos y ausencias en el texto agregado | 8 líneas | 0 nuevos |
+| Fechas de los hechos contra la fecha impresa de cada acto | 22 referencias | 1 mes tomado de la edición: hallazgo 1 |
+| Largo de los archivos antes y después de la fase 6 | 2 archivos | no cambia |
+| Compilación | fase 6 sobre `4194a11` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `4194a11` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega 22 referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 11 cotejos sobre 18 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 100 | 100 | Sin hallazgos |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 16,9 páginas; el AMPLÍA corrige E:56, que atribuía a 1914 los sucesorios de agosto y octubre de 1913 |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Sin pedidos nuevos |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis gana evidencia en 1914 (más abajo) |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin cambios |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1914, presumiblemente fallecidas |
+
+**Nota inicial: 88,0 antes del tope y 88,0 después** (tope de 90 por la cobertura acumulada inicial del 99,97 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 95.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P18 para 1908; (5) P288 y las ediciones de junio de 1914: completar los huecos del Release.
+
+**Avance del libro:** 1 de 1 hallazgo resuelto; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1914 Escolástico M. Aparicio es a la vez miembro de la comisión municipal, juez de paz del departamento y comisionado de la clasificación de patentes, y el comisionado propone, el juez firma y la comisión designa desde el mismo pueblo. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 8 líneas (0,03 %; 16,9 páginas). Cobertura acumulada: 25.656 de 25.656 (100,0 %). Falsos positivos descartados: 1. Recortes: ninguno. Errores introducidos por la propia auditoría: 1 en el AMPLÍA 1914, escrito por la misma sesión; atrapados por un control automático: 0.
