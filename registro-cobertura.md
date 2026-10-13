@@ -5212,3 +5212,134 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.051 páginas. **Avance de la investigación:** la **tercera tesis** gana un segundo caso de 1989 en adelante en que la Provincia le adjudica a un municipio del departamento, ahora el de Vaqueros, una obra del agua ---como ejecutora, sobre un legajo de la Administración General de Aguas---, y un acto que le transfiere al Municipio de La Caldera un servicio social, el Instituto «Dr. Luis Linares», que no es competencia sobre el agua ni sobre el suelo; la elección de 1999, que el capítulo de política apoyaba en la prensa, pasa a constar en acta. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 27 líneas (0,11 %; 32,6 páginas). Cobertura acumulada: 25.595 de 25.595 (100,0 %). Falsos positivos descartados: 3. Errores introducidos por la propia auditoría: 7, en el AMPLÍA de la misma sesión; atrapados por un control automático: 0; y una falla de las rondas 86 y 87 (un recuento de tramos con mayúscula inicial que sus controles no encontraban), corregida por el AMPLÍA 1999.
+
+## Ronda 89 — auditoría con fase 6 (12/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1993, 2000 y 2001. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `52e46b7` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1993, 2000 y 2001, sobre `e9e66da`; rechazado el 12/10 a las 19:24 por un `.git` ilegible en la máquina del autor, repuesto tal cual y aplicado por `3-registrar` a las 21:15), con la fase 6 en `ronda-89.patch` (un commit sobre `52e46b7`). La sesión que hace esta ronda no es la que escribió los informes LEE ni el AMPLÍA. Esta vez el Release de los tres años se alcanzó desde el entorno de lectura para los PDF de edición; los anexos de la 14104 y de la 14144, de 1993, se rasterizaron en la máquina del autor, de la copia del Release que guarda en `auto/tmp/r1993`.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 88 (25.595 de 25.595, sobre `3ea0009` con la fase 6, que es `e9e66da`) se trasladaron por diff a `52e46b7`. **El AMPLÍA caduca 34 líneas y deja 44 nuevas o modificadas** (10 netas: 8 en A, 2 en F), en 17 archivos. Vigentes después del traslado: 25.561 de 25.605.
+
+### Lectura sobre el texto (numeración de `52e46b7`)
+
+Se leyeron **las 44 líneas, enteras** (179.657 bytes, contando la línea en blanco que separa el párrafo nuevo de F), contra los informes `BO-Salta-1993_14085-14330_la-caldera_LEE-1993_2026-10-12.txt`, `BO-Salta-2000_15809-16055_la-caldera_LEE-2000_2026-10-11.txt` y `BO-Salta-2001_16056-16301_la-caldera_LEE-2001_2026-10-12.txt` y, en las cifras y las citas, contra el acto.
+
+| Archivo | Líneas nuevas |
+|---|---|
+| ape/A-cronologia.tex | 11 (4, 505, 506, 507, 508, 534, 535, 536, 537, 539, 540) |
+| ape/D-pedidos.tex | 2 (159, 176) |
+| ape/E-personas.tex | 1 (101) |
+| ape/F-fuentes.tex | 7 (25, 26, 111, 113, 121, 122 ---en blanco--- y 124) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 2 (119, 157) |
+| cap/02-metodo.tex | 3 (28, 37, 99) |
+| cap/04-siglo.tex | 1 (3671) |
+| cap/09-defensas.tex | 4 (536, 688, 689, 826) |
+| cap/11-ribera.tex | 1 (296) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/17-aguabaja.tex | 1 (369) |
+| cap/18-politica.tex | 3 (656, 670, 672) |
+| cap/20-opacidad.tex | 2 (881, 882) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/23-plan.tex | 2 (13, 95) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): 09:685–716 (la sección «2001: un arroyo que se llama Urquiza», con la ficha de la Res. SOP 516 y la atribución del nombre), 03:880–930 (el revalúo de 1944), A:240 y A:538 (las filas del revalúo y del encauzamiento de noviembre de 2001), y E:68 (Urquiza).
+
+**Esta ronda: 44 líneas nuevas**, 179.657 bytes sobre 3.484.679, que en las 1.059 páginas de la base equivalen a **54,6 páginas**.
+
+Acumulado: 25.561 vigentes + 44 = **25.605 de 25.605 (100,0 %)**. La fase 6 toca ocho líneas ---siete de esta ronda (A:505, la fila de 1993; A:508, la del 24 de noviembre de 1993; A:540, la de 2002; F:121; 11:296; 23:13, y 26:236) y una vigente de una ronda anterior, 09:705, releída entera en ésta--- y no cambia el largo de ningún archivo: **25.605 de 25.605 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 16184 | 6, 7 | Res. SOP 266 (21/06/01): «Encauzamiento sobre Río Vaqueros, Arroyo Chaile y Arroyo Urquiza, Vaqueros, departamento La Caldera»; presupuesto «sesenta mil cuatrocientos ochenta ($ 60.480,00)»; compulsa del 15/3; inciso h) del art. 13; Irac S.R.L., General Güemes, $ 57.934,80, «disminución del 4,09%», 35 días (imagen) | Coincide. El 60.480 se decidió en letras: la sospecha de un 60.408 (que daría el 4,09) cae; el error de porcentaje es del acto, como dice el libro |
+| 15880 | 10, 11 | Res. SO y SP 104 y 105 (23/03/00): Wierna, $ 41.599,99 en cifras y en letras; La Caldera, presupuesto «cuarenta mil trescientos veinte ($ 40.320,00)», adjudicación «cuarenta y cuatro mil trescientos veinte ($ 44.320,00)», 45 días, inciso a) del art. 13, Municipalidad de La Caldera (imagen) | Coincide |
+| 14320 | 7 | Res. 408 D (24/11/93): licitación del 1/10/93, «Provisión de Agua Corriente en La Calderilla - Departamento La Caldera - Provincia de Salta», $ 110.035,12; Reynaldo Lucardi S.R.L., $ 121.068,71, 150 días (imagen) | Las cifras coinciden; la cita entre comillas no: hallazgo 1 |
+| 14239 | 5 | Res. 252 D (26/07/93): «Provisión agua corriente en La Calderilla - Departamento La Caldera - Provincia de Salta», $ 110.035,12 (imagen) | Coincide (es la redacción que la fila del 24 de noviembre atribuye a la 408 D) |
+| 14309 | 17, 36, 48 | Acta 905 (4/11/93); concejales de La Caldera Robles, Calabró (FREJUVI), Maidana (P.R.S.); de Vaqueros Catalán, Ocampo (FREJUVI), Giménez, Mamani (P.R.S.); senador Pérez (FREJUVI) (imagen) | Coincide (el acto imprime «OCAMFO», con la P de la impresora gastada) |
+| 16266 | 39, 49, 61, 62 | Actas 4.272 a 4.275: concejales de La Caldera Fernández, Gutiérrez, Moreyra; de Vaqueros Guantay, López, Sumbay, todos FJ; senador Vilaseca; lista del FJ en La Caldera con Catacata de García primera (imagen) | Coincide |
+| 15909 | 7 | Decreto 1.288 (18/05/00): «el señor Intendente de La Caldera, Don Héctor Miguel Calabró», convenio del 9 de mayo, asesoramiento para la modernización del sector público a través de la Oficina de Calidad, anexo (imagen) | Coincide |
+| 16108 | 7 | Decreto 485: «el Intendente de la Municipalidad de La Caldera, Dr. Héctor Miguel Calabró», «XI Edición del Festival de la Chicha», 24/3/01 (imagen) | Coincide |
+| 14104 anexo | 71 | Decreto 2494 (30/12/92): convenio del 10/4/92, AGAS y Municipalidad de Vaqueros, intendente Mercedes Alba Junco de Galván García; 500 m de defensas de hormigón ciclópeo, arroyo Chaile o Teolinda; materiales y personal a cargo de la Municipalidad, supervisión de la A.G.A.S.; croquis adjunto no publicado (imagen) | Coincide |
+| 14104 anexo | 57 | Decreto 2455: comisión de noviembre de 1991 del jefe del Departamento Servicio Provincial de Agua Potable Rural, «para la aprobación de certificados de obra de La Caldera» (imagen) | Coincide |
+| 14144 anexo | 322, 323 | Decreto 554: organigrama «CENTRO DE SALUD Nº 21 . LA CALDERA», jefatura de servicio y 22 cargos (1+2+2+6+1+2+2+6) (imagen) | Coincide; recuento rehecho |
+| 14144 anexo | 1786 | Decreto 559: orden 459, «Ayudante Técnico Aforador 2da. de El Angosto-Río Mojotoro» (imagen) | Coincide |
+| 14144 anexo | 1282 | Decreto 586: jubilación de oficio, «JEFE OFIC. LA CALDERA», Registro Civil (imagen) | Coincide |
+| 14108 | 6 | La resolución sobre la «Estación de Aforos del Río Mojotoro (El Angosto)» (imagen a 300 ppp del encabezado y del articulado) | Es la «Resol. Nº 04-D - 14-1-93», no la 94-D, y cierra un sumario ordenado en 1990 a un agente que había renunciado en mayo de 1991: hallazgos 2 y 3 |
+| 14253 | 8 | «Estudio de caudales de estiaje de 1992 en el Río Mojotoro a la altura del Angosto» (texto reconocido) | Coincide |
+| 14274 | 7 | Decreto 1.722: catastros 1.824 a 1.826 de La Calderilla, 1 ha 2.000 m², 0,63 l/s, acequia «La Calderilla» (texto reconocido) | Coincide; 0,63 / 1,2 = 0,525 |
+| 16063 | 10 a 12 | Decretos 3.390 y 3.392 (26/12/00): $ 1.060,57 y $ 4.129,73 «para cada semestre» (texto reconocido; fecha del decreto en la hoja) | Coincide; los decretos son de diciembre de 2000 y se publican en enero de 2001 |
+| 15845 | 50 | Decreto 422: «Hogar Instituto Luis Linares – La Caldera», 17 cargos, 2 funciones jerárquicas (imagen); la guardería de Vaqueros, por el texto reconocido de h44 | Coincide |
+| 16056 | 41, 42 | Ley 7.118: La Caldera 450,389 y 58,703; Vaqueros 410,722 y 55,789 (imagen) | Coincide |
+| 15968 | 18 | Licitación Pública 01/00 de la Municipalidad de La Caldera: «Remodelación, ampliación y explotación del Camping "Santa Mónica"», «Concesión por siete (7) años» (imagen) | Coincide |
+| 15865 | 6 | Res. 060: «Encauzamiento sobre río Las Nieves», zona Escuela San Francisco de Asís, Los Yacones, $ 9.002,40 (texto reconocido) | Coincide |
+
+21 cotejos sobre 33 hojas de 20 ediciones y dos anexos (16 sobre la imagen; la 14253, la 14274, la 16063, la guardería de la 15845 y la 15865, sobre el texto reconocido).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:508 | La fila del 24 de noviembre de 1993 cita la Res. 408 D como «Provisión agua corriente en La Calderilla - Departamento La Caldera», que es la redacción de la 252 D, de julio; la 408 D dice «Provisión de Agua Corriente en La Calderilla - Departamento La Caldera» | 4 | Se transcribe la 408 D |
+| 2 | A:505; 11:296 | La resolución de la estación de aforos de El Angosto se cita como «Res. 94-D»: el encabezado imprime «Resol. Nº 04-D - 14-1-93», y la serie lo decide (control 1 del flujo §5.6: es del 14 de enero, y la 252 D es de julio); el número venía del informe LEE sin rehacerse | 3 | 04-D |
+| 3 | A:505; 11:296; 23:13 | «en 1993 la Provincia tenía todavía una Estación de Aforos ..., cuyo aforador ... es sumariado ese año», y en la fila del año «la estación de aforos ... tiene todavía un aforador (Res. 94-D)»: la 04-D cierra un sumario ordenado en 1990 a un agente que había renunciado en mayo de 1991; no prueba un aforador en 1993, que da la planta de marzo (Decreto 559), y describía a una persona identificable en un sumario sin necesidad | 5 | La fila del año apoya el aforador en la planta del Decreto 559; el capítulo 11 dice que la resolución de enero nombra la estación al cerrar un expediente de personal de 1990, sin el sumario; el capítulo 23, «de lo que la Provincia aforaba todavía en El Angosto a principios de los noventa» |
+| 4 | F:121 | «cuatro traen separatas ---la Ley 7118, de presupuesto, una ley procesal, el Código de Procedimientos Mineros y la ley de la caja...---»: según el informe, de las cuatro ediciones de 2001 con más hojas que páginas, sólo dos traen separatas; la ley procesal va foliada con el Boletín | 5 | «cuatro traen más hojas que páginas ---la Ley 7118, de presupuesto, una ley procesal foliada con el Boletín y, en separata, ...---» |
+| 5 | 09:705 | Francisco S. Urquiza «en 1944 figuraba como el mayor propietario del departamento»: el capítulo 3, la fila de 1944 del apéndice A y el apéndice E le dan la segunda valuación del revalúo (la partida 10, de un titular particular, vale más de cuatro veces la suya). Línea vigente de una ronda anterior, junto a las que tocó el AMPLÍA | 5 | «en 1944 tenía la segunda valuación del revalúo del departamento» |
+| 6 | 26:236 | «en 1989 Arquitectura pinta ..., en 1993 aprueba, para un concurso de precios, la primera etapa de la construcción de la 429»: la Res. 287 D es de la Secretaría de Obras y Servicios Públicos, que aprueba el legajo de Arquitectura | 5 | «en 1993 la Provincia le aprueba, para un concurso de precios, el legajo de la primera etapa ...» |
+| 7 | A:540 | En la fila de 2002, «Fue el primer año posterior a 1994 que este libro leyó de corrido»: desde el AMPLÍA 1995-1997 la frase en presente era falsa, y el AMPLÍA la pasó a pasado, que es lenguaje de proceso fuera de los apéndices de método | 12 | Se quita |
+
+Resta: en el aspecto 5, un superlativo que el propio libro desmiente (−10) y tres afirmaciones de una frase más allá del acto o del informe: observaciones repetidas, escala general, **70**; en el aspecto 3, un número importado del informe sin rehacer, **95**; en el aspecto 4, una cita que sigue la redacción de otro acto sin cambiar el sentido, **87**; en el aspecto 12, una frase de proceso, escala general, **90**. Ningún error de consistencia en las 54,6 páginas: el hallazgo 5 contradice al capítulo 3, pero resta en el aspecto 5, el más específico; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: cinco en el AMPLÍA 1993-2001 (`52e46b7`): los hallazgos 1, 2, 3, 4 y 6; el 2 y el 3 vienen del informe LEE 1993, que da «94-D» y «sumario a un aforador» (pendiente nuevo P273). El 5 es de una ronda anterior, en una línea que ninguna ronda posterior volvió a leer, y el 7, una corrección a medias del AMPLÍA sobre una falla que traía desde el AMPLÍA 1995-1997. Ninguno lo atrapó un control automático: los encontraron el cotejo y la relectura del contexto.
+
+**Descartados (falsos positivos, 4).** El 4,09 por ciento de la Res. SOP 266: se sospechó que el presupuesto fuera 60.408 (que da exactamente 4,09), y la imagen lo trae en letras, «sesenta mil cuatrocientos ochenta»: el libro tiene razón. «En 2001 la obra del río vuelve a las empresas» (22:545), cuando en 2000 una de las tres obras fue a un particular: el particular es el contratista de la obra menor, y las dos del río La Caldera y del Wierna fueron a la Municipalidad; se sostiene. Los decretos 3.390 y 3.392, que la fila de 2001 trae y el capítulo 26 fecha en diciembre: son del 26 de diciembre de 2000 y se publican en 2001, y la fila es del año del Boletín, como en el resto del apéndice. Las matrículas de los remates de 2000 y 2001: el libro no nombra a los demandados, y es el criterio de las rondas anteriores.
+
+**Pendientes revisados.** P268 a P272, abiertos por el AMPLÍA, siguen abiertos; el texto de P270 da la resolución como 94-D y con un aforador sumariado en 1993: vale lo de esta ronda (04-D; un expediente de 1990 de un agente que renunció en 1991; el aforador de 1993 está en la planta del Decreto 559), y el pedido de los registros posteriores a 1986 sigue en pie. P262: el control de menciones de cobertura de esta ronda se corrió sin distinguir mayúsculas; el pendiente es de la herramienta y sigue abierto. Pendiente nuevo: P273.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.595/25.595 vigentes en `e9e66da` | 25.561 vigentes; 34 caducas |
+| Citas entre comillas de material de 1993, 2000 y 2001 en las líneas nuevas contra el acto | 14 cadenas («Provisión agua corriente ...» de la 252 D y de la 408 D, «para la aprobación de certificados de obra de La Caldera», «Centro de Salud Nº 21 . La Caldera», «Ayudante Técnico Aforador», «Estación de Aforos del Río Mojotoro (El Angosto)», «el señor Intendente de La Caldera, Don Héctor Miguel Calabró», «Intendente de la Municipalidad de La Caldera, Dr. Héctor Miguel Calabró», «Encauzamiento de Emergencia sobre río Wierna ...», «Encauzamiento sobre río La Caldera ...», «Encauzamiento sobre Río Vaqueros, Arroyo Chaile y Arroyo Urquiza ...», «Hogar Instituto Luis Linares - La Caldera», «Santa Mónica», «electo senador por el departamento de La Caldera») | 13/14 literales sobre la imagen salvo el último, que no se cotejó; la de la 408 D, hallazgo 1 |
+| Cifras de las líneas nuevas contra el acto | 22 en 13 ediciones (Res. 104, 105, 266, 252 D, 408 D, 060; Ley 7.118; Decretos 554, 1.722, 3.390, 3.392 y 422; mesas de 1993 y de 2001, por el recuento de los informes) | 22/22; cinco sobre el texto reconocido |
+| Recálculos | Res. 408 D: 121.068,71 / 110.035,12 = 1,1003; Res. 105: 44.320 − 40.320 = 4.000; Res. SOP 266: 1 − 57.934,80 / 60.480 = 4,21 %; Decreto 1.722: 0,63 / 1,2 = 0,525; Decreto 2.248: los diecinueve renglones del informe suman 680.000,00; mesas de 2001: 5 + 5 + 6 + 5 + 1 = 22; tramos: 42 + 67 = 109, y 31 + 14 + 1 + 20 = 66 fuera de las ventanas además de 1948 | Todos cierran |
+| Superlativos y ausencias en las líneas agregadas por el AMPLÍA y la fase 6 | 44 líneas; coincidencias en el texto nuevo: «lo hallado del Boletín de ese año no trae la inauguración» (A:506 y 22:545), «no trae un acto que rescinda esas dos transferencias» (26:236), «la primera etapa» (nombre de obra) | Las tres ausencias llevan su universo («lo hallado», «lo leído del año, con pendientes»); 0 caídas |
+| Repaso de ventana: frases con fórmula de ausencia o superlativo que nombran 1993, 2000 o 2001 o cuyo intervalo los incluye | las 27 del índice del AMPLÍA, más el contexto de las líneas tocadas | Las que caían las corrigió el AMPLÍA; la del revalúo de 1944 (09:705) no es de la ventana y se encontró por contexto: hallazgo 5 |
+| Menciones de cobertura («1994 a 1999», «1992, 1994», «1992 y 1994», «sin 1993», «1993, que el repositorio», «ciento seis», «ciento cinco», «sesenta y tres/cuatro/seis/siete», «diez/trece últimos», «dieciocho de ellos», «1989 a 1999», «1995 a 1999», «hasta 1999», «1989 a 1992»), **sin distinguir mayúsculas** | 25.605/25.605 | 0 sin actualizar |
+| Remisiones a capítulos posteriores sin «más adelante» | `\ref{cap:…}` nuevos en capítulos | 0 sin marcar entre los nuevos de los capítulos 1, 9, 11, 15, 18, 22 y 26 (las remisiones de las líneas nuevas van a capítulos posteriores sólo desde el 1, con «más adelante») |
+| Privacidad: personas nombradas en las líneas nuevas | 44/44 | 0 caídas. Nombrados: electos de 1993 y 2001 (senadores, concejales), autoridades partidarias, la intendente de Vaqueros de 1992, Calabró; empresas (Reynaldo Lucardi S.R.L., Irac S.R.L., Jaime Durán Agropecuaria S.A.). Sin nombre: el agente del expediente de 1990 (la fase 6 quita además el sumario), la médica del centro de Vaqueros, el jefe del Registro Civil jubilado, los herederos y demandados de los remates |
+| Largo de los archivos antes y después de la fase 6 | 6 archivos | no cambia |
+| Compilación | fase 6 sobre `52e46b7` | Compila; 1.059 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `52e46b7` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Frases nuevas con acto, edición y hoja; escala general por P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | Hallazgo 1, aplicado; 21 cotejos sobre 20 ediciones y dos anexos, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 70 | 100 | Hallazgos 3, 4, 5 y 6, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Las elecciones de 1993 y 2001 constan en acta; sin discrepancias nuevas |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 54,6 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El AMPLÍA sacó del pedido de actas la de 1999, que el Boletín publica; ningún pedido satisfecho sigue en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La tercera tesis se rejuzga con 1993, 2000 y 2001: el convenio de Vaqueros de 1992 y los encauzamientos de 2000 son ejecución municipal de obras provinciales, y el camping es un bien propio |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Las plantas de 1993 y las actas de 1993 y 2001 entran a las series de presencia y de política |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 7, aplicado |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Sin caídas; la fase 6 quita el sumario de un agente identificable por el cargo |
+
+**Nota inicial: 84,0 antes del tope y 84,0 después** (tope de 90 por la cobertura acumulada inicial del 99,8 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en la ronda 88.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P268: `LEE 1993 cierre`, `LEE 2000 cierre` y `LEE 2001 cierre`, que corregirían de paso en el informe de 1993 el número y la materia de la 04-D (P273); (5) P262: llevar a la herramienta el control de menciones de cobertura sin distinguir mayúsculas, que esta ronda corrió a mano.
+
+**Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.059 páginas. **Avance de la investigación:** la **tercera tesis** suma un convenio de 1992 en que la Municipalidad de Vaqueros pone materiales y personal en una obra de defensa que supervisa la Administración General de Aguas, dos encauzamientos de 2000 que la Provincia le adjudica en forma directa a la de La Caldera ---uno por encima de su presupuesto--- y la licitación municipal de su camping, un acto sobre un bien propio; en junio de 2001 la obra del río vuelve a una empresa. La serie del agua de El Angosto gana un dato acotado: la Provincia tenía en 1993 un aforador en planta y un estudio de estiaje de 1992, sin series publicadas. Ninguna cambia de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 44 líneas (0,17 %; 54,6 páginas). Cobertura acumulada: 25.605 de 25.605 (100,0 %). Falsos positivos descartados: 4. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1993-2001 (dos heredados del informe LEE 1993), más una corrección incompleta del AMPLÍA sobre una falla del AMPLÍA 1995-1997; atrapados por un control automático: 0. Y uno de una ronda anterior (el revalúo de 1944 en el capítulo 9), que el cotejo de contexto encontró.
