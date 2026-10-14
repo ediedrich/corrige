@@ -7178,3 +7178,119 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.089 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana su primer dato a favor (1928: el recambio de mayo sigue en ocho a diecisiete días al cambio de gobernador del 1º de mayo) y dos en contra dentro del mismo año (las renuncias del 26 de marzo y los relevos de agosto a noviembre).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 115 líneas (0,44 %; 26,4 páginas). Cobertura acumulada: 25.918 de 25.918 (100,0 %). Falsos positivos descartados: 6. Recortes: P301 y P304 sin revisar (los scripts de las láminas están en otro repositorio); el 6974 y el 9438, sólo en la capa; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 7, los siete en el AMPLÍA 1928, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 4 (en el AMPLÍA). Dos de los siete (3 y 4) nacen de corregir una fecha («desde 1929» por «desde 1928») sin releer la serie entera que la frase resume: **cuando el AMPLÍA cambia el extremo de una serie (colegios, gobernadores, saltos), la búsqueda de la serie se hace en todo el capítulo y la frase nueva se coteja con la primera que la cuenta**. Y el hallazgo 1 sugiere afinar `control_amplia.py`: marcar como VERBO «aprueba los trabajos» y «aprueba la obra» cuando el acto dice «aprueba la ejecución» o «autoriza a invertir», que en los decretos de obras son cosas distintas.
+
+## Ronda 107 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1929. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `57eb3f7` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1929, sobre `d1b9b53`, aplicado por `3-registrar` el 14/10 a las 14:28), con la fase 6 en `ronda-107.patch` (un commit sobre `57eb3f7`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1929** ni el informe LEE 1929: la abrió la tarea programada. Para el cotejo se bajaron del Release `1929` de `boletines-salta` doce ediciones (1258, 1262, 1264, 1266, 1269, 1271, 1272, 1280, 1286, 1292, 1294 y 1300). El AMPLÍA había corrido `control_amplia.py` (flujo v4 §6.6): 151 marcas en la última corrida, cinco corregidas antes de compilar y las demás justificadas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 106 (25.918 de 25.918, sobre `5aceaf6`, sin cambios de largo en `d1b9b53`) se trasladaron por diff a `57eb3f7`. **El AMPLÍA caduca 46 líneas y deja 85 nuevas o modificadas**; cambian de largo el apéndice A (+4), el apéndice D (+1), el capítulo 4 (+32) y el capítulo 20 (+2); los apéndices E, F y H, la advertencia y los capítulos 3, 14, 17, 22 y 23 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.872 de 25.957.
+
+### Lectura sobre el texto (numeración de `57eb3f7`)
+
+Se leyeron **las 85 líneas, enteras** (80.600 bytes; la línea 56 de F, de 51.581 bytes, y la 45 de la advertencia, de 12.701, también enteras), contra el informe LEE 1929 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 9 (178–186) |
+| ape/D-pedidos.tex | 3 (215, 219, 380) |
+| ape/E-personas.tex | 3 (80, 84, 86) |
+| ape/F-fuentes.tex | 1 (56) |
+| ape/H-dominio.tex | 2 (114, 116) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/03-fincas.tex | 3 (635, 991–992) |
+| cap/04-siglo.tex | 42 (3074–3102, 3121–3124, 3168–3170, 3177–3178, 3189–3192) |
+| cap/14-poblacion.tex | 6 (147–151, 154) |
+| cap/17-tierrafiscal.tex | 1 (299) |
+| cap/20-opacidad.tex | 11 (12, 25–27, 30–32, 36, 38, 42, 45) |
+| cap/22-infraestructura.tex | 1 (54) |
+| cap/23-plan.tex | 2 (45–46) |
+
+Contexto releído entero (no suma cobertura): 20-opacidad:10–50; 23-plan:40–50; 22-infraestructura:50–56; 03-fincas:630–637 y 985–993; 04-siglo:3103–3125 y 3155–3195; la lista de menciones de «catastr», «comisarios auxiliares de 19», «Ley 1269» y «11078» en todo el manuscrito; y, para la línea 56 de F, el §P del informe LEE 1931 (22/09/2026).
+
+**Esta ronda: 85 líneas**, 80.600 bytes sobre 3.610.236, que en las 1.093 páginas de la base equivalen a **24,4 páginas**.
+
+Acumulado: 25.872 vigentes + 85 = **25.957 de 25.957 (100,0 %)**. La fase 6 cambia 16 líneas sin cambiar el largo de ningún archivo: 14 de las leídas en esta ronda y dos fuera de ellas (20-opacidad:44 y 46), releídas enteras y escritas en la ronda: **25.957 de 25.957 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1258 | 2 | «C. Electoral N° 2—La Caldera», circuitos 5 y 6, nueve nombres; «Urquiza Francisco Solano» suplente 1° de la mesa del circuito 6 (imagen) | Coincide; el acto no dice que sea el presidente de 1928: hallazgo 2 |
+| 1262 | 3 | 10182 del 4 de febrero: «Autorízase el gasto [...] dinero con el cual, se pagará al señor Donato Solá como saldo, por las defensas hechas» sobre la margen izquierda del Mojotoro (imagen, las dos columnas) | Autoriza el gasto; no paga: hallazgo 3 |
+| 1264 | 8 | 10255: «por haber sido proclamado candidato a Diputado a la H. Legislatura», Teófilo Reyes interino, CORNEJO—LUIS C. URIBURU (imagen) | Coincide |
+| 1266 | 8 | 10311: «Apruèbase la ejecuciòn de los trabajos indicados por la Comisión de Caminos», «Lagunilla», Estación Mojotoro, $ 57.4?8.76 y «Cincuenta y siete mil cuatrocientos diez y ocho pesos setenta y seis centavos» (imagen) | Coincide; la cifra la decide la letra |
+| 1269 | 4 | 10.389: «Manuel Condorí en reemplazo de don Teófilo Reyes quién desempeñaba dicho cargo interinamente» (imagen) | Coincide |
+| 1271 | 3 | Los dos 10491 del 23 de abril en la misma columna; el primero, «para el ejercicio del corriente año», Echaniz y Reyes (imagen) | Coincide |
+| 1272 | 12 | 10514 (impreso sin punto): Clara Iradi «en reemplazo de don Julio Royo Ortíz», «Rentos» (imagen) | Coincide |
+| 1280 | 4 | 10.696: «en uso de la licencia acordada por la H. Legislatura y encontrándose ausente de ella, el señor Presidente del H. Senado», «Delégase el mando gubernativo [...] doctor Ernesto F. Bavio» (imagen) | Coincide |
+| 1286 | 17 | 10.910: «en la cual éste manifiesta que teniendo urgente necesidad de la suma de $ 500, y habiendo terminado la catastración», liquidación al Director «para que éste a su vez haga entrega», Ley 9720 (imagen) | Coincide; la solicitud va sin fecha: hallazgo 4 |
+| 1292 | 13 | Ley 11070: «Autorízase al P. Ejecutivo de la Provincia a invertir hasta la suma de cinco mil pesos [...] en las obras de defensa» (imagen) y su continuación en la h. 14, Betania, Campo Santo y Güemes (capa) | Autoriza a invertir: hallazgo 3 |
+| 1294 | 19 | Aviso (242): las cuatro citas del cap. 14 («con una extensiòn de cinco hectareas más o menos», «o sean las 2/3 partes de su avaluación», los cuatro linderos), base, fecha y martillero (imagen) | Coincide |
+| 1300 | 3 | 11300: terna «que eleva la H. Comisión Municipal de Caldera», «Ingeniero Joaquín Echaniz y Teòfilo Reyes»; no remite al 10491 ni dice que reitere un nombramiento (imagen) | Hallazgo 1 |
+
+12 cotejos sobre 13 hojas de 12 ediciones, todos sobre la imagen salvo la continuación de la ley 11070, de la capa.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:179 y 04-siglo:3086–3089 | El 11300 «los vuelve a nombrar»; «Los jueces de paz, Joaquín Echaniz y Teófilo Reyes, se nombran dos veces»: el Boletín no dice que los nombrados de noviembre sean los de abril (informe LEE 1929, A.19), y el 11300 no remite al 10491 | 5 | «nombra en los dos cargos a un Joaquín Echaniz y un Teófilo Reyes sin decir para qué ejercicio ni que sean los mismos»; cap. 4: «Dos decretos nombran [...] a un Joaquín Echaniz y un Teófilo Reyes [...] sin decir para cuál ni que sean los mismos» |
+| 2 | 04-siglo:3092–3093 | «la Junta de Escrutinio vuelve a poner en la mesa del circuito 6 a «Urquiza Francisco Solano», ahora de suplente primero»: identidad con el presidente de 1928 que el Boletín no afirma (informe LEE 1929, A.1) | 5 | «pone de suplente primero [...] a un «Urquiza Francisco Solano», el nombre que en 1928 la presidía, sin decir que sea el mismo» |
+| 3 | 04-siglo:3122–3123 | «un decreto paga el saldo de unas defensas [...] y otra ley manda obras de defensa»: el 10182 autoriza el gasto con que se pagará el saldo; la ley 11070 autoriza al Ejecutivo a invertir hasta cinco mil pesos | 5 | «un decreto autoriza el gasto con que se pagará el saldo de unas defensas hechas [...] y otra ley, la 11070, autoriza a invertir hasta cinco mil pesos en obras de defensa» |
+| 4 | 04-siglo:3168–3169 y D:215 | «su autor lo da por terminado en agosto de 1929»; «que Adeodato Aybar declaró terminada en agosto de 1929»: agosto es el mes del decreto que transcribe la solicitud, que va sin fecha | 3 | «en una solicitud sin fecha que el decreto del 5 de agosto de 1929 transcribe»; D pide además la fecha de la solicitud |
+| 5 | D:215 | «y el decreto que fijó finalmente su remuneración»: el pedido presume un decreto que el Boletín de 1929 no publica | 5 | «y si un decreto fijó después su remuneración» |
+| 6 | 00-advertencia:45 | «con la cadena de Tesorería en tres tramos porque falta el resumen de junio»: sin junio la cadena tiene dos tramos; el tercero lo hace el empalme de julio a agosto, que A:178 y F:56 dan | 7 | «porque falta el resumen de junio y el saldo que julio pasa a agosto no es el que agosto recibe» |
+| 7 | F:56 | «las sesenta y nueve hojas que mencionan la palabra «plano» remiten siempre a uno archivado en un expediente», en la frase que el AMPLÍA amplió a 1929–1932: las 69 son de 1931, y el informe LEE 1931 dice «casi siempre» y cita la 1367 h4, que ratifica la necesidad del plano catastral | 5 | «de las sesenta y nueve hojas de ese año [...] casi todas remiten a uno archivado en un expediente y la que no ---la Nº 1.367, h. 4--- ratifica la necesidad de confeccionar el plano catastral» |
+| 8 | 20-opacidad:44–46 | «El levantamiento catastral de tres departamentos costó, en el pago a cuenta de 1929, menos de la décima parte de una finca»: el decreto liquida un adelanto a cuenta de una remuneración sin fijar; no da el costo | 5 | «El pago a cuenta de 1929 [...] fue menos de la décima parte de la base de remate de una finca de diez hectáreas; lo que costó en total el Boletín no lo dice» |
+| 9 | 23-plan:45–46 | «Levantar el estado dominial [...]. El catastrador del departamento lo declaró terminado en 1929»: el «lo» remite al estado dominial; el catastrador declaró terminada la catastración | 5 | «declaró terminada su catastración en 1929» |
+
+Resta: en el aspecto 5, siete frases que dicen más que el acto o que el informe (5 cada una), **65**; en el aspecto 3, una fecha de acto dada a otro hecho (5), **95**; en el aspecto 7, un error de consistencia en 24,4 páginas (4,1 por cada cien, hasta 8), **40**.
+
+**Errores introducidos por la propia auditoría**: nueve, los nueve en el AMPLÍA 1929 (`57eb3f7`); el 7 y el 8 están en frases anteriores que el AMPLÍA tocó (la ventana de 1929 a 1932 en F y el «costó [...] en pagos a cuenta» del cap. 20, que reescribió sin rehacer el universo ni el verbo). **Ninguno lo dejó `control_amplia.py` como no resuelto**: el 1 y el 2 son IDENT que el AMPLÍA justificó (el script marcó 10 en la última corrida); el 3 es una marca que el AMPLÍA corrigió con un verbo que el acto no usa («paga») y otro que endurece el de la ley («manda obras»); el 4 es una fecha fuera de una fila con asterisco; el 5, el 8 y el 9 caen fuera de las comillas y sin verbo de acto; el 6 y el 7 son VENTANA sobre universos que el script no recalcula. **Atrapados por el control antes de compilar el AMPLÍA: cinco**, según su `.json` (las citas del aviso de Vaqueros rehechas a la imagen, el verbo del 10311, la fórmula del 10.696, «ningún acto del año» por «de las 52 ediciones» y la frase de las defensas del Mojotoro, cuya corrección dejó todavía el «paga» del hallazgo 3), que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 6).** (a) «Ley 1269 (original 11078)» (A:180): es la numeración del Digesto (apéndice C, línea 277, y cap. 16), no una errata. (b) «casi la mitad son de cargos» (04-siglo:3074–3075): ocho de diecinueve fichas llevan la clase CARGOS, sola o con JUSTICIA. (c) «con licencia de la Legislatura y ausente el presidente del Senado» (A:185): el 10.696 dice «en uso de la licencia acordada por la H. Legislatura» (imagen). (d) «Primer catastro del departamento que este libro encuentra» (A:186 y 04-siglo:3168): ninguna mención anterior a 1929 de un catastro del departamento en el manuscrito; el universo está en la frase. (e) «veinte años después del padrón de comisarios auxiliares de 1909» (04-siglo:3192) frente a «el padrón de comisarios auxiliares de 1919» (03-fincas:989): el libro tiene padrones de 1909, 1918 y 1919 (04-siglo:921). (f) «Decreto 10.514» (A:184 y 04-siglo:3186) frente al «10514» impreso: normalización del número fuera de cita, como en el resto de la cronología; no es cita.
+
+**Pendientes revisados.** P298: 1929 no tiene cambio de gobernador; el interinato de Bavio (18-VI a 2-IX) no trae relevos del departamento (sólo el 10.856, que reconoce haberes, y el 10.910); los relevos del año (comisaría en febrero y marzo, receptoría y jueces en abril, jueces en noviembre) no caen junto a un cambio del Ejecutivo, salvo que el 11300 es del mismo 25 de noviembre en que se acepta la renuncia de Uriburu y se nombra a Sosa en Gobierno (11299 y 11301), y lo refrenda todavía Uriburu: dato neutro o en contra. P305 y P304 siguen abiertos: los scripts de las láminas están en `mapas_caldera`, que esta sesión no clonó. P67: la parte de 1929 la cerró el informe LEE 1929 y el AMPLÍA la llevó a H. **P306 nuevo**: el libro fecha en 1929 la declaración de Aybar (caps. 03, 20 y 23, A y E), y el decreto la transcribe sin fecha; el expediente 3463 D, ya pedido en D, la daría.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.918/25.918 vigentes en `d1b9b53` | 25.872 vigentes; 46 caducas; 85 nuevas o modificadas |
+| `control_amplia.py` sobre el AMPLÍA (lo corrió la sesión del AMPLÍA) | 85 líneas | 151 marcas en la última corrida; 5 corregidas, 151 justificadas, 0 sin resolver |
+| Menciones de «catastr» con un año anterior a 1929 en todo el manuscrito | 25.957 líneas de `57eb3f7` | ningún catastro del departamento anterior a 1929; las demás son números de catastro actuales |
+| Menciones de «Ley 1269», «11078» y «comisarios auxiliares de 19» | 25.957 líneas | la Ley 1269 es el número del Digesto de la 11078 en C, D, G y caps. 16 y 17; padrones de 1909, 1918 y 1919 |
+| Superlativos y ausencias en las 85 líneas | 85 líneas | los superlativos nuevos («primer catastro», «primer apellido», «segunda mujer», «antecedente más antiguo») llevan universo en la frase o en la anterior; «siempre» sin universo en F (hallazgo 7) |
+| Largo de los archivos antes y después de la fase 6 | 7 archivos | ninguno cambia de largo |
+| Compilación | fase 6 sobre `57eb3f7` | Compila; 1.093 páginas (la base `57eb3f7`, compilada en la misma máquina, también da 1.093); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `57eb3f7` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega unas veinticinco referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 4, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 12 cotejos sobre 12 ediciones, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 65 | 100 | Hallazgos 1, 2, 3, 5, 7, 8 y 9, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 40 | 100 | Hallazgo 6 en 24,4 páginas, aplicado |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedido nuevo del Registro Oficial de 1929 y del expediente del remate de Vaqueros, sin duplicados; el del expediente 3463 D suma la fecha de la solicitud |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; el argumento del cap. 20 ya venía condicionado por el AMPLÍA |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | La remisión nueva al decreto del catastro «de más abajo» está marcada |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P304 y P305 |
+| 14 | Utilidad pública | 4 | 100 | 100 | La propuesta del cap. 23 ya no atribuye al catastrador el estado dominial |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, candidatos, autoridades de mesa, propietarios y ejecutados de 1929, presumiblemente fallecidos (adultos de registros de 1944 o anteriores); los apellidos de origen andino se describen como apellidos (excepción de los registros históricos) |
+
+**Nota inicial: 78,4 antes del tope y 78,4 después** (tope de 90 por la cobertura acumulada inicial del 99,67 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 106.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1926, 1927 y 1929 alimentan con datos en contra o neutros y 1928 con el primero a favor; (5) P301, P304 y P305: revisar las láminas fig:boletin, fig:parajesnom y fig:cargos con sus scripts.
+
+**Avance del libro:** 9 de 9 hallazgos resueltos; compila sin errores, 1.093 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos suma 1929 sin dato a favor (sin cambio de gobernador; los relevos del año no siguen al interinato de Bavio).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 85 líneas (0,33 %; 24,4 páginas). Cobertura acumulada: 25.957 de 25.957 (100,0 %). Falsos positivos descartados: 6. Recortes: P304 y P305 sin revisar (los scripts de las láminas están en otro repositorio); la continuación de la ley 11070 (1292 h14), sólo en la capa; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 9, los nueve en el AMPLÍA 1929, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 5 (en el AMPLÍA). Dos de los nueve (1 y 2) son identidades que el informe LEE 1929 había retirado expresamente («el Boletín no dice que sean las mismas personas») y que el AMPLÍA volvió a afirmar con un verbo de repetición («vuelve a nombrar», «vuelve a poner», «se nombran dos veces»): **los verbos de repetición afirman identidad, y `control_amplia.py` debería marcarlos como IDENT** cuando el sujeto es un nombre de persona. Y dos más (7 y 8) nacen de reescribir un pedazo de una frase vieja sin rehacer el resto: **cuando el AMPLÍA cambia el universo de una frase («de los cuatro años» por «de 1929 a 1932»), el resto de la frase se coteja con el informe del año al que pertenece cada cifra**.

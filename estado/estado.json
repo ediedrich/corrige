@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-14T14:28:37",
+ "actualizado": "2026-10-14T14:48:35",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -15977,6 +15977,62 @@
    "git_am": "OK sobre 5aceaf6 (clon limpio), arbol identico",
    "nota_release": "decretos_1928.csv del Release 1928 trae solo el encabezado; la serie se rehizo sobre la capa de los 52 PDF",
    "propuesta_control": "control_amplia.py: (1) cuando el AMPLIA cambia el extremo de una serie (colegios electorales, gobernadores, saltos de numeracion), buscar la serie en todo el capitulo y no solo en la ventana de cinco lineas; (2) marcar como VERBO 'aprueba los trabajos' / 'aprueba la obra' cuando el acto dice 'aprueba la ejecucion' o 'autoriza a invertir'; (3) marcar como FECHA la fecha de un decreto atribuida a otro hecho que el decreto menciona (demanda, renuncia, presentacion)"
+  },
+  {
+   "ronda": 107,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 78.4,
+   "nota_final": 88.3,
+   "tope": 90,
+   "cobertura": 100.0,
+   "fecha": "2026-10-14",
+   "hallazgos": 9,
+   "aplicados": 9,
+   "atrapados": 5,
+   "base": "57eb3f7",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P306",
+     "tipo": "libro",
+     "anios": [
+      1929
+     ],
+     "texto": "Fecha de la declaracion de Adeodato Aybar: el decreto 10.910 (5-VIII-1929, B.O. 1286 h17-18) transcribe su solicitud ('habiendo terminado la catastracion de los Departamentos de Campo Santo, Caldera y La Viña') sin fecha; el libro la fecha en 1929 (caps. 03, 20 y 23, A y E). El expediente 3463 D, ya pedido en D, daria la fecha; si fuera de 1928, corregir esas menciones.",
+     "abierto": "2026-10-14",
+     "hecho": null
+    }
+   ],
+   "pendientes_trabajados_sin_cerrar": {
+    "P298": "1929: sin cambio de gobernador; el interinato de Bavio (18-VI a 2-IX) no trae relevos del departamento (solo 10.856, reconocimiento de haberes, y 10.910); los relevos del año (comisaria II y III, receptoria y jueces IV, jueces XI) no siguen a un cambio del Ejecutivo; el 11300 es del mismo 25-XI en que cambia el ministro de Gobierno (11299, 11301) y lo refrenda todavia Uriburu: dato neutro o en contra",
+    "P304": "sin revisar: los scripts de las laminas estan en mapas_caldera",
+    "P305": "sin revisar: los scripts de las laminas estan en mapas_caldera",
+    "P67": "la parte de 1929 la cerro el informe LEE 1929 y el AMPLIA 1929 la llevo a H; quedan las de otros anios"
+   },
+   "cotejos_imagen": {
+    "cotejos": 12,
+    "hojas": 13,
+    "ediciones": 12
+   },
+   "lectura": {
+    "lineas": 85,
+    "bytes": 80600,
+    "paginas_equivalentes": 24.4,
+    "caducas_por_amplia": 46,
+    "vigentes_tras_traslado": 25872,
+    "total": 25957
+   },
+   "compilacion": {
+    "paginas": 1093,
+    "paginas_base_misma_maquina": 1093,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 42
+   },
+   "git_am": "OK sobre 57eb3f7 (clon limpio), arbol identico",
+   "propuesta_control": "control_amplia.py: (1) marcar como IDENT los verbos de repeticion con sujeto u objeto persona ('vuelve a nombrar', 'vuelve a poner', 'se nombran dos veces', 'otra vez'); (2) cuando el AMPLIA cambia el universo de una frase ('de los cuatro anios' -> 'de 1929 a 1932'), marcar como VENTANA las cifras y los 'siempre'/'nunca' del resto de la frase; (3) marcar como VERBO 'paga' cuando el acto dice 'autorizase el gasto' o 'se pagara', y 'costo' sobre un pago a cuenta"
   }
  ],
  "pendientes": [
@@ -19460,9 +19516,19 @@
    "texto": "Laminas de mapas_caldera sin 1929: (1) fig:parajesnom no incluye la nomina del decreto 10175 de 1929 (Colegio N° 2: circuito 5 con 4 + 31 nombres y circuito 6 con 10; B.O. 1261 h5; 45 a 47 segun se partan 'Abra La Sierra' y 'Villa, Urquiza'); (2) revisar datos/cargos de fig:cargos con los actos de 1929: 10255 (renuncia de Royo Ortiz, Reyes interino, 22-II), 10.389 (Condorí, 22-III), 10514 (Iradi, 27-IV), 10189 (Plaza suspendido, Sarmiento interino en Vaqueros), 10491 y 11300 (Echaniz y Reyes jueces de paz). Requiere script publicado (flujo 6.4). Extiende P304 (1928).",
    "abierto": "2026-10-14",
    "hecho": null
+  },
+  {
+   "id": "P306",
+   "tipo": "libro",
+   "anios": [
+    1929
+   ],
+   "texto": "Fecha de la declaracion de Adeodato Aybar: el decreto 10.910 (5-VIII-1929, B.O. 1286 h17-18) transcribe su solicitud ('habiendo terminado la catastracion de los Departamentos de Campo Santo, Caldera y La Viña') sin fecha; el libro la fecha en 1929 (caps. 03, 20 y 23, A y E). El expediente 3463 D, ya pedido en D, daria la fecha; si fuera de 1928, corregir esas menciones.",
+   "abierto": "2026-10-14",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
