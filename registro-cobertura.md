@@ -7294,3 +7294,108 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 9 de 9 hallazgos resueltos; compila sin errores, 1.093 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos suma 1929 sin dato a favor (sin cambio de gobernador; los relevos del año no siguen al interinato de Bavio).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 85 líneas (0,33 %; 24,4 páginas). Cobertura acumulada: 25.957 de 25.957 (100,0 %). Falsos positivos descartados: 6. Recortes: P304 y P305 sin revisar (los scripts de las láminas están en otro repositorio); la continuación de la ley 11070 (1292 h14), sólo en la capa; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 9, los nueve en el AMPLÍA 1929, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 5 (en el AMPLÍA). Dos de los nueve (1 y 2) son identidades que el informe LEE 1929 había retirado expresamente («el Boletín no dice que sean las mismas personas») y que el AMPLÍA volvió a afirmar con un verbo de repetición («vuelve a nombrar», «vuelve a poner», «se nombran dos veces»): **los verbos de repetición afirman identidad, y `control_amplia.py` debería marcarlos como IDENT** cuando el sujeto es un nombre de persona. Y dos más (7 y 8) nacen de reescribir un pedazo de una frase vieja sin rehacer el resto: **cuando el AMPLÍA cambia el universo de una frase («de los cuatro años» por «de 1929 a 1932»), el resto de la frase se coteja con el informe del año al que pertenece cada cifra**.
+
+## Ronda 108 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1930. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `57a94e1` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1930, sobre `12ce32a`, aplicado por `3-registrar` el 14/10 a las 16:03), con la fase 6 en `ronda-108.patch` (un commit sobre `57a94e1`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1930** ni el informe LEE 1930: la abrió la tarea programada. Para el cotejo se usaron diez ediciones del Release `1930` de `boletines-salta` (1310, 1313, 1316, 1330, 1341, 1344, 1345, 1347, 1352 y 1353), que la computadora de Eduardo ya tenía en `auto/tmp/r1930` desde el informe LEE. El AMPLÍA había corrido `control_amplia.py` (flujo v4 §6.6): cuatro corridas, 181 marcas en la última, dos corregidas antes de compilar y 180 justificadas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 107 (25.957 de 25.957, sobre `12ce32a`) se trasladaron por diff a `57a94e1`. **El AMPLÍA caduca 52 líneas y deja 89 nuevas o modificadas**; cambian de largo el apéndice A (+6), el apéndice D (+1) y el capítulo 4 (+30); los apéndices E, F y H, la advertencia y los capítulos 15 y 22 (prospectiva) cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.905 de 25.994.
+
+### Lectura sobre el texto (numeración de `57a94e1`)
+
+Se leyeron **las 89 líneas, enteras** (85.585 bytes; la línea 56 de F, de 53.141 bytes, y la 45 de la advertencia, de 13.105, también enteras), contra el informe LEE 1930 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 11 (176, 186, 190–192, 194–199) |
+| ape/D-pedidos.tex | 3 (121, 220, 380) |
+| ape/E-personas.tex | 2 (74, 78) |
+| ape/F-fuentes.tex | 1 (56) |
+| ape/H-dominio.tex | 2 (118, 120) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/04-siglo.tex | 65 (1517, 1553, 1679, 1688, 1693–1694, 1715–1717, 1726, 1728, 1731–1733, 1735, 1737–1739, 1742–1745, 1751, 1757, 1762, 1789–1791, 1810, 3071, 3103–3132, 3225, 3227, 5103–5105) |
+| cap/15-hacienda.tex | 3 (73, 77–78) |
+| cap/22-prospectiva.tex | 1 (141) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:1512–1555, 1676–1724, 1747–1812, 3064–3102, 3195–3232 y 5060–5106; 15-hacienda:66–80; 22-prospectiva:136–143; 26-presencia:186–196 (P308); A:138 y A:277; la lista de menciones de «1930» fuera de las líneas del AMPLÍA en todo el manuscrito; y, para la advertencia y F, el informe LEE 1931 (22/09/2026) en lo que dice de la edición 1356.
+
+**Esta ronda: 89 líneas**, 85.585 bytes sobre 3.623.906, que en las 1.095 páginas de la base equivalen a **25,9 páginas**.
+
+Acumulado: 25.905 vigentes + 89 = **25.994 de 25.994 (100,0 %)**. La fase 6 cambia seis líneas sin cambiar el largo de ningún archivo (A:192 y 196, D:220, 04-siglo:1735, 3122 y 3123), todas entre las leídas en esta ronda: **25.994 de 25.994 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1310 | 3 | 11503: «por renuncia de don Luis Lepers», «Miembro de la H. C. M. de La Caldera» (imagen) | Coincide |
+| 1313 | 11–13 | 1169 C, «con fecha 21 de Enero de 1925», «taámite»; 1198 C, «con fecha 18 de Setiembre de 1925» y abandono «desde el 26 de Setiembre de 1925» (imagen) | Coincide; «entre ocho días y siete meses» se rehizo sobre las ocho fechas |
+| 1316 | 9 | Decreto 11581: después de «Mesa núm. 3.—Casa Finca Lagunilla del Doctor Arturo S. Torino» sigue «COLEGIO ELECTORAL Nº 3—CAMPQ SANTO / CIRCUITO N· 7» (imagen) | Coincide: falta el Colegio Nº 2 |
+| 1330 | 13 | Res. 434: «tompoco existe Ley que la establezca», «Municipalidad de la Caldera», «dentro de la jurisdicción de aquella» (imagen) | Coincide con la ficha del cap. 15 |
+| 1341 | 2 | Acta 12.181: «Jefes y Oficiales del Ejército Nacional», la invitación «para que entregara el Gobierno al Coronel Ernesto A. Day», la respuesta, «careciendo de los elementos de defensa» y el retiro (imagen, las dos columnas) | Coincide; la cronología resume sin decir más que el acta |
+| 1344 | 9 | Aviso (631): «Embargo Preventivo Melchor Rocha vs. José González Yufra», 20 de noviembre, las dos bases de $ 1.333,33 (la segunda sin punto), «Potrero de Gallinato en el departamento de la Caldera» (imagen) | Coincide |
+| 1345 | 3 | 12308: «Siendo uno de los objetivos de la Intervención Nacional la reorganización de las autoridades Comunales de la Provincia para lo que es necesario proceder a la compulsa del estado en que ellas se encuentran», seis comisionados, «de la Caldera al Sr. Augusto Regis» (imagen) | Hallazgo 1 |
+| 1347 | 23 | Edicto (657): «como concesionario del cateo», «vértice Noroeste de la casa de los hermanos Quipildor», «la ubico a 500 metros al Oeste verdadero del Cerro de la Inga», «Quipildor Hemanos», 20 de julio de 1929, 14 de octubre de 1930 (imagen) | Coincide |
+| 1352 | 5 | 12589: «Vista la nota Nº. 6828 de fecha 6 del actual, solicitando la provisión de los cargos», sin autor; «la vacante dejada por don Benjamín Torres»; Brachieri en reemplazo de Sarmiento, «ad-honorem» (imagen) | Hallazgo 2 |
+| 1353 | 3 | 12595: «cien kilómetros» en los vistos y «siete kilòmetros» en el artículo (imagen) | Coincide |
+
+10 cotejos sobre 12 hojas de 10 ediciones, todos sobre la imagen; 14 citas del libro cotejadas, sin correcciones silenciosas.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:196 y 04-siglo:3122–3123 | El 12308, «un decreto cuyo objetivo es «la reorganización de las autoridades Comunales de la Provincia»»: el decreto invoca la reorganización como «uno de los objetivos de la Intervención Nacional», para lo que hace falta «la compulsa del estado en que ellas se encuentran»; el objetivo no es del decreto | 5 | «en un decreto que invoca, como «uno de los objetivos de la Intervención Nacional», «la reorganización de las autoridades Comunales de la Provincia»» |
+| 2 | D:220 | «la nota 6828 de la Jefatura de Policía (decreto 12589)»: el decreto cita la nota con número, fecha y objeto, sin decir quién la firma | 5 | «la nota 6828 del 6 de noviembre, que el decreto 12589 cita sin decir de quién es» |
+| 3 | D:220 | «el reintegro del Interventor después de la delegación del 17 de noviembre [...], que no se publica»: ausencia sin universo; el informe LEE 1930 sólo buscó en las ediciones de 1930, y el reintegro puede estar en 1931 (la 1356, del 2 de enero, no está en el Release) | 5 | «que las ediciones de 1930 no publican» |
+| 4 | A:192 | «declaran caducas [...] **las ocho solicitudes de cateo de 1925** del departamento»: el AMPLÍA agregó «del departamento» y la frase pasa a decir que fueron todas; el cap. 4 (1788) y A:138 cuentan nueve, la de Larrán incluida | 7 | «**ocho de las solicitudes de cateo de 1925** del departamento ---la novena, la de Larrán, se revoca en abril---» |
+| 5 | 04-siglo:1735 | «El edicto muestra, además, que Las Nieves [...] figuraba en 1930 a nombre de Suárez y de la Vega», en la línea que el AMPLÍA reescribió y después de que introdujo el edicto de la manifestación (San José), que no nombra Las Nieves; el párrafo sólo cita la concesión (Nº 1.346), que es una resolución | 1 | «El edicto de ese pedido, del 30 de mayo de 1930 (Nº 1.326, h. 16), y la concesión muestran, además, que Las Nieves [...]» |
+
+Resta: en el aspecto 5, tres frases que dicen más que el acto o que el informe (5 cada una), **85**; en el aspecto 7, un error de consistencia en 25,9 páginas (3,9 por cada cien, hasta 4), **50**; el hallazgo 5 cae en el aspecto 1, que se puntúa por muestra y no cambia.
+
+**Errores introducidos por la propia auditoría**: cinco, los cinco en el AMPLÍA 1930 (`57a94e1`); el 5 está en una frase anterior que el AMPLÍA tocó sin rehacer su referente. **Ninguno lo dejó `control_amplia.py` como no resuelto**: el 1 cae fuera de la comilla (la cita es exacta y está en la capa; lo que cambia es el verbo que la presenta, «cuyo objetivo es»); el 2 es una atribución sin comillas ni verbo de acto; el 3 y el 4 son ALCANCE, de los 31 que el AMPLÍA justificó (la sesión no tiene la salida del script línea por línea, sólo el recuento del `.json`); el 5 no está en el texto agregado. **Atrapados por el control antes de compilar el AMPLÍA: dos**, según su `.json` (el verbo del 12639 y la cita del deslinde de Los Sauces, «entre los Provincias», que el script marcó SOLO-INFORME y la imagen decidió), que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 8).** (a) «casi la mitad se publican después del 6 de septiembre» (04-siglo:3103–3104): de los veintisiete actos del §A, trece salen de la 1342 en adelante (A.8 a A.19, con dos en A.11). (b) «entre ocho días y siete meses después de presentarse» (04-siglo:1716): rehecho sobre las ocho resoluciones, de 8 días (1198 C) a 7 meses (1169 C, 21-I a 20-VIII-1925). (c) «siete semanas» (1-VI a 20-VII-1929, 49 días), «casi seis meses» (30-IV a 15-X-1930), «casi cuatro años» (VII-1929 a III-1933) y «menos de cuatro años» (fines de 1925 a VII-1929): rehechos. (d) El acta 12.181 en A y en el cap. 4 («responde a los jefes del Ejército que lo invitan [...] que no entrega el mando, y se retira»): el acta dice «Jefes y Oficiales» y trae una segunda intimación antes del retiro; la frase dice menos que el acta, no más. (e) «manifestación 44-L, presentada el 20 de julio de 1929 [...] según el edicto de 1930» (D:121): el edicto no da el número 44-L, pero las minas se llaman igual (Caldera Nº 1, 2 y 3), son del mismo titular y en la misma finca, y el cap. 4 (1747) ya identifica por ese nombre las minas del padrón; el pedido de D es justamente para establecer la relación. (f) «1931 y 1932 enteros ---ediciones 1357 a 1461---» (advertencia:45): la 1356, del 2 de enero de 1931, no está en el Release, y el informe LEE 1931 y F ya lo declaran; la convención es anterior al AMPLÍA. (g) «Tercera intervención del cuerpo municipal tras la de 1923 y la de 1930» (A:277, repaso de ventana): el 12308 pone un comisionado municipal por decreto del Interventor, que es lo que el cap. 4 (3227) llama designar el gobierno municipal por decreto; el rótulo no afirma una disolución. (h) «el 12553 nombra a Murúa expendedor» (A:196): el propio acto identifica a los dieciséis nombrados como «Comisarios de Policía de las citadas localidades» (informe LEE 1930, A.15).
+
+**Pendientes revisados.** P298: 1930 es el segundo año con dato a favor, después de 1928: los relevos del departamento caen a los nueve días del cambio de gobierno del 7 de septiembre (16-IX, comisario y subcomisario de Mojotoro, por el Gobernador Provisional), a los diez de la asunción del Interventor (2-X, comisario y comisionado municipal) y siguen en octubre y noviembre (Registro Civil, jueces de paz, Vaqueros); antes de septiembre, sólo la Comisión Municipal en enero (8 y 20-I), días después de que Cornejo reasume el 3 de enero tras el interinato de Decavi. P308 sigue abierto: el cap. 26 (190) da la serie del Directorio de Vialidad desde 1930, y en 1930 los actos de caminos son de la Comisión de Caminos (11726, acta 99; 12595, acta 133) y no nombran el departamento; cerrarlo exige el primer acta del Directorio, que esta sesión no buscó. P307, P305 y P304 siguen abiertos: los scripts de las láminas están en `mapas_caldera`, que esta sesión no clonó. P309 es de tipo `lee` y no toca el libro: el AMPLÍA ya cita la imagen. P22: la parte de 1930 la cerró el AMPLÍA; quedan 1921, 1925 y 1983.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.957/25.957 vigentes en `12ce32a` | 25.905 vigentes; 52 caducas; 89 nuevas o modificadas |
+| `control_amplia.py` sobre el AMPLÍA (lo corrió la sesión del AMPLÍA) | 89 líneas | 181 marcas en la última corrida; 2 corregidas, 180 justificadas, 0 sin resolver |
+| Menciones de «1930» fuera de las líneas del AMPLÍA | 25.994 líneas de `57a94e1` | A:138 (nueve expedientes de 1925, consistente con el cap. 4) y A:277 (intervención de 1930): descartado (g); D:377, ajeno |
+| Superlativos y ausencias en las 89 líneas | 89 líneas | «Ninguno de los cuatro publica un solo plano» con universo («en las ediciones que se conservan»); «que no se publica» sin universo (hallazgo 3); «las ocho [...] del departamento» (hallazgo 4) |
+| Largo de los archivos antes y después de la fase 6 | 3 archivos | ninguno cambia de largo |
+| Compilación | fase 6 sobre `57a94e1` | Compila con `latexmk -pdf`; 1.097 páginas (la base `57a94e1`, compilada en la misma máquina, da 1.095: el apéndice A crece una página y el siguiente arranca en impar); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `57a94e1` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega unas treinta referencias de Boletín y hoja; hallazgo 5, aplicado; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de acto y de publicación separadas en las filas nuevas (27-II publicadas el 7-III; edicto de octubre de una manifestación de julio de 1929) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 14 citas cotejadas en 10 ediciones, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 100 | Hallazgos 1, 2 y 3, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 4 en 25,9 páginas, aplicado |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedido nuevo del Registro Oficial de 1930, sin duplicados; el de los expedientes de Larrán suma el escrito de fs. 25 |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; la hipótesis de los relevos suma 1930 a favor |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Las remisiones nuevas («más arriba», «capítulo \ref{cap:hacienda}, más adelante») están marcadas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P304, P305 y P307 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, autoridades de mesa, solicitantes de cateo, propietarios, ejecutados y causantes de 1925 a 1930, presumiblemente fallecidos (adultos de registros de 1944 o anteriores) |
+
+**Nota inicial: 82,0 antes del tope y 82,0 después** (tope de 90 por la cobertura acumulada inicial del 99,66 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 107.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1928 y 1930 alimentan a favor y 1926, 1927 y 1929 en contra o neutros; (5) P301, P304, P305 y P307: revisar las láminas fig:boletin, fig:parajesnom y fig:cargos con sus scripts.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.097 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana evidencia sin cambiar de estado (1930 a favor: relevos a los nueve y a los diez días de los dos cambios del Ejecutivo de septiembre).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 89 líneas (0,34 %; 25,9 páginas). Cobertura acumulada: 25.994 de 25.994 (100,0 %). Falsos positivos descartados: 8. Recortes: P304, P305, P307 y P308 sin revisar (los scripts de las láminas están en otro repositorio; el primer acta del Directorio de Vialidad no se buscó); la salida línea por línea de `control_amplia.py` no está en la entrega del AMPLÍA, de modo que no se puede decir cuál de sus marcas justificadas es cada hallazgo; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1930, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 2 (en el AMPLÍA). El hallazgo 1 muestra un mecanismo que el script no ve: **la cita es exacta y el error está en el verbo que la presenta** («un decreto cuyo objetivo es «...»» por un considerando que invoca un objetivo ajeno); **`control_amplia.py` debería marcar como VERBO las fórmulas «cuyo objetivo es», «con el fin de», «para» que preceden a una cita tomada de un considerando**. Y el 2 sugiere otra regla: **toda atribución de autor a una nota, un expediente o una terna citados («de la Jefatura», «del Ministerio») se marca como IDENT si el acto no la dice**.
