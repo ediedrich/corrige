@@ -1,4 +1,4 @@
-# Flujo editorial de *El dispositivo caldereño* — versión 3
+# Flujo editorial de *El dispositivo caldereño* — versión 4
 
 Fijada el 26/09/2026; la versión 2 (28/09/2026) agrega el §5.6, sobre las dudas de lectura, y las palabras clave `DUDAS` y `LECTURAS`. Unifica los proyectos «BOLETINES CALDERA» y «EL DISPOSITIVO CALDEREÑO» en uno solo, con un único estado y un único punto de entrada.
 
@@ -49,6 +49,8 @@ clave del mensaje, se bajan estos archivos (primera acción de la respuesta):
   LEE:      curl -fsSL $B/rubrica-lee-v16.md    -o /home/claude/lee-v16.md
             curl -fsSL $B/config/lee_config.json -o /home/claude/lee_config.json
   AMPLÍA:   git clone --depth 50 https://github.com/ediedrich/dispositivo-caldereno
+            curl -fsSL $B/scripts/control_amplia.py -o /home/claude/control_amplia.py
+            (más los lee_textos_<año>.zip del Release y los informes LEE del rango)
   LEE <año> cierre: lo de LEE, más
             curl -fsSL $B/lee/<año>/<informe LEE del año> (nombre en estado.json)
   DUDAS/LECTURAS:
@@ -329,6 +331,7 @@ AMPLÍA lleva al libro lo que los informes LEE de esos años establecieron. Hace
 - **Nada de figuras nuevas sin script publicado.** Una tabla nueva de la cronología no es una figura.
 - **Superlativos:** la sesión corre la búsqueda de superlativos sobre el texto agregado, y cada uno lleva su universo declarado.
 - **Se compila al final:** tiene que compilar, sin referencias indefinidas, y el número de láminas del `.lof` tiene que coincidir con el que dice el texto.
+- **La regla de no agregar renglones cede ante la precisión.** Si para no agregar un renglón hay que comprimir una frase hasta que diga más o menos que el acto, se agrega el renglón.
 
 ### 6.5 · Entregables
 
@@ -345,10 +348,48 @@ AMPLÍA lleva al libro lo que los informes LEE de esos años establecieron. Hace
    "archivos_que_cambian_de_largo": ["ape/A-cronologia.tex"],
    "pendientes_cerrados": ["P06"],
    "pendientes_nuevos": [{"id": "P15", "tipo": "libro", "anios": [1949],
-                          "texto": "…", "abierto": "2026-10-01", "hecho": null}]}
+                          "texto": "…", "abierto": "2026-10-01", "hecho": null}],
+   "control": {"primera": {"CITA": 4, "FECHA": 2, "CIFRA": 3, "IDENT": 2,
+                           "ALCANCE": 15, "VENTANA": 20, "VERBO": 14},
+               "corregidas": 6, "justificadas": 54, "ultima_sin_resolver": 0}}
   ```
 
 - **En el chat:** hasta diez renglones con lo que cambió de fondo. No se repite el parche.
+
+### 6.6 · Control antes de entregar (obligatorio desde la versión 4)
+
+**Por qué.** De la ronda 84 a la 102, las rondas MEJORA encontraron 96 errores en el material que acababa de incorporar el AMPLÍA anterior, escrito casi siempre por la misma sesión, y **ninguno lo atrapó un control automático**. Por aspecto de la rúbrica: 53 de honestidad epistémica (el libro dice más que el acto), 22 de fecha y origen del dato, 10 de transcripción, y 11 de otros aspectos. Por mecanismo, cinco causas explican casi todos:
+
+1. **Se escribe desde la ficha y no desde el acto.** La frase nueva parafrasea el informe LEE, y en la paráfrasis el verbo se endurece («concede» por «se solicita la gracia», «renunció» por «presentó su renuncia»), el alcance crece («en el año» por «en las ediciones conservadas») o dos personas homónimas pasan a ser la misma («el mismo Harbin»).
+2. **Se hereda el error del informe LEE.** En nueve rondas al menos uno de los hallazgos venía del informe (la transcripción «Desele», un recuento de 22 por 33, una fecha tomada de un aviso vecino), y el AMPLÍA lo pasó al libro sin mirar la imagen.
+3. **Se confunde la fecha de la edición con la del acto**, y la sanción con la promulgación o la publicación (la mitad de los 22 hallazgos del aspecto 3).
+4. **Se copian recuentos y cifras del informe sin rehacerlos**, aunque la rúbrica CORRIGE (aspecto 3) pide rehacerlos sobre el documento.
+5. **El dato nuevo desmiente una frase vecina que no se toca**: un superlativo («el primer apellido...») o una cronología («en 1925 se parte en dos colegios») que el propio AMPLÍA vuelve falsos.
+
+Ninguna de las cinco es de lectura: el informe LEE tiene el dato correcto en la mayoría de los casos y la frase del libro lo deforma. Por eso el remedio no es leer más sino **controlar lo escrito antes de entregarlo**, con un script y con la imagen.
+
+**Qué se hace.**
+
+1. **Script.** Con el commit del AMPLÍA hecho, se corre `scripts/control_amplia.py` de corrige sobre el diff:
+
+   ```bash
+   python3 control_amplia.py --repo dispositivo-caldereno --base <sha clonado> \
+       --anio <año> --textos lee_textos_<año>.zip --informe <informe LEE del año> \
+       [--anio ... --textos ... --informe ...] > control-amplia.txt
+   ```
+
+   Marca siete clases: **CITA** (texto entre comillas que no está tal cual en la capa, o sólo en el informe LEE), **FECHA** (fila de la cronología con asterisco que lleva la fecha de la edición que cita; sanción, promulgación y publicación), **CIFRA** (número que no está ni en el informe ni en la capa), **IDENT** (identidad entre personas), **ALCANCE** (ausencia, unicidad, primacía u orden sin universo), **VENTANA** (superlativos y ausencias de las cinco líneas vecinas de cada cambio) y **VERBO** (verbos que deciden un acto).
+2. **Cada marca se resuelve**: se corrige la frase, o se justifica en una línea. CITA, FECHA, CIFRA e IDENT se resuelven **mirando la imagen del acto**, no el informe; VERBO se coteja con el verbo del acto; ALCANCE y VENTANA, con el universo que el informe declara (año entero, ediciones conservadas, ediciones leídas).
+3. **Se vuelve a correr** después de corregir, hasta que no quede marca sin resolver, y recién entonces se compila y se arma el parche.
+4. **Cinco reglas de escritura**, que son las cinco causas al revés:
+   - el verbo es el del acto («presentó su renuncia», «solicita», «se publica»);
+   - la fecha de una fila con asterisco es la del acto; si sólo se conoce la de la edición, se dice «publicado el...» y la fila va sin día o sin asterisco;
+   - la identidad entre dos apariciones de un nombre sólo se afirma si el Boletín la dice; si no, «un X ---el Boletín no dice que sea el mismo---»;
+   - toda ausencia, unicidad o primacía lleva su universo en la misma frase;
+   - todo recuento o cálculo se rehace sobre la transcripción, y si el informe da otro número, se dice cuál vale y por qué.
+5. **Se registra.** El `.json` del AMPLÍA lleva la clave `control` con las marcas por clase, cuántas se corrigieron y cuántas se justificaron, y las cifras de la primera y la última corrida. La ronda MEJORA siguiente cuenta como **atrapados** (rúbrica CORRIGE 3.6) los desfases que el script marcó y la sesión corrigió antes de compilar, y como hallazgos los que el script no marcó: es la medida de si el control funciona.
+
+**Validación.** Corrido sobre los AMPLÍA 1921, 1923 y 1924, el script marca doce de los trece errores que encontraron las rondas 100 a 102; el que no marca es un nombre normalizado fuera de comillas («Agüero» por el «Aguero» impreso). Entre 60 y 70 marcas por AMPLÍA de un año, la mayoría de verbo y de alcance, que se resuelven en minutos.
 
 ---
 
@@ -421,6 +462,7 @@ Vive en `corrige/estado/estado.json`. **Nadie lo edita a mano**: lo escriben `ca
 | `mejora-ronda-<N>.json` | Registra la ronda y apaga el pedido de MEJORA |
 | `registro-cobertura.md` | Lo reemplaza en corrige, sólo si conserva intactos los bloques anteriores |
 | `rubrica-corrige.md`, `rubrica-lee-v<N>.md`, `flujo-editorial.md` | Los reemplaza en corrige |
+| `control_amplia.py` | Lo instala en `corrige/scripts/` (§6.6) |
 
 Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro y dice por qué. Casi siempre es porque se registró otro parche entre medio: la sesión siguiente lo rehace sobre el `HEAD` nuevo.
 
@@ -452,4 +494,4 @@ Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro 
 
 ---
 
-*Versión 3, 11/10/2026: palabra clave `LEE <año> cierre` (§2, §3 y §5.7). Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
+*Versión 4, 14/10/2026: control obligatorio del AMPLÍA antes de entregar (§6.6), con `scripts/control_amplia.py`, y la regla de no agregar renglones subordinada a la precisión (§6.4). Versión 3, 11/10/2026: palabra clave `LEE <año> cierre` (§2, §3 y §5.7). Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
