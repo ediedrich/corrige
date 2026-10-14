@@ -7065,3 +7065,116 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 6 de 6 hallazgos resueltos; compila sin errores, 1.085 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato en contra (1927: seis relevos del departamento en un año sin cambio de gobernador).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 96 líneas (0,37 %; 25,5 páginas). Cobertura acumulada: 25.875 de 25.875 (100,0 %). Falsos positivos descartados: 5. Recortes: P301 sin revisar (el script de la lámina está en otro repositorio); el decreto 5056 de La Poma, sólo en la capa; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 6, los seis en el AMPLÍA 1927, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 5 (en el AMPLÍA). Dos de los seis nacen de un mismo cambio, el del salto de numeración, corregido en la advertencia y no en F, y mal corregido en la advertencia: **cuando el AMPLÍA desmiente un superlativo, la búsqueda del mismo hecho se hace en todo el manuscrito y la frase nueva se relee contra los datos que el propio AMPLÍA agrega**. Y los hallazgos 3 y 4 sugieren un control nuevo para `control_amplia.py`: marcar «proclama», «proclamados» y los cargos electivos («el diputado», «el senador», «electores») como VERBO cuando el acto es una lista de partido.
+
+## Ronda 106 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1928. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `5aceaf6` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1928, sobre `981dc27`, aplicado por `3-registrar` el 14/10 a las 12:53), con la fase 6 en `ronda-106.patch` (un commit sobre `5aceaf6`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1928** ni el informe LEE 1928: la abrió la tarea programada. Para el cotejo se bajaron del Release `1928` de `boletines-salta` las 52 ediciones y `lee_textos_1928.zip`; el `decretos_1928.csv` del Release está vacío (sólo el encabezado), y la serie de decretos se rehízo sobre la capa de los 52 PDF. El AMPLÍA había corrido `control_amplia.py` (flujo v4 §6.6): 203 marcas en la última corrida, cuatro corregidas antes de compilar y las demás justificadas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 105 (25.875 de 25.875, sobre `633a0f6`, sin cambios de largo en `981dc27`) se trasladaron por diff a `5aceaf6`. **El AMPLÍA caduca 72 líneas y deja 115 nuevas o modificadas**; cambian de largo el apéndice A (+5) y el capítulo 4 (+38); los apéndices D, E y F, la advertencia y los capítulos 10, 17 y 18 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.803 de 25.918.
+
+### Lectura sobre el texto (numeración de `5aceaf6`)
+
+Se leyeron **las 115 líneas, enteras** (87.418 bytes; la línea 56 de F, de 50.514 bytes, y la 45 de la advertencia, de 12.505, también enteras), contra el informe LEE 1928 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 12 (163–165, 167–171, 173–176) |
+| ape/D-pedidos.tex | 2 (218–219) |
+| ape/E-personas.tex | 2 (68, 72) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/04-siglo.tex | 85 (917–920, 2946, 2964, 2967–2970, 2972–2973, 2975, 2977–2979, 2986–2992, 2996–2998, 3000–3001, 3005, 3007–3010, 3015–3064, 3167–3168) |
+| cap/10-expropiacion.tex | 1 (320) |
+| cap/17-tierrafiscal.tex | 1 (299) |
+| cap/18-politica.tex | 10 (67, 77, 81–82, 86, 93, 116, 148, 189, 277) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:2553–2560 y 2738–2756 (la partición del departamento en los colegios 5 y 6 desde octubre de 1924, y las nóminas de 1926 y 1927), 935–939, 2940–3064 (la sección de 1928 entera) y 3158–3170; 18-politica:60–86 y 110–118; 03-fincas:709–713; A:147 y 155; la lista de menciones de «Cornejo», «Corbalán», «7097», «8001», «colegio electoral» y «9 de mayo» en todo el manuscrito.
+
+**Esta ronda: 115 líneas**, 87.418 bytes sobre 3.599.169, que en las 1.087 páginas de la base equivalen a **26,4 páginas**.
+
+Acumulado: 25.803 vigentes + 115 = **25.918 de 25.918 (100,0 %)**. La fase 6 cambia 14 líneas sin cambiar el largo de ningún archivo: 11 de las leídas en esta ronda y tres fuera de ellas (18-politica:69–70 y 04-siglo:3169), releídas enteras y escritas en la ronda: **25.918 de 25.918 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1205 | 12 | «C. E. N. 2 LA CALDERA», circuitos 5 y 6, las tres mesas y los nueve nombres; «Urquiza Francisco Solano» presidente de la mesa del circuito 6 (imagen) | Coincide |
+| 1209 | 7 | «Caldera Colegio Electoral N· 2»; mesa 1 con cuatro nombres, mesa 2 con 31 (32 si «La Sierra Angosto» son dos), circuito 6 con diez; mesas en la Escuela Elemental Mixta y en la Iglesia Parroquial de La Caldera (imagen) | Coincide; 35 o 36 y 10, recontados |
+| 1209 | 24 | Aviso 2614: «la mitad indivisa de la finca Rio Blanco», «Departamento de San Antonio, provincia de Jujuy», «finca Los Sauces de D. Miguel Herrera», «la línea de las Tres Cruces divisoria entre las provincias de Jujuy y Salta», remate el 14 de abril (imagen) | Es la mitad indivisa: hallazgo 2 |
+| 1217 | 11 | 6877, artículo 1º: «cuyo derecho seguirà ejerciendo en la forma y condiciones acordadas por dicha concesión»; CORBALAN—ERNESTO M. ARÁOZ (imagen) | Coincide |
+| 1219 | 2 | «6974— La Asamblea Legislativa de la Provincia decreta: Art. 1°.—Queda en posesión...» (capa) y su cierre, «Sala de sesiones ... primero de Mayo»; «queda asumido el mando gubernativo de la Provincia por el suscrito», CORNEJO; 6975 del 1º de mayo (imagen) | Coincide |
+| 1222 | 9 | 8023: «Visto el decreto del Poder Ejecutivo de fecha 28 de Enero de 1924», «Y CONSIDERANDO: Que el mantenimieto de dicha concesión es inconveniente», un solo considerando; CORNEJO—CARLOS ARANDA arriba (imagen) | Coincide; el «[sic]» es exacto |
+| 1222 | 14 | 7099 y 8000, «Mayo 9 de 1928», en la misma columna, el 7099 firmado CORNEJO—JULIO C. TORINO (imagen) | Coincide; confirma P303 |
+| 1222 | 15 | Continuación del 8000: expendedor de guías de Rosario de la Frontera, Primera Sección (imagen) | Coincide |
+| 1228 | 8 | 9306: «Herman Pfister», «El señor Comisionado deberá entregar dicha Comuna a los señores miembros bajo un prolijo inventario» (imagen) | Coincide |
+| 1230 | 6 | 9406: «Reconócense los servicios prestados al frente de la Comisaría de La Caldera por don Ramón Balboa desde el 2 de Abril hasta el 12 de Mayo» (imagen) | Coincide |
+| 1231 | 3 | 9438 del 26 de julio, distribución de las Policías de Campaña (capa) | Coincide |
+| 1231 | 6 | 9458: «Calderrilla», los catorce lugares y las ocho personas, CORNEJO—LUIS C. URIBURU (imagen) | Coincide |
+| 1240 | 4 | 9604: vacante por renuncia de Offredi «aceptada por decreto N° 6776», terna de la Comisión Municipal, fórmula del Presidente del Superior Tribunal, «Juez de Paz Suplente que està vacante», TAMAYO (imagen) | Coincide; el acto no dice cómo quedó vacante el suplente: hallazgo 7 |
+| 1243 | 6 | 9677: «Apruébase la ejecución de los trabajos indicados por la Comisión de Puentes y Caminos para la construcción del primero y segundo tramo del camino de Salta a Mojotoro, quedando autorizada dicha comisión para invertir las sumas de $ 11.000 y 22.000-, que importarían» (imagen) | Aprueba la ejecución y autoriza a invertir: hallazgo 1 |
+| 1251 | 2 | 10011 del 11 de diciembre: «Escusación», «David E. Gudiño», «en la demanda entablada por vía contencioso administrativa, por don Francisco S. Urquiza, contra el Gobierno de la Provincia», Agente Fiscal Julio Aranda (imagen) | Coincide; el 11 de diciembre es la fecha de la escusación, no de la demanda: hallazgo 6 |
+
+15 cotejos sobre 16 hojas de 12 ediciones, todos sobre la imagen salvo los dos datos de la capa dichos en la tabla.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:164 y 04-siglo:3032–3034 | El 9677 «aprueba los trabajos del primer y el segundo tramo del camino de Salta a Mojotoro, por $11.000 y $22.000»: el acto aprueba la ejecución de los trabajos que la Comisión de Puentes y Caminos indica y la autoriza a invertir esas sumas, «que importarían»; la frase deja leer trabajos hechos | 5 | «aprueba la ejecución de los trabajos [...] y (la) autoriza a invertir en ellos» |
+| 2 | A:164 y 04-siglo:3034 | «el remate de la mitad de la finca Río Blanco»: el aviso remata «la mitad indivisa», una cuota y no media finca | 5 | «la mitad indivisa» |
+| 3 | 04-siglo:3019 | «los dos circuitos que desde 1926 iban en colegios separados», contra 04-siglo:2554–2556 (y 937), que dan los colegios 5 y 6 desde octubre de 1924 | 7 | «desde octubre de 1924» |
+| 4 | 04-siglo:3167–3170 y A:176 | «sigue en el tercer colegio electoral de su serie [...] Fue el Nº 3 de 1918 a 1923, el Nº 5 desde octubre de 1924 hasta 1927 [...] Tres numeraciones en once años»; A: «el tercero en once años». La misma sección dice, tres páginas antes, que de 1924 a 1927 el departamento estaba partido en dos colegios (el 5 y el 6), y 04-siglo:2554 lo da en el Nº 3 hasta febrero de 1924 | 7 | «el colegio electoral que estrena en 1928 [...] el Nº 3 de 1918 a febrero de 1924, el Nº 5 para el pueblo y el Nº 6 para Vaqueros desde octubre de 1924 hasta 1927 [...] Cuatro números en once años»; A: «después del Nº 3 y de los Nº 5 y Nº 6 en que se partió desde octubre de 1924» |
+| 5 | 18-politica:69–70 | «Decretos 6776 y 6777 [...]: renuncian el juez de paz [...] y el comisario»: los decretos aceptan las renuncias; el AMPLÍA lo corrigió en A y en el cap. 4 y no en esta ficha, a dos líneas de una que tocó (ventana) | 5 | «se aceptan las renuncias del juez de paz [...] y del comisario» |
+| 6 | 04-siglo:3046–3048 | «y, el 11 de diciembre, la demanda contencioso-administrativa que inicia contra el Gobierno»: el 11 de diciembre es la fecha del decreto 10011, que acepta la escusación del Fiscal en una demanda ya «entablada»; la frase fecha la demanda | 3 | «y la demanda [...] en la que el 11 de diciembre se excusa el Fiscal General» |
+| 7 | D:218 | El Registro Oficial de 1928 daría «la renuncia del juez de paz suplente cuya vacante declara el decreto 9604»: el 9604 dice que el cargo «està vacante» y no dice por qué (informe LEE 1928, A.23 y E.2) | 5 | «cómo y desde cuándo está vacante el juzgado de paz suplente que el decreto 9604 da por vacante» |
+
+Resta: en el aspecto 5, cuatro frases que dicen más que el acto (5 cada una), **80**; en el aspecto 3, una fecha de acto dada a otro hecho (5), **95**; en el aspecto 7, dos errores de consistencia en 26,4 páginas (7,6 por cada cien, hasta 8) y uno de ellos contra material que el propio libro expone tres páginas antes, un escalón más, **30**.
+
+**Errores introducidos por la propia auditoría**: siete, los siete en el AMPLÍA 1928 (`5aceaf6`). **Ninguno lo marcó `control_amplia.py` como no resuelto**: el 1 es una marca VERBO que el AMPLÍA justificó («aprueba») sin ver que el acto aprueba la ejecución y no los trabajos; el 2 y el 7 caen fuera de las comillas y sin verbo de acto; el 3 y el 4 son VENTANA a más de cinco líneas del cambio (la fecha de la partición en colegios está 465 líneas antes; el AMPLÍA cambió el renglón 3167 sin cotejarlo con el 2554); el 5 cae en la ventana del cambio de 18-politica:67 y el AMPLÍA lo justificó; el 6 es una fecha que el script no mira porque no está en una fila con asterisco. **Atrapados por el control antes de compilar el AMPLÍA: cuatro**, según su `.json` («remata» y «se rematan» por «anuncia el remate» y «salen a remate», dos alcances sin universo), que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 6).** (a) «la propia serie del año la desmiente: [...] recorre sin interrupción las centenas del 6500 al 7099 y del 9000 al 9999» (04-siglo:3056–3057): la serie rehecha sobre la capa de las 52 ediciones da números en todas esas centenas (de 72 a 80 por centena del 6500 al 7099, de 59 a 79 del 9000 al 9899 y 9 del 9900, con el 9999); el único número suelto, «7559» del 24 de agosto (1239 h3), es una lectura rota de la capa en pleno tramo de los 9500; el 6500 es del 22 de diciembre de 1927 y se publica en 1928, lo que no cambia el argumento. (b) «los nombramientos de mayo llegan entre ocho y diecisiete días después de que Cornejo asume» (04-siglo:3000): del 1º al 9 de mayo y del 1º al 18. (c) «Calderilla» en A:164 frente a «Calderrilla, así impreso» en 04-siglo:3025: A cita el 9499, que imprime «Calderilla», y el cap. 4 el 9458, que imprime «Calderrilla» (imagen). (d) «decreto 6974 de la Asamblea Legislativa» (A:168 y 04-siglo:2997): el acto lleva ese número y lo dicta la Asamblea (1219 h2). (e) «treinta y cinco nombres de paraje ---treinta y seis si [...]---, y el 6, Vaqueros, con diez» y «cuarenta y cinco o cuarenta y seis nombres» (04-siglo:917–920 y 3019–3021): recontados en la imagen. (f) «la orden de que el comisionado de la acefalía les entregue la Comuna» (E:72): el 9306 dice «el señor Comisionado» de «dicha Comuna», y el único comisionado de la Comisión de La Caldera en el año es el que nombra el 7096; el libro no dice que el 9306 cierre la acefalía.
+
+**Pendientes revisados.** P303: confirmado en la imagen (1222 h14: 7099 y 8000, «Mayo 9 de 1928», en la misma columna); queda abierto para el próximo informe LEE 1928, y el libro no hereda el error. P298: 1928 tiene cambio de gobernador (Corbalán hasta el 1º de mayo, Cornejo desde ese día, decreto 6974); los relevos de mayo (comisario, acefalía, Registro Civil, subcomisarías, receptor) caen entre ocho y diecisiete días después, y la comisión nueva el 26 de junio, dentro de los sesenta días: dato a favor; las dos renuncias del 26 de marzo, con Corbalán, y los relevos de agosto a noviembre, con el interino Tamayo y con Cornejo de vuelta, no caen en ninguna ventana: datos en contra o neutros. P304 y P301 siguen abiertos: los scripts de las láminas están en `mapas_caldera`, que esta sesión no clonó. P41: la parte de 1928 la cerró el informe LEE 1928; queda la de 1936.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.875/25.875 vigentes en `981dc27` | 25.803 vigentes; 72 caducas; 115 nuevas o modificadas |
+| `control_amplia.py` sobre el AMPLÍA (lo corrió la sesión del AMPLÍA) | 115 líneas | 203 marcas en la última corrida; 4 corregidas, 199 justificadas, 0 sin resolver |
+| Serie de decretos de 1928 rehecha sobre la capa de los 52 PDF (el CSV del Release está vacío) | 1.157 números distintos del 6400 al 10199 | centenas del 6500 al 7099 y del 9000 al 9999 todas presentes; ninguna del 7100 al 7999 ni del 8100 al 8999 salvo 8254 y 8448 (erratas por 9254 y 9448, informe LEE 1928, E.9) y un «7559» roto de la capa |
+| Menciones de «Cornejo», «Corbalán», «7097», «8001», «colegio electoral» y «9 de mayo» en todo el manuscrito | 135 líneas en `5aceaf6` | Ninguna fecha de mando de 1928 contraria al 1º de mayo; ningún «7097» ni «8001» como extremo de salto; dos frases de la serie de colegios contrarias a 04-siglo:2554 (hallazgos 3 y 4) |
+| Superlativos y ausencias en las 115 líneas | 115 líneas | las ausencias nuevas («en ninguna de las 52 ediciones», «el Boletín no dice», «en las ediciones leídas de los dos años») llevan su universo; «Tres numeraciones en once años» desmentido por el propio capítulo (hallazgo 4) |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | ninguno cambia de largo |
+| Compilación | fase 6 sobre `5aceaf6` | Compila; 1.089 páginas (la base `5aceaf6`, compilada en la misma máquina, da 1.087); 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `5aceaf6` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega una treintena de referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 6, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 15 cotejos sobre 12 ediciones, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 80 | 100 | Hallazgos 1, 2, 5 y 7, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 3 y 4 en 26,4 páginas, aplicados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido del Registro Oficial se extiende a los dos saltos de 1928 y a dos piezas citadas y no acompañadas; el de Urquiza suma la demanda de 1928 |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Las remisiones nuevas al cap. 18 y a la sección anterior están marcadas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P301 y P304 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, candidatos a mesa, propietarios, ejecutados y litigantes de 1928, presumiblemente fallecidos (adultos de registros de 1944 o anteriores); el proceso de Urquiza se atribuye al acto |
+
+**Nota inicial: 79,3 antes del tope y 79,3 después** (tope de 90 por la cobertura acumulada inicial del 99,56 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 105.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1926 y 1927 alimentan con datos en contra y 1928 con el primero a favor; (5) P301 y P304: revisar las láminas fig:boletin, fig:parajesnom y fig:cargos con sus scripts.
+
+**Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.089 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana su primer dato a favor (1928: el recambio de mayo sigue en ocho a diecisiete días al cambio de gobernador del 1º de mayo) y dos en contra dentro del mismo año (las renuncias del 26 de marzo y los relevos de agosto a noviembre).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 115 líneas (0,44 %; 26,4 páginas). Cobertura acumulada: 25.918 de 25.918 (100,0 %). Falsos positivos descartados: 6. Recortes: P301 y P304 sin revisar (los scripts de las láminas están en otro repositorio); el 6974 y el 9438, sólo en la capa; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 7, los siete en el AMPLÍA 1928, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 4 (en el AMPLÍA). Dos de los siete (3 y 4) nacen de corregir una fecha («desde 1929» por «desde 1928») sin releer la serie entera que la frase resume: **cuando el AMPLÍA cambia el extremo de una serie (colegios, gobernadores, saltos), la búsqueda de la serie se hace en todo el capítulo y la frase nueva se coteja con la primera que la cuenta**. Y el hallazgo 1 sugiere afinar `control_amplia.py`: marcar como VERBO «aprueba los trabajos» y «aprueba la obra» cuando el acto dice «aprueba la ejecución» o «autoriza a invertir», que en los decretos de obras son cosas distintas.
