@@ -6317,3 +6317,103 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** la **tercera tesis** gana evidencia sin cambiar de estado: en 1918 Murúa es comisario del departamento por tercer año seguido y la Intervención lo reemplaza por oficiales de línea y por un comisario inspector que comparte con Campo Santo, de modo que la acumulación de cargos en un vecino termina por decisión federal y no del departamento. Ninguna cambia de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 16 líneas (0,06 %; 15,1 páginas). Cobertura acumulada: 25.680 de 25.680 (100,0 %). Falsos positivos descartados: 2. Recortes: los cotejos de 704, 709 y 733 se hicieron sobre la capa y no sobre la imagen. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1918, escrito por la misma sesión; atrapados por un control automático: 0.
+
+## Ronda 99 — auditoría con fase 6 (13/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1919. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `2c48c7e` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1919, sobre `d51c502`, aplicado por `3-registrar` el 13/10 a las 22:19), con la fase 6 en `ronda-99.patch` (un commit sobre `2c48c7e`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1919 y el AMPLÍA 1919**, en la misma tarea programada. Para el cotejo se usaron los 49 PDF del Release 1919, bajados en la computadora de Eduardo para el informe LEE.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 98 (25.680 de 25.680, sobre `e4cf368` con la fase 6, que es `d51c502`) se trasladaron por diff a `2c48c7e`. **El AMPLÍA caduca 28 líneas y deja 33 nuevas o modificadas**; cambia de largo el capítulo 4 (+5 líneas); A, D, F, 00, 03 y 20 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.652 de 25.685.
+
+### Lectura sobre el texto (numeración de `2c48c7e`)
+
+Se leyeron **las 33 líneas, enteras** (64.283 bytes), contra el informe `BO-Salta-1919_737-787_la-caldera_LEE-1919_2026-10-13.txt` y, en las fechas, firmas, folios y recuentos, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 4 (52, 55, 58, 59) |
+| ape/D-pedidos.tex | 2 (201, 202) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/03-fincas.tex | 1 (991) |
+| cap/04-siglo.tex | 19 (764, 769–770, 833–834, 849–853, 868–875, 983) |
+| cap/20-opacidad.tex | 5 (892–896) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:700–1010 (la sección de 1919 y la plaza de Mojotoro en 1920), 20-opacidad:885–905, D:196–203 (los pedidos del Boletín de 1919 y 1920), F:56 (los tramos de 1918, 1919 y 1920), 03-fincas:985–998.
+
+**Esta ronda: 33 líneas**, 64.283 bytes sobre 3.545.780, que en las 1.069 páginas de la base equivalen a **19,4 páginas**.
+
+Acumulado: 25.652 vigentes + 33 = **25.685 de 25.685 (100,0 %)**. La fase 6 toca cinco líneas (04-siglo:834 y 871, A:59, D:198 y F:56); cuatro se leyeron en esta ronda y D:198 se leyó entera en esta ronda como contexto y se cuenta como leída. No cambia el largo de ningún archivo: **25.685 de 25.685 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 738 | 1 | Decreto de delegación del mando en Peñalba, cabeza de la columna 2, sin número ni fecha a la vista (imagen) | Coincide |
+| 745 | 7 | Decreto 213: «Salta, marzo 1 de 1919», Peñalba y Darío Arias (imagen) | Coincide |
+| 764 | 5 | Último decreto de la hoja: «Salta, Julio 4 de 1919 / PEÑALBA / DAVID M. SARAVIA» (imagen) | Hallazgo 1 |
+| 775 | 1–2 | «Salta, Septiembre 24 de 1919 / PEÑALBA» y «Salta, setiembre 26 de 1919 / CASTELLANOS» (imagen) | Coincide |
+| 757 | 2, 4 | «mayo 25 de 1919 / castellanos» y «mayo 20 de 1919 / penalba» (capa) | Coincide |
+| 773 | 6 | Ítem VII: nómina de 54 localidades (55 con la coma de San Carlos), 2.420 = 55 × 44 (imagen) | Coincide |
+| 774 | 5 | Decreto 522: «Habiéndose creado la Sub-Comisaría de Mojotoro con sueldo» (imagen) | Coincide; el universo de la ausencia, hallazgo 2 |
+
+7 cotejos sobre 9 hojas de 7 ediciones de 1919; seis sobre la imagen y uno sobre la capa.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:871 | «de enero al 22 de mayo y del 7 de julio al 24 de septiembre»: Peñalba firma ya el 4 de julio (Nº 764, h. 5, decreto con refrendo de David M. Saravia); el 7 venía del informe LEE 1919 (E.4), que tomó el primer decreto de Peñalba de la hoja 3 | 3 | «del 4 de julio al 24 de septiembre» |
+| 2 | 04-siglo:834; A:59 | «el acto que la crea no se publica en ninguna edición leída»: la búsqueda de «Mojotoro» se hizo sólo sobre las ediciones conservadas de 1919; el universo «ediciones leídas» abarca muchos años no barridos para esto | 5 | «no está en ninguna edición conservada de 1919» |
+| 3 | F:56 | «así se leyó en 307»: es la cifra del informe LEE anterior; el vigente da folio en 345 hojas, 327 de ellas concordantes con la cadena | 3 | «se leyó en 345, de las que 327 concuerdan con un folio de arranque único por edición» |
+| 4 | D:198 | «la 787 [...] existe y tiene ocho hojas»: la cadena da ocho folios, del 1.073 al 1.080, y el informe LEE 1919 (F.1) muestra que en este año un folio saltado no es necesariamente una hoja | 3 | «existe y ocupa ocho folios, del 1.073 al 1.080» |
+
+Resta: en el aspecto 3, una fecha y una cifra de segunda mano y un recuento de folios dado como hojas, **85**; en el aspecto 5, una ausencia afirmada sobre un universo que no se midió entero, **95**. Ningún error de consistencia en 19,4 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: cuatro; tres en el AMPLÍA 1919 (`2c48c7e`) y uno anterior (D:198), de una incorporación previa; el 1 viene del informe LEE 1919, escrito por esta misma sesión. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 2).** (a) «cuarenta y siete viernes, un jueves y un sábado» (A:52; F:56): 49 tapas, 48 leídas en la imagen; la de la 738 falta, pero la 738 cae en viernes por la serie y el folio. (b) «a la 737 le quedan, a lo sumo, cinco folios» (D:201): 588 a 592, con la tapa de la 738 en el 593, por la paridad de las tapas (informe LEE, §1 y E.2); la frase dice «a lo sumo» y rotula el cálculo.
+
+**Pendientes revisados.** P265 sigue abierto (737 y 787 ya se declaran faltantes en la fuente en D, pero el pendiente abarca otros años). P293 (repasar las hojas ausentes de 1918) sigue abierto. **Nuevo: P294** (tipo `lee`), la fecha del primer decreto de Peñalba en el segundo interinato en el informe LEE 1919, E.4.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.680/25.680 vigentes en `d51c502` | 25.652 vigentes; 28 caducas; 33 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1919 | 1 referencia nueva (Nº 773, h. 6) en 33 líneas | 1/1 |
+| Citas entre comillas nuevas | 1 («inclusive gastos de oficina y alquileres») | 1/1 literal en la imagen |
+| Superlativos y ausencias en el texto agregado | 33 líneas | 2 ausencias («no se publica en ninguna edición leída», «de los demás cambios no aparece ningún decreto»); la primera, hallazgo 2; la segunda con universo (las ediciones de 1919) |
+| Firmas por fecha de los actos | 351 encabezados de decreto en 440 hojas | Peñalba hasta el 22-V y del 4-VII al 24-IX; Castellanos del 25-V al 2-VII y desde el 26-IX |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | no cambia |
+| Compilación | fase 6 sobre `2c48c7e` | Compila; 1.069 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `2c48c7e` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega una referencia de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 85 | 100 | Hallazgos 1, 3 y 4, aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 7 cotejos sobre 7 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 100 | Hallazgo 2, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 19,4 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido de las 38 hojas se reescribe como pedido de la tapa de la 738 y de qué eran los folios; sin pedidos satisfechos en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1919, presumiblemente fallecidas |
+
+**Nota inicial: 86,8 antes del tope y 86,8 después** (tope de 90 por la cobertura acumulada inicial del 99,87 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 98.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P293: repasar con el pie de imprenta las hojas ausentes de 1918; (5) P288 a P294: corregir los informes LEE y completar los huecos del Release.
+
+**Avance del libro:** 4 de 4 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la cuarta («la desidia es selectiva») no gana ni pierde evidencia con 1919, que no trae actos de obra ni de dominio.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 33 líneas (0,13 %; 19,4 páginas). Cobertura acumulada: 25.685 de 25.685 (100,0 %). Falsos positivos descartados: 2. Recortes: el cotejo de 757 se hizo sobre la capa y no sobre la imagen. Errores introducidos por la propia auditoría: 4 (3 en el AMPLÍA 1919, 1 de una incorporación previa), y uno de ellos heredado del informe LEE 1919 escrito por esta misma sesión; atrapados por un control automático: 0.
