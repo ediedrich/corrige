@@ -6626,3 +6626,100 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 6 de 6 hallazgos resueltos; compila sin errores, 1.073 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; se declara una hipótesis nueva en estudio (relevos de cargos y cambios del Ejecutivo provincial), con valor 0; la tercera tesis gana un caso para su lado institucional (el 834 de Cerrillos nombra a quien pidió la intervención y el 1161 de La Caldera no), sin cambiar de estado.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 17 líneas (0,07 %; 16,2 páginas). Cobertura acumulada: 25.711 de 25.711 (100,0 %). Falsos positivos descartados: 3. Recortes: seis cotejos sobre la imagen, uno por hoja tocada por el AMPLÍA salvo F, D y la 949; el contexto de 04-siglo se releyó y no suma. Errores introducidos por la propia auditoría: 6, los seis en el AMPLÍA 1923 escrito por esta misma sesión; atrapados por un control automático: 0.
+
+## Ronda 102 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1924. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `85034c0` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1924, sobre `d42f009`, aplicado por `3-registrar` el 14/10 a las 06:03), con la fase 6 en `ronda-102.patch` (un commit sobre `85034c0`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1924 y el AMPLÍA 1924**, en la misma tarea programada. Para el cotejo se usaron los PDF del Release 1924 bajados desde la nube para el informe LEE.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 101 (25.711 de 25.711, sobre `d42f009`) se trasladaron por diff a `85034c0`. **El AMPLÍA caduca 16 líneas y deja 19 nuevas o modificadas**; cambian de largo el apéndice A (+2) y el D (+1); F y el capítulo 4 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.695 de 25.714.
+
+### Lectura sobre el texto (numeración de `85034c0`)
+
+Se leyeron **las 19 líneas, enteras** (53.930 bytes), contra el informe LEE 1924 y, en los nombres, fechas, cifras y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 5 (116–117, 120, 127, 131) |
+| ape/D-pedidos.tex | 1 (232) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 12 (2302–2304, 2327, 2507–2508, 2513, 2527–2528, 2540, 2544, 2716) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:1376–1440 (el decreto 1429), 2298–2560 (las secciones de 1924 y 1925) y 2700–2720, A:114–132, D:225–235, F:56 (los tramos de 1923 a 1925).
+
+**Esta ronda: 19 líneas**, 53.930 bytes sobre 3.559.998, que en las 1.075 páginas de la base equivalen a **16,3 páginas**.
+
+Acumulado: 25.695 vigentes + 19 = **25.714 de 25.714 (100,0 %)**. La fase 6 toca tres líneas (A:127, 04-siglo:2327 y 2540), las tres leídas en esta ronda, y no cambia el largo de ningún archivo: **25.714 de 25.714 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 996 | 4 | «Ubicación de mesas receptoras de votos / 1434—Salta, Enero 30 de 1924» (imagen) | Coincide |
+| 997 | 2 | «Nombramiento / 1434 Salta, Enero 29 de 1924» y «1435—Salta, Enero 29 de 1924» (imagen) | Coincide |
+| 996 | 9 | Circuitos de las cuatro mesas: 4, 22, 2 y 5; «Campo Alegre Calderilla» sin coma; «El Monte, Las Garrapatas» con coma (imagen) | Coincide |
+| 1006 | 3 | «Nº 1563—Salta, Abril 7 de 1924», Orán, «señor Eduardo F. Harbin» (imagen) | Coincide; la identidad, hallazgo 1 |
+| 1018 | 4 | «1726—Salta, Junio 30 de 1924», Cerrillos «desintegrada», «Casiano Hoyos y Eduardo F. Harbin» (imagen) | Coincide |
+| 1024 | 8, 12, 17 | «LEY: 1[8]10» (la serie decide 1810), Item 2° «a $ 44 mensuales» 2684 / 32208, «A la Iglesia de La Caldera, sola vez» 1000 (imagen) | Coincide |
+| 1033 | 15 | Colegios Núm. 5 (Caldera) y Núm. 6 (Vaqueros), dos mesas cada uno (imagen); fecha del acto no impresa en la hoja | Coincide; la fecha, hallazgo 2 |
+| 1035 | 3–4 | «1957 --Salta, Noviembre 3 de 1924», Mesa 2 del Colegio 6 en «Oficina de Correos, Mojotoro» (imagen) | Coincide; la fecha, hallazgo 2 |
+| 1031 | 22 | «18.321.64» y la columna «727.4[?]7.34» / «745.798.38» (imagen) | Coincide con lo que el libro dice de la cadena |
+| 944 (1923) | 6 | «El Monte Las Garra-/patas» sin coma (imagen) | Coincide |
+
+10 cotejos sobre 13 hojas de 10 ediciones, todos sobre la imagen.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:2327 | «el 7 de abril el mismo Eduardo F. Harbin es nombrado Interventor [de Orán]»: identifica al Harbin de 1924 con el Interventor de La Caldera de 1923, que el Boletín no relaciona (el informe LEE 1923, B.4, y el 1924, B.4, lo declaran inferencia no adoptada) | 5 | «un Eduardo F. Harbin ---el Boletín no dice que sea el mismo--- es nombrado» |
+| 2 | A:127 y 04-siglo:2540 | «24 oct. y 3 nov. 1924*» y «la composición de mesas del 24 de octubre»: el 24 de octubre es la fecha de la edición 1033; la hoja no imprime la fecha del acto | 3 | «oct.--nov. 1924*», «publicada el 24 de octubre» y «el decreto 1957, del 3 de noviembre» |
+
+Resta: en el aspecto 3, una fecha de publicación dada como fecha del acto, en dos lugares, **90**; en el aspecto 5, una identidad inferida dada como hecho, **95**. Ningún error de consistencia en 16,3 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: dos, los dos en el AMPLÍA 1924 (`85034c0`), escrito por esta misma sesión. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 3).** (a) «el primer año de toda la serie en que el calendario cierra solo» (A:116, 04-siglo:2302): 1923 tiene una tapa fuera de fecha y 1924 tres, pero el libro define el cierre por ediciones y viernes, y en los dos años es uno por viernes; la frase ya estaba antes del AMPLÍA y el AMPLÍA agrega la salvedad de las tapas. (b) «ningún cambio de un solo dígito en el detalle lo explica» (F:56): los siete renglones de marzo se probaron; sólo 42.209,34 y 39.980,63 pueden absorber dieciséis mil pesos, y los dos cambian dos dígitos. (c) «setenta años antes de que Vaqueros sea municipio» (04-siglo:2544): de 1924 a 1994.
+
+**Pendientes revisados.** P59 sigue abierto (el cruce de la concesión de 1924 con el decreto de 1953 no se hizo). P298: 1924 aporta un dato en contra (relevos en la Comisión Municipal en enero, abril y agosto sin cambio de gobernador), anotado en el `.json` del AMPLÍA. P296 y P297 siguen abiertos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.711/25.711 vigentes en `d42f009` | 25.695 vigentes; 16 caducas; 19 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1924 | 9 referencias distintas de 1924 en 19 líneas | 9/9 coinciden con la ficha o con B.4 |
+| Citas entre comillas nuevas | 3 («H. Comisión Municipal», «Campo Alegre Calderilla», «El Monte» / «Las Garrapatas») | 3/3 literales en la imagen |
+| Superlativos y ausencias en el texto agregado | 19 líneas | 2 de primacía («el primer año [...] cierra solo», «el primer acto de 1924 sobre ese cuerpo») y 3 ausencias («El acto que hizo el cambio no se publica», «ningún acto del año dice cuándo cesó el Interventor», «sin que se publique el acto»); todas con universo del año leído entero |
+| Largo de los archivos antes y después de la fase 6 | 2 archivos | no cambia |
+| Compilación | fase 6 sobre `85034c0` | Compila; 1.075 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `85034c0` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega nueve referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 10 cotejos sobre 10 ediciones, sin correcciones silenciosas, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 100 | Hallazgo 1, aplicado |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 16,3 páginas; el AMPLÍA quitó la contradicción entre la partición de 1925 y la mesa de Urquiza de octubre de 1924 |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Un pedido nuevo (Registro Oficial de 1924); sin pedidos satisfechos en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios y autoridades de mesa de 1924, presumiblemente fallecidos |
+
+**Nota inicial: 87,1 antes del tope y 87,1 después** (tope de 90 por la cobertura acumulada inicial del 99,93 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 101.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos; (5) P24: fijar el criterio del apéndice H.
+
+**Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.075 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato en contra (1924: tres relevos en la Comisión Municipal con el mismo gobernador todo el año).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 19 líneas (0,07 %; 16,3 páginas). Cobertura acumulada: 25.714 de 25.714 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los diez sobre la imagen); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 2, los dos en el AMPLÍA 1924 escrito por esta misma sesión; atrapados por un control automático: 0.
