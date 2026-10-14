@@ -6526,3 +6526,103 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.073 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la cuarta («la desidia es selectiva») no gana ni pierde evidencia con 1921, cuyos dos actos de dominio son deslindes de particulares sin obra.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 17,8 páginas). Cobertura acumulada: 25.708 de 25.708 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los quince sobre la imagen); el contexto de 04-siglo se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1921 escrito por esta misma sesión; atrapados por un control automático: 0.
+
+## Ronda 101 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1923. Base: commit `10c4904` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1923, sobre `2ea72e9`, aplicado por `3-registrar` el 14/10 a las 04:44), con la fase 6 en `ronda-101.patch` (un commit sobre `10c4904`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1923**, en la misma tarea programada; el informe LEE 1923 (`BO-Salta-1923_939-990_la-caldera_LEE-1923_2026-10-14.txt`) lo escribió la sesión anterior. Para el cotejo se bajaron desde la nube ocho PDF del Release 1923 (942, 944, 947, 949, 954, 956, 969 y 978). Insumo de Eduardo usado: `auto/insumos-mejora/2026-10-14_hipotesis-quinta-tesis.md` (hipótesis de una quinta tesis), tratado como pendiente conocido (flujo §7.3).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 100 (25.708 de 25.708, sobre `2ea72e9`) se trasladaron por diff a `10c4904`. **El AMPLÍA caduca 16 líneas y deja 17 nuevas o modificadas**; cambia de largo sólo el apéndice A (+1); D, F y el capítulo 4 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.692 de 25.709.
+
+### Lectura sobre el texto (numeración de `10c4904`)
+
+Se leyeron **las 17 líneas, enteras** (53.722 bytes), contra el informe LEE 1923 y, en los nombres, fechas, cifras y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 5 (103, 105, 107, 109, 113) |
+| ape/D-pedidos.tex | 1 (231) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 10 (2141, 2155–2157, 2178, 2262, 2267, 2270, 3288–3289) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:2136–2290 (la sección de 1923) y 3280–3292, A:100–116 (las filas de 1922 a 1924), D:225–235, F:56 (los tramos de 1922 a 1924), H:20–25 y 90–97, 01-planteo:141–162 (para el insumo).
+
+**Esta ronda: 17 líneas**, 53.722 bytes sobre 3.554.988, que en las 1.071 páginas de la base (compilada en esta sesión) equivalen a **16,2 páginas**.
+
+Acumulado: 25.692 vigentes + 17 = **25.709 de 25.709 (100,0 %)**. La fase 6 toca siete líneas existentes (A:105, F:56, 04-siglo:2157, 2178, 2261–2262 y 3288–3289) y agrega dos (01-planteo:163–164); 2261 y 01-planteo:141–162 se habían leído como contexto y las dos nuevas las escribió y leyó esta ronda. Cambia de largo el capítulo 1 (+2): **25.711 de 25.711 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 942 | 6 | «Colegio Electoral Núm. 3 / La Caldera»; las doce autoridades: «Yurquina Mariín Y.», «Condori Manuel», «Aguero Antonio», «Caceres Silverio», «Rivero Alejandro» (imagen, 250 ppp) | Coincide; nombres de A:105, hallazgo 2 |
+| 944 | 6 | Circuitos de las cuatro mesas: 4, 21, 2 y 5 elementos con los separadores del original (imagen) | Coincide: 32 |
+| 947 | 14 | «CALDERA / Mesa Nº 2 / Presidente —Arévalo Pedro / Choque Pablo» (imagen) | Coincide |
+| 954 | 8 | Decreto 834, «Salta, Abril 12 de 1923»: intervención de la Municipalidad de Cerrillos, Interventor «Eduardo F. Harbin», visto con la presentación de «D. Vicente Pérez», considerandos (imagen) | Coincide; el visto, hallazgo 4 |
+| 969 | 7 | Item 2º: «Rivadavia 1ª sección a $ 44», «2.640.00 / 32.680. / 32.680.» (imagen, 200 ppp) | Coincide |
+| 978 | 2 | Art. 1º «Declárase intervenida», «Har- / bín»; Art. 2º «Désele las instrucciones» (imagen, 250 ppp) | Declárase y Harbín coinciden; «Désele», hallazgo 1 |
+
+6 cotejos sobre 6 hojas de 6 ediciones de 1923, todos sobre la imagen.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:2157 | «Desele las instrucciones»: la imagen imprime «Désele»; el AMPLÍA lo tomó de la transcripción del informe LEE (A.16), que es la errada | 4 | «Désele» |
+| 2 | A:105 | «Antonio Agüero y Silverio Cáceres»: la composición imprime «Aguero Antonio» y «Caceres Silverio», en una entrada que transcribe «Mariín» [sic] | 4 | «Antonio Aguero y Silverio Caceres, como imprime» |
+| 3 | F:56 | «sólo en octubre se puede decir dónde está el error»: octubre tiene dos diferencias y sólo la de Impuestos al Consumo se sitúa; la de la Receptoría (400) queda abierta (informe LEE, E.8) | 5 | «de sus diferencias sólo una se puede situar: en octubre, en el subtotal impreso de Impuestos al Consumo [...]; las demás quedan abiertas bajo el techo de 150 ppi» |
+| 4 | 04-siglo:2178 | El decreto 834 de Cerrillos, «con el mismo Interventor y considerandos en parte iguales», sin decir que su visto nombra a quien pidió la intervención y los cargos que formula, que es justo lo que el 1161 calla | 5 | Se agrega: «aquel decreto dice quién la pidió y por qué ---el presidente de la propia Comisión, Vicente Pérez, que "formula diversos cargos contra esa Comuna"---, y éste no» |
+| 5 | 04-siglo:2262 | Pablo Choque, «el primer apellido de origen andino que aparece presidiendo una mesa»: la composición del 12 de enero, que el mismo párrafo cita, pone en la presidencia de esa mesa 2 a «Mariín» Y. Yurquina | 5 | «el segundo [...]»; Yurquina, «apellido también andino y el primero en presidir una» |
+| 6 | 04-siglo:3289 | Mamani en 1940, «la tercera autoridad de mesa con apellido de origen andino [...] después de Manuel Condori y Pablo Choque»: falta Yurquina | 5 | «la cuarta [...] después de Yurquina, Manuel Condori y Pablo Choque en 1923» |
+| 7 | 01-planteo:162 | Insumo de Eduardo (hipótesis de una quinta tesis): pendiente conocido, no defecto | — | Párrafo nuevo al final de «Qué refutaría cada tesis»: la hipótesis en estudio, lo que la refutaría y lo que falta medir, con remisión marcada al capítulo 4 y a la lámina de cargos; no se suma a «las cuatro tesis» |
+
+Resta: en el aspecto 4, dos correcciones silenciosas sin cambio de sentido, **84**; en el aspecto 5, una afirmación con más alcance que el dato (3), una comparación que omite la diferencia que importa al argumento (4) y dos superlativos que el propio libro desmiente (5 y 6), **70**. Ningún error de consistencia en 16,2 páginas; el aspecto 7 queda en **100**.
+
+Sobre el hallazgo 5: el libro clasifica por su origen los apellidos de autoridades de mesa (Choque, Condori, Mamani) desde rondas anteriores; Yurquina se clasifica con el mismo criterio. Es un registro de 1923, con personas que se presumen fallecidas, y la descripción recae sobre el apellido: rige la excepción del aspecto 15.
+
+**Errores introducidos por la propia auditoría**: seis, los seis en el AMPLÍA 1923 (`10c4904`), escrito por esta misma sesión (el 5 y el 6 sobre una frase de rondas anteriores que el AMPLÍA tocó sin repasar el superlativo). Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 3).** (a) «treinta y dos nombres de paraje» (A:107), cuando dos de los treinta y dos son «Pueblo» y «Estación del Ferrocarril»: el capítulo 4 cuenta igual las listas de 1918 y de 1921, y la cuenta es la del informe LEE. (b) «cinco meses y medio» entre el decreto 834 (12 de abril) y el 1161 (24 de septiembre): cinco meses y doce días. (c) «en catorce ediciones» (F:56): las fichas A.1 a A.18 caen en las ediciones 942, 943, 944, 946, 947, 948, 949, 956, 958, 961, 969, 978, 982 y 990.
+
+**Pendientes revisados.** P24 sigue abierto: fijar el criterio del apéndice H obliga a rehacer sus recuentos (sesenta y una filas, treinta y tres con hoja) y la frase de 1923; no se toca. P296 (comisiones de la Receptoría en 1923, cap. 26) y P297 (circuito de 1923 contra el de 1921) siguen abiertos. Nuevos: P298 (medir la hipótesis del insumo), P299 (extender `datos/cargos/` después de 1946) y P300 (corregir «Desele» en el informe LEE 1923, A.16).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.708/25.708 vigentes en `2ea72e9` | 25.692 vigentes; 16 caducas; 17 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1923 | 6 referencias distintas de 1923 en 17 líneas (Nº 942 h. 6; 947 h. 14, 15 y 17; 954 h. 8) | 6/6 coinciden con la ficha o con B.4 |
+| Citas entre comillas nuevas | 6 («L a Ga&dera» dos veces, «Mariín» dos, «Désele», «formula diversos cargos contra esa Comuna») | 5/6 literales en la imagen; «L a Ga&dera» es de la capa y el libro lo dice |
+| Superlativos y ausencias en el texto agregado y en las frases que toca | 17 líneas | 3 de primacía u orden («el primer apellido», «la tercera autoridad», «el primero en presidir una») y 1 de unicidad («sólo una se puede situar»); los dos primeros, hallazgos 5 y 6; los otros dos, con universo |
+| Largo de los archivos antes y después de la fase 6 | 4 archivos | sólo 01-planteo cambia (+2) |
+| Compilación | fase 6 sobre `10c4904` | Compila; 1.073 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `10c4904` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega seis referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Sin hallazgos |
+| 4 | Fidelidad de transcripción | 7 | 84 | 90 | Hallazgos 1 y 2, aplicados; 6 cotejos sobre 6 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 70 | 100 | Hallazgos 3 a 6, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 16,2 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido de las hojas de 1923 reescrito y el Registro Oficial de 1923 agregado; el control de las ediciones 971 a 990, satisfecho, sale de la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | La hipótesis nueva se declara como tal, con su refutación; ninguna tesis cambia de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Las remisiones nuevas al capítulo 4, marcadas |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: autoridades de mesa y funcionarios de 1923, presumiblemente fallecidos; apellidos descritos por su origen bajo la excepción de los registros históricos |
+
+**Nota inicial: 84,3 antes del tope y 84,3 después** (tope de 90 por la cobertura acumulada inicial del 99,93 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 100.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: armar las dos series y decidir si la hipótesis pasa a tesis; (5) P24: fijar el criterio del apéndice H y rehacer sus recuentos.
+
+**Avance del libro:** 6 de 6 hallazgos resueltos; compila sin errores, 1.073 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; se declara una hipótesis nueva en estudio (relevos de cargos y cambios del Ejecutivo provincial), con valor 0; la tercera tesis gana un caso para su lado institucional (el 834 de Cerrillos nombra a quien pidió la intervención y el 1161 de La Caldera no), sin cambiar de estado.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 17 líneas (0,07 %; 16,2 páginas). Cobertura acumulada: 25.711 de 25.711 (100,0 %). Falsos positivos descartados: 3. Recortes: seis cotejos sobre la imagen, uno por hoja tocada por el AMPLÍA salvo F, D y la 949; el contexto de 04-siglo se releyó y no suma. Errores introducidos por la propia auditoría: 6, los seis en el AMPLÍA 1923 escrito por esta misma sesión; atrapados por un control automático: 0.
