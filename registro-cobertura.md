@@ -7399,3 +7399,115 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.097 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana evidencia sin cambiar de estado (1930 a favor: relevos a los nueve y a los diez días de los dos cambios del Ejecutivo de septiembre).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 89 líneas (0,34 %; 25,9 páginas). Cobertura acumulada: 25.994 de 25.994 (100,0 %). Falsos positivos descartados: 8. Recortes: P304, P305, P307 y P308 sin revisar (los scripts de las láminas están en otro repositorio; el primer acta del Directorio de Vialidad no se buscó); la salida línea por línea de `control_amplia.py` no está en la entrega del AMPLÍA, de modo que no se puede decir cuál de sus marcas justificadas es cada hallazgo; el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1930, escrito por otra sesión; atrapados por un control automático antes de llegar al libro: 2 (en el AMPLÍA). El hallazgo 1 muestra un mecanismo que el script no ve: **la cita es exacta y el error está en el verbo que la presenta** («un decreto cuyo objetivo es «...»» por un considerando que invoca un objetivo ajeno); **`control_amplia.py` debería marcar como VERBO las fórmulas «cuyo objetivo es», «con el fin de», «para» que preceden a una cita tomada de un considerando**. Y el 2 sugiere otra regla: **toda atribución de autor a una nota, un expediente o una terna citados («de la Jefatura», «del Ministerio») se marca como IDENT si el acto no la dice**.
+
+## Ronda 109 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1931. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `7d8d9a3` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1931, sobre `9573d0c`, aplicado por `3-registrar` el 14/10 a las 17:28), con la fase 6 en `ronda-109.patch` (un commit sobre `7d8d9a3`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1931** ni el informe LEE 1931: la abrió el relevo de la tarea programada. Para el cotejo se bajaron desde la nube dieciocho ediciones del Release `1931` de `boletines-salta` y se abrieron trece (1362, 1367, 1376, 1380, 1383, 1384, 1395, 1396, 1397, 1399, 1402, 1405 y 1406; la 1364, 1378, 1381, 1385 y 1400 no hizo falta abrirlas) y `lee_textos_1931.zip`. El AMPLÍA había corrido `control_amplia.py` (flujo v4 §6.6): dos corridas, 142 marcas, dos corregidas antes de compilar y 140 justificadas; **esta ronda lo volvió a correr sobre el diff `9573d0c..7d8d9a3`** con el zip y el informe LEE 1931 del 14/10/2026, y tiene la salida línea por línea (142 marcas: CITA 4, FECHA 10, CIFRA 45, IDENT 2, ALCANCE 24, VENTANA 11, VERBO 46).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 108 (25.994 de 25.994, sobre `9573d0c`) se trasladaron por diff a `7d8d9a3`. **El AMPLÍA caduca 32 líneas y deja 62 nuevas o modificadas**; cambian de largo el apéndice A (+4), el apéndice D (+1) y los capítulos 4 (+24) y 14 (+1); los apéndices C, E y F, la advertencia y los capítulos 16, 18 y 22 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.962 de 26.024.
+
+### Lectura sobre el texto (numeración de `7d8d9a3`)
+
+Se leyeron **las 62 líneas, enteras** (86.001 bytes; la línea 56 de F, de 54.156 bytes, la 45 de la advertencia, de 13.351, y la 30 de E, de 4.341, también enteras), contra el informe LEE 1931 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 8 (200–207) |
+| ape/C-normativa.tex | 1 (20) |
+| ape/D-pedidos.tex | 2 (26, 221) |
+| ape/E-personas.tex | 1 (30) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/04-siglo.tex | 35 (3133–3154, 3182–3188, 3227–3232) |
+| cap/14-poblacion.tex | 3 (526–528) |
+| cap/16-redes.tex | 3 (371, 442, 479) |
+| cap/18-politica.tex | 5 (150, 153, 154, 160, 277) |
+| cap/22-infraestructura.tex | 2 (535, 536) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:3120–3132, 3155–3181, 3189–3226 y 3233–3236; 15-hacienda:170–190 (P310); 16-redes:360–364 y 478–500; 18-politica:146–162 y 270–278; D:216; la lista de las 49 líneas que mencionan «1931» fuera de las del AMPLÍA en todo el manuscrito; y, del informe LEE 1931, el §0, el §1, las catorce fichas del §A, el §B, el §P y el §E entero.
+
+**Esta ronda: 62 líneas**, 86.001 bytes sobre 3.635.177, que en las 1.101 páginas de la base equivalen a **26,0 páginas**.
+
+Acumulado: 25.962 vigentes + 62 = **26.024 de 26.024 (100,0 %)**. La fase 6 cambia siete líneas sin cambiar el largo de ningún archivo: A:201 y 202 y 18-politica:160, entre las leídas en esta ronda, y 16-redes:486–488 y 499, que estaban vigentes desde rondas anteriores, se releyeron enteras como contexto y se cuentan leídas en esta ronda después del cambio: **26.024 de 26.024 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1362 | 15 | 12870: «Salta, Diciembre 30 de 1930», «Eustaquio Murua», «Expendedor de Guías, transferencia de Cueros Marcas y Multa Policiales de La Caldera», sin reemplazante (imagen) | Coincide |
+| 1367 | 4 y 5 | 12967: «Enero 16 de 1931», «Fxp. Nº ...» sin número, «ratifica la necesidad de confeccionar el plano Catastral de la Provincia [...] en láminas que comprendiendo una cada Departamento», «ha confeccionado la lámina correspondiente al Departamento de Orán», Humberto Monroy Cano, «plano o mapa Catastral del Departamento de Oràn», doscientos pesos «que se le pagarán» (imagen, las dos hojas) | Coincide; el intervalo con la catastración, hallazgo 1 |
+| 1376 | 4 | 13299: «Liquídese a favor de don Medardo Sarmiento, ex-Sub Comisario de Policía de Vaqueros», $ 70, «cobrado y malversado por el ex-Habilitado Pagador», «El Interventor Nacional. Interino» (imagen) | Coincide |
+| 1380 | 2 y 8 | 13433: encabezado «Abril 13 de 1931», «Exp. Nº 1635 Lerta—M»; 13490 impreso «13400» (h. 7, capa) y el punto 7º del acta 146, Lesser a los Yacones, «un mil doscientos pesos», en la h. 8 (imagen y capa) | Coincide |
+| 1383 | 9 | 13628: «Salta 2 de Junio de 1931», «Mayo 27 de 1931», «Ramón Juárez», «Juez de Paz propietario del Departamento de La Caldera», «en mérito a las razones particulares que invoca» (imagen) | Coincide |
+| 1384 | 27 | 13711: «Junio 30 de 1931», «Dr. don Raimundo Meabe» (imagen) | Coincide |
+| 1395 | 10, 11 y 16 | Carátula e integración de la Corte: «Cristían Puló» (h. 10, imagen a 600 ppp); voto: «revocada por el mismo en Mayo 2 de 1928» (h. 11, la «Pág. 12»); resolución: «deja sin efecto El decreto del P. E. de fecha Mayo 12 de 1928 impugnada por Francisco Urquiza», firmas «Cristían Puló» (h. 16, imagen a 600 ppp) | Las citas coinciden; el nombre, hallazgo 2 |
+| 1396 | 28 | Aviso 1183: «en San José, jurisdicción de Vaqueros», «María Nolasco de Coca», Antonio Forcada (imagen) | Coincide |
+| 1397 | 17 | Resolución de Minas: «Declárase caduca la solicitud», «San Alejo y Santa Rufina», «Departamento Caldera», Apolo A. y Dorindo F. Prémoli, 15 de mayo de 1928 (imagen) | Coincide |
+| 1399 | 8 | 14091, art. 1º: «concesiones otorgadas a particulares por el Poder Ejecutivo de la Provincia para el uso—goce de las aguas de dominio público de los Ríos Vaqueros y Wierna», ordenanzas, «usos y costumbres» (imagen) | Coincide con las líneas del AMPLÍA; 16-redes:499, hallazgo 4 |
+| 1402 | 10 | 14155: «Salta, 15 de Noviembre de 1931», mesas de los comicios del 8 cuya nulidad declaró la Junta, «Convócase para el día Domingo 22 del corriente mes» (imagen) | Hallazgo 3 |
+| 1405 | 2 | 14189: «Diciembre 2 de 1931», «Delégase el mando gubernativo [...] en el señor Ministro Secretario de Estado en la Cartera de Hacienda, provisoriamente a cargo de la de Gobierno, Doctor Mariano Gómez» (imagen) | Coincide |
+| 1406 | 10 | 14.209, apartado d) y art. 2º: «en los restantes enumerados en el apartado d) se votará por dos» (imagen) | Coincide |
+
+13 cotejos sobre 17 hojas de 13 ediciones, todos sobre la imagen salvo el número impreso del 13490 (capa); 9 citas del libro cotejadas, sin correcciones silenciosas dentro de comillas; un nombre normalizado fuera de comillas (hallazgo 2). Aritmética rehecha: el cierre de diciembre de 1930, 909.822,08 − 876.563,90 = 33.258,18, como dicen A:200 y D:221.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:202 | Fila del 12967 (16-I-1931): «\textbf{Dos años después de la catastración que Aybar dio por terminada.}»: el AMPLÍA trajo la fila de marzo a enero y dejó el intervalo; del decreto del 5 de agosto de 1929 que transcribe la catastración (la solicitud de Aybar no tiene fecha, cap. 4) al 16 de enero de 1931 van diecisiete meses | 3 | «\textbf{Diecisiete meses después del decreto del 5 de agosto de 1929 que transcribe la catastración que Aybar dio por terminada.}» |
+| 2 | 18-politica:160 | «Firman los ministros [...] Humberto Cánepa y Cristián Puló»: el AMPLÍA cambió «Cristian» por «Cristián» tomándolo del informe LEE (A.9); el Boletín imprime «Cristían», en la carátula (h. 10) y en las firmas (h. 16) | 4 | «Cristían Puló, así impreso (Nº 1395, h.\ 10 y 16).» |
+| 3 | A:201 | «y la de elecciones complementarias del 15 de noviembre, para las mesas anuladas [...]»: el 15 es la fecha del decreto 14155; las elecciones complementarias se convocan para el domingo 22 | 3 | «y la del 15 de noviembre, que llama a elecciones complementarias para el 22 en las mesas anuladas por la Junta Escrutadora» |
+| 4 | 16-redes:499 | «en 1931 el Interventor pone a esa misma Municipalidad, junto con la de La Caldera, a investigar las concesiones de los dos ríos»: el AMPLÍA corrigió el alcance del 14091 en 16-redes:371 y 479, D, E, cap. 4 y cap. 22 (las concesiones otorgadas a particulares; la comisión la integra también Obras Públicas) y dejó esta frase, veinte líneas más abajo, fuera de su ventana | 5 | «junto con la de La Caldera y con la Dirección General de Obras Públicas, a estudiar e investigar las concesiones que el Poder Ejecutivo había otorgado a particulares sobre los dos ríos» |
+| 5 | 16-redes:486–488 | «el comisionado [...] es Augusto Regis, el mismo que presidirá el municipio durante buena parte de las dos décadas siguientes y será su comisario de policía en 1942»: identidad entre años que ningún acto afirma (los informes LEE 1930 y 1931 lo dicen expresamente: «no se infiere ninguna identidad»); frase anterior al AMPLÍA, hallada en el repaso de ventana | 5 | «; un Augusto Regis presidirá el municipio buena parte de las dos décadas siguientes y será su comisario de policía en 1942, aunque los actos no dicen que sea el mismo.» |
+
+Resta: en el aspecto 3, una cifra de intervalo no recalculada y una fecha de acto dada como fecha del hecho (5 cada una), **90**; en el aspecto 4, una corrección silenciosa (3), **87**; en el aspecto 5, dos frases que dicen más que el acto (5 cada una), **90**; en el aspecto 7, ningún error de consistencia en 26,0 páginas, **100**.
+
+**Errores introducidos por la propia auditoría**: cuatro de los cinco están en el AMPLÍA 1931 (`7d8d9a3`): el 1, el 2 y el 3 en texto que el AMPLÍA escribió, y el 4 en una frase que su corrección del 14091 debía alcanzar y no alcanzó; el 5 es anterior al clon (`67d4668` o antes). **Ninguno lo marcó `control_amplia.py`** como lo que era (corrida de esta ronda, salida línea por línea): el 1 está escrito en letras («dos años») y la clase CIFRA sólo mira dígitos; el 2 es un nombre fuera de comillas (el caso «Agüero» que el flujo §6.6 ya declara no cubierto); el 3 lo marcó como ALCANCE (A:201, «no nombra ninguna de los circuitos 5 y 6»), no como FECHA, y la sesión del AMPLÍA lo justificó por el universo, que era correcto; el 4 está a veinte líneas del cambio más cercano y la ventana del script es de cinco. **Atrapados por el control antes de compilar el AMPLÍA: dos**, según su `.json`, que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 9).** (a) «en ninguna de las 51 ediciones se nombra comisario, subcomisario, juez de paz ni encargado del Registro Civil» (A:200, 04-siglo:3133–3134): «nombra» es nombramiento, el universo está en la frase y el informe LEE 1931 lo buscó por cargo y lugar; el 13388 asigna plazas, no nombra personas, y la renuncia de Juárez no es nombramiento. (b) «el número 1.356, del 2 de enero, no está en el repositorio» (A:200, advertencia:45, D:221) frente a «no se sabe si salió» (F:56): el número lo prueba la serie (1355 el 26 de diciembre, 1357 el 9 de enero) y el viernes 2 es el único intermedio; F declara la inferencia. (c) «deja sin efecto El decreto del P.\ E.\ de fecha Mayo 12 de 1928} impugnada» (18-politica:153): la imagen (h. 16) imprime «Mayo 12 de 1928»; el informe LEE transcribe «Mayo 12 1928» y es el informe el que yerra (P311). (d) «paga la lámina de Orán» (04-siglo:3229): el decreto reconoce los servicios y le asigna doscientos pesos «que se le pagarán»; la frase no dice más que el acto. (e) «13490, impreso «13400», Nº 1380, h.\ 8»: el encabezado está en la h. 7 y el punto 7º del acta, con los mil doscientos pesos de Lesser a los Yacones, en la h. 8, que es lo que la frase cita. (f) «\$33.258,18» (A:200, D:221, F:56): rehecho, 909.822,08 − 876.563,90. (g) «En los años leídos, es la primera vez que el archivo muestra a los dos municipios sentados juntos» (04-siglo:3186–3187): primacía con universo. (h) D:26 y D:216 piden informe y actas de la misma comisión, pero a destinatarios distintos (secciones distintas del apéndice): no es pedido duplicado en el sentido del aspecto 8. (i) «Raimundo Meabe» (A:200, 04-siglo:3147): así lo imprime el 13711 (h. 27, imagen); el 13712 dice «Reimundo» y la mancheta «Raymundo» (informe LEE 1931, §1 y E.4).
+
+**Pendientes revisados.** P298: 1931 es neutro o en contra: ningún nombramiento del departamento en el año, y las dos renuncias no siguen a un cambio de mando (la de Murúa, del 30 de diciembre de 1930, tres meses después de septiembre; la de Juárez, presentada el 27 de mayo, antes de que asuma Meabe el 30 de junio); los tres cambios de mando del año (30-VI, 2-X, 2-XII) no traen relevos publicados. P310 sigue abierto: la serie de demoras del cap. 15 (líneas 178 y 182) mide desde la sanción o la elevación del presupuesto, y para 1931 el 13433 no fecha la elevación de Regis (sólo el dictamen fiscal del 17 de enero y el informe del Consejo de Educación del 6 de marzo); para 1929 esta sesión no tuvo el acto a la vista. P308, P304, P305 y P307 siguen sin revisar. P22: sin cambios (quedan 1921, 1925 y 1983).
+
+**Pendiente nuevo.** P311 (tipo `lee`, 1931): el informe LEE 1931 del 14/10/2026 transcribe «Cristián Puló» en A.9, donde la imagen (1395, h. 10 y 16) imprime «Cristían», y «de fecha Mayo 12 1928 impugnada» en la resolución, donde la imagen imprime «Mayo 12 de 1928».
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.994/25.994 vigentes en `9573d0c` | 25.962 vigentes; 32 caducas; 62 nuevas o modificadas |
+| `control_amplia.py` (corrida de esta ronda, sobre `9573d0c..7d8d9a3`) | 61 líneas agregadas o modificadas según el script, 80 frases | 142 marcas, las mismas clases y recuentos que declara el `.json` del AMPLÍA; ninguna marca los hallazgos 1, 2 y 4; el 3, como ALCANCE |
+| Menciones de «1931» fuera de las líneas del AMPLÍA | 26.024 líneas de `7d8d9a3` | 49 líneas; 16-redes:486–488 y 499, hallazgos 4 y 5; D:216, descartado (h); las demás, consistentes o ajenas (kilómetro 1931, Boletines Nº 11931) |
+| Superlativos y ausencias en las 62 líneas | 62 líneas | Todas con universo («en ninguna de las 51 ediciones», «en las ediciones leídas», «en los años leídos», «Ninguna de las ediciones del año») |
+| Largo de los archivos antes y después de la fase 6 | 38 archivos `.tex` | ninguno cambia de largo |
+| Compilación | fase 6 sobre `7d8d9a3` | Compila con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.101 páginas, las mismas que declara el AMPLÍA para su base; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `7d8d9a3` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega unas treinta referencias de Boletín y hoja, todas localizables; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios; la categoría de 1931 sigue en pasado con su vigencia estadística de 2022 |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 1 y 3, aplicados; las filas nuevas separan acto y publicación (12870, auto de la Sala Penal, 12967, fallo de la Corte) |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | 9 citas cotejadas en 13 ediciones, sin correcciones silenciosas; hallazgo 2, aplicado; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 90 | 100 | Hallazgos 4 y 5, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 26,0 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Pedido nuevo del Registro Oficial de 1931 y de la 1.356, sin duplicados ante el mismo destinatario |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; la hipótesis de los relevos suma 1931 neutro o en contra |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | La remisión nueva («capítulo \ref{cap:poblacion}, más adelante») está marcada |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P304, P305 y P307 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, ministros de la Corte, penados de 1930 con libertad condicional y causantes de 1928 a 1931, presumiblemente fallecidos (adultos de registros de 1944 o anteriores); el auto de la Sala Penal ya estaba en el informe y el libro no nombra a los penados |
+
+**Nota inicial: 86,3 antes del tope y 86,3 después** (tope de 90 por la cobertura acumulada inicial del 99,76 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 108.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1928 y 1930 alimentan a favor y 1926, 1927, 1929 y 1931 en contra o neutros; (5) P301, P304, P305 y P307: revisar las láminas fig:boletin, fig:parajesnom y fig:cargos con sus scripts.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.101 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un año más de evidencia, neutro o en contra (1931: tres cambios de mando sin relevos publicados en el departamento).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 62 líneas (0,24 %; 26,0 páginas), más cuatro líneas de contexto que la fase 6 cambia. Cobertura acumulada: 26.024 de 26.024 (100,0 %). Falsos positivos descartados: 9. Recortes: P304, P305, P307 y P308 sin revisar; P310 sin cerrar (falta la fecha de elevación del presupuesto de 1931 y el acto de 1929 a la vista); de las ediciones bajadas, cinco no se abrieron (1364, 1378, 1381, 1385 y 1400: sus fichas se dieron por el informe y las marcas del script); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 4 en el AMPLÍA 1931, escrito por otra sesión, y 1 anterior; atrapados por un control automático antes de llegar al libro: 2 (en el AMPLÍA). Con la salida del script a la vista, esta ronda propone tres reglas para `control_amplia.py`: **(1) marcar como CIFRA los intervalos escritos en letras («dos años», «tres semanas», «diecisiete meses») junto a una fecha, para rehacerlos**; **(2) marcar como CITA los nombres propios de las líneas agregadas cuya forma acentuada no esté tal cual en la capa ni en la imagen transcrita por el informe («Cristián» contra «Cristian» de la capa)**, porque un nombre normalizado fuera de comillas es el caso que el script no ve; **(3) cuando el AMPLÍA corrige el alcance de un acto (CONTRADICE), buscar en todo el manuscrito las demás frases que nombran ese acto o su objeto, no sólo las cinco líneas vecinas**: el hallazgo 4 estaba a veinte líneas del cambio, en el mismo capítulo. Y el hallazgo 3 muestra que **una marca justificada por la clase equivocada esconde la falla de otra clase**: el script vio la frase por su ausencia y no por su fecha.

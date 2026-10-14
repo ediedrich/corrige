@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-14T17:28:36",
+ "actualizado": "2026-10-14T17:48:36",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -16150,6 +16150,94 @@
    },
    "git_am": "OK sobre 57a94e1 (clon limpio), arbol identico",
    "propuesta_control": "control_amplia.py: (1) marcar como VERBO las formulas 'cuyo objetivo es', 'con el fin de', 'para' que preceden a una cita tomada de un considerando (el 12308 invoca 'uno de los objetivos de la Intervencion Nacional'; no es el objetivo del decreto); (2) marcar como IDENT toda atribucion de autor a una nota, expediente o terna citados ('de la Jefatura de Policia') que el acto no dice; (3) marcar como ALCANCE 'no se publica' sin anio ni ediciones"
+  },
+  {
+   "ronda": 109,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 86.3,
+   "nota_final": 88.3,
+   "tope": 90,
+   "cobertura": 100.0,
+   "fecha": "2026-10-14",
+   "hallazgos": 5,
+   "aplicados": 5,
+   "atrapados": 2,
+   "base": "7d8d9a3",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P311",
+     "tipo": "lee",
+     "anios": [
+      1931
+     ],
+     "texto": "Informe LEE 1931 (14/10/2026), A.9: transcribe 'Cristián Puló' donde la imagen (Nº 1395, h. 10 y 16) imprime 'Cristían', y 'de fecha Mayo 12 1928 impugnada' en la resolución, donde la imagen (h. 16) imprime 'Mayo 12 de 1928'. Corregir la ficha en el proximo informe del año.",
+     "abierto": "2026-10-14",
+     "hecho": null
+    }
+   ],
+   "pendientes_trabajados_sin_cerrar": {
+    "P298": "1931: neutro o en contra: ningun nombramiento del departamento en las 51 ediciones; las dos renuncias (Murua, 12870 del 30-XII-1930; Juarez, presentada 27-V y aceptada 2-VI) no siguen a un cambio de mando; los cambios del anio (Meabe 30-VI, Martinez 2-X, Gomez por delegacion 2-XII) no traen relevos publicados",
+    "P310": "sin cerrar: la serie de demoras del cap. 15 (l. 178 y 182) mide desde la sancion o la elevacion; el 13433 no fecha la elevacion de Regis (dictamen fiscal 17-I, Consejo de Educacion 6-III); el acto de 1929 no se tuvo a la vista",
+    "P308": "sin revisar en esta ronda",
+    "P304": "sin revisar: los scripts de las laminas estan en mapas_caldera",
+    "P305": "sin revisar: los scripts de las laminas estan en mapas_caldera",
+    "P307": "sin revisar: los scripts de las laminas estan en mapas_caldera"
+   },
+   "hallazgos_detalle": [
+    "1 A:202 (aspecto 3): 'Dos anios despues de la catastracion' -> 'Diecisiete meses despues del decreto del 5 de agosto de 1929 que transcribe la catastracion' (12967 es del 16-I-1931)",
+    "2 18-politica:160 (aspecto 4): 'Cristian Pulo' (con tilde en la a, tomado del informe LEE) -> 'Cristian Pulo, asi impreso' con la tilde en la i, como la imagen (Nº 1395, h. 10 y 16)",
+    "3 A:201 (aspecto 3): 'elecciones complementarias del 15 de noviembre' -> el 14155 del 15 convoca para el 22",
+    "4 16-redes:499 (aspecto 5): la comision del 14091 estudia las concesiones otorgadas a particulares por el PE y la integra tambien Obras Publicas (ventana no alcanzada por la correccion del AMPLIA)",
+    "5 16-redes:486-488 (aspecto 5): identidad del Augusto Regis de 1942 con el comisionado de 1931 no afirmada por los actos (anterior al AMPLIA)"
+   ],
+   "cotejos_imagen": {
+    "cotejos": 13,
+    "hojas": 17,
+    "ediciones": 13,
+    "citas": 9
+   },
+   "lectura": {
+    "lineas": 62,
+    "bytes": 86001,
+    "paginas_equivalentes": 26.0,
+    "caducas_por_amplia": 32,
+    "vigentes_tras_traslado": 25962,
+    "total": 26024,
+    "contexto_cambiado_por_fase6": [
+     "cap/16-redes.tex:486-488",
+     "cap/16-redes.tex:499"
+    ]
+   },
+   "compilacion": {
+    "paginas": 1101,
+    "paginas_base_declaradas_por_amplia": 1101,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 42
+   },
+   "archivos_que_cambian_de_largo": [],
+   "git_am": "OK sobre 7d8d9a3 (clon limpio), arbol identico",
+   "control_amplia_rehecho": {
+    "marcas": 142,
+    "CITA": 4,
+    "FECHA": 10,
+    "CIFRA": 45,
+    "IDENT": 2,
+    "ALCANCE": 24,
+    "VENTANA": 11,
+    "VERBO": 46,
+    "hallazgos_marcados": {
+     "1": "no (intervalo en letras)",
+     "2": "no (nombre fuera de comillas)",
+     "3": "si, como ALCANCE y no como FECHA",
+     "4": "no (fuera de la ventana de cinco lineas)",
+     "5": "no aplica (anterior al AMPLIA)"
+    }
+   },
+   "propuesta_control": "control_amplia.py: (1) marcar como CIFRA los intervalos escritos en letras ('dos anios', 'tres semanas') junto a una fecha; (2) marcar como CITA los nombres propios agregados cuya forma acentuada no este tal cual en la capa (caso 'Cristian'/'Cristian' con tilde); (3) cuando el AMPLIA corrige el alcance de un acto, buscar en todo el manuscrito las demas frases que nombran ese acto, no solo las cinco lineas vecinas"
   }
  ],
  "pendientes": [
@@ -19684,9 +19772,19 @@
    "texto": "Cap. 15 (hacienda), serie de demoras de aprobacion del presupuesto municipal ('1932, diez meses; 1943, cinco y medio; ...' y 'En los cinco casos'): no incluye los presupuestos de 1929 (decreto 10617 del 27 de mayo, Nº 1274, h. 3) ni de 1931 (decreto 13433 del 13 de abril, que aprueba presupuesto y ordenanza y los manda insertar en el libro del Ministerio sin publicarlos, Nº 1380, h. 2). Revisar la serie y el recuento.",
    "abierto": "2026-10-14",
    "hecho": null
+  },
+  {
+   "id": "P311",
+   "tipo": "lee",
+   "anios": [
+    1931
+   ],
+   "texto": "Informe LEE 1931 (14/10/2026), A.9: transcribe 'Cristián Puló' donde la imagen (Nº 1395, h. 10 y 16) imprime 'Cristían', y 'de fecha Mayo 12 1928 impugnada' en la resolución, donde la imagen (h. 16) imprime 'Mayo 12 de 1928'. Corregir la ficha en el proximo informe del año.",
+   "abierto": "2026-10-14",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
