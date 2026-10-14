@@ -6830,3 +6830,118 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.077 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato a favor (1925: cinco relevos del departamento en los sesenta días posteriores al cambio de gobernador, con el personal declarado en comisión por decreto).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 76 líneas (0,30 %; 22,4 páginas). Cobertura acumulada: 25.760 de 25.760 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los catorce sobre la imagen); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1925 escrito por esta misma sesión; atrapados por un control automático antes de llegar al libro: 7 (en el AMPLÍA), y de los cinco que llegaron, dos los había marcado el control y la sesión los justificó mal: **la justificación de una marca es el punto débil del control, no el script**.
+
+## Ronda 104 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1926. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `8446ada` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1926, sobre `4a19d2d`, aplicado por `3-registrar` el 14/10 a las 09:48), con la fase 6 en `ronda-104.patch` (un commit sobre `8446ada`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1926**, en la misma tarea programada; el informe LEE 1926 lo escribió otra sesión. Para el cotejo se usaron los PDF del Release 1926 bajados desde la nube para el AMPLÍA. El AMPLÍA había corrido `control_amplia.py` (flujo v4 §6.6): 110 marcas en la última corrida, dos corregidas antes de compilar y las demás justificadas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 103 (25.760 de 25.760, sobre `4a19d2d`) se trasladaron por diff a `8446ada`. **El AMPLÍA caduca 19 líneas y deja 80 nuevas o modificadas**; cambian de largo el apéndice A (+3), el D (+1) y el capítulo 4 (+57); la advertencia, los capítulos 3, 18 y 26 y los apéndices F y H cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.741 de 25.821.
+
+### Lectura sobre el texto (numeración de `8446ada`)
+
+Se leyeron **las 80 líneas, enteras** (23.626 bytes de líneas agregadas), contra el informe LEE 1926 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 6 (143–144, 146–149) |
+| ape/D-pedidos.tex | 2 (221, 233) |
+| ape/F-fuentes.tex | 2 (34, 36) |
+| ape/H-dominio.tex | 1 (107) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/03-fincas.tex | 1 (494) |
+| cap/04-siglo.tex | 65 (935, 2562, 2729–2732, 2744, 2761–2817, 3081) |
+| cap/18-politica.tex | 1 (293) |
+| cap/26-presencia.tex | 1 (132) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:1686–1745 (la tabla de los cateos de 1925), 1855–1940 (el semestre de 1922, por Masclef), 2525–2640 (la sección de 1925), 2725–2830 (la sección de 1926 y 1927), 3075–3085; 02-metodo:28–45 (la lámina fig:boletin); F:25–50; 00-advertencia:20–24; 15-hacienda:160–166; 18-politica:284–302; A:125–152; D:215–236.
+
+**Esta ronda: 80 líneas**, 23.626 bytes sobre 3.576.258, que en las 1.079 páginas de la base equivalen a **7,1 páginas**.
+
+Acumulado: 25.741 vigentes + 80 = **25.821 de 25.821 (100,0 %)**. La fase 6 cambia 19 líneas sin cambiar el largo de ningún archivo: 12 de las leídas en esta ronda y 7 fuera de ellas (F 44–46, advertencia 22, 03-fincas 495, 15-hacienda 165, 18-politica 291), releídas enteras y escritas en la ronda: **25.821 de 25.821 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1096 | 10 | «don Carmelo Civila», «doscientos setenta y siete pesos con noventa centavos» (imagen) | Coincide |
+| 1098 | 12–13 | «Saldo del día 30 de Noviembre de 1925 $ 3516.16»; «Saldo al día 31 de Diciembre de 1925 7676.62» (imagen) | Coincide |
+| 1099 | 2 | «3125—Salta, Enero 18 de 1926», «Subsistiendo las causas que motiva-rón el decreto N° 2944» (imagen); la lista de destinos contra la del 2944 en el informe LEE 1925, A.22 | Coincide; la misma lista, en el mismo orden |
+| 1101 | 6 | «CIRCUITO: Lesser y Vaqueros», «Mojotoro, Mojotorito, Potrero de Gallinato, Túnel y Estación Ferro Carril» (imagen) | Coincide |
+| 1101 | 20 | «Francisco R. Arias», «fianza de $ 5.000» (imagen) | Coincide |
+| 1104 | 7 | «Expediente 7571-E», «una de cuyas paredes se ha derrumbado, amenazando ruina el resto» (imagen, 300 ppp) | Coincide; la letra E contra P67 |
+| 1108 | 2 | «N° 3227—Salta, Febrero 23 de 1926», «Bruzzo», «en reemplazo de don Víctor Mascleff» (imagen) | Coincide |
+| 1108 | 8 | «Carlos H. Matienzo y D. Lucas Molina» (imagen) | Coincide |
+| 1108 | 14 | «Carlos F. Matienzo, Juez de Paz», «Marzo 27 de 1926» (imagen) | Coincide |
+| 1121 | 3 | «ha continuado desempeñado ese puesto hasta el 8 de Abril» (imagen) | Coincide |
+| 1122 | 3 | «Salvador Rosas», «veinticinco pesos m/n mensuales», «con anterioridad al 1°. de Diciembre ppdo.» (imagen) | Coincide |
+| 1130 | 6 | «crédito suplementario al P. Ejecutivo», «cancelar créditos correspondientes a ejercicios» (imagen) | Coincide; el verbo, hallazgo 3 |
+| 1130 | 9 | los renglones 1554 M y 1553 M, «Sub-Comisarìa» y «Sub-Comisaría Mojotoro», «70.—» en los dos (imagen) | Coincide |
+| 1130 | 22 | «denominada «Peño-nes» o«Los Peñones», ubicada en el Departamento de la Caldera» (imagen) | Las comillas internas, hallazgo 8 |
+
+14 cotejos sobre 16 hojas de 12 ediciones, todos sobre la imagen.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | F:34–36 frente a F:44–46, advertencia:22 y 45, 15-hacienda:165 | El AMPLÍA lleva a veinte las recuperadas y saca a la 1.146, pero diez líneas más abajo F sigue diciendo «diez números sin leer», «cinco» con aviso y «1.492 leídos», y la advertencia y el cap. 15 repiten «mil cuatrocientas noventa y dos» | 7 | once sin leer, seis con aviso (la 1.146 entre ellos), 1.491 leídos, en las cinco menciones; el cap. 2 ya decía «once» |
+| 2 | 04-siglo:2797 | «Y tres actos de 1926 miran hacia atrás»: la cautela enumera cuatro (las leyes 3610 y 3611, el fallo de 1922 y el edicto del cateo 1198 de 1925) | 7 | «cuatro actos» |
+| 3 | 04-siglo:2797–2799 y A:144 | «La Ley 3610 paga a Leoncio A. Mascietti»: la ley abre un crédito suplementario para «cancelar créditos correspondientes a ejercicios» vencidos; no paga | 5 | el crédito suplementario con su objeto, y «incluye» |
+| 4 | 04-siglo:2761 | «con nombres que ya estaban en 1925»: Bruzzo, Mascleff, Heredia, Rosas y Civila no estaban | 5 | «con algunos nombres» |
+| 5 | 04-siglo:2770–2771 | «un Francisco Arias había entrado a la comisaría [...] y otro es desde abril encargado interino»: «otro» afirma lo contrario de la identidad que la frase siguiente no decide | 5 | «y un Francisco Arias es desde abril», y «que ninguno de los tres sea el mismo» |
+| 6 | 04-siglo:2774 | «un año después de las reparaciones de Fantoni»: el decreto 2152 de 1925 aprueba el presupuesto; que las reparaciones se hicieran no lo dice el Boletín | 5 | «un año después de aprobado el presupuesto de Fantoni para reparar el local» |
+| 7 | A:147 | «La Caldera, Colegio Electoral Nº 5» y «Vaqueros, Colegio Electoral Nº 6», entre comillas, con una coma que el acto no imprime | 4 | sin las comas, como en el cap. 4 |
+| 8 | 18-politica:291 | «la finca denominada Peñones o Los Peñones», entre comillas, sin las comillas internas del original | 4 | «denominada «Peñones» o «Los Peñones»» |
+| 9 | 03-fincas:494–495 | «la finca cuyo título se pidió reponer judicialmente en 1926»: de 1926 son el auto (16 de julio) y la publicación; la fecha del pedido no consta | 3 | «la finca cuyo juicio de reposición de título publica el Boletín en 1926» |
+
+Resta: en el aspecto 3, una fecha de publicación dada como del acto, **95**; en el aspecto 4, dos correcciones silenciosas, que bajo el techo de 90 dejan **90**; en el aspecto 5, cuatro frases que dicen más que el acto, **80**; en el aspecto 7, dos errores de consistencia en 7,1 páginas (28 por cada cien, más de 8) y uno de ellos contra el mismo apéndice a diez líneas, **30**.
+
+**Errores introducidos por la propia auditoría**: nueve, los nueve en el AMPLÍA 1926 (`8446ada`), escrito por esta misma sesión (el 7 y el 8 estaban en frases que el AMPLÍA tocó sin crearlas: la fila del decreto 3156 y la cita de Los Peñones, a la que agregó la referencia). **Ninguno lo marcó `control_amplia.py` como no resuelto**: el 3 y el 6 caen en frases que marcó por CITA y VERBO y que la sesión justificó cotejando la cita y no el verbo de alrededor; el 1, el 2, el 4, el 5, el 7, el 8 y el 9 no los marcó (un recuento que el AMPLÍA cambió en una línea y no en sus vecinas; un número escrito en letras; dos alcances sin palabra de ausencia; dos comillas fuera del texto agregado). **Atrapados por el control antes de compilar el AMPLÍA: dos** (ALCANCE), que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 4).** (a) «para la misma lista de subcomisarías auxiliares» (04-siglo:2765, A:146): los catorce destinos del 3125 son los del 2944 en el mismo orden (informe LEE 1925, A.22, y la imagen de la 1099). (b) «El primero de los cinco resúmenes» (04-siglo:2810): cinco cuadros con «Saldo» en la capa, en las 1098, 1111, 1123, 1132 y 1140, sobre las 768 hojas. (c) «Masclef de 1922» (04-siglo:2780): la Nº 912 es de junio de 1922 (sección del primer semestre de 1922). (d) «los años 1923 a 1932 completos» (02-metodo:28): la frase remite a F para las ausencias, y la de la 1.095 ya estaba.
+
+**Pendientes revisados.** P04 lo cerró el AMPLÍA; esta ronda completa su efecto en los recuentos de la ventana (hallazgo 1). P67: la letra del expediente 7571 de 1926 es E, a 300 ppp en la imagen; la lectura «sin letra» de la ronda 47 no se sostiene, y el libro no cita ese expediente. P298: 1926 no tiene cambio de gobernador; los relevos del departamento (30 de enero a 8 de abril) no caen en los 60 días de ninguno, dato en contra, como se anotó en el `.json` del AMPLÍA. P301 (la lámina fig:boletin y la 1.146) sigue abierto: el script está en `mapas_caldera`, que esta sesión no clonó.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.760/25.760 vigentes en `4a19d2d` | 25.741 vigentes; 19 caducas; 80 nuevas o modificadas |
+| `control_amplia.py` sobre el AMPLÍA (lo corrió la sesión del AMPLÍA) | 80 líneas, 84 frases | primera corrida 110 marcas, última 110; 2 corregidas, 108 justificadas, 0 sin resolver |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1926 | 17 referencias distintas de 1926 en 80 líneas | 17/17 coinciden con la ficha |
+| Citas textuales de actos de 1926 en las líneas nuevas | 18 en itálica (con repeticiones) y 2 sin itálica en filas tocadas | 20/20 literales en la imagen después de la fase 6; 2 corregidas (hallazgos 7 y 8) |
+| Superlativos y ausencias en el texto agregado | 80 líneas | ningún superlativo nuevo; 3 ausencias («no está entre los actos de 1926», «en las cincuenta y una ediciones del año no se publica», «sin decir quién los dejó»), con universo |
+| Recuentos de la ventana 1923–1945 en todo el manuscrito | 5 menciones (F, advertencia dos veces, cap. 15, cap. 2) | 4 desfasadas por el AMPLÍA, corregidas (hallazgo 1) |
+| Largo de los archivos antes y después de la fase 6 | 7 archivos | ninguno cambia de largo |
+| Compilación | fase 6 sobre `8446ada` | Compila; 1.079 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `8446ada` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega diecisiete referencias de Boletín y hoja, y la cita de Los Peñones; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 9, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 14 cotejos sobre 12 ediciones; dos correcciones silenciosas, aplicadas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 80 | 100 | Hallazgos 3 a 6, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios; la discrepancia entre los decretos 3350 y 3504 está señalada |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 1 y 2 en 7,1 páginas, aplicados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Un pedido nuevo (Registro Oficial de 1926); el de la nómina del Colegio 6 se recorta a 1927 |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P301 sobre la lámina fig:boletin |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, propietarios, causantes y litigantes de 1922 a 1926, presumiblemente fallecidos |
+
+**Nota inicial: 79,3 antes del tope y 79,3 después** (tope de 90 por la cobertura acumulada inicial del 99,69 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 103.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1926 alimenta con un dato en contra; (5) P301: revisar la lámina fig:boletin.
+
+**Avance del libro:** 9 de 9 hallazgos resueltos; compila sin errores, 1.079 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato en contra (1926: seis relevos del departamento sin cambio de gobernador en el año, dos con causa publicada).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 80 líneas (0,31 %; 7,1 páginas). Cobertura acumulada: 25.821 de 25.821 (100,0 %). Falsos positivos descartados: 4. Recortes: P301 sin revisar (el script de la lámina está en otro repositorio); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 9, los nueve en el AMPLÍA 1926 escrito por esta misma sesión; atrapados por un control automático antes de llegar al libro: 2 (en el AMPLÍA). Dos de los nueve caen en frases marcadas que la sesión justificó cotejando la cita y no el verbo: **cuando una marca de CITA cae en una frase con verbo de acto, el verbo se coteja aparte**. Y el hallazgo 1 sugiere un control nuevo para `control_amplia.py`: cuando el AMPLÍA cambia un recuento del aparato de fuentes, buscar el mismo recuento, en cifras y en letras, en todo el manuscrito.
