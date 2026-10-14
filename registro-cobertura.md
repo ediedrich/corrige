@@ -6723,3 +6723,110 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 2 de 2 hallazgos resueltos; compila sin errores, 1.075 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato en contra (1924: tres relevos en la Comisión Municipal con el mismo gobernador todo el año).
 
 **Calidad de la auditoría.** Cobertura de la ronda: 19 líneas (0,07 %; 16,3 páginas). Cobertura acumulada: 25.714 de 25.714 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los diez sobre la imagen); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 2, los dos en el AMPLÍA 1924 escrito por esta misma sesión; atrapados por un control automático: 0.
+
+## Ronda 103 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1925. En `auto/insumos-mejora/` no hay insumos nuevos (sólo `usados/`). Base: commit `8a89339` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1925, sobre `59dca3e`, aplicado por `3-registrar` el 14/10 a las 07:23), con la fase 6 en `ronda-103.patch` (un commit sobre `8a89339`). **La sesión que hace esta ronda es la misma que escribió el informe LEE 1925 y el AMPLÍA 1925**, en la misma tarea programada. Para el cotejo se usaron los PDF del Release 1925 bajados desde la nube para el informe LEE. El AMPLÍA ya había corrido `control_amplia.py` (flujo v4 §6.6): 130 marcas en la última corrida, siete corregidas antes de compilar y las demás justificadas.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 102 (25.714 de 25.714, sobre `59dca3e`) se trasladaron por diff a `8a89339`. **El AMPLÍA caduca 33 líneas y deja 76 nuevas o modificadas**; cambian de largo el apéndice A (+5), el D (+1) y el capítulo 4 (+37); la advertencia, F y H cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.681 de 25.757.
+
+### Lectura sobre el texto (numeración de `8a89339`)
+
+Se leyeron **las 76 líneas, enteras** (74.020 bytes), contra el informe LEE 1925 del 14/10/2026 y, en los nombres, fechas, cifras y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 10 (129–133, 135, 138–141) |
+| ape/D-pedidos.tex | 2 (222, 232) |
+| ape/F-fuentes.tex | 1 (56) |
+| ape/H-dominio.tex | 3 (103, 206, 209) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/04-siglo.tex | 59 (1536, 1545, 1551–1552, 1700–1705, 1820, 1823, 1825–1827, 2525, 2530–2534, 2536–2537, 2543–2545, 2555, 2616–2636, 2650–2651, 2674, 2676–2677, 2687, 2699–2700, 2708–2710) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:1495–1560 (los cateos de enero), 1676–1712 (la tabla de caducidades), 1810–1835 (la fundición), 2513–2700 (la sección de 1925); A:125–145; D:220–235; H:95–106 y 200–210.
+
+**Esta ronda: 76 líneas**, 74.020 bytes sobre 3.567.379, que en las 1.077 páginas de la base equivalen a **22,4 páginas**.
+
+Acumulado: 25.681 vigentes + 76 = **25.757 de 25.757 (100,0 %)**. La fase 6 toca seis líneas leídas en esta ronda y agrega tres al capítulo 4, escritas y releídas en la misma ronda: **25.760 de 25.760 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 1046 | 9 | Colegios Núm. 5 (Caldera) y Núm. 6 (Vaqueros): presidentes, suplentes y el orden apellido-nombre (imagen) | Coincide |
+| 1048 | 5 | «2144—Salta, Enero 30 de 1925» y «fecha 23 del corriente», a 500 ppp (imagen) | Coincide |
+| 1050 | 3–4 | «Tres mil trescientos dos pesos moneda legal», «la posibilidad de derrumbe de parte del edificio» (imagen) | Coincide |
+| 1050 | 15 | «Unión Provincial», «Caldera / Diputado: Julio Suarez» (imagen) | Coincide |
+| 1058 | 9 | «Expediente N° 1166 C», «Enero 20 de 1925», «Rodolfo Povoli y Enrique Prémoli (hijo)», rectángulo de 4.000 por 5.000 (imagen) | Coincide; la identidad con la 1164 C, hallazgo 1 |
+| 1072 | 15 | «Expediente N° 1165 C», «20 de Enero de 1925», 5.000 por 4.000 (imagen) | Coincide |
+| 1080 | 9 | «Julio Juarez», «1195 C» (imagen) | Coincide |
+| 1081 | 12 | «Expediente N° 1169—C», «Agrimensor F. Arias el año 1889» (imagen) | Coincide |
+| 1077 | 8 | «practicado por el señor F. Arias en 1889» (imagen) | Coincide |
+| 1084 | 7 | «Exoneración / 2887», sanción del 24 y «Salta, Septiembre 30 de 1925» (imagen) | Coincide |
+| 1087 | 4 | «Creánse tres agentes de Policía de primera y trece de segunda», los catorce destinos con «Mojotoro (Caldera)» y «Vaqueros (Caldera)» (imagen) | Coincide; el recuento y la unicidad, hallazgos 2 y 3 |
+| 1075 | 11 | «Partido El Bordo, en el Departamento de Campo Santo», «parte en el de La Caldera», «Totoral» que Linares «vendió al Dr. Dario Arias» (imagen) | Coincide; Totoral, hallazgo 4 |
+| 1087 | 15 | «Salta, Octubre 28 de 1925», «denominada « Pulpera » ubicada en la Provincia de Jujuy» (imagen) | Coincide |
+| 1056 / 1081 | 7 / 10 | «Carlos F. Marti-nez», «Caldera, Marzo 30 de 1925»; «Carlos F Matienzo», «Caldera Agosto 9 de 1925» (imagen) | Coincide; los causantes, hallazgo 5 |
+
+14 cotejos sobre 16 hojas de 13 ediciones, todos sobre la imagen.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:1700 | «la 1164 C, que el edicto de 1925 imprime 1166 C»: identifica el expediente de la caducidad de 1930 con el del edicto, cuando la ficha de enero, cien líneas antes, dice que los dos números «no se concilian» | 5 | «la 1164 C, de Povoli y Prémoli, cuyo edicto de 1925 lleva el número 1166 C», y «según esos edictos» para la finca, el dueño y el punto de arranque |
+| 2 | 04-siglo:2629 y A:141 | «crea dieciséis agentes [...] para catorce subcomisarías»: suma y recuento propios sin el rango que el informe LEE declara (14 a 15, por «Los Noques é Higuerillas») | 3 | la cita del acto («tres agentes de Policía de primera y trece de segunda») y «catorce lugares ---quince si se separan «Los Noques é Higuerillas»---» |
+| 3 | 04-siglo:2631 | «es el acto del año que atribuye los dos parajes al departamento con todas las letras»: unicidad que el propio año desmiente para Vaqueros (decreto 2674, «Subcomisario de «Vaqueros» Caldera») y para la fundición de Mojotoro (la sentencia de Levilly y Cía.) | 5 | «en las 52 ediciones del año es el único acto que nombra a los dos parajes con el departamento entre paréntesis», con las otras dos atribuciones |
+| 4 | H:103 | «“Mosquera” y “Totoral” de Daniel Linares»: el edicto dice que Linares vendió Totoral al Dr. Dario Arias | 5 | «“Totoral”, que Linares vendió al Dr. Dario Arias» |
+| 5 | 04-siglo:2624 | «dos sucesorios, los dos de causantes de apellido Valencia»: uno es de María Asunción Gutierrez de Valencia | 5 | los dos causantes por su nombre |
+
+Resta: en el aspecto 3, un recuento sin su rango, **95**; en el aspecto 5, una identidad no acreditada, una unicidad sin universo que el libro desmiente a doscientas líneas y dos frases que dicen más que el acto, **80**. Ningún error de consistencia en 22,4 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: cinco, los cinco en el AMPLÍA 1925 (`8a89339`), escrito por esta misma sesión. **Ninguno lo marcó `control_amplia.py` como no resuelto**: el 1 y el 3 los marcó (IDENT y ALCANCE) y la sesión los justificó sin corregirlos; el 2, el 4 y el 5 no los marcó. **Atrapados por el control antes de compilar el AMPLÍA: siete** (dos IDENT, tres ALCANCE y dos nombres normalizados), que no restan (CORRIGE 3.6, «Hallazgos atrapados»).
+
+**Descartados (falsos positivos, 3).** (a) «Tres semanas después de publicada la sentencia» (04-siglo:1825): la sentencia sale el 6 de noviembre (Nº 1087) y el remate el 27 (Nº 1090). (b) «al menos seis pedimentos de cateo en enero» (04-siglo:1536, A:130): la caducidad de 1930 da cinco de enero y el 1168-C de Larrán es del 21 de enero; con el 1166 C del edicto podrían ser siete, y «al menos» lo cubre. (c) «sancionada el 24 de septiembre y promulgada el 30» (04-siglo:2627, A:140): las dos fechas, en la imagen.
+
+**Pendientes revisados.** P22: la disolución de Levilly y Cía. tiene ahora fecha y cita (Nº 1087, h. 15; Nº 1090, h. 14); quedan las otras tres afirmaciones. P67: la parte de 1925 está en el informe LEE 1925 del 14/10. P298: 1925 aporta un dato a favor, con causa publicada (cambio de gobernador el 1º de mayo, decreto 2411 del 4 de mayo y cinco relevos del departamento en los 60 días siguientes), anotado en el `.json` del AMPLÍA. P296 y P297 siguen abiertos.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.714/25.714 vigentes en `59dca3e` | 25.681 vigentes; 33 caducas; 76 nuevas o modificadas |
+| `control_amplia.py` sobre el AMPLÍA (lo corrió la sesión del AMPLÍA) | 76 líneas, 88 frases | primera corrida 124 marcas, última 130; 7 corregidas, 130 justificadas, 0 sin resolver |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1925 | 19 referencias distintas de 1925 en 76 líneas | 19/19 coinciden con la ficha o con el §B |
+| Citas textuales de actos de 1925 en las líneas nuevas (sin contar nombres de fincas) | 19, y 3 más de la fase 6 | 22/22 literales en la imagen; 6 con tildes distintas de la capa, todas como las imprime el original |
+| Superlativos y ausencias en el texto agregado | 76 líneas | 3 de unicidad o primacía («el único cuyo auto de concesión consta», «el deslinde más antiguo», «el acto del año que atribuye»), la tercera es el hallazgo 3; 2 ausencias («el acto que nombró al juez no está en ninguna de las 52 ediciones», «que el Boletín no publica»), con universo |
+| Largo de los archivos antes y después de la fase 6 | 3 archivos | el capítulo 4 crece tres líneas |
+| Compilación | fase 6 sobre `8a89339` | Compila; 1.077 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `8a89339` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega diecinueve referencias de Boletín y hoja y la cita de la fundición (P22, en parte); P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | 14 cotejos sobre 13 ediciones, sin correcciones silenciosas, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 80 | 100 | Hallazgos 1, 3, 4 y 5, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios; la discrepancia entre la caducidad de 1930 y los edictos de 1925 está señalada |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 22,4 páginas; el AMPLÍA quitó la contradicción entre el «rectángulo girado» y los edictos |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Un pedido nuevo (Registro Oficial de 1925); sin pedidos satisfechos en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, autoridades de mesa, propietarios y causantes de 1925, presumiblemente fallecidos |
+
+**Nota inicial: 85,6 antes del tope y 85,6 después** (tope de 90 por la cobertura acumulada inicial del 99,70 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 102.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P298 y P299: medir la hipótesis de los relevos, que 1925 alimenta; (5) P24: fijar el criterio del apéndice H.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.077 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la hipótesis en estudio de los relevos gana un dato a favor (1925: cinco relevos del departamento en los sesenta días posteriores al cambio de gobernador, con el personal declarado en comisión por decreto).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 76 líneas (0,30 %; 22,4 páginas). Cobertura acumulada: 25.760 de 25.760 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los catorce sobre la imagen); el contexto se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1925 escrito por esta misma sesión; atrapados por un control automático antes de llegar al libro: 7 (en el AMPLÍA), y de los cinco que llegaron, dos los había marcado el control y la sesión los justificó mal: **la justificación de una marca es el punto débil del control, no el script**.
