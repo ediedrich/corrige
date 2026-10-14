@@ -6417,3 +6417,112 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 4 de 4 hallazgos resueltos; compila sin errores, 1.069 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la cuarta («la desidia es selectiva») no gana ni pierde evidencia con 1919, que no trae actos de obra ni de dominio.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 33 líneas (0,13 %; 19,4 páginas). Cobertura acumulada: 25.685 de 25.685 (100,0 %). Falsos positivos descartados: 2. Recortes: el cotejo de 757 se hizo sobre la capa y no sobre la imagen. Errores introducidos por la propia auditoría: 4 (3 en el AMPLÍA 1919, 1 de una incorporación previa), y uno de ellos heredado del informe LEE 1919 escrito por esta misma sesión; atrapados por un control automático: 0.
+
+## Ronda 100 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v3 §7), sobre el material del AMPLÍA 1921. En `auto/insumos-mejora/` no hay insumos nuevos (sólo la carpeta `usados/`). Base: commit `7021135` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1921, sobre `729c7a8`, aplicado por `3-registrar` el 14/10 a la 01:45), con la fase 6 en `ronda-100.patch` (un commit sobre `7021135`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1921**, en la misma tarea programada; el informe LEE 1921 (`BO-Salta-1921_840-888_la-caldera_LEE-1921_2026-10-14.txt`) lo escribió la sesión anterior. Para el cotejo se bajaron desde la nube diecisiete PDF del Release 1921 (843, 845, 846, 848, 851, 856, 866, 869, 873, 875, 879, 880, 881, 882, 886, 887 y 888).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 99 (25.685 de 25.685, sobre `729c7a8`) se trasladaron por diff a `7021135`. **El AMPLÍA caduca 26 líneas y deja 49 nuevas o modificadas**; cambian de largo el capítulo 4 (+18 líneas), el apéndice A (+4) y el D (+1); E, F, H, 03 y 13 cambian líneas sin cambiar de largo. Vigentes después del traslado: 25.659 de 25.708.
+
+### Lectura sobre el texto (numeración de `7021135`)
+
+Se leyeron **las 49 líneas, enteras** (59.049 bytes), contra el informe LEE 1921 y, en las fechas, firmas, cifras y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 7 (69, 71–72, 74, 76, 80–81) |
+| ape/D-pedidos.tex | 2 (195–196) |
+| ape/E-personas.tex | 1 (68) |
+| ape/F-fuentes.tex | 1 (56) |
+| ape/H-dominio.tex | 1 (89) |
+| cap/03-fincas.tex | 2 (423–424) |
+| cap/04-siglo.tex | 34 (1125, 1134, 1137, 1163–1165, 1170, 1190, 1194–1195, 1208, 1218–1222, 1260, 1262–1266, 1275–1284, 1880, 1919) |
+| cap/13-loteo.tex | 1 (721) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:1119–1310 (la sección de 1921) y 1855–1925 (el tramo de 1922 que cita los cargos de noviembre de 1921), A:66–90 (las filas de 1920 a 1922), D:190–202, F:56 (los tramos de 1919 a 1922), H:85–90.
+
+**Esta ronda: 49 líneas**, 59.049 bytes sobre 3.551.348, que en las 1.073 páginas de la base equivalen a **17,8 páginas**.
+
+Acumulado: 25.659 vigentes + 49 = **25.708 de 25.708 (100,0 %)**. La fase 6 toca cuatro líneas (A:72 y 80, 04-siglo:1283 y 13-loteo:721), las cuatro leídas en esta ronda. No cambia el largo de ningún archivo: **25.708 de 25.708 (100,0 %)** después de ella.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 843 | 11 | «Saldo que pasa al mes de Enero 1921 ... 57143.47» (imagen) | Coincide |
+| 845 | 20 | «DECRETO Nº 1342 / Salta, Enero 31 de 1921» (imagen) | Coincide |
+| 846 | 2 | «Este hecho tuvo lugar en la Caldera y Buena Vista á fines de Octubre de 1917» (imagen) | Coincide |
+| 848 | 2 | «13 Gracia solicitada por el penado Angel Guari—Se concede.» (imagen) | Hallazgos 1 y 2 |
+| 851 | 4 | «la causa contra Angel Juan ó Martín Jurado [...] resuelta el 7 de Octubre pasado» (imagen) | Coincide; la fecha, hallazgo 2 |
+| 866 | 16 | Remate de Leguizamón: siete bueyes, tres y tres novillos, dos y tres terneros, «animales que se encuentran en Vaqueros», 10 de agosto (imagen) | Coincide |
+| 869 | 5 | «herederos de Luis A. Costas» al norte y al oeste (imagen) | Coincide |
+| 873 | 12 | «diez y ocho vacunos, cuyos detalles obra en mi poder», 30 de septiembre, aviso Nº 324 (imagen) | Coincide |
+| 875 | 10 | «Decreto Nº 1664 / Salta, Julio 6 de 1921» (imagen) | Coincide |
+| 879 | 15 | «en nota N· 30 de fecha 6 del corriente», «elecctorales» (imagen) | Coincide |
+| 880 | 9 | Decreto 1853, «Octubre 1º de 1921»: la renuncia «presentada con fecha 26 del próximo pasado mes» (imagen) | Coincide; el verbo del libro, hallazgo 3 |
+| 881–882 | 1 | Mancheta «GOBIERNO DEL DR. JOAQUÍN CASTELLANOS» en la 881 y no en la 882 (imagen) | Coincide |
+| 886 | 14 | Decreto 1959, 25 de octubre: «Asumir el P. E. de la Provincia mientras se sustancia y fenece el Juicio Político» (imagen) | Coincide |
+| 887 | 11–12 | Decreto 1990: «un grupo de ciudadanos que se atribuyó las funciones del H. Senado»; 8 de enero de 1922; Caldera con dos electores (imagen) | Coincide |
+| 888 | 7 | Decreto 2049, 9 de noviembre: «por razones de mejor servicio al Sub Comisario de Mojotoro don Ciro Cáceres», Medardo Sarmiento (imagen) | Coincide |
+
+15 cotejos sobre 17 hojas de 16 ediciones de 1921, todos sobre la imagen.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:72 | «concede la gracia "al penado Angel Guari"»: la nómina imprime «Gracia solicitada por el penado Angel Guari—Se concede.»; la cita cambiaba la preposición | 4 | «la "Gracia solicitada por el penado Angel Guari---Se concede"» |
+| 2 | A:72 | «En marzo el Tribunal concede [...] y en abril otro fallo cita»: marzo y abril son las fechas de las ediciones 848 y 851; ni la nómina ni el fallo que cita dan su fecha en esas hojas | 3 | «Una nómina [...] publicada en marzo» y «un fallo publicado en abril», con la cita «resuelta el 7 de Octubre pasado» |
+| 3 | A:80 | «el gobernador Castellanos, que había renunciado el 26 de septiembre»: el decreto 1853 dice que la renuncia se presentó y pide reunir a la Asamblea para considerarla; no consta que se aceptara | 5 | «que había presentado su renuncia el 26 de septiembre» |
+| 4 | 04-siglo:1283 | «ni la renuncia, ni la acusación ni el fin del juicio se publican en el año»: el año tiene seis ediciones ausentes, tres de ellas (878, 884 y 885) dentro del interinato | 5 | «están en las ediciones conservadas del año» |
+| 5 | 13-loteo:721 | «en el Boletín del año no se repite»: la búsqueda del informe LEE (E.6) es sobre las 43 ediciones conservadas | 5 | «en las ediciones conservadas del año no se repite» |
+
+Resta: en el aspecto 3, dos fechas de publicación dadas como fechas de los actos, **95**; en el aspecto 4, una corrección silenciosa sin cambio de sentido, **87**; en el aspecto 5, un dato presentado con más alcance que el que da el acto y dos ausencias afirmadas sobre un universo que no se leyó entero, **85**. Ningún error de consistencia en 17,8 páginas; el aspecto 7 queda en **100**.
+
+**Errores introducidos por la propia auditoría**: cinco, los cinco en el AMPLÍA 1921 (`7021135`), escrito por esta misma sesión. Ninguno lo atrapó un control automático.
+
+**Descartados (falsos positivos, 3).** (a) «doce distritos de los veintiuno» (04-siglo:1208): los decretos 1342 y 1664 listan veintiún departamentos, la Capital incluida (recuento del informe LEE, A.3 y A.8). (b) «la única edición incompleta del año» (F:56): las otras seis faltan enteras, no están incompletas; el universo son las 43 conservadas. (c) «resuelta el 7 de Octubre pasado» contra la fecha del fallo de 1919 (A:72): el fallo que cita se publica en abril de 1921, pero su propia fecha no está en la hoja; no hay discrepancia demostrada entre las dos fuentes.
+
+**Pendientes revisados.** P22 sigue abierto: de sus cuatro afirmaciones, la del edicto de 1921 mandado a dos diarios ya lleva edición y hoja (Nº 843, h. 8 y 9; 04-siglo:1170), y las de 1925, 1930 y 1983 no se tocaron. P265 sigue abierto: su parte de 1921 (859, 872, 876, 878, 884, 885 y los folios faltantes de la 852 como faltantes en la fuente) ya está en D:195 y F:56, pero el pendiente abarca otros años. P295 (numeración de los decretos de fines de 1921) sigue abierto.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 25.685/25.685 vigentes en `729c7a8` | 25.659 vigentes; 26 caducas; 49 nuevas o modificadas |
+| Referencias de Boletín y hoja agregadas por el AMPLÍA contra el informe LEE 1921 | 16 referencias distintas de 1921 en 49 líneas | 16/16 coinciden con la ficha |
+| Citas entre comillas nuevas | 13 | 11/12 literales en la imagen; la otra, hallazgo 1; «Wierma», por el informe LEE (A.5) y no por la imagen |
+| Superlativos y ausencias en el texto agregado | 49 líneas | 3 ausencias («no se publican en el año», «no se repite» y «el aviso no nombra el departamento») y 1 unicidad («la única edición incompleta del año»); las dos primeras, hallazgos 4 y 5; las otras dos, con universo |
+| Largo de los archivos antes y después de la fase 6 | 3 archivos | no cambia |
+| Compilación | fase 6 sobre `7021135` | Compila; 1.073 páginas; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `7021135` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | El AMPLÍA agrega dieciséis referencias de Boletín y hoja; P115 |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | Hallazgo 1, aplicado; 15 cotejos sobre 16 ediciones, bajo el techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 100 | Hallazgos 3, 4 y 5, aplicados |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | 0 errores en 17,8 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Un pedido nuevo (Registro Oficial de 1921) y el de las ediciones de 1921 reescrito; sin pedidos satisfechos en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: personas de 1917 a 1922, presumiblemente fallecidas; el hurto de 1917 se atribuye al fallo, que el libro transcribe sin inferir |
+
+**Nota inicial: 86,0 antes del tope y 86,0 después** (tope de 90 por la cobertura acumulada inicial del 99,81 %, que no actúa). **Nota final: 88,3 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 7,9 corregibles, como en las rondas 88 a 99.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta: hasta +1,8; (3) P115: +0,9; (4) P295: verificar en la 890 la numeración de los decretos de fines de 1921; (5) P288 a P294: corregir los informes LEE y completar los huecos del Release.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.073 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; la cuarta («la desidia es selectiva») no gana ni pierde evidencia con 1921, cuyos dos actos de dominio son deslindes de particulares sin obra.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 17,8 páginas). Cobertura acumulada: 25.708 de 25.708 (100,0 %). Falsos positivos descartados: 3. Recortes: ninguno de cotejo (los quince sobre la imagen); el contexto de 04-siglo se releyó y no suma. Errores introducidos por la propia auditoría: 5, los cinco en el AMPLÍA 1921 escrito por esta misma sesión; atrapados por un control automático: 0.
