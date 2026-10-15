@@ -7747,3 +7747,120 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la hipótesis de los relevos (P298) gana la fecha exacta del cambio de gobierno de 1946, que deja la serie policial del gobierno constitucional entre 17 y 36 días después de la asunción.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 82 líneas (0,31 %; 21,1 páginas), más tres líneas que la fase 6 cambia, leídas enteras después del cambio (0,3 páginas). Cobertura acumulada: 26.126 de 26.126 (100,0 %). Falsos positivos descartados: 8. Recortes: P304, P305, P307, P308, P310 y P321 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; `control_amplia.py` no se entregó (P319). Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1946, escrito por otra sesión (tres heredados del informe LEE), 1 por una cautela del AMPLÍA que desmentía una fila anterior, y 1 anterior; atrapados por un control automático antes de llegar al libro: 3 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma dos reglas a P319: **marcar como FECHA el comienzo de un gobierno o de un cargo escrito como «desde el <día> de <mes>», y cotejarlo con el decreto de asunción**, porque el 04:4014 sólo salió como VERBO; y **marcar como VERBO las fórmulas «a pedido de X: <verbo>» y comprobar que el pedido del visto sea del mismo objeto que el artículo**, porque en el 10810-G el pedido es de una oficina y el artículo suprime otra. Y suma una lección de método: **una palabra del libro que el facsímil imprime con otro sentido junto al dato («sin cargo» y «Con Cargo») no la ve ninguna clase del script**, y sólo la encuentra el cotejo de la firma en la imagen.
+
+## Ronda 112 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1948. Base: commit `66c92e7` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1948, sobre `eba69a4`, aplicado por `3-registrar` el 14/10 a las 23:23), con la fase 6 en `ronda-112.patch` (un commit sobre `66c92e7`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1948** ni el informe LEE 1948 del cierre: la abrió la tarea programada. `auto/insumos-mejora/` no tenía insumos nuevos (sólo la carpeta `usados/`). Para el cotejo se bajaron desde la nube, por la ruta directa de descarga del Release (el inventario `expanded_assets` sigue dando 403), 35 PDF del Release `1948` de `boletines-salta` (3030, 3045, 3046, 3058, 3064, 3065, 3083, 3101, 3104, 3126, 3133, 3140, 3141, 3142, 3157, 3166, 3176, 3190, 3195, 3196, 3202, 3208, 3215, 3221, 3229, 3238, 3239, 3243, 3247, 3256, 3268, 3273, 3275, 3282 y 3306) y uno del Release `1949` (3346), más `lee_textos_1948.zip` y el informe LEE 1948 del 15/10/2026 de `corrige/lee/1948/`. **Esta ronda volvió a correr `control_amplia.py` sobre el diff `eba69a4..66c92e7`** con el zip y el informe: 57 líneas y 79 frases según el script, 319 marcas (CITA 4, FECHA 0, CIFRA 197, IDENT 8, ALCANCE 38, VENTANA 45, VERBO 27), las mismas clases y recuentos que declara la última corrida del `.json` del AMPLÍA.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 111 (26.126 de 26.126, sobre `eba69a4`) se trasladaron por diff a `66c92e7`. **El AMPLÍA caduca 56 líneas y deja 64 nuevas o modificadas** (diff con `-U0`); cambian de largo el capítulo 4 (+9) y el capítulo 26 (−1), y el total pasa de 26.126 a 26.134 líneas; los apéndices A, D y F y los capítulos 0, 1, 2, 20 y 22 cambian líneas sin cambiar de largo. Vigentes después del traslado: 26.070 de 26.134.
+
+### Lectura sobre el texto (numeración de `66c92e7`)
+
+Se leyeron **las 64 líneas, enteras** (81.744 bytes; las líneas 45 del capítulo 0, de 13.403 bytes, 157 del 1, de 11.902, y 545 del 22, de 30.444, también enteras), contra el informe LEE 1948 del 15/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 4 (317, 318, 319, 321) |
+| ape/D-pedidos.tex | 2 (177, 188) |
+| ape/F-fuentes.tex | 4 (26, 127, 128, 129) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 1 (28) |
+| cap/04-siglo.tex | 46 (891, 3938, 4068–4070, 4074–4077, 4144–4145, 4211, 4222–4223, 4226, 4249–4250, 4260, 4370–4374, 4503, 4581, 4615–4616, 4683, 4721–4722, 4804, 4829, 4945, 4951–4953, 4955, 5094, 5170–5172, 5177–5181) |
+| cap/20-opacidad.tex | 2 (883, 884) |
+| cap/22-infraestructura.tex | 2 (545, 770) |
+| cap/26-presencia.tex | 1 (246) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:3934–3940, 4064–4080, 4140–4147, 4178–4292, 4364–4382, 4498–4505, 4576–4584, 4608–4620, 4676–4686, 4712–4726, 4798–4835, 4936–4962, 5088–5098 y 5160–5185; A:320; 22-infraestructura:768–771; 17-aguabaja:369–371; E:72 y E:84; 03-fincas:598–606; las líneas de todo el manuscrito con «1949--1957», «1949 a 1957», «tramo suelto», «1923--1947», «dos ventanas», «ventana», «Pfister», «El Angosto» y «4498»; de F:56, los dos párrafos de 1947-1948 y de 1957 (unos 6.000 bytes); y, del informe LEE 1948, el §0, las fichas A.3, A.4, A.8, A.10 a A.18, A.21 a A.31, A.34, A.35, A.40 a A.46, A.48, A.51, A.54 a A.57, el §B y E.1 a E.3, enteros.
+
+**Esta ronda: 64 líneas**, 81.744 bytes sobre 3.669.647, que en las 1.109 páginas de la base equivalen a **24,7 páginas**.
+
+Acumulado: 26.070 vigentes + 64 = **26.134 de 26.134 (100,0 %)**. La fase 6 cambia 12 líneas sin agregar ninguna: cinco están entre las leídas en esta ronda (A:317 y 321, 00:45, 04:4211 y 4222); seis que estaban vigentes (D:184, 02:99, 04:4270, 4284 y 4289, 17:371) se leyeron enteras después del cambio (8.319 bytes, 2,5 páginas) y se cuentan leídas en esta ronda; **la línea 56 del apéndice F (55.281 bytes), vigente, cambia en dos frases de los párrafos de 1948 y de 1957, que se leyeron con su contexto, y se la mantiene vigente** porque el cambio no es sustancial: se declara aquí. **26.134 de 26.134 (100,0 %)** después de la fase 6. Ningún archivo cambia de largo.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 3282 | 1 y 16 | Tapa: «MARTES, NOVIEMBRE 30 DE 1948» (imagen); lista del Tribunal Electoral, «LA CALDERA: Alberto Ovejero Paz y Alejandro Pfister» (imagen); la búsqueda de «Pfister» en la capa de las 281 ediciones da la lista sólo en esta edición | Hallazgo 1 |
+| 3256 | 6 y 7 | 12131-E del 26 de octubre: encabezado y visto («porcentajes [...] que han de servir de base para liquidar»), renglón 30 «2,5151», firma de Emilio Espelta como vicepresidente 1º del Senado en ejercicio del Poder Ejecutivo (imagen) | Hallazgo 6 |
+| 3126 | 20 | Edicto 3720 de Linares: «El reconocimiento de dicha concepción sería por una dotación de 15,22 litros por segundo, con carácter de temporal y eventual» (imagen); edicto 3696 de Echenique, «sería por una dotación de 14.66» (capa) | Hallazgo 7 |
+| 3229 | 8 | Sucesorio 4137: «se cita y emplaza por treinta días a herederos y acreedores de don DANIEL LINARES», 23 de setiembre de 1948 (imagen) | Coincide |
+| 3243 | 10 | 11867-A: «al Sud con el callejón privado del señor Daniel Linares» (imagen) | Coincide |
+| 3247 | 20 | Edicto 4221: «NOTIFICASE al señor MARIANO S[iv]ILA o quienes [...] titulares de algún dere[cho]» (imagen, con letras borradas; el resto, de la capa de las otras apariciones) | Coincide (parcial en la imagen) |
+| 3202 | 10 | 10870-E: «en base a los coeficientes aprobados por decreto No. 5276 del 30 de julio de 1947» (imagen) | Coincide |
+| 3306 | 6 | 13106-E: «al levantamiento de la Estación Sanitaria Tipo A» (imagen; el número, decidido por la serie en el informe) | Coincide |
+| 3104 | 5 | Res. 591: «María Josefina Monden Alcorta de Zuccarino», «CAL[DERA No. 1, 2 y 3]» (imagen) | Coincide |
+| 3346 (1949) | 9 | Res. 672: «María Josefina Mendez Alcorta de Zuccarino», «"Caldera 1, 2 y 3"» (imagen) | Coincide |
+| 3196 | 7 | 10733-E: «Dánse por terminadas las funciones», «jurisdicción del departamento de La Caldera», «por considerarse innecesarios sus servicios en virtud de lo exiguo de las cobranzas» (imagen) | Coincide |
+| 3045 | 7 | 7906-G: art. 2º, «a la Comisión Municipal [de la] Caldera» (imagen) | Coincide |
+| 3133 | 4 | 9623-A: «el Patronato Provincial de Menores comunica que la Junta Ejecutiva ha resuelto acordar el subsidio de $15.000, solicitado por el Hogar Agrícola "San Cayetano"» (imagen) | Coincide |
+| 3058 a 3065 | sumarios y cuerpo | Decreto 8176 en las ocho ediciones (capa: 3058 h10, 3059 h13, 3060 h12, 3061 h11, 3062 h16 y h19, 3063 h13, 3064 h19, 3065 h16; aviso 3459 en los sumarios) | Coincide |
+
+Once citas del libro cotejadas sobre la imagen en diez ediciones (3282, 3229, 3243, 3247, 3202, 3306, 3104, 3346, 3196 dos, 3045), sin correcciones silenciosas dentro de comillas; una fecha de edición (3282) y una cifra (2,5151) miradas en la imagen; las demás comprobaciones, en la capa o en las fichas del informe, y así se declaran.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04-siglo:4211 y 4222 | «Y en diciembre el apellido vuelve a aparecer» / «y en diciembre de ese año un Alejandro Pfister figura como candidato»: la lista del Tribunal Electoral se publica sólo en el Nº 3282, del martes 30 de noviembre de 1948 (imagen de la tapa); diciembre es el mes de los comicios | 3 | «Y a fines de noviembre el apellido vuelve a aparecer» / «y el 30 de noviembre de ese año» |
+| 2 | 00-advertencia:45 | «En esas dos ventanas y en 1949--1957, y sólo ahí»: el mismo párrafo, después del AMPLÍA, pone 1949-1957 dentro de la segunda ventana | 5 | «En esas dos ventanas, y sólo ahí» |
+| 3 | 02-metodo:99 | «la lectura edición por edición sobre la imagen llega a diciembre de 1947 y comprende además 1949 a 1957 ---1948 y 1958 a 1988 quedaron leídos con pendientes»: contradice 02:28 («1948 completo [...] cerrado después sobre la imagen») | 7 | «llega a diciembre de 1957 ---1958 a 1988 quedaron leídos con pendientes» |
+| 4 | F:56 | Párrafos de 1948 y de 1957: «un informe que quedó con pendientes [...] Por eso 1947 entra en la ventana y 1948 no» y «1949 a 1957 quedan fuera de las dos ventanas porque 1948 los separa de ellas»: contradicen F:26 y F:127 («1923--1957») | 7 | El informe «quedó primero con pendientes [...] y en octubre de 2026 se cerró sobre la imagen. Por eso los dos años entran en la ventana»; «Con 1948 cerrado, 1949 a 1957 entran en la segunda ventana» |
+| 5 | A:321 | «el 0,7686 por ciento de cada reparto [...], con los porcentajes que fija el 12131-E»: el 12131-E aprueba los porcentajes que «han de servir de base», y el de La Caldera es 2,5151; el informe (A.45) dice que el decreto no explica cómo se pasa de uno a otro | 5 | «sobre la base de los porcentajes que aprueba el 12131-E ---el de La Caldera, 2,5151, y el decreto no dice cómo se pasa de uno a otro---» |
+| 6 | A:317, 04-siglo:4270, 4284 y 4289, 17-aguabaja:371, D:184 | El edicto 3720 dice que el reconocimiento a Linares «sería» de 15,22 l/s y el 3696 que el de Echenique «sería» de 14,66; el libro escribía «se le reconocen», «obtiene», «el de Linares [se reconoce] temporal y eventual», «los dos reconocimientos de 1948» y que los dos expedientes «reconocen» el coeficiente. La resolución sobre Linares no está en 1948 (informe, E.3). El argumento del capítulo 4 ---el coeficiente se deduce del par porque los dos actos publican caudal y superficie--- se mantiene | 5 | «el edicto anuncia que el reconocimiento sería de 15,22 l/s [...]; la resolución no se publica en el año»; «el edicto le anuncia»; «el que el edicto anuncia para Linares»; «el reconocimiento y el edicto de 1948»; «aplican el mismo coeficiente [...] ---el primero en el decreto que reconoce el agua, el segundo en el edicto que anuncia la dotación---» |
+
+Resta: en el aspecto 3, una fecha de publicación errada (5), **95**; en el aspecto 5, un texto desactualizado (hallazgo 2, 3), una frase que dice más que el acto (hallazgo 5, 5) y un verbo endurecido en una sección y en el pedido que la acompaña (hallazgo 6, 10), sobre la base de 95, **77**; en el aspecto 7, dos errores de consistencia (hallazgos 3 y 4; el 4 son dos frases del mismo párrafo desactualizado, contadas como uno) en 27,2 páginas auditadas, 7,4 por cada cien (≤ 8 → 40), y un escalón más porque el 3 contradice una línea del mismo capítulo a menos de diez páginas, **30**.
+
+**Errores introducidos por la propia auditoría**: cinco de los seis vienen del AMPLÍA 1948 (`66c92e7`). El 5 es texto que escribió el AMPLÍA, y el informe LEE tenía el dato correcto (A.45: «Los porcentajes no son la cuota de cada municipio»; causa 1 del flujo §6.6); el 2, el 3 y el 4 son declaraciones de cobertura que el AMPLÍA dejó sin actualizar cuando 1948 subió a imagen (causa 5: el dato nuevo desmiente una frase vecina que no se toca), y el 1 es una fecha anterior en una línea que el AMPLÍA tocó. El 6 es anterior (A:317 y la cautela del capítulo 4), y el AMPLÍA 1948 lo dejó pasar en la línea que reescribía. **`control_amplia.py` no marcó ninguno**: el 2 está dentro de una línea modificada pero ni ALCANCE ni VENTANA miran la última frase; el 3 y el 4 están fuera del diff; el 5 y el 6 no tienen clase; el 1 no sale como FECHA. **Atrapados por el control antes de compilar el AMPLÍA: cinco**, según su `.json`, que no restan.
+
+**Descartados (falsos positivos, 9).** (a) «Dos números de decreto que la capa de texto tomaba del acto vecino» (04:4076): el 10826-E y el 13103-E son actos de la misma hoja (informe, A.30 y A.57). (b) «Es la misma adjudicación de diez meses antes»: del 2 de abril de 1948 al 10 de febrero de 1949. (c) «repetido en ocho ediciones seguidas (B.O. Nº 3058 a 3065)»: el decreto está en las ocho, por la capa. (d) «Quince ediciones de 1948 ---de la 3126 a la 3140---»: quince. (e) Expediente 4567/B/1948 del 8706-E, el mismo número que el 8713-E: el informe lo declara coincidencia (A.10). (f) «una Arminda Funes de Lamberto es nombrada interinamente, desde el 12 de julio»: el decreto dice «con anterioridad al 12 de julio», y del 31 de agosto. (g) «el 10870-E, en agosto, la Contribución Territorial de septiembre de 1947 a marzo de 1948»: el visto dice del 1º de setiembre al 31 de diciembre de 1947 y del 1º de enero al 31 de marzo de 1948. (h) «la Provincia paga su publicación a los diarios Norte, $1.170, y Noticias, $900»: A.48 y A.51. (i) «en cumplimiento del inciso a) del artículo 350 del Código de Aguas» (04:4249): el acto dice «del Art. N 350» y los edictos del mismo trámite citan el art. 350 del Código de Aguas.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo.
+
+**Pendientes revisados.** P318: el capítulo 4 (5168) y A:317 siguen dando a «Hermann Pfister» de 1948 por «el perito que deslindó Loma Bola, Santa Mónica, Quitilipe y el Potrero Gallinato en 1916 y 1917», seis líneas antes de la cautela que dice que el libro «no afirma identidad ni parentesco»; el AMPLÍA rotuló a Linares y no a Pfister, y la identidad del perito con el de 1928-1945 la sostienen el capítulo 3 y E:72: queda para la revisión de identidades. P37: la lámina fig:boletin sigue pintando 1948 como leído en parte. P323 (recuento de 46 nombres), sin cambios. P319: suma tres reglas (abajo). P298, P304, P305, P307, P308, P310, P321 y P322, sin revisar.
+
+**Pendientes nuevos.** P324 (`libro`, 1947-1957): 01-planteo:157 enuncia qué refutaría la tercera tesis «entre 1947 y 2012» y da el resultado de la lectura de 1958 a 1988 y de los años siguientes, pero no el de 1947 a 1957, que ahora están dentro de la ventana y permiten afirmar la ausencia; decirlo con su universo (el capítulo 22 registra para 1955 y 1957 el acueducto de Obras Sanitarias y la usina municipal).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 26.126/26.126 vigentes en `eba69a4` | 26.070 vigentes; 56 caducas; 64 nuevas o modificadas |
+| `control_amplia.py` (corrida de esta ronda, sobre `eba69a4..66c92e7`) | 57 líneas según el script, 79 frases | 319 marcas, las mismas clases y recuentos que la última corrida del `.json` del AMPLÍA; no marca ninguno de los seis hallazgos |
+| Declaraciones de cobertura de 1948 y de 1949-1957 en todo el manuscrito («1949--1957», «1949 a 1957», «tramo suelto», «1923--1947», «hasta 1947», «separa», «1948» con «pendiente», «en parte», «barri», «capa», «ventana») | 26.134 líneas | Tres desfasadas fuera de lo que el AMPLÍA cambió (02:99 y dos frases de F:56) y una dentro (00:45); corregidas |
+| «Pfister» en la capa de 1948 | 5.209 hojas | La lista de candidatos con Alejandro Pfister, sólo en 3282 h16 (30 de noviembre) |
+| Decreto 8176 en la capa | ediciones 3058 a 3066 | En las ocho de la 3058 a la 3065; no en la 3066 |
+| Superlativos y ausencias en las líneas cambiadas por la fase 6 | 12 líneas | Una restricción nueva con universo («la resolución no se publica en el año»); ninguna primacía ni unicidad |
+| Largo de los archivos antes y después de la fase 6 | 38 archivos `.tex` | Ninguno cambia de largo |
+| Compilación | fase 6 sobre `66c92e7`, en un clon limpio | Compila con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.109 páginas, las mismas de la base; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `66c92e7` (bajado de GitHub) | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 1, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Once citas cotejadas sobre la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 77 | 95 | Hallazgos 2, 5 y 6, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 3 y 4, aplicados; ningún error de consistencia después de la fase 6 en 27,2 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido de la verificación de 1948 ya no está en D (lo retiró el AMPLÍA); D:184 corregido en su fundamento, sin cambiar de destinatario |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; el contraejemplo del coeficiente sobrevive al hallazgo 6 |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P37, P304, P305, P307 y P320 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, candidatos, peticionantes de agua y partes de actos de 1948, todos de registros de 1944 o anteriores o en cargos públicos; el juicio de alimentos se nombra sin partes ni detalle más allá de lo que el fallo publica sobre el senador |
+
+**Nota inicial: 79,0 antes del tope y 79,0 después** (tope de 90 por la cobertura acumulada inicial del 99,76 %, que no actúa). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317): hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años, ahora con Hermann Pfister (04:5168, A:317) y A:355: +0,6; (5) P37 y P301, P304, P305, P307 y P320: regenerar fig:boletin con 1948 leído y revisar las láminas con sus scripts.
+
+**Avance del libro:** 6 de 6 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera tesis gana un pendiente (P324): con 1947-1957 dentro de la ventana, su cláusula de refutación puede decir ya qué encontró esa lectura.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 64 líneas (0,24 %; 24,7 páginas), más seis líneas que la fase 6 cambia, leídas enteras después del cambio (2,5 páginas). Cobertura acumulada: 26.134 de 26.134 (100,0 %), con F:56 vigente por cambio no sustancial. Falsos positivos descartados: 9. Recortes: P298, P304, P305, P307, P308, P310, P321 y P322 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; del edicto 4221 la imagen de 3247 h20 tiene letras borradas. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1948, escrito por otra sesión (uno de paráfrasis contra el informe y tres desfases de cobertura que el AMPLÍA no actualizó, más una fecha anterior en una línea que tocó), y 1 anterior que el AMPLÍA dejó pasar; atrapados por un control automático antes de llegar al libro: 5 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma tres reglas a P319: **cuando un AMPLÍA sube un año a `imagen` o une tramos de ventana, buscar en todo el manuscrito las formas viejas de la ventana con sus variantes de escritura («1949--1957» y «1949 a 1957», «1923--1947», «1948 no», «separa») y las que la sola mención del año acompaña de «pendientes», «en parte», «capa» o «fuera»**, porque el índice del AMPLÍA las buscó y se le escaparon tres; **marcar como VERBO «se le reconoce», «obtiene» o «concede» junto a un edicto cuya capa trae «sería»**; y **marcar como FECHA el mes que el libro da a un aviso o una lista cuando no es el de la edición que cita**.
