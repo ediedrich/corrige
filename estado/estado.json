@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T11:08:50",
+ "actualizado": "2026-10-15T11:28:42",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17563,6 +17563,53 @@
     "fuera_del_diff": []
    },
    "nota_sobre_amplia_json": "amplia-1961.json da solo F entre los archivos que cambian de largo (2 lineas agregadas en F:69-71); coincide con el diff."
+  },
+  {
+   "ronda": 117,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "base": "2e7d69e",
+   "nota_inicial": 79.0,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 79.0,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda": {
+    "lineas": 48,
+    "bytes": 255507,
+    "paginas": 77.3
+   },
+   "fecha": "2026-10-15",
+   "hallazgos": 8,
+   "aplicados": 8,
+   "material_auditado": "AMPLIA 1962 (2e7d69e sobre d765f5d), 48 lineas enteras",
+   "hallazgos_detalle": [
+    "22:545 'Y en 1963, leido del mismo modo' (1963 con pendientes) -> 'leido con pendientes' (aspecto 5)",
+    "26:236 'Y en 1964 y 1965, leidos del mismo modo' -> 'leidos con pendientes' (5)",
+    "04:5017, 15:185, 17:281, 18:470: 'tambien (leido) con pendientes' para 1963 despues de dar 1962 leido entero -> 'leido(s) con pendientes' (7, cuatro)",
+    "17:281 'dos pedidos ... desmembran riego' -> 'dos edictos publican pedidos de desmembrar riego del Wierna' (5; avisos 10311 y 10323, imagen)",
+    "18:470 Werfil Gallo 'presidio la comision municipal de 1958 a 1962' -> 'de 1958 a 1961 y fue su comisionado interventor a comienzos de 1962' (5)"
+   ],
+   "errores_introducidos_por_la_auditoria": {
+    "total": 8,
+    "del_amplia_1962_de_esta_sesion": 6,
+    "de_incorporaciones_anteriores_en_lineas_tocadas": 2,
+    "marcados_por_control_amplia": 0,
+    "atrapados_antes_de_compilar": 1
+   },
+   "falsos_positivos": 4,
+   "compilacion": {
+    "paginas": 1115,
+    "refs_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "git_am": "OK sobre un repositorio limpio con el arbol de LIBRO en 2e7d69e (copia de Windows pasada a LF); arbol identico",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [],
+   "propuesta_control_amplia": "Marcar, en las cinco lineas vecinas de cada cambio que pasa un año de 'con pendientes' a 'sobre la imagen', las formulas 'tambien con pendientes', 'tambien leido', 'del mismo modo' y 'con la misma reserva' (habria marcado los hallazgos 1 a 6).",
+   "atrapados": 1
   }
  ],
  "pendientes": [
@@ -21668,6 +21715,6 @@
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }

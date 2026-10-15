@@ -8320,3 +8320,125 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** dos hallazgos, los dos resueltos; compila sin errores, 1.113 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1961) sin el acto que la refutaría, y en el que la Provincia concede agua del río a Obras Sanitarias sin el municipio y la intervención federal pone en comisión a las autoridades municipales.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 70,4 páginas), más las 3 que cambia la fase 6, leídas enteras después del cambio (9,6 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 a P328 y P330 sin revisar; los actos de pensiones, minas, justicia y salud de 1961 se juzgaron sobre las fichas del informe, no sobre la imagen; la cifra del 20818-E queda sin decidir (P333); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en frases de 1961 que vienen del AMPLÍA 1961-1962 y que el AMPLÍA 1961 de esta sesión tocó sin corregir, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.
+
+## Ronda 117 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1962. Base: commit `2e7d69e` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1962, sobre `d765f5d`, aplicado por `3-registrar` el 15/10 a las 11:08), con la fase 6 en `ronda-117.patch` (un commit sobre `2e7d69e`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1962** (la abrió la tarea programada de las 10:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1962 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 48 líneas enteras y buscó en ellas, además de los datos de 1962, lo que el cambio de nivel de 1962 podía volver falso en las frases vecinas (flujo §6.6, causa 5). Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (HEAD `8275bc2`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol resultó idéntico al del commit con que se armó el parche del AMPLÍA. Del Release `1962` de `boletines-salta` se pidieron por el espejo de la máquina, durante el AMPLÍA y esta ronda, `lee_textos_1962.zip` y diecinueve PDF (6535, 6545, 6548, 6563, 6573, 6581, 6585, 6610, 6612, 6615, 6669, 6680, 6705, 6717, 6718, 6724, 6726, 6744 y 6768; de ellos se miraron nueve, los de la tabla de cotejo); el informe LEE 1962 del 15/10/2026 salió de `corrige/lee/1962/`. `control_amplia.py` se corrió dos veces sobre el diff `d765f5d..2e7d69e` durante el AMPLÍA (48 líneas; 521 y 522 marcas: CITA 7, FECHA 2, CIFRA 273, IDENT 8, ALCANCE 73, VENTANA 86, VERBO 71 y 72).
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 116 (26.167 de 26.167, sobre `03db8da` y su fase 6, que es `d765f5d`) se trasladaron por diff a `2e7d69e`. **El AMPLÍA caduca 48 líneas, las 48 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 41 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.119 de 26.167.
+
+### Lectura sobre el texto (numeración de `2e7d69e`)
+
+Se leyeron **las 48 líneas, enteras** (255.507 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 04:5017, 09:536, 15:185, 17:281, 18:470, 22:545, 26:236, D:177 y F:69 a F:103), contra el informe LEE 1962 del 15/10/2026 y, en las cifras, fechas, verbos y citas de 1962, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 3 (414, 418, 420) |
+| ape/D-pedidos.tex | 2 (177, 192) |
+| ape/F-fuentes.tex | 20 (26, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103) y 2 (133, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 6 (3938, 4068–4070, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 4 (281, 290, 291, 371) |
+| cap/18-politica.tex | 1 (470) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): de todo el manuscrito, las frases con «también con pendientes», «también leído con pendientes», «leído(s) del mismo modo» y «con la misma reserva» que siguen a una mención de 1962 en el mismo párrafo; las que llevan un superlativo o una ausencia junto con un rango que termina o empieza en 1962, «hasta 1962», «1923--1962», «segunda ventana» o «en la ventana» (9 frases); A:413 a A:422 (filas de 1961 a 1963); del informe LEE 1962, el §0, A.3, A.4, A.11, A.12, A.18, A.30, B.2.9, B.2.15, E.1, E.3, E.8, E.9, E.10 y §R.
+
+**Esta ronda: 48 líneas**, 255.507 bytes sobre 3.684.503, que en las 1.115 páginas de la base equivalen a **77,3 páginas**.
+
+Acumulado: 26.119 vigentes + 48 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 6 líneas que estaban vigentes (04:5017, 15:185, 17:281, 18:470, 22:545 y 26:236), sin agregar renglones, y las seis se leyeron enteras después del cambio (150.333 bytes, 45,5 páginas): **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6545 | 3 | Aviso 10311: «VIRGILIO GARCIA tiene solicitado desmembramiento de concesión de agua pública», 1,57 l/segundo del río Wierna, acequia V (imagen, 200 ppp) | **Hallazgo 7** |
+| 6563 | 8 | 1081-G: «DECRETO Nº 1081 — G. Salta, Febrero 6 de 1962.», visto del decreto 7 del 21/11/1961; el renglón «Werfil Gallo — La Caldera — La Caldera» (imagen, 250 y 200 ppp) | Coincide |
+| 6581 | 9 | 1522-A: «fenómenos atmosféricos»; La Caldera en la lista (imagen, 170 ppp) | Coincide |
+| 6585 | 5 | 1565-G, «Marzo 13 de 1962», expediente 5503-62, «de fojas 2, a fojas 5», \$1.002.736,82 (imagen, 170 ppp) | Coincide |
+| 6610 | 17 | 2166-A: «Enf. La Caldera» (imagen, 200 ppp) | Coincide |
+| 6615 | 11 | 2382-G, «Mayo 3 de 1962», «El Comisionado Federal Interino», visto del decreto 7 «por el que se declara en comisión a las autoridades municipales»; Augusto Regis, La Caldera, en el art. 2 (imagen, 170 ppp) | Coincide |
+| 6680 | 24 | La hoja ilegible que el libro declara (A:418, F:71) (imagen, 40 ppp) | Coincide: tapada por la transparencia de la otra cara |
+| 6718 | 10 | 4511-E: «resultaría desfavorable», «reducido porcentaje de obra faltante» (imagen, 220 ppp) | Coincide |
+| 6724 | 14 | Aviso 12543: Decreto Municipal 583 del 18/10/1962, art. 1 «DAR EL NOMBRE del INGENIERO ENRIQUE CLEMENT a la calle...»; la semblanza «En 1891 [...] Poco después, desde la finca campestre de "Vaqueros" que explotaba como arrendatario, donó a nuestra Municipalidad valiosos ejemplares de la flora local con destino a la Plaza "Güemes"»; el 4686 del 18/10/1962, «Aprobar con fuerza de Ordenanza el Decreto Nº 583» (imagen, 160 a 220 ppp) | Coincide |
+
+Nueve actos mirados en la imagen en nueve hojas; siete citas cotejadas en la imagen («desde la finca campestre de ``Vaqueros'' que explotaba como arrendatario», «valiosos ejemplares de la flora local», «resultaría desfavorable», «reducido porcentaje de obra faltante», «fenómenos atmosféricos», «Enf.\ La Caldera» y «por el que se declara en comisión a las autoridades municipales de la provincia», ésta en la parte que la hoja deja leer). Ninguna corrección silenciosa.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 22:545 | «\textbf{Y en 1963, leído del mismo modo, aparece otro interlocutor}»: la frase anterior, que el AMPLÍA 1962 cambió, dice ahora que 1961 y 1962 se leyeron «enteros sobre la imagen», y «del mismo modo» pasa a dar 1963 como leído entero, cuando quedó con pendientes (A:421, F:73) | 5 | «\textbf{Y en 1963, leído con pendientes, aparece otro interlocutor}» |
+| 2 | 26:236 | «Y en 1964 y 1965, leídos del mismo modo, la Provincia cierra esas obras»: la misma causa; 1964 y 1965 quedaron con pendientes (F:75) | 5 | «Y en 1964 y 1965, leídos con pendientes, la Provincia cierra esas obras» |
+| 3 | 04:5017 | «Los de 1963, también con pendientes»: el «también» remite a 1962, que la frase anterior da ahora leído entero | 7 | «Los de 1963, leídos con pendientes» |
+| 4 | 15:185 | «El año 1963, también leído con pendientes»: la misma | 7 | «El año 1963, leído con pendientes» |
+| 5 | 17:281 | «En \textbf{1963}, también con pendientes»: la misma | 7 | «En \textbf{1963}, leído con pendientes» |
+| 6 | 18:470 | «\textbf{En 1963}, también leído con pendientes»: la misma (la frase anterior trata 1962) | 7 | «\textbf{En 1963}, leído con pendientes» |
+| 7 | 17:281 | «en 1962 dos pedidos sobre el Wierna desmembran riego del empadronamiento de la finca Vaqueros»: los dos avisos son edictos citatorios que publican que los titulares «tiene[n] solicitado desmembramiento»; el pedido no desmembra nada | 5 | «en 1962 dos edictos publican pedidos de desmembrar riego del Wierna del empadronamiento de la finca Vaqueros» |
+| 8 | 18:470 | «Werfil Gallo ---el nombre del que presidió la comisión municipal de La Caldera de 1958 a 1962»: en 1962 la comisión estaba en comisión y Gallo fue comisionado interventor comunal, del 6 de febrero al 3 de mayo (1081-G, 2382-G) | 5 | «el nombre del que presidió la comisión municipal de La Caldera de 1958 a 1961 y fue su comisionado interventor a comienzos de 1962» |
+
+Resta: en el aspecto 5, sobre la base de 95, cuatro frases que dicen más que el documento o que la lectura (hallazgos 1, 2, 7 y 8), 5 cada una, **75**; en el aspecto 7, cuatro contradicciones con la frase anterior del mismo párrafo (hallazgos 3 a 6) en 77,3 páginas auditadas, 5,2 por cada cien páginas, escalón de 40, y un escalón más porque el material que las desmiente está a menos de diez páginas, **30**.
+
+**Errores introducidos por la propia auditoría**: los ocho están en líneas que el AMPLÍA 1962 de esta sesión tocó. Los seis primeros son la causa 5 del flujo §6.6 (el dato nuevo desmiente una frase vecina que no se toca), y los introdujo el AMPLÍA 1962 al cambiar «1962, leído con pendientes» por «leídos enteros sobre la imagen» en la frase anterior sin releer la siguiente; el 7 es la causa 1 (el verbo se endurece en la paráfrasis) y viene del AMPLÍA 1961-1962 (`c4e8c04`), y el 8 viene de una incorporación anterior y quedó falso al leerse 1962 sobre la imagen. **`control_amplia.py` no marcó ninguno**: «también» y «del mismo modo» no son superlativos ni ausencias, «desmembran» no está en su lista de verbos y el 8 no tiene fecha ni cifra nueva. **Atrapados por el control antes de compilar el AMPLÍA: uno**, el «ratifica» del 4686 en A:420, en una cláusula que el script marcó como VERBO (la marca apunta a «Intervención»), corregido a «aprueba» después de mirar el acto; el «una» de A:418 lo corrigió la lectura, no el script.
+
+**Descartados (falsos positivos, 4).** (a) 22:545, «la usina ya no aparece por su nombre en lo hallado»: con 1962 leído entero podría decir más, no menos. (b) 17:371, «en 1961 y 1962, los dos desmembramientos del Wierna de 1962 dan 0,523 y 0,527 [...]»: no enumera el 4324-E ni el 2274-E, pero no dice que sean todos los actos ni da un coeficiente para ellos. (c) 18:470 y A:414, «ningún acto hallado de 1962 da el resultado» de la elección de marzo: con 1962 leído entero la frase podría ser una ausencia; el informe la deja como «no se afirma» (E.3), y «hallado» es el universo correcto. (d) A:420, «poco después de un estudio de 1891»: la semblanza dice «En 1891 [...] realizó un amplio estudio [...] Poco después», y la imagen da 1891 sin duda.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P334 (láminas de 1962) y P332 (de 1961): sin cambios en las láminas. P81, P82 y P85 (apéndices y láminas de 1961-1962): sin cambios; el 1081-G de P85 ya se cita por número y fecha en el libro (A:414, 18:470), pero el pedido de los decretos de designación sigue siendo de expedientes, no del acto. P83 y P84, cerrados por el AMPLÍA 1962. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333, sin revisar.
+
+**Pendientes nuevos.** Ninguno.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`2e7d69e`) contra el commit del parche del AMPLÍA | 118 archivos versionados (sin `main.pdf`) | Idénticos después de pasar a LF |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `d765f5d` | 26.119 vigentes de 26.167; 48 caducas y 48 modificadas, ninguna agregada |
+| `control_amplia.py` (corridas del AMPLÍA, sobre `d765f5d..2e7d69e`) | 48 líneas | 521 y 522 marcas; ninguna de las ocho frases de los hallazgos marcada por su defecto |
+| «también (leído) con pendientes», «leído(s) del mismo modo» y «con la misma reserva» después de una mención de 1962 en el mismo párrafo | 48 líneas del AMPLÍA | 6, todas desfasadas (hallazgos 1 a 6); 02:99 y 18:470 («En 1984 y 1985, leídos con la misma reserva») no lo están |
+| Superlativos y ausencias con un rango que termina o empieza en 1962, «hasta 1962», «1923--1962», «segunda ventana» o «en la ventana» | 25.757 líneas de `cap/` y `ape/` | 9 frases, ninguna que 1962 desmienta |
+| Superlativos y ausencias en las seis líneas de la fase 6 | 6 líneas | Ninguno nuevo |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 48 verificados + 64 fuera = 112 |
+| D:177, hojas «a ojos» de 1963 a 1980 | 18 años | 18 cifras, de 69 a 734, las mismas que da 00:45 |
+| Compilación | AMPLÍA (`2e7d69e`) y fase 6, en clones limpios | Compilan con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `2e7d69e` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | El 1081-G con su fecha de acto, mirada en la imagen; ninguna fecha de edición dada como del acto |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Siete citas y nueve actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 75 | 95 | Hallazgos 1, 2, 7 y 8, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 3 a 6 (cuatro en 77,3 páginas, con el material que los desmiente en la frase anterior), aplicados; recuentos de láminas y de tramos cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 deja de pedir las hojas de 1962; el ejemplar de la 6737 sigue pedido; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | La semblanza de 1962 es de una persona nacida en 1863; los pedidos de agua de 1962 nombran a los titulares sólo en el informe, no en el libro |
+
+**Nota inicial: 79,0 antes del tope y 79,0 después** (cobertura acumulada inicial del 100,0 % sobre `2e7d69e` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1962 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P327, P330, P332, P334 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948 y 1958 a 1962 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** ocho hallazgos, los ocho resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1962) sin el acto que la refutaría, y en el que la Intervención gobierna el municipio por comisionados y los cuatro actos de agua del departamento se resuelven sin él.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 77,3 páginas), más las 6 que cambia la fase 6, leídas enteras después del cambio (45,5 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1962 cuyas hojas no se pidieron (los de salud, policía, minas, ganadería y becas de A:418 y A:420, y los avisos repetidos) se juzgaron sobre las fichas del informe, no sobre la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 8, todos en líneas del AMPLÍA 1962 de esta sesión ---seis los introdujo ese AMPLÍA y dos venían de incorporaciones anteriores---, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (el verbo del 4686 en A:420). Propuesta para el script (no se entrega versión nueva): marcar, en las cinco líneas vecinas de cada cambio que pasa un año de «con pendientes» a «sobre la imagen», las fórmulas «también con pendientes», «también leído», «del mismo modo» y «con la misma reserva»; las seis de esta ronda las habría marcado todas.
