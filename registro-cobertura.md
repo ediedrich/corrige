@@ -7976,3 +7976,110 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1958) sin el acto que la refutaría.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 50 líneas (0,19 %; 70,0 páginas), más tres líneas que la fase 6 cambia, leídas enteras después del cambio (1,1 páginas). Cobertura acumulada: 26.136 de 26.136 (100,0 %). Falsos positivos descartados: 7. Recortes: P318, P324 y P298, P304, P305, P307, P308, P310, P321, P322 y P323 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; la cifra de la Ley 3314 se tomó de la capa y del cotejo del AMPLÍA. Errores introducidos por la propia auditoría: 3 en el AMPLÍA 1958, escrito por otra sesión (una herencia del informe LEE sin rehacer el recuento sobre el acto, una frase de método escrita por analogía y un desfase de cobertura en tres párrafos, la mitad de él ya escapado a la ronda 112), y 2 anteriores en líneas que el AMPLÍA tocó o en la vecina; atrapados por un control automático antes de llegar al libro: 4 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma dos reglas a P319: **al cerrar un año, buscar en todo el manuscrito las comparaciones que lo daban por leído con pendientes («como de 1948», «como 1958», «con la marca de 1948», «de 1958 a 1960» junto a «hallazgos y no las ausencias»)**, porque F:67, F:69 y F:71 se le escaparon a la ronda 112 por 1948 y al AMPLÍA por 1958; y **marcar como CIFRA todo recuento de una nómina que el libro toma de un informe LEE cuando el acto trae más de una nómina bajo el mismo establecimiento (prorrogadas, renovaciones, concedidas)**, para que se cuenten todas las secciones del acto y no sólo la que transcribe la ficha.
+
+## Ronda 114 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1959, con el insumo `2026-10-15_fotos-archivo-historico-campo-alegre.md` de `auto/insumos-mejora/` tratado como pendiente ya conocido (§7.3). Base: commit `870a2fe` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1959, sobre `856982e`, aplicado por `3-registrar` el 15/10 a las 02:33), con la fase 6 en `ronda-114.patch` (un commit sobre `870a2fe`, hecho con `git format-patch --binary` porque trae tres imágenes). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1959** ni el informe LEE 1959 del cierre: la abrió la tarea programada. Desde el 15/10 los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (HEAD `3ba1d41`), el libro se armó en la nube con los 114 archivos versionados de la copia de Windows (sin `main.pdf`), pasados a LF y comprobados contra los blobs del parche del AMPLÍA (15 de 15 iguales), y el diff `856982e..870a2fe` es el `amplia-1959.patch` registrado (`entregas/procesados/2026-10-15T023343/`), que se aplicó al revés para tener la base. Del Release `1959` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1959.zip` y cinco PDF (5821, 5834, 5861, 5968 y 6003); el informe LEE 1959 del 15/10/2026 salió de `corrige/lee/1959/`. **Esta ronda volvió a correr `control_amplia.py` sobre el diff `856982e..870a2fe`** con el zip y el informe: 49 líneas y 204 frases según el script, 984 marcas (CITA 13, FECHA 12, CIFRA 552, IDENT 24, ALCANCE 161, VENTANA 65, VERBO 157), las mismas clases y recuentos que declara la última corrida del `.json` del AMPLÍA.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 113 (26.136 de 26.136, sobre `856982e`) se trasladaron por diff a `870a2fe`. **El AMPLÍA caduca 47 líneas y deja 49 nuevas o modificadas** (diff con `-U0`); cambia de largo sólo el apéndice F (+2: el párrafo de 1959 se separa del de 1960), y el total pasa de 26.136 a 26.138 líneas; los apéndices A y D y los capítulos 0, 1, 2, 4, 9, 10, 15, 16, 17, 20, 22 y 26 cambian líneas sin cambiar de largo (el `.json` del AMPLÍA da también A, 0 y 2 entre los que cambian de largo: no cambian). Vigentes después del traslado: 26.089 de 26.138.
+
+### Lectura sobre el texto (numeración de `870a2fe`)
+
+Se leyeron **las 49 líneas, enteras** (234.053 bytes; también enteras las largas: 00:45, 01:157, 02:28, 04:5017, 09:536, 15:185, 17:281, 22:545, 26:236, D:177, D:263 y F:65 a F:99), contra el informe LEE 1959 del 15/10/2026 y, en los nombres, fechas, cifras, verbos y citas del material nuevo, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 2 (399, 404) |
+| ape/D-pedidos.tex | 3 (177, 192, 263) |
+| ape/F-fuentes.tex | 24 (26, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 98, 99, 101, 131, 132) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 6 (3938, 4068–4070, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (335) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 3 (281, 290, 291) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): 02-metodo:30–45 (epígrafe de fig:boletin); 10-expropiacion:148–153 y 514–520; las líneas de todo el manuscrito con «1959 a», «1959 y», «1959--», «como de 1959», «1923--1958», «1923 a 1958», «hasta 1958», «1947 a 1958», «1949 a 1958», «cuarenta y cuatro tramos», «sesenta y ocho», «1958 a 1960» y «1959 a 1988»; las frases con 1959 junto a «pendiente», «en parte», «capa», «fuera de», «sin mirar», «reserva» o «barrido»; las frases de ausencia, unicidad y primacía con un rango que termina en 1958 o en 1959, y las de todo el manuscrito con 1959 y una fórmula de ausencia o de primacía; del informe LEE 1959, el §0, A.17bis, A.43, A.44, B.2 (B.2.1, B.2.2, B.2.8 y B.2.10), §P, E.1, E.3, E.8 a E.10 y §R, y las seis fichas de agua (A.19, A.23, A.27, A.37, A.47 y A.48).
+
+**Esta ronda: 49 líneas**, 234.053 bytes sobre 3.674.821, que en las 1.109 páginas de la base equivalen a **70,6 páginas**.
+
+Acumulado: 26.089 vigentes + 49 = **26.138 de 26.138 (100,0 %)**. La fase 6 cambia 6 líneas que estaban vigentes (00:77, 00:80, F:149, F:188, F:292 y F:308) y agrega 27 (cap/10-expropiacion.tex, 5 después de la 153 y 10 después de la 517; main.tex, 12 después de la 195), y las 33 se leyeron enteras después del cambio (8.379 bytes, 2,5 páginas): **26.165 de 26.165 (100,0 %)** después de la fase 6. Cambian de largo `cap/10-expropiacion.tex` (+15) y `main.tex` (+12).
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 5968 | 13 y 14 | 8165-A, del 25 de agosto: «Apruébanse las becas otorgadas por la Dirección de Patronato y Asistencia Social de Menores y prorróguense las ya acordadas» (h13, col. 3); en h14 col. 2 «Hogar Agrícola "San Cayetano" (Vaqueros) Internos con \$ 300.- mensuales por 10 meses», del 1 al 20, y «Internos con \$ 300.- pesos mensuales c/u. por 9 meses», del 21 (col. 3) al 26; el rótulo del Hogar se repite antes del 27 «por 9 meses», hasta el 40, y «Internos con \$ 450.— mensuales c/u. por 10 meses», del 41 al 54, que cierra la nómina antes del art. 1 del gasto (imagen, 250 ppp) | Coincide: 20 + 20 + 14 = 54 |
+| 5861 | 4 | 5428-A, del 12 de marzo: concurso de precios 96, «artículos de ropería», guardería «Dr. Luis Güemes», Preventorio de San Lorenzo y Hogar Escolar «Dr. Luis Linares» de «La Ca'dera», «resultaron desiertos los renglones»; art. 1, compra directa (imagen) | Coincide |
+| 5821 | 9 | 4440-G, del 16 de enero: «Acuérdase un subsidio de \$ 3.000» a la Comisión Pro-Festejos Patronales del Hogar Agrícola San Cayetano de Vaqueros, por las fiestas del 24 de agosto de 1958 (imagen) | Coincide |
+| 5834 | 9 y 10 | 4842-A, del 31 de enero: «Incorpórase la ley Nº 3314 [...] presupuesto ejercicio 1958-1959», con «un crédito de cincuenta mil pesos [...] a cada uno» de los dos institutos (imagen) | Coincide |
+| 6003 | 6 | 8954-A, reglamento del Hogar «Dr. Luis Linares»: art. 1, «Niños o niñas que vivan en a-partados lugares serranos» (imagen; el script la marca SOLO-INFORME por el corte de la palabra) | Coincide |
+| 6002 | 6 | 8985-G: subsidios a ocho municipalidades «para atender los gastos devengados con motivo de la celebración de sus respectivos festejos patronales», sin año de las fiestas (capa) | Descarte (b) |
+
+Cinco actos mirados en la imagen en siete hojas; la cita de A:399 y 26:236 cotejada en la imagen; las seis fichas de agua de 1959 y las de salud, en el informe. Ninguna corrección silenciosa.
+
+### Hallazgos y fase 6
+
+**Ningún hallazgo en el material del AMPLÍA 1959.** Las cuatro entradas nuevas de A:399 y A:404 (5428-A, 4440-G, 4842-A y 8165-A) coinciden con el acto en verbo, fecha, organismo e importes, y el recuento de becas del 8165-A, rehecho sobre la imagen, da los 54 internos y los tres tramos que escribe el libro; las declaraciones de cobertura de 1959 coinciden con el §0, E.1, E.10 y §R del informe (55 actos y 10 de núcleos, 364 hojas en plancha, 348 de tarifa y sumario, 822 miradas, nueve resúmenes con 30 subtotales de Tesorería, cuatro tramos de la cadena, 116 hojas de menos en 97 ediciones, ningún plano); los recuentos de tramos (45 y 67 de 112) y las ventanas (1923--1959, «como 1960 a» en F:69 a F:99) cierran, y ninguna frase de todo el manuscrito sigue dando 1959 por leído con pendientes.
+
+**Incorporación de la fase 6 (insumo del 15/10/2026, decisión de Eduardo).** *Fotografías del Archivo Histórico, dique Campo Alegre, 1972* (`2026-10-15_fotos-archivo-historico-campo-alegre.md`): tres láminas nuevas en el capítulo 10 ---`lam:cavaso` en «Campo Alegre antes del dique», después del párrafo que cierra «con la tierra vecina ya congelada por decreto», y `lam:caobra` y `lam:cacampamento` en «Lo que se construyó sobre esa tierra», después del primer párrafo---, con las imágenes de `laminas-propuestas/` sin retoque en `img/` (las mismas que el Archivo envió: comprobado por md5 contra «Dique Campo alegre futuro espejo de agua 1972», «Dique Campo Alegre Acceso Sur y paredón 1972» y «Dique Campo alegre detalle del campamento de trabajo 1972»). Los epígrafes se escribieron mirando cada imagen y dicen sólo lo que se ve, con el título de la copia del Archivo entre comillas; la lámina B va sin la frase condicional sobre la Ley 4486 y sin mes. La procedencia es la que fija el insumo, sin número provisorio de foto ni mes, y cierra con `\autorizacionAHS`, definido en `main.tex` junto a `\lamina` como único lugar del estado de la autorización («solicitada al Archivo el 13 de octubre de 2026, en trámite»); la entrada del AHS del apéndice F suma las fotografías y cierra también con `\autorizacionAHS`. Nada más en el libro afirma que la autorización existe. Recuentos: cuarenta y dos → cuarenta y cinco en 00:77 (dos veces, con «Tres son fotografías de 1972 del Archivo Histórico de la Provincia, de la obra del dique Campo Alegre» en la enumeración de procedencias y «Siete más tres más once más tres más veintiuna»), 00:80 (dos veces), F:149, F:188 y F:292; el `.lof` da 45. Con `\lamina`, que pone la figura sola en una página (`[p]`), la foto apaisada del valle quedaba nueve páginas después de su sección, en la misma página que la de la obra: se agregó en `main.tex` `\laminafoto`, igual a `\lamina` pero con `[tbp]`, y las tres van con ella (la del valle cae en la p. 245, en su sección, que empieza en la 244; las otras dos en la 254, en la suya, que empieza en la 252).
+
+**Descartados (falsos positivos, 6).** (a) F:65, «los treinta subtotales recalculados en sus nueve resúmenes»: el §R da 31 porque suma los de los cuadros de A de 5920, 5928 y 6002; los de Tesorería son 4 del informe anterior (tres de noviembre de 1958 y uno de mayo) y 26 del cierre (E.1). (b) 15:185, «los \$4.000 de las fiestas patronales de 1959»: el 8985-G no dice el año de las fiestas («gastos devengados»), pero los nueve expedientes son de 1959 y la frase se lee como el subsidio de 1959. (c) A:404, «el 8165-A aprueba las becas que otorga la Dirección»: el acto dice «otorgadas»; mismo sentido. (d) 04:5017, 21:87 y D:191, «los de 1958 a 1960 vuelven a mezclar los nombres»: ningún acto de 1959 nombra el establecimiento de salud del pueblo (sólo al médico regional, A de 5821, y el puesto de Yacones y el consultorio de Vaqueros), de modo que la frase sigue siendo cierta con 1959 leído entero. (e) 01:157, «no encontraron ninguno»: el préstamo de 1959 con cláusula para intervenir la usina (7163-E) es del movimiento inverso que la misma frase describe, no una competencia devuelta. (f) 10:335, «ninguno de los actos de agua de 1958 y 1959 [...] lo toca»: ninguna de las seis fichas de agua de 1959 nombra Campo Alegre, el catastro 136 ni a Fernández.
+
+**Insumos de `auto/insumos-mejora/` usados (uno):** `2026-10-15_fotos-archivo-historico-campo-alegre.md`, incorporado entero salvo lo que el propio insumo excluye; pasa a `usados/` al entregar.
+
+**Pendientes revisados.** P246 (láminas de 1972) se cierra por la decisión del autor: entran con la autorización marcada en trámite; lo que queda (la respuesta del Archivo, los números de inventario y la foto 3801 de 1981, no recibida) pasa a P329. P328: el cotejo del 8165-A en la imagen confirma la lectura que el libro ya da; sigue abierto porque el informe LEE 1959 no se corrigió. P327 y P75: sin cambios (las láminas fig:agua-serie y fig:boletin siguen sin redibujar). P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 y P326, sin revisar.
+
+**Pendientes nuevos.** P329 (`libro`, 1972): cuando el AHS conteste la nota del 13/10/2026, cambiar `\autorizacionAHS` en `main.tex` por la forma de cita y los créditos que indique el Archivo (o, si niega la autorización, quitar las tres láminas y volver a 42), y poner en cada procedencia el número de inventario y la fecha que dé el Archivo.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Blobs de la copia de Windows contra el parche del AMPLÍA | 15 archivos que toca el parche | 15/15 iguales al post-imagen del parche (después de pasar a LF); el parche se aplica al revés sin conflictos |
+| Traslado de tramos anteriores por diff | 26.136/26.136 vigentes en `856982e` | 26.089 vigentes; 47 caducas; 49 nuevas o modificadas |
+| `control_amplia.py` (corrida de esta ronda, sobre `856982e..870a2fe`) | 49 líneas según el script, 204 frases | 984 marcas, las mismas clases y recuentos que la última corrida del `.json` del AMPLÍA; ningún hallazgo |
+| Declaraciones de cobertura de 1959 en todo el manuscrito («1959 a», «1959 y», «1959--», «como de 1959», «1923--1958», «hasta 1958», «1947 a 1958», «1949 a 1958», «cuarenta y cuatro tramos», «sesenta y ocho», «1959 a 1988») | 26.138 líneas | Ninguna desfasada; «sesenta y ocho» sólo en 04:1646, F:56 y H:181, que no son recuentos de tramos |
+| Superlativos y ausencias con un rango que termina en 1958 o 1959, y frases con 1959 y una fórmula de ausencia o primacía | 26.138 líneas | Ninguno que 1959 desmienta (A:376, 18:464 y D:193 dan universos sobre actos leídos) |
+| Superlativos y ausencias en las líneas de la fase 6 (búsqueda de «el único», «la única», «el primer», «la primera», «el más», «nunca», «jamás», «ningún», «por primera vez», «una sola», «no aparece», «sólo») | 33 líneas | Tres coincidencias, ninguna nueva: «ninguna de las cuarenta y cinco láminas pasó por un modelo generativo» (00:80 y F:292) y «Ninguna de esas siete» (00:77), que siguen ciertas con las tres fotografías, copias sin retoque del Archivo; un «una sola construcción» del primer borrador del epígrafe del valle se quitó en la relectura, antes de compilar |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77, 00:80, F:149, F:188 y F:292; 7 + 3 + 11 + 3 + 21 = 45 |
+| Remisiones nuevas | 4 `\ref` nuevos | `cap:expropiacion` desde el cap. 0, con «más adelante»; los de F remiten hacia atrás |
+| Largo de los archivos antes y después de la fase 6 | 38 archivos `.tex` | Cambian `cap/10-expropiacion.tex` (+15) y `main.tex` (+12) |
+| Compilación | base `870a2fe` y fase 6, en clones limpios | Compilan con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.109 páginas la base y 1.111 con la fase 6; 0 errores; 0 referencias indefinidas; `.lof` con 42 y 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `870a2fe` | 1 parche (binario) | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de decreto y de edición bien separadas en las entradas de 1959 |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Una cita y cinco actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 95 | Sin hallazgos; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 70,6 páginas auditadas; recuentos de láminas y de tramos cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Ningún pedido satisfecho nuevo en la lista; las tres láminas con `\label` y en el `.lof` |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40); las tres fotografías llevan repositorio, serie y fecha de recepción |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios; las tres fotografías son documento inédito en el libro, sin argumento propio |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Tres facsímiles nuevos, con procedencia y fecha; ninguna figura propia nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Las becas se dan por número; en las fotografías hay personas no identificables; la reproducción se declara con la autorización en trámite (P329), por decisión del autor |
+
+**Nota inicial: 87,7 antes del tope y 87,7 después** (cobertura acumulada inicial del 100,0 % sobre `870a2fe` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1959 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P327, P37 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948, 1958 y 1959 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** sin hallazgos que resolver; una incorporación (tres láminas); compila sin errores, 1.111 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1959) sin el acto que la refutaría.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 70,6 páginas), más las 33 que cambia o agrega la fase 6, leídas enteras después del cambio (2,5 páginas). Cobertura acumulada: 26.165 de 26.165 (100,0 %). Falsos positivos descartados: 6. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 y P326 sin revisar; la ficha del 8985-G se miró en la capa; los actos de salud y de agua de 1959 se juzgaron sobre las fichas del informe, no sobre la imagen; el libro se tomó de la copia de Windows y no de un clon de GitHub, porque los repositorios son privados desde el 15/10. Errores introducidos por la propia auditoría: ninguno en el AMPLÍA 1959; atrapados por un control automático antes de llegar al libro: 1 (en el AMPLÍA, según su `.json`: la frase del 8165-A, que el script marcó por VERBO y que se rehízo sobre la imagen).
