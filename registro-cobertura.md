@@ -8564,3 +8564,113 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** siete hallazgos, los siete resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1963) sin el acto que la refutaría: el municipio aparece sólo como parte de dos convenios, y en el eléctrico la Intervención ratifica con fuerza de ordenanza lo que la Municipalidad firmó, como había hecho en mayo con el de la Capital.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 69,3 páginas), más las 7 que cambia la fase 6, leídas enteras después del cambio (31,8 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 3. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1963 cuyas hojas no se pidieron (los de salud, policía, minas, pensiones y hogar de A:421 y A:426) se juzgaron sobre las fichas del informe, no sobre la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 7, todos en líneas del AMPLÍA 1963 de esta sesión ---seis los introdujo ese AMPLÍA y uno venía del AMPLÍA 1963 anterior---, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (el verbo del art. 5 del decreto-ley 208 en A:426). **Control nuevo (se entrega `control_amplia.py`):** la clase ARRASTRE marca la primera fórmula de remisión («también con pendientes», «también leído», «del mismo modo», «de la misma manera», «con la misma reserva», «leídos igual», «como 19xx») que sigue, en la misma línea, a un cambio que sube un año a «entero sobre la imagen», «leído entero» o «cerrado». Es la propuesta de la ronda 117, que no se había incorporado al script y cuya falta dejó pasar los hallazgos 1 a 5: sobre el diff del AMPLÍA 1963 marca siete frases, las cinco de los hallazgos y dos falsos positivos; las demás clases dan las mismas cifras que antes.
+
+## Ronda 119 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v5 §7), sobre el material del AMPLÍA 1972. Base: commit `362a8f3` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1972, sobre `b7627d5`, aplicado por `3-registrar` el 15/10 a las 18:14), con la fase 6 en `ronda-119.patch` (un commit sobre `362a8f3`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1972** (la abrió la tarea programada de las 17:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1972 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 18 líneas enteras, buscó primero la causa 5 del flujo §6.6 (la frase que sigue a un año que cambia de nivel y remite a él) y después cotejó en la imagen los actos de 1972 que las líneas citan. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo, y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol de `362a8f3` resultó idéntico al de la sesión (cinco archivos comparados por suma MD5 en la máquina y en la nube, y el resto por `git am` del parche del AMPLÍA sobre `b7627d5`). Del Release `1972` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1972.zip` y los PDF 9037 (durante el AMPLÍA), 9038, 9040, 9059 y 9158; el informe LEE 1972 es el del cierre del 15/10/2026.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 118 (26.167 de 26.167, sobre `7d501e1` y su fase 6, que es `b7627d5`) se trasladaron por diff a `362a8f3`. **El AMPLÍA caduca 18 líneas, las 18 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 18 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.149 de 26.167.
+
+### Lectura sobre el texto (numeración de `362a8f3`)
+
+Se leyeron **las 18 líneas, enteras** (146.848 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 09:536, 22-infraestructura:545, A:467, A:469, D:177, F:26, F:83 y F:103), contra el informe LEE 1972 del 15/10/2026 y, en las cifras, fechas, verbos y citas de 1972, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 2 (467, 469) |
+| ape/D-pedidos.tex | 1 (177) |
+| ape/F-fuentes.tex | 4 (26, 83, 103, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 1 (281) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+
+Contexto releído entero (no suma cobertura): en las 18 líneas, cada fórmula de remisión («también», «del mismo modo», «de la misma manera», «leídos igual», «con la misma reserva», «como 19xx», «ese año», «esos años», «ellos») que sigue a una mención de 1972 en la misma línea (barrido por script, 700 caracteres después de cada 1972, y leídas una por una: nueve); las frases de todo el manuscrito con un superlativo o una ausencia junto con 1972, «1970 a 1972» o «1971 y 1972» (20 frases); del informe LEE 1972, el §0, §1 (encabezado), A03, A16, A16b, A17, A18, A19, A28, A35, A36, A37, A38, B.4, E.2, E.3, E.6, E.8, E.9, E.10 y §R.
+
+**Esta ronda: 18 líneas**, 146.848 bytes sobre 3.688.996, que en las 1.115 páginas de la base equivalen a **44,4 páginas**.
+
+Acumulado: 26.149 vigentes + 18 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 6 líneas que estaban vigentes (00:45, 09:536, 22-infraestructura:508, A:469, D:341 y F:83), sin agregar renglones; cuatro son de las 18 de esta ronda y dos (22-infraestructura:508 y D:341) no, y las seis se leyeron enteras después del cambio: **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9037 | 12 | Dec. 4611, «Salta, 27 de abril de 1972», Economía, expte. 34/16092/70: visto (obra A-8/70, presupuesto oficial \$70.479,49, Dec. 730/71), cuadro de ofertas («Brio S. A.» \$100.080,87, + 41,99 %; «Cátulo Abel Marcuzzi» \$101.754,76, + 44,37 %), considerando de la AGAS («los precios básicos del presupuesto de la obra, datan de enero de 1970»), art. 1 «Adjudícase a la EMPRESA BRIO S.A.» (imagen, 110 ppp); cabecera «SALTA, 22 DE MAYO DE 1972» | Coincide con A:469 (y con A:467, «la adjudicación, en la fila de 1972») |
+| 9037 | 23 | O.P. 11067, T. 9803, posesión veinteañal de Mercedes Condori, catastro 145, plano 138 (imagen, 150 ppp) | Coincide con A:469 |
+| 9040 | 5 | Ley 4474, art. 1, columnas 1 y 2: «cuyo radio de acción estará circunscripto al actual éjido del municipio de la citada localidad» (imagen, 200-220 ppp) | Coincide con A:469 |
+| 9059 | 6 | Dec. 4883: «Dispónese la habilitación de la Oficina del Registro del Estado Civil [...] de la localidad de Vaqueros [...] cuyo cese de funcionamiento fuera dispuesto por decreto Nº 4584 de fecha 2-V-69» (imagen, 110 ppp; cabecera del 26 de junio de 1972) | Coincide con A:469 |
+| 9158 | 15 | Dec. 6435, «Salta, 9 de octubre de 1972»: art. 1 «Desestímanse por inconvenientes, las propuestas»; art. 2 «Apruébase el nuevo legajo y presupuesto actualizado [...] por la suma de \$ 107.002,70 y autorízase a la Administración General de Aguas de Salta a ejecutar los trabajos por vía administrativa»; considerando: la Administración lo solicita «dada la proximidad del período de lluvias»; ofertas 44,10 y 83,97 % (imagen, 110 ppp) | **Hallazgo 3** |
+
+Cinco actos mirados en la imagen, en cinco hojas de cuatro ediciones (la 9038 se pidió y no hizo falta); cuatro citas de 1972 de las líneas leídas cotejadas en la imagen («datan de enero de 1970», «actual éjido del municipio», «Dispónese la habilitación», el verbo del 6435); las demás citas de 1972 de A:469 son anteriores a este AMPLÍA y se juzgaron sobre el informe del cierre. Ninguna corrección silenciosa en lo mirado.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 00:45, A:469, F:83 | Las novecientas diez hojas que el cierre de 1972 miró en plancha se describen como las «que el reconocimiento no había podido leer, que tenían poca tinta o que estaban en cuatro ediciones sumadas»: el informe (§0, pendiente 2) suma una cuarta clase, las 32 de los pares de imágenes casi iguales con texto distinto, que la frase deja fuera | 5 | Se agrega la cuarta clase en los tres lugares («que la comparación de imágenes daba por casi iguales a otra»; «casi iguales a otra») |
+| 2 | 09:536 | «sobre la imagen sólo de 1956 a 1963, leídos sin defensas, y 1972»: la frase se puede leer como si 1972 también fuera un año sin defensas, y el mismo párrafo trae la D-5/71, que el 6435 de 1972 resuelve | 12 | «y 1972, que trae la defensa de la zona Cabral» |
+| 3 | 09:536 (y 22-infraestructura:508 y D:341, fuera de las 18) | «la Provincia las desestima y manda hacerla por administración»: el art. 2 del 6435 aprueba el presupuesto actualizado y «autorízase» a la Administración a ejecutarla por vía administrativa, que es lo que ella había pedido por las lluvias; el verbo se endurece (causa 1 del flujo §6.6). Viene del AMPLÍA 1970-1972 (`d628fd6`), y el informe LEE 1972 lo arrastra («ordena la vía administrativa», A35) | 5 | «aprueba el presupuesto actualizado en \$107.002,70 y, como pedía la Administración por la proximidad de las lluvias, la autoriza a ejecutarla por vía administrativa»; en 22-infraestructura:508, «que en 1972 se autoriza a ejecutar por vía administrativa»; en D:341, «autorizada en 1972 a ejecutarse por vía administrativa» |
+
+Resta: en el aspecto 5, sobre la base de 95, dos frases que dicen otra cosa que la lectura o que el acto (hallazgos 1 y 3), 5 cada una, **85**; en el aspecto 12, una observación menor y aislada de redacción (hallazgo 2), **90** por la escala general. Ningún error de consistencia en las 44,4 páginas: aspecto 7, **100**.
+
+**Errores introducidos por la propia auditoría**: dos de los tres están en material que el AMPLÍA 1972 de esta sesión escribió (1 y 2); el 3 es anterior (AMPLÍA 1970-1972, `d628fd6`, en tres lugares) y cae en una línea que este AMPLÍA tocó. **`control_amplia.py` no marcó ninguno por su defecto**: el 1 no es una cita ni una cifra que el script coteje (el 910 está en el informe), el 2 no tiene fórmula de remisión, y el 3 es texto anterior al diff. **Atrapados por el control antes de compilar el AMPLÍA: uno**, la remisión «cerrado después del mismo modo» de F:134, que el script marcó por ARRASTRE y la sesión cambió por «cerrado después sobre la imagen»; y uno por la imagen, sin script: «Brío» por «Brio», como imprime el cuerpo del 4611.
+
+**Descartados (falsos positivos, 4).** (a) 02:28, «\textbf{1972} completo [...] leído primero con pendientes y cerrado después del mismo modo»: remite a 1958-1963 de la misma enumeración, cerrados con las hojas miradas en plancha, que es lo que hizo el cierre de 1972. (b) 17:281, «En 1973 y 1974, también con pendientes»: el «también» remite a 1970 y 1971, que la frase anterior da con pendientes. (c) 15:185, «En 1973 y 1974, también con pendientes»: la misma. (d) F:26, «los sesenta y dos quedan fuera de las ventanas» cuando 1972 también está fuera: la oración anterior dice que 1972 queda aislado, y los sesenta y dos son los que quedan fuera «por eso», por las hojas sin mirar.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P337 (láminas de 1972, abierto por el AMPLÍA): sin cambios en las láminas. P125: lo de 1972 queda reemplazado por P337. P127: la adjudicación de la obra A-8/70 queda respondida en A:469, y no estaba en D. P265: el AMPLÍA sacó de D las ediciones 9034 a 9037; lo demás sigue. P115: el cierre confirma que ningún acto del año da los datos técnicos del embalse; sigue abierto. P128 y P129: lo de 1972 lo aplicó el cierre; siguen abiertas las partes de 1970 y 1971. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333, sin revisar.
+
+**Pendientes nuevos.** P338 (lee, 1972): corregir el informe LEE 1972, ficha A35, «Dec. 6435 desestima las ofertas y ordena la via administrativa»: el art. 2 aprueba el legajo y el presupuesto actualizado (\$107.002,70) y «autorízase» a la Administración a ejecutar los trabajos por vía administrativa (9158 h15).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`362a8f3`) contra el de la sesión | 5 archivos tocados por suma MD5 (LF) y el resto por `git am` del parche del AMPLÍA sobre `b7627d5` | Idénticos |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `b7627d5` | 26.149 vigentes de 26.167; 18 caducas y 18 modificadas, ninguna agregada |
+| `control_amplia.py` (dos corridas del AMPLÍA, sobre `b7627d5..362a8f3`) | 18 líneas | 407 y 406 marcas; ninguna de las frases de los hallazgos marcada por su defecto |
+| `control_amplia.py` sobre la fase 6 (`362a8f3..` fase 6) | 6 líneas | 59 marcas, ninguna de ARRASTRE ni de FECHA; la única CITA es de 1971 (2530, Nº 8931), anterior |
+| Fórmulas de remisión después de una mención de 1972 en la misma línea | 18 líneas del AMPLÍA | 9, leídas: ninguna remite mal (falsos positivos a, b y c) |
+| Superlativos y ausencias junto con 1972, «1970 a 1972» o «1971 y 1972» | 25.757 líneas de `cap/` y `ape/` | 20 frases, ninguna que la lectura de 1972 sobre la imagen desmienta |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 50 verificados + 62 fuera = 112 |
+| D:177, hojas «a ojos» | 16 años (1964 a 1971 y 1973 a 1980) | 16 cifras, de 69 a 577, las mismas que da 00:45 |
+| Compilación | AMPLÍA (`362a8f3`) y fase 6, en clones limpios | Compilan con `latexmk -pdf`; 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `b7627d5` más el parche del AMPLÍA | 1 parche | Aplica; el diff resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | El 4611 con la fecha del acto (27/4) y la de la edición (22/5), miradas en la imagen |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Cuatro citas y cinco actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 95 | Hallazgos 1 y 3, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error en 44,4 páginas; recuentos de láminas, tramos y hojas «a ojos» cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 deja de pedir las ediciones 9034 a 9037, que ya están en el Release y se leyeron; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 2, aplicado; sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Lo agregado de 1972 nombra a una empresa, a un contratista que el libro ya nombraba (Marcuzzi) y a una titular de posesión ya citada; ningún atributo sensible |
+
+**Nota inicial: 86,3 antes del tope y 86,3 después** (cobertura acumulada inicial del 100,0 % sobre `362a8f3` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P337, P335, P334, P332, P325, P327, P330 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948, 1958 a 1963 y 1972 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** tres hallazgos, los tres resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1972) sin el acto que la refutaría: el agua potable de Vaqueros la adjudica la Provincia y la contrata la Administración General de Aguas, y la defensa del pueblo la ejecuta la Administración por vía administrativa; la cuarta gana un dato de la serie de cierres: de la A-8/70, ni el contrato ni el comienzo de la obra se publican en lo que se conserva de 1972.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 18 líneas (0,07 %; 44,4 páginas), más las 6 que cambia la fase 6, leídas enteras después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1972 de A:469 cuyas hojas no se pidieron (justicia, salud, hogar, escuelas, hacienda, agro, minas, elecciones y remates) se juzgaron sobre las fichas del informe, que los miró en la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 3, dos en material del AMPLÍA 1972 de esta sesión y uno del AMPLÍA 1970-1972 en una línea que este tocó; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (ARRASTRE en F:134).

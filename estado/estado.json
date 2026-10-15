@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T18:14:23",
+ "actualizado": "2026-10-15T18:39:10",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17664,6 +17664,63 @@
    ],
    "control_amplia_nuevo": "Se entrega control_amplia.py con la clase ARRASTRE: marca la primera formula de remision ('tambien con pendientes', 'tambien leido', 'del mismo modo', 'de la misma manera', 'con la misma reserva', 'leidos igual', 'como 19xx') que sigue, en la misma linea, a un cambio que sube un año a 'entero sobre la imagen', 'leido entero' o 'cerrado'. Sobre el diff del AMPLIA 1963 marca 7 frases: las de los hallazgos 1 a 5 y dos falsos positivos; las otras siete clases dan las mismas cifras que la version anterior.",
    "atrapados": 1
+  },
+  {
+   "ronda": 119,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "base": "362a8f3",
+   "base_completa": "362a8f3fd8476cf72175b9013de9023638408a3a",
+   "nota_inicial": 86.3,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 86.3,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda": {
+    "lineas": 18,
+    "bytes": 146848,
+    "paginas": 44.4
+   },
+   "fecha": "2026-10-15",
+   "hallazgos": 3,
+   "aplicados": 3,
+   "material_auditado": "AMPLIA 1972 (362a8f3 sobre b7627d5), 18 lineas enteras",
+   "hallazgos_detalle": [
+    "00:45, A:469, F:83: las 910 hojas del cierre de 1972 descritas como 'a ojos', de poca tinta o de las cuatro ediciones sumadas; el informe suma una cuarta clase (32 de pares dhash) -> se agrega 'casi iguales a otra' (aspecto 5)",
+    "09:536 'sobre la imagen solo de 1956 a 1963, leidos sin defensas, y 1972' (ambiguo: 1972 trae la D-5/71) -> 'y 1972, que trae la defensa de la zona Cabral' (12)",
+    "09:536, 22-infraestructura:508, D:341: 'manda hacerla por administracion' -> el art. 2 del 6435 'autorizase' a la AGAS a ejecutarla por via administrativa, a su pedido por las lluvias (5; imagen 9158 h15; viene de d628fd6)"
+   ],
+   "errores_introducidos_por_la_auditoria": {
+    "total": 3,
+    "del_amplia_1972_de_esta_sesion": 2,
+    "heredados_de_incorporaciones_anteriores_en_lineas_tocadas": 1,
+    "marcados_por_control_amplia": 0,
+    "atrapados_antes_de_compilar": 1,
+    "nota": "El hallazgo 3 lo escribio el AMPLIA 1970-1972 (d628fd6) en tres lugares y el informe LEE 1972 lo arrastra (A35). Atrapado: ARRASTRE en F:134 ('cerrado despues del mismo modo' -> 'cerrado despues sobre la imagen')."
+   },
+   "falsos_positivos": 4,
+   "compilacion": {
+    "paginas": 1115,
+    "refs_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "git_am": "OK sobre un repositorio limpio con el arbol de LIBRO en b7627d5 (copia de Windows pasada a LF) mas amplia-1972.patch (= 362a8f3); diff identico al de la sesion",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P338",
+     "tipo": "lee",
+     "anios": [
+      1972
+     ],
+     "texto": "Corregir el informe LEE 1972 (cierre del 15/10), ficha A35: 'Dec. 6435 desestima las ofertas y ordena la via administrativa'; el art. 2 aprueba el nuevo legajo y el presupuesto actualizado ($ 107.002,70) y 'autorizase a la Administracion General de Aguas de Salta a ejecutar los trabajos por via administrativa', como la AGAS habia pedido 'dada la proximidad del periodo de lluvias' (9158 h15, imagen 110 ppp). Tambien en E.6 o donde se repita.",
+     "abierto": "2026-10-15",
+     "hecho": null
+    }
+   ],
+   "atrapados": 1
   }
  ],
  "pendientes": [
@@ -21796,9 +21853,19 @@
    "texto": "Laminas tras el AMPLIA 1972 (con P125, que pedia marcar 1972 como leido con pendientes, 234 de 238): en fig:boletin marcar 1972 como leido entero sobre la imagen (238 ediciones, 8943-9180, ninguna ausente; 108 paginas faltantes en 79 ediciones), aislado entre 1964-1971 y 1973-1980; en fig:aguaserie, si se extiende a 1972 (P125), dibujar su barra (dos decretos, 4156 y 6112, y cuatro edictos, 9779, 10419, 12751 y 12942, ninguno con el municipio) como recuento cerrado; en fig:votado, sumar a la obra A-8/70 de Vaqueros la adjudicacion a Brio S.A. por $100.080,87 (4611, Nº 9037, h. 12).",
    "abierto": "2026-10-15",
    "hecho": null
+  },
+  {
+   "id": "P338",
+   "tipo": "lee",
+   "anios": [
+    1972
+   ],
+   "texto": "Corregir el informe LEE 1972 (cierre del 15/10), ficha A35: 'Dec. 6435 desestima las ofertas y ordena la via administrativa'; el art. 2 aprueba el nuevo legajo y el presupuesto actualizado ($ 107.002,70) y 'autorizase a la Administracion General de Aguas de Salta a ejecutar los trabajos por via administrativa', como la AGAS habia pedido 'dada la proximidad del periodo de lluvias' (9158 h15, imagen 110 ppp). Tambien en E.6 o donde se repita.",
+   "abierto": "2026-10-15",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
