@@ -7631,3 +7631,119 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.105 páginas. **Avance de la investigación:** ninguna tesis cambia de estado; se declaran dos hipótesis en estudio nuevas (la institución congelada, en el cap. 1; el crecimiento sin base fiscal, en el cap. 15), cada una con lo que la refutaría y lo que el libro ya tiene en contra; la cuarta tesis gana una segunda medida (caudal); la hipótesis de los relevos gana 1932, a favor en las fechas y neutro en las causas impresas.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 84 líneas (0,32 %; 27,4 páginas), más cuarenta y dos líneas que la fase 6 cambia o agrega, leídas enteras después del cambio (6,2 páginas). Cobertura acumulada: 26.093 de 26.093 (100,0 %). Falsos positivos descartados: 8. Recortes: P304, P305, P307 y P308 sin revisar; P310 sin cerrar; las fichas A.17 a A.27 del informe LEE se leyeron en sus renglones decisivos y no enteras; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; la revisión de identidades entre años quedó a medias (P318); `control_amplia.py` no se entregó (P319). Errores introducidos por la propia auditoría: 1 en el AMPLÍA 1932, escrito por otra sesión y heredado del informe LEE, 1 por una corrección del AMPLÍA que no alcanzó a una frase anterior, y 5 anteriores; atrapados por un control automático antes de llegar al libro: 13 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma una regla a las de las rondas 108 y 109: **marcar como FECHA los intervalos de mando y de cargo («del 10 al 12 de febrero», «desde el 22») y cotejarlos con el número y la fecha del decreto que los abre**, porque un intervalo heredado del informe no lo ve ninguna clase. Y suma una lección de método: **una salvedad de identidad agregada en una fila (A:211) obliga a buscar el mismo nombre en todo el manuscrito**, porque las afirmaciones de identidad del libro no están en la cronología sino en la prosa de los capítulos que la usan.
+
+## Ronda 111 — auditoría con fase 6 (14/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1946. Base: commit `be32aa0` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1946, sobre `a52e408`, aplicado por `3-registrar` el 14/10 a las 20:48), con la fase 6 en `ronda-111.patch` (un commit sobre `be32aa0`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1946** ni el informe LEE 1946: la abrió la tarea programada. `auto/insumos-mejora/` no tenía insumos nuevos (sólo la carpeta `usados/`). Para el cotejo se bajaron desde la nube 24 PDF del Release `1946` de `boletines-salta` (2469, 2473, 2483, 2495, 2508, 2511, 2518, 2522, 2529, 2543, 2554, 2572, 2588, 2594, 2596, 2608, 2613, 2618, 2626, 2652, 2686, 2695, 2725, 2728 y 2736; 25 con la 2736) y dos del Release `1945` (2402 y 2403), más `lee_textos_1946.zip` y el informe LEE 1946 de `corrige/lee/1946/`. **Esta ronda volvió a correr `control_amplia.py` sobre el diff `a52e408..be32aa0`** con el zip y el informe, y tiene la salida línea por línea: 105 marcas (CITA 4, FECHA 1, CIFRA 7, IDENT 4, ALCANCE 17, VENTANA 15, VERBO 57), las mismas clases y recuentos que declara la última corrida del `.json` del AMPLÍA.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 110 (26.093 de 26.093, sobre `a52e408`) se trasladaron por diff a `be32aa0`. **El AMPLÍA caduca 49 líneas y deja 82 nuevas o modificadas** (diff con `-U0`; `--numstat` da 79 y 46 porque alinea distinto el capítulo 4); cambian de largo el apéndice A (+4), el apéndice D (+1) y los capítulos 4 (+27) y 16 (+1); los apéndices E y F y el capítulo 20 cambian líneas sin cambiar de largo. Vigentes después del traslado: 26.044 de 26.126.
+
+### Lectura sobre el texto (numeración de `be32aa0`)
+
+Se leyeron **las 82 líneas, enteras** (69.809 bytes; la línea 56 de F, de 55.290 bytes, también entera), contra el informe LEE 1946 del 14/10/2026 y, en los nombres, fechas, cifras, verbos y citas, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 6 (304, 305, 306, 307, 310, 312) |
+| ape/D-pedidos.tex | 1 (261) |
+| ape/E-personas.tex | 1 (84) |
+| ape/F-fuentes.tex | 1 (56) |
+| cap/04-siglo.tex | 64 (3941–3942, 3944–3951, 3963, 3970–3975, 3979–3980, 3982–3985, 3992–4032) |
+| cap/16-redes.tex | 6 (748–749, 759–762) |
+| cap/20-opacidad.tex | 3 (727–728, 730) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:3925–3940 y 4033–4040; A:296–313 enteras (las filas de 1945 y 1946 que el AMPLÍA no tocó, entre ellas 308, 309 y 311); 16-redes:740–764; 20-opacidad:720–735; D:255–262; E:80–86; 18-politica:455–465; las líneas de todo el manuscrito con «Teófilo Reyes», «sin cargo», «abril de 1946», «16 de mayo» y «Mercado»; y, del informe LEE 1946, el §0, el §1, el §E y las fichas A.1 a A.11 enteras.
+
+**Esta ronda: 82 líneas**, 69.809 bytes sobre 3.665.907, que en las 1.109 páginas de la base equivalen a **21,1 páginas**.
+
+Acumulado: 26.044 vigentes + 82 = **26.126 de 26.126 (100,0 %)**. La fase 6 cambia 12 líneas sin agregar ninguna: nueve están entre las leídas en esta ronda, y las otras tres (A:308, 309 y 311), que estaban vigentes, se leyeron enteras después del cambio (1.047 bytes, 0,3 páginas) y se cuentan leídas en esta ronda: **26.126 de 26.126 (100,0 %)** después de ella. Ningún archivo cambia de largo.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 2469 | 4 | 9908-G del 5 de enero: renuncia de Francisco Mercado «al cargo de Interventor de la Comuna de La Caldera», fundada en «la actual campaña lectoral» [sic] y en la prescindencia política; art. 2º, «Encárgase provisoriamente, de la Comuna de La Caldera, hasta tanto se provea en definitiva, al señor Secretario de la misma, don Teófilo Reyes»; firma Escalada (imagen) | Coincide |
+| 2473 | 11 y 12 | Balance Nº 1452: título (imagen); octubre 18,15 + 75 + 5 = 98,15, salidas 5 + 19,70 + 19,70 + 15 + 1,70 + 3 + 3,45 = 67,55 contra el subtotal impreso 67,63, saldo 30,52; noviembre abre el 7 con 2,02 «según entrega de la Municipalidad, por la administración anterior» (imagen), salidas 71,47, saldo 26,55; diciembre 26,55 + 25 + 2 + 2 + 30 + 40 = 125,55, saldo 13,70 (capa); tres firmas «F. Mercado» y, debajo de la última, «Con Cargo» (imagen) | Aritmética rehecha, coincide; hallazgo 5 |
+| 2529 | 2 y 6 | 10810-G del 20 de marzo: el visto es el pedido del interventor de la Comuna de San Antonio de los Cobres de una oficina en Tolar Grande; el considerando, que la de Vaqueros «no ha funcionado durante el año próximo pasado» (la capa lee «río ha funcionado»); art. 1º «Suprímese» (imagen); sumario: «localidad de La Caldera» (capa) | Hallazgo 1 |
+| 2572 | 5, 6 y 7 | 11514-G del 14 de mayo, firmado por Escalada, pone en posesión del mando a Cornejo; 1-G del 14, firmado por Cornejo, «Queda asumido el mando»; 10-G del 15 y 11-H y 12-H del 16, de Cornejo (capa; de los decretos fechados el 15 o el 16 en las ediciones 2569 a 2580 cuya firma resuelve la capa, ninguno es de Escalada); 14-G: «en la localidad de La Calderilla (Departamento de la Capital)» (imagen) | Hallazgo 2 |
+| 2686 | 5 y 6 | 1966-H: considerando «Que el Río Mojotoro o Siancas forma su caudal con el proveniente de los ríos Wierna, La Caldera y Castellanos»; zona II «… hasta aguas arriba de la pirmera toma del sistema» [sic]; art. 1º, «(Zona I)», 2.500 l/s, seis fincas, 382 l/s, 760 ha; art. 2º «Los regantes de la Zona II»; art. 5º (imagen) | Coincide en el capítulo 4; hallazgo 4 en la fila de A |
+| 2725 | 7 | 2479-G del 5 de diciembre: «por esta única vez», \$200, liquidado a Pfister y Reyes, dos ministros (imagen y capa) | Coincide |
+| 2495 | 4 | 10286-G: «La Caldera — Teófilo Reyes» en la tercera categoría; «Vaqueros (La Caldera) — Vacante» en la sexta (capa con disposición) | Hallazgo 6 |
+| 2608 | 4 | 659-G del 6 de julio: «Dáse por terminada la Intervención», nombra a Pfister presidente (capa) | Coincide; hallazgo 7 (hoja) |
+| 2402 | 5 | 9053-G de 1945: renuncia de Augusto Regis y designación de Francisco Mercado (capa) | Coincide |
+| 2403 | 7 | Edicto de 1945: «ubicado en La Calderilla, Departamento de La Caldera» (imagen) | Coincide |
+| 2483, 2508, 2511 | 6; 4; 4 | 10062-G del 19 de enero (Guerrero, suplente); 10469-G (Vivas, propietario); 10520-G del 23 de febrero (Vivas renuncia, Sivila) (capa) | Coincide |
+| 2554; 2652 | 3 y 4; 4 | 11198-G del 22 de abril (Alvarez, Arias); Ley 745, grupo a) «Caldera» (capa) | Coincide |
+| 2618; 2695 | 7; 6 | 809-H del 20 de julio, «Dánse por terminadas las funciones» de Julia R. de Regis, Gerardo Guerrero; Res. 165-H del 30 de octubre, fianza de \$3.000 de Darío Arias (capa) | Coincide |
+| 2613; 2522 | 6; 20 y 22 | 756-G del 16 de julio, seis departamentos; anexo: comisaría \$5.573,80 y defensa \$2.904, Ley 712 (capa) | Coincide |
+| 2736 | 8 | 2599-H del 18 de diciembre, expediente 8045/1946, jueces de distribución Wierna y Mojotoro (capa) | Coincide; hallazgo 7 (hoja) |
+
+Once citas del libro cotejadas sobre la imagen en ocho ediciones (2469, 2473 dos, 2529, 2572, 2686 tres, 2725, 2403 y la firma de 2473), sin correcciones silenciosas dentro de comillas; un número y una fecha de acto mirados en la imagen (9908-G y 10810-G); las demás comprobaciones, en la capa, y así se declaran. Aritmética rehecha: los tres meses del balance y la serie policial (seis actos del Interventor, del 2 de marzo al 10 de mayo, y siete del gobierno constitucional, cinco del 31 de mayo al 19 de junio).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:307 | «Decreto 10810-G, a pedido del interventor de la Comuna de San Antonio de los Cobres: suprime la oficina del Registro Civil de Vaqueros [...] y crea una en Tolar Grande»: el pedido del visto es la oficina de Tolar Grande; la supresión la funda el considerando en el informe de la Dirección General de Registro Civil. El error viene del informe LEE (A.5) | 5 | «suprime [...] y crea una en Tolar Grande, que había pedido el interventor de la Comuna de San Antonio de los Cobres; el decreto no dice que él pidiera la supresión» |
+| 2 | 04-siglo:4013–4014 | «Hasta mediados de mayo firma los decretos el Interventor Federal [...]; desde el 16 de mayo, el gobernador Lucio A. Cornejo»: Cornejo asume y firma desde el 14 (11514-G y 1-G, Nº 2572, h. 5 y 6). El error viene del informe LEE (§0 y E.4: «en decretos desde el 16/05») | 3 | «Hasta el 14 de mayo [...]; desde ese mismo día, en que asume (11514-G y 1-G, Nº 2572, h. 5 y 6), el gobernador» |
+| 3 | 04-siglo:4007–4008 | «sus últimos seis meses los cubre un encargo provisorio al secretario»: el 9908-G encarga la Comuna «hasta tanto se provea en definitiva»; que nadie más la tuviera hasta julio no lo dicen los actos, y el apéndice D (261) lo pide al Registro Oficial | 5 | «de sus últimos seis meses las ediciones del año sólo publican el encargo provisorio al secretario» |
+| 4 | A:309 | Fila del 1966-H: «las fincas de la Zona I [...] no pueden derivar más de 382 l/s; usaban 1.123»: los 1.123 l/s son de las seis tomas del considerando, y la cautela que el AMPLÍA agregó al cap. 16 dice que el decreto no da por las mismas las tomas y las fincas (frase vecina desmentida, causa 5 del flujo §6.6) | 5 | Los regantes de seis fincas que nombra, 382 l/s para 760 ha; las seis tomas de la Zona I levantaban 1.123 en la inspección, «y el decreto no dice que sean las de esas fincas»; hojas 5 y 6 |
+| 5 | A:305 y 04-siglo:3985 | «firmado [...] por F. Mercado, sin cargo» / «al pie de cada mes, sin cargo»: el propio libro usa «sin cargo» por «gratuito» (A:408, cap. 22 y C), y la hoja 12 imprime «Con Cargo» debajo de la última firma (la tarifa de la publicación) | 4 | «sin decir el cargo», y en A la aclaración del «Con Cargo» |
+| 6 | A:312 y E:84 | El 10286-G de enero de 1946 pone a «La Caldera — Teófilo Reyes» en la tercera categoría del Registro Civil; la fila de A lo omite y E dice sólo que «los actos no dicen que sea el encargado del Registro Civil», como si 1946 no nombrara encargado. El informe LEE (A.5) tampoco lo trae | 5 | A: «a cargo de Teófilo Reyes»; E: «en enero el 10286-G pone a un Teófilo Reyes al frente de la oficina [...], y los actos no dicen que el secretario y el encargado sean la misma persona» |
+| 7 | A:308 y 311 | 659-G y 2599-H sin hoja | 1 | «h. 4» y «h. 8» |
+
+Resta: en el aspecto 3, una fecha tomada de un informe y no rehecha sobre el documento (5), **95**; en el aspecto 4, una descripción del facsímil que el facsímil contradice (3), **87**; en el aspecto 5, cuatro frases que dicen más que el acto o lo desmienten a dos líneas (hallazgos 1, 3, 4 y 6: 5 + 5 + 5 + 3, el 6 como texto incompleto), sobre la base de 95 que dejó la ronda 110 con P318 abierto, **77**; en el aspecto 1, el hallazgo 7 no mueve la muestra (P115).
+
+**Errores introducidos por la propia auditoría**: cinco de los siete están en texto que escribió el AMPLÍA 1946 (`be32aa0`), el 1, el 2, el 3, el 5 y el 6; el 1, el 2 y el 6 vienen del informe LEE 1946 (causa 2 del flujo §6.6), y el 4 es una frase anterior que la cautela nueva del capítulo 16 desmentía (causa 5); el 7 es anterior. **`control_amplia.py` marcó tres de los cinco** y la sesión del AMPLÍA los justificó: el 1 como VERBO («suprime», «interventor» en A:307), el 3 como ALCANCE (04:4008) y el 2 sólo como VERBO («Interventor», 04:4014), no como FECHA; el 5 y el 6 no los marcó. **Atrapados por el control antes de compilar el AMPLÍA: tres**, según su `.json`, que no restan.
+
+**Descartados (falsos positivos, 8).** (a) «los regantes de la zona I no deriven más de 382» (04-siglo:3949): el art. 1º pone «(Zona I)» y el 2º dice «Los regantes de la Zona II». (b) «Ninguna de las 280 ediciones del año publica el nombramiento de otro interventor antes de julio» (A:306): la búsqueda de «Comuna», «Municipalidad» y «Comisión Municipal» de La Caldera en las 3.912 hojas de la capa sólo devuelve el 9908-G, el sumario del balance y el 659-G. (c) «el subtotal de salidas de octubre, \$67,63, supera en ocho centavos la suma de su detalle»: 67,55. (d) «La tercera intervención duró más de dos años»: de abril de 1944 al 6 de julio de 1946 son más de dos años. (e) «Después de cinco actos económicos publicados sin una sola cifra entre 1922 y 1927» (20:729) frente a «Entre 1922 y 1944 este capítulo registró cinco actos» (04:3988): la segunda es la ventana, la primera el lapso de los cinco. (f) «en seis departamentos, La Caldera entre ellos» (756-G): Capital, Cerrillos, Rosario de Lerma, La Caldera, Campo Santo y Chicoana. (g) «trece actos, seis del Interventor Federal y siete del gobierno constitucional»: recontado sobre las fichas, coincide. (h) «el saldo de octubre no pasa a noviembre»: noviembre abre con 2,02 y diciembre sí abre con el 26,55 de noviembre.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo.
+
+**Pendientes revisados.** P298: el cambio de gobierno es del 14 de mayo, de modo que los cinco actos policiales del 31 de mayo al 19 de junio caen de 17 a 36 días después; el cap. 4 sigue sin tomar partido. P318: Teófilo Reyes, secretario de la Comuna en 1946 y, de nombre, encargado del Registro Civil del pueblo el mismo año (10286-G), sin identidad afirmada; queda abierta en A:355 la fila de 1952 («se jubila Teófilo Reyes, encargado desde 1928»), que une apariciones de 1928 a 1952. P320: suma a la serie de 1946 el 10286-G (Reyes en el Registro Civil) y la fecha del cambio de gobierno. P319: suma dos reglas (abajo). P321, P304, P305, P307, P308 y P310, sin revisar.
+
+**Pendientes nuevos.** P322 (`lee`, 1946): el informe LEE 1946 del 14/10/2026 da al Gobernador «en decretos desde el 16/05» (§0, E.4), cuando el 1-G de Cornejo y el 11514-G de Escalada son del 14 de mayo (Nº 2572, h. 5 y 6); en A.5 omite que el 10286-G pone a Teófilo Reyes en la oficina del Registro Civil de La Caldera (Nº 2495, h. 4), y escribe que el 10810-G suprime la oficina de Vaqueros «a pedido del interventor» de San Antonio de los Cobres, cuyo pedido es la oficina de Tolar Grande.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 26.093/26.093 vigentes en `a52e408` | 26.044 vigentes; 49 caducas; 82 nuevas o modificadas |
+| `control_amplia.py` (corrida de esta ronda, sobre `a52e408..be32aa0`) | 74 líneas agregadas o modificadas según el script, 91 frases | 105 marcas, las mismas clases y recuentos que la última corrida del `.json` del AMPLÍA; marca los hallazgos 1 (VERBO), 2 (VERBO, no FECHA) y 3 (ALCANCE); no marca el 5 ni el 6; el 4 y el 7, fuera del diff |
+| Firmas de los decretos fechados del 13 al 19 de mayo | ediciones 2569 a 2580, capa | Escalada firma hasta el 14; Cornejo desde el 14 (1-G); de los decretos fechados el 15 o el 16 cuya firma resuelve la capa (18), ninguno es de Escalada |
+| Menciones de la Comuna o de la Comisión Municipal de La Caldera en 1946 | 3.912 hojas de la capa de las 280 ediciones | 9908-G, sumario del balance y 659-G (la de 2479-G, partida por el renglón, se vio en la imagen) |
+| «sin cargo», «Teófilo Reyes», «abril de 1946», «16 de mayo», «Mercado» en todo el manuscrito | 26.126 líneas | «sin cargo» con sentido de gratuito en A:408, C:133, 01:157, 22-infraestructura:545 y 17:226; ninguna otra fecha de abril para la renuncia de Mercado; las demás, consistentes |
+| Superlativos y ausencias en las líneas cambiadas por la fase 6 | 12 líneas | Una restricción nueva con universo («las ediciones del año sólo publican»); ningún superlativo |
+| Largo de los archivos antes y después de la fase 6 | 38 archivos `.tex` | Ninguno cambia de largo |
+| Compilación | fase 6 sobre `be32aa0`, en un clon limpio con el parche aplicado | Compila con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.109 páginas, las mismas que declara el AMPLÍA para su resultado; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `be32aa0` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | Dos filas de 1946 sin hoja (hallazgo 7, aplicado); la muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 2, aplicado |
+| 4 | Fidelidad de transcripción | 7 | 87 | 90 | Once citas cotejadas sobre la imagen, sin correcciones silenciosas; hallazgo 5, aplicado; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 77 | 95 | Hallazgos 1, 3, 4 y 6, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 21,4 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | El pedido nuevo de D (Registro Oficial de 1946) no duplica destinatario; sin pedidos satisfechos en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Las remisiones nuevas llevan «más adelante» |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; P304, P305, P307 y P320 |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Nombrados: funcionarios, legisladores y firmantes de actos de 1946, en sus cargos; ninguna imputación de conducta (la cesantía de Oliva se da con la fórmula del acto); se omiten clases y matrículas |
+
+**Nota inicial: 85,1 antes del tope y 85,1 después** (tope de 90 por la cobertura acumulada inicial del 99,70 %, que no actúa). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317): hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años, con A:355 y el apéndice E: +0,6; (5) P301, P304, P305, P307 y P320: revisar las láminas fig:boletin, fig:parajesnom y fig:cargos con sus scripts.
+
+**Avance del libro:** 7 de 7 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la hipótesis de los relevos (P298) gana la fecha exacta del cambio de gobierno de 1946, que deja la serie policial del gobierno constitucional entre 17 y 36 días después de la asunción.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 82 líneas (0,31 %; 21,1 páginas), más tres líneas que la fase 6 cambia, leídas enteras después del cambio (0,3 páginas). Cobertura acumulada: 26.126 de 26.126 (100,0 %). Falsos positivos descartados: 8. Recortes: P304, P305, P307, P308, P310 y P321 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; `control_amplia.py` no se entregó (P319). Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1946, escrito por otra sesión (tres heredados del informe LEE), 1 por una cautela del AMPLÍA que desmentía una fila anterior, y 1 anterior; atrapados por un control automático antes de llegar al libro: 3 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma dos reglas a P319: **marcar como FECHA el comienzo de un gobierno o de un cargo escrito como «desde el <día> de <mes>», y cotejarlo con el decreto de asunción**, porque el 04:4014 sólo salió como VERBO; y **marcar como VERBO las fórmulas «a pedido de X: <verbo>» y comprobar que el pedido del visto sea del mismo objeto que el artículo**, porque en el 10810-G el pedido es de una oficina y el artículo suprime otra. Y suma una lección de método: **una palabra del libro que el facsímil imprime con otro sentido junto al dato («sin cargo» y «Con Cargo») no la ve ninguna clase del script**, y sólo la encuentra el cotejo de la firma en la imagen.
