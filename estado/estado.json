@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T00:53:36",
+ "actualizado": "2026-10-15T01:13:36",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17067,6 +17067,119 @@
      "4"
     ]
    }
+  },
+  {
+   "ronda": 113,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 81.3,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 81.3,
+   "nota_final_sin_tope": 87.7,
+   "tope": 90,
+   "cobertura": 100.0,
+   "fecha": "2026-10-15",
+   "hallazgos": 5,
+   "aplicados": 5,
+   "atrapados": 4,
+   "base": "ab769b1",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P326",
+     "tipo": "lee",
+     "anios": [
+      1958
+     ],
+     "texto": "Informe LEE 1958, B.2.5 y B.2.7: del 14048-A y del 2204-A transcribe solo las nominas del Hogar Agricola San Cayetano a $250 (40 y 29 internos). Faltan la de becas prorrogadas a $180 por nueve meses del 14048-A (58 internos, Nº 5642, h. 14 y 15) y la de renovaciones a $200 mensuales por diez meses del 2204-A (37, Nº 5733, h. 7). Corregir en el proximo informe del anio (el libro ya lo dice, ronda 113, A:398).",
+     "abierto": "2026-10-15",
+     "hecho": null
+    }
+   ],
+   "pendientes_trabajados_sin_cerrar": {
+    "P319": "dos reglas nuevas: (1) al cerrar un anio, buscar en todo el manuscrito las comparaciones que lo daban por leido con pendientes ('como de 1948', 'como 1958', 'con la marca de 1948', 'de 1958 a 1960' junto a 'hallazgos y no las ausencias'): F:67, 69 y 71 se le escaparon a la ronda 112 por 1948 y al AMPLIA por 1958; (2) CIFRA para el recuento de una nomina tomado del informe LEE cuando el acto trae mas de una nomina bajo el mismo establecimiento (prorrogadas, renovaciones, concedidas)",
+    "P79": "lo de 1958 queda hecho por el LEE 1958 cierre y el AMPLIA 1958; sigue abierto por 1959 y 1960",
+    "P325": "sin cambios",
+    "P318": "sin revisar",
+    "P324": "sin revisar",
+    "P298": "sin revisar",
+    "P304": "sin revisar",
+    "P305": "sin revisar",
+    "P307": "sin revisar",
+    "P308": "sin revisar",
+    "P310": "sin revisar",
+    "P321": "sin revisar",
+    "P322": "sin revisar",
+    "P323": "sin revisar"
+   },
+   "hallazgos_detalle": [
+    "1 A:398 (aspecto 5): 14048-A 'becas para cuarenta internos ... a $250 (Nº 5642, h. 15)' y 2204-A 'entre ellas las de veintinueve internos ... a $250 (Nº 5733, h. 8)' -> cada decreto trae dos nominas del Hogar: 58 prorrogadas a $180 y 40 concedidas a $250, por nueve meses (5642 h14-15); 37 renovaciones a $200 por diez meses y 29 concedidas a $250 por nueve meses (5733 h7-8), imagen; heredado de B.2.5 y B.2.7 del informe",
+    "2 F:67, F:69, F:71 (aspecto 7): 'cuentan los hallazgos y no las ausencias, como de 1948 y de 1958 a 1960/1962/1963' -> 'como de 1959 y 1960 / 1959 a 1962 / 1959 a 1963'; contradecia F:26, F:56 y F:63",
+    "3 00:45 (aspecto 5): 1958 'cerrado despues con sus ochenta actos del departamento mirados sobre la imagen' -> actos mirados en la primera lectura; cerrado con las 306 hojas que el reconocimiento no habia podido leer, miradas en plancha (informe §0; F:63)",
+    "4 F:130 (aspecto 5): 'y 2006 a 2015' -> 'y 2006 a 2026' (F:26)",
+    "5 20:884 (aspecto 5): '2004, 2005 y 2006 a 2012 quedaron con pendientes' -> '2004, la primera mitad de 2005 y 2006 a 2012'"
+   ],
+   "falsos_positivos": 7,
+   "cotejos_imagen": {
+    "citas": 2,
+    "citas_en": "capa",
+    "actos_mirados_en_imagen": [
+     "14048-A (5642 h14 y h15)",
+     "2204-A (5733 h7 y h8)"
+    ],
+    "actos_en_capa": [
+     "3257-A (5770 h5)",
+     "Ley 3314 (5773 h5)",
+     "edicto 1639 (5671 h9)",
+     "13090-G (5613 h13)"
+    ],
+    "pdf_bajados": 6
+   },
+   "lectura": {
+    "lineas": 50,
+    "bytes": 231913,
+    "paginas_equivalentes": 70.0,
+    "caducas_por_amplia": 48,
+    "vigentes_tras_traslado": 26086,
+    "total": 26136,
+    "leidas_tras_fase6_fuera_del_amplia": [
+     "ape/F-fuentes.tex:67",
+     "ape/F-fuentes.tex:69",
+     "cap/20-opacidad.tex:884"
+    ]
+   },
+   "compilacion": {
+    "paginas": 1109,
+    "paginas_base": 1109,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 42
+   },
+   "archivos_que_cambian_de_largo": [],
+   "git_am": "OK sobre ab769b1 (clon limpio de GitHub), arbol identico",
+   "control_amplia_rehecho": {
+    "marcas": 572,
+    "CITA": 6,
+    "FECHA": 9,
+    "CIFRA": 328,
+    "IDENT": 8,
+    "ALCANCE": 79,
+    "VENTANA": 73,
+    "VERBO": 69,
+    "hallazgos_en_frase_marcada": {
+     "1": "VERBO",
+     "4": "ALCANCE",
+     "5": "ALCANCE (20:883)"
+    },
+    "hallazgos_no_marcados": [
+     "2",
+     "3"
+    ],
+    "fuera_del_diff": [
+     "2 (F:67 y F:69)"
+    ]
+   }
   }
  ],
  "pendientes": [
@@ -21081,9 +21194,19 @@
    "texto": "Laminas tras el AMPLIA 1958: fig:agua-serie (fig-agua-serie.png) dibuja 1958 como anio con hojas sin mirar enteras; redibujar su barra (7 actos: 6 decretos, 1 edicto) como recuento cerrado y quitar del epigrafe del cap. 17 la salvedad 'se cerro despues de dibujada la lamina'. En fig:boletin (P75) marcar 1958 como leido entero sobre la imagen (243 ediciones, 5562-5805, sin la 5727). P75 y P79 quedan solo para 1959-1960; P78 punto 2 (Ley 3314) y lo de 1958 en P80 quedan resueltos por el LEE 1958 cierre.",
    "abierto": "2026-10-15",
    "hecho": null
+  },
+  {
+   "id": "P326",
+   "tipo": "lee",
+   "anios": [
+    1958
+   ],
+   "texto": "Informe LEE 1958, B.2.5 y B.2.7: del 14048-A y del 2204-A transcribe solo las nominas del Hogar Agricola San Cayetano a $250 (40 y 29 internos). Faltan la de becas prorrogadas a $180 por nueve meses del 14048-A (58 internos, Nº 5642, h. 14 y 15) y la de renovaciones a $200 mensuales por diez meses del 2204-A (37, Nº 5733, h. 7). Corregir en el proximo informe del anio (el libro ya lo dice, ronda 113, A:398).",
+   "abierto": "2026-10-15",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }

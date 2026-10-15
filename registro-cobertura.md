@@ -7864,3 +7864,115 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** 6 de 6 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera tesis gana un pendiente (P324): con 1947-1957 dentro de la ventana, su cláusula de refutación puede decir ya qué encontró esa lectura.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 64 líneas (0,24 %; 24,7 páginas), más seis líneas que la fase 6 cambia, leídas enteras después del cambio (2,5 páginas). Cobertura acumulada: 26.134 de 26.134 (100,0 %), con F:56 vigente por cambio no sustancial. Falsos positivos descartados: 9. Recortes: P298, P304, P305, P307, P308, P310, P321 y P322 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; del edicto 4221 la imagen de 3247 h20 tiene letras borradas. Errores introducidos por la propia auditoría: 5 en el AMPLÍA 1948, escrito por otra sesión (uno de paráfrasis contra el informe y tres desfases de cobertura que el AMPLÍA no actualizó, más una fecha anterior en una línea que tocó), y 1 anterior que el AMPLÍA dejó pasar; atrapados por un control automático antes de llegar al libro: 5 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma tres reglas a P319: **cuando un AMPLÍA sube un año a `imagen` o une tramos de ventana, buscar en todo el manuscrito las formas viejas de la ventana con sus variantes de escritura («1949--1957» y «1949 a 1957», «1923--1947», «1948 no», «separa») y las que la sola mención del año acompaña de «pendientes», «en parte», «capa» o «fuera»**, porque el índice del AMPLÍA las buscó y se le escaparon tres; **marcar como VERBO «se le reconoce», «obtiene» o «concede» junto a un edicto cuya capa trae «sería»**; y **marcar como FECHA el mes que el libro da a un aviso o una lista cuando no es el de la edición que cita**.
+
+## Ronda 113 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1958. Base: commit `ab769b1` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1958, sobre `d3c6d52`, aplicado por `3-registrar` el 15/10 a las 00:53), con la fase 6 en `ronda-113.patch` (un commit sobre `ab769b1`). **La sesión que hace esta ronda no es la que escribió el AMPLÍA 1958** ni el informe LEE 1958 del cierre: la abrió la tarea programada. `auto/insumos-mejora/` no tenía insumos nuevos (sólo la carpeta `usados/`). Para el cotejo se bajaron desde la nube, por la ruta directa de descarga del Release `1958` de `boletines-salta`, seis PDF (5613, 5642, 5671, 5733, 5770 y 5773) y `lee_textos_1958.zip`, y el informe LEE 1958 del 15/10/2026 de `corrige/lee/1958/`. **Esta ronda volvió a correr `control_amplia.py` sobre el diff `d3c6d52..ab769b1`** con el zip y el informe: 49 líneas y 66 frases según el script, 572 marcas (CITA 6, FECHA 9, CIFRA 328, IDENT 8, ALCANCE 79, VENTANA 73, VERBO 69), las mismas clases y recuentos que declara la última corrida del `.json` del AMPLÍA.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 112 (26.134 de 26.134, sobre `d3c6d52`) se trasladaron por diff a `ab769b1`. **El AMPLÍA caduca 48 líneas y deja 50 nuevas o modificadas** (diff con `-U0`); cambia de largo sólo el apéndice F (+2: el párrafo de 1958 se separa del de 1959 y 1960), y el total pasa de 26.134 a 26.136 líneas; los apéndices A y D y los capítulos 0, 1, 2, 4, 9, 10, 15, 16, 17, 20, 22 y 26 cambian líneas sin cambiar de largo. Vigentes después del traslado: 26.086 de 26.136.
+
+### Lectura sobre el texto (numeración de `ab769b1`)
+
+Se leyeron **las 50 líneas, enteras** (231.913 bytes; también enteras las largas: 00:45, de 13.529 bytes; 01:157, de 11.935; 04:5017, de 13.871; 15:185, de 28.502; 17:281, de 21.545; 22:545, de 30.466, y 26:236, de 31.894), contra el informe LEE 1958 del 15/10/2026 y, en los nombres, fechas, cifras, verbos y citas del material nuevo, contra el acto.
+
+| Archivo | Líneas nuevas o modificadas |
+|---|---|
+| ape/A-cronologia.tex | 2 (394, 398) |
+| ape/D-pedidos.tex | 3 (177, 192, 263) |
+| ape/F-fuentes.tex | 23 (26, 63–65, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 129, 130, 133, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 7 (3938, 4068–4070, 4975, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (335) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 3 (281, 290, 291) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 2 (69, 236) |
+
+Contexto releído entero (no suma cobertura): 04-siglo:4066–4071 y 4970–4977; 17-aguabaja:284–293; 20-opacidad:881–886; F:128–136; las líneas de todo el manuscrito con «1958 a», «1958 y», «1958--», «1923--1957», «1923 a 1957», «hasta 1957», «cuarenta y tres», «sesenta y nueve», «1949 a 1957», «segunda ventana», «como de 1948», «como 1958», «1948 y de 1958» y «1958 a 1960»; las frases de ausencia, unicidad y primacía con un rango que termina en 1957 o en 1958; y, del informe LEE 1958, el §0, los §R, B.2.5 a B.2.9, E.8 a E.10 y la tabla de renglones de las ediciones 5642, 5733, 5770 y 5773.
+
+**Esta ronda: 50 líneas**, 231.913 bytes sobre 3.672.105, que en las 1.109 páginas de la base equivalen a **70,0 páginas**.
+
+Acumulado: 26.086 vigentes + 50 = **26.136 de 26.136 (100,0 %)**. La fase 6 cambia 7 líneas sin agregar ninguna: cuatro están entre las leídas en esta ronda (A:398, F:71, F:130 y 00:45) y se releyeron después del cambio; tres que estaban vigentes (F:67, F:69 y 20:884) se leyeron enteras después del cambio (3.647 bytes, 1,1 páginas) y se cuentan leídas en esta ronda. **26.136 de 26.136 (100,0 %)** después de la fase 6. Ningún archivo cambia de largo.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 5642 | 14 y 15 | 14048-A, del 23 de abril (edición del 5 de mayo): art. 1, «Apruébanse las becas prorrogadas por la Dirección de Patronato y Asistencia Social de Menores», con «HOGAR AGRICOLA "SAN CAYETANO" (Vaqueros) Internos con $ 180.— c/u. por 9 meses», 58 renglones numerados (h14, col. 3, del 1 al 32; h15, col. 1, del 33 al 58); art. 2, «Apruébanse las becas concedidas», con «HOGAR AGRÍCOLA SAN CAYETANO (Vaqueros) Internos con $ 250.— cada uno por 9 meses», 40 renglones (h15, col. 2, del 1 al 15, y col. 3, del 16 al 40) (imagen) | Hallazgo 1 |
+| 5733 | 7 y 8 | 2204-A, del 5 de septiembre (edición del 17): visto, la Dirección pide derogar el 14.048 «debido a que en el mismo se omitió de consignarse diversos alumnos, y en otros casos se disminuyó el monto de las becas»; art. 2, «RENOVACIONES DE BECAS: HOGAR AGRICOLA "SAN CAYETANO" (VAQUEROS) — Internos con $ 200.— mensuales c/u. x 10 meses», 37 renglones (h7, col. 3), y, bajo «BECAS CONCEDIDAS EN EL PERIODO ESCOLAR 1958», «HOGAR AGRICOLA SAN CAYETANO (Vaqueros) internos con $ 250.— mensuales c/u. x 9 meses», 29 renglones (h8, col. 3) (imagen) | Hallazgo 1 |
+| 5770 | 5 | 3257-A: «Concédense un subsidio de $ 5.000.— [...] a favor del Hogar Agrícola "San Cayetano", de Vaqueros», para «la adquisición de los artículos de primera necesidad»; el decreto anterior de la hoja es el 3256-A, del 31 de octubre (capa) | Coincide |
+| 5773 | 5 | Ley Nº 3314: al «Instituto Concepcionista Hogar Agrícola San Cayetano, que funciona en Vaqueros», $50.000 «para la adquisición de moblaje, ropa, vajilla y otros enseres»; «se incorporará en el presupuesto general de 1959»; dada «a los treinta y un días del mes de Octubre» y promulgada el 31 de octubre (capa; el número, en la imagen según el informe y el `.json` del AMPLÍA) | Coincide |
+| 5671 | 9 | Edicto 1639, cateo «en el Departamento de Rosario de Lerma», expediente 100.623-M: «mojón Nº 42 de la mensura de la finca "El Toro", ubicada en Abra del Toro Trancas» (capa) | Coincide |
+| 5613 | 13 | 13090-G, art. 2: «Déjase establecido, que la Municipalidad en cualquier oportunidad que deba realizar una obra municipal, deberá dar cumplimiento previamente con las exigencias legales» (capa; el script lo marca SOLO-INFORME por el corte de palabras de la capa) | Coincide |
+
+Dos actos mirados en la imagen en cuatro hojas (5642 h14 y h15, 5733 h7 y h8), con el recuento de sus nóminas rehecho sobre la imagen; las demás comprobaciones, en la capa o en las fichas del informe, y así se declaran. Dos citas del libro cotejadas en la capa (15:185 y F:134), sin correcciones silenciosas.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:398 | «el decreto 14048-A aprueba becas para cuarenta internos del Hogar Agrícola San Cayetano [...] a \$250 [...] (Nº 5642, h. 15), y [...] el 2204-A [...] aprueba las que prorroga la Dirección [...], entre ellas las de veintinueve internos del Hogar a \$250 [...] (Nº 5733, h. 8)»: cada decreto trae dos nóminas del Hogar, y el libro daba sólo la de \$250; la lectura «cuarenta, después veintinueve» sugería un recorte que los actos no dicen (98 becas en el primero, 66 en el segundo) | 5 | «aprueba las becas que la Dirección [...] prorroga y las que concede para el año lectivo, y al Hogar [...] le tocan cincuenta y ocho internos a \$180 cada uno y cuarenta a \$250, por nueve meses (Nº 5642, h. 14 y 15); [...] y aprueba las que la Dirección prorroga, que para el Hogar son treinta y siete renovaciones a \$200 mensuales por diez meses y veintinueve becas concedidas en el período escolar, a \$250 mensuales por nueve meses (Nº 5733, h. 7 y 8)» |
+| 2 | F:67, F:69 y F:71 | «De estos dos años cuentan los hallazgos y no las ausencias, como de 1948 y de 1958 a 1960» (y «a 1962», «a 1963»): 1948 y 1958 están cerrados sobre la imagen y dentro de la segunda ventana, como dicen F:26, F:56 y F:63, a pocas páginas | 7 | «como de 1959 y 1960», «como de 1959 a 1962», «como de 1959 a 1963» |
+| 3 | 00:45 | 1958, «leído primero con pendientes y cerrado después con sus ochenta actos del departamento mirados sobre la imagen»: los ochenta actos se miraron en la primera lectura; lo que cerró el año fueron las 306 hojas que el reconocimiento no había podido leer, miradas en plancha (informe, §0; F:63) | 5 | «leído primero con pendientes, con sus ochenta actos del departamento mirados sobre la imagen, y cerrado después con las trescientas seis hojas que el reconocimiento no había podido leer, miradas en plancha» |
+| 4 | F:130 | «en todo lo posterior a 1958, incluidos 1959 a 2004, la primera mitad de 2005 y 2006 a 2015»: los años leídos llegan a 2026 (F:26) | 5 | «y 2006 a 2026» |
+| 5 | 20:884 | «---1959 a 2004, 2005 y 2006 a 2012 quedaron con pendientes---», a continuación de «la primera mitad de 2005» en la misma frase: de 2005 se leyó la primera mitad | 5 | «2004, la primera mitad de 2005 y 2006 a 2012» |
+
+Resta: en el aspecto 5, sobre la base de 95, una frase que dice menos que los actos y sugiere un recorte (hallazgo 1, 5), una declaración de método que dice otra cosa que la hecha (hallazgo 3, 5) y dos textos desactualizados o imprecisos de cobertura (hallazgos 4 y 5, 3 cada uno), **79**; en el aspecto 7, un error de consistencia (hallazgo 2: la misma frase desactualizada en tres párrafos seguidos, contada como uno) en 71,1 páginas auditadas, 1,4 por cada cien (≤ 2 → 70), y un escalón más porque contradice el párrafo de 1958 del mismo apéndice, a menos de diez páginas, **50**.
+
+**Errores introducidos por la propia auditoría**: tres de los cinco vienen del AMPLÍA 1958 (`ab769b1`). El 1 es texto que escribió el AMPLÍA y hereda el recorte de las fichas B.2.5 y B.2.7 del informe LEE 1958, que transcriben sólo las nóminas de \$250 (causa 2 del flujo §6.6; el `.json` del AMPLÍA da los cuarenta como «recuento propio», y la nómina de \$180 está en la hoja anterior a la que cita); el 3 es una frase que el AMPLÍA escribió por analogía con la de 1948, en el mismo párrafo; el 2 es un desfase de cobertura (causa 5): F:71 es una línea que el AMPLÍA tocó, y F:67 y F:69 están fuera del diff; la mitad de 1948 se le había escapado ya a la ronda 112. El 4 y el 5 son anteriores, en una línea que el AMPLÍA tocó y en la vecina. **`control_amplia.py` marcó tres de los cinco en la frase que los contiene y el AMPLÍA las justificó**: el 1 (VERBO, «aprueba», sin marca de cifra), el 4 (ALCANCE) y el 5 (ALCANCE sobre 20:883, la primera mitad de la frase); el 3 cae en una línea marcada por ALCANCE en la cláusula de 1948, no en la de 1958, y el 2 no tiene clase. **Atrapados por el control antes de compilar el AMPLÍA: cuatro**, según su `.json` (tres verbos de la entrada nueva y la herencia de B.2.8), que no restan.
+
+**Descartados (falsos positivos, 7).** (a) F:63, «ocho de julio a septiembre no cierran contra su detalle, con dígitos que la imagen no decide»: el informe (E.8) da diferencias entre detalle y subtotal impreso en las que entran pares del catálogo de confusiones (0 y 3, 8 y 9) y las transcribe sin conciliarlas, y su propio E.10 dice lo mismo que el libro. (b) F:63, «de sus 67 subtotales recalculados»: 67 de Tesorería; el §R da 68 porque suma el cuadro de A.64. (c) F:63, «los 80 actos [...] y los 10 de sus núcleos»: 183 − 103 y 34 − 24, y B.2.1 a B.2.10. (d) A:398, «la Ley 3314, dada el 31 de octubre»: la Legislatura la da el 31 y el Ejecutivo la promulga el mismo día. (e) 00:45, «entre sesenta y nueve y setecientas sesenta y cuatro hojas» en cada año hasta 1980: sacar 1958 (306) no mueve los extremos. (f) 09:536, 1958 «leído sin defensas»: el informe no tiene ninguna ficha de defensas (sólo «Seguridad y Defensa» de la policía). (g) F:134, el «Abra del Toro Trancas» de 1958 está en un cateo «en el Departamento de Rosario de Lerma» (capa).
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo.
+
+**Pendientes revisados.** P325: sin cambios (las láminas siguen sin redibujar; el epígrafe de fig:agua-serie lo declara). P79: lo de 1958 queda hecho por el LEE 1958 cierre y el AMPLÍA; sigue abierto por 1959 y 1960. P319: suma dos reglas (abajo). P318, P324 y P298, P304, P305, P307, P308, P310, P321, P322 y P323, sin revisar.
+
+**Pendientes nuevos.** P326 (`lee`, 1958): el informe LEE 1958 (B.2.5 y B.2.7) transcribe del 14048-A y del 2204-A sólo las nóminas del Hogar Agrícola San Cayetano a \$250 (40 y 29); faltan la de becas prorrogadas a \$180 por nueve meses del 14048-A (58 internos, Nº 5642, h. 14 y 15) y la de renovaciones a \$200 por diez meses del 2204-A (37, Nº 5733, h. 7); corregirlo en el próximo informe del año.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Traslado de tramos anteriores por diff | 26.134/26.134 vigentes en `d3c6d52` | 26.086 vigentes; 48 caducas; 50 nuevas o modificadas |
+| `control_amplia.py` (corrida de esta ronda, sobre `d3c6d52..ab769b1`) | 49 líneas según el script, 66 frases | 572 marcas, las mismas clases y recuentos que la última corrida del `.json` del AMPLÍA; tres de los cinco hallazgos caen en frases marcadas (VERBO una, ALCANCE dos) |
+| Declaraciones de cobertura de 1948 y 1958 en todo el manuscrito («1958 a», «1958 y», «1958--», «como de 1948», «como 1958», «1923--1957», «hasta 1957», «cuarenta y tres», «sesenta y nueve», «1949 a 1957», «segunda ventana») | 26.136 líneas | Tres frases desfasadas fuera de lo que el AMPLÍA cambió o en líneas que tocó (F:67, F:69, F:71) y dos imprecisiones de años leídos (F:130, 20:884); corregidas |
+| Superlativos y ausencias con un rango que termina en 1957 o 1958 | 26.136 líneas | Ninguno que 1958 desmienta (A:375 y D:192 dan rangos sobre años leídos sobre la imagen) |
+| Superlativos y ausencias en las líneas cambiadas por la fase 6 | 7 líneas | Ninguna primacía, unicidad ni ausencia nueva |
+| Largo de los archivos antes y después de la fase 6 | 38 archivos `.tex` | Ninguno cambia de largo |
+| Compilación | fase 6 sobre `ab769b1`, en un clon limpio | Compila con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión, y un `latexmk -C` después de una primera corrida sin el idioma); 1.109 páginas, las mismas de la base; 0 errores; 0 referencias indefinidas; `.lof` con 42 entradas, «cuarenta y dos láminas» en el texto |
+| `git am` del parche sobre un clon limpio de `ab769b1` (bajado de GitHub) | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Sanción y promulgación de la Ley 3314 bien dadas; sin fechas de segunda mano nuevas |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Dos citas cotejadas en la capa, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 79 | 95 | Hallazgos 1, 3, 4 y 5, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 2, aplicado; ningún error de consistencia después de la fase 6 en 71,1 páginas |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 retiró la cadena de saldos y las hojas de 1958 del pedido; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado; 01:157 suma 1958, leído sobre la imagen, al resultado de la tercera tesis |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Sin figuras nuevas; el epígrafe de fig:agua-serie declara que 1958 se cerró después de dibujada (P325) |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Las becas se dan por número, sin nombrar a ningún interno; los demás nombrados son funcionarios y partes de actos publicados |
+
+**Nota inicial: 81,3 antes del tope y 81,3 después** (tope de 90 por la cobertura acumulada inicial del 99,81 %, que no actúa). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1958 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P37 y P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948 y 1958 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** 5 de 5 hallazgos resueltos; compila sin errores, 1.109 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1958) sin el acto que la refutaría.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 50 líneas (0,19 %; 70,0 páginas), más tres líneas que la fase 6 cambia, leídas enteras después del cambio (1,1 páginas). Cobertura acumulada: 26.136 de 26.136 (100,0 %). Falsos positivos descartados: 7. Recortes: P318, P324 y P298, P304, P305, P307, P308, P310, P321, P322 y P323 sin revisar; las comprobaciones marcadas «capa» en la tabla de cotejo no se hicieron en la imagen; la cifra de la Ley 3314 se tomó de la capa y del cotejo del AMPLÍA. Errores introducidos por la propia auditoría: 3 en el AMPLÍA 1958, escrito por otra sesión (una herencia del informe LEE sin rehacer el recuento sobre el acto, una frase de método escrita por analogía y un desfase de cobertura en tres párrafos, la mitad de él ya escapado a la ronda 112), y 2 anteriores en líneas que el AMPLÍA tocó o en la vecina; atrapados por un control automático antes de llegar al libro: 4 (en el AMPLÍA). Con la salida del script a la vista, esta ronda suma dos reglas a P319: **al cerrar un año, buscar en todo el manuscrito las comparaciones que lo daban por leído con pendientes («como de 1948», «como 1958», «con la marca de 1948», «de 1958 a 1960» junto a «hallazgos y no las ausencias»)**, porque F:67, F:69 y F:71 se le escaparon a la ronda 112 por 1948 y al AMPLÍA por 1958; y **marcar como CIFRA todo recuento de una nómina que el libro toma de un informe LEE cuando el acto trae más de una nómina bajo el mismo establecimiento (prorrogadas, renovaciones, concedidas)**, para que se cuenten todas las secciones del acto y no sólo la que transcribe la ficha.
