@@ -8202,3 +8202,121 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** dos hallazgos, los dos resueltos; compila sin errores, 1.113 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1960) sin el acto que la refutaría, y en el que la usina municipal pasa a la A.G.A.S.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 70,7 páginas), más las 2 que cambia la fase 6, leídas enteras después del cambio (1,1 páginas). Cobertura acumulada: 26.165 de 26.165 (100,0 %). Falsos positivos descartados: 5. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 a P328 sin revisar; los actos de agua, de policía y de salud de 1960 se juzgaron sobre las fichas del informe, no sobre la imagen; el 14.964-E se juzgó sobre el informe (A.49 y E.8); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en el AMPLÍA 1960 escrito por esta sesión, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.
+
+## Ronda 116 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1961. Base: commit `03db8da` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1961, sobre `3dc38d3`, aplicado por `3-registrar` el 15/10 a las 09:04), con la fase 6 en `ronda-116.patch` (un commit sobre `03db8da`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1961** (la abrió la tarea programada de las 08:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1961 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 49 líneas enteras y volvió a mirar en la imagen los actos de 1961 que esas líneas citan. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (HEAD `9e2ac7d`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol resultó idéntico al del commit con que se armó el parche del AMPLÍA (`d24f25c`). Del Release `1961` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1961.zip` y once PDF (6288, 6325, 6367, 6394, 6421, 6438, 6439, 6440, 6457, 6489 y 6507); el informe LEE 1961 del 15/10/2026 salió de `corrige/lee/1961/`. `control_amplia.py` se corrió dos veces sobre el diff `3dc38d3..03db8da` durante el AMPLÍA (49 líneas, 202 frases, 865 marcas: CITA 9, FECHA 4, CIFRA 457, IDENT 23, ALCANCE 155, VENTANA 77, VERBO 140), las cifras que da su `.json`.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 115 (26.165 de 26.165, sobre `3dc38d3`) se trasladaron por diff a `03db8da`. **El AMPLÍA caduca 47 líneas, deja 47 modificadas y agrega 2** (diff con `-U0`, 43 bloques: F:69 se parte en dos párrafos, con una línea en blanco y una de texto nuevas); el total pasa a 26.167 líneas. Vigentes después del traslado: 26.118 de 26.167.
+
+### Lectura sobre el texto (numeración de `03db8da`)
+
+Se leyeron **las 49 líneas, enteras** (233.012 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 04:5017, 09:536, 15:185, 17:281, 22:545, 26:236, D:177 y F:69 a F:103), contra el informe LEE 1961 del 15/10/2026 y, en las cifras, fechas, verbos y citas de 1961, contra el acto.
+
+| Archivo | Líneas modificadas o agregadas |
+|---|---|
+| ape/A-cronologia.tex | 2 (412, 416) |
+| ape/D-pedidos.tex | 2 (177, 192) |
+| ape/F-fuentes.tex | 21 (26, 67, 69, 70, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103) y 2 (133, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 6 (3938, 4068–4070, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 4 (281, 290, 291, 371) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 2 (99, 236) |
+
+Contexto releído entero (no suma cobertura): las líneas de todo el manuscrito con «1961» (72 en la base, 106 menciones) y con un número de edición de la 6288 a la 6527 (77 citas «Nº»); las frases con 1961 junto a «pendiente», «reserva», «hallazgos y no», «sin mirar»; las de todo el manuscrito con «cuarenta y seis tramos», «sesenta y seis», «1923--1960», «1923 a 1960», «hasta 1960», «a 1960» y «y 1960»; A:411 a A:418 (filas de 1960 a 1962); del informe LEE 1961, el §0, el §A entero en sus FICHAS, B.2 entero, §C, §P, E.1, E.3, E.9, E.10 y §R.
+
+**Esta ronda: 49 líneas**, 233.012 bytes sobre 3.682.867, que en las 1.113 páginas de la base equivalen a **70,4 páginas**.
+
+Acumulado: 26.118 vigentes + 49 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 3 líneas que estaban vigentes (A:412, 15:185 y 26:99), sin agregar renglones, y las tres se leyeron enteras después del cambio (31.684 bytes, 9,6 páginas): **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6288 | 9 | 15.835-G, «Salta, Diciembre 27 de 1.960»: «Rosario del G. Jurado — Senador — Festejos Patronales de La Caldera ... 5.000» (imagen, 170 ppp) | **Hallazgo 1** |
+| 6288 | 10 | 15839-G: adjudica a Walter Lerario la escuela «Bernabé López» por \$1.733.043,51 (imagen) | Coincide |
+| 6325 | 9 | Edicto de cateo 7.723: «en el Departamento de La Caldera y Rosario de Lerma» (imagen) | Coincide |
+| 6367 | 6 | Resolución 189 de Jefatura (17.362-G): «a partir del día 1º de mayo próximo», «(Departamento La Caldera)», «1 Cabo y 2 Agentes», II Zona con asiento en Campo Quijano (imagen) | Coincide |
+| 6394 | 8 | 18.079-E: «Edificio Policial en La Calde-ra ... 300.—» (imagen) | Coincide |
+| 6421 | 6 | 18570-E: a pedido de la A.G.A.S., 25 l/s del río La Caldera para «agua para bebida a la ciudad de Salta» (imagen) | Coincide |
+| 6438 | 5 | 19.077, del 4 de agosto: \$812.516,85; «cuadro comparativo de éste que corre de fs. 13 a fs. 16 de estas actuaciones» (imagen) | Coincide |
+| 6439 | 6 | 19119-A: «siendo necesario normalizar la situación de dicho personal» (imagen) | Coincide |
+| 6440 | 7 | 19157-E: «a nombre de la actual propietaria del predio»; turno de 216 horas quincenales con las 19/30 partes del río; «setenta y cinco centilitros» por hectárea en abundancia (imagen) | Coincide |
+| 6457 | 7 | 19.524-E: el renglón «Const. Edif. Policial en La Caldera ... 100.000» en el bloque REBAJAS, antes de «TOTAL REBAJAS \$ 12.190.000» (imagen, 200 ppp) | Coincide |
+| 6489 | 14 | 20167-A: servicios «en la Comisión Municipal de La Caldera del 1º de enero de 1930 al 30 de diciembre de 1931» (imagen) | Coincide |
+| 6507 | 9 | 20818-E: «Constr. Edif. Policial en La Caldera ... 1.5?0.—» (imagen del PDF, unos 376 ppi, ampliada a 600) | **Hallazgo 2** |
+
+Doce actos mirados en la imagen en doce hojas; siete citas cotejadas en la imagen («Departamento La Caldera», «Edificio Policial en La Caldera», «necesario normalizar la situación de dicho personal», «Comisión Municipal de La Caldera», «en el Departamento de La Caldera y Rosario de Lerma», «fs. 13 a fs. 16 de estas actuaciones» y «actual propietaria del predio»). Ninguna corrección silenciosa.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 15:185 | «y los \$5.000 de los festejos patronales de 1961 se publican otra vez a nombre de un senador (15.835-G, Nº 6288, h.\ 9)»: el decreto es del 27 de diciembre de 1960, se publica el 2 de enero de 1961 y no dice de qué año son los festejos; el año de la publicación pasó a ser el de los festejos | 3 | «y en enero de 1961 se publican, otra vez a nombre de un senador, los \$5.000 que un decreto del 27 de diciembre anterior concede para los festejos patronales de La Caldera, sin decir de qué año» |
+| 2 | A:412 y 26:99 | «\$1.500 en octubre» (20818-E, Nº 6507, h.\ 8 y 9): la tercera cifra es un 0 o un 6 que la imagen no decide; la capa del PDF lee «1.560» en ese renglón y en otros cinco de la misma planilla que imprimen el mismo glifo, el reconocimiento propio lee «1.500», y la ficha A.60 transcribe 1.500 a 130 ppp sin control; la suma de la planilla de fondos provinciales, recalculada con las lecturas de la capa y de la imagen, no cierra contra los \$5.429.505,06 impresos (difiere en \$17.607,20, más que lo que puede explicar este renglón), de modo que no sirve de control | 3 | «\$1.500 o \$1.560 en octubre ---la tercera cifra no se decide en la imagen---», en los dos lugares |
+
+Resta: en el aspecto 3, sobre la base de 100, una fecha de publicación dada como año del hecho (hallazgo 1) y una cifra tomada de la ficha sin control (hallazgo 2), 5 cada una, **90**. Ningún error de consistencia en 70,4 páginas auditadas.
+
+**Errores introducidos por la propia auditoría**: los dos están en frases que el AMPLÍA 1961 de esta sesión tocó, pero vienen del AMPLÍA 1961-1962 (`c4e8c04`): el 1 es la causa 3 del flujo §6.6 (la fecha de la edición por la del hecho), y el 2 es la causa 2 (se hereda la lectura del informe sin mirar la imagen); el AMPLÍA 1961 releyó la frase del 2 para cambiar el «sentido no leído» del renglón vecino y no miró el de octubre. **`control_amplia.py` no marcó ninguno de los dos**: «1.500» está en el informe y la capa no se cotejó cifra por cifra, y la frase del 1 no tiene una fecha con día que el script reconozca. **Atrapados por el control antes de compilar el AMPLÍA: ninguno**; el `.json` del AMPLÍA cuenta 0 correcciones antes de compilar.
+
+**Descartados (falsos positivos, 4).** (a) A:412, «aparece con \$300 en junio»: el 18.079-E, de junio, liquida a Arquitectura inversiones de febrero; «aparece» no dice cuándo se invirtió. (b) 17:281, «la lectura halló cuatro actos en cada año»: en 1961, leído entero, son los cuatro del año (18570-E, 19157-E, edictos 7831 y 9050); la frase no dice que haya más. (c) 22:545, «la usina ya no aparece por su nombre en lo hallado»: con 1961 leído entero la frase podría decir más, no menos. (d) 26:236, «En 1961 [...] y en 1962 [...] la obra se hace»: los diecinueve certificados son de los dos años (seis y trece, A:417).
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P332 (láminas de 1961) y P81: sin cambios en las láminas; P81 se completa con la rebaja del 19.524-E y la cifra en duda del 20818-E (P333). P83 y P84: lo de 1961 quedó cerrado por el LEE 1961 cierre; siguen abiertos por 1962. P82 y P85 (apéndices H, E y D, 1961-1962): sin cambios. P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 a P328 y P330, sin revisar.
+
+**Pendientes nuevos.** P333 (`lee`): la tercera cifra del renglón «Constr. Edif. Policial en La Caldera» del 20818-E (Nº 6507, h.\ 9), 1.500 o 1.560; recalcular la planilla de fondos provinciales del decreto (h.\ 8 y 9) con todos sus renglones mirados a la resolución nativa, o pedir el Registro Oficial; anotar en el informe LEE 1961 (A.60) que la cifra no está decidida.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`03db8da`) contra el commit del parche del AMPLÍA | 118 archivos versionados (sin `main.pdf`) | Idénticos después de pasar a LF |
+| Traslado de tramos anteriores por diff | 26.165/26.165 vigentes en `3dc38d3` | 26.118 vigentes de 26.167; 47 caducas; 47 modificadas y 2 agregadas |
+| `control_amplia.py` (corridas del AMPLÍA, sobre `3dc38d3..03db8da`) | 49 líneas, 202 frases | 865 marcas; ninguna de las dos frases de los hallazgos marcada por su defecto |
+| Declaraciones de cobertura de 1961 en todo el manuscrito («1961 a», «1961 y», «como 1961 a», «como de 1961», «1923--1960», «1923 a 1960», «hasta 1960», «cuarenta y seis tramos», «sesenta y seis», y 1961 con «pendiente», «reserva» o «hallazgos y no») | 26.167 líneas | Ninguna desfasada; «cuarenta y seis» sólo en recuentos que no son de tramos (nombres, parajes, matrículas, años de vigencia de una norma) |
+| Superlativos y ausencias con un rango que termina en 1960 o 1961, o con «segunda ventana» o «en la ventana» | 26.167 líneas | 11 frases, ninguna que 1961 desmienta |
+| Superlativos y ausencias en las tres líneas de la fase 6 | 3 líneas | Ninguno nuevo |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77 y 00:80 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 47 verificados + 65 fuera = 112 |
+| Suma de la planilla de fondos provinciales del 20818-E | 56 renglones leídos en la imagen a 130 ppp | No cierra (difiere en \$17.607,20): no decide el renglón de La Caldera |
+| Compilación | AMPLÍA (`03db8da`) y fase 6, en clones limpios | Compilan con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.113 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `03db8da` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 90 | 100 | Hallazgos 1 y 2, aplicados |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Siete citas y doce actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 95 | Sin hallazgos nuevos; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 70,4 páginas auditadas; recuentos de láminas y de tramos cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 deja de pedir las hojas de 1961; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | El personal del Hogar de 1961 se da por cargo y no por nombre, como decidió el AMPLÍA 1961-1962 |
+
+**Nota inicial: 87,1 antes del tope y 87,1 después** (cobertura acumulada inicial del 100,0 % sobre `03db8da` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1961 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P327, P330, P332 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948 y 1958 a 1961 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** dos hallazgos, los dos resueltos; compila sin errores, 1.113 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1961) sin el acto que la refutaría, y en el que la Provincia concede agua del río a Obras Sanitarias sin el municipio y la intervención federal pone en comisión a las autoridades municipales.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 70,4 páginas), más las 3 que cambia la fase 6, leídas enteras después del cambio (9,6 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 a P328 y P330 sin revisar; los actos de pensiones, minas, justicia y salud de 1961 se juzgaron sobre las fichas del informe, no sobre la imagen; la cifra del 20818-E queda sin decidir (P333); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en frases de 1961 que vienen del AMPLÍA 1961-1962 y que el AMPLÍA 1961 de esta sesión tocó sin corregir, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.

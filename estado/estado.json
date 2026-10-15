@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T09:03:54",
+ "actualizado": "2026-10-15T09:18:50",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17425,6 +17425,144 @@
     "fuera_del_diff": []
    },
    "nota_sobre_amplia_json": "amplia-1960.json da A, F, 00 y 02 entre los archivos que cambian de largo: cambian en bytes, no en renglones (48 lineas modificadas, ninguna agregada)"
+  },
+  {
+   "ronda": 116,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 87.1,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 87.1,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "fecha": "2026-10-15",
+   "hallazgos": 2,
+   "aplicados": 2,
+   "atrapados": 0,
+   "base": "03db8da",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P333",
+     "tipo": "lee",
+     "anios": [
+      1961
+     ],
+     "texto": "LEE 1961 A.60 (20818-E, 6507 h9): la tercera cifra del renglon 'Constr. Edif. Policial en La Caldera' es 0 o 6 (1.500 o 1.560) y la imagen no la decide (PDF a unos 376 ppi); la capa del PDF lee 1.560 en ese renglon y en otros cinco de la misma planilla con el mismo glifo (Sala Mat. Hosp. Oran, Local Polic. Cobos, San Agustin, Animana, El Chamical), el OCR propio lee 1.500 y la ficha transcribe 1.500 a 130 ppp. La suma de la planilla de fondos provinciales (h8 c3 y h9 c1, 56 renglones leidos a 130 ppp) no cierra contra $5.429.505,06 (difiere en $17.607,20), asi que no sirve de control. Recalcularla con todos los renglones mirados a la resolucion nativa, o pedir el Registro Oficial; corregir A.60 y E.8 del informe. El libro (A:412, 26:99) da '$1.500 o $1.560' desde la ronda 116.",
+     "abierto": "2026-10-15",
+     "hecho": null
+    }
+   ],
+   "pendientes_trabajados_sin_cerrar": {
+    "P332": "sin cambios (laminas de 1961)",
+    "P81": "la partida del Edificio Policial de septiembre de 1961 es una rebaja de $100.000 (19.524-E, 6457 h7, imagen) y la de octubre es $1.500 o $1.560 (P333)",
+    "P83": "lo de 1961 lo decidio el LEE 1961 cierre; quedan los puntos 2 y 3, de 1962",
+    "P84": "lo de 1961 lo cerro el LEE 1961 cierre; queda 1962",
+    "P82": "sin cambios",
+    "P85": "sin cambios",
+    "P318": "sin revisar",
+    "P319": "sin revisar",
+    "P324": "sin revisar",
+    "P298": "sin revisar",
+    "P304": "sin revisar",
+    "P305": "sin revisar",
+    "P307": "sin revisar",
+    "P308": "sin revisar",
+    "P310": "sin revisar",
+    "P321": "sin revisar",
+    "P322": "sin revisar",
+    "P323": "sin revisar",
+    "P325": "sin revisar",
+    "P326": "sin revisar",
+    "P327": "sin revisar",
+    "P328": "sin revisar",
+    "P330": "sin revisar"
+   },
+   "hallazgos_detalle": [
+    {
+     "n": 1,
+     "linea": "15:185",
+     "aspecto": 3,
+     "alcance": "frase",
+     "origen": "AMPLIA 1961-1962 (c4e8c04); linea tocada por el AMPLIA 1961 (03db8da), misma sesion que audita",
+     "marcado_por_control": false,
+     "texto": "'y los $5.000 de los festejos patronales de 1961 se publican otra vez a nombre de un senador (15.835-G, 6288 h9)': el decreto es del 27 de diciembre de 1960 ('Salta, Diciembre 27 de 1.960', imagen), se publica el 2 de enero de 1961 y no dice de que anio son los festejos. Corregido: 'y en enero de 1961 se publican, otra vez a nombre de un senador, los $5.000 que un decreto del 27 de diciembre anterior concede para los festejos patronales de La Caldera, sin decir de que anio'."
+    },
+    {
+     "n": 2,
+     "linea": "A:412 y 26:99",
+     "aspecto": 3,
+     "alcance": "frase",
+     "origen": "AMPLIA 1961-1962 (c4e8c04), heredado de la ficha A.60 del informe LEE 1961; lineas tocadas por el AMPLIA 1961 (03db8da)",
+     "marcado_por_control": false,
+     "texto": "'$1.500 en octubre' (20818-E, 6507 h8-h9): la tercera cifra es 0 o 6 y la imagen no la decide; la capa del PDF lee 1.560, el OCR propio 1.500, y la suma de la planilla no cierra con las lecturas (no es control). Corregido en los dos lugares: '$1.500 o $1.560 en octubre ---la tercera cifra no se decide en la imagen---'. Abre P333."
+    }
+   ],
+   "incorporaciones": [],
+   "falsos_positivos": 4,
+   "cotejos_imagen": {
+    "citas": 7,
+    "citas_en": "imagen",
+    "actos_mirados_en_imagen": [
+     "15.835-G (6288 h9)",
+     "15839-G (6288 h10)",
+     "edicto 7.723 (6325 h9)",
+     "17.362-G / Res. 189 (6367 h6)",
+     "18.079-E (6394 h8)",
+     "18570-E (6421 h6)",
+     "19.077 (6438 h5)",
+     "19119-A (6439 h6)",
+     "19157-E (6440 h7)",
+     "19.524-E (6457 h7)",
+     "20167-A (6489 h14)",
+     "20818-E (6507 h9)"
+    ],
+    "actos_en_informe": [
+     "pensiones, minas, justicia y salud de 1961 (fichas del §A y B.2)"
+    ],
+    "pdf_bajados": 11
+   },
+   "lectura": {
+    "lineas": 49,
+    "bytes": 233012,
+    "paginas_equivalentes": 70.4,
+    "caducas_por_amplia": 47,
+    "agregadas_por_amplia": 2,
+    "vigentes_tras_traslado": 26118,
+    "total": 26167,
+    "total_tras_fase6": 26167,
+    "leidas_tras_fase6": 3,
+    "bytes_fase6": 31684
+   },
+   "compilacion": {
+    "paginas": 1113,
+    "paginas_base": 1113,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "archivos_que_cambian_de_largo": [],
+   "git_am": "OK sobre 03db8da (clon limpio armado con los archivos versionados de la copia de Windows, en LF; los repositorios son privados), arbol identico",
+   "nota_sesion": "La sesion que audita es la que escribio el AMPLIA 1961 (tarea programada de las 08:27, que siguio con el MEJORA que pidio la maquina al registrar a las 09:04). Las 49 lineas se releyeron enteras y los actos de 1961 que citan se volvieron a mirar en la imagen.",
+   "control_amplia_rehecho": {
+    "marcas": 865,
+    "CITA": 9,
+    "FECHA": 4,
+    "CIFRA": 457,
+    "IDENT": 23,
+    "ALCANCE": 155,
+    "VENTANA": 77,
+    "VERBO": 140,
+    "hallazgos_en_frase_marcada": {},
+    "hallazgos_no_marcados": [
+     "15:185 ('festejos patronales de 1961')",
+     "A:412 y 26:99 ('$1.500 en octubre')"
+    ],
+    "fuera_del_diff": []
+   },
+   "nota_sobre_amplia_json": "amplia-1961.json da solo F entre los archivos que cambian de largo (2 lineas agregadas en F:69-71); coincide con el diff."
   }
  ],
  "pendientes": [
@@ -21507,9 +21645,19 @@
    "texto": "Laminas tras el AMPLIA 1961: fig:agua-serie (fig-agua-serie.png) dibuja 1961 como anio con hojas sin mirar enteras; redibujar su barra (4 actos: 2 decretos, 18570-E y 19157-E, y 2 edictos, 7831 y 9050) como recuento cerrado, como las de 1958-1960 (P325, P327, P330), y quitar del epigrafe del cap. 17 la salvedad 'se cerraron despues de dibujada la lamina' cuando las cuatro esten redibujadas. En fig:boletin (P75, P81) marcar 1961 como leido entero sobre la imagen (240 ediciones, 6288-6527) y no 'con pendientes'. En fig:votado (P81), la partida del Edificio Policial en La Caldera de septiembre de 1961 es una rebaja de $100.000 (19.524-E, 6457 h7).",
    "abierto": "2026-10-15",
    "hecho": null
+  },
+  {
+   "id": "P333",
+   "tipo": "lee",
+   "anios": [
+    1961
+   ],
+   "texto": "LEE 1961 A.60 (20818-E, 6507 h9): la tercera cifra del renglon 'Constr. Edif. Policial en La Caldera' es 0 o 6 (1.500 o 1.560) y la imagen no la decide (PDF a unos 376 ppi); la capa del PDF lee 1.560 en ese renglon y en otros cinco de la misma planilla con el mismo glifo (Sala Mat. Hosp. Oran, Local Polic. Cobos, San Agustin, Animana, El Chamical), el OCR propio lee 1.500 y la ficha transcribe 1.500 a 130 ppp. La suma de la planilla de fondos provinciales (h8 c3 y h9 c1, 56 renglones leidos a 130 ppp) no cierra contra $5.429.505,06 (difiere en $17.607,20), asi que no sirve de control. Recalcularla con todos los renglones mirados a la resolucion nativa, o pedir el Registro Oficial; corregir A.60 y E.8 del informe. El libro (A:412, 26:99) da '$1.500 o $1.560' desde la ronda 116.",
+   "abierto": "2026-10-15",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
