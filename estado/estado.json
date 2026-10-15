@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T05:55:40",
+ "actualizado": "2026-10-15T06:08:34",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17290,6 +17290,141 @@
     "fuera_del_diff": []
    },
    "nota_sobre_amplia_json": "amplia-1959.json da A, 00 y 02 entre los archivos que cambian de largo; solo cambia F (+2)"
+  },
+  {
+   "ronda": 115,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "nota_inicial": 86.5,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 86.5,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "fecha": "2026-10-15",
+   "hallazgos": 2,
+   "aplicados": 2,
+   "atrapados": 0,
+   "base": "d2be108",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P331",
+     "tipo": "herramientas",
+     "anios": [],
+     "texto": "control_amplia.py: sumar a la lista de verbos los que convierten un acto de la Provincia en un hecho del beneficiario ('recibe', 'obtiene', 'cobra', 'le llega') y una clase nueva que marque, en las filas de la cronologia, todo verbo cuyo sujeto no sea el Poder Ejecutivo o el organismo que firma el acto. Los dos hallazgos de la ronda 115 (A:411, San Cayetano 1960: 'recibe' por otorga/concede/acuerda/autoriza; F:67, 'liquida la partida de la usina' por reintegro de inversiones con una partida de diez localidades) no tenian marca.",
+     "abierto": "2026-10-15",
+     "hecho": null
+    }
+   ],
+   "pendientes_trabajados_sin_cerrar": {
+    "P330": "sin cambios (laminas de 1960); el epigrafe de fig:agua-serie ya dice que 1958 a 1960 se cerraron despues de dibujada la lamina",
+    "P75": "sin cambios",
+    "P76": "sin cambios",
+    "P77": "sin cambios",
+    "P318": "sin revisar",
+    "P319": "sin revisar",
+    "P324": "sin revisar",
+    "P298": "sin revisar",
+    "P304": "sin revisar",
+    "P305": "sin revisar",
+    "P307": "sin revisar",
+    "P308": "sin revisar",
+    "P310": "sin revisar",
+    "P321": "sin revisar",
+    "P322": "sin revisar",
+    "P323": "sin revisar",
+    "P325": "sin revisar",
+    "P326": "sin revisar",
+    "P327": "sin revisar",
+    "P328": "sin revisar"
+   },
+   "hallazgos_detalle": [
+    {
+     "n": 1,
+     "linea": "A:411",
+     "aspecto": 5,
+     "alcance": "frase",
+     "origen": "AMPLIA 1960 (d2be108), misma sesion",
+     "marcado_por_control": false,
+     "texto": "San Cayetano 1960: 'recibe en marzo un subsidio de $4.970 ... en abril, $5.000 ... para reforzar las becas ... desde noviembre, viveres de la Carcel': los actos otorgan (11.662-E), conceden (11983-A), acuerdan (12899-E) y autorizan a la Carcel a proveer (15095-G); los mosaicos se liquidan a la Carcel; 'reforzar las cuotas de las becas'. Corregido con los verbos de los actos (6110 h4, 6124 h8, 6162 h5, 6259 h10, mirados en la imagen)."
+    },
+    {
+     "n": 2,
+     "linea": "F:67",
+     "aspecto": 5,
+     "alcance": "frase",
+     "origen": "AMPLIA 1960 (d2be108), misma sesion",
+     "marcado_por_control": false,
+     "texto": "'el subtotal provincial del decreto de octubre que liquida la partida de la usina (14.964-E)': el decreto reintegra a la A.G.A.S. sus inversiones, y el renglon es una partida de obras electromecanicas de la Ley 3192 con diez localidades (A:408 dice que no consta cuanto corresponde a cada una). Corregido: 'que reintegra a la Administracion General de Aguas sus inversiones, entre ellas la partida de obras electromecanicas de la Ley 3192 que nombra a La Caldera con otras localidades'."
+    }
+   ],
+   "incorporaciones": [],
+   "falsos_positivos": 5,
+   "cotejos_imagen": {
+    "citas": 3,
+    "citas_en": "imagen y capa",
+    "actos_mirados_en_imagen": [
+     "10.909-A (6075 h15)",
+     "12949-A (6165 h7)",
+     "13020-A (6167 h7)",
+     "13.835-A (6206 h10)",
+     "14015-A (6214 h10)",
+     "14.095-A (6219 h6)",
+     "14.271-A (6226 h7)",
+     "15.284-A (6271 h6)",
+     "15288-A (6271 h7)",
+     "11.662-E (6110 h4)",
+     "11983-A (6124 h8)",
+     "12899-E (6162 h5)",
+     "15095-G (6259 h10)",
+     "13.844-E (6207 h6)"
+    ],
+    "actos_en_informe": [
+     "14.964-E (6284 h5-h6, A.49 y E.8)",
+     "actos de agua, policia y salud de 1960"
+    ],
+    "pdf_bajados": 16
+   },
+   "lectura": {
+    "lineas": 48,
+    "bytes": 233820,
+    "paginas_equivalentes": 70.7,
+    "caducas_por_amplia": 48,
+    "vigentes_tras_traslado": 26117,
+    "total": 26165,
+    "total_tras_fase6": 26165,
+    "leidas_tras_fase6": 2,
+    "bytes_fase6": 3736
+   },
+   "compilacion": {
+    "paginas": 1113,
+    "paginas_base": 1113,
+    "errores": 0,
+    "referencias_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "archivos_que_cambian_de_largo": [],
+   "git_am": "OK sobre d2be108 (clon limpio armado con los archivos versionados de la copia de Windows, en LF; los repositorios son privados), arbol identico",
+   "nota_sesion": "La sesion que audita es la que escribio el AMPLIA 1960 (tarea programada de las 05:27, que siguio con el MEJORA que pidio la maquina al registrar). Las 48 lineas se releyeron enteras y lo nuevo se volvio a mirar en la imagen.",
+   "control_amplia_rehecho": {
+    "marcas": 626,
+    "CITA": 12,
+    "FECHA": 10,
+    "CIFRA": 369,
+    "IDENT": 7,
+    "ALCANCE": 83,
+    "VENTANA": 68,
+    "VERBO": 77,
+    "hallazgos_en_frase_marcada": {},
+    "hallazgos_no_marcados": [
+     "A:411 ('recibe')",
+     "F:67 ('liquida la partida de la usina')"
+    ],
+    "fuera_del_diff": []
+   },
+   "nota_sobre_amplia_json": "amplia-1960.json da A, F, 00 y 02 entre los archivos que cambian de largo: cambian en bytes, no en renglones (48 lineas modificadas, ninguna agregada)"
   }
  ],
  "pendientes": [
@@ -21354,9 +21489,17 @@
    "texto": "Laminas tras el AMPLIA 1960: fig:agua-serie (fig-agua-serie.png) dibuja 1960 como anio con hojas sin mirar enteras; redibujar su barra (6 actos: 2 decretos, 4 edictos) como recuento cerrado, como las de 1958 y 1959 (P325, P327), y quitar del epigrafe del cap. 17 la salvedad 'se cerraron despues de dibujada la lamina' cuando las tres esten redibujadas. En fig:boletin (P75) marcar 1960 como leido entero sobre la imagen (240 ediciones, 6048-6287). Con esto P75 queda solo con fig:votado.",
    "abierto": "2026-10-15",
    "hecho": null
+  },
+  {
+   "id": "P331",
+   "tipo": "herramientas",
+   "anios": [],
+   "texto": "control_amplia.py: sumar a la lista de verbos los que convierten un acto de la Provincia en un hecho del beneficiario ('recibe', 'obtiene', 'cobra', 'le llega') y una clase nueva que marque, en las filas de la cronologia, todo verbo cuyo sujeto no sea el Poder Ejecutivo o el organismo que firma el acto. Los dos hallazgos de la ronda 115 (A:411, San Cayetano 1960: 'recibe' por otorga/concede/acuerda/autoriza; F:67, 'liquida la partida de la usina' por reintegro de inversiones con una partida de diez localidades) no tenian marca.",
+   "abierto": "2026-10-15",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }

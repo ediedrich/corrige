@@ -8083,3 +8083,122 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** sin hallazgos que resolver; una incorporación (tres láminas); compila sin errores, 1.111 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1959) sin el acto que la refutaría.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 49 líneas (0,19 %; 70,6 páginas), más las 33 que cambia o agrega la fase 6, leídas enteras después del cambio (2,5 páginas). Cobertura acumulada: 26.165 de 26.165 (100,0 %). Falsos positivos descartados: 6. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 y P326 sin revisar; la ficha del 8985-G se miró en la capa; los actos de salud y de agua de 1959 se juzgaron sobre las fichas del informe, no sobre la imagen; el libro se tomó de la copia de Windows y no de un clon de GitHub, porque los repositorios son privados desde el 15/10. Errores introducidos por la propia auditoría: ninguno en el AMPLÍA 1959; atrapados por un control automático antes de llegar al libro: 1 (en el AMPLÍA, según su `.json`: la frase del 8165-A, que el script marcó por VERBO y que se rehízo sobre la imagen).
+
+## Ronda 115 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1960. Base: commit `d2be108` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1960, sobre `fc3fed2`, aplicado por `3-registrar` el 15/10 a las 05:56), con la fase 6 en `ronda-115.patch` (un commit sobre `d2be108`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1960** (la abrió la tarea programada de las 05:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1960 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 48 líneas enteras y volvió a mirar en la imagen lo que las frases nuevas afirman. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (HEAD `6f5d92f`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol resultó idéntico, archivo por archivo, al del commit con que se armó el parche del AMPLÍA. Del Release `1960` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1960.zip` y dieciséis PDF (6053, 6075, 6110, 6124, 6162, 6165, 6167, 6206, 6207, 6214, 6219, 6226, 6240, 6259, 6271 y 6284); el informe LEE 1960 del 15/10/2026 salió de `corrige/lee/1960/`. `control_amplia.py` se corrió dos veces sobre el diff `fc3fed2..d2be108` durante el AMPLÍA (48 líneas, 70 frases, 626 marcas: CITA 12, FECHA 10, CIFRA 369, IDENT 7, ALCANCE 83, VENTANA 68, VERBO 77), las cifras que da su `.json`.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 114 (26.165 de 26.165, sobre `fc3fed2`) se trasladaron por diff a `d2be108`. **El AMPLÍA caduca 48 líneas y deja 48 modificadas** (diff con `-U0`, 44 bloques); no agrega ni quita renglones, y el total sigue en 26.165 líneas (el `.json` del AMPLÍA da A, F, 00 y 02 entre los archivos que cambian de largo: cambian en bytes, no en renglones). Vigentes después del traslado: 26.117 de 26.165.
+
+### Lectura sobre el texto (numeración de `d2be108`)
+
+Se leyeron **las 48 líneas, enteras** (233.820 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 04:5017, 09:536, 15:185, 17:281, 22:545, 26:236, D:177, D:263 y F:69 a F:101), contra el informe LEE 1960 del 15/10/2026 y, en los nombres, fechas, cifras, verbos y citas del material nuevo, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 3 (406, 409, 411) |
+| ape/D-pedidos.tex | 3 (177, 192, 263) |
+| ape/F-fuentes.tex | 20 (26, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101) y 2 (131, 132) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 6 (3938, 4068–4070, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 3 (281, 290, 291) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): las líneas de todo el manuscrito con «1960» (66 en la base, 91 menciones) y con un número de edición de la 6048 a la 6287 (52 menciones); las frases con 1960 junto a «pendiente», «reserva», «hallazgos y no», «sin mirar»; las de todo el manuscrito con «cuarenta y cinco tramos», «sesenta y siete», «1923--1959», «1923 a 1959», «hasta 1959», «a 1959» y «y 1959»; A:403 a A:416 (filas de 1959 a 1962); del informe LEE 1960, el §0, el §A entero en sus FICHAS, A.28bis, B.1, B.2 entero, §C, §P, §D, E.1, E.3, E.7 a E.10, §F y §R.
+
+**Esta ronda: 48 líneas**, 233.820 bytes sobre 3.681.328, que en las 1.113 páginas de la base equivalen a **70,7 páginas**.
+
+Acumulado: 26.117 vigentes + 48 = **26.165 de 26.165 (100,0 %)**. La fase 6 cambia 2 líneas que estaban vigentes (A:411 y F:67), sin agregar renglones, y las dos se leyeron enteras después del cambio (3.736 bytes, 1,1 páginas): **26.165 de 26.165 (100,0 %)** después de la fase 6. Ningún archivo cambia de largo en renglones.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6075 | 15 | 10.909-A, del 4 de febrero: «Desígnase [...] Oficial 7º Regente del Hogar del Niño "Dr. Luis Linares", de La Caldera» (imagen, 170 ppp) | Coincide |
+| 6165 | 7 | 12949-A: «Déjase sin efecto el artículo 1º del Decreto Nº 10.909 [...] referente a la designación»; servicios «desde el 16 de enero al 31 de mayo»; «Desígnase a partir del 1º del corriente mes Oficial 1º» (imagen) | Coincide |
+| 6167 | 7 | 13020-A: mucama del Hogar de La Caldera, «con anterioridad al día 10 de mayo ppdo.» (imagen; el encabezado, en h6) | Coincide |
+| 6206 | 10 | 13.835-A: mucama «en el Hogar de Niños de la Ca'» / «dera, a partir del día 12 de junio» (imagen y capa) | Coincide; la capa escribe «Ca’» a fin de renglón |
+| 6214 | 10 | 14015-A: mucama del Hogar, «treinta (30) días a partir del 20 de mayo» (imagen) | Coincide |
+| 6219 | 6 | 14.095-A: «Celadora en el Hogar de la Caldera» (imagen) | Coincide |
+| 6226 | 7 | 14.271-A: «Lavandera en el Hogar de Niños de La Caldera, a partir del 22 de agosto» (imagen) | Coincide |
+| 6271 | 6 y 7 | 15.284-A, renglón 52, y 15288-A: «Lavandera del Hogar Dr. Luis Güemes, de la Caldera» (imagen, 180-200 ppp) | Coincide; el renglón está en h6 y h7, no en h5 como daba la ficha A.45 |
+| 6110 | 4 | 11.662-E: «Otórgase a favor del HOGAR AGRICOLA "SAN CALLETANO", un subsidio [...] de \$ 4.970», 70 m² a \$71; art. 3, «liquídese a favor de la CARCEL PENITENCIARIA» (imagen) | **Hallazgo 1** |
+| 6124 | 8 | 11983-A: «Concédese un subsidio [...] (\$ 5.000) por esta única vez», para «reforzar las cuotas de las becas que estuvieron en vigencia» y el «mayor costo [...] en los artículos alimenticios» (imagen) | **Hallazgo 1** |
+| 6162 | 5 | 12899-E: «Acuérdase un subsidio a favor del Hogar Agrícola San Cayetano [...] por la suma de m\$n 9.277» para mosaicos del «templete de San Cayetano a erigirse en dicha localidad», a pedido de la Congregación; se liquida a la Cárcel (imagen) | **Hallazgo 1** |
+| 6259 | 10 | 15095-G: «Autorízase a la Cárcel Penitenciaría a proveer de víveres, a partir del día 1º de noviembre», con el renglón «Hogar Agrícola San Cayetano —Vaqueros» (imagen) | **Hallazgo 1** |
+| 6207 | 6 | 13.844-E: pedido de Arquitectura; ocho rebajas recontadas sobre la imagen, 100.000 + 200.000 + 200.000 + 400.000 + 400.000 + 300.000 + 1.000.000 + 300.000 = 2.900.000, contra el «2.909.000» impreso; «Construc. Esc. Prim. Dr. Bernabé López Vaqueros ... 200.000»; refuerzo del Mercado Frigorífico de Tartagal | Coincide |
+| 6284 | 5 | 14.964-E: el renglón «Ampl. partidas electromecánicas Ley 3192 incluidas 10 localidades de El Galpón, La Caldera, etc.» (informe A.49 y E.8) | **Hallazgo 2** |
+
+Trece actos mirados en la imagen en catorce hojas; las citas «Hogar Dr. Luis Güemes» (A:406), «Dr. Luis Linares» (A:406) y «Ca'dera» (F:67) cotejadas en la imagen y en la capa. Ninguna corrección silenciosa.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:411 | «el Hogar Agrícola San Cayetano de Vaqueros recibe en marzo un subsidio de \$4.970 [...]; en abril, \$5.000 por única vez para reforzar las becas [...]; en junio [...] \$9.277 en mosaicos [...], y desde noviembre, víveres de la Cárcel Penitenciaría»: el verbo no es el de los actos (que otorgan, conceden, acuerdan y autorizan; el importe de los mosaicos se liquida a la Cárcel, que es la que los provee, y lo de noviembre es una autorización a la Cárcel), y «reforzar las becas» dice menos que «reforzar las cuotas de las becas» | 5 | «en marzo la Provincia otorga al Hogar Agrícola San Cayetano de Vaqueros un subsidio de \$4.970, el importe de setenta metros cuadrados de mosaico que le provee la Cárcel Penitenciaría, a la que se liquida, [...]; en abril le concede \$5.000 por única vez para reforzar las cuotas de sus becas [...]; en junio [...] le acuerda \$9.277 en mosaicos, también liquidados a la Cárcel, [...], y en noviembre autoriza a la Cárcel a proveerle víveres desde el 1 de ese mes» |
+| 2 | F:67 | «el subtotal provincial del decreto de octubre que liquida la partida de la usina (14.964-E [...])»: el decreto reintegra a la A.G.A.S. sus inversiones del mes, y el renglón es una partida de obras electromecánicas de la Ley 3192 que incluye diez localidades; A:408, a la que remite, dice que el acto no dice cuánto corresponde a cada una | 5 | «el subtotal provincial del decreto de octubre que reintegra a la Administración General de Aguas sus inversiones, entre ellas la partida de obras electromecánicas de la Ley 3192 que nombra a La Caldera con otras localidades (14.964-E [...])» |
+
+Resta: en el aspecto 5, sobre la base de 95, dos frases que dicen más que el acto (hallazgos 1 y 2, 5 cada uno), **85**. Ningún error de consistencia en 70,7 páginas auditadas (el 2 contradice a A:408, pero se cuenta una sola vez, en el aspecto más específico).
+
+**Errores introducidos por la propia auditoría**: los dos vienen del AMPLÍA 1960 (`d2be108`), escrito por esta misma sesión. El 1 es la causa 1 del flujo §6.6 (se escribió desde la ficha: «otorga», «concede», «acuerda» y «autoriza» pasaron a «recibe»), aunque las cuatro imágenes se miraron durante el AMPLÍA para la cifra y el objeto, no para el verbo; el 2 es una paráfrasis del renglón del §0 del informe que alarga el alcance del acto. **`control_amplia.py` no marcó ninguno de los dos**: «recibe» no está en su lista de verbos y la frase de F:67 sólo cae en marcas de ALCANCE por otras cláusulas. **Atrapados por el control antes de compilar el AMPLÍA: ninguno**; el `.json` del AMPLÍA cuenta dos correcciones antes de compilar (las hojas de los decretos de licencias y la forma «Ca'dera»), que la sesión halló mirando la imagen y no por una marca del script.
+
+**Descartados (falsos positivos, 5).** (a) A:406, «el nombre de la mucama aparece en tres decretos, de junio a septiembre»: los tres decretos son del 27 de junio, el 19 de agosto y el 1 de septiembre, y la frase no afirma que sea la misma persona. (b) A:406, «dos de noviembre lo llaman «Hogar Dr. Luis Güemes»»: 15.284-A y 15288-A, los dos del 18 de noviembre (imagen). (c) 04:5017, «Los de 1958 a 1960, leídos enteros sobre la imagen, vuelven a mezclar los nombres»: en 1960 el establecimiento es «Estación Sanitaria» (14381-A) y «Consultorio Externo» (15.284-A); el 11166-A sólo nombra al médico regional «de La Caldera y de El Chamical». (d) 26:236, «Y los años 1958 a 1960 [...] completan la serie del hogar», cuando lo que la frase da de 1960 es la escuela de Vaqueros: la entrada de 1960 de A (regente, licencias) es serie del hogar y la frase no dice que 1960 no la tenga. (e) 15:185, «muestran la misma tutela sobre las obras», con ejemplos sólo de 1958 y 1959: la Ley 3575 de 1960 (la usina pasa a la A.G.A.S.) está en 22:545 y no desmiente la frase.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P330 (láminas de 1960) y P75: sin cambios; el epígrafe de fig:agua-serie ya dice que 1958 a 1960 se cerraron después de dibujada la lámina. P76 (apéndices H y E, 1958-1960) y P77 (pedidos de D, 1958-1960): sin cambios. P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325, P326, P327 y P328, sin revisar.
+
+**Pendientes nuevos.** P331 (`herramientas`): sumar a la lista de verbos de `control_amplia.py` los que convierten un acto de la Provincia en un hecho del beneficiario («recibe», «obtiene», «cobra», «le llega»), y una clase nueva que marque, en las filas de la cronología, todo verbo cuyo sujeto no sea el Poder Ejecutivo o el organismo que firma el acto; los dos hallazgos de esta ronda no tenían marca.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`d2be108`) contra el commit del parche del AMPLÍA | 118 archivos versionados (sin `main.pdf`) | Idénticos después de pasar a LF |
+| Traslado de tramos anteriores por diff | 26.165/26.165 vigentes en `fc3fed2` | 26.117 vigentes; 48 caducas; 48 modificadas |
+| `control_amplia.py` (corridas del AMPLÍA, sobre `fc3fed2..d2be108`) | 48 líneas según el script, 70 frases | 626 marcas; ninguna de las dos frases de los hallazgos marcada por su defecto |
+| Declaraciones de cobertura de 1960 en todo el manuscrito («1960 a», «1960 y», «como 1960 a», «como de 1960», «1923--1959», «1923 a 1959», «hasta 1959», «cuarenta y cinco tramos», «sesenta y siete», y 1960 con «pendiente», «reserva» o «hallazgos y no») | 26.165 líneas | Ninguna desfasada; «cuarenta y cinco» sólo en láminas y en textos que no son recuentos de tramos; «también con pendientes» de 1961-1962 que remitía a 1960, cambiado en las cinco líneas donde estaba |
+| Superlativos y ausencias con un rango que termina en 1959 o 1960, y frases con 1960 y una fórmula de ausencia o primacía | 26.165 líneas | Ninguno que 1960 desmienta (01:157, 09:536, 10:340, 16:793, 17:281 y D:192 dan universos que 1960 leído entero confirma) |
+| Superlativos y ausencias en las dos líneas de la fase 6 | 2 líneas | «por única vez» es del acto; ninguno nuevo |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77, 00:80, F:149, F:188 y F:292 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 46 verificados + 66 fuera = 112 |
+| Compilación | base `d2be108` y fase 6, en clones limpios | Compilan con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.113 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `d2be108` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Fechas de decreto y de edición bien separadas en las entradas de 1960; la cifra de las rebajas del 13.844-E, recontada sobre la imagen |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Tres citas y trece actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 95 | Hallazgos 1 y 2, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 70,7 páginas auditadas; recuentos de láminas y de tramos cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | Ningún pedido satisfecho nuevo en la lista (D:177 deja de pedir las hojas de 1960) |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | El personal del Hogar de 1960 se da por cargo y no por nombre, como decidió el AMPLÍA 1958-1960 |
+
+**Nota inicial: 86,5 antes del tope y 86,5 después** (cobertura acumulada inicial del 100,0 % sobre `d2be108` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1960 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P327, P330 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948 y 1958 a 1960 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** dos hallazgos, los dos resueltos; compila sin errores, 1.113 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1960) sin el acto que la refutaría, y en el que la usina municipal pasa a la A.G.A.S.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 70,7 páginas), más las 2 que cambia la fase 6, leídas enteras después del cambio (1,1 páginas). Cobertura acumulada: 26.165 de 26.165 (100,0 %). Falsos positivos descartados: 5. Recortes: P318, P319, P324 y P298, P304, P305, P307, P308, P310, P321, P322, P323, P325 a P328 sin revisar; los actos de agua, de policía y de salud de 1960 se juzgaron sobre las fichas del informe, no sobre la imagen; el 14.964-E se juzgó sobre el informe (A.49 y E.8); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en el AMPLÍA 1960 escrito por esta sesión, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.
