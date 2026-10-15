@@ -22,6 +22,9 @@ por línea agregada o modificada, las seis clases de error que las rondas MEJORA
           líneas antes y después), que el dato nuevo puede desmentir.
   VERBO   verbos que deciden un acto (concede, renunció, nombra, remata, aprueba,
           adjudica, crea...): se cotejan con el verbo del acto en la ficha.
+  ARRASTRE [ronda 118] la primera fórmula de remisión («también con pendientes»,
+          «del mismo modo», «con la misma reserva», «como 1963») que sigue, en la
+          misma línea, a un cambio que sube un año a «leído entero sobre la imagen».
 
 No corrige nada. Entrega un informe; la sesión resuelve cada marca (corrige o
 justifica) y lo resume en el .json del AMPLÍA, clave "control". Una marca
@@ -124,6 +127,56 @@ def diff_lineas(repo, base, head):
                     out.append((f, nn, fr))
             else:
                 out.append((f, nn, l))
+    for l in d.split('\n'):
+        if l.startswith('+++ ') or l.startswith('@@') or l.startswith('diff '):
+            cerrar(); viejas, nuevas = [], []
+            if l.startswith('+++ '):
+                f = l[6:]
+            elif l.startswith('@@'):
+                n = int(re.search(r'\+(\d+)', l).group(1))
+        elif l.startswith('-') and not l.startswith('---'):
+            viejas.append(l[1:])
+        elif l.startswith('+'):
+            nuevas.append((n, l[1:])); n += 1
+    cerrar()
+    return out
+
+PAT_ARR = re.compile(r'\b(también,? (?:leíd[oa]s? )?con pendientes|también leíd[oa]s?|leíd[oa]s? del mismo modo|del mismo modo|de la misma manera|con la misma reserva|leíd[oa]s? igual|como (?:de )?\d{4}\b)', re.I)
+PAT_NIVEL = re.compile(r'(entero|enteros|entera|enteras) sobre la imagen|leíd[oa]s? enter[oa]s?|cerrad[oa]s?', re.I)
+
+def arrastres(repo, base, head):
+    """[v4.1] ARRASTRE (causa 5 del flujo §6.6): cuando un cambio sube un año a
+    «leído entero sobre la imagen», la primera fórmula de remisión que le sigue
+    en la misma línea («también con pendientes», «del mismo modo», «con la misma
+    reserva», «como 1963») pasa a remitir al nivel nuevo. Se marca para releerla.
+    Rondas 117 y 118: diez frases desfasadas así, ninguna marcada por las otras clases."""
+    import difflib
+    d = subprocess.run(['git', '-C', repo, 'diff', '-U0', base, head, '--', 'cap', 'ape'],
+                       capture_output=True, text=True, check=True).stdout
+    out, f, n, viejas, nuevas = [], None, 0, [], []
+    def cerrar():
+        for (nn, l) in nuevas:
+            mejor, r = None, 0
+            for v in viejas:
+                q = difflib.SequenceMatcher(None, v, l, autojunk=False).quick_ratio()
+                if q > r:
+                    mejor, r = v, q
+            vieja = mejor if (mejor is not None and r > 0.6) else ''
+            tok = [(m.start(), m.end()) for m in re.finditer(r'\S+', l)]
+            sm = difflib.SequenceMatcher(None, vieja.split(), [l[a:b] for a, b in tok], autojunk=False)
+            pos = []
+            for op, i1, i2, j1, j2 in sm.get_opcodes():
+                if op in ('replace', 'insert'):
+                    pos += [tok[j][0] for j in range(j1, j2)]
+            hechos = set()
+            for p in pos:
+                m = PAT_NIVEL.search(l, max(0, p - 40), p + 60)
+                if not m or m.start() > p + 40:
+                    continue
+                s = PAT_ARR.search(l, m.end())
+                if s and s.start() not in hechos:
+                    hechos.add(s.start())
+                    out.append((f, nn, latex_a_texto(l[max(0, s.start() - 120):s.end() + 60]).strip()))
     for l in d.split('\n'):
         if l.startswith('+++ ') or l.startswith('@@') or l.startswith('diff '):
             cerrar(); viejas, nuevas = [], []
@@ -251,9 +304,12 @@ def main():
             for m in PAT_SUP.finditer(t):
                 marcas['VENTANA'].append((f'{f}:{k}', f'«{t[max(0, m.start()-70):m.end()+70].strip()}»: frase vecina de un cambio; ¿la desmiente lo agregado?'))
 
+    for f, n, fr in arrastres(a.repo, a.base, a.head):
+        marcas['ARRASTRE'].append((f'{f}:{n}', f'«{fr}»: remite a la frase anterior, cuyo año acaba de cambiar de nivel; ¿sigue valiendo?'))
+
     print(f'CONTROL AMPLÍA — base {a.base}, {len(set((x[0], x[1]) for x in lineas))} líneas agregadas o modificadas ({len(lineas)} frases controladas), años {a.anio}')
     print(f'fechas de edición leídas en la capa: {len(fechas)}')
-    for cl in ['CITA', 'FECHA', 'CIFRA', 'IDENT', 'ALCANCE', 'VENTANA', 'VERBO']:
+    for cl in ['CITA', 'FECHA', 'CIFRA', 'IDENT', 'ALCANCE', 'VENTANA', 'VERBO', 'ARRASTRE']:
         print(f'\n== {cl}: {len(marcas[cl])}')
         for d, msg in marcas[cl]:
             print(f'  {d}  {msg}')

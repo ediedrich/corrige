@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T14:53:38",
+ "actualizado": "2026-10-15T15:13:44",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17610,6 +17610,60 @@
    "pendientes_nuevos": [],
    "propuesta_control_amplia": "Marcar, en las cinco lineas vecinas de cada cambio que pasa un año de 'con pendientes' a 'sobre la imagen', las formulas 'tambien con pendientes', 'tambien leido', 'del mismo modo' y 'con la misma reserva' (habria marcado los hallazgos 1 a 6).",
    "atrapados": 1
+  },
+  {
+   "ronda": 118,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "base": "7d501e1",
+   "nota_inicial": 79.7,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 79.7,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda": {
+    "lineas": 48,
+    "bytes": 229008,
+    "paginas": 69.3
+   },
+   "fecha": "2026-10-15",
+   "hallazgos": 7,
+   "aplicados": 7,
+   "material_auditado": "AMPLIA 1963 (7d501e1 sobre b994970), 48 lineas enteras",
+   "hallazgos_detalle": [
+    "04:5017 'Los de 1964 y 1965, leidos del mismo modo' (despues de dar 1963 leido entero sobre la imagen) -> 'leidos con pendientes' (aspecto 5)",
+    "15:185 'Los de 1964 y 1965, leidos del mismo modo' -> 'leidos con pendientes' (5)",
+    "17:281 'En 1964 y 1965, tambien con pendientes', 22-infraestructura:545 'De 1964 a 1985, tambien con pendientes', 26:50 'en 1965, tambien con pendientes': el 'tambien' remitia a 1963, ahora leido entero -> 'leidos con pendientes' / 'año leido con pendientes' (7, tres)",
+    "A:426 'detalla en su articulo 5 las ocho reparticiones e instituciones': son ocho renglones, el primero con tres reparticiones (recuento del informe no rehecho) -> 'en ocho renglones, las reparticiones e instituciones' (3; imagen 6807 h19)",
+    "D:263 'segun su considerando' (ambiguo: el considerando es del 429) -> 'segun el considerando del 429' (12)"
+   ],
+   "errores_introducidos_por_la_auditoria": {
+    "total": 7,
+    "del_amplia_1963_de_esta_sesion": 6,
+    "heredados_de_incorporaciones_anteriores_en_lineas_tocadas": 1,
+    "marcados_por_control_amplia": 0,
+    "atrapados_antes_de_compilar": 1,
+    "nota": "El hallazgo 7 lo escribio el AMPLIA 1963 anterior (cef2ed6) y este AMPLIA lo reescribio sin corregirlo. Los hallazgos 1 a 5 son la causa 5 del flujo §6.6, la misma de la ronda 117, cuyo control propuesto no estaba en el script."
+   },
+   "falsos_positivos": 3,
+   "compilacion": {
+    "paginas": 1115,
+    "refs_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "git_am": "OK sobre un repositorio limpio con el arbol de LIBRO en 7d501e1 (copia de Windows pasada a LF); arbol identico (8ea73bb)",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [],
+   "pendientes_actualizados": [
+    {
+     "id": "P336",
+     "agregar": "Tambien en B.2.1: el RECUENTO PROPIO 'ocho destinos' son ocho renglones; el primero reune tres reparticiones (Carcel Penitenciaria, Jefatura de Policia y Escuela de Policia) y el ultimo es 'Escuelas, Colegios y varios'; decir 'ocho renglones' (ronda 118, hallazgo 6)."
+    }
+   ],
+   "control_amplia_nuevo": "Se entrega control_amplia.py con la clase ARRASTRE: marca la primera formula de remision ('tambien con pendientes', 'tambien leido', 'del mismo modo', 'de la misma manera', 'con la misma reserva', 'leidos igual', 'como 19xx') que sigue, en la misma linea, a un cambio que sube un año a 'entero sobre la imagen', 'leido entero' o 'cerrado'. Sobre el diff del AMPLIA 1963 marca 7 frases: las de los hallazgos 1 a 5 y dos falsos positivos; las otras siete clases dan las mismas cifras que la version anterior.",
+   "atrapados": 1
   }
  ],
  "pendientes": [
@@ -21735,6 +21789,6 @@
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }

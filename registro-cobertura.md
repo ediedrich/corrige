@@ -8442,3 +8442,125 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** ocho hallazgos, los ocho resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1962) sin el acto que la refutaría, y en el que la Intervención gobierna el municipio por comisionados y los cuatro actos de agua del departamento se resuelven sin él.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 77,3 páginas), más las 6 que cambia la fase 6, leídas enteras después del cambio (45,5 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1962 cuyas hojas no se pidieron (los de salud, policía, minas, ganadería y becas de A:418 y A:420, y los avisos repetidos) se juzgaron sobre las fichas del informe, no sobre la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 8, todos en líneas del AMPLÍA 1962 de esta sesión ---seis los introdujo ese AMPLÍA y dos venían de incorporaciones anteriores---, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (el verbo del 4686 en A:420). Propuesta para el script (no se entrega versión nueva): marcar, en las cinco líneas vecinas de cada cambio que pasa un año de «con pendientes» a «sobre la imagen», las fórmulas «también con pendientes», «también leído», «del mismo modo» y «con la misma reserva»; las seis de esta ronda las habría marcado todas.
+
+## Ronda 118 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v4 §7), sobre el material del AMPLÍA 1963. Base: commit `7d501e1` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1963, sobre `b994970`, aplicado por `3-registrar` el 15/10 a las 14:53), con la fase 6 en `ronda-118.patch` (un commit sobre `7d501e1`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1963** (la abrió la tarea programada de las 14:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1963 del cierre. Por eso, y por lo que encontró la ronda 117, la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 48 líneas enteras y buscó en ellas, ante todo, la causa 5 del flujo §6.6 (la frase que sigue a un año que cambia de nivel y remite a él). Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (HEAD `192fc44`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol resultó idéntico al del commit con que se armó el parche del AMPLÍA (`179b387`). Del Release `1963` de `boletines-salta` se pidieron por el espejo de la máquina, durante el AMPLÍA, `lee_textos_1963.zip` y seis PDF (6774, 6807, 6846, 6875, 6909 y 6959), todos mirados (tabla de cotejo); el informe LEE 1963 es el del cierre del 15/10/2026.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 117 (26.167 de 26.167, sobre `2e7d69e` y su fase 6, que es `b994970`) se trasladaron por diff a `7d501e1`. **El AMPLÍA caduca 48 líneas, las 48 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 42 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.119 de 26.167.
+
+### Lectura sobre el texto (numeración de `7d501e1`)
+
+Se leyeron **las 48 líneas, enteras** (229.008 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 04:5017, 09:536, 15:185, 17:281, 18:470, 22-infraestructura:545, 26:50, A:421 a A:426, D:177, D:263 y F:26 a F:103), contra el informe LEE 1963 del 15/10/2026 y, en las cifras, fechas, verbos y citas de 1963, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 4 (421, 424, 425, 426) |
+| ape/D-pedidos.tex | 3 (177, 192, 263) |
+| ape/F-fuentes.tex | 20 (26, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 133, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 6 (3938, 4068–4070, 4976, 5017) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 3 (281, 290, 291) |
+| cap/18-politica.tex | 1 (470) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (50) |
+
+Contexto releído entero (no suma cobertura): en las 48 líneas, cada fórmula de remisión («también con pendientes», «también leído», «leído(s) del mismo modo», «de la misma manera», «con la misma reserva», «leídos igual», «como 19xx») que sigue a una mención de 1963 en la misma línea (barrido por script, 2.500 caracteres después de cada 1963, y leídas una por una); las frases de todo el manuscrito con un superlativo o una ausencia junto con un rango que empieza o termina en 1962 o 1963, «hasta 1963», «segunda ventana» o «en la ventana» (12 frases); A:417 a A:431 (filas de 1961-1962 a 1965); del informe LEE 1963, el §0, A.2, A.12, A.20, A.25, A.26, A.29, A.34, B.2 entero, §P, E.1, E.3, E.8, E.9, E.10 y §R.
+
+**Esta ronda: 48 líneas**, 229.008 bytes sobre 3.686.602, que en las 1.115 páginas de la base equivalen a **69,3 páginas**.
+
+Acumulado: 26.119 vigentes + 48 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 7 líneas que estaban vigentes (04:5017, 15:185, 17:281, 22-infraestructura:545, 26:50, A:426 y D:263), sin agregar renglones, y las siete se leyeron enteras después del cambio (105.061 bytes, 31,8 páginas): **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 6774 | 5 | 5127-E: «Salta, 31 de Octubre de 1962», certificado Nº 6 parcial provisorio de la escuela Bernabé López, \$162.373, aprobado por el art. 1 (imagen, 170 ppp) | Coincide con A:417 y 26:236 |
+| 6807 | 1 | Tapa: «Nº 6807», «JUEVES, FEBRERO 28 DE 1963» (imagen, 60 ppp) | Coincide |
+| 6807 | 17 | Encabezado del presupuesto: «DECRETO LEY Nº 208», «SALTA, 29 de Noviembre de 1962», ejercicio del 1/11/1962 al 31/10/1963 (imagen, 150 ppp) | Coincide con A:426 (el informe dice «Ley N 208»: P336) |
+| 6807 | 18–19 | Art. 5: crédito de \$13.500.000, «se atenderán erogaciones por víveres y racionamiento de las Reparticiones é Instituciones que a continuación se detallan», ocho renglones, el primero con tres reparticiones; «Hogar San Cayetano», \$470.000 (imagen, 120 y 200 ppp) | **Hallazgo 6** |
+| 6846 | 6 | 7173-G, considerando del Hogar San Cayetano y art. 1: «Facúltase al Consejo General de Educación para conceder dirección libre a las escuelas de misiones indígenas, parroquiales y de hogares agrícolas cuyos directores fueran sacerdotes o religiosos y que tuvieran un número de alumnos no inferios a cien (100)» (imagen, 170 ppp) | Coincide |
+| 6875 | 4 | Decreto-ley 309-G, «SALTA, Mayo 31 de 1963», «Ratifícase con fuerza de Ordenanza el Convenio suscripto entre la Municipalidad de la Capital y Agua y Energía Eléctrica», «cuyo texto se transcribe a continuación» (imagen, 200 ppp) | Coincide con A:424 y D:263 |
+| 6909 | 6 | Planilla anexa del decreto-ley 360: columnas de cantidad, designación, valor unitario y total, sin columna ni renglón de destino (plancha, 55 ppp) | Coincide con A:426 |
+| 6959 | 7 | Decreto-ley 429: considerando «de cláusulas similares al que fuera aprobado por esta Intervención Federal [...] mediante Decreto Ley Nº 309|63», art. 1 «Ratifícanse con fuerza de Ordenanza» (imagen, 180 ppp) | Coincide con A:424, 15:185 y 22-infraestructura:545 |
+
+Seis actos y una tapa mirados en la imagen, en nueve hojas de seis ediciones; tres citas que el AMPLÍA agrega o toca, cotejadas en la imagen («Hogar San Cayetano», «con fuerza de Ordenanza» y «dirección libre»); las demás citas de 1963 de las líneas leídas («La Callera», «Getsemani», «Consultorio Externo de la localidad de La Caldera», «en vacante por renuncia») son anteriores a este AMPLÍA y se juzgaron sobre el informe del cierre, que las miró a 220-300 ppp. Ninguna corrección silenciosa en lo mirado.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 04:5017 | «\textbf{Los de 1964 y 1965, leídos del mismo modo, muestran que el pueblo vuelve a tener médico regional}»: la frase anterior, que el AMPLÍA 1963 cambió, da ahora 1963 «leídos enteros sobre la imagen», y «del mismo modo» pasa a dar 1964 y 1965 como leídos enteros, cuando quedaron con pendientes (A:427, A:431, F:75) | 5 | «leídos con pendientes» |
+| 2 | 15:185 | «Los de 1964 y 1965, leídos del mismo modo, muestran la misma tutela»: la misma causa | 5 | «leídos con pendientes» |
+| 3 | 17:281 | «En \textbf{1964 y 1965}, también con pendientes»: el «también» remite a 1963, que la frase anterior da ahora leído entero | 7 | «leídos con pendientes» |
+| 4 | 22-infraestructura:545 | «\textbf{De 1964 a 1985, también con pendientes}»: la misma | 7 | «leídos con pendientes» |
+| 5 | 26:50 | «en 1965, también con pendientes»: remite por encima de la frase de 1964 (sin calificar) a la de 1963, que el AMPLÍA dio leído entero | 7 | «en 1965, año leído con pendientes» |
+| 6 | A:426 | «detalla en su artículo 5 las ocho reparticiones e instituciones»: el art. 5 tiene ocho renglones, y el primero reúne tres reparticiones (Cárcel Penitenciaría, Jefatura de Policía y Escuela de Policía) y el último «Escuelas, Colegios y varios»; el AMPLÍA tomó el recuento del informe («ocho destinos») sin rehacerlo sobre la imagen | 3 | «detalla en su artículo 5, en ocho renglones, las reparticiones e instituciones» |
+| 7 | D:263 | «el decreto-ley 309/63, que según su considerando aprobó otro de cláusulas similares»: «su» se lee como del 309, y el considerando es del 429 | 12 | «que según el considerando del 429 aprobó otro» |
+
+Resta: en el aspecto 5, sobre la base de 95, dos frases que dicen más que la lectura (hallazgos 1 y 2), 5 cada una, **85**; en el aspecto 7, tres contradicciones con una frase anterior del mismo párrafo (hallazgos 3 a 5) en 69,3 páginas auditadas, 4,3 por cada cien páginas, escalón de 40, y un escalón más porque el material que las desmiente está a menos de diez páginas, **30**; en el aspecto 3, un recuento importado del informe y no rehecho (hallazgo 6), **95**; en el aspecto 12, una observación menor y aislada de redacción (hallazgo 7), **90** por la escala general.
+
+**Errores introducidos por la propia auditoría**: los siete están en líneas que el AMPLÍA 1963 de esta sesión tocó, y seis los introdujo ese AMPLÍA. Los cinco primeros son otra vez la causa 5 del flujo §6.6, la misma que la ronda 117 encontró en el AMPLÍA 1962 y para la que propuso un control que no se había agregado al script: el AMPLÍA cambió «1963, leído con pendientes» por «leído entero sobre la imagen» y no releyó la frase siguiente. El 6 es la causa 4 (recuento copiado del informe). El 7 viene del AMPLÍA 1963 anterior (`cef2ed6`), que escribió «según su considerando», y este AMPLÍA lo heredó al reescribir la cláusula. **`control_amplia.py` no marcó ninguno por su defecto** (el 6 cae en una frase que el script marcó por ALCANCE, y la sesión corrigió en ella el verbo y no el recuento). **Atrapados por el control antes de compilar el AMPLÍA: uno**, el «destina» del art. 5 en A:426, cambiado por «detalla», el verbo del acto.
+
+**Descartados (falsos positivos, 3).** (a) 18:470, «\textbf{En 1966}, también con pendientes»: la frase anterior que califica es la de 1964 y 1965, «leídos con pendientes», y el «también» remite a ella. (b) 00:45, «Tampoco 2002 ni 2005, leídos al cierre del mismo modo»: remite a 1964-1988 («leídos al cierre edición por edición»), no a 1963. (c) A:422 y 18:470, «ningún acto hallado del año da el resultado» de la elección de 1963: con 1963 leído entero podría ser una ausencia; el informe la deja como acto citado y no hallado (E.3), y «hallado» es el universo correcto.
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P335 (láminas de 1963), P334 (de 1962), P332 (de 1961) y P88/P95: sin cambios en las láminas. P336 (el «Ley N 208» del informe LEE 1963): se le suma el recuento «ocho destinos» de B.2.1, que son ocho renglones con diez reparticiones e instituciones nombradas y un renglón genérico. P89, P90 y P91: sin cambios. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333, sin revisar.
+
+**Pendientes nuevos.** Ninguno; el ajuste de P336 va en el `.json`.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`7d501e1`) contra el commit del parche del AMPLÍA | 118 archivos versionados (sin `main.pdf`) | Idénticos después de pasar a LF (`179b387`) |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `b994970` | 26.119 vigentes de 26.167; 48 caducas y 48 modificadas, ninguna agregada |
+| `control_amplia.py` (tres corridas del AMPLÍA, sobre `b994970..7d501e1`) | 48 líneas | 489 marcas en cada corrida; ninguna de las siete frases de los hallazgos marcada por su defecto |
+| `control_amplia.py` con la clase nueva ARRASTRE (entregada en esta ronda), sobre el mismo diff | 48 líneas | 7 marcas: las cinco frases de los hallazgos 1 a 5 y los dos falsos positivos (a) y (b) |
+| La misma, sobre la fase 6 (`7d501e1..` fase 6) | 7 líneas | 0 marcas de ARRASTRE |
+| Fórmulas de remisión después de una mención de 1963 en la misma línea | 48 líneas del AMPLÍA | 7 (las mismas siete) |
+| Superlativos y ausencias con un rango que empieza o termina en 1962 o 1963, «hasta 1963», «segunda ventana» o «en la ventana» | 25.757 líneas de `cap/` y `ape/` | 12 frases, ninguna que 1963 desmienta |
+| Superlativos y ausencias en las siete líneas de la fase 6 | 7 líneas | Ninguno nuevo |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00 y F |
+| Recuento de tramos | 00:45, 02:28, F:26 | 49 verificados + 63 fuera = 112 |
+| D:177, hojas «a ojos» de 1964 a 1980 | 17 años | 17 cifras, de 69 a 577, las mismas que da 00:45 |
+| Compilación | AMPLÍA (`7d501e1`) y fase 6, en clones limpios | Compilan con `latexmk -pdf` (con `texlive-lang-spanish` instalado en la sesión); 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `7d501e1` | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión (`8ea73bb`) |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 95 | 100 | Hallazgo 6, aplicado; el decreto-ley 208 con su fecha de acto (29/11/1962) y la de la edición del suplemento, miradas en la imagen |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Tres citas y seis actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 85 | 95 | Hallazgos 1 y 2, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 30 | 100 | Hallazgos 3 a 5 (tres en 69,3 páginas, con el material que los desmiente en la frase anterior), aplicados; recuentos de láminas y de tramos cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:263 deja de pedir el decreto-ley 309/63, que se publica; D:177 deja de pedir las hojas de 1963; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 7, aplicado; sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Lo agregado de 1963 no nombra personas (instituciones, decretos-leyes y un presupuesto) |
+
+**Nota inicial: 79,7 antes del tope y 79,7 después** (cobertura acumulada inicial del 100,0 % sobre `7d501e1` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324, que con 1947 a 1963 dentro de la ventana deja escribir el resultado de la tercera tesis sobre esos años: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P325, P327, P330, P332, P334, P335 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948 y 1958 a 1963 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** siete hallazgos, los siete resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1963) sin el acto que la refutaría: el municipio aparece sólo como parte de dos convenios, y en el eléctrico la Intervención ratifica con fuerza de ordenanza lo que la Municipalidad firmó, como había hecho en mayo con el de la Capital.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 48 líneas (0,18 %; 69,3 páginas), más las 7 que cambia la fase 6, leídas enteras después del cambio (31,8 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 3. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1963 cuyas hojas no se pidieron (los de salud, policía, minas, pensiones y hogar de A:421 y A:426) se juzgaron sobre las fichas del informe, no sobre la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 7, todos en líneas del AMPLÍA 1963 de esta sesión ---seis los introdujo ese AMPLÍA y uno venía del AMPLÍA 1963 anterior---, ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (el verbo del art. 5 del decreto-ley 208 en A:426). **Control nuevo (se entrega `control_amplia.py`):** la clase ARRASTRE marca la primera fórmula de remisión («también con pendientes», «también leído», «del mismo modo», «de la misma manera», «con la misma reserva», «leídos igual», «como 19xx») que sigue, en la misma línea, a un cambio que sube un año a «entero sobre la imagen», «leído entero» o «cerrado». Es la propuesta de la ronda 117, que no se había incorporado al script y cuya falta dejó pasar los hallazgos 1 a 5: sobre el diff del AMPLÍA 1963 marca siete frases, las cinco de los hallazgos y dos falsos positivos; las demás clases dan las mismas cifras que antes.
