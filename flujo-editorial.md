@@ -1,4 +1,4 @@
-# Flujo editorial de *El dispositivo caldereño* — versión 4
+# Flujo editorial de *El dispositivo caldereño* — versión 5
 
 Fijada el 26/09/2026; la versión 2 (28/09/2026) agrega el §5.6, sobre las dudas de lectura, y las palabras clave `DUDAS` y `LECTURAS`. Unifica los proyectos «BOLETINES CALDERA» y «EL DISPOSITIVO CALDEREÑO» en uno solo, con un único estado y un único punto de entrada.
 
@@ -133,7 +133,8 @@ Reglas:
 5. **LEE** del primer año procesado sin informe. Se usa `LEE lote` si hay 3 o más años seguidos con 3 candidatos o menos cada uno.
 6. **Descargar** los años siguientes.
 7. **Regularización.** Años leídos sin §R (1909–1932 y 1946): primero se procesan en la máquina; después, `LEE <año>` con la rúbrica vigente.
-8. **Cierre.** Años leídos CON PENDIENTES: `LEE <año> cierre` (§5.7), en el orden de `orden_anios`. Es lo último del ciclo; cuando no queda ninguno, `siguiente` responde `ESTADO`.
+8. **Cierre.** Años leídos CON PENDIENTES: `LEE <año> cierre` (§5.7), en el orden de `orden_anios`.
+9. **Cierre de los años fuera de ventana** (versión 5). Cuando no queda ningún año CON PENDIENTES, los años con informe COMPLETO que el libro dejó en `barrido` (hojas «a ojos» o de poca tinta sin mirar enteras dadas como límite, tramos sin leer): `LEE <año> cierre` (§5.7, último párrafo), en el orden de `orden_anios`, con el mismo tope de dos cierres por año. Es lo último del ciclo; cuando no queda ninguno, `siguiente` responde `ESTADO`. La meta es que los 119 años queden en `imagen` o con límites declarados por causas que no dependen de la sesión.
 
 **Orden de los años** (`orden_anios` en `proyecto.json`, se puede cambiar):
 
@@ -255,6 +256,7 @@ Es para los años cuyo informe vigente terminó **CON PENDIENTES** (v17 §5.5): 
 - **Entrega.** Un **informe LEE completo del año** con el nombre fijo de siempre: conserva todo lo resuelto del anterior, dice en el §0 qué pendientes cerró y cómo, y qué afirmaciones del informe anterior cambian. `registrar` lo instala en lugar del anterior.
 - **§R.** `estado: COMPLETO` si se cerraron todos los pendientes. Si alguno no se puede cerrar por una causa que no depende de la sesión (falta el PDF en el Release, la hoja está ilegible, el organismo no publicó), queda como **límite declarado** con su causa y el estado es `COMPLETO` con ese límite. Si no cupo en la sesión, `CON PENDIENTES` con lo que quede.
 - **Tope.** La máquina pide a lo sumo dos cierres por año (`cierre_max_intentos` en `proyecto.json`). Si después del segundo sigue con pendientes, `caldera.py avance` lo cuenta como completo con límites y el ciclo sigue con otro año.
+- **Años COMPLETOS fuera de ventana (versión 5).** También va a cierre un año cuyo informe vigente es COMPLETO pero que el libro dejó en `barrido`, porque el informe da como límite hojas que no se miraron enteras (las «a ojos» del pre-informe, las de poca tinta, las de una sola versión de texto, sumarios leídos sólo por la capa) o un tramo del año sin leer. El corpus del cierre son esos límites: se miran en plancha y, donde haga falta, con OCR en español, como en el cierre de 1963. Sólo quedan como límite lo que no depende de la sesión (falta el PDF o la hoja, la hoja está ilegible, el repositorio no trae las ediciones). El informe nuevo dice en su §0 qué límites levantó; el AMPLÍA siguiente sube el año a `imagen` si no queda hoja sin mirar por causa de la sesión, y lo dice en `nota_nivel` si no. Desde que la máquina incluye estos años (`cierre_completos_fuera_de_ventana` en `proyecto.json`, por defecto encendido), van después de todos los CON PENDIENTES.
 
 ---
 
@@ -494,4 +496,4 @@ Si un parche no aplica, `registrar` lo deja donde está, no toca nada del libro 
 
 ---
 
-*Versión 4, 14/10/2026: control obligatorio del AMPLÍA antes de entregar (§6.6), con `scripts/control_amplia.py`, y la regla de no agregar renglones subordinada a la precisión (§6.4). Versión 3, 11/10/2026: palabra clave `LEE <año> cierre` (§2, §3 y §5.7). Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
+*Versión 5, 15/10/2026: el cierre alcanza también a los años con informe COMPLETO que el libro dejó fuera de las ventanas (§3, prioridad 9, y §5.7), para que 1908-2026 quede entero en `imagen` o con límites que no dependen de la sesión (P100). Versión 4, 14/10/2026: control obligatorio del AMPLÍA antes de entregar (§6.6), con `scripts/control_amplia.py`, y la regla de no agregar renglones subordinada a la precisión (§6.4). Versión 3, 11/10/2026: palabra clave `LEE <año> cierre` (§2, §3 y §5.7). Versión 2, 28/09/2026 (la 1 es del 26/09/2026). La próxima versión la propone una ronda MEJORA o un informe LEE en su §F, y se entrega como `flujo-editorial.md` completo.*
