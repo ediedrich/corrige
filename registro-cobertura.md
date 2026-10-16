@@ -8904,3 +8904,112 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** dos hallazgos, los dos resueltos, y el insumo del 16/10 aplicado en su §1 y corregido por el control en su §2; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año más leído sobre la imagen (1974) sin el acto que la refutaría: el límite entre los dos municipios, la coparticipación y el agua del embalse los fija la Provincia por ley, y el convenio con Obras Sanitarias no nombra al municipio; la cuarta gana un dato de la medida de caudal: el agua del embalse para la capital se pacta como el máximo que el acueducto pueda conducir, sin litros por segundo, y las localidades del recorrido quedan para un servicio «eventual».
 
 **Calidad de la auditoría.** Cobertura de la ronda: 29 líneas (0,11 %; 60,8 páginas), más la que cambia la fase 6 fuera de ellas (01:139), leída entera después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 3. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1974 de A:480 cuyas hojas no se pidieron (municipio, justicia, obras, escuelas, hogar, registro civil, salud, tierra y minas) se juzgaron sobre las fichas del informe, que los miró en la imagen; la escala de la planilla de 1976 no se miró (P343); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en material del AMPLÍA 1974 de esta sesión; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.
+
+## Ronda 122 — auditoría con fase 6 (16/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v5 §7), sobre el material del AMPLÍA 1975 (el segundo, el que sube 1975 a `imagen` después del cierre LEE del 16/10). Base: commit `6540261` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1975, sobre `303b678`, aplicado por `3-registrar` el 16/10 a las 14:53), con la fase 6 en `ronda-122.patch` (un commit sobre `6540261`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1975** (la abrió la tarea programada y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1975 del cierre. Por eso no se apoyó en lo que el AMPLÍA declaraba: volvió a leer las 23 líneas enteras, buscó por script la causa 5 del flujo §6.6 (fórmulas de remisión después de una mención de 1975) y los superlativos y ausencias cuyo universo contiene 1975 en todo el manuscrito, y miró en la imagen los actos de 1975 cuyas citas cambiaron. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (`24f9f99`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows en `303b678` (`main.pdf` aparte), pasados a LF, más `amplia-1975.patch`; el árbol resultante es el de `6540261` (el `git am` del parche sobre esa copia da el árbol de la sesión, y `heads.json` de la máquina da `6540261` como HEAD a las 14:58). Del Release `1975` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1975.zip` y los PDF 9667, 9678, 9692, 9794, 9810, 9820, 9864, 9870 y 9877; el informe LEE 1975 es el del cierre del 16/10/2026.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 121 (26.167 de 26.167, sobre `27133b2` y su fase 6, que es `303b678`) se trasladaron por diff a `6540261`. **El AMPLÍA caduca 23 líneas, las 23 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 23 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.144 de 26.167.
+
+### Lectura sobre el texto (numeración de `6540261`)
+
+Se leyeron **las 23 líneas, enteras** (221.050 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 06:56, 09:536, 10:521, 15:185, 17:281, 18:470, 22-infraestructura:545, 26:236, A:484, D:177 y F:103), contra el informe LEE 1975 del 16/10/2026 y, en las citas de 1975 que el AMPLÍA cambió, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 1 (484) |
+| ape/D-pedidos.tex | 1 (177) |
+| ape/F-fuentes.tex | 5 (26, 87, 89, 103, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 1 (4070) |
+| cap/06-pdua.tex | 1 (56) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 2 (340, 521) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 1 (281) |
+| cap/18-politica.tex | 1 (470) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído (no suma cobertura): en todo el manuscrito, cada fórmula de remisión («también», «del mismo modo», «de la misma manera», «leídos igual», «con la misma reserva», «como 1975», «como él», «ese año», «esos años») en los 700 caracteres que siguen a una mención de 1975 en la misma línea (barrido por script y leídas una por una: nueve); las oraciones con superlativo o ausencia («el único», «la única», «el primero», «nunca», «ningún», «ninguno», «no aparece», «no consta» y sus variantes) que nombran 1975 o un rango que lo contiene (barrido por script: 34, leídas todas); el epígrafe de `fig:boletin` (02:38 a 02:45); C:21 (Ordenanza 3/75); del informe LEE 1975, el §0, el §1 (la tabla de hojas por edición), A.1 a A.23, B.2, §C, E.1 a E.10 y §R.
+
+**Esta ronda: 23 líneas**, 221.050 bytes sobre 3.695.847, que en las 1.115 páginas de la base equivalen a **66,7 páginas**.
+
+Acumulado: 26.144 vigentes + 23 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 2 líneas que estaban vigentes (06:56 y 10:521), las dos de las 23 de esta ronda, sin agregar renglones, y se leyeron enteras después del cambio: **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9678 | 5 | Decreto 404, Finalidad 5 - Función 10, parcial 6: «Refacción Escuela Bernabé López y Juana Moro de López, / La Caldera $ 50.000,00» (imagen, 300 ppp); el decreto empieza en h4 y sigue en h6 con las firmas | Coincide con A:484 y 26:236 tal como los dejó el AMPLÍA («escuela» en singular; la de Vaqueros es la Bernabé López, Dec. 5931 de 1974, 9593 h13, ya citado en la misma línea de 26); la cita «h. 4 y 5» vale (encabezado y parcial) |
+| 9877 | 12 | Firma de la Ordenanza 3/75, «Luis Xamena, Interventor» (imagen, 600 ppp): un trazo vertical corto sobre la e y la n, sin forma de virgulilla | Coincide con F:87 («la marca es un trazo corto sin forma de virgulilla») y con el informe de cierre (D1 decidida) |
+
+Dos actos mirados en la imagen, en dos hojas de dos ediciones. Citas nuevas de 1975 en las líneas leídas: dos («Refacción Escuela Bernabé López y Juana Moro de López, La Caldera», en la imagen; «Escuela J. M. de López - La Caldera», en la capa, A.13 del informe, 9807 h8, que no se pidió); las demás citas de 1975 de A:484 y de los capítulos son del AMPLÍA 1973-1975 (`792ef89`), que las cotejó en el facsímil, y se juzgaron sobre el informe del cierre. Ninguna corrección silenciosa en lo mirado. **Cifra rehecha:** las hojas que faltan en 1975, sobre la tabla del §1 del informe (241 renglones): 107 ediciones con menos hojas que las que declara su tapa suman 134, y la 9711 (153 hojas, 140 declaradas, cadena de folios 865-1018, es decir 154) suma una: 108 ediciones y 135 hojas, como dice el libro en 00:45, 02:28, A:484, D:177 y F:87; el informe dice «unas 137» y 4.861 declaradas (P345, abierto por el AMPLÍA).
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 06:56 y 10:521 | «Y en 1975, cerrado después sobre la imagen, ningún acto de lo que se conserva nombra el embalse, ni en lo hallado de 1976, leído con pendientes»: la segunda cláusula queda sin verbo, y «ningún acto de lo que se conserva» dice el universo de manera torcida | 12 | «Y ningún acto nombra el embalse en lo que se conserva de 1975, cerrado después sobre la imagen, ni en lo hallado de 1976, leído con pendientes» (y lo mismo, sin la «Y», en 10:521) |
+
+Resta: en el aspecto 12, una observación menor y aislada de prosa en dos líneas, sin efecto en lo que el libro afirma, **90**. Nada más: los recuentos de tramos (53 verificados + 59 fuera = 112, en 00:45, 02:28 y F:26), de hojas «a ojos» (D:177, trece cifras de 1964 a 1971 y 1976 a 1980, de 69 a 577, las mismas que da 00:45) y de páginas faltantes de 1964 a 1986 (D:177, veintitrés cifras) cierran; las remisiones de modo a 1975 (nueve) están bien; ningún superlativo ni ausencia con 1975 en su universo queda desmentido.
+
+**Errores introducidos por la propia auditoría**: uno, el hallazgo 1, en material que escribió el AMPLÍA 1975 de esta sesión. **`control_amplia.py` lo marcó como ALCANCE** (06:56 y 10:521, «declarar el universo») y el AMPLÍA lo justificó porque el universo estaba declarado, sin ver que la frase quedaba mal construida: no cuenta como atrapado, porque llegó al libro. **Atrapados por el control antes de compilar el AMPLÍA: ninguno**; la escuela en singular (A:484, 26:236) la encontró la sesión al mirar 9678 h5, y la herencia del informe (137 hojas por 135), al rehacer el recuento, no un script.
+
+**Descartados (falsos positivos, 3).** (a) 06:56, «Lo que sigue, de 1981 a 1983, leídos con la misma reserva», marcado por ARRASTRE: remite a 1980 y 1981, con pendientes. (b) 15:185 y 18:470, «En 1977 y 1978, también con pendientes», marcados por ARRASTRE: remiten a 1976, que sigue con pendientes. (c) 02:28, «\textbf{1975} completo, [...] también, salvo unas 135 páginas»: el «también» remite a 1972 a 1974, cerrados del mismo modo.
+
+**Pendientes revisados.** P141 y P143: los aplicó el informe de cierre y los cerró el AMPLÍA. P138: su parte de fig:boletin queda reemplazada por P344 (abierto por el AMPLÍA). P139, P140 y P243: sin cambio. P345 (abierto por el AMPLÍA): el informe LEE 1975 sigue con 137 hojas y 4.861 declaradas, y con la nota de A.4 que identifica la escuela. P115: ningún acto de lo conservado de 1975 da la capacidad, la cota o el espejo del embalse; sigue abierto. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330, P333 y P343, sin revisar.
+
+**Pendientes nuevos.** Ninguno.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`303b678`) más `amplia-1975.patch` contra el de la sesión | 118 archivos versionados (LF) | `git am` aplica y da el árbol de la sesión; `heads.json` da `6540261` |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `303b678` | 26.144 vigentes de 26.167; 23 caducas y 23 modificadas, ninguna agregada |
+| `control_amplia.py` (dos corridas del AMPLÍA, sobre `303b678..6540261`) | 23 líneas | 507 y 771 marcas; la del hallazgo 1 marcada como ALCANCE (universo), no por su construcción |
+| `control_amplia.py` sobre la fase 6 (`6540261..` fase 6) | 2 líneas | 5 marcas: ALCANCE 06:56 y 10:521 («en lo que se conserva de 1975»: universo declarado), VERBO «nombra» (no decide un acto), ARRASTRE 06:56 (falso positivo a); ninguna de CITA, FECHA, CIFRA, IDENT ni VENTANA |
+| Fórmulas de remisión después de una mención de 1975 en la misma línea | 26.167 líneas de `cap/` y `ape/` | 9, leídas: ninguna remite mal (una es el falso positivo c) |
+| Superlativos y ausencias con 1975 en su universo | 26.167 líneas | 34 oraciones, leídas: ninguna desmentida por el cierre de 1975 |
+| Citas «Nº 96xx-98xx, h. N» de ediciones de 1975 contra las FUENTE del informe | 59 citas en el manuscrito, 33 pares distintos | Coinciden todas |
+| Recuento de hojas faltantes de 1975 | 241 renglones del §1 del informe | 135 en 108 ediciones (el informe: 137) |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 53 verificados + 59 fuera = 112 |
+| D:177, hojas «a ojos» y de poca tinta | 13 años (1964 a 1971 y 1976 a 1980) y 10 años (1976 a 1985) | 13 cifras, de 69 a 577, las mismas que da 00:45; 10 cifras de poca tinta, sin la de 1975 |
+| Compilación | AMPLÍA (`6540261`) y fase 6, en clones limpios | Compilan con `latexmk -pdf`; 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `303b678` más el parche del AMPLÍA | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Las hojas faltantes de 1975 se rehicieron sobre la tabla del informe; los dos decretos del 31-12-1974 siguen fechados como actos de ese día, publicados en 1975 |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Una cita nueva y una firma cotejadas en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 95 | 95 | Las ausencias que 1975 habilita llevan su universo («en lo que se conserva»); siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 100 | 100 | Ningún error de consistencia en 66,7 páginas; recuentos de tramos, hojas «a ojos», páginas faltantes y láminas cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 deja de pedir las 204 y las 2.308 hojas de 1975, ya miradas; las páginas faltantes y los números 9696 y 9698 siguen pedidos; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 1, aplicado; sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Lo cambiado de 1975 no nombra a nadie que el libro no nombrara; ningún atributo sensible |
+
+**Nota inicial: 87,5 antes del tope y 87,5 después** (cobertura acumulada inicial del 100,0 % sobre `6540261` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P344, P341, P339, P337, P335, P334, P332, P325, P327, P330 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948, 1958 a 1963 y 1972 a 1975 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** un hallazgo, resuelto; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año más leído sobre la imagen (1975) sin el acto que la refutaría: lo único que el municipio deja ese año sobre el agua es la adhesión, intervenido, a un régimen nacional, y en lo que se conserva del año no hay ningún otorgamiento, reconocimiento ni pedido de agua del departamento; la cuarta gana un cero cerrado en la serie de los actos de agua (1975).
+
+**Calidad de la auditoría.** Cobertura de la ronda: 23 líneas (0,09 %; 66,7 páginas). Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 3. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330, P333 y P343 sin revisar; los actos de 1975 de A:484 y de los capítulos cuyas hojas no se miraron en esta ronda se juzgaron sobre las fichas del informe, que los miró en la imagen, y sobre el cotejo del AMPLÍA 1973-1975; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 1, en material del AMPLÍA 1975 de esta sesión; marcado por `control_amplia.py` como ALCANCE y justificado sin ver la construcción; atrapados por un control automático antes de llegar al libro: 0.
