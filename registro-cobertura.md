@@ -8674,3 +8674,117 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** tres hallazgos, los tres resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año leído sobre la imagen (1972) sin el acto que la refutaría: el agua potable de Vaqueros la adjudica la Provincia y la contrata la Administración General de Aguas, y la defensa del pueblo la ejecuta la Administración por vía administrativa; la cuarta gana un dato de la serie de cierres: de la A-8/70, ni el contrato ni el comienzo de la obra se publican en lo que se conserva de 1972.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 18 líneas (0,07 %; 44,4 páginas), más las 6 que cambia la fase 6, leídas enteras después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 4. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1972 de A:469 cuyas hojas no se pidieron (justicia, salud, hogar, escuelas, hacienda, agro, minas, elecciones y remates) se juzgaron sobre las fichas del informe, que los miró en la imagen; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 3, dos en material del AMPLÍA 1972 de esta sesión y uno del AMPLÍA 1970-1972 en una línea que este tocó; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (ARRASTRE en F:134).
+
+## Ronda 120 — auditoría con fase 6 (15/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v5 §7), sobre el material del AMPLÍA 1973. Base: commit `197f566` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1973, sobre `c10e595`, aplicado por `3-registrar` el 15/10 a las 22:03), con la fase 6 en `ronda-120.patch` (un commit sobre `197f566`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1973** (la abrió la tarea programada de las 21:27 y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1973 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 29 líneas enteras, buscó primero la causa 5 del flujo §6.6 (la frase que sigue a un año que cambia de nivel y remite a él, también en líneas que el AMPLÍA no tocó) y después cotejó en la imagen los actos de 1973 cuyos verbos y cifras las líneas usan. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo, y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol de `197f566` resultó idéntico al de la sesión (cuatro archivos tocados comparados por suma MD5 en la máquina y en la nube, y el resto por `git am` del parche del AMPLÍA sobre `c10e595`). Del Release `1973` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1973.zip` y los PDF 9187, 9257, 9275, 9336, 9344, 9345, 9346, 9363, 9371 y 9380; el informe LEE 1973 es el del cierre del 15/10/2026.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 119 (26.167 de 26.167, sobre `362a8f3` y su fase 6, que es `c10e595`) se trasladaron por diff a `197f566`. **El AMPLÍA caduca 29 líneas, las 29 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 29 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.138 de 26.167.
+
+### Lectura sobre el texto (numeración de `197f566`)
+
+Se leyeron **las 29 líneas, enteras** (203.052 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 09:536, 15:185, 17:281, 22-infraestructura:545, 26:236, A:473, D:177 y F:85 a F:103), contra el informe LEE 1973 del 15/10/2026 y, en los verbos, cifras, fechas y citas de 1973, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 3 (473, 475, 477) |
+| ape/D-pedidos.tex | 1 (177) |
+| ape/F-fuentes.tex | 12 (26, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 1 (4070) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 1 (281) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): en todo el manuscrito, cada fórmula de remisión («también», «del mismo modo», «de la misma manera», «leídos igual», «con la misma reserva», «como 19xx», «ese año», «esos años», «ellos») que sigue a una mención de 1973 en la misma línea (barrido por script, 700 caracteres después de cada 1973, y leídas una por una: dieciocho); las frases del libro que nombran el Decreto 1.410/73, las que citan el 1563 y la resolución policial del destacamento de Lesser; del informe LEE 1973, el §0, §1, §2, A01 a A22, B.2, B.3, B.4, §C, §P, E.1 a E.10, §F y §R.
+
+**Esta ronda: 29 líneas**, 203.052 bytes sobre 3.691.382, que en las 1.115 páginas de la base equivalen a **61,3 páginas**.
+
+Acumulado: 26.138 vigentes + 29 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 8 líneas que estaban vigentes (00:45, 18:470, 22-infraestructura:545, A:473, A:475, C:157, D:177 y F:85), sin agregar renglones; seis son de las 29 de esta ronda y dos (18:470 y C:157) no, y las ocho se leyeron enteras después del cambio: **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9380 | 6 | Dec. 1563: considerando «Que, por razones de índole presupuestario no fue posible en su oportunidad en el Ejercicio 1972...»; art. 1 (que da nueva redacción al art. 1 del 6866/72): «Apruébase el presupuesto oficial actualizado [...] por \$ 201.592,56 [...] y autorízase a la Administración General de Aguas de Salta a ejecutar los trabajos por vía administrativa» (imagen, 220 ppp) | **Hallazgo 6** |
+| 9371 | 12 y 13 | Dec. 1.410: «Salta, 28 de setiembre de 1973. DECRETO Nº 1410», Ministerio de Economía; firmas Ragone, Pfister Frías, Villada, Canónica, Hurtado, Guzmán, Castello (imagen, 200-220 ppp); serie: el 1409 de h10 es del mismo día | Coincide con A:477 tal como la dejó el AMPLÍA, y con 07:253 (lo firma Ragone) |
+| 9344 | 17 y 18 | Aviso 15547: art. 1 «Convocar a Concurso de Antecedentes y Oposición, por segunda vez, para cubrir 66 (sesenta y seis) cargos vacantes de Director», extensión a «37 (treinta y siete) [...] vacantes de Vice-director, en Escuelas de 1ª y 2ª categoría»; «Juana Moro de López - La Caldera» y «Bernabé Aráoz - Vaqueros, Dpto. La C[aldera]» bajo «TERCERA CATEGORIA», antes de «PARA VICEDIRECTORA:» (imagen, 200 ppp) | Coincide con A:473 tal como la dejó el AMPLÍA |
+| 9257 | 20 a 23 | Cabeceras «PAG. Nº 2206», «2205», «2208», «2209» (imagen, 80 ppp): la 2207 no está y la h21 repite a la h19 | Coincide con F:85 |
+
+Cuatro actos o series de cabeceras mirados en la imagen, en nueve hojas de cuatro ediciones. Citas de 1973 de las líneas leídas cotejadas en la imagen: cinco («por razones de índole presupuestario», «autorízase», «Bernabé Aráoz - Vaqueros», «Juana Moro de López», «Salta, 28 de setiembre de 1973»); las demás citas de 1973 de A:473 y de los capítulos son anteriores a este AMPLÍA y se juzgaron sobre el informe del cierre y sobre el cotejo del AMPLÍA 1973-1974 (`6814683`). Ninguna corrección silenciosa en lo mirado. El «233» de la resolución policial (hallazgo 5) no se miró: la 9183 no se pidió, y vale la lectura del informe a 400 ppp y su límite L3.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | 00:45 | «o que la comparación de imágenes daba por casi iguales a otra miradas en plancha»: sin la coma, «miradas» se lee como si concordara con «otra» | 12 | «casi iguales a otra, miradas en plancha» |
+| 2 | A:473, F:85 | «da por faltantes 158 páginas en 110 ediciones, las dieciséis de la 9333 entre ellas»: en el mismo pasaje el libro dice que el archivo de la 9333 «trae doce de sus dieciséis páginas y la mitad de otra» (A:473) y que la lectura «rescató de él, como imágenes, la tapa, once páginas más y la mitad de otra» (F:85) | 7 | «entre ellas las dieciséis de la 9333, que cuentan como faltantes porque su archivo no abre, aunque se rescataran en parte como imágenes» (informe §1 y E.2) |
+| 3 | 00:45 | «Tampoco 2002 ni 2005, leídos al cierre del mismo modo»: sigue a las oraciones de 1972 y 1973, cerrados sobre la imagen, y se lee como si 2002 y 2005 también lo estuvieran; la remisión es a los años con pendientes de dos oraciones antes (la causa 5 del flujo §6.6; viene del AMPLÍA 1972, `362a8f3`, y el de 1973 la agrava) | 5 | «leídos al cierre como 1964 a 1971 y 1974 a 1988» |
+| 4 | 18:470 (fuera de las 29) | La cadena «En 1969, también con pendientes [...] En 1970, también con pendientes [...] En 1973, el año de esa convocatoria [...] En 1975, también con pendientes»: 1973 queda leído como un año con pendientes más; el script no la marca porque la línea no está en el diff | 5 | «En 1973, el año de esa convocatoria ---leído después entero sobre la imagen---»; «En 1975, leído con pendientes» |
+| 5 | C:157 (fuera de las 29) | «el VISTO da a la resolución el número 233»: el informe lo lee 3 a 400 ppp pero dice que ningún control lo decide (A02, E.8 y límite L3); el libro lo da por decidido. Viene del AMPLÍA 1973-1974 (`6814683`) | 5 | «un número que se lee 233, con un último dígito que el escaneo no permite distinguir de un 8»; D:177 suma el pedido de un escaneo mejor de la 9183, h. 10 |
+| 6 | 22-infraestructura:545, A:475 | «y manda hacer la obra por administración» (1563): el art. 1 «autorízase» a la Administración a ejecutar los trabajos por vía administrativa; el verbo se endurece (causa 1 del flujo §6.6), el mismo defecto que el hallazgo 3 de la ronda 119 encontró en el 6435. Viene del AMPLÍA 1973-1974 (`6814683`) | 5 | «y autoriza a la Administración a hacer la obra por vía administrativa»; en A:475, «a hacerla por vía administrativa» |
+
+Resta: en el aspecto 5, sobre la base de 95, cuatro frases que dicen otra cosa que la lectura o que el acto (hallazgos 3, 4, 5 y 6), 5 cada una, **75**; en el aspecto 7, un error de consistencia en 61,3 páginas (1,6 cada 100: escalón de 70) que contradice material a menos de diez páginas ---en la misma fila y en el mismo párrafo---, un escalón más, **50**; en el aspecto 12, una observación menor de redacción (hallazgo 1), **90** por la escala general.
+
+**Errores introducidos por la propia auditoría**: dos de los seis están en material que el AMPLÍA 1973 de esta sesión escribió (1 y 2); el 3 lo escribió el AMPLÍA 1972 (`362a8f3`) y este AMPLÍA lo agravó al agregar 1973 en la oración anterior; el 4 está en una línea que ningún AMPLÍA reciente tocó, y el 5 y el 6 vienen del AMPLÍA 1973-1974 (`6814683`), el 6 en dos líneas que este AMPLÍA tocó. **`control_amplia.py` no marcó ninguno por su defecto**: el 1 y el 2 no son citas ni cifras que el script coteje (158, 110 y 9333 están en el informe), el 3 y el 4 son remisiones que no siguen inmediatamente a un cambio de nivel en la misma línea (el 4 está fuera del diff), y el 5 y el 6 son texto anterior al diff. **Atrapados por el control antes de compilar el AMPLÍA: uno**, la remisión «En 1975, leído del mismo modo» de 17:281, que el script marcó por ARRASTRE y la sesión cambió por «leído con pendientes como 1974»; y una fecha que la sesión encontró por el repaso de ventana, sin script, antes de compilar: la fila del Decreto 1.410/73 llevaba con asterisco la fecha de su publicación (24 de octubre) y pasó a la del acto (28 de septiembre), mirada en la imagen (9371 h12).
+
+**Descartados (falsos positivos, 5).** (a) 06:56, «Y en lo hallado de 1975 y de 1976, también leídos con pendientes»: la oración anterior sobre 1973 y 1974 no declara modo, y el «también» remite a los años con pendientes del principio del párrafo; lo que la frase afirma de 1975 y 1976 es cierto. (b) 15:185, «En 1975, también con pendientes»: la frase anterior dice ahora que 1974 sigue con pendientes. (c) 26:236, la misma. (d) 17:281, «En 1976, también con pendientes»: remite a 1975, leído con pendientes. (e) 18:470, «En 1976, también con pendientes», marcado por ARRASTRE en la corrida sobre la fase 6: remite a 1975, que la fase 6 deja «leído con pendientes». Además, la marca CITA SOLO-INFORME de C:157 («por intermedio del Municipio de La Caldera») es texto anterior que el AMPLÍA 1973-1974 cotejó en la imagen (9183 h10).
+
+**Insumos de `auto/insumos-mejora/`**: ninguno nuevo (la carpeta sólo tiene `usados/`).
+
+**Pendientes revisados.** P339 (láminas de 1973, abierto por el AMPLÍA): sin cambios en las láminas. P131: lo de 1973 queda reemplazado por P339. P134 y P136: las partes de 1973 las aplicó el cierre; siguen abiertas las de 1974. P265: la 9333 sigue pedida en D:177. P115: el cierre confirma que ningún acto del año da los datos técnicos del embalse; sigue abierto. P54: ningún acto de 1973 nombra hospital ni estación sanitaria (04:5017 sin cambio); sigue abierto. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333, sin revisar.
+
+**Pendientes nuevos.** P340 (lee, 1973): corregir el informe LEE 1973 (cierre del 15/10), ficha A17, TEXTO del segundo llamado: la elipsis une la extensión a vicedirectores («37 (treinta y siete) cargos vacantes de Vice-director») con «Juana Moro de López - La Caldera. / Bernabé Aráoz - Vaqueros», que en el aviso están bajo «TERCERA CATEGORIA» de la lista de directores, antes de «PARA VICEDIRECTORA:» (9344 h17-h18); la nota CIERRE de la ficha ya lo dice, el TEXTO no.
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`197f566`) contra el de la sesión | 4 archivos tocados por suma MD5 (LF) y el resto por `git am` del parche del AMPLÍA sobre `c10e595` | Idénticos |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `c10e595` | 26.138 vigentes de 26.167; 29 caducas y 29 modificadas, ninguna agregada |
+| `control_amplia.py` (cuatro corridas del AMPLÍA, sobre `c10e595..197f566`) | 29 líneas | 406, 413, 414 y 414 marcas; ninguna de las frases de los hallazgos marcada por su defecto |
+| `control_amplia.py` sobre la fase 6 (`197f566..` fase 6) | 8 líneas | 150 marcas, ninguna de FECHA; la ARRASTRE (18:470, 1976) es el falso positivo e; las CITA son de otros años o anteriores y cotejadas |
+| Fórmulas de remisión después de una mención de 1973 en la misma línea | 26.167 líneas de `cap/` y `ape/` | 18, leídas: una remite mal (hallazgo 4), las demás no (falsos positivos a a d); el hallazgo 3 lo dio la lectura, porque el script se detiene en el «del mismo modo» de la propia oración de 1973 |
+| Citas «Nº 9xxx, h. N» de ediciones de 1973 contra las FUENTE del informe | 85 citas en el manuscrito | 85 coinciden en edición y hoja |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 51 verificados + 61 fuera = 112 |
+| D:177, hojas «a ojos» | 15 años (1964 a 1971 y 1974 a 1980) | 15 cifras, de 69 a 577, las mismas que da 00:45 |
+| Compilación | AMPLÍA (`197f566`) y fase 6, en clones limpios | Compilan con `latexmk -pdf`; 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `c10e595` más el parche del AMPLÍA | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios; el Decreto 1.410/73 sigue dicho como derogado en 2019 |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | La fila del 1.410/73 ya llega con la fecha del acto y la de la publicación dicha como tal |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Cinco citas y cuatro actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 75 | 95 | Hallazgos 3, 4, 5 y 6, aplicados; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 2 (un error en 61,3 páginas, con material a menos de diez páginas), aplicado; recuentos de láminas, tramos y hojas «a ojos» cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 suma un pedido (la 9183, h. 10) y deja de pedir las 344 hojas de 1973, ya miradas; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 90 | 100 | Hallazgo 1, aplicado; sin remisiones nuevas sin marcar |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Lo cambiado de 1973 no nombra a nadie que el libro no nombrara; ningún atributo sensible |
+
+**Nota inicial: 80,6 antes del tope y 80,6 después** (cobertura acumulada inicial del 100,0 % sobre `197f566` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P339, P337, P335, P334, P332, P325, P327, P330 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948, 1958 a 1963, 1972 y 1973 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** seis hallazgos, los seis resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año más leído sobre la imagen (1973) sin el acto que la refutaría: la red de agua del pueblo la actualiza la Provincia y la autoriza a hacer la Administración General de Aguas por vía administrativa, la comisión municipal la sigue designando la Provincia y ningún acto de agua del año pasa por el municipio; la cuarta gana un dato de la serie de cierres: de la obra por administración de 1973 no se publica ningún acto que diga que se hizo.
+
+**Calidad de la auditoría.** Cobertura de la ronda: 29 líneas (0,11 %; 61,3 páginas), más las 2 que cambia la fase 6 fuera de ellas (18:470 y C:157), leídas enteras después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 5. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1973 de A:473 cuyas hojas no se pidieron (municipio, justicia, policía, salud, hogar, hacienda, agro, Vaqueros, dominio y gauchos) se juzgaron sobre las fichas del informe, que los miró en la imagen, y el «233» de C:157, sobre la lectura del informe; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 6, dos en material del AMPLÍA 1973 de esta sesión, uno del AMPLÍA 1972 agravado por éste, uno en una línea que ningún AMPLÍA reciente tocó y dos del AMPLÍA 1973-1974; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (ARRASTRE en 17:281).

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-15T22:03:43",
+ "actualizado": "2026-10-15T22:18:47",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17721,6 +17721,68 @@
     }
    ],
    "atrapados": 1
+  },
+  {
+   "ronda": 120,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "base": "197f566",
+   "base_completa": "197f56673106006884437d017bd6bab3b1de9783",
+   "nota_inicial": 80.6,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 80.6,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda": {
+    "lineas": 29,
+    "bytes": 203052,
+    "paginas": 61.3
+   },
+   "fecha": "2026-10-15",
+   "hallazgos": 6,
+   "aplicados": 6,
+   "material_auditado": "AMPLIA 1973 (197f566 sobre c10e595), 29 lineas enteras, mas 18:470 y C:157 leidas enteras despues de la fase 6",
+   "hallazgos_detalle": [
+    "00:45 'casi iguales a otra miradas en plancha' (sin coma) -> 'a otra, miradas en plancha' (aspecto 12)",
+    "A:473 y F:85 'las dieciseis de la 9333 entre ellas' [faltantes] contra 'trae doce de sus dieciseis paginas y la mitad de otra' en el mismo pasaje -> 'que cuentan como faltantes porque su archivo no abre, aunque se rescataran en parte como imagenes' (7)",
+    "00:45 'Tampoco 2002 ni 2005, leidos al cierre del mismo modo' despues de las oraciones de 1972 y 1973 cerrados sobre la imagen -> 'como 1964 a 1971 y 1974 a 1988' (5; viene de 362a8f3)",
+    "18:470 'En 1975, tambien con pendientes' despues de 'En 1973' sin modo (arrastre fuera del diff) -> 1973 'leido despues entero sobre la imagen'; 1975 'leido con pendientes' (5)",
+    "C:157 'el VISTO da a la resolucion el numero 233' (el informe: ultimo digito sin decidir, L3) -> 'un numero que se lee 233, con un ultimo digito que el escaneo no permite distinguir de un 8'; D:177 pide un escaneo mejor de 9183 h10 (5; viene de 6814683)",
+    "22-infraestructura:545 y A:475 'manda hacer la obra por administracion' (1563) -> el art. 1 'autorizase' a la AGAS a ejecutar los trabajos por via administrativa (5; imagen 9380 h6; viene de 6814683)"
+   ],
+   "errores_introducidos_por_la_auditoria": {
+    "total": 6,
+    "del_amplia_1973_de_esta_sesion": 2,
+    "del_amplia_1972_agravado": 1,
+    "en_lineas_no_tocadas_por_amplia_reciente": 1,
+    "del_amplia_1973_1974": 2,
+    "marcados_por_control_amplia": 0,
+    "atrapados_antes_de_compilar": 1,
+    "nota": "Atrapado por script: ARRASTRE en 17:281 ('En 1975, leido del mismo modo' -> 'leido con pendientes como 1974'). Ademas, sin script, por el repaso de ventana, antes de compilar el AMPLIA: A:477, la fila del Decreto 1.410/73 con la fecha de publicacion y asterisco -> 28 sep. 1973 (imagen 9371 h12)."
+   },
+   "falsos_positivos": 5,
+   "compilacion": {
+    "paginas": 1115,
+    "refs_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "git_am": "OK sobre un repositorio limpio con el arbol de LIBRO en c10e595 (copia de Windows pasada a LF) mas amplia-1973.patch (= 197f566, suma MD5 de los archivos tocados igual a la de LIBRO); arbol resultante identico al de la sesion",
+   "insumos_usados": [],
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P340",
+     "tipo": "lee",
+     "anios": [
+      1973
+     ],
+     "texto": "Corregir el informe LEE 1973 (cierre del 15/10), ficha A17, TEXTO del segundo llamado: la elipsis une la extension a vicedirectores ('37 (treinta y siete) cargos vacantes de Vice-director') con 'Juana Moro de Lopez - La Caldera. / Bernabe Araoz - Vaqueros', que en el aviso estan bajo 'TERCERA CATEGORIA' de la lista de directores, antes de 'PARA VICEDIRECTORA:' (9344 h17-h18, imagen 200 ppp); la nota CIERRE de la ficha ya lo dice, el TEXTO no.",
+     "abierto": "2026-10-15",
+     "hecho": null
+    }
+   ],
+   "atrapados": 1
   }
  ],
  "pendientes": [
@@ -21873,9 +21935,19 @@
    "texto": "Laminas tras el AMPLIA 1973 (con P131, que pedia marcar 1973 como leido con pendientes): en fig:boletin marcar 1973 como leido entero sobre la imagen (235 ediciones, 9181-9415, ninguna ausente; la 9333 truncada, con doce paginas y media rescatadas como imagen; 158 paginas faltantes en 110 ediciones), contiguo a 1972 y entre 1964-1971 y 1974-1980; en fig:aguaserie, si se extiende a 1973 (P131), dibujar su barra (un decreto, 262, y dos edictos, 14339 y 16384, ninguno con el municipio) como recuento cerrado.",
    "abierto": "2026-10-15",
    "hecho": null
+  },
+  {
+   "id": "P340",
+   "tipo": "lee",
+   "anios": [
+    1973
+   ],
+   "texto": "Corregir el informe LEE 1973 (cierre del 15/10), ficha A17, TEXTO del segundo llamado: la elipsis une la extension a vicedirectores ('37 (treinta y siete) cargos vacantes de Vice-director') con 'Juana Moro de Lopez - La Caldera. / Bernabe Araoz - Vaqueros', que en el aviso estan bajo 'TERCERA CATEGORIA' de la lista de directores, antes de 'PARA VICEDIRECTORA:' (9344 h17-h18, imagen 200 ppp); la nota CIERRE de la ficha ya lo dice, el TEXTO no.",
+   "abierto": "2026-10-15",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }
