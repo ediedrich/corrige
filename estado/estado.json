@@ -1,6 +1,6 @@
 {
  "version": 1,
- "actualizado": "2026-10-16T00:13:56",
+ "actualizado": "2026-10-16T00:33:52",
  "nota": "Sembrado a mano el 26/09/2026 con lo que se sabia. 'caldera.py estado' recalcula los bloques release e informes LEE desde GitHub y la carpeta local; lo demas lo escriben 'descargar' y 'registrar'.",
  "anios": {
   "1908": {
@@ -17783,6 +17783,64 @@
     }
    ],
    "atrapados": 1
+  },
+  {
+   "ronda": 121,
+   "tipo": "auditoria con fase 6",
+   "rubrica": "3.6",
+   "base": "27133b2",
+   "base_completa": "27133b238eacd5e42ba62246057842a5ccaf8dd5",
+   "nota_inicial": 82.6,
+   "nota_final": 87.7,
+   "nota_inicial_sin_tope": 82.6,
+   "nota_final_sin_tope": 87.7,
+   "tope": null,
+   "cobertura": 100.0,
+   "cobertura_ronda": {
+    "lineas": 29,
+    "bytes": 201339,
+    "paginas": 60.8
+   },
+   "fecha": "2026-10-16",
+   "hallazgos": 2,
+   "aplicados": 2,
+   "material_auditado": "AMPLIA 1974 (27133b2 sobre a8c80ca), 29 lineas enteras, mas 01:139 leida entera despues de la fase 6",
+   "hallazgos_detalle": [
+    "A:482 'los indices suman 99,9950, porque dos filas ... no cierran': las tres columnas dan 100,0060; las dos filas explican la distancia a 100,0060, no a 100 -> 'que es lo que dan las tres columnas juntas, 100,0060, menos lo que no cierran dos filas' (aspecto 7)",
+    "06:56 'Y en lo hallado de 1975 y de 1976, tambien leidos con pendientes' despues de 1973 y 1974, ahora cerrados sobre la imagen -> 'leidos con pendientes' (aspecto 5; causa 5 del flujo §6.6)"
+   ],
+   "errores_introducidos_por_la_auditoria": {
+    "total": 2,
+    "del_amplia_1974_de_esta_sesion": 2,
+    "marcados_por_control_amplia": 0,
+    "atrapados_antes_de_compilar": 0,
+    "nota": "El 1 lo escribio el AMPLIA 1974 (A:482); el 2 esta en una linea que el AMPLIA toco por la cita de la 4597 (06:56) sin corregir el arrastre. La herencia del informe LEE (sumas de la planilla de la Ley 4860: 20/27,106/32,9/79,995 por 30/37,106/32,9/99,995) la encontro la sesion al rehacer el recuento sobre la imagen, no un script."
+   },
+   "falsos_positivos": 3,
+   "compilacion": {
+    "paginas": 1115,
+    "refs_indefinidas": 0,
+    "laminas_lof": 45
+   },
+   "git_am": "OK sobre un repositorio limpio con el arbol de LIBRO en a8c80ca (copia de Windows pasada a LF, modos 100644) mas amplia-1974.patch (= arbol de 27133b2, comparado con diff -r contra la copia de Windows); arbol resultante identico al de la sesion",
+   "insumos_usados": [
+    "2026-10-16_convenio-osn-y-coparticipacion-1974.md"
+   ],
+   "insumos_nota": "§1 (Ley 4834) aplicado tras cotejo en la imagen (9518 h5-h7): art. 14 en 01:139 (medida de caudal de la cuarta tesis, con el contraste de los 20 l/s de 1970) y arts. 13 y 14 en 22-infraestructura:545; no se escribio la primacia ('primera clausula hallada') porque el universo no se recorrio. Las citas h. 5 a 7 y la fecha de la firma ya las habia puesto el AMPLIA 1974. §2 (escala de la planilla de la Ley 4860) corregido por el control: la planilla suma 99,995 sobre la imagen (escala 100), no 79,995 como dice el informe LEE; ninguna frase del libro compara el indice de 1974 con los de 1947-1948; la verificacion de la planilla de 1976 queda en P343.",
+   "pendientes_cerrados": [],
+   "pendientes_nuevos": [
+    {
+     "id": "P343",
+     "tipo": "libro",
+     "anios": [
+      1976
+     ],
+     "texto": "Verificar sobre la imagen la escala de la planilla de la Ley 5082 (B.O. 10127, h. 5 a 7): suma de sus columnas y de sus indices, antes de que 07:249, 15:185 y A:489 la sigan comparando con la de la Ley 4860 de 1974, que suma 30,0000 / 37,1060 / 32,9000 e indices 99,9950 (ronda 121; insumo del 16/10, §2).",
+     "abierto": "2026-10-16",
+     "hecho": null
+    }
+   ],
+   "atrapados": 0
   }
  ],
  "pendientes": [
@@ -21965,9 +22023,19 @@
    "texto": "Corregir el informe LEE 1974 (cierre del 15/10), ficha A13 y E.8: las columnas de la planilla de la Ley 4860 (9560 h6) suman 30,0000, 37,1060 y 32,9000, y los indices 99,9950 (100,0060 menos 0,0050 y 0,0060 de San Antonio de los Cobres y Molinos), no 20,0000, 27,1060, 32,9000 y 79,9950; recalculado sobre la imagen a 300 ppp con control por fila (AMPLIA 1974). Y B.2.4: la sancion, la promulgacion y la firma del convenio estan en h7 (ya lo dice); agregar que el art. 14 (caudal) tambien esta en h7.",
    "abierto": "2026-10-16",
    "hecho": null
+  },
+  {
+   "id": "P343",
+   "tipo": "libro",
+   "anios": [
+    1976
+   ],
+   "texto": "Verificar sobre la imagen la escala de la planilla de la Ley 5082 (B.O. 10127, h. 5 a 7): suma de sus columnas y de sus indices, antes de que 07:249, 15:185 y A:489 la sigan comparando con la de la Ley 4860 de 1974, que suma 30,0000 / 37,1060 / 32,9000 e indices 99,9950 (ronda 121; insumo del 16/10, §2).",
+   "abierto": "2026-10-16",
+   "hecho": null
   }
  ],
  "control": {
-  "mejora_pendiente": true
+  "mejora_pendiente": false
  }
 }

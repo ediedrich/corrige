@@ -8788,3 +8788,119 @@ Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de t
 **Avance del libro:** seis hallazgos, los seis resueltos; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año más leído sobre la imagen (1973) sin el acto que la refutaría: la red de agua del pueblo la actualiza la Provincia y la autoriza a hacer la Administración General de Aguas por vía administrativa, la comisión municipal la sigue designando la Provincia y ningún acto de agua del año pasa por el municipio; la cuarta gana un dato de la serie de cierres: de la obra por administración de 1973 no se publica ningún acto que diga que se hizo.
 
 **Calidad de la auditoría.** Cobertura de la ronda: 29 líneas (0,11 %; 61,3 páginas), más las 2 que cambia la fase 6 fuera de ellas (18:470 y C:157), leídas enteras después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 5. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1973 de A:473 cuyas hojas no se pidieron (municipio, justicia, policía, salud, hogar, hacienda, agro, Vaqueros, dominio y gauchos) se juzgaron sobre las fichas del informe, que los miró en la imagen, y el «233» de C:157, sobre la lectura del informe; la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 6, dos en material del AMPLÍA 1973 de esta sesión, uno del AMPLÍA 1972 agravado por éste, uno en una línea que ningún AMPLÍA reciente tocó y dos del AMPLÍA 1973-1974; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 1 (ARRASTRE en 17:281).
+
+## Ronda 121 — auditoría con fase 6 (16/10/2026)
+
+Tipo: **auditoría con fase 6** (CORRIGE 3.6), por la palabra clave `MEJORA` (flujo v5 §7), sobre el material del AMPLÍA 1974. Base: commit `27133b2` de `ediedrich/dispositivo-caldereno` (AMPLÍA 1974, sobre `a8c80ca`, aplicado por `3-registrar` el 16/10 a las 00:14; el push falló porque la máquina no resolvía `github.com`, y el commit quedó local), con la fase 6 en `ronda-121.patch` (un commit sobre `27133b2`). **La sesión que hace esta ronda es la misma que escribió el AMPLÍA 1974** (la abrió la tarea programada y siguió con el paso que la máquina pidió al registrar); no escribió el informe LEE 1974 del cierre. Por eso la auditoría no se apoyó en lo que el AMPLÍA declaraba haber mirado: volvió a leer las 29 líneas enteras, buscó la causa 5 del flujo §6.6 (la frase que sigue a un año que cambia de nivel y remite a él) en todo el manuscrito y cotejó en la imagen los actos de 1974 cuyas cifras y citas las líneas usan. Los repositorios son privados: `corrige` se leyó del clon local de la máquina de Eduardo (`75d331a`), y el libro se armó en la nube con los 118 archivos versionados de la copia de Windows (`main.pdf` aparte), pasados a LF; el árbol de `27133b2` resultó idéntico al de la sesión (todos los archivos comparados con `diff -r` contra el árbol que dejó el `git am` del parche del AMPLÍA sobre `a8c80ca`). Del Release `1974` de `boletines-salta` se pidieron por el espejo de la máquina `lee_textos_1974.zip` y los PDF 9420, 9421, 9426, 9456, 9477, 9518, 9555, 9560, 9613 y 9646; el informe LEE 1974 es el del cierre del 15/10/2026.
+
+### Traslado y caducidad de los tramos anteriores
+
+Los tramos vigentes al cierre de la ronda 120 (26.167 de 26.167, sobre `197f566` y su fase 6, que es `a8c80ca`) se trasladaron por diff a `27133b2`. **El AMPLÍA caduca 29 líneas, las 29 modificadas, y no agrega ni quita ninguna** (diff con `-U0`, 27 bloques); el total sigue en 26.167 líneas. Vigentes después del traslado: 26.138 de 26.167.
+
+### Lectura sobre el texto (numeración de `27133b2`)
+
+Se leyeron **las 29 líneas, enteras** (201.339 bytes; también enteras las largas: 00:45, 01:157, 02:28, 02:99, 06:56, 09:536, 10:340, 15:185, 17:281, 22-infraestructura:545, 26:236, A:480 a A:482, D:177, D:192, D:263 y F:26 a F:134), contra el informe LEE 1974 del 15/10/2026 y, en las cifras, fechas y citas de 1974, contra el acto.
+
+| Archivo | Líneas modificadas |
+|---|---|
+| ape/A-cronologia.tex | 4 (476, 480, 481, 482) |
+| ape/C-normativa.tex | 2 (159, 166) |
+| ape/D-pedidos.tex | 3 (177, 192, 263) |
+| ape/F-fuentes.tex | 5 (26, 85, 87, 103, 134) |
+| cap/00-advertencia.tex | 1 (45) |
+| cap/01-planteo.tex | 1 (157) |
+| cap/02-metodo.tex | 2 (28, 99) |
+| cap/04-siglo.tex | 1 (4070) |
+| cap/06-pdua.tex | 1 (56) |
+| cap/08-vaqueros.tex | 1 (22) |
+| cap/09-defensas.tex | 1 (536) |
+| cap/10-expropiacion.tex | 1 (340) |
+| cap/15-hacienda.tex | 1 (185) |
+| cap/16-redes.tex | 1 (793) |
+| cap/17-aguabaja.tex | 1 (281) |
+| cap/20-opacidad.tex | 1 (883) |
+| cap/22-infraestructura.tex | 1 (545) |
+| cap/26-presencia.tex | 1 (236) |
+
+Contexto releído entero (no suma cobertura): en todo el manuscrito, cada fórmula de remisión («también», «del mismo modo», «de la misma manera», «leídos igual», «con la misma reserva», «como 19xx», «como él», «ese año», «esos años», «ellos») en los 700 caracteres que siguen a una mención de 1974 en la misma línea (barrido por script y leídas una por una: quince); las frases del libro que dan los índices de coparticipación de 1947, 1948, 1974 y 1976 (01:165, 04:4330 a 4424, 07:249, 15:42 y 15:185, A:313, A:321, A:482, A:489, C:167 y C:169); la cuarta tesis entera (01:123 a 01:159); del informe LEE 1974, el §0, A01 a A23, B.2, §C, §P, E.1 a E.10 y §R.
+
+**Esta ronda: 29 líneas**, 201.339 bytes sobre 3.693.113, que en las 1.115 páginas de la base equivalen a **60,8 páginas**.
+
+Acumulado: 26.138 vigentes + 29 = **26.167 de 26.167 (100,0 %)**. La fase 6 cambia 4 líneas que estaban vigentes (01:139, 06:56, 22-infraestructura:545 y A:482), sin agregar renglones; tres son de las 29 de esta ronda y una (01:139) no, y las cuatro se leyeron enteras después del cambio: **26.167 de 26.167 (100,0 %)** después de la fase 6.
+
+### Cotejo sobre el acto
+
+| Edición | Hoja | Qué se cotejó | Resultado |
+|---|---|---|---|
+| 9518 | 5 a 7 | Ley 4834: art. 1 del convenio («destinadas a reforzar la provisión de agua potable a la Ciudad de Salta y al eventual suministro a las demás poblaciones comprendidas en el recorrido del acueducto», h5-h6); art. 2 (proyecto de O.S.N., «sometiéndose a conformidad de "LA PROVINCIA"», h6); art. 13 («se prestará eventualmente el servicio de provisión de aguas a las localidades en ruta del acueducto» y, desde la habilitación, O.S.N. «se hará cargo de los servicios de provisión de aguas que actualmente presta la ADMINISTRACION GENERAL DE AGUAS DE SALTA en la Ciudad Capital», h6-h7); art. 14 («asegurará un caudal permanente de agua proveniente del EMBALSE CAMPO ALEGRE que será igual al máximo que pueda conducir el acueducto incrementado con las pérdidas derivadas del proceso de tratamiento», h7); firma «en la ciudad de Buenos Aires a los 26 días del mes de octubre del año mil novecientos setenta y tres», sanción «a los veinti-/trés días del mes de mayo» de 1974 y promulgación del 29 de mayo (h7) (imagen, 300 ppp) | Coincide con A:481, C:166, D:192 y 22-infraestructura:545 tal como los dejó el AMPLÍA; los arts. 13 y 14 entran por la fase 6 (insumo) |
+| 9456 | 17 y 18 | Ley 4597 entera en h17 (p. 777: arts. 1 a 6, firmas Spangenberg y Sosa, principio de la 4598); h18 (p. 778) es la 4598 (imagen, 300 ppp) | Coincide con A:476, C:159, 06:56 y 08:22 («h. 17») |
+| 9560 | 6 | Planilla de la Ley 4860: las 55 filas, por OCR en español sobre la imagen a 300 ppp y control de cada fila (cuatro índices de columna); cierran 51 por OCR, El Carril se completó a mano y las cuatro restantes se miraron recortadas: San Antonio de los Cobres (0,1832 + 0,0927 + 0,3533 = 0,6292, impreso 0,6242) y Molinos (0,7219, impreso 0,7159) no cierran en el original; Rivadavia Banda Sud (0,4442) y Payogasta (0,7422) cierran y el OCR los leía mal. Sumas: población 30,0000; gastos corrientes 37,1060; gastos corrientes por población 32,9000; índices 99,9950 | Coincide con las cifras de A:482 y D:263; **hallazgo 1** en la explicación de A:482; el informe LEE da 20,0000, 27,1060, 32,9000 y 79,9950 (abajo) |
+
+Tres actos mirados en la imagen, en seis hojas de tres ediciones. Citas de 1974 de las líneas leídas cotejadas en la imagen: seis (el art. 1, el art. 14, «eventualmente», la fecha y el lugar de la firma, «a los veinti-/trés días», «Salta, 18 de mayo de 1973» de la 4597); las demás citas de 1974 de A:480 y A:481 y de los capítulos son anteriores a este AMPLÍA y se juzgaron sobre el informe del cierre y sobre el cotejo del AMPLÍA 1973-1974 (`6814683`). Ninguna corrección silenciosa en lo mirado.
+
+### Hallazgos y fase 6
+
+| # | Línea | Qué decía | Aspecto | Cómo queda |
+|---|---|---|---|---|
+| 1 | A:482 | «los índices suman 99,9950, porque dos filas, San Antonio de los Cobres y Molinos, no cierran»: las tres columnas juntas dan 100,0060, de modo que lo que no cierran las dos filas (0,0050 y 0,0060) explica la distancia a 100,0060 y no la distancia a 100, que es lo que la frase deja entender | 7 | «los índices suman 99,9950, que es lo que dan las tres columnas juntas, 100,0060, menos lo que no cierran dos filas, San Antonio de los Cobres y Molinos» |
+| 2 | 06:56 | «Tampoco en lo hallado de 1973 y 1974 [...]. Y en lo hallado de 1975 y de 1976, también leídos con pendientes»: el párrafo no declara antes ningún año con pendientes, y los dos años que preceden a la frase quedan ahora cerrados sobre la imagen; el «también» los arrastra (causa 5 del flujo §6.6; la ronda 120 lo había descartado como falso positivo a cuando 1974 seguía con pendientes, y el AMPLÍA 1974 tocó la línea sin verlo) | 5 | «Y en lo hallado de 1975 y de 1976, leídos con pendientes, ningún acto nombra el embalse» |
+
+**Insumo de `auto/insumos-mejora/`: `2026-10-16_convenio-osn-y-coparticipacion-1974.md`** (pedido de Eduardo del 15/10, fuente: cierre LEE 1974, B.2.4 y A13). Se trató como pendiente ya conocido (flujo §7.3) y se cotejó en la imagen antes de escribir:
+
+- **§1, convenio con O.S.N. (Ley 4834): aplicado.** La cita «h. 5 a 7» ya la había corregido el AMPLÍA 1974 donde se cita la ley entera (A:481, D:192, 22-infraestructura:545); 10-expropiacion:381 y :521 y 17:281 citan el art. 1 o el art. 2, que están en h5-h6, y quedan con «h. 5 y 6». La fecha y el lugar de la firma ya los había puesto el AMPLÍA (A:481, C:166). La fase 6 agrega el art. 14 en la cuarta tesis (01:139, la medida de caudal: «y no siempre se dan en litros», con la cita del artículo y el contraste con los veinte litros por segundo que la Provincia le otorgó a la misma empresa en 1970, 22, Nº 8628) y los arts. 13 y 14 en 22-infraestructura:545 (el caudal, el traspaso a O.S.N. de los servicios que la Administración General de Aguas presta en la capital y el servicio «eventualmente» a las localidades del recorrido). **No se escribió** que el art. 14 sea «la primera cláusula hallada» que fija el caudal en función de la obra: el universo «1908-1974» no se recorrió para comprobarlo, y el libro dice el contraste con el acto de 1970, que sí está en él. El contraste de 10-expropiacion entre los \$2.129,40 de la tierra y los \$18.851.203,40 de la obra no se juntó en una frase.
+- **§2, escala de la planilla de la Ley 4860: corregida por el control.** El insumo toma del informe LEE las sumas 20,0000, 27,1060, 32,9000 y 79,9950 y concluye que los índices están sobre unos 80 y no sobre 100. La planilla, sumada de nuevo sobre la imagen con control por fila (cotejo de arriba), da 30,0000, 37,1060, 32,9000 y 99,9950: está en escala de 100, el 0,6548 de La Caldera es el 0,65 por ciento, y el informe restó 10 a las dos primeras columnas y 20 al total. Ninguna frase del libro pone en serie el índice de 1974 con el 0,127 por ciento de 1947 o el 0,7686 de 1948 (01:165 sólo nombra el de 1947; 04:4415 y 04:4424 comparan 1947 y 1948; 07:249 y A:489 comparan 1974 con 1976 y 1978, que son la misma fórmula), y con la escala de 100 la comparación sería, además, legítima. Lo que el insumo sí deja es la observación de que las dos columnas de gasto no suman 35 y 35: la puso el AMPLÍA 1974 (A:482, D:263). La escala de la planilla de 1976 (Ley 5082, Nº 10127) no se verificó: queda en P343.
+
+Resta: en el aspecto 5, sobre la base de 95, una frase que dice otra cosa que la lectura (hallazgo 2), **90**; en el aspecto 7, un error de consistencia en 60,8 páginas (1,6 cada 100: escalón de 70) que contradice material de la misma fila, un escalón más, **50**.
+
+**Errores introducidos por la propia auditoría**: los dos están en material que tocó el AMPLÍA 1974 de esta sesión: el 1 lo escribió (A:482), y el 2 estaba en una línea que el AMPLÍA tocó por la cita de la 4597 y no corrigió al cambiar de nivel a 1974. **`control_amplia.py` no marcó ninguno por su defecto**: el 1 es una explicación de cifras que el script sólo marca como CIFRA propia (37,1060 y 99,9950), y en el 2 el «también» está a más de una oración de la mención de 1974. **Atrapados por el control antes de compilar el AMPLÍA: ninguno**; la herencia del informe (las sumas de la planilla) la encontró la sesión al rehacer el recuento, no un script.
+
+**Descartados (falsos positivos, 3).** (a) 26:236, «En 1976, leído del mismo modo», marcado por ARRASTRE en el AMPLÍA: remite a 1975, leído con pendientes. (b) 15:185, «En 1976, también con pendientes»: la misma. (c) 02:28, «\textbf{1974} completo, [...] también, salvo 96 páginas»: el «también» remite a 1972 y 1973, cerrados del mismo modo, como en la oración de 1973 que lo precede.
+
+**Pendientes revisados.** P131: lo de 1974 queda reemplazado por P341 (abierto por el AMPLÍA). P134 y P136: las partes de 1974 las aplicó el cierre; la fase 6 no agrega nada. P133: siguen pedidas la licitación de cauces, la Ordenanza 3/1974 de Vaqueros y las 96 páginas. P115: el art. 14 del convenio da el caudal en función del acueducto, no la capacidad, la cota ni el espejo del embalse; sigue abierto. P316 (cuarta tesis medida): gana el dato del art. 14 en la medida de caudal, sin cambiar de estado. P342 (abierto por el AMPLÍA): el informe LEE 1974 sigue con las sumas de A13 y E.8 sin corregir. P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333, sin revisar.
+
+**Pendientes nuevos.** P343 (libro, 1976): verificar sobre la imagen la escala de la planilla de la Ley 5082 (Nº 10127, h. 5 a 7) ---suma de sus columnas y de sus índices--- antes de que 07:249, 15:185 y A:489 la sigan comparando con la de 1974 (insumo del 16/10, §2).
+
+### Controles por script (no cuentan como lectura)
+
+| Control | Denominador | Resultado |
+|---|---|---|
+| Árbol de la copia de Windows (`27133b2`) contra el de la sesión | 118 archivos versionados, con `diff -r` (LF) | Idénticos salvo `main.pdf`, que no se compara |
+| Traslado de tramos anteriores por diff | 26.167/26.167 vigentes en `a8c80ca` | 26.138 vigentes de 26.167; 29 caducas y 29 modificadas, ninguna agregada |
+| `control_amplia.py` (dos corridas del AMPLÍA, sobre `a8c80ca..27133b2`) | 29 líneas | 584 y 584 marcas; ninguna de las frases de los hallazgos marcada por su defecto |
+| `control_amplia.py` sobre la fase 6 (`27133b2..` fase 6) | 4 líneas | 27 marcas: CITA 01:139 (mirada en la imagen, 9518 h7: está tal cual) y 22:545 («a la Dirección de Aguas», 1973, texto previo); CIFRA 37,1060, 99,9950 y 100,0060 (cálculo propio sobre la imagen, dicho como tal) y 8628, 15589 y 9346 (texto previo de 1970 y 1973); IDENT 01:139 («la misma empresa»: los dos actos nombran a Obras Sanitarias de la Nación); ALCANCE 01:139 (la medida de caudal es una propuesta de serie, sin ausencia afirmada); VENTANA, 12 frases vecinas, ninguna desmentida por lo agregado (A:481, «Ningún acto hallado del año da la capacidad, la cota o el espejo del embalse»: el art. 14 da el caudal del acueducto, no el del embalse); VERBO «conceden» y «aprueba» (art. 1 de la ley: «Apruébase el convenio»); ninguna de FECHA ni de ARRASTRE |
+| Fórmulas de remisión después de una mención de 1974 en la misma línea | 26.167 líneas de `cap/` y `ape/` | 15, leídas: una remite mal (hallazgo 2), dos son los falsos positivos a y c, y las doce restantes no son remisiones de modo a 1974 (el falso positivo b lo marcó `control_amplia.py` por ARRASTRE) |
+| Citas «Nº 9xxx, h. N» de ediciones de 1974 contra las FUENTE del informe | 74 citas en el manuscrito, 33 pares distintos | Coinciden; las 9518 «h. 5 y 6» que quedan citan el art. 1 o el art. 2 del convenio |
+| Suma de la planilla de la Ley 4860 | 55 filas, 4 columnas | 30,0000; 37,1060; 32,9000; 99,9950 (51 filas cierran por OCR, 4 miradas recortadas) |
+| Recuento de láminas | `.lof` y texto | 45 entradas en el `.lof`; «cuarenta y cinco» en 00:77 |
+| Recuento de tramos | 00:45, 02:28, F:26 | 52 verificados + 60 fuera = 112 |
+| D:177, hojas «a ojos» | 14 años (1964 a 1971 y 1975 a 1980) | 14 cifras, de 69 a 577, las mismas que da 00:45 |
+| Compilación | AMPLÍA (`27133b2`) y fase 6, en clones limpios | Compilan con `latexmk -pdf`; 1.115 páginas las dos; 0 errores; 0 referencias indefinidas; `.lof` con 45 entradas |
+| `git am` del parche sobre un clon limpio de la copia de Windows de `a8c80ca` más el parche del AMPLÍA | 1 parche | Aplica; el árbol resultante es idéntico al de la sesión |
+
+### Notas
+
+| # | Aspecto | Peso | Inicial | Final | Justificación |
+|---|---|---|---|---|---|
+| 1 | Rigor documental | 11 | 82 | 82 | La muestra de la ronda 42 no se rehízo (P115) |
+| 2 | Vigencia normativa | 8 | 100 | 100 | Sin cambios; la Ley 4860 sigue dicha como derogada por la 5082 |
+| 3 | Versión, fecha y origen | 6 | 100 | 100 | Las sumas de la planilla se rehicieron sobre el documento; la fecha de la firma del convenio, del acto (h7) |
+| 4 | Fidelidad de transcripción | 7 | 90 | 90 | Seis citas y tres actos cotejados en la imagen, sin correcciones silenciosas; techo de 90 |
+| 5 | Honestidad epistémica | 12 | 90 | 95 | Hallazgo 2, aplicado; siguen sin revisar una por una las identidades de P318 |
+| 6 | Tipo y jerarquía de fuente | 5 | 90 | 90 | Sin cambios |
+| 7 | Consistencia interna | 9 | 50 | 100 | Hallazgo 1 (un error en 60,8 páginas, en la misma fila), aplicado; recuentos de láminas, tramos y hojas «a ojos» cerrados |
+| 8 | Integridad del aparato | 8 | 95 | 95 | D:177 deja de pedir las 181 hojas de 1974, ya miradas; D:263 suma la razón de las columnas de gasto; ningún pedido satisfecho nuevo en la lista |
+| 9 | Trazabilidad | 6 | 30 | 30 | Muestra de la ronda 42 (P40) |
+| 10 | Argumentación | 9 | 70 | 70 | Sin cambios de estado |
+| 11 | Aporte y originalidad | 5 | 90 | 90 | Sin cambios |
+| 12 | Estructura y prosa | 2 | 100 | 100 | Sin remisiones nuevas sin marcar; la de 01:139 dice «más adelante» |
+| 13 | Cartografía y figuras | 3 | 94 | 94 | Ninguna figura nueva |
+| 14 | Utilidad pública | 4 | 100 | 100 | Sin cambios |
+| 15 | Riesgo legal y privacidad | 5 | 90 | 90 | Lo cambiado de 1974 no nombra a nadie que el libro no nombrara; ningún atributo sensible |
+
+**Nota inicial: 82,6 antes del tope y 82,6 después** (cobertura acumulada inicial del 100,0 % sobre `27133b2` después del traslado y la lectura; sin tope). **Nota final: 87,7 antes y después del tope** (cobertura acumulada del 100,0 %). Distancia a 100: 3,8 puntos estructurales y 8,5 corregibles.
+
+Las cinco acciones que más subirían la nota final: (1) rehacer la muestra de trazabilidad con P40 resuelto: hasta +3,6; (2) cerrar con documento alguna tesis abierta, o medir las hipótesis en estudio (P298, P314 a P317), y P324: hasta +1,8; (3) P115: +0,9; (4) P318: terminar la revisión de identidades entre años: +0,6; (5) P341, P339, P337, P335, P334, P332, P325, P327, P330 y P75, P301, P304, P305, P307 y P320: redibujar fig:agua-serie y fig:boletin con 1948, 1958 a 1963 y 1972 a 1974 cerrados y revisar las láminas con sus scripts.
+
+**Avance del libro:** dos hallazgos, los dos resueltos, y el insumo del 16/10 aplicado en su §1 y corregido por el control en su §2; compila sin errores, 1.115 páginas. **Avance de la investigación:** ninguna tesis ni hipótesis cambia de estado; la tercera gana un año más leído sobre la imagen (1974) sin el acto que la refutaría: el límite entre los dos municipios, la coparticipación y el agua del embalse los fija la Provincia por ley, y el convenio con Obras Sanitarias no nombra al municipio; la cuarta gana un dato de la medida de caudal: el agua del embalse para la capital se pacta como el máximo que el acueducto pueda conducir, sin litros por segundo, y las localidades del recorrido quedan para un servicio «eventual».
+
+**Calidad de la auditoría.** Cobertura de la ronda: 29 líneas (0,11 %; 60,8 páginas), más la que cambia la fase 6 fuera de ellas (01:139), leída entera después del cambio. Cobertura acumulada: 26.167 de 26.167 (100,0 %). Falsos positivos descartados: 3. Recortes: P318, P319, P324, P298, P304, P305, P307, P308, P310, P321 a P323, P325 a P328, P330 y P333 sin revisar; los actos de 1974 de A:480 cuyas hojas no se pidieron (municipio, justicia, obras, escuelas, hogar, registro civil, salud, tierra y minas) se juzgaron sobre las fichas del informe, que los miró en la imagen; la escala de la planilla de 1976 no se miró (P343); la sesión que audita es la que escribió el AMPLÍA, y el libro se tomó de la copia de Windows y no de un clon de GitHub. Errores introducidos por la propia auditoría: 2, los dos en material del AMPLÍA 1974 de esta sesión; ninguno marcado por `control_amplia.py`; atrapados por un control automático antes de llegar al libro: 0.
